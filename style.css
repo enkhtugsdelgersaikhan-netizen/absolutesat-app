@@ -184,7 +184,7 @@ footer {
 
 
 /* =========================================
-   REGISTER / SIGN IN
+   REGISTER / LOGIN
 ========================================= */
 
 .auth-buttons {
@@ -197,10 +197,12 @@ footer {
 }
 
 .register-button,
-.signin-button {
+.login-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
+    min-width: 82px;
 
     padding: 10px 15px;
 
@@ -233,7 +235,7 @@ footer {
     background: #f0fdfa;
 }
 
-.signin-button {
+.login-button {
     color: #ffffff;
 
     background: #0f766e;
@@ -241,7 +243,7 @@ footer {
     border: 1px solid #0f766e;
 }
 
-.signin-button:hover {
+.login-button:hover {
     background: #115e59;
 
     border-color: #115e59;
@@ -765,8 +767,10 @@ footer {
     }
 
     .register-button,
-    .signin-button {
+    .login-button {
         padding: 9px 11px;
+
+        min-width: 76px;
 
         font-size: 13px;
     }
