@@ -1,323 +1,131 @@
 ```css
-/* ==================================================
-   ABSOLUTESAT
-   Main Stylesheet
-   ================================================== */
-
-
-/* ==================== RESET ==================== */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-html {
-    scroll-behavior: smooth;
-}
-
-
-body {
-    font-family: "Poppins", sans-serif;
-    background: #f8fafc;
-    color: #1e293b;
-    -webkit-font-smoothing: antialiased;
-}
-
-
-/* ==================== HEADER ==================== */
-
-.header {
-    width: 100%;
-    height: 96px;
-
-    background: #ffffff;
-
-    border-bottom: 1px solid #e2e8f0;
-
-    position: sticky;
-    top: 0;
-
-    z-index: 100;
-}
-
-
 .header-container {
-    max-width: 1280px;
-    height: 100%;
-
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 16px 16px;
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
-/* ==================== LOGO ==================== */
-
+/* Logo */
 .logo-link {
     display: flex;
     align-items: center;
-
-    text-decoration: none;
 }
-
 
 .logo {
     height: 77px;
     width: auto;
-    display: block;
+    object-fit: contain;
 }
 
 
-/* ==================== NAVIGATION ==================== */
-
+/* Navigation */
 .navigation {
     display: flex;
     align-items: center;
-
-    gap: 42px;
+    gap: 8px;
+    margin-left: 45px;
 }
-
 
 .nav-button {
-    position: relative;
-
-    color: #334155;
-
-    font-family: "Poppins", sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-
+    padding: 10px 16px;
     text-decoration: none;
-
-    padding: 8px 0;
-
-    transition:
-        color 0.2s ease,
-        transform 0.2s ease;
+    color: #334155;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: 0.2s ease;
 }
-
-
-/* Hover */
 
 .nav-button:hover {
     color: #0f766e;
+    background: #f0fdfa;
 }
-
-
-/* Active page */
 
 .nav-button.active {
     color: #0f766e;
 }
 
 
-/* Underline */
-
-.nav-button::after {
-    content: "";
-
-    position: absolute;
-
-    left: 50%;
-    bottom: -4px;
-
-    width: 0;
-    height: 2px;
-
-    background: #06b6d4;
-
-    transform: translateX(-50%);
-
-    transition: width 0.2s ease;
-}
-
-
-.nav-button:hover::after,
-.nav-button.active::after {
-    width: 70%;
-}
-
-
-/* ==================== HERO ==================== */
-
-.hero {
-    min-height: calc(100vh - 96px);
+/* Register / Sign In */
+.auth-buttons {
+    margin-left: auto;
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 10px;
+}
 
-    padding: 80px 32px;
+.register-button,
+.signin-button {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
 
-    background: #f8fafc;
+.register-button {
+    color: #0f766e;
+    border: 1px solid #0f766e;
+}
+
+.register-button:hover {
+    background: #f0fdfa;
+}
+
+.signin-button {
+    color: white;
+    background: #0f766e;
+}
+
+.signin-button:hover {
+    background: #115e59;
 }
 
 
-.hero-content {
-    text-align: center;
-
-    max-width: 900px;
-}
-
-
-.hero h1 {
-    color: #0f172a;
-
-    font-size: clamp(48px, 7vw, 76px);
-
-    font-weight: 800;
-
-    line-height: 1.1;
-
-    letter-spacing: -2px;
-}
-
-
-.hero h1 span {
-    color: #06b6d4;
-}
-
-
-.hero p {
-    margin-top: 24px;
-
-    color: #64748b;
-
-    font-size: 19px;
-
-    font-weight: 400;
-
-    line-height: 1.7;
-}
-
-
-/* ==================== MOBILE MENU ==================== */
-
+/* Mobile */
 .mobile-menu-button {
     display: none;
-
+    margin-left: auto;
     border: none;
     background: transparent;
-
-    color: #334155;
-
-    font-family: "Poppins", sans-serif;
-
-    font-size: 28px;
-
+    font-size: 26px;
     cursor: pointer;
 }
 
 
-/* ==================== RESPONSIVE ==================== */
+@media (max-width: 900px) {
 
-@media (max-width: 768px) {
-
-    .header {
-        height: 80px;
+    .navigation,
+    .auth-buttons {
+        display: none;
     }
-
-
-    .header-container {
-        padding: 0 20px;
-    }
-
-
-    .logo {
-        height: 52px;
-    }
-
 
     .mobile-menu-button {
         display: block;
     }
 
-
-    .navigation {
-        display: none;
-
-        position: absolute;
-
-        top: 80px;
-        left: 0;
-
-        width: 100%;
-
-        padding: 20px 24px;
-
-        background: #ffffff;
-
-        border-bottom: 1px solid #e2e8f0;
-
-        box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
-
-        flex-direction: column;
-        align-items: flex-start;
-
-        gap: 18px;
-    }
-
-
     .navigation.mobile-open {
         display: flex;
-    }
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
 
+        flex-direction: column;
+        align-items: stretch;
+
+        background: white;
+        padding: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
 
     .nav-button {
         width: 100%;
-
-        padding: 8px 0;
     }
-
-
-    .nav-button::after {
-        left: 0;
-
-        transform: none;
-    }
-
-
-    .hero {
-        min-height: calc(100vh - 80px);
-
-        padding: 60px 24px;
-    }
-
-
-    .hero h1 {
-        letter-spacing: -1.5px;
-    }
-
-
-    .hero p {
-        font-size: 16px;
-    }
-
-}
-
-
-/* ==================== SMALL PHONES ==================== */
-
-@media (max-width: 480px) {
-
-    .header-container {
-        padding: 0 16px;
-    }
-
-
-    .logo {
-        height: 48px;
-    }
-
-
-    .hero h1 {
-        font-size: 44px;
-    }
-
 }
 ```
