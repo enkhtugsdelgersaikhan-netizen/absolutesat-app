@@ -6,81 +6,93 @@
     <title>AbsoluteSAT - SAT Preparation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom styles for matching the feel of absolute.mn but with teal/cyan colors */
-        .text-accent-teal { color: #008080; } /* Custom Teal */
-        .text-accent-cyan { color: #00ced1; } /* Custom Cyan */
-        .bg-accent-teal { background-color: #008080; } /* Custom Teal */
-        .bg-accent-teal-hover:hover { background-color: #006666; } /* Custom Darker Teal for hover */
-        .text-accent-cyan-hover:hover { color: #20b2aa; } /* Custom teal for cyan text hover */
+        .text-teal-brand { color: #0f766e; }
+        .bg-teal-brand { background-color: #0f766e; }
+        .bg-teal-brand:hover { background-color: #115e59; }
+        .text-cyan-brand { color: #0891b2; }
     </style>
 </head>
-<body class="bg-white text-gray-900 font-sans antialiased">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
-    <!-- Top Navigation Bar -->
-    <nav class="flex items-center justify-between p-6 max-w-7xl mx-auto">
-        <!-- Logo Area - exactly like the absolute.mn reference placement -->
-        <div class="logo-area">
-            <a href="#" class="block">
-                <img src="image_0.png" alt="AbsoluteSAT Logo" class="h-16 w-auto block">
-            </blank>
+    <!-- Header Navigation -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Top-Left Logo -->
+            <a href="#" class="flex items-center">
+                <img src="Logo.png" alt="AbsoluteSAT Logo" class="h-12 w-auto object-contain">
+            </a>
+
+            <!-- Right Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold">
+                <a href="#" class="text-teal-brand hover:text-cyan-brand transition">HOME</a>
+                <a href="#" class="text-slate-600 hover:text-teal-brand transition">COURSES</a>
+                <a href="#" class="text-slate-600 hover:text-teal-brand transition">SCHOLARSHIPS</a>
+                <a href="#" class="text-slate-600 hover:text-teal-brand transition">TESTIMONIALS</a>
+                <a href="#" class="bg-cyan-500 hover:bg-cyan-600 text-white px-5 py-2 rounded-lg transition font-bold">REGISTER</a>
+            </nav>
         </div>
+    </header>
 
-        <!-- Right Side Nav Items - like the reference but themed teal/cyan -->
-        <div class="nav-right flex items-center space-x-10 text-sm">
-            <a href="#" class="font-medium text-teal-700 hover:text-cyan-600 transition">Home</a>
-            <a href="#" class="font-medium text-teal-700 hover:text-cyan-600 transition">Courses</a>
-            <a href="#" class="font-medium text-teal-700 hover:text-cyan-600 transition">Practice</a>
-            <a href="#" class="font-medium text-teal-700 hover:text-cyan-600 transition">About Us</a>
-
-            <!-- Language and Menu items like the ref but with custom teal/cyan theme -->
-            <div class="flex items-center space-x-3 text-teal-700">
-                <button class="flex items-center font-medium hover:text-cyan-600 transition">
-                    EN 
-                    <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <button class="hover:text-cyan-600 transition">
-                    <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Main Hero Section - matching the structure and elements of absolute.mn -->
-    <main class="text-center px-6 py-16 md:py-24 max-w-7xl mx-auto">
-        <!-- Headline with cyan highlight -->
-        <h1 class="text-5xl md:text-6xl font-extrabold leading-tight text-gray-900 mb-6">
-            Let us be your bridge to the <span class="text-accent-cyan">***Future***</span>
-        </h1>
-        
-        <!-- Sub-headline text -->
-        <p class="text-gray-600 text-xl max-w-3xl mx-auto mb-16">
-            We are committed to providing a stimulating, secure, enjoyable environment for learning Digital SAT preparation.
-        </p>
-        
-        <!-- Call to action buttons with teal and cyan colors -->
-        <div class="flex items-center justify-center space-x-12 mb-16 md:mb-24">
-            <button class="bg-accent-teal text-white font-semibold text-lg px-12 py-4 rounded-xl shadow-lg bg-accent-teal-hover transition duration-300">
+    <!-- Main Hero Section -->
+    <main class="max-w-7xl mx-auto px-6 py-16 md:py-24">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight mb-4">
+                Your Bridge to a High SAT Score
+            </h1>
+            <p class="text-slate-600 text-lg mb-8">
+                Unlocking your full potential with comprehensive High SAT Score Preparation.
+            </p>
+            <a href="#" class="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-bold px-8 py-3.5 rounded-xl shadow-md transition">
                 Register Now
-            </button>
-            <a href="#" class="flex items-center text-accent-cyan text-lg font-medium text-accent-cyan-hover group transition duration-300">
-                Read more <span class="ml-2 group-hover:ml-3 transition-all">→</span>
             </a>
         </div>
-        
-        <!-- Hero image with teal/cyan colors and positive university feel, matching ref layout -->
-        <div class="max-w-6xl mx-auto rounded-3xl overflow-hidden shadow-2xl relative">
-            <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1600&h=900&auto=format&fit=crop" 
-                 alt="Two young students smiling while looking at a laptop, with a modern, light-filled university library background, featuring subtle cyan and teal ambient lighting"
-                 class="w-full h-auto">
-            <div class="absolute inset-0 bg-teal-900/10 mix-blend-multiply rounded-3xl"></div>
-            <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent"></div>
+
+        <!-- Hero Content Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch mt-12">
+            <!-- Left Info Block -->
+            <div class="bg-teal-brand text-white p-8 md:p-10 rounded-2xl shadow-lg flex flex-col justify-between">
+                <div>
+                    <h2 class="text-2xl font-bold mb-4">Mission Statement</h2>
+                    <p class="text-teal-100 leading-relaxed text-sm">
+                        Our mission focuses on delivering top-tier SAT preparation, academic support, and personalized guidance for students, combining technology with experienced mentors for unmatched academic statements.
+                    </p>
+                </div>
+                <div class="mt-8 pt-6 border-t border-teal-600">
+                    <p class="italic text-cyan-200 text-sm">
+                        "AbsoluteSAT preparation programs are simple yet effective core character traits that foster academic excellence in students."
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Stats / History Block -->
+            <div class="bg-white border border-slate-200 p-8 md:p-10 rounded-2xl shadow-sm flex flex-col justify-between">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Program History</h2>
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <span class="w-8 h-8 rounded-full bg-cyan-100 text-cyan-700 flex items-center justify-center font-bold text-sm shrink-0">1</span>
+                        <div>
+                            <h3 class="font-bold text-slate-800 text-sm">First SAT Prep Track</h3>
+                            <p class="text-slate-500 text-xs mt-0.5">Established specialized SAT preparation curriculum.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <span class="w-8 h-8 rounded-full bg-cyan-100 text-cyan-700 flex items-center justify-center font-bold text-sm shrink-0">2</span>
+                        <div>
+                            <h3 class="font-bold text-slate-800 text-sm">Tailored University Guidance</h3>
+                            <p class="text-slate-500 text-xs mt-0.5">Precise scholarship guidance and application support.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <span class="w-8 h-8 rounded-full bg-cyan-100 text-cyan-700 flex items-center justify-center font-bold text-sm shrink-0">3</span>
+                        <div>
+                            <h3 class="font-bold text-slate-800 text-sm">Digital SAT Portal</h3>
+                            <p class="text-slate-500 text-xs mt-0.5">Focus and review on SAT preparation journey online.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
-
-    <!-- Footer or other sections could go here -->
-    <footer class="py-10 text-center text-gray-500 border-t border-gray-100 mt-24">
-        &copy; 2024 AbsoluteSAT. All rights reserved. Teal & Cyan only.
-    </footer>
 
 </body>
 </html>
