@@ -49,13 +49,12 @@ body {
     height: 100%;
 
     margin: 0 auto;
-    padding: 0 32px;
+    padding: 0 16px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
 
 /* ==================== LOGO ==================== */
 
@@ -68,9 +67,8 @@ body {
 
 
 .logo {
-    height: 64px;
+    height: 77px;
     width: auto;
-
     display: block;
 }
 
