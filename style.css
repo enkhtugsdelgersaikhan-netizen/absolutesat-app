@@ -202,5 +202,351 @@ body {
 
     border-radius: 8px;
 
-    text-de
+    text-decoration: none;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+/* Register */
+
+.register-button {
+    color: #0f766e;
+
+    background: #ffffff;
+
+    border: 1px solid #0f766e;
+}
+
+.register-button:hover {
+    background: #f0fdfa;
+}
+
+
+/* Sign In */
+
+.signin-button {
+    color: #ffffff;
+
+    background: #0f766e;
+
+    border: 1px solid #0f766e;
+}
+
+.signin-button:hover {
+    background: #115e59;
+
+    border-color: #115e59;
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
+
+.mobile-menu-button {
+    display: none;
+
+    margin-left: auto;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #0f172a;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 26px;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+
+    transition: background-color 0.2s ease;
+}
+
+.mobile-menu-button:hover {
+    background: #f1f5f9;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    width: 100%;
+    max-width: 100%;
+
+    min-height: calc(100vh - 92px);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 80px 24px;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            #ecfeff 0%,
+            #f8fafc 45%,
+            #f8fafc 100%
+        );
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 900px;
+
+    text-align: center;
+}
+
+.hero h1 {
+    margin-bottom: 20px;
+
+    font-size: clamp(52px, 7vw, 88px);
+
+    line-height: 1.05;
+
+    font-weight: 800;
+
+    letter-spacing: -3px;
+
+    color: #0f172a;
+}
+
+.hero h1 span {
+    color: #0f766e;
+}
+
+.hero p {
+    width: 100%;
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    font-size: 20px;
+
+    line-height: 1.7;
+
+    font-weight: 400;
+
+    color: #64748b;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1150px) {
+
+    .header-container {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .logo {
+        height: 70px;
+    }
+
+    .navigation {
+        /*
+           Reduce navigation width on smaller screens.
+        */
+        flex: 1 1 auto;
+
+        margin-left: 20px;
+        margin-right: 8px;
+
+        gap: 2px;
+    }
+
+    .nav-button {
+        padding-left: 8px;
+        padding-right: 8px;
+
+        font-size: 14px;
+    }
+
+    .auth-buttons {
+        gap: 5px;
+    }
+
+    .register-button,
+    .signin-button {
+        padding: 9px 11px;
+
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   SMALLER TABLETS / LARGE PHONES
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+    .header {
+        height: 80px;
+    }
+
+    .header-container {
+        padding: 6px 16px;
+    }
+
+    .logo {
+        height: 67px;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .auth-buttons {
+        display: none;
+    }
+
+    .mobile-menu-button {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    /* =====================================================
+       MOBILE DROPDOWN
+       ===================================================== */
+
+    .navigation.mobile-open {
+        position: absolute;
+
+        top: 80px;
+        left: 0;
+        right: 0;
+
+        width: 100%;
+        max-width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 4px;
+
+        margin: 0;
+
+        padding: 12px 16px 16px;
+
+        background: #ffffff;
+
+        border-bottom: 1px solid #e2e8f0;
+
+        box-shadow:
+            0 10px 25px rgba(15, 23, 42, 0.08);
+    }
+
+    .navigation.mobile-open .nav-button {
+        width: 100%;
+
+        padding: 12px 14px;
+
+        font-size: 15px;
+    }
+
+    .navigation.mobile-open .nav-button.active::after {
+        display: none;
+    }
+
+
+    /* =====================================================
+       HERO — TABLET / MOBILE
+       ===================================================== */
+
+    .hero {
+        min-height: calc(100vh - 80px);
+
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: clamp(48px, 13vw, 68px);
+
+        letter-spacing: -2px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .header {
+        height: 72px;
+    }
+
+    .header-container {
+        padding: 5px 12px;
+    }
+
+    .logo {
+        height: 61px;
+    }
+
+    .mobile-menu-button {
+        width: 40px;
+        height: 40px;
+
+        font-size: 24px;
+    }
+
+    .navigation.mobile-open {
+        top: 72px;
+
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .hero {
+        min-height: calc(100vh - 72px);
+
+        padding: 50px 18px;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+
+        letter-spacing: -1.5px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
 ```
