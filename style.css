@@ -11,13 +11,23 @@
 
 html {
     width: 100%;
+    min-width: 100%;
+
+    margin: 0;
+    padding: 0;
+
     overflow-x: hidden;
+
     scroll-behavior: smooth;
 }
 
 body {
     width: 100%;
+    min-width: 100%;
     min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
 
     font-family: 'Poppins', sans-serif;
 
@@ -27,6 +37,13 @@ body {
     overflow-x: hidden;
 }
 
+body,
+main,
+footer {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 
 /* =========================================
    HEADER
@@ -34,7 +51,12 @@ body {
 
 .header {
     width: 100%;
+    max-width: none;
+
     height: 92px;
+
+    margin: 0;
+    padding: 0;
 
     background: #ffffff;
 
@@ -78,8 +100,8 @@ body {
 
 .logo {
     height: 77px;
-    width: auto;
 
+    width: auto;
     max-width: 100%;
 
     object-fit: contain;
@@ -295,21 +317,6 @@ body {
     stroke-linejoin: round;
 }
 
-.social-button:nth-child(1) svg {
-    fill: none;
-    stroke: currentColor;
-}
-
-.social-button:nth-child(2) svg {
-    fill: none;
-    stroke: currentColor;
-}
-
-.social-button:nth-child(3) svg {
-    fill: none;
-    stroke: currentColor;
-}
-
 
 /* =========================================
    MOBILE MENU BUTTON
@@ -351,6 +358,7 @@ body {
 
 .hero {
     width: 100%;
+    max-width: none;
 
     min-height: calc(100vh - 92px);
 
@@ -359,6 +367,8 @@ body {
     justify-content: center;
 
     padding: 80px 20px;
+
+    margin: 0;
 
     background:
         radial-gradient(
@@ -371,7 +381,6 @@ body {
 
 .hero-content {
     width: 100%;
-
     max-width: 900px;
 
     text-align: center;
@@ -399,7 +408,6 @@ body {
 
 .hero p {
     width: 100%;
-
     max-width: 650px;
 
     margin: 0 auto;
@@ -422,14 +430,20 @@ body {
     position: relative;
 
     width: 100%;
+    max-width: none;
 
     min-height: 500px;
+
+    margin: 0;
+    padding: 0;
 
     background: #202c3d;
 
     color: #ffffff;
 
     overflow: hidden;
+
+    display: block;
 }
 
 .footer-container {
@@ -438,7 +452,6 @@ body {
     z-index: 2;
 
     width: calc(100% - 40px);
-
     max-width: 1440px;
 
     min-height: 500px;
