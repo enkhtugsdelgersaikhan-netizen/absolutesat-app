@@ -9,141 +9,199 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Inter', sans-serif; }
-    .bg-teal-primary { background-color: #0f766e; }
-    .bg-teal-primary:hover { background-color: #115e59; }
-    .text-teal-primary { color: #0f766e; }
-    .bg-cyan-accent { background-color: #06b6d4; }
-    .bg-cyan-accent:hover { background-color: #0891b2; }
-    .text-cyan-accent { color: #0891b2; }
-    .border-cyan-accent { border-color: #06b6d4; }
+    body { font-family: 'Inter', sans-serif; background-color: #f2fbfb; }
+    .bg-dark-teal { background-color: #0d4b50; }
+    .bg-cyan-accent { background-color: #1ed2dc; }
+    .bg-cyan-accent:hover { background-color: #12b7c0; }
+    .text-dark-teal { color: #0d4b50; }
+    .text-cyan-accent { color: #00b4be; }
+    .bg-card-teal { background-color: #c9ecee; }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased font-sans">
+<body class="text-slate-800 antialiased min-h-screen flex flex-col">
 
-  <!-- Header Navigation -->
-  <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+  <!-- Header -->
+  <header class="bg-white border-b border-slate-100 sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
       
-      <!-- Top Left Logo (Bigger Size) -->
+      <!-- Logo Top-Left -->
       <a href="#" class="flex items-center">
-        <img src="Logo.png" alt="AbsoluteSAT Logo" class="h-20 w-auto object-contain">
+        <img src="Logo.png" alt="AbsoluteSAT Logo" class="h-14 w-auto object-contain">
       </a>
 
-      <!-- Navigation Links (Uniformly Distributed & Larger Font) -->
-      <nav class="hidden md:flex items-center space-x-10 text-base font-semibold text-slate-700">
-        <a href="#" class="text-teal-primary hover:text-cyan-accent transition">Home</a>
-        <a href="#" class="hover:text-teal-primary transition">Courses</a>
-        <a href="#" class="hover:text-teal-primary transition">Practice</a>
-        <a href="#" class="hover:text-teal-primary transition">Scholarships</a>
-        <a href="#" class="hover:text-teal-primary transition">Testimonials</a>
-      </nav>
-
-      <!-- Right Action Button -->
-      <div class="flex items-center space-x-4">
-        <a href="#register" class="bg-cyan-accent hover:bg-cyan-accent text-white font-bold text-base px-6 py-2.5 rounded-xl transition shadow-md hover:shadow-lg">
+      <!-- Navbar Buttons Top-Right -->
+      <nav class="flex items-center space-x-8 text-xs md:text-sm font-bold tracking-wide uppercase">
+        <a href="#home" class="text-slate-600 hover:text-dark-teal transition">Home</a>
+        <a href="#courses" class="text-slate-600 hover:text-dark-teal transition">Courses</a>
+        <a href="#scholarships" class="text-slate-600 hover:text-dark-teal transition">Scholarships</a>
+        <a href="#testimonials" class="text-slate-600 hover:text-dark-teal transition">Testimonials</a>
+        
+        <!-- REGISTER Button -->
+        <a href="#register" class="bg-cyan-accent text-slate-900 font-extrabold px-6 py-2.5 rounded hover:opacity-90 transition shadow-sm">
           Register
         </a>
-      </div>
+      </nav>
+
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="max-w-7xl mx-auto px-8 py-16 md:py-24 text-center">
-    <h1 class="text-5xl md:text-6xl font-black text-slate-900 leading-tight mb-6 tracking-tight">
-      Let us be your bridge to a <span class="text-cyan-accent">High SAT Score</span>
-    </h1>
-    <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed font-normal">
-      Unlocking your full potential with comprehensive Digital SAT preparation, personalized guidance, and expert mentors.
-    </p>
-
-    <!-- Call to Action Buttons -->
-    <div class="flex items-center justify-center space-x-8 mb-16">
-      <a href="#register" class="bg-teal-primary text-white font-bold text-lg px-10 py-4 rounded-xl shadow-lg hover:bg-teal-primary transition transform hover:-translate-y-0.5">
-        Register Now
-      </a>
-      <a href="#about" class="text-cyan-accent hover:text-teal-primary font-bold text-lg flex items-center transition group">
-        Read more <span class="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-      </a>
-    </div>
-
-    <!-- Hero Image Banner -->
-    <div class="max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-slate-200 relative">
-      <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1600&auto=format&fit=crop" 
-           alt="Students studying SAT together" 
-           class="w-full h-[450px] object-cover">
-      <div class="absolute inset-0 bg-gradient-to-t from-teal-900/30 to-transparent"></div>
-    </div>
-  </section>
-
-  <!-- Key Features / Advantages (Uniform Grid) -->
-  <section class="bg-white py-20 border-t border-slate-200">
-    <div class="max-w-7xl mx-auto px-8">
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="text-xs font-bold uppercase tracking-widest text-cyan-accent">Advantages</span>
-        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-2">Why Should You Join AbsoluteSAT?</h2>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-cyan-accent transition shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-teal-primary text-white flex items-center justify-center font-bold text-xl mb-6">01</div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3">Targeted SAT Modules</h3>
-          <p class="text-slate-600 leading-relaxed text-sm">Challenging, engaging materials specifically engineered for the official Digital SAT suite format.</p>
-        </div>
-
-        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-cyan-accent transition shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-cyan-accent text-white flex items-center justify-center font-bold text-xl mb-6">02</div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3">Expert Mentorship</h3>
-          <p class="text-slate-600 leading-relaxed text-sm">Experienced instructors dedicated to helping you master Reading, Writing, and Math strategies.</p>
-        </div>
-
-        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-cyan-accent transition shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-teal-primary text-white flex items-center justify-center font-bold text-xl mb-6">03</div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3">Proven Results</h3>
-          <p class="text-slate-600 leading-relaxed text-sm">Track record of helping thousands of students score 1500+ and secure full university scholarships.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Mission Statement & Stats -->
-  <section id="about" class="bg-teal-primary text-white py-20">
-    <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-      <div class="lg:col-span-7 space-y-6">
-        <span class="text-xs font-bold uppercase tracking-widest text-cyan-300">Mission Statement</span>
-        <h2 class="text-3xl md:text-4xl font-extrabold leading-tight">Unlocking Potential for Global Education</h2>
-        <p class="text-teal-100 text-base leading-relaxed">
-          We are committed to delivering top-tier SAT preparation, academic support, and personalized guidance for students. Combining modern testing technology with structured practice, our goal is to foster critical thinking and produce high achievers ready for elite universities worldwide.
+  <!-- Main Content Grid Layout -->
+  <main class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-1 lg:grid-cols-12 gap-6 flex-1 w-full">
+    
+    <!-- LEFT COLUMN -->
+    <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
+      
+      <!-- Hero Section -->
+      <div class="text-center py-6">
+        <h1 class="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-4">
+          Your Bridge to a High SAT Score
+        </h1>
+        <p class="text-slate-600 font-medium text-sm md:text-base max-w-md mx-auto mb-6">
+          Unlocking your full potential with comprehensive High SAT Score Preparation
         </p>
+
+        <!-- Register Now Button -->
+        <a href="#register" class="inline-block bg-cyan-accent text-slate-900 font-extrabold px-8 py-3 rounded-md shadow-md hover:bg-cyan-accent transition">
+          Register Now
+        </a>
       </div>
 
-      <!-- Stats Counters -->
-      <div class="lg:col-span-5 bg-teal-800/60 p-8 rounded-3xl border border-teal-600/40 grid grid-cols-2 gap-6 text-center">
-        <div class="p-4">
-          <span class="block text-4xl font-black text-cyan-300">60k+</span>
-          <span class="text-xs uppercase font-semibold text-teal-100 mt-1 block">Students Taught</span>
+      <!-- Mission Statement Section -->
+      <div class="bg-dark-teal text-white p-6 rounded-lg grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+        <div>
+          <h2 class="text-lg font-bold mb-2 text-cyan-300">Mission Statement</h2>
+          <p class="text-xs leading-relaxed text-slate-200">
+            Our mission focuses on delivering top-tier SAT preparation, academic support, and personalized guidance for students, combining technology with experienced mentors for unmatched academic statements.
+          </p>
         </div>
-        <div class="p-4">
-          <span class="block text-4xl font-black text-cyan-300">180+</span>
-          <span class="text-xs uppercase font-semibold text-teal-100 mt-1 block">Full Scholarships</span>
-        </div>
-        <div class="p-4 col-span-2 border-t border-teal-700/60 pt-6">
-          <span class="block text-4xl font-black text-white">$7.2M+</span>
-          <span class="text-xs uppercase font-semibold text-teal-100 mt-1 block">Total Scholarship Value</span>
+        <div class="bg-dark-teal/50 p-3 rounded border border-teal-600/40 relative">
+          <span class="text-3xl text-cyan-300 font-serif leading-none absolute -top-2 left-2">“</span>
+          <p class="text-xs text-slate-200 italic pt-3">
+            AbsoluteSAT preparation programs are simple yet effective core character traits that foster academic excellence in students.
+          </p>
+          <span class="text-3xl text-cyan-300 font-serif leading-none text-right block -mb-2">”</span>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 text-sm">
-    <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-      <div class="flex items-center space-x-3">
-        <img src="Logo.png" alt="AbsoluteSAT Logo" class="h-10 w-auto brightness-200">
+      <!-- History Section -->
+      <div class="pt-2">
+        <h2 class="text-xl font-bold text-slate-900 mb-6">History</h2>
+        
+        <div class="relative flex items-start justify-between">
+          <!-- Horizontal Cyan Timeline Line -->
+          <div class="absolute top-3 left-0 right-0 h-1 bg-cyan-accent z-0"></div>
+
+          <!-- Timeline Points -->
+          <div class="relative z-10 flex flex-col items-center text-center w-1/4 px-1">
+            <div class="w-6 h-6 rounded-full bg-dark-teal border-4 border-cyan-300 mb-2"></div>
+            <p class="text-[11px] font-semibold text-slate-700 leading-tight">Second round of test prep history with SAT</p>
+          </div>
+
+          <div class="relative z-10 flex flex-col items-center text-center w-1/4 px-1">
+            <div class="w-6 h-6 rounded-full bg-dark-teal border-4 border-cyan-300 mb-2"></div>
+            <p class="text-[11px] font-semibold text-slate-700 leading-tight">The first class to graduate to establish SAT preparation since 2023</p>
+          </div>
+
+          <div class="relative z-10 flex flex-col items-center text-center w-1/4 px-1">
+            <div class="w-6 h-6 rounded-full bg-dark-teal border-4 border-cyan-300 mb-2"></div>
+            <p class="text-[11px] font-semibold text-slate-700 leading-tight">Precise tailored SAT scholarship for College</p>
+          </div>
+
+          <div class="relative z-10 flex flex-col items-center text-center w-1/4 px-1">
+            <div class="w-6 h-6 rounded-full bg-dark-teal border-4 border-cyan-300 mb-2"></div>
+            <p class="text-[11px] font-semibold text-slate-700 leading-tight">Focus and review on SAT preparation journey</p>
+          </div>
+        </div>
       </div>
-      <p>&copy; 2026 AbsoluteSAT Preparation. All rights reserved.</p>
+
     </div>
-  </footer>
+
+    <!-- RIGHT COLUMN -->
+    <div class="lg:col-span-7 flex flex-col space-y-6">
+      
+      <!-- Partners Institutions Section -->
+      <div class="bg-dark-teal text-white p-5 rounded-lg flex items-center justify-between">
+        <h2 class="text-xl font-extrabold text-cyan-300 w-1/3 leading-tight">
+          Partners<br>Institutions
+        </h2>
+        <div class="w-2/3 grid grid-cols-3 gap-2 text-center text-[10px] font-bold text-slate-200 uppercase tracking-wider">
+          <div class="p-2 border border-teal-700/60 rounded bg-dark-teal/40">USUI</div>
+          <div class="p-2 border border-teal-700/60 rounded bg-dark-teal/40">EASTERN UNIVERSITY</div>
+          <div class="p-2 border border-teal-700/60 rounded bg-dark-teal/40">CAMNITUM UNIVERSITY</div>
+          <div class="p-2 border border-teal-700/60 rounded bg-dark-teal/40">TENNES STATE UNIVERSITY</div>
+          <div class="p-2 border border-teal-700/60 rounded bg-dark-teal/40">TENNISTORN UNIVERSITY</div>
+          <div class="p-2 border border-teal-700/60 rounded bg-dark-teal/40">ACADEMY</div>
+        </div>
+      </div>
+
+      <!-- Testimonials Student Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        
+        <!-- Student Card 1 -->
+        <div class="bg-card-teal rounded-lg p-3 flex flex-col justify-between relative shadow-sm">
+          <span class="text-2xl text-cyan-500 font-serif absolute top-2 left-3">“</span>
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop" class="w-full h-32 object-cover rounded mb-2">
+          <div>
+            <h3 class="font-extrabold text-xs text-slate-900">SAT 1520 - Maral O.</h3>
+            <p class="text-[10px] text-slate-700">Graduate of SAT class | got full scholarship and...</p>
+          </div>
+        </div>
+
+        <!-- Student Card 2 -->
+        <div class="bg-card-teal rounded-lg p-3 flex flex-col justify-between relative shadow-sm">
+          <span class="text-2xl text-cyan-500 font-serif absolute top-2 left-3">“</span>
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300&auto=format&fit=crop" class="w-full h-32 object-cover rounded mb-2">
+          <div>
+            <h3 class="font-extrabold text-xs text-slate-900">SAT 1520 - Aliff A.</h3>
+            <p class="text-[10px] text-slate-700">Graduate of SAT class | got full scholarship and...</p>
+          </div>
+        </div>
+
+        <!-- Student Card 3 -->
+        <div class="bg-card-teal rounded-lg p-3 flex flex-col justify-between relative shadow-sm">
+          <span class="text-2xl text-cyan-500 font-serif absolute top-2 left-3">“</span>
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=300&auto=format&fit=crop" class="w-full h-32 object-cover rounded mb-2">
+          <div>
+            <h3 class="font-extrabold text-xs text-slate-900">SAT 1520 - Lexal A.</h3>
+            <p class="text-[10px] text-slate-700">Graduate of SAT class | got full scholarship and...</p>
+          </div>
+        </div>
+
+        <!-- Student Card 4 -->
+        <div class="bg-card-teal rounded-lg p-3 flex flex-col justify-between relative shadow-sm">
+          <span class="text-2xl text-cyan-500 font-serif absolute top-2 left-3">“</span>
+          <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=300&auto=format&fit=crop" class="w-full h-32 object-cover rounded mb-2">
+          <div>
+            <h3 class="font-extrabold text-xs text-slate-900">SAT 1520 - Marina C.</h3>
+            <p class="text-[10px] text-slate-700">Graduate of SAT class | got full scholarship...</p>
+          </div>
+        </div>
+
+        <!-- Student Card 5 -->
+        <div class="bg-card-teal rounded-lg p-3 flex flex-col justify-between relative shadow-sm">
+          <span class="text-2xl text-cyan-500 font-serif absolute top-2 left-3">“</span>
+          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=300&auto=format&fit=crop" class="w-full h-32 object-cover rounded mb-2">
+          <div>
+            <h3 class="font-extrabold text-xs text-slate-900">SAT 1520 - Lesm C.</h3>
+            <p class="text-[10px] text-slate-700">Graduate of SAT class | got full scholarship...</p>
+          </div>
+        </div>
+
+        <!-- Student Card 6 -->
+        <div class="bg-card-teal rounded-lg p-3 flex flex-col justify-between relative shadow-sm">
+          <span class="text-2xl text-cyan-500 font-serif absolute top-2 left-3">“</span>
+          <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=300&auto=format&fit=crop" class="w-full h-32 object-cover rounded mb-2">
+          <div>
+            <h3 class="font-extrabold text-xs text-slate-900">SAT 1520 - Euhar O.</h3>
+            <p class="text-[10px] text-slate-700">Graduate of SAT class | got full scholarship...</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
 
 </body>
 </html>
