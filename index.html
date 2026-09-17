@@ -1,335 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Absolute SAT - Digital Practice Engine</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AbsoluteSAT - SAT Preparation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for matching the feel of absolute.mn but with teal/cyan colors */
+        .text-accent-teal { color: #008080; } /* Custom Teal */
+        .text-accent-cyan { color: #00ced1; } /* Custom Cyan */
+        .bg-accent-teal { background-color: #008080; } /* Custom Teal */
+        .bg-accent-teal-hover:hover { background-color: #006666; } /* Custom Darker Teal for hover */
+        .text-accent-cyan-hover:hover { color: #20b2aa; } /* Custom teal for cyan text hover */
+    </style>
 </head>
-<body class="bg-slate-100 text-slate-800 antialiased min-h-screen flex flex-col font-sans select-none">
+<body class="bg-white text-gray-900 font-sans antialiased">
 
-  <!-- Top Navigation Bar -->
-  <header class="bg-slate-900 text-white border-b border-slate-800 px-6 py-3 flex justify-between items-center sticky top-0 z-50">
-    <div class="flex items-center space-x-3">
-      <div class="bg-indigo-600 text-white p-2 rounded-lg font-black text-lg">AS</div>
-      <div>
-        <h1 class="font-bold text-lg leading-tight">Absolute SAT</h1>
-        <p class="text-xs text-slate-400">Practice Module 1 • Reading, Writing & Math</p>
-      </div>
-    </div>
-
-    <!-- Timer & Progress -->
-    <div class="flex items-center space-x-6">
-      <div class="flex items-center bg-slate-800 px-4 py-1.5 rounded-full border border-slate-700">
-        <i class="fa-regular font-mono text-indigo-400 mr-2 fa-clock"></i>
-        <span id="timer" class="font-mono text-sm font-bold tracking-wider">35:00</span>
-      </div>
-      <button onclick="finishTest()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-1.5 rounded-lg text-sm font-semibold transition">
-        Submit Practice Test
-      </button>
-    </div>
-  </header>
-
-  <!-- Main App Layout -->
-  <div id="test-view" class="flex-1 max-w-7xl w-full mx-auto p-4 md:p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
-
-    <!-- Left / Top: Question Navigator & Stats -->
-    <div class="lg:col-span-3 space-y-4">
-      <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
-        <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Question Palette</h3>
-        <div id="palette" class="grid grid-cols-5 gap-2"></div>
-      </div>
-
-      <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-indigo-900 text-xs leading-relaxed">
-        <i class="fa-solid fa-circle-info mr-1 text-indigo-600"></i>
-        <strong>Digital SAT Tip:</strong> You can flag questions to return to them later before submitting your score.
-      </div>
-    </div>
-
-    <!-- Right: Active Question & Passage Area -->
-    <div class="lg:col-span-9 flex flex-col">
-      <div class="bg-white rounded-xl border border-slate-200 shadow-sm flex-1 flex flex-col overflow-hidden">
-        
-        <!-- Question Header -->
-        <div class="bg-slate-50 border-b border-slate-200 px-6 py-3 flex justify-between items-center">
-          <span id="question-category" class="text-xs font-bold text-indigo-600 uppercase tracking-wider">Loading...</span>
-          <button id="flag-btn" onclick="toggleFlag()" class="text-xs font-medium text-slate-500 hover:text-amber-600 flex items-center space-x-1">
-            <i class="fa-regular fa-bookmark"></i>
-            <span id="flag-text">Mark for Review</span>
-          </button>
+    <!-- Top Navigation Bar -->
+    <nav class="flex items-center justify-between p-6 max-w-7xl mx-auto">
+        <!-- Logo Area - exactly like the absolute.mn reference placement -->
+        <div class="logo-area">
+            <a href="#" class="block">
+                <img src="image_0.png" alt="AbsoluteSAT Logo" class="h-16 w-auto block">
+            </blank>
         </div>
 
-        <!-- Question Body Split -->
-        <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6 flex-1 overflow-y-auto">
-          <!-- Passage / Problem Context -->
-          <div id="passage-container" class="bg-slate-50 border border-slate-200 p-5 rounded-lg text-slate-700 leading-relaxed text-sm overflow-y-auto max-h-[380px]">
-            <p id="passage-text"></p>
-          </div>
+        <!-- Right Side Nav Items - like the reference but themed teal/cyan -->
+        <div class="nav-right flex items-center space-x-10 text-sm">
+            <a href="#" class="font-medium text-teal-700 hover:text-cyan-600 transition">Home</a>
+            <a href="#" class="font-medium text-teal-700 hover:text-cyan-600 transition">Courses</a>
+            <a href="#" class="font-medium text-teal-700 hover:text-cyan-600 transition">Practice</a>
+            <a href="#" class="font-medium text-teal-700 hover:text-cyan-600 transition">About Us</a>
 
-          <!-- Prompt & Answer Choices -->
-          <div class="flex flex-col justify-between">
-            <div>
-              <p id="prompt-text" class="font-semibold text-slate-900 mb-4 text-base"></p>
-              <div id="choices-container" class="space-y-2.5"></div>
+            <!-- Language and Menu items like the ref but with custom teal/cyan theme -->
+            <div class="flex items-center space-x-3 text-teal-700">
+                <button class="flex items-center font-medium hover:text-cyan-600 transition">
+                    EN 
+                    <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <button class="hover:text-cyan-600 transition">
+                    <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
             </div>
-
-            <!-- Explanation Box (Initially Hidden) -->
-            <div id="explanation-box" class="mt-4 p-4 rounded-lg bg-indigo-50 border border-indigo-200 text-xs text-indigo-950 hidden">
-              <strong class="block mb-1 text-indigo-700"><i class="fa-solid fa-lightbulb mr-1"></i> Explanation:</strong>
-              <span id="explanation-text"></span>
-            </div>
-          </div>
         </div>
+    </nav>
 
-        <!-- Footer Controls -->
-        <div class="bg-slate-50 border-t border-slate-200 px-6 py-4 flex justify-between items-center">
-          <button onclick="prevQuestion()" id="prev-btn" class="px-4 py-2 border border-slate-300 rounded-lg text-sm font-medium hover:bg-slate-100 disabled:opacity-40">
-            <i class="fa-solid fa-chevron-left mr-1"></i> Previous
-          </button>
-          <button onclick="toggleExplanation()" class="text-xs font-medium text-indigo-600 hover:underline">
-            Toggle Explanation
-          </button>
-          <button onclick="nextQuestion()" id="next-btn" class="px-5 py-2 bg-indigo-600 text-white rounded-lg text-sm font-semibold hover:bg-indigo-500">
-            Next <i class="fa-solid fa-chevron-right ml-1"></i>
-          </button>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- Score Summary Modal (Hidden until test finishes) -->
-  <div id="results-view" class="hidden flex-1 max-w-3xl w-full mx-auto p-6 my-auto">
-    <div class="bg-white rounded-2xl border border-slate-200 shadow-xl p-8 text-center space-y-6">
-      <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-2xl">
-        <i class="fa-solid fa-trophy"></i>
-      </div>
-      <div>
-        <h2 class="text-3xl font-extrabold text-slate-900">Practice Module Complete!</h2>
-        <p class="text-slate-500 text-sm mt-1">Here is your estimated Digital SAT breakdown based on accuracy.</p>
-      </div>
-
-      <div class="grid grid-cols-3 gap-4 py-4">
-        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
-          <span class="block text-2xl font-black text-indigo-600" id="score-val">0 / 800</span>
-          <span class="text-xs font-semibold text-slate-400 uppercase tracking-wide">Estimated Score</span>
-        </div>
-        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
-          <span class="block text-2xl font-black text-emerald-600" id="accuracy-val">0%</span>
-          <span class="text-xs font-semibold text-slate-400 uppercase tracking-wide">Accuracy</span>
-        </div>
-        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
-          <span class="block text-2xl font-black text-slate-700" id="time-val">00:00</span>
-          <span class="text-xs font-semibold text-slate-400 uppercase tracking-wide">Time Elapsed</span>
-        </div>
-      </div>
-
-      <button onclick="restartTest()" class="w-full py-3 bg-indigo-600 text-white font-bold rounded-xl hover:bg-indigo-500 transition">
-        Retake Practice Module
-      </button>
-    </div>
-  </div>
-
-  <script>
-    const questions = [
-      {
-        id: 1,
-        category: "Reading & Writing • Craft and Structure",
-        passage: "Researchers studying avian migration patterns discovered that navigational precision relies significantly on magnetoreception. However, recent disruptions in local geomagnetic fields have led to unexpected navigational errors among migratory populations, suggesting that birds ____ supplemental cues when geomagnetic signals become unreliable.",
-        prompt: "Which choice completes the text with the most logical and precise word or phrase?",
-        options: ["disregard", "integrate", "fabricate", "relinquish"],
-        answer: 1,
-        explanation: "'Integrate' logically completes the sentence because birds would combine secondary cues when primary geomagnetic signals fail."
-      },
-      {
-        id: 2,
-        category: "Reading & Writing • Information and Ideas",
-        passage: "In 1928, Alexander Fleming observed that a mold belonging to the Penicillium genus inhibited the growth of Staphylococcus bacteria on a culture plate. This serendipitous observation eventually revolutionized modern medicine by initiating the development of antibiotics.",
-        prompt: "Based on the text, what direct effect did Fleming's observation of the mold have?",
-        options: [
-          "It immediately cured all Staphylococcus bacterial infections.",
-          "It led to the discovery and creation of antibiotic drugs.",
-          "It proved that mold was harmful to humans.",
-          "It forced scientists to abandon culture plate experiments."
-        ],
-        answer: 1,
-        explanation: "The text states that Fleming's observation initiated the development of antibiotics, revolutionizing modern medicine."
-      },
-      {
-        id: 3,
-        category: "Math • Advanced Math (Algebra & Functions)",
-        passage: "Consider the quadratic equation f(x) = 2x² - 8x + 6.",
-        prompt: "What is the x-coordinate of the vertex of the parabola defined by f(x)?",
-        options: ["x = 2", "x = 4", "x = -2", "x = 1"],
-        answer: 0,
-        explanation: "The vertex x-coordinate formula is x = -b / (2a). Here a = 2 and b = -8, so x = -(-8) / (2 * 2) = 8 / 4 = 2."
-      },
-      {
-        id: 4,
-        category: "Math • Problem Solving & Data Analysis",
-        passage: "A study surveyed 200 high school juniors regarding their preference between digital and paper test formats. 65% preferred the digital format, while 25% preferred paper, and the rest expressed no preference.",
-        prompt: "How many students expressed no preference?",
-        options: ["10 students", "20 students", "30 students", "50 students"],
-        answer: 1,
-        explanation: "65% + 25% = 90%. Therefore, 100% - 90% = 10% had no preference. 10% of 200 = 20 students."
-      },
-      {
-        id: 5,
-        category: "Reading & Writing • Standard English Conventions",
-        passage: "The international research team presented ____ findings at the annual astrophysics summit in Geneva, drawing applause from delegates across the globe.",
-        prompt: "Which choice conforms to the conventions of Standard English?",
-        options: ["its", "their", "there", "it's"],
-        answer: 1,
-        explanation: "'Team' in this plural context (or referencing researchers) uses 'their' to refer to the collective team members' findings."
-      }
-    ];
-
-    let currentIndex = 0;
-    let userAnswers = Array(questions.length).fill(null);
-    let flagged = Array(questions.length).fill(false);
-    let timerSeconds = 35 * 60;
-    let timerInterval;
-
-    function init() {
-      startTimer();
-      renderPalette();
-      loadQuestion(0);
-    }
-
-    function startTimer() {
-      clearInterval(timerInterval);
-      timerInterval = setInterval(() => {
-        if (timerSeconds > 0) {
-          timerSeconds--;
-          const m = Math.floor(timerSeconds / 60).toString().padStart(2, '0');
-          const s = (timerSeconds % 60).toString().padStart(2, '0');
-          document.getElementById('timer').innerText = `${m}:${s}`;
-        }
-      }, 1000);
-    }
-
-    function renderPalette() {
-      const palette = document.getElementById('palette');
-      palette.innerHTML = '';
-      questions.forEach((q, idx) => {
-        const btn = document.createElement('button');
-        btn.onclick = () => loadQuestion(idx);
-        btn.id = `palette-btn-${idx}`;
-        btn.className = `h-9 rounded-lg font-bold text-xs flex items-center justify-center border transition relative ${getPaletteStyle(idx)}`;
-        btn.innerHTML = `${idx + 1} ${flagged[idx] ? '<span class="absolute -top-1 -right-1 text-amber-500 text-[10px]">★</span>' : ''}`;
-        palette.appendChild(btn);
-      });
-    }
-
-    function getPaletteStyle(idx) {
-      if (idx === currentIndex) return 'bg-indigo-600 text-white border-indigo-600 shadow-sm';
-      if (userAnswers[idx] !== null) return 'bg-indigo-50 text-indigo-700 border-indigo-200';
-      return 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100';
-    }
-
-    function loadQuestion(index) {
-      currentIndex = index;
-      const q = questions[index];
-
-      document.getElementById('question-category').innerText = `Question ${index + 1} of ${questions.length} • ${q.category}`;
-      document.getElementById('passage-text').innerText = q.passage;
-      document.getElementById('prompt-text').innerText = q.prompt;
-
-      const choicesContainer = document.getElementById('choices-container');
-      choicesContainer.innerHTML = '';
-
-      q.options.forEach((opt, optIdx) => {
-        const selected = userAnswers[index] === optIdx;
-        const letter = String.fromCharCode(65 + optIdx);
+    <!-- Main Hero Section - matching the structure and elements of absolute.mn -->
+    <main class="text-center px-6 py-16 md:py-24 max-w-7xl mx-auto">
+        <!-- Headline with cyan highlight -->
+        <h1 class="text-5xl md:text-6xl font-extrabold leading-tight text-gray-900 mb-6">
+            Let us be your bridge to the <span class="text-accent-cyan">***Future***</span>
+        </h1>
         
-        const optBtn = document.createElement('button');
-        optBtn.onclick = () => selectAnswer(optIdx);
-        optBtn.className = `w-full text-left p-3.5 rounded-lg border text-sm font-medium transition flex items-center ${
-          selected 
-            ? 'bg-indigo-50 border-indigo-600 text-indigo-950 ring-1 ring-indigo-600' 
-            : 'border-slate-200 hover:border-slate-300 hover:bg-slate-50 text-slate-700'
-        }`;
+        <!-- Sub-headline text -->
+        <p class="text-gray-600 text-xl max-w-3xl mx-auto mb-16">
+            We are committed to providing a stimulating, secure, enjoyable environment for learning Digital SAT preparation.
+        </p>
         
-        optBtn.innerHTML = `
-          <span class="w-6 h-6 rounded-full border ${selected ? 'bg-indigo-600 text-white border-indigo-600' : 'border-slate-300 text-slate-500'} flex items-center justify-center mr-3 text-xs font-bold">${letter}</span>
-          <span>${opt}</span>
-        `;
-        choicesContainer.appendChild(optBtn);
-      });
+        <!-- Call to action buttons with teal and cyan colors -->
+        <div class="flex items-center justify-center space-x-12 mb-16 md:mb-24">
+            <button class="bg-accent-teal text-white font-semibold text-lg px-12 py-4 rounded-xl shadow-lg bg-accent-teal-hover transition duration-300">
+                Register Now
+            </button>
+            <a href="#" class="flex items-center text-accent-cyan text-lg font-medium text-accent-cyan-hover group transition duration-300">
+                Read more <span class="ml-2 group-hover:ml-3 transition-all">→</span>
+            </a>
+        </div>
+        
+        <!-- Hero image with teal/cyan colors and positive university feel, matching ref layout -->
+        <div class="max-w-6xl mx-auto rounded-3xl overflow-hidden shadow-2xl relative">
+            <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1600&h=900&auto=format&fit=crop" 
+                 alt="Two young students smiling while looking at a laptop, with a modern, light-filled university library background, featuring subtle cyan and teal ambient lighting"
+                 class="w-full h-auto">
+            <div class="absolute inset-0 bg-teal-900/10 mix-blend-multiply rounded-3xl"></div>
+            <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent"></div>
+        </div>
+    </main>
 
-      document.getElementById('flag-text').innerText = flagged[index] ? 'Bookmarked' : 'Mark for Review';
-      document.getElementById('flag-btn').className = `text-xs font-medium flex items-center space-x-1 ${flagged[index] ? 'text-amber-600 font-bold' : 'text-slate-500 hover:text-amber-600'}`;
-      
-      document.getElementById('explanation-box').classList.add('hidden');
-      document.getElementById('explanation-text').innerText = q.explanation;
+    <!-- Footer or other sections could go here -->
+    <footer class="py-10 text-center text-gray-500 border-t border-gray-100 mt-24">
+        &copy; 2024 AbsoluteSAT. All rights reserved. Teal & Cyan only.
+    </footer>
 
-      document.getElementById('prev-btn').disabled = index === 0;
-      document.getElementById('next-btn').innerText = index === questions.length - 1 ? 'Finish' : 'Next';
-
-      renderPalette();
-    }
-
-    function selectAnswer(optIdx) {
-      userAnswers[currentIndex] = optIdx;
-      loadQuestion(currentIndex);
-    }
-
-    function toggleFlag() {
-      flagged[currentIndex] = !flagged[currentIndex];
-      loadQuestion(currentIndex);
-    }
-
-    function toggleExplanation() {
-      const box = document.getElementById('explanation-box');
-      box.classList.toggle('hidden');
-    }
-
-    function prevQuestion() {
-      if (currentIndex > 0) loadQuestion(currentIndex - 1);
-    }
-
-    function nextQuestion() {
-      if (currentIndex < questions.length - 1) {
-        loadQuestion(currentIndex + 1);
-      } else {
-        finishTest();
-      }
-    }
-
-    function finishTest() {
-      clearInterval(timerInterval);
-      let correct = 0;
-      questions.forEach((q, idx) => {
-        if (userAnswers[idx] === q.answer) correct++;
-      });
-
-      const accuracy = Math.round((correct / questions.length) * 100);
-      const satScore = 200 + Math.round((correct / questions.length) * 600);
-      const elapsedSec = (35 * 60) - timerSeconds;
-      const m = Math.floor(elapsedSec / 60).toString().padStart(2, '0');
-      const s = (elapsedSec % 60).toString().padStart(2, '0');
-
-      document.getElementById('test-view').classList.add('hidden');
-      document.getElementById('results-view').classList.remove('hidden');
-
-      document.getElementById('score-val').innerText = `${satScore} / 800`;
-      document.getElementById('accuracy-val').innerText = `${accuracy}%`;
-      document.getElementById('time-val').innerText = `${m}:${s}`;
-    }
-
-    function restartTest() {
-      currentIndex = 0;
-      userAnswers = Array(questions.length).fill(null);
-      flagged = Array(questions.length).fill(false);
-      timerSeconds = 35 * 60;
-
-      document.getElementById('results-view').classList.add('hidden');
-      document.getElementById('test-view').classList.remove('hidden');
-      init();
-    }
-
-    window.onload = init;
-  </script>
 </body>
 </html>
