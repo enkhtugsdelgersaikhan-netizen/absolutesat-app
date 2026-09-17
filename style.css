@@ -726,6 +726,350 @@ body {
     .hero p {
         font-size: 16px;
     }
+/* =========================================
+   FOOTER
+========================================= */
 
+.footer {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    background: #202c3d;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.footer-container {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1400px;
+    min-height: 500px;
+
+    margin: 0 auto;
+    padding: 70px 26px 65px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+
+/* =========================================
+   BACKGROUND LINES
+========================================= */
+
+.footer-background-lines {
+    position: absolute;
+    z-index: 1;
+
+    width: 850px;
+    height: 850px;
+
+    right: -40px;
+    bottom: -470px;
+
+    border-radius: 48% 52% 45% 55%;
+
+    background:
+        repeating-radial-gradient(
+            ellipse at center,
+            transparent 0,
+            transparent 9px,
+            rgba(148, 163, 184, 0.16) 10px,
+            transparent 11px
+        );
+
+    transform: rotate(-12deg) scaleX(1.3);
+    pointer-events: none;
+}
+
+.footer-background-lines::before {
+    content: "";
+
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    left: -470px;
+    top: -520px;
+
+    border-radius: 50%;
+
+    background:
+        repeating-radial-gradient(
+            ellipse at center,
+            transparent 0,
+            transparent 9px,
+            rgba(148, 163, 184, 0.14) 10px,
+            transparent 11px
+        );
+
+    transform: rotate(20deg) scaleX(1.4);
+}
+
+
+/* =========================================
+   FOOTER BRAND
+========================================= */
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    width: 205px;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 55px;
+}
+
+.footer-motto {
+    max-width: 610px;
+
+    font-size: 20px;
+    line-height: 1.8;
+    font-weight: 400;
+
+    color: #f1f5f9;
+}
+
+
+/* =========================================
+   FOOTER INFORMATION
+========================================= */
+
+.footer-information {
+    padding-left: 10px;
+}
+
+.footer-information h2 {
+    margin-bottom: 58px;
+
+    font-size: 46px;
+    line-height: 1.1;
+    font-weight: 400;
+    letter-spacing: -1.5px;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   INFORMATION ITEMS
+========================================= */
+
+.footer-info-item {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 28px;
+
+    margin-bottom: 38px;
+
+    color: #f8fafc;
+}
+
+.footer-info-item:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   FOOTER ICONS
+========================================= */
+
+.footer-icon {
+    width: 42px;
+    min-width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+}
+
+.footer-icon svg {
+    width: 31px;
+    height: 31px;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* =========================================
+   FOOTER TEXT
+========================================= */
+
+.footer-info-item a {
+    color: #f8fafc;
+    text-decoration: none;
+
+    font-size: 20px;
+    line-height: 1.65;
+    font-weight: 400;
+
+    transition:
+        color 0.2s ease;
+}
+
+.footer-info-item a:hover {
+    color: #5eead4;
+}
+
+.footer-info-item p {
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 1.65;
+    font-weight: 400;
+
+    color: #f8fafc;
+}
+
+.footer-email {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-email span {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color: #f8fafc;
+}
+
+.footer-email a {
+    margin-top: 1px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+    .footer {
+        min-height: auto;
+    }
+
+    .footer-container {
+        min-height: auto;
+
+        grid-template-columns: 1fr;
+        gap: 70px;
+
+        padding: 65px 30px 60px;
+    }
+
+    .footer-logo {
+        width: 190px;
+        margin-bottom: 35px;
+    }
+
+    .footer-motto {
+        max-width: 650px;
+        font-size: 18px;
+    }
+
+    .footer-information {
+        padding-left: 0;
+    }
+
+    .footer-information h2 {
+        margin-bottom: 40px;
+        font-size: 40px;
+    }
+
+    .footer-info-item {
+        gap: 22px;
+        margin-bottom: 30px;
+    }
+
+    .footer-info-item a,
+    .footer-info-item p,
+    .footer-email span {
+        font-size: 18px;
+    }
+
+    .footer-background-lines {
+        width: 700px;
+        height: 700px;
+        right: -300px;
+        bottom: -400px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .footer-container {
+        padding: 55px 22px 50px;
+        gap: 55px;
+    }
+
+    .footer-logo {
+        width: 170px;
+        margin-bottom: 30px;
+    }
+
+    .footer-motto {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    .footer-information h2 {
+        margin-bottom: 35px;
+        font-size: 34px;
+        letter-spacing: -1px;
+    }
+
+    .footer-info-item {
+        gap: 16px;
+        margin-bottom: 27px;
+    }
+
+    .footer-icon {
+        width: 34px;
+        min-width: 34px;
+        height: 34px;
+    }
+
+    .footer-icon svg {
+        width: 27px;
+        height: 27px;
+    }
+
+    .footer-info-item a,
+    .footer-info-item p,
+    .footer-email span {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .footer-background-lines {
+        width: 600px;
+        height: 600px;
+        right: -330px;
+        bottom: -320px;
+    }
+}
 }
 ```
