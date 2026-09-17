@@ -9,15 +9,11 @@
     box-sizing: border-box;
 }
 
-
 html {
     width: 100%;
-
     overflow-x: hidden;
-
     scroll-behavior: smooth;
 }
-
 
 body {
     width: 100%;
@@ -26,12 +22,10 @@ body {
     font-family: 'Poppins', sans-serif;
 
     background: #f8fafc;
-
     color: #0f172a;
 
     overflow-x: hidden;
 }
-
 
 
 /* =========================================
@@ -49,7 +43,6 @@ body {
     border-bottom: 1px solid #e2e8f0;
 
     position: sticky;
-
     top: 0;
 
     z-index: 1000;
@@ -58,7 +51,6 @@ body {
 
 .header-container {
     width: 100%;
-
     max-width: 1400px;
 
     height: 100%;
@@ -68,12 +60,10 @@ body {
     padding: 8px 16px;
 
     display: flex;
-
     align-items: center;
 
     min-width: 0;
 }
-
 
 
 /* =========================================
@@ -82,7 +72,6 @@ body {
 
 .logo-link {
     display: flex;
-
     align-items: center;
 
     text-decoration: none;
@@ -95,7 +84,6 @@ body {
     height: 77px;
 
     width: auto;
-
     max-width: 100%;
 
     object-fit: contain;
@@ -104,19 +92,13 @@ body {
 }
 
 
-
 /* =========================================
    NAVIGATION
 ========================================= */
 
 .navigation {
     display: flex;
-
     align-items: center;
-
-    /*
-       Overall navigation width
-    */
 
     flex: 0 1 650px;
 
@@ -125,14 +107,12 @@ body {
     /*
        Space between logo and navigation
     */
-
     margin-left: 30px;
 
     /*
        Extra space between Analytics
        and Register
     */
-
     margin-right: 32px;
 
     justify-content: space-between;
@@ -151,7 +131,6 @@ body {
     color: #334155;
 
     font-size: 15px;
-
     font-weight: 500;
 
     border-radius: 8px;
@@ -180,8 +159,7 @@ body {
 }
 
 
-
-/* Active navigation underline */
+/* Active underline */
 
 .nav-button.active::after {
     content: "";
@@ -189,7 +167,6 @@ body {
     position: absolute;
 
     left: 12px;
-
     right: 12px;
 
     bottom: 3px;
@@ -200,7 +177,6 @@ body {
 
     border-radius: 999px;
 }
-
 
 
 /* =========================================
@@ -225,7 +201,6 @@ body {
     display: inline-flex;
 
     align-items: center;
-
     justify-content: center;
 
     padding: 10px 15px;
@@ -237,7 +212,6 @@ body {
     font-family: 'Poppins', sans-serif;
 
     font-size: 14px;
-
     font-weight: 600;
 
     white-space: nowrap;
@@ -247,7 +221,6 @@ body {
         color 0.2s ease,
         border-color 0.2s ease;
 }
-
 
 
 /* Register */
@@ -264,7 +237,6 @@ body {
 .register-button:hover {
     background: #f0fdfa;
 }
-
 
 
 /* Sign In */
@@ -285,24 +257,24 @@ body {
 }
 
 
-
-/* =========================================
-   SOCIAL MEDIA
-========================================= */
-
-```css id="7k2mqp"
 /* =========================================
    SOCIAL MEDIA
 ========================================= */
 
 .social-buttons {
     display: flex;
+
     align-items: center;
 
-    /* Space between Sign In and icons */
+    /*
+       Space between Sign In
+       and first social icon
+    */
     margin-left: 14px;
 
-    /* Smaller distance between circles */
+    /*
+       Distance between social circles
+    */
     gap: 11px;
 
     flex-shrink: 0;
@@ -314,6 +286,7 @@ body {
     height: 42px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -321,7 +294,9 @@ body {
 
     text-decoration: none;
 
-    /* Circular outline */
+    /*
+       Thin circular outline
+    */
     border: 1px solid #8da1bd;
 
     border-radius: 50%;
@@ -345,7 +320,6 @@ body {
 
     transform: translateY(-1px);
 }
-
 
 
 /* =========================================
@@ -372,6 +346,7 @@ body {
 
 .social-button:nth-child(1) svg {
     fill: none;
+
     stroke: currentColor;
 }
 
@@ -380,7 +355,9 @@ body {
 
 .social-button:nth-child(2) svg {
     fill: none;
+
     stroke: currentColor;
+
     stroke-width: 1.8;
 }
 
@@ -389,7 +366,9 @@ body {
 
 .social-button:nth-child(3) svg {
     fill: none;
+
     stroke: currentColor;
+
     stroke-width: 1.8;
 }
 
@@ -404,7 +383,6 @@ body {
     margin-left: auto;
 
     width: 42px;
-
     height: 42px;
 
     border: none;
@@ -433,14 +411,12 @@ body {
 }
 
 
-
 /* =========================================
    HERO
 ========================================= */
 
 .hero {
     width: 100%;
-
     max-width: 100%;
 
     min-height: calc(100vh - 92px);
@@ -448,7 +424,6 @@ body {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     padding: 80px 24px;
@@ -509,7 +484,6 @@ body {
 }
 
 
-
 /* =========================================
    TABLET
 ========================================= */
@@ -518,7 +492,6 @@ body {
 
     .header-container {
         padding-left: 14px;
-
         padding-right: 14px;
     }
 
@@ -532,7 +505,6 @@ body {
         flex: 1 1 auto;
 
         margin-left: 20px;
-
         margin-right: 18px;
 
         gap: 2px;
@@ -541,7 +513,6 @@ body {
 
     .nav-button {
         padding-left: 8px;
-
         padding-right: 8px;
 
         font-size: 14px;
@@ -561,6 +532,8 @@ body {
     }
 
 
+    /* Smaller social circles on tablet */
+
     .social-buttons {
         margin-left: 8px;
 
@@ -569,19 +542,16 @@ body {
 
 
     .social-button {
-        width: 40px;
-
-        height: 40px;
+        width: 38px;
+        height: 38px;
     }
 
 
     .social-button svg {
-        width: 18px;
-
-        height: 18px;
+        width: 17px;
+        height: 17px;
     }
 }
-
 
 
 /* =========================================
@@ -640,11 +610,9 @@ body {
         top: 80px;
 
         left: 0;
-
         right: 0;
 
         width: 100%;
-
         max-width: 100%;
 
         display: flex;
@@ -682,9 +650,7 @@ body {
     }
 
 
-    /*
-       Mobile hero
-    */
+    /* Hero */
 
     .hero {
         min-height: calc(100vh - 80px);
@@ -704,7 +670,6 @@ body {
         font-size: 17px;
     }
 }
-
 
 
 /* =========================================
@@ -730,7 +695,6 @@ body {
 
     .mobile-menu-button {
         width: 40px;
-
         height: 40px;
 
         font-size: 24px;
@@ -741,7 +705,6 @@ body {
         top: 72px;
 
         padding-left: 12px;
-
         padding-right: 12px;
     }
 
