@@ -46,6 +46,7 @@ body {
     width: 100%;
     max-width: 1400px;
     height: 100%;
+
     margin: 0 auto;
 
     padding: 8px 16px;
@@ -86,21 +87,15 @@ body {
     align-items: center;
 
     /*
-       Take up the available space between
-       the logo and authentication buttons.
+       Navigation occupies the middle section,
+       but does NOT stretch all the way to the
+       right side of the screen.
     */
-    flex: 1;
+    flex: 0 1 720px;
 
-    /*
-       Space between logo and first button,
-       and between last button and auth buttons.
-    */
     margin-left: 35px;
-    margin-right: 25px;
+    margin-right: 18px;
 
-    /*
-       Spread all navigation buttons evenly.
-    */
     justify-content: space-between;
 }
 
@@ -117,6 +112,8 @@ body {
     font-weight: 500;
 
     border-radius: 8px;
+
+    white-space: nowrap;
 
     transition:
         color 0.2s ease,
@@ -158,16 +155,16 @@ body {
    ========================================================= */
 
 .auth-buttons {
-    /*
-       No auto margin here.
-       This keeps the buttons closer to navigation.
-    */
-    margin-left: 0;
-
     display: flex;
     align-items: center;
 
-    gap: 10px;
+    gap: 8px;
+
+    /*
+       Keep authentication buttons immediately
+       after the navigation.
+    */
+    margin-left: 0;
 
     flex-shrink: 0;
 }
@@ -179,7 +176,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    padding: 10px 18px;
+    padding: 10px 17px;
 
     border-radius: 8px;
 
@@ -189,6 +186,8 @@ body {
 
     font-size: 14px;
     font-weight: 600;
+
+    white-space: nowrap;
 
     transition:
         background-color 0.2s ease,
@@ -337,137 +336,8 @@ body {
     }
 
     .navigation {
+        flex: 1;
+
         margin-left: 20px;
-        margin-right: 15px;
-
-        gap: 2px;
-    }
-
-    .nav-button {
-        padding-left: 10px;
-        padding-right: 10px;
-
-        font-size: 14px;
-    }
-
-    .register-button,
-    .signin-button {
-        padding: 9px 13px;
-
-        font-size: 13px;
-    }
-
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 850px) {
-
-    .header {
-        height: 80px;
-    }
-
-    .header-container {
-        padding: 6px 16px;
-    }
-
-    .logo {
-        height: 67px;
-    }
-
-
-    /* Hide desktop navigation */
-
-    .navigation {
-        display: none;
-    }
-
-
-    /* Hide authentication buttons */
-
-    .auth-buttons {
-        display: none;
-    }
-
-
-    /* Show hamburger */
-
-    .mobile-menu-button {
-        display: flex;
-
-        align-items: center;
-        justify-content: center;
-    }
-
-
-    /* Mobile navigation */
-
-    .navigation.mobile-open {
-        position: absolute;
-
-        top: 80px;
-
-        left: 0;
-        right: 0;
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        gap: 4px;
-
-        margin: 0;
-
-        padding: 12px 16px 16px;
-
-        background: #ffffff;
-
-        border-bottom: 1px solid #e2e8f0;
-
-        box-shadow:
-            0 10px 25px rgba(15, 23, 42, 0.08);
-    }
-
-    .navigation.mobile-open .nav-button {
-        width: 100%;
-
-        padding: 12px 14px;
-
-        font-size: 15px;
-    }
-
-    .navigation.mobile-open .nav-button.active::after {
-        display: none;
-    }
-
-
-    /* Hero */
-
-    .hero {
-        min-height: calc(100vh - 80px);
-
-        padding: 60px 20px;
-    }
-
-    .hero h1 {
-        font-size: clamp(48px, 13vw, 68px);
-
-        letter-spacing: -2px;
-    }
-
-    .hero p {
-        font-size: 17px;
-    }
-
-}
-
-
-/* =========================================================
-   SMALL PHONES
-   ===========================================
+        margin-right: 12px;
 ```
