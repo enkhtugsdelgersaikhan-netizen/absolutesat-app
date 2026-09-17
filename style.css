@@ -290,51 +290,38 @@ body {
    SOCIAL MEDIA
 ========================================= */
 
+```css id="7k2mqp"
+/* =========================================
+   SOCIAL MEDIA
+========================================= */
+
 .social-buttons {
     display: flex;
-
     align-items: center;
 
-    /*
-       Space between Sign In
-       and the first icon
-    */
-
+    /* Space between Sign In and icons */
     margin-left: 14px;
 
-    /*
-       Space between circles
-    */
-
-    gap: 16px;
+    /* Smaller distance between circles */
+    gap: 11px;
 
     flex-shrink: 0;
 }
 
 
 .social-button {
-    width: 48px;
-
-    height: 48px;
+    width: 42px;
+    height: 42px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
-    /*
-       Blue-gray from reference image
-    */
 
     color: #8da1bd;
 
     text-decoration: none;
 
-    /*
-       Thin circular border
-    */
-
+    /* Circular outline */
     border: 1px solid #8da1bd;
 
     border-radius: 50%;
@@ -366,9 +353,8 @@ body {
 ========================================= */
 
 .social-button svg {
-    width: 14px;
-
-    height: 14px;
+    width: 18px;
+    height: 18px;
 
     fill: none;
 
@@ -382,39 +368,30 @@ body {
 }
 
 
-
 /* Instagram */
 
 .social-button:nth-child(1) svg {
     fill: none;
-
     stroke: currentColor;
 }
-
 
 
 /* YouTube */
 
 .social-button:nth-child(2) svg {
     fill: none;
-
     stroke: currentColor;
-
     stroke-width: 1.8;
 }
-
 
 
 /* Facebook */
 
 .social-button:nth-child(3) svg {
     fill: none;
-
     stroke: currentColor;
-
     stroke-width: 1.8;
 }
-
 
 
 /* =========================================
