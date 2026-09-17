@@ -197,7 +197,7 @@ footer {
 }
 
 .register-button,
-.signin-button {
+.login-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -233,7 +233,7 @@ footer {
     background: #f0fdfa;
 }
 
-.signin-button {
+.login-button {
     color: #ffffff;
 
     background: #0f766e;
@@ -241,7 +241,7 @@ footer {
     border: 1px solid #0f766e;
 }
 
-.signin-button:hover {
+.login-button:hover {
     background: #115e59;
 
     border-color: #115e59;
@@ -765,7 +765,7 @@ footer {
     }
 
     .register-button,
-    .signin-button {
+    .login-button {
         padding: 9px 11px;
 
         font-size: 13px;
