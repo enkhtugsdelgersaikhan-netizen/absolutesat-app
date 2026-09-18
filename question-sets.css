@@ -1,0 +1,840 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    background: #f7f9fb;
+
+    color: #202c3d;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.site-header {
+    width: 100%;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+.header-container {
+    width: min(1400px, 92%);
+
+    min-height: 92px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo-link {
+    display: flex;
+
+    align-items: center;
+
+    text-decoration: none;
+
+    flex-shrink: 0;
+}
+
+
+.logo {
+    height: 77px;
+
+    width: auto;
+
+    max-width: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.main-navigation {
+    display: flex;
+
+    align-items: center;
+
+    gap: 27px;
+
+    margin-left: 20px;
+
+    flex: 1;
+}
+
+
+.main-navigation a {
+    position: relative;
+
+    color: #526071;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    padding: 8px 0;
+
+    transition: color 0.2s ease;
+}
+
+
+.main-navigation a:hover {
+    color: #0f766e;
+}
+
+
+.main-navigation a.active {
+    color: #0f766e;
+
+    font-weight: 600;
+}
+
+
+.main-navigation a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    height: 2px;
+
+    border-radius: 2px;
+
+    background: #0f766e;
+}
+
+
+
+/* =========================================
+   AUTH BUTTONS
+========================================= */
+
+.auth-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    flex-shrink: 0;
+}
+
+
+.register-button,
+.login-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 10px 15px;
+
+    min-width: 82px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.register-button {
+    color: #0f766e;
+
+    background: #ffffff;
+
+    border: 1px solid #0f766e;
+}
+
+
+.register-button:hover {
+    background: #f0fdfa;
+}
+
+
+.login-button {
+    color: #ffffff;
+
+    background: #0f766e;
+
+    border: 1px solid #0f766e;
+}
+
+
+.login-button:hover {
+    background: #115e59;
+
+    border-color: #115e59;
+}
+
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.question-sets-page {
+    width: min(1200px, 90%);
+
+    margin: 0 auto;
+
+    padding: 70px 0 100px;
+}
+
+
+
+/* =========================================
+   PAGE INTRO
+========================================= */
+
+.page-intro {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+
+.page-eyebrow {
+    margin: 0 0 10px;
+
+    color: #0f766e;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.page-intro h1 {
+    margin: 0 0 12px;
+
+    color: #202c3d;
+
+    font-size: 42px;
+
+    line-height: 1.2;
+
+    font-weight: 600;
+
+    letter-spacing: -1px;
+}
+
+
+.page-description {
+    margin: 0;
+
+    color: #697586;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+
+/* =========================================
+   SECTION SELECTOR
+========================================= */
+
+.section-selector {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-bottom: 50px;
+}
+
+
+.section-button {
+    padding: 11px 22px;
+
+    border: 1px solid #d7dde4;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #697586;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.section-button:hover {
+    border-color: #0f766e;
+
+    color: #0f766e;
+}
+
+
+.section-button.active {
+    background: #0f766e;
+
+    border-color: #0f766e;
+
+    color: #ffffff;
+}
+
+
+
+/* =========================================
+   SETS SECTION
+========================================= */
+
+.sets-section {
+    display: none;
+}
+
+
+.sets-section.active-section {
+    display: block;
+}
+
+
+.sets-heading {
+    margin-bottom: 25px;
+}
+
+
+.sets-eyebrow {
+    margin: 0 0 7px;
+
+    color: #0f766e;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+.sets-heading h2 {
+    margin: 0;
+
+    color: #202c3d;
+
+    font-size: 27px;
+
+    font-weight: 600;
+}
+
+
+
+/* =========================================
+   SET GRID
+========================================= */
+
+.sets-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+
+/* =========================================
+   SET CARD
+========================================= */
+
+.set-card {
+    min-height: 265px;
+
+    padding: 27px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 13px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.set-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #b8dcd8;
+
+    box-shadow:
+        0 12px 30px rgba(32, 44, 61, 0.08);
+}
+
+
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.set-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 22px;
+}
+
+
+.difficulty {
+    display: inline-flex;
+
+    padding: 5px 9px;
+
+    border-radius: 6px;
+
+    background: #f0fdfa;
+
+    color: #0f766e;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+.question-count {
+    color: #8994a3;
+
+    font-size: 11px;
+
+    font-weight: 500;
+}
+
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.set-card h3 {
+    margin: 0 0 10px;
+
+    color: #202c3d;
+
+    font-size: 18px;
+
+    line-height: 1.4;
+
+    font-weight: 600;
+}
+
+
+.set-card p {
+    margin: 0;
+
+    color: #697586;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+
+/* =========================================
+   START BUTTON
+========================================= */
+
+.start-button {
+    margin-top: auto;
+
+    padding-top: 23px;
+
+    color: #0f766e;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.start-button:hover {
+    text-decoration: underline;
+}
+
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    background: #202c3d;
+
+    color: #ffffff;
+
+    padding: 55px 0 30px;
+}
+
+
+.footer-container {
+    width: min(1200px, 90%);
+
+    margin: 0 auto;
+}
+
+
+.footer-brand {
+    padding-left: 30px;
+
+    margin-bottom: 50px;
+}
+
+
+.footer-brand h2 {
+    margin: 0 0 10px;
+
+    font-size: 30px;
+
+    font-weight: 600;
+}
+
+
+.footer-brand p {
+    margin: 0;
+
+    color: #c6ced8;
+
+    font-size: 14px;
+}
+
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+
+    padding-top: 22px;
+
+    padding-left: 30px;
+
+    padding-right: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color: #c6ced8;
+
+    font-size: 12px;
+}
+
+
+.footer-socials {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.footer-socials a {
+    width: 32px;
+
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    border-radius: 7px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.footer-socials a:hover {
+    background: rgba(255, 255, 255, 0.1);
+
+    border-color: #ffffff;
+}
+
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+    .header-container {
+        gap: 18px;
+    }
+
+
+    .main-navigation {
+        gap: 18px;
+
+        margin-left: 5px;
+    }
+
+
+    .main-navigation a {
+        font-size: 13px;
+    }
+
+
+    .register-button,
+    .login-button {
+        padding: 9px 11px;
+
+        min-width: 76px;
+
+        font-size: 13px;
+    }
+
+
+    .sets-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .header-container {
+        width: 90%;
+
+        min-height: auto;
+
+        padding: 10px 0;
+
+        flex-wrap: wrap;
+    }
+
+
+    .logo {
+        height: 67px;
+    }
+
+
+    .main-navigation {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        margin: 0;
+
+        gap: 17px;
+
+        padding-bottom: 5px;
+    }
+
+
+    .main-navigation a {
+        font-size: 11px;
+    }
+
+
+    .auth-buttons {
+        margin-left: auto;
+    }
+
+
+    .question-sets-page {
+        padding-top: 50px;
+    }
+
+
+    .page-intro h1 {
+        font-size: 35px;
+    }
+
+
+    .page-description {
+        font-size: 14px;
+    }
+
+
+    .sets-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .section-selector {
+        margin-bottom: 40px;
+    }
+
+
+    .section-button {
+        padding: 10px 16px;
+
+        font-size: 13px;
+    }
+
+
+    .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
+
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 450px) {
+
+    .logo {
+        height: 61px;
+    }
+
+
+    .register-button,
+    .login-button {
+        min-width: 0;
+
+        padding: 8px 10px;
+
+        font-size: 12px;
+    }
+
+
+    .main-navigation {
+        gap: 12px;
+    }
+
+
+    .main-navigation a {
+        font-size: 10px;
+    }
+
+
+    .page-intro h1 {
+        font-size: 30px;
+    }
+
+
+    .section-selector {
+        gap: 5px;
+    }
+
+
+    .section-button {
+        padding: 9px 12px;
+
+        font-size: 12px;
+    }
+
+
+    .set-card {
+        padding: 23px;
+    }
+
+}
