@@ -532,7 +532,6 @@ pronEl=document.getElementById("vocab-pronunciation"),
 catEl=document.getElementById("vocab-category-label"),
 solvedStatusEl=document.getElementById("vocab-solved-status"),
 reviewStatusEl=document.getElementById("vocab-review-status"),
-posEl=document.getElementById("vocab-position"),
 meaningEl=document.getElementById("vocab-meaning"),
 exampleEl=document.getElementById("vocab-example"),
 definition=document.getElementById("vocab-definition"),
@@ -839,7 +838,6 @@ function render(){
     pronEl.textContent="";
     pronEl.classList.add("hidden");
     catEl.textContent=word[2];
-    posEl.textContent=(index+1)+" / "+filtered.length;
     meaningEl.textContent=word[3];
     exampleEl.textContent=exampleFor(word[0],word[1],word[2]);
 
