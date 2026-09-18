@@ -678,7 +678,9 @@ function findMatchingWords(excludeWord=""){
 
 function resetCardUI(){
     definition.classList.add("hidden");
-    actions.classList.add("hidden");
+    // Keep the answer controls visible so the saved Solved/Unsolved state
+    // is visible immediately when the word loads.
+    actions.classList.remove("hidden");
     reveal.classList.remove("hidden");
     card.classList.remove("vocab-solved-flash","vocab-learning-flash");
     reviewButton.textContent="☆ Mark for Review";
