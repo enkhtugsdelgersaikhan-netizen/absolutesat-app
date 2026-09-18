@@ -1,5 +1,5 @@
 /* ============================================================
-   ABSOLUTESAT AUTHENTICATION SYSTEM
+   ABSOLUTEPREP AUTHENTICATION SYSTEM
    ============================================================ */
 
 
@@ -7,17 +7,17 @@
    SUPABASE
    ============================================================ */
 
-const ABSOLUTESAT_SUPABASE_URL =
+const ABSOLUTEPREP_SUPABASE_URL =
     "https://ikvvixdyztyqqxkveois.supabase.co";
 
-const ABSOLUTESAT_SUPABASE_PUBLISHABLE_KEY =
+const ABSOLUTEPREP_SUPABASE_PUBLISHABLE_KEY =
     "sb_publishable_nO5HUWPidf4U_MMK0-HYEA_vuOR0POg";
 
 
-const absoluteSatSupabase =
+const absolutePrepSupabase =
     window.supabase.createClient(
-        ABSOLUTESAT_SUPABASE_URL,
-        ABSOLUTESAT_SUPABASE_PUBLISHABLE_KEY,
+        ABSOLUTEPREP_SUPABASE_URL,
+        ABSOLUTEPREP_SUPABASE_PUBLISHABLE_KEY,
         {
             auth: {
                 persistSession: true,
@@ -32,7 +32,7 @@ const absoluteSatSupabase =
    UPDATE HEADER
    ============================================================ */
 
-async function updateAbsoluteSATHeader(session = null) {
+async function updateAbsolutePrepHeader(session = null) {
 
     const authButtons =
         document.querySelector(
@@ -56,7 +56,7 @@ async function updateAbsoluteSATHeader(session = null) {
             data,
             error
         } =
-            await absoluteSatSupabase.auth.getSession();
+            await absolutePrepSupabase.auth.getSession();
 
 
         if (error) {
@@ -130,19 +130,19 @@ async function updateAbsoluteSATHeader(session = null) {
    AUTH STATE CHANGES
    ============================================================ */
 
-absoluteSatSupabase.auth.onAuthStateChange(
+absolutePrepSupabase.auth.onAuthStateChange(
     (
         event,
         session
     ) => {
 
         console.log(
-            "AbsoluteSAT auth event:",
+            "AbsolutePrep auth event:",
             event
         );
 
 
-        updateAbsoluteSATHeader(
+        updateAbsolutePrepHeader(
             session
         );
 
@@ -154,7 +154,7 @@ absoluteSatSupabase.auth.onAuthStateChange(
    INITIALIZE HEADER
    ============================================================ */
 
-async function initializeAbsoluteSATAuth() {
+async function initializeAbsolutePrepAuth() {
 
     /*
      * Supabase automatically initializes its auth client
@@ -168,7 +168,7 @@ async function initializeAbsoluteSATAuth() {
         data,
         error
     } =
-        await absoluteSatSupabase.auth.getSession();
+        await absolutePrepSupabase.auth.getSession();
 
 
     if (error) {
@@ -187,7 +187,7 @@ async function initializeAbsoluteSATAuth() {
             : null;
 
 
-    await updateAbsoluteSATHeader(
+    await updateAbsolutePrepHeader(
         session
     );
 
@@ -205,11 +205,11 @@ if (
 
     document.addEventListener(
         "DOMContentLoaded",
-        initializeAbsoluteSATAuth
+        initializeAbsolutePrepAuth
     );
 
 } else {
 
-    initializeAbsoluteSATAuth();
+    initializeAbsolutePrepAuth();
 
 }
