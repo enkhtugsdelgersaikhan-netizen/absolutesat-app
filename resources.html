@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources | AbsoluteSAT</title>
+    <link rel="icon" type="image/png" href="Favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .resources-page{max-width:1200px;margin:0 auto;padding:72px 24px 96px}
+        .resources-header{max-width:760px;margin-bottom:44px}
+        .resources-header .page-eyebrow{margin-bottom:10px}
+        .resources-header h1{font-size:48px;line-height:1.1;margin:0 0 16px}
+        .resources-header p{font-size:17px;line-height:1.7;margin:0;opacity:.72}
+        .resources-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+        .resource-card{display:flex;flex-direction:column;min-height:210px;padding:28px;border:1px solid rgba(0,0,0,.09);border-radius:18px;background:#fff;box-shadow:0 8px 30px rgba(0,0,0,.04);text-decoration:none;color:inherit;transition:transform .2s ease,box-shadow .2s ease}
+        .resource-card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(0,0,0,.08)}
+        .resource-card h2{font-size:20px;margin:0 0 10px}
+        .resource-card p{font-size:14px;line-height:1.65;margin:0;opacity:.68}
+        .resource-arrow{margin-top:auto;padding-top:22px;font-weight:600}
+        @media(max-width:900px){.resources-grid{grid-template-columns:repeat(2,1fr)}}
+        @media(max-width:600px){.resources-page{padding-top:48px}.resources-header h1{font-size:38px}.resources-grid{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="header-container">
+        <a href="/" class="logo-link"><img src="Logo.png" alt="AbsoluteSAT Logo" class="logo"></a>
+        <nav class="navigation">
+            <a href="/" class="nav-button">Home</a>
+            <a href="/question-sets" class="nav-button">Question Bank</a>
+            <a href="/mock-tests" class="nav-button">Mock Tests</a>
+            <a href="/vocab" class="nav-button">Vocab</a>
+            <a href="/resources" class="nav-button active">Resources</a>
+        </nav>
+        <div class="auth-buttons"></div>
+        <div class="social-buttons">
+            <a href="https://www.instagram.com/absolute_school_of_english/" class="social-button" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a>
+            <a href="https://www.youtube.com/@AbsoluteSchoolofEnglish-oj3nr/featured" class="social-button" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="4"></rect><polygon points="10,9 16,12 10,15"></polygon></svg></a>
+            <a href="https://www.facebook.com/AbsoluteToeflCenter" class="social-button" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3 c-3.3 0-5 2-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9 c0-.7.3-1 1-1z"></path></svg></a>
+        </div>
+        <button class="mobile-menu-button" aria-label="Open navigation" aria-expanded="false" type="button">☰</button>
+    </div>
+</header>
+
+<main class="resources-page">
+    <section class="resources-header">
+        <div class="page-eyebrow">STUDY MATERIALS</div>
+        <h1>Resources</h1>
+        <p>Useful materials and official resources to help you prepare for the SAT beyond daily practice.</p>
+    </section>
+
+    <section class="resources-grid">
+        <a class="resource-card" href="https://satsuite.collegeboard.org/sat" target="_blank" rel="noopener noreferrer">
+            <h2>Official SAT</h2>
+            <p>Official SAT information, test structure, policies, dates, and preparation guidance from College Board.</p>
+            <span class="resource-arrow">Visit resource →</span>
+        </a>
+        <a class="resource-card" href="https://bluebook.collegeboard.org/" target="_blank" rel="noopener noreferrer">
+            <h2>Bluebook</h2>
+            <p>Learn about the official digital testing application and access practice-test information.</p>
+            <span class="resource-arrow">Visit resource →</span>
+        </a>
+        <a class="resource-card" href="https://satsuite.collegeboard.org/sat/practice-preparation" target="_blank" rel="noopener noreferrer">
+            <h2>Official Practice</h2>
+            <p>Explore College Board's official SAT practice and preparation materials.</p>
+            <span class="resource-arrow">Visit resource →</span>
+        </a>
+        <a class="resource-card" href="/question-sets">
+            <h2>AbsoluteSAT Question Bank</h2>
+            <p>Practice individual questions by section, topic, difficulty, and status.</p>
+            <span class="resource-arrow">Practice now →</span>
+        </a>
+        <a class="resource-card" href="/mock-tests">
+            <h2>Mock Tests</h2>
+            <p>Put your skills together with full SAT-style practice tests under timed conditions.</p>
+            <span class="resource-arrow">Take a test →</span>
+        </a>
+        <a class="resource-card" href="/vocab">
+            <h2>SAT Vocabulary</h2>
+            <p>Build your academic vocabulary and review words that commonly appear in SAT-style reading.</p>
+            <span class="resource-arrow">Study vocabulary →</span>
+        </a>
+    </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="auth.js"></script>
+<script>
+const menuButton=document.querySelector(".mobile-menu-button");
+const navigation=document.querySelector(".navigation");
+if(menuButton&&navigation){menuButton.addEventListener("click",()=>{const isOpen=navigation.classList.toggle("mobile-open");menuButton.setAttribute("aria-expanded",isOpen?"true":"false");});}
+</script>
+</body>
+</html>
