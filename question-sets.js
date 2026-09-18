@@ -1252,7 +1252,31 @@ questionBankSupabase.auth.onAuthStateChange(
 
 
 // ============================================================
-// INITIAL LOAD
+// INITIAL LOAD — REQUIRE AUTHENTICATION FIRST
 // ============================================================
 
-loadQuestions();
+async function initializeQuestionBank() {
+
+    const {
+        data: { session },
+        error
+    } = await questionBankSupabase.auth.getSession();
+
+    if (error || !session) {
+
+        const currentPath =
+            window.location.pathname +
+            window.location.search;
+
+        window.location.replace(
+            "/login?redirect=" +
+            encodeURIComponent(currentPath)
+        );
+
+        return;
+    }
+
+    await loadQuestions();
+}
+
+initializeQuestionBank();
