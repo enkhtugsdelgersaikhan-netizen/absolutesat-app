@@ -22,7 +22,45 @@
 .vocab-pre-actions{display:flex;justify-content:center;gap:10px;margin-top:auto}
 .vocab-review-row{display:flex;justify-content:center;margin-top:12px}
 .vocab-review-button{min-width:190px}
-.vocab-card>#reveal-button{margin-top:auto}.vocab-pre-actions #reveal-button{margin-top:0}.vocab-actions{display:flex;justify-content:center;gap:10px;margin-top:auto}.vocab-empty{padding:50px;text-align:center;border:1px dashed #cbd5e1;border-radius:18px}.hidden{display:none!important}@media(max-width:650px){.vocab-page{padding-top:48px}.vocab-header h1{font-size:38px}.vocab-toolbar{grid-template-columns:1fr}.vocab-card{padding:24px;min-height:400px}.vocab-card h2{font-size:34px;margin-top:40px}.vocab-pre-actions,.vocab-actions{flex-direction:column}.vocab-pre-actions button,.vocab-actions button{width:100%}.vocab-review-row{margin-top:10px}.vocab-card-top{grid-template-columns:1fr auto;row-gap:8px}.vocab-card-top .vocab-status-chip{grid-column:1 / -1;grid-row:2;justify-self:center}.vocab-card-top>span:last-child{grid-column:2;grid-row:1}}
+.vocab-card>#reveal-button{margin-top:auto}.vocab-pre-actions #reveal-button{margin-top:0}.vocab-actions{display:flex;justify-content:center;gap:10px;margin-top:auto}.vocab-empty{padding:50px;text-align:center;border:1px dashed #cbd5e1;border-radius:18px}.hidden{display:none!important}
+.vocab-status-filter{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+    font-size:13px;
+    font-weight:600
+}
+.vocab-status-buttons{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:6px;
+    height:46px;
+    padding:4px;
+    border:1px solid rgba(0,0,0,.12);
+    border-radius:10px;
+    background:#f8fafc
+}
+.vocab-status-filter-button{
+    border:0;
+    border-radius:7px;
+    background:transparent;
+    color:#64748b;
+    font:inherit;
+    font-size:12px;
+    font-weight:600;
+    cursor:pointer;
+    transition:background-color .18s ease,color .18s ease,transform .18s ease,box-shadow .18s ease
+}
+.vocab-status-filter-button:hover{
+    transform:translateY(-1px);
+    color:#0f766e
+}
+.vocab-status-filter-button.active{
+    background:#fff;
+    color:#0f766e;
+    box-shadow:0 1px 5px rgba(0,0,0,.08)
+}
+@media(max-width:650px){.vocab-status-buttons{height:44px}.vocab-status-filter-button{font-size:11px}.vocab-page{padding-top:48px}.vocab-header h1{font-size:38px}.vocab-toolbar{grid-template-columns:1fr}.vocab-card{padding:24px;min-height:400px}.vocab-card h2{font-size:34px;margin-top:40px}.vocab-pre-actions,.vocab-actions{flex-direction:column}.vocab-pre-actions button,.vocab-actions button{width:100%}.vocab-review-row{margin-top:10px}.vocab-card-top{grid-template-columns:1fr auto;row-gap:8px}.vocab-card-top .vocab-status-chip{grid-column:1 / -1;grid-row:2;justify-self:center}.vocab-card-top>span:last-child{grid-column:2;grid-row:1}}
 /* Vocab page animations */
 @keyframes vocabFadeUp{
     from{opacity:0;transform:translateY(12px)}
