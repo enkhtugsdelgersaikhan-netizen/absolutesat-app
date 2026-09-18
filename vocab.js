@@ -526,10 +526,12 @@ const words=[
 ];
 const search=document.getElementById("vocab-search"),
 category=document.getElementById("vocab-category"),
+statusButtons=[...document.querySelectorAll(".vocab-status-filter-button")],
 wordEl=document.getElementById("vocab-word"),
 pronEl=document.getElementById("vocab-pronunciation"),
 catEl=document.getElementById("vocab-category-label"),
-statusEl=document.getElementById("vocab-status-label"),
+solvedStatusEl=document.getElementById("vocab-solved-status"),
+reviewStatusEl=document.getElementById("vocab-review-status"),
 posEl=document.getElementById("vocab-position"),
 meaningEl=document.getElementById("vocab-meaning"),
 exampleEl=document.getElementById("vocab-example"),
@@ -548,9 +550,8 @@ statusSummary=document.getElementById("vocab-status-summary");
 
 const STATE_KEY="absoluteprep_vocab_state";
 const legacyLearned=JSON.parse(localStorage.getItem("absoluteprep_vocab_learned")||"{}");
-let studyState=JSON.parse(localStorage.getItem(STATE_KEY)||"null");
-let currentStatusFilter="all";
 
+let studyState=JSON.parse(localStorage.getItem(STATE_KEY)||"null");
 if(!studyState||typeof studyState!=="object"){
     studyState={solved:{},review:{}};
 }
@@ -562,7 +563,12 @@ Object.keys(legacyLearned).forEach(word=>{
         studyState.solved[word]=true;
     }
 });
+
 localStorage.setItem(STATE_KEY,JSON.stringify(studyState));
+
+let currentStatusFilter="all";
+let filtered=[];
+let index=0;
 
 function saveState(){
     localStorage.setItem(STATE_KEY,JSON.stringify(studyState));
@@ -577,68 +583,74 @@ function shuffle(items){
     return result;
 }
 
-function solvedCount(){
-    return words.reduce((total,word)=>total+(studyState.solved[word[0]]===true?1:0),0);
+function getWordState(word){
+    const name=word[0];
+    return {
+        solved:studyState.solved[name]===true,
+        review:studyState.review[name]===true
+    };
 }
 
-function reviewCount(){
-    return words.reduce((total,word)=>total+(studyState.review[word[0]]===true?1:0),0);
+function getMatchingWords(excludeWord=""){
+    const query=search.value.trim().toLowerCase();
+    const selectedCategory=category.value;
+
+    return words.filter(word=>{
+        const name=word[0];
+        const lowerName=name.toLowerCase();
+        const meaning=word[3].toLowerCase();
+        const state=getWordState(word);
+
+        if(excludeWord&&name===excludeWord) return false;
+        if(query&&!lowerName.includes(query)&&!meaning.includes(query)) return false;
+        if(selectedCategory!=="all"&&word[2]!==selectedCategory) return false;
+
+        if(currentStatusFilter==="solved"&&!state.solved) return false;
+        if(currentStatusFilter==="unsolved"&&state.solved) return false;
+        if(currentStatusFilter==="review"&&!state.review) return false;
+
+        return true;
+    });
 }
 
-function updateProgress(){
-    const done=solvedCount();
-    progressText.textContent=done+" of "+words.length+" solved";
-    progressBar.style.width=(done/words.length*100)+"%";
-    statusSummary.textContent=reviewCount()+" review · "+(words.length-done)+" unsolved";
-}
-
-function updateStatusUI(word){
-    const isSolved=studyState.solved[word[0]]===true;
-    const isReview=studyState.review[word[0]]===true;
-
-    if(isSolved&&isReview){
-        statusEl.textContent="Solved · Review";
-        statusEl.className="vocab-status-chip solved review-combined";
-    }else if(isSolved){
-        statusEl.textContent="Solved";
-        statusEl.className="vocab-status-chip solved";
-    }else if(isReview){
-        statusEl.textContent="Review";
-        statusEl.className="vocab-status-chip review";
-    }else{
-        statusEl.textContent="Unsolved";
-        statusEl.className="vocab-status-chip unsolved";
-    }
-
-    reviewButton.textContent=isReview?"★ Remove Review":"☆ Mark for Review";
-    reviewButton.classList.toggle("active",isReview);
-}
-
-function resetCardUI(){
-    card.classList.remove("vocab-solved-flash","vocab-learning-flash");
-
+function resetTransientUI(){
     definition.classList.add("hidden");
     actions.classList.add("hidden");
     reveal.classList.remove("hidden");
-
-    // Fully reset transient status UI before the next word is rendered.
-    statusEl.textContent="Unsolved";
-    statusEl.className="vocab-status-chip unsolved";
+    card.classList.remove("vocab-solved-flash","vocab-learning-flash");
     reviewButton.textContent="☆ Mark for Review";
     reviewButton.classList.remove("active");
 }
 
+function updateStatusUI(word){
+    const state=getWordState(word);
+
+    solvedStatusEl.textContent=state.solved?"Solved":"Unsolved";
+    solvedStatusEl.className="vocab-status-chip "+(state.solved?"solved":"unsolved");
+
+    reviewStatusEl.classList.toggle("hidden",!state.review);
+    reviewButton.textContent=state.review?"★ Remove Review":"☆ Mark for Review";
+    reviewButton.classList.toggle("active",state.review);
+}
+
+function updateProgress(){
+    const solved=words.reduce((total,word)=>total+(getWordState(word).solved?1:0),0);
+    const review=words.reduce((total,word)=>total+(getWordState(word).review?1:0),0);
+
+    progressText.textContent=solved+" of "+words.length+" solved";
+    progressBar.style.width=(solved/words.length*100)+"%";
+    statusSummary.textContent=review+" review · "+(words.length-solved)+" unsolved";
+}
+
 function render(){
-    resetCardUI();
+    resetTransientUI();
 
     if(!filtered.length){
         card.classList.add("hidden");
         empty.classList.remove("hidden");
         countEl.textContent="0 words";
-        statusEl.textContent="";
-        statusEl.className="vocab-status-chip";
-        reviewButton.textContent="☆ Mark for Review";
-        reviewButton.classList.remove("active");
+        prev.disabled=true;
+        next.disabled=true;
         updateProgress();
         return;
     }
@@ -646,56 +658,60 @@ function render(){
     card.classList.remove("hidden");
     empty.classList.add("hidden");
 
-    const w=filtered[index];
+    const word=filtered[index];
 
-    wordEl.textContent=w[0];
+    wordEl.textContent=word[0];
     pronEl.textContent="";
     pronEl.classList.add("hidden");
-    catEl.textContent=w[2];
+    catEl.textContent=word[2];
     posEl.textContent=(index+1)+" / "+filtered.length;
-    meaningEl.textContent=w[3];
-    exampleEl.textContent=exampleFor(w[0],w[1],w[2]);
+    meaningEl.textContent=word[3];
+    exampleEl.textContent=exampleFor(word[0],word[1],word[2]);
 
-    updateStatusUI(w);
+    updateStatusUI(word);
 
     prev.disabled=index===0;
     next.disabled=index===filtered.length-1;
     countEl.textContent=filtered.length+" words";
+
     updateProgress();
 }
 
-function getWordStatus(word){
-    const isSolved=studyState.solved[word[0]]===true;
-    const isReview=studyState.review[word[0]]===true;
-    return {
-        solved:isSolved,
-        review:isReview,
-        status:isReview?"review":isSolved?"solved":"unsolved"
-    };
+function rebuildFiltered(excludeWord="",preserveWord=""){
+    filtered=shuffle(getMatchingWords(excludeWord));
+
+    if(preserveWord){
+        const preservedIndex=filtered.findIndex(word=>word[0]===preserveWord);
+        index=preservedIndex>=0?preservedIndex:0;
+    }else{
+        index=0;
+    }
+
+    render();
 }
 
-function applyFilters(excludeWord=""){
-    const query=search.value.trim().toLowerCase();
-    const selectedCategory=category.value;
-    const selectedStatus=currentStatusFilter;
+function advanceAfterAnswer(answeredWord){
+    const remaining=filtered.filter(word=>word[0]!==answeredWord);
 
-    filtered=shuffle(words.filter(word=>{
-        const wordName=word[0].toLowerCase();
-        const meaning=word[3].toLowerCase();
-        const state=getWordStatus(word);
+    if(remaining.length){
+        const oldIndex=index;
+        filtered=remaining;
+        index=Math.min(oldIndex,filtered.length-1);
+        render();
+        return;
+    }
 
-        if(excludeWord&&word[0]===excludeWord) return false;
-        if(query&&!wordName.includes(query)&&!meaning.includes(query)) return false;
-        if(selectedCategory!=="all"&&word[2]!==selectedCategory) return false;
+    rebuildFiltered(answeredWord);
+}
 
-        if(selectedStatus==="review") return state.review;
-        if(selectedStatus==="solved") return state.solved;
-        if(selectedStatus==="unsolved") return !state.solved;
-        return true;
-    }));
+function setStatusFilter(status){
+    currentStatusFilter=status;
 
-    index=0;
-    render();
+    statusButtons.forEach(button=>{
+        button.classList.toggle("active",button.dataset.status===status);
+    });
+
+    rebuildFiltered();
 }
 
 reveal.addEventListener("click",()=>{
@@ -706,27 +722,43 @@ reveal.addEventListener("click",()=>{
 
 reviewButton.addEventListener("click",()=>{
     if(!filtered.length) return;
-    const word=filtered[index][0];
-    studyState.review[word]=studyState.review[word]!==true;
+
+    const word=filtered[index];
+    const name=word[0];
+
+    studyState.review[name]=studyState.review[name]!==true;
     saveState();
-    updateStatusUI(filtered[index]);
+
+    updateStatusUI(word);
     updateProgress();
 });
 
 document.getElementById("known-button").addEventListener("click",()=>{
     if(!filtered.length) return;
-    const word=filtered[index][0];
-    studyState.solved[word]=true;
+
+    const word=filtered[index];
+    studyState.solved[word[0]]=true;
     saveState();
-    applyFilters(word);
+
+    card.classList.remove("vocab-solved-flash");
+    void card.offsetWidth;
+    card.classList.add("vocab-solved-flash");
+
+    window.setTimeout(()=>advanceAfterAnswer(word[0]),160);
 });
 
 document.getElementById("learning-button").addEventListener("click",()=>{
     if(!filtered.length) return;
-    const word=filtered[index][0];
-    studyState.solved[word]=false;
+
+    const word=filtered[index];
+    studyState.solved[word[0]]=false;
     saveState();
-    applyFilters(word);
+
+    card.classList.remove("vocab-learning-flash");
+    void card.offsetWidth;
+    card.classList.add("vocab-learning-flash");
+
+    window.setTimeout(()=>advanceAfterAnswer(word[0]),160);
 });
 
 prev.addEventListener("click",()=>{
@@ -743,21 +775,20 @@ next.addEventListener("click",()=>{
     }
 });
 
-document.querySelectorAll(".vocab-status-filter-button").forEach(button=>{
+search.addEventListener("input",()=>rebuildFiltered());
+category.addEventListener("change",()=>rebuildFiltered());
+
+statusButtons.forEach(button=>{
     button.addEventListener("click",()=>{
-        currentStatusFilter=button.dataset.status||"all";
-
-        document.querySelectorAll(".vocab-status-filter-button").forEach(item=>{
-            item.classList.toggle("active",item===button);
-        });
-
-        applyFilters();
+        setStatusFilter(button.dataset.status||"all");
     });
 });
 
-search.addEventListener("input",()=>applyFilters());
-category.addEventListener("change",()=>applyFilters());
+function applyInitialState(){
+    statusButtons.forEach(button=>{
+        button.classList.toggle("active",button.dataset.status==="all");
+    });
+    rebuildFiltered();
+}
 
-let filtered=[];
-let index=0;
-applyFilters();
+applyInitialState();
