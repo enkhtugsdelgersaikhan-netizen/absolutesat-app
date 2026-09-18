@@ -62,7 +62,11 @@
 <div id="vocab-empty" class="vocab-empty hidden">No vocabulary words match your search.</div>
 
 <article id="vocab-card" class="vocab-card">
-<div class="vocab-card-top"><span id="vocab-category-label">Academic</span><span id="vocab-status-label" class="vocab-status-chip unsolved">Unsolved</span><span id="vocab-position">1 / 524</span></div>
+<div class="vocab-card-top"><span id="vocab-category-label">Academic</span><span id="vocab-position">1 / 524</span></div>
+<div class="vocab-status-row">
+<span id="vocab-solved-status" class="vocab-status-chip unsolved">Unsolved</span>
+<span id="vocab-review-status" class="vocab-status-chip review hidden">Review</span>
+</div>
 <h2 id="vocab-word">Abate</h2>
 <p id="vocab-pronunciation">/əˈbeɪt/</p>
 <div id="vocab-definition" class="vocab-definition hidden">
@@ -116,7 +120,7 @@
 <script src="supabase-config.js"></script>
 <script src="auth-guard.js"></script>
 <script src="auth.js"></script>
-<script src="vocab.js?v=4"></script>
+<script src="vocab.js?v=5"></script>
 <script>
 const menuButton=document.querySelector(".mobile-menu-button"),navigation=document.querySelector(".navigation");
 if(menuButton&&navigation){menuButton.addEventListener("click",()=>{const isOpen=navigation.classList.toggle("mobile-open");menuButton.setAttribute("aria-expanded",isOpen?"true":"false");});}
