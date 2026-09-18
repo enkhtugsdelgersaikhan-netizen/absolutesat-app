@@ -42,17 +42,19 @@
 <div class="vocab-toolbar">
 <label class="vocab-search-wrap"><span>Search</span><input id="vocab-search" type="search" placeholder="Search a word..." autocomplete="off"></label>
 <label class="vocab-search-wrap"><span>Category</span><select id="vocab-category"><option value="all">All Categories</option><option value="Academic">Academic</option><option value="Argument">Argument & Ideas</option><option value="Tone">Tone & Style</option><option value="Science">Science</option></select></label>
+<label class="vocab-search-wrap"><span>Status</span><select id="vocab-status"><option value="all">All Words</option><option value="review">Review</option><option value="unsolved">Unsolved</option><option value="solved">Solved</option></select></label>
 </div>
 
 <div class="vocab-progress">
-<div><strong id="vocab-progress-text">0 of 524 learned</strong><span id="vocab-count">524 words</span></div>
+<div><strong id="vocab-progress-text">0 of 524 solved</strong><span id="vocab-count">524 words</span></div>
+<div class="vocab-status-summary" id="vocab-status-summary">0 review · 524 unsolved</div>
 <div class="progress-track"><div id="vocab-progress-bar"></div></div>
 </div>
 
 <div id="vocab-empty" class="vocab-empty hidden">No vocabulary words match your search.</div>
 
 <article id="vocab-card" class="vocab-card">
-<div class="vocab-card-top"><span id="vocab-category-label">Academic</span><span id="vocab-position">1 / 524</span></div>
+<div class="vocab-card-top"><span id="vocab-category-label">Academic</span><span id="vocab-status-label" class="vocab-status-chip unsolved">Unsolved</span><span id="vocab-position">1 / 524</span></div>
 <h2 id="vocab-word">Abate</h2>
 <p id="vocab-pronunciation">/əˈbeɪt/</p>
 <div id="vocab-definition" class="vocab-definition hidden">
@@ -60,7 +62,10 @@
 <p id="vocab-meaning"></p>
 <div class="vocab-example"><strong>Example</strong><p id="vocab-example"></p></div>
 </div>
+<div class="vocab-pre-actions">
+<button id="review-button" class="vocab-review-button">☆ Mark for Review</button>
 <button id="reveal-button" class="vocab-primary">Reveal Definition</button>
+</div>
 <div class="vocab-actions hidden" id="vocab-actions">
 <button id="learning-button" class="vocab-secondary">Still Learning</button>
 <button id="known-button" class="vocab-primary">I Know It</button>
