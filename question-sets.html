@@ -23,7 +23,11 @@
     <div class="header-container">
 
         <a href="/" class="logo-link">
-            <img src="Logo.png" alt="AbsoluteSAT Logo" class="logo">
+            <img
+                src="Logo.png"
+                alt="AbsoluteSAT Logo"
+                class="logo"
+            >
         </a>
 
         <nav class="navigation">
@@ -78,7 +82,7 @@
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                     <path d="
                         M14 8h3V4h-3
-                        c-3.3 0-5 2-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9
+                        c-3.3 0-5 2-5 5v3H6v4h3v4h3l1-4h-4V9
                         c0-.7.3-1 1-1z
                     "></path>
                 </svg>
@@ -102,7 +106,6 @@
 <main class="question-bank-page">
 
     <section class="question-bank-header">
-
         <div>
             <div class="page-eyebrow">PRACTICE</div>
 
@@ -113,7 +116,6 @@
                 and build your skills one question at a time.
             </p>
         </div>
-
     </section>
 
 
@@ -142,7 +144,7 @@
         </div>
 
 
-        <!-- SECTION FILTER -->
+        <!-- SECTION TABS -->
 
         <div class="section-tabs">
 
@@ -159,7 +161,7 @@
                 class="section-tab"
                 data-section="Reading & Writing"
             >
-                Reading & Writing
+                Reading &amp; Writing
             </button>
 
             <button
@@ -177,6 +179,8 @@
 
         <div class="filters-row">
 
+            <!-- TOPIC -->
+
             <div class="filter-group">
 
                 <label for="topic-filter">
@@ -184,11 +188,17 @@
                 </label>
 
                 <select id="topic-filter">
-                    <option value="all">All Topics</option>
+
+                    <option value="all">
+                        All Topics
+                    </option>
+
                 </select>
 
             </div>
 
+
+            <!-- DIFFICULTY -->
 
             <div class="filter-group">
 
@@ -196,28 +206,30 @@
                     Difficulty
                 </label>
 
-                    <select id="difficulty-filter">
+                <select id="difficulty-filter">
 
                     <option value="all">
-                        All
+                        All Difficulties
                     </option>
-                
+
                     <option value="Easy">
                         Easy
                     </option>
-                
+
                     <option value="Medium">
                         Medium
                     </option>
-                
+
                     <option value="Hard">
                         Hard
                     </option>
-                
+
                 </select>
 
             </div>
 
+
+            <!-- STATUS -->
 
             <div class="filter-group">
 
@@ -227,30 +239,30 @@
 
                 <select id="status-filter">
 
-                <option value="all">
-                    All Questions
-                </option>
-            
-                <option value="unanswered">
-                    Unanswered
-                </option>
-            
-                <option value="correct">
-                    Correct
-                </option>
-            
-                <option value="incorrect">
-                    Incorrect
-                </option>
-            
-            </select>
+                    <option value="all">
+                        All Questions
+                    </option>
+
+                    <option value="unanswered">
+                        Unanswered
+                    </option>
+
+                    <option value="correct">
+                        Correct
+                    </option>
+
+                    <option value="incorrect">
+                        Incorrect
+                    </option>
+
+                </select>
 
             </div>
 
         </div>
 
 
-        <!-- REVIEW TOGGLE -->
+        <!-- REVIEW FILTER -->
 
         <div class="review-filter">
 
@@ -277,6 +289,7 @@
         <div class="results-header">
 
             <div>
+
                 <strong id="question-count">
                     0 questions
                 </strong>
@@ -284,27 +297,8 @@
                 <span id="results-description">
                     in your question bank
                 </span>
+
             </div>
-
-            <select id="sort-filter">
-
-                <option value="newest">
-                    Newest
-                </option>
-
-                <option value="oldest">
-                    Oldest
-                </option>
-
-                <option value="difficulty">
-                    Difficulty
-                </option>
-
-                <option value="topic">
-                    Topic
-                </option>
-
-            </select>
 
         </div>
 
@@ -323,7 +317,10 @@
 
                 <div class="empty-icon">
 
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
                         <path d="M6 3h12v18H6z"></path>
                         <path d="M9 7h6"></path>
                         <path d="M9 11h6"></path>
@@ -337,8 +334,8 @@
                 </h2>
 
                 <p>
-                    Your question bank is ready. Questions will appear here
-                    once they are added to AbsoluteSAT.
+                    Your question bank is ready.
+                    Questions will appear here once they are added to AbsoluteSAT.
                 </p>
 
             </div>
@@ -368,13 +365,28 @@
 
         </div>
 
+
         <div class="footer-links">
 
-            <a href="/">Home</a>
-            <a href="/question-sets">Question Bank</a>
-            <a href="/mock-tests">Mock Tests</a>
-            <a href="/vocab">Vocab</a>
-            <a href="/analytics">Analytics</a>
+            <a href="/">
+                Home
+            </a>
+
+            <a href="/question-sets">
+                Question Bank
+            </a>
+
+            <a href="/mock-tests">
+                Mock Tests
+            </a>
+
+            <a href="/vocab">
+                Vocab
+            </a>
+
+            <a href="/analytics">
+                Analytics
+            </a>
 
         </div>
 
@@ -384,8 +396,11 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 <script src="auth.js"></script>
+
 <script src="question-sets.js"></script>
+
 
 <script>
     const menuButton =
