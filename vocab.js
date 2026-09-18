@@ -551,75 +551,137 @@ statusSummary=document.getElementById("vocab-status-summary");
 const STATE_KEY="absoluteprep_vocab_state";
 const legacyLearned=JSON.parse(localStorage.getItem("absoluteprep_vocab_learned")||"{}");
 
-let studyState=JSON.parse(localStorage.getItem(STATE_KEY)||"null");
-if(!studyState||typeof studyState!=="object"){
-    studyState={solved:{},review:{}};
-}
-studyState.solved=studyState.solved&&typeof studyState.solved==="object"?studyState.solved:{};
-studyState.review=studyState.review&&typeof studyState.review==="object"?studyState.review:{};
+function loadWordState(){
+    const saved=JSON.parse(localStorage.getItem(STATE_KEY)||"null");
+    const state={};
 
-Object.keys(legacyLearned).forEach(word=>{
-    if(legacyLearned[word]===true){
-        studyState.solved[word]=true;
+    for(const word of words){
+        state[word[0]]={solved:false,review:false};
     }
-});
 
-localStorage.setItem(STATE_KEY,JSON.stringify(studyState));
+    if(saved&&typeof saved==="object"){
+        // Read the current unified format if present.
+        for(const word of words){
+            const savedEntry=saved[word[0]];
+            if(savedEntry&&typeof savedEntry==="object"){
+                state[word[0]].solved=savedEntry.solved===true;
+                state[word[0]].review=savedEntry.review===true;
+            }
+        }
+
+        // Migrate the previous {solved:{},review:{}} format.
+        if(saved.solved&&typeof saved.solved==="object"){
+            Object.keys(saved.solved).forEach(name=>{
+                if(state[name]){
+                    state[name].solved=saved.solved[name]===true;
+                }
+            });
+        }
+
+        if(saved.review&&typeof saved.review==="object"){
+            Object.keys(saved.review).forEach(name=>{
+                if(state[name]){
+                    state[name].review=saved.review[name]===true;
+                }
+            });
+        }
+    }
+
+    // Preserve any progress from the original localStorage implementation.
+    Object.keys(legacyLearned).forEach(name=>{
+        if(state[name]&&legacyLearned[name]===true){
+            state[name].solved=true;
+        }
+    });
+
+    return state;
+}
+
+let wordState=loadWordState();
+
+function saveState(){
+    localStorage.setItem(STATE_KEY,JSON.stringify(wordState));
+}
 
 let currentStatusFilter="all";
 let filtered=[];
 let index=0;
 
-function saveState(){
-    localStorage.setItem(STATE_KEY,JSON.stringify(studyState));
-}
-
 function shuffle(items){
     const result=[...items];
+
     for(let i=result.length-1;i>0;i--){
         const j=Math.floor(Math.random()*(i+1));
         [result[i],result[j]]=[result[j],result[i]];
     }
+
     return result;
 }
 
 function getWordState(word){
-    const name=word[0];
-    return {
-        solved:studyState.solved[name]===true,
-        review:studyState.review[name]===true
-    };
+    return wordState[word[0]]||{solved:false,review:false};
 }
 
-function getMatchingWords(excludeWord=""){
+function matchesCurrentFilter(word,excludeWord=""){
+    const name=word[0];
+
+    if(excludeWord&&name===excludeWord){
+        return false;
+    }
+
     const query=search.value.trim().toLowerCase();
     const selectedCategory=category.value;
+    const state=getWordState(word);
 
-    return words.filter(word=>{
-        const name=word[0];
-        const lowerName=name.toLowerCase();
-        const meaning=word[3].toLowerCase();
-        const state=getWordState(word);
+    if(query){
+        const wordText=name.toLowerCase();
+        const meaningText=word[3].toLowerCase();
 
-        if(excludeWord&&name===excludeWord) return false;
-        if(query&&!lowerName.includes(query)&&!meaning.includes(query)) return false;
-        if(selectedCategory!=="all"&&word[2]!==selectedCategory) return false;
+        if(!wordText.includes(query)&&!meaningText.includes(query)){
+            return false;
+        }
+    }
 
-        if(currentStatusFilter==="solved"&&!state.solved) return false;
-        if(currentStatusFilter==="unsolved"&&state.solved) return false;
-        if(currentStatusFilter==="review"&&!state.review) return false;
+    if(selectedCategory!=="all"&&word[2]!==selectedCategory){
+        return false;
+    }
 
-        return true;
-    });
+    if(currentStatusFilter==="solved"&&!state.solved){
+        return false;
+    }
+
+    if(currentStatusFilter==="unsolved"&&state.solved){
+        return false;
+    }
+
+    if(currentStatusFilter==="review"&&!state.review){
+        return false;
+    }
+
+    return true;
 }
 
-function resetTransientUI(){
+function findMatchingWords(excludeWord=""){
+    const matches=[];
+
+    // Scan every word in the complete vocabulary bank.
+    for(let i=0;i<words.length;i++){
+        if(matchesCurrentFilter(words[i],excludeWord)){
+            matches.push(words[i]);
+        }
+    }
+
+    return shuffle(matches);
+}
+
+function resetCardUI(){
     definition.classList.add("hidden");
     actions.classList.add("hidden");
     reveal.classList.remove("hidden");
     card.classList.remove("vocab-solved-flash","vocab-learning-flash");
     reviewButton.textContent="☆ Mark for Review";
     reviewButton.classList.remove("active");
+    reviewStatusEl.classList.add("hidden");
 }
 
 function updateStatusUI(word){
@@ -634,8 +696,20 @@ function updateStatusUI(word){
 }
 
 function updateProgress(){
-    const solved=words.reduce((total,word)=>total+(getWordState(word).solved?1:0),0);
-    const review=words.reduce((total,word)=>total+(getWordState(word).review?1:0),0);
+    let solved=0;
+    let review=0;
+
+    for(const word of words){
+        const state=getWordState(word);
+
+        if(state.solved){
+            solved++;
+        }
+
+        if(state.review){
+            review++;
+        }
+    }
 
     progressText.textContent=solved+" of "+words.length+" solved";
     progressBar.style.width=(solved/words.length*100)+"%";
@@ -643,7 +717,7 @@ function updateProgress(){
 }
 
 function render(){
-    resetTransientUI();
+    resetCardUI();
 
     if(!filtered.length){
         card.classList.add("hidden");
@@ -677,41 +751,23 @@ function render(){
     updateProgress();
 }
 
-function rebuildFiltered(excludeWord="",preserveWord=""){
-    filtered=shuffle(getMatchingWords(excludeWord));
-
-    if(preserveWord){
-        const preservedIndex=filtered.findIndex(word=>word[0]===preserveWord);
-        index=preservedIndex>=0?preservedIndex:0;
-    }else{
-        index=0;
-    }
-
+function rebuildList(excludeWord=""){
+    filtered=findMatchingWords(excludeWord);
+    index=0;
     render();
-}
-
-function advanceAfterAnswer(answeredWord){
-    const remaining=filtered.filter(word=>word[0]!==answeredWord);
-
-    if(remaining.length){
-        const oldIndex=index;
-        filtered=remaining;
-        index=Math.min(oldIndex,filtered.length-1);
-        render();
-        return;
-    }
-
-    rebuildFiltered(answeredWord);
 }
 
 function setStatusFilter(status){
     currentStatusFilter=status;
 
     statusButtons.forEach(button=>{
-        button.classList.toggle("active",button.dataset.status===status);
+        button.classList.toggle(
+            "active",
+            button.dataset.status===currentStatusFilter
+        );
     });
 
-    rebuildFiltered();
+    rebuildList();
 }
 
 reveal.addEventListener("click",()=>{
@@ -726,39 +782,47 @@ reviewButton.addEventListener("click",()=>{
     const word=filtered[index];
     const name=word[0];
 
-    studyState.review[name]=studyState.review[name]!==true;
+    wordState[name].review=!wordState[name].review;
     saveState();
 
-    updateStatusUI(word);
-    updateProgress();
+    if(currentStatusFilter==="review"){
+        rebuildList(name);
+    }else{
+        updateStatusUI(word);
+        updateProgress();
+    }
 });
 
 document.getElementById("known-button").addEventListener("click",()=>{
     if(!filtered.length) return;
 
     const word=filtered[index];
-    studyState.solved[word[0]]=true;
+    wordState[word[0]].solved=true;
     saveState();
 
     card.classList.remove("vocab-solved-flash");
     void card.offsetWidth;
     card.classList.add("vocab-solved-flash");
 
-    window.setTimeout(()=>advanceAfterAnswer(word[0]),160);
+    window.setTimeout(()=>{
+        rebuildList(word[0]);
+    },160);
 });
 
 document.getElementById("learning-button").addEventListener("click",()=>{
     if(!filtered.length) return;
 
     const word=filtered[index];
-    studyState.solved[word[0]]=false;
+    wordState[word[0]].solved=false;
     saveState();
 
     card.classList.remove("vocab-learning-flash");
     void card.offsetWidth;
     card.classList.add("vocab-learning-flash");
 
-    window.setTimeout(()=>advanceAfterAnswer(word[0]),160);
+    window.setTimeout(()=>{
+        rebuildList(word[0]);
+    },160);
 });
 
 prev.addEventListener("click",()=>{
@@ -775,8 +839,13 @@ next.addEventListener("click",()=>{
     }
 });
 
-search.addEventListener("input",()=>rebuildFiltered());
-category.addEventListener("change",()=>rebuildFiltered());
+search.addEventListener("input",()=>{
+    rebuildList();
+});
+
+category.addEventListener("change",()=>{
+    rebuildList();
+});
 
 statusButtons.forEach(button=>{
     button.addEventListener("click",()=>{
@@ -784,11 +853,15 @@ statusButtons.forEach(button=>{
     });
 });
 
-function applyInitialState(){
+function initialize(){
     statusButtons.forEach(button=>{
-        button.classList.toggle("active",button.dataset.status==="all");
+        button.classList.toggle(
+            "active",
+            button.dataset.status==="all"
+        );
     });
-    rebuildFiltered();
+
+    rebuildList();
 }
 
-applyInitialState();
+initialize();
