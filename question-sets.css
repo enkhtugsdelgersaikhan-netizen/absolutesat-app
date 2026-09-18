@@ -1,71 +1,61 @@
 /* =========================================
-   QUESTION SETS PAGE
+   ABSOLUTESAT QUESTION SETS PAGE
 ========================================= */
 
-.question-sets-main {
+.question-sets-page {
     width: 100%;
-    max-width: none;
-
-    margin: 0;
     padding: 0 0 110px;
-
     background: #f8fafc;
 }
 
 
 /* =========================================
-   PAGE INTRO
+   HERO
 ========================================= */
 
-.question-sets-intro {
+.question-sets-hero {
     width: calc(100% - 40px);
     max-width: 1100px;
-
     margin: 0 auto;
-
     padding: 90px 20px 45px;
-
     text-align: center;
 }
 
 .question-sets-eyebrow {
+    display: block;
     margin-bottom: 14px;
-
     color: #0f766e;
-
     font-size: 13px;
     font-weight: 700;
-
     letter-spacing: 2.5px;
 }
 
-.question-sets-intro h1 {
+.question-sets-hero h1 {
     margin: 0 0 20px;
-
     color: #0f172a;
-
     font-size: clamp(44px, 6vw, 72px);
-
     line-height: 1.05;
-
     font-weight: 800;
-
     letter-spacing: -2.5px;
 }
 
-.question-sets-description {
+.question-sets-hero p {
     width: 100%;
     max-width: 680px;
-
     margin: 0 auto;
-
     color: #64748b;
-
     font-size: 18px;
-
     line-height: 1.7;
-
     font-weight: 400;
+}
+
+
+/* =========================================
+   MAIN SECTION
+========================================= */
+
+.question-section {
+    width: 100%;
 }
 
 
@@ -76,46 +66,37 @@
 .section-selector {
     width: calc(100% - 40px);
     max-width: 900px;
-
     margin: 0 auto 65px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    gap: 10px;
-
+    gap: 6px;
     padding: 6px;
 
     background: #ffffff;
-
     border: 1px solid #e2e8f0;
-
     border-radius: 12px;
 
     box-shadow:
         0 4px 14px rgba(15, 23, 42, 0.04);
 }
 
-.section-button {
+.section-selector-button {
     flex: 1;
 
     min-height: 48px;
-
     padding: 11px 20px;
 
     border: none;
-
     border-radius: 8px;
 
     background: transparent;
-
     color: #64748b;
 
     font-family: 'Poppins', sans-serif;
-
     font-size: 15px;
-
     font-weight: 600;
 
     cursor: pointer;
@@ -126,15 +107,13 @@
         box-shadow 0.2s ease;
 }
 
-.section-button:hover {
+.section-selector-button:hover {
     color: #0f766e;
-
     background: #f0fdfa;
 }
 
-.section-button.active {
+.section-selector-button.active {
     color: #ffffff;
-
     background: #0f766e;
 
     box-shadow:
@@ -143,79 +122,25 @@
 
 
 /* =========================================
-   SETS SECTION
+   SETS GRID
 ========================================= */
 
-.sets-section {
+.sets-grid {
     display: none;
 
     width: calc(100% - 40px);
     max-width: 1280px;
 
     margin: 0 auto;
-}
-
-.sets-section.active-section {
-    display: block;
-}
-
-
-/* =========================================
-   SECTION HEADING
-========================================= */
-
-.sets-section-heading {
-    margin-bottom: 34px;
-}
-
-.sets-section-eyebrow {
-    margin-bottom: 9px;
-
-    color: #0f766e;
-
-    font-size: 12px;
-
-    font-weight: 700;
-
-    letter-spacing: 2px;
-}
-
-.sets-section-heading h2 {
-    margin-bottom: 10px;
-
-    color: #0f172a;
-
-    font-size: 34px;
-
-    line-height: 1.2;
-
-    font-weight: 700;
-
-    letter-spacing: -0.8px;
-}
-
-.sets-section-heading > p:last-child {
-    max-width: 700px;
-
-    color: #64748b;
-
-    font-size: 16px;
-
-    line-height: 1.7;
-}
-
-
-/* =========================================
-   SETS GRID
-========================================= */
-
-.sets-grid {
-    display: grid;
 
     grid-template-columns:
         repeat(3, minmax(0, 1fr));
 
     gap: 20px;
+}
+
+.sets-grid.active-section {
+    display: grid;
 }
 
 
@@ -227,17 +152,13 @@
     position: relative;
 
     min-height: 320px;
-
     padding: 28px;
 
     display: flex;
-
     flex-direction: column;
 
     background: #ffffff;
-
     border: 1px solid #e2e8f0;
-
     border-radius: 14px;
 
     box-shadow:
@@ -260,15 +181,23 @@
 
 
 /* =========================================
+   CARD CONTENT
+========================================= */
+
+.set-card-content {
+    flex: 1;
+}
+
+
+/* =========================================
    SET NUMBER
 ========================================= */
 
-.set-card-number {
+.set-number {
     width: 42px;
     height: 42px;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
@@ -277,48 +206,41 @@
     border-radius: 10px;
 
     background: #f0fdfa;
-
     color: #0f766e;
 
     font-size: 13px;
-
     font-weight: 700;
-
     letter-spacing: 0.5px;
 }
 
 
 /* =========================================
-   SET CARD CONTENT
+   CARD TITLE
 ========================================= */
 
-.set-card-content {
-    flex: 1;
-}
-
-.set-card-content h3 {
-    margin-bottom: 12px;
+.set-card h2 {
+    margin: 0 0 12px;
 
     color: #0f172a;
 
     font-size: 21px;
-
     line-height: 1.3;
-
     font-weight: 700;
-
     letter-spacing: -0.3px;
 }
 
-.set-card-content p {
-    margin-bottom: 22px;
+
+/* =========================================
+   CARD DESCRIPTION
+========================================= */
+
+.set-card p {
+    margin: 0 0 22px;
 
     color: #64748b;
 
     font-size: 14px;
-
     line-height: 1.7;
-
     font-weight: 400;
 }
 
@@ -329,9 +251,7 @@
 
 .set-card-meta {
     display: flex;
-
     align-items: center;
-
     flex-wrap: wrap;
 
     gap: 8px;
@@ -339,23 +259,18 @@
 
 .set-card-meta span {
     display: inline-flex;
-
     align-items: center;
 
     min-height: 28px;
-
     padding: 5px 9px;
 
     border-radius: 6px;
 
     background: #f1f5f9;
-
     color: #64748b;
 
     font-size: 11px;
-
     line-height: 1.2;
-
     font-weight: 500;
 }
 
@@ -366,30 +281,26 @@
 
 .start-set-button {
     display: flex;
-
     align-items: center;
     justify-content: center;
 
     width: 100%;
-
     min-height: 44px;
 
     margin-top: 25px;
-
     padding: 10px 16px;
+
+    box-sizing: border-box;
 
     border-radius: 8px;
 
     background: #0f766e;
-
     color: #ffffff;
 
     text-decoration: none;
 
     font-family: 'Poppins', sans-serif;
-
     font-size: 14px;
-
     font-weight: 600;
 
     transition:
@@ -399,18 +310,17 @@
 
 .start-set-button:hover {
     background: #115e59;
-
     transform: translateY(-1px);
 }
 
 
 /* =========================================
-   LARGE TABLET
+   TABLET
 ========================================= */
 
 @media (max-width: 1100px) {
 
-    .question-sets-intro {
+    .question-sets-hero {
         padding-top: 75px;
     }
 
@@ -423,62 +333,48 @@
 
 
 /* =========================================
-   TABLET
+   MOBILE
 ========================================= */
 
 @media (max-width: 700px) {
 
-    .question-sets-main {
+    .question-sets-page {
         padding-bottom: 80px;
     }
 
-    .question-sets-intro {
+    .question-sets-hero {
         width: calc(100% - 32px);
-
-        padding:
-            65px 10px 35px;
+        padding: 65px 10px 35px;
     }
 
-    .question-sets-intro h1 {
+    .question-sets-hero h1 {
         font-size: 48px;
-
         letter-spacing: -1.8px;
     }
 
-    .question-sets-description {
+    .question-sets-hero p {
         font-size: 16px;
     }
 
     .section-selector {
         width: calc(100% - 32px);
-
         margin-bottom: 50px;
     }
 
-    .section-button {
+    .section-selector-button {
         font-size: 14px;
-
         padding-left: 12px;
         padding-right: 12px;
     }
 
-    .sets-section {
-        width: calc(100% - 32px);
-    }
-
-    .sets-section-heading h2 {
-        font-size: 30px;
-    }
-
     .sets-grid {
+        width: calc(100% - 32px);
         grid-template-columns: 1fr;
-
         gap: 16px;
     }
 
     .set-card {
         min-height: 0;
-
         padding: 25px;
     }
 
@@ -491,94 +387,65 @@
 
 @media (max-width: 480px) {
 
-    .question-sets-main {
+    .question-sets-page {
         padding-bottom: 65px;
     }
 
-    .question-sets-intro {
+    .question-sets-hero {
         width: calc(100% - 24px);
-
-        padding:
-            55px 6px 30px;
+        padding: 55px 6px 30px;
     }
 
     .question-sets-eyebrow {
         font-size: 11px;
-
         letter-spacing: 2px;
     }
 
-    .question-sets-intro h1 {
+    .question-sets-hero h1 {
         font-size: 40px;
-
         letter-spacing: -1.4px;
-
         margin-bottom: 16px;
     }
 
-    .question-sets-description {
+    .question-sets-hero p {
         font-size: 15px;
-
         line-height: 1.65;
     }
 
     .section-selector {
         width: calc(100% - 24px);
-
         margin-bottom: 42px;
-
         padding: 5px;
-
         gap: 5px;
     }
 
-    .section-button {
+    .section-selector-button {
         min-height: 44px;
-
-        padding:
-            9px 8px;
-
+        padding: 9px 8px;
         font-size: 12px;
     }
 
-    .sets-section {
+    .sets-grid {
         width: calc(100% - 24px);
-    }
-
-    .sets-section-eyebrow {
-        font-size: 10px;
-
-        letter-spacing: 1.7px;
-    }
-
-    .sets-section-heading h2 {
-        font-size: 27px;
-    }
-
-    .sets-section-heading > p:last-child {
-        font-size: 14px;
     }
 
     .set-card {
         padding: 22px;
-
         border-radius: 12px;
     }
 
-    .set-card-number {
+    .set-number {
         width: 38px;
         height: 38px;
-
         margin-bottom: 20px;
-
         font-size: 12px;
     }
 
-    .set-card-content h3 {
+    .set-card h2 {
         font-size: 19px;
     }
 
-    .set-card-content p {
+    .set-card p {
         font-size: 13px;
     }
 
