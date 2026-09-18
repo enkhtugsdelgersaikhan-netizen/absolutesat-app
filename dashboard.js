@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
-    const { data } = await absoluteSatSupabase.auth.getSession();
+    const { data } = await absolutePrepSupabase.auth.getSession();
     if (!data || !data.session) {
         window.location.href = "/login";
         return;
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             resetButton.textContent = "Resetting...";
 
             const { data: sessionData, error: sessionError } =
-                await absoluteSatSupabase.auth.getSession();
+                await absolutePrepSupabase.auth.getSession();
 
             const user = sessionData?.session?.user;
 
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 ];
 
                 for (const table of tables) {
-                    const { error } = await absoluteSatSupabase
+                    const { error } = await absolutePrepSupabase
                         .from(table)
                         .delete()
                         .eq("user_id", user.id);
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         logoutButton.addEventListener("click", async () => {
             logoutButton.disabled = true;
             logoutButton.textContent = "Logging out...";
-            const { error } = await absoluteSatSupabase.auth.signOut();
+            const { error } = await absolutePrepSupabase.auth.signOut();
             if (error) {
                 logoutButton.disabled = false;
                 logoutButton.textContent = "Log out";
