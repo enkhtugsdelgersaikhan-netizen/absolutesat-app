@@ -1,13 +1,13 @@
-const ABSOLUTESAT_SUPABASE_URL =
+const ABSOLUTEPREP_SUPABASE_URL =
     "https://ikvvixdyztyqqxkveois.supabase.co";
 
-const ABSOLUTESAT_SUPABASE_PUBLISHABLE_KEY =
+const ABSOLUTEPREP_SUPABASE_PUBLISHABLE_KEY =
     "sb_publishable_nO5HUWPidf4U_MMK0-HYEA_vuOR0POg";
 
 const questionBankSupabase =
     window.supabase.createClient(
-        ABSOLUTESAT_SUPABASE_URL,
-        ABSOLUTESAT_SUPABASE_PUBLISHABLE_KEY
+        ABSOLUTEPREP_SUPABASE_URL,
+        ABSOLUTEPREP_SUPABASE_PUBLISHABLE_KEY
     );
 
 
