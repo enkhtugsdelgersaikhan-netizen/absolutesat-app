@@ -603,14 +603,24 @@ function updateStatusUI(word){
     reviewButton.classList.toggle("active",isReview);
 }
 
-function render(){
+function resetCardUI(){
     card.classList.remove("vocab-solved-flash","vocab-learning-flash");
-    void card.offsetWidth;
+    definition.classList.add("hidden");
+    actions.classList.add("hidden");
+    reveal.classList.remove("hidden");
+}
+
+function render(){
+    resetCardUI();
 
     if(!filtered.length){
         card.classList.add("hidden");
         empty.classList.remove("hidden");
         countEl.textContent="0 words";
+        statusEl.textContent="";
+        statusEl.className="vocab-status-chip";
+        reviewButton.textContent="☆ Mark for Review";
+        reviewButton.classList.remove("active");
         updateProgress();
         return;
     }
@@ -627,10 +637,6 @@ function render(){
     posEl.textContent=(index+1)+" / "+filtered.length;
     meaningEl.textContent=w[3];
     exampleEl.textContent=exampleFor(w[0],w[1],w[2]);
-
-    definition.classList.add("hidden");
-    actions.classList.add("hidden");
-    reveal.classList.remove("hidden");
 
     updateStatusUI(w);
 
@@ -683,20 +689,7 @@ document.getElementById("known-button").addEventListener("click",()=>{
     const word=filtered[index][0];
     studyState.solved[word]=true;
     saveState();
-    updateProgress();
-    updateStatusUI(filtered[index]);
-    card.classList.remove("vocab-solved-flash");
-    void card.offsetWidth;
-    card.classList.add("vocab-solved-flash");
-
-    window.setTimeout(()=>{
-        if(index<filtered.length-1){
-            index++;
-            render();
-        }else{
-            applyFilters();
-        }
-    },180);
+    applyFilters();
 });
 
 document.getElementById("learning-button").addEventListener("click",()=>{
@@ -704,20 +697,7 @@ document.getElementById("learning-button").addEventListener("click",()=>{
     const word=filtered[index][0];
     studyState.solved[word]=false;
     saveState();
-    updateProgress();
-    updateStatusUI(filtered[index]);
-    card.classList.remove("vocab-learning-flash");
-    void card.offsetWidth;
-    card.classList.add("vocab-learning-flash");
-
-    window.setTimeout(()=>{
-        if(index<filtered.length-1){
-            index++;
-            render();
-        }else{
-            applyFilters();
-        }
-    },180);
+    applyFilters();
 });
 
 prev.addEventListener("click",()=>{
