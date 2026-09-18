@@ -605,9 +605,16 @@ function updateStatusUI(word){
 
 function resetCardUI(){
     card.classList.remove("vocab-solved-flash","vocab-learning-flash");
+
     definition.classList.add("hidden");
     actions.classList.add("hidden");
     reveal.classList.remove("hidden");
+
+    // Fully reset transient status UI before the next word is rendered.
+    statusEl.textContent="Unsolved";
+    statusEl.className="vocab-status-chip unsolved";
+    reviewButton.textContent="☆ Mark for Review";
+    reviewButton.classList.remove("active");
 }
 
 function render(){
