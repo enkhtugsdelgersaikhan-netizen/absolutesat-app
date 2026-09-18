@@ -85,6 +85,14 @@ async function updateAbsoluteSATHeader(session = null) {
 
         authButtons.innerHTML = `
 
+            <a
+                href="/profile"
+                class="profile-button"
+                aria-label="Profile settings"
+            >
+                Profile
+            </a>
+
             <button
                 type="button"
                 class="logout-button"
