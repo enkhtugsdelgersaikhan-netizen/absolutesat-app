@@ -526,7 +526,6 @@ const words=[
 ];
 const search=document.getElementById("vocab-search"),
 category=document.getElementById("vocab-category"),
-statusFilter=document.getElementById("vocab-status"),
 wordEl=document.getElementById("vocab-word"),
 pronEl=document.getElementById("vocab-pronunciation"),
 catEl=document.getElementById("vocab-category-label"),
@@ -550,6 +549,7 @@ statusSummary=document.getElementById("vocab-status-summary");
 const STATE_KEY="absoluteprep_vocab_state";
 const legacyLearned=JSON.parse(localStorage.getItem("absoluteprep_vocab_learned")||"{}");
 let studyState=JSON.parse(localStorage.getItem(STATE_KEY)||"null");
+let currentStatusFilter="all";
 
 if(!studyState||typeof studyState!=="object"){
     studyState={solved:{},review:{}};
@@ -666,7 +666,7 @@ function getWordStatus(word){
 function applyFilters(excludeWord=""){
     const query=search.value.trim().toLowerCase();
     const selectedCategory=category.value;
-    const selectedStatus=statusFilter.value;
+    const selectedStatus=currentStatusFilter;
 
     filtered=shuffle(words.filter(word=>{
         const wordName=word[0].toLowerCase();
@@ -732,9 +732,20 @@ next.addEventListener("click",()=>{
     }
 });
 
+document.querySelectorAll(".vocab-status-filter-button").forEach(button=>{
+    button.addEventListener("click",()=>{
+        currentStatusFilter=button.dataset.status||"all";
+
+        document.querySelectorAll(".vocab-status-filter-button").forEach(item=>{
+            item.classList.toggle("active",item===button);
+        });
+
+        applyFilters();
+    });
+});
+
 search.addEventListener("input",()=>applyFilters());
 category.addEventListener("change",()=>applyFilters());
-statusFilter.addEventListener("change",()=>applyFilters());
 
 let filtered=[];
 let index=0;
