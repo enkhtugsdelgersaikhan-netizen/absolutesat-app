@@ -596,8 +596,19 @@ function updateStatusUI(word){
     const isSolved=studyState.solved[word[0]]===true;
     const isReview=studyState.review[word[0]]===true;
 
-    statusEl.textContent=isReview?"Review":isSolved?"Solved":"Unsolved";
-    statusEl.className="vocab-status-chip "+(isReview?"review":isSolved?"solved":"unsolved");
+    if(isSolved&&isReview){
+        statusEl.textContent="Solved · Review";
+        statusEl.className="vocab-status-chip solved review-combined";
+    }else if(isSolved){
+        statusEl.textContent="Solved";
+        statusEl.className="vocab-status-chip solved";
+    }else if(isReview){
+        statusEl.textContent="Review";
+        statusEl.className="vocab-status-chip review";
+    }else{
+        statusEl.textContent="Unsolved";
+        statusEl.className="vocab-status-chip unsolved";
+    }
 
     reviewButton.textContent=isReview?"★ Remove Review":"☆ Mark for Review";
     reviewButton.classList.toggle("active",isReview);
