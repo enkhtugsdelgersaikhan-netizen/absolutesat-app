@@ -700,14 +700,17 @@ function updateStatusUI(word){
     solvedStatusEl.className="vocab-status-chip "+(state.solved?"solved":"unsolved");
 
     reviewStatusEl.classList.toggle("hidden",!state.review);
-    reviewButton.textContent=state.review?"★ Remove Review":"☆ Mark for Review";
+    reviewButton.textContent=state.review?"★ In Review":"☆ Mark for Review";
     reviewButton.classList.toggle("active",state.review);
     reviewButton.setAttribute("aria-pressed",state.review?"true":"false");
 
-    // Exactly one answer-state button is active whenever the word is loaded.
+    // The saved answer state is written directly into the button labels
+    // as well as the active styling so it is always visible.
+    knownButton.textContent=state.solved?"✓ Solved":"I Know It";
     knownButton.classList.toggle("active",state.solved);
     knownButton.setAttribute("aria-pressed",state.solved?"true":"false");
 
+    learningButton.textContent=state.solved?"Still Learning":"✓ Unsolved";
     learningButton.classList.toggle("active",!state.solved);
     learningButton.setAttribute("aria-pressed",state.solved?"false":"true");
 }
