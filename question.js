@@ -252,7 +252,7 @@ async function initialize() {
          * This allows the user to move between:
          *
          * Login
-         * Question Sets
+         * Question Bank
          * Question
          *
          * without being treated as logged out.
@@ -321,7 +321,7 @@ async function initialize() {
         if (!slug) {
 
             showError(
-                "No question set was specified."
+                "No question was specified."
             );
 
             return;
@@ -342,7 +342,7 @@ async function initialize() {
 
 
         showError(
-            "Something went wrong while loading the question set."
+            "Something went wrong while loading the question."
         );
 
     }
@@ -378,7 +378,7 @@ async function loadQuestionSet(
 
 
         showError(
-            "The question set could not be found."
+            "The question could not be found."
         );
 
         return;
@@ -445,7 +445,7 @@ async function loadQuestionSet(
     ) {
 
         showError(
-            "This question set does not contain any questions yet."
+            "This question does not contain any questions yet."
         );
 
         return;
@@ -1107,7 +1107,7 @@ async function submitTest(
 
             const shouldSubmit =
                 window.confirm(
-                    "Are you sure you want to submit this question set?"
+                    "Are you sure you want to submit this question?"
                 );
 
 
@@ -1676,7 +1676,7 @@ function showError(
                     font-weight: 600;
                 "
             >
-                Back to Question Sets
+                Back to Question Bank
             </a>
 
         </div>
