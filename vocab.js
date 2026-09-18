@@ -787,11 +787,11 @@ function updateStatusUI(word){
 
     // The saved answer state is written directly into the button labels
     // as well as the active styling so it is always visible.
-    knownButton.textContent=state.solved?"✓ Solved":"I Know It";
+    knownButton.textContent="I Know It";
     knownButton.classList.toggle("active",state.solved);
     knownButton.setAttribute("aria-pressed",state.solved?"true":"false");
 
-    learningButton.textContent=state.solved?"Still Learning":"✓ Unsolved";
+    learningButton.textContent="Still Learning";
     learningButton.classList.toggle("active",!state.solved);
     learningButton.setAttribute("aria-pressed",state.solved?"false":"true");
 }
