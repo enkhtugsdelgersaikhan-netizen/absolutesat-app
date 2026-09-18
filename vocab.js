@@ -604,6 +604,9 @@ function updateStatusUI(word){
 }
 
 function render(){
+    card.classList.remove("vocab-solved-flash","vocab-learning-flash");
+    void card.offsetWidth;
+
     if(!filtered.length){
         card.classList.add("hidden");
         empty.classList.remove("hidden");
@@ -616,6 +619,7 @@ function render(){
     empty.classList.add("hidden");
 
     const w=filtered[index];
+
     wordEl.textContent=w[0];
     pronEl.textContent="";
     pronEl.classList.add("hidden");
