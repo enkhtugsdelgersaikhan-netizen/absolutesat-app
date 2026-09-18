@@ -17,64 +17,22 @@ const ABSOLUTESAT_SUPABASE_PUBLISHABLE_KEY =
 const absoluteSatSupabase =
     window.supabase.createClient(
         ABSOLUTESAT_SUPABASE_URL,
-        ABSOLUTESAT_SUPABASE_PUBLISHABLE_KEY
-    );
-
-
-/* ============================================================
-   GET CURRENT USER
-   ============================================================ */
-
-async function getAbsoluteSATUser() {
-
-    try {
-
-        const {
-            data: {
-                user
-            },
-            error
-        } =
-            await absoluteSatSupabase.auth.getUser();
-
-
-        if (error) {
-
-            console.error(
-                "Could not get current user:",
-                error
-            );
-
-            return null;
-
+        ABSOLUTESAT_SUPABASE_PUBLISHABLE_KEY,
+        {
+            auth: {
+                persistSession: true,
+                autoRefreshToken: true,
+                detectSessionInUrl: true
+            }
         }
-
-
-        return user || null;
-
-    } catch (error) {
-
-        console.error(
-            "Authentication error:",
-            error
-        );
-
-        return null;
-
-    }
-
-}
+    );
 
 
 /* ============================================================
    UPDATE HEADER
    ============================================================ */
 
-async function updateAbsoluteSATHeader() {
-
-    const user =
-        await getAbsoluteSATUser();
-
+async function updateAbsoluteSATHeader(session = null) {
 
     const authButtons =
         document.querySelector(
@@ -87,11 +45,43 @@ async function updateAbsoluteSATHeader() {
     }
 
 
-    /* =========================================
-       USER IS LOGGED IN
-    ========================================= */
+    /*
+     * If a session was not supplied, get the
+     * currently stored session.
+     */
 
-    if (user) {
+    if (!session) {
+
+        const {
+            data,
+            error
+        } =
+            await absoluteSatSupabase.auth.getSession();
+
+
+        if (error) {
+
+            console.error(
+                "Could not get Supabase session:",
+                error
+            );
+
+        }
+
+
+        session =
+            data
+                ? data.session
+                : null;
+
+    }
+
+
+    /* ========================================================
+       LOGGED IN
+    ======================================================== */
+
+    if (session) {
 
         authButtons.innerHTML = `
 
@@ -138,6 +128,7 @@ async function updateAbsoluteSATHeader() {
                             error
                         );
 
+
                         logoutButton.disabled =
                             false;
 
@@ -149,69 +140,129 @@ async function updateAbsoluteSATHeader() {
                     }
 
 
-                    window.location.replace(
-                        "/"
-                    );
+                    window.location.href =
+                        "/";
 
                 }
             );
 
         }
 
-    }
 
-
-    /* =========================================
-       USER IS NOT LOGGED IN
-    ========================================= */
-
-    else {
-
-        authButtons.innerHTML = `
-
-            <a
-                href="/register"
-                class="register-button"
-            >
-                Register
-            </a>
-
-            <a
-                href="/login"
-                class="login-button"
-            >
-                Login
-            </a>
-
-        `;
+        return;
 
     }
+
+
+    /* ========================================================
+       LOGGED OUT
+    ======================================================== */
+
+    authButtons.innerHTML = `
+
+        <a
+            href="/register"
+            class="register-button"
+        >
+            Register
+        </a>
+
+        <a
+            href="/login"
+            class="login-button"
+        >
+            Login
+        </a>
+
+    `;
 
 }
 
 
 /* ============================================================
-   AUTH STATE LISTENER
+   AUTH STATE CHANGES
    ============================================================ */
 
 absoluteSatSupabase.auth.onAuthStateChange(
-    (event, session) => {
+    (
+        event,
+        session
+    ) => {
 
-        updateAbsoluteSATHeader();
+        console.log(
+            "AbsoluteSAT auth event:",
+            event
+        );
+
+
+        updateAbsoluteSATHeader(
+            session
+        );
 
     }
 );
 
 
 /* ============================================================
-   INITIALIZE
+   INITIALIZE HEADER
    ============================================================ */
 
-document.addEventListener(
-    "DOMContentLoaded",
-    () => {
+async function initializeAbsoluteSATAuth() {
 
-        updateAbsoluteSATHeader();
+    /*
+     * Supabase automatically initializes its auth client
+     * and restores the stored session.
+     *
+     * We then explicitly read that session and update
+     * the header.
+     */
+
+    const {
+        data,
+        error
+    } =
+        await absoluteSatSupabase.auth.getSession();
+
+
+    if (error) {
+
+        console.error(
+            "Authentication initialization error:",
+            error
+        );
 
     }
-);
+
+
+    const session =
+        data
+            ? data.session
+            : null;
+
+
+    await updateAbsoluteSATHeader(
+        session
+    );
+
+}
+
+
+/* ============================================================
+   START
+   ============================================================ */
+
+if (
+    document.readyState ===
+    "loading"
+) {
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        initializeAbsoluteSATAuth
+    );
+
+} else {
+
+    initializeAbsoluteSATAuth();
+
+}
