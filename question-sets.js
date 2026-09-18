@@ -11,6 +11,10 @@ const questionBankSupabase =
     );
 
 
+// ============================================================
+// STATE
+// ============================================================
+
 let allQuestions = [];
 
 let activeSection = "all";
@@ -19,15 +23,131 @@ let activeTopic = "all";
 let activeDifficulty = "all";
 let activeStatus = "all";
 let reviewOnly = false;
-let activeSort = "newest";
 
 let userAttempts = [];
 let userReviews = [];
 
 
-/* ============================================
-   ELEMENTS
-============================================ */
+// ============================================================
+// SAT TOPIC STRUCTURE
+// ============================================================
+
+const topicStructure = {
+
+    "Reading & Writing": [
+
+        {
+            domain: "Information and Ideas",
+            percentage: "~26%",
+            description:
+                "Focuses on comprehension, locating details, and evaluating data.",
+            subtopics: [
+                "Central Ideas and Details",
+                "Command of Evidence — Textual",
+                "Command of Evidence — Quantitative",
+                "Inferences"
+            ]
+        },
+
+        {
+            domain: "Craft and Structure",
+            percentage: "~28%",
+            description:
+                "Focuses on vocabulary, text organization, and author's purpose.",
+            subtopics: [
+                "Words in Context",
+                "Text Structure and Purpose",
+                "Cross-Text Connections"
+            ]
+        },
+
+        {
+            domain: "Expression of Ideas",
+            percentage: "~20%",
+            description:
+                "Focuses on revision and improving how a point is made.",
+            subtopics: [
+                "Transitions",
+                "Rhetorical Synthesis"
+            ]
+        },
+
+        {
+            domain: "Standard English Conventions",
+            percentage: "~26%",
+            description:
+                "Focuses on grammar, punctuation, and sentence mechanics.",
+            subtopics: [
+                "Boundaries",
+                "Form, Structure, and Sense"
+            ]
+        }
+
+    ],
+
+
+    "Math": [
+
+        {
+            domain: "Algebra",
+            percentage: "35%",
+            description:
+                "This domain focuses on linear equations and systems.",
+            subtopics: [
+                "Linear Equations",
+                "Linear Functions",
+                "Systems of Linear Equations",
+                "Linear Inequalities"
+            ]
+        },
+
+        {
+            domain: "Advanced Math",
+            percentage: "35%",
+            description:
+                "This domain moves beyond linear relationships into non-linear equations and functions.",
+            subtopics: [
+                "Quadratic Equations",
+                "Exponential and Radical Functions",
+                "Polynomial Operations",
+                "Nonlinear Equations"
+            ]
+        },
+
+        {
+            domain: "Problem-Solving and Data Analysis",
+            percentage: "15%",
+            description:
+                "This domain tests quantitative literacy in real-world contexts.",
+            subtopics: [
+                "Ratios, Rates, and Proportions",
+                "Percentages",
+                "Data Interpretation",
+                "Statistics and Probability"
+            ]
+        },
+
+        {
+            domain: "Geometry and Trigonometry",
+            percentage: "15%",
+            description:
+                "This domain covers spatial reasoning and basic angle relationships.",
+            subtopics: [
+                "Area, Perimeter, and Volume",
+                "Lines, Angles, and Triangles",
+                "Circles",
+                "Basic Trigonometry"
+            ]
+        }
+
+    ]
+
+};
+
+
+// ============================================================
+// DOM ELEMENTS
+// ============================================================
 
 const questionList =
     document.getElementById("question-list");
@@ -56,20 +176,20 @@ const statusFilter =
 const reviewOnlyCheckbox =
     document.getElementById("review-only");
 
-const sortFilter =
-    document.getElementById("sort-filter");
-
 const sectionTabs =
     document.querySelectorAll(".section-tab");
 
 
-/* ============================================
-   HELPERS
-============================================ */
+// ============================================================
+// HTML ESCAPING
+// ============================================================
 
 function escapeHtml(value) {
 
-    if (value === null || value === undefined) {
+    if (
+        value === null ||
+        value === undefined
+    ) {
         return "";
     }
 
@@ -82,15 +202,34 @@ function escapeHtml(value) {
 }
 
 
-function getCurrentUser() {
+// ============================================================
+// CURRENT USER
+// ============================================================
 
-    return questionBankSupabase.auth
-        .getSession()
-        .then(({ data }) => {
-            return data?.session?.user || null;
-        });
+async function getCurrentUser() {
+
+    const {
+        data,
+        error
+    } = await questionBankSupabase.auth.getSession();
+
+    if (error) {
+
+        console.error(
+            "Could not get current user:",
+            error
+        );
+
+        return null;
+    }
+
+    return data?.session?.user || null;
 }
 
+
+// ============================================================
+// ATTEMPTS
+// ============================================================
 
 function getAttemptsForQuestion(questionId) {
 
@@ -102,29 +241,38 @@ function getAttemptsForQuestion(questionId) {
 }
 
 
+// ============================================================
+// PERFORMANCE
+// ============================================================
+
 function getQuestionPerformance(questionId) {
 
     const attempts =
         getAttemptsForQuestion(questionId);
 
     if (attempts.length === 0) {
+
         return {
             className: "unanswered",
             label: "Not answered yet"
         };
+
     }
 
-    const sorted =
-        [...attempts].sort(
-            (a, b) =>
-                new Date(a.created_at) -
-                new Date(b.created_at)
-        );
+
+    const sorted = [...attempts].sort(
+        (a, b) =>
+            new Date(a.created_at) -
+            new Date(b.created_at)
+    );
+
 
     const firstCorrectIndex =
         sorted.findIndex(
-            attempt => attempt.is_correct === true
+            attempt =>
+                attempt.is_correct === true
         );
+
 
     if (firstCorrectIndex === 0) {
 
@@ -135,6 +283,7 @@ function getQuestionPerformance(questionId) {
 
     }
 
+
     if (firstCorrectIndex === 1) {
 
         return {
@@ -144,15 +293,16 @@ function getQuestionPerformance(questionId) {
 
     }
 
+
     if (firstCorrectIndex >= 2) {
 
         return {
             className: "later-correct",
-            label:
-                "Correct after multiple attempts"
+            label: "Correct after multiple attempts"
         };
 
     }
+
 
     return {
         className: "later-correct",
@@ -160,6 +310,10 @@ function getQuestionPerformance(questionId) {
     };
 }
 
+
+// ============================================================
+// REVIEW STATUS
+// ============================================================
 
 function isQuestionMarkedForReview(questionId) {
 
@@ -171,14 +325,22 @@ function isQuestionMarkedForReview(questionId) {
 }
 
 
+// ============================================================
+// QUESTION STATUS
+// ============================================================
+
 function getQuestionStatus(questionId) {
 
     const attempts =
         getAttemptsForQuestion(questionId);
 
+
     if (attempts.length === 0) {
+
         return "unanswered";
+
     }
+
 
     const latest =
         [...attempts].sort(
@@ -187,21 +349,26 @@ function getQuestionStatus(questionId) {
                 new Date(a.created_at)
         )[0];
 
+
     if (latest.is_correct) {
+
         return "correct";
+
     }
+
 
     return "incorrect";
 }
 
 
-/* ============================================
-   LOAD QUESTIONS
-============================================ */
+// ============================================================
+// LOAD QUESTIONS
+// ============================================================
 
 async function loadQuestions() {
 
     showLoading();
+
 
     const {
         data,
@@ -209,9 +376,13 @@ async function loadQuestions() {
     } = await questionBankSupabase
         .from("questions")
         .select("*")
-        .order("created_at", {
-            ascending: false
-        });
+        .order(
+            "created_at",
+            {
+                ascending: false
+            }
+        );
+
 
     if (error) {
 
@@ -227,24 +398,30 @@ async function loadQuestions() {
         return;
     }
 
-    allQuestions = data || [];
+
+    allQuestions =
+        data || [];
+
 
     populateTopicFilter();
 
+
     await loadUserData();
+
 
     renderQuestions();
 }
 
 
-/* ============================================
-   LOAD USER DATA
-============================================ */
+// ============================================================
+// LOAD USER DATA
+// ============================================================
 
 async function loadUserData() {
 
     const user =
         await getCurrentUser();
+
 
     if (!user) {
 
@@ -259,7 +436,10 @@ async function loadUserData() {
         await questionBankSupabase
             .from("question_attempts")
             .select("*")
-            .eq("user_id", user.id);
+            .eq(
+                "user_id",
+                user.id
+            );
 
 
     if (attemptsResult.error) {
@@ -283,7 +463,10 @@ async function loadUserData() {
         await questionBankSupabase
             .from("question_reviews")
             .select("*")
-            .eq("user_id", user.id);
+            .eq(
+                "user_id",
+                user.id
+            );
 
 
     if (reviewsResult.error) {
@@ -301,13 +484,12 @@ async function loadUserData() {
             reviewsResult.data || [];
 
     }
-
 }
 
 
-/* ============================================
-   TOPIC FILTER
-============================================ */
+// ============================================================
+// TOPIC FILTER
+// ============================================================
 
 function populateTopicFilter() {
 
@@ -315,48 +497,110 @@ function populateTopicFilter() {
         return;
     }
 
-    const topics =
-        [...new Set(
-            allQuestions
-                .map(question => question.topic)
-                .filter(Boolean)
-        )]
-        .sort((a, b) =>
-            a.localeCompare(b)
-        );
+
+    topicFilter.innerHTML = "";
 
 
-    topicFilter.innerHTML = `
-        <option value="all">
-            All Topics
-        </option>
-    `;
+    const allOption =
+        document.createElement("option");
+
+    allOption.value = "all";
+    allOption.textContent = "All Topics";
+
+    topicFilter.appendChild(
+        allOption
+    );
 
 
-    topics.forEach(topic => {
+    const sectionOrder = [
+        "Reading & Writing",
+        "Math"
+    ];
 
-        const option =
-            document.createElement("option");
 
-        option.value = topic;
-        option.textContent = topic;
+    sectionOrder.forEach(
+        sectionName => {
 
-        topicFilter.appendChild(option);
+            const domains =
+                topicStructure[sectionName];
 
-    });
+            if (!domains) {
+                return;
+            }
+
+
+            const group =
+                document.createElement("optgroup");
+
+            group.label =
+                sectionName;
+
+
+            domains.forEach(
+                domain => {
+
+                    // Domain option
+
+                    const domainOption =
+                        document.createElement("option");
+
+                    domainOption.value =
+                        domain.domain;
+
+                    domainOption.textContent =
+                        `${domain.domain} (${domain.percentage})`;
+
+                    group.appendChild(
+                        domainOption
+                    );
+
+
+                    // Subtopic options
+
+                    domain.subtopics.forEach(
+                        subtopic => {
+
+                            const subtopicOption =
+                                document.createElement("option");
+
+                            subtopicOption.value =
+                                subtopic;
+
+                            subtopicOption.textContent =
+                                `  ${subtopic}`;
+
+                            group.appendChild(
+                                subtopicOption
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
+
+            topicFilter.appendChild(
+                group
+            );
+
+        }
+    );
 
 }
 
 
-/* ============================================
-   FILTER QUESTIONS
-============================================ */
+// ============================================================
+// FILTER QUESTIONS
+// ============================================================
 
 function getFilteredQuestions() {
 
     let questions =
         [...allQuestions];
 
+
+    // SECTION
 
     if (activeSection !== "all") {
 
@@ -370,31 +614,42 @@ function getFilteredQuestions() {
     }
 
 
+    // SEARCH
+
     if (activeSearch) {
 
         const search =
             activeSearch.toLowerCase();
 
+
         questions =
-            questions.filter(question => {
+            questions.filter(
+                question => {
 
-                const searchableText = [
+                    const searchableText = [
 
-                    question.question_text,
-                    question.topic,
-                    question.difficulty
+                        question.question_text,
+                        question.topic,
+                        question.difficulty,
+                        question.section
 
-                ]
-                .filter(Boolean)
-                .join(" ")
-                .toLowerCase();
+                    ]
+                        .filter(Boolean)
+                        .join(" ")
+                        .toLowerCase();
 
-                return searchableText.includes(search);
 
-            });
+                    return searchableText.includes(
+                        search
+                    );
+
+                }
+            );
 
     }
 
+
+    // TOPIC
 
     if (activeTopic !== "all") {
 
@@ -408,6 +663,8 @@ function getFilteredQuestions() {
     }
 
 
+    // DIFFICULTY
+
     if (activeDifficulty !== "all") {
 
         questions =
@@ -419,6 +676,8 @@ function getFilteredQuestions() {
 
     }
 
+
+    // STATUS
 
     if (activeStatus !== "all") {
 
@@ -433,6 +692,8 @@ function getFilteredQuestions() {
     }
 
 
+    // REVIEW
+
     if (reviewOnly) {
 
         questions =
@@ -446,58 +707,18 @@ function getFilteredQuestions() {
     }
 
 
-    questions.sort(
-        (a, b) => {
-
-            if (activeSort === "oldest") {
-
-                return new Date(a.created_at) -
-                    new Date(b.created_at);
-
-            }
-
-
-            if (activeSort === "difficulty") {
-
-                const order = {
-                    Easy: 1,
-                    Medium: 2,
-                    Hard: 3,
-                    Mixed: 4
-                };
-
-                return (
-                    (order[a.difficulty] || 99) -
-                    (order[b.difficulty] || 99)
-                );
-
-            }
-
-
-            if (activeSort === "topic") {
-
-                return String(a.topic || "")
-                    .localeCompare(
-                        String(b.topic || "")
-                    );
-
-            }
-
-
-            return new Date(b.created_at) -
-                new Date(a.created_at);
-
-        }
-    );
-
+    // Keep database order.
+    //
+    // No "Newest / Oldest / Difficulty / Topic"
+    // sorting button is used anymore.
 
     return questions;
 }
 
 
-/* ============================================
-   RENDER QUESTIONS
-============================================ */
+// ============================================================
+// RENDER QUESTIONS
+// ============================================================
 
 function renderQuestions() {
 
@@ -520,7 +741,8 @@ function renderQuestions() {
     if (resultsDescription) {
 
         resultsDescription.textContent =
-            questions.length === allQuestions.length
+            questions.length ===
+            allQuestions.length
                 ? "in your question bank"
                 : "matching your filters";
 
@@ -532,11 +754,6 @@ function renderQuestions() {
         showEmptyState();
 
         return;
-    }
-
-
-    if (emptyState) {
-        emptyState.remove();
     }
 
 
@@ -555,13 +772,12 @@ function renderQuestions() {
 
         }
     );
-
 }
 
 
-/* ============================================
-   CREATE QUESTION CARD
-============================================ */
+// ============================================================
+// QUESTION CARD
+// ============================================================
 
 function createQuestionCard(
     question,
@@ -570,6 +786,7 @@ function createQuestionCard(
 
     const card =
         document.createElement("article");
+
 
     card.className =
         "question-card";
@@ -590,7 +807,7 @@ function createQuestionCard(
     const difficulty =
         String(
             question.difficulty ||
-            "Mixed"
+            "Medium"
         );
 
 
@@ -625,10 +842,12 @@ function createQuestionCard(
 
 
             <div class="question-card-description">
+
                 ${escapeHtml(
                     question.question_text ||
                     "Question"
                 )}
+
             </div>
 
 
@@ -641,13 +860,18 @@ function createQuestionCard(
                     )}
                 </span>
 
-                <span class="
-                    question-meta-tag
-                    difficulty-${escapeHtml(
-                        difficultyClass
+
+                <span
+                    class="
+                        question-meta-tag
+                        difficulty-${escapeHtml(
+                            difficultyClass
+                        )}
+                    "
+                >
+                    ${escapeHtml(
+                        difficulty
                     )}
-                ">
-                    ${escapeHtml(difficulty)}
                 </span>
 
             </div>
@@ -743,9 +967,9 @@ function createQuestionCard(
 }
 
 
-/* ============================================
-   UI STATES
-============================================ */
+// ============================================================
+// LOADING STATE
+// ============================================================
 
 function showLoading() {
 
@@ -760,9 +984,12 @@ function showLoading() {
         </div>
 
     `;
-
 }
 
+
+// ============================================================
+// EMPTY STATE
+// ============================================================
 
 function showEmptyState() {
 
@@ -784,9 +1011,11 @@ function showEmptyState() {
 
             </div>
 
+
             <h2>
                 No questions found
             </h2>
+
 
             <p>
                 Try changing your filters or search.
@@ -795,9 +1024,12 @@ function showEmptyState() {
         </div>
 
     `;
-
 }
 
+
+// ============================================================
+// ERROR STATE
+// ============================================================
 
 function showError(message) {
 
@@ -811,20 +1043,26 @@ function showError(message) {
                     viewBox="0 0 24 24"
                     aria-hidden="true"
                 >
+
                     <path d="M12 3v10"></path>
+
                     <path d="M12 17v1"></path>
+
                     <circle
                         cx="12"
                         cy="12"
                         r="9"
                     ></circle>
+
                 </svg>
 
             </div>
 
+
             <h2>
                 Something went wrong
             </h2>
+
 
             <p>
                 ${escapeHtml(message)}
@@ -833,13 +1071,12 @@ function showError(message) {
         </div>
 
     `;
-
 }
 
 
-/* ============================================
-   EVENT LISTENERS
-============================================ */
+// ============================================================
+// SEARCH
+// ============================================================
 
 if (searchInput) {
 
@@ -858,6 +1095,10 @@ if (searchInput) {
 }
 
 
+// ============================================================
+// TOPIC FILTER
+// ============================================================
+
 if (topicFilter) {
 
     topicFilter.addEventListener(
@@ -874,6 +1115,10 @@ if (topicFilter) {
 
 }
 
+
+// ============================================================
+// DIFFICULTY FILTER
+// ============================================================
 
 if (difficultyFilter) {
 
@@ -892,6 +1137,10 @@ if (difficultyFilter) {
 }
 
 
+// ============================================================
+// STATUS FILTER
+// ============================================================
+
 if (statusFilter) {
 
     statusFilter.addEventListener(
@@ -908,6 +1157,10 @@ if (statusFilter) {
 
 }
 
+
+// ============================================================
+// REVIEW FILTER
+// ============================================================
 
 if (reviewOnlyCheckbox) {
 
@@ -926,56 +1179,66 @@ if (reviewOnlyCheckbox) {
 }
 
 
-if (sortFilter) {
+// ============================================================
+// SECTION TABS
+// ============================================================
 
-    sortFilter.addEventListener(
-        "change",
-        event => {
+sectionTabs.forEach(
+    tab => {
 
-            activeSort =
-                event.target.value;
+        tab.addEventListener(
+            "click",
+            () => {
 
-            renderQuestions();
-
-        }
-    );
-
-}
-
-
-sectionTabs.forEach(tab => {
-
-    tab.addEventListener(
-        "click",
-        () => {
-
-            sectionTabs.forEach(
-                otherTab =>
-                    otherTab.classList.remove(
-                        "active"
-                    )
-            );
+                sectionTabs.forEach(
+                    otherTab =>
+                        otherTab.classList.remove(
+                            "active"
+                        )
+                );
 
 
-            tab.classList.add("active");
+                tab.classList.add(
+                    "active"
+                );
 
 
-            activeSection =
-                tab.dataset.section ||
-                "all";
+                activeSection =
+                    tab.dataset.section ||
+                    "all";
 
 
-            renderQuestions();
+                /*
+                 * When switching between
+                 * Reading & Writing and Math,
+                 * reset the topic filter so the
+                 * user doesn't accidentally keep
+                 * a topic from the other section.
+                 */
 
-        }
-    );
-
-});
+                activeTopic = "all";
 
 
-/* ============================================
-   AUTH CHANGES
-============================================ */
+                if (topicFilter) {
+
+                    topicFilter.value =
+                        "all";
+
+                }
+
+
+                renderQuestions();
+
+            }
+        );
+
+    }
+);
+
+
+// ============================================================
+// AUTH STATE
+// ============================================================
 
 questionBankSupabase.auth.onAuthStateChange(
     async () => {
@@ -988,8 +1251,8 @@ questionBankSupabase.auth.onAuthStateChange(
 );
 
 
-/* ============================================
-   START
-============================================ */
+// ============================================================
+// INITIAL LOAD
+// ============================================================
 
 loadQuestions();
