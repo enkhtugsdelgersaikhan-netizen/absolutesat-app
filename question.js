@@ -5,28 +5,28 @@
 
 /* ============================================================
    SUPABASE
-   ============================================================
+   ============================================================ */
 
-   IMPORTANT:
-   Use the SAME publishable key that you already used
-   successfully in register.html / login.html.
-*/
+const SUPABASE_URL =
+    "https://ikvvixdyztyqqxkveois.supabase.co";
 
-const SUPABASE_URL = "https://ikvvixdyztyqqxkveois.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY =
+    "sb_publishable_nO5HUWPidf4U_MMK0-HYEA_vuOR0POg";
 
-const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_nO5HUWPidf4U_MMK0-HYEA_vuOR0POg";
 
-const supabaseClient = window.supabase.createClient(
-    SUPABASE_URL,
-    SUPABASE_PUBLISHABLE_KEY
-);
+const supabaseClient =
+    window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_PUBLISHABLE_KEY
+    );
 
 
 /* ============================================================
    SETTINGS
    ============================================================ */
 
-const TOTAL_TIME_SECONDS = 15 * 60;
+const TOTAL_TIME_SECONDS =
+    15 * 60;
 
 
 /* ============================================================
@@ -41,7 +41,8 @@ let answers = {};
 
 let markedForReview = {};
 
-let timeRemaining = TOTAL_TIME_SECONDS;
+let timeRemaining =
+    TOTAL_TIME_SECONDS;
 
 let timerInterval = null;
 
@@ -56,59 +57,125 @@ let submitted = false;
    DOM ELEMENTS
    ============================================================ */
 
-const loadingScreen = document.getElementById("loading-screen");
+const loadingScreen =
+    document.getElementById(
+        "loading-screen"
+    );
 
-const questionApp = document.getElementById("question-app");
+const questionApp =
+    document.getElementById(
+        "question-app"
+    );
 
-const resultsScreen = document.getElementById("results-screen");
+const resultsScreen =
+    document.getElementById(
+        "results-screen"
+    );
 
-const setTitle = document.getElementById("set-title");
+const setTitle =
+    document.getElementById(
+        "set-title"
+    );
 
-const questionNumber = document.getElementById("question-number");
+const questionNumber =
+    document.getElementById(
+        "question-number"
+    );
 
-const questionText = document.getElementById("question-text");
+const questionText =
+    document.getElementById(
+        "question-text"
+    );
 
-const choicesContainer = document.getElementById("choices");
+const choicesContainer =
+    document.getElementById(
+        "choices"
+    );
 
-const previousButton = document.getElementById("previous-button");
+const previousButton =
+    document.getElementById(
+        "previous-button"
+    );
 
-const nextButton = document.getElementById("next-button");
+const nextButton =
+    document.getElementById(
+        "next-button"
+    );
 
-const clearButton = document.getElementById("clear-button");
+const clearButton =
+    document.getElementById(
+        "clear-button"
+    );
 
-const reviewButton = document.getElementById("review-button");
+const reviewButton =
+    document.getElementById(
+        "review-button"
+    );
 
-const reviewText = document.getElementById("review-text");
+const reviewText =
+    document.getElementById(
+        "review-text"
+    );
 
-const questionNavigator = document.getElementById("question-navigator");
+const questionNavigator =
+    document.getElementById(
+        "question-navigator"
+    );
 
-const submitButton = document.getElementById("submit-button");
+const submitButton =
+    document.getElementById(
+        "submit-button"
+    );
 
-const timerElement = document.getElementById("timer");
+const timerElement =
+    document.getElementById(
+        "timer"
+    );
 
-const scoreNumber = document.getElementById("score-number");
+const scoreNumber =
+    document.getElementById(
+        "score-number"
+    );
 
-const correctCount = document.getElementById("correct-count");
+const correctCount =
+    document.getElementById(
+        "correct-count"
+    );
 
-const incorrectCount = document.getElementById("incorrect-count");
+const incorrectCount =
+    document.getElementById(
+        "incorrect-count"
+    );
 
-const unansweredCount = document.getElementById("unanswered-count");
+const unansweredCount =
+    document.getElementById(
+        "unanswered-count"
+    );
 
-const resultsSetTitle = document.getElementById("results-set-title");
+const resultsSetTitle =
+    document.getElementById(
+        "results-set-title"
+    );
 
-const resultsMessage = document.getElementById("results-message");
+const resultsMessage =
+    document.getElementById(
+        "results-message"
+    );
 
-const reviewResultsButton = document.getElementById(
-    "review-results-button"
-);
+const reviewResultsButton =
+    document.getElementById(
+        "review-results-button"
+    );
 
-const resultsReview = document.getElementById(
-    "results-review"
-);
+const resultsReview =
+    document.getElementById(
+        "results-review"
+    );
 
-const resultsReviewList = document.getElementById(
-    "results-review-list"
-);
+const resultsReviewList =
+    document.getElementById(
+        "results-review-list"
+    );
 
 
 /* ============================================================
@@ -117,7 +184,10 @@ const resultsReviewList = document.getElementById(
 
 function getSetSlug() {
 
-    const params = new URLSearchParams(window.location.search);
+    const params =
+        new URLSearchParams(
+            window.location.search
+        );
 
     return params.get("set");
 
@@ -130,16 +200,37 @@ function getSetSlug() {
 
 function escapeHtml(value) {
 
-    if (value === null || value === undefined) {
+    if (
+        value === null ||
+        value === undefined
+    ) {
+
         return "";
+
     }
 
+
     return String(value)
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+        .replace(
+            /</g,
+            "&lt;"
+        )
+        .replace(
+            />/g,
+            "&gt;"
+        )
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+        .replace(
+            /'/g,
+            "&#039;"
+        );
 
 }
 
@@ -152,29 +243,80 @@ async function initialize() {
 
     try {
 
+        /*
+         * IMPORTANT:
+         *
+         * getSession() reads the session that Supabase
+         * has already saved in the browser.
+         *
+         * This allows the user to move between:
+         *
+         * Login
+         * Question Sets
+         * Question
+         *
+         * without being treated as logged out.
+         */
+
         const {
             data: {
-                user
-            }
-        } = await supabaseClient.auth.getUser();
+                session
+            },
+            error: sessionError
+        } =
+            await supabaseClient.auth.getSession();
 
-        currentUser = user;
 
-        if (!currentUser) {
+        if (sessionError) {
+
+            console.error(
+                "Could not restore Supabase session:",
+                sessionError
+            );
+
+            showError(
+                "We could not restore your login session. Please try logging in again."
+            );
+
+            return;
+
+        }
+
+
+        /*
+         * No saved session.
+         */
+
+        if (!session) {
 
             const currentUrl =
                 window.location.pathname +
                 window.location.search;
 
-            window.location.href =
+
+            window.location.replace(
                 "/login?redirect=" +
-                encodeURIComponent(currentUrl);
+                encodeURIComponent(
+                    currentUrl
+                )
+            );
 
             return;
+
         }
 
 
-        const slug = getSetSlug();
+        /*
+         * Saved session exists.
+         */
+
+        currentUser =
+            session.user;
+
+
+        const slug =
+            getSetSlug();
+
 
         if (!slug) {
 
@@ -183,14 +325,21 @@ async function initialize() {
             );
 
             return;
+
         }
 
 
-        await loadQuestionSet(slug);
+        await loadQuestionSet(
+            slug
+        );
 
     } catch (error) {
 
-        console.error(error);
+        console.error(
+            "Question initialization error:",
+            error
+        );
+
 
         showError(
             "Something went wrong while loading the question set."
@@ -205,86 +354,115 @@ async function initialize() {
    LOAD QUESTION SET
    ============================================================ */
 
-async function loadQuestionSet(slug) {
+async function loadQuestionSet(
+    slug
+) {
 
     const {
         data: setData,
         error: setError
-    } = await supabaseClient
-        .from("question_sets")
-        .select("*")
-        .eq("slug", slug)
-        .single();
+    } =
+        await supabaseClient
+            .from("question_sets")
+            .select("*")
+            .eq("slug", slug)
+            .single();
 
 
     if (setError) {
 
-        console.error(setError);
+        console.error(
+            "Question set error:",
+            setError
+        );
+
 
         showError(
             "The question set could not be found."
         );
 
         return;
+
     }
 
 
-    currentSet = setData;
+    currentSet =
+        setData;
 
 
     const {
         data: questionData,
         error: questionError
-    } = await supabaseClient
-        .from("questions")
-        .select(`
-            id,
-            set_id,
-            question_number,
-            question_text,
-            choice_a,
-            choice_b,
-            choice_c,
-            choice_d,
-            correct_answer,
-            explanation,
-            difficulty,
-            topic
-        `)
-        .eq("set_id", currentSet.id)
-        .order("question_number", {
-            ascending: true
-        });
+    } =
+        await supabaseClient
+            .from("questions")
+            .select(`
+                id,
+                set_id,
+                question_number,
+                question_text,
+                choice_a,
+                choice_b,
+                choice_c,
+                choice_d,
+                correct_answer,
+                explanation,
+                difficulty,
+                topic
+            `)
+            .eq(
+                "set_id",
+                currentSet.id
+            )
+            .order(
+                "question_number",
+                {
+                    ascending: true
+                }
+            );
 
 
     if (questionError) {
 
-        console.error(questionError);
+        console.error(
+            "Question loading error:",
+            questionError
+        );
+
 
         showError(
             "The questions could not be loaded."
         );
 
         return;
+
     }
 
 
-    if (!questionData || questionData.length === 0) {
+    if (
+        !questionData ||
+        questionData.length === 0
+    ) {
 
         showError(
             "This question set does not contain any questions yet."
         );
 
         return;
+
     }
 
 
-    questions = questionData;
+    questions =
+        questionData;
 
 
-    setTitle.textContent = currentSet.name;
+    setTitle.textContent =
+        currentSet.name;
 
-    resultsSetTitle.textContent = currentSet.name;
+
+    resultsSetTitle.textContent =
+        currentSet.name;
 
 
     renderQuestionNavigator();
@@ -294,9 +472,14 @@ async function loadQuestionSet(slug) {
     startTimer();
 
 
-    loadingScreen.classList.add("hidden");
+    loadingScreen.classList.add(
+        "hidden"
+    );
 
-    questionApp.classList.remove("hidden");
+
+    questionApp.classList.remove(
+        "hidden"
+    );
 
 }
 
@@ -307,37 +490,54 @@ async function loadQuestionSet(slug) {
 
 function renderQuestionNavigator() {
 
-    questionNavigator.innerHTML = "";
+    questionNavigator.innerHTML =
+        "";
 
 
-    questions.forEach((question, index) => {
+    questions.forEach(
+        (
+            question,
+            index
+        ) => {
 
-        const button =
-            document.createElement("button");
-
-        button.type = "button";
-
-        button.className =
-            "question-number-button";
-
-        button.textContent =
-            index + 1;
-
-        button.addEventListener(
-            "click",
-            () => {
-
-                currentQuestionIndex = index;
-
-                renderCurrentQuestion();
-
-            }
-        );
+            const button =
+                document.createElement(
+                    "button"
+                );
 
 
-        questionNavigator.appendChild(button);
+            button.type =
+                "button";
 
-    });
+
+            button.className =
+                "question-number-button";
+
+
+            button.textContent =
+                index + 1;
+
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    currentQuestionIndex =
+                        index;
+
+
+                    renderCurrentQuestion();
+
+                }
+            );
+
+
+            questionNavigator.appendChild(
+                button
+            );
+
+        }
+    );
 
 
     updateQuestionNavigator();
@@ -357,38 +557,48 @@ function updateQuestionNavigator() {
         );
 
 
-    buttons.forEach((button, index) => {
+    buttons.forEach(
+        (
+            button,
+            index
+        ) => {
 
-        button.classList.toggle(
-            "current",
-            index === currentQuestionIndex
-        );
-
-
-        const question =
-            questions[index];
-
-
-        const answer =
-            answers[question.id];
+            button.classList.toggle(
+                "current",
+                index ===
+                    currentQuestionIndex
+            );
 
 
-        const isMarked =
-            markedForReview[question.id] === true;
+            const question =
+                questions[index];
 
 
-        button.classList.toggle(
-            "answered",
-            Boolean(answer)
-        );
+            const answer =
+                answers[
+                    question.id
+                ];
 
 
-        button.classList.toggle(
-            "review",
-            isMarked
-        );
+            const isMarked =
+                markedForReview[
+                    question.id
+                ] === true;
 
-    });
+
+            button.classList.toggle(
+                "answered",
+                Boolean(answer)
+            );
+
+
+            button.classList.toggle(
+                "review",
+                isMarked
+            );
+
+        }
+    );
 
 }
 
@@ -400,23 +610,34 @@ function updateQuestionNavigator() {
 function renderCurrentQuestion() {
 
     const question =
-        questions[currentQuestionIndex];
+        questions[
+            currentQuestionIndex
+        ];
 
 
     if (!question) {
+
         return;
+
     }
 
 
     questionNumber.textContent =
-        `Question ${currentQuestionIndex + 1} of ${questions.length}`;
+        `Question ${
+            currentQuestionIndex + 1
+        } of ${
+            questions.length
+        }`;
 
 
     questionText.textContent =
         question.question_text;
 
 
-    renderChoices(question);
+    renderChoices(
+        question
+    );
+
 
     updateReviewButton();
 
@@ -431,78 +652,104 @@ function renderCurrentQuestion() {
    RENDER CHOICES
    ============================================================ */
 
-function renderChoices(question) {
+function renderChoices(
+    question
+) {
 
-    choicesContainer.innerHTML = "";
+    choicesContainer.innerHTML =
+        "";
 
 
     const choices = [
+
         {
             letter: "A",
             text: question.choice_a
         },
+
         {
             letter: "B",
             text: question.choice_b
         },
+
         {
             letter: "C",
             text: question.choice_c
         },
+
         {
             letter: "D",
             text: question.choice_d
         }
+
     ];
 
 
-    choices.forEach(choice => {
+    choices.forEach(
+        choice => {
 
-        const button =
-            document.createElement("button");
-
-        button.type = "button";
-
-        button.className = "choice";
-
-
-        if (
-            answers[question.id] ===
-            choice.letter
-        ) {
-
-            button.classList.add("selected");
-
-        }
+            const button =
+                document.createElement(
+                    "button"
+                );
 
 
-        button.innerHTML = `
-            <span class="choice-letter">
-                ${choice.letter}
-            </span>
-
-            <span class="choice-text">
-                ${escapeHtml(choice.text)}
-            </span>
-        `;
+            button.type =
+                "button";
 
 
-        button.addEventListener(
-            "click",
-            () => {
+            button.className =
+                "choice";
 
-                selectAnswer(
-                    question.id,
-                    choice.letter
+
+            if (
+                answers[
+                    question.id
+                ] ===
+                choice.letter
+            ) {
+
+                button.classList.add(
+                    "selected"
                 );
 
             }
-        );
 
 
-        choicesContainer.appendChild(button);
+            button.innerHTML = `
 
-    });
+                <span class="choice-letter">
+                    ${choice.letter}
+                </span>
+
+                <span class="choice-text">
+                    ${escapeHtml(
+                        choice.text
+                    )}
+                </span>
+
+            `;
+
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    selectAnswer(
+                        question.id,
+                        choice.letter
+                    );
+
+                }
+            );
+
+
+            choicesContainer.appendChild(
+                button
+            );
+
+        }
+    );
 
 }
 
@@ -516,7 +763,10 @@ function selectAnswer(
     answer
 ) {
 
-    answers[questionId] = answer;
+    answers[
+        questionId
+    ] = answer;
+
 
     renderCurrentQuestion();
 
@@ -530,15 +780,21 @@ function selectAnswer(
 function clearAnswer() {
 
     const question =
-        questions[currentQuestionIndex];
+        questions[
+            currentQuestionIndex
+        ];
 
 
     if (!question) {
+
         return;
+
     }
 
 
-    delete answers[question.id];
+    delete answers[
+        question.id
+    ];
 
 
     renderCurrentQuestion();
@@ -553,16 +809,24 @@ function clearAnswer() {
 function toggleReview() {
 
     const question =
-        questions[currentQuestionIndex];
+        questions[
+            currentQuestionIndex
+        ];
 
 
     if (!question) {
+
         return;
+
     }
 
 
-    markedForReview[question.id] =
-        !markedForReview[question.id];
+    markedForReview[
+        question.id
+    ] =
+        !markedForReview[
+            question.id
+        ];
 
 
     updateReviewButton();
@@ -579,11 +843,22 @@ function toggleReview() {
 function updateReviewButton() {
 
     const question =
-        questions[currentQuestionIndex];
+        questions[
+            currentQuestionIndex
+        ];
+
+
+    if (!question) {
+
+        return;
+
+    }
 
 
     const marked =
-        markedForReview[question.id] === true;
+        markedForReview[
+            question.id
+        ] === true;
 
 
     reviewButton.classList.toggle(
@@ -606,12 +881,17 @@ function updateReviewButton() {
 
 function goPrevious() {
 
-    if (currentQuestionIndex <= 0) {
+    if (
+        currentQuestionIndex <= 0
+    ) {
+
         return;
+
     }
 
 
     currentQuestionIndex--;
+
 
     renderCurrentQuestion();
 
@@ -630,10 +910,12 @@ function goNext() {
     ) {
 
         return;
+
     }
 
 
     currentQuestionIndex++;
+
 
     renderCurrentQuestion();
 
@@ -678,28 +960,40 @@ function startTimer() {
 
 
     timerInterval =
-        setInterval(() => {
+        setInterval(
+            () => {
 
-            if (submitted) {
-                return;
-            }
+                if (submitted) {
 
+                    return;
 
-            timeRemaining--;
-
-
-            updateTimerDisplay();
+                }
 
 
-            if (timeRemaining <= 0) {
+                timeRemaining--;
 
-                clearInterval(timerInterval);
 
-                submitTest(true);
+                updateTimerDisplay();
 
-            }
 
-        }, 1000);
+                if (
+                    timeRemaining <= 0
+                ) {
+
+                    clearInterval(
+                        timerInterval
+                    );
+
+
+                    submitTest(
+                        true
+                    );
+
+                }
+
+            },
+            1000
+        );
 
 }
 
@@ -711,14 +1005,27 @@ function startTimer() {
 function updateTimerDisplay() {
 
     const minutes =
-        Math.floor(timeRemaining / 60);
+        Math.floor(
+            timeRemaining / 60
+        );
+
 
     const seconds =
         timeRemaining % 60;
 
 
     timerElement.textContent =
-        `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+        `${String(
+            minutes
+        ).padStart(
+            2,
+            "0"
+        )}:${String(
+            seconds
+        ).padStart(
+            2,
+            "0"
+        )}`;
 
 
     timerElement.classList.remove(
@@ -727,13 +1034,17 @@ function updateTimerDisplay() {
     );
 
 
-    if (timeRemaining <= 60) {
+    if (
+        timeRemaining <= 60
+    ) {
 
         timerElement.classList.add(
             "danger"
         );
 
-    } else if (timeRemaining <= 300) {
+    } else if (
+        timeRemaining <= 300
+    ) {
 
         timerElement.classList.add(
             "warning"
@@ -753,7 +1064,9 @@ async function submitTest(
 ) {
 
     if (submitted) {
+
         return;
+
     }
 
 
@@ -762,20 +1075,32 @@ async function submitTest(
         const unanswered =
             questions.filter(
                 question =>
-                    !answers[question.id]
+                    !answers[
+                        question.id
+                    ]
             ).length;
 
 
-        if (unanswered > 0) {
+        if (
+            unanswered > 0
+        ) {
 
             const shouldSubmit =
                 window.confirm(
-                    `You have ${unanswered} unanswered question${unanswered === 1 ? "" : "s"}. Are you sure you want to submit?`
+                    `You have ${
+                        unanswered
+                    } unanswered question${
+                        unanswered === 1
+                            ? ""
+                            : "s"
+                    }. Are you sure you want to submit?`
                 );
 
 
             if (!shouldSubmit) {
+
                 return;
+
             }
 
         } else {
@@ -787,7 +1112,9 @@ async function submitTest(
 
 
             if (!shouldSubmit) {
+
                 return;
+
             }
 
         }
@@ -800,7 +1127,9 @@ async function submitTest(
 
     if (timerInterval) {
 
-        clearInterval(timerInterval);
+        clearInterval(
+            timerInterval
+        );
 
     }
 
@@ -809,9 +1138,14 @@ async function submitTest(
         calculateResults();
 
 
-    await saveAttempt(results);
+    await saveAttempt(
+        results
+    );
 
-    showResults(results);
+
+    showResults(
+        results
+    );
 
 }
 
@@ -830,46 +1164,57 @@ function calculateResults() {
 
 
     const detailedResults =
-        questions.map(question => {
+        questions.map(
+            question => {
 
-            const selected =
-                answers[question.id] || null;
+                const selected =
+                    answers[
+                        question.id
+                    ] || null;
 
 
-            let status;
+                let status;
 
 
-            if (!selected) {
+                if (!selected) {
 
-                unanswered++;
+                    unanswered++;
 
-                status = "unanswered";
+                    status =
+                        "unanswered";
 
-            } else if (
-                selected ===
-                question.correct_answer
-            ) {
+                } else if (
+                    selected ===
+                    question.correct_answer
+                ) {
 
-                correct++;
+                    correct++;
 
-                status = "correct";
+                    status =
+                        "correct";
 
-            } else {
+                } else {
 
-                incorrect++;
+                    incorrect++;
 
-                status = "incorrect";
+                    status =
+                        "incorrect";
+
+                }
+
+
+                return {
+
+                    question,
+
+                    selected,
+
+                    status
+
+                };
 
             }
-
-
-            return {
-                question,
-                selected,
-                status
-            };
-
-        });
+        );
 
 
     const total =
@@ -878,17 +1223,27 @@ function calculateResults() {
 
     const percentage =
         Math.round(
-            (correct / total) * 100
+            (
+                correct /
+                total
+            ) * 100
         );
 
 
     return {
+
         correct,
+
         incorrect,
+
         unanswered,
+
         total,
+
         percentage,
+
         detailedResults
+
     };
 
 }
@@ -898,10 +1253,17 @@ function calculateResults() {
    SAVE ATTEMPT
    ============================================================ */
 
-async function saveAttempt(results) {
+async function saveAttempt(
+    results
+) {
 
-    if (!currentUser || !currentSet) {
+    if (
+        !currentUser ||
+        !currentSet
+    ) {
+
         return;
+
     }
 
 
@@ -910,17 +1272,31 @@ async function saveAttempt(results) {
         const {
             data: attempt,
             error: attemptError
-        } = await supabaseClient
-            .from("question_set_attempts")
-            .insert({
-                user_id: currentUser.id,
-                set_id: currentSet.id,
-                score: results.correct,
-                total_questions: results.total,
-                completed_at: new Date().toISOString()
-            })
-            .select()
-            .single();
+        } =
+            await supabaseClient
+                .from(
+                    "question_set_attempts"
+                )
+                .insert({
+
+                    user_id:
+                        currentUser.id,
+
+                    set_id:
+                        currentSet.id,
+
+                    score:
+                        results.correct,
+
+                    total_questions:
+                        results.total,
+
+                    completed_at:
+                        new Date().toISOString()
+
+                })
+                .select()
+                .single();
 
 
         if (attemptError) {
@@ -930,27 +1306,47 @@ async function saveAttempt(results) {
                 attemptError
             );
 
+
             return;
+
         }
 
 
         const answerRows =
-            results.detailedResults.map(result => ({
-                attempt_id: attempt.id,
-                question_id: result.question.id,
-                selected_answer: result.selected,
-                is_correct:
-                    result.status === "correct"
-            }));
+            results.detailedResults.map(
+                result => ({
+
+                    attempt_id:
+                        attempt.id,
+
+                    question_id:
+                        result.question.id,
+
+                    selected_answer:
+                        result.selected,
+
+                    is_correct:
+                        result.status ===
+                        "correct"
+
+                })
+            );
 
 
-        if (answerRows.length > 0) {
+        if (
+            answerRows.length > 0
+        ) {
 
             const {
                 error: answerError
-            } = await supabaseClient
-                .from("question_answers")
-                .insert(answerRows);
+            } =
+                await supabaseClient
+                    .from(
+                        "question_answers"
+                    )
+                    .insert(
+                        answerRows
+                    );
 
 
             if (answerError) {
@@ -980,11 +1376,18 @@ async function saveAttempt(results) {
    SHOW RESULTS
    ============================================================ */
 
-function showResults(results) {
+function showResults(
+    results
+) {
 
-    questionApp.classList.add("hidden");
+    questionApp.classList.add(
+        "hidden"
+    );
 
-    resultsScreen.classList.remove("hidden");
+
+    resultsScreen.classList.remove(
+        "hidden"
+    );
 
 
     scoreNumber.textContent =
@@ -1007,12 +1410,16 @@ function showResults(results) {
         currentSet.name;
 
 
-    if (results.percentage >= 90) {
+    if (
+        results.percentage >= 90
+    ) {
 
         resultsMessage.textContent =
             "Excellent work. Review any missed questions carefully and focus on why the correct answer is supported.";
 
-    } else if (results.percentage >= 70) {
+    } else if (
+        results.percentage >= 70
+    ) {
 
         resultsMessage.textContent =
             "Solid performance. Review the questions you missed and identify the reasoning pattern behind each error.";
@@ -1026,8 +1433,11 @@ function showResults(results) {
 
 
     window.scrollTo({
+
         top: 0,
+
         behavior: "smooth"
+
     });
 
 }
@@ -1049,10 +1459,13 @@ function showResultsReview() {
             "hidden"
         );
 
+
         reviewResultsButton.textContent =
             "Review Questions";
 
+
         return;
+
     }
 
 
@@ -1060,11 +1473,15 @@ function showResultsReview() {
         calculateResults();
 
 
-    resultsReviewList.innerHTML = "";
+    resultsReviewList.innerHTML =
+        "";
 
 
     results.detailedResults.forEach(
-        (result, index) => {
+        (
+            result,
+            index
+        ) => {
 
             const question =
                 result.question;
@@ -1072,20 +1489,38 @@ function showResultsReview() {
 
             const selectedText =
                 result.selected
-                    ? `${result.selected}. ${getChoiceText(question, result.selected)}`
+                    ? `${
+                        result.selected
+                    }. ${
+                        getChoiceText(
+                            question,
+                            result.selected
+                        )
+                    }`
                     : "No answer";
 
 
             const correctText =
-                `${question.correct_answer}. ${getChoiceText(question, question.correct_answer)}`;
+                `${
+                    question.correct_answer
+                }. ${
+                    getChoiceText(
+                        question,
+                        question.correct_answer
+                    )
+                }`;
 
 
             const item =
-                document.createElement("div");
+                document.createElement(
+                    "div"
+                );
 
 
             item.className =
-                `review-result-item ${result.status}`;
+                `review-result-item ${
+                    result.status
+                }`;
 
 
             item.innerHTML = `
@@ -1095,28 +1530,38 @@ function showResultsReview() {
                 </div>
 
                 <div class="review-result-question">
-                    ${escapeHtml(question.question_text)}
+                    ${escapeHtml(
+                        question.question_text
+                    )}
                 </div>
 
                 <div class="review-result-answer">
                     <strong>Your answer:</strong>
-                    ${escapeHtml(selectedText)}
+                    ${escapeHtml(
+                        selectedText
+                    )}
                 </div>
 
                 <div class="review-result-answer">
                     <strong>Correct answer:</strong>
-                    ${escapeHtml(correctText)}
+                    ${escapeHtml(
+                        correctText
+                    )}
                 </div>
 
                 <div class="review-result-explanation">
                     <strong>Explanation:</strong><br>
-                    ${escapeHtml(question.explanation)}
+                    ${escapeHtml(
+                        question.explanation
+                    )}
                 </div>
 
             `;
 
 
-            resultsReviewList.appendChild(item);
+            resultsReviewList.appendChild(
+                item
+            );
 
         }
     );
@@ -1132,7 +1577,9 @@ function showResultsReview() {
 
 
     resultsReview.scrollIntoView({
+
         behavior: "smooth"
+
     });
 
 }
@@ -1150,18 +1597,27 @@ function getChoiceText(
     switch (letter) {
 
         case "A":
+
             return question.choice_a;
 
+
         case "B":
+
             return question.choice_b;
 
+
         case "C":
+
             return question.choice_c;
 
+
         case "D":
+
             return question.choice_d;
 
+
         default:
+
             return "";
 
     }
@@ -1173,9 +1629,12 @@ function getChoiceText(
    ERROR
    ============================================================ */
 
-function showError(message) {
+function showError(
+    message
+) {
 
     loadingScreen.innerHTML = `
+
         <div style="
             max-width: 520px;
             padding: 30px;
@@ -1199,7 +1658,9 @@ function showError(message) {
                 line-height: 1.6;
                 font-size: 14px;
             ">
-                ${escapeHtml(message)}
+                ${escapeHtml(
+                    message
+                )}
             </p>
 
             <a
@@ -1219,6 +1680,7 @@ function showError(message) {
             </a>
 
         </div>
+
     `;
 
 }
@@ -1251,7 +1713,9 @@ nextButton.addEventListener(
 
             if (shouldSubmit) {
 
-                submitTest(false);
+                submitTest(
+                    false
+                );
 
             }
 
@@ -1279,7 +1743,13 @@ reviewButton.addEventListener(
 
 submitButton.addEventListener(
     "click",
-    () => submitTest(false)
+    () => {
+
+        submitTest(
+            false
+        );
+
+    }
 );
 
 
@@ -1304,25 +1774,32 @@ const navigation =
     );
 
 
-menuButton.addEventListener(
-    "click",
-    () => {
+if (
+    menuButton &&
+    navigation
+) {
 
-        const isOpen =
-            navigation.classList.toggle(
-                "mobile-open"
+    menuButton.addEventListener(
+        "click",
+        () => {
+
+            const isOpen =
+                navigation.classList.toggle(
+                    "mobile-open"
+                );
+
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                isOpen
+                    ? "true"
+                    : "false"
             );
 
+        }
+    );
 
-        menuButton.setAttribute(
-            "aria-expanded",
-            isOpen
-                ? "true"
-                : "false"
-        );
-
-    }
-);
+}
 
 
 /* ============================================================
