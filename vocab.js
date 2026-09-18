@@ -553,6 +553,87 @@ statusSummary=document.getElementById("vocab-status-summary");
 const STATE_KEY="absoluteprep_vocab_state";
 const legacyLearned=JSON.parse(localStorage.getItem("absoluteprep_vocab_learned")||"{}");
 
+function exampleFor(word,pos,cat){
+    const w=word.toLowerCase();
+
+    if(pos==="conj"){
+        return "The results were promising, albeit preliminary.";
+    }
+
+    if(pos==="adj"){
+        if(cat==="Tone"){
+            return "The author uses a "+w+" tone when discussing the issue.";
+        }
+
+        if(cat==="Argument"){
+            return "The passage presents the claim as "+w+" rather than certain.";
+        }
+
+        if(cat==="Science"){
+            return "The study describes a "+w+" process or condition.";
+        }
+
+        return "The researchers adopted a "+w+" approach to the problem.";
+    }
+
+    if(pos==="noun"){
+        if(cat==="Tone"){
+            return "The passage contains an undercurrent of "+w+".";
+        }
+
+        if(cat==="Science"){
+            return "The researchers measured "+w+" during the experiment.";
+        }
+
+        if(cat==="Argument"){
+            return "The passage treats "+w+" as an important part of the argument.";
+        }
+
+        return "The report identifies "+w+" as an important feature of the method.";
+    }
+
+    if(pos==="verb"){
+        if(cat==="Science"){
+            return "The experiment shows how the system can "+w+" under controlled conditions.";
+        }
+
+        if(cat==="Argument"){
+            const argumentExamples={
+                infer:"The author invites readers to infer that the evidence supports the conclusion.",
+                imply:"The wording may imply that the earlier explanation is incomplete.",
+                object:"The author continues to object to the proposed explanation.",
+                paraphrase:"The author paraphrases the earlier claim in simpler terms.",
+                reiterate:"The author reiterates the central claim near the end of the passage.",
+                summarize:"The author summarizes the evidence before reaching a conclusion.",
+                warrant:"The evidence may warrant a closer examination of the claim.",
+                maintain:"The author maintains that the evidence supports the conclusion.",
+                invoke:"The author invokes a historical example to support the argument.",
+                counter:"The new evidence helps counter the earlier claim.",
+                contradict:"The new finding appears to contradict the earlier conclusion.",
+                deny:"The author does not deny that the evidence has some limitations.",
+                dismiss:"The researcher dismisses the alternative explanation as unsupported.",
+                discredit:"The new evidence could discredit the earlier interpretation.",
+                allege:"The critic alleges that the evidence has been misinterpreted.",
+                endorse:"The evidence does not necessarily endorse the author's conclusion.",
+                qualify:"The author qualifies the claim by noting an important exception.",
+                rebut:"The final paragraph attempts to rebut the opposing argument.",
+                refute:"The new evidence may refute the earlier conclusion.",
+                revoke:"The agency may revoke the claim after the error is confirmed.",
+                rationalize:"The author attempts to rationalize the decision after the results appear.",
+                justify:"The evidence is used to justify the proposed interpretation."
+            };
+
+            if(argumentExamples[w]){
+                return argumentExamples[w];
+            }
+        }
+
+        return "The researchers sought to "+w+" the process.";
+    }
+
+    return "In the passage, "+w+" describes an important idea.";
+}
+
 function loadWordState(){
     const saved=JSON.parse(localStorage.getItem(STATE_KEY)||"null");
     const state={};
