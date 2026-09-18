@@ -1,253 +1,175 @@
 /* =========================================
-   GLOBAL
+   QUESTION SETS PAGE
 ========================================= */
 
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-
-    background: #f7f9fb;
-
-    color: #202c3d;
-
-    font-family: 'Poppins', sans-serif;
-}
-
-
-
-/* =========================================
-   HEADER
-========================================= */
-
-.site-header {
+.question-sets-main {
     width: 100%;
+    max-width: none;
 
-    background: #ffffff;
+    margin: 0;
+    padding: 0 0 110px;
 
-    border-bottom: 1px solid #e5e7eb;
+    background: #f8fafc;
 }
-
-
-.header-container {
-    width: min(1400px, 92%);
-
-    min-height: 92px;
-
-    margin: 0 auto;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 30px;
-}
-
-
-
-/* =========================================
-   LOGO
-========================================= */
-
-.logo-link {
-    display: flex;
-
-    align-items: center;
-
-    text-decoration: none;
-
-    flex-shrink: 0;
-}
-
-
-.logo {
-    height: 77px;
-
-    width: auto;
-
-    max-width: 100%;
-
-    object-fit: contain;
-
-    display: block;
-}
-
-
-
-/* =========================================
-   NAVIGATION
-========================================= */
-
-.main-navigation {
-    display: flex;
-
-    align-items: center;
-
-    gap: 27px;
-
-    margin-left: 20px;
-
-    flex: 1;
-}
-
-
-.main-navigation a {
-    position: relative;
-
-    color: #526071;
-
-    text-decoration: none;
-
-    font-size: 14px;
-
-    font-weight: 500;
-
-    padding: 8px 0;
-
-    transition: color 0.2s ease;
-}
-
-
-.main-navigation a:hover {
-    color: #0f766e;
-}
-
-
-.main-navigation a.active {
-    color: #0f766e;
-
-    font-weight: 600;
-}
-
-
-.main-navigation a.active::after {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-
-    right: 0;
-
-    bottom: 0;
-
-    height: 2px;
-
-    border-radius: 2px;
-
-    background: #0f766e;
-}
-
-
-
-/* =========================================
-   AUTH BUTTONS
-========================================= */
-
-.auth-buttons {
-    display: flex;
-
-    align-items: center;
-
-    gap: 7px;
-
-    flex-shrink: 0;
-}
-
-
-.register-button,
-.login-button {
-    display: inline-flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    padding: 10px 15px;
-
-    border-radius: 8px;
-
-    text-decoration: none;
-
-    font-family: 'Poppins', sans-serif;
-
-    font-size: 14px;
-
-    font-weight: 600;
-
-    white-space: nowrap;
-
-    transition:
-        background-color 0.2s ease,
-        color 0.2s ease,
-        border-color 0.2s ease;
-}
-
-
-.register-button {
-    color: #0f766e;
-
-    background: #ffffff;
-
-    border: 1px solid #0f766e;
-}
-
-
-.register-button:hover {
-    background: #f0fdfa;
-}
-
-
-.login-button {
-    color: #ffffff;
-
-    background: #0f766e;
-
-    border: 1px solid #0f766e;
-}
-
-
-.login-button:hover {
-    background: #115e59;
-
-    border-color: #115e59;
-}
-
-
-
-/* =========================================
-   MAIN
-========================================= */
-
-.question-sets-page {
-    width: min(1200px, 90%);
-
-    margin: 0 auto;
-
-    padding: 70px 0 100px;
-}
-
 
 
 /* =========================================
    PAGE INTRO
 ========================================= */
 
-.page-intro {
-    text-align: center;
+.question-sets-intro {
+    width: calc(100% - 40px);
+    max-width: 1100px;
 
-    margin-bottom: 45px;
+    margin: 0 auto;
+
+    padding: 90px 20px 45px;
+
+    text-align: center;
+}
+
+.question-sets-eyebrow {
+    margin-bottom: 14px;
+
+    color: #0f766e;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+}
+
+.question-sets-intro h1 {
+    margin: 0 0 20px;
+
+    color: #0f172a;
+
+    font-size: clamp(44px, 6vw, 72px);
+
+    line-height: 1.05;
+
+    font-weight: 800;
+
+    letter-spacing: -2.5px;
+}
+
+.question-sets-description {
+    width: 100%;
+    max-width: 680px;
+
+    margin: 0 auto;
+
+    color: #64748b;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    font-weight: 400;
 }
 
 
-.page-eyebrow {
-    margin: 0 0 10px;
+/* =========================================
+   SECTION SELECTOR
+========================================= */
+
+.section-selector {
+    width: calc(100% - 40px);
+    max-width: 900px;
+
+    margin: 0 auto 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 6px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 14px rgba(15, 23, 42, 0.04);
+}
+
+.section-button {
+    flex: 1;
+
+    min-height: 48px;
+
+    padding: 11px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #64748b;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.section-button:hover {
+    color: #0f766e;
+
+    background: #f0fdfa;
+}
+
+.section-button.active {
+    color: #ffffff;
+
+    background: #0f766e;
+
+    box-shadow:
+        0 3px 10px rgba(15, 118, 110, 0.18);
+}
+
+
+/* =========================================
+   SETS SECTION
+========================================= */
+
+.sets-section {
+    display: none;
+
+    width: calc(100% - 40px);
+    max-width: 1280px;
+
+    margin: 0 auto;
+}
+
+.sets-section.active-section {
+    display: block;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.sets-section-heading {
+    margin-bottom: 34px;
+}
+
+.sets-section-eyebrow {
+    margin-bottom: 9px;
 
     color: #0f766e;
 
@@ -258,26 +180,24 @@ body {
     letter-spacing: 2px;
 }
 
+.sets-section-heading h2 {
+    margin-bottom: 10px;
 
-.page-intro h1 {
-    margin: 0 0 12px;
+    color: #0f172a;
 
-    color: #202c3d;
-
-    font-size: 42px;
+    font-size: 34px;
 
     line-height: 1.2;
 
-    font-weight: 600;
+    font-weight: 700;
 
-    letter-spacing: -1px;
+    letter-spacing: -0.8px;
 }
 
+.sets-section-heading > p:last-child {
+    max-width: 700px;
 
-.page-description {
-    margin: 0;
-
-    color: #697586;
+    color: #64748b;
 
     font-size: 16px;
 
@@ -285,111 +205,8 @@ body {
 }
 
 
-
 /* =========================================
-   SECTION SELECTOR
-========================================= */
-
-.section-selector {
-    display: flex;
-
-    justify-content: center;
-
-    gap: 8px;
-
-    margin-bottom: 50px;
-}
-
-
-.section-button {
-    padding: 11px 22px;
-
-    border: 1px solid #d7dde4;
-
-    border-radius: 8px;
-
-    background: #ffffff;
-
-    color: #697586;
-
-    font-family: 'Poppins', sans-serif;
-
-    font-size: 14px;
-
-    font-weight: 600;
-
-    cursor: pointer;
-
-    transition:
-        background-color 0.2s ease,
-        color 0.2s ease,
-        border-color 0.2s ease;
-}
-
-
-.section-button:hover {
-    border-color: #0f766e;
-
-    color: #0f766e;
-}
-
-
-.section-button.active {
-    background: #0f766e;
-
-    border-color: #0f766e;
-
-    color: #ffffff;
-}
-
-
-
-/* =========================================
-   SETS SECTION
-========================================= */
-
-.sets-section {
-    display: none;
-}
-
-
-.sets-section.active-section {
-    display: block;
-}
-
-
-.sets-heading {
-    margin-bottom: 25px;
-}
-
-
-.sets-eyebrow {
-    margin: 0 0 7px;
-
-    color: #0f766e;
-
-    font-size: 11px;
-
-    font-weight: 700;
-
-    letter-spacing: 1.5px;
-}
-
-
-.sets-heading h2 {
-    margin: 0;
-
-    color: #202c3d;
-
-    font-size: 27px;
-
-    font-weight: 600;
-}
-
-
-
-/* =========================================
-   SET GRID
+   SETS GRID
 ========================================= */
 
 .sets-grid {
@@ -402,286 +219,200 @@ body {
 }
 
 
-
 /* =========================================
    SET CARD
 ========================================= */
 
 .set-card {
-    min-height: 265px;
+    position: relative;
 
-    padding: 27px;
+    min-height: 320px;
 
-    background: #ffffff;
-
-    border: 1px solid #e5e7eb;
-
-    border-radius: 13px;
+    padding: 28px;
 
     display: flex;
 
     flex-direction: column;
 
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 5px 18px rgba(15, 23, 42, 0.04);
+
     transition:
         transform 0.2s ease,
-        box-shadow 0.2s ease,
-        border-color 0.2s ease;
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
-
 
 .set-card:hover {
     transform: translateY(-3px);
 
-    border-color: #b8dcd8;
+    border-color: #cbd5e1;
 
     box-shadow:
-        0 12px 30px rgba(32, 44, 61, 0.08);
+        0 12px 28px rgba(15, 23, 42, 0.08);
 }
-
 
 
 /* =========================================
-   CARD TOP
+   SET NUMBER
 ========================================= */
 
-.set-top {
+.set-card-number {
+    width: 42px;
+    height: 42px;
+
     display: flex;
 
     align-items: center;
+    justify-content: center;
 
-    justify-content: space-between;
+    margin-bottom: 25px;
 
-    gap: 10px;
-
-    margin-bottom: 22px;
-}
-
-
-.difficulty {
-    display: inline-flex;
-
-    padding: 5px 9px;
-
-    border-radius: 6px;
+    border-radius: 10px;
 
     background: #f0fdfa;
 
     color: #0f766e;
 
-    font-size: 11px;
+    font-size: 13px;
 
-    font-weight: 600;
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
 }
-
-
-.question-count {
-    color: #8994a3;
-
-    font-size: 11px;
-
-    font-weight: 500;
-}
-
 
 
 /* =========================================
-   CARD CONTENT
+   SET CARD CONTENT
 ========================================= */
 
-.set-card h3 {
-    margin: 0 0 10px;
-
-    color: #202c3d;
-
-    font-size: 18px;
-
-    line-height: 1.4;
-
-    font-weight: 600;
+.set-card-content {
+    flex: 1;
 }
 
+.set-card-content h3 {
+    margin-bottom: 12px;
 
-.set-card p {
-    margin: 0;
+    color: #0f172a;
 
-    color: #697586;
+    font-size: 21px;
 
-    font-size: 13px;
+    line-height: 1.3;
+
+    font-weight: 700;
+
+    letter-spacing: -0.3px;
+}
+
+.set-card-content p {
+    margin-bottom: 22px;
+
+    color: #64748b;
+
+    font-size: 14px;
 
     line-height: 1.7;
+
+    font-weight: 400;
 }
 
+
+/* =========================================
+   CARD META
+========================================= */
+
+.set-card-meta {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.set-card-meta span {
+    display: inline-flex;
+
+    align-items: center;
+
+    min-height: 28px;
+
+    padding: 5px 9px;
+
+    border-radius: 6px;
+
+    background: #f1f5f9;
+
+    color: #64748b;
+
+    font-size: 11px;
+
+    line-height: 1.2;
+
+    font-weight: 500;
+}
 
 
 /* =========================================
    START BUTTON
 ========================================= */
 
-.start-button {
-    margin-top: auto;
-
-    padding-top: 23px;
-
-    color: #0f766e;
-
-    text-decoration: none;
-
-    font-size: 13px;
-
-    font-weight: 600;
-}
-
-
-.start-button:hover {
-    text-decoration: underline;
-}
-
-
-
-/* =========================================
-   FOOTER
-========================================= */
-
-.site-footer {
-    background: #202c3d;
-
-    color: #ffffff;
-
-    padding: 55px 0 30px;
-}
-
-
-.footer-container {
-    width: min(1200px, 90%);
-
-    margin: 0 auto;
-}
-
-
-.footer-brand {
-    padding-left: 30px;
-
-    margin-bottom: 50px;
-}
-
-
-.footer-brand h2 {
-    margin: 0 0 10px;
-
-    font-size: 30px;
-
-    font-weight: 600;
-}
-
-
-.footer-brand p {
-    margin: 0;
-
-    color: #c6ced8;
-
-    font-size: 14px;
-}
-
-
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.35);
-
-    padding-top: 22px;
-
-    padding-left: 30px;
-
-    padding-right: 30px;
-
+.start-set-button {
     display: flex;
 
     align-items: center;
-
-    justify-content: space-between;
-
-    gap: 20px;
-
-    color: #c6ced8;
-
-    font-size: 12px;
-}
-
-
-.footer-socials {
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
-}
-
-
-.footer-socials a {
-    width: 32px;
-
-    height: 32px;
-
-    display: flex;
-
-    align-items: center;
-
     justify-content: center;
 
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    width: 100%;
 
-    border-radius: 7px;
+    min-height: 44px;
+
+    margin-top: 25px;
+
+    padding: 10px 16px;
+
+    border-radius: 8px;
+
+    background: #0f766e;
 
     color: #ffffff;
 
     text-decoration: none;
 
-    font-size: 11px;
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
 
     font-weight: 600;
 
     transition:
         background-color 0.2s ease,
-        border-color 0.2s ease;
+        transform 0.2s ease;
 }
 
+.start-set-button:hover {
+    background: #115e59;
 
-.footer-socials a:hover {
-    background: rgba(255, 255, 255, 0.1);
-
-    border-color: #ffffff;
+    transform: translateY(-1px);
 }
-
 
 
 /* =========================================
-   TABLET
+   LARGE TABLET
 ========================================= */
 
-@media (max-width: 950px) {
+@media (max-width: 1100px) {
 
-    .header-container {
-        gap: 18px;
+    .question-sets-intro {
+        padding-top: 75px;
     }
-
-
-    .main-navigation {
-        gap: 18px;
-
-        margin-left: 5px;
-    }
-
-
-    .main-navigation a {
-        font-size: 13px;
-    }
-
-
-    .register-button,
-    .login-button {
-        padding: 9px 11px;
-
-        font-size: 13px;
-    }
-
 
     .sets-grid {
         grid-template-columns:
@@ -691,144 +422,164 @@ body {
 }
 
 
-
 /* =========================================
-   MOBILE
+   TABLET
 ========================================= */
 
 @media (max-width: 700px) {
 
-    .header-container {
-        width: 90%;
-
-        min-height: auto;
-
-        padding: 10px 0;
-
-        flex-wrap: wrap;
+    .question-sets-main {
+        padding-bottom: 80px;
     }
 
+    .question-sets-intro {
+        width: calc(100% - 32px);
 
-    .logo {
-        height: 67px;
+        padding:
+            65px 10px 35px;
     }
 
+    .question-sets-intro h1 {
+        font-size: 48px;
 
-    .main-navigation {
-        order: 3;
-
-        width: 100%;
-
-        justify-content: center;
-
-        margin: 0;
-
-        gap: 17px;
-
-        padding-bottom: 5px;
+        letter-spacing: -1.8px;
     }
 
-
-    .main-navigation a {
-        font-size: 11px;
+    .question-sets-description {
+        font-size: 16px;
     }
 
+    .section-selector {
+        width: calc(100% - 32px);
 
-    .auth-buttons {
-        margin-left: auto;
+        margin-bottom: 50px;
     }
 
-
-    .question-sets-page {
-        padding-top: 50px;
-    }
-
-
-    .page-intro h1 {
-        font-size: 35px;
-    }
-
-
-    .page-description {
+    .section-button {
         font-size: 14px;
+
+        padding-left: 12px;
+        padding-right: 12px;
     }
 
+    .sets-section {
+        width: calc(100% - 32px);
+    }
+
+    .sets-section-heading h2 {
+        font-size: 30px;
+    }
 
     .sets-grid {
         grid-template-columns: 1fr;
+
+        gap: 16px;
     }
 
+    .set-card {
+        min-height: 0;
 
-    .section-selector {
-        margin-bottom: 40px;
-    }
-
-
-    .section-button {
-        padding: 10px 16px;
-
-        font-size: 13px;
-    }
-
-
-    .footer-bottom {
-        flex-direction: column;
-
-        align-items: flex-start;
+        padding: 25px;
     }
 
 }
-
 
 
 /* =========================================
    SMALL PHONES
 ========================================= */
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
 
-    .logo {
-        height: 61px;
+    .question-sets-main {
+        padding-bottom: 65px;
     }
 
+    .question-sets-intro {
+        width: calc(100% - 24px);
 
-    .register-button,
-    .login-button {
-        padding: 8px 10px;
-
-        font-size: 12px;
+        padding:
+            55px 6px 30px;
     }
 
+    .question-sets-eyebrow {
+        font-size: 11px;
 
-    .main-navigation {
-        gap: 12px;
+        letter-spacing: 2px;
     }
 
+    .question-sets-intro h1 {
+        font-size: 40px;
 
-    .main-navigation a {
-        font-size: 10px;
+        letter-spacing: -1.4px;
+
+        margin-bottom: 16px;
     }
 
+    .question-sets-description {
+        font-size: 15px;
 
-    .page-intro h1 {
-        font-size: 30px;
+        line-height: 1.65;
     }
-
 
     .section-selector {
+        width: calc(100% - 24px);
+
+        margin-bottom: 42px;
+
+        padding: 5px;
+
         gap: 5px;
     }
 
-
     .section-button {
-        padding: 9px 12px;
+        min-height: 44px;
+
+        padding:
+            9px 8px;
 
         font-size: 12px;
     }
 
+    .sets-section {
+        width: calc(100% - 24px);
+    }
+
+    .sets-section-eyebrow {
+        font-size: 10px;
+
+        letter-spacing: 1.7px;
+    }
+
+    .sets-section-heading h2 {
+        font-size: 27px;
+    }
+
+    .sets-section-heading > p:last-child {
+        font-size: 14px;
+    }
 
     .set-card {
-        padding: 23px;
+        padding: 22px;
+
+        border-radius: 12px;
+    }
+
+    .set-card-number {
+        width: 38px;
+        height: 38px;
+
+        margin-bottom: 20px;
+
+        font-size: 12px;
+    }
+
+    .set-card-content h3 {
+        font-size: 19px;
+    }
+
+    .set-card-content p {
+        font-size: 13px;
     }
 
 }
