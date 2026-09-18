@@ -19,7 +19,6 @@
     >
 
     <!-- Poppins -->
-
     <link
         rel="preconnect"
         href="https://fonts.googleapis.com"
@@ -47,7 +46,9 @@
 <body>
 
 
-    <!-- HEADER -->
+    <!-- =========================================
+         HEADER
+    ========================================== -->
 
     <header class="auth-header">
 
@@ -80,20 +81,29 @@
 
 
 
-    <!-- REGISTER -->
+    <!-- =========================================
+         REGISTER PAGE
+    ========================================== -->
 
     <main class="auth-page">
 
         <section class="auth-card">
 
+
             <h1 class="auth-heading">
                 Create your account
             </h1>
+
 
             <p class="auth-subheading">
                 Join AbsoluteSAT and start practicing smarter.
             </p>
 
+
+
+            <!-- =====================================
+                 REGISTER FORM
+            ====================================== -->
 
             <form
                 id="register-form"
@@ -111,6 +121,7 @@
                     >
                         Email
                     </label>
+
 
                     <input
                         id="email"
@@ -135,6 +146,7 @@
                     >
                         Password
                     </label>
+
 
                     <input
                         id="password"
@@ -161,6 +173,7 @@
                         Confirm password
                     </label>
 
+
                     <input
                         id="confirm-password"
                         type="password"
@@ -175,7 +188,7 @@
 
 
 
-                <!-- SUBMIT -->
+                <!-- CREATE ACCOUNT BUTTON -->
 
                 <button
                     id="register-button"
@@ -190,18 +203,28 @@
 
 
 
-            <!-- GOOGLE -->
+            <!-- =====================================
+                 DIVIDER
+            ====================================== -->
 
             <div class="auth-divider">
+
                 <span>or</span>
+
             </div>
 
+
+
+            <!-- =====================================
+                 GOOGLE BUTTON
+            ====================================== -->
 
             <button
                 id="google-button"
                 type="button"
                 class="google-button"
             >
+
 
                 <svg
                     class="google-icon"
@@ -231,13 +254,17 @@
 
                 </svg>
 
+
                 Continue with Google
+
 
             </button>
 
 
 
-            <!-- MESSAGE -->
+            <!-- =====================================
+                 MESSAGE
+            ====================================== -->
 
             <div
                 id="auth-message"
@@ -246,7 +273,9 @@
 
 
 
-            <!-- LOGIN -->
+            <!-- =====================================
+                 LOGIN LINK
+            ====================================== -->
 
             <p class="auth-bottom-text">
 
@@ -265,13 +294,22 @@
 
 
 
-    <!-- SUPABASE -->
+    <!-- =========================================
+         SUPABASE
+    ========================================== -->
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+
 
     <script src="/supabase-config.js"></script>
 
 
+
+    <!-- =========================================
+         REGISTER JAVASCRIPT
+    ========================================== -->
 
     <script>
 
@@ -288,9 +326,14 @@
             document.getElementById("auth-message");
 
 
+
+        /* =====================================
+           SHOW MESSAGE
+        ====================================== */
+
         function showMessage(text, type) {
 
-            message.textContent = text;
+            message.innerHTML = text;
 
             message.className =
                 "auth-message show " + type;
@@ -298,9 +341,19 @@
         }
 
 
-        function setLoading(button, loading, text) {
+
+        /* =====================================
+           BUTTON LOADING
+        ====================================== */
+
+        function setLoading(
+            button,
+            loading,
+            text
+        ) {
 
             button.disabled = loading;
+
 
             if (loading) {
 
@@ -320,9 +373,10 @@
         }
 
 
+
         /* =====================================
            EMAIL REGISTRATION
-        ===================================== */
+        ====================================== */
 
         registerForm.addEventListener(
             "submit",
@@ -330,8 +384,10 @@
 
                 event.preventDefault();
 
+
                 message.className =
                     "auth-message";
+
 
                 const email =
                     document
@@ -339,16 +395,23 @@
                         .value
                         .trim();
 
+
                 const password =
                     document
                         .getElementById("password")
                         .value;
+
 
                 const confirmPassword =
                     document
                         .getElementById("confirm-password")
                         .value;
 
+
+
+                /* ================================
+                   CHECK PASSWORDS
+                ================================= */
 
                 if (password !== confirmPassword) {
 
@@ -358,8 +421,31 @@
                     );
 
                     return;
+
                 }
 
+
+
+                /* ================================
+                   PASSWORD LENGTH
+                ================================= */
+
+                if (password.length < 6) {
+
+                    showMessage(
+                        "Your password must be at least 6 characters.",
+                        "error"
+                    );
+
+                    return;
+
+                }
+
+
+
+                /* ================================
+                   LOADING
+                ================================= */
 
                 setLoading(
                     registerButton,
@@ -367,6 +453,11 @@
                     "Creating account..."
                 );
 
+
+
+                /* ================================
+                   SUPABASE SIGN UP
+                ================================= */
 
                 const {
                     data,
@@ -388,22 +479,10 @@
                     });
 
 
-                if (error) {
 
-                    setLoading(
-                        registerButton,
-                        false,
-                        "Create Account"
-                    );
-
-                    showMessage(
-                        error.message,
-                        "error"
-                    );
-
-                    return;
-                }
-
+                /* ================================
+                   STOP LOADING
+                ================================= */
 
                 setLoading(
                     registerButton,
@@ -411,6 +490,49 @@
                     "Create Account"
                 );
 
+
+
+                /* ================================
+                   SUPABASE ERROR
+                ================================= */
+
+                if (error) {
+
+                    showMessage(
+                        error.message,
+                        "error"
+                    );
+
+                    return;
+
+                }
+
+
+
+                /* ================================
+                   EXISTING ACCOUNT CHECK
+                ================================= */
+
+                if (
+                    data.user &&
+                    data.user.identities &&
+                    data.user.identities.length === 0
+                ) {
+
+                    showMessage(
+                        'An account with this email already exists. <a href="/login">Log in here.</a>',
+                        "error"
+                    );
+
+                    return;
+
+                }
+
+
+
+                /* ================================
+                   ACCOUNT CREATED + LOGGED IN
+                ================================= */
 
                 if (
                     data.user &&
@@ -424,8 +546,13 @@
                 }
 
 
+
+                /* ================================
+                   EMAIL CONFIRMATION
+                ================================= */
+
                 showMessage(
-                    "Account created. Please check your email to confirm your account.",
+                    "Account created successfully. Please check your email to confirm your account.",
                     "success"
                 );
 
@@ -435,8 +562,8 @@
 
 
         /* =====================================
-           GOOGLE REGISTRATION / LOGIN
-        ===================================== */
+           GOOGLE SIGN UP
+        ====================================== */
 
         googleButton.addEventListener(
             "click",
@@ -446,6 +573,7 @@
 
                 googleButton.textContent =
                     "Connecting to Google...";
+
 
 
                 const {
@@ -465,12 +593,18 @@
                     });
 
 
+
+                /* ================================
+                   GOOGLE ERROR
+                ================================= */
+
                 if (error) {
 
                     googleButton.disabled = false;
 
                     googleButton.textContent =
                         "Continue with Google";
+
 
                     showMessage(
                         error.message,
