@@ -1,209 +1,500 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Login | AbsoluteSAT</title>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link
+        rel="icon"
+        type="image/png"
+        href="Favicon.png"
+    >
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f7fb;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-        }
+    <!-- Poppins -->
 
-        .login-box {
-            background: white;
-            width: 380px;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-        }
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
 
-        h1 {
-            text-align: center;
-            margin-bottom: 10px;
-        }
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
-        .subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 30px;
-        }
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 
-        input {
-            width: 100%;
-            padding: 13px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-sizing: border-box;
-            font-size: 15px;
-        }
+    <link
+        rel="stylesheet"
+        href="auth.css"
+    >
 
-        button {
-            width: 100%;
-            padding: 13px;
-            border: none;
-            border-radius: 8px;
-            font-size: 15px;
-            cursor: pointer;
-            margin-bottom: 12px;
-        }
-
-        .login-btn {
-            background: #111827;
-            color: white;
-        }
-
-        .google-btn {
-            background: white;
-            border: 1px solid #ddd;
-            color: #222;
-        }
-
-        button:hover {
-            opacity: 0.9;
-        }
-
-        .message {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 14px;
-        }
-
-        .register-link {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 14px;
-        }
-
-        .register-link a {
-            color: #2563eb;
-            text-decoration: none;
-        }
-    </style>
 </head>
+
 
 <body>
 
-<div class="login-box">
 
-    <h1>Welcome Back</h1>
+    <!-- HEADER -->
 
-    <div class="subtitle">
-        Log in to AbsoluteSAT
-    </div>
+    <header class="auth-header">
 
-    <form id="login-form">
+        <div class="auth-header-container">
 
-        <input
-            type="email"
-            id="email"
-            placeholder="Email address"
-            required
-        >
+            <a
+                href="/"
+                class="auth-logo-link"
+            >
 
-        <input
-            type="password"
-            id="password"
-            placeholder="Password"
-            required
-        >
+                <img
+                    src="Logo.png"
+                    alt="AbsoluteSAT"
+                    class="auth-logo"
+                >
 
-        <button type="submit" class="login-btn">
-            Log In
-        </button>
-
-    </form>
-
-    <button id="google-btn" class="google-btn">
-        Continue with Google
-    </button>
-
-    <div id="message" class="message"></div>
-
-    <div class="register-link">
-        Don't have an account?
-        <a href="/register">Create one</a>
-    </div>
-
-</div>
-
-<script>
-
-    const SUPABASE_URL = "https://ikvvixdyztyqqxkveois.supabase.co";
-    const SUPABASE_ANON_KEY = "sb_publishable_nO5HUWPidf4U_MMK0-HYEA_vuOR0POg";
-
-    const supabaseClient = supabase.createClient(
-        SUPABASE_URL,
-        SUPABASE_ANON_KEY
-    );
+            </a>
 
 
-    // EMAIL / PASSWORD LOGIN
+            <a
+                href="/"
+                class="back-home"
+            >
+                ← Back to Home
+            </a>
 
-    document
-        .getElementById("login-form")
-        .addEventListener("submit", async function(event) {
+        </div>
 
-            event.preventDefault();
+    </header>
 
-            const email =
-                document.getElementById("email").value;
 
-            const password =
-                document.getElementById("password").value;
 
-            const message =
-                document.getElementById("message");
+    <!-- LOGIN -->
 
-            message.textContent = "Logging in...";
+    <main class="auth-page">
 
-            const { data, error } =
-                await supabaseClient.auth.signInWithPassword({
-                    email: email,
-                    password: password
-                });
+        <section class="auth-card">
 
-            if (error) {
-                message.textContent = error.message;
-                return;
+            <h1 class="auth-heading">
+                Welcome back
+            </h1>
+
+            <p class="auth-subheading">
+                Log in to continue your SAT preparation.
+            </p>
+
+
+            <form
+                id="login-form"
+                class="auth-form"
+            >
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label
+                        for="email"
+                        class="form-label"
+                    >
+                        Email
+                    </label>
+
+                    <input
+                        id="email"
+                        type="email"
+                        class="form-input"
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+                    <div class="password-row">
+
+                        <label
+                            for="password"
+                            class="form-label"
+                        >
+                            Password
+                        </label>
+
+                        <a
+                            href="#"
+                            class="forgot-password"
+                            id="forgot-password"
+                        >
+                            Forgot password?
+                        </a>
+
+                    </div>
+
+
+                    <input
+                        id="password"
+                        type="password"
+                        class="form-input"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- LOGIN -->
+
+                <button
+                    id="login-button"
+                    type="submit"
+                    class="auth-submit"
+                >
+                    Log In
+                </button>
+
+
+            </form>
+
+
+
+            <!-- GOOGLE -->
+
+            <div class="auth-divider">
+                <span>or</span>
+            </div>
+
+
+            <button
+                id="google-button"
+                type="button"
+                class="google-button"
+            >
+
+                <svg
+                    class="google-icon"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+
+                    <path
+                        fill="#4285F4"
+                        d="M21.35 12.27c0-.78-.07-1.53-.22-2.27H12v4.3h5.22a4.46 4.46 0 0 1-1.94 2.93v2.43h3.14c1.84-1.69 2.93-4.18 2.93-7.39z"
+                    />
+
+                    <path
+                        fill="#34A853"
+                        d="M12 21.5c2.63 0 4.84-.87 6.45-2.36l-3.14-2.43c-.87.58-1.98.92-3.31.92-2.54 0-4.7-1.72-5.47-4.03H3.29v2.5A9.74 9.74 0 0 0 12 21.5z"
+                    />
+
+                    <path
+                        fill="#FBBC05"
+                        d="M6.53 13.6A5.85 5.85 0 0 1 6.23 12c0-.56.1-1.1.3-1.6V7.9H3.29A9.5 9.5 0 0 0 2.5 12c0 1.48.35 2.88.79 4.1l3.24-2.5z"
+                    />
+
+                    <path
+                        fill="#EA4335"
+                        d="M12 6.38c1.43 0 2.71.49 3.72 1.45l2.79-2.79C16.84 3.49 14.63 2.5 12 2.5a9.74 9.74 0 0 0-8.71 5.4l3.24 2.5C7.3 8.1 9.46 6.38 12 6.38z"
+                    />
+
+                </svg>
+
+                Continue with Google
+
+            </button>
+
+
+
+            <!-- MESSAGE -->
+
+            <div
+                id="auth-message"
+                class="auth-message"
+            ></div>
+
+
+
+            <!-- REGISTER -->
+
+            <p class="auth-bottom-text">
+
+                Don't have an account?
+
+                <a href="/register">
+                    Create one
+                </a>
+
+            </p>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- SUPABASE -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="/supabase-config.js"></script>
+
+
+
+    <script>
+
+        const loginForm =
+            document.getElementById("login-form");
+
+        const loginButton =
+            document.getElementById("login-button");
+
+        const googleButton =
+            document.getElementById("google-button");
+
+        const forgotPassword =
+            document.getElementById("forgot-password");
+
+        const message =
+            document.getElementById("auth-message");
+
+
+        function showMessage(text, type) {
+
+            message.textContent = text;
+
+            message.className =
+                "auth-message show " + type;
+
+        }
+
+
+        function setLoading(button, loading, text) {
+
+            button.disabled = loading;
+
+            if (loading) {
+
+                button.innerHTML = `
+                    <span class="button-loading">
+                        <span class="spinner"></span>
+                        ${text}
+                    </span>
+                `;
+
+            } else {
+
+                button.textContent = text;
+
             }
 
-            window.location.href = "/";
-        });
+        }
 
 
-    // GOOGLE LOGIN
+        /* =====================================
+           LOGIN
+        ===================================== */
 
-    document
-        .getElementById("google-btn")
-        .addEventListener("click", async function() {
+        loginForm.addEventListener(
+            "submit",
+            async function (event) {
 
-            const { error } =
-                await supabaseClient.auth.signInWithOAuth({
-                    provider: "google",
-                    options: {
-                        redirectTo: window.location.origin + "/"
-                    }
-                });
+                event.preventDefault();
 
-            if (error) {
-                document.getElementById("message").textContent =
-                    error.message;
+                message.className =
+                    "auth-message";
+
+
+                const email =
+                    document
+                        .getElementById("email")
+                        .value
+                        .trim();
+
+                const password =
+                    document
+                        .getElementById("password")
+                        .value;
+
+
+                setLoading(
+                    loginButton,
+                    true,
+                    "Logging in..."
+                );
+
+
+                const {
+                    error
+                } =
+                    await supabaseClient.auth.signInWithPassword({
+
+                        email: email,
+
+                        password: password
+
+                    });
+
+
+                if (error) {
+
+                    setLoading(
+                        loginButton,
+                        false,
+                        "Log In"
+                    );
+
+                    showMessage(
+                        error.message,
+                        "error"
+                    );
+
+                    return;
+                }
+
+
+                window.location.href = "/";
+
             }
+        );
 
-        });
 
-</script>
+
+        /* =====================================
+           GOOGLE LOGIN
+        ===================================== */
+
+        googleButton.addEventListener(
+            "click",
+            async function () {
+
+                googleButton.disabled = true;
+
+                googleButton.textContent =
+                    "Connecting to Google...";
+
+
+                const {
+                    error
+                } =
+                    await supabaseClient.auth.signInWithOAuth({
+
+                        provider: "google",
+
+                        options: {
+
+                            redirectTo:
+                                window.location.origin + "/"
+
+                        }
+
+                    });
+
+
+                if (error) {
+
+                    googleButton.disabled = false;
+
+                    googleButton.textContent =
+                        "Continue with Google";
+
+                    showMessage(
+                        error.message,
+                        "error"
+                    );
+
+                }
+
+            }
+        );
+
+
+
+        /* =====================================
+           FORGOT PASSWORD
+        ===================================== */
+
+        forgotPassword.addEventListener(
+            "click",
+            async function (event) {
+
+                event.preventDefault();
+
+
+                const email =
+                    document
+                        .getElementById("email")
+                        .value
+                        .trim();
+
+
+                if (!email) {
+
+                    showMessage(
+                        "Enter your email address first.",
+                        "error"
+                    );
+
+                    return;
+                }
+
+
+                const {
+                    error
+                } =
+                    await supabaseClient.auth.resetPasswordForEmail(
+                        email,
+                        {
+
+                            redirectTo:
+                                window.location.origin +
+                                "/reset-password"
+
+                        }
+                    );
+
+
+                if (error) {
+
+                    showMessage(
+                        error.message,
+                        "error"
+                    );
+
+                    return;
+                }
+
+
+                showMessage(
+                    "Password reset instructions have been sent to your email.",
+                    "success"
+                );
+
+            }
+        );
+
+    </script>
+
 
 </body>
+
 </html>
