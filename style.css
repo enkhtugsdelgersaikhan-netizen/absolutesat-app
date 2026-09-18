@@ -545,6 +545,17 @@ footer {
     padding-top: 20px;
 }
 
+.footer-logo {
+    width: 180px;
+    height: auto;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin-bottom: 28px;
+}
+
 .footer-title {
     margin-bottom: 22px;
 
@@ -737,6 +748,10 @@ footer {
 ========================================= */
 
 @media (max-width: 1150px) {
+   .footer-logo {
+    width: 155px;
+    margin-bottom: 24px;
+}
 
     .header-container {
         width: calc(100% - 28px);
