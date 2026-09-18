@@ -524,14 +524,200 @@ const words=[
     ["Vaporize", "verb", "Science", "to convert into vapor"],
     ["Viscosity", "noun", "Science", "a fluid's resistance to flowing"]
 ];
-const search=document.getElementById("vocab-search"),category=document.getElementById("vocab-category"),wordEl=document.getElementById("vocab-word"),pronEl=document.getElementById("vocab-pronunciation"),catEl=document.getElementById("vocab-category-label"),posEl=document.getElementById("vocab-position"),meaningEl=document.getElementById("vocab-meaning"),exampleEl=document.getElementById("vocab-example"),definition=document.getElementById("vocab-definition"),reveal=document.getElementById("reveal-button"),actions=document.getElementById("vocab-actions"),prev=document.getElementById("previous-button"),next=document.getElementById("next-button"),empty=document.getElementById("vocab-empty"),card=document.getElementById("vocab-card"),progressText=document.getElementById("vocab-progress-text"),progressBar=document.getElementById("vocab-progress-bar"),countEl=document.getElementById("vocab-count");
-let filtered=[...words],index=0,learned=JSON.parse(localStorage.getItem("absoluteprep_vocab_learned")||"{}");
-function exampleFor(word,pos,cat){const w=word.toLowerCase();if(pos==="conj")return "The results were promising, albeit preliminary.";if(cat==="Argument"&&pos==="verb"){const custom={infer:"The author invites readers to infer that the evidence supports the conclusion.",imply:"The wording may imply that the earlier explanation is incomplete.",object:"The author continues to object to the proposed explanation.",paraphrase:"The author paraphrases the earlier claim in simpler terms.",reiterate:"The author uses the final paragraph to reiterate the central claim.",summarize:"The author summarizes the evidence before reaching a conclusion.",warrant:"The evidence may warrant a closer examination of the claim.",maintain:"The author maintains that the evidence supports the conclusion.",invoke:"The author invokes a historical example to support the argument.",counter:"The new evidence helps counter the earlier claim.",contradict:"The new finding appears to contradict the earlier conclusion.",deny:"The author does not deny that the evidence has some limitations.",dismiss:"The researcher dismisses the alternative explanation as unsupported.",discredit:"The new evidence could discredit the earlier interpretation.",allege:"The critic alleges that the evidence has been misinterpreted.",endorse:"The evidence does not necessarily endorse the author's conclusion.",qualify:"The author qualifies the claim by noting an important exception.",rebut:"The final paragraph attempts to rebut the opposing argument.",refute:"The new evidence may refute the earlier conclusion.",revoke:"The agency may revoke the claim after the error is confirmed.",rationalize:"The author attempts to rationalize the decision after the results appear.",justify:"The evidence is used to justify the proposed interpretation.",reiterate:"The author reiterates the central claim near the end of the passage."};if(custom[w])return custom[w]}if(pos==="adj")return cat==="Tone"?"The author uses a "+w+" tone when discussing the issue.":cat==="Argument"?"The passage presents the claim as "+w+" rather than certain.":cat==="Science"?"The study describes a "+w+" process or condition.":"The researchers adopted a "+w+" approach to the problem.";if(pos==="noun")return cat==="Tone"?"The passage contains an undercurrent of "+w+".":cat==="Science"?"The researchers measured "+w+" during the experiment.":cat==="Argument"?"The passage treats "+w+" as an important part of the argument.":"The report identifies "+w+" as an important feature of the method.";if(pos==="verb")return cat==="Science"?"The experiment shows how the system can "+w+" under controlled conditions.":cat==="Argument"?"The author uses the evidence to "+w+" the earlier claim.":"The researchers sought to "+w+" the process.";return "In the passage, "+w+" describes an important idea."}
-function updateProgress(){const done=Object.keys(learned).filter(k=>learned[k]).length;progressText.textContent=done+" of "+words.length+" learned";progressBar.style.width=(done/words.length*100)+"%"}
-function render(){if(!filtered.length){card.classList.add("hidden");empty.classList.remove("hidden");countEl.textContent="0 words";return}card.classList.remove("hidden");empty.classList.add("hidden");const w=filtered[index];wordEl.textContent=w[0];pronEl.textContent="";pronEl.classList.add("hidden");catEl.textContent=w[2];posEl.textContent=(index+1)+" / "+filtered.length;meaningEl.textContent=w[3];exampleEl.textContent=exampleFor(w[0],w[1],w[2]);definition.classList.add("hidden");actions.classList.add("hidden");reveal.classList.remove("hidden");prev.disabled=index===0;next.disabled=index===filtered.length-1;countEl.textContent=filtered.length+" words";updateProgress()}
-function applyFilters(){const q=search.value.trim().toLowerCase(),c=category.value;filtered=words.filter(w=>(!q||w[0].toLowerCase().includes(q)||w[3].toLowerCase().includes(q))&&(c==="all"||w[2]===c));index=0;render()}
-reveal.addEventListener("click",()=>{definition.classList.remove("hidden");actions.classList.remove("hidden");reveal.classList.add("hidden")});
-document.getElementById("known-button").addEventListener("click",()=>{learned[filtered[index][0]]=true;localStorage.setItem("absoluteprep_vocab_learned",JSON.stringify(learned));updateProgress();if(index<filtered.length-1){index++;render()}});
-document.getElementById("learning-button").addEventListener("click",()=>{learned[filtered[index][0]]=false;localStorage.setItem("absoluteprep_vocab_learned",JSON.stringify(learned));updateProgress();if(index<filtered.length-1){index++;render()}});
-prev.addEventListener("click",()=>{if(index>0){index--;render()}});next.addEventListener("click",()=>{if(index<filtered.length-1){index++;render()}});
-search.addEventListener("input",applyFilters);category.addEventListener("change",applyFilters);render();
+const search=document.getElementById("vocab-search"),
+category=document.getElementById("vocab-category"),
+statusFilter=document.getElementById("vocab-status"),
+wordEl=document.getElementById("vocab-word"),
+pronEl=document.getElementById("vocab-pronunciation"),
+catEl=document.getElementById("vocab-category-label"),
+statusEl=document.getElementById("vocab-status-label"),
+posEl=document.getElementById("vocab-position"),
+meaningEl=document.getElementById("vocab-meaning"),
+exampleEl=document.getElementById("vocab-example"),
+definition=document.getElementById("vocab-definition"),
+reveal=document.getElementById("reveal-button"),
+reviewButton=document.getElementById("review-button"),
+actions=document.getElementById("vocab-actions"),
+prev=document.getElementById("previous-button"),
+next=document.getElementById("next-button"),
+empty=document.getElementById("vocab-empty"),
+card=document.getElementById("vocab-card"),
+progressText=document.getElementById("vocab-progress-text"),
+progressBar=document.getElementById("vocab-progress-bar"),
+countEl=document.getElementById("vocab-count"),
+statusSummary=document.getElementById("vocab-status-summary");
+
+const STATE_KEY="absoluteprep_vocab_state";
+const legacyLearned=JSON.parse(localStorage.getItem("absoluteprep_vocab_learned")||"{}");
+let studyState=JSON.parse(localStorage.getItem(STATE_KEY)||"null");
+
+if(!studyState||typeof studyState!=="object"){
+    studyState={solved:{},review:{}};
+}
+studyState.solved=studyState.solved&&typeof studyState.solved==="object"?studyState.solved:{};
+studyState.review=studyState.review&&typeof studyState.review==="object"?studyState.review:{};
+
+Object.keys(legacyLearned).forEach(word=>{
+    if(legacyLearned[word]===true){
+        studyState.solved[word]=true;
+    }
+});
+localStorage.setItem(STATE_KEY,JSON.stringify(studyState));
+
+function saveState(){
+    localStorage.setItem(STATE_KEY,JSON.stringify(studyState));
+}
+
+function shuffle(items){
+    const result=[...items];
+    for(let i=result.length-1;i>0;i--){
+        const j=Math.floor(Math.random()*(i+1));
+        [result[i],result[j]]=[result[j],result[i]];
+    }
+    return result;
+}
+
+function solvedCount(){
+    return words.reduce((total,word)=>total+(studyState.solved[word[0]]===true?1:0),0);
+}
+
+function reviewCount(){
+    return words.reduce((total,word)=>total+(studyState.review[word[0]]===true?1:0),0);
+}
+
+function updateProgress(){
+    const done=solvedCount();
+    progressText.textContent=done+" of "+words.length+" solved";
+    progressBar.style.width=(done/words.length*100)+"%";
+    statusSummary.textContent=reviewCount()+" review · "+(words.length-done)+" unsolved";
+}
+
+function updateStatusUI(word){
+    const isSolved=studyState.solved[word[0]]===true;
+    const isReview=studyState.review[word[0]]===true;
+
+    statusEl.textContent=isReview?"Review":isSolved?"Solved":"Unsolved";
+    statusEl.className="vocab-status-chip "+(isReview?"review":isSolved?"solved":"unsolved");
+
+    reviewButton.textContent=isReview?"★ Remove Review":"☆ Mark for Review";
+    reviewButton.classList.toggle("active",isReview);
+}
+
+function render(){
+    if(!filtered.length){
+        card.classList.add("hidden");
+        empty.classList.remove("hidden");
+        countEl.textContent="0 words";
+        updateProgress();
+        return;
+    }
+
+    card.classList.remove("hidden");
+    empty.classList.add("hidden");
+
+    const w=filtered[index];
+    wordEl.textContent=w[0];
+    pronEl.textContent="";
+    pronEl.classList.add("hidden");
+    catEl.textContent=w[2];
+    posEl.textContent=(index+1)+" / "+filtered.length;
+    meaningEl.textContent=w[3];
+    exampleEl.textContent=exampleFor(w[0],w[1],w[2]);
+
+    definition.classList.add("hidden");
+    actions.classList.add("hidden");
+    reveal.classList.remove("hidden");
+
+    updateStatusUI(w);
+
+    prev.disabled=index===0;
+    next.disabled=index===filtered.length-1;
+    countEl.textContent=filtered.length+" words";
+    updateProgress();
+}
+
+function applyFilters(){
+    const q=search.value.trim().toLowerCase();
+    const c=category.value;
+    const s=statusFilter.value;
+
+    let nextWords=words.filter(w=>
+        (!q||w[0].toLowerCase().includes(q)||w[3].toLowerCase().includes(q))&&
+        (c==="all"||w[2]===c)
+    );
+
+    if(s==="review"){
+        nextWords=nextWords.filter(w=>studyState.review[w[0]]===true);
+    }else if(s==="unsolved"){
+        nextWords=nextWords.filter(w=>studyState.solved[w[0]]!==true);
+    }else if(s==="solved"){
+        nextWords=nextWords.filter(w=>studyState.solved[w[0]]===true);
+    }
+
+    filtered=shuffle(nextWords);
+    index=0;
+    render();
+}
+
+reveal.addEventListener("click",()=>{
+    definition.classList.remove("hidden");
+    actions.classList.remove("hidden");
+    reveal.classList.add("hidden");
+});
+
+reviewButton.addEventListener("click",()=>{
+    if(!filtered.length) return;
+    const word=filtered[index][0];
+    studyState.review[word]=studyState.review[word]!==true;
+    saveState();
+    updateStatusUI(filtered[index]);
+    updateProgress();
+});
+
+document.getElementById("known-button").addEventListener("click",()=>{
+    const word=filtered[index][0];
+    studyState.solved[word]=true;
+    saveState();
+    updateProgress();
+    if(index<filtered.length-1){
+        index++;
+        render();
+    }else{
+        applyFilters();
+    }
+});
+
+document.getElementById("learning-button").addEventListener("click",()=>{
+    const word=filtered[index][0];
+    studyState.solved[word]=false;
+    saveState();
+    updateProgress();
+    if(index<filtered.length-1){
+        index++;
+        render();
+    }else{
+        applyFilters();
+    }
+});
+
+prev.addEventListener("click",()=>{
+    if(index>0){
+        index--;
+        render();
+    }
+});
+
+next.addEventListener("click",()=>{
+    if(index<filtered.length-1){
+        index++;
+        render();
+    }
+});
+
+search.addEventListener("input",applyFilters);
+category.addEventListener("change",applyFilters);
+statusFilter.addEventListener("change",applyFilters);
+
+let filtered=shuffle([...words]);
+let index=0;
+render();
