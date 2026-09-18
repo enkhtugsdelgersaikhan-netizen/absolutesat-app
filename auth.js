@@ -83,69 +83,18 @@ async function updateAbsoluteSATHeader(session = null) {
 
     if (session) {
 
+        authButtons.classList.add("logged-in");
+
         authButtons.innerHTML = `
 
-            <button
-                type="button"
-                class="logout-button"
-                id="absolute-sat-logout"
+            <a
+                href="/dashboard"
+                class="dashboard-button"
             >
-                Logout
-            </button>
+                Dashboard
+            </a>
 
         `;
-        const logoutButton =
-            document.getElementById(
-                "absolute-sat-logout"
-            );
-
-
-        if (logoutButton) {
-
-            logoutButton.addEventListener(
-                "click",
-                async () => {
-
-                    logoutButton.disabled =
-                        true;
-
-                    logoutButton.textContent =
-                        "Logging out...";
-
-
-                    const {
-                        error
-                    } =
-                        await absoluteSatSupabase.auth.signOut();
-
-
-                    if (error) {
-
-                        console.error(
-                            "Logout error:",
-                            error
-                        );
-
-
-                        logoutButton.disabled =
-                            false;
-
-                        logoutButton.textContent =
-                            "Logout";
-
-                        return;
-
-                    }
-
-
-                    window.location.href =
-                        "/";
-
-                }
-            );
-
-        }
-
 
         return;
 
