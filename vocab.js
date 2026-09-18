@@ -646,12 +646,13 @@ function render(){
     updateProgress();
 }
 
-function applyFilters(){
+function applyFilters(excludeWord=""){
     const q=search.value.trim().toLowerCase();
     const c=category.value;
     const s=statusFilter.value;
 
     let nextWords=words.filter(w=>
+        w[0]!==excludeWord&&
         (!q||w[0].toLowerCase().includes(q)||w[3].toLowerCase().includes(q))&&
         (c==="all"||w[2]===c)
     );
@@ -689,7 +690,7 @@ document.getElementById("known-button").addEventListener("click",()=>{
     const word=filtered[index][0];
     studyState.solved[word]=true;
     saveState();
-    applyFilters();
+    applyFilters(word);
 });
 
 document.getElementById("learning-button").addEventListener("click",()=>{
@@ -697,7 +698,7 @@ document.getElementById("learning-button").addEventListener("click",()=>{
     const word=filtered[index][0];
     studyState.solved[word]=false;
     saveState();
-    applyFilters();
+    applyFilters(word);
 });
 
 prev.addEventListener("click",()=>{
