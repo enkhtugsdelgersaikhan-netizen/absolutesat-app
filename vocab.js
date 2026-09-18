@@ -653,26 +653,36 @@ function render(){
     updateProgress();
 }
 
+function getWordStatus(word){
+    const isSolved=studyState.solved[word[0]]===true;
+    const isReview=studyState.review[word[0]]===true;
+    return {
+        solved:isSolved,
+        review:isReview,
+        status:isReview?"review":isSolved?"solved":"unsolved"
+    };
+}
+
 function applyFilters(excludeWord=""){
-    const q=search.value.trim().toLowerCase();
-    const c=category.value;
-    const s=statusFilter.value;
+    const query=search.value.trim().toLowerCase();
+    const selectedCategory=category.value;
+    const selectedStatus=statusFilter.value;
 
-    let nextWords=words.filter(w=>
-        w[0]!==excludeWord&&
-        (!q||w[0].toLowerCase().includes(q)||w[3].toLowerCase().includes(q))&&
-        (c==="all"||w[2]===c)
-    );
+    filtered=shuffle(words.filter(word=>{
+        const wordName=word[0].toLowerCase();
+        const meaning=word[3].toLowerCase();
+        const state=getWordStatus(word);
 
-    if(s==="review"){
-        nextWords=nextWords.filter(w=>studyState.review[w[0]]===true);
-    }else if(s==="unsolved"){
-        nextWords=nextWords.filter(w=>studyState.solved[w[0]]!==true);
-    }else if(s==="solved"){
-        nextWords=nextWords.filter(w=>studyState.solved[w[0]]===true);
-    }
+        if(excludeWord&&word[0]===excludeWord) return false;
+        if(query&&!wordName.includes(query)&&!meaning.includes(query)) return false;
+        if(selectedCategory!=="all"&&word[2]!==selectedCategory) return false;
 
-    filtered=shuffle(nextWords);
+        if(selectedStatus==="review") return state.review;
+        if(selectedStatus==="solved") return state.solved;
+        if(selectedStatus==="unsolved") return !state.solved;
+        return true;
+    }));
+
     index=0;
     render();
 }
@@ -722,10 +732,10 @@ next.addEventListener("click",()=>{
     }
 });
 
-search.addEventListener("input",applyFilters);
-category.addEventListener("change",applyFilters);
-statusFilter.addEventListener("change",applyFilters);
+search.addEventListener("input",()=>applyFilters());
+category.addEventListener("change",()=>applyFilters());
+statusFilter.addEventListener("change",()=>applyFilters());
 
-let filtered=shuffle([...words]);
+let filtered=[];
 let index=0;
-render();
+applyFilters();
