@@ -42,7 +42,15 @@
 <div class="vocab-toolbar">
 <label class="vocab-search-wrap"><span>Search</span><input id="vocab-search" type="search" placeholder="Search a word..." autocomplete="off"></label>
 <label class="vocab-search-wrap"><span>Category</span><select id="vocab-category"><option value="all">All Categories</option><option value="Academic">Academic</option><option value="Argument">Argument & Ideas</option><option value="Tone">Tone & Style</option><option value="Science">Science</option></select></label>
-<label class="vocab-search-wrap"><span>Status</span><select id="vocab-status"><option value="all">All Words</option><option value="review">Review</option><option value="unsolved">Unsolved</option><option value="solved">Solved</option></select></label>
+<div class="vocab-status-filter">
+<span>Status</span>
+<div class="vocab-status-buttons" role="group" aria-label="Vocabulary status filter">
+<button type="button" class="vocab-status-filter-button active" data-status="all">All</button>
+<button type="button" class="vocab-status-filter-button" data-status="review">Review</button>
+<button type="button" class="vocab-status-filter-button" data-status="unsolved">Unsolved</button>
+<button type="button" class="vocab-status-filter-button" data-status="solved">Solved</button>
+</div>
+</div>
 </div>
 
 <div class="vocab-progress">
