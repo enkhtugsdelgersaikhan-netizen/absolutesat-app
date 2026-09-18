@@ -675,29 +675,45 @@ reviewButton.addEventListener("click",()=>{
 });
 
 document.getElementById("known-button").addEventListener("click",()=>{
+    if(!filtered.length) return;
     const word=filtered[index][0];
     studyState.solved[word]=true;
     saveState();
     updateProgress();
-    if(index<filtered.length-1){
-        index++;
-        render();
-    }else{
-        applyFilters();
-    }
+    updateStatusUI(filtered[index]);
+    card.classList.remove("vocab-solved-flash");
+    void card.offsetWidth;
+    card.classList.add("vocab-solved-flash");
+
+    window.setTimeout(()=>{
+        if(index<filtered.length-1){
+            index++;
+            render();
+        }else{
+            applyFilters();
+        }
+    },180);
 });
 
 document.getElementById("learning-button").addEventListener("click",()=>{
+    if(!filtered.length) return;
     const word=filtered[index][0];
     studyState.solved[word]=false;
     saveState();
     updateProgress();
-    if(index<filtered.length-1){
-        index++;
-        render();
-    }else{
-        applyFilters();
-    }
+    updateStatusUI(filtered[index]);
+    card.classList.remove("vocab-learning-flash");
+    void card.offsetWidth;
+    card.classList.add("vocab-learning-flash");
+
+    window.setTimeout(()=>{
+        if(index<filtered.length-1){
+            index++;
+            render();
+        }else{
+            applyFilters();
+        }
+    },180);
 });
 
 prev.addEventListener("click",()=>{
