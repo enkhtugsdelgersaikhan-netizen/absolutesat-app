@@ -538,6 +538,8 @@ exampleEl=document.getElementById("vocab-example"),
 definition=document.getElementById("vocab-definition"),
 reveal=document.getElementById("reveal-button"),
 reviewButton=document.getElementById("review-button"),
+learningButton=document.getElementById("learning-button"),
+knownButton=document.getElementById("known-button"),
 actions=document.getElementById("vocab-actions"),
 prev=document.getElementById("previous-button"),
 next=document.getElementById("next-button"),
@@ -681,7 +683,12 @@ function resetCardUI(){
     card.classList.remove("vocab-solved-flash","vocab-learning-flash");
     reviewButton.textContent="☆ Mark for Review";
     reviewButton.classList.remove("active");
+    reviewButton.setAttribute("aria-pressed","false");
     reviewStatusEl.classList.add("hidden");
+    knownButton.classList.remove("active");
+    knownButton.setAttribute("aria-pressed","false");
+    learningButton.classList.remove("active");
+    learningButton.setAttribute("aria-pressed","false");
 }
 
 function updateStatusUI(word){
@@ -693,6 +700,14 @@ function updateStatusUI(word){
     reviewStatusEl.classList.toggle("hidden",!state.review);
     reviewButton.textContent=state.review?"★ Remove Review":"☆ Mark for Review";
     reviewButton.classList.toggle("active",state.review);
+    reviewButton.setAttribute("aria-pressed",state.review?"true":"false");
+
+    // Exactly one answer-state button is active whenever the word is loaded.
+    knownButton.classList.toggle("active",state.solved);
+    knownButton.setAttribute("aria-pressed",state.solved?"true":"false");
+
+    learningButton.classList.toggle("active",!state.solved);
+    learningButton.setAttribute("aria-pressed",state.solved?"false":"true");
 }
 
 function updateProgress(){
@@ -793,7 +808,7 @@ reviewButton.addEventListener("click",()=>{
     }
 });
 
-document.getElementById("known-button").addEventListener("click",()=>{
+knownButton.addEventListener("click",()=>{
     if(!filtered.length) return;
 
     const word=filtered[index];
@@ -809,7 +824,7 @@ document.getElementById("known-button").addEventListener("click",()=>{
     },160);
 });
 
-document.getElementById("learning-button").addEventListener("click",()=>{
+learningButton.addEventListener("click",()=>{
     if(!filtered.length) return;
 
     const word=filtered[index];
