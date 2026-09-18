@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
@@ -183,6 +184,11 @@
             background: #f8fafc;
         }
 
+        .google-login:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
         .divider {
             display: flex;
             align-items: center;
@@ -223,18 +229,20 @@
 
 <body>
 
+
 <header class="header">
 
     <div class="header-container">
 
-        <a href="/" class="logo-link">
-
+        <a
+            href="/"
+            class="logo-link"
+        >
             <img
                 src="Logo.png"
                 alt="AbsoluteSAT Logo"
                 class="logo"
             >
-
         </a>
 
 
@@ -465,10 +473,13 @@
 
 
         <div class="login-register">
+
             Don't have an account?
+
             <a href="/register">
                 Register
             </a>
+
         </div>
 
     </div>
@@ -499,38 +510,21 @@ const supabaseClient =
 const loginForm =
     document.getElementById("login-form");
 
-
 const emailInput =
     document.getElementById("email");
-
 
 const passwordInput =
     document.getElementById("password");
 
-
 const loginSubmit =
     document.getElementById("login-submit");
-
 
 const googleLogin =
     document.getElementById("google-login");
 
-
 const loginMessage =
     document.getElementById("login-message");
 
-
-/*
-    Where should we go after login?
-
-    Example:
-
-    /login?redirect=%2Fquestion%3Fset%3Dinformation-and-ideas
-
-    becomes:
-
-    /question?set=information-and-ideas
-*/
 
 function getRedirectUrl() {
 
@@ -539,29 +533,19 @@ function getRedirectUrl() {
             window.location.search
         );
 
-
     const redirect =
         params.get("redirect");
-
 
     if (
         redirect &&
         redirect.startsWith("/")
     ) {
-
         return redirect;
-
     }
 
-
     return "/question-sets";
-
 }
 
-
-/* ================================
-   SHOW MESSAGE
-   ================================ */
 
 function showMessage(
     message,
@@ -577,18 +561,14 @@ function showMessage(
 }
 
 
-/* ================================
-   CHECK EXISTING SESSION
-   ================================ */
-
 async function checkExistingSession() {
 
     const {
         data: {
             user
         }
-    } = await supabaseClient.auth.getUser();
-
+    } =
+        await supabaseClient.auth.getUser();
 
     if (user) {
 
@@ -601,9 +581,9 @@ async function checkExistingSession() {
 }
 
 
-/* ================================
+/* =================================
    EMAIL LOGIN
-   ================================ */
+================================= */
 
 loginForm.addEventListener(
     "submit",
@@ -611,20 +591,16 @@ loginForm.addEventListener(
 
         event.preventDefault();
 
-
         const email =
             emailInput.value.trim();
 
-
         const password =
             passwordInput.value;
-
 
         loginSubmit.disabled = true;
 
         loginSubmit.textContent =
             "Logging in...";
-
 
         loginMessage.className =
             "login-message";
@@ -649,7 +625,6 @@ loginForm.addEventListener(
                 "error"
             );
 
-
             loginSubmit.disabled =
                 false;
 
@@ -657,7 +632,6 @@ loginForm.addEventListener(
                 "Login";
 
             return;
-
         }
 
 
@@ -668,7 +642,6 @@ loginForm.addEventListener(
                 "error"
             );
 
-
             loginSubmit.disabled =
                 false;
 
@@ -676,7 +649,6 @@ loginForm.addEventListener(
                 "Login";
 
             return;
-
         }
 
 
@@ -686,26 +658,24 @@ loginForm.addEventListener(
         );
 
 
-        /*
-            Give Supabase a moment to persist
-            the session before navigating.
-        */
+        setTimeout(
+            () => {
 
-        setTimeout(() => {
+                window.location.replace(
+                    getRedirectUrl()
+                );
 
-            window.location.replace(
-                getRedirectUrl()
-            );
-
-        }, 300);
+            },
+            300
+        );
 
     }
 );
 
 
-/* ================================
+/* =================================
    GOOGLE LOGIN
-   ================================ */
+================================= */
 
 googleLogin.addEventListener(
     "click",
@@ -713,7 +683,6 @@ googleLogin.addEventListener(
 
         googleLogin.disabled =
             true;
-
 
         googleLogin.textContent =
             "Connecting...";
@@ -728,10 +697,13 @@ googleLogin.addEventListener(
             error
         } =
             await supabaseClient.auth.signInWithOAuth({
+
                 provider: "google",
+
                 options: {
                     redirectTo: redirectUrl
                 }
+
             });
 
 
@@ -743,7 +715,6 @@ googleLogin.addEventListener(
                 error.message,
                 "error"
             );
-
 
             googleLogin.disabled =
                 false;
@@ -757,9 +728,9 @@ googleLogin.addEventListener(
 );
 
 
-/* ================================
+/* =================================
    AUTH STATE
-   ================================ */
+================================= */
 
 supabaseClient.auth.onAuthStateChange(
     (event, session) => {
@@ -779,15 +750,14 @@ supabaseClient.auth.onAuthStateChange(
 );
 
 
-/* ================================
+/* =================================
    MOBILE MENU
-   ================================ */
+================================= */
 
 const menuButton =
     document.querySelector(
         ".mobile-menu-button"
     );
-
 
 const navigation =
     document.querySelector(
@@ -795,33 +765,41 @@ const navigation =
     );
 
 
-menuButton.addEventListener(
-    "click",
-    () => {
+if (
+    menuButton &&
+    navigation
+) {
 
-        const isOpen =
-            navigation.classList.toggle(
-                "mobile-open"
+    menuButton.addEventListener(
+        "click",
+        () => {
+
+            const isOpen =
+                navigation.classList.toggle(
+                    "mobile-open"
+                );
+
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                isOpen ? "true" : "false"
             );
 
+        }
+    );
 
-        menuButton.setAttribute(
-            "aria-expanded",
-            isOpen
-                ? "true"
-                : "false";
-
-    }
-);
+}
 
 
-/* ================================
+/* =================================
    START
-   ================================ */
+================================= */
 
 checkExistingSession();
 
 </script>
 
+
 </body>
+
 </html>
