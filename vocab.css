@@ -66,3 +66,17 @@
 .vocab-status-filter-button:hover{transform:translateY(-1px);color:#0f766e}
 .vocab-status-filter-button.active{background:#fff;color:#0f766e;box-shadow:0 1px 5px rgba(0,0,0,.08)}
 @media(max-width:650px){.vocab-status-buttons{height:44px}.vocab-status-filter-button{font-size:11px}}
+
+.vocab-answer-button{
+    transition:transform .18s ease,box-shadow .18s ease,background-color .18s ease,color .18s ease,border-color .18s ease,opacity .18s ease
+}
+.vocab-secondary.vocab-answer-button.active{
+    background:#e2e8f0;
+    border-color:#0f766e;
+    color:#0f766e;
+    box-shadow:0 0 0 2px rgba(15,118,110,.08);
+}
+.vocab-primary.vocab-answer-button.active{
+    background:#115e59;
+    box-shadow:0 0 0 2px rgba(15,118,110,.12);
+}
