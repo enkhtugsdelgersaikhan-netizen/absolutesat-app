@@ -540,8 +540,6 @@ reviewButton=document.getElementById("review-button"),
 learningButton=document.getElementById("learning-button"),
 knownButton=document.getElementById("known-button"),
 actions=document.getElementById("vocab-actions"),
-prev=document.getElementById("previous-button"),
-next=document.getElementById("next-button"),
 empty=document.getElementById("vocab-empty"),
 card=document.getElementById("vocab-card"),
 progressText=document.getElementById("vocab-progress-text"),
@@ -823,8 +821,6 @@ function render(){
         card.classList.add("hidden");
         empty.classList.remove("hidden");
         countEl.textContent="0 words";
-        prev.disabled=true;
-        next.disabled=true;
         updateProgress();
         return;
     }
@@ -843,8 +839,6 @@ function render(){
 
     updateStatusUI(word);
 
-    prev.disabled=index===0;
-    next.disabled=index===filtered.length-1;
     countEl.textContent=filtered.length+" words";
 
     updateProgress();
@@ -924,19 +918,6 @@ learningButton.addEventListener("click",()=>{
     },160);
 });
 
-prev.addEventListener("click",()=>{
-    if(index>0){
-        index--;
-        render();
-    }
-});
-
-next.addEventListener("click",()=>{
-    if(index<filtered.length-1){
-        index++;
-        render();
-    }
-});
 
 search.addEventListener("input",()=>{
     rebuildList();
