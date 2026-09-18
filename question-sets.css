@@ -171,8 +171,6 @@ body {
 
     padding: 10px 15px;
 
-    min-width: 82px;
-
     border-radius: 8px;
 
     text-decoration: none;
@@ -681,8 +679,6 @@ body {
     .login-button {
         padding: 9px 11px;
 
-        min-width: 76px;
-
         font-size: 13px;
     }
 
@@ -798,8 +794,6 @@ body {
 
     .register-button,
     .login-button {
-        min-width: 0;
-
         padding: 8px 10px;
 
         font-size: 12px;
