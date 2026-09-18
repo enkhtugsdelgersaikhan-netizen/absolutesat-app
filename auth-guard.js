@@ -1,5 +1,5 @@
 /* =========================================
-   ABSOLUTESAT AUTH GUARD
+   ABSOLUTEPREP AUTH GUARD
 ========================================= */
 
 (async function () {
