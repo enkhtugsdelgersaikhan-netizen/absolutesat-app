@@ -1331,7 +1331,7 @@
       "domain": "Standard English Conventions",
       "skill": "Boundaries",
       "difficulty": "medium",
-      "passage": "In 2021, researchers at the University of Washington studied how urban gardens affect bee populations. They found that gardens with many different flowering plants attracted more bee species than gardens with fewer plant varieties, suggesting that plant diversity may support urban pollinators. The researchers cautioned, however, that garden size also ______ This finding meant that plant variety alone could not account for all differences in bee abundance across the study sites.",
+      "passage": "In 2021, researchers at the University of Washington studied how urban gardens affect bee populations. They found that gardens with many different flowering plants attracted more bee species than gardens with fewer plant varieties, suggesting that plant diversity may support urban pollinators. The researchers cautioned, however, that garden size also ______ more bees regardless of plant diversity. This finding meant that plant variety alone could not account for all differences in bee abundance across the study sites.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "choices": {
         "A": "mattered; larger gardens generally attracted",
