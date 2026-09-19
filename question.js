@@ -567,6 +567,17 @@ async function goToNextQuestion() {
     );
 
     renderCurrentQuestion();
+
+    if (questionPassage) {
+        requestAnimationFrame(
+            () => {
+                questionPassage.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }
+        );
+    }
 }
 
 
