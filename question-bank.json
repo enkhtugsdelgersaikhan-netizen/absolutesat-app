@@ -1418,6 +1418,63 @@
       "correctAnswer": "B",
       "explanation": "The passage first presents plant diversity as a possible explanation, then introduces garden size as an alternative explanation. The evidence immediately after the blank shows that controlling for garden size does not eliminate the effect associated with plant diversity, so 'however' marks the necessary qualification of the size-based alternative. Because the two clauses are independent, a semicolon must precede 'however' and a comma must follow it. Choice B therefore fits both the grammar and the passage's revised reasoning.",
       "status": "staged"
+    },
+    {
+      "id": "rw-sea-otter-learning-form-001-easy",
+      "groupId": "rw-sea-otter-learning-form-001",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Form, Structure, and Sense",
+      "difficulty": "easy",
+      "passage": "Researchers at the Monterey Bay Aquarium studied young sea otters learning to open hard-shelled prey. They found that otters that watched experienced adults learned to open the shells more quickly. ______, young otters may benefit from observing skilled adults before practicing the technique themselves.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English and most logically expresses the intended meaning?",
+      "choices": {
+        "A": "By watching experienced adults, young otters may benefit from observing skilled adults before practicing the technique themselves.",
+        "B": "Watching experienced adults, the young otters may learn the technique more quickly before practicing it themselves.",
+        "C": "After practicing the technique themselves, watching experienced adults may help young otters learn it more quickly.",
+        "D": "The technique may help young otters learn more quickly, watching experienced adults before practicing it themselves."
+      },
+      "correctAnswer": "B",
+      "explanation": "The introductory participial phrase 'Watching experienced adults' must logically modify the subject that follows it. Choice B makes young otters the ones doing the watching and then correctly states the possible learning benefit. A repeats the idea awkwardly, C places the actions in the wrong order, and D creates an illogical relationship between the technique and the act of watching.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-sea-otter-learning-form-001-medium",
+      "groupId": "rw-sea-otter-learning-form-001",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Form, Structure, and Sense",
+      "difficulty": "medium",
+      "passage": "Researchers at the Monterey Bay Aquarium observed young sea otters as they learned to open hard-shelled prey. Otters that watched experienced adults generally learned the technique more quickly than otters with less opportunity to observe them. The researchers also found that the young otters continued practicing on their own after watching the adults. ______, observation appears to have contributed to the otters' learning even though independent practice remained important.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English and most logically expresses the intended meaning?",
+      "choices": {
+        "A": "Although the young otters practiced independently, their faster progress after observing adults suggests",
+        "B": "Because the young otters practiced independently, their faster progress after observing adults suggests",
+        "C": "The young otters practiced independently, suggesting their faster progress after observing adults",
+        "D": "Practicing independently, their faster progress after observing adults suggests"
+      },
+      "correctAnswer": "A",
+      "explanation": "Choice A creates a logical concessive structure: the otters practiced independently, but they also progressed faster after observing adults. The phrase 'their faster progress' has a clear logical relationship to the young otters. B incorrectly treats independent practice as a reason to attribute the progress to observation, while C and D create awkward or illogical relationships between the participial phrases and their subjects.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-sea-otter-learning-form-001-hard",
+      "groupId": "rw-sea-otter-learning-form-001",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Form, Structure, and Sense",
+      "difficulty": "hard",
+      "passage": "At the Monterey Bay Aquarium, researchers initially observed that young sea otters who spent more time near experienced adults often became proficient at opening hard-shelled prey sooner than less observant otters. Because the more observant otters also tended to practice frequently, however, that pattern did not establish whether watching adults itself accelerated learning. Some young otters that rarely watched adults still improved substantially through repeated attempts, making independent practice a plausible alternative explanation. Yet when researchers compared otters with similar opportunities to practice, those that had spent more time watching skilled adults generally acquired the technique sooner. This comparison made observation harder to dismiss, although it still did not show that watching alone produced the improvement. Researchers then noted that young otters often practiced immediately after observing adults and sometimes appeared to reproduce actions they had just seen. ______, the evidence suggests that observation may contribute to faster acquisition even though practice remains an important part of the learning process.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English and most logically expresses the intended meaning?",
+      "choices": {
+        "A": "Having observed skilled adults and then practiced independently, the researchers concluded that young otters learned the technique more quickly",
+        "B": "Because the researchers observed young otters practicing after watching adults, faster learning was caused entirely by the adults' behavior",
+        "C": "Although independent practice could produce substantial improvement, comparisons among similarly practicing otters indicated that observation contributed to faster learning",
+        "D": "Watching experienced adults, independent practice was shown by the researchers to be sufficient to explain why some young otters learned the technique more quickly"
+      },
+      "correctAnswer": "C",
+      "explanation": "The passage first presents practice as a plausible alternative explanation, then shows that observation still matters when practice opportunities are similar. Choice C correctly expresses that refined relationship while maintaining a logical sentence structure. A gives the researchers the actions that actually belong to the otters and overstates the conclusion, B incorrectly claims a single cause, and D makes independent practice sufficient despite the comparison that weakens that interpretation.",
+      "status": "staged"
     }
   ]
 }
