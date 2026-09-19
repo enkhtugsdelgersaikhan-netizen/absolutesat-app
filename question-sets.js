@@ -403,6 +403,113 @@ async function loadQuestions() {
         data || [];
 
 
+    /*
+     * Also load reviewed/staged questions from the
+     * repository JSON file. These are not inserted into
+     * Supabase until they are formally deployed.
+     */
+
+    try {
+
+        const stagedResponse =
+            await fetch(
+                "/data/question-bank.json",
+                {
+                    cache: "no-store"
+                }
+            );
+
+        if (stagedResponse.ok) {
+
+            const stagedData =
+                await stagedResponse.json();
+
+            const stagedQuestions =
+                (stagedData.questions || [])
+                    .filter(
+                        question =>
+                            question.status ===
+                            "staged"
+                    )
+                    .map(
+                        question => ({
+
+                            id:
+                                question.id,
+
+                            question_number:
+                                null,
+
+                            question_text:
+                                question.question,
+
+                            choice_a:
+                                question.choices?.A ||
+                                "",
+
+                            choice_b:
+                                question.choices?.B ||
+                                "",
+
+                            choice_c:
+                                question.choices?.C ||
+                                "",
+
+                            choice_d:
+                                question.choices?.D ||
+                                "",
+
+                            correct_answer:
+                                question.correctAnswer,
+
+                            explanation:
+                                question.explanation ||
+                                "",
+
+                            difficulty:
+                                question.difficulty
+                                    ? (
+                                        question.difficulty
+                                            .charAt(0)
+                                            .toUpperCase() +
+                                        question.difficulty
+                                            .slice(1)
+                                    )
+                                    : "Medium",
+
+                            topic:
+                                question.skill ||
+                                "SAT Practice",
+
+                            section:
+                                question.section ||
+                                "SAT",
+
+                            domain:
+                                question.domain ||
+                                ""
+
+                        })
+                    );
+
+
+            allQuestions = [
+                ...allQuestions,
+                ...stagedQuestions
+            ];
+
+        }
+
+    } catch (stagedError) {
+
+        console.warn(
+            "Could not load staged question bank JSON:",
+            stagedError
+        );
+
+    }
+
+
     populateTopicFilter();
 
 
