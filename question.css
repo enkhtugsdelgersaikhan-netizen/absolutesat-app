@@ -137,14 +137,13 @@
    ============================================ */
 
 .question-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 285px;
-    gap: 25px;
-    align-items: start;
+    display: block;
+    width: min(980px, 100%);
+    margin: 0 auto;
 }
 
 .question-main {
-    min-width: 0;
+    width: 100%;
 }
 
 
@@ -366,6 +365,126 @@
 
 .choice-text {
     padding-top: 4px;
+}
+
+.choice.correct-answer {
+    border-color: #22c55e;
+    background: #ecfdf3;
+    box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.12);
+}
+
+.choice.correct-answer .choice-letter {
+    border-color: #22c55e;
+    background: #22c55e;
+    color: #ffffff;
+}
+
+.choice.incorrect-answer {
+    border-color: #ef4444;
+    background: #fef2f2;
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.10);
+}
+
+.choice.incorrect-answer .choice-letter {
+    border-color: #ef4444;
+    background: #ef4444;
+    color: #ffffff;
+}
+
+.choice:disabled {
+    cursor: default;
+}
+
+.choice-strike-button:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.answer-feedback {
+    margin-top: 24px;
+    padding: 18px 20px;
+    border: 1px solid #dbe3ec;
+    border-radius: 10px;
+    background: #f8fafc;
+    color: #334155;
+    animation: answer-feedback-in 0.22s ease both;
+}
+
+.answer-feedback.correct {
+    border-color: #86efac;
+    background: #f0fdf4;
+}
+
+.answer-feedback.incorrect {
+    border-color: #fca5a5;
+    background: #fef2f2;
+}
+
+.answer-feedback.neutral {
+    border-color: #cbd5e1;
+    background: #f8fafc;
+}
+
+.answer-feedback-title {
+    margin-bottom: 6px;
+    color: #0f172a;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.answer-feedback.correct .answer-feedback-title {
+    color: #15803d;
+}
+
+.answer-feedback.incorrect .answer-feedback-title {
+    color: #dc2626;
+}
+
+.answer-feedback-explanation {
+    color: #475569;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.check-answer-button {
+    width: 100%;
+    min-height: 46px;
+    padding: 11px 18px;
+    border: 1px solid #0f9f9a;
+    border-radius: 9px;
+    background: #0f9f9a;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background 0.18s ease,
+        border-color 0.18s ease,
+        transform 0.15s ease;
+}
+
+.check-answer-button:hover:not(:disabled) {
+    border-color: #0b8985;
+    background: #0b8985;
+    transform: translateY(-1px);
+}
+
+.check-answer-button:disabled {
+    opacity: 0.65;
+    cursor: default;
+}
+
+@keyframes answer-feedback-in {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
@@ -898,4 +1017,24 @@
         height: 29px;
     }
 
+}
+
+
+/* Legacy set controls are no longer shown on the single-question practice page. */
+.question-sidebar {
+    display: none;
+}
+
+.question-actions {
+    margin-top: 18px;
+    display: block;
+}
+
+.clear-button,
+.navigation-buttons,
+.secondary-navigation-button,
+.primary-navigation-button,
+.submit-button,
+.question-navigator {
+    display: none !important;
 }
