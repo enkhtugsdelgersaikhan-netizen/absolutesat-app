@@ -39,6 +39,7 @@ let currentQuestionIndex = 0;
 let answers = {};
 
 let markedForReview = {};
+let localReviewOverrides = {};
 
 let elapsedSeconds = 0;
 
@@ -272,45 +273,50 @@ function getReviewStorageKey() {
 }
 
 
-function getLocalReviewIds() {
-
+function getLocalReviewOverrides() {
     const key =
         getReviewStorageKey();
 
     if (!key) {
-        return [];
+        return {};
     }
 
     try {
-
         const stored =
             JSON.parse(
                 localStorage.getItem(
                     key
-                ) || "[]"
+                ) || "{}"
             );
 
-        return Array.isArray(
-            stored
+        if (Array.isArray(stored)) {
+            const overrides = {};
+
+            stored.forEach(
+                questionId => {
+                    overrides[
+                        String(questionId)
+                    ] = true;
+                }
+            );
+
+            return overrides;
+        }
+
+        return (
+            stored &&
+            typeof stored === "object"
         )
-            ? stored.map(
-                id => String(id)
-            )
-            : [];
-
+            ? stored
+            : {};
     } catch {
-
-        return [];
-
+        return {};
     }
-
 }
 
-
-function saveLocalReviewIds(
-    ids
+function saveLocalReviewOverrides(
+    overrides
 ) {
-
     const key =
         getReviewStorageKey();
 
@@ -319,26 +325,25 @@ function saveLocalReviewIds(
     }
 
     try {
-
         localStorage.setItem(
             key,
             JSON.stringify(
-                [...new Set(
-                    ids.map(
-                        id => String(id)
-                    )
-                )]
+                overrides || {}
             )
         );
-
     } catch {
-
-        // Local storage is only a fallback.
-
+        // Local storage is a fallback.
     }
-
 }
 
+function getPracticeResetAt() {
+    return currentUser
+        ? localStorage.getItem(
+            "absoluteprep-practice-reset:" +
+            currentUser.id
+        )
+        : null;
+}
 
 /* ============================================================
    INITIALIZE
@@ -482,27 +487,37 @@ async function initialize() {
 async function loadQuestionReviewState(
     questionId
 ) {
+    localReviewOverrides =
+        getLocalReviewOverrides();
 
-    const localIds =
-        getLocalReviewIds();
+    const key =
+        String(questionId);
+
+    if (
+        Object.prototype.hasOwnProperty.call(
+            localReviewOverrides,
+            key
+        )
+    ) {
+        markedForReview[
+            questionId
+        ] =
+            Boolean(
+                localReviewOverrides[key]
+            );
+
+        return;
+    }
 
     markedForReview[
         questionId
-    ] =
-        localIds.includes(
-            String(questionId)
-        );
-
+    ] = false;
 
     if (!currentUser) {
-
         return;
-
     }
 
-
     try {
-
         const {
             data,
             error
@@ -512,7 +527,7 @@ async function loadQuestionReviewState(
                     "question_reviews"
                 )
                 .select(
-                    "question_id"
+                    "question_id, created_at"
                 )
                 .eq(
                     "user_id",
@@ -524,78 +539,102 @@ async function loadQuestionReviewState(
                 )
                 .limit(1);
 
-
         if (error) {
-
             console.warn(
                 "Could not load question review status; using local state:",
                 error
             );
-
             return;
-
         }
 
+        const resetAt =
+            getPracticeResetAt();
+
+        const resetTime =
+            resetAt
+                ? new Date(
+                    resetAt
+                ).getTime()
+                : null;
+
+        const serverReview =
+            Array.isArray(data) &&
+            data.length > 0
+                ? data[0]
+                : null;
+
+        const createdTime =
+            serverReview
+                ? new Date(
+                    serverReview.created_at ||
+                    0
+                ).getTime()
+                : 0;
 
         const serverMarked =
-            Array.isArray(data) &&
-            data.length > 0;
-
+            Boolean(serverReview) &&
+            (
+                !resetTime ||
+                (
+                    Number.isFinite(
+                        createdTime
+                    ) &&
+                    createdTime >
+                        resetTime
+                )
+            );
 
         markedForReview[
             questionId
         ] =
             serverMarked;
 
-
-        const nextLocalIds =
-            serverMarked
-                ? [
-                    ...localIds,
-                    String(questionId)
-                ]
-                : localIds.filter(
-                    id =>
-                        id !==
-                        String(questionId)
-                );
-
-
-        saveLocalReviewIds(
-            nextLocalIds
-        );
-
     } catch (error) {
-
         console.warn(
             "Could not load question review status; using local state:",
             error
         );
-
     }
-
 }
-
 
 async function loadReviewStatesForQuestions(
     questionList
 ) {
-
     markedForReview = {};
 
-    const localIds =
-        getLocalReviewIds();
+    localReviewOverrides =
+        getLocalReviewOverrides();
 
-    questionList.forEach(question => {
-        markedForReview[
-            question.id
-        ] =
-            localIds.includes(
-                String(question.id)
-            );
-    });
+    questionList.forEach(
+        question => {
+            const key =
+                String(question.id);
 
-    if (!currentUser || !questionList.length) {
+            if (
+                Object.prototype.hasOwnProperty.call(
+                    localReviewOverrides,
+                    key
+                )
+            ) {
+                markedForReview[
+                    question.id
+                ] =
+                    Boolean(
+                        localReviewOverrides[key]
+                    );
+            } else {
+                markedForReview[
+                    question.id
+                ] =
+                    false;
+            }
+        }
+    );
+
+    if (
+        !currentUser ||
+        !questionList.length
+    ) {
         return;
     }
 
@@ -614,7 +653,7 @@ async function loadReviewStatesForQuestions(
                     "question_reviews"
                 )
                 .select(
-                    "question_id"
+                    "question_id, created_at"
                 )
                 .eq(
                     "user_id",
@@ -633,11 +672,52 @@ async function loadReviewStatesForQuestions(
             return;
         }
 
+        const resetAt =
+            getPracticeResetAt();
+
+        const resetTime =
+            resetAt
+                ? new Date(
+                    resetAt
+                ).getTime()
+                : null;
+
         (data || []).forEach(
             review => {
-                markedForReview[
-                    review.question_id
-                ] = true;
+                const key =
+                    String(
+                        review.question_id
+                    );
+
+                if (
+                    Object.prototype.hasOwnProperty.call(
+                        localReviewOverrides,
+                        key
+                    )
+                ) {
+                    return;
+                }
+
+                const createdTime =
+                    new Date(
+                        review.created_at || 0
+                    ).getTime();
+
+                const valid =
+                    !resetTime ||
+                    (
+                        Number.isFinite(
+                            createdTime
+                        ) &&
+                        createdTime >
+                            resetTime
+                    );
+
+                if (valid) {
+                    markedForReview[
+                        review.question_id
+                    ] = true;
+                }
             }
         );
 
@@ -648,7 +728,6 @@ async function loadReviewStatesForQuestions(
         );
     }
 }
-
 
 /* ============================================================
    LOAD QUESTION BY ID
@@ -1770,93 +1849,49 @@ function clearAnswer() {
    ============================================================ */
 
 async function toggleReview() {
-
     const question =
         questions[
             currentQuestionIndex
         ];
 
-
     if (!question) {
-
         return;
-
     }
 
-
-    const previousMarked =
-        markedForReview[
-            question.id
-        ] === true;
-
+    const key =
+        String(question.id);
 
     const nextMarked =
-        !previousMarked;
+        !(
+            markedForReview[
+                question.id
+            ] === true
+        );
 
+    localReviewOverrides =
+        getLocalReviewOverrides();
+
+    localReviewOverrides[key] =
+        nextMarked;
+
+    saveLocalReviewOverrides(
+        localReviewOverrides
+    );
 
     markedForReview[
         question.id
     ] =
         nextMarked;
 
-
-    const localIds =
-        getLocalReviewIds();
-
-    const nextLocalIds =
-        nextMarked
-            ? [
-                ...localIds,
-                String(question.id)
-            ]
-            : localIds.filter(
-                id =>
-                    id !==
-                    String(question.id)
-            );
-
-    saveLocalReviewIds(
-        nextLocalIds
-    );
-
-
     updateReviewButton();
-
     updateQuestionNavigator();
 
-
     if (!currentUser) {
-
         return;
-
     }
 
-
     try {
-
-        const deleteResult =
-            await supabaseClient
-                .from(
-                    "question_reviews"
-                )
-                .delete()
-                .eq(
-                    "user_id",
-                    currentUser.id
-                )
-                .eq(
-                    "question_id",
-                    question.id
-                );
-
-
-        if (deleteResult.error) {
-            throw deleteResult.error;
-        }
-
-
         if (nextMarked) {
-
             const insertResult =
                 await supabaseClient
                     .from(
@@ -1869,53 +1904,41 @@ async function toggleReview() {
                             question.id
                     });
 
-
             if (insertResult.error) {
-                throw insertResult.error;
+                console.warn(
+                    "Could not save review to Supabase; keeping local review state:",
+                    insertResult.error
+                );
             }
+        } else {
+            const deleteResult =
+                await supabaseClient
+                    .from(
+                        "question_reviews"
+                    )
+                    .delete()
+                    .eq(
+                        "user_id",
+                        currentUser.id
+                    )
+                    .eq(
+                        "question_id",
+                        question.id
+                    );
 
+            if (deleteResult.error) {
+                console.warn(
+                    "Could not remove review from Supabase; keeping local review state:",
+                    deleteResult.error
+                );
+            }
         }
-
     } catch (error) {
-
-        console.error(
-            "Could not save review status:",
+        console.warn(
+            "Review sync failed; keeping local review state:",
             error
         );
-
-
-        markedForReview[
-            question.id
-        ] =
-            previousMarked;
-
-
-        const rollbackIds =
-            getLocalReviewIds();
-
-        const rollbackLocalIds =
-            previousMarked
-                ? [
-                    ...rollbackIds,
-                    String(question.id)
-                ]
-                : rollbackIds.filter(
-                    id =>
-                        id !==
-                        String(question.id)
-                );
-
-        saveLocalReviewIds(
-            rollbackLocalIds
-        );
-
-
-        updateReviewButton();
-
-        updateQuestionNavigator();
-
     }
-
 }
 
 
