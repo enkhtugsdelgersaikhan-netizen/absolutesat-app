@@ -1540,7 +1540,7 @@
       "domain": "Standard English Conventions",
       "skill": "Form, Structure, and Sense",
       "difficulty": "easy",
-      "passage": "Researchers studying beaver dams in Devon, England, found that the dams temporarily held back stormwater. Water moved more slowly through the dammed areas than through nearby undammed channels. ______",
+      "passage": "Researchers studying beaver dams in Devon, England, found that the dams temporarily held back stormwater during several monitored storms. Water moved more slowly through the dammed areas than through nearby undammed channels, and some runoff remained stored behind the dams for a period before continuing downstream. This difference in timing affected when the runoff reached downstream areas. ______",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English and makes the most sense in context?",
       "choices": {
         "A": "This slowing of water can reduce the amount of water reaching downstream areas at once.",
@@ -1559,7 +1559,7 @@
       "domain": "Standard English Conventions",
       "skill": "Form, Structure, and Sense",
       "difficulty": "medium",
-      "passage": "Researchers studying beaver dams in Devon, England, found that the dams temporarily held back stormwater. Measurements showed that water moved more slowly through dammed areas, and downstream channels received the water over a longer period. ______. The researchers therefore cautioned that the effect should not be treated as identical during every storm.",
+      "passage": "Researchers studying beaver dams in Devon, England, found that the dams temporarily held back stormwater. Measurements showed that water moved more slowly through dammed areas, and downstream channels received the water over a longer period. In some storms, the delayed arrival meant that less runoff reached a downstream channel in a single surge, suggesting that temporary storage could alter the intensity of downstream flow. ______. The researchers therefore cautioned that the effect should not be treated as identical during every storm.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English and makes the most sense in context?",
       "choices": {
         "A": "Beaver dams are found in many landscapes, and they can alter stream habitats.",
