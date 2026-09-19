@@ -376,7 +376,7 @@
     grid-template-columns: repeat(auto-fill, minmax(220px, max-content));
     align-items: center;
     justify-content: start;
-    column-gap: 34px;
+    column-gap: 20px;
     row-gap: 28px;
 }
 
