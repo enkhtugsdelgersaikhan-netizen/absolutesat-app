@@ -373,19 +373,11 @@
 
 .question-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, max-content));
+    grid-template-columns: repeat(auto-fill, 62px);
     align-items: center;
     justify-content: start;
     column-gap: 20px;
     row-gap: 28px;
-}
-
-.question-group {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    min-height: 72px;
-    width: max-content;
 }
 
 .question-icon-wrapper {
@@ -652,8 +644,8 @@
     }
 
     .question-list {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fill, 56px);
         row-gap: 22px;
-        column-gap: 0;
+        column-gap: 14px;
     }
 }
