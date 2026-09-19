@@ -554,6 +554,63 @@
       "correctAnswer": "C",
       "explanation": "The passage does not treat ring width as a direct record of rainfall. Instead, researchers establish a relationship between ring patterns and instrumental precipitation data and then use that relationship to interpret earlier periods for which direct measurements do not exist. Thus, **proxy** refers to a measurement or indicator used in place of a directly observed variable because the relationship between them has been established.",
       "status": "staged"
+    },
+    {
+      "id": "rw-tel-haran-001-easy",
+      "groupId": "rw-tel-haran-001",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "easy",
+      "passage": "Archaeologists studying pottery at the ancient settlement of Tel Haran first thought that the large number of painted bowls found there showed that the bowls had been made locally. However, chemical tests later showed that the clay came from a distant region, suggesting that many bowls had been imported. The researchers therefore described their first explanation as **provisional**, since the new evidence required them to reconsider it.",
+      "question": "As used in the text, what does **“provisional”** most nearly mean?",
+      "choices": {
+        "A": "Carefully documented",
+        "B": "Widely accepted",
+        "C": "Not yet final",
+        "D": "Based on chemical evidence"
+      },
+      "correctAnswer": "C",
+      "explanation": "The researchers had to reconsider their first explanation after receiving new evidence, so the explanation was provisional, or not yet final.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-tel-haran-001-medium",
+      "groupId": "rw-tel-haran-001",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "medium",
+      "passage": "At Tel Haran, archaeologists initially connected the settlement's unusually large collection of painted bowls with local pottery production. The concentration seemed significant because nearby sites contained far fewer such vessels. Yet chemical analysis showed that the bowls' clay originated hundreds of kilometers away, making long-distance trade a plausible explanation. Some bowls also showed wear consistent with repeated use at Tel Haran, indicating that imported vessels could have accumulated there over time. For this reason, the researchers called their first explanation **provisional** rather than abandoning it entirely.",
+      "question": "As used in the text, what does **“provisional”** most nearly mean?",
+      "choices": {
+        "A": "Accepted as a reasonable possibility but still subject to reconsideration",
+        "B": "Supported primarily by evidence from nearby settlements",
+        "C": "Rejected because the pottery had been transported from elsewhere",
+        "D": "Established by the wear patterns found on the pottery"
+      },
+      "correctAnswer": "A",
+      "explanation": "The original explanation remained plausible, but the chemical and wear evidence prevented the researchers from treating it as settled. Thus, provisional means accepted for the time being but still open to reconsideration.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-tel-haran-001-hard",
+      "groupId": "rw-tel-haran-001",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "hard",
+      "passage": "At Tel Haran, archaeologists initially connected the abundance of painted bowls with local production. The vessels were unusually common at the settlement, and fragments occurred in several areas where production debris might be expected. That interpretation remained **provisional**, however, because the distribution of fragments could also have resulted from the repeated use of pottery obtained elsewhere. Chemical analysis later linked the clay to a distant region, strengthening the case for long-distance trade but not establishing that every vessel had arrived that way. Some bowls showed extensive wear consistent with prolonged use at Tel Haran, whereas others were relatively little worn. The differing wear patterns therefore suggested that the collection might reflect several stages of acquisition and use rather than a single source. As a result, the chemical evidence weakened the original interpretation without eliminating it entirely; the researchers continued to treat local production as possible, but no longer as the only explanation for the settlement's unusually large pottery assemblage.",
+      "question": "As used in the text, what does **“provisional”** most nearly mean?",
+      "choices": {
+        "A": "Formed from evidence that was sufficient to establish one explanation conclusively",
+        "B": "Treated as a working interpretation even though further evidence could alter it",
+        "C": "Developed mainly by comparing Tel Haran with other archaeological settlements",
+        "D": "Restricted to pottery whose clay could be traced to distant regions"
+      },
+      "correctAnswer": "B",
+      "explanation": "The passage never gives a direct definition of provisional. Instead, the reader must connect the initial interpretation, the uncertainty surrounding the fragment distribution, the later chemical evidence, and the continued possibility of local production. Together, these details show that the interpretation was being treated as a working explanation rather than a settled conclusion.",
+      "status": "staged"
     }
   ]
 }
