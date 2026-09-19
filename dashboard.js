@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (resetButton) {
         resetButton.addEventListener("click", async () => {
             const confirmed = window.confirm(
-                "Reset all practice data? This will permanently delete your question attempts, review marks, and question-set results. This cannot be undone."
+                "Reset all practice data? This will permanently delete your question attempts, review marks, question-set results, and vocabulary progress. This cannot be undone."
             );
 
             if (!confirmed) {
@@ -46,6 +46,9 @@ document.addEventListener("DOMContentLoaded", async () => {
                     "absoluteprep-practice-reset:" +
                     user.id;
 
+                const vocabStateKey = "absoluteprep_vocab_state";
+                const legacyVocabLearnedKey = "absoluteprep_vocab_learned";
+
                 /*
                  * Mark the local reset first. This guarantees the
                  * interface stays reset even if an older server row
@@ -58,6 +61,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                 localStorage.removeItem(statusKey);
                 localStorage.removeItem(reviewKey);
+
+                // Vocab progress is stored locally under its own keys.
+                localStorage.removeItem(vocabStateKey);
+                localStorage.removeItem(legacyVocabLearnedKey);
 
                 const tables = [
                     "question_answers",
