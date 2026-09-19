@@ -848,7 +848,7 @@
       "skill": "Rhetorical Synthesis",
       "difficulty": "easy",
       "passage": "A city archive is preparing a public exhibit about an 1890 map of the Riverside district. The map records streets and buildings that have since disappeared, making it useful for showing how the neighborhood once looked. However, some boundaries on the map differ from those recorded in a later city survey. Property records indicate that several Riverside parcels changed over time. The exhibit should present the map as historically valuable without suggesting that every feature matches later records exactly.",
-      "question": "Which choice most effectively uses the information from the passage to accomplish this goal?\n\n**Goal:** Explain why the 1890 map remains useful for documenting Riverside's earlier appearance while acknowledging that some of its boundaries differ from later records.",
+      "question": "Which choice most effectively uses the information from the passage to accomplish this goal?",
       "choices": {
         "A": "The 1890 map of Riverside records streets and buildings that later disappeared from the neighborhood.",
         "B": "A later city survey provides information about Riverside that differs from some features shown on the 1890 map.",
@@ -857,7 +857,8 @@
       },
       "correctAnswer": "C",
       "explanation": "The goal requires both emphasizing the map's historical value and acknowledging that some features differ from later records. Choice C combines both points without overstating the map's accuracy.",
-      "status": "staged"
+      "status": "staged",
+      "goal": "Explain why the 1890 map remains useful for documenting Riverside's earlier appearance while acknowledging that some of its boundaries differ from later records."
     },
     {
       "id": "rw-riverside-map-001-medium",
@@ -867,7 +868,7 @@
       "skill": "Rhetorical Synthesis",
       "difficulty": "medium",
       "passage": "A city archive is preparing a public exhibit about an 1890 map of the Riverside district. The map shows streets and buildings that have since disappeared, so curators want visitors to understand why the map remains useful for reconstructing the neighborhood's history. A later city survey, however, does not match several of the map's property boundaries. Property records indicate that some parcels were repeatedly divided or recombined between the two dates, suggesting that the differences do not necessarily mean the older map was inaccurate. The exhibit should therefore present the map's value while avoiding the implication that its boundaries should match later records exactly.",
-      "question": "Which choice most effectively uses the information from the passage to accomplish this goal?\n\n**Goal:** Explain why the 1890 map remains useful for reconstructing Riverside's history while avoiding the implication that its boundaries should match later records exactly.",
+      "question": "Which choice most effectively uses the information from the passage to accomplish this goal?",
       "choices": {
         "A": "Although some Riverside boundaries differ between the 1890 map and a later survey, records of changing parcels help explain the differences without eliminating the map's value as evidence of the neighborhood's history.",
         "B": "The 1890 map is especially useful because it shows Riverside streets and buildings that no longer exist.",
@@ -876,7 +877,8 @@
       },
       "correctAnswer": "A",
       "explanation": "The goal requires combining the map's historical value with the qualification about its differing boundaries. Choice A connects the later survey, changing property records, and continued usefulness of the map.",
-      "status": "staged"
+      "status": "staged",
+      "goal": "Explain why the 1890 map remains useful for reconstructing Riverside's history while avoiding the implication that its boundaries should match later records exactly."
     },
     {
       "id": "rw-riverside-map-001-hard",
@@ -886,7 +888,7 @@
       "skill": "Rhetorical Synthesis",
       "difficulty": "hard",
       "passage": "A city archive is preparing a public exhibit about an 1890 map of the Riverside district. Curators initially valued the map because it shows streets and buildings that later disappeared, making it a useful record of the neighborhood's earlier appearance. A later city survey, however, places several property boundaries differently, and the surviving measurements in that survey appear more precise. This made it tempting to present the older map mainly as a historical image rather than as evidence that could be used to reconstruct Riverside.\n\nProperty records introduced a complication. Several parcels shown on the map were divided or recombined before the later survey was made, and the boundaries in the records changed again in subsequent decades. Aerial photographs later captured some of those same locations after additional changes had occurred. At the same time, several streets and buildings remained recognizable across the records. The exhibit therefore has to accommodate a record whose details do not always line up across dates, even though those differences occur within a neighborhood whose physical and property boundaries were themselves changing.",
-      "question": "Which choice most effectively uses the information from the passage to accomplish this goal?\n\n**Goal:** Explain why the 1890 map remains useful historical evidence without implying that its boundaries should match later records exactly.",
+      "question": "Which choice most effectively uses the information from the passage to accomplish this goal?",
       "choices": {
         "A": "Although later records provide more precise information about some Riverside boundaries, the 1890 map remains useful because it documents streets and buildings from an earlier stage of the neighborhood's development.",
         "B": "The 1890 map differs from later surveys because Riverside's property boundaries changed over time, so the map can help document those changes as well as the neighborhood's earlier appearance.",
@@ -895,7 +897,8 @@
       },
       "correctAnswer": "D",
       "explanation": "The passage creates two competing interpretations: the later survey appears more precise, which could make the 1890 map seem mainly illustrative, but the property records and aerial photographs show that Riverside itself changed between the records. The best choice must therefore preserve the older map's value while acknowledging that discrepancies cannot be interpreted simply as errors. Choice D incorporates the map, later surveys, and records of change without treating any one source as a complete account.",
-      "status": "staged"
+      "status": "staged",
+      "goal": "Explain why the 1890 map remains useful historical evidence without implying that its boundaries should match later records exactly."
     },
     {
       "id": "rw-edmund-fitzgerald-001-easy",
@@ -904,7 +907,7 @@
       "domain": "Expression of Ideas",
       "skill": "Rhetorical Synthesis",
       "difficulty": "easy",
-      "passage": "A student is researching the Edmund Fitzgerald, a Great Lakes freighter that sank in Lake Superior in 1975. The student has taken the following notes:\n\n- The Edmund Fitzgerald sank during a severe storm.\n- Maritime historians have studied the sinking for decades.\n- Researchers have used the disaster to examine how weather can interact with ship design and human decisions.\n\nThe student wants to emphasize why the Edmund Fitzgerald remains useful to maritime historians.",
+      "passage": "A student is researching the Edmund Fitzgerald, a Great Lakes freighter that sank in Lake Superior in 1975. The student has taken the following notes:\n\n- The Edmund Fitzgerald sank during a severe storm.\n- Maritime historians have studied the sinking for decades.\n- Researchers have used the disaster to examine how weather can interact with ship design and human decisions.",
       "question": "Which choice most effectively uses the information from the passage to accomplish this goal?",
       "choices": {
         "A": "The Edmund Fitzgerald sank during a severe storm in Lake Superior in 1975.",
@@ -914,7 +917,8 @@
       },
       "correctAnswer": "B",
       "explanation": "The goal is to explain why the disaster remains useful to historians. Choice B directly states that the disaster provides a case for examining the interaction of weather, ship design, and human decisions. The other choices provide individual facts but do not explain the disaster's continuing research value.",
-      "status": "staged"
+      "status": "staged",
+      "goal": "Emphasize why the Edmund Fitzgerald remains useful to maritime historians."
     },
     {
       "id": "rw-edmund-fitzgerald-001-medium",
@@ -923,7 +927,7 @@
       "domain": "Expression of Ideas",
       "skill": "Rhetorical Synthesis",
       "difficulty": "medium",
-      "passage": "A student is researching the Edmund Fitzgerald, a Great Lakes freighter that sank in Lake Superior in 1975. The student has taken the following notes:\n\n- The ship disappeared during a severe November storm.\n- Maritime historians have continued examining the disaster for decades.\n- Some investigations have focused on the ship's design and condition.\n- Other investigations have examined decisions made by the crew and changing weather conditions.\n- The disaster therefore provides a case for studying how several factors can interact during a maritime accident.\n\nThe student wants to explain why historians continue to study the disaster rather than treating it simply as the story of a ship lost in a storm.",
+      "passage": "A student is researching the Edmund Fitzgerald, a Great Lakes freighter that sank in Lake Superior in 1975. The student has taken the following notes:\n\n- The ship disappeared during a severe November storm.\n- Maritime historians have continued examining the disaster for decades.\n- Some investigations have focused on the ship's design and condition.\n- Other investigations have examined decisions made by the crew and changing weather conditions.\n- The disaster therefore provides a case for studying how several factors can interact during a maritime accident.",
       "question": "Which choice most effectively uses the information from the passage to accomplish this goal?",
       "choices": {
         "A": "The Edmund Fitzgerald disappeared during a severe November storm, and historians have continued studying the disaster for decades.",
@@ -933,7 +937,8 @@
       },
       "correctAnswer": "B",
       "explanation": "The goal asks why the disaster remains worth studying beyond the fact that a ship was lost in a storm. Choice B connects the different lines of investigation and explains that together they allow historians to study how several factors can interact. The other choices mention the research but do not explain its broader significance as directly.",
-      "status": "staged"
+      "status": "staged",
+      "goal": "Explain why historians continue to study the Edmund Fitzgerald disaster rather than treating it simply as the story of a ship lost in a storm."
     },
     {
       "id": "rw-edmund-fitzgerald-001-hard",
@@ -942,7 +947,7 @@
       "domain": "Expression of Ideas",
       "skill": "Rhetorical Synthesis",
       "difficulty": "hard",
-      "passage": "A student is researching the Edmund Fitzgerald, a Great Lakes freighter that sank in Lake Superior in 1975. The student has taken the following notes:\n\n- The Edmund Fitzgerald disappeared during a powerful November storm.\n- Because the loss occurred during extreme weather, early accounts naturally emphasized the storm as a possible explanation.\n- Later examinations of the wreck drew attention to the vessel's structure and condition.\n- Researchers also considered decisions made aboard the ship as weather conditions changed.\n- No single factor fully accounts for all the evidence gathered about the sinking.\n- The disaster has consequently been used by maritime historians to examine how environmental conditions, vessel characteristics, and human decisions can interact.\n- This approach does not make the storm irrelevant; rather, it places the storm within a larger set of circumstances.\n- The continuing examination of the wreck and historical records has allowed researchers to compare these factors rather than treating any one of them as sufficient by itself.\n\nThe student wants to explain the significance of the Edmund Fitzgerald disaster to maritime historians while accurately reflecting the evidence's limitations.",
+      "passage": "A student is researching the Edmund Fitzgerald, a Great Lakes freighter that sank in Lake Superior in 1975. The student has taken the following notes:\n\n- The Edmund Fitzgerald disappeared during a powerful November storm.\n- Because the loss occurred during extreme weather, early accounts naturally emphasized the storm as a possible explanation.\n- Later examinations of the wreck drew attention to the vessel's structure and condition.\n- Researchers also considered decisions made aboard the ship as weather conditions changed.\n- No single factor fully accounts for all the evidence gathered about the sinking.\n- The disaster has consequently been used by maritime historians to examine how environmental conditions, vessel characteristics, and human decisions can interact.\n- This approach does not make the storm irrelevant; rather, it places the storm within a larger set of circumstances.\n- The continuing examination of the wreck and historical records has allowed researchers to compare these factors rather than treating any one of them as sufficient by itself.",
       "question": "Which choice most effectively uses the information from the passage to accomplish this goal?",
       "choices": {
         "A": "The Edmund Fitzgerald disaster shows that severe weather was the primary cause of the sinking, although researchers have also examined the vessel and its crew.",
@@ -952,7 +957,8 @@
       },
       "correctAnswer": "C",
       "explanation": "The goal requires both the disaster's significance to historians and a careful statement of what the evidence does not establish. Choice C does both: it recognizes the storm's importance, explains why researchers continue to study the event, and avoids claiming that any one factor has been proved sufficient to explain the sinking. A and B make unsupported causal claims, while D suggests that researchers have established that several factors contributed without preserving the passage's explicit uncertainty about how those factors relate to the sinking.",
-      "status": "staged"
+      "status": "staged",
+      "goal": "Explain the significance of the Edmund Fitzgerald disaster to maritime historians while accurately reflecting the evidence's limitations."
     }
   ]
 }
