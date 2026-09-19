@@ -1126,6 +1126,58 @@
     display: none;
 }
 
+.question-passage-table-wrap {
+    width: 100%;
+    margin: 24px 0 4px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.question-passage-table {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    background: #ffffff;
+    font-size: 12.5px;
+    line-height: 1.45;
+}
+
+.question-passage-table caption {
+    margin-bottom: 9px;
+    color: #475569;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.question-passage-table th,
+.question-passage-table td {
+    padding: 9px 8px;
+    border: 1px solid #dbe3ec;
+    text-align: center;
+    vertical-align: middle;
+    overflow-wrap: anywhere;
+}
+
+.question-passage-table th {
+    background: #f8fafc;
+    color: #334155;
+    font-weight: 700;
+}
+
+.question-passage-table td:first-child,
+.question-passage-table th:first-child {
+    text-align: left;
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .question-passage-table {
+        min-width: 520px;
+    }
+}
+
 .sat-answer-pane .question-progress-row {
     min-height: 62px;
     margin: 0;
