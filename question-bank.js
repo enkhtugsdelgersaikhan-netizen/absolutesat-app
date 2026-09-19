@@ -988,10 +988,28 @@ function setupFilterDropdown(
                 nextValues.push(value);
             }
 
+            const options = [
+                ...menu.querySelectorAll(
+                    ".filter-dropdown-option"
+                )
+            ].map(option => ({
+                value:
+                    option.dataset.value ||
+                    "all",
+                label:
+                    option.textContent.trim()
+            }));
+
+            setDropdownSelections(
+                dropdown,
+                nextValues,
+                options
+            );
+
             onChange(nextValues);
 
-            // Re-rendering the menu keeps the dropdown
-            // open and makes multi-selection easy.
+            // Keep the menu open so multiple values
+            // can be selected in one pass.
         }
     );
 
