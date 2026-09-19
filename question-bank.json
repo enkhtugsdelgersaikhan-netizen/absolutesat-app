@@ -1076,6 +1076,63 @@
       "correctAnswer": "A",
       "explanation": "Choice A reflects the full rhetorical job: it acknowledges the important limitation shown by small or poorly positioned sites, incorporates the later evidence that larger or strategically positioned systems can intercept more runoff, and preserves the habitat benefit. B stops at the intermediate interpretation that limited sites are mainly habitat projects, while C overgeneralizes the flood benefit and D focuses on one example without preserving the broader qualification.",
       "status": "staged"
+    },
+    {
+      "id": "rw-huron-transition-001-easy",
+      "groupId": "rw-huron-transition-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "easy",
+      "passage": "Researchers at the University of Michigan restored several wetlands along the Huron River. The wetlands absorbed large amounts of rainwater before it reached the river. ______, the restored wetlands helped reduce flooding in nearby low-lying areas.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "For example,",
+        "B": "As a result,",
+        "C": "Nevertheless,",
+        "D": "In contrast,"
+      },
+      "correctAnswer": "B",
+      "explanation": "The first two sentences describe the wetlands' ability to absorb rainwater, and the final sentence gives the resulting benefit: reduced flooding. 'As a result' correctly signals this cause-and-effect relationship.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-huron-transition-001-medium",
+      "groupId": "rw-huron-transition-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "medium",
+      "passage": "A University of Michigan study found that restored wetlands along the Huron River can absorb substantial amounts of rainwater. This capacity can reduce the amount of water reaching the river during heavy storms. ______, the researchers found that some restored wetlands had little effect on flooding because they were located away from major runoff routes. Their findings therefore suggested that the flood-reduction benefit of restoration depends partly on where a wetland is positioned.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "For instance,",
+        "B": "In other words,",
+        "C": "Similarly,",
+        "D": "However,"
+      },
+      "correctAnswer": "D",
+      "explanation": "The first two sentences establish a potential flood-reduction benefit, while the next sentence introduces an important limitation: some wetlands have little effect because of their location. 'However' signals this contrast and prepares the reader for the qualification that follows.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-huron-transition-001-hard",
+      "groupId": "rw-huron-transition-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "hard",
+      "passage": "Researchers studying restored wetlands along the Huron River first focused on how much rainwater the wetlands could retain. During heavy storms, measurements showed that some sites absorbed substantial amounts of water, making retention seem like a useful measure of their flood-reduction value. ______, several restored wetlands produced only small changes in peak river levels. Those sites were often located downstream from major runoff sources, so much of the stormwater had already entered the river system before reaching the wetlands. Later measurements further complicated the pattern: some wetlands located farther upstream produced larger reductions in peak levels even when they retained less water overall. The researchers therefore distinguished between the volume of water a wetland stores and the point in the watershed where that storage occurs. In one set of paired sites, wetlands that received runoff from major drainage routes produced larger reductions in peak levels than similarly sized wetlands that received less of the incoming flow.",
+      "question": "Which choice best completes the first blank and helps establish the relationship between the observations that follows?",
+      "choices": {
+        "A": "Nevertheless,",
+        "B": "For example,",
+        "C": "As a result,",
+        "D": "In other words,"
+      },
+      "correctAnswer": "A",
+      "explanation": "'Nevertheless' signals the key shift from an initially promising measure of wetland performance to observations that do not fit a simple retention-based interpretation. The later evidence shows why: the amount of water retained matters, but the wetland's position in the watershed also affects whether that retention changes downstream flooding. The other choices would not properly signal the complication that drives the passage's reasoning.",
+      "status": "staged"
     }
   ]
 }
