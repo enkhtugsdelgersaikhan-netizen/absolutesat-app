@@ -11,6 +11,7 @@ let reviewOnly = false;
 
 let userAttempts = [];
 let userReviews = [];
+let localReviewOverrides = {};
 
 const questionList = document.getElementById("question-list");
 const questionCount = document.getElementById("question-count");
@@ -174,6 +175,16 @@ function getLocalReviewStorageKey(userId) {
     return "absoluteprep-question-reviews:" + userId;
 }
 
+function getPracticeResetKey(userId) {
+    return "absoluteprep-practice-reset:" + userId;
+}
+
+function getPracticeResetAt(userId) {
+    return localStorage.getItem(
+        getPracticeResetKey(userId)
+    );
+}
+
 function loadLocalQuestionAttempts(userId) {
     try {
         const stored =
@@ -234,48 +245,56 @@ function saveLocalQuestionStatus(
     }
 }
 
-function loadLocalReviews(userId) {
+function getLocalReviewOverrides(
+    userId
+) {
     try {
-        const ids =
+        const stored =
             JSON.parse(
                 localStorage.getItem(
                     getLocalReviewStorageKey(userId)
-                ) || "[]"
+                ) || "{}"
             );
 
-        if (!Array.isArray(ids)) {
-            return [];
+        if (Array.isArray(stored)) {
+            const overrides = {};
+
+            stored.forEach(
+                questionId => {
+                    overrides[
+                        String(questionId)
+                    ] = true;
+                }
+            );
+
+            return overrides;
         }
 
-        return ids.map(
-            questionId => ({
-                user_id: userId,
-                question_id: String(questionId)
-            })
-        );
+        return (
+            stored &&
+            typeof stored === "object"
+        )
+            ? stored
+            : {};
     } catch (error) {
         console.warn(
             "Could not load local review state:",
             error
         );
-        return [];
+
+        return {};
     }
 }
 
-function saveLocalReviews(
+function saveLocalReviewOverrides(
     userId,
-    reviews
+    overrides
 ) {
     try {
         localStorage.setItem(
             getLocalReviewStorageKey(userId),
             JSON.stringify(
-                reviews.map(
-                    review =>
-                        String(
-                            review.question_id
-                        )
-                )
+                overrides || {}
             )
         );
     } catch (error) {
@@ -319,20 +338,19 @@ function getQuestionStatus(questionId) {
 function isQuestionMarkedForReview(
     questionId
 ) {
-    return userReviews.some(
-        review =>
-            String(review.question_id) ===
-            String(questionId)
-    );
-}
+    const key =
+        String(questionId);
 
-async function loadUserData() {
+    if (
+        Object.prototype.hasOwnProperty.call(
+            localReviewOverrideasync function loadUserData() {
     const user =
         await getCurrentUser();
 
     if (!user) {
         userAttempts = [];
         userReviews = [];
+        localReviewOverrides = {};
         return;
     }
 
@@ -341,10 +359,20 @@ async function loadUserData() {
             user.id
         );
 
-    const localReviews =
-        loadLocalReviews(
+    localReviewOverrides =
+        getLocalReviewOverrides(
             user.id
         );
+
+    const resetAt =
+        getPracticeResetAt(
+            user.id
+        );
+
+    const resetTime =
+        resetAt
+            ? new Date(resetAt).getTime()
+            : null;
 
     const attemptsResult =
         await questionBankSupabase
@@ -356,11 +384,33 @@ async function loadUserData() {
             );
 
     const serverAttempts =
-        attemptsResult.error
-            ? []
-            : (
-                attemptsResult.data || []
-            );
+        (
+            attemptsResult.error
+                ? []
+                : (
+                    attemptsResult.data ||
+                    []
+                )
+        ).filter(
+            attempt => {
+                if (!resetTime) {
+                    return true;
+                }
+
+                const createdTime =
+                    new Date(
+                        attempt.created_at || 0
+                    ).getTime();
+
+                return (
+                    Number.isFinite(
+                        createdTime
+                    ) &&
+                    createdTime >
+                        resetTime
+                );
+            }
+        );
 
     if (attemptsResult.error) {
         console.warn(
@@ -377,18 +427,42 @@ async function loadUserData() {
     const reviewsResult =
         await questionBankSupabase
             .from("question_reviews")
-            .select("*")
+            .select(
+                "question_id, created_at"
+            )
             .eq(
                 "user_id",
                 user.id
             );
 
     const serverReviews =
-        reviewsResult.error
-            ? []
-            : (
-                reviewsResult.data || []
-            );
+        (
+            reviewsResult.error
+                ? []
+                : (
+                    reviewsResult.data ||
+                    []
+                )
+        ).filter(
+            review => {
+                if (!resetTime) {
+                    return true;
+                }
+
+                const createdTime =
+                    new Date(
+                        review.created_at || 0
+                    ).getTime();
+
+                return (
+                    Number.isFinite(
+                        createdTime
+                    ) &&
+                    createdTime >
+                        resetTime
+                );
+            }
+        );
 
     if (reviewsResult.error) {
         console.warn(
@@ -400,10 +474,7 @@ async function loadUserData() {
     const reviewMap =
         new Map();
 
-    [
-        ...serverReviews,
-        ...localReviews
-    ].forEach(
+    serverReviews.forEach(
         review => {
             reviewMap.set(
                 String(
@@ -414,13 +485,35 @@ async function loadUserData() {
         }
     );
 
+    /*
+     * Local review overrides always win over server state.
+     * This prevents a failed DELETE request from immediately
+     * re-marking a question.
+     */
+    Object.entries(
+        localReviewOverrides
+    ).forEach(
+        ([questionId, marked]) => {
+            if (marked) {
+                reviewMap.set(
+                    questionId,
+                    {
+                        user_id:
+                            user.id,
+                        question_id:
+                            questionId
+                    }
+                );
+            } else {
+                reviewMap.delete(
+                    questionId
+                );
+            }
+        }
+    );
+
     userReviews =
         [...reviewMap.values()];
-
-    saveLocalReviews(
-        user.id,
-        userReviews
-    );
 }
 
 const FALLBACK_QUESTIONS = [
@@ -1090,60 +1183,79 @@ async function toggleQuestionReview(
             questionId
         );
 
-    const previousReviews =
-        [...userReviews];
+    const nextMarked =
+        !currentlyMarked;
 
-    if (currentlyMarked) {
+    /*
+     * Persist the desired state locally before touching Supabase.
+     * This makes review toggling instant and prevents a failed
+     * server DELETE/INSERT from flashing back to the old state.
+     */
+    localReviewOverrides[
+        String(questionId)
+    ] =
+        nextMarked;
+
+    saveLocalReviewOverrides(
+        user.id,
+        localReviewOverrides
+    );
+
+    if (nextMarked) {
+        userReviews = [
+            ...userReviews.filter(
+                review =>
+                    String(
+                        review.question_id
+                    ) !==
+                    String(questionId)
+            ),
+            {
+                user_id:
+                    user.id,
+                question_id:
+                    questionId
+            }
+        ];
+    } else {
         userReviews =
             userReviews.filter(
                 review =>
-                    !(
-                        String(
-                            review.question_id
-                        ) ===
-                        String(questionId)
-                    )
+                    String(
+                        review.question_id
+                    ) !==
+                    String(questionId)
             );
-    } else {
-        userReviews = [
-            ...userReviews,
-            {
-                user_id: user.id,
-                question_id: questionId
-            }
-        ];
     }
-
-    saveLocalReviews(
-        user.id,
-        userReviews
-    );
 
     renderQuestions();
 
-    let error = null;
-
     try {
-        if (currentlyMarked) {
-            const result =
+        if (nextMarked) {
+            /*
+             * Insert only. The local override is authoritative
+             * if the table policy rejects the write.
+             */
+            const insertResult =
                 await questionBankSupabase
                     .from(
                         "question_reviews"
                     )
-                    .delete()
-                    .eq(
-                        "user_id",
-                        user.id
-                    )
-                    .eq(
-                        "question_id",
-                        questionId
-                    );
+                    .insert({
+                        user_id:
+                            user.id,
+                        question_id:
+                            questionId
+                    });
 
-            error =
-                result.error || null;
+            if (insertResult.error) {
+                console.warn(
+                    "Could not save review to Supabase; keeping local review state:",
+                    insertResult.error
+                );
+            }
         } else {
-            const deleteExisting =
+            const deleteResult =
                 await questionBankSupabase
                     .from(
                         "question_reviews"
@@ -1158,46 +1270,18 @@ async function toggleQuestionReview(
                         questionId
                     );
 
-            if (!deleteExisting.error) {
-                const insertResult =
-                    await questionBankSupabase
-                        .from(
-                            "question_reviews"
-                        )
-                        .insert({
-                            user_id:
-                                user.id,
-                            question_id:
-                                questionId
-                        });
-
-                error =
-                    insertResult.error ||
-                    null;
-            } else {
-                error =
-                    deleteExisting.error;
+            if (deleteResult.error) {
+                console.warn(
+                    "Could not remove review from Supabase; keeping local review state:",
+                    deleteResult.error
+                );
             }
         }
-    } catch (requestError) {
-        error = requestError;
-    }
-
-    if (error) {
-        console.error(
-            "Could not save review status:",
+    } catch (error) {
+        console.warn(
+            "Review sync failed; keeping local review state:",
             error
         );
-
-        userReviews =
-            previousReviews;
-
-        saveLocalReviews(
-            user.id,
-            userReviews
-        );
-
-        renderQuestions();
     }
 }
 
