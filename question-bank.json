@@ -1247,6 +1247,63 @@
       "correctAnswer": "A",
       "explanation": "The evidence immediately before the blank shows that streets with fewer but more connected trees could cool more than streets with larger numbers of scattered trees. 'As a result' appropriately signals the researchers' resulting shift toward examining canopy arrangement as a better explanation. The later comparison then adds another qualification: arrangement alone is not sufficient because the amount of sunlight displaced also matters.",
       "status": "staged"
+    },
+    {
+      "id": "rw-telescope-boundaries-001-easy",
+      "groupId": "rw-telescope-boundaries-001",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "easy",
+      "passage": "The telescope was first designed for observing distant stars. **Its compact size also made it useful for students.** Because the telescope could be carried easily, teachers began bringing it into classrooms.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "stars, its compact size also made it useful for students.",
+        "B": "stars; its compact size also made it useful for students.",
+        "C": "stars its compact size also made it useful for students.",
+        "D": "stars: its compact size also made it useful for students."
+      },
+      "correctAnswer": "B",
+      "explanation": "Both parts of the sentence are independent clauses: 'The telescope was first designed for observing distant stars' and 'Its compact size also made it useful for students.' A semicolon correctly separates the clauses. A creates a comma splice, C creates a run-on sentence, and D uses a colon where no explanation or elaboration is being introduced.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-telescope-boundaries-001-medium",
+      "groupId": "rw-telescope-boundaries-001",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "medium",
+      "passage": "The telescope was first designed for observing distant stars, but teachers soon discovered another use for it. **Its compact size made it practical for classroom demonstrations.** Students could handle the instrument more easily than many larger telescopes, and teachers could move it from room to room.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "use for it; its compact size made it practical for classroom demonstrations.",
+        "B": "use for it its compact size made it practical for classroom demonstrations.",
+        "C": "use for it, its compact size made it practical for classroom demonstrations.",
+        "D": "use for it: its compact size made it practical for classroom demonstrations."
+      },
+      "correctAnswer": "A",
+      "explanation": "The material on both sides of the blank forms two independent clauses. A semicolon correctly separates them while preserving their close relationship. B creates a run-on sentence, C creates a comma splice, and D incorrectly presents the second clause as a direct explanation or elaboration of the first.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-telescope-boundaries-001-hard",
+      "groupId": "rw-telescope-boundaries-001",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "hard",
+      "passage": "The telescope was developed to make observations of distant objects easier, and its design later attracted interest from educators. **The instrument was compact enough for classroom demonstrations. Its portability also allowed teachers to move it between classrooms.** Because students could examine the telescope directly, teachers sometimes used it to connect observations of the night sky with lessons on how scientific instruments are constructed.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "demonstrations, its portability also allowed teachers to move it between classrooms.",
+        "B": "demonstrations its portability also allowed teachers to move it between classrooms.",
+        "C": "demonstrations; its portability also allowed teachers to move it between classrooms.",
+        "D": "demonstrations: its portability also allowed teachers to move it between classrooms."
+      },
+      "correctAnswer": "C",
+      "explanation": "The words before and after the blank are independent clauses, so the sentence requires an appropriate boundary. A comma alone would create a comma splice, B would create a run-on sentence, and D would use a colon even though the second clause is a related statement rather than a specific explanation of the first. C correctly uses a semicolon.",
+      "status": "staged"
     }
   ]
 }
