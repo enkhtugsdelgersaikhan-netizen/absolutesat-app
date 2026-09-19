@@ -1350,16 +1350,16 @@
       "domain": "Standard English Conventions",
       "skill": "Boundaries",
       "difficulty": "hard",
-      "passage": "At the Smithsonian's National Air and Space Museum, conservators sometimes use digital scans to document fragile aircraft components before handling them. A scan can preserve a detailed record even if a component later deteriorates, and it can reduce physical wear by limiting repeated handling. Yet a digital record is not always sufficient for conservation work because some surface features become difficult to interpret when separated from their physical context. Conservators therefore sometimes compare a scan with the original component before deciding how it should be treated. This comparison can reveal details that the scan appears to capture but whose significance is uncertain. The digital record remains useful for tracking change over time______ however, its value depends partly on how it is interpreted alongside direct observation.",
+      "passage": "At the Smithsonian's National Air and Space Museum, conservators sometimes use digital scans to document fragile aircraft components before handling them. A scan can preserve a detailed record even if a component later deteriorates, and it can reduce physical wear by limiting repeated handling. Yet a digital record is not always sufficient for conservation work because some surface features become difficult to interpret when separated from their physical context. Conservators therefore sometimes compare a scan with the original component before deciding how it should be treated. This comparison can reveal details that the scan appears to capture but whose significance is uncertain. The digital record remains useful for tracking change over ______",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "choices": {
-        "A": ",",
-        "B": ";",
-        "C": ".",
-        "D": ":"
+        "A": "time, however its value depends partly",
+        "B": "time; however, its value depends partly",
+        "C": "time however; its value depends partly",
+        "D": "time. However its value depends partly"
       },
       "correctAnswer": "B",
-      "explanation": "The words before the blank form an independent clause, and the words after it begin a second independent clause introduced by the conjunctive adverb 'however.' A semicolon is needed before 'however,' and the comma after 'however' is already provided in the passage. A would create a comma splice, C would leave 'However' incorrectly attached to the previous sentence without its required comma, and D would incorrectly use a colon.",
+      "explanation": "The words before the blank form an independent clause, and the words after the blank form a second independent clause introduced by the conjunctive adverb 'however.' Choice B correctly supplies a semicolon before 'however' and a comma after it. A creates a comma splice, C misplaces the boundary, and D leaves out the comma required after 'However.'",
       "status": "staged"
     }
   ]
