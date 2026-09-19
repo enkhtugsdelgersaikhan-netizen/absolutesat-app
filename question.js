@@ -89,6 +89,11 @@ const questionText =
         "question-text"
     );
 
+const questionPassage =
+    document.getElementById(
+        "question-passage"
+    );
+
 const choicesContainer =
     document.getElementById(
         "choices"
@@ -696,13 +701,13 @@ async function loadQuestionById(
             questions = [{
                 id: stagedQuestion.id,
                 question_number: null,
+                passage:
+                    stagedQuestion.passage ||
+                    "",
+
                 question_text:
-                    [
-                        stagedQuestion.passage,
-                        stagedQuestion.question
-                    ]
-                        .filter(Boolean)
-                        .join("\n\n"),
+                    stagedQuestion.question ||
+                    "",
                 choice_a:
                     stagedQuestion.choices?.A ||
                     "",
@@ -824,7 +829,12 @@ async function loadQuestionById(
         }
 
         questions = [
-            liveQuestion
+            {
+                ...liveQuestion,
+                passage:
+                    liveQuestion.passage ||
+                    ""
+            }
         ];
 
         currentSet = null;
@@ -1183,6 +1193,17 @@ function renderCurrentQuestion() {
 
     questionText.textContent =
         question.question_text;
+
+    if (questionPassage) {
+        questionPassage.textContent =
+            question.passage ||
+            "";
+
+        questionPassage.parentElement?.classList.toggle(
+            "has-passage",
+            Boolean(question.passage)
+        );
+    }
 
 
     renderChoices(
@@ -1663,6 +1684,34 @@ async function saveQuestionBankAttempt(
     questionId,
     isCorrect
 ) {
+
+    try {
+        const key =
+            "absoluteprep-question-status:" +
+            currentUser.id;
+
+        const stored =
+            JSON.parse(
+                localStorage.getItem(key) || "{}"
+            );
+
+        stored[String(questionId)] = {
+            is_correct:
+                Boolean(isCorrect),
+            updated_at:
+                new Date().toISOString()
+        };
+
+        localStorage.setItem(
+            key,
+            JSON.stringify(stored)
+        );
+    } catch (storageError) {
+        console.warn(
+            "Could not save local question status:",
+            storageError
+        );
+    }
 
     if (!currentUser) {
         return;
