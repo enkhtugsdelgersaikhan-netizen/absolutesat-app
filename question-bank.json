@@ -113,6 +113,63 @@
       "correctAnswer": "C",
       "explanation": "The passage distinguishes between the limited effect of an individual dam and the combined effect of temporary delays at different points in a drainage network. Because multiple structures can alter when different portions of runoff reach downstream channels, their cumulative effect may moderate some downstream flooding even though none can guarantee that flooding will be prevented. A treats the eventual release of stored water as evidence that dams have little effect, ignoring the importance of delayed timing. B incorrectly assumes that permanent or uninterrupted storage is necessary. D introduces a comparison with engineered flood-control systems that the passage never makes.",
       "status": "staged"
+    },
+    {
+      "id": "rw-mangrove-001-easy",
+      "groupId": "rw-mangrove-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Central Ideas and Details",
+      "difficulty": "easy",
+      "passage": "Mangrove forests can reduce the force of coastal storms. In Florida’s Everglades, the red mangrove (*Rhizophora mangle*) forms dense networks of trunks and roots that slow moving water. Field measurements from the Ten Thousand Islands have shown that water loses energy as it passes through wider mangrove stands. However, a narrow or damaged stand provides less protection. Thus, mangroves can help shield coastlines from storm-driven water, especially when the forests are broad and intact.",
+      "question": "Which choice best states the central idea of the text?",
+      "choices": {
+        "A": "Broad, healthy mangrove forests can reduce the force of storm-driven water along coastlines.",
+        "B": "The red mangrove is the most common plant found throughout Florida’s Everglades.",
+        "C": "Researchers have found that storms are becoming more frequent in the Ten Thousand Islands.",
+        "D": "Mangrove roots are more important to coastal ecosystems than mangrove trunks are."
+      },
+      "correctAnswer": "A",
+      "explanation": "The passage explains that mangroves can reduce the energy of storm-driven water and that broader, intact forests provide greater protection. The other choices focus on details that are either unsupported or not central to the passage.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-mangrove-001-medium",
+      "groupId": "rw-mangrove-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Central Ideas and Details",
+      "difficulty": "medium",
+      "passage": "Along Florida’s Ten Thousand Islands, stands of red mangrove (*Rhizophora mangle*) differ considerably in width and condition. Measurements of water moving through these forests indicate that the tangled trunks and aerial roots dissipate some of the energy carried by storm-driven water. The effect is not uniform, however: water passing through a narrow stand encounters fewer obstacles, while damaged vegetation likewise provides less resistance. These observations suggest that simply having mangroves along a shoreline does not guarantee the same degree of protection everywhere. Rather, the capacity of a mangrove forest to moderate storm impacts depends in part on how continuous and extensive the forest is.",
+      "question": "Which choice best states the central idea of the text?",
+      "choices": {
+        "A": "Red mangroves are especially well adapted to the environmental conditions of Florida’s Ten Thousand Islands.",
+        "B": "Mangrove forests can moderate storm-driven water, but the degree of protection depends partly on the forests’ extent and condition.",
+        "C": "Narrow mangrove stands are generally more vulnerable to storm damage than wide mangrove stands.",
+        "D": "The aerial roots of red mangroves dissipate more storm energy than their trunks do."
+      },
+      "correctAnswer": "B",
+      "explanation": "The passage connects two ideas: mangrove vegetation dissipates some of the energy carried by storm-driven water, but the effect varies with the forest’s width and condition. Choice B combines both ideas into the central conclusion. A and D focus on narrower details, while C introduces a claim about vulnerability to damage that the passage does not establish.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-mangrove-001-hard",
+      "groupId": "rw-mangrove-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Central Ideas and Details",
+      "difficulty": "hard",
+      "passage": "In Florida’s Ten Thousand Islands, the red mangrove (*Rhizophora mangle*) occupies shorelines where storm-driven water can move inland with considerable force. Because the species develops substantial trunks and aerial roots, a mangrove stand does not merely mark the boundary between land and water; its vegetation also creates physical resistance to moving water. Measurements taken across stands of different widths indicate that this resistance can dissipate part of the water’s energy. Yet the presence of mangroves alone is an insufficient measure of their protective effect. A narrow stand may contain the same species as a much broader one but present far fewer obstacles to incoming water, and gaps caused by vegetation loss can similarly reduce resistance. Thus, two shorelines containing red mangroves may not receive the same degree of protection from storm-driven water. The distinction suggests that the ecological value of mangroves as a coastal buffer depends not simply on whether the vegetation is present, but on how much of the shoreline it occupies and how continuously it intercepts moving water.",
+      "question": "Which choice best states the central idea of the text?",
+      "choices": {
+        "A": "The protective value of red mangroves is determined primarily by the number of aerial roots in a coastal forest.",
+        "B": "Measurements from the Ten Thousand Islands demonstrate that storm-driven water causes extensive damage whenever mangrove forests are narrow.",
+        "C": "Red mangrove forests can lessen the energy of storm-driven water, although the amount of protection depends partly on how extensive and continuous the vegetation is.",
+        "D": "The presence of red mangroves along a shoreline is insufficient to prevent storms from carrying water inland."
+      },
+      "correctAnswer": "C",
+      "explanation": "The passage first explains how red mangrove vegetation creates resistance to moving water, then qualifies that finding by showing that narrow or interrupted forests provide fewer obstacles. Its final point is therefore that mangroves can moderate storm-driven water, but their protective effect depends partly on the extent and continuity of the vegetation. A focuses too narrowly on aerial roots, B overstates the evidence, and D turns a qualification about the degree of protection into an absolute claim that mangroves cannot meaningfully limit inland water movement.",
+      "status": "staged"
     }
   ]
 }
