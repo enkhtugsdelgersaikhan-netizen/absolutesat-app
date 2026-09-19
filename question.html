@@ -164,81 +164,38 @@
 
                     <div id="choices" class="choices"></div>
 
+                    <div
+                        id="answer-feedback"
+                        class="answer-feedback hidden"
+                        aria-live="polite"
+                    >
+                        <div
+                            id="answer-feedback-title"
+                            class="answer-feedback-title"
+                        ></div>
+
+                        <div
+                            id="answer-feedback-explanation"
+                            class="answer-feedback-explanation"
+                        ></div>
+                    </div>
+
                 </div>
 
 
                 <div class="question-actions">
 
                     <button
-                        id="clear-button"
-                        class="clear-button"
+                        id="check-answer-button"
+                        class="check-answer-button"
                         type="button"
                     >
-                        Clear Answer
+                        Check Answer
                     </button>
-
-                    <div class="navigation-buttons">
-
-                        <button
-                            id="previous-button"
-                            class="secondary-navigation-button"
-                            type="button"
-                        >
-                            Previous
-                        </button>
-
-                        <button
-                            id="next-button"
-                            class="primary-navigation-button"
-                            type="button"
-                        >
-                            Next
-                        </button>
-
-                    </div>
 
                 </div>
 
             </div>
-
-
-            <!-- QUESTION NAVIGATOR -->
-            <aside class="question-sidebar">
-
-                <div class="sidebar-title">
-                    Questions
-                </div>
-
-                <div class="sidebar-summary">
-
-                    <div class="summary-item">
-                        <span class="summary-dot answered-dot"></span>
-                        <span>Answered</span>
-                    </div>
-
-                    <div class="summary-item">
-                        <span class="summary-dot review-dot"></span>
-                        <span>Review</span>
-                    </div>
-
-                    <div class="summary-item">
-                        <span class="summary-dot unanswered-dot"></span>
-                        <span>Unanswered</span>
-                    </div>
-
-                </div>
-
-                <div id="question-navigator" class="question-navigator"></div>
-
-                <button
-                    id="submit-button"
-                    class="submit-button"
-                    type="button"
-                >
-                    Submit Set
-                </button>
-
-            </aside>
 
         </div>
 
@@ -553,7 +510,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js"></script>
-<script src="question.js?v=5"></script>
+<script src="question.js?v=6"></script>
 
 </body>
 </html>
