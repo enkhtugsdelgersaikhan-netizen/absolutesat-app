@@ -197,8 +197,23 @@
     color: #9a6815;
 }
 
-.flag-icon {
-    font-size: 15px;
+.bookmark-icon {
+    width: 16px;
+    height: 18px;
+    flex: 0 0 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition:
+        fill 0.18s ease,
+        transform 0.18s ease;
+}
+
+.review-button.reviewing .bookmark-icon {
+    fill: currentColor;
+    transform: translateY(-1px);
 }
 
 
@@ -234,12 +249,17 @@
     margin-top: 32px;
 }
 
+.choice-wrapper {
+    position: relative;
+    width: 100%;
+}
+
 .choice {
     width: 100%;
     display: flex;
     align-items: flex-start;
     gap: 15px;
-    padding: 17px 18px;
+    padding: 17px 52px 17px 18px;
     border: 1.5px solid #d5dee8;
     border-radius: 10px;
     background: #ffffff;
@@ -258,6 +278,64 @@
 .choice:hover {
     border-color: #7ebebb;
     background: #f8fffe;
+}
+
+.choice.eliminated {
+    border-style: dashed;
+    background: #f8fafc;
+    color: #64748b;
+}
+
+.choice.eliminated .choice-text {
+    color: #94a3b8;
+    text-decoration: line-through;
+    text-decoration-thickness: 1.5px;
+}
+
+.choice.eliminated .choice-letter {
+    color: #94a3b8;
+    border-color: #cbd5e1;
+    background: #f8fafc;
+}
+
+.choice-strike-button {
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid #d5dee8;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #94a3b8;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition:
+        color 0.18s ease,
+        border-color 0.18s ease,
+        background 0.18s ease,
+        transform 0.18s ease;
+}
+
+.choice-strike-button:hover {
+    border-color: #ef4444;
+    background: #fff5f5;
+    color: #dc2626;
+}
+
+.choice-wrapper:has(.choice.eliminated)
+    .choice-strike-button {
+    border-color: #fca5a5;
+    background: #fef2f2;
+    color: #dc2626;
 }
 
 .choice.selected {
