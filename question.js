@@ -374,6 +374,75 @@ async function initialize() {
 }
 
 
+async function loadQuestionReviewState(
+    questionId
+) {
+
+    markedForReview[
+        questionId
+    ] = false;
+
+
+    if (!currentUser) {
+
+        return;
+
+    }
+
+
+    try {
+
+        const {
+            data,
+            error
+        } =
+            await supabaseClient
+                .from(
+                    "question_reviews"
+                )
+                .select(
+                    "question_id"
+                )
+                .eq(
+                    "user_id",
+                    currentUser.id
+                )
+                .eq(
+                    "question_id",
+                    questionId
+                )
+                .maybeSingle();
+
+
+        if (error) {
+
+            console.warn(
+                "Could not load question review status:",
+                error
+            );
+
+            return;
+
+        }
+
+
+        markedForReview[
+            questionId
+        ] =
+            Boolean(data);
+
+    } catch (error) {
+
+        console.warn(
+            "Could not load question review status:",
+            error
+        );
+
+    }
+
+}
+
+
 /* ============================================================
    LOAD QUESTION BY ID
    ============================================================ */
@@ -447,6 +516,11 @@ async function loadQuestionById(
                 setData || null;
 
         }
+
+
+        await loadQuestionReviewState(
+            questionId
+        );
 
 
         const setName =
@@ -588,6 +662,11 @@ async function loadQuestionById(
             }
 
         ];
+
+
+        await loadQuestionReviewState(
+            stagedQuestion.id
+        );
 
 
         setTitle.textContent =
@@ -1085,7 +1164,7 @@ function clearAnswer() {
    MARK FOR REVIEW
    ============================================================ */
 
-function toggleReview() {
+async function toggleReview() {
 
     const question =
         questions[
@@ -1100,17 +1179,104 @@ function toggleReview() {
     }
 
 
-    markedForReview[
-        question.id
-    ] =
+    const nextMarked =
         !markedForReview[
             question.id
         ];
 
 
+    markedForReview[
+        question.id
+    ] =
+        nextMarked;
+
+
     updateReviewButton();
 
     updateQuestionNavigator();
+
+
+    if (!currentUser) {
+
+        return;
+
+    }
+
+
+    try {
+
+        if (nextMarked) {
+
+            await supabaseClient
+                .from("question_reviews")
+                .delete()
+                .eq(
+                    "user_id",
+                    currentUser.id
+                )
+                .eq(
+                    "question_id",
+                    question.id
+                );
+
+
+            const {
+                error
+            } =
+                await supabaseClient
+                    .from(
+                        "question_reviews"
+                    )
+                    .insert({
+                        user_id:
+                            currentUser.id,
+                        question_id:
+                            question.id
+                    });
+
+
+            if (error) {
+
+                throw error;
+
+            }
+
+        } else {
+
+            const {
+                error
+            } =
+                await supabaseClient
+                    .from(
+                        "question_reviews"
+                    )
+                    .delete()
+                    .eq(
+                        "user_id",
+                        currentUser.id
+                    )
+                    .eq(
+                        "question_id",
+                        question.id
+                    );
+
+
+            if (error) {
+
+                throw error;
+
+            }
+
+        }
+
+    } catch (error) {
+
+        console.error(
+            "Could not save review status:",
+            error
+        );
+
+    }
 
 }
 
@@ -1536,10 +1702,7 @@ async function saveAttempt(
     results
 ) {
 
-    if (
-        !currentUser ||
-        !currentSet
-    ) {
+    if (!currentUser) {
 
         return;
 
@@ -1547,6 +1710,59 @@ async function saveAttempt(
 
 
     try {
+
+        /*
+         * Questions opened directly from the Question Bank
+         * do not belong to a question set. Their individual
+         * result must be saved in question_attempts so the
+         * Question Bank can show a persistent green/red status.
+         */
+
+        if (!currentSet) {
+
+            const rows =
+                results.detailedResults.map(
+                    result => ({
+                        user_id:
+                            currentUser.id,
+                        question_id:
+                            result.question.id,
+                        is_correct:
+                            result.status ===
+                            "correct"
+                    })
+                );
+
+
+            if (rows.length > 0) {
+
+                const {
+                    error
+                } =
+                    await supabaseClient
+                        .from(
+                            "question_attempts"
+                        )
+                        .insert(
+                            rows
+                        );
+
+
+                if (error) {
+
+                    console.error(
+                        "Could not save question-bank attempts:",
+                        error
+                    );
+
+                }
+
+            }
+
+            return;
+
+        }
+
 
         const {
             data: attempt,
@@ -1612,9 +1828,7 @@ async function saveAttempt(
             );
 
 
-        if (
-            answerRows.length > 0
-        ) {
+        if (answerRows.length > 0) {
 
             const {
                 error: answerError
@@ -1943,7 +2157,7 @@ function showError(
             </p>
 
             <a
-                href="/question-sets"
+                href="/question-bank"
                 style="
                     display: inline-block;
                     padding: 10px 17px;
