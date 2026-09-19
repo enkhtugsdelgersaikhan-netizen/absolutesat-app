@@ -56,6 +56,63 @@
       "correctAnswer": "C",
       "explanation": "The passage establishes a tension between gaining information through excavation and preserving buried deposits. It then explains that Marquez's radar survey revealed structural patterns without exposing those deposits. At the same time, the passage explicitly limits the method's significance by noting that radar does not replace excavation or provide the same direct access to materials. C captures both the method's usefulness and its limitation. A reverses that limitation, B overstates the method's capabilities, and D describes a possible use of the survey rather than its central idea.",
       "status": "staged"
+    },
+    {
+      "id": "rw-beaver-001-easy",
+      "groupId": "rw-beaver-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Inferences",
+      "difficulty": "easy",
+      "passage": "Since Eurasian beavers (*Castor fiber*) were reintroduced to Scotland, researchers have studied how their dams affect the movement of water. At Knapdale Forest, biologists observed that dams slowed water and temporarily stored some of it in ponds. During heavy rainfall, this storage delayed part of the runoff from reaching downstream channels all at once. As a result, water reached some downstream areas more gradually than it otherwise would have.",
+      "question": "Which inference is best supported by the passage?",
+      "choices": {
+        "A": "Beaver dams prevent heavy rainfall from entering Scottish streams.",
+        "B": "Knapdale Forest receives less rainfall than areas without beaver dams.",
+        "C": "Beaver dams permanently remove some stormwater from downstream channels.",
+        "D": "Beaver dams may reduce the intensity of some downstream flooding by delaying runoff."
+      },
+      "correctAnswer": "D",
+      "explanation": "The passage explains that beaver dams slow water and temporarily store some runoff, causing it to reach downstream channels more gradually. It is therefore reasonable to infer that the dams may reduce the intensity of some downstream flooding. A, B, and C make claims that the passage does not support.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-beaver-001-medium",
+      "groupId": "rw-beaver-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Inferences",
+      "difficulty": "medium",
+      "passage": "The return of Eurasian beavers (*Castor fiber*) to Scotland has given researchers an opportunity to examine how dam building affects water movement. At Knapdale Forest, monitoring showed that beaver structures could increase temporary water storage and delay the arrival of peak flows downstream. This effect would not make flooding impossible: stored water eventually leaves the ponds, and the amount of delay can vary with local conditions. Nevertheless, when runoff is slowed before reaching downstream channels, some of the water may arrive over a longer period rather than in a concentrated surge.",
+      "question": "Which inference is best supported by the passage?",
+      "choices": {
+        "A": "Beaver colonies may lessen the severity of some downstream floods by spreading the arrival of runoff over time.",
+        "B": "Beaver dams are most useful for preventing flooding when rainfall is relatively light.",
+        "C": "The presence of beavers guarantees that downstream flooding will remain minor.",
+        "D": "The Knapdale monitoring showed that beaver dams permanently retain stormwater."
+      },
+      "correctAnswer": "A",
+      "explanation": "The passage states that beaver structures can temporarily store water and delay peak flows. Because some runoff may therefore reach downstream channels over a longer period instead of as a concentrated surge, it can be inferred that beaver colonies may lessen the severity of some floods. B, C, and D either add unsupported claims or contradict the passage's description of temporary storage.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-beaver-001-hard",
+      "groupId": "rw-beaver-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Inferences",
+      "difficulty": "hard",
+      "passage": "The reintroduction of Eurasian beavers (*Castor fiber*) to Scotland has provided researchers with a way to examine how habitat modification can alter the timing of water movement. At Knapdale Forest, monitoring found that beaver structures could increase temporary storage and delay peak flows in some downstream streams. That observation does not mean that an individual dam can prevent flooding, since water stored in a pond eventually continues downstream and the amount of storage can change during a storm. The hydrological effect also depends on where dams occur within a drainage network. A structure located farther upstream, for example, can affect when part of its stored water reaches downstream channels, while a separate structure elsewhere in the same network can alter the timing of another portion of the runoff. Taken together, these observations indicate that the effect of beaver activity should be considered not only in terms of how much water a single pond can hold, but also in terms of how multiple temporary delays change the timing of runoff across a larger drainage system.",
+      "question": "Which inference is best supported by the passage?",
+      "choices": {
+        "A": "Because individual ponds eventually release stored water, beaver dams have little influence on downstream flood flows.",
+        "B": "Beaver dams can prevent major floods only when each pond remains below capacity throughout a storm.",
+        "C": "Several beaver dams distributed through a drainage network may moderate some downstream flooding by collectively delaying runoff, even though no individual dam guarantees flood prevention.",
+        "D": "The Knapdale study demonstrated that beaver structures are more effective than engineered flood-control systems."
+      },
+      "correctAnswer": "C",
+      "explanation": "The passage distinguishes between the limited effect of an individual dam and the combined effect of temporary delays at different points in a drainage network. Because multiple structures can alter when different portions of runoff reach downstream channels, their cumulative effect may moderate some downstream flooding even though none can guarantee that flooding will be prevented. A treats the eventual release of stored water as evidence that dams have little effect, ignoring the importance of delayed timing. B incorrectly assumes that permanent or uninterrupted storage is necessary. D introduces a comparison with engineered flood-control systems that the passage never makes.",
+      "status": "staged"
     }
   ]
 }
