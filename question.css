@@ -1038,3 +1038,128 @@
 .question-navigator {
     display: none !important;
 }
+
+
+
+/* ============================================
+   DIGITAL SAT-STYLE TWO-PANE LAYOUT
+   ============================================ */
+
+.question-layout {
+    width: min(1380px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+    align-items: stretch;
+    gap: 18px;
+}
+
+.sat-question-pane {
+    min-width: 0;
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border: 1px solid #dce4ed;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.045);
+}
+
+.sat-passage-pane {
+    overflow: hidden;
+}
+
+.sat-answer-pane {
+    padding: 0 24px 24px;
+}
+
+.sat-pane-label {
+    flex: 0 0 auto;
+    padding: 18px 22px 12px;
+    color: #64748b;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.question-passage {
+    flex: 1 1 auto;
+    padding: 4px 26px 30px;
+    overflow: auto;
+    color: #172033;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 400;
+    white-space: pre-line;
+}
+
+.question-passage:empty {
+    display: none;
+}
+
+.sat-answer-pane .question-progress-row {
+    min-height: 62px;
+    margin: 0;
+    padding: 0 0 0 0;
+}
+
+.sat-answer-pane .question-card {
+    flex: 1 1 auto;
+    padding: 8px 0 22px;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.sat-answer-pane .question-text {
+    font-size: 17px;
+    line-height: 1.7;
+    font-weight: 600;
+}
+
+.sat-answer-pane .choices {
+    margin-top: 26px;
+}
+
+.sat-answer-pane .question-actions {
+    margin-top: auto;
+    padding-top: 0;
+}
+
+.sat-answer-pane .check-answer-button {
+    margin-top: 0;
+}
+
+.sat-passage-pane.has-passage {
+    display: flex;
+}
+
+@media (max-width: 900px) {
+    .question-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sat-question-pane {
+        min-height: auto;
+    }
+
+    .question-passage {
+        max-height: none;
+        overflow: visible;
+    }
+
+    .sat-answer-pane {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sat-question-pane,
+    .question-passage,
+    .sat-answer-pane .question-card {
+        animation: none !important;
+    }
+}
