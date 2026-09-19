@@ -1190,6 +1190,63 @@
       "correctAnswer": "A",
       "explanation": "The passage begins with an interpretation that digitization would reduce the need for physical visits. The later evidence shows that researchers continued consulting originals, but used them more selectively after searching the digital archive. 'Nevertheless' best signals the shift from the initial expectation to evidence that qualifies it, while the rest of the passage shows that digital and physical access became complementary rather than simply replacing one another.",
       "status": "staged"
+    },
+    {
+      "id": "rw-riverton-trees-transition-001-easy",
+      "groupId": "rw-riverton-trees-transition-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "easy",
+      "passage": "In 2023, the city of Riverton planted trees along several streets with little shade. Measurements taken the following summer showed that these streets were cooler than before the planting. The effect was strongest where the new trees formed continuous stretches of shade. ______, city planners concluded that planting trees can reduce street-level heat when the trees provide substantial shade.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "Nevertheless,",
+        "B": "For example,",
+        "C": "Therefore,",
+        "D": "In contrast,"
+      },
+      "correctAnswer": "C",
+      "explanation": "The first three sentences provide evidence that the tree planting reduced street-level heat, especially where the trees created substantial shade. 'Therefore' appropriately signals the conclusion drawn from that evidence.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-riverton-trees-transition-001-medium",
+      "groupId": "rw-riverton-trees-transition-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "medium",
+      "passage": "Researchers studying Riverton's tree-planting program found that newly planted trees lowered afternoon temperatures on streets that previously had little shade. They also found that streets with scattered trees showed smaller temperature reductions than streets where the trees formed a continuous canopy. Some scattered-tree streets had nearly as many new trees as the cooler streets. ______, the researchers concluded that simply increasing the number of trees is not enough to guarantee a substantial cooling effect; how the trees are distributed also matters.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "In other words,",
+        "B": "For this reason,",
+        "C": "Likewise,",
+        "D": "In particular,"
+      },
+      "correctAnswer": "B",
+      "explanation": "The comparison between scattered and continuous plantings shows that tree count alone does not explain the differences in cooling. 'For this reason' links that evidence to the researchers' qualified conclusion that the distribution of trees also matters.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-riverton-trees-transition-001-hard",
+      "groupId": "rw-riverton-trees-transition-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "hard",
+      "passage": "Riverton's tree-planting program initially appeared to show a straightforward relationship: streets with more new trees generally experienced lower afternoon temperatures. The pattern was especially noticeable on streets that had been highly exposed to sunlight before planting. ______, several streets with many new trees showed only modest cooling, making tree quantity alone an incomplete explanation. Researchers found that these streets often had isolated plantings rather than connected areas of shade. In some cases, streets with fewer trees but a nearly continuous canopy cooled more than streets with larger numbers of widely separated trees. ______, the researchers began examining whether the arrangement of the canopy better explained the pattern than planting totals did. They then compared streets with similar canopy coverage but different amounts of sunlight exposure before planting. The strongest cooling occurred on streets where trees both formed substantial shade and replaced especially intense sun exposure. The findings left tree quantity relevant but insufficient as a measure of cooling.",
+      "question": "Which choice best completes the second blank?",
+      "choices": {
+        "A": "As a result,",
+        "B": "In contrast,",
+        "C": "For example,",
+        "D": "Nevertheless,"
+      },
+      "correctAnswer": "A",
+      "explanation": "The evidence immediately before the blank shows that streets with fewer but more connected trees could cool more than streets with larger numbers of scattered trees. 'As a result' appropriately signals the researchers' resulting shift toward examining canopy arrangement as a better explanation. The later comparison then adds another qualification: arrangement alone is not sufficient because the amount of sunlight displaced also matters.",
+      "status": "staged"
     }
   ]
 }
