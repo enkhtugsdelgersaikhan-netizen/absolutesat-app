@@ -41,10 +41,11 @@ let answers = {};
 
 let markedForReview = {};
 
-let timeRemaining =
-    TOTAL_TIME_SECONDS;
+let elapsedSeconds = 0;
 
 let timerInterval = null;
+
+let eliminatedChoices = {};
 
 let currentSet = null;
 
@@ -411,7 +412,7 @@ async function loadQuestionReviewState(
                     "question_id",
                     questionId
                 )
-                .maybeSingle();
+                .limit(1);
 
 
         if (error) {
@@ -429,7 +430,8 @@ async function loadQuestionReviewState(
         markedForReview[
             questionId
         ] =
-            Boolean(data);
+            Array.isArray(data) &&
+            data.length > 0;
 
     } catch (error) {
 
@@ -440,6 +442,71 @@ async function loadQuestionReviewState(
 
     }
 
+}
+
+
+async function loadReviewStatesForQuestions(
+    questionList
+) {
+
+    markedForReview = {};
+
+    if (!currentUser || !questionList.length) {
+        return;
+    }
+
+    questionList.forEach(question => {
+        markedForReview[question.id] = false;
+    });
+
+    try {
+        const questionIds =
+            questionList.map(
+                question => question.id
+            );
+
+        const {
+            data,
+            error
+        } =
+            await supabaseClient
+                .from(
+                    "question_reviews"
+                )
+                .select(
+                    "question_id"
+                )
+                .eq(
+                    "user_id",
+                    currentUser.id
+                )
+                .in(
+                    "question_id",
+                    questionIds
+                );
+
+        if (error) {
+            console.warn(
+                "Could not load question review states:",
+                error
+            );
+            return;
+        }
+
+        (data || []).forEach(
+            review => {
+                markedForReview[
+                    review.question_id
+                ] = true;
+            }
+        );
+
+    } catch (error) {
+        console.warn(
+            "Could not load question review states:",
+            error
+        );
+    }
 }
 
 
@@ -813,6 +880,9 @@ async function loadQuestionSet(
     questions =
         questionData;
 
+    await loadReviewStatesForQuestions(
+        questions
+    );
 
     setTitle.textContent =
         currentSet?.name || "Question Bank";
@@ -883,6 +953,7 @@ function renderQuestionNavigator() {
                     currentQuestionIndex =
                         index;
 
+                    resetQuestionTimer();
 
                     renderCurrentQuestion();
 
@@ -1046,6 +1117,15 @@ function renderChoices(
     choices.forEach(
         choice => {
 
+            const wrapper =
+                document.createElement(
+                    "div"
+                );
+
+            wrapper.className =
+                "choice-wrapper";
+
+
             const button =
                 document.createElement(
                     "button"
@@ -1069,6 +1149,21 @@ function renderChoices(
 
                 button.classList.add(
                     "selected"
+                );
+
+            }
+
+
+            if (
+                eliminatedChoices[
+                    question.id
+                ]?.includes(
+                    choice.letter
+                )
+            ) {
+
+                button.classList.add(
+                    "eliminated"
                 );
 
             }
@@ -1102,8 +1197,76 @@ function renderChoices(
             );
 
 
-            choicesContainer.appendChild(
+            const strikeButton =
+                document.createElement(
+                    "button"
+                );
+
+
+            strikeButton.type =
+                "button";
+
+
+            strikeButton.className =
+                "choice-strike-button";
+
+
+            const isEliminated =
+                eliminatedChoices[
+                    question.id
+                ]?.includes(
+                    choice.letter
+                );
+
+
+            strikeButton.textContent =
+                isEliminated
+                    ? "×"
+                    : "✕";
+
+
+            strikeButton.setAttribute(
+                "aria-label",
+                isEliminated
+                    ? "Remove cross out"
+                    : "Cross out choice"
+            );
+
+
+            strikeButton.setAttribute(
+                "title",
+                isEliminated
+                    ? "Remove cross out"
+                    : "Cross out choice"
+            );
+
+
+            strikeButton.addEventListener(
+                "click",
+                event => {
+
+                    event.stopPropagation();
+
+                    toggleEliminatedChoice(
+                        question.id,
+                        choice.letter
+                    );
+
+                }
+            );
+
+
+            wrapper.appendChild(
                 button
+            );
+
+            wrapper.appendChild(
+                strikeButton
+            );
+
+
+            choicesContainer.appendChild(
+                wrapper
             );
 
         }
@@ -1113,10 +1276,58 @@ function renderChoices(
 
 
 /* ============================================================
-   SELECT ANSWER
+   TOGGLE CHOICE CROSS-OUT
    ============================================================ */
 
-function selectAnswer(
+function toggleEliminatedChoice(
+    questionId,
+    choiceLetter
+) {
+
+    if (!eliminatedChoices[questionId]) {
+
+        eliminatedChoices[questionId] = [];
+
+    }
+
+    const choices =
+        eliminatedChoices[
+            questionId
+        ];
+
+    const existingIndex =
+        choices.indexOf(
+            choiceLetter
+        );
+
+
+    if (existingIndex >= 0) {
+
+        choices.splice(
+            existingIndex,
+            1
+        );
+
+    } else {
+
+        choices.push(
+            choiceLetter
+        );
+
+    }
+
+
+    renderChoices(
+        questions[
+            currentQuestionIndex
+        ]
+    );
+
+}
+
+
+/* ============================================================
+   SELECT ANSWERfunction selectAnswer(
     questionId,
     answer
 ) {
@@ -1179,10 +1390,14 @@ async function toggleReview() {
     }
 
 
-    const nextMarked =
-        !markedForReview[
+    const previousMarked =
+        markedForReview[
             question.id
-        ];
+        ] === true;
+
+
+    const nextMarked =
+        !previousMarked;
 
 
     markedForReview[
@@ -1205,10 +1420,11 @@ async function toggleReview() {
 
     try {
 
-        if (nextMarked) {
-
+        const deleteResult =
             await supabaseClient
-                .from("question_reviews")
+                .from(
+                    "question_reviews"
+                )
                 .delete()
                 .eq(
                     "user_id",
@@ -1220,9 +1436,14 @@ async function toggleReview() {
                 );
 
 
-            const {
-                error
-            } =
+        if (deleteResult.error) {
+            throw deleteResult.error;
+        }
+
+
+        if (nextMarked) {
+
+            const insertResult =
                 await supabaseClient
                     .from(
                         "question_reviews"
@@ -1235,36 +1456,8 @@ async function toggleReview() {
                     });
 
 
-            if (error) {
-
-                throw error;
-
-            }
-
-        } else {
-
-            const {
-                error
-            } =
-                await supabaseClient
-                    .from(
-                        "question_reviews"
-                    )
-                    .delete()
-                    .eq(
-                        "user_id",
-                        currentUser.id
-                    )
-                    .eq(
-                        "question_id",
-                        question.id
-                    );
-
-
-            if (error) {
-
-                throw error;
-
+            if (insertResult.error) {
+                throw insertResult.error;
             }
 
         }
@@ -1275,6 +1468,17 @@ async function toggleReview() {
             "Could not save review status:",
             error
         );
+
+
+        markedForReview[
+            question.id
+        ] =
+            previousMarked;
+
+
+        updateReviewButton();
+
+        updateQuestionNavigator();
 
     }
 
@@ -1337,6 +1541,7 @@ function goPrevious() {
 
     currentQuestionIndex--;
 
+    resetQuestionTimer();
 
     renderCurrentQuestion();
 
@@ -1361,6 +1566,7 @@ function goNext() {
 
     currentQuestionIndex++;
 
+    resetQuestionTimer();
 
     renderCurrentQuestion();
 
@@ -1401,6 +1607,24 @@ function updateNavigationButtons() {
 
 function startTimer() {
 
+    resetQuestionTimer();
+
+}
+
+
+function resetQuestionTimer() {
+
+    if (timerInterval) {
+
+        clearInterval(
+            timerInterval
+        );
+
+    }
+
+
+    elapsedSeconds = 0;
+
     updateTimerDisplay();
 
 
@@ -1415,26 +1639,9 @@ function startTimer() {
                 }
 
 
-                timeRemaining--;
-
+                elapsedSeconds++;
 
                 updateTimerDisplay();
-
-
-                if (
-                    timeRemaining <= 0
-                ) {
-
-                    clearInterval(
-                        timerInterval
-                    );
-
-
-                    submitTest(
-                        true
-                    );
-
-                }
 
             },
             1000
@@ -1451,12 +1658,12 @@ function updateTimerDisplay() {
 
     const minutes =
         Math.floor(
-            timeRemaining / 60
+            elapsedSeconds / 60
         );
 
 
     const seconds =
-        timeRemaining % 60;
+        elapsedSeconds % 60;
 
 
     timerElement.textContent =
@@ -1477,25 +1684,6 @@ function updateTimerDisplay() {
         "warning",
         "danger"
     );
-
-
-    if (
-        timeRemaining <= 60
-    ) {
-
-        timerElement.classList.add(
-            "danger"
-        );
-
-    } else if (
-        timeRemaining <= 300
-    ) {
-
-        timerElement.classList.add(
-            "warning"
-        );
-
-    }
 
 }
 
