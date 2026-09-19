@@ -45,6 +45,8 @@ let elapsedSeconds = 0;
 let timerInterval = null;
 
 let eliminatedChoices = {};
+let checkedResults = {};
+
 
 let currentSet = null;
 
@@ -175,6 +177,26 @@ const resultsReview =
 const resultsReviewList =
     document.getElementById(
         "results-review-list"
+    );
+
+const checkAnswerButton =
+    document.getElementById(
+        "check-answer-button"
+    );
+
+const answerFeedback =
+    document.getElementById(
+        "answer-feedback"
+    );
+
+const answerFeedbackTitle =
+    document.getElementById(
+        "answer-feedback-title"
+    );
+
+const answerFeedbackExplanation =
+    document.getElementById(
+        "answer-feedback-explanation"
     );
 
 
@@ -1031,6 +1053,10 @@ async function loadQuestionSet(
 
 function renderQuestionNavigator() {
 
+    if (!questionNavigator) {
+        return;
+    }
+
     questionNavigator.innerHTML =
         "";
 
@@ -1092,6 +1118,10 @@ function renderQuestionNavigator() {
    ============================================================ */
 
 function updateQuestionNavigator() {
+
+    if (!questionNavigator) {
+        return;
+    }
 
     const buttons =
         questionNavigator.querySelectorAll(
@@ -1180,6 +1210,10 @@ function renderCurrentQuestion() {
         question
     );
 
+    renderAnswerFeedback(
+        question
+    );
+
 
     updateReviewButton();
 
@@ -1198,32 +1232,14 @@ function renderChoices(
     question
 ) {
 
-    choicesContainer.innerHTML =
-        "";
+    choicesContainer.innerHTML = "";
 
 
     const choices = [
-
-        {
-            letter: "A",
-            text: question.choice_a
-        },
-
-        {
-            letter: "B",
-            text: question.choice_b
-        },
-
-        {
-            letter: "C",
-            text: question.choice_c
-        },
-
-        {
-            letter: "D",
-            text: question.choice_d
-        }
-
+        { letter: "A", text: question.choice_a },
+        { letter: "B", text: question.choice_b },
+        { letter: "C", text: question.choice_c },
+        { letter: "D", text: question.choice_d }
     ];
 
 
@@ -1244,48 +1260,76 @@ function renderChoices(
                     "button"
                 );
 
-
             button.type =
                 "button";
-
 
             button.className =
                 "choice";
 
 
-            if (
+            const selected =
                 answers[
                     question.id
-                ] ===
-                choice.letter
-            ) {
-
-                button.classList.add(
-                    "selected"
-                );
-
-            }
+                ] === choice.letter;
 
 
-            if (
+            const checked =
+                checkedResults[
+                    question.id
+                ];
+
+
+            const eliminated =
                 eliminatedChoices[
                     question.id
                 ]?.includes(
                     choice.letter
-                )
-            ) {
+                );
 
+
+            if (selected) {
+                button.classList.add(
+                    "selected"
+                );
+            }
+
+            if (eliminated) {
                 button.classList.add(
                     "eliminated"
                 );
+            }
+
+            if (checked) {
+
+                if (
+                    choice.letter ===
+                    question.correct_answer
+                ) {
+
+                    button.classList.add(
+                        "correct-answer"
+                    );
+
+                } else if (
+                    selected
+                ) {
+
+                    button.classList.add(
+                        "incorrect-answer"
+                    );
+
+                }
+
+                button.disabled = true;
 
             }
 
 
             button.innerHTML = `
-
                 <span class="choice-letter">
-                    ${choice.letter}
+                    ${escapeHtml(
+                        choice.letter
+                    )}
                 </span>
 
                 <span class="choice-text">
@@ -1293,7 +1337,6 @@ function renderChoices(
                         choice.text
                     )}
                 </span>
-
             `;
 
 
@@ -1315,10 +1358,8 @@ function renderChoices(
                     "button"
                 );
 
-
             strikeButton.type =
                 "button";
-
 
             strikeButton.className =
                 "choice-strike-button";
@@ -1354,6 +1395,12 @@ function renderChoices(
             );
 
 
+            if (checked) {
+                strikeButton.disabled =
+                    true;
+            }
+
+
             strikeButton.addEventListener(
                 "click",
                 event => {
@@ -1385,10 +1432,7 @@ function renderChoices(
         }
     );
 
-}
-
-
-/* ============================================================
+}/* ============================================================
    TOGGLE CHOICE CROSS-OUT
    ============================================================ */
 
@@ -1445,6 +1489,15 @@ function toggleEliminatedChoice(
     answer
 ) {
 
+    if (
+        checkedResults[
+            questionId
+        ]
+    ) {
+        return;
+    }
+
+
     answers[
         questionId
     ] = answer;
@@ -1455,11 +1508,106 @@ function toggleEliminatedChoice(
 }
 
 
-/* ============================================================
-   CLEAR ANSWER
-   ============================================================ */
+function renderAnswerFeedback(
+    question
+) {
 
-function clearAnswer() {
+    const checked =
+        checkedResults[
+            question.id
+        ];
+
+
+    if (
+        !answerFeedback ||
+        !answerFeedbackTitle ||
+        !answerFeedbackExplanation
+    ) {
+        return;
+    }
+
+
+    if (!checked) {
+
+        answerFeedback.classList.add(
+            "hidden"
+        );
+
+        answerFeedback.classList.remove(
+            "correct",
+            "incorrect",
+            "neutral"
+        );
+
+        answerFeedbackTitle.textContent =
+            "";
+
+        answerFeedbackExplanation.textContent =
+            "";
+
+        if (checkAnswerButton) {
+            checkAnswerButton.disabled =
+                false;
+        }
+
+        return;
+
+    }
+
+
+    const selected =
+        answers[
+            question.id
+        ] || null;
+
+
+    const isCorrect =
+        selected ===
+        question.correct_answer;
+
+
+    answerFeedback.classList.remove(
+        "hidden",
+        "neutral"
+    );
+
+    answerFeedback.classList.toggle(
+        "correct",
+        isCorrect
+    );
+
+    answerFeedback.classList.toggle(
+        "incorrect",
+        !isCorrect
+    );
+
+
+    answerFeedbackTitle.textContent =
+        isCorrect
+            ? "Correct"
+            : "Incorrect";
+
+
+    answerFeedbackExplanation.innerHTML =
+        "<strong>Explanation</strong><br>" +
+        escapeHtml(
+            question.explanation ||
+            "Review the question and compare your choice with the correct answer."
+        );
+
+
+    if (checkAnswerButton) {
+        checkAnswerButton.disabled =
+            true;
+
+        checkAnswerButton.textContent =
+            "Answer Checked";
+    }
+
+}
+
+
+async function checkAnswer() {
 
     const question =
         questions[
@@ -1468,19 +1616,121 @@ function clearAnswer() {
 
 
     if (!question) {
-
         return;
-
     }
 
 
-    delete answers[
+    const selected =
+        answers[
+            question.id
+        ];
+
+
+    if (!selected) {
+
+        if (answerFeedback) {
+
+            answerFeedback.classList.remove(
+                "hidden",
+                "correct",
+                "incorrect"
+            );
+
+            answerFeedback.classList.add(
+                "neutral"
+            );
+
+        }
+
+        if (answerFeedbackTitle) {
+            answerFeedbackTitle.textContent =
+                "Choose an answer";
+        }
+
+        if (answerFeedbackExplanation) {
+            answerFeedbackExplanation.textContent =
+                "Select one of the four choices before checking your answer.";
+        }
+
+        return;
+    }
+
+
+    const isCorrect =
+        selected ===
+        question.correct_answer;
+
+
+    checkedResults[
         question.id
-    ];
+    ] = true;
 
 
     renderCurrentQuestion();
 
+
+    await saveQuestionBankAttempt(
+        question.id,
+        isCorrect
+    );
+
+}
+
+
+async function saveQuestionBankAttempt(
+    questionId,
+    isCorrect
+) {
+
+    if (!currentUser) {
+        return;
+    }
+
+
+    try {
+
+        const {
+            error
+        } =
+            await supabaseClient
+                .from(
+                    "question_attempts"
+                )
+                .insert({
+                    user_id:
+                        currentUser.id,
+                    question_id:
+                        questionId,
+                    is_correct:
+                        isCorrect
+                });
+
+
+        if (error) {
+            console.error(
+                "Could not save question-bank result:",
+                error
+            );
+        }
+
+    } catch (error) {
+
+        console.error(
+            "Could not save question-bank result:",
+            error
+        );
+
+    }
+
+}
+
+
+/* ============================================================
+   CLEAR ANSWER
+   ============================================================ */
+
+function clearAnswer() {
+    return;
 }
 
 
@@ -1736,6 +1986,10 @@ function goNext() {
    ============================================================ */
 
 function updateNavigationButtons() {
+
+    if (!previousButton || !nextButton) {
+        return;
+    }
 
     previousButton.disabled =
         currentQuestionIndex === 0;
@@ -2529,73 +2783,36 @@ function showError(
    EVENT LISTENERS
    ============================================================ */
 
-previousButton.addEventListener(
-    "click",
-    goPrevious
-);
+if (reviewButton) {
 
+    reviewButton.addEventListener(
+        "click",
+        event => {
 
-nextButton.addEventListener(
-    "click",
-    () => {
+            event.preventDefault();
 
-        if (
-            currentQuestionIndex ===
-            questions.length - 1
-        ) {
-
-            const shouldSubmit =
-                window.confirm(
-                    "You are on the final question. Submit the set?"
-                );
-
-
-            if (shouldSubmit) {
-
-                submitTest(
-                    false
-                );
-
-            }
-
-        } else {
-
-            goNext();
+            toggleReview();
 
         }
+    );
 
-    }
-);
-
-
-clearButton.addEventListener(
-    "click",
-    clearAnswer
-);
+}
 
 
-reviewButton.addEventListener(
-    "click",
-    toggleReview
-);
+if (checkAnswerButton) {
 
+    checkAnswerButton.addEventListener(
+        "click",
+        event => {
 
-submitButton.addEventListener(
-    "click",
-    () => {
+            event.preventDefault();
 
-        submitTest(
-            false
-        );
+            checkAnswer();
 
-    }
-);
+        }
+    );
 
-
-reviewResultsButton.addEventListener(
-    "click",
-    showResultsReview
-);
+}
 
 
 /* ============================================================
