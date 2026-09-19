@@ -16,7 +16,7 @@
     >
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="question.css">
+    <link rel="stylesheet" href="question.css?v=2">
 </head>
 
 <body>
@@ -121,7 +121,7 @@
             </div>
 
             <div class="timer-container">
-                <span class="timer-label">TIME REMAINING</span>
+                <span class="timer-label">TIME ON QUESTION</span>
                 <div id="timer" class="timer">15:00</div>
             </div>
 
@@ -143,8 +143,15 @@
                         id="review-button"
                         class="review-button"
                         type="button"
+                        aria-pressed="false"
                     >
-                        <span class="flag-icon">⚑</span>
+                        <svg
+                            class="bookmark-icon"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <path d="M6 4.5A2.5 2.5 0 0 1 8.5 2h7A2.5 2.5 0 0 1 18 4.5V21l-6-3.8L6 21V4.5z"></path>
+                        </svg>
                         <span id="review-text">Mark for Review</span>
                     </button>
 
@@ -546,7 +553,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js"></script>
-<script src="question.js?v=3"></script>
+<script src="question.js?v=4"></script>
 
 </body>
 </html>
