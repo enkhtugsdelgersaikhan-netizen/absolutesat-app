@@ -484,7 +484,7 @@ async function loadQuestionById(
 
         const response =
             await fetch(
-                "/data/question-bank.json",
+                "/question-bank.json",
                 {
                     cache: "no-store"
                 }
