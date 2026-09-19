@@ -1483,7 +1483,7 @@
       "domain": "Standard English Conventions",
       "skill": "Form, Structure, and Sense",
       "difficulty": "easy",
-      "passage": "In 2018, researchers at the University of Delaware began monitoring a coastal marsh near Cape May, New Jersey. Their observations continued for three years. When the restoration project began in 2021, the researchers ______ the marsh since 2018.",
+      "passage": "In 2018, researchers at the University of Delaware began monitoring a coastal marsh near Cape May, New Jersey. Their observations continued for three years and recorded seasonal changes in water levels and plant growth. When the restoration project began in 2021, the researchers ______ the marsh since 2018.",
       "question": "Which choice completes the text so that it conforms to Standard English?",
       "choices": {
         "A": "monitor",
@@ -1502,7 +1502,7 @@
       "domain": "Standard English Conventions",
       "skill": "Form, Structure, and Sense",
       "difficulty": "medium",
-      "passage": "In 2018, researchers at the University of Delaware began monitoring a coastal marsh near Cape May, New Jersey. Their observations continued while plans for a restoration project were being developed. By the time restoration began in 2021, the researchers ______ the marsh continuously for three years. The records gave the team a detailed picture of conditions before the project began.",
+      "passage": "In 2018, researchers at the University of Delaware began monitoring a coastal marsh near Cape May, New Jersey. Their observations continued while plans for a restoration project were being developed, and the team recorded seasonal changes in water levels and plant growth. By the time restoration began in 2021, the researchers ______ the marsh continuously for three years. The records gave the team a detailed picture of conditions before the project began.",
       "question": "Which choice completes the text so that it conforms to Standard English?",
       "choices": {
         "A": "have monitored",
@@ -1521,7 +1521,7 @@
       "domain": "Standard English Conventions",
       "skill": "Form, Structure, and Sense",
       "difficulty": "hard",
-      "passage": "In 2018, researchers at the University of Delaware began monitoring a coastal marsh near Cape May, New Jersey, intending to document conditions before restoration. The project was delayed while engineers revised the design, so the team continued collecting measurements through 2019 and 2020. During 2020, contractors also made small preliminary changes to one section of the marsh, prompting the researchers to record the altered area separately from the rest of the site. By the time full restoration began in 2021, the team ______ the marsh for three years. The earlier measurements were then compared with data collected after the project began, with the preliminary changes treated as a separate part of the record.",
+      "passage": "In 2018, researchers at the University of Delaware began monitoring a coastal marsh near Cape May, New Jersey, intending to document conditions before restoration. The project was delayed while engineers revised the design, so the team continued collecting measurements through 2019 and 2020, including data on water levels, vegetation, and sediment. During 2020, contractors also made small preliminary changes to one section of the marsh, prompting the researchers to record the altered area separately from the rest of the site. By the time full restoration began in 2021, the team ______ the marsh for three years. The earlier measurements were then compared with data collected after the project began, with the preliminary changes treated as a separate part of the record.",
       "question": "Which choice completes the text so that it conforms to Standard English and most precisely expresses the time relationship among the events described?",
       "choices": {
         "A": "monitored",
