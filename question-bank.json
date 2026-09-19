@@ -896,6 +896,63 @@
       "correctAnswer": "C",
       "explanation": "Text 1 first connects reef-related wave reduction with lower sediment loss, then shows that currents can redistribute sediment and that reef orientation affects the consistency of shoreline protection. Text 2 provides a parallel case in which wave energy was reduced but erosion increased elsewhere because a current's path was altered. Together, the texts support a more precise conclusion: reef performance depends on the interaction of placement, waves, and sediment movement, not on wave attenuation alone.",
       "status": "staged"
+    },
+    {
+      "id": "rw-riverside-map-001-easy",
+      "groupId": "rw-riverside-map-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "easy",
+      "passage": "A city archive is preparing a public exhibit about an 1890 map of the Riverside district. The map records streets and buildings that have since disappeared, making it useful for showing how the neighborhood once looked. However, some boundaries on the map differ from those recorded in a later city survey. Property records indicate that several Riverside parcels changed over time. The exhibit should present the map as historically valuable without suggesting that every feature matches later records exactly.",
+      "question": "Which choice most effectively uses the information from the passage to accomplish this goal?",
+      "choices": {
+        "A": "The 1890 map of Riverside records streets and buildings that later disappeared from the neighborhood.",
+        "B": "A later city survey provides information about Riverside that differs from some features shown on the 1890 map.",
+        "C": "Although some features of the 1890 Riverside map differ from a later survey, the map remains valuable for documenting a neighborhood that changed over time.",
+        "D": "Property records show that several Riverside parcels changed after the 1890 map was created."
+      },
+      "correctAnswer": "C",
+      "explanation": "The goal requires both emphasizing the map's historical value and acknowledging that some features differ from later records. Choice C combines both points without overstating the map's accuracy.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-riverside-map-001-medium",
+      "groupId": "rw-riverside-map-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "medium",
+      "passage": "A city archive is preparing a public exhibit about an 1890 map of the Riverside district. The map shows streets and buildings that have since disappeared, so curators want visitors to understand why the map remains useful for reconstructing the neighborhood's history. A later city survey, however, does not match several of the map's property boundaries. Property records indicate that some parcels were repeatedly divided or recombined between the two dates, suggesting that the differences do not necessarily mean the older map was inaccurate. The exhibit should therefore present the map's value while avoiding the implication that its boundaries should match later records exactly.",
+      "question": "Which choice most effectively uses the information from the passage to accomplish this goal?",
+      "choices": {
+        "A": "Although some Riverside boundaries differ between the 1890 map and a later survey, records of changing parcels help explain the differences without eliminating the map's value as evidence of the neighborhood's history.",
+        "B": "The 1890 map is especially useful because it shows Riverside streets and buildings that no longer exist.",
+        "C": "Property records show that some Riverside parcels were divided or recombined between 1890 and the later city survey.",
+        "D": "Because the later survey differs from the 1890 map, visitors should use the survey rather than the older map when studying Riverside."
+      },
+      "correctAnswer": "A",
+      "explanation": "The goal requires combining the map's historical value with the qualification about its differing boundaries. Choice A connects the later survey, changing property records, and continued usefulness of the map.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-riverside-map-001-hard",
+      "groupId": "rw-riverside-map-001",
+      "section": "Expression of Ideas",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "hard",
+      "passage": "A city archive is preparing a public exhibit about an 1890 map of the Riverside district. Curators first valued the map because it records streets and buildings that later disappeared, making it a potentially useful record of the neighborhood's earlier physical layout. A later city survey appears more consistent with surviving measurements, however, and several property boundaries on the older map do not match those in the survey. At first, these discrepancies seemed to suggest that the 1890 map should be presented mainly as a historical illustration rather than as evidence that could help reconstruct the district. Property records complicated that interpretation: several parcels shown on the map were divided or recombined before the later survey was conducted. Aerial photographs taken decades afterward show that some of those same locations changed again, while other streets and structures remained recognizable. The exhibit therefore needs to account for both the map's imperfect correspondence with later records and the possibility that some differences reflect changes in Riverside itself rather than errors in the map.",
+      "question": "Which choice most effectively uses the information from the passage to accomplish this goal?",
+      "choices": {
+        "A": "The later city survey is more consistent with surviving measurements, so the 1890 map should be used mainly as an illustration of Riverside's past.",
+        "B": "The 1890 map provides valuable information about streets and buildings that later disappeared, although some of its property boundaries differ from those in later records.",
+        "C": "Property records and later aerial photographs show that Riverside changed after 1890, making the map useful for tracing individual parcels over time.",
+        "D": "Because some boundaries on the 1890 map differ from a later survey, the map should be interpreted alongside records of subsequent property changes rather than treated as either a flawless layout or merely an illustration."
+      },
+      "correctAnswer": "D",
+      "explanation": "The passage presents a tempting but incomplete interpretation: that discrepancies make the map mainly illustrative. It then shows that property boundaries changed and that later photographs document further changes. The best synthesis therefore preserves the map's evidentiary value while explicitly limiting how its disagreements with later records should be interpreted.",
+      "status": "staged"
     }
   ]
 }
