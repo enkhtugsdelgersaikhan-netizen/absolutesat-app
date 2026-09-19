@@ -1,14 +1,5 @@
-const ABSOLUTEPREP_SUPABASE_URL =
-    "https://ikvvixdyztyqqxkveois.supabase.co";
-
-const ABSOLUTEPREP_SUPABASE_PUBLISHABLE_KEY =
-    "sb_publishable_nO5HUWPidf4U_MMK0-HYEA_vuOR0POg";
-
 const questionBankSupabase =
-    window.supabase.createClient(
-        ABSOLUTEPREP_SUPABASE_URL,
-        ABSOLUTEPREP_SUPABASE_PUBLISHABLE_KEY
-    );
+    supabaseClient;
 
 
 // ============================================================
