@@ -782,6 +782,63 @@
       "correctAnswer": "D",
       "explanation": "The passage begins with a straightforward explanation for the projects' effects, then introduces observations from normal and high-water conditions that complicate that explanation. The differing results among sites also show that the total amount of added land alone is insufficient. Together, these details support the purpose of examining why the projects' effects cannot be explained by a simple increase in available river space.",
       "status": "staged"
+    },
+    {
+      "id": "rw-phoenix-tree-canopy-001-easy",
+      "groupId": "rw-phoenix-tree-canopy-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Cross-Text Connections",
+      "difficulty": "easy",
+      "passage": "Text 1\n\nCity planners often plant trees along sidewalks to reduce pedestrians' exposure to summer heat. In a Phoenix neighborhood, researchers found that shaded sidewalks were several degrees cooler than nearby unshaded pavement. The cooling was greatest where tree canopies directly covered areas used by pedestrians.\n\nText 2\n\nA separate study of Phoenix streets found that adding trees did not produce the same amount of cooling everywhere. Trees that shaded sidewalks and other heavily used spaces provided the clearest reduction in people's heat exposure. Simply increasing the number of trees without considering their placement had a smaller effect.",
+      "question": "Based on the texts, what would the authors of both passages most likely agree about planting trees in hot cities?",
+      "choices": {
+        "A": "Planting more trees always produces the same amount of cooling.",
+        "B": "Trees reduce heat exposure most effectively when their placement provides useful shade.",
+        "C": "Trees are more effective at cooling pavement than at protecting pedestrians.",
+        "D": "Cities should replace unshaded pavement with trees whenever possible."
+      },
+      "correctAnswer": "B",
+      "explanation": "Both texts emphasize that trees are most useful for reducing people's heat exposure when their canopies provide shade where pedestrians actually spend time.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-phoenix-tree-canopy-001-medium",
+      "groupId": "rw-phoenix-tree-canopy-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Cross-Text Connections",
+      "difficulty": "medium",
+      "passage": "Text 1\n\nIn a Phoenix neighborhood, researchers compared sidewalks beneath mature tree canopies with nearby sidewalks exposed to direct sunlight. The shaded areas were cooler, suggesting that trees can reduce pedestrians' exposure to extreme heat. However, the researchers noted that the cooling benefit varied with canopy coverage: a street with many small trees did not necessarily provide as much shaded walking space as a street with fewer trees whose canopies were concentrated over sidewalks.\n\nText 2\n\nAnother study examined several Phoenix blocks after new trees were planted. Blocks with more trees generally became cooler, but the strongest reductions in pedestrian heat exposure occurred where the new trees were positioned beside frequently used walking routes. Some blocks gained substantial tree cover without a comparable reduction in the heat experienced by pedestrians.",
+      "question": "How does the second text relate to the finding in the first text?",
+      "choices": {
+        "A": "It challenges the first text's conclusion by showing that trees rarely reduce temperatures in urban areas.",
+        "B": "It extends the first text's finding by suggesting that the location of tree cover helps determine whether cooling reaches pedestrians.",
+        "C": "It provides an alternative explanation by arguing that the age of trees is more important than their placement.",
+        "D": "It narrows the first text's finding by showing that trees cool only sidewalks rather than other urban surfaces."
+      },
+      "correctAnswer": "B",
+      "explanation": "Text 1 shows that canopy coverage affects how much shaded walking space trees provide, while Text 2 adds evidence that placement along heavily used routes influences whether that cooling reaches pedestrians.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-phoenix-tree-canopy-001-hard",
+      "groupId": "rw-phoenix-tree-canopy-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Cross-Text Connections",
+      "difficulty": "hard",
+      "passage": "Text 1\n\nIn a Phoenix neighborhood, researchers found that sidewalks beneath mature tree canopies were cooler than nearby stretches exposed to direct sunlight. Because the difference was greatest during the hottest part of the day, the result initially appeared to support a broad expectation: increasing tree cover should make streets more protective during periods of extreme heat. Yet the researchers also observed stretches where several trees were present without creating continuous shade, leaving pedestrians exposed between canopies. This variation made it unclear whether the number of trees itself was the most useful measure of the benefit.\n\nText 2\n\nA later study examined Phoenix blocks that received similar numbers of newly planted trees. Surface temperatures generally declined, but the change in conditions experienced by pedestrians varied considerably from block to block. Some blocks gained substantial vegetation while leaving long portions of commonly used walking routes exposed between separate canopies. Elsewhere, fewer trees produced a more continuous band of shade along routes with heavy pedestrian traffic. The researchers also found that blocks with comparable reductions in surface temperature could differ in how much relief pedestrians experienced during the hottest periods. These results made the relationship between vegetation and human heat exposure less straightforward than a simple tree-count comparison would suggest.",
+      "question": "The authors of the two texts would most likely agree that the second study",
+      "choices": {
+        "A": "demonstrates that reductions in surface temperature are less important than tree age when evaluating pedestrian heat exposure.",
+        "B": "suggests that the cooling observed in the first study should be understood partly in terms of where and how consistently tree cover reaches pedestrians.",
+        "C": "shows that increasing the number of trees has little effect unless every tree is planted directly beside a sidewalk.",
+        "D": "establishes that strategically placed trees can reduce pedestrian heat exposure even when they do not lower surface temperatures."
+      },
+      "correctAnswer": "B",
+      "explanation": "Text 1 establishes that trees can cool pedestrian areas but raises uncertainty about whether tree count alone captures the benefit. Text 2 adds evidence that blocks with similar numbers of trees or similar surface-temperature reductions can produce different pedestrian experiences depending on how continuously the canopy reaches commonly used routes. Together, the texts suggest that the first study's cooling findings are most meaningfully interpreted in relation to the distribution and continuity of tree cover.",
+      "status": "staged"
     }
   ]
 }
