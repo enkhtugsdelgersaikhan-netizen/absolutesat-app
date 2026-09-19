@@ -1427,4 +1427,14 @@ async function initializeQuestionBank() {
     await loadQuestions();
 }
 
+window.addEventListener(
+    "pageshow",
+    async event => {
+        if (event.persisted) {
+            await loadUserData();
+            renderQuestions();
+        }
+    }
+);
+
 initializeQuestionBank();
