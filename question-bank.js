@@ -1505,75 +1505,45 @@ function renderQuestions() {
 
     questionList.innerHTML = "";
 
-    const grouped =
-        new Map();
+    const difficultyOrder = {
+        Easy: 0,
+        Medium: 1,
+        Hard: 2
+    };
 
-    questions.forEach(
-        question => {
-            const number =
-                question.question_number;
+    [...questions]
+        .sort(
+            (a, b) => {
+                const numberDifference =
+                    Number(
+                        a.question_number
+                    ) -
+                    Number(
+                        b.question_number
+                    );
 
-            if (!grouped.has(number)) {
-                grouped.set(
-                    number,
-                    []
+                if (
+                    numberDifference !== 0
+                ) {
+                    return numberDifference;
+                }
+
+                return (
+                    difficultyOrder[
+                        a.difficulty
+                    ] -
+                    difficultyOrder[
+                        b.difficulty
+                    ]
                 );
             }
-
-            grouped.get(number).push(
-                question
-            );
-        }
-    );
-
-    [...grouped.entries()]
-        .sort(
-            (a, b) =>
-                Number(a[0]) -
-                Number(b[0])
         )
         .forEach(
-            ([number, group]) => {
-                const groupElement =
-                    document.createElement(
-                        "div"
-                    );
-
-                groupElement.className =
-                    "question-group";
-
-                group
-                    .sort(
-                        (a, b) => {
-                            const order =
-                                {
-                                    Easy: 0,
-                                    Medium: 1,
-                                    Hard: 2
-                                };
-
-                            return (
-                                order[
-                                    a.difficulty
-                                ] -
-                                order[
-                                    b.difficulty
-                                ]
-                            );
-                        }
-                    )
-                    .forEach(
-                        question => {
-                            groupElement.appendChild(
-                                createQuestionIcon(
-                                    question
-                                )
-                            );
-                        }
-                    );
-
+            question => {
                 questionList.appendChild(
-                    groupElement
+                    createQuestionIcon(
+                        question
+                    )
                 );
             }
         );
