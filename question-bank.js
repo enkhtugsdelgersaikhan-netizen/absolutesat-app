@@ -166,6 +166,126 @@ async function getCurrentUser() {
     return data?.session?.user || null;
 }
 
+function getLocalStatusStorageKey(userId) {
+    return "absoluteprep-question-status:" + userId;
+}
+
+function getLocalReviewStorageKey(userId) {
+    return "absoluteprep-question-reviews:" + userId;
+}
+
+function loadLocalQuestionAttempts(userId) {
+    try {
+        const stored =
+            JSON.parse(
+                localStorage.getItem(
+                    getLocalStatusStorageKey(userId)
+                ) || "{}"
+            );
+
+        return Object.entries(stored)
+            .map(([questionId, state]) => ({
+                user_id: userId,
+                question_id: questionId,
+                is_correct: Boolean(state?.is_correct),
+                created_at:
+                    state?.updated_at ||
+                    state?.created_at ||
+                    new Date(0).toISOString()
+            }));
+    } catch (error) {
+        console.warn(
+            "Could not load local question status:",
+            error
+        );
+        return [];
+    }
+}
+
+function saveLocalQuestionStatus(
+    userId,
+    questionId,
+    isCorrect
+) {
+    try {
+        const key =
+            getLocalStatusStorageKey(userId);
+
+        const stored =
+            JSON.parse(
+                localStorage.getItem(key) || "{}"
+            );
+
+        stored[String(questionId)] = {
+            is_correct: Boolean(isCorrect),
+            updated_at:
+                new Date().toISOString()
+        };
+
+        localStorage.setItem(
+            key,
+            JSON.stringify(stored)
+        );
+    } catch (error) {
+        console.warn(
+            "Could not save local question status:",
+            error
+        );
+    }
+}
+
+function loadLocalReviews(userId) {
+    try {
+        const ids =
+            JSON.parse(
+                localStorage.getItem(
+                    getLocalReviewStorageKey(userId)
+                ) || "[]"
+            );
+
+        if (!Array.isArray(ids)) {
+            return [];
+        }
+
+        return ids.map(
+            questionId => ({
+                user_id: userId,
+                question_id: String(questionId)
+            })
+        );
+    } catch (error) {
+        console.warn(
+            "Could not load local review state:",
+            error
+        );
+        return [];
+    }
+}
+
+function saveLocalReviews(
+    userId,
+    reviews
+) {
+    try {
+        localStorage.setItem(
+            getLocalReviewStorageKey(userId),
+            JSON.stringify(
+                reviews.map(
+                    review =>
+                        String(
+                            review.question_id
+                        )
+                )
+            )
+        );
+    } catch (error) {
+        console.warn(
+            "Could not save local review state:",
+            error
+        );
+    }
+}
+
 function getAttemptsForQuestion(questionId) {
     return userAttempts.filter(
         attempt =>
@@ -216,6 +336,16 @@ async function loadUserData() {
         return;
     }
 
+    const localAttempts =
+        loadLocalQuestionAttempts(
+            user.id
+        );
+
+    const localReviews =
+        loadLocalReviews(
+            user.id
+        );
+
     const attemptsResult =
         await questionBankSupabase
             .from("question_attempts")
@@ -225,17 +355,24 @@ async function loadUserData() {
                 user.id
             );
 
+    const serverAttempts =
+        attemptsResult.error
+            ? []
+            : (
+                attemptsResult.data || []
+            );
+
     if (attemptsResult.error) {
         console.warn(
-            "Could not load question attempts:",
+            "Could not load question attempts; keeping local status:",
             attemptsResult.error
         );
-
-        userAttempts = [];
-    } else {
-        userAttempts =
-            attemptsResult.data || [];
     }
+
+    userAttempts = [
+        ...serverAttempts,
+        ...localAttempts
+    ];
 
     const reviewsResult =
         await questionBankSupabase
@@ -246,17 +383,44 @@ async function loadUserData() {
                 user.id
             );
 
+    const serverReviews =
+        reviewsResult.error
+            ? []
+            : (
+                reviewsResult.data || []
+            );
+
     if (reviewsResult.error) {
         console.warn(
-            "Could not load question reviews:",
+            "Could not load question reviews; keeping local review state:",
             reviewsResult.error
         );
-
-        userReviews = [];
-    } else {
-        userReviews =
-            reviewsResult.data || [];
     }
+
+    const reviewMap =
+        new Map();
+
+    [
+        ...serverReviews,
+        ...localReviews
+    ].forEach(
+        review => {
+            reviewMap.set(
+                String(
+                    review.question_id
+                ),
+                review
+            );
+        }
+    );
+
+    userReviews =
+        [...reviewMap.values()];
+
+    saveLocalReviews(
+        user.id,
+        userReviews
+    );
 }
 
 const FALLBACK_QUESTIONS = [
@@ -726,11 +890,25 @@ function getFilteredQuestions() {
     if (activeStatus !== "all") {
         questions =
             questions.filter(
-                question =>
-                    getQuestionStatus(
-                        question.id
-                    ) ===
-                    activeStatus
+                question => {
+                    const status =
+                        getQuestionStatus(
+                            question.id
+                        );
+
+                    if (activeStatus === "solved") {
+                        return status !== "unanswered";
+                    }
+
+                    if (activeStatus === "review") {
+                        return isQuestionMarkedForReview(
+                            question.id
+                        );
+                    }
+
+                    return status ===
+                        activeStatus;
+                }
             );
     }
 
@@ -821,10 +999,10 @@ function createQuestionIcon(question) {
             status +
             '" title="' +
             (status === "correct"
-                ? "Got right"
+                ? "Solved — correct"
                 : status === "incorrect"
-                    ? "Got wrong"
-                    : "Unanswered") +
+                    ? "Solved — incorrect"
+                    : "Unsolved") +
         '"></span>';
 
     button.addEventListener(
@@ -936,6 +1114,11 @@ async function toggleQuestionReview(
         ];
     }
 
+    saveLocalReviews(
+        user.id,
+        userReviews
+    );
+
     renderQuestions();
 
     let error = null;
@@ -1008,6 +1191,11 @@ async function toggleQuestionReview(
 
         userReviews =
             previousReviews;
+
+        saveLocalReviews(
+            user.id,
+            userReviews
+        );
 
         renderQuestions();
     }
