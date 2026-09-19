@@ -170,6 +170,63 @@
       "correctAnswer": "C",
       "explanation": "The passage first explains how red mangrove vegetation creates resistance to moving water, then qualifies that finding by showing that narrow or interrupted forests provide fewer obstacles. Its final point is therefore that mangroves can moderate storm-driven water, but their protective effect depends partly on the extent and continuity of the vegetation. A focuses too narrowly on aerial roots, B overstates the evidence, and D turns a qualification about the degree of protection into an absolute claim that mangroves cannot meaningfully limit inland water movement.",
       "status": "staged"
+    },
+    {
+      "id": "rw-pompeii-politics-001-easy",
+      "groupId": "rw-pompeii-politics-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Inferences",
+      "difficulty": "easy",
+      "passage": "In ancient Pompeii, electoral messages called *programmata* were painted on walls along busy streets such as the Via dell'Abbondanza. These messages supported candidates for local office and sometimes named individual people or groups that endorsed them. Because political recommendations appeared in ordinary public spaces rather than only in official buildings, they provide evidence that political advocacy in Pompeii involved people outside the city's formal officeholders.",
+      "question": "What can reasonably be inferred from the passage about political advocacy in Pompeii?",
+      "choices": {
+        "A": "Most Pompeians supported the candidates named in public inscriptions.",
+        "B": "Political candidates were usually selected by wealthy patrons.",
+        "C": "Political advocacy in Pompeii was not limited to formal city officials.",
+        "D": "The Via dell'Abbondanza served as Pompeii's main political institution."
+      },
+      "correctAnswer": "C",
+      "explanation": "The passage points out that electoral messages appeared in ordinary public spaces and sometimes identified people or groups endorsing candidates. These details support the inference that political advocacy extended beyond formal officeholders. The other choices make claims about the majority of Pompeians, candidate selection, or the importance of the street that the passage does not establish.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-pompeii-politics-001-medium",
+      "groupId": "rw-pompeii-politics-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Inferences",
+      "difficulty": "medium",
+      "passage": "At Pompeii, electoral *programmata* appeared on walls along routes such as the Via dell'Abbondanza, where pedestrians could encounter recommendations for candidates seeking local office. Some inscriptions identify individual endorsers, while others refer to occupational or neighborhood groups. These messages cannot show how many Pompeians actually voted or how influential any particular endorsement was. They do show, however, that political advocacy was displayed in ordinary public spaces and could involve people and groups beyond those who held political office. The evidence therefore suggests that civic advocacy was connected to social relationships outside Pompeii's formal political institutions.",
+      "question": "Which inference is best supported by the passage?",
+      "choices": {
+        "A": "Political advocacy in Pompeii could extend through social networks beyond formal officeholders.",
+        "B": "Most occupational groups in Pompeii officially endorsed political candidates.",
+        "C": "The *programmata* were more influential than Pompeii's elections themselves.",
+        "D": "Neighborhood groups usually selected candidates for local office."
+      },
+      "correctAnswer": "A",
+      "explanation": "The passage describes endorsements by individuals and groups and emphasizes that these messages appeared in ordinary public spaces. Although the inscriptions cannot establish the number of voters or the influence of particular endorsements, they support the inference that political advocacy extended through social relationships beyond formal officeholders. B, C, and D go beyond the evidence.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-pompeii-politics-001-hard",
+      "groupId": "rw-pompeii-politics-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Inferences",
+      "difficulty": "hard",
+      "passage": "Pompeii's electoral inscriptions complicate the idea that local politics was conducted mainly within formal political spaces. Along streets such as the Via dell'Abbondanza, *programmata* recommended candidates for local office and sometimes identified individual endorsers or occupational and neighborhood groups. Their placement meant that political advocacy formed part of the visual environment encountered in everyday urban life. Yet the inscriptions reveal less about the scale of participation than about the existence of advocacy: they cannot establish how many people supported a candidate, whether an endorsement persuaded voters, or how many endorsers actually participated in an election. Even so, the range of people and groups represented in these messages suggests that political expression was connected to social relationships extending beyond officeholders themselves. The evidence therefore points to a political culture in which formal institutions existed alongside broader forms of publicly expressed civic advocacy, although the precise extent of that involvement remains uncertain.",
+      "question": "Which inference about Pompeii's political life is best supported by the passage?",
+      "choices": {
+        "A": "Because *programmata* were publicly visible, most Pompeians probably voted for the candidates they endorsed.",
+        "B": "Occupational and neighborhood groups held more political power than Pompeii's formal officeholders.",
+        "C": "The *programmata* demonstrate that Pompeii's elections were primarily controlled by ordinary pedestrians.",
+        "D": "Political advocacy in Pompeii likely extended through everyday social relationships, even though the scale of participation cannot be determined from the inscriptions."
+      },
+      "correctAnswer": "D",
+      "explanation": "The passage distinguishes between what the inscriptions demonstrate and what they cannot demonstrate. The variety of endorsers and the public placement of the *programmata* support the inference that political advocacy extended through everyday social relationships. However, the inscriptions do not reveal how many people actually participated or how influential the endorsements were. A, B, and C turn evidence of public advocacy into unsupported claims about majority behavior or political control.",
+      "status": "staged"
     }
   ]
 }
