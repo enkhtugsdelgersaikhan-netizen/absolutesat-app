@@ -1192,6 +1192,34 @@
     box-shadow: none;
 }
 
+.question-goal-wrap {
+    display: none;
+    margin: 0 0 18px;
+    padding: 13px 15px;
+    border: 1px solid #dce4ed;
+    border-radius: 9px;
+    background: #f8fafc;
+}
+
+.question-goal-wrap.has-goal {
+    display: block;
+}
+
+.question-goal-label {
+    margin-bottom: 5px;
+    color: #0f9f9a;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.question-goal {
+    color: #475569;
+    font-size: 13px;
+    line-height: 1.55;
+    font-weight: 500;
+}
+
 .sat-answer-pane .question-text {
     font-size: 17px;
     line-height: 1.7;
