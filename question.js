@@ -1197,8 +1197,6 @@ function renderCurrentQuestion() {
     questionNumber.textContent =
         `Question ${
             currentQuestionIndex + 1
-        } of ${
-            questions.length
         }`;
 
 
