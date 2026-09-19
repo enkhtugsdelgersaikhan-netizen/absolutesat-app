@@ -839,6 +839,63 @@
       "correctAnswer": "B",
       "explanation": "Text 1 establishes that trees can cool pedestrian areas but raises uncertainty about whether tree count alone captures the benefit. Text 2 adds evidence that blocks with similar numbers of trees or similar surface-temperature reductions can produce different pedestrian experiences depending on how continuously the canopy reaches commonly used routes. Together, the texts suggest that the first study's cooling findings are most meaningfully interpreted in relation to the distribution and continuity of tree cover.",
       "status": "staged"
+    },
+    {
+      "id": "rw-oyster-reef-001-easy",
+      "groupId": "rw-oyster-reef-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Cross-Text Connections",
+      "difficulty": "easy",
+      "passage": "Text 1\n\nResearchers studying oyster-reef restoration in Maryland's Chesapeake Bay found that reefs can weaken incoming waves before they reach nearby shorelines. In test sites with restored reefs, shoreline sections behind the reefs generally lost less sediment than exposed sections. The researchers therefore suggested that oyster reefs can help protect vulnerable shorelines from erosion.\n\nText 2\n\nA separate Chesapeake Bay restoration project produced similar results. Areas behind newly restored oyster reefs experienced smaller waves and retained more sediment than nearby areas without reefs. The project managers noted that the reefs were especially useful where wave action was contributing to shoreline erosion.",
+      "question": "Which choice best describes the relationship between the two texts?",
+      "choices": {
+        "A": "Text 1 emphasizes the ecological benefits of oyster reefs, whereas Text 2 focuses mainly on their economic value.",
+        "B": "Text 1 and Text 2 both indicate that restored oyster reefs can reduce shoreline erosion by weakening wave action.",
+        "C": "Text 1 argues that oyster reefs are more effective than other restoration methods, whereas Text 2 disputes that claim.",
+        "D": "Text 1 describes a failed restoration effort, whereas Text 2 explains why a later effort succeeded."
+      },
+      "correctAnswer": "B",
+      "explanation": "Both texts report that restored oyster reefs can weaken waves and reduce sediment loss along nearby shorelines, supporting the same general conclusion about erosion control.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-oyster-reef-001-medium",
+      "groupId": "rw-oyster-reef-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Cross-Text Connections",
+      "difficulty": "medium",
+      "passage": "Text 1\n\nResearchers studying oyster-reef restoration in Maryland's Chesapeake Bay found that reefs reduced the force of waves reaching nearby shorelines. Shorelines behind restored reefs also retained more sediment than exposed shorelines. However, the researchers observed that the protective effect was strongest at sites where waves regularly approached the reef from the direction for which it had been positioned. Thus, reef restoration appeared useful for reducing erosion, but its effectiveness depended partly on local wave conditions.\n\nText 2\n\nA Chesapeake Bay restoration project likewise found that restored oyster reefs could help stabilize nearby shorelines. Managers observed less sediment loss behind several reefs than in comparable unprotected areas. Yet reefs placed where wave directions frequently changed produced less consistent results. The managers concluded that restoration could contribute to erosion control when reef placement matched the conditions of the shoreline being protected.",
+      "question": "Which choice best describes how the second text relates to the first?",
+      "choices": {
+        "A": "It presents evidence that supports the first text's conclusion while adding that reef placement and local conditions affect the strength of the benefit.",
+        "B": "It challenges the first text by showing that oyster reefs generally fail to prevent sediment loss.",
+        "C": "It expands the first text's claim by arguing that oyster reefs protect shorelines regardless of changing wave conditions.",
+        "D": "It introduces an alternative explanation for erosion that the first text does not consider."
+      },
+      "correctAnswer": "A",
+      "explanation": "Both texts find that oyster reefs can reduce shoreline erosion, but each also indicates that the benefit varies with local wave conditions and reef placement. Text 2 reinforces that qualification rather than replacing the first text's conclusion.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-oyster-reef-001-hard",
+      "groupId": "rw-oyster-reef-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Cross-Text Connections",
+      "difficulty": "hard",
+      "passage": "Text 1\n\nResearchers examining restored oyster reefs along Maryland's Chesapeake Bay initially found that shorelines behind reefs often retained more sediment than nearby unprotected shorelines. Because the reefs also reduced incoming wave energy, wave attenuation appeared to be a straightforward explanation for the difference. Measurements at several sites complicated that interpretation, however. Where currents carried sediment along the shoreline, a reef sometimes caused sediment to accumulate on one side while leaving another section more exposed. Later comparisons showed that reefs facing the dominant wave approach produced more consistent reductions in shoreline loss than reefs placed at other angles.\n\nText 2\n\nA subsequent Chesapeake Bay project showed a similar pattern but introduced another complication. Instruments recorded weaker waves behind several reefs, and those areas generally lost less sediment. At one site, however, a reef reduced wave energy while erosion increased farther along the adjacent shoreline. Additional monitoring found that the structure had altered the path of a local current, shifting where sediment accumulated rather than simply preventing its movement. Other reefs, positioned differently relative to prevailing waves and shoreline currents, produced more stable shoreline conditions. Thus, sites with comparable reef structures and measurable wave reduction did not always show comparable patterns of sediment retention.",
+      "question": "Based on both texts, what is the most accurate conclusion about oyster-reef restoration in the Chesapeake Bay?",
+      "choices": {
+        "A": "Oyster reefs primarily protect shorelines by reducing wave energy, while changes in sediment movement have only a secondary effect on their performance.",
+        "B": "Oyster reefs can redistribute sediment without meaningfully reducing erosion, so wave measurements are an unreliable indicator of their value.",
+        "C": "The shoreline benefit of oyster reefs depends on how reef placement interacts with both incoming waves and local sediment movement, rather than on wave reduction alone.",
+        "D": "Because similar reefs can produce different sediment patterns, oyster-reef restoration cannot reliably contribute to shoreline erosion control."
+      },
+      "correctAnswer": "C",
+      "explanation": "Text 1 first connects reef-related wave reduction with lower sediment loss, then shows that currents can redistribute sediment and that reef orientation affects the consistency of shoreline protection. Text 2 provides a parallel case in which wave energy was reduced but erosion increased elsewhere because a current's path was altered. Together, the texts support a more precise conclusion: reef performance depends on the interaction of placement, waves, and sediment movement, not on wave attenuation alone.",
+      "status": "staged"
     }
   ]
 }
