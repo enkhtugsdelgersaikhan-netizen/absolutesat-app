@@ -16,7 +16,7 @@
     >
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="question.css?v=2">
+    <link rel="stylesheet" href="question.css?v=3">
 </head>
 
 <body>
@@ -130,14 +130,27 @@
 
         <div class="question-layout">
 
-            <!-- QUESTION -->
-            <div class="question-main">
+            <div class="sat-question-pane sat-passage-pane">
+
+                <div class="sat-pane-label">
+                    PASSAGE
+                </div>
+
+                <div
+                    id="question-passage"
+                    class="question-passage"
+                ></div>
+
+            </div>
+
+
+            <div class="sat-question-pane sat-answer-pane">
 
                 <div class="question-progress-row">
 
-                    <div>
-                        <span id="question-number">Question 1 of 10</span>
-                    </div>
+                    <span id="question-number">
+                        Question 1
+                    </span>
 
                     <button
                         id="review-button"
@@ -160,9 +173,19 @@
 
                 <div class="question-card">
 
-                    <div id="question-text" class="question-text"></div>
+                    <div class="sat-pane-label">
+                        QUESTION
+                    </div>
 
-                    <div id="choices" class="choices"></div>
+                    <div
+                        id="question-text"
+                        class="question-text"
+                    ></div>
+
+                    <div
+                        id="choices"
+                        class="choices"
+                    ></div>
 
                     <div
                         id="answer-feedback"
@@ -197,7 +220,7 @@
 
             </div>
 
-        </div>
+        </div>        </div>
 
     </section>
 
