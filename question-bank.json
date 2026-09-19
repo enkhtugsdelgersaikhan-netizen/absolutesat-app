@@ -1133,6 +1133,63 @@
       "correctAnswer": "A",
       "explanation": "'Nevertheless' signals the key shift from an initially promising measure of wetland performance to observations that do not fit a simple retention-based interpretation. The later evidence shows why: the amount of water retained matters, but the wetland's position in the watershed also affects whether that retention changes downstream flooding. The other choices would not properly signal the complication that drives the passage's reasoning.",
       "status": "staged"
+    },
+    {
+      "id": "rw-scotland-manuscripts-transition-001-easy",
+      "groupId": "rw-scotland-manuscripts-transition-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "easy",
+      "passage": "The National Library of Scotland has digitized thousands of historical manuscripts. Researchers can now view these documents online, including scholars who cannot travel to Edinburgh. The digital copies therefore make the collection available to a much wider audience. ______, digitization increases access to materials that were once difficult for many researchers to study.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "Nevertheless,",
+        "B": "For example,",
+        "C": "Therefore,",
+        "D": "In contrast,"
+      },
+      "correctAnswer": "C",
+      "explanation": "The first three sentences establish that digitization allows more researchers to examine the manuscripts. 'Therefore' correctly signals the conclusion that follows from those details.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-scotland-manuscripts-transition-001-medium",
+      "groupId": "rw-scotland-manuscripts-transition-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "medium",
+      "passage": "The National Library of Scotland has digitized thousands of historical manuscripts, allowing researchers around the world to examine them without traveling to Edinburgh. This broader access also lets scholars identify documents that are especially relevant to their research before deciding whether to visit the library. ______, digital images cannot always reveal physical features such as paper texture, binding construction, or marks left by previous owners. Researchers who need to study those features may still have to consult the original manuscripts.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "For example,",
+        "B": "However,",
+        "C": "Similarly,",
+        "D": "As a result,"
+      },
+      "correctAnswer": "B",
+      "explanation": "The first two sentences describe advantages of digitization, while the next sentence introduces a limitation of digital images. 'However' signals that contrast and prepares the reader for the need to consult originals.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-scotland-manuscripts-transition-001-hard",
+      "groupId": "rw-scotland-manuscripts-transition-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "hard",
+      "passage": "The National Library of Scotland's digitization project initially seemed likely to reduce researchers' need to travel to Edinburgh. Online images allowed scholars to survey large collections quickly, and some began using them to identify which manuscripts warranted closer attention. ______, the effect on researchers' physical visits was not as simple as that early interpretation suggested. Interviews showed that scholars still traveled to the library when they needed to examine paper texture, binding, or marks that scans could not fully capture. Yet those visits were often more targeted: researchers used the digital archive beforehand to narrow the manuscripts they needed to inspect, and they sometimes returned to the scans afterward to compare related documents. In one survey, researchers who relied heavily on the digital archive reported spending less time browsing the physical collection, even though many still consulted original manuscripts. The project therefore changed how scholars divided their work between digital and physical sources rather than simply eliminating the need for the originals.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "Nevertheless,",
+        "B": "For instance,",
+        "C": "Similarly,",
+        "D": "As a result,"
+      },
+      "correctAnswer": "A",
+      "explanation": "The passage begins with an interpretation that digitization would reduce the need for physical visits. The later evidence shows that researchers continued consulting originals, but used them more selectively after searching the digital archive. 'Nevertheless' best signals the shift from the initial expectation to evidence that qualifies it, while the rest of the passage shows that digital and physical access became complementary rather than simply replacing one another.",
+      "status": "staged"
     }
   ]
 }
