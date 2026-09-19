@@ -45,16 +45,16 @@
       "domain": "Information and Ideas",
       "skill": "Central Ideas and Details",
       "difficulty": "hard",
-      "passage": "At Pompeii, archaeologists seeking information about structures still hidden beneath volcanic deposits face a practical dilemma: excavation can reveal architectural details, but exposing deposits also physically alters the archaeological record. In 2019, Elena Marquez and colleagues at the University of Naples Federico II approached this problem differently. Their ground-penetrating-radar survey of an unexcavated area produced subsurface images that, when compared with maps of nearby Roman houses, indicated walls, courtyards, and other features beneath the ground. Such readings do not provide the same direct access to materials that excavation does, and individual signals can require interpretation. Nevertheless, the structural patterns visible across the radar images were sufficient for the team to reconstruct portions of the area's layout without first removing the overlying deposits. The significance of the project, then, lies less in showing that radar can replace excavation than in demonstrating that archaeological information about Pompeii can sometimes be obtained before excavation occurs. By making buried architecture accessible to study while leaving the deposits substantially intact, the method offers archaeologists a way to investigate the site while reducing the physical disruption that excavation can cause.",
+      "passage": "At Pompeii, archaeologists face a practical dilemma when studying structures still hidden beneath volcanic deposits: excavation can reveal architectural details, but exposing deposits also alters the archaeological record. In 2019, Elena Marquez and colleagues at the University of Naples Federico II used ground-penetrating radar to examine an unexcavated area. The survey produced patterns indicating walls, courtyards, and other features, but individual signals required interpretation and did not reveal the same material information as excavation. In several selected areas, later excavation exposed structures that corresponded to patterns identified in the radar images, while other signals proved less conclusive. The comparison showed that radar could provide useful information before archaeologists disturbed the deposits, even though physical excavation remained necessary for resolving some questions about the buried structures.",
       "question": "Which choice best states the central idea of the passage?",
       "choices": {
         "A": "Ground-penetrating radar provides archaeologists with more detailed information than conventional excavation does.",
         "B": "Elena Marquez's survey established that the buried architecture of Pompeii can be completely reconstructed without excavation.",
-        "C": "Although radar cannot provide all the information that excavation can, it can reveal enough about buried structures to help archaeologists study Pompeii while limiting physical disturbance.",
+        "C": "Although radar cannot provide all the information that excavation can, it can reveal useful evidence about buried structures before excavation and thereby limit unnecessary physical disturbance.",
         "D": "The main purpose of comparing radar images with maps of Roman houses is to determine which areas of Pompeii should eventually be excavated."
       },
       "correctAnswer": "C",
-      "explanation": "The passage establishes a tension between gaining information through excavation and preserving buried deposits. It then explains that Marquez's radar survey revealed structural patterns without exposing those deposits. At the same time, the passage explicitly limits the method's significance by noting that radar does not replace excavation or provide the same direct access to materials. C captures both the method's usefulness and its limitation. A reverses that limitation, B overstates the method's capabilities, and D describes a possible use of the survey rather than its central idea.",
+      "explanation": "The passage shows both the usefulness and the limitation of radar: it can identify structural evidence before deposits are disturbed, and some of those interpretations are later supported by excavation, but it cannot answer every archaeological question by itself. Choice C captures that full relationship. A reverses the limitation, B overstates what the survey established, and D narrows the passage to one possible use of the method.",
       "status": "staged"
     },
     {
@@ -159,16 +159,16 @@
       "domain": "Information and Ideas",
       "skill": "Central Ideas and Details",
       "difficulty": "hard",
-      "passage": "In Florida’s Ten Thousand Islands, the red mangrove (*Rhizophora mangle*) occupies shorelines where storm-driven water can move inland with considerable force. Because the species develops substantial trunks and aerial roots, a mangrove stand does not merely mark the boundary between land and water; its vegetation also creates physical resistance to moving water. Measurements taken across stands of different widths indicate that this resistance can dissipate part of the water’s energy. Yet the presence of mangroves alone is an insufficient measure of their protective effect. A narrow stand may contain the same species as a much broader one but present far fewer obstacles to incoming water, and gaps caused by vegetation loss can similarly reduce resistance. Thus, two shorelines containing red mangroves may not receive the same degree of protection from storm-driven water. The distinction suggests that the ecological value of mangroves as a coastal buffer depends not simply on whether the vegetation is present, but on how much of the shoreline it occupies and how continuously it intercepts moving water.",
+      "passage": "In Florida's Ten Thousand Islands, red mangroves create physical resistance to storm-driven water through their trunks and aerial roots. Measurements across stands of different widths showed that water lost energy while moving through the vegetation, making mangrove cover appear useful as a coastal buffer. The measurements also revealed an important complication: two shorelines could contain the same species while differing greatly in the amount of vegetation intercepting incoming water. Narrow stands presented fewer obstacles, and gaps caused by vegetation loss likewise reduced resistance. In a comparison of two shorelines with similar mangrove species, the broader and more continuous stand reduced water velocity more consistently across the protected area. The contrast meant that researchers could not treat the mere presence of mangroves as a sufficient measure of their protective effect.",
       "question": "Which choice best states the central idea of the text?",
       "choices": {
         "A": "The protective value of red mangroves is determined primarily by the number of aerial roots in a coastal forest.",
         "B": "Measurements from the Ten Thousand Islands demonstrate that storm-driven water causes extensive damage whenever mangrove forests are narrow.",
-        "C": "Red mangrove forests can lessen the energy of storm-driven water, although the amount of protection depends partly on how extensive and continuous the vegetation is.",
+        "C": "Red mangrove forests can lessen the energy of storm-driven water, although the amount of protection depends partly on the extent and continuity of the vegetation.",
         "D": "The presence of red mangroves along a shoreline is insufficient to prevent storms from carrying water inland."
       },
       "correctAnswer": "C",
-      "explanation": "The passage first explains how red mangrove vegetation creates resistance to moving water, then qualifies that finding by showing that narrow or interrupted forests provide fewer obstacles. Its final point is therefore that mangroves can moderate storm-driven water, but their protective effect depends partly on the extent and continuity of the vegetation. A focuses too narrowly on aerial roots, B overstates the evidence, and D turns a qualification about the degree of protection into an absolute claim that mangroves cannot meaningfully limit inland water movement.",
+      "explanation": "The passage first establishes that mangrove vegetation can reduce the energy of moving water, then shows that the effect varies with how much and how continuously the vegetation intercepts that water. Choice C captures both the benefit and the qualification. A focuses on one feature, B overstates the evidence, and D turns a qualification about degree of protection into an absolute claim.",
       "status": "staged"
     },
     {
@@ -273,7 +273,7 @@
       "domain": "Information and Ideas",
       "skill": "Command of Evidence",
       "difficulty": "hard",
-      "passage": "At Pompeii's House of Obellius Firmus, archaeologists used georadar to investigate parts of the building whose earlier phases remained buried. The survey produced subsurface anomalies that were consistent with wall structures, but the signals did not by themselves reveal the complete form or history of those structures. Some interpretations remained tentative because different subsurface conditions could produce patterns requiring further investigation. This limitation might seem to reduce the value of the survey, especially when the archaeological questions concern construction phases or the arrangement of individual rooms. Yet excavation of selected areas produced physical remains that could be compared with the earlier radar interpretations. Where the two forms of evidence corresponded, the survey offered stronger grounds for treating particular anomalies as meaningful architectural features; where they did not, excavation supplied information that the georadar data had left unresolved. The contrasting results show that the usefulness of the survey cannot be measured simply by asking whether it independently identifies every buried structure. Its greater value emerges when the geophysical results are treated as preliminary evidence whose relationship to physical remains can determine where additional investigation is most informative.",
+      "passage": "At Pompeii's House of Obellius Firmus, archaeologists used georadar to investigate buried phases of the building. The survey produced subsurface anomalies consistent with wall structures, but the signals did not reveal the complete form or history of those structures. Some interpretations remained tentative because different subsurface conditions could produce similar patterns. Excavation of selected areas then provided physical remains that could be compared with the radar interpretations. Where the two kinds of evidence corresponded, archaeologists had stronger grounds for treating particular anomalies as meaningful architectural features; where they did not, excavation revealed questions that the radar data alone could not resolve. In several locations, the areas flagged by the survey became the places selected for closer physical investigation, while other signals were set aside for later study.",
       "question": "Which choice best explains how the evidence in the passage supports the author's conclusion about the role of georadar?",
       "choices": {
         "A": "Because georadar sometimes produces uncertain signals, excavation remains the more reliable method for reconstructing Pompeii's buried architecture.",
@@ -282,7 +282,7 @@
         "D": "Because excavation can confirm or complicate radar interpretations, archaeologists should postpone georadar surveys until after physical remains have been uncovered."
       },
       "correctAnswer": "B",
-      "explanation": "The passage develops a layered argument. First, georadar identifies potentially meaningful subsurface patterns, but those patterns are not definitive. Second, excavation supplies physical evidence against which the radar interpretations can be evaluated. Third, agreement between the two types of evidence strengthens the interpretation of some anomalies, while disagreement reveals where radar alone was insufficient. The overall conclusion is therefore that georadar is most useful as preliminary evidence that can help guide and inform further investigation, rather than as a complete substitute for excavation.",
+      "explanation": "The survey did not answer every archaeological question on its own, but its anomalies helped identify areas for later investigation and some were supported by physical remains. Choice B reflects both that usefulness and the limitation. A overstates the weakness of the method, C gives it more power than the passage supports, and D reverses the sequence described.",
       "status": "staged"
     },
     {
@@ -429,7 +429,7 @@
       "id": "rw-redmesa-pv-001-hard",
       "groupId": "rw-redmesa-pv-001",
       "difficulty": "hard",
-      "passage": "At the Red Mesa Research Station, engineers compared three photovoltaic arrays with the same rated capacity but different operating conditions. Mesa received 7.4 hours of sunlight per day, more than Juniper or Arroyo, and its 20.1 kWh daily output was likewise the highest. A simple ranking based on output would therefore place Mesa first. Yet the efficiency data complicate that ranking: Mesa converted 17.8% of the incoming sunlight, compared with 19.2% for Juniper and 19.5% for Arroyo, while also operating at the highest average temperature. The cooler arrays consequently converted a larger share of their available sunlight even though neither produced as much electricity overall. These results do not establish that temperature alone caused the efficiency differences, since the arrays were operating under different conditions, but the contrast prevents high output from being treated as evidence of superior conversion efficiency. At the same time, the lower efficiency cannot explain away Mesa's higher output, because Mesa received substantially more sunlight. The figures therefore leave two measurements pointing in different directions: one identifies Mesa as the daily-output leader, while the other shows that it converted a smaller fraction of the sunlight available to it.",
+      "passage": "At the Red Mesa Research Station, engineers compared three photovoltaic arrays with the same rated capacity but different operating conditions. Mesa received 7.4 hours of sunlight per day, more than Juniper or Arroyo, and its 20.1 kWh daily output was the highest. Yet Mesa also had the lowest efficiency, 17.8%, compared with 19.2% for Juniper and 19.5% for Arroyo. The cooler arrays therefore converted a larger share of their available sunlight even though neither produced as much electricity overall. The data do not establish that temperature alone caused the efficiency difference, since the arrays operated under different conditions. They also show why low efficiency does not erase Mesa's output advantage: Mesa received substantially more sunlight than the other arrays.",
       "question": "Which statement best synthesizes the information in the passage and table?",
       "choices": {
         "A": "Mesa's lower efficiency shows that increasing the amount of available sunlight does not substantially affect total electricity production.",
@@ -438,7 +438,7 @@
         "D": "The higher operating temperature at Mesa definitively caused its lower efficiency despite its greater exposure to sunlight."
       },
       "correctAnswer": "C",
-      "explanation": "The passage creates an apparent tension: Mesa produced the most electricity but converted the smallest percentage of incoming sunlight. The student must recognize that these are different measurements, then use the table to resolve the tension rather than treating one measure as disproving the other. A incorrectly minimizes the importance of sunlight exposure, B turns one performance measure into an overall ranking, and D treats an observed temperature-efficiency pattern as proof of causation that the passage explicitly does not establish.",
+      "explanation": "Mesa leads in daily electricity output but has the lowest efficiency, so those measurements cannot be treated as interchangeable. The passage also warns that the data do not prove temperature alone caused the efficiency difference. Choice C captures the contrast without adding a claim the table does not establish.",
       "status": "staged"
     },
     {
@@ -486,16 +486,16 @@
       "domain": "Craft and Structure",
       "skill": "Words in Context",
       "difficulty": "hard",
-      "passage": "At the University of Arizona Laboratory of Tree-Ring Research, scientists use ponderosa pine chronologies from northern Arizona to examine climate conditions that existed before systematic weather measurements. A wide ring may be associated with a wetter year, but the same measurement can also reflect temperature, soil moisture, competition, or other influences on growth. Researchers therefore do not treat an individual ring as a preserved record of the rainfall that produced it. Instead, they compare patterns across many trees and test those patterns against periods for which instrumental observations are available. A relationship that remains consistent after these comparisons can then be used when interpreting older portions of the chronology. This approach allows researchers to extract information about precipitation even though no rain gauge recorded the original conditions. For such reconstructions, the calibrated ring pattern functions as a **proxy** only because its relationship to precipitation has been established across independently measured periods.",
+      "passage": "At the University of Arizona Laboratory of Tree-Ring Research, scientists use ponderosa pine chronologies from northern Arizona to study climate conditions that existed before systematic weather measurements. A wide ring may coincide with a wetter year, but the same ring can also reflect temperature, soil moisture, competition, or other influences. Researchers therefore compare patterns across many trees and test them against periods for which instrumental observations exist. When a relationship remains consistent across those comparisons, the older ring patterns can be interpreted with greater confidence. The method is especially useful for periods when no rain gauge or other instrument was operating. For each reconstruction, the researchers evaluate how well the calibrated ring pattern tracks the measured precipitation before applying the same relationship to earlier portions of the chronology; the resulting **proxy** is then used alongside other evidence about past conditions.",
       "question": "As used in the text, what does **“proxy”** most nearly mean?",
       "choices": {
         "A": "A measurement that becomes unreliable whenever more than one environmental factor affects it",
         "B": "A direct record preserved from the period being studied",
-        "C": "A measurement used in place of a directly observed variable because a reliable relationship has been established between them",
-        "D": "A preliminary observation that must ultimately be discarded once instrumental records become available"
+        "C": "A measurement used in place of a directly observed variable after a reliable relationship between the two has been established",
+        "D": "A preliminary observation that must be discarded once instrumental records become available"
       },
       "correctAnswer": "C",
-      "explanation": "The passage does not treat ring width as a direct record of rainfall. Instead, researchers establish a relationship between ring patterns and instrumental precipitation data and then use that relationship to interpret earlier periods for which direct measurements do not exist. Thus, **proxy** refers to a measurement or indicator used in place of a directly observed variable because the relationship between them has been established.",
+      "explanation": "The passage shows that ring patterns are compared with periods of measured precipitation before they are used to interpret earlier periods. Thus, the target word refers to a measurement used as a stand-in for a variable that was not directly observed. A, B, and D conflict with the way the researchers validate and use the ring patterns.",
       "status": "staged"
     },
     {
@@ -543,16 +543,16 @@
       "domain": "Craft and Structure",
       "skill": "Words in Context",
       "difficulty": "hard",
-      "passage": "At Tel Haran, archaeologists initially connected the abundance of painted bowls with local production. The vessels were unusually common at the settlement, and fragments occurred in several areas where production debris might be expected. That interpretation remained **provisional**, however, because the distribution of fragments could also have resulted from the repeated use of pottery obtained elsewhere. Chemical analysis later linked the clay to a distant region, strengthening the case for long-distance trade but not establishing that every vessel had arrived that way. Some bowls showed extensive wear consistent with prolonged use at Tel Haran, whereas others were relatively little worn. The differing wear patterns therefore suggested that the collection might reflect several stages of acquisition and use rather than a single source. As a result, the chemical evidence weakened the original interpretation without eliminating it entirely; the researchers continued to treat local production as possible, but no longer as the only explanation for the settlement's unusually large pottery assemblage.",
+      "passage": "At Tel Haran, archaeologists initially connected the abundance of painted bowls with local production. The vessels were unusually common at the settlement, and fragments occurred in several areas where production debris might be expected. That interpretation remained **provisional**, however, because the distribution of fragments could also have resulted from repeated use of pottery obtained elsewhere. Chemical analysis later linked the clay to a distant region, strengthening the case for long-distance trade but not establishing that every vessel had arrived that way. Some bowls showed extensive wear consistent with prolonged use at Tel Haran, whereas others were relatively little worn. The differing wear patterns meant that the collection could reflect several stages of acquisition and use, so the researchers continued comparing pottery samples and trade evidence rather than treating the local-production explanation as settled.",
       "question": "As used in the text, what does **“provisional”** most nearly mean?",
       "choices": {
         "A": "Formed from evidence that was sufficient to establish one explanation conclusively",
-        "B": "Treated as a working interpretation even though further evidence could alter it",
+        "B": "Treated as a working interpretation that remained open to change as new evidence emerged",
         "C": "Developed mainly by comparing Tel Haran with other archaeological settlements",
         "D": "Restricted to pottery whose clay could be traced to distant regions"
       },
       "correctAnswer": "B",
-      "explanation": "The passage never gives a direct definition of provisional. Instead, the reader must connect the initial interpretation, the uncertainty surrounding the fragment distribution, the later chemical evidence, and the continued possibility of local production. Together, these details show that the interpretation was being treated as a working explanation rather than a settled conclusion.",
+      "explanation": "The original explanation is supported by some observations but challenged by the chemical and wear evidence, so the researchers continue testing it rather than treating it as settled. In context, **provisional** describes an interpretation that is being used for the time being but remains open to revision. The other choices either make the interpretation too certain or refer to details unrelated to the word's meaning.",
       "status": "staged"
     },
     {
@@ -600,7 +600,7 @@
       "domain": "Craft and Structure",
       "skill": "Words in Context",
       "difficulty": "hard",
-      "passage": "Eastview University researchers expected the tomato plants at two urban farms to respond mainly to the quantity of water supplied. The drip and hand-watered groups received nearly the same total amount over the study period, yet their **yield** measurements did not remain comparable. During hot afternoons, the hand-watered plots lost more water to evaporation, and the difference between the groups became especially pronounced. That pattern suggested that irrigation timing and delivery affected what portion of the supplied water was actually available to the plants, but the researchers did not assume that evaporation alone explained the result. When conditions were cooler and evaporation declined, the gap narrowed, although the drip-watered plants still maintained an overall production advantage. The researchers therefore interpreted the farm records by considering both the total water supplied and the conditions under which plants could use it. In this context, the relevant measure reflects the amount of agricultural output obtained under those conditions, rather than the volume of water applied.",
+      "passage": "Eastview University researchers expected tomato plants at two urban farms to respond mainly to the quantity of water supplied. The drip and hand-watered groups received nearly the same total amount, yet their **yield** measurements differed. During hot afternoons, the hand-watered plots lost more water to evaporation, and the production gap became especially pronounced. When conditions were cooler and evaporation declined, the gap narrowed, although the drip-watered plants still maintained an overall advantage. The researchers therefore compared production across conditions rather than treating the irrigation systems as if they differed only in total water supplied. Their records included both the number of tomatoes harvested and the environmental conditions present during each observation period.",
       "question": "As used in the text, what does **“yield”** most nearly mean?",
       "choices": {
         "A": "The portion of water available to plants after irrigation",
@@ -609,7 +609,7 @@
         "D": "The efficiency of the irrigation equipment itself"
       },
       "correctAnswer": "C",
-      "explanation": "The meaning of yield must be inferred by connecting the comparison of production, the discussion of water availability, and the final distinction between agricultural output and water applied. Yield refers to the amount of agricultural output obtained from the plants.",
+      "explanation": "The passage compares the groups' production and notes that the gap changed under different growing conditions. The target word therefore refers to the plants' output, not the amount of water or the performance of the equipment. Choice C matches that contextual use.",
       "status": "staged"
     },
     {
@@ -657,16 +657,16 @@
       "domain": "Craft and Structure",
       "skill": "Text Structure and Purpose",
       "difficulty": "hard",
-      "passage": "At the Harbor City Museum, Mara Chen investigated whether labels could help visitors understand nineteenth-century tools used by local shipbuilders. Her first comparison seemed to favor labels that supplied more information: visitors given names, dates, uses, and connections to the local industry encountered a fuller account than those given only names and dates. Yet visitors did not reliably retain the extra facts in the expanded labels, so the amount of information alone could not explain the results. A different comparison proved more revealing. Visitors who received shorter labels that included a tool's use and connection to Harbor's shipbuilding industry were more likely to identify its function than visitors who received only a name and date. The results therefore complicate a simple assumption that more historical detail should produce better understanding. They also suggest that the details most useful to a visitor may be those that establish a connection between an unfamiliar object and a larger historical setting, even when many other facts about the object are omitted.",
+      "passage": "At the Harbor City Museum, Mara Chen investigated whether labels could help visitors understand nineteenth-century tools used by local shipbuilders. Her first comparison seemed to favor labels that supplied more information: visitors given names, dates, uses, and connections to the local industry encountered a fuller account than those given only names and dates. Yet visitors did not reliably retain all the extra facts in the expanded labels, so the amount of information alone could not explain the results. A different comparison proved more revealing. Visitors who received shorter labels that included a tool's use and connection to Harbor's shipbuilding industry were more likely to identify its function than visitors who received only a name and date. In follow-up sessions, visitors given those shorter contextual labels continued to identify unfamiliar tools more accurately than visitors given labels containing names and dates alone.",
       "question": "Which choice best describes the primary purpose of the text?",
       "choices": {
-        "A": "To examine why the usefulness of museum-label information depends on how effectively selected details help visitors interpret an object's function and context",
-        "B": "To explain why providing historical information about museum objects can be counterproductive when visitors encounter too many details",
+        "A": "To examine how the usefulness of museum-label information depends on whether selected details help visitors interpret an object's function and context",
+        "B": "To argue that museums should replace historical information with simplified descriptions of objects",
         "C": "To show that visitors generally remember local historical information better than information about individual objects",
         "D": "To trace how Mara Chen's research changed museum practices at the Harbor City Museum"
       },
       "correctAnswer": "A",
-      "explanation": "The passage first considers whether more information helps, then shows that visitors did not consistently retain the added facts, and finally contrasts those results with the stronger performance produced by concise contextual information. The purpose is to examine how the usefulness of label information depends on whether selected details help visitors interpret an object's function and historical context.",
+      "explanation": "The passage compares labels with different amounts and kinds of information, then shows that concise context about an object's use is more useful than simply adding facts. Choice A captures the purpose of examining how selected details help visitors interpret objects. The other choices either overgeneralize the findings or focus on claims the passage does not establish.",
       "status": "staged"
     },
     {
@@ -714,16 +714,16 @@
       "domain": "Craft and Structure",
       "skill": "Text Structure and Purpose",
       "difficulty": "hard",
-      "passage": "When engineers evaluated projects in the Netherlands' Room for the River program, they initially focused on a simple result: after floodplains were lowered or dikes moved, peak water levels often fell. This pattern seemed consistent with the idea that enlarging a river's available space directly reduced flooding. Some sites complicated that interpretation, however. During ordinary flows, newly opened areas often remained dry, and vegetation sometimes covered them, making their contribution less apparent than that of a permanently widened channel.\n\nLater high-water events revealed a different pattern. Those same areas were repeatedly inundated as rivers rose, although the timing varied with each site's elevation and shape. Sites with similar amounts of added area also produced different changes in water levels when their dikes and floodplains were arranged differently. Thus, neither the apparent inactivity of some restored areas during normal conditions nor the total amount of added land alone accounted for the program's results.",
+      "passage": "When engineers evaluated projects in the Netherlands' Room for the River program, they initially focused on a simple result: after floodplains were lowered or dikes moved, peak water levels often fell. This pattern seemed consistent with the idea that enlarging a river's available space directly reduced flooding. Some sites complicated that interpretation, however. During ordinary flows, newly opened areas often remained dry, making their contribution less apparent than that of a permanently widened channel. Later high-water events showed that these same areas could be inundated when rivers rose, although the timing varied with each site's elevation and shape. During one comparison, sites with similar amounts of added area produced different changes in water levels because their dikes and floodplains were arranged differently.",
       "question": "Which choice best describes the purpose of the passage?",
       "choices": {
         "A": "To demonstrate that relocated dikes are more important than lowered floodplains in reducing flood risk",
         "B": "To explain why restored floodplains are most effective when they remain covered by water for much of the year",
         "C": "To compare the amount of land restored by different Room for the River projects",
-        "D": "To examine how observations under different water conditions challenge a simple explanation of why the projects reduce flood risk"
+        "D": "To examine how observations under different water conditions and at different sites challenge a simple explanation of why the projects reduce flood risk"
       },
       "correctAnswer": "D",
-      "explanation": "The passage begins with a straightforward explanation for the projects' effects, then introduces observations from normal and high-water conditions that complicate that explanation. The differing results among sites also show that the total amount of added land alone is insufficient. Together, these details support the purpose of examining why the projects' effects cannot be explained by a simple increase in available river space.",
+      "explanation": "The passage begins with a straightforward explanation for lower peak levels, then introduces ordinary-flow observations, later flooding evidence, and differences among similarly sized sites. These details complicate the idea that simply adding river space explains every result. Choice D captures that purpose.",
       "status": "staged"
     },
     {
@@ -771,7 +771,7 @@
       "domain": "Information and Ideas",
       "skill": "Cross-Text Connections",
       "difficulty": "hard",
-      "passage": "Text 1\n\nIn a Phoenix neighborhood, researchers found that sidewalks beneath mature tree canopies were cooler than nearby stretches exposed to direct sunlight. Because the difference was greatest during the hottest part of the day, the result initially appeared to support a broad expectation: increasing tree cover should make streets more protective during periods of extreme heat. Yet the researchers also observed stretches where several trees were present without creating continuous shade, leaving pedestrians exposed between canopies. This variation made it unclear whether the number of trees itself was the most useful measure of the benefit.\n\nText 2\n\nA later study examined Phoenix blocks that received similar numbers of newly planted trees. Surface temperatures generally declined, but the change in conditions experienced by pedestrians varied considerably from block to block. Some blocks gained substantial vegetation while leaving long portions of commonly used walking routes exposed between separate canopies. Elsewhere, fewer trees produced a more continuous band of shade along routes with heavy pedestrian traffic. The researchers also found that blocks with comparable reductions in surface temperature could differ in how much relief pedestrians experienced during the hottest periods. These results made the relationship between vegetation and human heat exposure less straightforward than a simple tree-count comparison would suggest.",
+      "passage": "Text 1\n\nIn a Phoenix neighborhood, researchers found that sidewalks beneath mature tree canopies were cooler than nearby stretches exposed to direct sunlight. Because the difference was greatest during the hottest part of the day, the result initially appeared to support a broad expectation that more tree cover should make streets more protective during extreme heat. Yet some stretches contained several trees without creating continuous shade, leaving pedestrians exposed between canopies.\n\nText 2\n\nA later study examined Phoenix blocks that received similar numbers of newly planted trees. Surface temperatures generally declined, but pedestrian heat exposure varied considerably from block to block. Some blocks gained substantial vegetation while leaving long portions of commonly used walking routes exposed. Elsewhere, fewer trees produced a more continuous band of shade along heavily used routes. Blocks with comparable reductions in surface temperature could therefore still differ in the amount of relief pedestrians experienced during the hottest periods.",
       "question": "The authors of the two texts would most likely agree that the second study",
       "choices": {
         "A": "demonstrates that reductions in surface temperature are less important than tree age when evaluating pedestrian heat exposure.",
@@ -780,7 +780,7 @@
         "D": "establishes that strategically placed trees can reduce pedestrian heat exposure even when they do not lower surface temperatures."
       },
       "correctAnswer": "B",
-      "explanation": "Text 1 establishes that trees can cool pedestrian areas but raises uncertainty about whether tree count alone captures the benefit. Text 2 adds evidence that blocks with similar numbers of trees or similar surface-temperature reductions can produce different pedestrian experiences depending on how continuously the canopy reaches commonly used routes. Together, the texts suggest that the first study's cooling findings are most meaningfully interpreted in relation to the distribution and continuity of tree cover.",
+      "explanation": "Text 1 shows that trees can cool pedestrian areas but leaves open whether tree count alone captures the benefit. Text 2 then compares blocks with similar numbers of trees and shows that pedestrian relief varies with the continuity and placement of shade. Choice B captures that refined connection between the studies.",
       "status": "staged"
     },
     {
@@ -828,7 +828,7 @@
       "domain": "Information and Ideas",
       "skill": "Cross-Text Connections",
       "difficulty": "hard",
-      "passage": "Text 1\n\nResearchers examining restored oyster reefs along Maryland's Chesapeake Bay initially found that shorelines behind reefs often retained more sediment than nearby unprotected shorelines. Because the reefs also reduced incoming wave energy, wave attenuation appeared to be a straightforward explanation for the difference. Measurements at several sites complicated that interpretation, however. Where currents carried sediment along the shoreline, a reef sometimes caused sediment to accumulate on one side while leaving another section more exposed. Later comparisons showed that reefs facing the dominant wave approach produced more consistent reductions in shoreline loss than reefs placed at other angles.\n\nText 2\n\nA subsequent Chesapeake Bay project showed a similar pattern but introduced another complication. Instruments recorded weaker waves behind several reefs, and those areas generally lost less sediment. At one site, however, a reef reduced wave energy while erosion increased farther along the adjacent shoreline. Additional monitoring found that the structure had altered the path of a local current, shifting where sediment accumulated rather than simply preventing its movement. Other reefs, positioned differently relative to prevailing waves and shoreline currents, produced more stable shoreline conditions. Thus, sites with comparable reef structures and measurable wave reduction did not always show comparable patterns of sediment retention.",
+      "passage": "Text 1\n\nResearchers examining restored oyster reefs along Maryland's Chesapeake Bay initially found that shorelines behind reefs often retained more sediment than nearby unprotected shorelines. Because the reefs also reduced incoming wave energy, wave attenuation appeared to be a straightforward explanation. Measurements complicated that interpretation: where currents carried sediment along the shoreline, a reef sometimes caused sediment to accumulate on one side while leaving another section more exposed. Later comparisons showed that reefs facing the dominant wave approach produced more consistent reductions in shoreline loss.\n\nText 2\n\nA subsequent Chesapeake Bay project showed a similar pattern but introduced another complication. Instruments recorded weaker waves behind several reefs, and those areas generally lost less sediment. At one site, however, a reef reduced wave energy while erosion increased farther along the adjacent shoreline because the structure altered a local current. Other reefs, positioned differently relative to prevailing waves and shoreline currents, produced more stable shoreline conditions.",
       "question": "Based on both texts, what is the most accurate conclusion about oyster-reef restoration in the Chesapeake Bay?",
       "choices": {
         "A": "Oyster reefs primarily protect shorelines by reducing wave energy, while changes in sediment movement have only a secondary effect on their performance.",
@@ -837,7 +837,7 @@
         "D": "Because similar reefs can produce different sediment patterns, oyster-reef restoration cannot reliably contribute to shoreline erosion control."
       },
       "correctAnswer": "C",
-      "explanation": "Text 1 first connects reef-related wave reduction with lower sediment loss, then shows that currents can redistribute sediment and that reef orientation affects the consistency of shoreline protection. Text 2 provides a parallel case in which wave energy was reduced but erosion increased elsewhere because a current's path was altered. Together, the texts support a more precise conclusion: reef performance depends on the interaction of placement, waves, and sediment movement, not on wave attenuation alone.",
+      "explanation": "Text 1 shows that wave reduction can accompany lower sediment loss but that shoreline currents can redistribute sediment, while Text 2 supplies a case in which wave reduction occurred alongside increased erosion farther away. Choice C resolves that tension by treating placement, waves, and sediment movement as interacting factors. The other choices either make one factor dominant or dismiss the restoration benefit altogether.",
       "status": "staged"
     },
     {
@@ -1084,7 +1084,7 @@
       "domain": "Expression of Ideas",
       "skill": "Transitions",
       "difficulty": "easy",
-      "passage": "Researchers at the University of Michigan restored several wetlands along the Huron River. The restored wetlands absorbed large amounts of rainwater before it reached the river, temporarily holding water that might otherwise have entered the river more quickly. ______, the restored wetlands helped reduce flooding in nearby low-lying areas during heavy storms.",
+      "passage": "Researchers at the University of Michigan restored several wetlands along the Huron River as part of a flood-management project. The restored wetlands absorbed large amounts of rainwater before it reached the river, temporarily holding water that might otherwise have entered the river more quickly. ______, the restored wetlands helped reduce flooding in nearby low-lying areas during heavy storms.",
       "question": "Which choice completes the text with the most logical transition?",
       "choices": {
         "A": "For example,",
@@ -1141,7 +1141,7 @@
       "domain": "Expression of Ideas",
       "skill": "Transitions",
       "difficulty": "easy",
-      "passage": "The National Library of Scotland has digitized thousands of historical manuscripts. Researchers can now view these documents online, including scholars who cannot travel to Edinburgh. The digital copies therefore make the collection available to a much wider audience. ______, digitization increases access to materials that were once difficult for many researchers to study.",
+      "passage": "At the National Library of Scotland, researchers digitized several eighteenth-century manuscripts so scholars could consult them without handling the originals as often. High-resolution images made the texts easier to search and share with researchers in other locations. ______, the physical manuscripts remained important because binding details and paper features were not always fully captured in digital copies.",
       "question": "Which choice completes the text with the most logical transition?",
       "choices": {
         "A": "Nevertheless,",
@@ -1236,16 +1236,16 @@
       "domain": "Expression of Ideas",
       "skill": "Transitions",
       "difficulty": "hard",
-      "passage": "Riverton's tree-planting program initially appeared to show a straightforward relationship: streets with more new trees generally experienced lower afternoon temperatures. The pattern was especially noticeable on streets that had been highly exposed to sunlight before planting. ______, several streets with many new trees showed only modest cooling, making tree quantity alone an incomplete explanation. Researchers found that these streets often had isolated plantings rather than connected areas of shade. In some cases, streets with fewer trees but a nearly continuous canopy cooled more than streets with larger numbers of widely separated trees. ______, the researchers began examining whether the arrangement of the canopy better explained the pattern than planting totals did. They then compared streets with similar canopy coverage but different amounts of sunlight exposure before planting. The strongest cooling occurred on streets where trees both formed substantial shade and replaced especially intense sun exposure. The findings left tree quantity relevant but insufficient as a measure of cooling.",
-      "question": "Which choice best completes the second blank?",
+      "passage": "Riverton's tree-planting program initially appeared to show a straightforward relationship: streets with more new trees generally experienced lower afternoon temperatures. The pattern was especially noticeable on streets that had been highly exposed to sunlight before planting. ______, several streets with many new trees showed only modest cooling, making tree quantity alone an incomplete explanation. Researchers found that these streets often had isolated plantings rather than connected areas of shade. In some cases, streets with fewer trees but a nearly continuous canopy cooled more than streets with larger numbers of widely separated trees. The researchers then compared streets with similar canopy coverage but different amounts of sunlight exposure before planting. The strongest cooling occurred where trees both formed substantial shade and replaced especially intense sun exposure, leaving planting totals relevant but insufficient on their own.",
+      "question": "Which choice completes the text with the most logical transition?",
       "choices": {
-        "A": "As a result,",
-        "B": "In contrast,",
-        "C": "For example,",
-        "D": "Nevertheless,"
+        "A": "Nevertheless,",
+        "B": "For example,",
+        "C": "As a result,",
+        "D": "Similarly,"
       },
       "correctAnswer": "A",
-      "explanation": "The evidence immediately before the blank shows that streets with fewer but more connected trees could cool more than streets with larger numbers of scattered trees. 'As a result' appropriately signals the researchers' resulting shift toward examining canopy arrangement as a better explanation. The later comparison then adds another qualification: arrangement alone is not sufficient because the amount of sunlight displaced also matters.",
+      "explanation": "The first sentences suggest that more trees are associated with lower temperatures, but the next evidence presents cases in which many trees produced only modest cooling. 'Nevertheless' correctly marks that contrast. The later comparisons further show that canopy arrangement and prior sunlight exposure help explain the variation.",
       "status": "staged"
     },
     {
@@ -1255,16 +1255,16 @@
       "domain": "Standard English Conventions",
       "skill": "Boundaries",
       "difficulty": "easy",
-      "passage": "The telescope was first designed for observing distant ______ Because the telescope could be carried easily, teachers began bringing it into classrooms for demonstrations. Students could examine the instrument directly and use it during lessons about the night sky and the basic principles of observation.",
+      "passage": "Because the telescope was compact enough to carry between classrooms ______ teachers could use it during different lessons about the night sky. Students also examined the instrument directly during these demonstrations.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "choices": {
-        "A": "stars, its compact size also made it useful for students.",
-        "B": "stars; its compact size also made it useful for students.",
-        "C": "stars its compact size also made it useful for students.",
-        "D": "stars: its compact size also made it useful for students."
+        "A": ",",
+        "B": ";",
+        "C": ":",
+        "D": "—"
       },
-      "correctAnswer": "B",
-      "explanation": "Both parts of the sentence are independent clauses: 'The telescope was first designed for observing distant stars' and 'Its compact size also made it useful for students.' A semicolon correctly separates the clauses. A creates a comma splice, C creates a run-on sentence, and D uses a colon where no explanation or elaboration is being introduced.",
+      "correctAnswer": "A",
+      "explanation": "The opening clause beginning with 'Because' is dependent, so it must be followed by a comma before the independent clause 'teachers could use it...' A supplies the required boundary; a semicolon, colon, or dash cannot replace the comma in this construction.",
       "status": "staged"
     },
     {
@@ -1274,16 +1274,16 @@
       "domain": "Standard English Conventions",
       "skill": "Boundaries",
       "difficulty": "medium",
-      "passage": "The telescope was first designed for observing distant stars, but teachers soon discovered ______ Students could handle the instrument more easily than many larger telescopes. Teachers could also move it from room to room when different classes were studying the night sky. This portability meant that one telescope could support lessons in several classrooms rather than remaining in a single laboratory.",
+      "passage": "Although the telescope was originally designed for observing distant stars ______ teachers soon discovered that its compact size made it useful for classroom demonstrations. Students could handle the instrument more easily than many larger telescopes.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "choices": {
-        "A": "use for it; its compact size made it practical for classroom demonstrations.",
-        "B": "use for it its compact size made it practical for classroom demonstrations.",
-        "C": "use for it, its compact size made it practical for classroom demonstrations.",
-        "D": "use for it: its compact size made it practical for classroom demonstrations."
+        "A": ",",
+        "B": ";",
+        "C": ":",
+        "D": "—"
       },
       "correctAnswer": "A",
-      "explanation": "The material on both sides of the blank forms two independent clauses. A semicolon correctly separates them while preserving their close relationship. B creates a run-on sentence, C creates a comma splice, and D incorrectly presents the second clause as a direct explanation or elaboration of the first.",
+      "explanation": "The phrase beginning with 'Although' is a dependent introductory clause. A comma is therefore needed before the independent clause 'teachers soon discovered...' The semicolon, colon, and dash cannot correctly separate this dependent clause from the main clause.",
       "status": "staged"
     },
     {
@@ -1293,16 +1293,16 @@
       "domain": "Standard English Conventions",
       "skill": "Boundaries",
       "difficulty": "hard",
-      "passage": "The telescope was first developed for observing distant stars, but educators soon noticed that its design offered another advantage in schools. Because the instrument was compact enough to move easily between rooms, teachers could use it during different lessons without building a permanent observatory space. Students also benefited from being able to examine the instrument at close range, which made discussions of how telescopes work more concrete. In schools where several classes shared equipment, however, the telescope's portability mattered even more than its original astronomical purpose. Teachers could carry the same instrument to different classrooms, allowing it to support lessons that might otherwise have required separate equipment. Because the same instrument could be carried to different ______",
+      "passage": "The telescope was first developed for observing distant stars, but educators soon noticed that its compact design made it useful in schools. Because the instrument was light enough to move between rooms, teachers could use it during different lessons without building a permanent observatory space. Students also benefited from examining the instrument at close range, which made discussions of how telescopes work more concrete. In schools where several classes shared equipment, the telescope's portability mattered especially because one instrument could serve multiple groups. ______ teachers could carry it to different classrooms without limiting its use to a single science room.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "choices": {
-        "A": "rooms; teachers could use it across the school rather than limiting it to a single science classroom.",
-        "B": "rooms, teachers could use it across the school rather than limiting it to a single science classroom.",
-        "C": "rooms teachers could use it across the school rather than limiting it to a single science classroom.",
-        "D": "rooms: teachers could use it across the school rather than limiting it to a single science classroom."
+        "A": "When several classes shared the same instrument,",
+        "B": "When several classes shared the same instrument;",
+        "C": "When several classes shared the same instrument:",
+        "D": "When several classes shared the same instrument—"
       },
-      "correctAnswer": "B",
-      "explanation": "The material before the blank begins with the dependent clause 'Because the same instrument could be carried to different rooms,' while the material after the blank is an independent clause. A semicolon cannot follow a dependent clause, and C would create a run-on sentence. D is not appropriate because the second clause is not a direct explanation of a preceding independent clause. B correctly uses a comma to separate the introductory dependent clause from the main clause.",
+      "correctAnswer": "A",
+      "explanation": "The opening words 'When several classes shared the same instrument' form a dependent introductory clause, so a comma is required before the independent clause 'teachers could carry it...' Choice A supplies that boundary. The semicolon, colon, and dash cannot replace the comma after a dependent clause.",
       "status": "staged"
     },
     {
@@ -1312,16 +1312,16 @@
       "domain": "Standard English Conventions",
       "skill": "Boundaries",
       "difficulty": "easy",
-      "passage": "The Monterey Bay Aquarium opened a new exhibit about kelp forests in 2019. The exhibit features live kelp, fish, and ______ Visitors can therefore learn about both the ecosystem and efforts to protect it. The exhibit is designed to show how kelp forests support many marine species.",
+      "passage": "The Monterey Bay Aquarium opened a new exhibit about kelp forests in 2019. The exhibit features live kelp, fish, and sea otters, as well as displays about conservation efforts. ______ visitors can learn about both the ecosystem and the work being done to protect it.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "choices": {
-        "A": "sea otters; it also includes",
-        "B": "sea otters. It also includes",
-        "C": "sea otters, and it also includes",
-        "D": "sea otters it also includes"
+        "A": "Because",
+        "B": "Because,",
+        "C": "Because;",
+        "D": "Because:"
       },
-      "correctAnswer": "B",
-      "explanation": "Both parts of the sentence are independent clauses, so they cannot be joined by a comma alone. A period correctly separates them: 'The exhibit features live kelp, fish, and sea otters. It also includes...' ",
+      "correctAnswer": "A",
+      "explanation": "'Because the exhibit features live kelp, fish, and sea otters, as well as displays about conservation efforts' is a dependent clause that introduces the independent clause 'visitors can learn...' Choice A correctly joins the two parts; the other choices create incorrect punctuation after 'because'.",
       "status": "staged"
     },
     {
@@ -1331,16 +1331,16 @@
       "domain": "Standard English Conventions",
       "skill": "Boundaries",
       "difficulty": "medium",
-      "passage": "In 2021, researchers at the University of Washington studied how urban gardens affect bee populations. They found that gardens with many different flowering plants attracted more bee species than gardens with fewer plant varieties, suggesting that plant diversity may support urban pollinators. The researchers cautioned, however, that garden size also ______ more bees regardless of plant diversity. This finding meant that plant variety alone could not account for all differences in bee abundance across the study sites.",
+      "passage": "In 2021, researchers at the University of Washington studied how urban gardens affect bee populations. They found that gardens with many different flowering plants attracted more bee species than gardens with fewer varieties. The researchers also found that garden size affected bee abundance. ______ larger gardens tended to support more bees even when plant diversity was similar. The researchers therefore concluded that plant diversity alone did not explain every difference among the study sites.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "choices": {
-        "A": "mattered; larger gardens generally attracted",
-        "B": "mattered. Larger gardens generally attracted",
-        "C": "mattered, because larger gardens generally attracted",
-        "D": "mattered larger gardens generally attracted"
+        "A": "Although",
+        "B": "Although,",
+        "C": "Although;",
+        "D": "Although:"
       },
-      "correctAnswer": "B",
-      "explanation": "The words before and after the blank form two independent clauses. A semicolon is grammatically possible, but the sentence is best separated with a period here because the second clause presents a distinct qualification about garden size rather than a tightly joined compound idea. B is therefore the clearest Standard English construction; C changes the meaning by making the second clause the reason the first is true, while D creates a run-on sentence.",
+      "correctAnswer": "A",
+      "explanation": "'Although larger gardens tended to support more bees' is a dependent clause that must connect to the independent clause that follows it. Choice A creates that structure without adding punctuation after 'Although'; the other choices create incorrect boundaries.",
       "status": "staged"
     },
     {
@@ -1388,7 +1388,7 @@
       "domain": "Standard English Conventions",
       "skill": "Boundaries",
       "difficulty": "medium",
-      "passage": "Researchers at the University of Washington found that gardens with many flowering plant varieties attracted more bee species than gardens with fewer varieties. The researchers initially thought that plant diversity might explain much of the difference among gardens. Garden size, however, also affected bee abundance; larger gardens often supported more bees even when their plant diversity was similar. ______ however, comparisons among gardens of similar size still showed somewhat greater bee diversity in gardens with more flowering plant varieties.",
+      "passage": "Researchers at the University of Washington found that gardens with many flowering plant varieties attracted more bee species than gardens with fewer varieties. The researchers initially thought that plant diversity might explain much of the difference among gardens. Garden size, however, also affected bee abundance; larger gardens often supported more bees even when their plant diversity was similar. The researchers then compared gardens of similar size to see whether the association with plant diversity remained. ______ however, the comparisons still showed somewhat greater bee diversity in gardens with more flowering plant varieties.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "choices": {
         "A": ", however,",
@@ -1445,7 +1445,7 @@
       "domain": "Standard English Conventions",
       "skill": "Form, Structure, and Sense",
       "difficulty": "medium",
-      "passage": "Researchers at the Monterey Bay Aquarium observed young sea otters as they learned to open hard-shelled prey. Otters that watched experienced adults generally learned the technique more quickly than otters with less opportunity to observe them. The researchers also found that the young otters continued practicing on their own after watching the adults. This pattern raised an important question: how much of the faster progress could be attributed to observation rather than to the practice that followed it? ______",
+      "passage": "Researchers at the Monterey Bay Aquarium observed young sea otters as they learned to open hard-shelled prey. Otters that watched experienced adults generally learned the technique more quickly than otters with less opportunity to observe them. The researchers also found that the young otters continued practicing on their own after watching the adults. This pattern raised an important question: how much of the faster progress could be attributed to observation rather than to the practice that followed it? To address that question, the researchers compared learning among otters that had similar opportunities to practice. ______",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English and most logically expresses the intended meaning?",
       "choices": {
         "A": "Although the young otters practiced independently, their faster progress after observing adults suggests that observation contributed to their learning.",
@@ -1540,16 +1540,16 @@
       "domain": "Standard English Conventions",
       "skill": "Form, Structure, and Sense",
       "difficulty": "easy",
-      "passage": "Researchers studying beaver dams in Devon, England, found that the dams temporarily held back stormwater during several monitored storms. Water moved more slowly through the dammed areas than through nearby undammed channels, and some runoff remained stored behind the dams for a period before continuing downstream. This difference in timing affected when the runoff reached downstream areas. ______",
-      "question": "Which choice completes the text so that it conforms to the conventions of Standard English and makes the most sense in context?",
+      "passage": "Researchers studying beaver dams in Devon, England, found that the dams can slow stormwater during heavy rain. In several monitored storms, water moved more slowly through dammed areas than through nearby undammed channels. The team concluded that this slower movement ______ the time over which runoff reaches downstream areas.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "choices": {
-        "A": "This slowing of water can reduce the amount of water reaching downstream areas at once.",
-        "B": "The researchers, whose measurements were collected during several storms.",
-        "C": "Because downstream areas received water at different times.",
-        "D": "Beaver dams, which are structures that can alter the movement of water."
+        "A": "extends",
+        "B": "extend",
+        "C": "extending",
+        "D": "have extended"
       },
       "correctAnswer": "A",
-      "explanation": "Choice A is the only option that forms a complete, logical sentence and connects the two preceding ideas. The passage explains that the dams slow stormwater, so the resulting effect is that less water reaches downstream areas simultaneously.",
+      "explanation": "The subject 'this slower movement' is singular, so the singular verb 'extends' is required. The other choices use plural or nonfinite verb forms that do not agree with the subject in this sentence.",
       "status": "staged"
     },
     {
@@ -1559,16 +1559,16 @@
       "domain": "Standard English Conventions",
       "skill": "Form, Structure, and Sense",
       "difficulty": "medium",
-      "passage": "Researchers studying beaver dams in Devon, England, found that the dams temporarily held back stormwater. Measurements showed that water moved more slowly through dammed areas, and downstream channels received the water over a longer period. In some storms, the delayed arrival meant that less runoff reached a downstream channel in a single surge, suggesting that temporary storage could alter the intensity of downstream flow. ______. The researchers therefore cautioned that the effect should not be treated as identical during every storm.",
-      "question": "Which choice completes the text so that it conforms to the conventions of Standard English and makes the most sense in context?",
+      "passage": "Researchers studying beaver dams in Devon, England, found that dammed areas temporarily held back part of the runoff. Because some water remained stored for a period, the downstream arrival of runoff became more spread out over time. The researchers compared several sites and storms before describing the pattern in their report. They concluded that beaver dams can influence downstream flow because ______ delay the movement of some runoff.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English and maintains a clear pronoun reference?",
       "choices": {
-        "A": "Beaver dams are found in many landscapes, and they can alter stream habitats.",
-        "B": "The delayed movement of water can lessen the size of a downstream surge, although the effect depends on storm conditions.",
-        "C": "Stormwater is water produced when rain falls on a landscape.",
-        "D": "The researchers recorded measurements at several points along the channels."
+        "A": "it",
+        "B": "they",
+        "C": "which",
+        "D": "this"
       },
       "correctAnswer": "B",
-      "explanation": "Choice B connects the two relevant details: slower movement spreads the arrival of water over time, which can reduce a downstream surge. The phrase 'although the effect depends on storm conditions' supplies the important qualification that explains why the researchers did not treat the effect as universal.",
+      "explanation": "The pronoun refers to 'beaver dams,' a plural noun, so 'they' is the only choice with the correct number and clear reference. 'It' is singular, while 'which' and 'this' do not provide the required independent subject in the clause.",
       "status": "staged"
     },
     {
@@ -1578,16 +1578,16 @@
       "domain": "Standard English Conventions",
       "skill": "Form, Structure, and Sense",
       "difficulty": "hard",
-      "passage": "Researchers studying beaver dams in Devon, England, initially had reason to associate the structures with smaller downstream surges: during monitored storms, dams stored water temporarily, and measurements showed slower movement through dammed sections. That pattern could mean that the dams themselves were primarily responsible for reducing the amount of water arriving downstream at once. Yet some of the monitored sites differed substantially in how much water they received from surrounding land, making the dams difficult to consider in isolation. In addition, a few storms produced relatively modest downstream changes even where the dams retained substantial water. Those observations left open the possibility that storage alone was not the decisive factor. Later measurements showed that when storms were especially intense, water could move around or over some dams, while the surrounding landscape still influenced how quickly runoff entered the channels. At the same time, sites with substantial storage and limited incoming runoff showed more consistent reductions in downstream surges. ______",
-      "question": "Which choice completes the text so that it conforms to the conventions of Standard English and makes the most sense in context?",
+      "passage": "Researchers studying beaver dams in Devon, England, initially found that sites with substantial storage often showed smaller downstream surges. That pattern suggested that storing more water might be the main reason for the reduction. Yet some sites with similar storage experienced different storm responses, and the amount of runoff entering each site also varied. The researchers therefore compared locations with different combinations of storage and incoming runoff. In the resulting analysis, they examined whether reductions in downstream surges occurred when the stored water represented a substantial share of the runoff reaching the site. ______, the researchers could distinguish an effect associated with temporary storage from differences caused by how much water was arriving in the first place.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English and most precisely expresses the relationship among the actions described?",
       "choices": {
-        "A": "The measurements therefore show that beaver dams consistently prevent large downstream surges, regardless of storm intensity or surrounding conditions.",
-        "B": "The findings indicate that temporary storage is an important part of the observed effect, but its influence depends on how much runoff reaches the site and how the storm interacts with the dam.",
-        "C": "The later measurements instead demonstrate that the original association between beaver dams and reduced downstream surges was mistaken.",
-        "D": "The evidence confirms the initial interpretation that the amount of water stored by a dam is the primary cause of every reduction in downstream flow."
+        "A": "By making this comparison",
+        "B": "Making this comparison, the data",
+        "C": "This comparison making",
+        "D": "Made this comparison, the researchers"
       },
-      "correctAnswer": "B",
-      "explanation": "Choice B reflects the full progression of the passage: early measurements support an association between dams and reduced surges, but differences among sites and storm conditions limit a simple explanation based on storage alone. The later evidence shows that storage still matters when combined with conditions such as incoming runoff and storm intensity. Choices A and D ignore those qualifications, while C goes too far in rejecting the original interpretation.",
+      "correctAnswer": "A",
+      "explanation": "Choice A creates the introductory phrase 'By making this comparison, the researchers could distinguish...' The phrase correctly modifies 'the researchers,' who performed the comparison. B creates a dangling modifier because the data did not make the comparison, while C is incomplete and D has an illogical structure.",
       "status": "staged"
     },
     {
