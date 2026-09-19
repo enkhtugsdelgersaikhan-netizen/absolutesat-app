@@ -227,6 +227,63 @@
       "correctAnswer": "D",
       "explanation": "The passage distinguishes between what the inscriptions demonstrate and what they cannot demonstrate. The variety of endorsers and the public placement of the *programmata* support the inference that political advocacy extended through everyday social relationships. However, the inscriptions do not reveal how many people actually participated or how influential the endorsements were. A, B, and C turn evidence of public advocacy into unsupported claims about majority behavior or political control.",
       "status": "staged"
+    },
+    {
+      "id": "rw-monet-rouen-001-easy",
+      "groupId": "rw-monet-rouen-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "easy",
+      "passage": "In the 1890s, Claude Monet painted more than thirty views of the Rouen Cathedral in France. Rather than treating each painting as an exact record of the building, Monet changed the cathedral's colors to reflect different conditions of light. In some paintings, the stone appears blue or violet; in others, it appears yellow or orange. These differences suggest that Monet's series was concerned with how the cathedral appeared under changing conditions rather than with presenting one fixed appearance.",
+      "question": "Which choice provides the best evidence for the claim that Monet's series emphasized changing visual conditions?",
+      "choices": {
+        "A": "Monet painted more than thirty views of the Rouen Cathedral.",
+        "B": "The cathedral was located in France during the 1890s.",
+        "C": "Monet represented the cathedral's stone in different colors, including blue, violet, yellow, and orange.",
+        "D": "Monet painted the cathedral more than once."
+      },
+      "correctAnswer": "C",
+      "explanation": "The different colors used to represent the same cathedral directly show that Monet varied its appearance from one painting to another. This evidence supports the claim that changing visual conditions were important to the series.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-monet-rouen-001-medium",
+      "groupId": "rw-monet-rouen-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "medium",
+      "passage": "Claude Monet's Rouen Cathedral series, created during the 1890s, repeatedly depicts the same Gothic facade. Yet the paintings do not present that facade in an identical way. As the light changed, Monet altered the colors and tonal relationships of the stone, producing versions in which the building appears cooler in some paintings and warmer in others. The physical structure provided a stable subject, while its painted appearance varied considerably. This contrast suggests that Monet was investigating how a familiar subject could appear different under changing visual conditions rather than attempting to establish one definitive image of the cathedral.",
+      "question": "Which choice best supports the passage's conclusion about Monet's purpose?",
+      "choices": {
+        "A": "The same cathedral remained the subject while its painted appearance changed considerably.",
+        "B": "Monet created the series during the 1890s.",
+        "C": "The cathedral has a Gothic facade.",
+        "D": "Monet painted the building repeatedly rather than choosing unrelated subjects."
+      },
+      "correctAnswer": "A",
+      "explanation": "Choice A establishes the most important contrast in the passage: the subject remained constant while its visual representation changed. That contrast directly supports the conclusion that Monet was investigating changing visual conditions rather than creating one definitive representation.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-monet-rouen-001-hard",
+      "groupId": "rw-monet-rouen-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "hard",
+      "passage": "Claude Monet's Rouen Cathedral series can be understood as an investigation of perception, but the significance of the repeated subject depends on a distinction between the cathedral itself and its representation. The Gothic facade served as a relatively stable motif across the paintings; Monet did not depict a newly transformed building each time he changed canvases. Instead, recognizable architectural elements acquire different visual qualities from one painting to another, with variations in color and tonal intensity corresponding to changing conditions of light and atmosphere. The recurrence of the same structure therefore provides a point of comparison: because the subject remains identifiable, changes in its painted appearance cannot simply be attributed to a change in what was being depicted. The repeated motif allowed Monet to make variation itself the focus of the series. Thus, the importance of the cathedral lies partly in its stability, which makes the paintings' differences in appearance especially significant.",
+      "question": "Which choice best provides evidence for the passage's claim that the cathedral's stability made the differences among the paintings significant?",
+      "choices": {
+        "A": "Monet worked on the series during several visits to Rouen in the early 1890s.",
+        "B": "The paintings depict recognizable architectural features of the same cathedral while varying noticeably in color and tonal appearance.",
+        "C": "The Rouen Cathedral is a Gothic building with a long history.",
+        "D": "Monet produced more than thirty paintings of the cathedral."
+      },
+      "correctAnswer": "B",
+      "explanation": "The passage's argument depends on a contrast: the subject remains recognizable, while its visual appearance changes. Choice B provides both parts of that contrast, making it the strongest evidence for the claim that the cathedral's stability allowed Monet to emphasize variation in perception.",
+      "status": "staged"
     }
   ]
 }
