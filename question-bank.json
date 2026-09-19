@@ -341,6 +341,162 @@
       "correctAnswer": "B",
       "explanation": "The passage develops a layered argument. First, georadar identifies potentially meaningful subsurface patterns, but those patterns are not definitive. Second, excavation supplies physical evidence against which the radar interpretations can be evaluated. Third, agreement between the two types of evidence strengthens the interpretation of some anomalies, while disagreement reveals where radar alone was insufficient. The overall conclusion is therefore that georadar is most useful as preliminary evidence that can help guide and inform further investigation, rather than as a complete substitute for excavation.",
       "status": "staged"
+    },
+    {
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "table": {
+        "caption": "Photovoltaic array performance at Red Mesa Research Station",
+        "headers": [
+          "Array",
+          "Sunlight per Day",
+          "Average Temperature",
+          "Daily Electricity Output",
+          "Efficiency"
+        ],
+        "rows": [
+          [
+            "Juniper",
+            "6.2 hours",
+            "24°C",
+            "18.6 kWh",
+            "19.2%"
+          ],
+          [
+            "Mesa",
+            "7.4 hours",
+            "31°C",
+            "20.1 kWh",
+            "17.8%"
+          ],
+          [
+            "Arroyo",
+            "5.8 hours",
+            "22°C",
+            "17.5 kWh",
+            "19.5%"
+          ]
+        ]
+      },
+      "id": "rw-redmesa-pv-001-easy",
+      "groupId": "rw-redmesa-pv-001",
+      "difficulty": "easy",
+      "passage": "At the Red Mesa Research Station, engineers compared three photovoltaic arrays with the same rated capacity. The arrays received different amounts of sunlight and operated at different temperatures. Mesa received the most sunlight, at 7.4 hours per day, and produced the most electricity, at 20.1 kWh per day. However, Mesa also had the lowest efficiency, at 17.8%, while the cooler Juniper and Arroyo arrays had efficiencies of 19.2% and 19.5%, respectively.",
+      "question": "Which conclusion is best supported by the passage and table?",
+      "choices": {
+        "A": "Arroyo produced the most electricity because it had the highest efficiency.",
+        "B": "Higher temperatures caused all three arrays to produce more electricity.",
+        "C": "Mesa produced the most electricity even though it had the lowest efficiency.",
+        "D": "The three arrays received nearly identical amounts of sunlight."
+      },
+      "correctAnswer": "C",
+      "explanation": "The table shows that Mesa had the highest daily electricity output but the lowest efficiency. The other choices contradict the data or make claims that the table does not establish.",
+      "status": "staged"
+    },
+    {
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "table": {
+        "caption": "Photovoltaic array performance at Red Mesa Research Station",
+        "headers": [
+          "Array",
+          "Sunlight per Day",
+          "Average Temperature",
+          "Daily Electricity Output",
+          "Efficiency"
+        ],
+        "rows": [
+          [
+            "Juniper",
+            "6.2 hours",
+            "24°C",
+            "18.6 kWh",
+            "19.2%"
+          ],
+          [
+            "Mesa",
+            "7.4 hours",
+            "31°C",
+            "20.1 kWh",
+            "17.8%"
+          ],
+          [
+            "Arroyo",
+            "5.8 hours",
+            "22°C",
+            "17.5 kWh",
+            "19.5%"
+          ]
+        ]
+      },
+      "id": "rw-redmesa-pv-001-medium",
+      "groupId": "rw-redmesa-pv-001",
+      "difficulty": "medium",
+      "passage": "At the Red Mesa Research Station, engineers compared three photovoltaic arrays with the same rated capacity to examine how different operating conditions related to performance. Mesa received substantially more sunlight than Juniper or Arroyo and consequently had the highest daily electricity output. Yet Mesa also operated at the highest average temperature and had the lowest efficiency. The efficiency figures therefore cannot be interpreted simply by looking at total electricity production: an array may generate more electricity while converting a smaller percentage of the available sunlight. The data consequently distinguish between the amount of electricity an array produces and the proportion of incoming sunlight that it converts.",
+      "question": "Which choice provides the best evidence for the passage's distinction between total electricity production and conversion efficiency?",
+      "choices": {
+        "A": "Mesa operated at the highest average temperature.",
+        "B": "Mesa produced the most electricity while having the lowest efficiency of the three arrays.",
+        "C": "Juniper and Arroyo had lower daily electricity outputs than Mesa.",
+        "D": "All three arrays had the same rated capacity."
+      },
+      "correctAnswer": "B",
+      "explanation": "B combines the two pieces of evidence needed for the distinction: Mesa led in total electricity output but had the lowest efficiency. The other choices provide only one part of the comparison or establish a condition under which the comparison was made.",
+      "status": "staged"
+    },
+    {
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "table": {
+        "caption": "Photovoltaic array performance at Red Mesa Research Station",
+        "headers": [
+          "Array",
+          "Sunlight per Day",
+          "Average Temperature",
+          "Daily Electricity Output",
+          "Efficiency"
+        ],
+        "rows": [
+          [
+            "Juniper",
+            "6.2 hours",
+            "24°C",
+            "18.6 kWh",
+            "19.2%"
+          ],
+          [
+            "Mesa",
+            "7.4 hours",
+            "31°C",
+            "20.1 kWh",
+            "17.8%"
+          ],
+          [
+            "Arroyo",
+            "5.8 hours",
+            "22°C",
+            "17.5 kWh",
+            "19.5%"
+          ]
+        ]
+      },
+      "id": "rw-redmesa-pv-001-hard",
+      "groupId": "rw-redmesa-pv-001",
+      "difficulty": "hard",
+      "passage": "At the Red Mesa Research Station, engineers compared three photovoltaic arrays with the same rated capacity but different operating conditions. Mesa received 7.4 hours of sunlight per day, more than Juniper or Arroyo, and its 20.1 kWh daily output was likewise the highest. A simple ranking based on output would therefore place Mesa first. Yet the efficiency data complicate that ranking: Mesa converted 17.8% of the incoming sunlight, compared with 19.2% for Juniper and 19.5% for Arroyo, while also operating at the highest average temperature. The cooler arrays consequently converted a larger share of their available sunlight even though neither produced as much electricity overall. These results do not establish that temperature alone caused the efficiency differences, since the arrays were operating under different conditions, but the contrast prevents high output from being treated as evidence of superior conversion efficiency. At the same time, the lower efficiency cannot explain away Mesa's higher output, because Mesa received substantially more sunlight. The figures therefore leave two measurements pointing in different directions: one identifies Mesa as the daily-output leader, while the other shows that it converted a smaller fraction of the sunlight available to it.",
+      "question": "Which statement best synthesizes the information in the passage and table?",
+      "choices": {
+        "A": "Mesa's lower efficiency shows that increasing the amount of available sunlight does not substantially affect total electricity production.",
+        "B": "Because Juniper and Arroyo converted more sunlight efficiently, they should be considered superior to Mesa by every meaningful measure.",
+        "C": "Mesa's output advantage and efficiency disadvantage show that total electricity production and conversion efficiency measure different aspects of photovoltaic performance.",
+        "D": "The higher operating temperature at Mesa definitively caused its lower efficiency despite its greater exposure to sunlight."
+      },
+      "correctAnswer": "C",
+      "explanation": "The passage creates an apparent tension: Mesa produced the most electricity but converted the smallest percentage of incoming sunlight. The student must recognize that these are different measurements, then use the table to resolve the tension rather than treating one measure as disproving the other. A incorrectly minimizes the importance of sunlight exposure, B turns one performance measure into an overall ranking, and D treats an observed temperature-efficiency pattern as proof of causation that the passage explicitly does not establish.",
+      "status": "staged"
     }
   ]
 }
