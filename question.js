@@ -263,6 +263,27 @@ function escapeHtml(value) {
 }
 
 
+function renderInlineFormatting(value) {
+
+    const escaped =
+        escapeHtml(value);
+
+    return escaped
+        .replace(
+            /\*\*([^*]+)\*\*/g,
+            "<strong>$1</strong>"
+        )
+        .replace(
+            /\*([^*]+)\*/g,
+            "<em>$1</em>"
+        )
+        .replace(
+            /_([^_]+)_/g,
+            "<em>$1</em>"
+        );
+
+}
+
 function getReviewStorageKey() {
 
     return currentUser
@@ -1270,13 +1291,17 @@ function renderCurrentQuestion() {
         }`;
 
 
-    questionText.textContent =
-        question.question_text;
+    questionText.innerHTML =
+        renderInlineFormatting(
+            question.question_text
+        );
 
     if (questionPassage) {
-        questionPassage.textContent =
-            question.passage ||
-            "";
+        questionPassage.innerHTML =
+            renderInlineFormatting(
+                question.passage ||
+                ""
+            );
 
         questionPassage.parentElement?.classList.toggle(
             "has-passage",
@@ -1412,7 +1437,7 @@ function renderChoices(
                 </span>
 
                 <span class="choice-text">
-                    ${escapeHtml(
+                    ${renderInlineFormatting(
                         choice.text
                     )}
                 </span>
@@ -1672,7 +1697,7 @@ function renderAnswerFeedback(
 
     answerFeedbackExplanation.innerHTML =
         "<strong>Explanation</strong><br>" +
-        escapeHtml(
+        renderInlineFormatting(
             question.explanation ||
             "Review the question and compare your choice with the correct answer."
         );
