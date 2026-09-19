@@ -959,6 +959,63 @@
       "explanation": "The goal requires both the disaster's significance to historians and a careful statement of what the evidence does not establish. Choice C does both: it recognizes the storm's importance, explains why researchers continue to study the event, and avoids claiming that any one factor has been proved sufficient to explain the sinking. A and B make unsupported causal claims, while D suggests that researchers have established that several factors contributed without preserving the passage's explicit uncertainty about how those factors relate to the sinking.",
       "status": "staged",
       "goal": "Explain the significance of the Edmund Fitzgerald disaster to maritime historians while accurately reflecting the evidence's limitations."
+    },
+    {
+      "id": "rw-green-roof-cooling-001-easy",
+      "groupId": "rw-green-roof-cooling-001",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Cross-Text Connections",
+      "difficulty": "easy",
+      "passage": "Text 1\n\nArchitects studying vegetated roofs have found that layers of plants and soil can keep buildings cooler during hot weather. The vegetation shades the roof and releases some absorbed heat through evaporation, reducing the amount of solar heat transferred indoors.\n\nText 2\n\nResearch on Chicago office buildings has likewise found that upper floors beneath vegetated roofs often receive less heat during sunny summer afternoons than floors beneath bare roofs. The researchers attributed the difference in part to the cooling provided by the plants.",
+      "question": "Which choice best describes how the two texts relate to one another?",
+      "choices": {
+        "A": "Text 1 explains why vegetated roofs can reduce heat transfer, while Text 2 provides building-level evidence of a similar cooling effect.",
+        "B": "Text 1 argues that vegetated roofs are mainly decorative, while Text 2 shows that they have a practical purpose.",
+        "C": "Text 1 focuses on winter conditions, while Text 2 examines why vegetated roofs are ineffective in summer.",
+        "D": "Text 1 presents a theoretical explanation that Text 2 rejects by showing that roof vegetation has little effect on indoor temperatures."
+      },
+      "correctAnswer": "A",
+      "explanation": "Text 1 explains the cooling mechanism of vegetated roofs, while Text 2 reports that the same general effect has been observed in Chicago office buildings. Thus, Text 2 provides evidence consistent with the explanation in Text 1.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-green-roof-cooling-001-medium",
+      "groupId": "rw-green-roof-cooling-001",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Cross-Text Connections",
+      "difficulty": "medium",
+      "passage": "Text 1\n\nResearchers studying vegetated roofs have found that plants and soil can reduce the amount of solar heat transferred into a building. The effect is strongest on hot, sunny days, when vegetation shades the roof and evaporation removes some absorbed energy. The researchers also found that the amount of cooling varies with the thickness of the growing layer and the condition of the plants.\n\nText 2\n\nA study of several Chicago office buildings found that rooms beneath vegetated roofs generally experienced less afternoon heat gain than rooms beneath conventional roofs. Yet during unusually dry periods, some of that difference became smaller because the plants had less water available for evaporation. Buildings with deeper growing layers sometimes retained an advantage, but the size of the benefit varied across the sites.",
+      "question": "Which choice best describes the relationship between the two texts?",
+      "choices": {
+        "A": "Text 2 extends Text 1 by providing building-level evidence that the cooling effect of vegetated roofs exists but varies with conditions affecting the roof's vegetation and structure.",
+        "B": "Text 2 disputes Text 1 by showing that vegetated roofs cool buildings only when the weather is unusually dry.",
+        "C": "Text 2 focuses on growing-layer thickness, whereas Text 1 argues that the condition of the vegetation has little effect on cooling.",
+        "D": "Text 2 demonstrates that deeper growing layers always produce greater cooling, regardless of weather or plant condition."
+      },
+      "correctAnswer": "A",
+      "explanation": "Both texts support the general finding that vegetated roofs can reduce heat gain. Text 1 notes that the effect varies with growing-layer thickness and plant condition, and Text 2 provides building-level evidence that dry conditions and differences among roof designs can change the size of the benefit.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-green-roof-cooling-001-hard",
+      "groupId": "rw-green-roof-cooling-001",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Cross-Text Connections",
+      "difficulty": "hard",
+      "passage": "Text 1\n\nAn early comparison of vegetated and conventional roofs on Chicago university buildings found that rooms below planted roofs often gained less heat during sunny afternoons. Because the planted roofs also had thicker growing layers, researchers initially treated the vegetation as the likely explanation: leaves shaded the surface, and moisture released through evaporation could carry heat away. Yet during a series of mild, cloudy weeks, some vegetated roofs showed little indoor cooling advantage over conventional roofs. Since the planted roofs still had substantial growing layers, the result raised the possibility that the roof assembly itself was responsible for more of the difference than the vegetation was.\n\nText 2\n\nA later study compared roofs during hotter periods and separated roofs with similar insulation and membrane construction. When the vegetation was actively watered, those roofs showed larger reductions in afternoon heat transfer than comparable roofs whose plants had dried. This result made a structure-only explanation less complete. The researchers then compared roofs with similarly healthy vegetation but different growing-layer depths. During the same afternoon, the roof with the deeper assembly showed the lower indoor heat gain.\n\nTaken separately, the first set of observations could support an insulation-based explanation, while the second could support a vegetation-based one. The combined evidence instead points to what?",
+      "question": "Which choice best describes the relationship between the two texts?",
+      "choices": {
+        "A": "Text 2 overturns Text 1 by demonstrating that plant activity, rather than roof construction, is the primary cause of cooling.",
+        "B": "Text 2 confirms Text 1's original explanation that thicker growing layers are effective because they allow vegetation to remove heat through evaporation.",
+        "C": "Text 2 qualifies the interpretation in Text 1 by showing that both vegetation conditions and physical roof characteristics can affect heat transfer, so neither factor alone fully explains the cooling differences.",
+        "D": "Text 2 shows that the weak cooling observed during mild weather in Text 1 resulted mainly from unusually low plant activity rather than from differences in roof construction."
+      },
+      "correctAnswer": "C",
+      "explanation": "Text 1 first makes vegetation seem like the main explanation, but the weak differences during mild weather raise the possibility that roof construction matters more. Text 2 then shows that active vegetation affects cooling when roof construction is held similar, while a separate comparison shows that growing-layer depth also matters when vegetation is similarly healthy. Together, the texts indicate that both vegetation conditions and roof characteristics contribute to the observed differences rather than either one alone explaining them.",
+      "status": "staged"
     }
   ]
 }
