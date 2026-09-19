@@ -1395,6 +1395,57 @@ footer {
     transform: translateY(1px);
 }
 
+
+/* =========================================
+   DROPDOWN / SELECT ANIMATIONS
+========================================= */
+
+select {
+    transition:
+        transform .16s ease,
+        border-color .16s ease,
+        box-shadow .16s ease,
+        background-color .16s ease;
+}
+
+select:hover {
+    transform: translateY(-1px);
+}
+
+select:focus {
+    transform: translateY(-1px);
+    animation: absoluteDropdownFocus .18s ease both;
+}
+
+@keyframes absoluteDropdownFocus {
+    from {
+        opacity: .88;
+        transform: translateY(1px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-1px);
+    }
+}
+
+.navigation.mobile-open {
+    transform-origin: top center;
+    animation: absoluteDropdownReveal .18s ease both;
+}
+
+@keyframes absoluteDropdownReveal {
+    from {
+        opacity: 0;
+        transform: translateY(-8px) scaleY(.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scaleY(1);
+    }
+}
+
 /* =========================================
    GLOBAL SUBTLE ANIMATIONS
 ========================================= */
