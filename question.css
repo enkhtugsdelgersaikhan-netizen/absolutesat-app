@@ -475,6 +475,33 @@
     cursor: default;
 }
 
+.next-question-button {
+    width: 100%;
+    min-height: 46px;
+    margin-top: 10px;
+    padding: 11px 18px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #334155;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background 0.18s ease,
+        border-color 0.18s ease,
+        color 0.18s ease,
+        transform 0.15s ease;
+}
+
+.next-question-button:hover {
+    border-color: #0f9f9a;
+    background: #f8fffe;
+    color: #0f8d89;
+    transform: translateY(-1px);
+}
+
 @keyframes answer-feedback-in {
     from {
         opacity: 0;
