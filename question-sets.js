@@ -370,153 +370,15 @@ async function loadQuestions() {
     showLoading();
 
 
-    const {
-        data,
-        error
-    } = await questionBankSupabase
-        .from("questions")
-        .select("*")
-        .order(
-            "created_at",
-            {
-                ascending: false
-            }
-        );
-
-
-    if (error) {
-
-        console.error(
-            "Question loading error:",
-            error
-        );
-
-        showError(
-            "We couldn't load the question bank."
-        );
-
-        return;
-    }
-
-
-    allQuestions =
-        data || [];
-
-
     /*
-     * Also load reviewed/staged questions from the
-     * repository JSON file. These are not inserted into
-     * Supabase until they are formally deployed.
+     * Staged questions are independent of Supabase.
+     * This is important because the Question Bank should
+     * still display reviewed questions when the live
+     * question table is empty, unavailable, or returns
+     * an RLS/database error.
      */
 
-    try {
-
-        const stagedResponse =
-            await fetch(
-                "/question-bank.json",
-                {
-                    cache: "no-store"
-                }
-            );
-
-        if (stagedResponse.ok) {
-
-            const stagedData =
-                await stagedResponse.json();
-
-            const stagedQuestions =
-                (stagedData.questions || [])
-                    .filter(
-                        question =>
-                            question.status ===
-                            "staged"
-                    )
-                    .map(
-                        question => ({
-
-                            id:
-                                question.id,
-
-                            question_number:
-                                null,
-
-                            question_text:
-                                question.question,
-
-                            choice_a:
-                                question.choices?.A ||
-                                "",
-
-                            choice_b:
-                                question.choices?.B ||
-                                "",
-
-                            choice_c:
-                                question.choices?.C ||
-                                "",
-
-                            choice_d:
-                                question.choices?.D ||
-                                "",
-
-                            correct_answer:
-                                question.correctAnswer,
-
-                            explanation:
-                                question.explanation ||
-                                "",
-
-                            difficulty:
-                                question.difficulty
-                                    ? (
-                                        question.difficulty
-                                            .charAt(0)
-                                            .toUpperCase() +
-                                        question.difficulty
-                                            .slice(1)
-                                    )
-                                    : "Medium",
-
-                            topic:
-                                question.skill ||
-                                "SAT Practice",
-
-                            section:
-                                question.section ||
-                                "SAT",
-
-                            domain:
-                                question.domain ||
-                                ""
-
-                        })
-                    );
-
-
-            allQuestions = [
-                ...allQuestions,
-                ...stagedQuestions
-            ];
-
-        }
-
-    } catch (stagedError) {
-
-        console.warn(
-            "Could not load staged question bank JSON:",
-            stagedError
-        );
-
-    }
-
-
-    /*
-     * Hard fallback for the current approved test group.
-     * This guarantees the group appears even if the static
-     * JSON asset is blocked or unavailable.
-     */
-
-    const embeddedStagedQuestions = [
+    const stagedFallback = [
         {
             id: "rw-central-001-easy",
             section: "Reading & Writing",
@@ -570,38 +432,218 @@ async function loadQuestions() {
         }
     ];
 
-    if (
-        !allQuestions.some(
-            question =>
-                String(question.id) ===
-                "rw-central-001-easy"
-        )
+
+    function normalizeStagedQuestion(
+        question
     ) {
 
-        const embeddedQuestions =
-            embeddedStagedQuestions.map(
-                question => ({
-                    ...question,
-                    question_number: null,
-                    question_text:
-                        question.question,
-                    choice_a:
-                        question.choices.A,
-                    choice_b:
-                        question.choices.B,
-                    choice_c:
-                        question.choices.C,
-                    choice_d:
-                        question.choices.D,
-                    correct_answer:
-                        question.correctAnswer
-                })
+        return {
+
+            id:
+                question.id,
+
+            question_number:
+                null,
+
+            question_text:
+                question.question,
+
+            choice_a:
+                question.choices?.A ||
+                "",
+
+            choice_b:
+                question.choices?.B ||
+                "",
+
+            choice_c:
+                question.choices?.C ||
+                "",
+
+            choice_d:
+                question.choices?.D ||
+                "",
+
+            correct_answer:
+                question.correctAnswer,
+
+            explanation:
+                question.explanation ||
+                "",
+
+            difficulty:
+                question.difficulty
+                    ? (
+                        question.difficulty
+                            .charAt(0)
+                            .toUpperCase() +
+                        question.difficulty
+                            .slice(1)
+                    )
+                    : "Medium",
+
+            topic:
+                question.skill ||
+                "SAT Practice",
+
+            section:
+                question.section ||
+                "SAT",
+
+            domain:
+                question.domain ||
+                "",
+
+            passage:
+                question.passage ||
+                ""
+
+        };
+
+    }
+
+
+    /*
+     * Start with the guaranteed approved test group.
+     * This makes the Question Bank independent of both
+     * Supabase availability and static-asset loading.
+     */
+
+    allQuestions =
+        stagedFallback.map(
+            normalizeStagedQuestion
+        );
+
+
+    /*
+     * Prefer the repository JSON when available.
+     * It is the long-term source of truth for staged
+     * questions. If it fails, the embedded test group
+     * above remains available.
+     */
+
+    try {
+
+        const stagedResponse =
+            await fetch(
+                "/question-bank.json?v=1",
+                {
+                    cache: "no-store"
+                }
             );
 
-        allQuestions = [
-            ...allQuestions,
-            ...embeddedQuestions
-        ];
+
+        if (
+            stagedResponse.ok
+        ) {
+
+            const stagedData =
+                await stagedResponse.json();
+
+
+            const stagedQuestions =
+                (stagedData.questions || [])
+                    .filter(
+                        question =>
+                            question.status ===
+                            "staged"
+                    )
+                    .map(
+                        normalizeStagedQuestion
+                    );
+
+
+            if (
+                stagedQuestions.length > 0
+            ) {
+
+                allQuestions =
+                    stagedQuestions;
+
+            }
+
+        }
+
+    } catch (stagedError) {
+
+        console.warn(
+            "Could not load staged question bank JSON. Using embedded approved questions.",
+            stagedError
+        );
+
+    }
+
+
+    /*
+     * Then try the live Supabase bank.
+     * A database failure must NEVER prevent the
+     * staged Question Bank from rendering.
+     */
+
+    try {
+
+        const {
+            data,
+            error
+        } =
+            await questionBankSupabase
+                .from("questions")
+                .select("*")
+                .order(
+                    "created_at",
+                    {
+                        ascending: false
+                    }
+                );
+
+
+        if (error) {
+
+            console.warn(
+                "Live question bank unavailable; continuing with staged questions.",
+                error
+            );
+
+        } else if (
+            Array.isArray(data) &&
+            data.length > 0
+        ) {
+
+            const stagedIds =
+                new Set(
+                    allQuestions.map(
+                        question =>
+                            String(
+                                question.id
+                            )
+                    )
+                );
+
+
+            const liveQuestions =
+                data.filter(
+                    question =>
+                        !stagedIds.has(
+                            String(
+                                question.id
+                            )
+                        )
+                );
+
+
+            allQuestions = [
+                ...allQuestions,
+                ...liveQuestions
+            ];
+
+        }
+
+    } catch (questionError) {
+
+        console.warn(
+            "Live question bank request failed; continuing with staged questions.",
+            questionError
+        );
 
     }
 
@@ -613,8 +655,8 @@ async function loadQuestions() {
 
 
     renderQuestions();
-}
 
+}
 
 // ============================================================
 // LOAD USER DATA
