@@ -90,6 +90,11 @@ const questionText =
         "question-text"
     );
 
+const questionGoal =
+    document.getElementById(
+        "question-goal"
+    );
+
 const questionPassage =
     document.getElementById(
         "question-passage"
@@ -1087,6 +1092,9 @@ function normalizeStagedQuestion(
         passage:
             stagedQuestion.passage ||
             "",
+        goal:
+            stagedQuestion.goal ||
+            "",
         question_text:
             stagedQuestion.question ||
             "",
@@ -1732,6 +1740,18 @@ function renderCurrentQuestion() {
         `Question ${
             currentQuestionIndex + 1
         }`;
+
+
+    if (questionGoal) {
+        questionGoal.textContent =
+            question.goal ||
+            "";
+
+        questionGoal.parentElement?.classList.toggle(
+            "has-goal",
+            Boolean(question.goal)
+        );
+    }
 
 
     questionText.innerHTML =
