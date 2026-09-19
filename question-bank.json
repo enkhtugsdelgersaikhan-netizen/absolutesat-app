@@ -1475,6 +1475,63 @@
       "correctAnswer": "C",
       "explanation": "The passage first presents practice as a plausible alternative explanation, then shows that observation still matters when practice opportunities are similar. Choice C captures that refined relationship while remaining grammatically and logically complete. A gives the researchers the actions that belong to the otters and overstates the conclusion, B claims a single cause, and D treats independent practice as sufficient despite the comparison that weakens that interpretation.",
       "status": "staged"
+    },
+    {
+      "id": "rw-cape-may-verb-tense-001-easy",
+      "groupId": "rw-cape-may-verb-tense-001",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Form, Structure, and Sense",
+      "difficulty": "easy",
+      "passage": "In 2018, researchers at the University of Delaware began monitoring a coastal marsh near Cape May, New Jersey. Their observations continued for three years. When the restoration project began in 2021, the researchers ______ the marsh since 2018.",
+      "question": "Which choice completes the text so that it conforms to Standard English?",
+      "choices": {
+        "A": "monitor",
+        "B": "had monitored",
+        "C": "have monitored",
+        "D": "will monitor"
+      },
+      "correctAnswer": "B",
+      "explanation": "The restoration began in 2021, a point in the past, while the monitoring had begun earlier in 2018. The past perfect 'had monitored' correctly places the monitoring before that later past event.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-cape-may-verb-tense-001-medium",
+      "groupId": "rw-cape-may-verb-tense-001",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Form, Structure, and Sense",
+      "difficulty": "medium",
+      "passage": "In 2018, researchers at the University of Delaware began monitoring a coastal marsh near Cape May, New Jersey. Their observations continued while plans for a restoration project were being developed. By the time restoration began in 2021, the researchers ______ the marsh continuously for three years. The records gave the team a detailed picture of conditions before the project began.",
+      "question": "Which choice completes the text so that it conforms to Standard English?",
+      "choices": {
+        "A": "have monitored",
+        "B": "monitor",
+        "C": "had been monitoring",
+        "D": "will have monitored"
+      },
+      "correctAnswer": "C",
+      "explanation": "The monitoring started in 2018 and continued up to the later past event in 2021. 'Had been monitoring' correctly expresses an activity that was ongoing over a period leading up to that past point; the other choices do not fit the past-before-past timeline as precisely.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-cape-may-verb-tense-001-hard",
+      "groupId": "rw-cape-may-verb-tense-001",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Form, Structure, and Sense",
+      "difficulty": "hard",
+      "passage": "In 2018, researchers at the University of Delaware began monitoring a coastal marsh near Cape May, New Jersey, intending to document conditions before restoration. The project was delayed while engineers revised the design, so the team continued collecting measurements through 2019 and 2020. During 2020, contractors also made small preliminary changes to one section of the marsh, prompting the researchers to record the altered area separately from the rest of the site. By the time full restoration began in 2021, the team ______ the marsh for three years. The earlier measurements were then compared with data collected after the project began, with the preliminary changes treated as a separate part of the record.",
+      "question": "Which choice completes the text so that it conforms to Standard English and most precisely expresses the time relationship among the events described?",
+      "choices": {
+        "A": "monitored",
+        "B": "had been monitoring",
+        "C": "have been monitoring",
+        "D": "will have monitored"
+      },
+      "correctAnswer": "B",
+      "explanation": "The passage establishes a monitoring activity that began in 2018 and continued through the two years before the full restoration began in 2021. 'Had been monitoring' correctly presents that ongoing activity as extending up to a later past event. Choice A only states that the monitoring occurred without expressing its duration leading to 2021, while C and D do not fit the passage's past-time framework.",
+      "status": "staged"
     }
   ]
 }
