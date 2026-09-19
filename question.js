@@ -314,8 +314,32 @@ async function initialize() {
             session.user;
 
 
+        const params =
+            new URLSearchParams(
+                window.location.search
+            );
+
+        const questionId =
+            params.get("id");
+
         const slug =
-            getSetSlug();
+            params.get("set");
+
+
+        /*
+         * Question Bank questions use ?id=...
+         * while legacy question sets use ?set=...
+         */
+
+        if (questionId) {
+
+            await loadQuestionById(
+                questionId
+            );
+
+            return;
+
+        }
 
 
         if (!slug) {
@@ -343,6 +367,260 @@ async function initialize() {
 
         showError(
             "Something went wrong while loading the question."
+        );
+
+    }
+
+}
+
+
+/* ============================================================
+   LOAD QUESTION BY ID
+   ============================================================ */
+
+async function loadQuestionById(
+    questionId
+) {
+
+    const {
+        data: liveQuestion,
+        error: liveQuestionError
+    } =
+        await supabaseClient
+            .from("questions")
+            .select(`
+                id,
+                set_id,
+                question_number,
+                question_text,
+                choice_a,
+                choice_b,
+                choice_c,
+                choice_d,
+                correct_answer,
+                explanation,
+                difficulty,
+                topic
+            `)
+            .eq(
+                "id",
+                questionId
+            )
+            .maybeSingle();
+
+
+    if (
+        liveQuestionError &&
+        liveQuestionError.code !== "PGRST116"
+    ) {
+
+        console.warn(
+            "Live question lookup failed:",
+            liveQuestionError
+        );
+
+    }
+
+
+    if (liveQuestion) {
+
+        questions = [
+            liveQuestion
+        ];
+
+
+        if (liveQuestion.set_id) {
+
+            const {
+                data: setData
+            } =
+                await supabaseClient
+                    .from("question_sets")
+                    .select("*")
+                    .eq(
+                        "id",
+                        liveQuestion.set_id
+                    )
+                    .maybeSingle();
+
+            currentSet =
+                setData || null;
+
+        }
+
+
+        const setName =
+            currentSet?.name ||
+            "Question Bank";
+
+
+        setTitle.textContent =
+            setName;
+
+
+        resultsSetTitle.textContent =
+            setName;
+
+
+        renderQuestionNavigator();
+        renderCurrentQuestion();
+        startTimer();
+
+
+        loadingScreen.classList.add(
+            "hidden"
+        );
+
+        questionApp.classList.remove(
+            "hidden"
+        );
+
+        return;
+
+    }
+
+
+    try {
+
+        const response =
+            await fetch(
+                "/data/question-bank.json",
+                {
+                    cache: "no-store"
+                }
+            );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "Staged question file could not be loaded."
+            );
+
+        }
+
+
+        const stagedData =
+            await response.json();
+
+
+        const stagedQuestion =
+            (stagedData.questions || [])
+                .find(
+                    question =>
+                        String(question.id) ===
+                        String(questionId) &&
+                        question.status ===
+                        "staged"
+                );
+
+
+        if (!stagedQuestion) {
+
+            showError(
+                "The question could not be found."
+            );
+
+            return;
+
+        }
+
+
+        currentSet = null;
+
+
+        questions = [
+
+            {
+                id:
+                    stagedQuestion.id,
+
+                question_number:
+                    null,
+
+                question_text:
+                    stagedQuestion.passage +
+                    "\n\n" +
+                    stagedQuestion.question,
+
+                choice_a:
+                    stagedQuestion.choices?.A ||
+                    "",
+
+                choice_b:
+                    stagedQuestion.choices?.B ||
+                    "",
+
+                choice_c:
+                    stagedQuestion.choices?.C ||
+                    "",
+
+                choice_d:
+                    stagedQuestion.choices?.D ||
+                    "",
+
+                correct_answer:
+                    stagedQuestion.correctAnswer,
+
+                explanation:
+                    stagedQuestion.explanation ||
+                    "",
+
+                difficulty:
+                    stagedQuestion.difficulty
+                        ? (
+                            stagedQuestion.difficulty
+                                .charAt(0)
+                                .toUpperCase() +
+                            stagedQuestion.difficulty
+                                .slice(1)
+                        )
+                        : "Medium",
+
+                topic:
+                    stagedQuestion.skill ||
+                    "SAT Practice",
+
+                section:
+                    stagedQuestion.section ||
+                    "SAT"
+
+            }
+
+        ];
+
+
+        setTitle.textContent =
+            "Question Bank";
+
+
+        resultsSetTitle.textContent =
+            "Question Bank";
+
+
+        renderQuestionNavigator();
+        renderCurrentQuestion();
+        startTimer();
+
+
+        loadingScreen.classList.add(
+            "hidden"
+        );
+
+        questionApp.classList.remove(
+            "hidden"
+        );
+
+    } catch (error) {
+
+        console.error(
+            "Staged question loading error:",
+            error
+        );
+
+
+        showError(
+            "The question could not be loaded."
         );
 
     }
