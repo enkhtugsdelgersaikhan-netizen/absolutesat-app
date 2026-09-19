@@ -847,8 +847,13 @@ function setDropdownSelections(
                     return match?.label || value;
                 });
 
-            valueElement.textContent =
-                labels.join(", ");
+            if (labels.length <= 2) {
+                valueElement.textContent =
+                    labels.join(", ");
+            } else {
+                valueElement.textContent =
+                    labels[0] + ", ...";
+            }
         }
     }
 
