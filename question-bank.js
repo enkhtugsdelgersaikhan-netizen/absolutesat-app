@@ -2,7 +2,7 @@
 const questionBankSupabase = supabaseClient;
 
 let allQuestions = [];
-let activeSection = "all";
+let activeSection = "Reading & Writing";
 let activeSearch = "";
 let activeDomain = "all";
 let activeSubtopic = "all";
@@ -1494,8 +1494,18 @@ function renderQuestions() {
 
     resultsDescription.textContent =
         questions.length ===
-        allQuestions.length
-            ? "in your question bank"
+        allQuestions.filter(
+            question =>
+                question.section ===
+                activeSection
+        ).length &&
+        !activeSearch &&
+        activeDomain === "all" &&
+        activeSubtopic === "all" &&
+        activeDifficulty === "all" &&
+        activeStatus === "all" &&
+        !reviewOnly
+            ? "in this section"
             : "matching your filters";
 
     if (questions.length === 0) {
@@ -1625,7 +1635,7 @@ sectionTabs.forEach(
 
                 activeSection =
                     tab.dataset.section ||
-                    "all";
+                    "Reading & Writing";
 
                 activeDomain = "all";
                 activeSubtopic = "all";
