@@ -736,7 +736,7 @@ async function loadQuestionSet(
 
 
     setTitle.textContent =
-        currentSet.name;
+        currentSet?.name || "Question Bank";
 
 
     resultsSetTitle.textContent =
@@ -1686,7 +1686,7 @@ function showResults(
 
 
     resultsSetTitle.textContent =
-        currentSet.name;
+        currentSet?.name || "Question Bank";
 
 
     if (
