@@ -959,6 +959,66 @@
       "explanation": "The goal requires both the disaster's significance to historians and a careful statement of what the evidence does not establish. Choice C does both: it recognizes the storm's importance, explains why researchers continue to study the event, and avoids claiming that any one factor has been proved sufficient to explain the sinking. A and B make unsupported causal claims, while D suggests that researchers have established that several factors contributed without preserving the passage's explicit uncertainty about how those factors relate to the sinking.",
       "status": "staged",
       "goal": "Explain the significance of the Edmund Fitzgerald disaster to maritime historians while accurately reflecting the evidence's limitations."
+    },
+    {
+      "id": "rw-inness-color-001-easy",
+      "groupId": "rw-inness-color-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "easy",
+      "passage": "A student is researching the National Gallery of Art's restoration of a 19th-century landscape painting by George Inness. The student has taken the following notes:\n\n- Conservators removed a yellowed varnish that had darkened the painting.\n- After the varnish was removed, viewers could see that Inness had originally used brighter greens and blues.\n- The restoration therefore gave viewers a clearer sense of how Inness originally used color in the landscape.",
+      "goal": "Emphasize how the restoration changed viewers' understanding of Inness's use of color.",
+      "question": "Which choice most effectively uses the information from the passage to accomplish this goal?",
+      "choices": {
+        "A": "The National Gallery of Art restored a landscape painting by George Inness, a 19th-century American artist.",
+        "B": "By removing yellowed varnish from George Inness's landscape, conservators revealed the brighter greens and blues the artist originally used, giving viewers a clearer understanding of his color choices.",
+        "C": "Conservators at the National Gallery of Art removed yellowed varnish from a 19th-century landscape painting.",
+        "D": "George Inness's landscape painting underwent restoration at the National Gallery of Art."
+      },
+      "correctAnswer": "B",
+      "explanation": "The goal requires explaining how the restoration affected viewers' understanding of Inness's use of color. Choice B connects the removal of the varnish, the newly visible colors, and the resulting change in viewers' understanding. The other choices provide background details without explaining that effect.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-inness-color-001-medium",
+      "groupId": "rw-inness-color-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "medium",
+      "passage": "Researchers at the University of Washington studied how visitors responded to reconstructed Roman frescoes. The student has taken the following notes:\n\n- Visitors who saw reconstructions with vivid colors were more likely to report that Roman interiors had been brightly decorated.\n- Many surviving Roman frescoes have faded, so their present appearance may not represent their original colors.\n- The researchers therefore argue that reconstructions can help correct modern assumptions about the appearance of Roman buildings.\n- However, reconstructions are based on available evidence rather than serving as direct records of every surviving building's original appearance.",
+      "goal": "Explain why vivid reconstructions can be useful for understanding ancient Roman interiors while acknowledging an important limitation of surviving and reconstructed evidence.",
+      "question": "Which choice most effectively uses the information from the passage to accomplish this goal?",
+      "choices": {
+        "A": "Because many surviving Roman frescoes have faded, vivid reconstructions can help visitors recognize that ancient interiors may originally have been more colorful than the surviving paintings suggest, although such reconstructions remain interpretations based on available evidence.",
+        "B": "Visitors in the University of Washington study were more likely to describe Roman interiors as brightly decorated when shown vivid reconstructions.",
+        "C": "Researchers at the University of Washington used reconstructed Roman frescoes to study visitors' perceptions of ancient buildings.",
+        "D": "Although Roman frescoes can provide evidence about ancient interiors, their faded colors can make it difficult for modern visitors to determine how colorful those interiors originally were."
+      },
+      "correctAnswer": "A",
+      "explanation": "The goal requires both the usefulness of vivid reconstructions and a limitation on what they can establish. Choice A connects the faded condition of surviving frescoes to the usefulness of reconstructions while noting that reconstructions are interpretations based on available evidence. B and C give study details without explaining their significance, and D mentions the limitation without explaining why vivid reconstructions are useful.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-inness-color-001-hard",
+      "groupId": "rw-inness-color-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "hard",
+      "passage": "The Smithsonian's restoration of a 17th-century Dutch interior painting initially focused on removing surface grime that obscured small details. Once cleaned, the painting appeared to show a more brightly lit room, leading some conservators to suspect that the artist had emphasized sunlight as a major compositional feature. That interpretation seemed consistent with the unusually clear windows depicted in the scene. Art historians, however, pointed out that restorers could not assume that every difference in brightness reflected the artist's original intentions; later varnishes and previous repairs had altered different areas unevenly. Infrared imaging subsequently revealed underdrawing beneath the windows, showing that the artist had repeatedly adjusted their placement. Those adjustments suggested that the windows were important to the composition, but they did not by themselves establish that sunlight was the painting's principal subject. A comparison with two related works by the same artist then showed that similar window arrangements were used even in scenes where lighting played a secondary role. The restoration thus provided evidence about how the artist constructed the interior while also making it necessary to distinguish compositional importance from the particular visual effect produced by the painting's altered surface.",
+      "goal": "Explain how the restoration changed scholars' understanding of the painting without overstating what the new evidence can establish.",
+      "question": "Which choice most effectively uses the information from the passage to accomplish this goal?",
+      "choices": {
+        "A": "The restoration revealed that the artist deliberately emphasized sunlight, as shown by the painting's brighter appearance and the careful placement of its windows.",
+        "B": "Although cleaning and imaging revealed that the windows played an important role in the artist's construction of the scene, comparisons with related works indicate that this role should not be equated with making sunlight the painting's primary subject.",
+        "C": "The painting's original appearance can now be reconstructed more accurately because infrared imaging revealed the artist's changes to the windows and cleaning removed later alterations.",
+        "D": "The restoration demonstrated that the artist's use of windows was mainly intended to control the amount of light entering the painted interior, a feature also found in two related works."
+      },
+      "correctAnswer": "B",
+      "explanation": "The goal requires a precise account of what the restoration revealed and what it did not prove. Choice B captures both parts: the imaging and cleaning showed that the windows mattered to the composition, but the related works prevent scholars from equating that importance with sunlight being the painting's principal subject. A, C, and D overstate what the evidence establishes.",
+      "status": "staged"
     }
   ]
 }
