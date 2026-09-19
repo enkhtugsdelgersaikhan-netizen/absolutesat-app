@@ -373,9 +373,9 @@
 
 .question-list {
     display: grid;
-    grid-template-columns: repeat(18, 70px);
+    grid-template-columns: repeat(18, minmax(0, 1fr));
     align-items: start;
-    justify-content: start;
+    justify-content: stretch;
     column-gap: 10px;
     row-gap: 28px;
 }
@@ -386,14 +386,15 @@
 
 .question-group .question-icon-wrapper,
 .question-group .question-icon {
-    flex: 0 0 70px;
+    flex: 0 0 auto;
 }
 
 .question-icon-wrapper {
     position: relative;
-    width: 70px;
-    height: 70px;
-    flex: 0 0 70px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    flex: 0 0 auto;
 }
 
 .question-icon {
@@ -401,8 +402,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 70px;
-    height: 70px;
+    width: 100%;
+    height: 100%;
     padding: 0;
     border: 2px solid transparent;
     border-radius: 15px;
