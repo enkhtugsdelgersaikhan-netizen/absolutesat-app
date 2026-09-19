@@ -1597,16 +1597,16 @@
       "domain": "Standard English Conventions",
       "skill": "Form, Structure, and Sense",
       "difficulty": "easy",
-      "passage": "At McGill University, biologists studying peregrine falcons in Montreal observed pairs nesting on rooftop ledges during the 2022 breeding season. The ledges shielded eggs and chicks from heavy rain and falling debris, giving the nests greater protection. The team also recorded the number of chicks that eventually left each nest. ______, the rooftop ledges may help some pairs raise chicks successfully.",
+      "passage": "At McGill University, researchers studying peregrine falcons in Montreal observed that pairs nesting on rooftop ledges fledged more chicks than pairs nesting on exposed building surfaces. The ledges shielded eggs and chicks from heavy rain and falling debris. The researchers therefore examined whether the added protection helped explain the difference in nesting success. ______, the ledges may help some peregrine pairs raise chicks successfully.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "choices": {
-        "A": "By providing this protection",
-        "B": "By providing this protection, successful breeding",
-        "C": "Providing this protection, rooftop ledges",
-        "D": "Provided with this protection, successful breeding"
+        "A": "By shielding the nests from severe weather",
+        "B": "By shielding the nests from severe weather, the ledges",
+        "C": "Shielded from severe weather, the ledges",
+        "D": "Shielding the nests from severe weather, greater nesting success"
       },
       "correctAnswer": "A",
-      "explanation": "Choice A creates the complete sentence 'By providing this protection, the rooftop ledges may help some pairs raise chicks successfully.' The introductory phrase logically modifies 'the rooftop ledges,' which are the things providing the protection. The other choices create incomplete or illogical modifier structures.",
+      "explanation": "Choice A creates the complete sentence 'By shielding the nests from severe weather, the ledges may help some peregrine pairs raise chicks successfully.' The introductory phrase logically modifies 'the ledges,' which are the things doing the shielding. B repeats the subject in an illogical structure, while C and D create dangling or misplaced modifiers.",
       "status": "staged"
     },
     {
@@ -1616,16 +1616,16 @@
       "domain": "Standard English Conventions",
       "skill": "Form, Structure, and Sense",
       "difficulty": "medium",
-      "passage": "Biologists at McGill University compared peregrine falcon nests on rooftop ledges with nests on other building surfaces in Montreal during the 2022 breeding season. Ledge-supported pairs generally fledged more chicks, but the researchers also found that productive feeding areas and low levels of nearby disturbance were associated with greater nesting success. The team also noted which nesting sites experienced construction activity during the same period. By the end of the breeding season, the researchers ______ data from ledge and non-ledge nests and compared fledgling counts with local feeding conditions.",
+      "passage": "At McGill University, researchers compared peregrine nests on rooftop ledges with nests on other building surfaces in Montreal. Ledge-supported pairs generally fledged more chicks, but the team also recorded the availability of nearby prey and the amount of construction activity around each nest. Monitoring began early in the 2022 breeding season and continued until the last chicks left the nests. The researchers used the same measures at each site so that they could compare shelter with other local conditions. By the end of the breeding season, the team ______ data from ledge and non-ledge nests and compared the results with prey availability and disturbance levels.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "choices": {
-        "A": "had compiled",
-        "B": "have compiled",
-        "C": "compile",
+        "A": "had been compiling",
+        "B": "has compiled",
+        "C": "compiled",
         "D": "will compile"
       },
       "correctAnswer": "A",
-      "explanation": "The phrase 'By the end of the breeding season' refers to a point in the past, and the compiling occurred before that point. 'Had compiled' correctly places the completed data collection before the later past reference. The other choices do not express that past-before-past relationship as precisely.",
+      "explanation": "The passage describes an activity that began earlier in the breeding season and continued until a later past point, 'the end of the breeding season.' 'Had been compiling' correctly expresses that ongoing activity leading up to the later past point. C states that the compiling occurred but does not express its duration, while B and D do not fit the passage's past-time framework.",
       "status": "staged"
     },
     {
@@ -1635,16 +1635,16 @@
       "domain": "Standard English Conventions",
       "skill": "Form, Structure, and Sense",
       "difficulty": "hard",
-      "passage": "At McGill University, biologists initially found that peregrine pairs using rooftop nesting ledges fledged more chicks than pairs using other building surfaces. Because the ledges sheltered nests from heavy rain and falling debris, researchers considered physical protection a likely explanation. Yet many ledges stood on taller buildings near open river corridors where prey was plentiful, so the difference could also have reflected better feeding opportunities. To separate these possibilities, the researchers compared ledge and non-ledge nests within similar districts and still found higher fledgling counts among many ledge pairs. That comparison made the shelter explanation more convincing, but it did not explain every result. Several ledges near active construction had failed nesting attempts despite providing physical protection. The researchers then tracked prey deliveries during the following breeding season and found that, among relatively quiet sites, pairs receiving more food were not always the pairs on the most sheltered ledges. ______ Their final comparisons therefore required them to consider protection, disturbance, and food availability together when interpreting nesting success.",
+      "passage": "At McGill University, biologists initially found that peregrine pairs using rooftop nesting ledges fledged more chicks than pairs using other building surfaces. Because the ledges shielded nests from heavy rain and falling debris, physical protection seemed like a plausible explanation. Yet many ledges were on taller buildings beside open river corridors where prey was plentiful, leaving open the possibility that food access partly explained the pattern. The researchers then compared ledge and non-ledge nests within similar districts and still found higher fledgling counts among many ledge pairs. That result strengthened the protection explanation, but several ledges near active construction nevertheless had failed nesting attempts. During the following breeding season, the team tracked prey deliveries more closely and found that, among relatively quiet sites, pairs receiving more food were not always those on the most sheltered ledges. ______ The team then separated nests by disturbance level when comparing fledgling counts across sites.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English and most precisely expresses the relationship among the evidence described?",
       "choices": {
-        "A": "Because rooftop ledges were associated with higher fledgling counts, the researchers concluded that protection alone explained the differences.",
-        "B": "Providing physical protection from weather, the researchers found that prey availability was unrelated to fledgling success.",
-        "C": "The researchers found that, although ledges could provide useful protection, greater fledgling success could not be attributed to the ledges alone.",
-        "D": "Although ledges could provide useful protection, attributed to them alone greater fledgling success was not by the researchers."
+        "A": "Because the ledges protected nests, the researchers concluded that food access and disturbance had little effect on nesting success.",
+        "B": "Although ledges were associated with higher fledgling counts, the later comparisons showed that site conditions could strengthen or offset that advantage.",
+        "C": "The ledges protected nests, and the later comparisons showed that site conditions could strengthen or offset that advantage, although.",
+        "D": "Having found higher fledgling counts, site conditions could strengthen or offset the advantage of the ledges."
       },
-      "correctAnswer": "C",
-      "explanation": "The passage first supports a protection-based explanation, then shows that location, disturbance, and prey availability can also affect the outcome. Choice C states the resulting qualified conclusion in a grammatical and logically ordered structure: ledges may help, but the higher fledgling counts cannot be attributed to them alone. A stops at the initial interpretation, B ignores the later prey evidence, and D uses an illogical word order.",
+      "correctAnswer": "B",
+      "explanation": "The passage first supports a protection-based explanation, then introduces food availability as an alternative and later shows that disturbance can also weaken the apparent advantage of ledges. Choice B correctly uses a concessive structure to combine the original association with the later qualification: ledges can help, but site conditions also affect the outcome. A stops at the initial interpretation, while C and D are grammatically or structurally defective.",
       "status": "staged"
     }
   ]
