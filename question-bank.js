@@ -1271,6 +1271,31 @@ function createQuestionIcon(question) {
     button.addEventListener(
         "click",
         () => {
+            const filteredQuestions =
+                getFilteredQuestions();
+
+            try {
+                sessionStorage.setItem(
+                    "absoluteprep-question-bank-navigation",
+                    JSON.stringify({
+                        questionIds:
+                            filteredQuestions.map(
+                                filteredQuestion =>
+                                    String(
+                                        filteredQuestion.id
+                                    )
+                            ),
+                        currentQuestionId:
+                            String(question.id)
+                    })
+                );
+            } catch (error) {
+                console.warn(
+                    "Could not save Question Bank navigation state:",
+                    error
+                );
+            }
+
             window.location.href =
                 "/question?id=" +
                 encodeURIComponent(
