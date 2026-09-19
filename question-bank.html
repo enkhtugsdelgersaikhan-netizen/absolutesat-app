@@ -15,7 +15,7 @@
     >
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="question-bank.css?v=3">
+    <link rel="stylesheet" href="question-bank.css?v=4">
 </head>
 
 <body>
@@ -190,13 +190,13 @@
                     Topic
                 </label>
 
-                <select id="topic-filter">
-
-                    <option value="all">
-                        All Topics
-                    </option>
-
-                </select>
+                <div class="filter-dropdown" id="topic-filter" data-filter="topic" data-value="all">
+    <button type="button" class="filter-dropdown-trigger" aria-haspopup="listbox" aria-expanded="false">
+        <span class="filter-dropdown-value">All Topics</span>
+        <span class="filter-dropdown-chevron" aria-hidden="true">⌄</span>
+    </button>
+    <div class="filter-dropdown-menu" role="listbox"></div>
+</div>
 
             </div>
 
@@ -209,25 +209,18 @@
                     Difficulty
                 </label>
 
-                <select id="difficulty-filter">
-
-                    <option value="all">
-                        All Difficulties
-                    </option>
-
-                    <option value="Easy">
-                        Easy
-                    </option>
-
-                    <option value="Medium">
-                        Medium
-                    </option>
-
-                    <option value="Hard">
-                        Hard
-                    </option>
-
-                </select>
+                <div class="filter-dropdown" id="difficulty-filter" data-filter="difficulty" data-value="all">
+    <button type="button" class="filter-dropdown-trigger" aria-haspopup="listbox" aria-expanded="false">
+        <span class="filter-dropdown-value">All Difficulties</span>
+        <span class="filter-dropdown-chevron" aria-hidden="true">⌄</span>
+    </button>
+    <div class="filter-dropdown-menu" role="listbox">
+        <button type="button" class="filter-dropdown-option active" role="option" data-value="all" aria-selected="true">All Difficulties</button>
+        <button type="button" class="filter-dropdown-option" role="option" data-value="Easy" aria-selected="false">Easy</button>
+        <button type="button" class="filter-dropdown-option" role="option" data-value="Medium" aria-selected="false">Medium</button>
+        <button type="button" class="filter-dropdown-option" role="option" data-value="Hard" aria-selected="false">Hard</button>
+    </div>
+</div>
 
             </div>
 
@@ -240,25 +233,18 @@
                     Status
                 </label>
 
-                <select id="status-filter">
-
-                    <option value="all">
-                        All Questions
-                    </option>
-
-                    <option value="unanswered">
-                        Unanswered
-                    </option>
-
-                    <option value="correct">
-                        Correct
-                    </option>
-
-                    <option value="incorrect">
-                        Incorrect
-                    </option>
-
-                </select>
+                <div class="filter-dropdown" id="status-filter" data-filter="status" data-value="all">
+    <button type="button" class="filter-dropdown-trigger" aria-haspopup="listbox" aria-expanded="false">
+        <span class="filter-dropdown-value">All Questions</span>
+        <span class="filter-dropdown-chevron" aria-hidden="true">⌄</span>
+    </button>
+    <div class="filter-dropdown-menu" role="listbox">
+        <button type="button" class="filter-dropdown-option active" role="option" data-value="all" aria-selected="true">All Questions</button>
+        <button type="button" class="filter-dropdown-option" role="option" data-value="unanswered" aria-selected="false">Unanswered</button>
+        <button type="button" class="filter-dropdown-option" role="option" data-value="correct" aria-selected="false">Correct</button>
+        <button type="button" class="filter-dropdown-option" role="option" data-value="incorrect" aria-selected="false">Incorrect</button>
+    </div>
+</div>
 
             </div>
 
@@ -677,7 +663,7 @@
 <script src="auth-guard.js"></script>
 <script src="auth.js"></script>
 
-<script src="question-bank.js?v=4"></script>
+<script src="question-bank.js?v=5"></script>
 
 
 <script>
