@@ -848,7 +848,7 @@
       "skill": "Rhetorical Synthesis",
       "difficulty": "easy",
       "passage": "A city archive is preparing a public exhibit about an 1890 map of the Riverside district. The map records streets and buildings that have since disappeared, making it useful for showing how the neighborhood once looked. However, some boundaries on the map differ from those recorded in a later city survey. Property records indicate that several Riverside parcels changed over time. The exhibit should present the map as historically valuable without suggesting that every feature matches later records exactly.",
-      "question": "Which choice most effectively uses the information from the passage to accomplish this goal?",
+      "question": "Which choice most effectively uses the information from the passage to accomplish this goal?\n\n**Goal:** Explain why the 1890 map remains useful for documenting Riverside's earlier appearance while acknowledging that some of its boundaries differ from later records.",
       "choices": {
         "A": "The 1890 map of Riverside records streets and buildings that later disappeared from the neighborhood.",
         "B": "A later city survey provides information about Riverside that differs from some features shown on the 1890 map.",
@@ -867,7 +867,7 @@
       "skill": "Rhetorical Synthesis",
       "difficulty": "medium",
       "passage": "A city archive is preparing a public exhibit about an 1890 map of the Riverside district. The map shows streets and buildings that have since disappeared, so curators want visitors to understand why the map remains useful for reconstructing the neighborhood's history. A later city survey, however, does not match several of the map's property boundaries. Property records indicate that some parcels were repeatedly divided or recombined between the two dates, suggesting that the differences do not necessarily mean the older map was inaccurate. The exhibit should therefore present the map's value while avoiding the implication that its boundaries should match later records exactly.",
-      "question": "Which choice most effectively uses the information from the passage to accomplish this goal?",
+      "question": "Which choice most effectively uses the information from the passage to accomplish this goal?\n\n**Goal:** Explain why the 1890 map remains useful for reconstructing Riverside's history while avoiding the implication that its boundaries should match later records exactly.",
       "choices": {
         "A": "Although some Riverside boundaries differ between the 1890 map and a later survey, records of changing parcels help explain the differences without eliminating the map's value as evidence of the neighborhood's history.",
         "B": "The 1890 map is especially useful because it shows Riverside streets and buildings that no longer exist.",
