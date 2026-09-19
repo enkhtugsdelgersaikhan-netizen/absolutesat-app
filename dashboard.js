@@ -34,6 +34,31 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
 
             try {
+                const statusKey =
+                    "absoluteprep-question-status:" +
+                    user.id;
+
+                const reviewKey =
+                    "absoluteprep-question-reviews:" +
+                    user.id;
+
+                const resetKey =
+                    "absoluteprep-practice-reset:" +
+                    user.id;
+
+                /*
+                 * Mark the local reset first. This guarantees the
+                 * interface stays reset even if an older server row
+                 * cannot be deleted because of a database policy.
+                 */
+                localStorage.setItem(
+                    resetKey,
+                    new Date().toISOString()
+                );
+
+                localStorage.removeItem(statusKey);
+                localStorage.removeItem(reviewKey);
+
                 const tables = [
                     "question_answers",
                     "question_set_attempts",
@@ -41,19 +66,44 @@ document.addEventListener("DOMContentLoaded", async () => {
                     "question_reviews"
                 ];
 
+                const serverErrors = [];
+
                 for (const table of tables) {
-                    const { error } = await absolutePrepSupabase
-                        .from(table)
-                        .delete()
-                        .eq("user_id", user.id);
+                    const { error } =
+                        await absolutePrepSupabase
+                            .from(table)
+                            .delete()
+                            .eq(
+                                "user_id",
+                                user.id
+                            );
 
                     if (error) {
-                        throw new Error(`Could not reset ${table}: ${error.message}`);
+                        console.warn(
+                            "Could not reset " +
+                                table +
+                                ":",
+                            error
+                        );
+
+                        serverErrors.push(
+                            table
+                        );
                     }
                 }
 
-                window.alert("All practice data has been reset.");
+                if (serverErrors.length > 0) {
+                    window.alert(
+                        "Your practice data has been reset on this device. Some older server records could not be deleted."
+                    );
+                } else {
+                    window.alert(
+                        "All practice data has been reset."
+                    );
+                }
+
                 window.location.reload();
+
             } catch (error) {
                 console.error("Practice data reset error:", error);
                 resetButton.disabled = false;
