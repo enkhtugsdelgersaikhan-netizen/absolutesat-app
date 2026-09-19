@@ -568,16 +568,37 @@ async function goToNextQuestion() {
 
     renderCurrentQuestion();
 
-    if (questionPassage) {
-        requestAnimationFrame(
-            () => {
-                questionPassage.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                });
+    requestAnimationFrame(
+        () => {
+            const topbar =
+                document.querySelector(
+                    ".question-topbar"
+                );
+
+            if (!topbar) {
+                return;
             }
-        );
-    }
+
+            const topbarTop =
+                topbar.getBoundingClientRect().top +
+                window.scrollY;
+
+            const offset =
+                Math.max(
+                    16,
+                    window.innerHeight * 0.025
+                );
+
+            window.scrollTo({
+                top:
+                    Math.max(
+                        0,
+                        topbarTop - offset
+                    ),
+                behavior: "smooth"
+            });
+        }
+    )
 }
 
 
@@ -2041,7 +2062,7 @@ function renderAnswerFeedback(
             true;
 
         checkAnswerButton.textContent =
-            "Answer Checked";
+            "Check the selected answer";
     }
 
 }
