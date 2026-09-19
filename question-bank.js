@@ -397,6 +397,224 @@ async function loadQuestions() {
     renderQuestions();
 }
 
+function getDropdownValue(
+    dropdown
+) {
+    return dropdown?.dataset.value || "all";
+}
+
+function setDropdownValue(
+    dropdown,
+    value,
+    label
+) {
+    if (!dropdown) return;
+
+    dropdown.dataset.value = value;
+
+    const valueElement =
+        dropdown.querySelector(
+            ".filter-dropdown-value"
+        );
+
+    if (valueElement) {
+        valueElement.textContent =
+            label ?? value;
+    }
+
+    dropdown
+        .querySelectorAll(
+            ".filter-dropdown-option"
+        )
+        .forEach(option => {
+            const active =
+                option.dataset.value ===
+                String(value);
+
+            option.classList.toggle(
+                "active",
+                active
+            );
+
+            option.setAttribute(
+                "aria-selected",
+                active
+                    ? "true"
+                    : "false"
+            );
+        });
+}
+
+function closeAllDropdowns(
+    except = null
+) {
+    document
+        .querySelectorAll(
+            ".filter-dropdown.open"
+        )
+        .forEach(dropdown => {
+            if (dropdown !== except) {
+                dropdown.classList.remove(
+                    "open"
+                );
+
+                dropdown
+                    .querySelector(
+                        ".filter-dropdown-trigger"
+                    )
+                    ?.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+            }
+        });
+}
+
+function setupFilterDropdown(
+    dropdown,
+    onChange
+) {
+    if (!dropdown) return;
+
+    const trigger =
+        dropdown.querySelector(
+            ".filter-dropdown-trigger"
+        );
+
+    const menu =
+        dropdown.querySelector(
+            ".filter-dropdown-menu"
+        );
+
+    if (!trigger || !menu) return;
+
+    trigger.addEventListener(
+        "click",
+        event => {
+            event.stopPropagation();
+
+            const open =
+                !dropdown.classList.contains(
+                    "open"
+                );
+
+            closeAllDropdowns(
+                dropdown
+            );
+
+            dropdown.classList.toggle(
+                "open",
+                open
+            );
+
+            trigger.setAttribute(
+                "aria-expanded",
+                open
+                    ? "true"
+                    : "false"
+            );
+        }
+    );
+
+    menu.addEventListener(
+        "click",
+        event => {
+            const option =
+                event.target.closest(
+                    ".filter-dropdown-option"
+                );
+
+            if (!option) return;
+
+            event.stopPropagation();
+
+            const value =
+                option.dataset.value ||
+                "all";
+
+            setDropdownValue(
+                dropdown,
+                value,
+                option.textContent.trim()
+            );
+
+            dropdown.classList.remove(
+                "open"
+            );
+
+            trigger.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            onChange(value);
+        }
+    );
+
+    dropdown.addEventListener(
+        "keydown",
+        event => {
+            if (event.key === "Escape") {
+                dropdown.classList.remove(
+                    "open"
+                );
+
+                trigger.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                trigger.focus();
+            }
+        }
+    );
+}
+
+function setDropdownOptions(
+    dropdown,
+    options
+) {
+    if (!dropdown) return;
+
+    const menu =
+        dropdown.querySelector(
+            ".filter-dropdown-menu"
+        );
+
+    if (!menu) return;
+
+    menu.innerHTML =
+        options
+            .map(option => `
+                <button
+                    type="button"
+                    class="filter-dropdown-option"
+                    role="option"
+                    data-value="${escapeHtml(option.value)}"
+                    aria-selected="false"
+                >
+                    ${escapeHtml(option.label)}
+                </button>
+            `)
+            .join("");
+
+    const currentValue =
+        getDropdownValue(dropdown);
+
+    const current =
+        options.find(
+            option =>
+                String(option.value) ===
+                String(currentValue)
+        ) || options[0];
+
+    setDropdownValue(
+        dropdown,
+        current.value,
+        current.label
+    );
+}
+
 function populateTopicFilter() {
     if (!topicFilter) return;
 
@@ -421,24 +639,27 @@ function populateTopicFilter() {
         }
     );
 
-    topicFilter.innerHTML =
-        '<option value="all">All Topics</option>';
+    const options = [
+        {
+            value: "all",
+            label: "All Topics"
+        },
+        ...[...values.entries()]
+            .sort((a, b) =>
+                a[1].localeCompare(b[1])
+            )
+            .map(
+                ([value, label]) => ({
+                    value,
+                    label
+                })
+            )
+    ];
 
-    [...values.values()]
-        .sort()
-        .forEach(value => {
-            const option =
-                document.createElement(
-                    "option"
-                );
-
-            option.value = value;
-            option.textContent = value;
-
-            topicFilter.appendChild(
-                option
-            );
-        });
+    setDropdownOptions(
+        topicFilter,
+        options
+    );
 }
 
 function getFilteredQuestions() {
@@ -903,41 +1124,29 @@ if (searchInput) {
     );
 }
 
-if (topicFilter) {
-    topicFilter.addEventListener(
-        "change",
-        event => {
-            activeTopic =
-                event.target.value;
+setupFilterDropdown(
+    topicFilter,
+    value => {
+        activeTopic = value;
+        renderQuestions();
+    }
+);
 
-            renderQuestions();
-        }
-    );
-}
+setupFilterDropdown(
+    difficultyFilter,
+    value => {
+        activeDifficulty = value;
+        renderQuestions();
+    }
+);
 
-if (difficultyFilter) {
-    difficultyFilter.addEventListener(
-        "change",
-        event => {
-            activeDifficulty =
-                event.target.value;
-
-            renderQuestions();
-        }
-    );
-}
-
-if (statusFilter) {
-    statusFilter.addEventListener(
-        "change",
-        event => {
-            activeStatus =
-                event.target.value;
-
-            renderQuestions();
-        }
-    );
-}
+setupFilterDropdown(
+    statusFilter,
+    value => {
+        activeStatus = value;
+        renderQuestions();
+    }
+);
 
 if (reviewOnlyCheckbox) {
     reviewOnlyCheckbox.addEventListener(
@@ -973,14 +1182,28 @@ sectionTabs.forEach(
 
                 activeTopic = "all";
 
-                if (topicFilter) {
-                    topicFilter.value =
-                        "all";
-                }
+                setDropdownValue(
+                    topicFilter,
+                    "all",
+                    "All Topics"
+                );
 
                 renderQuestions();
             }
         );
+    }
+);
+
+document.addEventListener(
+    "click",
+    event => {
+        if (
+            !event.target.closest(
+                ".filter-dropdown"
+            )
+        ) {
+            closeAllDropdowns();
+        }
     }
 );
 
