@@ -413,7 +413,7 @@ async function loadQuestions() {
 
         const stagedResponse =
             await fetch(
-                "/data/question-bank.json",
+                "/question-bank.json",
                 {
                     cache: "no-store"
                 }
