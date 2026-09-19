@@ -4,10 +4,10 @@ const questionBankSupabase = supabaseClient;
 let allQuestions = [];
 let activeSection = "Reading & Writing";
 let activeSearch = "";
-let activeDomain = "all";
-let activeSubtopic = "all";
-let activeDifficulty = "all";
-let activeStatus = "all";
+let activeDomain = [];
+let activeSubtopic = [];
+let activeDifficulty = [];
+let activeStatus = [];
 let reviewOnly = false;
 
 let userAttempts = [];
@@ -789,29 +789,67 @@ async function loadQuestions() {
     renderQuestions();
 }
 
-function getDropdownValue(
-    dropdown
-) {
-    return dropdown?.dataset.value || "all";
+
+function getDropdownValues(dropdown) {
+    if (!dropdown) return [];
+
+    try {
+        const parsed = JSON.parse(
+            dropdown.dataset.values || "[]"
+        );
+
+        return Array.isArray(parsed)
+            ? parsed
+            : [];
+    } catch {
+        return [];
+    }
 }
 
-function setDropdownValue(
+function setDropdownSelections(
     dropdown,
-    value,
-    label
+    values,
+    options
 ) {
     if (!dropdown) return;
 
-    dropdown.dataset.value = value;
+    const selectedValues = Array.isArray(values)
+        ? values.filter(value => value !== "all")
+        : [];
+
+    dropdown.dataset.values = JSON.stringify(
+        selectedValues
+    );
 
     const valueElement =
         dropdown.querySelector(
             ".filter-dropdown-value"
         );
 
+    const allOption =
+        options.find(
+            option => option.value === "all"
+        );
+
     if (valueElement) {
-        valueElement.textContent =
-            label ?? value;
+        if (selectedValues.length === 0) {
+            valueElement.textContent =
+                allOption?.label || "All";
+        } else {
+            const labels = selectedValues
+                .map(value => {
+                    const match = options.find(
+                        option =>
+                            String(option.value) ===
+                            String(value)
+                    );
+
+                    return match?.label || value;
+                });
+
+            valueElement.textContent =
+                labels.join(", ");
+        }
     }
 
     dropdown
@@ -819,9 +857,13 @@ function setDropdownValue(
             ".filter-dropdown-option"
         )
         .forEach(option => {
+            const value =
+                option.dataset.value || "all";
+
             const active =
-                option.dataset.value ===
-                String(value);
+                value === "all"
+                    ? selectedValues.length === 0
+                    : selectedValues.includes(value);
 
             option.classList.toggle(
                 "active",
@@ -921,25 +963,35 @@ function setupFilterDropdown(
             event.stopPropagation();
 
             const value =
-                option.dataset.value ||
-                "all";
+                option.dataset.value || "all";
 
-            setDropdownValue(
-                dropdown,
-                value,
-                option.textContent.trim()
-            );
+            const currentValues =
+                getDropdownValues(
+                    dropdown
+                );
 
-            dropdown.classList.remove(
-                "open"
-            );
+            let nextValues = [
+                ...currentValues
+            ];
 
-            trigger.setAttribute(
-                "aria-expanded",
-                "false"
-            );
+            if (value === "all") {
+                nextValues = [];
+            } else if (
+                nextValues.includes(value)
+            ) {
+                nextValues =
+                    nextValues.filter(
+                        selected =>
+                            selected !== value
+                    );
+            } else {
+                nextValues.push(value);
+            }
 
-            onChange(value);
+            onChange(nextValues);
+
+            // Re-rendering the menu keeps the dropdown
+            // open and makes multi-selection easy.
         }
     );
 
@@ -964,7 +1016,8 @@ function setupFilterDropdown(
 
 function setDropdownOptions(
     dropdown,
-    options
+    options,
+    selectedValues = []
 ) {
     if (!dropdown) return;
 
@@ -985,44 +1038,33 @@ function setDropdownOptions(
                     data-value="${escapeHtml(option.value)}"
                     aria-selected="false"
                 >
-                    ${escapeHtml(option.label)}
+                    <span class="filter-option-check" aria-hidden="true"></span>
+                    <span>${escapeHtml(option.label)}</span>
                 </button>
             `)
             .join("");
 
-    const currentValue =
-        getDropdownValue(dropdown);
-
-    const current =
-        options.find(
-            option =>
-                String(option.value) ===
-                String(currentValue)
-        ) || options[0];
-
-    setDropdownValue(
+    setDropdownSelections(
         dropdown,
-        current.value,
-        current.label
+        selectedValues,
+        options
     );
 }
 
-function getDomainsForSection() {
-    if (activeSection === "Reading & Writing" || activeSection === "Math") {
-        return SAT_FILTER_TAXONOMY[activeSection] || {};
-    }
 
-    return Object.assign(
-        {},
-        SAT_FILTER_TAXONOMY["Reading & Writing"],
-        SAT_FILTER_TAXONOMY["Math"]
+
+function getDomainsForSection() {
+    return (
+        SAT_FILTER_TAXONOMY[activeSection] ||
+        {}
     );
 }
 
 function populateDomainFilter() {
     if (!topicFilter) return;
 
-    const domains = getDomainsForSection();
+    const domains =
+        getDomainsForSection();
 
     const options = [
         {
@@ -1035,23 +1077,60 @@ function populateDomainFilter() {
         }))
     ];
 
-    setDropdownOptions(topicFilter, options);
-    setDropdownValue(topicFilter, activeDomain, activeDomain === "all" ? "All Domains" : activeDomain);
+    const validValues =
+        activeDomain.filter(
+            value =>
+                Object.prototype.hasOwnProperty.call(
+                    domains,
+                    value
+                )
+        );
+
+    activeDomain = validValues;
+
+    setDropdownOptions(
+        topicFilter,
+        options,
+        activeDomain
+    );
 }
 
 function populateSubtopicFilter() {
     if (!subtopicFilter) return;
 
-    const domains = getDomainsForSection();
+    const domains =
+        getDomainsForSection();
+
     let subtopics = [];
 
-    if (activeDomain === "all") {
-        subtopics = Object.values(domains).flat();
-    } else if (domains[activeDomain]) {
-        subtopics = domains[activeDomain];
+    if (activeDomain.length === 0) {
+        subtopics =
+            Object.values(domains).flat();
+    } else {
+        activeDomain.forEach(
+            domain => {
+                if (domains[domain]) {
+                    subtopics.push(
+                        ...domains[domain]
+                    );
+                }
+            }
+        );
     }
 
-    const uniqueSubtopics = [...new Set(subtopics)];
+    const uniqueSubtopics =
+        [...new Set(subtopics)];
+
+    const validValues =
+        activeSubtopic.filter(
+            value =>
+                uniqueSubtopics.includes(
+                    value
+                )
+        );
+
+    activeSubtopic =
+        validValues;
 
     const options = [
         {
@@ -1064,29 +1143,21 @@ function populateSubtopicFilter() {
         }))
     ];
 
-    setDropdownOptions(subtopicFilter, options);
-
-    const stillValid =
-        activeSubtopic === "all" ||
-        uniqueSubtopics.includes(activeSubtopic);
-
-    if (!stillValid) {
-        activeSubtopic = "all";
-    }
-
-    setDropdownValue(
+    setDropdownOptions(
         subtopicFilter,
-        activeSubtopic,
-        activeSubtopic === "all" ? "All Subtopics" : activeSubtopic
+        options,
+        activeSubtopic
     );
 }
+
+
 
 
 function getFilteredQuestions() {
     let questions =
         [...allQuestions];
 
-    if (activeSection !== "all") {
+    if (activeSection) {
         questions =
             questions.filter(
                 question =>
@@ -1117,40 +1188,41 @@ function getFilteredQuestions() {
                         .filter(Boolean)
                         .join(" ")
                         .toLowerCase()
-                        .includes(
-                            search
-                        )
+                        .includes(search)
             );
     }
 
-    if (activeDomain !== "all") {
+    if (activeDomain.length > 0) {
         questions =
             questions.filter(
                 question =>
-                    question.domain ===
-                    activeDomain
+                    activeDomain.includes(
+                        question.domain
+                    )
             );
     }
 
-    if (activeSubtopic !== "all") {
+    if (activeSubtopic.length > 0) {
         questions =
             questions.filter(
                 question =>
-                    question.topic ===
-                    activeSubtopic
+                    activeSubtopic.includes(
+                        question.topic
+                    )
             );
     }
 
-    if (activeDifficulty !== "all") {
+    if (activeDifficulty.length > 0) {
         questions =
             questions.filter(
                 question =>
-                    question.difficulty ===
-                    activeDifficulty
+                    activeDifficulty.includes(
+                        question.difficulty
+                    )
             );
     }
 
-    if (activeStatus !== "all") {
+    if (activeStatus.length > 0) {
         questions =
             questions.filter(
                 question => {
@@ -1159,18 +1231,51 @@ function getFilteredQuestions() {
                             question.id
                         );
 
-                    if (activeStatus === "solved") {
-                        return status !== "unanswered";
-                    }
+                    return activeStatus.some(
+                        selectedStatus => {
+                            if (
+                                selectedStatus ===
+                                "solved"
+                            ) {
+                                return (
+                                    status !==
+                                    "unanswered"
+                                );
+                            }
 
-                    if (activeStatus === "review") {
-                        return isQuestionMarkedForReview(
-                            question.id
-                        );
-                    }
+                            if (
+                                selectedStatus ===
+                                "correct"
+                            ) {
+                                return (
+                                    status ===
+                                    "correct"
+                                );
+                            }
 
-                    return status ===
-                        activeStatus;
+                            if (
+                                selectedStatus ===
+                                "incorrect"
+                            ) {
+                                return (
+                                    status ===
+                                    "incorrect"
+                                );
+                            }
+
+                            if (
+                                selectedStatus ===
+                                "unanswered"
+                            ) {
+                                return (
+                                    status ===
+                                    "unanswered"
+                                );
+                            }
+
+                            return false;
+                        }
+                    );
                 }
             );
     }
@@ -1187,6 +1292,7 @@ function getFilteredQuestions() {
 
     return questions;
 }
+
 
 function showLoading() {
     questionList.innerHTML =
@@ -1500,10 +1606,10 @@ function renderQuestions() {
                 activeSection
         ).length &&
         !activeSearch &&
-        activeDomain === "all" &&
-        activeSubtopic === "all" &&
-        activeDifficulty === "all" &&
-        activeStatus === "all" &&
+        activeDomain.length === 0 &&
+        activeSubtopic.length === 0 &&
+        activeDifficulty.length === 0 &&
+        activeStatus.length === 0 &&
         !reviewOnly
             ? "in this section"
             : "matching your filters";
@@ -1573,9 +1679,10 @@ if (searchInput) {
 
 setupFilterDropdown(
     topicFilter,
-    value => {
-        activeDomain = value;
-        activeSubtopic = "all";
+    values => {
+        activeDomain = values;
+        activeSubtopic = [];
+        populateDomainFilter();
         populateSubtopicFilter();
         renderQuestions();
     }
@@ -1583,24 +1690,24 @@ setupFilterDropdown(
 
 setupFilterDropdown(
     subtopicFilter,
-    value => {
-        activeSubtopic = value;
+    values => {
+        activeSubtopic = values;
         renderQuestions();
     }
 );
 
 setupFilterDropdown(
     difficultyFilter,
-    value => {
-        activeDifficulty = value;
+    values => {
+        activeDifficulty = values;
         renderQuestions();
     }
 );
 
 setupFilterDropdown(
     statusFilter,
-    value => {
-        activeStatus = value;
+    values => {
+        activeStatus = values;
         renderQuestions();
     }
 );
@@ -1637,8 +1744,10 @@ sectionTabs.forEach(
                     tab.dataset.section ||
                     "Reading & Writing";
 
-                activeDomain = "all";
-                activeSubtopic = "all";
+                activeDomain = [];
+                activeSubtopic = [];
+                activeDifficulty = [];
+                activeStatus = [];
 
                 populateDomainFilter();
                 populateSubtopicFilter();
