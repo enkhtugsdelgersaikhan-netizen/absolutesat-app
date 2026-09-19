@@ -1668,6 +1668,11 @@ function updateReviewButton() {
         marked
     );
 
+    reviewButton.setAttribute(
+        "aria-pressed",
+        marked ? "true" : "false"
+    );
+
 
     reviewText.textContent =
         marked
