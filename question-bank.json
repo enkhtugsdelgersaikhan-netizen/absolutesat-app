@@ -497,6 +497,63 @@
       "correctAnswer": "C",
       "explanation": "The passage creates an apparent tension: Mesa produced the most electricity but converted the smallest percentage of incoming sunlight. The student must recognize that these are different measurements, then use the table to resolve the tension rather than treating one measure as disproving the other. A incorrectly minimizes the importance of sunlight exposure, B turns one performance measure into an overall ranking, and D treats an observed temperature-efficiency pattern as proof of causation that the passage explicitly does not establish.",
       "status": "staged"
+    },
+    {
+      "id": "rw-tree-rings-001-easy",
+      "groupId": "rw-tree-rings-001",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "easy",
+      "passage": "At the University of Arizona Laboratory of Tree-Ring Research, scientists study the annual growth rings of ponderosa pines in northern Arizona. In years with more rainfall, these trees often form wider rings. Because rainfall from centuries ago was not measured directly, researchers can use tree-ring width as a **proxy** for past precipitation. Thus, the rings provide an indirect way to estimate how wet earlier periods were.",
+      "question": "As used in the text, what does **“proxy”** most nearly mean?",
+      "choices": {
+        "A": "A feature that changes independently of environmental conditions",
+        "B": "A record that reveals exactly how much rain fell",
+        "C": "A method for predicting where trees will grow",
+        "D": "A substitute measure used to estimate something indirectly"
+      },
+      "correctAnswer": "D",
+      "explanation": "The passage explains that past rainfall was not measured directly, so researchers use tree-ring width to estimate it. Therefore, proxy refers to a substitute measure that provides indirect information about something else.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-tree-rings-001-medium",
+      "groupId": "rw-tree-rings-001",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "medium",
+      "passage": "Researchers at the University of Arizona Laboratory of Tree-Ring Research have used ponderosa pine chronologies from northern Arizona to reconstruct rainfall patterns from periods before weather instruments were available. Wider rings often occur during wetter years, so ring width can serve as a **proxy** for precipitation. The relationship is not exact, however, because temperature, soil conditions, and other environmental factors can also affect growth. Researchers therefore compare many trees and calibrate their ring patterns against periods for which instrumental rainfall measurements are available. Once those influences are taken into account, variations in tree growth can provide evidence about rainfall that was never directly recorded.",
+      "question": "As used in the text, what does **“proxy”** most nearly mean?",
+      "choices": {
+        "A": "A collection of measurements used to distinguish one tree from another",
+        "B": "An indirect indicator used to estimate a quantity that was not directly observed",
+        "C": "A complete record that can replace instrumental measurements",
+        "D": "A biological characteristic that remains unchanged under different environmental conditions"
+      },
+      "correctAnswer": "B",
+      "explanation": "The passage explains that researchers use ring patterns to infer past rainfall even though the rainfall itself was not directly measured. Because the relationship must be calibrated and other influences considered, proxy means an indirect indicator, not an exact record.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-tree-rings-001-hard",
+      "groupId": "rw-tree-rings-001",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "hard",
+      "passage": "At the University of Arizona Laboratory of Tree-Ring Research, scientists use ponderosa pine chronologies from northern Arizona to examine climate conditions that existed before systematic weather measurements. A wide ring may be associated with a wetter year, but the same measurement can also reflect temperature, soil moisture, competition, or other influences on growth. Researchers therefore do not treat an individual ring as a preserved record of the rainfall that produced it. Instead, they compare patterns across many trees and test those patterns against periods for which instrumental observations are available. A relationship that remains consistent after these comparisons can then be used when interpreting older portions of the chronology. This approach allows researchers to extract information about precipitation even though no rain gauge recorded the original conditions. In other words, the usefulness of ring width depends on its ability to stand in for a variable that was not measured directly, provided that the relationship between the measurement and that variable has been established carefully.",
+      "question": "As used in the text, what does **“proxy”** most nearly mean?",
+      "choices": {
+        "A": "A measurement that becomes unreliable whenever more than one environmental factor affects it",
+        "B": "A direct record preserved from the period being studied",
+        "C": "A measurement used in place of a directly observed variable because a reliable relationship has been established between them",
+        "D": "A preliminary observation that must ultimately be discarded once instrumental records become available"
+      },
+      "correctAnswer": "C",
+      "explanation": "The passage does not treat ring width as a direct record of rainfall. Instead, researchers establish a reliable relationship between ring patterns and instrumental precipitation data and then use that relationship to interpret earlier periods for which direct measurements do not exist. Thus, proxy refers to a measurement that stands in for another variable whose value was not directly observed.",
+      "status": "staged"
     }
   ]
 }
