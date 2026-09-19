@@ -1532,6 +1532,63 @@
       "correctAnswer": "B",
       "explanation": "The passage establishes a monitoring activity that began in 2018 and continued through the two years before the full restoration began in 2021. 'Had been monitoring' correctly presents that ongoing activity as extending up to a later past event. Choice A only states that the monitoring occurred without expressing its duration leading to 2021, while C and D do not fit the passage's past-time framework.",
       "status": "staged"
+    },
+    {
+      "id": "rw-beaver-dams-form-001-easy",
+      "groupId": "rw-beaver-dams-form-001",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Form, Structure, and Sense",
+      "difficulty": "easy",
+      "passage": "Researchers studying beaver dams in Devon, England, found that the dams temporarily held back stormwater. Water moved more slowly through the dammed areas than through nearby undammed channels. ______",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English and makes the most sense in context?",
+      "choices": {
+        "A": "This slowing of water can reduce the amount of water reaching downstream areas at once.",
+        "B": "The researchers, whose measurements were collected during several storms.",
+        "C": "Because downstream areas received water at different times.",
+        "D": "Beaver dams, which are structures that can alter the movement of water."
+      },
+      "correctAnswer": "A",
+      "explanation": "Choice A is the only option that forms a complete, logical sentence and connects the two preceding ideas. The passage explains that the dams slow stormwater, so the resulting effect is that less water reaches downstream areas simultaneously.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-beaver-dams-form-001-medium",
+      "groupId": "rw-beaver-dams-form-001",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Form, Structure, and Sense",
+      "difficulty": "medium",
+      "passage": "Researchers studying beaver dams in Devon, England, found that the dams temporarily held back stormwater. Measurements showed that water moved more slowly through dammed areas, and downstream channels received the water over a longer period. ______. The researchers therefore cautioned that the effect should not be treated as identical during every storm.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English and makes the most sense in context?",
+      "choices": {
+        "A": "Beaver dams are found in many landscapes, and they can alter stream habitats.",
+        "B": "The delayed movement of water can lessen the size of a downstream surge, although the effect depends on storm conditions.",
+        "C": "Stormwater is water produced when rain falls on a landscape.",
+        "D": "The researchers recorded measurements at several points along the channels."
+      },
+      "correctAnswer": "B",
+      "explanation": "Choice B connects the two relevant details: slower movement spreads the arrival of water over time, which can reduce a downstream surge. The phrase 'although the effect depends on storm conditions' supplies the important qualification that explains why the researchers did not treat the effect as universal.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-beaver-dams-form-001-hard",
+      "groupId": "rw-beaver-dams-form-001",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Form, Structure, and Sense",
+      "difficulty": "hard",
+      "passage": "Researchers studying beaver dams in Devon, England, initially had reason to associate the structures with smaller downstream surges: during monitored storms, dams stored water temporarily, and measurements showed slower movement through dammed sections. That pattern could mean that the dams themselves were primarily responsible for reducing the amount of water arriving downstream at once. Yet some of the monitored sites differed substantially in how much water they received from surrounding land, making the dams difficult to consider in isolation. In addition, a few storms produced relatively modest downstream changes even where the dams retained substantial water. Those observations left open the possibility that storage alone was not the decisive factor. Later measurements showed that when storms were especially intense, water could move around or over some dams, while the surrounding landscape still influenced how quickly runoff entered the channels. At the same time, sites with substantial storage and limited incoming runoff showed more consistent reductions in downstream surges. ______",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English and makes the most sense in context?",
+      "choices": {
+        "A": "The measurements therefore show that beaver dams consistently prevent large downstream surges, regardless of storm intensity or surrounding conditions.",
+        "B": "The findings indicate that temporary storage is an important part of the observed effect, but its influence depends on how much runoff reaches the site and how the storm interacts with the dam.",
+        "C": "The later measurements instead demonstrate that the original association between beaver dams and reduced downstream surges was mistaken.",
+        "D": "The evidence confirms the initial interpretation that the amount of water stored by a dam is the primary cause of every reduction in downstream flow."
+      },
+      "correctAnswer": "B",
+      "explanation": "Choice B reflects the full progression of the passage: early measurements support an association between dams and reduced surges, but differences among sites and storm conditions limit a simple explanation based on storage alone. The later evidence shows that storage still matters when combined with conditions such as incoming runoff and storm intensity. Choices A and D ignore those qualifications, while C goes too far in rejecting the original interpretation.",
+      "status": "staged"
     }
   ]
 }
