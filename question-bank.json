@@ -1016,6 +1016,66 @@
       "correctAnswer": "C",
       "explanation": "Text 1 first makes vegetation seem like the main explanation, but the weak differences during mild weather raise the possibility that roof construction matters more. Text 2 then shows that active vegetation affects cooling when roof construction is held similar, while a separate comparison shows that growing-layer depth also matters when vegetation is similarly healthy. Together, the texts indicate that both vegetation conditions and roof characteristics contribute to the observed differences rather than either one alone explaining them.",
       "status": "staged"
+    },
+    {
+      "id": "rw-urban-wetlands-001-easy",
+      "groupId": "rw-urban-wetlands-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "easy",
+      "passage": "A student is researching urban wetlands and has gathered these notes:\n\n- Wetlands can absorb and temporarily store stormwater.\n- This storage can reduce the amount of water entering city drainage systems during heavy rain.\n- Wetlands also provide habitat for birds, insects, and other wildlife.\n- The city of Portland, Oregon, has restored several wetlands in urban areas.",
+      "goal": "Emphasize a direct benefit of restoring urban wetlands for cities.",
+      "question": "Which choice most effectively uses the notes to accomplish this goal?",
+      "choices": {
+        "A": "Portland, Oregon, has restored several wetlands in urban areas that also provide habitat for birds and insects.",
+        "B": "Urban wetlands can provide habitat for birds and insects while remaining part of Portland's approach to restoring city landscapes.",
+        "C": "Restoring urban wetlands can help reduce the amount of stormwater entering city drainage systems during heavy rain.",
+        "D": "Wetlands temporarily store stormwater, and Portland has restored several wetlands in urban areas."
+      },
+      "correctAnswer": "C",
+      "explanation": "Choice C directly emphasizes the practical stormwater benefit named in the notes. The other choices mention related facts, but they do not present a direct benefit of restoration as clearly.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-urban-wetlands-001-medium",
+      "groupId": "rw-urban-wetlands-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "medium",
+      "passage": "A student is preparing a presentation about restoring wetlands within cities and has gathered these notes:\n\n- Urban wetlands can temporarily store stormwater during heavy rain.\n- By holding some stormwater, wetlands can reduce the amount of water entering drainage systems at once.\n- Wetlands also provide habitat for birds, insects, and other wildlife.\n- The flood-reduction benefit depends partly on a wetland's location and size; a small wetland away from major runoff routes may have little effect on flooding.\n- Portland, Oregon, has restored several urban wetlands.",
+      "goal": "Explain why restoring urban wetlands can support stormwater management while acknowledging an important limitation on that benefit.",
+      "question": "Which choice most effectively uses the notes to accomplish this goal?",
+      "choices": {
+        "A": "Portland, Oregon, has restored several urban wetlands that provide wildlife habitat and can also store stormwater.",
+        "B": "Because wetlands can store stormwater, restoring them can reduce pressure on drainage systems, although the effect on flooding depends partly on the wetland's size and location.",
+        "C": "Small wetlands located away from major runoff routes may have little effect on flooding during heavy rain.",
+        "D": "Urban wetlands provide habitat for wildlife while also giving cities another way to manage stormwater."
+      },
+      "correctAnswer": "B",
+      "explanation": "Choice B connects the two ideas the goal requires: wetlands can reduce pressure on drainage systems, but the size and location of a wetland affect how much flood reduction it can provide. C states the limitation without explaining the broader benefit, while D omits the qualification.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-urban-wetlands-001-hard",
+      "groupId": "rw-urban-wetlands-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "hard",
+      "passage": "A student is preparing a presentation about whether cities should restore wetlands and has gathered these notes:\n\n- Urban wetlands can temporarily hold stormwater during heavy rain, so planners have examined them as a way to reduce pressure on drainage systems.\n- Several small restored wetlands, however, intercepted little runoff because they were located away from the routes carrying the largest volumes of stormwater.\n- Those results led some planners to question whether wetland restoration should be treated as a meaningful flood-management strategy rather than mainly as habitat creation.\n- In one Portland project, a wetland provided habitat but produced only a modest reduction in peak runoff because much of the neighborhood's stormwater bypassed the site.\n- Larger wetland systems connected directly to major runoff routes intercepted substantially more water before it reached drainage infrastructure.\n- A separate comparison of wetlands with similar total area found that sites positioned along major runoff corridors had greater effects on peak flows than equally large sites that received less of the incoming runoff.\n- Portland has incorporated restored wetlands into broader stormwater projects that also use other drainage measures.\n- Project records from these larger systems show that wetlands can be useful for stormwater planning even though their effect varies with how much runoff a site can actually receive.",
+      "goal": "Present urban wetland restoration as potentially useful for stormwater management and habitat while avoiding the claim that every wetland project will substantially reduce flooding.",
+      "question": "Which choice most effectively uses the notes to accomplish this goal?",
+      "choices": {
+        "A": "Although some restored wetlands intercept too little runoff to substantially reduce flooding, strategically positioned or larger wetland systems can contribute to stormwater management while also providing wildlife habitat.",
+        "B": "Urban wetland restoration can be valuable mainly because it creates wildlife habitat when individual sites do not intercept enough runoff to affect flooding.",
+        "C": "Restored wetlands can reduce pressure on drainage systems and provide habitat, making them an effective flood-management strategy for cities.",
+        "D": "Portland's larger restored wetland systems show that wetlands located along runoff corridors can substantially reduce peak flows."
+      },
+      "correctAnswer": "A",
+      "explanation": "Choice A reflects the full rhetorical job: it acknowledges the important limitation shown by small or poorly positioned sites, incorporates the later evidence that larger or strategically positioned systems can intercept more runoff, and preserves the habitat benefit. B stops at the intermediate interpretation that limited sites are mainly habitat projects, while C overgeneralizes the flood benefit and D focuses on one example without preserving the broader qualification.",
+      "status": "staged"
     }
   ]
 }
