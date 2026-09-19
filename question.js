@@ -653,52 +653,181 @@ async function loadQuestionById(
     questionId
 ) {
 
-    const {
-        data: liveQuestion,
-        error: liveQuestionError
-    } =
-        await supabaseClient
-            .from("questions")
-            .select(`
-                id,
-                set_id,
-                question_number,
-                question_text,
-                choice_a,
-                choice_b,
-                choice_c,
-                choice_d,
-                correct_answer,
-                explanation,
-                difficulty,
-                topic
-            `)
-            .eq(
-                "id",
-                questionId
-            )
-            .maybeSingle();
+    /*
+     * Staged Question Bank JSON is the source of truth for
+     * current Question Bank questions. Load it first so an
+     * unavailable legacy questions table cannot block them.
+     */
 
+    try {
 
-    if (
-        liveQuestionError &&
-        liveQuestionError.code !== "PGRST116"
-    ) {
+        const response =
+            await fetch(
+                "/question-bank.json?v=4",
+                {
+                    cache: "no-store"
+                }
+            );
+
+        if (!response.ok) {
+            throw new Error(
+                "Question bank returned " +
+                response.status
+            );
+        }
+
+        const stagedData =
+            await response.json();
+
+        const stagedQuestion =
+            (stagedData.questions || [])
+                .find(
+                    question =>
+                        String(question.id) ===
+                        String(questionId) &&
+                        question.status ===
+                        "staged"
+                );
+
+        if (stagedQuestion) {
+
+            currentSet = null;
+
+            questions = [{
+                id: stagedQuestion.id,
+                question_number: null,
+                question_text:
+                    [
+                        stagedQuestion.passage,
+                        stagedQuestion.question
+                    ]
+                        .filter(Boolean)
+                        .join("\n\n"),
+                choice_a:
+                    stagedQuestion.choices?.A ||
+                    "",
+                choice_b:
+                    stagedQuestion.choices?.B ||
+                    "",
+                choice_c:
+                    stagedQuestion.choices?.C ||
+                    "",
+                choice_d:
+                    stagedQuestion.choices?.D ||
+                    "",
+                correct_answer:
+                    stagedQuestion.correctAnswer ||
+                    "",
+                explanation:
+                    stagedQuestion.explanation ||
+                    "",
+                difficulty:
+                    stagedQuestion.difficulty
+                        ? (
+                            stagedQuestion.difficulty
+                                .charAt(0)
+                                .toUpperCase() +
+                            stagedQuestion.difficulty
+                                .slice(1)
+                        )
+                        : "Medium",
+                topic:
+                    stagedQuestion.skill ||
+                    "SAT Practice",
+                section:
+                    stagedQuestion.section ||
+                    "SAT"
+            }];
+
+            await loadQuestionReviewState(
+                stagedQuestion.id
+            );
+
+            setTitle.textContent =
+                "Question Bank";
+
+            resultsSetTitle.textContent =
+                "Question Bank";
+
+            renderQuestionNavigator();
+            renderCurrentQuestion();
+            startTimer();
+
+            loadingScreen.classList.add(
+                "hidden"
+            );
+
+            questionApp.classList.remove(
+                "hidden"
+            );
+
+            return;
+        }
+
+    } catch (error) {
 
         console.warn(
-            "Live question lookup failed:",
-            liveQuestionError
+            "Could not load staged question-bank JSON; trying live question data:",
+            error
         );
 
     }
 
+    try {
 
-    if (liveQuestion) {
+        const {
+            data: liveQuestion,
+            error: liveQuestionError
+        } =
+            await supabaseClient
+                .from("questions")
+                .select(`
+                    id,
+                    set_id,
+                    question_number,
+                    question_text,
+                    choice_a,
+                    choice_b,
+                    choice_c,
+                    choice_d,
+                    correct_answer,
+                    explanation,
+                    difficulty,
+                    topic
+                `)
+                .eq(
+                    "id",
+                    questionId
+                )
+                .maybeSingle();
+
+        if (
+            liveQuestionError &&
+            liveQuestionError.code !== "PGRST116"
+        ) {
+
+            console.warn(
+                "Live question lookup failed:",
+                liveQuestionError
+            );
+
+        }
+
+        if (!liveQuestion) {
+
+            showError(
+                "The question could not be found."
+            );
+
+            return;
+
+        }
 
         questions = [
             liveQuestion
         ];
 
+        currentSet = null;
 
         if (liveQuestion.set_id) {
 
@@ -719,170 +848,23 @@ async function loadQuestionById(
 
         }
 
-
         await loadQuestionReviewState(
             questionId
         );
-
 
         const setName =
             currentSet?.name ||
             "Question Bank";
 
-
         setTitle.textContent =
             setName;
-
 
         resultsSetTitle.textContent =
             setName;
 
-
         renderQuestionNavigator();
         renderCurrentQuestion();
         startTimer();
-
-
-        loadingScreen.classList.add(
-            "hidden"
-        );
-
-        questionApp.classList.remove(
-            "hidden"
-        );
-
-        return;
-
-    }
-
-
-    try {
-
-        const response =
-            await fetch(
-                "/question-bank.json",
-                {
-                    cache: "no-store"
-                }
-            );
-
-
-        if (!response.ok) {
-
-            throw new Error(
-                "Staged question file could not be loaded."
-            );
-
-        }
-
-
-        const stagedData =
-            await response.json();
-
-
-        const stagedQuestion =
-            (stagedData.questions || [])
-                .find(
-                    question =>
-                        String(question.id) ===
-                        String(questionId) &&
-                        question.status ===
-                        "staged"
-                );
-
-
-        if (!stagedQuestion) {
-
-            showError(
-                "The question could not be found."
-            );
-
-            return;
-
-        }
-
-
-        currentSet = null;
-
-
-        questions = [
-
-            {
-                id:
-                    stagedQuestion.id,
-
-                question_number:
-                    null,
-
-                question_text:
-                    stagedQuestion.passage +
-                    "\n\n" +
-                    stagedQuestion.question,
-
-                choice_a:
-                    stagedQuestion.choices?.A ||
-                    "",
-
-                choice_b:
-                    stagedQuestion.choices?.B ||
-                    "",
-
-                choice_c:
-                    stagedQuestion.choices?.C ||
-                    "",
-
-                choice_d:
-                    stagedQuestion.choices?.D ||
-                    "",
-
-                correct_answer:
-                    stagedQuestion.correctAnswer,
-
-                explanation:
-                    stagedQuestion.explanation ||
-                    "",
-
-                difficulty:
-                    stagedQuestion.difficulty
-                        ? (
-                            stagedQuestion.difficulty
-                                .charAt(0)
-                                .toUpperCase() +
-                            stagedQuestion.difficulty
-                                .slice(1)
-                        )
-                        : "Medium",
-
-                topic:
-                    stagedQuestion.skill ||
-                    "SAT Practice",
-
-                section:
-                    stagedQuestion.section ||
-                    "SAT"
-
-            }
-
-        ];
-
-
-        await loadQuestionReviewState(
-            stagedQuestion.id
-        );
-
-
-        setTitle.textContent =
-            "Question Bank";
-
-
-        resultsSetTitle.textContent =
-            "Question Bank";
-
-
-        renderQuestionNavigator();
-        renderCurrentQuestion();
-        startTimer();
-
 
         loadingScreen.classList.add(
             "hidden"
@@ -895,10 +877,9 @@ async function loadQuestionById(
     } catch (error) {
 
         console.error(
-            "Staged question loading error:",
+            "Question loading error:",
             error
         );
-
 
         showError(
             "The question could not be loaded."
@@ -1482,7 +1463,10 @@ function toggleEliminatedChoice(
 
 
 /* ============================================================
-   SELECT ANSWERfunction selectAnswer(
+   SELECT ANSWER
+   ============================================================ */
+
+function selectAnswer(
     questionId,
     answer
 ) {
