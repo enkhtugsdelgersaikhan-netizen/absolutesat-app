@@ -361,6 +361,20 @@
     color: #eab308;
 }
 
+.question-review-icon svg {
+    width: 12px;
+    height: 14px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.question-review-icon.active svg {
+    fill: currentColor;
+}
+
 .question-review-icon:hover {
     color: #ca8a04;
 }
