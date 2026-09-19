@@ -896,6 +896,63 @@
       "correctAnswer": "D",
       "explanation": "The passage creates two competing interpretations: the later survey appears more precise, which could make the 1890 map seem mainly illustrative, but the property records and aerial photographs show that Riverside itself changed between the records. The best choice must therefore preserve the older map's value while acknowledging that discrepancies cannot be interpreted simply as errors. Choice D incorporates the map, later surveys, and records of change without treating any one source as a complete account.",
       "status": "staged"
+    },
+    {
+      "id": "rw-edmund-fitzgerald-001-easy",
+      "groupId": "rw-edmund-fitzgerald-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "easy",
+      "passage": "A student is researching the Edmund Fitzgerald, a Great Lakes freighter that sank in Lake Superior in 1975. The student has taken the following notes:\n\n- The Edmund Fitzgerald sank during a severe storm.\n- Maritime historians have studied the sinking for decades.\n- Researchers have used the disaster to examine how weather can interact with ship design and human decisions.\n\nThe student wants to emphasize why the Edmund Fitzgerald remains useful to maritime historians.",
+      "question": "Which choice most effectively uses the information from the passage to accomplish this goal?",
+      "choices": {
+        "A": "The Edmund Fitzgerald sank during a severe storm in Lake Superior in 1975.",
+        "B": "Because researchers can examine how weather interacted with ship design and human decisions, the Edmund Fitzgerald disaster remains useful for maritime research.",
+        "C": "Maritime historians have studied the Edmund Fitzgerald for decades since the ship sank.",
+        "D": "The Edmund Fitzgerald was a Great Lakes freighter that sank in Lake Superior."
+      },
+      "correctAnswer": "B",
+      "explanation": "The goal is to explain why the disaster remains useful to historians. Choice B directly states that the disaster provides a case for examining the interaction of weather, ship design, and human decisions. The other choices provide individual facts but do not explain the disaster's continuing research value.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-edmund-fitzgerald-001-medium",
+      "groupId": "rw-edmund-fitzgerald-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "medium",
+      "passage": "A student is researching the Edmund Fitzgerald, a Great Lakes freighter that sank in Lake Superior in 1975. The student has taken the following notes:\n\n- The ship disappeared during a severe November storm.\n- Maritime historians have continued examining the disaster for decades.\n- Some investigations have focused on the ship's design and condition.\n- Other investigations have examined decisions made by the crew and changing weather conditions.\n- The disaster therefore provides a case for studying how several factors can interact during a maritime accident.\n\nThe student wants to explain why historians continue to study the disaster rather than treating it simply as the story of a ship lost in a storm.",
+      "question": "Which choice most effectively uses the information from the passage to accomplish this goal?",
+      "choices": {
+        "A": "The Edmund Fitzgerald disappeared during a severe November storm, and historians have continued studying the disaster for decades.",
+        "B": "Because investigations have examined the ship's design and condition, crew decisions, and changing weather, the Edmund Fitzgerald disaster provides historians with a case for studying how multiple factors can interact during a maritime accident.",
+        "C": "Historians have investigated several aspects of the Edmund Fitzgerald, including its design, condition, crew decisions, and the weather.",
+        "D": "Although the Edmund Fitzgerald was lost during a severe storm, historians have continued to investigate what happened to the ship."
+      },
+      "correctAnswer": "B",
+      "explanation": "The goal asks why the disaster remains worth studying beyond the fact that a ship was lost in a storm. Choice B connects the different lines of investigation and explains that together they allow historians to study how several factors can interact. The other choices mention the research but do not explain its broader significance as directly.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-edmund-fitzgerald-001-hard",
+      "groupId": "rw-edmund-fitzgerald-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "hard",
+      "passage": "A student is researching the Edmund Fitzgerald, a Great Lakes freighter that sank in Lake Superior in 1975. The student has taken the following notes:\n\n- The Edmund Fitzgerald disappeared during a powerful November storm.\n- Because the loss occurred during extreme weather, early accounts naturally emphasized the storm as a possible explanation.\n- Later examinations of the wreck drew attention to the vessel's structure and condition.\n- Researchers also considered decisions made aboard the ship as weather conditions changed.\n- No single factor fully accounts for all the evidence gathered about the sinking.\n- The disaster has consequently been used by maritime historians to examine how environmental conditions, vessel characteristics, and human decisions can interact.\n- This approach does not make the storm irrelevant; rather, it places the storm within a larger set of circumstances.\n- The continuing examination of the wreck and historical records has allowed researchers to compare these factors rather than treating any one of them as sufficient by itself.\n\nThe student wants to explain the significance of the Edmund Fitzgerald disaster to maritime historians while accurately reflecting the evidence's limitations.",
+      "question": "Which choice most effectively uses the information from the passage to accomplish this goal?",
+      "choices": {
+        "A": "The Edmund Fitzgerald disaster shows that severe weather was the primary cause of the sinking, although researchers have also examined the vessel and its crew.",
+        "B": "Decades of research into the Edmund Fitzgerald have established that the ship's design and condition, rather than the storm, best explain its loss.",
+        "C": "Although the storm initially appeared to provide the clearest explanation for the Edmund Fitzgerald's loss, subsequent research has made the disaster valuable for examining how weather, vessel characteristics, and human decisions may combine without reducing the event to any one factor.",
+        "D": "The Edmund Fitzgerald has remained a major subject of maritime history because researchers have identified several different factors that contributed to its sinking."
+      },
+      "correctAnswer": "C",
+      "explanation": "The goal requires both the disaster's significance to historians and a careful statement of what the evidence does not establish. Choice C does both: it recognizes the storm's importance, explains why researchers continue to study the event, and avoids claiming that any one factor has been proved sufficient to explain the sinking. A and B make unsupported causal claims, while D suggests that researchers have established that several factors contributed without preserving the passage's explicit uncertainty about how those factors relate to the sinking.",
+      "status": "staged"
     }
   ]
 }
