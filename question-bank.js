@@ -1650,42 +1650,56 @@ function renderQuestions() {
         Hard: 2
     };
 
+    const groups = new Map();
+
     [...questions]
-        .sort(
-            (a, b) => {
-                const numberDifference =
-                    Number(
-                        a.question_number
-                    ) -
-                    Number(
-                        b.question_number
-                    );
+        .sort((a, b) => {
+            const numberDifference =
+                Number(a.question_number) -
+                Number(b.question_number);
 
-                if (
-                    numberDifference !== 0
-                ) {
-                    return numberDifference;
-                }
+            if (numberDifference !== 0) {
+                return numberDifference;
+            }
 
-                return (
-                    difficultyOrder[
-                        a.difficulty
-                    ] -
-                    difficultyOrder[
-                        b.difficulty
-                    ]
-                );
+            return (
+                difficultyOrder[a.difficulty] -
+                difficultyOrder[b.difficulty]
+            );
+        })
+        .forEach(question => {
+            const key = String(question.groupId);
+
+            if (!groups.has(key)) {
+                groups.set(key, []);
             }
-        )
-        .forEach(
-            question => {
-                questionList.appendChild(
-                    createQuestionIcon(
-                        question
-                    )
+
+            groups.get(key).push(question);
+        });
+
+    groups.forEach(groupQuestions => {
+        const groupElement =
+            document.createElement("div");
+
+        groupElement.className =
+            "question-group";
+
+        groupQuestions
+            .sort(
+                (a, b) =>
+                    difficultyOrder[a.difficulty] -
+                    difficultyOrder[b.difficulty]
+            )
+            .forEach(question => {
+                groupElement.appendChild(
+                    createQuestionIcon(question)
                 );
-            }
+            });
+
+        questionList.appendChild(
+            groupElement
         );
+    });
 }
 
 if (searchInput) {
