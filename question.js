@@ -740,7 +740,8 @@ async function loadQuestionSet(
 
 
     resultsSetTitle.textContent =
-        currentSet.name;
+        currentSet?.name ||
+        "Question Bank";
 
 
     renderQuestionNavigator();
