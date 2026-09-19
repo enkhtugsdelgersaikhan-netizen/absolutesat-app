@@ -284,6 +284,63 @@
       "correctAnswer": "B",
       "explanation": "The passage's argument depends on a contrast: the subject remains recognizable, while its visual appearance changes. Choice B provides both parts of that contrast, making it the strongest evidence for the claim that the cathedral's stability allowed Monet to emphasize variation in perception.",
       "status": "staged"
+    },
+    {
+      "id": "rw-pompeii-gpr-001-easy",
+      "groupId": "rw-pompeii-gpr-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "easy",
+      "passage": "At Pompeii, archaeologists have used ground-penetrating radar (GPR) to detect buried walls and other features beneath the site's surface. The scans can reveal patterns that may indicate structures that are difficult to see from above. Because researchers can survey an area before disturbing the ground, they can use the results to identify locations that deserve closer physical investigation. Thus, GPR can help archaeologists focus excavation on potentially informative areas.",
+      "question": "Which choice best supports the conclusion that GPR can help archaeologists use excavation more efficiently?",
+      "choices": {
+        "A": "GPR can reveal possible buried structures before archaeologists physically investigate the area.",
+        "B": "Pompeii contains structures from several periods of the city's history.",
+        "C": "Some buried features at Pompeii are difficult to detect from the surface.",
+        "D": "Archaeologists use several technologies when studying Pompeii."
+      },
+      "correctAnswer": "A",
+      "explanation": "Choice A provides the direct link between GPR and more targeted excavation: researchers can identify possible structures before physically investigating them. The other choices provide relevant background but do not explain how GPR could make excavation more focused.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-pompeii-gpr-001-medium",
+      "groupId": "rw-pompeii-gpr-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "medium",
+      "passage": "At Pompeii's House of Obellius Firmus, a georadar survey revealed several subsurface anomalies associated with buried wall structures. The results did not identify every feature with certainty; archaeological interpretation remained preliminary, and some locations required additional excavation to determine what the signals represented. Even so, the survey helped researchers distinguish areas containing potentially significant structural remains from portions of the site where fewer such anomalies were detected. Physical excavation could then be concentrated in places where the geophysical evidence suggested that further investigation might be especially informative. The radar therefore functioned less as a substitute for excavation than as a means of helping archaeologists decide where excavation could be most productive.",
+      "question": "Which choice best supports the conclusion that georadar helped archaeologists concentrate their excavation efforts?",
+      "choices": {
+        "A": "The survey revealed anomalies associated with buried wall structures, although their interpretation remained preliminary.",
+        "B": "Researchers used differences in the survey results to distinguish locations that warranted additional physical investigation.",
+        "C": "The House of Obellius Firmus contains buried structures that are not visible from the ground surface.",
+        "D": "Some features identified by the survey could not be interpreted with certainty without excavation."
+      },
+      "correctAnswer": "B",
+      "explanation": "The conclusion concerns how georadar helped researchers concentrate excavation. Choice B connects the survey results to the researchers' decision about where to conduct additional physical investigation. A and D describe limitations of the survey, while C merely describes the archaeological setting.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-pompeii-gpr-001-hard",
+      "groupId": "rw-pompeii-gpr-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "hard",
+      "passage": "At Pompeii's House of Obellius Firmus, archaeologists used georadar to investigate parts of the building whose earlier phases remained buried. The survey produced subsurface anomalies that were consistent with wall structures, but the signals did not by themselves reveal the complete form or history of those structures. Some interpretations remained tentative because different subsurface conditions could produce patterns requiring further investigation. This limitation might seem to reduce the value of the survey, especially when the archaeological questions concern construction phases or the arrangement of individual rooms. Yet excavation of selected areas produced physical remains that could be compared with the earlier radar interpretations. Where the two forms of evidence corresponded, the survey offered stronger grounds for treating particular anomalies as meaningful architectural features; where they did not, excavation supplied information that the georadar data had left unresolved. The contrasting results show that the usefulness of the survey cannot be measured simply by asking whether it independently identifies every buried structure. Its greater value emerges when the geophysical results are treated as preliminary evidence whose relationship to physical remains can determine where additional investigation is most informative.",
+      "question": "Which choice best explains how the evidence in the passage supports the author's conclusion about the role of georadar?",
+      "choices": {
+        "A": "Because georadar sometimes produces uncertain signals, excavation remains the more reliable method for reconstructing Pompeii's buried architecture.",
+        "B": "Because the survey identified anomalies that were later compared with physical remains, georadar can contribute useful preliminary evidence even when it cannot independently resolve every archaeological question.",
+        "C": "Because some radar anomalies corresponded to buried walls, georadar can determine the construction history of the House of Obellius Firmus before excavation begins.",
+        "D": "Because excavation can confirm or complicate radar interpretations, archaeologists should postpone georadar surveys until after physical remains have been uncovered."
+      },
+      "correctAnswer": "B",
+      "explanation": "The passage develops a layered argument. First, georadar identifies potentially meaningful subsurface patterns, but those patterns are not definitive. Second, excavation supplies physical evidence against which the radar interpretations can be evaluated. Third, agreement between the two types of evidence strengthens the interpretation of some anomalies, while disagreement reveals where radar alone was insufficient. The overall conclusion is therefore that georadar is most useful as preliminary evidence that can help guide and inform further investigation, rather than as a complete substitute for excavation.",
+      "status": "staged"
     }
   ]
 }
