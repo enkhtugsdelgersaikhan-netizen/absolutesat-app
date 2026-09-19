@@ -235,6 +235,84 @@ function escapeHtml(value) {
 }
 
 
+function getReviewStorageKey() {
+
+    return currentUser
+        ? "absoluteprep-question-reviews:" +
+            currentUser.id
+        : null;
+
+}
+
+
+function getLocalReviewIds() {
+
+    const key =
+        getReviewStorageKey();
+
+    if (!key) {
+        return [];
+    }
+
+    try {
+
+        const stored =
+            JSON.parse(
+                localStorage.getItem(
+                    key
+                ) || "[]"
+            );
+
+        return Array.isArray(
+            stored
+        )
+            ? stored.map(
+                id => String(id)
+            )
+            : [];
+
+    } catch {
+
+        return [];
+
+    }
+
+}
+
+
+function saveLocalReviewIds(
+    ids
+) {
+
+    const key =
+        getReviewStorageKey();
+
+    if (!key) {
+        return;
+    }
+
+    try {
+
+        localStorage.setItem(
+            key,
+            JSON.stringify(
+                [...new Set(
+                    ids.map(
+                        id => String(id)
+                    )
+                )]
+            )
+        );
+
+    } catch {
+
+        // Local storage is only a fallback.
+
+    }
+
+}
+
+
 /* ============================================================
    INITIALIZE
    ============================================================ */
@@ -378,9 +456,15 @@ async function loadQuestionReviewState(
     questionId
 ) {
 
+    const localIds =
+        getLocalReviewIds();
+
     markedForReview[
         questionId
-    ] = false;
+    ] =
+        localIds.includes(
+            String(questionId)
+        );
 
 
     if (!currentUser) {
@@ -417,7 +501,7 @@ async function loadQuestionReviewState(
         if (error) {
 
             console.warn(
-                "Could not load question review status:",
+                "Could not load question review status; using local state:",
                 error
             );
 
@@ -426,16 +510,38 @@ async function loadQuestionReviewState(
         }
 
 
+        const serverMarked =
+            Array.isArray(data) &&
+            data.length > 0;
+
+
         markedForReview[
             questionId
         ] =
-            Array.isArray(data) &&
-            data.length > 0;
+            serverMarked;
+
+
+        const nextLocalIds =
+            serverMarked
+                ? [
+                    ...localIds,
+                    String(questionId)
+                ]
+                : localIds.filter(
+                    id =>
+                        id !==
+                        String(questionId)
+                );
+
+
+        saveLocalReviewIds(
+            nextLocalIds
+        );
 
     } catch (error) {
 
         console.warn(
-            "Could not load question review status:",
+            "Could not load question review status; using local state:",
             error
         );
 
@@ -450,13 +556,21 @@ async function loadReviewStatesForQuestions(
 
     markedForReview = {};
 
+    const localIds =
+        getLocalReviewIds();
+
+    questionList.forEach(question => {
+        markedForReview[
+            question.id
+        ] =
+            localIds.includes(
+                String(question.id)
+            );
+    });
+
     if (!currentUser || !questionList.length) {
         return;
     }
-
-    questionList.forEach(question => {
-        markedForReview[question.id] = false;
-    });
 
     try {
         const questionIds =
@@ -1405,6 +1519,26 @@ async function toggleReview() {
         nextMarked;
 
 
+    const localIds =
+        getLocalReviewIds();
+
+    const nextLocalIds =
+        nextMarked
+            ? [
+                ...localIds,
+                String(question.id)
+            ]
+            : localIds.filter(
+                id =>
+                    id !==
+                    String(question.id)
+            );
+
+    saveLocalReviewIds(
+        nextLocalIds
+    );
+
+
     updateReviewButton();
 
     updateQuestionNavigator();
@@ -1473,6 +1607,26 @@ async function toggleReview() {
             question.id
         ] =
             previousMarked;
+
+
+        const rollbackIds =
+            getLocalReviewIds();
+
+        const rollbackLocalIds =
+            previousMarked
+                ? [
+                    ...rollbackIds,
+                    String(question.id)
+                ]
+                : rollbackIds.filter(
+                    id =>
+                        id !==
+                        String(question.id)
+                );
+
+        saveLocalReviewIds(
+            rollbackLocalIds
+        );
 
 
         updateReviewButton();
