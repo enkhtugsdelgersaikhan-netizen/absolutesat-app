@@ -15,7 +15,7 @@
     >
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="question-bank.css?v=4">
+    <link rel="stylesheet" href="question-bank.css?v=5">
 </head>
 
 <body>
@@ -240,9 +240,11 @@
     </button>
     <div class="filter-dropdown-menu" role="listbox">
         <button type="button" class="filter-dropdown-option active" role="option" data-value="all" aria-selected="true">All Questions</button>
-        <button type="button" class="filter-dropdown-option" role="option" data-value="unanswered" aria-selected="false">Unanswered</button>
+        <button type="button" class="filter-dropdown-option" role="option" data-value="unanswered" aria-selected="false">Unsolved</button>
+        <button type="button" class="filter-dropdown-option" role="option" data-value="solved" aria-selected="false">Solved</button>
         <button type="button" class="filter-dropdown-option" role="option" data-value="correct" aria-selected="false">Correct</button>
         <button type="button" class="filter-dropdown-option" role="option" data-value="incorrect" aria-selected="false">Incorrect</button>
+        <button type="button" class="filter-dropdown-option" role="option" data-value="review" aria-selected="false">Review</button>
     </div>
 </div>
 
@@ -663,7 +665,7 @@
 <script src="auth-guard.js"></script>
 <script src="auth.js"></script>
 
-<script src="question-bank.js?v=5"></script>
+<script src="question-bank.js?v=6"></script>
 
 
 <script>
