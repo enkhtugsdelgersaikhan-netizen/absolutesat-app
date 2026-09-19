@@ -45,7 +45,7 @@
       "domain": "Information and Ideas",
       "skill": "Central Ideas and Details",
       "difficulty": "hard",
-      "passage": "At Pompeii, archaeologists face a practical dilemma when studying structures still hidden beneath volcanic deposits: excavation can reveal architectural details, but exposing deposits also alters the archaeological record. In 2019, Elena Marquez and colleagues at the University of Naples Federico II used ground-penetrating radar to examine an unexcavated area. The survey produced patterns indicating walls, courtyards, and other features, but individual signals required interpretation and did not reveal the same material information as excavation. In several selected areas, later excavation exposed structures that corresponded to patterns identified in the radar images, while other signals proved less conclusive. The comparison showed that radar could provide useful information before archaeologists disturbed the deposits, even though physical excavation remained necessary for resolving some questions about the buried structures.",
+      "passage": "At Pompeii, archaeologists face a practical dilemma when studying structures still hidden beneath volcanic deposits: excavation can reveal architectural details, but exposing deposits also alters the archaeological record. In 2019, Elena Marquez and colleagues at the University of Naples Federico II used ground-penetrating radar to examine an unexcavated area. The survey produced patterns indicating walls, courtyards, and other features, but individual signals required interpretation and did not reveal the same material information as excavation. In several selected areas, later excavation exposed structures that corresponded to patterns identified in the radar images, while other signals proved less conclusive. In one excavated section, the wall alignments matched several radar anomalies, whereas a nearby signal did not correspond to a clearly identifiable structure.",
       "question": "Which choice best states the central idea of the passage?",
       "choices": {
         "A": "Ground-penetrating radar provides archaeologists with more detailed information than conventional excavation does.",
@@ -159,7 +159,7 @@
       "domain": "Information and Ideas",
       "skill": "Central Ideas and Details",
       "difficulty": "hard",
-      "passage": "In Florida's Ten Thousand Islands, red mangroves create physical resistance to storm-driven water through their trunks and aerial roots. Measurements across stands of different widths showed that water lost energy while moving through the vegetation, making mangrove cover appear useful as a coastal buffer. The measurements also revealed an important complication: two shorelines could contain the same species while differing greatly in the amount of vegetation intercepting incoming water. Narrow stands presented fewer obstacles, and gaps caused by vegetation loss likewise reduced resistance. In a comparison of two shorelines with similar mangrove species, the broader and more continuous stand reduced water velocity more consistently across the protected area. The contrast meant that researchers could not treat the mere presence of mangroves as a sufficient measure of their protective effect.",
+      "passage": "In Florida’s Ten Thousand Islands, red mangroves create physical resistance to storm-driven water through their trunks and aerial roots. Measurements across stands of different widths showed that water lost energy while moving through the vegetation, making mangrove cover appear useful as a coastal buffer. The measurements also revealed an important complication: two shorelines could contain the same species while differing greatly in the amount of vegetation intercepting incoming water. Narrow stands presented fewer obstacles, and gaps caused by vegetation loss likewise reduced resistance. In a comparison of two shorelines with similar mangrove species, the broader and more continuous stand reduced water velocity more consistently across the protected area. The contrast meant that researchers could not treat the mere presence of mangroves as a sufficient measure of their protective effect.",
       "question": "Which choice best states the central idea of the text?",
       "choices": {
         "A": "The protective value of red mangroves is determined primarily by the number of aerial roots in a coastal forest.",
@@ -429,7 +429,7 @@
       "id": "rw-redmesa-pv-001-hard",
       "groupId": "rw-redmesa-pv-001",
       "difficulty": "hard",
-      "passage": "At the Red Mesa Research Station, engineers compared three photovoltaic arrays with the same rated capacity but different operating conditions. Mesa received 7.4 hours of sunlight per day, more than Juniper or Arroyo, and its 20.1 kWh daily output was the highest. Yet Mesa also had the lowest efficiency, 17.8%, compared with 19.2% for Juniper and 19.5% for Arroyo. The cooler arrays therefore converted a larger share of their available sunlight even though neither produced as much electricity overall. The data do not establish that temperature alone caused the efficiency difference, since the arrays operated under different conditions. They also show why low efficiency does not erase Mesa's output advantage: Mesa received substantially more sunlight than the other arrays.",
+      "passage": "At the Red Mesa Research Station, engineers compared three photovoltaic arrays with the same rated capacity but different operating conditions. Mesa received 7.4 hours of sunlight per day, more than Juniper or Arroyo, and its 20.1 kWh daily output was the highest. Yet Mesa also had the lowest efficiency, 17.8%, compared with 19.2% for Juniper and 19.5% for Arroyo. The cooler arrays therefore converted a larger share of their available sunlight even though neither produced as much electricity overall. The data do not establish that temperature alone caused the efficiency difference, since the arrays operated under different conditions. The engineers also noted that Mesa's extra sunlight coincided with its higher output, while the efficiency figures moved in the opposite direction. These comparisons required the researchers to treat output and efficiency as separate measurements when evaluating the arrays.",
       "question": "Which statement best synthesizes the information in the passage and table?",
       "choices": {
         "A": "Mesa's lower efficiency shows that increasing the amount of available sunlight does not substantially affect total electricity production.",
@@ -600,7 +600,7 @@
       "domain": "Craft and Structure",
       "skill": "Words in Context",
       "difficulty": "hard",
-      "passage": "Eastview University researchers expected tomato plants at two urban farms to respond mainly to the quantity of water supplied. The drip and hand-watered groups received nearly the same total amount, yet their **yield** measurements differed. During hot afternoons, the hand-watered plots lost more water to evaporation, and the production gap became especially pronounced. When conditions were cooler and evaporation declined, the gap narrowed, although the drip-watered plants still maintained an overall advantage. The researchers therefore compared production across conditions rather than treating the irrigation systems as if they differed only in total water supplied. Their records included both the number of tomatoes harvested and the environmental conditions present during each observation period.",
+      "passage": "Eastview University researchers expected tomato plants at two urban farms to respond mainly to the quantity of water supplied. The drip and hand-watered groups received nearly the same total amount, yet their **yield** measurements differed. During hot afternoons, the hand-watered plots lost more water to evaporation, and the production gap became especially pronounced. When conditions were cooler and evaporation declined, the gap narrowed, although the drip-watered plants still maintained an overall advantage. The researchers therefore compared production across conditions rather than treating the irrigation systems as if they differed only in total water supplied. Their records included both the number of tomatoes harvested and the environmental conditions present during each observation period. The comparisons were made across multiple observation periods rather than from a single harvest.",
       "question": "As used in the text, what does **“yield”** most nearly mean?",
       "choices": {
         "A": "The portion of water available to plants after irrigation",
@@ -733,7 +733,7 @@
       "domain": "Information and Ideas",
       "skill": "Cross-Text Connections",
       "difficulty": "easy",
-      "passage": "Text 1\n\nCity planners often plant trees along sidewalks to reduce pedestrians' exposure to summer heat. In a Phoenix neighborhood, researchers found that shaded sidewalks were several degrees cooler than nearby unshaded pavement. The cooling was greatest where tree canopies directly covered areas used by pedestrians.\n\nText 2\n\nA separate study of Phoenix streets found that adding trees did not produce the same amount of cooling everywhere. Trees that shaded sidewalks and other heavily used spaces provided the clearest reduction in people's heat exposure. Simply increasing the number of trees without considering their placement had a smaller effect.",
+      "passage": "City planners often plant trees along sidewalks to reduce pedestrians' exposure to summer heat. In a Phoenix neighborhood, researchers found that shaded sidewalks were several degrees cooler than nearby unshaded pavement. Cooling was greatest where tree canopies directly covered areas used by pedestrians. The researchers therefore linked useful cooling with shade reaching spaces people occupied.",
       "question": "Based on the texts, what would the authors of both passages most likely agree about planting trees in hot cities?",
       "choices": {
         "A": "Planting more trees always produces the same amount of cooling.",
@@ -752,7 +752,7 @@
       "domain": "Information and Ideas",
       "skill": "Cross-Text Connections",
       "difficulty": "medium",
-      "passage": "Text 1\n\nIn a Phoenix neighborhood, researchers compared sidewalks beneath mature tree canopies with nearby sidewalks exposed to direct sunlight. The shaded areas were cooler, suggesting that trees can reduce pedestrians' exposure to extreme heat. However, the researchers noted that the cooling benefit varied with canopy coverage: a street with many small trees did not necessarily provide as much shaded walking space as a street with fewer trees whose canopies were concentrated over sidewalks.\n\nText 2\n\nAnother study examined several Phoenix blocks after new trees were planted. Blocks with more trees generally became cooler, but the strongest reductions in pedestrian heat exposure occurred where the new trees were positioned beside frequently used walking routes. Some blocks gained substantial tree cover without a comparable reduction in the heat experienced by pedestrians.",
+      "passage": "In a Phoenix neighborhood, researchers compared sidewalks beneath mature tree canopies with nearby sidewalks exposed to direct sunlight. The shaded areas were cooler, suggesting that trees can reduce pedestrians' exposure to extreme heat. However, the researchers noted that a street with many small trees did not necessarily provide as much shaded walking space as a street with fewer trees whose canopies were concentrated over sidewalks.\n\nAnother study examined Phoenix blocks after new trees were planted. Blocks with more trees generally became cooler, but the strongest reductions in pedestrian heat exposure occurred where the trees were positioned beside frequently used walking routes. Some blocks gained tree cover without a comparable reduction in pedestrian heat.",
       "question": "How does the second text relate to the finding in the first text?",
       "choices": {
         "A": "It challenges the first text's conclusion by showing that trees rarely reduce temperatures in urban areas.",
@@ -790,7 +790,7 @@
       "domain": "Information and Ideas",
       "skill": "Cross-Text Connections",
       "difficulty": "easy",
-      "passage": "Text 1\n\nResearchers studying oyster-reef restoration in Maryland's Chesapeake Bay found that reefs can weaken incoming waves before they reach nearby shorelines. In test sites with restored reefs, shoreline sections behind the reefs generally lost less sediment than exposed sections. The researchers therefore suggested that oyster reefs can help protect vulnerable shorelines from erosion.\n\nText 2\n\nA separate Chesapeake Bay restoration project produced similar results. Areas behind newly restored oyster reefs experienced smaller waves and retained more sediment than nearby areas without reefs. The project managers noted that the reefs were especially useful where wave action was contributing to shoreline erosion.",
+      "passage": "Researchers studying oyster-reef restoration in Maryland's Chesapeake Bay found that reefs can weaken incoming waves before they reach nearby shorelines. In test sites with restored reefs, shoreline sections behind the reefs generally lost less sediment than exposed sections. A separate restoration project found a similar pattern: areas behind restored reefs experienced smaller waves and retained more sediment. Together, the studies support a link between reef restoration and reduced shoreline erosion.",
       "question": "Which choice best describes the relationship between the two texts?",
       "choices": {
         "A": "Text 1 emphasizes the ecological benefits of oyster reefs, whereas Text 2 focuses mainly on their economic value.",
@@ -809,7 +809,7 @@
       "domain": "Information and Ideas",
       "skill": "Cross-Text Connections",
       "difficulty": "medium",
-      "passage": "Text 1\n\nResearchers studying oyster-reef restoration in Maryland's Chesapeake Bay found that reefs reduced the force of waves reaching nearby shorelines. Shorelines behind restored reefs also retained more sediment than exposed shorelines. However, the researchers observed that the protective effect was strongest at sites where waves regularly approached the reef from the direction for which it had been positioned. Thus, reef restoration appeared useful for reducing erosion, but its effectiveness depended partly on local wave conditions.\n\nText 2\n\nA Chesapeake Bay restoration project likewise found that restored oyster reefs could help stabilize nearby shorelines. Managers observed less sediment loss behind several reefs than in comparable unprotected areas. Yet reefs placed where wave directions frequently changed produced less consistent results. The managers concluded that restoration could contribute to erosion control when reef placement matched the conditions of the shoreline being protected.",
+      "passage": "Researchers studying oyster-reef restoration in Maryland's Chesapeake Bay found that reefs reduced the force of waves reaching nearby shorelines. Shorelines behind restored reefs also retained more sediment than exposed shorelines. However, the protective effect was strongest where waves approached the reef from the direction for which it had been positioned.\n\nA Chesapeake Bay restoration project likewise found less sediment loss behind several reefs. Yet reefs placed where wave directions frequently changed produced less consistent results. The managers concluded that reef placement helped determine how much erosion control the restoration provided.",
       "question": "Which choice best describes how the second text relates to the first?",
       "choices": {
         "A": "It presents evidence that supports the first text's conclusion while adding that reef placement and local conditions affect the strength of the benefit.",
@@ -1245,7 +1245,7 @@
         "D": "Similarly,"
       },
       "correctAnswer": "A",
-      "explanation": "The first sentences suggest that more trees are associated with lower temperatures, but the next evidence presents cases in which many trees produced only modest cooling. 'Nevertheless' correctly marks that contrast. The later comparisons further show that canopy arrangement and prior sunlight exposure help explain the variation.",
+      "explanation": "The opening establishes a positive relationship between tree quantity and cooling, but the next evidence presents streets with many trees that cooled only modestly. 'Nevertheless' correctly signals that contrast. The later comparisons then help explain why tree count alone was insufficient.",
       "status": "staged"
     },
     {
@@ -1255,7 +1255,7 @@
       "domain": "Standard English Conventions",
       "skill": "Boundaries",
       "difficulty": "easy",
-      "passage": "Because the telescope was compact enough to carry between classrooms ______ teachers could use it during different lessons about the night sky. Students also examined the instrument directly during these demonstrations.",
+      "passage": "Because the telescope was compact enough to carry between classrooms, teachers could use it during different lessons about the night sky. Students also examined the instrument directly during these demonstrations, which made discussions of how telescopes work more concrete. The school could therefore use one instrument in several rooms without building a permanent observatory space. ______ teachers could use it throughout the school day.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "choices": {
         "A": ",",
@@ -1274,7 +1274,7 @@
       "domain": "Standard English Conventions",
       "skill": "Boundaries",
       "difficulty": "medium",
-      "passage": "Although the telescope was originally designed for observing distant stars ______ teachers soon discovered that its compact size made it useful for classroom demonstrations. Students could handle the instrument more easily than many larger telescopes.",
+      "passage": "Although the telescope was originally designed for observing distant stars, teachers soon discovered that its compact size made it useful for classroom demonstrations. Students could handle the instrument more easily than many larger telescopes, and teachers could move it from room to room when different classes were studying the night sky. This portability allowed one instrument to support lessons in several classrooms rather than remaining in a single laboratory throughout the school day. ______ teachers could schedule it for different classes.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "choices": {
         "A": ",",
@@ -1283,7 +1283,7 @@
         "D": "—"
       },
       "correctAnswer": "A",
-      "explanation": "The phrase beginning with 'Although' is a dependent introductory clause. A comma is therefore needed before the independent clause 'teachers soon discovered...' The semicolon, colon, and dash cannot correctly separate this dependent clause from the main clause.",
+      "explanation": "The opening words form a dependent introductory clause beginning with 'Although.' A comma must therefore separate that clause from the independent clause that follows. The semicolon, colon, and dash cannot correctly serve this boundary.",
       "status": "staged"
     },
     {
@@ -1293,16 +1293,16 @@
       "domain": "Standard English Conventions",
       "skill": "Boundaries",
       "difficulty": "hard",
-      "passage": "The telescope was first developed for observing distant stars, but educators soon noticed that its compact design made it useful in schools. Because the instrument was light enough to move between rooms, teachers could use it during different lessons without building a permanent observatory space. Students also benefited from examining the instrument at close range, which made discussions of how telescopes work more concrete. In schools where several classes shared equipment, the telescope's portability mattered especially because one instrument could serve multiple groups. ______ teachers could carry it to different classrooms without limiting its use to a single science room.",
+      "passage": "The telescope was first developed for observing distant stars, but educators soon noticed that its compact design made it useful in schools. Because the instrument was light enough to move between rooms, teachers could use it during different lessons without building a permanent observatory space. Students also benefited from examining the instrument at close range, which made discussions of how telescopes work more concrete. In schools where several classes shared equipment, the telescope's portability mattered especially because one instrument could serve multiple groups. Teachers could therefore use the same instrument for lessons in several locations rather than limiting it to one science room. In larger schools, ______ teachers could carry it to different classrooms without interrupting the other classes' schedules.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "choices": {
-        "A": "When several classes shared the same instrument,",
-        "B": "When several classes shared the same instrument;",
-        "C": "When several classes shared the same instrument:",
-        "D": "When several classes shared the same instrument—"
+        "A": "when several classes shared the same instrument,",
+        "B": "when several classes shared the same instrument;",
+        "C": "when several classes shared the same instrument:",
+        "D": "when several classes shared the same instrument—"
       },
       "correctAnswer": "A",
-      "explanation": "The opening words 'When several classes shared the same instrument' form a dependent introductory clause, so a comma is required before the independent clause 'teachers could carry it...' Choice A supplies that boundary. The semicolon, colon, and dash cannot replace the comma after a dependent clause.",
+      "explanation": "The words 'when several classes shared the same instrument' form a dependent introductory clause, so a comma is required before the independent clause 'teachers could carry it...' Choice A supplies that boundary; the semicolon, colon, and dash cannot replace the comma after a dependent clause.",
       "status": "staged"
     },
     {
@@ -1312,7 +1312,7 @@
       "domain": "Standard English Conventions",
       "skill": "Boundaries",
       "difficulty": "easy",
-      "passage": "The Monterey Bay Aquarium opened a new exhibit about kelp forests in 2019. The exhibit features live kelp, fish, and sea otters, as well as displays about conservation efforts. ______ visitors can learn about both the ecosystem and the work being done to protect it.",
+      "passage": "The Monterey Bay Aquarium opened a new exhibit about kelp forests in 2019. The exhibit features live kelp, fish, and sea otters, as well as displays about conservation efforts. Visitors can explore the exhibit at their own pace and compare the living organisms with the information shown on the displays. ______ visitors can learn about both the ecosystem and the work being done to protect it.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "choices": {
         "A": "Because",
@@ -1321,7 +1321,7 @@
         "D": "Because:"
       },
       "correctAnswer": "A",
-      "explanation": "'Because the exhibit features live kelp, fish, and sea otters, as well as displays about conservation efforts' is a dependent clause that introduces the independent clause 'visitors can learn...' Choice A correctly joins the two parts; the other choices create incorrect punctuation after 'because'.",
+      "explanation": "'Because visitors can learn...' begins with a dependent clause that works as the reason for the main idea that follows. Choice A supplies the conjunction without incorrect punctuation after it; the other choices create faulty boundaries.",
       "status": "staged"
     },
     {
@@ -1331,7 +1331,7 @@
       "domain": "Standard English Conventions",
       "skill": "Boundaries",
       "difficulty": "medium",
-      "passage": "In 2021, researchers at the University of Washington studied how urban gardens affect bee populations. They found that gardens with many different flowering plants attracted more bee species than gardens with fewer varieties. The researchers also found that garden size affected bee abundance. ______ larger gardens tended to support more bees even when plant diversity was similar. The researchers therefore concluded that plant diversity alone did not explain every difference among the study sites.",
+      "passage": "In 2021, researchers at the University of Washington studied how urban gardens affect bee populations. They found that gardens with many different flowering plants attracted more bee species than gardens with fewer varieties. The researchers also found that garden size affected bee abundance, and they compared gardens of similar size to see whether the association with plant diversity remained. ______ larger gardens tended to support more bees even when plant diversity was similar. The researchers therefore concluded that plant diversity alone did not explain every difference among the study sites.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "choices": {
         "A": "Although",
@@ -1340,7 +1340,7 @@
         "D": "Although:"
       },
       "correctAnswer": "A",
-      "explanation": "'Although larger gardens tended to support more bees' is a dependent clause that must connect to the independent clause that follows it. Choice A creates that structure without adding punctuation after 'Although'; the other choices create incorrect boundaries.",
+      "explanation": "'Although larger gardens tended to support more bees' is a dependent clause that must connect to the independent clause that follows it. Choice A creates the required structure without adding punctuation after 'Although'; the other choices create incorrect boundaries.",
       "status": "staged"
     },
     {
@@ -1540,16 +1540,16 @@
       "domain": "Standard English Conventions",
       "skill": "Form, Structure, and Sense",
       "difficulty": "easy",
-      "passage": "Researchers studying beaver dams in Devon, England, found that the dams can slow stormwater during heavy rain. In several monitored storms, water moved more slowly through dammed areas than through nearby undammed channels. The team concluded that this slower movement ______ the time over which runoff reaches downstream areas.",
+      "passage": "Researchers studying beaver dams in Devon, England, found that the dams can slow stormwater during heavy rain. In several monitored storms, water moved more slowly through dammed areas than through nearby undammed channels. The team also measured how long water took to reach downstream monitoring points. ______, the researchers concluded that the slower movement spreads runoff over a longer period.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "choices": {
-        "A": "extends",
-        "B": "extend",
-        "C": "extending",
-        "D": "have extended"
+        "A": "The data showed",
+        "B": "The data, showing",
+        "C": "The data have shown",
+        "D": "Showing the data"
       },
       "correctAnswer": "A",
-      "explanation": "The subject 'this slower movement' is singular, so the singular verb 'extends' is required. The other choices use plural or nonfinite verb forms that do not agree with the subject in this sentence.",
+      "explanation": "The blank begins the main clause that serves as the researchers' conclusion, so 'The data showed' forms a complete independent clause. B and D create incomplete or illogical structures, while C changes the tense without a clear present connection.",
       "status": "staged"
     },
     {
@@ -1559,7 +1559,7 @@
       "domain": "Standard English Conventions",
       "skill": "Form, Structure, and Sense",
       "difficulty": "medium",
-      "passage": "Researchers studying beaver dams in Devon, England, found that dammed areas temporarily held back part of the runoff. Because some water remained stored for a period, the downstream arrival of runoff became more spread out over time. The researchers compared several sites and storms before describing the pattern in their report. They concluded that beaver dams can influence downstream flow because ______ delay the movement of some runoff.",
+      "passage": "Researchers studying beaver dams in Devon, England, found that dammed areas temporarily held back part of the runoff. Because some water remained stored for a period, the downstream arrival of runoff became more spread out over time. The researchers compared several sites and storms and recorded the timing of runoff at each site. They concluded that beaver dams can influence downstream flow because ______ delay the movement of some runoff. The effect was strongest at sites where the dams held water before it reached the monitoring point.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English and maintains a clear pronoun reference?",
       "choices": {
         "A": "it",
@@ -1568,7 +1568,7 @@
         "D": "this"
       },
       "correctAnswer": "B",
-      "explanation": "The pronoun refers to 'beaver dams,' a plural noun, so 'they' is the only choice with the correct number and clear reference. 'It' is singular, while 'which' and 'this' do not provide the required independent subject in the clause.",
+      "explanation": "The pronoun refers to 'beaver dams,' a plural noun, so 'they' is the only choice with the correct number and clear reference. 'It' is singular, while 'which' and 'this' do not provide the required subject in the clause.",
       "status": "staged"
     },
     {
@@ -1578,7 +1578,7 @@
       "domain": "Standard English Conventions",
       "skill": "Form, Structure, and Sense",
       "difficulty": "hard",
-      "passage": "Researchers studying beaver dams in Devon, England, initially found that sites with substantial storage often showed smaller downstream surges. That pattern suggested that storing more water might be the main reason for the reduction. Yet some sites with similar storage experienced different storm responses, and the amount of runoff entering each site also varied. The researchers therefore compared locations with different combinations of storage and incoming runoff. In the resulting analysis, they examined whether reductions in downstream surges occurred when the stored water represented a substantial share of the runoff reaching the site. ______, the researchers could distinguish an effect associated with temporary storage from differences caused by how much water was arriving in the first place.",
+      "passage": "Researchers studying beaver dams in Devon, England, initially found that sites with substantial storage often showed smaller downstream surges. That pattern suggested that storing more water might be the main reason for the reduction. Yet some sites with similar storage experienced different storm responses, and the amount of runoff entering each site also varied. The researchers therefore compared locations with different combinations of storage and incoming runoff. In the resulting analysis, they examined whether reductions in downstream surges occurred when the stored water represented a substantial share of the runoff reaching the site. They repeated these comparisons across several storms rather than relying on a single event. ______, the researchers could distinguish an effect associated with temporary storage from differences caused by how much water was arriving in the first place.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English and most precisely expresses the relationship among the actions described?",
       "choices": {
         "A": "By making this comparison",
