@@ -343,7 +343,23 @@ function isQuestionMarkedForReview(
 
     if (
         Object.prototype.hasOwnProperty.call(
-            localReviewOverrideasync function loadUserData() {
+            localReviewOverrides,
+            key
+        )
+    ) {
+        return Boolean(
+            localReviewOverrides[key]
+        );
+    }
+
+    return userReviews.some(
+        review =>
+            String(review.question_id) ===
+            key
+    );
+}
+
+async function loadUserData() {
     const user =
         await getCurrentUser();
 
@@ -371,7 +387,9 @@ function isQuestionMarkedForReview(
 
     const resetTime =
         resetAt
-            ? new Date(resetAt).getTime()
+            ? new Date(
+                resetAt
+            ).getTime()
             : null;
 
     const attemptsResult =
@@ -487,8 +505,6 @@ function isQuestionMarkedForReview(
 
     /*
      * Local review overrides always win over server state.
-     * This prevents a failed DELETE request from immediately
-     * re-marking a question.
      */
     Object.entries(
         localReviewOverrides
@@ -1513,11 +1529,9 @@ async function initializeQuestionBank() {
 
 window.addEventListener(
     "pageshow",
-    async event => {
-        if (event.persisted) {
-            await loadUserData();
-            renderQuestions();
-        }
+    async () => {
+        await loadUserData();
+        renderQuestions();
     }
 );
 
