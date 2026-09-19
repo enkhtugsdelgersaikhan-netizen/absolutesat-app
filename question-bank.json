@@ -1,3 +1,61 @@
 {
-  "questions": []
+  "questions": [
+    {
+      "id": "rw-pompeii-001-easy",
+      "groupId": "rw-pompeii-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Central Ideas and Details",
+      "difficulty": "easy",
+      "passage": "In 2019, archaeologist Elena Marquez used ground-penetrating radar to examine parts of Pompeii that had not been excavated. At the University of Naples Federico II, her team compared the radar images with maps of nearby Roman houses. The images revealed walls and courtyards beneath the surface, allowing the researchers to identify the layout of several buried structures without digging them up. The project showed that radar can help archaeologists study Pompeii while limiting physical disturbance to the site.",
+      "question": "Which choice best states the central idea of the passage?",
+      "choices": {
+        "A": "Ground-penetrating radar can help archaeologists investigate Pompeii while reducing the need for excavation.",
+        "B": "Roman houses in Pompeii were generally larger than archaeologists had previously believed.",
+        "C": "Elena Marquez's team created the first complete map of Pompeii's buried structures.",
+        "D": "The University of Naples Federico II specializes in technologies for studying Roman architecture."
+      },
+      "correctAnswer": "A",
+      "explanation": "The passage explains that Marquez's team used radar to identify buried structures without excavating them and concludes that the method can reduce physical disturbance. The other choices either focus on unsupported details or make claims the passage does not establish.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-pompeii-001-medium",
+      "groupId": "rw-pompeii-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Central Ideas and Details",
+      "difficulty": "medium",
+      "passage": "When archaeologist Elena Marquez and colleagues at the University of Naples Federico II surveyed an unexcavated section of Pompeii in 2019, they did not begin by removing soil. Instead, they used ground-penetrating radar and compared its readings with maps of nearby Roman houses. The resulting images suggested the presence of walls, courtyards, and other structural features below the surface. Because these features could be mapped without exposing them, the team could reconstruct portions of the area's layout while leaving the archaeological deposits largely undisturbed. The work therefore demonstrated that remote sensing can provide useful information about Pompeii while avoiding some of the physical disruption associated with conventional excavation.",
+      "question": "Which choice best states the central idea of the passage?",
+      "choices": {
+        "A": "Maps of Roman houses are more useful than radar images for reconstructing Pompeii's buried structures.",
+        "B": "Ground-penetrating radar can reveal information about buried structures at Pompeii while allowing archaeologists to limit physical disturbance.",
+        "C": "Marquez's team's findings suggest that remote sensing can substantially reduce the need for conventional excavation at Pompeii.",
+        "D": "The structural features discovered by Elena Marquez's team were previously unknown to archaeologists."
+      },
+      "correctAnswer": "B",
+      "explanation": "The passage connects the radar readings and existing maps to the team's ability to reconstruct buried structures without exposing them. Its central point is therefore that remote sensing can provide archaeological information while limiting physical disturbance. A and D misrepresent supporting details, while C extends the passage's claim beyond what it establishes.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-pompeii-001-hard",
+      "groupId": "rw-pompeii-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Central Ideas and Details",
+      "difficulty": "hard",
+      "passage": "At Pompeii, archaeologists seeking information about structures still hidden beneath volcanic deposits face a practical dilemma: excavation can reveal architectural details, but exposing deposits also physically alters the archaeological record. In 2019, Elena Marquez and colleagues at the University of Naples Federico II approached this problem differently. Their ground-penetrating-radar survey of an unexcavated area produced subsurface images that, when compared with maps of nearby Roman houses, indicated walls, courtyards, and other features beneath the ground. Such readings do not provide the same direct access to materials that excavation does, and individual signals can require interpretation. Nevertheless, the structural patterns visible across the radar images were sufficient for the team to reconstruct portions of the area's layout without first removing the overlying deposits. The significance of the project, then, lies less in showing that radar can replace excavation than in demonstrating that archaeological information about Pompeii can sometimes be obtained before excavation occurs. By making buried architecture accessible to study while leaving the deposits substantially intact, the method offers archaeologists a way to investigate the site while reducing the physical disruption that excavation can cause.",
+      "question": "Which choice best states the central idea of the passage?",
+      "choices": {
+        "A": "Ground-penetrating radar provides archaeologists with more detailed information than conventional excavation does.",
+        "B": "Elena Marquez's survey established that the buried architecture of Pompeii can be completely reconstructed without excavation.",
+        "C": "Although radar cannot provide all the information that excavation can, it can reveal enough about buried structures to help archaeologists study Pompeii while limiting physical disturbance.",
+        "D": "The main purpose of comparing radar images with maps of Roman houses is to determine which areas of Pompeii should eventually be excavated."
+      },
+      "correctAnswer": "C",
+      "explanation": "The passage establishes a tension between gaining information through excavation and preserving buried deposits. It then explains that Marquez's radar survey revealed structural patterns without exposing those deposits. At the same time, the passage explicitly limits the method's significance by noting that radar does not replace excavation or provide the same direct access to materials. C captures both the method's usefulness and its limitation. A reverses that limitation, B overstates the method's capabilities, and D describes a possible use of the survey rather than its central idea.",
+      "status": "staged"
+    }
+  ]
 }
