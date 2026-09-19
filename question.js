@@ -190,6 +190,11 @@ const checkAnswerButton =
         "check-answer-button"
     );
 
+const nextQuestionButton =
+    document.getElementById(
+        "next-question-button"
+    );
+
 const answerFeedback =
     document.getElementById(
         "answer-feedback"
@@ -365,6 +370,205 @@ function getPracticeResetAt() {
         )
         : null;
 }
+
+
+function getQuestionBankNavigationState() {
+
+    try {
+        const raw =
+            sessionStorage.getItem(
+                "absoluteprep-question-bank-navigation"
+            );
+
+        if (!raw) {
+            return null;
+        }
+
+        const parsed =
+            JSON.parse(raw);
+
+        if (
+            !parsed ||
+            !Array.isArray(
+                parsed.questionIds
+            ) ||
+            parsed.questionIds.length === 0
+        ) {
+            return null;
+        }
+
+        if (
+            parsed.userId &&
+            currentUser &&
+            String(parsed.userId) !==
+                String(currentUser.id)
+        ) {
+            return null;
+        }
+
+        return parsed;
+    } catch (error) {
+        console.warn(
+            "Could not read Question Bank navigation state:",
+            error
+        );
+        return null;
+    }
+}
+
+
+function saveQuestionBankNavigationState(
+    questionIds,
+    currentQuestionId
+) {
+
+    try {
+        sessionStorage.setItem(
+            "absoluteprep-question-bank-navigation",
+            JSON.stringify({
+                questionIds:
+                    questionIds.map(
+                        id => String(id)
+                    ),
+                currentQuestionId:
+                    String(
+                        currentQuestionId
+                    ),
+                userId:
+                    currentUser
+                        ? currentUser.id
+                        : null
+            })
+        );
+    } catch (error) {
+        console.warn(
+            "Could not save Question Bank navigation state:",
+            error
+        );
+    }
+}
+
+
+function updateQuestionUrl(
+    questionId
+) {
+
+    const url =
+        new URL(
+            window.location.href
+        );
+
+    url.searchParams.set(
+        "id",
+        String(questionId)
+    );
+
+    window.history.replaceState(
+        {},
+        "",
+        url.toString()
+    );
+}
+
+
+function resetQuestionForNavigation() {
+
+    const question =
+        questions[
+            currentQuestionIndex
+        ];
+
+    if (!question) {
+        return;
+    }
+
+    answers = {};
+
+    eliminatedChoices = {};
+
+    checkedResults = {};
+
+    markedForReview =
+        {};
+
+    submitted = false;
+
+    resetQuestionTimer();
+
+    return question;
+}
+
+
+function updateNextQuestionButton() {
+
+    if (!nextQuestionButton) {
+        return;
+    }
+
+    const question =
+        questions[
+            currentQuestionIndex
+        ];
+
+    const isChecked =
+        Boolean(
+            question &&
+            checkedResults[
+                question.id
+            ]
+        );
+
+    const hasNext =
+        currentQuestionIndex <
+        questions.length - 1;
+
+    nextQuestionButton.classList.toggle(
+        "hidden",
+        !(
+            isChecked &&
+            hasNext
+        )
+    );
+}
+
+
+async function goToNextQuestion() {
+
+    if (
+        currentQuestionIndex >=
+        questions.length - 1
+    ) {
+        return;
+    }
+
+    currentQuestionIndex += 1;
+
+    resetQuestionForNavigation();
+
+    const nextQuestion =
+        questions[
+            currentQuestionIndex
+        ];
+
+    saveQuestionBankNavigationState(
+        questions.map(
+            question =>
+                question.id
+        ),
+        nextQuestion.id
+    );
+
+    updateQuestionUrl(
+        nextQuestion.id
+    );
+
+    await loadQuestionReviewState(
+        nextQuestion.id
+    );
+
+    renderCurrentQuestion();
+}
+
 
 /* ============================================================
    INITIALIZE
@@ -750,6 +954,120 @@ async function loadReviewStatesForQuestions(
     }
 }
 
+function normalizeStagedQuestion(
+    stagedQuestion,
+    index
+) {
+
+    return {
+        id:
+            stagedQuestion.id,
+        question_number:
+            index + 1,
+        passage:
+            stagedQuestion.passage ||
+            "",
+        question_text:
+            stagedQuestion.question ||
+            "",
+        choice_a:
+            stagedQuestion.choices?.A ||
+            "",
+        choice_b:
+            stagedQuestion.choices?.B ||
+            "",
+        choice_c:
+            stagedQuestion.choices?.C ||
+            "",
+        choice_d:
+            stagedQuestion.choices?.D ||
+            "",
+        correct_answer:
+            stagedQuestion.correctAnswer ||
+            "",
+        explanation:
+            stagedQuestion.explanation ||
+            "",
+        difficulty:
+            stagedQuestion.difficulty
+                ? (
+                    stagedQuestion.difficulty
+                        .charAt(0)
+                        .toUpperCase() +
+                    stagedQuestion.difficulty
+                        .slice(1)
+                )
+                : "Medium",
+        topic:
+            stagedQuestion.skill ||
+            "SAT Practice",
+        section:
+            stagedQuestion.section ||
+            "SAT",
+        domain:
+            stagedQuestion.domain ||
+            ""
+    };
+
+}
+
+
+function getStagedNavigationQuestions(
+    stagedQuestions,
+    questionId
+) {
+
+    const navigation =
+        getQuestionBankNavigationState();
+
+    if (
+        !navigation ||
+        !navigation.questionIds.includes(
+            String(questionId)
+        )
+    ) {
+        return null;
+    }
+
+    const byId =
+        new Map(
+            stagedQuestions.map(
+                question => [
+                    String(question.id),
+                    question
+                ]
+            )
+        );
+
+    const ordered =
+        navigation.questionIds
+            .map(
+                id =>
+                    byId.get(
+                        String(id)
+                    )
+            )
+            .filter(
+                question =>
+                    question &&
+                    question.status ===
+                        "staged"
+            );
+
+    if (
+        !ordered.some(
+            question =>
+                String(question.id) ===
+                String(questionId)
+        )
+    ) {
+        return null;
+    }
+
+    return ordered;
+}
+
+
 /* ============================================================
    LOAD QUESTION BY ID
    ============================================================ */
@@ -784,69 +1102,71 @@ async function loadQuestionById(
         const stagedData =
             await response.json();
 
+        const stagedQuestions =
+            stagedData.questions ||
+            [];
+
         const stagedQuestion =
-            (stagedData.questions || [])
-                .find(
-                    question =>
-                        String(question.id) ===
-                        String(questionId) &&
-                        question.status ===
-                        "staged"
-                );
+            stagedQuestions.find(
+                question =>
+                    String(question.id) ===
+                    String(questionId) &&
+                    question.status ===
+                    "staged"
+            );
 
         if (stagedQuestion) {
 
             currentSet = null;
 
-            questions = [{
-                id: stagedQuestion.id,
-                question_number: null,
-                passage:
-                    stagedQuestion.passage ||
-                    "",
+            const navigationQuestions =
+                getStagedNavigationQuestions(
+                    stagedQuestions,
+                    questionId
+                );
 
-                question_text:
-                    stagedQuestion.question ||
-                    "",
-                choice_a:
-                    stagedQuestion.choices?.A ||
-                    "",
-                choice_b:
-                    stagedQuestion.choices?.B ||
-                    "",
-                choice_c:
-                    stagedQuestion.choices?.C ||
-                    "",
-                choice_d:
-                    stagedQuestion.choices?.D ||
-                    "",
-                correct_answer:
-                    stagedQuestion.correctAnswer ||
-                    "",
-                explanation:
-                    stagedQuestion.explanation ||
-                    "",
-                difficulty:
-                    stagedQuestion.difficulty
-                        ? (
-                            stagedQuestion.difficulty
-                                .charAt(0)
-                                .toUpperCase() +
-                            stagedQuestion.difficulty
-                                .slice(1)
+            const sourceQuestions =
+                navigationQuestions ||
+                [stagedQuestion];
+
+            questions =
+                sourceQuestions.map(
+                    (
+                        question,
+                        index
+                    ) =>
+                        normalizeStagedQuestion(
+                            question,
+                            index
                         )
-                        : "Medium",
-                topic:
-                    stagedQuestion.skill ||
-                    "SAT Practice",
-                section:
-                    stagedQuestion.section ||
-                    "SAT"
-            }];
+                );
 
-            await loadQuestionReviewState(
-                stagedQuestion.id
+            currentQuestionIndex =
+                questions.findIndex(
+                    question =>
+                        String(question.id) ===
+                        String(questionId)
+                );
+
+            if (
+                currentQuestionIndex < 0
+            ) {
+                currentQuestionIndex = 0;
+            }
+
+            await loadReviewStatesForQuestions(
+                questions
             );
+
+            if (navigationQuestions) {
+                saveQuestionBankNavigationState(
+                    questions.map(
+                        question =>
+                            question.id
+                    ),
+                    questionId
+                );
+            }
 
             setTitle.textContent =
                 "Question Bank";
@@ -1324,6 +1644,8 @@ function renderCurrentQuestion() {
     updateNavigationButtons();
 
     updateQuestionNavigator();
+
+    updateNextQuestionButton();
 
 }
 
@@ -2887,6 +3209,22 @@ if (checkAnswerButton) {
             event.preventDefault();
 
             checkAnswer();
+
+        }
+    );
+
+}
+
+
+if (nextQuestionButton) {
+
+    nextQuestionButton.addEventListener(
+        "click",
+        event => {
+
+            event.preventDefault();
+
+            goToNextQuestion();
 
         }
     );
