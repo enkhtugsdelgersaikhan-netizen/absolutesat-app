@@ -611,6 +611,63 @@
       "correctAnswer": "B",
       "explanation": "The passage never gives a direct definition of provisional. Instead, the reader must connect the initial interpretation, the uncertainty surrounding the fragment distribution, the later chemical evidence, and the continued possibility of local production. Together, these details show that the interpretation was being treated as a working explanation rather than a settled conclusion.",
       "status": "staged"
+    },
+    {
+      "id": "rw-eastview-tomato-001-easy",
+      "groupId": "rw-eastview-tomato-001",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "easy",
+      "passage": "Researchers at Eastview University tested tomato plants in two urban farms. Plants watered with a drip system produced more tomatoes than plants watered by hand. The researchers noted that the drip system delivered water slowly, reducing the amount lost to evaporation during hot afternoons. Because the plants received water more efficiently, their **yield** was higher.",
+      "question": "As used in the text, what does **“yield”** most nearly mean?",
+      "choices": {
+        "A": "Amount produced",
+        "B": "Amount watered",
+        "C": "Time required",
+        "D": "Temperature reached"
+      },
+      "correctAnswer": "A",
+      "explanation": "The passage compares how many tomatoes the plants produced, so yield refers to the amount produced.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-eastview-tomato-001-medium",
+      "groupId": "rw-eastview-tomato-001",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "medium",
+      "passage": "At two urban farms, Eastview University researchers compared tomato plants watered by hand with plants using a drip system. The drip-watered plants produced more tomatoes, even though the researchers did not give them substantially more total water. This difference was especially noticeable on hot afternoons, when much of the water applied by hand evaporated before the plants could use it. Thus, the drip system's higher **yield** was associated with more effective delivery of water, although the researchers cautioned that the system did not increase the plants' total water supply.",
+      "question": "As used in the text, what does **“yield”** most nearly mean?",
+      "choices": {
+        "A": "Efficiency of water use",
+        "B": "Amount of tomatoes produced",
+        "C": "Total amount of water supplied",
+        "D": "Duration of afternoon heat"
+      },
+      "correctAnswer": "B",
+      "explanation": "The passage says the drip-watered plants produced more tomatoes and then describes their higher yield. Thus, yield refers to the amount of tomatoes produced, not the amount of water supplied.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-eastview-tomato-001-hard",
+      "groupId": "rw-eastview-tomato-001",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "hard",
+      "passage": "Eastview University researchers expected the tomato plants at two urban farms to respond mainly to the quantity of water supplied. The drip and hand-watered groups received nearly the same total amount over the study period, yet their **yield** measurements did not remain comparable. During hot afternoons, the hand-watered plots lost more water to evaporation, and the difference between the groups became especially pronounced. That pattern suggested that irrigation timing and delivery affected what portion of the supplied water was actually available to the plants, but the researchers did not assume that evaporation alone explained the result. When conditions were cooler and evaporation declined, the gap narrowed, although the drip-watered plants still maintained an overall production advantage. The researchers therefore interpreted the farm records by considering both the total water supplied and the conditions under which plants could use it. In this context, the relevant measure reflects the amount of agricultural output obtained under those conditions, rather than the volume of water applied.",
+      "question": "As used in the text, what does **“yield”** most nearly mean?",
+      "choices": {
+        "A": "The portion of water available to plants after irrigation",
+        "B": "The temperature conditions under which tomatoes grow",
+        "C": "The amount of agricultural output obtained from the plants",
+        "D": "The efficiency of the irrigation equipment itself"
+      },
+      "correctAnswer": "C",
+      "explanation": "The meaning of yield must be inferred by connecting the comparison of production, the discussion of water availability, and the final distinction between agricultural output and water applied. Yield refers to the amount of agricultural output obtained from the plants.",
+      "status": "staged"
     }
   ]
 }
