@@ -1361,6 +1361,63 @@
       "correctAnswer": "B",
       "explanation": "The blank comes between two independent clauses: 'The digital record remains useful for tracking change over time' and 'its value depends partly on how it is interpreted alongside direct observation.' Because 'however' is a conjunctive adverb connecting the clauses, a semicolon belongs before 'however' and a comma after it. Choice B supplies both correctly; A creates a comma splice, C misplaces the punctuation, and D incorrectly creates a new sentence without the proper connection.",
       "status": "staged"
+    },
+    {
+      "id": "rw-urban-gardens-boundaries-001-easy",
+      "groupId": "rw-urban-gardens-boundaries-001",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "easy",
+      "passage": "Researchers at the University of Washington studied how urban gardens affect bee populations. Gardens with a greater variety of flowering plants attracted more bee species than gardens with fewer varieties. Garden size also mattered ______ for example, larger gardens generally supported more bees. The researchers concluded that plant diversity can benefit urban pollinators, but it does not explain every difference among gardens.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": ", for example,",
+        "B": "; for example,",
+        "C": ", however,",
+        "D": "; however,"
+      },
+      "correctAnswer": "B",
+      "explanation": "The material before and after the blank forms two independent clauses, so a semicolon is needed. Because the second clause gives an example of how garden size mattered, 'for example' is the appropriate transition. Choice B supplies both the correct boundary and logical connection.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-urban-gardens-boundaries-001-medium",
+      "groupId": "rw-urban-gardens-boundaries-001",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "medium",
+      "passage": "Researchers at the University of Washington found that gardens with many flowering plant varieties attracted more bee species than gardens with fewer varieties. The researchers initially thought that plant diversity might explain much of the difference among gardens. Garden size, however, also affected bee abundance; larger gardens often supported more bees even when their plant diversity was similar. ______ however, comparisons among gardens of similar size still showed somewhat greater bee diversity in gardens with more flowering plant varieties.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": ", however,",
+        "B": "; however,",
+        "C": ", therefore,",
+        "D": "; therefore,"
+      },
+      "correctAnswer": "B",
+      "explanation": "The sentence before the blank describes a qualification: garden size affects bee abundance. The next sentence introduces evidence that plant diversity still matters after size is controlled, so 'however' signals the necessary contrast. Because both parts are independent clauses, a semicolon must precede 'however' and a comma must follow it.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-urban-gardens-boundaries-001-hard",
+      "groupId": "rw-urban-gardens-boundaries-001",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "hard",
+      "passage": "Researchers at the University of Washington initially found that urban gardens containing many flowering plant varieties supported more bee species than gardens with fewer varieties. This pattern seemed to suggest that increasing plant diversity might be a reliable way to increase bee diversity in cities. The researchers then noticed that gardens with many flower types also tended to be larger, raising the possibility that garden size, rather than plant diversity, explained part of the pattern. ______ however, a comparison of gardens with similar sizes still found a difference: sites with more flowering varieties generally supported more bee species. A second analysis complicated the interpretation again. Among gardens with similarly diverse plantings, larger sites still tended to support more bees, suggesting that neither variable alone accounted for the full pattern. The researchers therefore treated plant diversity and garden size as related influences rather than assuming that the original association could be attributed to only one of them.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": ", however,",
+        "B": "; however,",
+        "C": ", therefore,",
+        "D": "; therefore,"
+      },
+      "correctAnswer": "B",
+      "explanation": "The passage first presents plant diversity as a possible explanation, then introduces garden size as an alternative explanation. The evidence immediately after the blank shows that controlling for garden size does not eliminate the effect associated with plant diversity, so 'however' marks the necessary qualification of the size-based alternative. Because the two clauses are independent, a semicolon must precede 'however' and a comma must follow it. Choice B therefore fits both the grammar and the passage's revised reasoning.",
+      "status": "staged"
     }
   ]
 }
