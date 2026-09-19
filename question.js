@@ -289,6 +289,94 @@ function renderInlineFormatting(value) {
 
 }
 
+function renderQuestionTable(
+    table
+) {
+
+    if (
+        !table ||
+        !Array.isArray(
+            table.headers
+        ) ||
+        !Array.isArray(
+            table.rows
+        )
+    ) {
+        return "";
+    }
+
+    const headers =
+        table.headers
+            .map(
+                header =>
+                    "<th scope=\"col\">" +
+                    escapeHtml(
+                        header
+                    ) +
+                    "</th>"
+            )
+            .join("");
+
+    const rows =
+        table.rows
+            .map(
+                row =>
+                    "<tr>" +
+                    row
+                        .map(
+                            cell =>
+                                "<td>" +
+                                escapeHtml(
+                                    cell
+                                ) +
+                                "</td>"
+                        )
+                        .join("") +
+                    "</tr>"
+            )
+            .join("");
+
+    const caption =
+        table.caption
+            ? "<caption>" +
+                escapeHtml(
+                    table.caption
+                ) +
+              "</caption>"
+            : "";
+
+    return (
+        '<div class="question-passage-table-wrap">' +
+            '<table class="question-passage-table">' +
+                caption +
+                "<thead><tr>" +
+                    headers +
+                "</tr></thead>" +
+                "<tbody>" +
+                    rows +
+                "</tbody>" +
+            "</table>" +
+        "</div>"
+    );
+}
+
+
+function renderQuestionPassage(
+    question
+) {
+
+    return (
+        renderInlineFormatting(
+            question.passage ||
+            ""
+        ) +
+        renderQuestionTable(
+            question.table
+        )
+    );
+}
+
+
 function getReviewStorageKey() {
 
     return currentUser
@@ -1038,7 +1126,10 @@ function normalizeStagedQuestion(
             "SAT",
         domain:
             stagedQuestion.domain ||
-            ""
+            "",
+        table:
+            stagedQuestion.table ||
+            null
     };
 
 }
@@ -1650,9 +1741,8 @@ function renderCurrentQuestion() {
 
     if (questionPassage) {
         questionPassage.innerHTML =
-            renderInlineFormatting(
-                question.passage ||
-                ""
+            renderQuestionPassage(
+                question
             );
 
         questionPassage.parentElement?.classList.toggle(
