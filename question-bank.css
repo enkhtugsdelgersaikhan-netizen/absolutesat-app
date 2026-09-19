@@ -372,9 +372,12 @@
 }
 
 .question-list {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, max-content));
+    align-items: center;
+    justify-content: start;
+    column-gap: 34px;
+    row-gap: 28px;
 }
 
 .question-group {
@@ -382,6 +385,7 @@
     align-items: center;
     gap: 12px;
     min-height: 72px;
+    width: max-content;
 }
 
 .question-icon-wrapper {
@@ -648,6 +652,8 @@
     }
 
     .question-list {
-        gap: 22px;
+        grid-template-columns: 1fr;
+        row-gap: 22px;
+        column-gap: 0;
     }
 }
