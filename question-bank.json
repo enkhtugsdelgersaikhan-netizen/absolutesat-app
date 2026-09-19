@@ -725,6 +725,63 @@
       "correctAnswer": "A",
       "explanation": "The passage first considers whether more information helps, then shows that visitors did not consistently retain the added facts, and finally contrasts those results with the stronger performance produced by concise contextual information. The purpose is to examine how the usefulness of label information depends on whether selected details help visitors interpret an object's function and historical context.",
       "status": "staged"
+    },
+    {
+      "id": "rw-room-for-the-river-001-easy",
+      "groupId": "rw-room-for-the-river-001",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Text Structure and Purpose",
+      "difficulty": "easy",
+      "passage": "In the Netherlands, the Room for the River program gave some rivers more space to spread during high water by lowering floodplains and moving dikes farther from river channels. This approach can reduce flood risk without requiring rivers to remain permanently deeper or wider. During ordinary water levels, much of the added space remains dry, but during floods it temporarily holds excess water.",
+      "question": "Which choice best describes the purpose of the passage?",
+      "choices": {
+        "A": "To explain why Dutch rivers are unusually difficult to deepen",
+        "B": "To show how giving rivers temporary space can reduce flood risk",
+        "C": "To argue that floodplains should remain underwater throughout the year",
+        "D": "To compare the costs of moving dikes with those of widening river channels"
+      },
+      "correctAnswer": "B",
+      "explanation": "The passage describes how the Room for the River program creates space that can temporarily hold excess water during floods, showing how this approach can reduce flood risk.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-room-for-the-river-001-medium",
+      "groupId": "rw-room-for-the-river-001",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Text Structure and Purpose",
+      "difficulty": "medium",
+      "passage": "The Netherlands' Room for the River program changed several flood-prone areas by moving dikes, lowering floodplains, and creating additional channels. These changes allowed high water to spread over a larger area rather than forcing all of it through a narrow riverbed. Yet the added land was not intended to remain submerged: most of it functions as ordinary landscape until water levels rise. This distinction matters because the program's effectiveness depends not simply on creating more open water but on making space available when rivers carry unusually large volumes.",
+      "question": "Which choice best describes the purpose of the passage?",
+      "choices": {
+        "A": "To describe how permanent expansion of river channels protects Dutch cities",
+        "B": "To explain why moving dikes is generally less expensive than lowering floodplains",
+        "C": "To illustrate that the program's flood-control strategy relies on temporary use of additional space",
+        "D": "To suggest that flood-prone land in the Netherlands is unsuitable for ordinary landscape use"
+      },
+      "correctAnswer": "C",
+      "explanation": "The passage first describes how the projects create additional space and then clarifies that this space is normally dry. That distinction supports the broader purpose of explaining why temporary use of the added space is central to the flood-control strategy.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-room-for-the-river-001-hard",
+      "groupId": "rw-room-for-the-river-001",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Text Structure and Purpose",
+      "difficulty": "hard",
+      "passage": "When engineers evaluated projects in the Netherlands' Room for the River program, they initially focused on a simple result: after floodplains were lowered or dikes moved, peak water levels often fell. This pattern seemed consistent with the idea that enlarging a river's available space directly reduced flooding. Some sites complicated that interpretation, however. During ordinary flows, newly opened areas often remained dry, and vegetation sometimes covered them, making their contribution less apparent than that of a permanently widened channel.\n\nLater high-water events revealed a different pattern. Those same areas were repeatedly inundated as rivers rose, although the timing varied with each site's elevation and shape. Sites with similar amounts of added area also produced different changes in water levels when their dikes and floodplains were arranged differently. Thus, neither the apparent inactivity of some restored areas during normal conditions nor the total amount of added land alone accounted for the program's results.",
+      "question": "Which choice best describes the purpose of the passage?",
+      "choices": {
+        "A": "To demonstrate that relocated dikes are more important than lowered floodplains in reducing flood risk",
+        "B": "To explain why restored floodplains are most effective when they remain covered by water for much of the year",
+        "C": "To compare the amount of land restored by different Room for the River projects",
+        "D": "To examine how observations under different water conditions challenge a simple explanation of why the projects reduce flood risk"
+      },
+      "correctAnswer": "D",
+      "explanation": "The passage begins with a straightforward explanation for the projects' effects, then introduces observations from normal and high-water conditions that complicate that explanation. The differing results among sites also show that the total amount of added land alone is insufficient. Together, these details support the purpose of examining why the projects' effects cannot be explained by a simple increase in available river space.",
+      "status": "staged"
     }
   ]
 }
