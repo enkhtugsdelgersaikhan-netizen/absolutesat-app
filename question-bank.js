@@ -4,7 +4,8 @@ const questionBankSupabase = supabaseClient;
 let allQuestions = [];
 let activeSection = "all";
 let activeSearch = "";
-let activeTopic = "all";
+let activeDomain = "all";
+let activeSubtopic = "all";
 let activeDifficulty = "all";
 let activeStatus = "all";
 let reviewOnly = false;
@@ -22,6 +23,60 @@ const difficultyFilter = document.getElementById("difficulty-filter");
 const statusFilter = document.getElementById("status-filter");
 const reviewOnlyCheckbox = document.getElementById("review-only");
 const sectionTabs = document.querySelectorAll(".section-tab");
+let subtopicFilter = null;
+
+const SAT_FILTER_TAXONOMY = {
+    "Reading & Writing": {
+        "Information and Ideas": [
+            "Central Ideas and Details",
+            "Command of Evidence",
+            "Inferences"
+        ],
+        "Craft and Structure": [
+            "Words in Context",
+            "Text Structure and Purpose",
+            "Cross-Text Connections"
+        ],
+        "Expression of Ideas": [
+            "Rhetorical Synthesis",
+            "Transitions"
+        ],
+        "Standard English Conventions": [
+            "Boundaries",
+            "Form, Structure, and Sense"
+        ]
+    },
+    "Math": {
+        "Algebra": [
+            "Linear equations in one variable",
+            "Linear functions",
+            "Linear equations in two variables",
+            "Systems of two linear equations in two variables",
+            "Linear inequalities in one or two variables"
+        ],
+        "Advanced Math": [
+            "Nonlinear functions",
+            "Nonlinear equations in one variable",
+            "Systems of equations in two variables",
+            "Equivalent expressions"
+        ],
+        "Problem-Solving and Data Analysis": [
+            "Ratios, rates, proportional relationships, and units",
+            "Percentages",
+            "One-variable data: distributions and measures of center and spread",
+            "Two-variable data: models and scatterplots",
+            "Probability and conditional probability",
+            "Inference from sample statistics and margin of error",
+            "Evaluating statistical claims: observational studies and experiments"
+        ],
+        "Geometry and Trigonometry": [
+            "Area and volume",
+            "Lines, angles, and triangles",
+            "Right triangles and trigonometry",
+            "Circles"
+        ]
+    }
+};
 
 function escapeHtml(value) {
     if (value === null || value === undefined) return "";
@@ -33,6 +88,69 @@ function escapeHtml(value) {
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#039;");
 }
+
+function ensureDomainSubtopicFilters() {
+    const existingGroup = topicFilter?.closest(".filter-group");
+
+    if (!existingGroup || subtopicFilter) {
+        return;
+    }
+
+    const label = existingGroup.querySelector("label");
+
+    if (label) {
+        label.textContent = "Domain";
+    }
+
+    topicFilter.dataset.filter = "domain";
+
+    const subtopicGroup = document.createElement("div");
+    subtopicGroup.className = "filter-group";
+    subtopicGroup.innerHTML = `
+        <label for="subtopic-filter">Subtopic</label>
+        <div class="filter-dropdown" id="subtopic-filter" data-filter="subtopic" data-value="all">
+            <button type="button" class="filter-dropdown-trigger" aria-haspopup="listbox" aria-expanded="false">
+                <span class="filter-dropdown-value">All Subtopics</span>
+                <span class="filter-dropdown-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="filter-dropdown-menu" role="listbox"></div>
+        </div>
+    `;
+
+    existingGroup.parentElement.insertBefore(
+        subtopicGroup,
+        difficultyFilter.closest(".filter-group")
+    );
+
+    subtopicFilter = document.getElementById("subtopic-filter");
+
+    const style = document.createElement("style");
+    style.textContent = `
+        .filters-row {
+            grid-template-columns:
+                minmax(0, 1.4fr)
+                minmax(0, 1.4fr)
+                minmax(180px, 1fr)
+                minmax(180px, 1fr) !important;
+        }
+
+        @media (max-width: 1000px) {
+            .filters-row {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .filters-row {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    `;
+
+    document.head.appendChild(style);
+}
+
+ensureDomainSubtopicFilters();
 
 function normalizeDifficulty(value) {
     const text = String(value || "medium").toLowerCase();
@@ -663,7 +781,8 @@ async function loadQuestions() {
             stagedQuestions
         );
 
-    populateTopicFilter();
+    populateDomainFilter();
+    populateSubtopicFilter();
 
     await loadUserData();
 
@@ -888,52 +1007,80 @@ function setDropdownOptions(
     );
 }
 
-function populateTopicFilter() {
+function getDomainsForSection() {
+    if (activeSection === "Reading & Writing" || activeSection === "Math") {
+        return SAT_FILTER_TAXONOMY[activeSection] || {};
+    }
+
+    return Object.assign(
+        {},
+        SAT_FILTER_TAXONOMY["Reading & Writing"],
+        SAT_FILTER_TAXONOMY["Math"]
+    );
+}
+
+function populateDomainFilter() {
     if (!topicFilter) return;
 
-    const values =
-        new Map();
-
-    allQuestions.forEach(
-        question => {
-            if (question.domain) {
-                values.set(
-                    question.domain,
-                    question.domain
-                );
-            }
-
-            if (question.topic) {
-                values.set(
-                    question.topic,
-                    question.topic
-                );
-            }
-        }
-    );
+    const domains = getDomainsForSection();
 
     const options = [
         {
             value: "all",
-            label: "All Topics"
+            label: "All Domains"
         },
-        ...[...values.entries()]
-            .sort((a, b) =>
-                a[1].localeCompare(b[1])
-            )
-            .map(
-                ([value, label]) => ({
-                    value,
-                    label
-                })
-            )
+        ...Object.keys(domains).map(domain => ({
+            value: domain,
+            label: domain
+        }))
     ];
 
-    setDropdownOptions(
-        topicFilter,
-        options
+    setDropdownOptions(topicFilter, options);
+    setDropdownValue(topicFilter, activeDomain, activeDomain === "all" ? "All Domains" : activeDomain);
+}
+
+function populateSubtopicFilter() {
+    if (!subtopicFilter) return;
+
+    const domains = getDomainsForSection();
+    let subtopics = [];
+
+    if (activeDomain === "all") {
+        subtopics = Object.values(domains).flat();
+    } else if (domains[activeDomain]) {
+        subtopics = domains[activeDomain];
+    }
+
+    const uniqueSubtopics = [...new Set(subtopics)];
+
+    const options = [
+        {
+            value: "all",
+            label: "All Subtopics"
+        },
+        ...uniqueSubtopics.map(subtopic => ({
+            value: subtopic,
+            label: subtopic
+        }))
+    ];
+
+    setDropdownOptions(subtopicFilter, options);
+
+    const stillValid =
+        activeSubtopic === "all" ||
+        uniqueSubtopics.includes(activeSubtopic);
+
+    if (!stillValid) {
+        activeSubtopic = "all";
+    }
+
+    setDropdownValue(
+        subtopicFilter,
+        activeSubtopic,
+        activeSubtopic === "all" ? "All Subtopics" : activeSubtopic
     );
 }
+
 
 function getFilteredQuestions() {
     let questions =
@@ -976,14 +1123,21 @@ function getFilteredQuestions() {
             );
     }
 
-    if (activeTopic !== "all") {
+    if (activeDomain !== "all") {
         questions =
             questions.filter(
                 question =>
                     question.domain ===
-                        activeTopic ||
+                    activeDomain
+            );
+    }
+
+    if (activeSubtopic !== "all") {
+        questions =
+            questions.filter(
+                question =>
                     question.topic ===
-                        activeTopic
+                    activeSubtopic
             );
     }
 
@@ -1415,7 +1569,17 @@ if (searchInput) {
 setupFilterDropdown(
     topicFilter,
     value => {
-        activeTopic = value;
+        activeDomain = value;
+        activeSubtopic = "all";
+        populateSubtopicFilter();
+        renderQuestions();
+    }
+);
+
+setupFilterDropdown(
+    subtopicFilter,
+    value => {
+        activeSubtopic = value;
         renderQuestions();
     }
 );
@@ -1468,13 +1632,11 @@ sectionTabs.forEach(
                     tab.dataset.section ||
                     "all";
 
-                activeTopic = "all";
+                activeDomain = "all";
+                activeSubtopic = "all";
 
-                setDropdownValue(
-                    topicFilter,
-                    "all",
-                    "All Topics"
-                );
+                populateDomainFilter();
+                populateSubtopicFilter();
 
                 renderQuestions();
             }
