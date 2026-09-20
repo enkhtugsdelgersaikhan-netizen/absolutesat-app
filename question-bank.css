@@ -564,6 +564,9 @@
 }
 
 .loading-state {
+    grid-column: 1 / -1;
+    width: 100%;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
