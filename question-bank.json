@@ -3107,6 +3107,63 @@
       "correctAnswer": "D",
       "explanation": "The noun phrase “the single morning-light treatment” already identifies one specific treatment, so the following relative clause beginning with “which” is nonessential and must be separated with a comma. The earlier trials matter because they establish why this treatment is being singled out, but the later clause adds information about that already identified treatment rather than defining which treatment is meant. A semicolon, colon, or period would incorrectly separate the noun phrase from the dependent relative clause.",
       "status": "staged"
+    },
+    {
+      "id": "rw-sedum-rooftop-boundaries-003-easy",
+      "groupId": "rw-sedum-rooftop-boundaries-003",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "easy",
+      "passage": "At a University of California, Davis rooftop-garden site, botanists grew *Sedum album* in substrate layers of different depths. After rainfall, plants in the deeper layers stayed hydrated longer than plants in the shallow layers. Their leaves also remained cooler during the warmest part of the afternoon. The researchers identified one consistent pattern____ that plots retaining moisture longer also tended to show lower leaf temperatures.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": ",",
+        "B": ";",
+        "C": ":",
+        "D": "."
+      },
+      "correctAnswer": "C",
+      "explanation": "The clause before the blank is complete, while the material after the blank is a dependent clause beginning with “that” that explains the pattern. A colon correctly introduces that explanation. A comma, semicolon, or period would not correctly connect the complete clause to the dependent clause.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-sedum-rooftop-boundaries-003-medium",
+      "groupId": "rw-sedum-rooftop-boundaries-003",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "medium",
+      "passage": "At a University of California, Davis rooftop-garden site, botanists compared *Sedum album* grown in shallow and deep substrate layers. During the first trial, deeper plots stayed cooler and retained more water, suggesting that substrate depth might directly affect leaf temperature. A second trial began with the same moisture level in both treatments, yet the deeper plots again remained cooler. The researchers therefore considered water retention a likely contributor but not a complete explanation____ however, afternoon measurements showed that the difference narrowed when airflow increased over all plots. The team then repeated the trial with airflow more closely matched.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": ", however,",
+        "B": "; however,",
+        "C": ": however,",
+        "D": ", and however,"
+      },
+      "correctAnswer": "B",
+      "explanation": "The material on both sides of the blank forms an independent clause, and “however” is a conjunctive adverb linking the two ideas. A semicolon must therefore precede “however,” and the comma after it sets off the conjunctive adverb. The other choices do not create the required boundary.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-sedum-rooftop-boundaries-003-hard",
+      "groupId": "rw-sedum-rooftop-boundaries-003",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "hard",
+      "passage": "At a University of California, Davis rooftop-garden site, botanists initially treated substrate depth as the main explanation for why *Sedum album* remained cooler in deeper plots. The pattern appeared after both heavy rainfall and several dry days, although the deeper substrate also retained water longer. Because starting moisture could therefore account for part of the difference, the researchers repeated the experiment with the two depths matched for initial water content. The deeper plots still had lower afternoon leaf temperatures, which made depth itself seem important. A later trial complicated that interpretation: when wind speed increased across the roof, the temperature gap between the treatments narrowed even though their starting moisture levels were again matched. The researchers consequently examined whether depth acted indirectly by allowing plants to maintain moisture during periods of evaporative demand. In the final comparison, they focused on the deeper plots that had maintained cooler leaves____ which were also the plots with the most stable moisture readings during the high-wind trial. Measurements taken several hours later showed that those plots had lost less water from the leaves.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": ", which were also the plots with the most stable moisture readings during the high-wind trial.",
+        "B": "; which were also the plots with the most stable moisture readings during the high-wind trial.",
+        "C": "which were also the plots with the most stable moisture readings during the high-wind trial.",
+        "D": ". Which were also the plots with the most stable moisture readings during the high-wind trial."
+      },
+      "correctAnswer": "A",
+      "explanation": "The phrase “that had maintained cooler leaves” already identifies the specific plots being discussed, so the following “which” clause adds nonessential information about those identified plots and must be preceded by a comma. A semicolon cannot separate a noun phrase from a dependent relative clause, and omitting the comma would incorrectly make the second relative clause restrictive. The period would also leave the “Which” clause as a fragment.",
+      "status": "staged"
     }
   ]
 }
