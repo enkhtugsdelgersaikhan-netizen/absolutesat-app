@@ -1988,6 +1988,63 @@
       "correctAnswer": "D",
       "explanation": "Early evidence makes the original mixture a plausible explanation, but the sheltered fragments with similar composition weaken the idea that starting materials alone account for preservation. The strongest evidence comes from combining the later controlled exposure with the mechanical test: samples with matched initial composition developed new crack deposits after seawater treatment and then retained more cohesion. This makes the environmental contribution more compelling than any single earlier observation.",
       "status": "staged"
+    },
+    {
+      "id": "rw-teotihuacan-obsidian-command-evidence-001-easy",
+      "groupId": "rw-teotihuacan-obsidian-command-evidence-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "easy",
+      "passage": "At Teotihuacan, archaeologist Lucía Herrera compared finished obsidian blades with volcanic glass from deposits near the city. Most of the finished blades had trace-element signatures matching obsidian from Pachuca, a source farther away, rather than the nearby deposits. The nearby deposits had a different chemical signature. Because the finished blades usually matched the distant source, Herrera concluded that many had likely reached Teotihuacan through exchange rather than being made from local stone.",
+      "question": "A researcher concludes that many finished obsidian blades at Teotihuacan arrived through exchange. Which choice provides the best evidence for this conclusion?",
+      "choices": {
+        "A": "Herrera compared finished blades with obsidian from more than one possible source.",
+        "B": "The nearby deposits had a chemical signature different from most finished blades.",
+        "C": "Most finished blades matched Pachuca obsidian rather than the nearby deposits.",
+        "D": "The finished blades came from archaeological contexts at Teotihuacan."
+      },
+      "correctAnswer": "C",
+      "explanation": "Most finished blades matched obsidian from the distant Pachuca source rather than the nearby deposits. That direct source match is the strongest evidence that many of the blades reached Teotihuacan through exchange rather than being made from local stone.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-teotihuacan-obsidian-command-evidence-001-medium",
+      "groupId": "rw-teotihuacan-obsidian-command-evidence-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "medium",
+      "passage": "At Teotihuacan, archaeologist Lucía Herrera found abundant obsidian flakes and partly worked pieces in several workshops, indicating that obsidian was being shaped locally. To determine whether finished blades were also made from local stone, she compared their trace-element signatures with nearby deposits. Most finished blades matched Pachuca obsidian, whereas the nearby deposits had a different signature. Some workshops also contained cores made from local stone. These findings suggest that local knapping occurred, but the presence of local workshops does not by itself show that most finished blades were produced from local obsidian.",
+      "question": "A researcher concludes that evidence of local obsidian working does not establish that most finished blades were made locally. Which choice provides the best evidence for this conclusion?",
+      "choices": {
+        "A": "The workshops contained flakes and partly worked obsidian pieces.",
+        "B": "Most finished blades matched Pachuca obsidian rather than the nearby deposits.",
+        "C": "Some workshops contained cores made from local obsidian.",
+        "D": "Herrera compared finished blades with several possible obsidian sources."
+      },
+      "correctAnswer": "B",
+      "explanation": "The workshop evidence shows that obsidian was worked locally, but the finished blades largely matched the distant Pachuca source rather than the nearby deposits. That distinction is the key evidence that local knapping did not necessarily produce most of the finished blades.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-teotihuacan-obsidian-command-evidence-001-hard",
+      "groupId": "rw-teotihuacan-obsidian-command-evidence-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "hard",
+      "passage": "At Teotihuacan, archaeologist Lucía Herrera first suspected that finished obsidian blades were produced locally because workshops contained many flakes, partly worked pieces, and discarded cores. That interpretation remained plausible even after some workshop material proved to be made from nearby obsidian. Herrera then analyzed the trace-element signatures of finished blades and several candidate sources. Most finished blades matched obsidian from Pachuca, whereas the volcanic deposits closest to the city had a different signature. Yet local production could not simply be ruled out: some finished blades had edges that had been retouched with techniques also found in the workshops, and local cores were common. Herrera therefore compared the chemical signatures of the retouched blades separately. Those blades were chemically similar to the other finished blades. At the same workshops, however, archaeologists continued to find cores and flakes made from local obsidian.",
+      "question": "A researcher concludes that many finished obsidian blades reached Teotihuacan through exchange even though obsidian was also worked locally. Which choice provides the strongest evidence for this conclusion?",
+      "choices": {
+        "A": "Workshop debris made from local obsidian shows that local knapping occurred at Teotihuacan.",
+        "B": "Most finished blades matched Pachuca obsidian, suggesting that some finished blades were imported.",
+        "C": "Retouched blades resembled other finished blades chemically while local cores and flakes remained common in workshops.",
+        "D": "Some finished blades had edges retouched with techniques used at local workshops."
+      },
+      "correctAnswer": "C",
+      "explanation": "The passage first establishes that local obsidian was being worked, but most finished blades matched the distant Pachuca source. The retouched blades were then shown to be chemically similar to those finished blades, while local cores and flakes remained common. Together, those details support the interpretation that imported blades could be modified locally rather than having been produced there from local stone.",
+      "status": "staged"
     }
   ]
 }
