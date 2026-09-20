@@ -2039,11 +2039,11 @@
       "choices": {
         "A": "Workshop debris made from local obsidian shows that local knapping occurred at Teotihuacan.",
         "B": "Most finished blades matched Pachuca obsidian, suggesting that some finished blades were imported.",
-        "C": "Retouched blades resembled other finished blades chemically while local cores and flakes remained common in workshops.",
+        "C": "Retouched blades matched other finished blades chemically, while local cores and flakes remained common.",
         "D": "Some finished blades had edges retouched with techniques used at local workshops."
       },
       "correctAnswer": "C",
-      "explanation": "The passage first establishes that local obsidian was being worked, but most finished blades matched the distant Pachuca source. The retouched blades were then shown to be chemically similar to those finished blades, while local cores and flakes remained common. Together, those details support the interpretation that imported blades could be modified locally rather than having been produced there from local stone.",
+      "explanation": "The passage establishes that most finished blades matched the distant Pachuca source while local obsidian was also being worked in the workshops. The retouched blades were chemically similar to the other finished blades, and local cores and flakes remained common. Together, those details support the interpretation that imported blades could be modified locally rather than being produced there from local stone.",
       "status": "staged"
     }
   ]
