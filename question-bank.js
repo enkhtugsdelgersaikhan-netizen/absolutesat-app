@@ -152,6 +152,108 @@ function ensureDomainSubtopicFilters() {
 
 ensureDomainSubtopicFilters();
 
+const QUESTION_BANK_FILTER_STORAGE_KEY = "absoluteprep-question-bank-filters";
+
+function saveQuestionBankFilters() {
+    try {
+        localStorage.setItem(
+            QUESTION_BANK_FILTER_STORAGE_KEY,
+            JSON.stringify({
+                section: activeSection,
+                search: activeSearch,
+                domain: activeDomain,
+                subtopic: activeSubtopic,
+                difficulty: activeDifficulty,
+                status: activeStatus,
+                reviewOnly
+            })
+        );
+    } catch (error) {
+        console.warn(
+            "Could not save Question Bank filters:",
+            error
+        );
+    }
+}
+
+function loadQuestionBankFilters() {
+    try {
+        const stored = JSON.parse(
+            localStorage.getItem(
+                QUESTION_BANK_FILTER_STORAGE_KEY
+            ) || "null"
+        );
+
+        if (!stored || typeof stored !== "object") {
+            return;
+        }
+
+        const validSections =
+            Object.keys(SAT_FILTER_TAXONOMY);
+
+        if (validSections.includes(stored.section)) {
+            activeSection = stored.section;
+        }
+
+        activeSearch =
+            typeof stored.search === "string"
+                ? stored.search
+                : "";
+
+        activeDomain =
+            Array.isArray(stored.domain)
+                ? stored.domain
+                : [];
+
+        activeSubtopic =
+            Array.isArray(stored.subtopic)
+                ? stored.subtopic
+                : [];
+
+        activeDifficulty =
+            Array.isArray(stored.difficulty)
+                ? stored.difficulty
+                : [];
+
+        activeStatus =
+            Array.isArray(stored.status)
+                ? stored.status
+                : [];
+
+        reviewOnly =
+            stored.reviewOnly === true;
+    } catch (error) {
+        console.warn(
+            "Could not load Question Bank filters:",
+            error
+        );
+    }
+}
+
+function syncQuestionBankFilterUI() {
+    sectionTabs.forEach(tab => {
+        const isActive =
+            (tab.dataset.section || "Reading & Writing") ===
+            activeSection;
+
+        tab.classList.toggle(
+            "active",
+            isActive
+        );
+    });
+
+    if (searchInput) {
+        searchInput.value = activeSearch;
+    }
+
+    if (reviewOnlyCheckbox) {
+        reviewOnlyCheckbox.checked =
+            reviewOnly;
+    }
+}
+
+loadQuestionBankFilters();
+
 function normalizeDifficulty(value) {
     const text = String(value || "medium").toLowerCase();
 
@@ -1709,6 +1811,7 @@ if (searchInput) {
             activeSearch =
                 event.target.value.trim();
 
+            saveQuestionBankFilters();
             renderQuestions();
         }
     );
@@ -1719,6 +1822,7 @@ setupFilterDropdown(
     values => {
         activeDomain = values;
         activeSubtopic = [];
+        saveQuestionBankFilters();
         populateDomainFilter();
         populateSubtopicFilter();
         renderQuestions();
@@ -1729,6 +1833,7 @@ setupFilterDropdown(
     subtopicFilter,
     values => {
         activeSubtopic = values;
+        saveQuestionBankFilters();
         renderQuestions();
     }
 );
@@ -1737,6 +1842,7 @@ setupFilterDropdown(
     difficultyFilter,
     values => {
         activeDifficulty = values;
+        saveQuestionBankFilters();
         renderQuestions();
     }
 );
@@ -1745,6 +1851,7 @@ setupFilterDropdown(
     statusFilter,
     values => {
         activeStatus = values;
+        saveQuestionBankFilters();
         renderQuestions();
     }
 );
@@ -1756,6 +1863,7 @@ if (reviewOnlyCheckbox) {
             reviewOnly =
                 event.target.checked;
 
+            saveQuestionBankFilters();
             renderQuestions();
         }
     );
@@ -1785,6 +1893,8 @@ sectionTabs.forEach(
                 activeSubtopic = [];
                 activeDifficulty = [];
                 activeStatus = [];
+
+                saveQuestionBankFilters();
 
                 populateDomainFilter();
                 populateSubtopicFilter();
@@ -1837,6 +1947,7 @@ async function initializeQuestionBank() {
         return;
     }
 
+    syncQuestionBankFilterUI();
     await loadQuestions();
 }
 
