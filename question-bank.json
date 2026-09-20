@@ -1931,6 +1931,63 @@
       "correctAnswer": "C",
       "explanation": "The matching clusters of scars support the idea that scars can identify periods of burning, while the charcoal in plots with few or no scars shows that the tree record can miss fires. The later evidence changes the significance of the earlier scar pattern: the scars are useful indicators, but the independent evidence prevents them from being treated as a complete record. The other choices capture only an early interpretation, an intermediate explanation, or one supporting detail.",
       "status": "staged"
+    },
+    {
+      "id": "rw-portus-concrete-command-evidence-001-easy",
+      "groupId": "rw-portus-concrete-command-evidence-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "easy",
+      "passage": "At the ancient Roman harbor of Portus near Rome, materials scientist Elena Rossi compared concrete fragments exposed to seawater with fragments from sheltered masonry. The two groups had similar proportions of volcanic ash and lime-rich clasts. Yet the submerged fragments contained new mineral crystals inside tiny cracks and remained more intact than the sheltered fragments. Rossi concluded that seawater exposure may have contributed to the concrete’s long-term durability.",
+      "question": "A researcher concludes that seawater exposure may have contributed to the concrete’s long-term durability. Which choice provides the best evidence for this conclusion?",
+      "choices": {
+        "A": "The two groups had similar proportions of volcanic ash and lime-rich clasts.",
+        "B": "The submerged fragments contained new mineral crystals inside tiny cracks and remained more intact than the sheltered fragments.",
+        "C": "Rossi compared concrete fragments from different parts of Portus.",
+        "D": "The concrete fragments contained volcanic ash and lime-rich clasts."
+      },
+      "correctAnswer": "B",
+      "explanation": "The submerged fragments not only developed new mineral crystals but also remained more intact than the sheltered fragments. Because the comparison links seawater exposure with both a physical change and greater preservation, it directly supports the researcher’s conclusion.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-portus-concrete-command-evidence-001-medium",
+      "groupId": "rw-portus-concrete-command-evidence-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "medium",
+      "passage": "At the ancient Roman harbor of Portus near Rome, materials scientist Elena Rossi compared concrete from submerged structures with concrete from sheltered sections of the same harbor complex. The samples had similar proportions of volcanic ash and lime-rich clasts, so differences in their original mixtures were limited. Submerged fragments generally developed more mineral deposits inside microscopic cracks, and they remained more cohesive during laboratory stress tests. Not every submerged fragment showed the same amount of mineral growth, however, so Rossi treated the pattern as evidence of a contribution from seawater exposure rather than as proof that seawater alone determined durability.",
+      "question": "A researcher concludes that seawater exposure contributed to the concrete’s durability even though the original mixtures were similar and the response was not identical in every sample. Which choice provides the best evidence for this conclusion?",
+      "choices": {
+        "A": "The samples came from submerged structures and sheltered sections of the same harbor complex.",
+        "B": "The samples had similar proportions of volcanic ash and lime-rich clasts.",
+        "C": "Submerged fragments generally developed more mineral deposits in microscopic cracks and remained more cohesive during laboratory stress tests.",
+        "D": "Not every submerged fragment showed the same amount of mineral growth."
+      },
+      "correctAnswer": "C",
+      "explanation": "The submerged fragments showed both more mineral development in their cracks and greater cohesion during stress testing. Together with the passage’s comparison of similarly composed samples, these observations support the role of seawater exposure while the variation among samples prevents the stronger claim that seawater alone determines durability.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-portus-concrete-command-evidence-001-hard",
+      "groupId": "rw-portus-concrete-command-evidence-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "hard",
+      "passage": "At the ancient Roman harbor of Portus near Rome, materials scientist Elena Rossi initially suspected that the remarkable survival of some concrete walls resulted mainly from their original mixture of volcanic ash and lime-rich clasts. Several centuries-old fragments retained large lime-rich inclusions, which seemed consistent with that explanation. Yet sheltered fragments with similar clast distributions were less well preserved, leaving open the possibility that the environment had contributed something beyond the starting mixture. Rossi then selected submerged and sheltered samples from construction phases with closely matched aggregate and lime-clast content. The submerged pieces generally contained more mineral growth in microscopic cracks, but some showed little such growth, so that pattern alone did not settle the question. Rossi next reproduced comparable cracks in laboratory specimens and exposed them to seawater under controlled conditions. Mineral veins subsequently formed within cracks that reached lime-rich regions. During a later mechanical test, specimens that had developed these deposits retained more cohesion than similarly prepared controls that had not undergone the seawater treatment.",
+      "question": "A researcher concludes that the concrete’s durability cannot be explained by its initial composition alone. Which choice provides the strongest evidence for this conclusion?",
+      "choices": {
+        "A": "Several centuries-old fragments retained large lime-rich inclusions, which seemed consistent with an important role for the original mixture.",
+        "B": "The submerged pieces generally contained more mineral growth in microscopic cracks, although some showed little such growth.",
+        "C": "Sheltered fragments with similar clast distributions were less well preserved than some submerged fragments.",
+        "D": "The submerged and sheltered samples had closely matched initial compositions; after controlled seawater exposure, treated specimens developed mineral veins in cracks and retained more cohesion during mechanical testing."
+      },
+      "correctAnswer": "D",
+      "explanation": "Early evidence makes the original mixture a plausible explanation, but the sheltered fragments with similar composition weaken the idea that starting materials alone account for preservation. The strongest evidence comes from combining the later controlled exposure with the mechanical test: samples with matched initial composition developed new crack deposits after seawater treatment and then retained more cohesion. This makes the environmental contribution more compelling than any single earlier observation.",
+      "status": "staged"
     }
   ]
 }
