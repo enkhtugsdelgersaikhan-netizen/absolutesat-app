@@ -3050,6 +3050,63 @@
       "correctAnswer": "B",
       "explanation": "The blank separates two closely related independent clauses: “The comparison produced similar visitation rates but different nesting rates” and “the researchers also found the same pattern at a fourth roof.” A semicolon correctly joins them without creating a comma splice or an improperly capitalized second sentence. A colon would suggest that the second clause explains the first rather than adding a related finding.",
       "status": "staged"
+    },
+    {
+      "id": "rw-arizona-basil-boundaries-002-easy",
+      "groupId": "rw-arizona-basil-boundaries-002",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "easy",
+      "passage": "At the University of Arizona's controlled-environment agriculture lab, researchers grew *Ocimum basilicum* under different morning-light schedules. Plants exposed to longer periods of morning light produced more leaves than plants exposed to shorter periods. The researchers kept watering and nutrient levels the same for every group____ the plants receiving more morning light also accumulated more biomass.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": ".",
+        "B": ":",
+        "C": ";",
+        "D": ","
+      },
+      "correctAnswer": "C",
+      "explanation": "The text contains two independent clauses: the first ends with “levels the same for every group,” and the second begins with “the plants.” A semicolon correctly joins these closely related clauses. A comma would create a comma splice, while a colon or period would not fit the sentence as written.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-arizona-basil-boundaries-002-medium",
+      "groupId": "rw-arizona-basil-boundaries-002",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "medium",
+      "passage": "At the University of Arizona's controlled-environment agriculture lab, researchers grew *Ocimum basilicum* in chambers that differed in morning-light exposure. Plants receiving more morning light generally grew faster, so the team initially focused on illumination as the likely explanation. A second trial produced a similar pattern, although a small humidity difference remained among the chambers. The researchers identified one additional variable that could affect growth____ humidity levels that were lower in some chambers than in others. In a third trial, they matched humidity more closely and again found faster growth in the plants receiving more morning light.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": ":",
+        "B": ",",
+        "C": ";",
+        "D": "."
+      },
+      "correctAnswer": "A",
+      "explanation": "The clause before the blank is complete, and what follows is a noun phrase explaining which additional variable the researchers identified. A colon correctly introduces that explanation. The comma, semicolon, and period would not correctly connect a complete clause to the fragment that follows.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-arizona-basil-boundaries-002-hard",
+      "groupId": "rw-arizona-basil-boundaries-002",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "hard",
+      "passage": "At the University of Arizona's controlled-environment agriculture lab, researchers initially observed that *Ocimum basilicum* grew more quickly under longer periods of morning light. Because those chambers also warmed earlier in the day, the first result could be attributed either to illumination or to differences in plant-water conditions. A second trial held temperature more constant, and the same growth pattern remained, making light a more plausible contributor. The team nevertheless avoided treating morning exposure as a complete explanation because humidity still varied slightly. They then kept total daily light nearly identical while moving part of the exposure from morning to afternoon; the difference in biomass became smaller. At that point, the researchers considered whether the timing of light mattered more than total exposure, although the humidity records still complicated that interpretation. In the final comparison, the team focused on the single morning-light treatment____ which had produced the largest gain in biomass across the trials.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": ";",
+        "B": ".",
+        "C": ":",
+        "D": ","
+      },
+      "correctAnswer": "D",
+      "explanation": "The noun phrase “the single morning-light treatment” already identifies one specific treatment, so the following relative clause beginning with “which” is nonessential and must be separated with a comma. The earlier trials matter because they establish why this treatment is being singled out, but the later clause adds information about that already identified treatment rather than defining which treatment is meant. A semicolon, colon, or period would incorrectly separate the noun phrase from the dependent relative clause.",
+      "status": "staged"
     }
   ]
 }
