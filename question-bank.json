@@ -1760,6 +1760,63 @@
       "correctAnswer": "B",
       "explanation": "The early fish counts support the idea that the modules provide habitat, but the later recruitment data change how those counts should be interpreted. Isolated modules could hold many adults without comparable juvenile recruitment, whereas modules near living coral showed stronger recruitment and greater biological variety; the final measurements reinforce that distinction. Thus B captures both the initial benefit and the qualification that makes simple abundance an insufficient measure of recovery.",
       "status": "staged"
+    },
+    {
+      "id": "rw-monarch-corridors-inferences-001-easy",
+      "groupId": "rw-monarch-corridors-inferences-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Inferences",
+      "difficulty": "easy",
+      "passage": "At the University of Minnesota, researchers planted strips of milkweed between two separated monarch butterfly breeding areas. During the first summer, observers repeatedly saw monarchs enter the strips, pause at flowers, and later continue toward one of the larger patches. Some butterflies used the same strip on multiple days. These observations suggest that the strips may serve as routes between the larger breeding areas.",
+      "question": "Which inference is best supported by the passage?",
+      "choices": {
+        "A": "The milkweed strips may help monarchs move between otherwise separated breeding areas.",
+        "B": "Monarchs prefer the planted strips to the larger breeding areas for most activities.",
+        "C": "Planting the strips guarantees that the monarch population will increase.",
+        "D": "The strips provide more breeding habitat than the larger areas do."
+      },
+      "correctAnswer": "A",
+      "explanation": "Monarchs repeatedly entered the strips and then continued toward one of the larger breeding areas, and some used the same strip on multiple days. These observations support the inference that the strips may function as connections between habitats. The passage does not show that the strips replace the larger areas or guarantee population growth.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-monarch-corridors-inferences-001-medium",
+      "groupId": "rw-monarch-corridors-inferences-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Inferences",
+      "difficulty": "medium",
+      "passage": "At the University of Minnesota, researchers planted strips of milkweed between two monarch butterfly breeding areas separated by farmland. During summer surveys, monarchs repeatedly stopped at flowers in the strips before appearing in either larger breeding patch. Researchers also marked butterflies seen in the strips and later found some of the marked butterflies in both patches. However, the strips contained far fewer milkweed plants than the main breeding areas, and most eggs were recorded in those larger patches. The marked-butterfly and egg patterns were similar across several survey weeks.",
+      "question": "Which inference is best supported by the passage?",
+      "choices": {
+        "A": "The planted strips probably support more monarch reproduction than the larger breeding patches.",
+        "B": "The strips may help monarchs travel between breeding areas even though the larger patches appear more important for reproduction.",
+        "C": "Monarchs use the strips primarily because the farmland between the patches contains no usable food.",
+        "D": "Increasing the number of milkweed plants in the strips would necessarily increase the monarch population."
+      },
+      "correctAnswer": "B",
+      "explanation": "The marked butterflies' later appearance in both breeding patches connects the strips with movement between those patches. At the same time, the larger areas contained far more milkweed and most of the recorded eggs, so the evidence points more strongly to a movement role than to a primary reproductive role. The qualification prevents the inference from becoming a claim that the strips are the main breeding habitat.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-monarch-corridors-inferences-001-hard",
+      "groupId": "rw-monarch-corridors-inferences-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Inferences",
+      "difficulty": "hard",
+      "passage": "At the University of Minnesota, ecologists planted milkweed strips between two monarch butterfly breeding areas separated by farmland. Early surveys found many monarchs using the strips, seemingly suggesting that the strips were becoming important breeding habitat. Yet observers noticed that butterflies often paused briefly before continuing toward one of the larger patches. Researchers marked butterflies at strip sites and later searched both breeding patches; marked individuals were found in each patch, and several reached the opposite patch on the same day. Later, sections with dense milkweed attracted fewer butterflies than some sparse sections, while most eggs were found in the larger breeding patches. One heavily visited strip section had few eggs despite repeated butterfly sightings, whereas nearby breeding patches had both more eggs and more milkweed. The same contrast appeared during a second sampling period.",
+      "question": "Which inference is best supported by the passage?",
+      "choices": {
+        "A": "The large numbers of monarchs observed in the strips show that the new habitat substantially increased reproduction.",
+        "B": "The strips became important breeding habitat because butterflies repeatedly paused there before continuing.",
+        "C": "The strips are more likely to function as connections between breeding areas than as sites whose frequent use demonstrates increased reproduction.",
+        "D": "Monarchs generally avoid densely planted areas because high milkweed density reduces their reproductive success."
+      },
+      "correctAnswer": "C",
+      "explanation": "The early abundance of butterflies makes increased breeding a plausible interpretation, but the marked individuals later appearing in both larger patches provides evidence consistent with movement between sites. The later contrast between heavy butterfly traffic and relatively few eggs in some strip sections, together with the concentration of eggs in larger milkweed-rich patches across two sampling periods, weakens the reproduction interpretation. C therefore accounts for both the movement evidence and the qualification that frequent use alone does not establish increased reproduction.",
+      "status": "staged"
     }
   ]
 }
