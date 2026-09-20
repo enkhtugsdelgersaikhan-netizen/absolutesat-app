@@ -2528,6 +2528,63 @@
       "correctAnswer": "A",
       "explanation": "The passage first establishes an apparent link between tree cover and cooler pavement, then complicates that interpretation with a warm, heavily planted site. Evidence about building orientation makes an alternative explanation plausible, but a comparison of similarly oriented sites restores direct shade as an important factor; the later heat-wave comparison further limits the explanation by showing that canopy fullness also matters. Thus, the passage develops its purpose by moving from an initial explanation through competing evidence to a more qualified account of when tree cover produces cooling.",
       "status": "staged"
+    },
+    {
+      "id": "rw-floodplain-wetlands-connection-001-easy",
+      "groupId": "rw-floodplain-wetlands-connection-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Cross-Text Connections",
+      "difficulty": "easy",
+      "passage": "Text 1\n\nAt the University of Iowa, hydrologist Lena Ortiz found that restored wetlands beside the Cedar River temporarily stored stormwater. During major storms, river gauges downstream of these wetlands recorded lower peak water levels.\n\nText 2\n\nResearchers at Iowa State University studied wetlands connected to the Cedar River and also found that these areas stored stormwater before it reached the main channel. Their measurements showed smaller downstream flood peaks after some storms.",
+      "question": "Which choice best describes how the two texts are related?",
+      "choices": {
+        "A": "Text 2 contradicts Text 1 by showing that wetlands increase downstream flood peaks.",
+        "B": "Text 2 supports Text 1 by reporting similar evidence that connected wetlands can reduce some downstream flood peaks.",
+        "C": "Text 2 examines river chemistry, whereas Text 1 examines wetland vegetation.",
+        "D": "Text 2 argues that wetlands help only during unusually light storms."
+      },
+      "correctAnswer": "B",
+      "explanation": "Both texts connect wetlands beside the Cedar River with temporary stormwater storage and lower downstream flood peaks. Text 2 therefore provides evidence that is consistent with the finding described in Text 1.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-floodplain-wetlands-connection-001-medium",
+      "groupId": "rw-floodplain-wetlands-connection-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Cross-Text Connections",
+      "difficulty": "medium",
+      "passage": "Text 1\n\nAt the University of Iowa, hydrologist Lena Ortiz studied restored wetlands beside the Cedar River. She found that wetlands connected to former overflow areas could hold stormwater during large storms, and downstream peak levels were lower when those basins filled. Ortiz therefore suggested that wetland restoration could help moderate flooding. The strongest effect, however, occurred where river water could readily enter the wetlands.\n\nText 2\n\nResearchers at Iowa State University compared floodplain wetlands with isolated depressions several kilometers from the Cedar River. Both types held water after storms, but the isolated depressions often remained disconnected from the river during peak flows. Their storage was substantial, yet nearby river gauges showed little corresponding reduction in peak levels.",
+      "question": "Which choice best describes how Text 2 qualifies the claim in Text 1?",
+      "choices": {
+        "A": "It shows that storing stormwater has no relationship to downstream flood levels.",
+        "B": "It suggests that the flood-moderating effect of wetlands depends partly on their connection to the river's flow.",
+        "C": "It establishes that isolated depressions reduce flooding more effectively than floodplain wetlands.",
+        "D": "It demonstrates that wetland restoration increases flood levels when storms are especially large."
+      },
+      "correctAnswer": "B",
+      "explanation": "Text 1 links the largest flood reductions to wetlands that receive river water, while Text 2 shows that isolated depressions can store substantial water without producing much change in river peaks. Together, the texts indicate that storage alone is not enough; a wetland's connection to the river also affects its downstream influence.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-floodplain-wetlands-connection-001-hard",
+      "groupId": "rw-floodplain-wetlands-connection-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Cross-Text Connections",
+      "difficulty": "hard",
+      "passage": "Text 1\n\nAt the University of Iowa, hydrologist Lena Ortiz initially interpreted lower Cedar River peaks below restored wetlands as evidence that the amount of water the wetlands could hold was the main factor reducing floods. The largest reductions followed storms in which several basins beside the river remained partly full after rainfall. That pattern made storage capacity seem sufficient to explain the effect. One storm complicated this view: a basin with plenty of unused capacity coincided with a high downstream peak. Ortiz then compared storms in which basin capacity was similar but the timing of river overflow differed. Peaks were lower when water entered the wetlands through former flood channels.\n\nText 2\n\nResearchers at Iowa State University first found that both floodplain wetlands and isolated depressions could retain substantial amounts of stormwater, apparently supporting a broad storage-based explanation. Yet some isolated depressions filled mainly from local rainfall and remained separate from the Cedar River during peak flow. They held water for days, but gauges along the river showed little change in peak stage. In a later comparison of wetlands with similar storage volumes, those connected to active overflow routes produced larger reductions in peak levels.",
+      "question": "Which choice best describes the relationship between the two texts?",
+      "choices": {
+        "A": "Text 1 argues that storage capacity alone explains lower flood peaks, while Text 2 shows that isolated depressions always eliminate the same effect.",
+        "B": "Text 1 and Text 2 both conclude that wetlands with greater storage always produce proportionally larger reductions in flooding.",
+        "C": "Text 1 and Text 2 initially make storage seem sufficient, but later evidence in both texts shows that storage has a stronger flood-moderating effect when wetlands are connected to river overflow routes.",
+        "D": "Text 1 focuses on river overflow, while Text 2 rejects the idea that a wetland's location can affect downstream flooding."
+      },
+      "correctAnswer": "C",
+      "explanation": "Both texts initially present evidence that could make storage capacity appear to be the main explanation: Text 1 describes large reductions when basins retain water, and Text 2 finds substantial storage in two wetland types. Text 1 then shows that similar capacity can produce different outcomes depending on how water enters the basins, while Text 2 shows that isolated storage may have little effect on river peaks. The later comparisons in both texts therefore refine the connection: storage matters, but its flood-moderating effect is greater when the wetlands are hydraulically connected to river overflow routes.",
+      "status": "staged"
     }
   ]
 }
