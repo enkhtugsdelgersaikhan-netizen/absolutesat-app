@@ -2660,7 +2660,8 @@
       },
       "correctAnswer": "B",
       "explanation": "The goal is to introduce the study's main finding, so the sentence should state the central result rather than a supporting detail. Choice B directly communicates that green roofs can lower afternoon surface temperatures.",
-      "status": "staged"
+      "status": "staged",
+      "goal": "Introduce the study's main finding."
     },
     {
       "id": "rw-green-roof-rhetorical-synthesis-001-medium",
@@ -2679,7 +2680,8 @@
       },
       "correctAnswer": "A",
       "explanation": "The goal requires both the general finding and the qualification about water availability. Choice A combines those two pieces of information, while the other choices emphasize only one detail from the notes.",
-      "status": "staged"
+      "status": "staged",
+      "goal": "Summarize the general finding while noting how water availability affected the size of the cooling effect."
     },
     {
       "id": "rw-green-roof-rhetorical-synthesis-001-hard",
@@ -2698,7 +2700,8 @@
       },
       "correctAnswer": "C",
       "explanation": "The notes establish a general cooling pattern, but the unusually dry roof performed differently during the heat wave. The full-summer comparison shows that the roof was still cooler overall, while the irrigated roofs show that water availability affected the size of the reduction. Choice C integrates the general finding, the exception, and the evidence that qualifies it.",
-      "status": "staged"
+      "status": "staged",
+      "goal": "Explain the overall finding while accounting for the apparent exception and the later evidence about conditions affecting the result."
     },
     {
       "id": "rw-prairie-strips-rhetorical-synthesis-001-easy",
@@ -2717,7 +2720,8 @@
       },
       "correctAnswer": "B",
       "explanation": "The goal is to introduce the study's main finding, so the sentence should state the central result rather than a supporting detail. Choice B directly communicates that prairie strips can reduce nitrate runoff.",
-      "status": "staged"
+      "status": "staged",
+      "goal": "Introduce the study's main finding."
     },
     {
       "id": "rw-prairie-strips-rhetorical-synthesis-001-medium",
@@ -2736,7 +2740,8 @@
       },
       "correctAnswer": "A",
       "explanation": "The goal requires both the general finding and the qualification about placement. Choice A combines the evidence that prairie strips reduced nitrate runoff with the finding that their position affected the size of the reduction.",
-      "status": "staged"
+      "status": "staged",
+      "goal": "Summarize the study's finding while noting the factor that affected the size of the nitrate reduction."
     },
     {
       "id": "rw-prairie-strips-rhetorical-synthesis-001-hard",
@@ -2755,7 +2760,8 @@
       },
       "correctAnswer": "C",
       "explanation": "The notes first establish a general reduction in nitrate runoff, then introduce a weak result that could appear to challenge that finding. Later evidence points to strip placement rather than plant density as one source of variation, while the dry-month result shows that growing conditions also matter. Choice C synthesizes the overall finding and the qualifications that explain why the apparent exception did not overturn it.",
-      "status": "staged"
+      "status": "staged",
+      "goal": "Present the general finding while explaining why the apparent exception did not overturn it and what later evidence revealed about variation in the effect."
     },
     {
       "id": "rw-pollinator-solar-rhetorical-synthesis-001-easy",
@@ -2774,7 +2780,8 @@
       },
       "correctAnswer": "B",
       "explanation": "The goal is to introduce the study's main finding, so the sentence should state the key result rather than a research detail. Choice B directly communicates that solar sites with native wildflowers attracted more bees.",
-      "status": "staged"
+      "status": "staged",
+      "goal": "Introduce the study's main finding."
     },
     {
       "id": "rw-pollinator-solar-rhetorical-synthesis-001-medium",
@@ -2793,7 +2800,8 @@
       },
       "correctAnswer": "A",
       "explanation": "The goal requires combining the finding that native wildflowers attracted more bees with the qualification that mowing affected nesting evidence. Choice A connects both pieces of information, whereas the other choices present only one research detail or one part of the finding.",
-      "status": "staged"
+      "status": "staged",
+      "goal": "Summarize the study's finding while noting the factor that affected the broader pollinator benefits."
     },
     {
       "id": "rw-pollinator-solar-rhetorical-synthesis-001-hard",
@@ -2812,7 +2820,8 @@
       },
       "correctAnswer": "C",
       "explanation": "The notes first suggest that flower abundance explains bee activity, but the later nesting evidence complicates that interpretation: a site could attract many bees without providing the conditions associated with more nesting. The additional findings about continuous vegetation and nearby prairie show that broader habitat benefits depended on management and surrounding habitat as well as flowering plants. Choice C captures that refined conclusion, while A overgeneralizes, B stops at an intermediate finding, and D treats nearby prairie as necessary when the notes show that some nesting occurred without it.",
-      "status": "staged"
+      "status": "staged",
+      "goal": "Summarize the evidence without implying that flower abundance alone guaranteed broader habitat benefits."
     }
   ]
 }
