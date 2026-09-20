@@ -2422,16 +2422,16 @@
       "domain": "Information and Ideas",
       "skill": "Text Structure and Purpose",
       "difficulty": "easy",
-      "passage": "At Iowa State University, hydrologist Priya Raman studied prairie strips planted across runoff pathways in cornfields. The strips included switchgrass (*Panicum virgatum*) and little bluestem (*Schizachyrium scoparium*). After heavy storms, fields with these strips released less nitrate into drainage ditches than comparable fields without them. Raman's report describes the strips as a way to reduce nitrate runoff from cropland.",
+      "passage": "At Iowa State University, hydrologist Priya Raman studied prairie strips planted across runoff pathways in cornfields. The strips included switchgrass (*Panicum virgatum*) and little bluestem (*Schizachyrium scoparium*). After heavy storms, fields with these strips released less nitrate into drainage ditches than comparable fields without them. Raman used these results to illustrate how strategically placed prairie vegetation can limit nitrate runoff from cropland.",
       "question": "Which choice best describes the primary purpose of the text?",
       "choices": {
-        "A": "To explain how prairie plants are classified by researchers",
-        "B": "To describe a study showing prairie strips reduce nitrate runoff",
-        "C": "To compare nitrate levels in Iowa with those elsewhere",
-        "D": "To argue that cropland should be replaced by prairie vegetation"
+        "A": "To explain how researchers classify different prairie plants in Iowa agriculture",
+        "B": "To describe a study showing how prairie strips can reduce nitrate runoff",
+        "C": "To compare nitrate levels in Iowa with those in other regions",
+        "D": "To argue that cropland should be fully replaced by native prairie vegetation"
       },
       "correctAnswer": "B",
-      "explanation": "The text introduces Raman's study, identifies the prairie plants and their placement, and reports lower nitrate runoff from fields containing the strips. Its primary purpose is to describe evidence that strategically placed prairie strips can reduce nitrate runoff.",
+      "explanation": "The text introduces Raman's study, identifies the type and placement of the prairie strips, and reports lower nitrate runoff from fields containing them. Its primary purpose is to describe evidence that prairie strips can help limit nitrate runoff.",
       "status": "staged"
     },
     {
@@ -2441,16 +2441,16 @@
       "domain": "Information and Ideas",
       "skill": "Text Structure and Purpose",
       "difficulty": "medium",
-      "passage": "At Iowa State University, hydrologist Priya Raman studied prairie strips planted within cornfields to determine whether they could reduce nitrate runoff. Fields containing strips of switchgrass (*Panicum virgatum*) and little bluestem (*Schizachyrium scoparium*) released less nitrate into drainage ditches after heavy storms than comparable fields without strips. Raman then examined where the strips were located and found that some crossed natural runoff pathways, while others ran beside them. The second comparison suggested that the strips' effectiveness depended partly on whether they intercepted concentrated water flow.",
-      "question": "How does the second half of the text contribute to the overall purpose?",
+      "passage": "At Iowa State University, hydrologist Priya Raman studied prairie strips planted within cornfields to determine whether they could reduce nitrate runoff. Fields containing strips of switchgrass (*Panicum virgatum*) and little bluestem (*Schizachyrium scoparium*) released less nitrate into drainage ditches after heavy storms than comparable fields without strips. Raman then mapped the strips and found that some crossed natural runoff pathways, while others ran beside them. Strips crossing the pathways intercepted more concentrated flow, whereas edge strips intercepted less. The comparison therefore added a qualification to the initial finding: the benefit was not simply a matter of having prairie vegetation somewhere in the field.",
+      "question": "How does the second half of the text contribute to its overall purpose?",
       "choices": {
-        "A": "It qualifies the first finding by showing that strip placement matters.",
-        "B": "It introduces a different question about which grasses grow best in Iowa.",
-        "C": "It shows that prairie strips work only when they cover an entire field.",
-        "D": "It shifts from reporting findings to arguing that nitrate runoff cannot be prevented."
+        "A": "It introduces a different question about which prairie grasses grow best in Iowa.",
+        "B": "It shows that prairie strips are effective only when they cover an entire field.",
+        "C": "It qualifies the initial finding by showing that strip placement affects the benefit.",
+        "D": "It shifts from reporting research results to arguing that nitrate runoff cannot be prevented."
       },
-      "correctAnswer": "A",
-      "explanation": "The first two sentences establish that fields with prairie strips released less nitrate. The later sentences examine strip location and show that the benefit varies according to whether the strips intercept concentrated runoff, so they qualify the initial finding rather than overturning it.",
+      "correctAnswer": "C",
+      "explanation": "The first part establishes a general association between prairie strips and lower nitrate runoff. The second part examines where the strips were placed and shows that their position affected how much concentrated flow they intercepted, adding an important qualification to the initial finding.",
       "status": "staged"
     },
     {
@@ -2460,16 +2460,16 @@
       "domain": "Information and Ideas",
       "skill": "Text Structure and Purpose",
       "difficulty": "hard",
-      "passage": "At Iowa State University, hydrologist Priya Raman began studying prairie strips in cornfields after observing that fields containing switchgrass (*Panicum virgatum*) and little bluestem (*Schizachyrium scoparium*) often showed lower nitrate losses after heavy storms. Because the strips slowed water moving across the soil, their presence initially seemed sufficient to explain the pattern. One field complicated that interpretation: despite having a large strip, it released nearly as much nitrate as an untreated field. Raman first suspected differences in plant density, but the strips were similarly established by midsummer. She then mapped drainage routes and noticed that the anomalous strip ran beside a shallow depression rather than across it. That finding made placement a stronger explanation, although soil texture still appeared capable of affecting how quickly water crossed the field. In a later comparison of fields with similar soils, strips that crossed concentrated flow paths captured more nitrate than strips placed along field margins. During an unusually dry month, however, even well-positioned strips showed smaller effects as plant growth slowed.",
-      "question": "Which choice best describes the structure of the text?",
+      "passage": "At Iowa State University, hydrologist Priya Raman began studying prairie strips after noticing that cornfields containing switchgrass (*Panicum virgatum*) and little bluestem (*Schizachyrium scoparium*) often showed lower nitrate losses after heavy storms. Because the strips slowed water moving across the soil, their presence initially seemed sufficient to explain the pattern. One field complicated that interpretation: despite having a large strip, it released nearly as much nitrate as an untreated field. Raman first suspected plant density, but the strips were similarly established by midsummer. She then mapped drainage routes and found that the anomalous strip ran beside a shallow depression rather than across it. In a later comparison of fields with similar soils, strips that crossed concentrated flow paths captured more nitrate than strips along field margins. That result strengthened the placement explanation, yet it did not account for every difference. During an unusually dry month, even well-positioned strips showed smaller effects as plant growth slowed.",
+      "question": "Which choice best describes how the passage develops its main idea?",
       "choices": {
-        "A": "It begins with a pattern, introduces an exception, tests alternatives, and refines the explanation.",
-        "B": "It presents a successful farming technique and then lists unrelated conditions that might limit its usefulness.",
-        "C": "It compares two competing explanations and ultimately shows that plant density is the main cause of nitrate reduction.",
-        "D": "It describes several field results and uses them to argue that prairie strips cannot reliably reduce nitrate runoff."
+        "A": "It presents a general pattern, introduces an exception, tests alternatives, and ends by qualifying the revised explanation.",
+        "B": "It reports an initial benefit, then confirms that runoff placement alone determines whether the strips are effective.",
+        "C": "It introduces an apparent exception, tests plant density, and concludes that soil conditions alone explain the field-to-field differences.",
+        "D": "It presents positive results, then argues that later limits make prairie strips unreliable across agricultural fields in general."
       },
       "correctAnswer": "A",
-      "explanation": "The text first presents lower nitrate losses as evidence supporting a straightforward explanation based on the presence of prairie strips. An anomalous field then creates uncertainty, leading Raman to test plant density and later examine drainage routes and soil conditions; the final dry-period observation adds another qualification. Thus, the passage's structure moves from an initial interpretation through competing explanations and complications to a more precise account rather than simply confirming or rejecting the original idea.",
+      "explanation": "The passage begins with an apparently straightforward explanation based on the presence of prairie strips, then uses an anomalous field to create uncertainty. Raman tests plant density, obtains later evidence favoring strategic placement, and then adds a dry-period result that limits the revised explanation. Thus, the passage develops its main idea by moving from an initial interpretation through competing explanations to a qualified account.",
       "status": "staged"
     }
   ]
