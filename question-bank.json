@@ -2834,13 +2834,13 @@
       "passage": "At North River University, hydrologist Elena Marquez studied a restored wetland beside a residential district. The wetland stored stormwater during heavy rain. After restoration, nearby streets experienced less standing water after several comparable storms. These observations came from similar weather conditions that year. ______, the team reported that restoring the wetland could reduce neighborhood flooding.",
       "question": "Which choice completes the text with the most logical transition?",
       "choices": {
-        "A": "As a result,",
+        "A": "Thus,",
         "B": "However,",
         "C": "For example,",
-        "D": "In contrast,"
+        "D": "Meanwhile,"
       },
       "correctAnswer": "A",
-      "explanation": "The first four sentences establish that the restored wetland stored stormwater and that nearby flooding decreased afterward. As a result, correctly signals the cause-and-effect relationship between those observations and the team's conclusion."
+      "explanation": "The passage first reports that the restored wetland stored stormwater and that nearby streets had less standing water. Thus, correctly signals the team's conclusion based on those observations."
     },
     {
       "id": "rw-gray-creek-wetlands-transition-002-medium",
@@ -2869,7 +2869,7 @@
       "skill": "Transitions",
       "difficulty": "hard",
       "status": "staged",
-      "passage": "North River University researchers monitored four restored wetlands along Gray Creek. They expected larger basins to produce larger reductions because they can temporarily hold more stormwater. Early measurements supported this: the largest basin showed the biggest drop in peak water levels. Yet one smaller basin performed nearly as well during moderate storms, despite holding less water. Researchers considered whether its dense native vegetation allowed greater absorption, but surveys showed similar plant cover among the four basins. A map of stormwater routes then showed that the smaller basin sat across a drainage swale, while the largest received only part of the runoff because a road culvert diverted some flow. The evidence made connectivity an important part of the explanation, but it did not account for every result. During an intense storm, even the best-connected basin reduced the downstream peak by only a small amount. ______, the researchers compared the timing of inflow to each basin rather than relying on basin size or connectivity alone. Basins receiving runoff earliest provided measurable storage, but their effects varied with the storm's speed and volume.",
+      "passage": "North River University researchers monitored four restored wetlands along Gray Creek. They expected larger basins to produce larger reductions because they can hold more stormwater. Early measurements supported this: the largest basin showed the biggest drop in peak water levels. Yet one smaller basin performed nearly as well during moderate storms, despite holding less water. Researchers considered whether its dense native vegetation allowed greater absorption, but surveys showed similar plant cover among the four basins. A map of stormwater routes then showed that the smaller basin sat across a drainage swale, while the largest received only part of the runoff because a road culvert diverted some flow. The evidence made connectivity an important part of the explanation, but it did not account for every result. During an intense storm, even the best-connected basin reduced the downstream peak by only a small amount. ______, the researchers compared the timing of inflow to each basin rather than relying on basin size or connectivity alone. Basins receiving runoff earliest provided measurable storage, but their effects varied with the storm's speed and volume.",
       "question": "Which choice completes the text with the most logical transition?",
       "choices": {
         "A": "Consequently,",
