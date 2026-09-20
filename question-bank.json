@@ -1646,6 +1646,63 @@
       "correctAnswer": "B",
       "explanation": "The passage first supports a protection-based explanation, then introduces food availability as an alternative and later shows that disturbance can also weaken the apparent advantage of ledges. Choice B correctly uses a concessive structure to combine the original association with the later qualification: ledges can help, but site conditions also affect the outcome. A stops at the initial interpretation, while C and D are grammatically or structurally defective.",
       "status": "staged"
+    },
+    {
+      "id": "rw-cambridge-marginalia-001-easy",
+      "groupId": "rw-cambridge-marginalia-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Central Ideas and Details",
+      "difficulty": "easy",
+      "passage": "At the University of Cambridge, historian Eleanor Marsh examined handwritten notes in the margins of fifteenth-century manuscripts from Corpus Christi College. Many notes mark passages that later readers considered useful or noteworthy, while others respond directly to the text. By comparing annotations across several manuscripts, Marsh found that the marginal notes provide evidence about how readers interacted with the books. The manuscripts therefore preserve clues not only about what their authors wrote but also about how later readers used the books.",
+      "question": "Which choice best states the central idea of the passage?",
+      "choices": {
+        "A": "Fifteenth-century manuscripts at Corpus Christi College were primarily used by scholars studying the same subjects.",
+        "B": "Marginal notes in fifteenth-century manuscripts can provide evidence about how later readers interacted with books.",
+        "C": "Historian Eleanor Marsh discovered that most fifteenth-century manuscripts contain extensive annotations.",
+        "D": "Readers in fifteenth-century England wrote more marginal notes than readers did in later periods."
+      },
+      "correctAnswer": "B",
+      "explanation": "The passage focuses on what annotations in the margins can reveal about how later readers used and responded to books. The other choices make claims about the number of annotations, the subjects studied, or changes across periods that the passage does not establish.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-cambridge-marginalia-001-medium",
+      "groupId": "rw-cambridge-marginalia-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Central Ideas and Details",
+      "difficulty": "medium",
+      "passage": "Historian Eleanor Marsh studied handwritten annotations in fifteenth-century manuscripts held by Corpus Christi College at the University of Cambridge. Some notes mark passages that readers found useful, while others respond directly to the text, giving researchers evidence about historical reading practices. Some heavily annotated volumes had remained in college collections where ownership and use were unusually well documented. Yet several books with few surviving notes also carried multiple ownership inscriptions or signs of repeated handling. Marsh therefore compared patterns across many manuscripts rather than treating the most heavily annotated books as representative. In several volumes, annotations from different hands appeared beside the same passages, while lightly annotated books sometimes showed evidence of continued use.",
+      "question": "Which choice best states the central idea of the passage?",
+      "choices": {
+        "A": "Marginal annotations can help historians study how readers used books, but the surviving evidence must be interpreted cautiously because the record is incomplete and uneven.",
+        "B": "Heavily annotated manuscripts provide more accurate evidence of historical reading practices than lightly annotated manuscripts do.",
+        "C": "Most fifteenth-century readers responded to important passages by writing detailed comments in the margins.",
+        "D": "Comparing manuscripts allows historians to determine exactly which passages readers considered most important."
+      },
+      "correctAnswer": "A",
+      "explanation": "The passage provides evidence that marginal notes can reveal how readers engaged with books, but it also shows why the surviving notes cannot simply be treated as a complete or representative record. Choices B, C, and D either overstate the evidence or turn limited patterns into conclusions the passage does not support.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-cambridge-marginalia-001-hard",
+      "groupId": "rw-cambridge-marginalia-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Central Ideas and Details",
+      "difficulty": "hard",
+      "passage": "At the University of Cambridge, Eleanor Marsh initially found that fifteenth-century manuscripts containing numerous annotations often included comments beside passages on theology, law, and classical authors. The concentration seemed to suggest that marginalia could reveal which parts of a book had attracted the greatest attention from readers. However, heavily annotated manuscripts were not a random sample: many had remained in college collections, where ownership and use were well preserved. This raised the possibility that surviving annotated books may reflect preservation and institutional history as much as ordinary reading habits. Marsh compared heavily annotated volumes with manuscripts that had fewer surviving notes but similar dates and subjects. Some sparsely annotated books had multiple ownership inscriptions or signs of handling, so limited marginal writing did not necessarily indicate limited use. Several heavily annotated volumes contained marks from different hands, making a cluster of notes difficult to attribute to one reader. Still, recurring annotations across manuscripts often appeared beside passages connected to the books' subjects. Several lightly annotated manuscripts carried multiple ownership marks, while some heavily annotated volumes showed only one owner.",
+      "question": "Which choice best states the central idea of the passage?",
+      "choices": {
+        "A": "The concentration of annotations beside theological, legal, and classical passages demonstrates that readers consistently focused on those subjects.",
+        "B": "Manuscript annotations can help historians study reader engagement, but interpreting them requires considering preservation patterns and evidence from books with few surviving notes.",
+        "C": "Because institutional collections preserve ownership records more reliably than marginal notes, those records are the best evidence of historical reading practices.",
+        "D": "The presence of annotations from multiple hands makes marginalia too inconsistent to provide useful evidence about historical readers."
+      },
+      "correctAnswer": "B",
+      "explanation": "The passage first presents a straightforward interpretation of heavily annotated books, then complicates it with preservation bias, lightly annotated books that still show evidence of use, and annotations made by multiple readers. It ultimately shows that marginalia remain useful when interpreted alongside those qualifications rather than treated as a complete record of reading priorities.",
+      "status": "staged"
     }
   ]
 }
