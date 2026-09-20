@@ -2471,6 +2471,63 @@
       "correctAnswer": "A",
       "explanation": "The passage begins with an apparently straightforward explanation based on the presence of prairie strips, then uses an anomalous field to create uncertainty. Raman tests plant density, obtains later evidence favoring strategic placement, and then adds a dry-period result that limits the revised explanation. Thus, the passage develops its main idea by moving from an initial interpretation through competing explanations to a qualified account.",
       "status": "staged"
+    },
+    {
+      "id": "rw-palo-verde-structure-purpose-002-easy",
+      "groupId": "rw-palo-verde-structure-purpose-002",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Text Structure and Purpose",
+      "difficulty": "easy",
+      "passage": "At Arizona State University, ecologist Elena Marín studied Mexican palo verde trees (*Parkinsonia aculeata*) along Phoenix sidewalks. Pavement beneath the trees was cooler than nearby exposed pavement during summer afternoons. Marín used the measurements to examine how urban tree cover affects surface heat. The study highlights the cooling benefit of placing tree canopies over heavily exposed pavement.",
+      "question": "Which choice best describes the primary purpose of the text?",
+      "choices": {
+        "A": "To explain why Mexican palo verde trees thrive in Phoenix's summer climate",
+        "B": "To describe a study showing that tree cover can cool urban pavement",
+        "C": "To compare several methods for measuring heat on Phoenix sidewalks",
+        "D": "To argue that Phoenix should replace paved sidewalks with planted spaces"
+      },
+      "correctAnswer": "B",
+      "explanation": "The passage introduces Marín's study, reports cooler pavement beneath trees, and explains what the study examined. Its primary purpose is to describe evidence that urban tree cover can reduce pavement temperatures.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-palo-verde-structure-purpose-002-medium",
+      "groupId": "rw-palo-verde-structure-purpose-002",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Text Structure and Purpose",
+      "difficulty": "medium",
+      "passage": "At Arizona State University, ecologist Elena Marín compared Phoenix sidewalks beneath Mexican palo verde trees (*Parkinsonia aculeata*) with nearby exposed pavement. Shaded pavement was generally cooler during summer afternoons. Marín then compared sites with different canopy positions and found that cooling was strongest where branches covered pavement during the hottest hours. Yet one block with substantial tree cover remained relatively warm because a nearby wall reflected sunlight onto the sidewalk. The comparison therefore added an important qualification: the cooling effect depended not simply on having trees nearby, but on how their canopies and surroundings interacted.",
+      "question": "How does the second half of the text contribute to its overall purpose?",
+      "choices": {
+        "A": "It introduces a separate question about which tree species grow best in Phoenix.",
+        "B": "It shows that tree cover cools sidewalks only when buildings are nearby.",
+        "C": "It qualifies the initial finding by showing that canopy placement and surroundings affect cooling.",
+        "D": "It shifts from describing measurements to arguing that Phoenix sidewalks should be redesigned."
+      },
+      "correctAnswer": "C",
+      "explanation": "The first half establishes that shaded pavement was generally cooler, while the later comparisons explain why the size of the cooling effect varied. The wall example and canopy-position results qualify the initial finding by showing that tree cover works differently under different site conditions.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-palo-verde-structure-purpose-002-hard",
+      "groupId": "rw-palo-verde-structure-purpose-002",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Text Structure and Purpose",
+      "difficulty": "hard",
+      "passage": "At Arizona State University, ecologist Elena Marín began with thermal maps showing that Phoenix pavement beneath mature Mexican palo verde trees (*Parkinsonia aculeata*) was often cooler than nearby exposed pavement. Because shaded surfaces received less direct sunlight, Marín initially treated canopy coverage as the main explanation. One block complicated that view: despite extensive tree cover, its sidewalks remained warmer than those on a less densely planted block. Building orientation offered a plausible alternative because the warmer block received afternoon sunlight reflected from a large stucco wall. Marín then compared locations with similar building orientation and found that pavement was cooler where canopies crossed the sidewalk during peak sunlight, strengthening the case for direct shade. That result still left a second question, since some heavily shaded sites showed smaller temperature differences than others. During a later heat wave, those sites had notably sparser foliage, while similarly positioned trees with fuller canopies produced larger temperature reductions.",
+      "question": "Which choice best describes how the passage develops its main idea?",
+      "choices": {
+        "A": "It presents a cooling pattern, introduces a site that challenges the first explanation, tests competing factors, and ends with evidence that refines the role of tree shade.",
+        "B": "It reports that shaded pavement is cooler, demonstrates that building orientation explains the differences, and concludes that tree placement has little independent effect.",
+        "C": "It introduces an apparent exception, rules out buildings as a possible influence, and establishes that the amount of tree cover alone determines cooling.",
+        "D": "It presents measurements favoring tree cover, then shifts to evidence that urban trees generally fail to cool pavement during heat waves."
+      },
+      "correctAnswer": "A",
+      "explanation": "The passage first establishes an apparent link between tree cover and cooler pavement, then complicates that interpretation with a warm, heavily planted site. Evidence about building orientation makes an alternative explanation plausible, but a comparison of similarly oriented sites restores direct shade as an important factor; the later heat-wave comparison further limits the explanation by showing that canopy fullness also matters. Thus, the passage develops its purpose by moving from an initial explanation through competing evidence to a more qualified account of when tree cover produces cooling.",
+      "status": "staged"
     }
   ]
 }
