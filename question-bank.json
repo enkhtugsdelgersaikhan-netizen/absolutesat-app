@@ -2879,6 +2879,63 @@
       },
       "correctAnswer": "C",
       "explanation": "The early results make basin size seem important, but the smaller basin's performance weakens that interpretation; similar vegetation then makes vegetation density less convincing, and the drainage map provides a partial explanation through connectivity. The intense-storm result further shows that connectivity alone cannot explain the outcomes, so Consequently, correctly signals the researchers' shift to examining inflow timing. The later finding that the earliest-receiving basin did not always perform best reinforces why that additional factor had to be investigated."
+    },
+    {
+      "id": "rw-ponderosa-fire-transition-001-easy",
+      "groupId": "rw-ponderosa-fire-transition-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "easy",
+      "status": "staged",
+      "passage": "At Chiricahua National Monument in Arizona, ecologist Maya Chen studied fire scars in ponderosa pine trees to reconstruct past fires. Many scar dates matched decades when charcoal layers appeared in nearby soil. The matching records supported Chen's use of fire scars as evidence of past burning. ______, the scar records helped researchers identify periods when fires had occurred.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "Nevertheless,",
+        "B": "For example,",
+        "C": "Therefore,",
+        "D": "Meanwhile,"
+      },
+      "correctAnswer": "C",
+      "explanation": "The passage explains that the fire-scar dates matched independent charcoal evidence and that this agreement supported Chen's interpretation. Therefore, correctly signals the conclusion that follows from those findings."
+    },
+    {
+      "id": "rw-ponderosa-fire-transition-001-medium",
+      "groupId": "rw-ponderosa-fire-transition-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "medium",
+      "status": "staged",
+      "passage": "At Chiricahua National Monument in Arizona, ecologist Maya Chen studied fire scars in ponderosa pine trees. Many scar dates coincided with decades in which charcoal accumulated in nearby soil, supporting the use of scars to identify periods of past burning. However, some trees at sheltered sites had no scars from decades when charcoal indicated that fire had occurred. ______, Chen compared scar dates with other evidence rather than treating the absence of a scar as proof that no fire had occurred.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "For example,",
+        "B": "As a result,",
+        "C": "Similarly,",
+        "D": "In contrast,"
+      },
+      "correctAnswer": "B",
+      "explanation": "The missing sentence describes Chen's response to the limitation that some fires left no scars. As a result, logically signals that this limitation led her to compare scar dates with other evidence."
+    },
+    {
+      "id": "rw-ponderosa-fire-transition-001-hard",
+      "groupId": "rw-ponderosa-fire-transition-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "hard",
+      "status": "staged",
+      "passage": "Ecologist Maya Chen used fire scars in ponderosa pine trees at Chiricahua National Monument to reconstruct periods of past burning. At first, clusters of scars that coincided with charcoal layers in nearby soil appeared to provide a straightforward record: when many trees were scarred in the same decade, a fire seemed likely. Yet several trees at sheltered sites lacked scars from decades when charcoal indicated that fire had occurred, weakening the idea that the absence of scars could reliably indicate the absence of fire. Chen then considered whether clusters of scars might instead exaggerate the number of separate fires, since nearby trees could be scarred by the same burn. Comparisons among neighboring trees showed that this was possible as well. ______, Chen treated fire-scar dates as evidence of periods when burning occurred, but not as a complete record of every fire or as proof that each scar represented a separate event.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "For example,",
+        "B": "Nevertheless,",
+        "C": "Consequently,",
+        "D": "Similarly,"
+      },
+      "correctAnswer": "C",
+      "explanation": "The passage identifies two limitations: some fires left no scars on certain trees, and one fire could scar several nearby trees. Consequently, correctly signals Chen's revised conclusion that fire-scar records are useful evidence but are not a complete or one-to-one record of fires."
     }
   ]
 }
