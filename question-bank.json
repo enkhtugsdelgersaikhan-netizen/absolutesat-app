@@ -2653,13 +2653,13 @@
       "passage": "A student is researching green roofs at Arizona State University. The student has gathered the following notes:\n\n- Elena Marín and her team studied green roofs on three Phoenix office buildings.\n- Roofs planted with *Penstemon parryi* had lower afternoon surface temperatures than conventional roofs.\n- The researchers measured roof temperatures during summer.\n- The study examined whether green roofs can reduce heat at the roof surface.\n\nThe student wants to introduce the study's main finding. The student writes: \"______\"",
       "question": "Which choice most effectively uses the notes to accomplish this goal?",
       "choices": {
-        "A": "Marín's team studied three Phoenix office buildings during the summer.",
-        "B": "Arizona State researchers found that green roofs can lower afternoon roof-surface temperatures.",
-        "C": "*Penstemon parryi* was planted on several Phoenix office-building roofs.",
-        "D": "The researchers measured temperatures on green roofs during summer afternoons."
+        "A": "Marín's team studied three Phoenix office buildings.",
+        "B": "Green roofs can lower afternoon surface temperatures in Phoenix.",
+        "C": "*Penstemon parryi* was planted on several Phoenix roofs.",
+        "D": "The researchers measured roof temperatures during summer."
       },
       "correctAnswer": "B",
-      "explanation": "The goal is to introduce the study's main finding, so the sentence should state the central result rather than a supporting detail. Choice B directly communicates that the green roofs were associated with lower afternoon surface temperatures.",
+      "explanation": "The goal is to introduce the study's main finding, so the sentence should state the central result rather than a supporting detail. Choice B directly communicates that green roofs can lower afternoon surface temperatures.",
       "status": "staged"
     },
     {
@@ -2672,13 +2672,13 @@
       "passage": "A student is researching green roofs at Arizona State University. The student has gathered the following notes:\n\n- Elena Marín and her team compared green roofs with conventional roofs on three Phoenix office buildings.\n- Green roofs planted with *Penstemon parryi* had lower afternoon surface temperatures.\n- During a week of extreme heat, irrigated green roofs showed larger temperature reductions than roofs that received no supplemental water.\n- One nonirrigated green roof still remained cooler than its conventional comparison roof.\n- The researchers measured roof temperatures throughout the summer.\n\nThe student wants to summarize the overall cooling finding while noting that water availability affected the size of the effect. The student writes: \"______\"",
       "question": "Which choice most effectively uses the notes to accomplish this goal?",
       "choices": {
-        "A": "The study found that green roofs lowered surface temperatures, although water availability affected the size of the cooling effect.",
+        "A": "The study found that green roofs lowered surface temperatures, although water availability affected cooling.",
         "B": "The study found that irrigated green roofs were cooler during a week of extreme heat.",
-        "C": "Marín's team compared green and conventional roofs on three Phoenix office buildings.",
-        "D": "One nonirrigated green roof remained cooler than its conventional comparison roof."
+        "C": "Marín's team compared green and conventional roofs on three Phoenix buildings.",
+        "D": "One nonirrigated green roof remained cooler than its conventional counterpart."
       },
       "correctAnswer": "A",
-      "explanation": "The goal requires both the general finding and the qualification about water availability. Choice A combines those two pieces of information, while B, C, and D each emphasize only one detail from the notes.",
+      "explanation": "The goal requires both the general finding and the qualification about water availability. Choice A combines those two pieces of information, while the other choices emphasize only one detail from the notes.",
       "status": "staged"
     },
     {
@@ -2692,12 +2692,12 @@
       "question": "Which choice most effectively uses the notes to accomplish this goal?",
       "choices": {
         "A": "The heat-wave result suggests that green roofs may provide unreliable cooling during extreme heat.",
-        "B": "The study shows that irrigation is necessary for green roofs to reduce summer surface temperatures.",
-        "C": "Green roofs generally cooled surfaces, although dry conditions reduced the size of the cooling effect during extreme heat.",
-        "D": "Green roofs consistently produced large temperature reductions throughout the summer and during extreme heat."
+        "B": "The study suggests that irrigation strongly affected green-roof cooling during extreme heat.",
+        "C": "Green roofs generally cooled surfaces, but dry conditions reduced cooling during extreme heat.",
+        "D": "Green roofs consistently produced large temperature reductions throughout the summer."
       },
       "correctAnswer": "C",
-      "explanation": "The notes establish a general cooling pattern, but the unusually dry roof performed differently during the heat wave. The full-summer comparison shows that the roof was still cooler overall, while the irrigated roofs show that water availability affected the size of the reduction. Choice C therefore integrates the general finding, the exception, and the evidence that qualifies it.",
+      "explanation": "The notes establish a general cooling pattern, but the unusually dry roof performed differently during the heat wave. The full-summer comparison shows that the roof was still cooler overall, while the irrigated roofs show that water availability affected the size of the reduction. Choice C integrates the general finding, the exception, and the evidence that qualifies it.",
       "status": "staged"
     }
   ]
