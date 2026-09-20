@@ -3172,16 +3172,16 @@
       "domain": "Standard English Conventions",
       "skill": "Boundaries",
       "difficulty": "easy",
-      "passage": "At Michigan State University, researchers compared red maple (*Acer rubrum*) trees planted along city streets. Trees with broader crowns shaded more pavement, and that shaded pavement stayed cooler during afternoon measurements. The researchers attributed the lower pavement temperatures to canopy shade______ a straightforward effect visible across the sites.",
+      "passage": "At Michigan State University, researchers studied red maple (*Acer rubrum*) trees along city streets. During the hottest part of the afternoon______ trees with broader crowns shaded more pavement and kept the shaded surfaces cooler. The finding suggested that larger canopies can provide greater cooling.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "choices": {
-        "A": ", a",
-        "B": "; a",
-        "C": ": a",
-        "D": ". A"
+        "A": ",",
+        "B": ";",
+        "C": ":",
+        "D": "."
       },
-      "correctAnswer": "C",
-      "explanation": "The clause before the blank is complete, and the words after the blank give an explanation of the effect just mentioned. A colon correctly introduces that explanatory phrase. A comma would create an invalid boundary, while a semicolon or period would incorrectly separate the explanatory phrase from the clause.",
+      "correctAnswer": "A",
+      "explanation": "The phrase “During the hottest part of the afternoon” is an introductory phrase, so it should be followed by a comma before the independent clause begins. A semicolon, colon, or period cannot correctly separate an introductory phrase from the clause that follows.",
       "status": "staged"
     },
     {
