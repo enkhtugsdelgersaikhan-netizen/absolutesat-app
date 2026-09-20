@@ -1853,7 +1853,8 @@
       },
       "correctAnswer": "B",
       "explanation": "The passage shows a relationship between precipitation and ring width, but it also shows that trees exposed to similar regional rainfall can form different-sized rings because local conditions vary. This supports using ring width as evidence about moisture while recognizing that the signal can be affected by site-specific conditions.",
-      "status": "staged"
+      "status": "staged",
+      "question": "Which inference is best supported by the passage?"
     },
     {
       "id": "rw-bristlecone-growth-inferences-001-hard",
@@ -1871,7 +1872,8 @@
       },
       "correctAnswer": "D",
       "explanation": "The initial drought interpretation is weakened by trees at different elevations responding differently and by the stronger relationship with low snowfall on some slopes. The insect outbreak provides another cause of narrow rings, while the isotope differences help distinguish those rings from the low-snowfall pattern. Together, the evidence supports a moisture-related signal without making narrow rings a unique or universal indicator of drought.",
-      "status": "staged"
+      "status": "staged",
+      "question": "Which inference is best supported by the passage?"
     },
     {
       "id": "rw-ponderosa-fire-command-evidence-001-easy",
