@@ -2300,6 +2300,63 @@
       "correctAnswer": "D",
       "explanation": "The matched comparisons first show that shell plots have more juveniles than their bare counterparts, supporting a contribution from shell structure. Comparing the three matched salinity levels then reveals that the difference is much smaller at 10 ppt than at 19 or 14 ppt, supplying the qualification that salinity constrains the size of the effect. B and C capture only part of the evidence, while A treats shell structure as sufficient on its own.",
       "status": "staged"
+    },
+    {
+      "id": "rw-mesquite-qualify-words-context-001-easy",
+      "groupId": "rw-mesquite-qualify-words-context-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Words in Context",
+      "difficulty": "easy",
+      "passage": "At a University of Arizona pilot site near Phoenix's Roosevelt Row, engineer Maya Serrano compared sidewalks beneath velvet mesquite (*Prosopis velutina*) with nearby uncovered pavement. Shaded sidewalks were cooler, and pedestrians beneath the trees received less direct heat. Because the benefit was weaker where canopies were sparse, Serrano said the result **qualified** her broad claim about tree shade.",
+      "question": "As used in the text, what does **“qualified”** most nearly mean?",
+      "choices": {
+        "A": "Recorded",
+        "B": "Strengthened",
+        "C": "Narrowed",
+        "D": "Repeated"
+      },
+      "correctAnswer": "C",
+      "explanation": "Serrano began with a broad claim about tree shade, but the weaker benefit beneath sparse canopies limited that claim. In this context, **“qualified”** means narrowed or made less broad.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-mesquite-qualify-words-context-001-medium",
+      "groupId": "rw-mesquite-qualify-words-context-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Words in Context",
+      "difficulty": "medium",
+      "passage": "At a University of Arizona pilot site near Phoenix's Roosevelt Row, engineer Maya Serrano compared sidewalks beneath velvet mesquite (*Prosopis velutina*) with nearby uncovered pavement. Dense canopies were linked to cooler pavement and lower radiant heat for pedestrians. However, the same amount of canopy did not produce identical readings: sites with stronger afternoon winds often felt cooler than more sheltered sites. After comparing several locations, Serrano concluded that tree shade still mattered, but the variation in wind conditions **qualified** her initial interpretation of the size of its effect.",
+      "question": "As used in the text, what does **“qualified”** most nearly mean?",
+      "choices": {
+        "A": "Narrowed",
+        "B": "Strengthened",
+        "C": "Reversed",
+        "D": "Measured"
+      },
+      "correctAnswer": "A",
+      "explanation": "Serrano still regarded tree shade as important, but differences in wind conditions made her initial estimate of its effect less broad or certain. Thus, **“qualified”** means narrowed rather than reversed or strengthened.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-mesquite-qualify-words-context-001-hard",
+      "groupId": "rw-mesquite-qualify-words-context-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Words in Context",
+      "difficulty": "hard",
+      "passage": "At a University of Arizona site in Phoenix's Roosevelt Row, engineer Maya Serrano initially treated canopy density as the main explanation for why some sidewalks were cooler. Blocks shaded by velvet mesquite (*Prosopis velutina*) recorded lower pavement temperatures, and pedestrians there received less radiant heat. Yet one lightly shaded block was also relatively cool, making stronger afternoon winds a plausible alternative explanation. The wind pattern seemed important when a heavily shaded block beside a sheltered building remained warmer than expected. Serrano then compared sites with similar wind exposure; the shaded sites showed lower radiant heat, strengthening the case that canopy contributed to the pattern. That comparison did not settle the matter, however, because several of the sites differed in the surfaces surrounding the trees. Pale concrete walls reflected substantial radiation toward pedestrians, and blocks beside darker, shaded façades showed a larger benefit. These later comparisons **qualified** Serrano's initial interpretation. A final survey of similarly shaded blocks showed that even when canopy density was nearly matched, differences in wind exposure and wall reflectivity still tracked with small changes in the readings.",
+      "question": "As used in the text, what does **“qualified”** most nearly mean?",
+      "choices": {
+        "A": "Strengthened",
+        "B": "Confirmed",
+        "C": "Replaced",
+        "D": "Narrowed"
+      },
+      "correctAnswer": "D",
+      "explanation": "The early measurements made canopy density look like the main explanation, but the wind comparison and later evidence about reflective walls showed that this interpretation was incomplete. The final survey still supported a role for shade while adding important limits, so **“qualified”** most nearly means narrowed.",
+      "status": "staged"
     }
   ]
 }
