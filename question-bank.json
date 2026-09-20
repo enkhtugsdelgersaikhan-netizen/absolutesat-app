@@ -2936,6 +2936,63 @@
       },
       "correctAnswer": "C",
       "explanation": "The passage identifies two limitations: some fires left no scars on certain trees, and one fire could scar several nearby trees. Consequently, correctly signals Chen's revised conclusion that fire-scar records are useful evidence but are not a complete or one-to-one record of fires."
+    },
+    {
+      "id": "rw-tess-exoplanets-transition-001-easy",
+      "groupId": "rw-tess-exoplanets-transition-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "easy",
+      "status": "staged",
+      "passage": "NASA's Transiting Exoplanet Survey Satellite (TESS) monitors stars for small, repeated dips in brightness. Astronomers found a star whose light curve showed three evenly spaced dips over several weeks. Because a regularly repeating dip can indicate that an orbiting object is crossing in front of the star, the team marked the star for follow-up observations. ______, the dips made the star a promising exoplanet candidate.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "Meanwhile,",
+        "B": "For example,",
+        "C": "As a result,",
+        "D": "In contrast,"
+      },
+      "correctAnswer": "C",
+      "explanation": "The repeated dips were consistent with a possible orbiting object crossing the star, which led the team to select the star for further study. As a result, correctly signals this cause-and-effect relationship."
+    },
+    {
+      "id": "rw-tess-exoplanets-transition-001-medium",
+      "groupId": "rw-tess-exoplanets-transition-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "medium",
+      "status": "staged",
+      "passage": "NASA's TESS searches for exoplanets by recording repeated changes in stars' brightness. A regular pattern of dips in one star's light suggested that an orbiting planet might be blocking some of the light. Astronomers then compared the pattern with longer observations and found additional fluctuations between the dips. Those changes could be caused by activity on the star itself, so the dips alone could not establish that a planet was present. ______, the team kept the star on its follow-up list but treated the transit signal as evidence to investigate rather than as proof.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "Nevertheless,",
+        "B": "For example,",
+        "C": "Similarly,",
+        "D": "In particular,"
+      },
+      "correctAnswer": "A",
+      "explanation": "The dips still made the star worth studying, even though the additional fluctuations showed that stellar activity could imitate part of the signal. Nevertheless, correctly marks that contrast and introduces the team's qualified decision to continue investigating the star."
+    },
+    {
+      "id": "rw-tess-exoplanets-transition-001-hard",
+      "groupId": "rw-tess-exoplanets-transition-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "hard",
+      "status": "staged",
+      "passage": "NASA's TESS identified a star whose light curve contained several recurring dips. At first, the near-regular spacing and similar depth of the dips made a transiting planet seem likely. But the star's overall brightness also changed gradually, and rotating starspots can create recurring changes of their own. A preliminary model showed that the signal could be produced by either a planetary transit or a combination of stellar activity and a smaller transit signal. A later spectrum confirmed that the star was active, strengthening the competing explanation without establishing that the dips were caused by it. At that point, the recurring pattern still supported a planet as one possibility, but the available evidence could not distinguish the explanations. ______, measurements at another wavelength showed that the dips remained aligned in time, whereas several activity-related fluctuations shifted or disappeared. The comparison did not prove that a planet was present, but it separated part of the recurring signal from the star's changing surface.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "Consequently,",
+        "B": "Nevertheless,",
+        "C": "For example,",
+        "D": "Similarly,"
+      },
+      "correctAnswer": "B",
+      "explanation": "The earlier evidence leaves the planetary and stellar-activity explanations unresolved, so the new wavelength measurements provide a needed test rather than simply confirming the first interpretation. Nevertheless, correctly signals the contrast between that unresolved uncertainty and the later evidence showing that the recurring dips behaved differently from several activity-related fluctuations. The final sentence keeps the conclusion appropriately limited: the evidence separates part of the signal but does not by itself prove a planet."
     }
   ]
 }
