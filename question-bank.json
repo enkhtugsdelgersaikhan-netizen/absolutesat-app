@@ -1125,13 +1125,13 @@
       "passage": "Researchers studying restored wetlands along the Huron River first focused on how much rainwater the wetlands could retain. During heavy storms, measurements showed that some sites absorbed substantial amounts of water, making retention seem like a useful measure of their flood-reduction value. ______, several restored wetlands produced only small changes in peak river levels. Those sites were often located downstream from major runoff sources, so much of the stormwater had already entered the river system before reaching the wetlands. Later measurements further complicated the pattern: some wetlands located farther upstream produced larger reductions in peak levels even when they retained less water overall. The researchers therefore distinguished between the volume of water a wetland stores and the point in the watershed where that storage occurs. In one set of paired sites, wetlands that received runoff from major drainage routes produced larger reductions in peak levels than similarly sized wetlands that received less of the incoming flow.",
       "question": "Which choice best completes the first blank and helps establish the relationship between the observations that follows?",
       "choices": {
-        "A": "Nevertheless,",
-        "B": "For example,",
-        "C": "As a result,",
-        "D": "In other words,"
+        "A": "More specifically,",
+        "B": "Even so,",
+        "C": "For that reason,",
+        "D": "In turn,"
       },
-      "correctAnswer": "A",
-      "explanation": "'Nevertheless' signals the key shift from an initially promising measure of wetland performance to observations that do not fit a simple retention-based interpretation. The later evidence shows why: the amount of water retained matters, but the wetland's position in the watershed also affects whether that retention changes downstream flooding. The other choices would not properly signal the complication that drives the passage's reasoning.",
+      "correctAnswer": "B",
+      "explanation": "The strong retention results initially make storage seem like a useful measure of flood reduction, but several wetlands still produced only small changes in peak river levels. Even so, correctly marks the concession that the initial evidence remains informative without being sufficient. The later comparison explains why the effect depended on where stored water entered the watershed.",
       "status": "staged"
     },
     {
@@ -1182,13 +1182,13 @@
       "passage": "The National Library of Scotland's digitization project initially seemed likely to reduce researchers' need to travel to Edinburgh. Online images allowed scholars to survey large collections quickly, and some began using them to identify which manuscripts warranted closer attention. ______, the effect on researchers' physical visits was not as simple as that early interpretation suggested. Interviews showed that scholars still traveled to the library when they needed to examine paper texture, binding, or marks that scans could not fully capture. Yet those visits were often more targeted: researchers used the digital archive beforehand to narrow the manuscripts they needed to inspect, and they sometimes returned to the scans afterward to compare related documents. In one survey, researchers who relied heavily on the digital archive reported spending less time browsing the physical collection, even though many still consulted original manuscripts. The project therefore changed how scholars divided their work between digital and physical sources rather than simply eliminating the need for the originals.",
       "question": "Which choice completes the text with the most logical transition?",
       "choices": {
-        "A": "Nevertheless,",
-        "B": "For instance,",
-        "C": "Similarly,",
-        "D": "As a result,"
+        "A": "More specifically,",
+        "B": "As a result,",
+        "C": "Even so,",
+        "D": "In that respect,"
       },
-      "correctAnswer": "A",
-      "explanation": "The passage begins with an interpretation that digitization would reduce the need for physical visits. The later evidence shows that researchers continued consulting originals, but used them more selectively after searching the digital archive. 'Nevertheless' best signals the shift from the initial expectation to evidence that qualifies it, while the rest of the passage shows that digital and physical access became complementary rather than simply replacing one another.",
+      "correctAnswer": "C",
+      "explanation": "The digital archive appeared likely to reduce the need for physical visits, but researchers still needed originals for features that scans could not fully capture. Even so, signals the shift from the initial expectation to the more qualified picture in which digital access changed visits rather than simply eliminating them. The later findings support that narrower interpretation.",
       "status": "staged"
     },
     {
@@ -1239,13 +1239,13 @@
       "passage": "Riverton's tree-planting program initially appeared to show a straightforward relationship: streets with more new trees generally experienced lower afternoon temperatures. The pattern was especially noticeable on streets that had been highly exposed to sunlight before planting. ______, several streets with many new trees showed only modest cooling, making tree quantity alone an incomplete explanation. Researchers found that these streets often had isolated plantings rather than connected areas of shade. In some cases, streets with fewer trees but a nearly continuous canopy cooled more than streets with larger numbers of widely separated trees. The researchers then compared streets with similar canopy coverage but different amounts of sunlight exposure before planting. The strongest cooling occurred where trees both formed substantial shade and replaced especially intense sun exposure, leaving planting totals relevant but insufficient on their own.",
       "question": "Which choice completes the text with the most logical transition?",
       "choices": {
-        "A": "Nevertheless,",
-        "B": "For example,",
-        "C": "As a result,",
-        "D": "Similarly,"
+        "A": "In turn,",
+        "B": "Accordingly,",
+        "C": "More narrowly,",
+        "D": "Even so,"
       },
-      "correctAnswer": "A",
-      "explanation": "The opening establishes a positive relationship between tree quantity and cooling, but the next evidence presents streets with many trees that cooled only modestly. 'Nevertheless' correctly signals that contrast. The later comparisons then help explain why tree count alone was insufficient.",
+      "correctAnswer": "D",
+      "explanation": "The initial results suggest a simple relationship between tree quantity and cooling, but some streets with many trees cooled only modestly. Even so, correctly introduces evidence that limits the initial interpretation without discarding the broader cooling effect. The later comparison shows that the arrangement of shade and prior sunlight exposure mattered alongside planting totals.",
       "status": "staged"
     },
     {
@@ -2872,13 +2872,13 @@
       "passage": "North River University researchers monitored four restored wetlands along Gray Creek. They expected larger basins to produce larger reductions in downstream water levels because larger basins can hold more stormwater. Early measurements seemed to support that interpretation: the largest basin showed the greatest reduction during several moderate storms. Yet a smaller basin performed nearly as well, even though its storage capacity was lower. Researchers considered whether denser vegetation explained the difference, but vegetation surveys showed similar coverage across the sites. A drainage map then revealed that the smaller basin sat across a major runoff swale, whereas a road culvert diverted some water away from the largest basin. This made runoff connectivity a plausible explanation, although it could not account for every result. During an unusually intense storm, even the best-connected basin produced only a modest reduction in the downstream peak. ______, the researchers examined when runoff entered each basin rather than relying on basin size or connectivity alone. In later storms, the basin receiving water earliest did not always produce the largest reduction.",
       "question": "Which choice completes the text with the most logical transition?",
       "choices": {
-        "A": "For example,",
-        "B": "In contrast,",
-        "C": "Consequently,",
-        "D": "Similarly,"
+        "A": "Given that limitation,",
+        "B": "By comparison,",
+        "C": "In turn,",
+        "D": "More specifically,"
       },
-      "correctAnswer": "C",
-      "explanation": "The early results make basin size seem important, but the smaller basin's performance weakens that interpretation; similar vegetation then makes vegetation density less convincing, and the drainage map provides a partial explanation through connectivity. The intense-storm result further shows that connectivity alone cannot explain the outcomes, so Consequently, correctly signals the researchers' shift to examining inflow timing. The later finding that the earliest-receiving basin did not always perform best reinforces why that additional factor had to be investigated."
+      "correctAnswer": "A",
+      "explanation": "The intense-storm result shows that even favorable runoff connectivity did not consistently explain the reduction in downstream peaks. Given that limitation, correctly links the incomplete explanation to the researchers' decision to examine another factor, the timing of runoff. The later storms show why timing could not simply be inferred from basin size or connectivity alone."
     },
     {
       "id": "rw-ponderosa-fire-transition-001-easy",
@@ -2929,13 +2929,13 @@
       "passage": "Ecologist Maya Chen used fire scars in ponderosa pine trees at Chiricahua National Monument to reconstruct periods of past burning. At first, clusters of scars that coincided with charcoal layers in nearby soil appeared to provide a straightforward record: when many trees were scarred in the same decade, a fire seemed likely. Yet several trees at sheltered sites lacked scars from decades when charcoal indicated that fire had occurred, weakening the idea that the absence of scars could reliably indicate the absence of fire. Chen then considered whether clusters of scars might instead exaggerate the number of separate fires, since nearby trees could be scarred by the same burn. Comparisons among neighboring trees showed that this was possible as well. ______, Chen treated fire-scar dates as evidence of periods when burning occurred, but not as a complete record of every fire or as proof that each scar represented a separate event.",
       "question": "Which choice completes the text with the most logical transition?",
       "choices": {
-        "A": "For example,",
-        "B": "Nevertheless,",
-        "C": "Consequently,",
-        "D": "Similarly,"
+        "A": "Even so,",
+        "B": "In that light,",
+        "C": "By comparison,",
+        "D": "More narrowly,"
       },
-      "correctAnswer": "C",
-      "explanation": "The passage identifies two limitations: some fires left no scars on certain trees, and one fire could scar several nearby trees. Consequently, correctly signals Chen's revised conclusion that fire-scar records are useful evidence but are not a complete or one-to-one record of fires."
+      "correctAnswer": "B",
+      "explanation": "The comparison among neighboring trees adds a second limitation: scars can be missing after some fires and can also be produced by the same fire on multiple trees. In that light, correctly signals that Chen's treatment of the records was shaped by considering those limitations together. The conclusion therefore preserves the useful evidence while restricting what the scar patterns can establish."
     },
     {
       "id": "rw-tess-exoplanets-transition-001-easy",
@@ -2986,13 +2986,13 @@
       "passage": "NASA's TESS identified a star whose light curve contained several recurring dips. At first, the near-regular spacing and similar depth of the dips made a transiting planet seem likely. But the star's overall brightness also changed gradually, and rotating starspots can create recurring changes of their own. A preliminary model showed that the signal could be produced by either a planetary transit or a combination of stellar activity and a smaller transit signal. A later spectrum confirmed that the star was active, strengthening the competing explanation without establishing that the dips were caused by it. At that point, the recurring pattern still supported a planet as one possibility, but the available evidence could not distinguish the explanations. ______, measurements at another wavelength showed that the dips remained aligned in time, whereas several activity-related fluctuations shifted or disappeared. The comparison did not prove that a planet was present, but it separated part of the recurring signal from the star's changing surface.",
       "question": "Which choice completes the text with the most logical transition?",
       "choices": {
-        "A": "Consequently,",
-        "B": "Nevertheless,",
-        "C": "For example,",
-        "D": "Similarly,"
+        "A": "For that reason,",
+        "B": "In comparison,",
+        "C": "With that question unresolved,",
+        "D": "In the broader analysis,"
       },
-      "correctAnswer": "B",
-      "explanation": "The earlier evidence leaves the planetary and stellar-activity explanations unresolved, so the new wavelength measurements provide a needed test rather than simply confirming the first interpretation. Nevertheless, correctly signals the contrast between that unresolved uncertainty and the later evidence showing that the recurring dips behaved differently from several activity-related fluctuations. The final sentence keeps the conclusion appropriately limited: the evidence separates part of the signal but does not by itself prove a planet."
+      "correctAnswer": "C",
+      "explanation": "The earlier evidence leaves the planetary and stellar-activity explanations unresolved, so the next measurement is introduced as a way to discriminate between them rather than as a simple confirmation. With that question unresolved, correctly connects the remaining uncertainty to the decision to examine the signal at another wavelength. The final result is still qualified: it separates part of the recurring signal but does not by itself prove a planet."
     }
   ]
 }
