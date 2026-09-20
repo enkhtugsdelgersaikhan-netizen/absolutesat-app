@@ -2585,6 +2585,63 @@
       "correctAnswer": "C",
       "explanation": "Both texts first provide evidence that could make storage capacity seem sufficient to explain lower flood peaks. Text 1 then shows that similar capacity can produce different outcomes depending on when river water reaches the wetlands, while Text 2 shows that isolated storage may have little effect on river peaks. The later evidence in both texts therefore refines the connection: storage matters, but its flood-moderating effect depends on hydraulic connection to overflow routes.",
       "status": "staged"
+    },
+    {
+      "id": "rw-tidal-marsh-connection-001-easy",
+      "groupId": "rw-tidal-marsh-connection-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Cross-Text Connections",
+      "difficulty": "easy",
+      "passage": "Text 1\n\nResearchers at the University of Delaware studied restored tidal marshes along Delaware Bay. Shorelines with dense cordgrass (*Spartina alterniflora*) lost less sediment during seasonal storms than nearby unvegetated shorelines.\n\nText 2\n\nA Rutgers University study of restored marshes along the same bay found that shorelines with dense cordgrass also experienced less sediment loss during storms. The researchers concluded that marsh vegetation can help reduce shoreline erosion.",
+      "question": "Which choice best describes how the two texts are related?",
+      "choices": {
+        "A": "Text 2 disputes Text 1 by showing that marshes increase sediment loss during storms.",
+        "B": "Text 2 supports Text 1 by reporting similar evidence that dense marsh vegetation can reduce erosion.",
+        "C": "Text 2 examines water chemistry, whereas Text 1 examines bird populations.",
+        "D": "Text 2 argues that cordgrass works only during unusually mild storms."
+      },
+      "correctAnswer": "B",
+      "explanation": "Both texts report less sediment loss along shorelines with dense cordgrass. Text 2 therefore supports Text 1's conclusion that marsh vegetation can help reduce shoreline erosion.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-tidal-marsh-connection-001-medium",
+      "groupId": "rw-tidal-marsh-connection-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Cross-Text Connections",
+      "difficulty": "medium",
+      "passage": "Text 1\n\nResearchers at the University of Delaware studied restored tidal marshes along Delaware Bay and found that shorelines with dense cordgrass (*Spartina alterniflora*) lost less sediment during seasonal storms than nearby unvegetated shorelines. The researchers suggested that the stems and roots helped stabilize the marsh edge. The strongest reductions occurred where vegetation formed a continuous band along the shoreline.\n\nText 2\n\nA Rutgers University study also found less erosion along marshes with dense cordgrass. However, some vegetated shorelines still lost substantial sediment because they faced unusually strong wave exposure. Sites with similar vegetation density experienced different erosion rates when their exposure to open water differed.",
+      "question": "Which choice best describes how Text 2 qualifies the claim in Text 1?",
+      "choices": {
+        "A": "It shows that cordgrass has no meaningful effect on shoreline stability.",
+        "B": "It suggests that cordgrass's effect on erosion depends partly on wave exposure.",
+        "C": "It establishes that highly exposed shorelines always have denser cordgrass.",
+        "D": "It demonstrates that vegetation reduces erosion only when storms are weak."
+      },
+      "correctAnswer": "B",
+      "explanation": "Text 1 links continuous cordgrass with lower sediment loss, while Text 2 shows that equally vegetated shorelines can differ in erosion when wave exposure differs. Thus, Text 2 qualifies the first text by showing that vegetation matters, but its effect also depends on the site's physical setting.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-tidal-marsh-connection-001-hard",
+      "groupId": "rw-tidal-marsh-connection-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Cross-Text Connections",
+      "difficulty": "hard",
+      "passage": "Text 1\n\nResearchers at the University of Delaware initially treated lower sediment loss along restored marshes as evidence that dense cordgrass (*Spartina alterniflora*) was the main source of shoreline protection. The strongest results came from sites with continuous vegetation, which made plant density seem sufficient to explain the pattern. One site complicated that view: despite dense cordgrass, its shoreline retreated almost as quickly as a sparsely vegetated site. Because it faced a broad stretch of open water, researchers considered wave exposure as an alternative explanation. A later comparison of sites with similar vegetation density found less retreat where waves traveled across shorter open-water distances.\n\nText 2\n\nA Rutgers University study initially found the same association between dense marsh vegetation and lower erosion. Yet two heavily vegetated sites differed substantially in sediment loss. Researchers then measured sediment entering each marsh through nearby tidal channels; the site receiving more sediment was more stable. When marshes with similar sediment inputs were compared, less wave-exposed sites again retained more shoreline material.",
+      "question": "Which choice best describes the relationship between the two texts?",
+      "choices": {
+        "A": "Both texts conclude that dense cordgrass alone prevents major shoreline erosion.",
+        "B": "Text 1 emphasizes waves, while Text 2 shows that vegetation density alone controls stability.",
+        "C": "Both begin with a vegetation-based explanation, then show that site conditions modify its effect.",
+        "D": "The texts disagree about whether restored marshes can reduce shoreline erosion."
+      },
+      "correctAnswer": "C",
+      "explanation": "Both texts first make dense vegetation look like the main explanation for lower erosion. Text 1 later introduces wave exposure, while Text 2 adds sediment supply and then again finds a wave-exposure effect when that factor is held similar. Together, the texts refine the initial explanation: vegetation can protect shorelines, but its effect depends on conditions at the site.",
+      "status": "staged"
     }
   ]
 }
