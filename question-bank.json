@@ -1817,6 +1817,61 @@
       "correctAnswer": "C",
       "explanation": "The early abundance of butterflies makes increased breeding a plausible interpretation, but the marked individuals later appearing in both larger patches provides evidence consistent with movement between sites. The later contrast between heavy butterfly traffic and relatively few eggs in some strip sections, together with the concentration of eggs in larger milkweed-rich patches across two sampling periods, weakens the reproduction interpretation. C therefore accounts for both the movement evidence and the qualification that frequent use alone does not establish increased reproduction.",
       "status": "staged"
+    },
+    {
+      "id": "rw-bristlecone-growth-inferences-001-easy",
+      "groupId": "rw-bristlecone-growth-inferences-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Inferences",
+      "difficulty": "easy",
+      "passage": "At the University of Arizona, dendrochronologist Mira Chen measured annual growth rings in Great Basin bristlecone pines (*Pinus longaeva*) from the White Mountains of California. Trees with narrower rings in several years also came from years when nearby weather stations recorded below-average precipitation. In wetter years, the same trees generally formed wider rings. Chen observed this broad pattern across multiple trees, although the widths of individual rings varied from tree to tree.",
+      "question": "Which inference is best supported by the passage?",
+      "choices": {
+        "A": "Great Basin bristlecone pines grow fastest at the highest elevations in the White Mountains.",
+        "B": "Annual precipitation has no relationship to the growth of Great Basin bristlecone pines.",
+        "C": "Growth-ring width in these trees may provide evidence about moisture conditions in a particular year.",
+        "D": "A narrow growth ring proves that a particular year experienced severe drought."
+      },
+      "correctAnswer": "C",
+      "explanation": "The passage links narrower rings with below-average precipitation and wider rings with wetter years across multiple trees. That pattern supports using ring width as evidence about yearly moisture conditions, but it does not prove that every narrow ring resulted from severe drought.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-bristlecone-growth-inferences-001-medium",
+      "groupId": "rw-bristlecone-growth-inferences-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Inferences",
+      "difficulty": "medium",
+      "passage": "At the University of Arizona, dendrochronologist Mira Chen compared annual growth rings from Great Basin bristlecone pines (*Pinus longaeva*) in California’s White Mountains with nearby climate records. Years with below-average precipitation often corresponded to narrower rings, while wetter years tended to produce wider rings. Yet trees growing on different slopes sometimes formed noticeably different-sized rings during the same year, even when regional rainfall was similar. Chen also recorded differences in snow accumulation and soil moisture among those sites. Which inference is best supported by the passage?",
+      "choices": {
+        "A": "Differences in slope completely determine why bristlecone pines form different-sized growth rings.",
+        "B": "Growth-ring width can provide clues about moisture conditions, but those clues should be interpreted in light of local environmental differences.",
+        "C": "Regional precipitation is more important than every local factor affecting bristlecone pine growth.",
+        "D": "Trees growing on the same slope always respond identically to changes in precipitation."
+      },
+      "correctAnswer": "B",
+      "explanation": "The passage shows a relationship between precipitation and ring width, but it also shows that trees exposed to similar regional rainfall can form different-sized rings because local conditions vary. This supports using ring width as evidence about moisture while recognizing that the signal can be affected by site-specific conditions.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-bristlecone-growth-inferences-001-hard",
+      "groupId": "rw-bristlecone-growth-inferences-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Inferences",
+      "difficulty": "hard",
+      "passage": "At the University of Arizona, dendrochronologist Mira Chen examined growth rings from Great Basin bristlecone pines (*Pinus longaeva*) in California’s White Mountains. At first, the repeated appearance of very narrow rings during years of low regional precipitation seemed to make drought the obvious explanation for reduced growth. But the pattern was not uniform: some trees at higher elevations formed relatively wide rings in those same years, while several lower-elevation trees produced unusually narrow rings despite similar rainfall. Chen compared neighboring slopes and found that low-snowfall years were especially associated with reduced growth on south-facing slopes, suggesting that regional rainfall alone did not capture all of the relevant moisture conditions. A further complication appeared when an insect outbreak coincided with several unusually narrow rings; those trees also showed substantial needle loss. Carbon-isotope measurements from selected rings differed between the low-snowfall years and the insect-damaged years. Which inference is best supported by the passage?",
+      "choices": {
+        "A": "Narrow growth rings in bristlecone pines are caused primarily by regional drought regardless of where the trees grow.",
+        "B": "Elevation is the single most important factor determining whether bristlecone pines produce narrow or wide growth rings.",
+        "C": "Low snowfall accounts for nearly all unusually narrow rings in the White Mountains.",
+        "D": "Narrow rings can offer evidence about moisture stress, but interpreting that evidence requires accounting for local conditions and other causes of reduced growth."
+      },
+      "correctAnswer": "D",
+      "explanation": "The initial drought interpretation is weakened by trees at different elevations responding differently and by the stronger relationship with low snowfall on some slopes. The insect outbreak provides another cause of narrow rings, while the isotope differences help distinguish those rings from the low-snowfall pattern. Together, the evidence supports a moisture-related signal without making narrow rings a unique or universal indicator of drought.",
+      "status": "staged"
     }
   ]
 }
