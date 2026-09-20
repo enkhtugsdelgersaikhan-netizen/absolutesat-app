@@ -2102,6 +2102,204 @@
       "correctAnswer": "B",
       "explanation": "Ortiz's first interpretation treated plant cover as a likely explanation, but later comparisons showed that watering, growing-layer depth, and insulation also affected the temperature difference. Those findings did not eliminate the role of vegetation; they made the initial explanation less complete and less certain. Thus, **“tempered”** most nearly means weakened.",
       "status": "staged"
+    },
+    {
+      "id": "rw-oyster-shell-coe-table-001-easy",
+      "groupId": "rw-oyster-shell-coe-table-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "easy",
+      "table": {
+        "caption": "Juvenile oyster settlement at University of Maryland field plots",
+        "headers": [
+          "Plot",
+          "Substrate",
+          "Salinity",
+          "Juvenile oysters"
+        ],
+        "rows": [
+          [
+            "Cedar",
+            "Stacked shell",
+            "19 ppt",
+            "41/m²"
+          ],
+          [
+            "Harbor",
+            "Bare sediment",
+            "19 ppt",
+            "14/m²"
+          ],
+          [
+            "Point",
+            "Stacked shell",
+            "14 ppt",
+            "22/m²"
+          ],
+          [
+            "Marsh",
+            "Bare sediment",
+            "14 ppt",
+            "9/m²"
+          ],
+          [
+            "Canal",
+            "Stacked shell",
+            "10 ppt",
+            "12/m²"
+          ],
+          [
+            "Quarry",
+            "Bare sediment",
+            "10 ppt",
+            "6/m²"
+          ]
+        ]
+      },
+      "passage": "At the University of Maryland Center for Environmental Science, biologists investigated whether adding oyster shell could increase juvenile oyster settlement in restored coastal plots. They compared shell reefs with nearby bare-sediment areas under similar salinity conditions. Researchers recorded juvenile oysters per square meter at each plot and used the measurements to compare plots with different substrates. The table summarizes representative results from the field study.",
+      "question": "A researcher concludes that, at similar salinity, adding oyster shell is associated with greater juvenile oyster settlement. Which finding from the table best supports this conclusion?",
+      "choices": {
+        "A": "Cedar and Harbor had the same salinity but different substrates.",
+        "B": "All three shell and bare plots had more than 10 juveniles per square meter.",
+        "C": "Cedar had 41 juveniles at 19 ppt; Harbor had 14 on bare sediment.",
+        "D": "Point had the highest salinity among the shell plots shown."
+      },
+      "correctAnswer": "C",
+      "explanation": "Cedar and Harbor had the same salinity, but Cedar's shell plot had substantially more juvenile oysters. Because the salinity was matched, this comparison directly supports the claimed association between shell structure and greater settlement.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-oyster-shell-coe-table-001-medium",
+      "groupId": "rw-oyster-shell-coe-table-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "medium",
+      "table": {
+        "caption": "Juvenile oyster settlement at University of Maryland field plots",
+        "headers": [
+          "Plot",
+          "Substrate",
+          "Salinity",
+          "Juvenile oysters"
+        ],
+        "rows": [
+          [
+            "Cedar",
+            "Stacked shell",
+            "19 ppt",
+            "41/m²"
+          ],
+          [
+            "Harbor",
+            "Bare sediment",
+            "19 ppt",
+            "14/m²"
+          ],
+          [
+            "Point",
+            "Stacked shell",
+            "14 ppt",
+            "22/m²"
+          ],
+          [
+            "Marsh",
+            "Bare sediment",
+            "14 ppt",
+            "9/m²"
+          ],
+          [
+            "Canal",
+            "Stacked shell",
+            "10 ppt",
+            "12/m²"
+          ],
+          [
+            "Quarry",
+            "Bare sediment",
+            "10 ppt",
+            "6/m²"
+          ]
+        ]
+      },
+      "passage": "At the University of Maryland Center for Environmental Science, biologists investigated whether adding oyster shell affected juvenile oyster settlement in restored coastal plots. They compared shell reefs with bare-sediment areas and recorded salinity because recruitment varied among sites. Researchers wanted to know whether differences in substrate still appeared when water conditions were similar, rather than simply comparing every plot with every other plot. Shell reefs generally had more juveniles, but the size of that difference varied among sites. The table summarizes representative plots from the study.",
+      "question": "Which finding from the table best supports the conclusion that shell structure is associated with greater settlement, while lower salinity may limit the size of the effect?",
+      "choices": {
+        "A": "At both 19 and 14 ppt, shell plots exceeded paired bare plots, with the lower-salinity pair showing a smaller gap.",
+        "B": "The shell plot at 19 ppt had 41 juveniles per square meter, while the shell plot at 14 ppt had 22.",
+        "C": "The two 14-ppt plots had fewer juveniles than the two 19-ppt plots in the table.",
+        "D": "Cedar had more juveniles than Point, and both of those plots contained stacked shell structures."
+      },
+      "correctAnswer": "A",
+      "explanation": "At both 19 and 14 ppt, the shell plot has more juveniles than the matched bare plot. The gap is smaller at 14 ppt, so the same comparison supports both the shell association and the qualification that lower salinity may reduce its apparent effect.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-oyster-shell-coe-table-001-hard",
+      "groupId": "rw-oyster-shell-coe-table-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "hard",
+      "table": {
+        "caption": "Juvenile oyster settlement at University of Maryland field plots",
+        "headers": [
+          "Plot",
+          "Substrate",
+          "Salinity",
+          "Juvenile oysters"
+        ],
+        "rows": [
+          [
+            "Cedar",
+            "Stacked shell",
+            "19 ppt",
+            "41/m²"
+          ],
+          [
+            "Harbor",
+            "Bare sediment",
+            "19 ppt",
+            "14/m²"
+          ],
+          [
+            "Point",
+            "Stacked shell",
+            "14 ppt",
+            "22/m²"
+          ],
+          [
+            "Marsh",
+            "Bare sediment",
+            "14 ppt",
+            "9/m²"
+          ],
+          [
+            "Canal",
+            "Stacked shell",
+            "10 ppt",
+            "12/m²"
+          ],
+          [
+            "Quarry",
+            "Bare sediment",
+            "10 ppt",
+            "6/m²"
+          ]
+        ]
+      },
+      "passage": "At the University of Maryland Center for Environmental Science, biologists initially found that restored plots containing stacked oyster shell supported more juveniles than nearby bare-sediment plots. Because shell reefs also tended to occur where salinity was higher, the researchers could not immediately tell whether substrate or water conditions accounted for the pattern. A comparison of two plots with similar salinity strengthened the substrate explanation, but another shell site had fewer juveniles than a nearby shell site, leaving room for other influences. The researchers then expanded the comparison to plots spanning several salinity levels. They paired shell and bare plots where possible and recorded juvenile abundance at each location. The resulting pattern included both high and low recruitment values, so the researchers examined whether the size of the substrate difference changed across the salinity range. The table gives the matched observations used for that comparison.",
+      "question": "The researchers conclude that shell structure contributes to juvenile oyster settlement, but salinity constrains the size of that effect. Which finding from the table most strongly supports this conclusion?",
+      "choices": {
+        "A": "Shell plots had more juveniles than bare plots, suggesting that shell structure alone largely drives recruitment.",
+        "B": "At each matched salinity, shell plots had more juveniles than the corresponding bare plots in the table.",
+        "C": "At 19 ppt, Cedar and Harbor differed greatly in juvenile abundance despite having similar salinity conditions.",
+        "D": "At matched salinities, shell plots had more juveniles, but the advantage narrowed as salinity fell."
+      },
+      "correctAnswer": "D",
+      "explanation": "The matched comparisons first show that shell plots have more juveniles than their bare counterparts, supporting a contribution from shell structure. Comparing the three matched salinity levels then reveals that the difference is much smaller at 10 ppt than at 19 or 14 ppt, supplying the qualification that salinity constrains the size of the effect. B and C capture only part of the evidence, while A treats shell structure as sufficient on its own.",
+      "status": "staged"
     }
   ]
 }
