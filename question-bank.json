@@ -2756,6 +2756,60 @@
       "correctAnswer": "C",
       "explanation": "The notes first establish a general reduction in nitrate runoff, then introduce a weak result that could appear to challenge that finding. Later evidence points to strip placement rather than plant density as one source of variation, while the dry-month result shows that growing conditions also matter. Choice C synthesizes the overall finding and the qualifications that explain why the apparent exception did not overturn it.",
       "status": "staged"
+    },
+    {
+      "id": "rw-pollinator-solar-rhetorical-synthesis-001-easy",
+      "groupId": "rw-pollinator-solar-rhetorical-synthesis-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "easy",
+      "passage": "A student is researching pollinator-friendly vegetation at solar energy sites. The student has gathered these notes:\n\n- A University of Minnesota team studied solar sites in southern Minnesota.\n- Some sites were planted with native wildflowers.\n- Sites with native wildflowers had more bees visiting during bloom periods.\n- The study examined whether flowering vegetation could benefit pollinators.\n\nThe student wants to introduce the study's main finding. The student writes: \"______\"",
+      "question": "Which choice most effectively uses the notes to accomplish this goal?",
+      "choices": {
+        "A": "The study examined solar sites in southern Minnesota.",
+        "B": "Native wildflowers at solar sites attracted more bees.",
+        "C": "The team observed bees during bloom periods.",
+        "D": "Some Minnesota solar sites contained native plants."
+      },
+      "correctAnswer": "B",
+      "explanation": "The goal is to introduce the study's main finding, so the sentence should state the key result rather than a research detail. Choice B directly communicates that solar sites with native wildflowers attracted more bees."
+    },
+    {
+      "id": "rw-pollinator-solar-rhetorical-synthesis-001-medium",
+      "groupId": "rw-pollinator-solar-rhetorical-synthesis-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "medium",
+      "passage": "A student is researching pollinator-friendly vegetation at solar energy sites. The student has gathered these notes:\n\n- A University of Minnesota team studied eight solar sites in southern Minnesota.\n- Sites planted with native wildflowers had more bees visiting during bloom periods.\n- Some sites were left unmowed after flowering began, while others were mowed.\n- Sites with continuous unmowed vegetation showed more evidence of bee nesting.\n- The study examined whether flowering vegetation could provide broader pollinator benefits.\n\nThe student wants to summarize the study's finding while noting an important factor that affected those broader benefits. The student writes: \"______\"",
+      "question": "Which choice most effectively uses the notes to accomplish this goal?",
+      "choices": {
+        "A": "Native wildflowers attracted more bees, but mowing also affected nesting.",
+        "B": "The team studied eight solar sites in southern Minnesota.",
+        "C": "Unmowed sites contained more evidence of bee nesting after flowering began.",
+        "D": "The researchers compared sites that were mowed with sites that were left unmowed."
+      },
+      "correctAnswer": "A",
+      "explanation": "The goal requires combining the finding that native wildflowers attracted more bees with the qualification that mowing affected nesting evidence. Choice A connects both pieces of information, whereas the other choices present only one research detail or one part of the finding."
+    },
+    {
+      "id": "rw-pollinator-solar-rhetorical-synthesis-001-hard",
+      "groupId": "rw-pollinator-solar-rhetorical-synthesis-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "hard",
+      "passage": "A student is preparing a report on a University of Minnesota study of pollinator habitat at solar energy sites in southern Minnesota. The student has gathered these notes:\n\n- The research team examined eight solar sites planted with native wildflowers.\n- During bloom periods, flower-rich areas received more bee visits than areas with fewer flowers.\n- Because of this pattern, the team initially considered flower abundance a likely explanation for differences in pollinator activity.\n- The sites differed in how their vegetation was managed after flowering began.\n- Some were mowed during the season, while others remained vegetated.\n- Early observations showed that a recently mowed site could still receive many bee visits when flowers were abundant nearby.\n- Later nest surveys found more evidence of bee nesting where vegetation remained continuous.\n- Sites adjacent to existing prairie also supported more bee species, although some nesting occurred at sites without nearby prairie when unmowed vegetation was maintained.\n- The student wants to summarize the evidence without implying that flower abundance alone guaranteed broader habitat benefits. The student writes: \"______\"",
+      "question": "Which choice most effectively uses the notes to accomplish this goal?",
+      "choices": {
+        "A": "Flower-rich solar sites attracted more bees, showing that flower abundance was the main driver of habitat value.",
+        "B": "The study found that unmowed vegetation supported bee nesting at solar sites.",
+        "C": "Native flowering cover drew more bees, but nesting benefits also depended on mowing and nearby habitat.",
+        "D": "Solar sites near existing prairie supported more bee species, so adjacent habitat was necessary for pollinator benefits."
+      },
+      "correctAnswer": "C",
+      "explanation": "The notes first suggest that flower abundance explains bee activity, but the later nesting evidence complicates that interpretation: a site could attract many bees without providing the conditions associated with more nesting. The additional findings about continuous vegetation and nearby prairie show that broader habitat benefits depended on management and surrounding habitat as well as flowering plants. Choice C captures that refined conclusion, while A overgeneralizes, B stops at an intermediate finding, and D treats nearby prairie as necessary when the notes show that some nesting occurred without it."
     }
   ]
 }
