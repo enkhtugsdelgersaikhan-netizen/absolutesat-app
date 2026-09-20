@@ -3164,6 +3164,60 @@
       "correctAnswer": "A",
       "explanation": "The phrase “that had maintained cooler leaves” already identifies the specific plots being discussed, so the following “which” clause adds nonessential information about those identified plots and must be preceded by a comma. A semicolon cannot separate a noun phrase from a dependent relative clause, and omitting the comma would incorrectly make the second relative clause restrictive. The period would also leave the “Which” clause as a fragment.",
       "status": "staged"
+    },
+    {
+      "id": "rw-red-maple-boundaries-004-easy",
+      "groupId": "rw-red-maple-boundaries-004",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "easy",
+      "passage": "At Michigan State University, researchers compared red maple (*Acer rubrum*) trees planted along city streets. Trees with broader crowns shaded more pavement, and that shaded pavement stayed cooler during afternoon measurements. The researchers attributed the lower pavement temperatures to canopy shade____ a straightforward effect visible across the sites.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": ", a",
+        "B": "; a",
+        "C": ": a",
+        "D": ". A"
+      },
+      "correctAnswer": "C",
+      "explanation": "The clause before the blank is complete, and the words after the blank give an explanation of the effect just mentioned. A colon correctly introduces that explanatory phrase. A comma would create an invalid boundary, while a semicolon or period would incorrectly separate the explanatory phrase from the clause."
+    },
+    {
+      "id": "rw-red-maple-boundaries-004-medium",
+      "groupId": "rw-red-maple-boundaries-004",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "medium",
+      "passage": "At Michigan State University, researchers found that red maples (*Acer rubrum*) with broader crowns generally cooled more pavement. One summer survey, however, produced a weaker difference among the largest trees. Those trees had dry root zones, and the researchers suspected that limited water availability had reduced their cooling effect____ the canopy measurements alone therefore did not explain the entire pattern. The team planned a second trial that controlled soil moisture more closely.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": ", and",
+        "B": ";",
+        "C": ":",
+        "D": ". And"
+      },
+      "correctAnswer": "B",
+      "explanation": "Both sides of the blank are independent clauses: the first states that limited water availability may have reduced cooling, and the second states that canopy measurements alone were insufficient. A semicolon correctly joins these closely related clauses. The other choices either create an incorrect boundary or change the sentence structure."
+    },
+    {
+      "id": "rw-red-maple-boundaries-004-hard",
+      "groupId": "rw-red-maple-boundaries-004",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "hard",
+      "passage": "At Michigan State University, researchers initially interpreted the greater pavement cooling beneath broad-crowned red maples (*Acer rubrum*) as evidence that canopy size was the main driver of the effect. Yet the broadest trees were often growing in planting beds with deeper soil, which also allowed them to remain hydrated longer. A trial that matched soil moisture across trees still showed greater cooling beneath broad crowns, supporting an intermediate conclusion that canopy size itself mattered. The result seemed straightforward until a late-summer drought reduced the difference between some broad- and medium-crowned trees. Follow-up measurements showed that the broad-crowned trees that maintained the strongest cooling also maintained higher leaf conductance during the drought. Because those trees represented only part of the broad-crowned group, the researchers reconsidered what the original canopy comparison was actually isolating. They then reanalyzed the data by comparing the broad-crowned trees____ that maintained the highest leaf conductance during drought.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "that maintained the highest leaf conductance during drought",
+        "B": ", which maintained the highest leaf conductance during drought,",
+        "C": "; they maintained the highest leaf conductance during drought",
+        "D": ": maintaining the highest leaf conductance during drought"
+      },
+      "correctAnswer": "A",
+      "explanation": "The passage specifies that only some broad-crowned trees maintained the strongest cooling and higher leaf conductance, so the final clause must identify that subset rather than describe all broad-crowned trees. Choice A uses a restrictive relative clause without commas, correctly narrowing which trees the researchers reanalyzed. Choice B incorrectly implies that all the broad-crowned trees had the stated characteristic, while C and D do not create the intended grammatical relationship within the sentence."
     }
   ]
 }
