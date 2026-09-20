@@ -2822,6 +2822,63 @@
       "explanation": "The notes first suggest that flower abundance explains bee activity, but the later nesting evidence complicates that interpretation: a site could attract many bees without providing the conditions associated with more nesting. The additional findings about continuous vegetation and nearby prairie show that broader habitat benefits depended on management and surrounding habitat as well as flowering plants. Choice C captures that refined conclusion, while A overgeneralizes, B stops at an intermediate finding, and D treats nearby prairie as necessary when the notes show that some nesting occurred without it.",
       "status": "staged",
       "goal": "Summarize the evidence without implying that flower abundance alone guaranteed broader habitat benefits."
+    },
+    {
+      "id": "rw-gray-creek-wetlands-transition-002-easy",
+      "groupId": "rw-gray-creek-wetlands-transition-002",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "easy",
+      "status": "staged",
+      "passage": "At North River University, hydrologist Elena Marquez studied a restored wetland beside a residential district. The wetland stored stormwater during heavy rain. After restoration, nearby streets experienced less standing water after several comparable storms. These observations came from similar weather conditions that year. ______, the team reported that restoring the wetland could reduce neighborhood flooding.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "As a result,",
+        "B": "However,",
+        "C": "For example,",
+        "D": "In contrast,"
+      },
+      "correctAnswer": "A",
+      "explanation": "The first four sentences establish that the restored wetland stored stormwater and that nearby flooding decreased afterward. As a result, correctly signals the cause-and-effect relationship between those observations and the team's conclusion."
+    },
+    {
+      "id": "rw-gray-creek-wetlands-transition-002-medium",
+      "groupId": "rw-gray-creek-wetlands-transition-002",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "medium",
+      "status": "staged",
+      "passage": "North River University researchers studied three restored wetlands along Gray Creek. All three stored stormwater during heavy rains, but the wetland connected to the creek's overflow channel reduced nearby water levels more than the others. The other two basins held water as well, yet some stormwater reached streets before entering them. Results from later storms showed the same pattern. ______, the researchers concluded that wetland restoration can reduce flooding, but the amount of protection depends on how readily stormwater can reach the restored area.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "Similarly,",
+        "B": "However,",
+        "C": "For example,",
+        "D": "Therefore,"
+      },
+      "correctAnswer": "D",
+      "explanation": "The passage first describes the wetlands' general ability to store stormwater and then explains why their effects differed. Therefore, appropriately introduces the researchers' conclusion based on those findings, including the qualification about how easily stormwater reaches each wetland."
+    },
+    {
+      "id": "rw-gray-creek-wetlands-transition-002-hard",
+      "groupId": "rw-gray-creek-wetlands-transition-002",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "hard",
+      "status": "staged",
+      "passage": "North River University researchers monitored four restored wetlands along Gray Creek. They expected larger basins to produce larger reductions because they can temporarily hold more stormwater. Early measurements supported this: the largest basin showed the biggest drop in peak water levels. Yet one smaller basin performed nearly as well during moderate storms, despite holding less water. Researchers considered whether its dense native vegetation allowed greater absorption, but surveys showed similar plant cover among the four basins. A map of stormwater routes then showed that the smaller basin sat across a drainage swale, while the largest received only part of the runoff because a road culvert diverted some flow. The evidence made connectivity an important part of the explanation, but it did not account for every result. During an intense storm, even the best-connected basin reduced the downstream peak by only a small amount. ______, the researchers compared the timing of inflow to each basin rather than relying on basin size or connectivity alone. Basins receiving runoff earliest provided measurable storage, but their effects varied with the storm's speed and volume.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "Consequently,",
+        "B": "For example,",
+        "C": "In contrast,",
+        "D": "Similarly,"
+      },
+      "correctAnswer": "A",
+      "explanation": "The researchers had already found that basin size alone was insufficient and that connectivity did not explain every result. The unusually intense storm supplied another reason to investigate a different factor, so Consequently, correctly signals the move to studying inflow timing. The other choices do not express that cause-and-effect shift."
     }
   ]
 }
