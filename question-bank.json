@@ -1844,7 +1844,7 @@
       "domain": "Information and Ideas",
       "skill": "Inferences",
       "difficulty": "medium",
-      "passage": "At the University of Arizona, dendrochronologist Mira Chen compared annual growth rings from Great Basin bristlecone pines (*Pinus longaeva*) in California’s White Mountains with nearby climate records. Years with below-average precipitation often corresponded to narrower rings, while wetter years tended to produce wider rings. Yet trees growing on different slopes sometimes formed noticeably different-sized rings during the same year, even when regional rainfall was similar. Chen also recorded differences in snow accumulation and soil moisture among those sites. Which inference is best supported by the passage?",
+      "passage": "At the University of Arizona, dendrochronologist Mira Chen compared annual growth rings from Great Basin bristlecone pines (*Pinus longaeva*) in California’s White Mountains with nearby climate records. Years with below-average precipitation often corresponded to narrower rings, while wetter years tended to produce wider rings. Yet trees growing on different slopes sometimes formed noticeably different-sized rings during the same year, even when regional rainfall was similar. Chen also recorded differences in snow accumulation and soil moisture among those sites. These local differences showed that the same regional weather conditions could be associated with different growth responses in different locations.",
       "choices": {
         "A": "Differences in slope completely determine why bristlecone pines form different-sized growth rings.",
         "B": "Growth-ring width can provide clues about moisture conditions, but those clues should be interpreted in light of local environmental differences.",
@@ -1862,7 +1862,7 @@
       "domain": "Information and Ideas",
       "skill": "Inferences",
       "difficulty": "hard",
-      "passage": "At the University of Arizona, dendrochronologist Mira Chen examined growth rings from Great Basin bristlecone pines (*Pinus longaeva*) in California’s White Mountains. At first, the repeated appearance of very narrow rings during years of low regional precipitation seemed to make drought the obvious explanation for reduced growth. But the pattern was not uniform: some trees at higher elevations formed relatively wide rings in those same years, while several lower-elevation trees produced unusually narrow rings despite similar rainfall. Chen compared neighboring slopes and found that low-snowfall years were especially associated with reduced growth on south-facing slopes, suggesting that regional rainfall alone did not capture all of the relevant moisture conditions. A further complication appeared when an insect outbreak coincided with several unusually narrow rings; those trees also showed substantial needle loss. Carbon-isotope measurements from selected rings differed between the low-snowfall years and the insect-damaged years. Which inference is best supported by the passage?",
+      "passage": "At the University of Arizona, dendrochronologist Mira Chen examined growth rings from Great Basin bristlecone pines (*Pinus longaeva*) in California’s White Mountains. At first, the repeated appearance of very narrow rings during years of low regional precipitation seemed to make drought the obvious explanation for reduced growth. But the pattern was not uniform: some trees at higher elevations formed relatively wide rings in those same years, while several lower-elevation trees produced unusually narrow rings despite similar rainfall. Chen compared neighboring slopes and found that low-snowfall years were especially associated with reduced growth on south-facing slopes, suggesting that regional rainfall alone did not capture all of the relevant moisture conditions. A further complication appeared when an insect outbreak coincided with several unusually narrow rings; those trees also showed substantial needle loss. Carbon-isotope measurements from selected rings differed between the low-snowfall years and the insect-damaged years. The differing isotope patterns gave Chen a way to distinguish rings associated with the two processes.",
       "choices": {
         "A": "Narrow growth rings in bristlecone pines are caused primarily by regional drought regardless of where the trees grow.",
         "B": "Elevation is the single most important factor determining whether bristlecone pines produce narrow or wide growth rings.",
@@ -1871,6 +1871,63 @@
       },
       "correctAnswer": "D",
       "explanation": "The initial drought interpretation is weakened by trees at different elevations responding differently and by the stronger relationship with low snowfall on some slopes. The insect outbreak provides another cause of narrow rings, while the isotope differences help distinguish those rings from the low-snowfall pattern. Together, the evidence supports a moisture-related signal without making narrow rings a unique or universal indicator of drought.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-ponderosa-fire-command-evidence-001-easy",
+      "groupId": "rw-ponderosa-fire-command-evidence-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "easy",
+      "passage": "At Chiricahua National Monument in Arizona, ecologist Maya Chen examined fire scars in ponderosa pine (*Pinus ponderosa*) trees to reconstruct past fires. Many scars occurred in the same decades that researchers found charcoal layers in nearby soil. Because the two records pointed to the same periods, the fire scars provided evidence that fires had occurred. Some trees lacked scars, even in areas where charcoal showed that fire had occurred.",
+      "question": "A researcher concludes that fire-scar dates can help identify periods when fires occurred. Which choice provides the best evidence for this conclusion?",
+      "choices": {
+        "A": "Some trees lacked scars, even in areas where charcoal showed that fire had occurred.",
+        "B": "Many scars occurred in the same decades that researchers found charcoal layers in nearby soil.",
+        "C": "Maya Chen examined fire scars in ponderosa pine trees to reconstruct past fires.",
+        "D": "The study took place at Chiricahua National Monument in Arizona."
+      },
+      "correctAnswer": "B",
+      "explanation": "The matching fire-scar and charcoal records provide two independent indicators of the same periods of burning. That direct agreement is the strongest evidence that fire-scar dates can help identify when fires occurred.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-ponderosa-fire-command-evidence-001-medium",
+      "groupId": "rw-ponderosa-fire-command-evidence-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "medium",
+      "passage": "At Chiricahua National Monument in Arizona, ecologist Maya Chen studied fire scars in ponderosa pine (*Pinus ponderosa*). Clusters of scars often appeared during decades when charcoal accumulated in nearby soil. Yet trees of the same species and similar age at sheltered sites sometimes had no scars from those decades, even when the charcoal record indicated fire. Chen also found that several scarred trees stood close together, so one burn could produce scars on multiple neighboring trees. The pattern gave Chen reason to compare scar dates with other evidence rather than treating each scar as a separate fire.",
+      "question": "A researcher concludes that fire-scar records can reveal periods of past burning but cannot by themselves provide a complete record. Which choice provides the best evidence for this conclusion?",
+      "choices": {
+        "A": "Several scarred trees stood close together, so one burn could produce scars on multiple neighboring trees.",
+        "B": "Trees of the same species and similar age at sheltered sites sometimes had no scars from decades when the charcoal record indicated fire.",
+        "C": "Chen studied fire scars in ponderosa pine at Chiricahua National Monument.",
+        "D": "The pattern gave Chen reason to compare scar dates with other evidence."
+      },
+      "correctAnswer": "B",
+      "explanation": "The absence of scars from trees in places where the charcoal record still shows fire demonstrates that a fire can occur without leaving a scar on every tree. That evidence directly supports the qualification that fire-scar records are useful but incomplete.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-ponderosa-fire-command-evidence-001-hard",
+      "groupId": "rw-ponderosa-fire-command-evidence-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "hard",
+      "passage": "At Chiricahua National Monument in Arizona, ecologist Maya Chen initially treated clusters of fire scars in old ponderosa pines as a near-direct chronology of past surface fires. Several old trees carried scars from the same decades, and the slopes with the most scarred trees had also been described in earlier surveys as frequently burned. The pattern looked especially persuasive because scars from nearby trees often fell within a narrow range of years. Yet neighboring trees sometimes differed sharply: one could carry three scars from a decade in which another had none. Chen considered whether this variation reflected local differences in flame exposure, so she compared trees on exposed edges with trees only a few meters away. Edge trees did have more scars, supporting a role for local exposure, but that result did not explain every gap in the record. Soil cores then revealed charcoal layers from several decades represented by few or no tree scars. In two such plots, archival fire-inspection notes also described burned fence lines near the same locations.",
+      "question": "A researcher concludes that fire-scar records are useful indicators of past burning but are incomplete on their own. Which choice provides the strongest evidence for this conclusion?",
+      "choices": {
+        "A": "The slopes with the most scarred trees had also been described in earlier surveys as frequently burned.",
+        "B": "Trees on exposed edges had more scars than trees only a few meters away.",
+        "C": "Several old trees carried scars from the same decades, while soil cores from two plots contained charcoal from decades represented by few or no tree scars.",
+        "D": "Archival fire-inspection notes described burned fence lines near two plots."
+      },
+      "correctAnswer": "C",
+      "explanation": "The matching clusters of scars support the idea that scars can identify periods of burning, while the charcoal in plots with few or no scars shows that the tree record can miss fires. The later evidence changes the significance of the earlier scar pattern: the scars are useful indicators, but the independent evidence prevents them from being treated as a complete record. The other choices capture only an early interpretation, an intermediate explanation, or one supporting detail.",
       "status": "staged"
     }
   ]
