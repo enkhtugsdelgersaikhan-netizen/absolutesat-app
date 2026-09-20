@@ -3181,7 +3181,8 @@
         "D": ". A"
       },
       "correctAnswer": "C",
-      "explanation": "The clause before the blank is complete, and the words after the blank give an explanation of the effect just mentioned. A colon correctly introduces that explanatory phrase. A comma would create an invalid boundary, while a semicolon or period would incorrectly separate the explanatory phrase from the clause."
+      "explanation": "The clause before the blank is complete, and the words after the blank give an explanation of the effect just mentioned. A colon correctly introduces that explanatory phrase. A comma would create an invalid boundary, while a semicolon or period would incorrectly separate the explanatory phrase from the clause.",
+      "status": "staged"
     },
     {
       "id": "rw-red-maple-boundaries-004-medium",
@@ -3199,7 +3200,8 @@
         "D": ". And"
       },
       "correctAnswer": "B",
-      "explanation": "Both sides of the blank are independent clauses: the first states that limited water availability may have reduced cooling, and the second states that canopy measurements alone were insufficient. A semicolon correctly joins these closely related clauses. The other choices either create an incorrect boundary or change the sentence structure."
+      "explanation": "Both sides of the blank are independent clauses: the first states that limited water availability may have reduced cooling, and the second states that canopy measurements alone were insufficient. A semicolon correctly joins these closely related clauses. The other choices either create an incorrect boundary or change the sentence structure.",
+      "status": "staged"
     },
     {
       "id": "rw-red-maple-boundaries-004-hard",
@@ -3217,7 +3219,8 @@
         "D": ": maintaining the highest leaf conductance during drought"
       },
       "correctAnswer": "A",
-      "explanation": "The passage specifies that only some broad-crowned trees maintained the strongest cooling and higher leaf conductance, so the final clause must identify that subset rather than describe all broad-crowned trees. Choice A uses a restrictive relative clause without commas, correctly narrowing which trees the researchers reanalyzed. Choice B incorrectly implies that all the broad-crowned trees had the stated characteristic, while C and D do not create the intended grammatical relationship within the sentence."
+      "explanation": "The passage specifies that only some broad-crowned trees maintained the strongest cooling and higher leaf conductance, so the final clause must identify that subset rather than describe all broad-crowned trees. Choice A uses a restrictive relative clause without commas, correctly narrowing which trees the researchers reanalyzed. Choice B incorrectly implies that all the broad-crowned trees had the stated characteristic, while C and D do not create the intended grammatical relationship within the sentence.",
+      "status": "staged"
     }
   ]
 }
