@@ -2357,6 +2357,63 @@
       "correctAnswer": "D",
       "explanation": "The early measurements made canopy density look like the main explanation, but the wind comparison and later evidence about reflective walls showed that this interpretation was incomplete. The final survey still supported a role for shade while adding important limits, so **“qualified”** most nearly means narrowed.",
       "status": "staged"
+    },
+    {
+      "id": "rw-prescribed-fire-mitigate-words-context-001-easy",
+      "groupId": "rw-prescribed-fire-mitigate-words-context-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Words in Context",
+      "difficulty": "easy",
+      "passage": "At the University of California, Davis, ecologist Maya Chen studied prescribed burns in stands of coast live oak (*Quercus agrifolia*). After a controlled burn, the forest floor held less dry leaf litter and fewer fallen branches than nearby unburned plots. Because a later fire would encounter less combustible material, Chen wrote that prescribed burns could **mitigate** wildfire risk.",
+      "question": "As used in the text, what does **“mitigate”** most nearly mean?",
+      "choices": {
+        "A": "Predict",
+        "B": "Measure",
+        "C": "Lessen",
+        "D": "Intensify"
+      },
+      "correctAnswer": "C",
+      "explanation": "The passage says that prescribed burns leave less combustible material for a later fire. In this context, **“mitigate”** means lessen or make the wildfire risk less severe.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-prescribed-fire-mitigate-words-context-001-medium",
+      "groupId": "rw-prescribed-fire-mitigate-words-context-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Words in Context",
+      "difficulty": "medium",
+      "passage": "At the University of California, Davis, ecologist Maya Chen studied prescribed burns in stands of coast live oak (*Quercus agrifolia*). Burned plots had thinner layers of dry litter and fewer small branches than nearby untreated plots, but grasses quickly regrew in some areas and restored part of the ground cover. Other plots remained relatively open for months. Chen concluded that prescribed burns can **mitigate** wildfire risk, although the duration of the benefit varies with how quickly vegetation returns. Thus, the treatment can help even when its effect does not last equally long everywhere.",
+      "question": "As used in the text, what does **“mitigate”** most nearly mean?",
+      "choices": {
+        "A": "Lessen",
+        "B": "Predict",
+        "C": "Measure",
+        "D": "Replace"
+      },
+      "correctAnswer": "A",
+      "explanation": "The passage connects prescribed burning with thinner fuel layers and fewer branches, while also explaining that regrowth can limit how long the benefit lasts. Thus, **“mitigate”** means lessen the wildfire risk rather than eliminate it or replace another process.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-prescribed-fire-mitigate-words-context-001-hard",
+      "groupId": "rw-prescribed-fire-mitigate-words-context-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Words in Context",
+      "difficulty": "hard",
+      "passage": "At the University of California, Davis, ecologist Maya Chen initially treated the smaller fuel loads in prescribed-burn plots as evidence that the treatment explained their lower fire-risk ratings. In stands of coast live oak (*Quercus agrifolia*), burned plots contained less dry litter and fewer fallen branches than nearby untreated plots. Yet one burned plot still received a relatively high rating, leaving open two explanations: the treatment may have had little lasting effect, or another site condition may have mattered more. Chen noted that grasses had rapidly returned there, but the observation alone did not show which factor was more important. She then compared burned and unburned plots with similar grass cover; the burned plots still contained fewer woody fuels. A second comparison produced a new complication: on steep, shaded slopes, moist litter sometimes kept fire behavior relatively restrained even where fuel amounts were similar. Chen therefore described prescribed burning as able to **mitigate** wildfire risk. In the following season, however, plots with similar fuel loads continued to receive different ratings when wind exposure and canopy density differed.",
+      "question": "As used in the text, what does **“mitigate”** most nearly mean?",
+      "choices": {
+        "A": "Predict",
+        "B": "Eliminate",
+        "C": "Measure",
+        "D": "Lessen"
+      },
+      "correctAnswer": "D",
+      "explanation": "The early evidence suggests that prescribed burning changes fuel conditions, but the high-risk burned plot and later comparisons show that other factors can still affect overall fire risk. The treatment therefore does not guarantee that risk disappears; rather, it makes one important part of the risk less severe. Thus, **“mitigate”** most nearly means lessen.",
+      "status": "staged"
     }
   ]
 }
