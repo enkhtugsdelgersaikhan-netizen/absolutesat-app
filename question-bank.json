@@ -2045,6 +2045,63 @@
       "correctAnswer": "C",
       "explanation": "The passage establishes that most finished blades matched the distant Pachuca source while local obsidian was also being worked in the workshops. The retouched blades were chemically similar to the other finished blades, and local cores and flakes remained common. Together, those details support the interpretation that imported blades could be modified locally rather than being produced there from local stone.",
       "status": "staged"
+    },
+    {
+      "id": "rw-green-roof-tempered-words-context-001-easy",
+      "groupId": "rw-green-roof-tempered-words-context-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Words in Context",
+      "difficulty": "easy",
+      "passage": "At the University of Chicago, engineer Lena Ortiz studied green roofs planted with *Sedum album*. On sunny afternoons, these roofs were cooler than nearby bare roofs. During a week with very little rainfall, however, the plants provided less evaporative cooling, and the temperature difference between the roofs became smaller. Ortiz wrote that dry weather had **tempered** the cooling benefit of the green roofs.",
+      "question": "As used in the text, what does **“tempered”** most nearly mean?",
+      "choices": {
+        "A": "Measured",
+        "B": "Reduced",
+        "C": "Recorded",
+        "D": "Repeated"
+      },
+      "correctAnswer": "B",
+      "explanation": "The passage explains that dry weather caused less evaporative cooling and a smaller temperature difference. Thus, **“tempered”** means reduced or weakened. The other choices do not fit the change described in the cooling effect.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-green-roof-tempered-words-context-001-medium",
+      "groupId": "rw-green-roof-tempered-words-context-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Words in Context",
+      "difficulty": "medium",
+      "passage": "At the University of Chicago, engineer Lena Ortiz compared green roofs planted with *Sedum album* with nearby bare roofs. The planted roofs generally stayed cooler, but the size of the difference varied among buildings. Roofs with deeper growing layers retained moisture longer, while shallow layers dried more quickly. During dry weeks, even some planted roofs with shallow layers showed little cooling advantage, whereas watered roofs maintained a larger temperature gap. Ortiz therefore wrote that dry conditions **tempered** the cooling benefit of rooftop vegetation.",
+      "question": "As used in the text, what does **“tempered”** most nearly mean?",
+      "choices": {
+        "A": "Extended",
+        "B": "Moderated",
+        "C": "Measured",
+        "D": "Recorded"
+      },
+      "correctAnswer": "B",
+      "explanation": "The passage connects dry conditions with weaker cooling, especially on roofs that dried quickly, while better-watered roofs retained a larger temperature difference. In this context, **“tempered”** means moderated or made less pronounced. The other choices do not describe a reduction in the strength of the cooling benefit.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-green-roof-tempered-words-context-001-hard",
+      "groupId": "rw-green-roof-tempered-words-context-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Words in Context",
+      "difficulty": "hard",
+      "passage": "At the University of Chicago, engineer Lena Ortiz initially found that green roofs planted with *Sedum album* were cooler than nearby bare roofs during sunny afternoons. Because the planted roofs also differed in growing-layer depth, Ortiz considered plant cover a likely explanation, but she could not tell how much the vegetation itself contributed. Some shallow planted roofs showed only a modest temperature advantage, leaving open the possibility that roof construction mattered more than the plants. Ortiz then compared buildings with similar insulation but different watering schedules; during wet periods, well-watered planted roofs maintained a larger temperature gap. That result made plant activity more plausible, though it did not settle the role of the roof assembly. In a separate comparison, roofs with similarly healthy plants but deeper growing layers retained their cooling advantage longer during dry weather. Ortiz also found that two roofs with similar plant coverage could differ noticeably in temperature when their insulation differed. These comparisons **tempered** her first interpretation of the cooling pattern. On another afternoon, roofs with similar vegetation again showed different readings despite comparable weather conditions.",
+      "question": "As used in the text, what does **“tempered”** most nearly mean?",
+      "choices": {
+        "A": "Confirmed",
+        "B": "Weakened",
+        "C": "Accelerated",
+        "D": "Measured"
+      },
+      "correctAnswer": "B",
+      "explanation": "Ortiz's first interpretation treated plant cover as a likely explanation, but later comparisons showed that watering, growing-layer depth, and insulation also affected the temperature difference. Those findings did not eliminate the role of vegetation; they made the initial explanation less complete and less certain. Thus, **“tempered”** most nearly means weakened.",
+      "status": "staged"
     }
   ]
 }
