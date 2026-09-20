@@ -2993,6 +2993,63 @@
       },
       "correctAnswer": "C",
       "explanation": "The earlier evidence leaves the planetary and stellar-activity explanations unresolved, so the next measurement is introduced as a way to discriminate between them rather than as a simple confirmation. With that question unresolved, correctly connects the remaining uncertainty to the decision to examine the signal at another wavelength. The final result is still qualified: it separates part of the recurring signal but does not by itself prove a planet."
+    },
+    {
+      "id": "rw-chicago-rooftop-pollinators-boundaries-001-easy",
+      "groupId": "rw-chicago-rooftop-pollinators-boundaries-001",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "easy",
+      "passage": "Researchers at three Chicago rooftop gardens compared bee activity under different planting conditions. Roofs with more native flowering plants received more bee visits during bloom. Gardens with continuous low vegetation also showed more nesting sites. The researchers concluded that flowering plants can support foraging while uninterrupted vegetation can provide places to nest____ benefits that depend on how the rooftop is managed.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": ",",
+        "B": ";",
+        "C": ":",
+        "D": "."
+      },
+      "correctAnswer": "A",
+      "explanation": "A comma correctly separates the independent clause from the following nonessential noun phrase, “benefits that depend on how the rooftop is managed.” A semicolon, colon, or period cannot be used to join the clause to that phrase.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-chicago-rooftop-pollinators-boundaries-001-medium",
+      "groupId": "rw-chicago-rooftop-pollinators-boundaries-001",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "medium",
+      "passage": "Researchers at three Chicago rooftop gardens compared bee activity under different planting conditions. Roofs with more native flowering plants received more bee visits during bloom, while gardens with continuous low vegetation showed more nesting sites. The team initially treated flower abundance as the clearest explanation for overall bee activity____ however, later observations showed that roofs with similar numbers of flowers could differ substantially in nesting when vegetation was interrupted. The researchers therefore concluded that flowering plants and continuous cover contributed to different aspects of pollinator habitat.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": ", however,",
+        "B": "; however,",
+        "C": ": however,",
+        "D": ". however,"
+      },
+      "correctAnswer": "B",
+      "explanation": "The text contains two independent clauses joined by the conjunctive adverb “however,” so a semicolon is needed before “however.” A comma alone would create a comma splice, while a colon and period do not correctly form this construction as written.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-chicago-rooftop-pollinators-boundaries-001-hard",
+      "groupId": "rw-chicago-rooftop-pollinators-boundaries-001",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "hard",
+      "passage": "Researchers at three Chicago rooftop gardens first observed that roofs with more native flowering plants received more bee visits during bloom. Because those same roofs often had continuous vegetation, the team could not tell whether flower abundance or overall plant cover explained the pattern. A roof with many flowers but recently cut vegetation still attracted numerous foraging bees, which initially seemed to favor flower abundance as the main explanation. Later, however, nest surveys showed that roofs with continuous cover supported more nesting sites even when they contained fewer flowers. To test whether this result simply reflected differences in flower abundance, researchers compared roofs with similar flower counts but different mowing schedules. The comparison produced similar visitation rates but different nesting rates____ the researchers also found the same pattern at a fourth roof. Taken together, the observations suggested that flowering availability was more closely associated with visitation, whereas continuous cover was more closely associated with nesting.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": ",",
+        "B": ";",
+        "C": ":",
+        "D": "."
+      },
+      "correctAnswer": "B",
+      "explanation": "The blank separates two closely related independent clauses: “The comparison produced similar visitation rates but different nesting rates” and “the researchers also found the same pattern at a fourth roof.” A semicolon correctly joins them without creating a comma splice or an improperly capitalized second sentence. A colon would suggest that the second clause explains the first rather than adding a related finding.",
+      "status": "staged"
     }
   ]
 }
