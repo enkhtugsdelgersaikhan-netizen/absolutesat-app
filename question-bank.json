@@ -2699,6 +2699,63 @@
       "correctAnswer": "C",
       "explanation": "The notes establish a general cooling pattern, but the unusually dry roof performed differently during the heat wave. The full-summer comparison shows that the roof was still cooler overall, while the irrigated roofs show that water availability affected the size of the reduction. Choice C integrates the general finding, the exception, and the evidence that qualifies it.",
       "status": "staged"
+    },
+    {
+      "id": "rw-prairie-strips-rhetorical-synthesis-001-easy",
+      "groupId": "rw-prairie-strips-rhetorical-synthesis-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "easy",
+      "passage": "A student is researching prairie strips at Iowa State University. The student has gathered these notes:\n\n- Hydrologist Priya Raman studied prairie strips planted in cornfields.\n- The strips included switchgrass (*Panicum virgatum*) and little bluestem (*Schizachyrium scoparium*).\n- Fields with prairie strips released less nitrate into drainage ditches after heavy storms.\n- The study examined whether prairie vegetation could reduce nitrate runoff.\n\nThe student wants to introduce the study's main finding. The student writes: \"______\"",
+      "question": "Which choice most effectively uses the notes to accomplish this goal?",
+      "choices": {
+        "A": "Raman studied prairie strips in Iowa cornfields after heavy storms.",
+        "B": "Raman found that prairie strips can reduce nitrate runoff from cornfields.",
+        "C": "The prairie strips included switchgrass and little bluestem.",
+        "D": "The study measured nitrate levels in drainage ditches after storms."
+      },
+      "correctAnswer": "B",
+      "explanation": "The goal is to introduce the study's main finding, so the sentence should state the central result rather than a supporting detail. Choice B directly communicates that prairie strips can reduce nitrate runoff.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-prairie-strips-rhetorical-synthesis-001-medium",
+      "groupId": "rw-prairie-strips-rhetorical-synthesis-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "medium",
+      "passage": "A student is researching prairie strips at Iowa State University. The student has gathered these notes:\n\n- Hydrologist Priya Raman studied prairie strips in cornfields.\n- Fields with prairie strips released less nitrate after heavy storms.\n- Some strips crossed natural runoff pathways; others ran beside them.\n- Strips crossing the pathways intercepted more concentrated water flow.\n- The study found that strip placement affected the size of the nitrate reduction.\n\nThe student wants to summarize the general finding while noting the factor that affected the size of the reduction. The student writes: \"______\"",
+      "question": "Which choice most effectively uses the notes to accomplish this goal?",
+      "choices": {
+        "A": "Prairie strips reduced nitrate runoff, but their placement affected the size of the reduction.",
+        "B": "Raman found that strips crossing runoff pathways reduced nitrate after heavy storms.",
+        "C": "Some prairie strips were planted beside natural runoff pathways in cornfields.",
+        "D": "The study measured nitrate released into drainage ditches after heavy storms."
+      },
+      "correctAnswer": "A",
+      "explanation": "The goal requires both the general finding and the qualification about placement. Choice A combines the evidence that prairie strips reduced nitrate runoff with the finding that their position affected the size of the reduction.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-prairie-strips-rhetorical-synthesis-001-hard",
+      "groupId": "rw-prairie-strips-rhetorical-synthesis-001",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "hard",
+      "passage": "A student is preparing a report on Priya Raman's Iowa State University study of prairie strips. The student has gathered these notes:\n\n- Raman studied switchgrass (*Panicum virgatum*) and little bluestem (*Schizachyrium scoparium*) planted within cornfields.\n- Fields containing prairie strips generally released less nitrate after heavy storms.\n- One field with a large strip showed only a small reduction.\n- That strip ran beside a shallow depression rather than across it.\n- Raman initially considered whether plant density explained the weak result.\n- Its vegetation was similarly established to that of strips with larger effects.\n- A later comparison found greater nitrate reductions where strips crossed concentrated runoff pathways.\n- During an unusually dry month, even well-positioned strips showed smaller effects as plant growth slowed.\n- The study therefore did not treat the single weak field as evidence that prairie strips were ineffective overall.\n\nThe student wants to present the general finding while explaining why the apparent exception did not overturn it and what later evidence revealed about variation in the size of the effect. The student writes: \"______\"",
+      "question": "Which choice most effectively uses the notes to accomplish this goal?",
+      "choices": {
+        "A": "The weak result from one field suggests that prairie strips may be ineffective near shallow depressions.",
+        "B": "Raman found that strips crossing runoff pathways consistently eliminated nitrate losses from cornfields.",
+        "C": "Prairie strips generally reduced nitrate runoff, although placement and growing conditions affected the size of the reduction.",
+        "D": "The study found that plant density was the main reason some prairie strips reduced more nitrate than others."
+      },
+      "correctAnswer": "C",
+      "explanation": "The notes first establish a general reduction in nitrate runoff, then introduce a weak result that could appear to challenge that finding. Later evidence points to strip placement rather than plant density as one source of variation, while the dry-month result shows that growing conditions also matter. Choice C synthesizes the overall finding and the qualifications that explain why the apparent exception did not overturn it.",
+      "status": "staged"
     }
   ]
 }
