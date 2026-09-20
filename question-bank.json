@@ -1703,6 +1703,63 @@
       "correctAnswer": "B",
       "explanation": "The passage first presents a straightforward interpretation of heavily annotated books, then complicates it with preservation bias, lightly annotated books that still show evidence of use, and annotations made by multiple readers. It ultimately shows that marginalia remain useful when interpreted alongside those qualifications rather than treated as a complete record of reading priorities.",
       "status": "staged"
+    },
+    {
+      "id": "rw-florida-keys-reef-001-easy",
+      "groupId": "rw-florida-keys-reef-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Central Ideas and Details",
+      "difficulty": "easy",
+      "passage": "In Florida Keys National Marine Sanctuary, marine biologists placed artificial reef structures at several damaged reef sites. Fish quickly began using the structures as shelter and feeding areas, increasing the number of fish observed at the sites. However, the structures did not recreate every function of a living coral reef. The researchers found that artificial structures can provide useful habitat, but their benefits depend partly on the surrounding reef ecosystem.",
+      "question": "Which choice best states the central idea of the passage?",
+      "choices": {
+        "A": "Artificial reefs can completely replace damaged coral reefs when they attract enough fish.",
+        "B": "Fish generally prefer artificial structures to living coral reefs for shelter and feeding.",
+        "C": "Artificial reef structures can provide useful habitat, but their effectiveness depends partly on the surrounding ecosystem.",
+        "D": "Marine biologists in the Florida Keys primarily use artificial structures to increase fish populations."
+      },
+      "correctAnswer": "C",
+      "explanation": "The passage explains that fish use the artificial structures and that the structures do not reproduce every function of a living reef. Together, these details support the idea that artificial reefs can provide habitat but work within a larger ecological context. The other choices either overstate the structures' benefits or focus on a narrower detail.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-florida-keys-reef-001-medium",
+      "groupId": "rw-florida-keys-reef-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Central Ideas and Details",
+      "difficulty": "medium",
+      "passage": "At several damaged reef sites in Florida Keys National Marine Sanctuary, researchers installed artificial reef modules and later recorded more fish around the modules than around nearby bare areas. This increase suggested that the structures were providing useful shelter and feeding locations. Yet the sites differed in the amount of living coral surrounding them, and modules located near healthier coral patches supported more recently settled juvenile fish. At isolated modules, researchers often observed many adult fish but fewer juveniles. Modules beside healthier coral patches also supported a greater variety of small organisms living on and around the structures.",
+      "question": "Which choice best states the central idea of the passage?",
+      "choices": {
+        "A": "Artificial reef structures can support fish, but their contribution to reef recovery depends partly on the condition of the surrounding ecosystem.",
+        "B": "Artificial reef modules are most effective when they attract large numbers of adult fish.",
+        "C": "Healthy coral patches are more useful for reef recovery than artificial structures at every site.",
+        "D": "Researchers found that artificial reef structures increased fish abundance primarily by providing food."
+      },
+      "correctAnswer": "A",
+      "explanation": "The passage connects the increase in fish around the modules with a second pattern: juvenile fish and a wider variety of small organisms were more common near healthier coral. Those combined observations suggest that the surrounding ecosystem helps determine what the added structures can support. B focuses only on adults, while C and D go beyond the evidence.",
+      "status": "staged"
+    },
+    {
+      "id": "rw-florida-keys-reef-001-hard",
+      "groupId": "rw-florida-keys-reef-001",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Central Ideas and Details",
+      "difficulty": "hard",
+      "passage": "After artificial reef modules were installed at sites in Florida Keys National Marine Sanctuary, early surveys found more fish around the modules than around nearby bare seabed. The pattern seemed to indicate that the structures were already restoring habitat, particularly because fish used their cavities for shelter. Yet the first surveys did not distinguish between resident fish and fish that had moved in temporarily, leaving open the possibility that the modules were concentrating existing animals rather than increasing production. Researchers then tracked fish age and recruitment over several seasons. Modules at isolated sites continued to hold many adult fish, but they supported relatively few settled juveniles, making simple fish counts an incomplete measure of recovery. Later surveys found stronger juvenile recruitment at modules beside healthy coral patches, along with a greater variety of small organisms living on and around those modules. The contrast persisted even when some isolated modules retained high adult counts and had similar dimensions. Measurements of living coral cover near the modules also tracked with juvenile recruitment, while adult fish counts did not show the same pattern.",
+      "question": "Which choice best states the central idea of the passage?",
+      "choices": {
+        "A": "Artificial reef modules can restore damaged reefs primarily by attracting large numbers of adult fish to otherwise empty sites.",
+        "B": "Artificial reef modules provide habitat, but evidence of broader reef recovery cannot be judged from fish abundance alone and depends partly on the surrounding living community.",
+        "C": "Because isolated modules attract many adult fish but few juveniles, artificial structures are generally ineffective at damaged reef sites.",
+        "D": "The success of artificial reef modules depends mainly on their physical dimensions rather than on the organisms living nearby."
+      },
+      "correctAnswer": "B",
+      "explanation": "The early fish counts support the idea that the modules provide habitat, but the later recruitment data change how those counts should be interpreted. Isolated modules could hold many adults without comparable juvenile recruitment, whereas modules near living coral showed stronger recruitment and greater biological variety; the final measurements reinforce that distinction. Thus B captures both the initial benefit and the qualification that makes simple abundance an insufficient measure of recovery.",
+      "status": "staged"
     }
   ]
 }
