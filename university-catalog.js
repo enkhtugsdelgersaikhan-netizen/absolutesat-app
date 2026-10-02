@@ -553,11 +553,30 @@
   const profileStatus = document.getElementById("sat-profile-status");
   let profileUser = null;
 
+  const highlightGuideScore = (guide, score) => {
+    const scale = document.querySelector('.sat-score-guide-scale[data-guide="' + guide + '"]');
+    if (!scale) return;
+    scale.querySelectorAll(".sat-score-scale-row").forEach((row) => {
+      const min = row.dataset.min === undefined ? -Infinity : Number(row.dataset.min);
+      const max = row.dataset.max === undefined ? Infinity : Number(row.dataset.max);
+      row.classList.toggle("is-user-range", Number.isFinite(score) && score >= min && score <= max);
+    });
+  };
+
+  const updateGuideHighlights = (reading, math) => {
+    const validReading = validSectionScore(reading);
+    const validMath = validSectionScore(math);
+    highlightGuideScore("reading", validReading ? reading : NaN);
+    highlightGuideScore("math", validMath ? math : NaN);
+    highlightGuideScore("composite", validReading && validMath ? reading + math : NaN);
+  };
+
   const updateProfilePreview = () => {
     const reading = Number(readingInput?.value);
     const math = Number(mathInput?.value);
     const composite = validSectionScore(reading) && validSectionScore(math) ? reading + math : null;
     if (totalPreview) totalPreview.textContent = Number.isFinite(composite) ? String(composite) : "—";
+    updateGuideHighlights(reading, math);
   };
 
   loadUserProfile().then(async (profile) => {
