@@ -14,7 +14,7 @@ const titleOverrides = {
   "University of Minnesota, Twin Cities": "University of Minnesota Twin Cities"
 };
 
-const badMedia = /(commons-logo|wikimedia|wikidata|wikipedia|icon|map|location|blank|question|checkmark|flag|football|basketball|athletics|sports|mascot|conference|wordmark.*athletic)/i;
+const badMedia = /(commons-logo|wikimedia|wikidata|wikipedia|wikisource|wiktionary|wikibooks|wikinews|wikiquote|wikiversity|mediawiki|icon|map|location|blank|question|checkmark|flag|football|basketball|athletics|sports|mascot|conference|wordmark.*athletic)/i;
 const symbolTerms = /(logo|seal|crest|shield|coat of arms|wordmark|emblem|brand mark|monogram)/i;
 const campusTerms = /(campus|hall|library|chapel|quad|quadrangle|building|tower|center|centre|college|university|aerial|administration|main building|academic)/i;
 
@@ -54,10 +54,13 @@ function campusScore(title) {
   return score;
 }
 
-function pickFile(images, scorer) {
+function pickFile(images, scorer, schoolName = "") {
   const ranked = (images || [])
-    .map((item) => ({ title: item.title, score: scorer(item.title) }))
-    .filter((item) => item.score > 0)
+    .map((item) => {
+      const relevance = schoolName ? schoolTokenScore(item.title, schoolName) : 0;
+      return { title: item.title, score: scorer(item.title) + relevance, relevance };
+    })
+    .filter((item) => item.score > 0 && (!schoolName || item.relevance > 0 || /seal|crest|coat of arms/i.test(item.title)))
     .sort((a, b) => b.score - a.score);
   return ranked[0]?.title || null;
 }
@@ -316,8 +319,8 @@ async function buildAssets(schools) {
     const pageImageName = page.pageimage ? "File:" + page.pageimage : null;
     const pageImageLooksLikeSymbol = pageImageName ? symbolTerms.test(pageImageName) : false;
 
-    const symbolTitle = pickFile(images, symbolScore);
-    let campusTitle = pickFile(images, campusScore);
+    const symbolTitle = pickFile(images, symbolScore, school.name);
+    let campusTitle = pickFile(images, campusScore, school.name);
 
     if (!campusTitle && pageImageName && !pageImageLooksLikeSymbol) {
       campusTitle = pageImageName;
@@ -375,6 +378,15 @@ async function buildAssets(schools) {
 module.exports = async function handler(req, res) {
   if (req.method === "GET") {
     try {
+      if (String(req.query?.set || "") === "problem") {
+        const group = [
+          { id: "nc-state", name: "North Carolina State University" },
+          { id: "gwu", name: "George Washington University" },
+          { id: "binghamton", name: "Binghamton University" }
+        ];
+        const samples = await buildAssets(group);
+        return res.status(200).json({ ok: true, samples });
+      }
       const requestedId = String(req.query?.id || "mit").trim();
       const requestedName = String(req.query?.name || "Massachusetts Institute of Technology").trim();
       const sample = await buildAssets([
