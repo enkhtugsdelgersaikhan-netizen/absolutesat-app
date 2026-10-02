@@ -557,9 +557,9 @@
       return { title: "At median and upper quartile", detail: "Median · Upper · " + median };
     }
     if (score === lower) return { title: "At lower quartile", detail: "Lower quartile · " + lower };
-    if (score < median) return { title: "Lower quartile to median", detail: lower + " to " + median };
+    if (score < median) return { title: "Between lower quartile and median", detail: lower + " to " + median };
     if (score === median) return { title: "At median", detail: "Median · " + median };
-    if (score < upper) return { title: "Median to upper quartile", detail: median + " to " + upper };
+    if (score < upper) return { title: "Between median and upper quartile", detail: median + " to " + upper };
     if (score === upper) return { title: "At upper quartile", detail: "Upper quartile · " + upper };
     return { title: "Above upper quartile", detail: "Above " + upper };
   }
