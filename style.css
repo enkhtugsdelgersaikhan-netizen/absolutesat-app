@@ -1986,3 +1986,89 @@ select:focus,
         transform:none!important;
     }
 }
+
+
+/* =========================================
+   STRONGER, STILL-RESTRAINED BUTTON DEPTH
+========================================= */
+:root{
+    --ui-shadow:
+        0 3px 0 rgba(15,23,42,.13),
+        0 6px 13px rgba(15,23,42,.10);
+    --ui-shadow-hover:
+        0 4px 0 rgba(15,23,42,.14),
+        0 9px 19px rgba(15,23,42,.12);
+    --ui-shadow-pressed:
+        0 1px 0 rgba(15,23,42,.12),
+        0 3px 7px rgba(15,23,42,.08);
+}
+
+.login-button,
+.dashboard-button,
+.register-button,
+.study-button,
+.hero-primary-button,
+.hero-secondary-button,
+.logout-button,
+.fluency-options button,
+.mobile-menu-button{
+    box-shadow:var(--ui-shadow);
+}
+
+.login-button:hover,
+.dashboard-button:hover,
+.register-button:hover,
+.study-button:hover,
+.hero-primary-button:hover,
+.hero-secondary-button:hover,
+.logout-button:hover,
+.fluency-options button:hover,
+.mobile-menu-button:hover{
+    transform:translateY(-2px);
+    box-shadow:var(--ui-shadow-hover);
+}
+
+.login-button:active,
+.dashboard-button:active,
+.register-button:active,
+.study-button:active,
+.hero-primary-button:active,
+.hero-secondary-button:active,
+.logout-button:active,
+.fluency-options button:active,
+.mobile-menu-button:active{
+    transform:translateY(2px) scale(.995);
+    box-shadow:var(--ui-shadow-pressed);
+}
+
+.hero-primary-button{
+    box-shadow:
+        0 3px 0 #0a5f58,
+        0 7px 16px rgba(15,118,110,.19);
+}
+.hero-primary-button:hover{
+    box-shadow:
+        0 4px 0 #0a5f58,
+        0 10px 22px rgba(15,118,110,.22);
+}
+.hero-primary-button:active{
+    box-shadow:
+        0 1px 0 #0a5f58,
+        0 3px 8px rgba(15,118,110,.16);
+}
+
+.hero-secondary-button{
+    box-shadow:
+        0 3px 0 rgba(15,23,42,.12),
+        0 7px 15px rgba(15,23,42,.09);
+}
+.hero-secondary-button:hover{
+    box-shadow:
+        0 4px 0 rgba(15,23,42,.13),
+        0 10px 20px rgba(15,23,42,.11);
+}
+.hero-secondary-button:active{
+    box-shadow:
+        0 1px 0 rgba(15,23,42,.11),
+        0 3px 7px rgba(15,23,42,.07);
+}
