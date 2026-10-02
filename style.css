@@ -4495,3 +4495,13 @@ select:hover,
     margin-left:auto;
     margin-right:auto;
 }
+
+/* Exact shared frame for SAT context top row and score-guide row */
+.sat-context-workspace,
+.sat-guide-row{
+    width:min(100%,1060px);
+    max-width:1060px;
+    margin-left:auto;
+    margin-right:auto;
+    box-sizing:border-box;
+}
