@@ -245,3 +245,6 @@
 .sat-shape-label{fill:#6f7f7b;font-size:9px;font-weight:700}.sat-shape-value{fill:#274d46;font-size:9px;font-weight:800}
 .sat-shape-panel>p{margin:5px 0 0;color:#7b8986;font-size:8px;line-height:1.45}
 @media(max-width:850px){.sat-profile-workspace{grid-template-columns:1fr}.sat-shape-panel{max-width:420px;width:100%;margin:auto}}
+
+/* Current-score-only SAT shape */
+.sat-total-preview-group{grid-template-columns:1fr}.sat-shape-heading{align-items:center}
