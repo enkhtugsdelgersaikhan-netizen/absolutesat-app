@@ -300,11 +300,14 @@
   }
 
   function logoImg(u, cls) {
-    const initials = u.short.slice(0, 3).toUpperCase();
-    return '<img class="' + cls + '" src="' + escapeHtml(u.logo) +
-      '" alt="" loading="lazy" onerror="this.outerHTML=\'<span class=&quot;' +
-      cls + ' university-logo-fallback&quot;>' +
-      escapeHtml(initials) + '</span>\'">';
+    const initials = (u.short || u.name)
+      .split(/\\s+/)
+      .map((word) => word[0])
+      .join("")
+      .slice(0, 3)
+      .toUpperCase();
+    return '<span class="' + cls + ' university-logo-fallback university-logo-monogram" aria-hidden="true">' +
+      escapeHtml(initials) + '</span>';
   }
 
   function railScale(values, type, userScore) {
@@ -484,8 +487,7 @@
     results.innerHTML = list.slice(0, 6).map((u) =>
       '<button class="university-search-option" type="button" data-id="' +
         escapeHtml(u.id) + '" role="option">' +
-        '<img src="' + escapeHtml(u.logo) +
-          '" alt="" onerror="this.style.visibility=\'hidden\'">' +
+        logoImg(u, "university-search-logo") +
         '<span><strong>' + escapeHtml(u.name) + '</strong><span>' +
           escapeHtml(u.location) + ' · Composite ' +
           u.sat.composite[0] + '–' + u.sat.composite[2] +
