@@ -199,9 +199,6 @@
     };
   }
 
-  const brandMark = (domain) => "https://logo.clearbit.com/" + encodeURIComponent(domain) + "?size=256";
-  const fallbackMark = (domain) => "https://www.google.com/s2/favicons?sz=256&domain_url=https://" + encodeURIComponent(domain);
-
   const universities = (Array.isArray(window.LEXLOGICA_TOP100) ? window.LEXLOGICA_TOP100 : []).map((meta) => {
     const image = curatedImages[meta.id];
     const seed = knownFallbacks[meta.id] || estimatedFromRank(meta.rank, meta.id);
@@ -214,8 +211,8 @@
       source:"https://www.collegedata.fyi/schools/" + meta.cdId,
       image:image ? commons(image[0]) : null,
       photoSource:image ? image[1] : null,
-      mark:universityMarks[meta.id] ? schoolMark(universityMarks[meta.id]) : brandMark(meta.domain),
-      markFallback:fallbackMark(meta.domain)
+      mark:null,
+      markFallback:universityMarks[meta.id] ? schoolMark(universityMarks[meta.id]) : null
     };
   });
 
@@ -240,6 +237,61 @@
         if (/until live data loads/i.test(u.dataStatus)) {
           u.dataStatus = knownFallbacks[u.id] ? "Latest saved fallback" : "Estimated";
         }
+      });
+    }
+  }
+
+  const UNIVERSITY_ASSET_CACHE_KEY = "lexlogica_university_assets_v2";
+  const UNIVERSITY_ASSET_CACHE_MS = 30 * 24 * 60 * 60 * 1000;
+
+  function applyUniversityAssets(assetResults) {
+    universities.forEach((u) => {
+      const asset = assetResults?.[u.id];
+      if (!asset) return;
+      if (asset.mark_url) {
+        u.mark = asset.mark_url;
+        u.markSource = asset.mark_source || null;
+      }
+      if (!u.image && asset.campus_url) {
+        u.image = asset.campus_url;
+        u.photoSource = asset.campus_source || null;
+      }
+    });
+  }
+
+  async function hydrateUniversityAssets() {
+    try {
+      const cachedRaw = localStorage.getItem(UNIVERSITY_ASSET_CACHE_KEY);
+      if (cachedRaw) {
+        const cached = JSON.parse(cachedRaw);
+        if (cached?.savedAt && Date.now() - cached.savedAt < UNIVERSITY_ASSET_CACHE_MS && cached.results) {
+          applyUniversityAssets(cached.results);
+          return;
+        }
+      }
+    } catch {}
+
+    try {
+      const response = await fetch("/api/school-assets", {
+        method:"POST",
+        headers:{"content-type":"application/json"},
+        body:JSON.stringify({
+          schools:universities.map((u) => ({id:u.id,name:u.name}))
+        })
+      });
+      if (!response.ok) throw new Error("University asset request failed");
+      const payload = await response.json();
+      applyUniversityAssets(payload?.results || {});
+      try {
+        localStorage.setItem(UNIVERSITY_ASSET_CACHE_KEY, JSON.stringify({
+          savedAt:Date.now(),
+          results:payload?.results || {}
+        }));
+      } catch {}
+    } catch (error) {
+      console.warn("High-resolution university assets unavailable:", error);
+      universities.forEach((u) => {
+        if (!u.mark && u.markFallback) u.mark = u.markFallback;
       });
     }
   }
@@ -412,7 +464,7 @@
     }
     const fallback = escapeHtml(u.markFallback || "");
     return '<span class="' + cls + ' university-mark-wrap" aria-hidden="true">' +
-      '<img class="university-mark-image" src="' + escapeHtml(u.mark) + '" alt="" loading="lazy" referrerpolicy="no-referrer" ' +
+      '<img class="university-mark-image" src="' + escapeHtml(u.mark) + '" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" ' +
       'data-fallback="' + fallback + '" onerror="if(this.dataset.fallback && !this.dataset.usedFallback){this.dataset.usedFallback=\'1\';this.src=this.dataset.fallback;}else{this.remove();this.parentElement.classList.add(\'mark-missing\');}">' +
     '</span>';
   }
@@ -499,7 +551,7 @@
       : null;
 
     const media = u.image
-      ? '<div class="university-featured-media"><img src="' + escapeHtml(u.image) + '" alt="' + escapeHtml(u.name) + ' campus" loading="eager">' +
+      ? '<div class="university-featured-media"><img src="' + escapeHtml(u.image) + '" alt="' + escapeHtml(u.name) + ' campus" loading="eager" decoding="async" onerror="this.parentElement.classList.add(\'image-failed\');this.remove();">' +
           (u.photoSource ? '<span class="university-photo-credit">Photo: <a href="' + escapeHtml(u.photoSource) + '" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></span>' : '') + '</div>'
       : '<div class="university-featured-media university-campus-placeholder">' +
           logoImg(u, "university-placeholder-logo") +
@@ -542,7 +594,7 @@
   function card(u) {
     const [lower, median, upper] = u.sat.composite;
     const media = u.image
-      ? '<div class="university-card-image"><img src="' + escapeHtml(u.image) + '" alt="' + escapeHtml(u.name) + ' campus" loading="lazy"></div>'
+      ? '<div class="university-card-image"><img src="' + escapeHtml(u.image) + '" alt="' + escapeHtml(u.name) + ' campus" loading="lazy" decoding="async" onerror="this.parentElement.classList.add(\'image-failed\');this.remove();"></div>'
       : '<div class="university-card-image university-card-placeholder">' + logoImg(u, "university-card-placeholder-logo") + '</div>';
 
     return '<article class="university-card" tabindex="0" role="button" data-id="' +
@@ -695,7 +747,7 @@
     updateGuideHighlights(reading, math);
   };
 
-  Promise.all([hydrateUniversityData(), loadUserProfile()]).then(async ([, profile]) => {
+  Promise.all([hydrateUniversityData(), hydrateUniversityAssets(), loadUserProfile()]).then(async ([, , profile]) => {
     userProfile = profile;
     try {
       const { data } = await absolutePrepSupabase.auth.getSession();
