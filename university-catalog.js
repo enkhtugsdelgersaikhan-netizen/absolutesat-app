@@ -253,7 +253,7 @@
     }
   }
 
-  const UNIVERSITY_ASSET_CACHE_KEY = "lexlogica_university_assets_v6";
+  const UNIVERSITY_ASSET_CACHE_KEY = "lexlogica_university_assets_v7";
   const UNIVERSITY_ASSET_CACHE_MS = 30 * 24 * 60 * 60 * 1000;
 
   function applyUniversityAssets(assetResults) {
