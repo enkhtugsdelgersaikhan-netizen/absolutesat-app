@@ -3286,3 +3286,69 @@ select:hover,
 .university-you-label{
     max-width:none;
 }
+
+
+/* SAT context explainer */
+.sat-weight-context{
+    display:grid;
+    grid-template-columns:150px minmax(0,1fr);
+    gap:22px;
+    max-width:850px;
+    margin-top:22px;
+    padding:20px;
+    border:1px solid #dbe6e3;
+    border-radius:16px;
+    background:rgba(255,255,255,.7);
+}
+.sat-weight-number{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    min-height:118px;
+    padding:14px;
+    border-radius:13px;
+    background:#f0f8f6;
+    text-align:center;
+}
+.sat-weight-number strong{
+    color:#0e7367;
+    font-size:34px;
+    line-height:1;
+    letter-spacing:-1.5px;
+}
+.sat-weight-number span{
+    margin-top:8px;
+    color:#71817e;
+    font-size:9px;
+    font-weight:600;
+    line-height:1.45;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+}
+.sat-weight-copy p{
+    margin:0 0 9px;
+    color:#53656f;
+    font-size:12px;
+    line-height:1.75;
+}
+.sat-weight-copy p:last-child{margin-bottom:0}
+.sat-weight-copy strong{color:#264943;font-weight:600}
+.sat-weight-copy a{
+    color:#0e7367;
+    font-weight:600;
+    text-decoration:none;
+    white-space:nowrap;
+}
+.sat-weight-copy a:hover{text-decoration:underline}
+
+/* Slight visual nudge requested for the median tick only.
+   Numeric score positions remain unchanged. */
+.university-band-dot.median{
+    transform:translateX(5px);
+}
+
+@media(max-width:620px){
+    .sat-weight-context{grid-template-columns:1fr}
+    .sat-weight-number{min-height:auto}
+}
