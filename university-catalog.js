@@ -212,10 +212,20 @@
       escapeHtml(initials) + '</span>\'">';
   }
 
-  function railPosition(score, type) {
-    const min = type === "composite" ? 800 : 400;
-    const max = type === "composite" ? 1600 : 800;
-    return Math.max(1.5, Math.min(98.5, ((score - min) / (max - min)) * 100));
+  function railScale(values, type, userScore) {
+    const [lower, median, upper] = values;
+    const hardMin = type === "composite" ? 400 : 200;
+    const hardMax = type === "composite" ? 1600 : 800;
+    const step = type === "composite" ? 20 : 10;
+    const spread = Math.max(upper - lower, type === "composite" ? 80 : 40);
+    const padding = Math.max(spread * 0.65, type === "composite" ? 60 : 30);
+    const observedMin = Number.isFinite(userScore) ? Math.min(lower, userScore) : lower;
+    const observedMax = Number.isFinite(userScore) ? Math.max(upper, userScore) : upper;
+    let min = Math.max(hardMin, Math.floor((observedMin - padding) / step) * step);
+    let max = Math.min(hardMax, Math.ceil((observedMax + padding) / step) * step);
+    if (max <= min) max = Math.min(hardMax, min + step * 10);
+    const position = (score) => ((score - min) / (max - min)) * 100;
+    return { min, max, position };
   }
 
   function scoreRelationship(score, [lower, median, upper]) {
@@ -230,12 +240,12 @@
 
   function renderBand(label, values, type, userScore) {
     const [lower, median, upper] = values;
-    const lowerPos = railPosition(lower, type);
-    const medianPos = railPosition(median, type);
-    const upperPos = railPosition(upper, type);
     const hasUser = Number.isFinite(userScore);
-    const userPos = hasUser ? railPosition(userScore, type) : null;
-    const markerLeft = userPos;
+    const scale = railScale(values, type, hasUser ? userScore : null);
+    const lowerPos = scale.position(lower);
+    const medianPos = scale.position(median);
+    const upperPos = scale.position(upper);
+    const markerLeft = hasUser ? scale.position(userScore) : null;
 
     return '<section class="university-score-band">' +
       '<div class="university-score-band-header">' +
