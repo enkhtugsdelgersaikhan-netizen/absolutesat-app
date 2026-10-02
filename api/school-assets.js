@@ -87,8 +87,7 @@ function chunks(values, size) {
 }
 
 async function fetchPages(schools) {
-  const results = [];
-  for (const group of chunks(schools, 20)) {
+  const batches = await Promise.all(chunks(schools, 20).map(async (group) => {
     const titles = group.map((school) => titleOverrides[school.name] || school.name);
     const payload = await wikiQuery({
       redirects: "1",
@@ -100,6 +99,7 @@ async function fetchPages(schools) {
     });
 
     const pages = payload?.query?.pages || [];
+    const pairs = [];
     group.forEach((school, index) => {
       const wanted = titles[index].toLowerCase();
       let page = pages.find((p) => String(p.title || "").toLowerCase() === wanted);
@@ -110,21 +110,23 @@ async function fetchPages(schools) {
           return schoolWords.some((word) => pt.includes(word));
         });
       }
-      if (page) results.push({ school, page });
+      if (page) pairs.push({ school, page });
     });
-  }
-  return results;
+    return pairs;
+  }));
+  return batches.flat();
 }
 
 async function resolveFiles(fileTitles) {
   const map = new Map();
-  for (const group of chunks([...new Set(fileTitles.filter(Boolean))], 40)) {
-    const payload = await wikiQuery({
-      prop: "imageinfo",
-      iiprop: "url|canonicaltitle",
-      iiurlwidth: "1600",
-      titles: group.join("|")
-    });
+  const groups = chunks([...new Set(fileTitles.filter(Boolean))], 40);
+  const payloads = await Promise.all(groups.map((group) => wikiQuery({
+    prop: "imageinfo",
+    iiprop: "url|canonicaltitle",
+    iiurlwidth: "1600",
+    titles: group.join("|")
+  })));
+  for (const payload of payloads) {
     for (const page of payload?.query?.pages || []) {
       const info = page?.imageinfo?.[0];
       if (!info) continue;
