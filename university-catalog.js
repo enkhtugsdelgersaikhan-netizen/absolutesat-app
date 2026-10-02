@@ -215,6 +215,7 @@
     const seed = knownFallbacks[meta.id] || estimatedFromRank(meta.rank, meta.id);
     return {
       ...meta,
+      forbesRank:meta.rank,
       state:(meta.location.split(",").pop() || "").trim(),
       year:seed.year,
       sat:seed.sat,
@@ -227,6 +228,29 @@
       imageFallback:null
     };
   });
+
+
+  function rankUniversitiesBySat() {
+    universities.sort((a, b) => {
+      const [aLower, aMedian, aUpper] = a.sat?.composite || [];
+      const [bLower, bMedian, bUpper] = b.sat?.composite || [];
+
+      const upperDiff = (Number(bUpper) || 0) - (Number(aUpper) || 0);
+      if (upperDiff) return upperDiff;
+
+      const medianDiff = (Number(bMedian) || 0) - (Number(aMedian) || 0);
+      if (medianDiff) return medianDiff;
+
+      const lowerDiff = (Number(bLower) || 0) - (Number(aLower) || 0);
+      if (lowerDiff) return lowerDiff;
+
+      return (a.forbesRank || 999) - (b.forbesRank || 999);
+    });
+
+    universities.forEach((u, index) => {
+      u.rank = index + 1;
+    });
+  }
 
   async function hydrateUniversityData() {
     try {
@@ -521,9 +545,9 @@
   function positionDisplay(score, [lower, median, upper]) {
     if (score < lower) return { title: "Below lower quartile", detail: "Below " + lower };
     if (score === lower) return { title: "At lower quartile", detail: "Lower quartile · " + lower };
-    if (score < median) return { title: "Lower quartile → Median", detail: lower + "–" + median };
+    if (score < median) return { title: "Lower quartile to median", detail: lower + " to " + median };
     if (score === median) return { title: "At median", detail: "Median · " + median };
-    if (score < upper) return { title: "Median → Upper quartile", detail: median + "–" + upper };
+    if (score < upper) return { title: "Median to upper quartile", detail: median + " to " + upper };
     if (score === upper) return { title: "At upper quartile", detail: "Upper quartile · " + upper };
     return { title: "Above upper quartile", detail: "Above " + upper };
   }
@@ -583,14 +607,14 @@
           (u.photoSource ? '<span class="university-photo-credit">Photo: <a href="' + escapeHtml(u.photoSource) + '" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></span>' : '') + '</div>'
       : '<div class="university-featured-media university-campus-placeholder">' +
           logoImg(u, "university-placeholder-logo") +
-          '<span>#' + u.rank + ' · Forbes 2025–26</span></div>';
+          '<span>#' + u.rank + ' · SAT quartile rank</span></div>';
 
     featured.innerHTML =
       media +
       '<div class="university-featured-content">' +
         '<div class="university-featured-school">' +
           logoImg(u, "university-featured-logo") +
-          '<div><span class="university-rank-chip">#' + u.rank + ' · Forbes 2025–26</span><h3>' + escapeHtml(u.name) + '</h3><p>' +
+          '<div><span class="university-rank-chip">#' + u.rank + ' · SAT quartile rank</span><h3>' + escapeHtml(u.name) + '</h3><p>' +
             escapeHtml(u.location) + '</p></div>' +
         '</div>' +
         '<div class="university-score-context">' +
@@ -683,7 +707,7 @@
         logoImg(u, "university-search-logo") +
         '<span><strong>' + escapeHtml(u.name) + '</strong><span>' +
           escapeHtml(u.location) + ' · Composite ' +
-          u.sat.composite[0] + '–' + u.sat.composite[2] +
+          u.sat.composite[0] + ' to ' + u.sat.composite[2] +
         '</span></span>' +
       '</button>'
     ).join("");
@@ -786,6 +810,7 @@
       mathInput.value = profile.math;
     }
     updateProfilePreview();
+    rankUniversitiesBySat();
     selectedUniversity = universities[0];
     renderFeatured(selectedUniversity);
     renderGrid(universities);
