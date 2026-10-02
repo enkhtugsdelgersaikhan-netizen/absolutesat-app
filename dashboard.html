@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=universities-3">
-    <link rel="stylesheet" href="dashboard.css?v=sat-shape-3">
+    <link rel="stylesheet" href="dashboard.css?v=sat-profile-1">
 </head>
 <body>
 <header class="header"><div class="header-container"><a href="/" class="logo-link" aria-label="LexLogica home"><img src="/Logo.png" alt="LexLogica" class="logo"></a><nav class="navigation" aria-label="Main navigation"><a href="/mathematics" class="nav-button">Mathematics</a><a href="/mock-tests" class="nav-button">Mock Tests</a><a href="/reading-writing" class="nav-button">Reading and Writing</a></nav><a href="/dashboard" class="dashboard-button site-dashboard">Dashboard</a><div class="auth-buttons"><a href="/login" class="login-button">Login</a></div><button class="mobile-menu-button" aria-label="Open navigation" aria-expanded="false" type="button">☰</button></div></header>
@@ -48,7 +48,7 @@
                 <div>
                     <div class="panel-eyebrow">SAT PROFILE</div>
                     <h2>Your current SAT</h2>
-                    <p class="dashboard-muted sat-profile-intro">Save your latest section scores. LexLogica will use them to show your SAT position and compare your score shape with each university.</p>
+                    <p class="dashboard-muted sat-profile-intro">Save your latest section scores. LexLogica will use them to place your score precisely against each university’s reported SAT quartiles.</p>
                 </div>
                 <div class="sat-total-preview-group" aria-live="polite">
                     <div class="sat-total-preview">
@@ -83,14 +83,7 @@
 
             <p class="sat-profile-note">Your composite is calculated automatically by adding the two section scores. Saved values are synced to your signed-in account when possible and cached on this device for fast access.</p>
                 </div>
-                <aside class="sat-shape-panel" aria-labelledby="sat-shape-title">
-                    <div class="sat-shape-heading">
-                        <div><span>SCORE SHAPE</span><h3 id="sat-shape-title">Your SAT</h3></div>
-                        <div class="sat-shape-legend"><span class="is-current"><i></i>Your score</span></div>
-                    </div>
-                    <div id="dashboard-sat-shape" class="sat-shape-chart" aria-live="polite"></div>
-                    <p>Zoomed for selective-school comparisons: center = 1400 composite / 700 per section; outer edge = 1600 / 800.</p>
-                </aside>
+
             </div>
         </section>
 
@@ -136,7 +129,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js?v=subjects-1"></script>
-<script src="dashboard.js?v=sat-shape-5"></script>
+<script src="dashboard.js?v=sat-profile-1"></script>
 <script src="/study.js"></script>
 </body>
 </html>
