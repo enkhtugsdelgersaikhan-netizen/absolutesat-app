@@ -553,11 +553,46 @@
   const profileStatus = document.getElementById("sat-profile-status");
   let profileUser = null;
 
+  const standingTitle = document.getElementById("sat-dataset-standing-title");
+  const standingCopy = document.getElementById("sat-dataset-standing-copy");
+
+  const renderDatasetStanding = (score) => {
+    if (!standingTitle || !standingCopy || !Number.isFinite(score)) {
+      if (standingTitle) standingTitle.textContent = "Set your score to see your standing";
+      if (standingCopy) standingCopy.textContent = "Your composite will be compared with the reported SAT quartiles in the university catalog.";
+      return;
+    }
+    const reporting = universities.filter((school) =>
+      Array.isArray(school.sat?.composite) && school.sat.composite.length >= 3
+    );
+    const total = reporting.length;
+    if (!total) return;
+    const q1 = reporting.filter((school) => score >= school.sat.composite[0]).length;
+    const med = reporting.filter((school) => score >= school.sat.composite[1]).length;
+    const q3 = reporting.filter((school) => score >= school.sat.composite[2]).length;
+    const pct = (n) => Math.round((n / total) * 100);
+
+    if (q3 === total) {
+      standingTitle.textContent = "Universal Q3+";
+      standingCopy.textContent = "At or above the upper quartile at every university currently in the catalog.";
+    } else if (med === total) {
+      standingTitle.textContent = "Universal Median+";
+      standingCopy.textContent = "At or above the median at every university currently in the catalog.";
+    } else if (q1 === total) {
+      standingTitle.textContent = "Universal Q1+";
+      standingCopy.textContent = "At or above the lower quartile at every university currently in the catalog.";
+    } else {
+      standingTitle.textContent = "Q1+ at " + pct(q1) + "% of schools";
+      standingCopy.textContent = "At or above the lower quartile at " + q1 + " of " + total + " universities currently in the catalog.";
+    }
+  };
+
   const updateProfilePreview = () => {
     const reading = Number(readingInput?.value);
     const math = Number(mathInput?.value);
-    if (totalPreview) totalPreview.textContent =
-      validSectionScore(reading) && validSectionScore(math) ? String(reading + math) : "—";
+    const composite = validSectionScore(reading) && validSectionScore(math) ? reading + math : null;
+    if (totalPreview) totalPreview.textContent = Number.isFinite(composite) ? String(composite) : "—";
+    renderDatasetStanding(composite);
   };
 
   loadUserProfile().then(async (profile) => {
