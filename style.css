@@ -3443,3 +3443,31 @@ select:hover,
     left:0;
     transform:translateX(-50%);
 }
+
+
+/* Three-part SAT philosophy explanation */
+.sat-weight-three{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:12px;
+}
+.sat-weight-three p{
+    margin:0;
+    padding:14px 15px;
+    border:1px solid #e1ebe8;
+    border-radius:12px;
+    background:rgba(255,255,255,.68);
+}
+.sat-weight-three p strong{
+    display:block;
+    margin-bottom:5px;
+    color:#174f48;
+}
+.sat-weight-source-link{
+    display:inline-block;
+    margin-top:5px;
+}
+@media(max-width:900px){
+    .sat-weight-context{grid-template-columns:1fr}
+    .sat-weight-three{grid-template-columns:1fr}
+}
