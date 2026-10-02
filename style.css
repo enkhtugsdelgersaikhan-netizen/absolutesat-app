@@ -5058,3 +5058,36 @@ select:hover,
     width:100%;
   }
 }
+
+
+/* Keep SAT intro + score saver side by side inside the left main column */
+.sat-context-left-column{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) 330px;
+  gap:18px;
+  align-items:start;
+  width:100%;
+}
+.sat-context-left-column .sat-context-intro-copy{
+  grid-column:1;
+  width:100%;
+  min-width:0;
+}
+.sat-context-left-column .sat-context-profile-inline{
+  grid-column:2;
+  width:100%;
+  max-width:none;
+  margin:0!important;
+}
+.sat-context-left-column .university-sat-philosophy{
+  max-width:none;
+}
+@media(max-width:900px){
+  .sat-context-left-column{
+    grid-template-columns:1fr!important;
+  }
+  .sat-context-left-column .sat-context-intro-copy,
+  .sat-context-left-column .sat-context-profile-inline{
+    grid-column:1;
+  }
+}
