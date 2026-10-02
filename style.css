@@ -4270,3 +4270,10 @@ select:hover,
     line-height:1.45;
 }
 .university-impact-relative-help strong{color:#4b625d}
+
+/* University SAT score-shape comparison */
+.university-shape-panel{margin:0 0 14px;padding:13px 14px;border:1px solid #dce7e4;border-radius:14px;background:#fbfdfc}
+.university-shape-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.university-shape-head>div:first-child>span{display:block;color:#0e7367;font-size:8px;font-weight:800;letter-spacing:.1em}.university-shape-head h4{margin:2px 0 0;color:#294842;font-size:12px}
+.university-shape-legend{display:flex;gap:8px;flex-wrap:wrap;color:#71807d;font-size:7.5px;font-weight:700}.university-shape-legend span{display:flex;align-items:center;gap:4px}.university-shape-legend i{width:7px;height:7px;border-radius:2px}
+.university-shape-legend .school i{background:#667773}.university-shape-legend .you i{background:#0e7367}.university-shape-legend .goal i{background:#9dbbb4}
+.university-shape-panel svg{display:block;width:min(100%,390px);height:auto;margin:6px auto 0;overflow:visible}.university-shape-grid{fill:none;stroke:#dce6e3;stroke-width:1}.university-shape-axis{stroke:#e5ecea;stroke-width:1}.university-shape-series{stroke-width:2;stroke-linejoin:round}.university-shape-series.school{fill:rgba(91,111,106,.06);stroke:#667773}.university-shape-series.you{fill:rgba(14,115,103,.13);stroke:#0e7367}.university-shape-series.goal{fill:rgba(125,166,157,.08);stroke:#7da69d;stroke-dasharray:5 3}.university-shape-label{fill:#6f7f7b;font-size:9px;font-weight:700}.university-shape-panel>p{margin:2px 0 0;text-align:center;color:#7b8986;font-size:8px;line-height:1.45}
