@@ -5,6 +5,128 @@ document.addEventListener("DOMContentLoaded", async () => {
         return;
     }
 
+    const user = data.session.user;
+    const profileKey = "lexlogica_sat_profile:" + user.id;
+
+    const readingInput = document.getElementById("sat-reading-writing");
+    const mathInput = document.getElementById("sat-math");
+    const totalPreview = document.getElementById("sat-total-preview");
+    const profileForm = document.getElementById("sat-profile-form");
+    const profileSave = document.getElementById("sat-profile-save");
+    const profileClear = document.getElementById("sat-profile-clear");
+    const profileStatus = document.getElementById("sat-profile-status");
+
+    const validSectionScore = (value) =>
+        Number.isInteger(value) &&
+        value >= 200 &&
+        value <= 800 &&
+        value % 10 === 0;
+
+    const readLocalProfile = () => {
+        try {
+            const raw = localStorage.getItem(profileKey);
+            if (!raw) return null;
+            const parsed = JSON.parse(raw);
+            const reading = Number(parsed?.readingWriting);
+            const math = Number(parsed?.math);
+            return validSectionScore(reading) && validSectionScore(math)
+                ? { readingWriting: reading, math }
+                : null;
+        } catch {
+            return null;
+        }
+    };
+
+    const metadataReading = Number(user.user_metadata?.sat_reading_writing);
+    const metadataMath = Number(user.user_metadata?.sat_math);
+
+    const initialProfile =
+        validSectionScore(metadataReading) && validSectionScore(metadataMath)
+            ? { readingWriting: metadataReading, math: metadataMath }
+            : readLocalProfile();
+
+    if (initialProfile) {
+        readingInput.value = initialProfile.readingWriting;
+        mathInput.value = initialProfile.math;
+        localStorage.setItem(profileKey, JSON.stringify(initialProfile));
+    }
+
+    const updateTotal = () => {
+        const reading = Number(readingInput?.value);
+        const math = Number(mathInput?.value);
+        if (validSectionScore(reading) && validSectionScore(math)) {
+            totalPreview.textContent = String(reading + math);
+        } else {
+            totalPreview.textContent = "—";
+        }
+    };
+
+    readingInput?.addEventListener("input", updateTotal);
+    mathInput?.addEventListener("input", updateTotal);
+    updateTotal();
+
+    profileForm?.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const reading = Number(readingInput.value);
+        const math = Number(mathInput.value);
+
+        if (!validSectionScore(reading) || !validSectionScore(math)) {
+            profileStatus.textContent = "Enter valid section scores from 200 to 800 in 10-point increments.";
+            profileStatus.classList.add("error");
+            return;
+        }
+
+        const profile = { readingWriting: reading, math };
+        localStorage.setItem(profileKey, JSON.stringify(profile));
+
+        profileSave.disabled = true;
+        profileSave.textContent = "Saving…";
+        profileStatus.textContent = "";
+        profileStatus.classList.remove("error");
+
+        const { error } = await absolutePrepSupabase.auth.updateUser({
+            data: {
+                sat_reading_writing: reading,
+                sat_math: math
+            }
+        });
+
+        profileSave.disabled = false;
+        profileSave.textContent = "Save SAT scores";
+
+        if (error) {
+            console.warn("SAT profile account sync failed:", error);
+            profileStatus.textContent = "Saved on this device. Account sync was unavailable.";
+            profileStatus.classList.add("error");
+        } else {
+            profileStatus.textContent = "Saved. Your university comparisons will now show your position.";
+            profileStatus.classList.remove("error");
+        }
+    });
+
+    profileClear?.addEventListener("click", async () => {
+        readingInput.value = "";
+        mathInput.value = "";
+        updateTotal();
+        localStorage.removeItem(profileKey);
+        profileStatus.textContent = "Scores cleared.";
+        profileStatus.classList.remove("error");
+
+        const { error } = await absolutePrepSupabase.auth.updateUser({
+            data: {
+                sat_reading_writing: null,
+                sat_math: null
+            }
+        });
+
+        if (error) {
+            console.warn("SAT profile clear sync failed:", error);
+            profileStatus.textContent = "Cleared on this device. Account sync was unavailable.";
+            profileStatus.classList.add("error");
+        }
+    });
+
     const resetButton = document.getElementById("dashboard-reset");
 
     if (resetButton) {
@@ -23,9 +145,9 @@ document.addEventListener("DOMContentLoaded", async () => {
             const { data: sessionData, error: sessionError } =
                 await absolutePrepSupabase.auth.getSession();
 
-            const user = sessionData?.session?.user;
+            const resetUser = sessionData?.session?.user;
 
-            if (sessionError || !user) {
+            if (sessionError || !resetUser) {
                 resetButton.disabled = false;
                 resetButton.textContent = "Reset all practice data";
                 console.error("Could not identify current user:", sessionError);
@@ -34,35 +156,15 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
 
             try {
-                const statusKey =
-                    "absoluteprep-question-status:" +
-                    user.id;
-
-                const reviewKey =
-                    "absoluteprep-question-reviews:" +
-                    user.id;
-
-                const resetKey =
-                    "absoluteprep-practice-reset:" +
-                    user.id;
-
+                const statusKey = "absoluteprep-question-status:" + resetUser.id;
+                const reviewKey = "absoluteprep-question-reviews:" + resetUser.id;
+                const resetKey = "absoluteprep-practice-reset:" + resetUser.id;
                 const vocabStateKey = "absoluteprep_vocab_state";
                 const legacyVocabLearnedKey = "absoluteprep_vocab_learned";
 
-                /*
-                 * Mark the local reset first. This guarantees the
-                 * interface stays reset even if an older server row
-                 * cannot be deleted because of a database policy.
-                 */
-                localStorage.setItem(
-                    resetKey,
-                    new Date().toISOString()
-                );
-
+                localStorage.setItem(resetKey, new Date().toISOString());
                 localStorage.removeItem(statusKey);
                 localStorage.removeItem(reviewKey);
-
-                // Vocab progress is stored locally under its own keys.
                 localStorage.removeItem(vocabStateKey);
                 localStorage.removeItem(legacyVocabLearnedKey);
 
@@ -80,22 +182,11 @@ document.addEventListener("DOMContentLoaded", async () => {
                         await absolutePrepSupabase
                             .from(table)
                             .delete()
-                            .eq(
-                                "user_id",
-                                user.id
-                            );
+                            .eq("user_id", resetUser.id);
 
                     if (error) {
-                        console.warn(
-                            "Could not reset " +
-                                table +
-                                ":",
-                            error
-                        );
-
-                        serverErrors.push(
-                            table
-                        );
+                        console.warn("Could not reset " + table + ":", error);
+                        serverErrors.push(table);
                     }
                 }
 
@@ -104,9 +195,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                         "Your practice data has been reset on this device. Some older server records could not be deleted."
                     );
                 } else {
-                    window.alert(
-                        "All practice data has been reset."
-                    );
+                    window.alert("All practice data has been reset.");
                 }
 
                 window.location.reload();
