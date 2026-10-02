@@ -4515,3 +4515,9 @@ select:hover,
 .sat-score-scale-row>b{grid-row:1/4;color:#0e7367;font-size:9px}.sat-score-scale-row>span{color:#355a53;font-size:8px;font-weight:700;line-height:1.35}.sat-score-scale-row>em{color:#9a6334;font-size:7px;font-style:normal;font-weight:800}.sat-score-scale-row>i{color:#788783;font-size:7px;font-style:normal;line-height:1.35}
 .sat-score-guide-scale.composite .sat-score-scale-row>em{display:block}
 @media(max-width:1050px){.sat-score-guide-columns{grid-template-columns:1fr}.sat-score-scale-row{grid-template-columns:75px minmax(0,1fr)}}
+
+/* Keep all three SAT guide scales visually parallel */
+.sat-score-guide-columns{align-items:stretch}
+.sat-score-guide-scale{display:flex;flex-direction:column}
+.sat-score-scale-row{flex:1}
+.sat-score-scale-row>em{display:block;color:#9a6334;font-size:7px;font-style:normal;font-weight:800}
