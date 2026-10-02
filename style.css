@@ -4799,3 +4799,32 @@ select:hover,
     radial-gradient(circle at 50% 42%,#dcebe7 0 18%,transparent 19%),
     linear-gradient(145deg,#f4faf8,#eaf4f1)!important;
 }
+
+/* Larger university symbol icons */
+.university-card-logo.university-mark-wrap{
+  width:46px!important;
+  height:46px!important;
+  padding:3px!important;
+  border-radius:11px!important;
+  box-sizing:border-box;
+}
+.university-featured-logo.university-mark-wrap{
+  width:68px!important;
+  height:68px!important;
+  padding:4px!important;
+  border-radius:15px!important;
+  box-sizing:border-box;
+}
+.university-search-logo.university-mark-wrap{
+  width:40px!important;
+  height:40px!important;
+  padding:3px!important;
+  border-radius:9px!important;
+  box-sizing:border-box;
+}
+.university-mark-image{
+  width:94%!important;
+  height:94%!important;
+  max-width:94%!important;
+  max-height:94%!important;
+}
