@@ -167,9 +167,9 @@
 
   async function loadUserProfile() {
     try {
-      if (!window.absolutePrepSupabase) return null;
+      if (typeof absolutePrepSupabase === "undefined") return null;
 
-      const { data } = await window.absolutePrepSupabase.auth.getSession();
+      const { data } = await absolutePrepSupabase.auth.getSession();
       const user = data?.session?.user;
       if (!user) return null;
 
