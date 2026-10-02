@@ -375,12 +375,14 @@ async function buildAssets(schools) {
 module.exports = async function handler(req, res) {
   if (req.method === "GET") {
     try {
+      const requestedId = String(req.query?.id || "mit").trim();
+      const requestedName = String(req.query?.name || "Massachusetts Institute of Technology").trim();
       const sample = await buildAssets([
-        { id: "mit", name: "Massachusetts Institute of Technology" }
+        { id: requestedId || "mit", name: requestedName || "Massachusetts Institute of Technology" }
       ]);
       return res.status(200).json({
         ok: true,
-        sample: sample.mit || null
+        sample: sample[requestedId || "mit"] || null
       });
     } catch (error) {
       console.error("school-assets health error", error);
