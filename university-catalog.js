@@ -4,6 +4,30 @@
     encodeURIComponent(file) +
     "?width=1400";
 
+  const schoolMark = (file) =>
+    "https://commons.wikimedia.org/wiki/Special:Redirect/file/" +
+    encodeURIComponent(file) +
+    "?width=400";
+
+  const universityMarks = {
+    mit:"MIT logo 2003-2023.svg",
+    stanford:"Seal of Leland Stanford Junior University.png",
+    princeton:"Princeton seal.svg",
+    yale:"Yale University logo.svg",
+    duke:"Duke Athletics logo.svg",
+    cornell:"Cornell University seal.svg",
+    brown:"Brown seal.svg",
+    rice:"Academic Seal Rice University.svg",
+    vanderbilt:"Vanderbilt University logo transparent.svg",
+    uchicago:"Chicago Maroons logo.svg",
+    tufts:"Tufts University wordmark.svg",
+    pomona:"Pomona College logo.svg",
+    haverford:"Haverford college wordmark black.png",
+    williams:"Williams College wordmark.svg",
+    bowdoin:"Bowdoin college blacklogo.png",
+    columbia:"Columbia College of Columbia University Crown 2020.svg"
+  };
+
   const universities = [
     {
       id:"mit", name:"Massachusetts Institute of Technology", short:"MIT", location:"Cambridge, MA",
@@ -134,7 +158,10 @@
       source:"https://www.collegedata.fyi/schools/columbia/2024-25",
       note:"Columbia College & Columbia Engineering"
     }
-  ];
+  ].map((u) => ({
+    ...u,
+    mark: universityMarks[u.id] ? schoolMark(universityMarks[u.id]) : null
+  }));
 
   const input = document.getElementById("university-search");
   const results = document.getElementById("university-search-results");
@@ -297,26 +324,12 @@
   }
 
   function logoImg(u, cls) {
-    const labelMap = {
-      mit:"MIT", stanford:"S", princeton:"P", yale:"Y", duke:"D",
-      cornell:"C", brown:"B", rice:"R", vanderbilt:"V", uchicago:"UC",
-      tufts:"T", pomona:"P", haverford:"H", williams:"W", bowdoin:"B",
-      columbia:"C"
-    };
-    const label = labelMap[u.id] || (u.short || u.name)
-      .split(/\s+/)
-      .map((word) => word[0])
-      .join("")
-      .slice(0, 3)
-      .toUpperCase();
-
-    const safe = escapeHtml(label);
-    const sizeClass = label.length >= 3 ? " is-wide" : label.length === 2 ? " is-medium" : "";
-    return '<span class="' + cls + ' university-symbol-badge' + sizeClass + '" aria-hidden="true">' +
-      '<svg class="university-symbol-svg" viewBox="0 0 48 48" focusable="false" aria-hidden="true">' +
-        '<rect x="1" y="1" width="46" height="46" rx="11"></rect>' +
-        '<text x="24" y="25" text-anchor="middle" dominant-baseline="middle">' + safe + '</text>' +
-      '</svg>' +
+    if (!u.mark) {
+      return '<span class="' + cls + ' university-mark-wrap mark-missing" aria-hidden="true"></span>';
+    }
+    return '<span class="' + cls + ' university-mark-wrap" aria-hidden="true">' +
+      '<img class="university-mark-image" src="' + escapeHtml(u.mark) + '" alt="" loading="lazy" referrerpolicy="no-referrer" ' +
+      'onerror="this.remove();this.parentElement.classList.add(\'mark-missing\')">' +
     '</span>';
   }
 
