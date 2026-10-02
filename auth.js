@@ -85,16 +85,7 @@ async function updateAbsolutePrepHeader(session = null) {
 
         authButtons.classList.add("logged-in");
 
-        authButtons.innerHTML = `
-
-            <a
-                href="/dashboard"
-                class="dashboard-button"
-            >
-                Dashboard
-            </a>
-
-        `;
+        authButtons.innerHTML = "";
 
         return;
 
@@ -213,3 +204,4 @@ if (
     initializeAbsolutePrepAuth();
 
 }
+
