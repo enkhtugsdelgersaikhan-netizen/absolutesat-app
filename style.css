@@ -4389,3 +4389,12 @@ select:hover,
 .sat-dataset-standing-kicker{display:block;margin-bottom:5px;color:#6e8580;font-size:8px;font-weight:800;letter-spacing:.11em}
 .sat-dataset-standing>strong{display:block;color:#0e7367;font-size:16px;line-height:1.2;letter-spacing:-.2px}
 .sat-dataset-standing>p{margin:5px 0 0;color:#667773;font-size:9px;line-height:1.5}
+
+/* Static SAT composite score guide */
+.sat-score-guide{margin-top:15px;padding-top:14px;border-top:1px solid #dce8e5}
+.sat-score-guide-head>span{display:block;color:#0e7367;font-size:8px;font-weight:800;letter-spacing:.11em}.sat-score-guide-head h4{margin:3px 0 10px;color:#173b36;font-size:14px}
+.sat-score-guide-list{display:flex;flex-direction:column;gap:0;border:1px solid #dce8e5;border-radius:11px;overflow:hidden;background:#fff}
+.sat-score-guide-row{display:grid;grid-template-columns:68px minmax(0,1fr);gap:8px;padding:9px 10px;border-bottom:1px solid #edf2f0}.sat-score-guide-row:last-child{border-bottom:0}
+.sat-score-guide-row>strong{color:#0e7367;font-size:10px;line-height:1.35}.sat-score-guide-row p{margin:0;color:#6b7a77;font-size:8px;line-height:1.45}.sat-score-guide-row p b{display:block;color:#355a53;font-size:9px}.sat-score-guide-row p span{display:block;margin-top:1px}.sat-score-guide-row>em{grid-column:2;justify-self:start;margin-top:-3px;padding:2px 6px;border-radius:999px;background:#f0f8f6;color:#4c756d;font-size:7px;font-style:normal;font-weight:800}
+.sat-score-guide-row:first-child,.sat-score-guide-row:nth-child(2),.sat-score-guide-row:nth-child(3){background:#f8fcfb}
+.sat-score-guide-note{display:block;margin-top:8px;color:#8a9794;font-size:7px;line-height:1.5}
