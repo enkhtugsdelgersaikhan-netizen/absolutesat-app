@@ -120,7 +120,11 @@ async function resolveMissing(schools, alreadyFound) {
 module.exports = async function handler(req, res) {
   if (req.method === "GET") {
     try {
-      const requestedId = String(req.query?.id || "mit").trim();
+      const requestedName = String(req.query?.name || "").trim();
+      let requestedId = String(req.query?.id || "mit").trim();
+      if (requestedName) {
+        requestedId = await resolveSchool({ name: requestedName, state: String(req.query?.state || "").trim() }) || requestedId;
+      }
       const rows = await browserRows([requestedId]);
       const latest = chooseLatestSatRow(rows);
       const federal = await federalRows([requestedId]);
