@@ -33,7 +33,7 @@
 
     <link
         rel="stylesheet"
-        href="style.css?v=soft3d-1"
+        href="style.css?v=universities-1"
     >
 
 </head>
@@ -201,6 +201,38 @@
 
         </section>
 
+        <section class="university-sat-section" aria-labelledby="university-sat-title">
+            <div class="university-sat-container">
+                <div class="university-sat-heading">
+                    <p class="section-kicker">SAT IN CONTEXT</p>
+                    <h2 id="university-sat-title">Where does a score sit?</h2>
+                    <p class="university-sat-philosophy"><strong>The SAT is just a number. Yet numbers have consequences.</strong> It cannot measure your curiosity, resilience, creativity, or potential. But it can still shape opportunity. Know the number. Understand the context. Then move beyond it.</p>
+                </div>
+
+                <div class="university-search-shell">
+                    <label for="university-search">Search the university catalog</label>
+                    <div class="university-search-row">
+                        <span class="university-search-icon" aria-hidden="true">⌕</span>
+                        <input id="university-search" type="search" autocomplete="off" placeholder="Try MIT, Stanford, Brown, Williams…">
+                    </div>
+                    <div id="university-search-results" class="university-search-results" role="listbox" hidden></div>
+                </div>
+
+                <div id="university-featured" class="university-featured" aria-live="polite"></div>
+
+                <div class="university-catalog-heading">
+                    <div>
+                        <h3>Browse universities</h3>
+                        <p>Composite SAT percentiles for enrolled first-year students who submitted scores.</p>
+                    </div>
+                    <span id="university-catalog-count"></span>
+                </div>
+                <div id="university-catalog-grid" class="university-catalog-grid"></div>
+
+                <p class="university-data-note">Percentiles are shown only when a school reports a composite SAT distribution. Test-optional policies can make score-submitter data unrepresentative of the full entering class. Always read the reporting year and source.</p>
+            </div>
+        </section>
+
     </main>
 
 
@@ -245,6 +277,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js?v=subjects-1"></script>
+<script src="/university-catalog.js?v=1"></script>
 
 </body>
 </html>
