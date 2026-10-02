@@ -4505,3 +4505,13 @@ select:hover,
     margin-right:auto;
     box-sizing:border-box;
 }
+
+/* Three-scale SAT score guide */
+.sat-guide-row{grid-template-columns:minmax(0,1fr) 250px}
+.sat-score-guide-columns{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:9px}
+.sat-score-guide-scale{min-width:0;border:1px solid #dfeae7;border-radius:11px;background:#fbfdfc;overflow:hidden}
+.sat-score-scale-head{padding:10px 11px;background:#f1f8f6;border-bottom:1px solid #dfeae7}.sat-score-scale-head strong{display:block;color:#174f48;font-size:11px}.sat-score-scale-head small{display:block;margin-top:2px;color:#8a9895;font-size:7px}
+.sat-score-scale-row{display:grid;grid-template-columns:60px minmax(0,1fr);gap:2px 7px;padding:8px 9px;border-bottom:1px solid #edf2f0}.sat-score-scale-row:last-child{border-bottom:0}
+.sat-score-scale-row>b{grid-row:1/4;color:#0e7367;font-size:9px}.sat-score-scale-row>span{color:#355a53;font-size:8px;font-weight:700;line-height:1.35}.sat-score-scale-row>em{color:#9a6334;font-size:7px;font-style:normal;font-weight:800}.sat-score-scale-row>i{color:#788783;font-size:7px;font-style:normal;line-height:1.35}
+.sat-score-guide-scale.composite .sat-score-scale-row>em{display:block}
+@media(max-width:1050px){.sat-score-guide-columns{grid-template-columns:1fr}.sat-score-scale-row{grid-template-columns:75px minmax(0,1fr)}}
