@@ -4720,3 +4720,7 @@ select:hover,
 .sat-context-profile-form input{min-height:0!important;height:34px!important;padding:5px 9px!important;font-size:14px;border-radius:9px}
 .sat-context-profile-actions{margin-top:1px!important;padding-top:0!important;gap:6px}
 .sat-context-profile-actions button{min-height:0!important;height:32px!important;padding:5px 10px!important;border-radius:9px}
+
+/* Auth visibility must win over legacy dashboard-button display rules */
+.site-dashboard{display:none!important}
+.site-dashboard.is-authenticated{display:inline-flex!important}
