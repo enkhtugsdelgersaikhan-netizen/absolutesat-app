@@ -3699,3 +3699,46 @@ select:hover,
     align-items:center;
     line-height:1.2;
 }
+
+
+/* SAT context layout: estimate + rationale together, two implications to the right. */
+.sat-weight-context{
+    display:grid;
+    grid-template-columns:minmax(0,1.08fr) minmax(0,1fr) minmax(0,1fr);
+    gap:12px;
+    align-items:stretch;
+}
+.sat-weight-primary{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    min-width:0;
+}
+.sat-weight-primary .sat-weight-number{
+    max-width:none;
+    width:100%;
+    box-sizing:border-box;
+}
+.sat-weight-card{
+    min-width:0;
+    padding:14px 15px;
+    border:1px solid #e1ebe8;
+    border-radius:12px;
+    background:rgba(255,255,255,.68);
+    box-sizing:border-box;
+}
+.sat-weight-card p{
+    margin:0;
+    line-height:1.58;
+}
+.sat-weight-card p > strong:first-child{
+    display:block;
+    margin-bottom:5px;
+    color:#174f48;
+}
+.sat-weight-why{
+    flex:1;
+}
+@media(max-width:900px){
+    .sat-weight-context{grid-template-columns:1fr}
+}
