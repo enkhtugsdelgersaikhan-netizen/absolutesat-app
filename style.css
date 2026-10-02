@@ -4311,3 +4311,13 @@ select:hover,
 .university-shape-legend .median i{background:#2aa99b}
 .university-shape-legend .upper i{background:#0e7367}
 .university-shape-legend .you i{background:#e56b55}
+
+/* Higher-contrast SAT shape palette */
+.university-shape-series.lower{stroke:#67dfe0;stroke-width:1.15}
+.university-shape-series.median{stroke:#18a99a;stroke-width:1.15}
+.university-shape-series.upper{stroke:#075f58;stroke-width:1.15}
+.university-shape-series.you{stroke:#f05a32;stroke-width:1.55;fill:rgba(240,90,50,.035)}
+.university-shape-legend .lower i{background:#67dfe0;border:1px solid #49bfc1}
+.university-shape-legend .median i{background:#18a99a;border:1px solid #118a7e}
+.university-shape-legend .upper i{background:#075f58;border:1px solid #044943}
+.university-shape-legend .you i{background:#f05a32;border:1px solid #ce4523}
