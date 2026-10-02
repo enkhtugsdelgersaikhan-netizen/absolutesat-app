@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const profileSave = document.getElementById("sat-profile-save");
     const profileClear = document.getElementById("sat-profile-clear");
     const profileStatus = document.getElementById("sat-profile-status");
+    const satShapeChart = document.getElementById("dashboard-sat-shape");
 
     const validSectionScore = (value) =>
         Number.isInteger(value) &&
@@ -78,6 +79,66 @@ document.addEventListener("DOMContentLoaded", async () => {
         localStorage.setItem(profileKey, JSON.stringify(initialProfile));
     }
 
+    const scoreShapeSvg = (series) => {
+        const cx = 160, cy = 142, radius = 100;
+        const vertices = [
+            [160, 30],
+            [63, 198],
+            [257, 198]
+        ];
+        const center = [160, 142];
+        const clamp = (v, min, max) => Math.max(0, Math.min(1, (v - min) / (max - min)));
+        const point = (vertex, ratio) => [
+            center[0] + (vertex[0] - center[0]) * ratio,
+            center[1] + (vertex[1] - center[1]) * ratio
+        ];
+        const polygon = (values) => {
+            const ratios = [
+                clamp(values.composite, 400, 1600),
+                clamp(values.reading, 200, 800),
+                clamp(values.math, 200, 800)
+            ];
+            return vertices.map((v, i) => point(v, ratios[i]).join(",")).join(" ");
+        };
+        const grid = [0.25,0.5,0.75,1].map(level =>
+            '<polygon points="' + vertices.map(v => point(v, level).join(",")).join(" ") + '" class="sat-shape-grid"/>'
+        ).join("");
+        const shapes = series.filter(x => x.values).map(x =>
+            '<polygon points="' + polygon(x.values) + '" class="sat-shape-series ' + x.className + '"/>'
+        ).join("");
+        return '<svg viewBox="0 0 320 235" role="img" aria-label="SAT score shape">' +
+            grid +
+            '<line x1="160" y1="142" x2="160" y2="30" class="sat-shape-axis"/>' +
+            '<line x1="160" y1="142" x2="63" y2="198" class="sat-shape-axis"/>' +
+            '<line x1="160" y1="142" x2="257" y2="198" class="sat-shape-axis"/>' +
+            shapes +
+            '<text x="160" y="16" text-anchor="middle" class="sat-shape-label">Composite</text>' +
+            '<text x="160" y="29" text-anchor="middle" class="sat-shape-value">' + (series[0]?.values?.composite ?? "—") + '</text>' +
+            '<text x="42" y="217" text-anchor="middle" class="sat-shape-label">R&W</text>' +
+            '<text x="42" y="230" text-anchor="middle" class="sat-shape-value">' + (series[0]?.values?.reading ?? "—") + '</text>' +
+            '<text x="278" y="217" text-anchor="middle" class="sat-shape-label">Math</text>' +
+            '<text x="278" y="230" text-anchor="middle" class="sat-shape-value">' + (series[0]?.values?.math ?? "—") + '</text>' +
+        '</svg>';
+    };
+
+    const updateShape = () => {
+        if (!satShapeChart) return;
+        const reading = Number(readingInput?.value);
+        const math = Number(mathInput?.value);
+        const goalReading = Number(goalReadingInput?.value);
+        const goalMath = Number(goalMathInput?.value);
+        const current = validSectionScore(reading) && validSectionScore(math)
+            ? { composite: reading + math, reading, math }
+            : null;
+        const goal = validSectionScore(goalReading) && validSectionScore(goalMath)
+            ? { composite: goalReading + goalMath, reading: goalReading, math: goalMath }
+            : null;
+        satShapeChart.innerHTML = scoreShapeSvg([
+            { className: "is-current", values: current },
+            { className: "is-goal", values: goal }
+        ]);
+    };
+
     const updateTotal = () => {
         const reading = Number(readingInput?.value);
         const math = Number(mathInput?.value);
@@ -93,6 +154,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             validSectionScore(goalReading) && validSectionScore(goalMath)
                 ? String(goalReading + goalMath)
                 : "—";
+        updateShape();
     };
 
     [readingInput, mathInput, goalReadingInput, goalMathInput].forEach((input) => {
