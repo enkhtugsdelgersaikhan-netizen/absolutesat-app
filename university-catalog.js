@@ -173,37 +173,181 @@
       const user = data?.session?.user;
       if (!user) return null;
 
-      const metadataReading = Number(user.user_metadata?.sat_reading_writing);
-      const metadataMath = Number(user.user_metadata?.sat_math);
-
-      if (validSectionScore(metadataReading) && validSectionScore(metadataMath)) {
-        const profile = { readingWriting: metadataReading, math: metadataMath };
-        localStorage.setItem(
-          "lexlogica_sat_profile:" + user.id,
-          JSON.stringify(profile)
-        );
-        return profile;
-      }
+      const localKey = "lexlogica_sat_profile:" + user.id;
+      let local = null;
 
       try {
-        const raw = localStorage.getItem("lexlogica_sat_profile:" + user.id);
-        if (!raw) return null;
-        const parsed = JSON.parse(raw);
-        const reading = Number(parsed?.readingWriting);
-        const math = Number(parsed?.math);
-        if (validSectionScore(reading) && validSectionScore(math)) {
-          return { readingWriting: reading, math };
-        }
+        const raw = localStorage.getItem(localKey);
+        if (raw) local = JSON.parse(raw);
       } catch {
-        return null;
+        local = null;
       }
+
+      const metadataReading = Number(user.user_metadata?.sat_reading_writing);
+      const metadataMath = Number(user.user_metadata?.sat_math);
+      const metadataGoalReading = Number(user.user_metadata?.sat_goal_reading_writing);
+      const metadataGoalMath = Number(user.user_metadata?.sat_goal_math);
+
+      const localReading = Number(local?.readingWriting);
+      const localMath = Number(local?.math);
+      const localGoalReading = Number(local?.goalReadingWriting);
+      const localGoalMath = Number(local?.goalMath);
+
+      const reading = validSectionScore(metadataReading)
+        ? metadataReading
+        : validSectionScore(localReading)
+          ? localReading
+          : null;
+      const math = validSectionScore(metadataMath)
+        ? metadataMath
+        : validSectionScore(localMath)
+          ? localMath
+          : null;
+
+      if (!validSectionScore(reading) || !validSectionScore(math)) return null;
+
+      const goalReading = validSectionScore(metadataGoalReading)
+        ? metadataGoalReading
+        : validSectionScore(localGoalReading)
+          ? localGoalReading
+          : null;
+      const goalMath = validSectionScore(metadataGoalMath)
+        ? metadataGoalMath
+        : validSectionScore(localGoalMath)
+          ? localGoalMath
+          : null;
+
+      const profile = {
+        readingWriting: reading,
+        math,
+        goalReadingWriting: goalReading,
+        goalMath
+      };
+
+      localStorage.setItem(localKey, JSON.stringify(profile));
+      return profile;
     } catch (error) {
       console.warn("Could not load SAT profile:", error);
+      return null;
     }
-
-    return null;
   }
 
+  function satAdmissionImpact(score, [lower, median, upper]) {
+    if (!Number.isFinite(score) || !(lower < median && median < upper)) return null;
+
+    const rawPosition = score >= median
+      ? (score - median) / (upper - median)
+      : (score - median) / (median - lower);
+
+    const quartilePosition = Math.max(-1, Math.min(1, rawPosition));
+    const k = 0.15 * quartilePosition;
+
+    return {
+      k,
+      kPercent: k * 100,
+      multiplier: 1 + k,
+      cappedLow: rawPosition < -1,
+      cappedHigh: rawPosition > 1
+    };
+  }
+
+  function signedPercent(value) {
+    if (Math.abs(value) < 0.005) return "0.0%";
+    return (value > 0 ? "+" : "−") + Math.abs(value).toFixed(1) + "%";
+  }
+
+  function impactTone(value) {
+    if (value > 0.00005) return "positive";
+    if (value < -0.00005) return "negative";
+    return "neutral";
+  }
+
+  function renderImpactCard(label, score, u, isGoal) {
+    if (!Number.isFinite(score)) {
+      return '<div class="university-impact-card is-empty">' +
+        '<span class="university-impact-label">' + escapeHtml(label) + '</span>' +
+        '<strong>Not set</strong>' +
+        '<p><a href="/dashboard">' + (isGoal ? 'Add a future SAT goal' : 'Add your SAT score') +
+          ' in Dashboard →</a></p>' +
+      '</div>';
+    }
+
+    const impact = satAdmissionImpact(score, u.sat.composite);
+    const [, median] = u.sat.composite;
+    const relation = score > median ? "above" : score < median ? "below" : "at";
+    const capCopy = impact.cappedHigh
+      ? " The model caps additional benefit above the upper quartile."
+      : impact.cappedLow
+        ? " The model caps additional penalty below the lower quartile."
+        : "";
+
+    return '<div class="university-impact-card ' + impactTone(impact.k) + '">' +
+      '<div class="university-impact-card-top">' +
+        '<span class="university-impact-label">' + escapeHtml(label) + '</span>' +
+        '<strong class="university-impact-score">' + score + '</strong>' +
+      '</div>' +
+      '<div class="university-impact-main">' +
+        '<strong>' + signedPercent(impact.kPercent) + '</strong>' +
+        '<span>relative SAT effect</span>' +
+      '</div>' +
+      '<div class="university-impact-equation">' +
+        '<span>Modeled admission chance</span>' +
+        '<strong>' + impact.multiplier.toFixed(3) + ' × P</strong>' +
+      '</div>' +
+      '<p>Your score is ' + relation + ' ' + escapeHtml(u.short || u.name) +
+        '\'s median of ' + median + '. With every other application factor held identical, SAT changes the median-SAT baseline by ' +
+        Math.abs(impact.kPercent).toFixed(1) + '%.' + escapeHtml(capCopy) + '</p>' +
+    '</div>';
+  }
+
+  function renderAdmissionsImpact(u, currentScore, goalScore) {
+    if (!Number.isFinite(currentScore)) {
+      return '<section class="university-impact-panel">' +
+        '<div class="university-impact-panel-heading">' +
+          '<div><span>SAT-ONLY ADMISSIONS MODEL</span><h4>How much is SAT moving the baseline?</h4></div>' +
+          '<span class="university-impact-assumption">W<sub>SAT</sub> = 15%</span>' +
+        '</div>' +
+        '<p class="university-impact-empty">Save your current SAT and optional future goal in <a href="/dashboard">Dashboard</a> to see the model for this university.</p>' +
+      '</section>';
+    }
+
+    const current = satAdmissionImpact(currentScore, u.sat.composite);
+    const goal = Number.isFinite(goalScore)
+      ? satAdmissionImpact(goalScore, u.sat.composite)
+      : null;
+
+    let delta = "";
+    if (current && goal) {
+      const relativeGain = ((goal.multiplier / current.multiplier) - 1) * 100;
+      const direction = relativeGain > 0.005
+        ? "higher"
+        : relativeGain < -0.005
+          ? "lower"
+          : "the same";
+
+      delta =
+        '<div class="university-impact-delta">' +
+          '<span>Current → goal</span>' +
+          '<strong>' + current.multiplier.toFixed(3) + 'P → ' + goal.multiplier.toFixed(3) + 'P</strong>' +
+          '<p>The goal score makes the model\'s SAT-adjusted admission probability ' +
+            Math.abs(relativeGain).toFixed(1) + '% ' + direction + ' than at your current score.</p>' +
+        '</div>';
+    }
+
+    return '<section class="university-impact-panel">' +
+      '<div class="university-impact-panel-heading">' +
+        '<div><span>SAT-ONLY ADMISSIONS MODEL</span><h4>How much is your SAT moving the baseline?</h4></div>' +
+        '<span class="university-impact-assumption">W<sub>SAT</sub> = 15%</span>' +
+      '</div>' +
+      '<p class="university-impact-definition"><strong>P</strong> is the admission probability for an otherwise identical applicant whose SAT is exactly this school\'s median. Only SAT changes; the rest of the application stays fixed.</p>' +
+      '<div class="university-impact-grid">' +
+        renderImpactCard("Current SAT", currentScore, u, false) +
+        renderImpactCard("Future goal", goalScore, u, true) +
+      '</div>' +
+      delta +
+      '<p class="university-impact-note">Heuristic model, not an observed admit-rate formula. The 15% SAT weight is an assumption. Because quartile data do not identify effects beyond the middle 50%, the SAT adjustment is capped at −15% at/below the lower quartile and +15% at/above the upper quartile.</p>' +
+    '</section>';
+  }
 
   function logoImg(u, cls) {
     const initials = u.short.slice(0, 3).toUpperCase();
