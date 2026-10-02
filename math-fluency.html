@@ -1,1 +1,109 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Formula Fluency | LexLogica</title><link rel="icon" type="image/png" href="/Favicon.png?v=b2788e22"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/style.css?v=subjects-2"><script>window.MathJax={tex:{inlineMath:[['\\(','\\)'],['$','$']]},svg:{fontCache:'global'}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script></head><body><header class="header"><div class="header-container"><a href="/" class="logo-link" aria-label="LexLogica home"><img src="/Logo.png" alt="LexLogica" class="logo"></a><nav class="navigation" aria-label="Main navigation"><a href="/mock-tests" class="nav-button">Mock Tests</a><a href="/reading-writing" class="nav-button">Reading and Writing</a><a href="/mathematics" class="nav-button active" aria-current="page">Mathematics</a></nav><a href="/dashboard" class="dashboard-button site-dashboard">Dashboard</a><div class="auth-buttons"><a href="/login" class="login-button">Login</a></div><button class="mobile-menu-button" aria-label="Open navigation" aria-expanded="false" type="button">☰</button></div></header><main class="study-page"><a class="study-back" href="/mathematics">← Mathematics</a><p class="study-eyebrow">THE LANGUAGE OF MATH</p><h1>Formula Fluency</h1><p class="study-intro">Treat formulas like vocabulary. Learn what each symbol means, what the relationship describes, and how to recognize it instantly.</p><section class="fluency-card"><p class="fluency-label">LINEAR FUNCTIONS</p><div class="display-math">\(y = mx + b\)</div><h2>What does <span class="inline-math">m</span> represent?</h2><div class="fluency-options"><button type="button" data-answer="wrong">The y-intercept</button><button type="button" data-answer="correct">The slope</button><button type="button" data-answer="wrong">The x-intercept</button><button type="button" data-answer="wrong">The output value</button></div><p class="fluency-feedback" aria-live="polite"></p></section><section class="fluency-card"><p class="fluency-label">QUADRATICS</p><div class="display-math">\(x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}\)</div><h2>What does <span class="inline-math">b² − 4ac</span> tell you?</h2><div class="fluency-options"><button type="button" data-answer="correct">The discriminant and nature of the roots</button><button type="button" data-answer="wrong">The vertex's x-coordinate</button><button type="button" data-answer="wrong">The slope of the parabola</button><button type="button" data-answer="wrong">The y-intercept only</button></div><p class="fluency-feedback" aria-live="polite"></p></section><div class="study-note">This is the starting format. We can expand it into a full spaced-repetition bank covering every SAT Math formula and symbol.</div></main><script>document.querySelectorAll('.fluency-options').forEach(group=>group.addEventListener('click',e=>{if(e.target.tagName!=='BUTTON')return;group.querySelectorAll('button').forEach(b=>b.classList.remove('correct','wrong'));const ok=e.target.dataset.answer==='correct';e.target.classList.add(ok?'correct':'wrong');group.nextElementSibling.textContent=ok?'Correct — exactly.':'Not quite. Try another choice.';}));</script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="/auth.js?v=subjects-2"></script><script src="/study.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formula Fluency | LexLogica</title>
+<link rel="icon" type="image/png" href="/Favicon.png?v=b2788e22">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css?v=subjects-2">
+<link rel="stylesheet" href="/vocab.css?v=9">
+<link rel="stylesheet" href="/math-fluency.css?v=1">
+<script>
+window.MathJax={
+  tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},
+  svg:{fontCache:'global'}
+};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+<header class="header"><div class="header-container"><a href="/" class="logo-link" aria-label="LexLogica home"><img src="/Logo.png" alt="LexLogica" class="logo"></a><nav class="navigation" aria-label="Main navigation"><a href="/mock-tests" class="nav-button">Mock Tests</a><a href="/reading-writing" class="nav-button">Reading and Writing</a><a href="/mathematics" class="nav-button active" aria-current="page">Mathematics</a></nav><a href="/dashboard" class="dashboard-button site-dashboard">Dashboard</a><div class="auth-buttons"><a href="/login" class="login-button">Login</a></div><button class="mobile-menu-button" aria-label="Open navigation" aria-expanded="false" type="button">☰</button></div></header>
+
+<main class="vocab-page formula-page">
+<section class="vocab-header">
+<a class="formula-back" href="/mathematics">← Mathematics</a>
+<div class="page-eyebrow">SAT MATH · FORMULA FLUENCY</div>
+<h1>Learn math like vocabulary.</h1>
+<p>See a formula first. Decide what it means. Then reveal the definition, symbols, and a quick SAT-style example. Mark what you know and keep the rest in rotation.</p>
+</section>
+
+<section class="vocab-content">
+<div class="vocab-toolbar">
+<label class="vocab-search-wrap"><span>Search</span><input id="formula-search" type="search" placeholder="Search a formula or topic..." autocomplete="off"></label>
+<label class="vocab-search-wrap"><span>Domain</span><select id="formula-category">
+<option value="all">All Domains</option>
+<option value="Algebra">Algebra</option>
+<option value="Advanced Math">Advanced Math</option>
+<option value="Problem-Solving and Data Analysis">Problem-Solving & Data Analysis</option>
+<option value="Geometry and Trigonometry">Geometry & Trigonometry</option>
+</select></label>
+<div class="vocab-status-filter">
+<span>Status</span>
+<div class="vocab-status-buttons" role="group" aria-label="Formula status filter">
+<button type="button" class="vocab-status-filter-button active" data-status="all">All</button>
+<button type="button" class="vocab-status-filter-button" data-status="review">Review</button>
+<button type="button" class="vocab-status-filter-button" data-status="unsolved">Unsolved</button>
+<button type="button" class="vocab-status-filter-button" data-status="solved">Solved</button>
+</div>
+</div>
+</div>
+
+<div class="vocab-progress">
+<div><strong id="formula-progress-text">0 solved</strong><span id="formula-count">0 formulas</span></div>
+<div class="vocab-status-summary" id="formula-status-summary">0 review · 0 unsolved</div>
+<div class="progress-track"><div id="formula-progress-bar"></div></div>
+</div>
+
+<div id="formula-empty" class="vocab-empty hidden">No formulas match your search.</div>
+
+<article id="formula-card" class="vocab-card formula-card-flash">
+<div class="vocab-card-top"><span id="formula-category-label">Algebra</span></div>
+<div class="vocab-status-row">
+<span id="formula-solved-status" class="vocab-status-chip unsolved">Unsolved</span>
+<span id="formula-review-status" class="vocab-status-chip review hidden">Review</span>
+</div>
+
+<div class="formula-stage">
+<div id="formula-expression" class="formula-expression" aria-label="Formula"></div>
+<p id="formula-topic" class="formula-topic"></p>
+</div>
+
+<div id="formula-definition" class="vocab-definition formula-definition hidden">
+<strong>Definition</strong>
+<p id="formula-meaning"></p>
+<div id="formula-symbols-wrap" class="formula-symbols">
+<strong>Symbols</strong>
+<p id="formula-symbols"></p>
+</div>
+<div class="vocab-example formula-example"><strong>Example</strong><p id="formula-example"></p></div>
+<div id="formula-note-wrap" class="formula-note"><strong>Remember</strong><p id="formula-note"></p></div>
+</div>
+
+<div class="vocab-pre-actions">
+<button id="reveal-button" class="vocab-primary">Reveal Definition</button>
+</div>
+<div class="vocab-actions hidden" id="formula-actions">
+<button id="learning-button" class="vocab-secondary vocab-answer-button" type="button" aria-pressed="false">Still Learning</button>
+<button id="known-button" class="vocab-primary vocab-answer-button" type="button" aria-pressed="false">I Know It</button>
+</div>
+<div class="vocab-review-row">
+<button id="review-button" class="vocab-review-button" type="button" aria-pressed="false">☆ Mark for Review</button>
+</div>
+</article>
+</section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/supabase-config.js"></script>
+<script src="/auth-guard.js"></script>
+<script src="/auth.js?v=subjects-2"></script>
+<script src="/math-fluency.js?v=1"></script>
+<script>
+const menuButton=document.querySelector(".mobile-menu-button"),navigation=document.querySelector(".navigation");
+if(menuButton&&navigation){menuButton.addEventListener("click",()=>{const isOpen=navigation.classList.toggle("mobile-open");menuButton.setAttribute("aria-expanded",isOpen?"true":"false");});}
+</script>
+</body>
+</html>
