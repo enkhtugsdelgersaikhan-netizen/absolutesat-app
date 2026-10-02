@@ -113,8 +113,25 @@ async function resolveMissing(schools, alreadyFound) {
 }
 
 module.exports = async function handler(req, res) {
+  if (req.method === "GET") {
+    try {
+      const rows = await browserRows(["mit"]);
+      const latest = chooseLatestSatRow(rows);
+      return res.status(200).json({
+        ok: true,
+        provider: "CollegeData.FYI",
+        sample_school: latest?.school_name || "MIT",
+        sample_year: latest?.canonical_year || null,
+        sample_sat_midpoint: latest?.sat_composite_p50 || null
+      });
+    } catch (error) {
+      console.error("college-data health error", error);
+      return res.status(502).json({ ok: false, error: "college_data_unavailable" });
+    }
+  }
+
   if (req.method !== "POST") {
-    res.setHeader("Allow", "POST");
+    res.setHeader("Allow", "GET, POST");
     return res.status(405).json({ error: "method_not_allowed" });
   }
 
