@@ -305,7 +305,7 @@
     const norm = (v,min,max) => Math.max(0,Math.min(1,(v-min)/(max-min)));
     const point = (v,r) => [center[0]+(v[0]-center[0])*r,center[1]+(v[1]-center[1])*r];
     const points = (values) => {
-      const ratios=[norm(values.composite,400,1600),norm(values.reading,200,800),norm(values.math,200,800)];
+      const ratios=[norm(values.composite,1200,1600),norm(values.reading,600,800),norm(values.math,600,800)];
       return vertices.map((v,i)=>point(v,ratios[i]).join(",")).join(" ");
     };
     const grid=[.25,.5,.75,1].map(l=>'<polygon points="'+vertices.map(v=>point(v,l).join(",")).join(" ")+'" class="university-shape-grid"/>').join("");
@@ -321,7 +321,7 @@
       '<text x="160" y="16" text-anchor="middle" class="university-shape-label">Composite</text>'+
       '<text x="42" y="220" text-anchor="middle" class="university-shape-label">R&W</text>'+
       '<text x="278" y="220" text-anchor="middle" class="university-shape-label">Math</text></svg>'+
-      '<p>The school shape uses its reported median on all three SAT measures. Each axis is normalized to its own SAT scale.</p>'+
+      '<p>The school shape uses its reported median on all three SAT measures. Zoomed comparison scale: center = 1200 composite / 600 per section; outer edge = 1600 / 800.</p>'+
     '</section>';
   }
 
