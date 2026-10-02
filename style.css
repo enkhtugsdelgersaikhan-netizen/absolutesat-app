@@ -4566,3 +4566,25 @@ select:hover,
 .sat-guide-explainer-detailed>div p{margin-top:2px;line-height:1.42}
 .sat-guide-explainer-detailed .sat-guide-intro{padding:7px 9px;margin-bottom:6px;line-height:1.42}
 .sat-guide-explainer-detailed .sat-guide-caution{margin-top:7px;padding:8px;line-height:1.42}
+
+/* SAT-role infographic redesign */
+.sat-weight-redesign{padding:0!important;border:1px solid #d8e8e4;border-radius:18px;background:#fff;overflow:hidden;box-shadow:0 10px 30px rgba(23,59,54,.055)}
+.sat-weight-redesign .sat-weight-main{display:grid;grid-template-columns:180px minmax(0,1fr);min-height:155px}
+.sat-weight-redesign .sat-weight-number{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:20px 22px;background:linear-gradient(145deg,#e8f6f2,#f3faf8);border:0;border-radius:0}
+.sat-weight-redesign .sat-weight-number>small{color:#5f817a;font-size:7px;font-weight:800;letter-spacing:.13em}
+.sat-weight-redesign .sat-weight-number>strong{margin:2px 0 0;color:#0e7367;font-size:50px;line-height:1;font-weight:800;letter-spacing:-3px}
+.sat-weight-redesign .sat-weight-number>span{margin-top:5px;color:#3f625c;font-size:9px;font-weight:700;text-transform:none;letter-spacing:0}
+.sat-weight-redesign .sat-weight-number>em{margin-top:12px;padding-top:9px;border-top:1px solid #cfe4df;color:#84938f;font-size:7px;font-style:normal}
+.sat-weight-redesign .sat-weight-why{padding:20px 24px;border:0!important;border-left:1px solid #dceae7!important;border-radius:0!important;background:#fff!important}
+.sat-weight-eyebrow{display:block;color:#0e7367;font-size:7px;font-weight:800;letter-spacing:.13em}
+.sat-weight-redesign .sat-weight-why h3{margin:4px 0 7px;color:#173b36;font-size:16px;line-height:1.3}
+.sat-weight-redesign .sat-weight-why p{margin:0;color:#5c6f6b;font-size:9px;line-height:1.65}
+.sat-weight-redesign .sat-weight-insights{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #dceae7}
+.sat-weight-redesign .sat-weight-insight{display:grid;grid-template-columns:28px 1fr;gap:9px;padding:15px 18px;background:#fbfdfc}
+.sat-weight-redesign .sat-weight-insight+ .sat-weight-insight{border-left:1px solid #dceae7}
+.sat-weight-insight-icon{display:grid;place-items:center;width:27px;height:27px;border-radius:9px;background:#e8f6f2;color:#0e7367;font-size:14px;font-weight:800}
+.sat-weight-redesign .sat-weight-insight strong{display:block;color:#214c45;font-size:9px;line-height:1.4}
+.sat-weight-redesign .sat-weight-insight p{margin:4px 0 0;color:#71807d;font-size:7.5px;line-height:1.5}
+.sat-weight-redesign .sat-weight-insight a{display:inline-block;margin-top:5px;color:#0e7367;font-size:7px;font-weight:700;text-decoration:none}
+.sat-weight-redesign .sat-weight-insight a:hover{text-decoration:underline}
+@media(max-width:760px){.sat-weight-redesign .sat-weight-main{grid-template-columns:1fr}.sat-weight-redesign .sat-weight-number{align-items:center;text-align:center}.sat-weight-redesign .sat-weight-why{border-left:0!important;border-top:1px solid #dceae7!important}.sat-weight-redesign .sat-weight-insights{grid-template-columns:1fr}.sat-weight-redesign .sat-weight-insight+ .sat-weight-insight{border-left:0;border-top:1px solid #dceae7}}
