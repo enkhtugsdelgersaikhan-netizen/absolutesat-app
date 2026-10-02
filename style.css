@@ -3742,3 +3742,32 @@ select:hover,
 @media(max-width:900px){
     .sat-weight-context{grid-template-columns:1fr}
 }
+
+
+/* SAT context: split first row, then two full-width explanation rows. */
+.sat-weight-context{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+.sat-weight-top-row{
+    display:grid;
+    grid-template-columns:minmax(190px,220px) minmax(0,1fr);
+    gap:12px;
+    align-items:stretch;
+}
+.sat-weight-top-row .sat-weight-number{
+    width:100%;
+    max-width:none;
+    box-sizing:border-box;
+}
+.sat-weight-top-row .sat-weight-why{
+    display:flex;
+    align-items:center;
+}
+.sat-weight-full-row{
+    width:100%;
+}
+@media(max-width:700px){
+    .sat-weight-top-row{grid-template-columns:1fr}
+}
