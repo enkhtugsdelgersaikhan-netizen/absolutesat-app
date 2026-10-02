@@ -78,7 +78,11 @@
   const mathHeavy = new Set(["mit","caltech","georgia-tech","cmu","uiuc","purdue","ut-austin","harvey-mudd","texas-am","virginia-tech","rice","umd"]);
   const verbalHeavy = new Set(["williams","amherst","swarthmore","wellesley","pomona","bowdoin","haverford","middlebury","wesleyan","colby","hamilton","smith","bates","davidson"]);
 
-  const round10 = (value) => Number.isFinite(Number(value)) ? Math.round(Number(value) / 10) * 10 : null;
+  const round10 = (value) => {
+    if (value === null || value === undefined || value === "") return null;
+    const number = Number(value);
+    return Number.isFinite(number) ? Math.round(number / 10) * 10 : null;
+  };
   const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
 
   function estimatedFromRank(rank, id) {
@@ -169,7 +173,7 @@
       data.browser.sat_composite_p25,data.browser.sat_composite_p50,data.browser.sat_composite_p75,
       data.browser.sat_ebrw_p25,data.browser.sat_ebrw_p50,data.browser.sat_ebrw_p75,
       data.browser.sat_math_p25,data.browser.sat_math_p50,data.browser.sat_math_p75
-    ].some((value) => Number.isFinite(Number(value)));
+    ].some((value) => value !== null && value !== undefined && value !== "" && Number.isFinite(Number(value)));
 
     const federalYears = Object.values(data.federal || {})
       .map((item) => Number(item?.data_year || item?.collection_year || 0))
@@ -180,7 +184,10 @@
       "sat_composite_p25","sat_composite_p50","sat_composite_p75",
       "sat_ebrw_p25","sat_ebrw_p50","sat_ebrw_p75",
       "sat_math_p25","sat_math_p50","sat_math_p75"
-    ].every((key) => Number.isFinite(Number(data.browser[key])));
+    ].every((key) => {
+      const value = data.browser[key];
+      return value !== null && value !== undefined && value !== "" && Number.isFinite(Number(value));
+    });
 
     const status = browserComplete && !derived
       ? "Reported CDS"
