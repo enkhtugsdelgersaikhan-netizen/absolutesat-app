@@ -4828,3 +4828,90 @@ select:hover,
   max-width:94%!important;
   max-height:94%!important;
 }
+
+/* Top-100 university catalog */
+.university-rank-chip{
+  display:inline-flex;
+  align-items:center;
+  margin:0 0 5px;
+  padding:3px 7px;
+  border-radius:999px;
+  background:#eef7f5;
+  color:#0e7367;
+  font-size:7px;
+  font-weight:800;
+  letter-spacing:.04em;
+}
+.university-card-rank{
+  display:inline-block;
+  margin-bottom:2px;
+  color:#0e7367;
+  font-size:8px;
+  font-weight:800;
+}
+.university-card-data-status{
+  display:block;
+  margin-top:9px;
+  color:#899693;
+  font-size:7px;
+  line-height:1.4;
+}
+.university-data-status{
+  display:inline-flex;
+  align-items:center;
+  padding:3px 7px;
+  border-radius:999px;
+  background:#eef7f5;
+  color:#3f6a62;
+  font-size:8px;
+  font-weight:700;
+}
+.university-campus-placeholder,
+.university-card-placeholder{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  gap:12px;
+  background:
+    radial-gradient(circle at 18% 18%,rgba(255,255,255,.9),transparent 27%),
+    linear-gradient(145deg,#e7f4f1,#f7fbfa 60%,#eaf5f2);
+}
+.university-campus-placeholder>span:last-child{
+  color:#52736d;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+}
+.university-placeholder-logo{
+  width:105px!important;
+  height:105px!important;
+  padding:9px!important;
+  border-radius:22px!important;
+  box-sizing:border-box;
+}
+.university-card-placeholder-logo{
+  width:72px!important;
+  height:72px!important;
+  padding:6px!important;
+  border-radius:17px!important;
+  box-sizing:border-box;
+}
+.university-catalog-loading{
+  grid-column:1/-1;
+  display:grid;
+  place-items:center;
+  min-height:170px;
+  padding:28px;
+  border:1px dashed #d3e3df;
+  border-radius:16px;
+  background:#f8fbfa;
+  color:#66807a;
+  font-size:11px;
+  font-weight:700;
+  text-align:center;
+}
+.university-data-note strong{color:#486b64}
+.university-data-note a{color:#0e7367;font-weight:700;text-decoration:none}
+.university-data-note a:hover{text-decoration:underline}
