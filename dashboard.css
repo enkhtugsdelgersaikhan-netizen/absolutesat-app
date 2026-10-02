@@ -184,3 +184,48 @@
     .sat-profile-form{grid-template-columns:1fr}
     .sat-profile-actions{grid-column:1}
 }
+
+
+/* Current + future SAT goal */
+.sat-total-preview-group{
+    display:flex;
+    gap:9px;
+    flex:0 0 auto;
+}
+.sat-goal-total-preview{
+    background:#fbfcfb;
+    border-color:#dce5e2;
+}
+.sat-goal-total-preview span{color:#7a8785}
+.sat-goal-total-preview strong{color:#315f56}
+.sat-profile-group-label{
+    grid-column:1/-1;
+    display:flex;
+    align-items:baseline;
+    gap:8px;
+    margin-top:2px;
+    padding-bottom:2px;
+}
+.sat-profile-group-label strong{
+    color:#24443f;
+    font-size:12px;
+}
+.sat-profile-group-label span{
+    color:#94a3b8;
+    font-size:10px;
+}
+.sat-goal-label{
+    margin-top:6px;
+    padding-top:14px;
+    border-top:1px solid #edf1f0;
+}
+.sat-goal-field input{
+    background:#fbfcfc;
+}
+@media(max-width:700px){
+    .sat-total-preview-group{width:100%}
+    .sat-total-preview{flex:1;min-width:0}
+}
+@media(max-width:480px){
+    .sat-total-preview-group{flex-direction:column}
+}
