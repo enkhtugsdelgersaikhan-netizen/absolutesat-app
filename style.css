@@ -2643,3 +2643,89 @@ select:hover,
   .deep-dive-tip-grid{grid-template-columns:1fr}
   .deep-dive-card h3{font-size:20px}
 }
+
+
+/* =========================================
+   DEEP DIVE LESSON HUB + INDIVIDUAL LESSONS
+========================================= */
+.lesson-hub-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+}
+.lesson-hub-card{
+  display:flex;
+  flex-direction:column;
+  min-height:220px;
+  padding:24px;
+  margin:0;
+  color:#173a36;
+  text-decoration:none;
+  transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease,background-color .18s ease;
+}
+.lesson-hub-card:hover{
+  transform:translateY(-2px);
+  border-color:#8ec5bc;
+  box-shadow:0 10px 26px rgba(15,23,42,.065);
+}
+.lesson-hub-card h3{
+  margin:14px 0 10px;
+  font-size:20px;
+  line-height:1.35;
+  letter-spacing:-.25px;
+}
+.lesson-hub-card p{
+  margin:0 0 18px;
+  color:#526174;
+  font-size:13px;
+  line-height:1.72;
+}
+.lesson-hub-card strong{
+  margin-top:auto;
+  color:#0f766e;
+  font-size:13px;
+}
+.lesson-page .deep-dive-card{
+  margin-top:28px;
+}
+.lesson-page .deep-dive-card-header{
+  margin-bottom:18px;
+}
+.lesson-page .deep-dive-card h3{
+  font-size:23px;
+}
+.lesson-pager{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin-top:28px;
+}
+.lesson-pager-link{
+  display:flex;
+  align-items:center;
+  min-height:58px;
+  padding:14px 16px;
+  border:1px solid #dbe5e4;
+  border-radius:12px;
+  background:#fff;
+  color:#23423e;
+  text-decoration:none;
+  font-size:13px;
+  line-height:1.5;
+  box-shadow:0 2px 0 rgba(15,23,42,.05),0 5px 10px rgba(15,23,42,.04);
+  transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease;
+}
+.lesson-pager-link:hover{
+  transform:translateY(-1px);
+  border-color:#82bdb4;
+  box-shadow:0 3px 0 rgba(15,23,42,.05),0 7px 13px rgba(15,23,42,.055);
+}
+.lesson-pager-link.next{
+  justify-content:flex-end;
+  text-align:right;
+}
+@media(max-width:760px){
+  .lesson-hub-grid{grid-template-columns:1fr}
+  .lesson-pager{grid-template-columns:1fr}
+  .lesson-pager-link.next{justify-content:flex-start;text-align:left}
+}
