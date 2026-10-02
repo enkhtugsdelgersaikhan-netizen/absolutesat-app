@@ -250,3 +250,6 @@
 .sat-total-preview-group{grid-template-columns:1fr}.sat-shape-heading{align-items:center}
 
 .sat-shape-grid,.sat-shape-axis{stroke-width:.55}.sat-shape-series{stroke-width:1.05}
+
+/* Triangle visualization retired */
+.sat-profile-workspace{display:block}.sat-profile-editor{width:100%}
