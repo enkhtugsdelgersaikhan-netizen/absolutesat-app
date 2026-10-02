@@ -4,16 +4,6 @@
     encodeURIComponent(file) +
     "?width=1400";
 
-  const mark = (file) =>
-    "https://commons.wikimedia.org/wiki/Special:Redirect/file/" +
-    encodeURIComponent(file) + "?width=320";
-
-  const markFiles = {
-    haverford: "Haverford college wordmark black.png",
-    williams: "Williams College wordmark.svg",
-    bowdoin: "Bowdoin college blacklogo.png"
-  };
-
   const universities = [
     {
       id:"mit", name:"Massachusetts Institute of Technology", short:"MIT", location:"Cambridge, MA",
@@ -144,7 +134,7 @@
       source:"https://www.collegedata.fyi/schools/columbia/2024-25",
       note:"Columbia College & Columbia Engineering"
     }
-  ].map((u) => ({ ...u, logo: markFiles[u.id] ? mark(markFiles[u.id]) : null }));
+  ];
 
   const input = document.getElementById("university-search");
   const results = document.getElementById("university-search-results");
@@ -307,19 +297,27 @@
   }
 
   function logoImg(u, cls) {
-    const initials = (u.short || u.name)
+    const labelMap = {
+      mit:"MIT", stanford:"S", princeton:"P", yale:"Y", duke:"D",
+      cornell:"C", brown:"B", rice:"R", vanderbilt:"V", uchicago:"UC",
+      tufts:"T", pomona:"P", haverford:"H", williams:"W", bowdoin:"B",
+      columbia:"C"
+    };
+    const label = labelMap[u.id] || (u.short || u.name)
       .split(/\s+/)
       .map((word) => word[0])
       .join("")
       .slice(0, 3)
       .toUpperCase();
-    const fallback = '<span class="' + cls + ' university-logo-fallback university-logo-monogram" aria-hidden="true">' +
-      escapeHtml(initials) + '</span>';
-    if (!u.logo) return fallback;
-    return '<span class="' + cls + ' university-mark-wrap">' +
-      '<img class="university-mark-image" src="' + escapeHtml(u.logo) + '" alt="" loading="lazy" ' +
-      'onerror="this.parentElement.outerHTML=\'' + fallback.replace(/'/g,"&#39;") + '\'">' +
-      '</span>';
+
+    const safe = escapeHtml(label);
+    const sizeClass = label.length >= 3 ? " is-wide" : label.length === 2 ? " is-medium" : "";
+    return '<span class="' + cls + ' university-symbol-badge' + sizeClass + '" aria-hidden="true">' +
+      '<svg class="university-symbol-svg" viewBox="0 0 48 48" focusable="false" aria-hidden="true">' +
+        '<rect x="1" y="1" width="46" height="46" rx="11"></rect>' +
+        '<text x="24" y="25" text-anchor="middle" dominant-baseline="middle">' + safe + '</text>' +
+      '</svg>' +
+    '</span>';
   }
 
   function railScale(values, type, userScore) {
