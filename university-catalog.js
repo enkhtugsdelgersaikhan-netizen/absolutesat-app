@@ -238,6 +238,16 @@
     return "Above the upper quartile";
   }
 
+  function positionDisplay(score, [lower, median, upper]) {
+    if (score < lower) return { title: "Below lower quartile", detail: "Below " + lower };
+    if (score === lower) return { title: "At lower quartile", detail: "Lower quartile · " + lower };
+    if (score < median) return { title: "Lower quartile → Median", detail: lower + "–" + median };
+    if (score === median) return { title: "At median", detail: "Median · " + median };
+    if (score < upper) return { title: "Median → Upper quartile", detail: median + "–" + upper };
+    if (score === upper) return { title: "At upper quartile", detail: "Upper quartile · " + upper };
+    return { title: "Above upper quartile", detail: "Above " + upper };
+  }
+
   function relationshipClass(score, [lower, median, upper]) {
     if (score < lower) return "below-lower";
     if (score === lower) return "at-lower";
@@ -251,7 +261,7 @@
   function renderBand(label, values, type, userScore) {
     const [lower, median, upper] = values;
     const hasUser = Number.isFinite(userScore);
-    const relation = hasUser ? scoreRelationship(userScore, values) : "";
+    const relation = hasUser ? positionDisplay(userScore, values) : null;
 
     return '<section class="university-score-band">' +
       '<div class="university-score-band-header">' +
@@ -259,8 +269,11 @@
         (hasUser
           ? '<span class="university-position-label ' +
               relationshipClass(userScore, values) + '">' +
-              escapeHtml(relation) +
-              ' · ' + userScore +
+              '<i class="university-position-dot" aria-hidden="true"></i>' +
+              '<span class="university-position-copy">' +
+                '<strong>' + escapeHtml(relation.title) + '</strong>' +
+                '<small>' + escapeHtml(relation.detail) + ' · Your score: ' + userScore + '</small>' +
+              '</span>' +
             '</span>'
           : '') +
       '</div>' +
