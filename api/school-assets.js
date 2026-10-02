@@ -3,6 +3,7 @@ const COMMONS_API = "https://commons.wikimedia.org/w/api.php";
 const WIKIDATA_API = "https://www.wikidata.org/w/api.php";
 
 const titleOverrides = {
+  "William & Mary": "College of William & Mary",
   "University of Michigan, Ann Arbor": "University of Michigan",
   "University of Washington, Seattle": "University of Washington",
   "California Polytechnic State University, San Luis Obispo": "California Polytechnic State University",
