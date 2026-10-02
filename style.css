@@ -3689,3 +3689,13 @@ select:hover,
     .sat-weight-number{max-width:none}
     .sat-weight-number span,.sat-weight-number small{max-width:none}
 }
+
+
+/* Keep all three SAT quartile headings on one consistent line. */
+.university-sat-section .university-featured-content .university-score-band-values span,
+.university-sat-section .university-card-scores span{
+    min-height:0;
+    white-space:nowrap;
+    align-items:center;
+    line-height:1.2;
+}
