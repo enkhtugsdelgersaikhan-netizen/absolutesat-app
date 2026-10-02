@@ -125,14 +125,42 @@
   vertical-align:middle;
   overflow:visible!important;
 }
+.formula-explanation-grid{
+  display:grid;
+  gap:12px;
+  margin-top:4px;
+}
+.formula-explanation-block{
+  padding:15px 17px;
+  border:1px solid #e2e8f0;
+  border-radius:12px;
+  background:#fbfdff;
+}
+.formula-explanation-block strong{
+  display:block;
+  margin-bottom:7px;
+  color:#0f766e;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+}
+.formula-explanation-block p,
 .formula-meaning{
-  margin:0 0 4px;
+  margin:0;
   color:#334155;
-  font-size:15px;
-  line-height:1.78;
+  font-size:14px;
+  line-height:1.76;
+  font-weight:400;
+}
+.formula-explanation-block:nth-child(2){
+  background:#f8fafc;
+}
+.formula-explanation-block:nth-child(3){
+  background:#f8fafc;
 }
 .formula-symbols{
-  margin-top:18px;
+  margin-top:14px;
   padding:15px 17px;
   border:1px solid #e2e8f0;
   border-radius:12px;
