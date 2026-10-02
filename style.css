@@ -3523,3 +3523,54 @@ select:hover,
 .university-score-band-values{
     margin-top:10px;
 }
+
+
+/* SAT philosophy: three stacked arguments, not columns */
+.sat-weight-three{
+    grid-template-columns:1fr;
+    gap:10px;
+}
+.sat-weight-three p{
+    width:100%;
+}
+
+/* High-contrast categorical SAT standing */
+.university-position-label{
+    border-width:1px;
+    font-weight:800;
+}
+.university-position-label.below-lower{
+    color:#8b1010;
+    background:#ffb4b4;
+    border-color:#ef7777;
+}
+.university-position-label.at-lower{
+    color:#8b3100;
+    background:#ffc98f;
+    border-color:#ef9b43;
+}
+.university-position-label.lower-to-median{
+    color:#745300;
+    background:#ffe66d;
+    border-color:#e7c72e;
+}
+.university-position-label.at-median{
+    color:#365d00;
+    background:#cfee73;
+    border-color:#9dc43d;
+}
+.university-position-label.median-to-upper{
+    color:#075d43;
+    background:#82e5bd;
+    border-color:#42bf91;
+}
+.university-position-label.at-upper{
+    color:#064d3b;
+    background:#4fd39f;
+    border-color:#20a878;
+}
+.university-position-label.above-upper{
+    color:#fff;
+    background:#087f5b;
+    border-color:#056647;
+}
