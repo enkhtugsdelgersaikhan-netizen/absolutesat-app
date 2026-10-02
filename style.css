@@ -4287,3 +4287,17 @@ select:hover,
 .university-shape-series.upper{stroke:#91a19d;stroke-dasharray:5 2.5}
 .university-shape-series.you{stroke:#0e7367;stroke-width:1.3;fill:rgba(14,115,103,.035)}
 .university-shape-legend .lower i{background:#a9b6b2}.university-shape-legend .median i{background:#667773}.university-shape-legend .upper i{background:#91a19d}
+
+/* Solid-color SAT quartile outlines */
+.university-shape-series.lower,
+.university-shape-series.median,
+.university-shape-series.upper,
+.university-shape-series.you{stroke-dasharray:none}
+.university-shape-series.lower{stroke:#a9b7b3}
+.university-shape-series.median{stroke:#7f938e}
+.university-shape-series.upper{stroke:#566e68}
+.university-shape-series.you{stroke:#0e7367}
+.university-shape-legend .lower i{background:#a9b7b3}
+.university-shape-legend .median i{background:#7f938e}
+.university-shape-legend .upper i{background:#566e68}
+.university-shape-legend .you i{background:#0e7367}
