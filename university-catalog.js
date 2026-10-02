@@ -301,7 +301,7 @@
 
   function logoImg(u, cls) {
     const initials = (u.short || u.name)
-      .split(/\\s+/)
+      .split(/\s+/)
       .map((word) => word[0])
       .join("")
       .slice(0, 3)
