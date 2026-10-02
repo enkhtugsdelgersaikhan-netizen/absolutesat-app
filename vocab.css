@@ -115,3 +115,78 @@
         transition:none!important
     }
 }
+
+
+/* Subtle tactile controls for Vocabulary + Formula Fluency */
+.vocab-primary,
+.vocab-secondary,
+.vocab-review-button,
+.vocab-status-filter-button{
+    transition:
+        transform .18s cubic-bezier(.2,.7,.2,1),
+        box-shadow .18s cubic-bezier(.2,.7,.2,1),
+        background-color .18s ease,
+        border-color .18s ease,
+        color .18s ease;
+}
+
+.vocab-primary{
+    box-shadow:0 2px 0 #0b5e55,0 4px 9px rgba(15,118,110,.13);
+}
+.vocab-primary:hover{
+    transform:translateY(-1px);
+    box-shadow:0 3px 0 #0b5e55,0 7px 14px rgba(15,118,110,.15);
+}
+.vocab-primary:active{
+    transform:translateY(1px);
+    box-shadow:0 1px 0 #0b5e55,0 2px 5px rgba(15,118,110,.11);
+}
+
+.vocab-secondary,
+.vocab-review-button{
+    box-shadow:0 2px 0 rgba(15,23,42,.07),0 4px 9px rgba(15,23,42,.045);
+}
+.vocab-secondary:hover,
+.vocab-review-button:hover{
+    transform:translateY(-1px);
+    box-shadow:0 3px 0 rgba(15,23,42,.07),0 7px 13px rgba(15,23,42,.055);
+}
+.vocab-secondary:active,
+.vocab-review-button:active{
+    transform:translateY(1px);
+    box-shadow:0 1px 0 rgba(15,23,42,.07),0 2px 5px rgba(15,23,42,.04);
+}
+
+.vocab-status-filter-button.active{
+    box-shadow:0 2px 0 rgba(15,23,42,.07),0 4px 8px rgba(15,23,42,.055);
+}
+.vocab-status-filter-button:active{
+    transform:translateY(1px);
+}
+
+.vocab-search-wrap select{
+    box-shadow:0 1px 0 rgba(15,23,42,.05),0 2px 7px rgba(15,23,42,.035);
+    transition:
+        transform .18s cubic-bezier(.2,.7,.2,1),
+        box-shadow .18s cubic-bezier(.2,.7,.2,1),
+        border-color .18s ease,
+        background-color .18s ease;
+}
+.vocab-search-wrap select:hover{
+    transform:translateY(-1px);
+    box-shadow:0 2px 0 rgba(15,23,42,.05),0 5px 12px rgba(15,23,42,.055);
+}
+.vocab-search-wrap select:focus{
+    box-shadow:0 0 0 3px rgba(15,118,110,.09),0 3px 10px rgba(15,23,42,.05);
+}
+
+@media (prefers-reduced-motion: reduce){
+    .vocab-primary,
+    .vocab-secondary,
+    .vocab-review-button,
+    .vocab-status-filter-button,
+    .vocab-search-wrap select{
+        transition:none!important;
+        transform:none!important;
+    }
+}
