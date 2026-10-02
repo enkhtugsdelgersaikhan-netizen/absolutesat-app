@@ -3418,3 +3418,28 @@ select:hover,
 }
 .university-sat-section .university-your-summary strong{font-size:27px}
 .university-sat-section .university-you-label{font-size:10px}
+
+
+/* Final SAT rail geometry: no cosmetic x-offsets; equal scores coincide exactly. */
+.university-band-track{
+    left:0;
+    right:0;
+}
+.university-band-dot,
+.university-band-dot.median,
+.university-band-dot.lower,
+.university-band-dot.upper{
+    transform:translateX(-50%);
+    margin-left:0;
+}
+.university-you-marker{
+    transform:translateX(0);
+}
+.university-you-stem{
+    left:0;
+    transform:translateX(-50%);
+}
+.university-you-diamond{
+    left:0;
+    transform:translateX(-50%);
+}
