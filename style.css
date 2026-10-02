@@ -3574,3 +3574,65 @@ select:hover,
     background:#087f5b;
     border-color:#056647;
 }
+
+
+/* Calm, redundant SAT-position communication: words first, color second. */
+.university-position-label,
+.university-position-label.below-lower,
+.university-position-label.at-lower,
+.university-position-label.lower-to-median,
+.university-position-label.at-median,
+.university-position-label.median-to-upper,
+.university-position-label.at-upper,
+.university-position-label.above-upper{
+    display:inline-flex;
+    align-items:center;
+    justify-content:flex-start;
+    gap:8px;
+    padding:7px 10px;
+    color:#53615f;
+    background:#fbfcfb;
+    border:1px solid #dde5e2;
+    border-radius:10px;
+    text-align:left;
+    box-shadow:none;
+}
+.university-position-dot{
+    width:7px;
+    height:7px;
+    flex:0 0 7px;
+    border-radius:50%;
+    background:#82908d;
+}
+.university-position-copy{
+    display:flex;
+    flex-direction:column;
+    gap:1px;
+    min-width:0;
+}
+.university-position-copy strong{
+    color:inherit;
+    font-size:11px;
+    font-weight:700;
+    line-height:1.2;
+}
+.university-position-copy small{
+    color:#899491;
+    font-size:9px;
+    font-weight:500;
+    line-height:1.25;
+}
+.university-position-label.below-lower{color:#8b4d4a;border-color:#ead8d6}
+.university-position-label.below-lower .university-position-dot{background:#b76b66}
+.university-position-label.at-lower{color:#8a6245;border-color:#eadfd4}
+.university-position-label.at-lower .university-position-dot{background:#bd8a61}
+.university-position-label.lower-to-median{color:#7b7047;border-color:#e8e4d5}
+.university-position-label.lower-to-median .university-position-dot{background:#b6a45f}
+.university-position-label.at-median{color:#587368;border-color:#dce6e2}
+.university-position-label.at-median .university-position-dot{background:#75978a}
+.university-position-label.median-to-upper{color:#416f62;border-color:#d5e5df}
+.university-position-label.median-to-upper .university-position-dot{background:#5e9c88}
+.university-position-label.at-upper{color:#326958;border-color:#cfe2db}
+.university-position-label.at-upper .university-position-dot{background:#478c75}
+.university-position-label.above-upper{color:#285f50;border-color:#c9dfd7}
+.university-position-label.above-upper .university-position-dot{background:#347d67}
