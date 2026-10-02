@@ -4673,3 +4673,15 @@ select:hover,
 @media(max-width:950px){
     .sat-context-workspace{grid-template-columns:1fr}
 }
+
+/* Match score editor to SAT-role card height while using the space intentionally */
+.sat-context-workspace{align-items:stretch}
+.sat-weight-redesign,.sat-context-profile{height:100%;box-sizing:border-box}
+.sat-context-profile{display:flex;flex-direction:column}
+.sat-context-profile>p{margin-bottom:9px}
+.sat-context-profile-form{display:flex;flex:1;flex-direction:column}
+.sat-context-profile-actions{margin-top:auto;padding-top:8px}
+.sat-weight-redesign .sat-weight-why p{font-size:7.25px;line-height:1.48}
+@media(max-width:950px){
+  .sat-weight-redesign,.sat-context-profile{height:auto}
+}
