@@ -4488,3 +4488,10 @@ select:hover,
 @media(max-width:460px){
     .sat-guide-row .sat-score-guide-list{grid-template-columns:1fr}
 }
+
+/* Center the score-guide + quartile explainer as one row */
+.sat-guide-row{
+    max-width:1060px;
+    margin-left:auto;
+    margin-right:auto;
+}
