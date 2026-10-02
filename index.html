@@ -33,7 +33,7 @@
 
     <link
         rel="stylesheet"
-        href="style.css?v=universities-30"
+        href="style.css?v=universities-31"
     >
 
 </head>
@@ -234,6 +234,11 @@
                                 <div class="sat-context-profile-actions"><button id="sat-profile-save" type="submit">Save SAT scores</button><button id="sat-profile-clear" type="button">Clear</button></div>
                                 <span id="sat-profile-status" class="sat-context-profile-status" role="status" aria-live="polite"></span>
                             </form>
+                            <section id="sat-dataset-standing" class="sat-dataset-standing" aria-live="polite">
+                                <span class="sat-dataset-standing-kicker">ACROSS UNIVERSITIES</span>
+                                <strong id="sat-dataset-standing-title">Set your score to see your standing</strong>
+                                <p id="sat-dataset-standing-copy">Your composite will be compared with the reported SAT quartiles in the university catalog.</p>
+                            </section>
                         </aside>
                     </div>
                 </div>
@@ -306,7 +311,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js?v=subjects-1"></script>
-<script src="/university-catalog.js?v=21"></script>
+<script src="/university-catalog.js?v=22"></script>
 
 </body>
 </html>
