@@ -1,5 +1,6 @@
 const WIKI_API = "https://en.wikipedia.org/w/api.php";
 const COMMONS_API = "https://commons.wikimedia.org/w/api.php";
+const WIKIDATA_API = "https://www.wikidata.org/w/api.php";
 
 const titleOverrides = {
   "University of Michigan, Ann Arbor": "University of Michigan",
@@ -103,6 +104,59 @@ async function commonsQuery(params) {
   return response.json();
 }
 
+
+async function wikidataQuery(params) {
+  const url = new URL(WIKIDATA_API);
+  Object.entries({
+    format: "json",
+    origin: "*",
+    ...params
+  }).forEach(([key, value]) => url.searchParams.set(key, String(value)));
+  const response = await fetch(url, {
+    headers: {
+      "User-Agent": "LexLogica/1.0 (educational SAT context catalog)",
+      Accept: "application/json"
+    }
+  });
+  if (!response.ok) throw new Error("Wikidata request failed: " + response.status);
+  return response.json();
+}
+
+function claimFile(entity, property) {
+  const claim = entity?.claims?.[property]?.find((item) => item?.mainsnak?.datavalue?.value);
+  const value = claim?.mainsnak?.datavalue?.value;
+  return typeof value === "string" && value ? "File:" + value : null;
+}
+
+async function fetchWikidataFileTitles(picks) {
+  const byId = new Map();
+  const qidToSchoolIds = new Map();
+
+  for (const pick of picks) {
+    const qid = pick.page?.pageprops?.wikibase_item;
+    if (!qid) continue;
+    if (!qidToSchoolIds.has(qid)) qidToSchoolIds.set(qid, []);
+    qidToSchoolIds.get(qid).push(pick.school.id);
+  }
+
+  const qids = [...qidToSchoolIds.keys()];
+  for (const group of chunks(qids, 50)) {
+    const payload = await wikidataQuery({
+      action: "wbgetentities",
+      ids: group.join("|"),
+      props: "claims"
+    });
+    for (const [qid, entity] of Object.entries(payload?.entities || {})) {
+      const symbolTitle = claimFile(entity, "P154") || claimFile(entity, "P94");
+      const campusTitle = claimFile(entity, "P18");
+      for (const schoolId of qidToSchoolIds.get(qid) || []) {
+        byId.set(schoolId, { qid, symbolTitle, campusTitle });
+      }
+    }
+  }
+  return byId;
+}
+
 function chunks(values, size) {
   const out = [];
   for (let i = 0; i < values.length; i += size) out.push(values.slice(i, i + size));
@@ -114,7 +168,8 @@ async function fetchPages(schools) {
     const titles = group.map((school) => titleOverrides[school.name] || school.name);
     const payload = await wikiQuery({
       redirects: "1",
-      prop: "pageimages|images",
+      prop: "pageimages|images|pageprops",
+      ppprop: "wikibase_item",
       piprop: "thumbnail|original|name",
       pithumbsize: "1600",
       imlimit: "100",
@@ -261,19 +316,27 @@ async function searchCommonsCampus(school) {
   return [];
 }
 
-async function resolveCommonsFallbacks(picks, fileMap) {
+async function resolveCommonsFallbacks(picks, fileMap, wikidataById) {
   const out = new Map();
   const work = picks.filter((pick) => {
-    const currentSymbol = pick.symbolTitle ? fileMap.get(pick.symbolTitle) : null;
-    const currentCampus = pick.campusTitle ? fileMap.get(pick.campusTitle) : null;
+    const wd = wikidataById?.get(pick.school.id) || {};
+    const wikidataSymbol = wd.symbolTitle ? fileMap.get(wd.symbolTitle) : null;
+    const pageSymbol = pick.symbolTitle ? fileMap.get(pick.symbolTitle) : null;
+    const currentSymbol = isCrispSymbol(wikidataSymbol) ? wikidataSymbol : pageSymbol;
+    const wikidataCampus = wd.campusTitle ? fileMap.get(wd.campusTitle) : null;
+    const currentCampus = wikidataCampus || (pick.campusTitle ? fileMap.get(pick.campusTitle) : null);
     const pageCampus = !pick.pageImageLooksLikeSymbol && pick.pageThumb;
     return !isCrispSymbol(currentSymbol) || (!currentCampus && !pageCampus);
   });
 
   for (const group of chunks(work, 10)) {
     const rows = await Promise.all(group.map(async (pick) => {
-      const currentSymbol = pick.symbolTitle ? fileMap.get(pick.symbolTitle) : null;
-      const currentCampus = pick.campusTitle ? fileMap.get(pick.campusTitle) : null;
+      const wd = wikidataById?.get(pick.school.id) || {};
+      const wikidataSymbol = wd.symbolTitle ? fileMap.get(wd.symbolTitle) : null;
+      const pageSymbol = pick.symbolTitle ? fileMap.get(pick.symbolTitle) : null;
+      const currentSymbol = isCrispSymbol(wikidataSymbol) ? wikidataSymbol : pageSymbol;
+      const wikidataCampus = wd.campusTitle ? fileMap.get(wd.campusTitle) : null;
+      const currentCampus = wikidataCampus || (pick.campusTitle ? fileMap.get(pick.campusTitle) : null);
       const pageCampus = !pick.pageImageLooksLikeSymbol && pick.pageThumb;
       const needSymbol = !isCrispSymbol(currentSymbol);
       const needCampus = !currentCampus && !pageCampus;
@@ -337,30 +400,45 @@ async function buildAssets(schools) {
     };
   });
 
+  const wikidataById = await fetchWikidataFileTitles(picks).catch(() => new Map());
+
   const fileMap = await resolveFiles(
-    picks.flatMap((pick) => [pick.symbolTitle, pick.campusTitle])
+    picks.flatMap((pick) => {
+      const wd = wikidataById.get(pick.school.id) || {};
+      return [pick.symbolTitle, pick.campusTitle, wd.symbolTitle, wd.campusTitle];
+    })
   );
 
-  const commonsFallbacks = await resolveCommonsFallbacks(picks, fileMap);
+  const commonsFallbacks = await resolveCommonsFallbacks(picks, fileMap, wikidataById);
 
   const results = {};
   for (const pick of picks) {
+    const wd = wikidataById.get(pick.school.id) || {};
+    const wikidataSymbol = wd.symbolTitle ? fileMap.get(wd.symbolTitle) : null;
     const pageSymbol = pick.symbolTitle ? fileMap.get(pick.symbolTitle) : null;
-    const pageCampus = pick.campusTitle ? fileMap.get(pick.campusTitle) : null;
     const extra = commonsFallbacks.get(pick.school.id) || {};
-    const symbol = isCrispSymbol(pageSymbol) ? pageSymbol : (extra.symbol || null);
+    const symbol = isCrispSymbol(wikidataSymbol)
+      ? wikidataSymbol
+      : isCrispSymbol(pageSymbol)
+        ? pageSymbol
+        : (extra.symbol || null);
 
+    const wikidataCampus = wd.campusTitle ? fileMap.get(wd.campusTitle) : null;
+    const pageCampus = pick.campusTitle ? fileMap.get(pick.campusTitle) : null;
     const pageCampusUrl = pageCampus?.url || (!pick.pageImageLooksLikeSymbol ? pick.pageThumb : null) || null;
     const searchedCampuses = Array.isArray(extra.campuses) ? extra.campuses : [];
     const searchedPrimary = searchedCampuses[0] || null;
     const searchedSecondary = searchedCampuses[1] || null;
-    const campusUrl = pageCampusUrl || searchedPrimary?.url || null;
-    const campusFallbackUrl = pageCampusUrl
-      ? (searchedPrimary?.url || null)
-      : (searchedSecondary?.url || null);
+    const campusUrl = wikidataCampus?.url || pageCampusUrl || searchedPrimary?.url || null;
+    const campusFallbackUrl = wikidataCampus?.url
+      ? (pageCampusUrl || searchedPrimary?.url || null)
+      : pageCampusUrl
+        ? (searchedPrimary?.url || null)
+        : (searchedSecondary?.url || null);
 
     results[pick.school.id] = {
       wiki_title: pick.page.title || null,
+      wikidata_id: wd.qid || null,
       mark_url: symbol?.original || symbol?.url || null,
       mark_source: symbol?.source || null,
       mark_width: symbol?.width || null,
@@ -368,7 +446,7 @@ async function buildAssets(schools) {
       mark_is_vector: isVectorAsset(symbol),
       campus_url: campusUrl,
       campus_fallback_url: campusFallbackUrl,
-      campus_source: pageCampus?.source || searchedPrimary?.source || ("https://en.wikipedia.org/wiki/" + encodeURIComponent(String(pick.page.title || "").replace(/ /g, "_")))
+      campus_source: wikidataCampus?.source || pageCampus?.source || searchedPrimary?.source || ("https://en.wikipedia.org/wiki/" + encodeURIComponent(String(pick.page.title || "").replace(/ /g, "_")))
     };
   }
 
