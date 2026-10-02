@@ -3274,3 +3274,15 @@ select:hover,
 .university-band-dot.upper{
     background:#76aaa2;
 }
+
+
+/* Keep every SAT rail marker on the same numeric coordinate system. */
+.university-band-dot.median{
+    transform:none;
+}
+.university-you-marker{
+    transform:none;
+}
+.university-you-label{
+    max-width:none;
+}
