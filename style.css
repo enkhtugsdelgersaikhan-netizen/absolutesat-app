@@ -4521,3 +4521,7 @@ select:hover,
 .sat-score-guide-scale{display:flex;flex-direction:column}
 .sat-score-scale-row{flex:1}
 .sat-score-scale-row>em{display:block;color:#9a6334;font-size:7px;font-style:normal;font-weight:800}
+
+/* Emphasize the lowest SAT band without overpowering the guide */
+.sat-score-scale-row.retake{background:#fff8f5}
+.sat-score-scale-row.retake>i{color:#c94f2f;font-weight:800}
