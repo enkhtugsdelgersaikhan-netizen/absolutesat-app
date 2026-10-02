@@ -4,8 +4,15 @@
     encodeURIComponent(file) +
     "?width=1400";
 
-  const logo = (domain) =>
-    "https://www.google.com/s2/favicons?sz=256&domain_url=https://" + domain;
+  const mark = (file) =>
+    "https://commons.wikimedia.org/wiki/Special:Redirect/file/" +
+    encodeURIComponent(file) + "?width=320";
+
+  const markFiles = {
+    haverford: "Haverford college wordmark black.png",
+    williams: "Williams College wordmark.svg",
+    bowdoin: "Bowdoin college blacklogo.png"
+  };
 
   const universities = [
     {
@@ -137,7 +144,7 @@
       source:"https://www.collegedata.fyi/schools/columbia/2024-25",
       note:"Columbia College & Columbia Engineering"
     }
-  ].map((u) => ({ ...u, logo: logo(u.domain) }));
+  ].map((u) => ({ ...u, logo: markFiles[u.id] ? mark(markFiles[u.id]) : null }));
 
   const input = document.getElementById("university-search");
   const results = document.getElementById("university-search-results");
@@ -306,8 +313,13 @@
       .join("")
       .slice(0, 3)
       .toUpperCase();
-    return '<span class="' + cls + ' university-logo-fallback university-logo-monogram" aria-hidden="true">' +
+    const fallback = '<span class="' + cls + ' university-logo-fallback university-logo-monogram" aria-hidden="true">' +
       escapeHtml(initials) + '</span>';
+    if (!u.logo) return fallback;
+    return '<span class="' + cls + ' university-mark-wrap">' +
+      '<img class="university-mark-image" src="' + escapeHtml(u.logo) + '" alt="" loading="lazy" ' +
+      'onerror="this.parentElement.outerHTML=\'' + fallback.replace(/'/g,"&#39;") + '\'">' +
+      '</span>';
   }
 
   function railScale(values, type, userScore) {
