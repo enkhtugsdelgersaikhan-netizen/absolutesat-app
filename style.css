@@ -4525,3 +4525,11 @@ select:hover,
 /* Emphasize the lowest SAT band without overpowering the guide */
 .sat-score-scale-row.retake{background:#fff8f5}
 .sat-score-scale-row.retake>i{color:#c94f2f;font-weight:800}
+
+/* Differentiate the three SAT score scales with restrained LexLogica glows */
+.sat-score-guide-scale.composite{border-color:#b9ddd6;box-shadow:0 0 0 1px rgba(14,115,103,.04),0 8px 22px rgba(14,115,103,.10)}
+.sat-score-guide-scale.composite .sat-score-scale-head{background:linear-gradient(180deg,#e9f7f3,#f4faf8)}
+.sat-score-guide-scale.reading{border-color:#bde4e5;box-shadow:0 0 0 1px rgba(72,194,199,.04),0 8px 22px rgba(72,194,199,.11)}
+.sat-score-guide-scale.reading .sat-score-scale-head{background:linear-gradient(180deg,#eafafb,#f5fcfc)}
+.sat-score-guide-scale.math{border-color:#a9d8d1;box-shadow:0 0 0 1px rgba(9,105,94,.04),0 8px 22px rgba(9,105,94,.12)}
+.sat-score-guide-scale.math .sat-score-scale-head{background:linear-gradient(180deg,#e3f4f1,#f2f9f7)}
