@@ -242,7 +242,7 @@
     }
   }
 
-  const UNIVERSITY_ASSET_CACHE_KEY = "lexlogica_university_assets_v4";
+  const UNIVERSITY_ASSET_CACHE_KEY = "lexlogica_university_assets_v6";
   const UNIVERSITY_ASSET_CACHE_MS = 30 * 24 * 60 * 60 * 1000;
 
   function applyUniversityAssets(assetResults) {
@@ -281,20 +281,28 @@
     } catch {}
 
     try {
-      const response = await fetch("/api/school-assets", {
-        method:"POST",
-        headers:{"content-type":"application/json"},
-        body:JSON.stringify({
-          schools:universities.map((u) => ({id:u.id,name:u.name}))
-        })
-      });
-      if (!response.ok) throw new Error("University asset request failed");
-      const payload = await response.json();
-      applyUniversityAssets(payload?.results || {});
+      const schools = universities.map((u) => ({id:u.id,name:u.name}));
+      const batches = [];
+      for (let i = 0; i < schools.length; i += 20) batches.push(schools.slice(i, i + 20));
+
+      const payloads = await Promise.all(batches.map(async (batch) => {
+        const response = await fetch("/api/school-assets", {
+          method:"POST",
+          headers:{"content-type":"application/json"},
+          body:JSON.stringify({schools:batch})
+        });
+        if (!response.ok) throw new Error("University asset batch failed");
+        return response.json();
+      }));
+
+      const mergedResults = {};
+      payloads.forEach((payload) => Object.assign(mergedResults, payload?.results || {}));
+      applyUniversityAssets(mergedResults);
+
       try {
         localStorage.setItem(UNIVERSITY_ASSET_CACHE_KEY, JSON.stringify({
           savedAt:Date.now(),
-          results:payload?.results || {}
+          results:mergedResults
         }));
       } catch {}
     } catch (error) {
