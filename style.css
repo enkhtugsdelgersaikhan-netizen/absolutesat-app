@@ -3352,3 +3352,69 @@ select:hover,
     .sat-weight-context{grid-template-columns:1fr}
     .sat-weight-number{min-height:auto}
 }
+
+
+/* SAT catalog number hierarchy + exact quartile alignment */
+.university-sat-section .sat-weight-number strong{font-size:44px}
+.university-sat-section .sat-weight-copy strong{font-size:1.08em}
+.university-sat-section .university-featured-content .university-score-band-values{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:0;
+}
+.university-sat-section .university-featured-content .university-score-band-values>div{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    padding:8px 4px;
+    text-align:center;
+}
+.university-sat-section .university-featured-content .university-score-band-values span{
+    width:100%;
+    min-height:24px;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    text-align:center;
+    font-size:9px;
+    line-height:1.2;
+}
+.university-sat-section .university-featured-content .university-score-band-values strong{
+    width:100%;
+    margin-top:5px;
+    text-align:center;
+    font-size:21px;
+    line-height:1;
+}
+.university-sat-section .university-card-scores{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:0;
+}
+.university-sat-section .university-card-scores>div{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding-left:4px;
+    padding-right:4px;
+    text-align:center;
+}
+.university-sat-section .university-card-scores span{
+    width:100%;
+    min-height:26px;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    white-space:normal;
+    text-align:center;
+    font-size:9px;
+    line-height:1.15;
+}
+.university-sat-section .university-card-scores strong{
+    width:100%;
+    margin-top:5px;
+    text-align:center;
+    font-size:19px;
+    line-height:1;
+}
+.university-sat-section .university-your-summary strong{font-size:27px}
+.university-sat-section .university-you-label{font-size:10px}
