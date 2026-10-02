@@ -317,11 +317,13 @@
   }
 
   function satAdmissionImpact(score, [lower, median, upper]) {
-    if (!Number.isFinite(score) || !(lower < median && median < upper)) return null;
+    if (![score, lower, median, upper].every(Number.isFinite)) return null;
 
+    const lowerSpan = Math.max(10, median - lower);
+    const upperSpan = Math.max(10, upper - median);
     const rawPosition = score >= median
-      ? (score - median) / (upper - median)
-      : (score - median) / (median - lower);
+      ? (score - median) / upperSpan
+      : (score - median) / lowerSpan;
 
     const quartilePosition = Math.max(-1, Math.min(1, rawPosition));
     const k = 0.15 * quartilePosition;
