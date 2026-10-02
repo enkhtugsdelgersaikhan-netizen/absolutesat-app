@@ -86,7 +86,7 @@ async function updateAbsolutePrepHeader(session = null) {
     if (session) {
 
         authButtons.classList.add("logged-in");
-        if (dashboardButton) dashboardButton.hidden = false;
+        if (dashboardButton) { dashboardButton.hidden = false; dashboardButton.classList.add("is-authenticated"); dashboardButton.removeAttribute("aria-hidden"); }
 
         authButtons.innerHTML = "";
 
@@ -100,7 +100,7 @@ async function updateAbsolutePrepHeader(session = null) {
     ======================================================== */
 
     authButtons.classList.remove("logged-in");
-    if (dashboardButton) dashboardButton.hidden = true;
+    if (dashboardButton) { dashboardButton.hidden = true; dashboardButton.classList.remove("is-authenticated"); dashboardButton.setAttribute("aria-hidden","true"); }
 
     authButtons.innerHTML = `
 
