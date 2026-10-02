@@ -33,7 +33,7 @@
 
     <link
         rel="stylesheet"
-        href="style.css?v=universities-16"
+        href="style.css?v=universities-17"
     >
 
 </head>
@@ -208,11 +208,70 @@
                     <h2 id="university-sat-title">Where does a score sit?</h2>
                     <p class="university-sat-philosophy"><strong>The SAT does not determine whether you stay in the acceptance pile. But it can help your application get into the admissions conversation in the first place.</strong> A strong score can make the academic case easier to establish; after that, rigor, grades, honors, activities, essays, recommendations, context, and personal qualities shape the larger decision.</p>
                     <div class="sat-weight-context">
-                        <div class="sat-weight-top-row">
-                            <div class="sat-weight-number"><strong>~15%</strong><span>A useful estimate of the standardized academic signal</span><small>Not an official admissions weight</small></div>
-                            <div class="sat-weight-card sat-weight-why">
-                                <p><strong>Why ~15%?</strong> Think of the application as roughly six lanes: <em>academic program/rigor, academic performance, extracurriculars, honors, school support, and personality.</em> One lane out of six is <strong>16.7%</strong>, so we use <strong>~15%</strong> as a simple estimate for the academic-performance/testing lane—not an official formula.</p>
+                        <div class="sat-model-grid">
+                            <div class="sat-weight-primary">
+                                <div class="sat-weight-number">
+                                    <strong>~15%</strong>
+                                    <span>A useful estimate of the standardized academic signal</span>
+                                    <small>Not an official admissions weight</small>
+                                </div>
+                                <div class="sat-weight-card sat-weight-why">
+                                    <p><strong>Why ~15%?</strong> Think of the application as roughly six lanes: <em>academic program/rigor, academic performance, extracurriculars, honors, school support, and personality.</em> One lane out of six is 16.7%, so LexLogica uses <strong>~15%</strong> as a simple modeling weight for the SAT-related academic signal.</p>
+                                </div>
                             </div>
+
+                            <section class="sat-impact-calculator" aria-labelledby="sat-impact-title">
+                                <div class="sat-impact-heading">
+                                    <div>
+                                        <span class="sat-impact-kicker">SAT IMPACT MODEL</span>
+                                        <h3 id="sat-impact-title">How much is your SAT changing the file?</h3>
+                                    </div>
+                                    <span class="sat-impact-weight">W<sub>SAT</sub> = 15%</span>
+                                </div>
+                                <p class="sat-impact-intro">Compare your score with an otherwise identical applicant whose SAT is exactly at the school's median. The result is a <strong>modeled application-score difference attributable to SAT</strong>—not a literal change in admission probability.</p>
+
+                                <div class="sat-impact-school-line">
+                                    <span>Quartiles loaded from</span>
+                                    <strong id="sat-impact-school">selected university</strong>
+                                </div>
+
+                                <div class="sat-impact-input-grid">
+                                    <label>
+                                        <span>Your SAT</span>
+                                        <input id="sat-impact-score" type="number" min="400" max="1600" step="10" inputmode="numeric" placeholder="1530">
+                                    </label>
+                                    <label>
+                                        <span>Lower quartile</span>
+                                        <input id="sat-impact-lower" type="number" min="400" max="1600" step="10" inputmode="numeric" value="1520">
+                                    </label>
+                                    <label>
+                                        <span>Median</span>
+                                        <input id="sat-impact-median" type="number" min="400" max="1600" step="10" inputmode="numeric" value="1550">
+                                    </label>
+                                    <label>
+                                        <span>Upper quartile</span>
+                                        <input id="sat-impact-upper" type="number" min="400" max="1600" step="10" inputmode="numeric" value="1570">
+                                    </label>
+                                </div>
+
+                                <button id="sat-impact-calculate" class="sat-impact-button" type="button">Calculate SAT impact</button>
+
+                                <div id="sat-impact-result" class="sat-impact-result" aria-live="polite">
+                                    <span class="sat-impact-result-label">Modeled SAT effect vs. median</span>
+                                    <strong>Enter your SAT</strong>
+                                    <p>We will compare it with the selected school's quartiles.</p>
+                                </div>
+
+                                <div class="sat-impact-explainer">
+                                    <strong>How the model works</strong>
+                                    <p>Lower quartile, median, and upper quartile are treated as the 25%, 50%, and 75% positions inside the SAT lane. With SAT weighted at 15% of the modeled application, moving from the median to either quartile changes the total modeled file by <strong>3.75 percentage points</strong>. Effects are capped beyond the reported quartiles because the data do not tell us the payoff of scores farther into the tails.</p>
+                                    <div class="sat-impact-anchors" aria-label="Model anchors">
+                                        <span><b>Lower quartile</b><em>−3.75 pp</em></span>
+                                        <span><b>Median</b><em>0 pp</em></span>
+                                        <span><b>Upper quartile</b><em>+3.75 pp</em></span>
+                                    </div>
+                                </div>
+                            </section>
                         </div>
                         <div class="sat-weight-card sat-weight-full-row"><p><strong>A lower SAT means the rest must compensate.</strong> A score below a college's typical range weakens one piece of the academic evidence. Strong grades and rigor can reinforce the academic side, while honors, extracurriculars, essays, recommendations, and personal qualities can strengthen the rest of the application. They can compensate in a holistic decision, but they do not literally convert into SAT points. <a href="https://www.justice.gov/d9/case-documents/attachments/2020/11/12/students_for_fair_admissions_inc._v._president_fellows_of_harvard_college_no._19-2005_1st_cir._11.12.20.pdf" target="_blank" rel="noopener noreferrer">First Circuit findings ↗</a></p></div>
                         <div class="sat-weight-card sat-weight-full-row"><p><strong>ACT or exceptional class rank can substitute more directly.</strong> A strong ACT supplies another standardized academic signal. A genuinely excellent class rank can also provide powerful comparative academic evidence—but only when the college knows and trusts the high school's rigor, grading distribution, and ranking context. Otherwise, rank helps contextualize the transcript; it is not a clean substitute for standardized testing.</p></div>
@@ -288,7 +347,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js?v=subjects-1"></script>
-<script src="/university-catalog.js?v=8"></script>
+<script src="/university-catalog.js?v=9"></script>
 
 </body>
 </html>
