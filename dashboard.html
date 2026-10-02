@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=universities-3">
-    <link rel="stylesheet" href="dashboard.css?v=sat-profile-1">
+    <link rel="stylesheet" href="dashboard.css?v=sat-profile-2">
 </head>
 <body>
 <header class="header"><div class="header-container"><a href="/" class="logo-link" aria-label="LexLogica home"><img src="/Logo.png" alt="LexLogica" class="logo"></a><nav class="navigation" aria-label="Main navigation"><a href="/mathematics" class="nav-button">Mathematics</a><a href="/mock-tests" class="nav-button">Mock Tests</a><a href="/reading-writing" class="nav-button">Reading and Writing</a></nav><a href="/dashboard" class="dashboard-button site-dashboard">Dashboard</a><div class="auth-buttons"><a href="/login" class="login-button">Login</a></div><button class="mobile-menu-button" aria-label="Open navigation" aria-expanded="false" type="button">☰</button></div></header>
@@ -48,15 +48,22 @@
                 <div>
                     <div class="panel-eyebrow">SAT PROFILE</div>
                     <h2>Your current SAT</h2>
-                    <p class="dashboard-muted sat-profile-intro">Save your latest section scores. LexLogica will use them to place a small <strong>You</strong> marker on university score bands on the homepage.</p>
+                    <p class="dashboard-muted sat-profile-intro">Save your latest section scores and a future score goal. LexLogica will use both on the homepage to show your current SAT position and how your goal would change the SAT-only admissions multiplier for each university.</p>
                 </div>
-                <div class="sat-total-preview" aria-live="polite">
-                    <span>Composite</span>
-                    <strong id="sat-total-preview">—</strong>
+                <div class="sat-total-preview-group" aria-live="polite">
+                    <div class="sat-total-preview">
+                        <span>Current</span>
+                        <strong id="sat-total-preview">—</strong>
+                    </div>
+                    <div class="sat-total-preview sat-goal-total-preview">
+                        <span>Goal</span>
+                        <strong id="sat-goal-total-preview">—</strong>
+                    </div>
                 </div>
             </div>
 
             <form id="sat-profile-form" class="sat-profile-form" novalidate>
+                <div class="sat-profile-group-label"><strong>Current SAT</strong><span>Your latest score</span></div>
                 <label class="sat-score-field" for="sat-reading-writing">
                     <span>Reading &amp; Writing</span>
                     <input id="sat-reading-writing" name="sat-reading-writing" type="number" min="200" max="800" step="10" inputmode="numeric" placeholder="e.g. 750">
@@ -69,6 +76,20 @@
                     <small>200–800, in 10-point increments</small>
                 </label>
 
+                <div class="sat-profile-group-label sat-goal-label"><strong>Future SAT goal</strong><span>Optional target score</span></div>
+
+                <label class="sat-score-field sat-goal-field" for="sat-goal-reading-writing">
+                    <span>Reading &amp; Writing goal</span>
+                    <input id="sat-goal-reading-writing" name="sat-goal-reading-writing" type="number" min="200" max="800" step="10" inputmode="numeric" placeholder="e.g. 780">
+                    <small>200–800, in 10-point increments</small>
+                </label>
+
+                <label class="sat-score-field sat-goal-field" for="sat-goal-math">
+                    <span>Math goal</span>
+                    <input id="sat-goal-math" name="sat-goal-math" type="number" min="200" max="800" step="10" inputmode="numeric" placeholder="e.g. 800">
+                    <small>200–800, in 10-point increments</small>
+                </label>
+
                 <div class="sat-profile-actions">
                     <button type="submit" class="dashboard-primary-button" id="sat-profile-save">Save SAT scores</button>
                     <button type="button" class="dashboard-profile-clear" id="sat-profile-clear">Clear</button>
@@ -76,7 +97,7 @@
                 </div>
             </form>
 
-            <p class="sat-profile-note">Your composite is calculated automatically by adding the two section scores. Scores are saved to your signed-in account when possible and cached on this device for fast access.</p>
+            <p class="sat-profile-note">Current and goal composites are calculated automatically by adding the two section scores. Your future goal is optional. Saved values are synced to your signed-in account when possible and cached on this device for fast access.</p>
         </section>
 
 
@@ -121,7 +142,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js?v=subjects-1"></script>
-<script src="dashboard.js?v=sat-profile-1"></script>
+<script src="dashboard.js?v=sat-profile-2"></script>
 <script src="/study.js"></script>
 </body>
 </html>
