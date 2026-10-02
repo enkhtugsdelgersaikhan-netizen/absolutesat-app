@@ -1,4 +1,5 @@
 const WIKI_API = "https://en.wikipedia.org/w/api.php";
+const COMMONS_API = "https://commons.wikimedia.org/w/api.php";
 
 const titleOverrides = {
   "University of Michigan, Ann Arbor": "University of Michigan",
@@ -80,6 +81,25 @@ async function wikiQuery(params) {
   return response.json();
 }
 
+async function commonsQuery(params) {
+  const url = new URL(COMMONS_API);
+  Object.entries({
+    action: "query",
+    format: "json",
+    formatversion: "2",
+    origin: "*",
+    ...params
+  }).forEach(([key, value]) => url.searchParams.set(key, String(value)));
+  const response = await fetch(url, {
+    headers: {
+      "User-Agent": "LexLogica/1.0 (educational SAT context catalog)",
+      Accept: "application/json"
+    }
+  });
+  if (!response.ok) throw new Error("Wikimedia Commons request failed: " + response.status);
+  return response.json();
+}
+
 function chunks(values, size) {
   const out = [];
   for (let i = 0; i < values.length; i += size) out.push(values.slice(i, i + size));
@@ -122,7 +142,7 @@ async function resolveFiles(fileTitles) {
   const groups = chunks([...new Set(fileTitles.filter(Boolean))], 40);
   const payloads = await Promise.all(groups.map((group) => wikiQuery({
     prop: "imageinfo",
-    iiprop: "url|canonicaltitle",
+    iiprop: "url|canonicaltitle|size|mime|mediatype",
     iiurlwidth: "1600",
     titles: group.join("|")
   })));
@@ -131,13 +151,138 @@ async function resolveFiles(fileTitles) {
       const info = page?.imageinfo?.[0];
       if (!info) continue;
       map.set(page.title, {
+        title: page.title,
         url: info.thumburl || info.url || null,
         original: info.url || null,
-        source: info.descriptionurl || ("https://en.wikipedia.org/wiki/" + encodeURIComponent(page.title.replace(/ /g, "_")))
+        source: info.descriptionurl || ("https://commons.wikimedia.org/wiki/" + encodeURIComponent(page.title.replace(/ /g, "_"))),
+        width: Number(info.width) || null,
+        height: Number(info.height) || null,
+        mime: info.mime || null,
+        mediatype: info.mediatype || null
       });
     }
   }
   return map;
+}
+
+
+function isVectorAsset(asset) {
+  return asset?.mime === "image/svg+xml" || /\.svg(?:$|\?)/i.test(String(asset?.original || asset?.url || ""));
+}
+
+function isCrispSymbol(asset) {
+  if (!asset) return false;
+  if (isVectorAsset(asset)) return true;
+  return Math.max(Number(asset.width) || 0, Number(asset.height) || 0) >= 256;
+}
+
+function schoolTokenScore(title, schoolName) {
+  const hay = String(title || "").toLowerCase();
+  const tokens = String(schoolName || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9 ]/g, " ")
+    .split(/\s+/)
+    .filter((token) => token.length >= 4 && !["university","college","institute","technology","state"].includes(token));
+  return tokens.reduce((score, token) => score + (hay.includes(token) ? 3 : 0), 0);
+}
+
+function commonsAsset(page) {
+  const info = page?.imageinfo?.[0];
+  if (!info) return null;
+  return {
+    title: page.title || null,
+    url: info.thumburl || info.url || null,
+    original: info.url || null,
+    source: info.descriptionurl || ("https://commons.wikimedia.org/wiki/" + encodeURIComponent(String(page.title || "").replace(/ /g, "_"))),
+    width: Number(info.width) || null,
+    height: Number(info.height) || null,
+    mime: info.mime || null,
+    mediatype: info.mediatype || null
+  };
+}
+
+async function searchCommonsSymbol(school) {
+  const searches = [school.name + " logo", school.name + " seal"];
+  for (const query of searches) {
+    const payload = await commonsQuery({
+      generator: "search",
+      gsrsearch: query,
+      gsrnamespace: "6",
+      gsrlimit: "12",
+      prop: "imageinfo",
+      iiprop: "url|size|mime|mediatype",
+      iiurlwidth: "640"
+    });
+    const ranked = (payload?.query?.pages || [])
+      .map((page) => {
+        const asset = commonsAsset(page);
+        return {
+          asset,
+          score: symbolScore(page.title) + schoolTokenScore(page.title, school.name)
+        };
+      })
+      .filter((item) => item.asset && item.score > 0 && isCrispSymbol(item.asset))
+      .sort((a, b) => b.score - a.score);
+    if (ranked.length) return ranked[0].asset;
+  }
+  return null;
+}
+
+async function searchCommonsCampus(school) {
+  const searches = [school.name + " campus", school.name + " hall"];
+  for (const query of searches) {
+    const payload = await commonsQuery({
+      generator: "search",
+      gsrsearch: query,
+      gsrnamespace: "6",
+      gsrlimit: "16",
+      prop: "imageinfo",
+      iiprop: "url|size|mime|mediatype",
+      iiurlwidth: "1600"
+    });
+    const ranked = (payload?.query?.pages || [])
+      .map((page) => {
+        const asset = commonsAsset(page);
+        return {
+          asset,
+          score: campusScore(page.title) + schoolTokenScore(page.title, school.name)
+        };
+      })
+      .filter((item) => {
+        if (!item.asset || item.score <= 0 || isVectorAsset(item.asset)) return false;
+        return Math.max(Number(item.asset.width) || 0, Number(item.asset.height) || 0) >= 900;
+      })
+      .sort((a, b) => b.score - a.score);
+    if (ranked.length) return ranked.slice(0, 2).map((item) => item.asset);
+  }
+  return [];
+}
+
+async function resolveCommonsFallbacks(picks, fileMap) {
+  const out = new Map();
+  const work = picks.filter((pick) => {
+    const currentSymbol = pick.symbolTitle ? fileMap.get(pick.symbolTitle) : null;
+    const currentCampus = pick.campusTitle ? fileMap.get(pick.campusTitle) : null;
+    const pageCampus = !pick.pageImageLooksLikeSymbol && pick.pageThumb;
+    return !isCrispSymbol(currentSymbol) || (!currentCampus && !pageCampus);
+  });
+
+  for (const group of chunks(work, 10)) {
+    const rows = await Promise.all(group.map(async (pick) => {
+      const currentSymbol = pick.symbolTitle ? fileMap.get(pick.symbolTitle) : null;
+      const currentCampus = pick.campusTitle ? fileMap.get(pick.campusTitle) : null;
+      const pageCampus = !pick.pageImageLooksLikeSymbol && pick.pageThumb;
+      const needSymbol = !isCrispSymbol(currentSymbol);
+      const needCampus = !currentCampus && !pageCampus;
+      const [symbol, campuses] = await Promise.all([
+        needSymbol ? searchCommonsSymbol(pick.school).catch(() => null) : Promise.resolve(null),
+        needCampus ? searchCommonsCampus(pick.school).catch(() => []) : Promise.resolve([])
+      ]);
+      return [pick.school.id, { symbol, campuses }];
+    }));
+    rows.forEach(([id, assets]) => out.set(id, assets));
+  }
+  return out;
 }
 
 async function searchPageForSchool(school) {
@@ -193,18 +338,34 @@ async function buildAssets(schools) {
     picks.flatMap((pick) => [pick.symbolTitle, pick.campusTitle])
   );
 
+  const commonsFallbacks = await resolveCommonsFallbacks(picks, fileMap);
+
   const results = {};
   for (const pick of picks) {
-    const symbol = pick.symbolTitle ? fileMap.get(pick.symbolTitle) : null;
-    const campus = pick.campusTitle ? fileMap.get(pick.campusTitle) : null;
-    const campusUrl = campus?.url || (!pick.pageImageLooksLikeSymbol ? pick.pageThumb : null) || null;
+    const pageSymbol = pick.symbolTitle ? fileMap.get(pick.symbolTitle) : null;
+    const pageCampus = pick.campusTitle ? fileMap.get(pick.campusTitle) : null;
+    const extra = commonsFallbacks.get(pick.school.id) || {};
+    const symbol = isCrispSymbol(pageSymbol) ? pageSymbol : (extra.symbol || null);
+
+    const pageCampusUrl = pageCampus?.url || (!pick.pageImageLooksLikeSymbol ? pick.pageThumb : null) || null;
+    const searchedCampuses = Array.isArray(extra.campuses) ? extra.campuses : [];
+    const searchedPrimary = searchedCampuses[0] || null;
+    const searchedSecondary = searchedCampuses[1] || null;
+    const campusUrl = pageCampusUrl || searchedPrimary?.url || null;
+    const campusFallbackUrl = pageCampusUrl
+      ? (searchedPrimary?.url || null)
+      : (searchedSecondary?.url || null);
 
     results[pick.school.id] = {
       wiki_title: pick.page.title || null,
       mark_url: symbol?.original || symbol?.url || null,
       mark_source: symbol?.source || null,
+      mark_width: symbol?.width || null,
+      mark_height: symbol?.height || null,
+      mark_is_vector: isVectorAsset(symbol),
       campus_url: campusUrl,
-      campus_source: campus?.source || ("https://en.wikipedia.org/wiki/" + encodeURIComponent(String(pick.page.title || "").replace(/ /g, "_")))
+      campus_fallback_url: campusFallbackUrl,
+      campus_source: pageCampus?.source || searchedPrimary?.source || ("https://en.wikipedia.org/wiki/" + encodeURIComponent(String(pick.page.title || "").replace(/ /g, "_")))
     };
   }
 
