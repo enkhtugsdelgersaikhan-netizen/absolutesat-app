@@ -33,7 +33,7 @@
 
     <link
         rel="stylesheet"
-        href="style.css?v=universities-28"
+        href="style.css?v=universities-29"
     >
 
 </head>
@@ -207,7 +207,8 @@
                     <p class="section-kicker">SAT IN CONTEXT</p>
                     <h2 id="university-sat-title">Where does a score sit?</h2>
                     <p class="university-sat-philosophy"><strong>The SAT does not determine whether you stay in the acceptance pile. But it can help your application get into the admissions conversation in the first place.</strong> A strong score can make the academic case easier to establish; after that, rigor, grades, honors, activities, essays, recommendations, context, and personal qualities shape the larger decision.</p>
-                    <div class="sat-weight-context">
+                    <div class="sat-context-workspace">
+                        <div class="sat-weight-context">
                         <div class="sat-weight-top-row">
                             <div class="sat-weight-number">
                                 <strong>~15%</strong>
@@ -220,6 +221,20 @@
                         </div>
                         <div class="sat-weight-card sat-weight-full-row"><p><strong>A lower SAT means the rest must compensate.</strong> A score below a college's typical range weakens one piece of the academic evidence. Strong grades and rigor can reinforce the academic side, while honors, extracurriculars, essays, recommendations, and personal qualities can strengthen the rest of the application. They can compensate in a holistic decision, but they do not literally convert into SAT points. <a href="https://www.justice.gov/d9/case-documents/attachments/2020/11/12/students_for_fair_admissions_inc._v._president_fellows_of_harvard_college_no._19-2005_1st_cir._11.12.20.pdf" target="_blank" rel="noopener noreferrer">First Circuit findings ↗</a></p></div>
                         <div class="sat-weight-card sat-weight-full-row"><p><strong>ACT or exceptional class rank can substitute more directly.</strong> A strong ACT supplies another standardized academic signal. A genuinely excellent class rank can also provide powerful comparative academic evidence—but only when the college knows and trusts the high school's rigor, grading distribution, and ranking context. Otherwise, rank helps contextualize the transcript; it is not a clean substitute for standardized testing.</p></div>
+                        </div>
+                        <aside class="sat-context-profile">
+                            <div class="sat-context-profile-head">
+                                <div><span>YOUR SAT</span><h3>Set your score</h3></div>
+                                <div class="sat-context-total"><small>Composite</small><strong id="sat-total-preview">—</strong></div>
+                            </div>
+                            <p>Enter your latest section scores to personalize every university comparison below.</p>
+                            <form id="sat-profile-form" class="sat-context-profile-form" novalidate>
+                                <label for="sat-reading-writing"><span>Reading &amp; Writing</span><input id="sat-reading-writing" type="number" min="200" max="800" step="10" inputmode="numeric" placeholder="750"><small>200–800</small></label>
+                                <label for="sat-math"><span>Math</span><input id="sat-math" type="number" min="200" max="800" step="10" inputmode="numeric" placeholder="780"><small>200–800</small></label>
+                                <div class="sat-context-profile-actions"><button id="sat-profile-save" type="submit">Save SAT scores</button><button id="sat-profile-clear" type="button">Clear</button></div>
+                                <span id="sat-profile-status" class="sat-context-profile-status" role="status" aria-live="polite"></span>
+                            </form>
+                        </aside>
                     </div>
                 </div>
 
@@ -291,7 +306,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js?v=subjects-1"></script>
-<script src="/university-catalog.js?v=20"></script>
+<script src="/university-catalog.js?v=21"></script>
 
 </body>
 </html>
