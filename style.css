@@ -4533,3 +4533,9 @@ select:hover,
 .sat-score-guide-scale.reading .sat-score-scale-head{background:linear-gradient(180deg,#eafafb,#f5fcfc)}
 .sat-score-guide-scale.math{border-color:#a9d8d1;box-shadow:0 0 0 1px rgba(9,105,94,.04),0 8px 22px rgba(9,105,94,.12)}
 .sat-score-guide-scale.math .sat-score-scale-head{background:linear-gradient(180deg,#e3f4f1,#f2f9f7)}
+
+/* Score-guide highlight follows the user's entered SAT; columns themselves stay neutral. */
+.sat-score-guide-scale.composite,.sat-score-guide-scale.reading,.sat-score-guide-scale.math{border-color:#dfeae7;box-shadow:none}
+.sat-score-guide-scale.composite .sat-score-scale-head,.sat-score-guide-scale.reading .sat-score-scale-head,.sat-score-guide-scale.math .sat-score-scale-head{background:#f1f8f6}
+.sat-score-scale-row.is-user-range{position:relative;z-index:1;background:#edf9f6!important;box-shadow:inset 0 0 0 1.5px rgba(14,115,103,.45),0 0 16px rgba(14,115,103,.18)}
+.sat-score-scale-row.is-user-range>b{color:#075f56}
