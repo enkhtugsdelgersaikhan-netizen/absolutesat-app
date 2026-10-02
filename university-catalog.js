@@ -534,6 +534,9 @@
   }
   function scoreRelationship(score, [lower, median, upper]) {
     if (score < lower) return "Below the lower quartile";
+    if (lower === median && median === upper && score === lower) return "At the lower quartile, median, and upper quartile";
+    if (lower === median && score === lower) return "At the lower quartile and median";
+    if (median === upper && score === median) return "At the median and upper quartile";
     if (score === lower) return "At the lower quartile";
     if (score < median) return "Between the lower quartile and median";
     if (score === median) return "At the median";
@@ -544,6 +547,15 @@
 
   function positionDisplay(score, [lower, median, upper]) {
     if (score < lower) return { title: "Below lower quartile", detail: "Below " + lower };
+    if (lower === median && median === upper && score === lower) {
+      return { title: "At all three quartiles", detail: "Lower · Median · Upper · " + lower };
+    }
+    if (lower === median && score === lower) {
+      return { title: "At lower quartile and median", detail: "Lower · Median · " + lower };
+    }
+    if (median === upper && score === median) {
+      return { title: "At median and upper quartile", detail: "Median · Upper · " + median };
+    }
     if (score === lower) return { title: "At lower quartile", detail: "Lower quartile · " + lower };
     if (score < median) return { title: "Lower quartile to median", detail: lower + " to " + median };
     if (score === median) return { title: "At median", detail: "Median · " + median };
@@ -554,6 +566,8 @@
 
   function relationshipClass(score, [lower, median, upper]) {
     if (score < lower) return "below-lower";
+    if (lower === median && score === lower) return "at-median";
+    if (median === upper && score === median) return "at-upper";
     if (score === lower) return "at-lower";
     if (score < median) return "lower-to-median";
     if (score === median) return "at-median";
@@ -574,6 +588,14 @@
         '<span class="sat-rail-marker-copy"><small>' + name + '</small><strong>' + value + '</strong></span>' +
       '</div>';
 
+    const quartileMarkers = lower === median && median === upper
+      ? marker("median","Lower · Median · Upper",median)
+      : lower === median
+        ? marker("median","Lower · Median",median) + marker("upper","Upper",upper)
+        : median === upper
+          ? marker("lower","Lower",lower) + marker("median","Median · Upper",median)
+          : marker("lower","Lower",lower) + marker("median","Median",median) + marker("upper","Upper",upper);
+
     return '<section class="university-score-band university-score-rail">' +
       '<div class="university-score-band-header">' +
         '<h4>' + escapeHtml(label) + '</h4>' +
@@ -587,9 +609,7 @@
       '<div class="sat-rail" role="img" aria-label="' + escapeHtml(label) + ': lower quartile ' + lower + ', median ' + median + ', upper quartile ' + upper + (hasUser ? ', your score ' + userScore : '') + '">' +
         '<div class="sat-rail-track"></div>' +
         '<div class="sat-rail-middle" style="left:' + pos(lower) + '%;width:' + (scale.position(upper)-scale.position(lower)).toFixed(2) + '%"></div>' +
-        marker("lower","Lower",lower) +
-        marker("median","Median",median) +
-        marker("upper","Upper",upper) +
+        quartileMarkers +
         (hasUser ? marker("you","You",userScore) : '') +
       '</div>' +
       '<div class="sat-rail-scale-note"><span>' + scale.min + '</span><span>Auto-zoomed comparison</span><span>' + scale.max + '</span></div>' +
