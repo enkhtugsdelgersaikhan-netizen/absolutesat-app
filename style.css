@@ -4321,3 +4321,6 @@ select:hover,
 .university-shape-legend .median i{background:#18a99a;border:1px solid #118a7e}
 .university-shape-legend .upper i{background:#075f58;border:1px solid #044943}
 .university-shape-legend .you i{background:#f05a32;border:1px solid #ce4523}
+
+/* Slight orange fill for the user's SAT score triangle */
+.university-shape-series.you{fill:rgba(240,90,50,.10)}
