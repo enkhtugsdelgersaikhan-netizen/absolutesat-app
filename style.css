@@ -4704,3 +4704,19 @@ select:hover,
   margin-top:2px;
   padding-top:0;
 }
+
+.sat-context-workspace{align-items:start!important}
+.sat-weight-redesign{height:auto!important;min-height:0!important;align-self:start!important}
+.sat-weight-redesign .sat-weight-main{min-height:0!important}
+.sat-weight-redesign .sat-weight-insights{height:auto!important}
+.sat-weight-redesign .sat-weight-insight{min-height:0!important}
+.sat-context-profile{height:auto!important;min-height:0!important;align-self:start!important;padding:10px 12px!important}
+.sat-context-profile-head h3{font-size:17px;line-height:1.12}
+.sat-context-total strong{font-size:25px;line-height:1}
+.sat-context-profile>p{margin:4px 0 7px!important;font-size:9px;line-height:1.35!important}
+.sat-context-profile-form{gap:5px!important}
+.sat-context-profile-form label>span{font-size:8px}
+.sat-context-profile-form label>small{font-size:6.5px}
+.sat-context-profile-form input{min-height:0!important;height:34px!important;padding:5px 9px!important;font-size:14px;border-radius:9px}
+.sat-context-profile-actions{margin-top:1px!important;padding-top:0!important;gap:6px}
+.sat-context-profile-actions button{min-height:0!important;height:32px!important;padding:5px 10px!important;border-radius:9px}
