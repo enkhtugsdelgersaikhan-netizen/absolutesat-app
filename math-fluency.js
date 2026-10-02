@@ -113,6 +113,8 @@ category=document.getElementById("formula-category"),
 statusButtons=[...document.querySelectorAll(".vocab-status-filter-button")],
 expressionEl=document.getElementById("formula-expression"),
 topicEl=document.getElementById("formula-topic"),
+promptEl=document.getElementById("formula-prompt"),
+iconEl=document.getElementById("formula-icon"),
 catEl=document.getElementById("formula-category-label"),
 solvedStatusEl=document.getElementById("formula-solved-status"),
 reviewStatusEl=document.getElementById("formula-review-status"),
@@ -136,6 +138,96 @@ countEl=document.getElementById("formula-count"),
 statusSummary=document.getElementById("formula-status-summary");
 
 const STATE_KEY="lexlogica_formula_fluency_state_v1";
+
+const PROMPTS={
+  "slope-intercept":"A line has slope m and y-intercept b. How can its equation be written?",
+  "slope-two-points":"Given two points (x₁, y₁) and (x₂, y₂), how do you find the slope between them?",
+  "point-slope":"A line has slope m and passes through (x₁, y₁). What equation form can represent the line?",
+  "standard-linear":"What is the standard form of a linear equation in x and y?",
+  "linear-solve":"For ax + b = c, how can x be isolated?",
+  "direct-variation":"If y varies directly with x with constant of proportionality k, how are y and x related?",
+  "x-intercept":"What value do you set y equal to when finding an x-intercept?",
+  "y-intercept":"What value do you set x equal to when finding a y-intercept?",
+  "parallel-lines":"What relationship do the slopes of two nonvertical parallel lines have?",
+  "perpendicular-lines":"What relationship do the slopes of two nonvertical perpendicular lines have?",
+  "inequality-flip":"What happens to an inequality sign when both sides are multiplied or divided by a negative number?",
+  "difference-squares":"How does a difference of two perfect squares factor?",
+  "quadratic-formula":"What formula gives the solutions of ax² + bx + c = 0?",
+  "discriminant":"What expression determines how many real solutions a quadratic equation has?",
+  "vertex-x":"For y = ax² + bx + c, how do you find the x-coordinate of the vertex?",
+  "exponential-growth":"A quantity starts at P and grows by rate r each period. What model gives its value after t periods?",
+  "exponential-decay":"A quantity starts at P and decreases by rate r each period. What model gives its value after t periods?",
+  "percent":"How do you calculate what percent a part is of a whole?",
+  "percent-change":"How do you calculate percent change from an original value to a new value?",
+  "mean":"How do you calculate the arithmetic mean of n values?",
+  "weighted-mean":"How do you calculate a weighted mean?",
+  "probability":"For equally likely outcomes, how do you calculate the probability of event A?",
+  "complement":"If you know P(A), how do you find the probability that A does not occur?",
+  "conditional-probability":"How do you calculate the probability of A given that B has occurred?",
+  "rectangle-area":"What is the area of a rectangle with length ℓ and width w?",
+  "triangle-area":"What is the area of a triangle with base b and perpendicular height h?",
+  "trapezoid-area":"What is the area of a trapezoid with parallel bases b₁ and b₂ and height h?",
+  "circle-circumference":"What is the circumference of a circle with radius r?",
+  "circle-area":"What is the area of a circle with radius r?",
+  "arc-length-deg":"A circle has radius r and central angle θ measured in degrees. What is the arc length?",
+  "arc-length-rad":"A circle has radius r and central angle θ measured in radians. What is the arc length?",
+  "sector-area-deg":"A sector has radius r and central angle θ measured in degrees. What is its area?",
+  "sector-area-rad":"A sector has radius r and central angle θ measured in radians. What is its area?",
+  "circle-equation":"A circle has center (h, k) and radius r. What is its equation?",
+  "pythagorean":"In a right triangle with legs a and b and hypotenuse c, what relationship connects the side lengths?",
+  "distance":"How do you find the distance between (x₁, y₁) and (x₂, y₂)?",
+  "midpoint":"How do you find the midpoint of a segment with endpoints (x₁, y₁) and (x₂, y₂)?",
+  "45-45-90":"What is the side-length ratio in a 45°-45°-90° triangle?",
+  "30-60-90":"What is the side-length ratio in a 30°-60°-90° triangle?",
+  "sine":"In a right triangle, how is sin θ defined?",
+  "cosine":"In a right triangle, how is cos θ defined?",
+  "tangent":"In a right triangle, how is tan θ defined?",
+  "degree-radian":"What equality connects degrees and radians?",
+  "triangle-sum":"What is the sum of the three interior angles of a triangle?",
+  "polygon-sum":"What formula gives the sum of the interior angles of an n-sided polygon?",
+  "regular-exterior":"What is the measure of each exterior angle of a regular n-gon?",
+  "similarity":"If two figures are similar with linear scale factor k, how do corresponding side lengths compare?",
+  "scale-area":"If all lengths scale by a factor of k, by what factor does area change?",
+  "scale-volume":"If all lengths scale by a factor of k, by what factor does volume change?",
+  "rect-prism-volume":"What is the volume of a rectangular prism with length ℓ, width w, and height h?",
+  "rect-prism-sa":"What is the surface area of a rectangular prism with length ℓ, width w, and height h?",
+  "cylinder-volume":"What is the volume of a cylinder with radius r and height h?",
+  "cylinder-sa":"What is the surface area of a closed cylinder with radius r and height h?",
+  "sphere-volume":"What is the volume of a sphere with radius r?",
+  "sphere-area":"What is the surface area of a sphere with radius r?",
+  "cone-volume":"What is the volume of a cone with radius r and perpendicular height h?",
+  "pyramid-volume":"What is the volume of a pyramid with base area B and perpendicular height h?"
+};
+
+function promptFor(item){
+  return PROMPTS[item.id]||("What formula or relationship should you know for "+item.topic.toLowerCase()+"?");
+}
+
+function iconFor(item){
+  const id=item.id;
+  let kind="algebra";
+  if(/cylinder/.test(id))kind="cylinder";
+  else if(/sphere/.test(id))kind="sphere";
+  else if(/circle|arc|sector|tangent-radius/.test(id))kind="circle";
+  else if(/triangle|pythagorean|sine|cosine|tangent|trig/.test(id))kind="triangle";
+  else if(/percent|probability|mean|range|residual|sample|margin|ratio|proportion|frequency/.test(id))kind="data";
+  else if(/quadratic|parabola|vertex|discriminant|root/.test(id))kind="parabola";
+  else if(/rect-prism|prism|pyramid|cone/.test(id))kind="solid";
+  else if(/line|slope|intercept|system|variation|linear/.test(id))kind="line";
+
+  const icons={
+    cylinder:'<svg viewBox="0 0 64 64" fill="none"><ellipse cx="32" cy="15" rx="17" ry="7" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/><path d="M15 15v31c0 3.9 7.6 7 17 7s17-3.1 17-7V15" fill="#f0fdfa" stroke="#0f766e" stroke-width="2"/><ellipse cx="32" cy="46" rx="17" ry="7" fill="#e6fffa" stroke="#0f766e" stroke-width="2"/></svg>',
+    sphere:'<svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="20" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/><ellipse cx="32" cy="32" rx="20" ry="8" stroke="#0284c7" stroke-width="1.8" opacity=".75"/><path d="M32 12c7 5 10 12 10 20S39 47 32 52M32 12c-7 5-10 12-10 20s3 15 10 20" stroke="#0284c7" stroke-width="1.5" opacity=".7"/></svg>',
+    circle:'<svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="20" fill="#fce7f3" stroke="#db2777" stroke-width="2"/><path d="M32 32L49 32" stroke="#db2777" stroke-width="2.2" stroke-linecap="round"/><circle cx="32" cy="32" r="2.8" fill="#db2777"/></svg>',
+    triangle:'<svg viewBox="0 0 64 64" fill="none"><path d="M13 49L31 15L52 49H13Z" fill="#fef3c7" stroke="#d97706" stroke-width="2"/><path d="M22 49V40H31" stroke="#d97706" stroke-width="2"/><path d="M18 44c2-3 4.8-4.5 8-4.5" stroke="#d97706" stroke-width="1.8" stroke-linecap="round"/></svg>',
+    data:'<svg viewBox="0 0 64 64" fill="none"><rect x="12" y="34" width="9" height="18" rx="3" fill="#a7f3d0"/><rect x="27" y="25" width="9" height="27" rx="3" fill="#6ee7b7"/><rect x="42" y="15" width="9" height="37" rx="3" fill="#34d399"/><path d="M11 53h42" stroke="#0f766e" stroke-width="2" stroke-linecap="round"/></svg>',
+    parabola:'<svg viewBox="0 0 64 64" fill="none"><path d="M13 48C20 18 44 18 51 48" stroke="#7c3aed" stroke-width="3" stroke-linecap="round"/><circle cx="32" cy="31" r="3.5" fill="#c4b5fd"/><path d="M10 52H54M32 10V55" stroke="#cbd5e1" stroke-width="1.5"/></svg>',
+    solid:'<svg viewBox="0 0 64 64" fill="none"><path d="M18 21L35 13L49 22L31 31L18 21Z" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/><path d="M18 21V43L31 51V31L18 21Z" fill="#f5f3ff" stroke="#6d28d9" stroke-width="2"/><path d="M31 31L49 22V43L31 51V31Z" fill="#ddd6fe" stroke="#6d28d9" stroke-width="2"/></svg>',
+    line:'<svg viewBox="0 0 64 64" fill="none"><path d="M11 50L51 18" stroke="#0f766e" stroke-width="3" stroke-linecap="round"/><circle cx="19" cy="44" r="4" fill="#5eead4"/><circle cx="43" cy="25" r="4" fill="#2dd4bf"/><path d="M10 54H54M14 10V54" stroke="#cbd5e1" stroke-width="1.5"/></svg>',
+    algebra:'<svg viewBox="0 0 64 64" fill="none"><rect x="11" y="13" width="42" height="38" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/><path d="M20 27h10M25 22v10M37 24h9M37 31h9M21 41l8-7M21 34l8 7" stroke="#3b82f6" stroke-width="2.3" stroke-linecap="round"/></svg>'
+  };
+  return icons[kind];
+}
 
 function loadState(){
     const saved=JSON.parse(localStorage.getItem(STATE_KEY)||"{}");
@@ -233,8 +325,10 @@ function render(){
     empty.classList.add("hidden");
     const item=filtered[index];
     catEl.textContent=item.category;
-    expressionEl.innerHTML="\\\\["+item.formula+"\\\\]";
     topicEl.textContent=item.topic;
+    promptEl.textContent=promptFor(item);
+    iconEl.innerHTML=iconFor(item);
+    expressionEl.innerHTML="\\\\["+item.formula+"\\\\]";
     meaningEl.innerHTML=item.meaning;
     symbolsEl.innerHTML=item.symbols||"";
     exampleEl.innerHTML=item.example||"";
@@ -242,9 +336,8 @@ function render(){
     symbolsWrap.classList.toggle("hidden",!item.symbols);
     noteWrap.classList.toggle("hidden",!item.note);
     updateStatusUI(item);
-    countEl.textContent=filtered.length+" formulas";
+    countEl.textContent=filtered.length+" cards";
     updateProgress();
-    typeset([expressionEl,meaningEl,symbolsEl,exampleEl,noteEl]);
 }
 function rebuildList(excludeId=""){
     filtered=findMatching(excludeId);
@@ -261,7 +354,7 @@ reveal.addEventListener("click",()=>{
     definition.classList.remove("hidden");
     actions.classList.remove("hidden");
     reveal.classList.add("hidden");
-    typeset([definition]);
+    typeset([expressionEl,meaningEl,symbolsEl,exampleEl,noteEl]);
 });
 reviewButton.addEventListener("click",()=>{
     if(!filtered.length)return;
