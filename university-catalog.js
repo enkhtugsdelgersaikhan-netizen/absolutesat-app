@@ -265,21 +265,24 @@
   function renderImpactCard(label, score, u, isGoal) {
     if (!Number.isFinite(score)) {
       return '<div class="university-impact-card is-empty">' +
-        '<span class="university-impact-label">' + escapeHtml(label) + '</span>' +
-        '<strong>Not set</strong>' +
-        '<p><a href="/dashboard">' + (isGoal ? 'Add a future SAT goal' : 'Add your SAT score') +
-          ' in Dashboard →</a></p>' +
+        '<div class="university-impact-card-top">' +
+          '<span class="university-impact-label">' + escapeHtml(label) + '</span>' +
+          '<strong class="university-impact-score">—</strong>' +
+        '</div>' +
+        '<p><a href="/dashboard">' + (isGoal ? 'Set a future SAT goal' : 'Add your SAT score') + ' →</a></p>' +
       '</div>';
     }
 
     const impact = satAdmissionImpact(score, u.sat.composite);
-    const [, median] = u.sat.composite;
-    const relation = score > median ? "above" : score < median ? "below" : "at";
-    const capCopy = impact.cappedHigh
-      ? " The model caps additional benefit above the upper quartile."
-      : impact.cappedLow
-        ? " The model caps additional penalty below the lower quartile."
-        : "";
+    const capCopy = impact.cappedHigh || impact.cappedLow
+      ? '<small class="university-impact-cap">Capped at reported quartile range</small>'
+      : '';
+
+    const direction = impact.kPercent > 0.005
+      ? 'higher'
+      : impact.kPercent < -0.005
+        ? 'lower'
+        : 'the same';
 
     return '<div class="university-impact-card ' + impactTone(impact.k) + '">' +
       '<div class="university-impact-card-top">' +
@@ -288,15 +291,16 @@
       '</div>' +
       '<div class="university-impact-main">' +
         '<strong>' + signedPercent(impact.kPercent) + '</strong>' +
-        '<span>relative SAT effect</span>' +
+        '<span>relative admission chance</span>' +
       '</div>' +
+      '<p>Your modeled admission chance is <strong>' + Math.abs(impact.kPercent).toFixed(1) + '% ' + direction +
+        '</strong> than an otherwise identical applicant at ' + escapeHtml(u.short || u.name) +
+        '\'s median SAT.</p>' +
       '<div class="university-impact-equation">' +
-        '<span>Modeled admission chance</span>' +
+        '<span>Equivalent multiplier</span>' +
         '<strong>' + impact.multiplier.toFixed(3) + ' × P</strong>' +
       '</div>' +
-      '<p>Your score is ' + relation + ' ' + escapeHtml(u.short || u.name) +
-        '\'s median of ' + median + '. With every other application factor held identical, SAT changes the median-SAT baseline by ' +
-        Math.abs(impact.kPercent).toFixed(1) + '%.' + escapeHtml(capCopy) + '</p>' +
+      capCopy +
     '</div>';
   }
 
@@ -304,10 +308,9 @@
     if (!Number.isFinite(currentScore)) {
       return '<section class="university-impact-panel">' +
         '<div class="university-impact-panel-heading">' +
-          '<div><span>SAT-ONLY ADMISSIONS MODEL</span><h4>How much is SAT moving the baseline?</h4></div>' +
-          '<span class="university-impact-assumption">W<sub>SAT</sub> = 15%</span>' +
+          '<div><span>SAT IMPACT</span><h4>Relative effect on modeled admission chance</h4></div>' +
         '</div>' +
-        '<p class="university-impact-empty">Save your current SAT and optional future goal in <a href="/dashboard">Dashboard</a> to see the model for this university.</p>' +
+        '<p class="university-impact-empty">Save your current SAT and optional goal in <a href="/dashboard">Dashboard</a> to see the estimate for this school.</p>' +
       '</section>';
     }
 
@@ -327,25 +330,27 @@
 
       delta =
         '<div class="university-impact-delta">' +
-          '<span>Current → goal</span>' +
-          '<strong>' + current.multiplier.toFixed(3) + 'P → ' + goal.multiplier.toFixed(3) + 'P</strong>' +
-          '<p>The goal score makes the model\'s SAT-adjusted admission probability ' +
-            Math.abs(relativeGain).toFixed(1) + '% ' + direction + ' than at your current score.</p>' +
+          '<span>Goal vs. current</span>' +
+          '<strong>' + signedPercent(relativeGain) + '</strong>' +
+          '<p>Your goal score would make the modeled admission chance ' +
+            Math.abs(relativeGain).toFixed(1) + '% ' + direction + ' than with your current SAT.</p>' +
         '</div>';
     }
 
     return '<section class="university-impact-panel">' +
       '<div class="university-impact-panel-heading">' +
-        '<div><span>SAT-ONLY ADMISSIONS MODEL</span><h4>How much is your SAT moving the baseline?</h4></div>' +
-        '<span class="university-impact-assumption">W<sub>SAT</sub> = 15%</span>' +
+        '<div>' +
+          '<span>SAT IMPACT</span>' +
+          '<h4>Relative effect on modeled admission chance</h4>' +
+        '</div>' +
+        '<span class="university-impact-median">Median: ' + u.sat.composite[1] + '</span>' +
       '</div>' +
-      '<p class="university-impact-definition"><strong>P</strong> is the admission probability for an otherwise identical applicant whose SAT is exactly this school\'s median. Only SAT changes; the rest of the application stays fixed.</p>' +
       '<div class="university-impact-grid">' +
         renderImpactCard("Current SAT", currentScore, u, false) +
         renderImpactCard("Future goal", goalScore, u, true) +
       '</div>' +
       delta +
-      '<p class="university-impact-note">Heuristic model, not an observed admit-rate formula. The 15% SAT weight is an assumption. Because quartile data do not identify effects beyond the middle 50%, the SAT adjustment is capped at −15% at/below the lower quartile and +15% at/above the upper quartile.</p>' +
+      '<p class="university-impact-note"><strong>Relative, not absolute.</strong> A +10% result means 10% higher than the median-SAT applicant\'s baseline chance. If that baseline were 10%, the model would give 11%—not 20%. Based on LexLogica\'s 15% SAT-weight assumption.</p>' +
     '</section>';
   }
 
