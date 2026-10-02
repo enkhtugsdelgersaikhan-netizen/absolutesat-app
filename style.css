@@ -4301,3 +4301,13 @@ select:hover,
 .university-shape-legend .median i{background:#7f938e}
 .university-shape-legend .upper i{background:#566e68}
 .university-shape-legend .you i{background:#0e7367}
+
+/* SAT shape palette: school = LexLogica teal/cyan, user = complementary coral */
+.university-shape-series.lower{stroke:#79cfc5}
+.university-shape-series.median{stroke:#2aa99b}
+.university-shape-series.upper{stroke:#0e7367}
+.university-shape-series.you{stroke:#e56b55;fill:rgba(229,107,85,.045)}
+.university-shape-legend .lower i{background:#79cfc5}
+.university-shape-legend .median i{background:#2aa99b}
+.university-shape-legend .upper i{background:#0e7367}
+.university-shape-legend .you i{background:#e56b55}
