@@ -234,10 +234,24 @@
                                 <div class="sat-context-profile-actions"><button id="sat-profile-save" type="submit">Save SAT scores</button><button id="sat-profile-clear" type="button">Clear</button></div>
                                 <span id="sat-profile-status" class="sat-context-profile-status" role="status" aria-live="polite"></span>
                             </form>
-                            <section id="sat-dataset-standing" class="sat-dataset-standing" aria-live="polite">
-                                <span class="sat-dataset-standing-kicker">ACROSS UNIVERSITIES</span>
-                                <strong id="sat-dataset-standing-title">Set your score to see your standing</strong>
-                                <p id="sat-dataset-standing-copy">Your composite will be compared with the reported SAT quartiles in the university catalog.</p>
+                            <section class="sat-score-guide" aria-labelledby="sat-score-guide-title">
+                                <div class="sat-score-guide-head">
+                                    <span>SCORE GUIDE</span>
+                                    <h4 id="sat-score-guide-title">What composite scores mean</h4>
+                                </div>
+                                <div class="sat-score-guide-list">
+                                    <div class="sat-score-guide-row"><strong>1570–1600</strong><p><b>Upper-quartile anywhere.</b><span>At or above every reported upper quartile in this catalog.</span></p><em>No retake needed</em></div>
+                                    <div class="sat-score-guide-row"><strong>1550–1560</strong><p><b>Median anywhere.</b><span>At or above every reported median in this catalog.</span></p><em>No retake needed</em></div>
+                                    <div class="sat-score-guide-row"><strong>1530–1540</strong><p><b>Lower-quartile anywhere.</b><span>At or above every reported lower quartile in this catalog.</span></p><em>Usually no retake</em></div>
+                                    <div class="sat-score-guide-row"><strong>1500–1520</strong><p><b>Competitive anywhere.</b><span>In range for essentially all schools here, though below Q1 at a few.</span></p><em>1 retake if confident</em></div>
+                                    <div class="sat-score-guide-row"><strong>1450–1490</strong><p><b>Strong, but school-dependent.</b><span>Within range at many selective schools; weaker relative to the highest-score distributions.</span></p><em>Consider 1 retake</em></div>
+                                    <div class="sat-score-guide-row"><strong>1400–1440</strong><p><b>Competitive broadly.</b><span>Strong score, but often below Q1 at the most selective schools in this catalog.</span></p><em>Retake for top-score schools</em></div>
+                                    <div class="sat-score-guide-row"><strong>1300–1390</strong><p><b>Strong nationally.</b><span>Useful at many universities, but below the typical submitted range at many schools shown here.</span></p><em>Retake if targeting these schools</em></div>
+                                    <div class="sat-score-guide-row"><strong>1200–1290</strong><p><b>Above-average territory.</b><span>Can be competitive at many universities, but not against this catalog's most selective score ranges.</span></p><em>Retake if score matters</em></div>
+                                    <div class="sat-score-guide-row"><strong>1000–1190</strong><p><b>Broad typical range.</b><span>School context matters much more than this selective-university catalog.</span></p><em>Retake for selective targets</em></div>
+                                    <div class="sat-score-guide-row"><strong>≤990</strong><p><b>Below the broad national center.</b><span>Improvement can materially expand where the score strengthens an application.</span></p><em>Retake recommended</em></div>
+                                </div>
+                                <small class="sat-score-guide-note">The top three thresholds come directly from the universities currently in this catalog. Lower bands are practical guidance, not universal admissions cutoffs.</small>
                             </section>
                         </aside>
                     </div>
@@ -311,7 +325,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js?v=subjects-1"></script>
-<script src="/university-catalog.js?v=22"></script>
+<script src="/university-catalog.js?v=23"></script>
 
 </body>
 </html>
