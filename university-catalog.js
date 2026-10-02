@@ -238,21 +238,29 @@
     return "Above the upper quartile";
   }
 
+  function relationshipClass(score, [lower, median, upper]) {
+    if (score < lower) return "below-lower";
+    if (score === lower) return "at-lower";
+    if (score < median) return "lower-to-median";
+    if (score === median) return "at-median";
+    if (score < upper) return "median-to-upper";
+    if (score === upper) return "at-upper";
+    return "above-upper";
+  }
+
   function renderBand(label, values, type, userScore) {
     const [lower, median, upper] = values;
     const hasUser = Number.isFinite(userScore);
-    const scale = railScale(values, type, hasUser ? userScore : null);
-    const lowerPos = scale.position(lower);
-    const medianPos = scale.position(median);
-    const upperPos = scale.position(upper);
-    const markerLeft = hasUser ? scale.position(userScore) : null;
+    const relation = hasUser ? scoreRelationship(userScore, values) : "";
 
     return '<section class="university-score-band">' +
       '<div class="university-score-band-header">' +
         '<h4>' + escapeHtml(label) + '</h4>' +
         (hasUser
-          ? '<span class="university-user-relation">' +
-              escapeHtml(scoreRelationship(userScore, values)) +
+          ? '<span class="university-position-label ' +
+              relationshipClass(userScore, values) + '">' +
+              escapeHtml(relation) +
+              ' · ' + userScore +
             '</span>'
           : '') +
       '</div>' +
@@ -260,25 +268,6 @@
         '<div><span>Lower quartile</span><strong>' + lower + '</strong></div>' +
         '<div><span>Median</span><strong>' + median + '</strong></div>' +
         '<div><span>Upper quartile</span><strong>' + upper + '</strong></div>' +
-      '</div>' +
-      '<div class="university-band-rail" aria-label="' +
-        escapeHtml(label) + ': lower quartile ' + lower +
-        ', median ' + median +
-        ', upper quartile ' + upper +
-        (hasUser ? ', your score ' + userScore : '') + '">' +
-        '<div class="university-band-track"></div>' +
-        '<div class="university-band-middle50" style="left:' + lowerPos +
-          '%;width:' + Math.max(1, upperPos - lowerPos) + '%"></div>' +
-        '<span class="university-band-dot lower" style="left:' + lowerPos + '%"></span>' +
-        '<span class="university-band-dot median" style="left:' + medianPos + '%"></span>' +
-        '<span class="university-band-dot upper" style="left:' + upperPos + '%"></span>' +
-        (hasUser
-          ? '<span class="university-you-marker" style="left:' + markerLeft + '%">' +
-              '<span class="university-you-label">◆ You ' + userScore + '</span>' +
-              '<span class="university-you-stem"></span>' +
-              '<span class="university-you-diamond">◆</span>' +
-            '</span>'
-          : '') +
       '</div>' +
     '</section>';
   }
