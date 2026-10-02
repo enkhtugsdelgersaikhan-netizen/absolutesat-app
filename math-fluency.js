@@ -236,6 +236,8 @@ catEl=document.getElementById("formula-category-label"),
 solvedStatusEl=document.getElementById("formula-solved-status"),
 reviewStatusEl=document.getElementById("formula-review-status"),
 meaningEl=document.getElementById("formula-meaning"),
+whyEl=document.getElementById("formula-why"),
+whenEl=document.getElementById("formula-when"),
 symbolsEl=document.getElementById("formula-symbols"),
 symbolsWrap=document.getElementById("formula-symbols-wrap"),
 exampleEl=document.getElementById("formula-example"),
@@ -367,6 +369,127 @@ function promptFor(item){
   return item.prompt||PROMPTS[item.id]||item.topic;
 }
 
+
+function conceptFor(item){
+  const t=item.topic.toLowerCase();
+  let extra="";
+  if(/slope|rate of change|linear model|direct variation|linear change|intercept|standard form|horizontal line|vertical line/.test(t)){
+    extra=" In a linear relationship, this structure is telling you how the output changes as the input changes, or where the graph sits on the coordinate plane. Thinking in terms of slope, intercepts, and units usually makes the algebra easier to interpret.";
+  }else if(/system|intersection|break-even/.test(t)){
+    extra=" A system is really asking for values that make two conditions true at the same time. Graphically, that means looking for where the two relationships meet; algebraically, it means forcing the equations to agree.";
+  }else if(/inequality/.test(t)){
+    extra=" Unlike an equation, an inequality describes a whole set of allowed values rather than one exact value. The direction of the inequality matters because it tells you which side of a boundary is included.";
+  }else if(/sequence/.test(t)){
+    extra=" Arithmetic sequences behave like discrete linear functions: the term number plays the role of the input, and the common difference acts like a slope.";
+  }else if(/quadratic|parabola|vertex|discriminant|root/.test(t)){
+    extra=" Quadratic relationships connect algebraic forms to graph features such as roots, the axis of symmetry, and the vertex. On the SAT, switching between standard, factored, and vertex form is often the fastest way to expose the feature being tested.";
+  }else if(/exponent|exponential|growth|decay|doubling|half-life|compound interest/.test(t)){
+    extra=" Exponential models describe repeated multiplication rather than repeated addition. That is why equal input steps produce a constant ratio between outputs instead of a constant difference.";
+  }else if(/factor|binomial|square|cube|distributive|completing/.test(t)){
+    extra=" This identity is useful because it lets you rewrite an expression without changing its value. The rewritten form often reveals zeros, cancellations, symmetry, or a structure that is much easier to solve.";
+  }else if(/function|translation|shift/.test(t)){
+    extra=" Function notation separates the rule from the input. Changes inside the function affect the input before the rule is applied, while changes outside affect the output afterward.";
+  }else if(/ratio|proportion|percent|markup|discount|tax|tip|interest/.test(t)){
+    extra=" These problems are fundamentally multiplicative comparisons. Keeping the reference quantity—the value you are comparing against—clear is what prevents most percent and proportion mistakes.";
+  }else if(/mean|range|quartile|sample|margin|population|correlation|residual|relative frequency/.test(t)){
+    extra=" Statistical formulas summarize many observations into a smaller number of useful quantities. The key is to identify exactly what population, sample, or denominator the statistic refers to before calculating.";
+  }else if(/probability|event/.test(t)){
+    extra=" Probability is a fraction of possible outcomes or cases. The denominator must match the condition in the question, especially when events overlap or when the problem gives a condition such as 'given B.'";
+  }else if(/area|perimeter|surface|volume|circumference|arc|sector/.test(t)){
+    extra=" Geometry formulas work by decomposing a figure into familiar lengths, areas, or solids. Units are a useful check: perimeter uses linear units, area uses square units, and volume uses cubic units.";
+  }else if(/circle|radius|diameter|tangent|chord/.test(t)){
+    extra=" Circle relationships are built around the center, radius, and the fraction of a full 360° turn. Identifying whether a problem is about angle measure, arc length, or area is essential because those quantities scale differently.";
+  }else if(/triangle|angle|similar|pythagorean|sine|cosine|tangent|trig/.test(t)){
+    extra=" Triangle relationships connect side lengths and angle measures. Before choosing a formula, mark the right angle, identify corresponding sides, and decide which side is opposite or adjacent to the angle of interest.";
+  }
+  return item.meaning+extra;
+}
+
+function whyFor(item){
+  const id=item.id, t=item.topic.toLowerCase();
+  if(/slope-two-points|average-rate|function-difference-slope/.test(id)) return "Slope compares vertical change with horizontal change. Subtracting the two y-values gives the change in output, while subtracting the matching x-values gives the change in input; dividing those changes produces a per-unit rate.";
+  if(/slope-intercept|standard-to-slope|linear-model/.test(id)) return "A linear function changes by the same amount for each one-unit change in x. Starting from the value at x=0 and repeatedly adding the constant rate gives the familiar intercept-plus-rate-times-input structure.";
+  if(/point-slope|line-two-points|parallel-through-point/.test(id)) return "The expression x−x₁ measures how far you move horizontally from a known point. Multiplying that horizontal change by the slope gives the matching vertical change y−y₁, which guarantees the equation passes through the point with the required slope.";
+  if(/standard-x-intercept|x-intercept/.test(id)) return "Every point on the x-axis has y=0. Setting y to zero reduces the equation to one variable, so solving it finds exactly where the graph crosses the x-axis.";
+  if(/standard-y-intercept|y-intercept/.test(id)) return "Every point on the y-axis has x=0. Setting x to zero leaves the output value at the vertical axis, which is the y-intercept.";
+  if(/parallel/.test(t)) return "Parallel nonvertical lines rise and fall at the same rate, so their slopes must match. If their intercepts were also equal, they would be the same line rather than distinct parallel lines.";
+  if(/perpendicular/.test(t)) return "For two nonvertical, nonhorizontal perpendicular lines, a right-angle rotation swaps rise and run and reverses one direction. Algebraically, that turns a slope into its negative reciprocal.";
+  if(/system-none/.test(id)) return "Equal slopes mean the lines never get closer or farther apart. Different intercepts place them at different vertical positions, so they can never meet.";
+  if(/system-infinite/.test(id)) return "Matching slope and intercept means the two equations describe the exact same set of points. Every solution of one equation is therefore also a solution of the other.";
+  if(/system|intersection|break-even/.test(t)) return "At a shared solution, both equations describe the same x- and y-values. Equating expressions, substituting, or eliminating a variable are all algebraic ways of enforcing that simultaneous agreement.";
+  if(/inequality-flip/.test(id)) return "Multiplying by a negative reverses order on the number line. For example, 2<5 becomes −2>−5, so the inequality symbol must reverse to preserve a true statement.";
+  if(/inequality/.test(t)) return "The solving steps are the same as for equations until multiplication or division by a negative number occurs. The final inequality represents every value that satisfies the original condition, not just a single solution.";
+  if(/arithmetic/.test(id)) return "Each term differs from the previous one by the same constant amount. After n−1 equal steps from the first term, the total accumulated change is (n−1)d.";
+  if(/distributive/.test(id)) return "Multiplication distributes over addition because multiplying a grouped sum is the same as multiplying each part and then adding the results. This preserves the value while removing parentheses.";
+  if(/difference-squares|conjugate-product/.test(id)) return "When conjugates are multiplied, the middle terms are opposites and cancel. What remains is the square of the first term minus the square of the second.";
+  if(/perfect-square/.test(id)) return "Squaring a binomial creates two square terms and two identical cross-products. Those cross-products combine to ±2ab, which is why the middle coefficient has that exact form.";
+  if(/exp-product/.test(id)) return "Multiplying powers with the same base combines repeated factors. A factor of a appearing m times followed by a appearing n more times gives m+n total copies.";
+  if(/exp-quotient/.test(id)) return "Division cancels matching factors from numerator and denominator. Starting with m copies of the base and canceling n of them leaves m−n copies.";
+  if(/power-power/.test(id)) return "Raising a power to another power repeats the original group of factors. Having m factors repeated n times creates mn total factors.";
+  if(/negative-exponent/.test(id)) return "Negative exponents encode reciprocals so that exponent rules remain consistent. Moving a factor across a fraction bar changes the sign of its exponent.";
+  if(/rational-exponent|radical/.test(t)) return "Fractional exponents combine roots and powers: the denominator tells you which root to take and the numerator tells you which power to apply. This is defined to preserve the usual exponent laws.";
+  if(/quadratic-formula/.test(id)) return "The quadratic formula comes from completing the square on the general equation ax²+bx+c=0. Because that derivation makes no special assumptions about factorability, it works for every quadratic with a≠0.";
+  if(/discriminant|disc-/.test(id)) return "The discriminant is the expression inside the square root of the quadratic formula. Its sign tells you whether the square root is positive, zero, or nonreal, which directly controls the number of real solutions.";
+  if(/vertex-x|repeated-root/.test(id)) return "A parabola is symmetric about its vertical axis. The formula −b/(2a) gives the x-value halfway between the roots when they exist and still locates the symmetry axis when they do not.";
+  if(/vertex-form/.test(id)) return "The squared term is minimized or maximized when x=h, because (x−h)² becomes zero there. The remaining output is k, so (h,k) is the vertex.";
+  if(/factored-quadratic|quadratic-from-roots/.test(id)) return "A product equals zero whenever at least one factor equals zero. Writing factors as x−r makes the zeros visible immediately at x=r.";
+  if(/root-sum|root-product/.test(id)) return "Expanding a(x−r₁)(x−r₂) and matching coefficients with ax²+bx+c links the roots directly to b/a and c/a. Those coefficient comparisons produce the sum and product relationships.";
+  if(/factor-theorem/.test(id)) return "If f(c)=0, then x=c is a zero of the polynomial. A zero at c means the polynomial must contain the factor x−c, and the converse works the same way.";
+  if(/remainder-theorem/.test(id)) return "Polynomial division by x−c can always be written as f(x)=(x−c)q(x)+r. Substituting x=c makes the product term vanish, leaving f(c)=r.";
+  if(/exponential|doubling|half-life|compound interest/.test(t)) return "Each equal time step multiplies the quantity by the same factor. Repeating that multiplication t times produces a power, which is why the variable appears in the exponent.";
+  if(/inverse variation/.test(t)) return "Inverse variation keeps the product xy constant. If x grows, y must shrink proportionally so that multiplying them still gives the same constant k.";
+  if(/function translation|horizontal function shift/.test(t)) return "Replacing x by x−h means the original function receives the value it used to receive h units earlier. That shifts every point horizontally, while adding k outside changes every output vertically.";
+  if(/ratio|proportion/.test(t)) return "Equivalent ratios describe the same multiplicative relationship. Cross multiplication works because multiplying both sides by the two denominators clears the fractions without changing the equality.";
+  if(/percent change/.test(t)) return "The difference new−original measures the actual change, but dividing by the original converts that change into a relative amount. Multiplying by 100% expresses that relative amount as a percent.";
+  if(/percent|markup|discount|tax|tip|reverse percent|successive percent/.test(t)) return "A percentage is a multiplier on a reference amount. Converting the rate to a decimal and combining it with 1 lets you represent keeping the original amount plus or minus the stated fraction in one step.";
+  if(/mean after adding|combined mean|weighted mean|arithmetic mean|recovering a sum/.test(t)) return "A mean is total value divided by total weight or count. These formulas work by reconstructing the appropriate total first, then dividing by the new total number of observations or total weight.";
+  if(/range|interquartile/.test(t)) return "Both statistics measure spread by subtracting a lower value from a higher value. Range uses the extremes, while IQR deliberately ignores the outer quarters to focus on the middle half of the data.";
+  if(/conditional probability/.test(t)) return "Conditioning on B changes the sample space so that only B-cases remain possible. Within that restricted group, the favorable cases are the ones that are also in A.";
+  if(/probability of a or b|addition/.test(t)) return "Adding P(A) and P(B) counts outcomes in both events twice. Subtracting the intersection once corrects that double counting.";
+  if(/independent events/.test(t)) return "Independence means knowing one event occurred does not change the probability of the other. Therefore the probability that both occur is the product of their separate probabilities.";
+  if(/mutually exclusive/.test(t)) return "Mutually exclusive events have no overlap, so the intersection probability is zero. The general addition rule therefore simplifies to a direct sum.";
+  if(/residual/.test(t)) return "A residual measures vertical prediction error: observed minus predicted. Its sign shows whether the model predicted too low or too high for that observation.";
+  if(/sample|population|margin of error/.test(t)) return "A random sample is used to approximate a larger population. Sampling variability means the estimate is not exact, so a margin of error describes a plausible range around the sample statistic.";
+  if(/area of a triangle/.test(t)) return "A triangle with the same base and height as a parallelogram occupies exactly half the parallelogram's area. That is why the factor one-half appears.";
+  if(/trapezoid/.test(t)) return "A trapezoid can be paired with a congruent copy to form a parallelogram whose base is b₁+b₂. Halving that parallelogram's area gives the trapezoid formula.";
+  if(/circle area/.test(t)) return "Circle area grows with the square of the radius because scaling the radius by k scales every length by k and therefore area by k². The constant π accounts for the circle's geometry.";
+  if(/circumference/.test(t)) return "For every circle, circumference divided by diameter is the constant π. Since diameter equals 2r, both πd and 2πr describe the same boundary length.";
+  if(/arc length/.test(t)) return "An arc is the same fraction of the full circumference as its central angle is of the full rotation. In radians, that fraction simplifies so directly that arc length becomes rθ.";
+  if(/sector area/.test(t)) return "A sector is the same fraction of the circle's total area as its central angle is of a full rotation. In radians, that fraction simplifies to one-half r²θ.";
+  if(/equation of a circle/.test(t)) return "Every point on the circle is exactly r units from the center. Applying the distance formula and squaring both sides produces (x−h)²+(y−k)²=r².";
+  if(/pythagorean theorem|distance formula|space diagonal/.test(t)) return "These formulas come from right-triangle geometry. Squared perpendicular components add, so the total straight-line distance is the square root of the sum of the component squares.";
+  if(/midpoint/.test(t)) return "The midpoint lies halfway in both the horizontal and vertical directions. Averaging the two x-coordinates and the two y-coordinates places the point exactly halfway between the endpoints.";
+  if(/45°-45°-90°/.test(t)) return "Applying the Pythagorean theorem to an isosceles right triangle with legs x gives hypotenuse √(x²+x²)=x√2.";
+  if(/30°-60°-90°/.test(t)) return "Splitting an equilateral triangle in half creates a 30°-60°-90° triangle. The half-base, altitude, and original side produce the fixed ratio 1:√3:2.";
+  if(/sine|cosine|tangent|trig/.test(t)) return "Right-triangle trigonometric ratios compare side lengths relative to a chosen acute angle. Because similar right triangles with the same angle have proportional sides, the ratios stay constant.";
+  if(/triangle angle sum/.test(t)) return "A line drawn through one vertex parallel to the opposite side shows the three interior angles arranged along a straight line, so their measures total 180°.";
+  if(/exterior angle theorem/.test(t)) return "The exterior angle and its adjacent interior angle form 180°, while the triangle's three interior angles also total 180°. Subtracting the shared adjacent angle leaves the two remote interior angles.";
+  if(/polygon/.test(t)) return "An n-gon can be partitioned from one vertex into n−2 triangles. Each triangle contributes 180°, which creates the interior-angle-sum formula.";
+  if(/similar/.test(t)) return "Similar figures have the same shape, so all corresponding lengths differ by one common scale factor. Areas then scale by the square of that factor and volumes by the cube.";
+  if(/volume/.test(t)) return "Volume measures how many cubic units fill a solid. Prisms and cylinders use base area times height; pyramids and cones take one-third of the corresponding prism or cylinder because of how their cross-sections shrink.";
+  if(/surface area/.test(t)) return "Surface area is found by adding the areas of every exposed face or curved surface. Each term in the formula corresponds to a specific part of the solid's exterior.";
+  return "The formula is a compact statement of a relationship that can also be derived from more basic algebraic or geometric principles. Understanding what each quantity represents makes it easier to reconstruct the rule even if you temporarily forget the exact notation.";
+}
+
+function whenFor(item){
+  const t=item.topic.toLowerCase(), c=item.category;
+  if(/slope|line|intercept|linear|direct variation|break-even/.test(t)) return "Use this when the problem gives or asks about a line, constant rate of change, initial value, intercept, or a real-world quantity changing at a constant rate. SAT questions may present the same relationship as an equation, graph, table, or word problem, so translate all of them into slope and intercept language.";
+  if(/system|intersection/.test(t)) return "Use this when two conditions must hold simultaneously—for example, two pricing plans, two moving objects, or two equations sharing the same variables. Decide whether the question wants the actual intersection or only the number of possible solutions.";
+  if(/inequality/.test(t)) return "Use this for constraints such as at least, at most, greater than, less than, minimum, or maximum. Pay special attention to whether the boundary is included and whether a negative multiplication or division reverses the inequality.";
+  if(/sequence/.test(t)) return "Use this when values change by the same additive amount from one term to the next. A constant difference indicates arithmetic behavior; if the ratio is constant instead, the pattern is exponential.";
+  if(/quadratic|parabola|vertex|discriminant|root/.test(t)) return "Use this when the relationship contains a squared variable, the graph is a parabola, or the question asks about zeros, maximum/minimum value, symmetry, or number of solutions. Choose the quadratic form that exposes the requested feature most directly.";
+  if(/exponential|growth|decay|doubling|half-life|compound interest/.test(t)) return "Use this when a quantity changes by the same percentage or multiplicative factor over equal intervals. Typical clues include grows by __% each year, doubles every __ units, half-life, or repeated compounding.";
+  if(/factor|binomial|square|cube|distributive|completing/.test(t)) return "Use this when an expression needs to be expanded, factored, simplified, or rewritten into a form that reveals roots or other structure. On the SAT, recognizing a standard identity can save several lines of algebra.";
+  if(/function|translation|shift/.test(t)) return "Use this when a question describes how a graph changes, asks for a transformed function, or evaluates a function at a particular input. Keep track of whether the change happens inside the input or outside the function.";
+  if(/ratio|proportion|percent|markup|discount|tax|tip|interest|rate|density|conversion|scale drawing/.test(t)) return "Use this for contextual comparisons involving rates, percentages, units, pricing, density, speed, or scale. Write units next to quantities before calculating; mismatched units are one of the most common SAT traps.";
+  if(/mean|range|quartile|sample|population|margin|correlation|residual|frequency/.test(t)) return "Use this when interpreting a data set, survey, scatterplot, model, or sample. First identify the population or group being summarized, then check whether the problem asks about center, spread, association, prediction error, or inference.";
+  if(/probability|event/.test(t)) return "Use this when the question asks for the chance of one or more events. Determine whether events overlap, are independent, are mutually exclusive, or are conditional before choosing the probability rule.";
+  if(/circle|arc|sector|radius|diameter|tangent|chord/.test(t)) return "Use this when the diagram or wording centers on a circle. Identify whether the given angle is central or inscribed and whether the requested quantity is an angle, an arc length, an area, or a tangent/chord relationship.";
+  if(/triangle|angle|similar|pythagorean|sine|cosine|tangent|trig/.test(t)) return "Use this when a geometry problem involves right triangles, special triangles, parallel-line angle relationships, similarity, or side-angle ratios. Mark the diagram before calculating so corresponding or opposite sides are not confused.";
+  if(/area|perimeter|surface|volume/.test(t)) return "Use this when a question asks for the size of a 2D region, boundary length, exposed surface, or 3D capacity. Check the requested unit power—linear, square, or cubic—to verify that you selected the correct type of formula.";
+  return "Use this whenever the quantities and relationships named in the prompt match this structure. Before substituting numbers, identify what each symbol stands for and what the question is actually asking you to solve.";
+}
+
 function iconFor(item){
   const id=item.id;
   let file="sigma.svg";
@@ -484,7 +607,9 @@ function render(){
     promptEl.textContent=promptFor(item);
     iconEl.innerHTML='<img src="'+iconFor(item)+'" alt="" draggable="false">';
     expressionEl.textContent="\\["+item.formula+"\\]";
-    meaningEl.textContent=item.meaning;
+    meaningEl.textContent=conceptFor(item);
+    whyEl.textContent=whyFor(item);
+    whenEl.textContent=whenFor(item);
     symbolsEl.textContent=item.symbols||"";
     exampleEl.textContent=item.example||"";
     noteEl.textContent=item.note||"";
@@ -509,7 +634,7 @@ reveal.addEventListener("click",()=>{
     definition.classList.remove("hidden");
     actions.classList.remove("hidden");
     reveal.classList.add("hidden");
-    typeset([expressionEl,meaningEl,symbolsEl,exampleEl,noteEl]);
+    typeset([expressionEl,meaningEl,whyEl,whenEl,symbolsEl,exampleEl,noteEl]);
 });
 reviewButton.addEventListener("click",()=>{
     if(!filtered.length)return;
