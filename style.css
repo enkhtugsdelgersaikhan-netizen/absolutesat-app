@@ -4588,3 +4588,88 @@ select:hover,
 .sat-weight-redesign .sat-weight-insight a{display:inline-block;margin-top:5px;color:#0e7367;font-size:7px;font-weight:700;text-decoration:none}
 .sat-weight-redesign .sat-weight-insight a:hover{text-decoration:underline}
 @media(max-width:760px){.sat-weight-redesign .sat-weight-main{grid-template-columns:1fr}.sat-weight-redesign .sat-weight-number{align-items:center;text-align:center}.sat-weight-redesign .sat-weight-why{border-left:0!important;border-top:1px solid #dceae7!important}.sat-weight-redesign .sat-weight-insights{grid-template-columns:1fr}.sat-weight-redesign .sat-weight-insight+ .sat-weight-insight{border-left:0;border-top:1px solid #dceae7}}
+
+/* Align SAT context tools to the left edge and remove dead space */
+.sat-context-workspace,
+.sat-guide-row{
+    margin-left:0;
+    margin-right:auto;
+}
+.sat-context-workspace{
+    grid-template-columns:minmax(0,1fr) 250px;
+    gap:12px;
+    align-items:start;
+}
+.sat-weight-redesign{
+    align-self:start;
+}
+.sat-weight-redesign .sat-weight-main{
+    grid-template-columns:145px minmax(0,1fr);
+    min-height:0;
+}
+.sat-weight-redesign .sat-weight-number{
+    padding:13px 15px;
+    justify-content:flex-start;
+}
+.sat-weight-redesign .sat-weight-number>strong{
+    font-size:41px;
+    margin-top:1px;
+}
+.sat-weight-redesign .sat-weight-number>span{
+    margin-top:3px;
+    font-size:8px;
+}
+.sat-weight-redesign .sat-weight-number>em{
+    margin-top:7px;
+    padding-top:6px;
+}
+.sat-weight-redesign .sat-weight-why{
+    padding:13px 17px;
+}
+.sat-weight-redesign .sat-weight-why h3{
+    margin:3px 0 5px;
+    font-size:13px;
+}
+.sat-weight-redesign .sat-weight-why p{
+    font-size:7.5px;
+    line-height:1.5;
+}
+.sat-weight-redesign .sat-weight-insight{
+    padding:10px 13px;
+    grid-template-columns:23px 1fr;
+    gap:7px;
+}
+.sat-weight-insight-icon{
+    width:23px;
+    height:23px;
+    border-radius:7px;
+    font-size:11px;
+}
+.sat-weight-redesign .sat-weight-insight strong{font-size:8px}
+.sat-weight-redesign .sat-weight-insight p{font-size:6.8px;line-height:1.42}
+.sat-weight-redesign .sat-weight-insight a{margin-top:3px;font-size:6.5px}
+
+.sat-context-profile{
+    align-self:start;
+    min-height:0;
+    padding:12px 13px;
+}
+.sat-context-profile-head{align-items:flex-start}
+.sat-context-profile-head h3{margin-top:1px}
+.sat-context-profile>p{
+    margin:5px 0 8px;
+    line-height:1.4;
+}
+.sat-context-profile-form{gap:7px}
+.sat-context-profile-form label{gap:3px}
+.sat-context-profile-form input{
+    min-height:34px;
+    padding-top:6px;
+    padding-bottom:6px;
+}
+.sat-context-profile-actions{margin-top:1px}
+.sat-context-profile-actions button{min-height:31px;padding-top:6px;padding-bottom:6px}
+.sat-context-profile-status:empty{display:none}
+@media(max-width:950px){
+    .sat-context-workspace{grid-template-columns:1fr}
+}
