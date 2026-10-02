@@ -2072,3 +2072,193 @@ select:focus,
         0 1px 0 rgba(15,23,42,.11),
         0 3px 7px rgba(15,23,42,.07);
 }
+
+
+/* =========================================
+   BUBBLY 3D BUTTON PERSONALITY
+========================================= */
+:root{
+    --bubble-ease:cubic-bezier(.2,.8,.2,1);
+    --bubble-teal-top:#16877b;
+    --bubble-teal-bottom:#0e7367;
+    --bubble-teal-edge:#095f57;
+    --bubble-light-edge:rgba(15,23,42,.12);
+}
+
+.nav-button,
+.login-button,
+.register-button,
+.dashboard-button,
+.study-button,
+.hero-primary-button,
+.hero-secondary-button,
+.logout-button,
+.fluency-options button,
+.mobile-menu-button{
+    border-radius:12px;
+    transition:
+        transform .20s var(--bubble-ease),
+        box-shadow .20s var(--bubble-ease),
+        background .20s ease,
+        background-color .20s ease,
+        border-color .20s ease,
+        color .20s ease;
+}
+
+.login-button,
+.dashboard-button,
+.study-button,
+.hero-primary-button{
+    background:linear-gradient(180deg,var(--bubble-teal-top) 0%,var(--bubble-teal-bottom) 100%);
+    border-color:var(--bubble-teal-bottom);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.28),
+        inset 0 -1px 0 rgba(0,0,0,.05),
+        0 4px 0 var(--bubble-teal-edge),
+        0 8px 18px rgba(15,118,110,.18);
+}
+
+.login-button:hover,
+.dashboard-button:hover,
+.study-button:hover,
+.hero-primary-button:hover{
+    transform:translateY(-2px) scale(1.012);
+    background:linear-gradient(180deg,#1a9184 0%,#0f7d71 100%);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.34),
+        inset 0 -1px 0 rgba(0,0,0,.04),
+        0 5px 0 var(--bubble-teal-edge),
+        0 11px 22px rgba(15,118,110,.22);
+}
+
+.login-button:active,
+.dashboard-button:active,
+.study-button:active,
+.hero-primary-button:active{
+    transform:translateY(3px) scale(.994);
+    box-shadow:
+        inset 0 1px 4px rgba(0,0,0,.08),
+        0 1px 0 var(--bubble-teal-edge),
+        0 4px 9px rgba(15,118,110,.13);
+    transition-duration:.09s;
+}
+
+.register-button,
+.hero-secondary-button,
+.fluency-options button,
+.mobile-menu-button{
+    background:linear-gradient(180deg,#ffffff 0%,#f7faf9 100%);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.95),
+        inset 0 -1px 0 rgba(15,23,42,.035),
+        0 4px 0 var(--bubble-light-edge),
+        0 8px 16px rgba(15,23,42,.08);
+}
+
+.register-button:hover,
+.hero-secondary-button:hover,
+.fluency-options button:hover,
+.mobile-menu-button:hover{
+    transform:translateY(-2px) scale(1.01);
+    background:linear-gradient(180deg,#ffffff 0%,#f0fbf8 100%);
+    box-shadow:
+        inset 0 1px 0 #fff,
+        0 5px 0 rgba(15,23,42,.13),
+        0 11px 20px rgba(15,23,42,.10);
+}
+
+.register-button:active,
+.hero-secondary-button:active,
+.fluency-options button:active,
+.mobile-menu-button:active{
+    transform:translateY(3px) scale(.994);
+    box-shadow:
+        inset 0 2px 4px rgba(15,23,42,.06),
+        0 1px 0 rgba(15,23,42,.12),
+        0 4px 8px rgba(15,23,42,.06);
+    transition-duration:.09s;
+}
+
+.nav-button{
+    border:1px solid rgba(15,23,42,.055);
+    background:linear-gradient(180deg,#ffffff 0%,#f8fbfa 100%);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.9),
+        0 3px 0 rgba(15,23,42,.08),
+        0 6px 12px rgba(15,23,42,.055);
+}
+
+.nav-button:hover{
+    color:#0f766e;
+    background:linear-gradient(180deg,#ffffff 0%,#eefaf7 100%);
+    transform:translateY(-2px);
+    box-shadow:
+        inset 0 1px 0 #fff,
+        0 4px 0 rgba(15,118,110,.12),
+        0 9px 16px rgba(15,118,110,.10);
+}
+
+.nav-button:active{
+    transform:translateY(2px);
+    box-shadow:
+        inset 0 1px 3px rgba(15,23,42,.05),
+        0 1px 0 rgba(15,23,42,.08),
+        0 3px 7px rgba(15,23,42,.05);
+}
+
+.nav-button.active{
+    background:linear-gradient(180deg,#f4fffc 0%,#e8f7f3 100%);
+    border-color:rgba(14,115,103,.16);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.9),
+        0 3px 0 rgba(14,115,103,.15),
+        0 7px 14px rgba(14,115,103,.09);
+}
+
+.nav-button.active::after{
+    bottom:4px;
+    height:2px;
+    opacity:.8;
+}
+
+.study-card{
+    border-radius:24px;
+}
+
+select,
+.guide-tools select,
+.vocab-search-wrap select{
+    border-radius:12px;
+    background:linear-gradient(180deg,#ffffff 0%,#fbfdfc 100%);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.95),
+        0 3px 0 rgba(15,23,42,.06),
+        0 6px 12px rgba(15,23,42,.045);
+}
+
+select:hover,
+.guide-tools select:hover,
+.vocab-search-wrap select:hover{
+    transform:translateY(-1px);
+    box-shadow:
+        inset 0 1px 0 #fff,
+        0 4px 0 rgba(15,23,42,.07),
+        0 9px 16px rgba(15,23,42,.065);
+}
+
+@media (prefers-reduced-motion: reduce){
+    .nav-button,
+    .login-button,
+    .register-button,
+    .dashboard-button,
+    .study-button,
+    .hero-primary-button,
+    .hero-secondary-button,
+    .logout-button,
+    .fluency-options button,
+    .mobile-menu-button,
+    select{
+        transform:none!important;
+        transition:none!important;
+    }
+}
