@@ -4539,3 +4539,14 @@ select:hover,
 .sat-score-guide-scale.composite .sat-score-scale-head,.sat-score-guide-scale.reading .sat-score-scale-head,.sat-score-guide-scale.math .sat-score-scale-head{background:#f1f8f6}
 .sat-score-scale-row.is-user-range{position:relative;z-index:1;background:#edf9f6!important;box-shadow:inset 0 0 0 1.5px rgba(14,115,103,.45),0 0 16px rgba(14,115,103,.18)}
 .sat-score-scale-row.is-user-range>b{color:#075f56}
+
+/* Detailed quartile explainer */
+.sat-guide-row{grid-template-columns:minmax(0,1fr) 310px}
+.sat-guide-explainer-detailed{background:linear-gradient(180deg,#f5faf9,#fff)}
+.sat-guide-explainer-detailed .sat-guide-intro{margin:0 0 10px;padding:9px 10px;border-radius:9px;background:#eaf6f3;color:#41645e;font-size:8px;line-height:1.55}
+.sat-guide-explainer-detailed>div{padding:10px 0}
+.sat-guide-explainer-detailed>div strong{font-size:9px}
+.sat-guide-explainer-detailed>div p{font-size:7.5px;line-height:1.55}
+.sat-guide-explainer-detailed .sat-guide-middle50{background:#f7fbfa;margin:0 -7px;padding:10px 7px}
+.sat-guide-explainer-detailed .sat-guide-caution{margin:10px 0 0;padding:10px;border:1px solid #d9e8e4;border-radius:9px;background:#fff;color:#60736f;font-size:7.5px;line-height:1.55}
+@media(max-width:1050px){.sat-guide-row{grid-template-columns:1fr}.sat-guide-explainer-detailed{max-width:none}}
