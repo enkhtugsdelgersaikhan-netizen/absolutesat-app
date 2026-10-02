@@ -4559,3 +4559,10 @@ select:hover,
 .sat-guide-explainer-detailed .sat-guide-middle50{background:#f7fbfa;margin:0 -7px;padding:10px 7px}
 .sat-guide-explainer-detailed .sat-guide-caution{margin:10px 0 0;padding:10px;border:1px solid #d9e8e4;border-radius:9px;background:#fff;color:#60736f;font-size:7.5px;line-height:1.55}
 @media(max-width:1050px){.sat-guide-row{grid-template-columns:1fr}}
+
+/* Keep quartile explainer at or below the score-guide height */
+.sat-guide-explainer-detailed{align-self:stretch;max-height:100%;overflow:hidden}
+.sat-guide-explainer-detailed>div{padding:7px 0}
+.sat-guide-explainer-detailed>div p{margin-top:2px;line-height:1.42}
+.sat-guide-explainer-detailed .sat-guide-intro{padding:7px 9px;margin-bottom:6px;line-height:1.42}
+.sat-guide-explainer-detailed .sat-guide-caution{margin-top:7px;padding:8px;line-height:1.42}
