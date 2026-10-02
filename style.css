@@ -4915,3 +4915,36 @@ select:hover,
 .university-data-note strong{color:#486b64}
 .university-data-note a{color:#0e7367;font-weight:700;text-decoration:none}
 .university-data-note a:hover{text-decoration:underline}
+
+/* High-resolution university asset fallbacks */
+.university-featured-media.image-failed,
+.university-card-image.image-failed{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:
+    radial-gradient(circle at 20% 18%,rgba(255,255,255,.92),transparent 28%),
+    linear-gradient(145deg,#e7f4f1,#f7fbfa 60%,#eaf5f2);
+}
+.university-featured-media.image-failed::after{
+  content:"Campus photo unavailable";
+  color:#70837f;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.03em;
+}
+.university-card-image.image-failed::after{
+  content:"Campus photo unavailable";
+  color:#71827e;
+  font-size:9px;
+  font-weight:700;
+}
+.university-mark-image{
+  image-rendering:auto;
+  object-position:center;
+}
+.university-mark-wrap.mark-missing{
+  background:linear-gradient(145deg,#f7fbfa,#eaf4f1)!important;
+  border-style:dashed!important;
+}
