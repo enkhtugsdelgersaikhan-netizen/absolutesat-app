@@ -28,140 +28,221 @@
     columbia:"Columbia College of Columbia University Crown 2020.svg"
   };
 
-  const universities = [
-    {
-      id:"mit", name:"Massachusetts Institute of Technology", short:"MIT", location:"Cambridge, MA",
-      domain:"mit.edu", year:"2025–26",
-      sat:{ composite:[1520,1550,1570], reading:[740,760,780], math:[780,790,800] },
-      image:commons("Great dome of MIT, Feb 2021 (2) (cropped).jpg"),
-      photoSource:"https://commons.wikimedia.org/wiki/File:Great_dome_of_MIT,_Feb_2021_(2)_(cropped).jpg",
-      source:"https://ir.mit.edu/projects/2025-26-common-data-set/"
-    },
-    {
-      id:"stanford", name:"Stanford University", short:"Stanford", location:"Stanford, CA",
-      domain:"stanford.edu", year:"2025–26",
-      sat:{ composite:[1520,1550,1570], reading:[750,760,780], math:[770,790,800] },
-      image:commons("Stanford University Main Quad (cropped).jpg"),
-      photoSource:"https://commons.wikimedia.org/wiki/File:Stanford_University_Main_Quad_(cropped).jpg",
-      source:"https://www.collegedata.fyi/schools/stanford/2025-26"
-    },
-    {
-      id:"princeton", name:"Princeton University", short:"Princeton", location:"Princeton, NJ",
-      domain:"princeton.edu", year:"2025–26",
-      sat:{ composite:[1490,1530,1560], reading:[740,760,780], math:[760,790,800] },
-      image:commons("Nassau Hall - Princeton University (55144981395).jpg"),
-      photoSource:"https://commons.wikimedia.org/wiki/File:Nassau_Hall_-_Princeton_University_(55144981395).jpg",
-      source:"https://www.collegedata.fyi/schools/princeton/2025-26"
-    },
-    {
-      id:"yale", name:"Yale University", short:"Yale", location:"New Haven, CT",
-      domain:"yale.edu", year:"2025–26",
-      sat:{ composite:[1470,1530,1560], reading:[730,760,780], math:[740,780,790] },
-      image:commons("Yale University Old Campus.JPG"),
-      photoSource:"https://commons.wikimedia.org/wiki/File:Yale_University_Old_Campus.JPG",
-      source:"https://oir.yale.edu/sites/default/files/yale_cds_2025-26_md_20260410_0.pdf"
-    },
-    {
-      id:"duke", name:"Duke University", short:"Duke", location:"Durham, NC",
-      domain:"duke.edu", year:"2025–26",
-      sat:{ composite:[1510,1550,1570], reading:[740,760,780], math:[770,790,790] },
-      image:commons("Duke University Chapel side in July 2025.jpg"),
-      photoSource:"https://commons.wikimedia.org/wiki/File:Duke_University_Chapel_side_in_July_2025.jpg",
-      source:"https://www.collegedata.fyi/schools/duke/2025-26"
-    },
-    {
-      id:"cornell", name:"Cornell University", short:"Cornell", location:"Ithaca, NY",
-      domain:"cornell.edu", year:"2025–26",
-      sat:{ composite:[1490,1530,1550], reading:[730,750,770], math:[770,790,800] },
-      image:commons("Cornell University from McGraw Tower.JPG"),
-      photoSource:"https://commons.wikimedia.org/wiki/File:Cornell_University_from_McGraw_Tower.JPG",
-      source:"https://www.collegedata.fyi/schools/cornell/2025-26"
-    },
-    {
-      id:"brown", name:"Brown University", short:"Brown", location:"Providence, RI",
-      domain:"brown.edu", year:"2025–26",
-      sat:{ composite:[1470,1520,1550], reading:[730,750,770], math:[730,770,790] },
-      image:commons("Brown University.jpg"),
-      photoSource:"https://commons.wikimedia.org/wiki/File:Brown_University.jpg",
-      source:"https://www.collegedata.fyi/schools/brown/2025-26"
-    },
-    {
-      id:"rice", name:"Rice University", short:"Rice", location:"Houston, TX",
-      domain:"rice.edu", year:"2025–26",
-      sat:{ composite:[1510,1540,1560], reading:[740,760,770], math:[760,790,800] },
-      image:commons("Rice University - Rice statue with Lovett Hall.JPG"),
-      photoSource:"https://commons.wikimedia.org/wiki/File:Rice_University_-_Rice_statue_with_Lovett_Hall.JPG",
-      source:"https://www.collegedata.fyi/schools/rice/2025-26"
-    },
-    {
-      id:"vanderbilt", name:"Vanderbilt University", short:"Vanderbilt", location:"Nashville, TN",
-      domain:"vanderbilt.edu", year:"2025–26",
-      sat:{ composite:[1510,1530,1560], reading:[740,750,770], math:[770,780,790] },
-      image:commons("Kirkland Hall at Vanderbilt University.jpg"),
-      photoSource:"https://commons.wikimedia.org/wiki/File:Kirkland_Hall_at_Vanderbilt_University.jpg",
-      source:"https://www.collegedata.fyi/schools/vanderbilt/2025-26"
-    },
-    {
-      id:"uchicago", name:"University of Chicago", short:"UChicago", location:"Chicago, IL",
-      domain:"uchicago.edu", year:"2025–26",
-      sat:{ composite:[1500,1540,1560], reading:[740,760,770], math:[760,780,790] },
-      image:commons("University of Chicago main quadrangles.jpg"),
-      photoSource:"https://commons.wikimedia.org/wiki/File:University_of_Chicago_main_quadrangles.jpg",
-      source:"https://www.collegedata.fyi/schools/uchicago"
-    },
-    {
-      id:"tufts", name:"Tufts University", short:"Tufts", location:"Medford, MA",
-      domain:"tufts.edu", year:"2025–26",
-      sat:{ composite:[1460,1500,1520], reading:[720,740,760], math:[730,760,780] },
-      image:commons("Ballou Hall at Tufts University at Medford Massachusetts USA built in 1852 by Gridley JF Bryant.jpg"),
-      photoSource:"https://commons.wikimedia.org/wiki/File:Ballou_Hall_at_Tufts_University_at_Medford_Massachusetts_USA_built_in_1852_by_Gridley_JF_Bryant.jpg",
-      source:"https://www.collegedata.fyi/schools/tufts/2025-26"
-    },
-    {
-      id:"pomona", name:"Pomona College", short:"Pomona", location:"Claremont, CA",
-      domain:"pomona.edu", year:"2025–26",
-      sat:{ composite:[1490,1520,1550], reading:[740,755,770], math:[730,770,790] },
-      image:commons("Pomona College - Claremont Colleges.jpg"),
-      photoSource:"https://commons.wikimedia.org/wiki/File:Pomona_College_-_Claremont_Colleges.jpg",
-      source:"https://www.collegedata.fyi/schools/pomona-college/2025-26"
-    },
-    {
-      id:"haverford", name:"Haverford College", short:"Haverford", location:"Haverford, PA",
-      domain:"haverford.edu", year:"2025–26",
-      sat:{ composite:[1460,1490,1530], reading:[720,750,760], math:[720,750,780] },
-      image:commons("Haverfordfounders.jpg"),
-      photoSource:"https://commons.wikimedia.org/wiki/File:Haverfordfounders.jpg",
-      source:"https://www.collegedata.fyi/schools/haverford-college/2025-26"
-    },
-    {
-      id:"williams", name:"Williams College", short:"Williams", location:"Williamstown, MA",
-      domain:"williams.edu", year:"2025–26",
-      sat:{ composite:[1490,1520,1550], reading:[740,750,770], math:[740,770,790] },
-      image:commons("Williams College - Thompson Memorial Chapel exterior view.JPG"),
-      photoSource:"https://commons.wikimedia.org/wiki/File:Williams_College_-_Thompson_Memorial_Chapel_exterior_view.JPG",
-      source:"https://www.collegedata.fyi/schools/williams-college/2025-26"
-    },
-    {
-      id:"bowdoin", name:"Bowdoin College", short:"Bowdoin", location:"Brunswick, ME",
-      domain:"bowdoin.edu", year:"2025–26",
-      sat:{ composite:[1470,1510,1540], reading:[730,750,770], math:[730,760,780] },
-      image:commons("Hubbard Hall (2026).jpg"),
-      photoSource:"https://commons.wikimedia.org/wiki/File:Hubbard_Hall_(2026).jpg",
-      source:"https://www.collegedata.fyi/schools/bowdoin/2025-26"
-    },
-    {
-      id:"columbia", name:"Columbia University", short:"Columbia", location:"New York, NY",
-      domain:"columbia.edu", year:"2024–25",
-      sat:{ composite:[1510,1540,1560], reading:[740,760,780], math:[770,790,800] },
-      image:commons("Columbia University - Low Library.jpg"),
-      photoSource:"https://commons.wikimedia.org/wiki/File:Columbia_University_-_Low_Library.jpg",
-      source:"https://www.collegedata.fyi/schools/columbia/2024-25",
-      note:"Columbia College & Columbia Engineering"
+  const curatedImages = {
+    mit:["Great dome of MIT, Feb 2021 (2) (cropped).jpg","https://commons.wikimedia.org/wiki/File:Great_dome_of_MIT,_Feb_2021_(2)_(cropped).jpg"],
+    stanford:["Stanford University Main Quad (cropped).jpg","https://commons.wikimedia.org/wiki/File:Stanford_University_Main_Quad_(cropped).jpg"],
+    princeton:["Nassau Hall - Princeton University (55144981395).jpg","https://commons.wikimedia.org/wiki/File:Nassau_Hall_-_Princeton_University_(55144981395).jpg"],
+    yale:["Yale University Old Campus.JPG","https://commons.wikimedia.org/wiki/File:Yale_University_Old_Campus.JPG"],
+    duke:["Duke University Chapel side in July 2025.jpg","https://commons.wikimedia.org/wiki/File:Duke_University_Chapel_side_in_July_2025.jpg"],
+    cornell:["Cornell University from McGraw Tower.JPG","https://commons.wikimedia.org/wiki/File:Cornell_University_from_McGraw_Tower.JPG"],
+    brown:["Brown University.jpg","https://commons.wikimedia.org/wiki/File:Brown_University.jpg"],
+    rice:["Rice University - Rice statue with Lovett Hall.JPG","https://commons.wikimedia.org/wiki/File:Rice_University_-_Rice_statue_with_Lovett_Hall.JPG"],
+    vanderbilt:["Kirkland Hall at Vanderbilt University.jpg","https://commons.wikimedia.org/wiki/File:Kirkland_Hall_at_Vanderbilt_University.jpg"],
+    uchicago:["University of Chicago main quadrangles.jpg","https://commons.wikimedia.org/wiki/File:University_of_Chicago_main_quadrangles.jpg"],
+    tufts:["Ballou Hall at Tufts University at Medford Massachusetts USA built in 1852 by Gridley JF Bryant.jpg","https://commons.wikimedia.org/wiki/File:Ballou_Hall_at_Tufts_University_at_Medford_Massachusetts_USA_built_in_1852_by_Gridley_JF_Bryant.jpg"],
+    pomona:["Pomona College - Claremont Colleges.jpg","https://commons.wikimedia.org/wiki/File:Pomona_College_-_Claremont_Colleges.jpg"],
+    haverford:["Haverfordfounders.jpg","https://commons.wikimedia.org/wiki/File:Haverfordfounders.jpg"],
+    williams:["Williams College - Thompson Memorial Chapel exterior view.JPG","https://commons.wikimedia.org/wiki/File:Williams_College_-_Thompson_Memorial_Chapel_exterior_view.JPG"],
+    bowdoin:["Hubbard Hall (2026).jpg","https://commons.wikimedia.org/wiki/File:Hubbard_Hall_(2026).jpg"],
+    columbia:["Columbia University - Low Library.jpg","https://commons.wikimedia.org/wiki/File:Columbia_University_-_Low_Library.jpg"]
+  };
+
+  const knownFallbacks = {
+    mit:{year:"2024–25",sat:{composite:[1520,1550,1570],reading:[740,760,780],math:[780,800,800]}},
+    columbia:{year:"2024–25",sat:{composite:[1510,1540,1560],reading:[740,760,780],math:[770,790,800]}},
+    princeton:{year:"2025–26",sat:{composite:[1490,1530,1560],reading:[740,760,780],math:[760,790,800]}},
+    stanford:{year:"2025–26",sat:{composite:[1520,1550,1570],reading:[750,760,780],math:[770,790,800]}},
+    harvard:{year:"IPEDS 2024",sat:{composite:[1510,1550,1580],reading:[740,760,780],math:[770,790,800]}},
+    williams:{year:"2025–26",sat:{composite:[1490,1520,1550],reading:[740,750,770],math:[740,770,790]}},
+    yale:{year:"2025–26",sat:{composite:[1470,1530,1560],reading:[730,760,780],math:[740,780,790]}},
+    vanderbilt:{year:"2025–26",sat:{composite:[1510,1530,1560],reading:[740,750,770],math:[770,780,790]}},
+    rice:{year:"2025–26",sat:{composite:[1510,1540,1560],reading:[740,760,770],math:[760,790,800]}},
+    uchicago:{year:"2025–26",sat:{composite:[1500,1540,1560],reading:[740,760,770],math:[760,780,790]}},
+    cornell:{year:"2025–26",sat:{composite:[1490,1530,1550],reading:[730,750,770],math:[770,790,800]}},
+    brown:{year:"2025–26",sat:{composite:[1470,1520,1550],reading:[730,750,770],math:[730,770,790]}},
+    duke:{year:"2025–26",sat:{composite:[1510,1550,1570],reading:[740,760,780],math:[770,790,790]}},
+    pomona:{year:"2025–26",sat:{composite:[1490,1520,1550],reading:[740,760,770],math:[730,770,790]}},
+    bowdoin:{year:"2025–26",sat:{composite:[1470,1510,1540],reading:[730,750,770],math:[730,760,780]}},
+    haverford:{year:"2025–26",sat:{composite:[1460,1490,1530],reading:[720,750,760],math:[720,750,780]}},
+    tufts:{year:"2025–26",sat:{composite:[1460,1500,1520],reading:[720,740,760],math:[730,760,780]}},
+    "uc-berkeley":{year:"IPEDS 2020",sat:{composite:[1310,1430,1530],reading:[650,700,740],math:[660,730,790]}},
+    ucla:{year:"IPEDS 2019",sat:{composite:[1300,1420,1530],reading:[650,700,740],math:[650,720,790]}},
+    ucsb:{year:"IPEDS 2020",sat:{composite:[1230,1350,1460],reading:[620,670,710],math:[610,680,750]}},
+    "uc-davis":{year:"IPEDS 2020",sat:{composite:[1160,1280,1400],reading:[570,620,670],math:[590,660,730]}},
+    ucsc:{year:"IPEDS 2020",sat:{composite:[1160,1270,1360],reading:[580,630,670],math:[580,640,690]}},
+    ucr:{year:"IPEDS 2020",sat:{composite:[1080,1190,1280],reading:[540,590,630],math:[540,600,650]}},
+    sdsu:{year:"IPEDS 2020",sat:{composite:[1090,1200,1300],reading:[550,600,640],math:[540,600,660]}},
+    csulb:{year:"IPEDS 2020",sat:{composite:[1020,1130,1240],reading:[510,570,620],math:[510,570,620]}}
+  };
+
+  const mathHeavy = new Set(["mit","caltech","georgia-tech","cmu","uiuc","purdue","ut-austin","harvey-mudd","texas-am","virginia-tech","rice","umd"]);
+  const verbalHeavy = new Set(["williams","amherst","swarthmore","wellesley","pomona","bowdoin","haverford","middlebury","wesleyan","colby","hamilton","smith","bates","davidson"]);
+
+  const round10 = (value) => Number.isFinite(Number(value)) ? Math.round(Number(value) / 10) * 10 : null;
+  const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
+
+  function estimatedFromRank(rank, id) {
+    const median = clamp(round10(1560 - (Math.max(1, rank) - 1) * 2.3), 1180, 1560);
+    const composite = [clamp(median - 60, 400, 1600), median, clamp(median + 40, 400, 1600)];
+    const bias = mathHeavy.has(id) ? -20 : verbalHeavy.has(id) ? 10 : 0;
+    const reading = composite.map((score) => clamp(round10(score / 2 + bias), 200, 800));
+    const math = composite.map((score, i) => clamp(round10(score - reading[i]), 200, 800));
+    return {year:"Estimated",sat:{composite,reading,math}};
+  }
+
+  function normalizeTriplet(values, min, max) {
+    let [low, mid, high] = values.map(round10);
+    if (!Number.isFinite(low) && Number.isFinite(mid) && Number.isFinite(high)) low = round10(mid - (high - mid));
+    if (!Number.isFinite(high) && Number.isFinite(low) && Number.isFinite(mid)) high = round10(mid + (mid - low));
+    if (!Number.isFinite(mid) && Number.isFinite(low) && Number.isFinite(high)) mid = round10((low + high) / 2);
+    if (![low,mid,high].every(Number.isFinite)) return null;
+    low = clamp(low,min,max); mid = clamp(mid,min,max); high = clamp(high,min,max);
+    if (mid < low) mid = low;
+    if (high < mid) high = mid;
+    return [low,mid,high];
+  }
+
+  function federalValue(data, key) {
+    const value = Number(data?.federal?.[key]?.value_numeric);
+    return Number.isFinite(value) ? value : null;
+  }
+
+  function browserValue(data, key) {
+    const value = Number(data?.browser?.[key]);
+    return Number.isFinite(value) ? value : null;
+  }
+
+  function buildSatFromData(u, data) {
+    if (!data) return null;
+
+    let reading = normalizeTriplet([
+      browserValue(data,"sat_ebrw_p25") ?? federalValue(data,"sat_ebrw_p25"),
+      browserValue(data,"sat_ebrw_p50") ?? federalValue(data,"sat_ebrw_p50"),
+      browserValue(data,"sat_ebrw_p75") ?? federalValue(data,"sat_ebrw_p75")
+    ],200,800);
+
+    let math = normalizeTriplet([
+      browserValue(data,"sat_math_p25") ?? federalValue(data,"sat_math_p25"),
+      browserValue(data,"sat_math_p50") ?? federalValue(data,"sat_math_p50"),
+      browserValue(data,"sat_math_p75") ?? federalValue(data,"sat_math_p75")
+    ],200,800);
+
+    let composite = normalizeTriplet([
+      browserValue(data,"sat_composite_p25"),
+      browserValue(data,"sat_composite_p50"),
+      browserValue(data,"sat_composite_p75")
+    ],400,1600);
+
+    let derived = false;
+
+    if (!composite && reading && math) {
+      composite = reading.map((score,i) => round10(score + math[i]));
+      derived = true;
     }
-  ].map((u) => ({
-    ...u,
-    mark: universityMarks[u.id] ? schoolMark(universityMarks[u.id]) : null
-  }));
+
+    if (!reading && composite && math) {
+      reading = composite.map((score,i) => clamp(round10(score - math[i]),200,800));
+      derived = true;
+    }
+
+    if (!math && composite && reading) {
+      math = composite.map((score,i) => clamp(round10(score - reading[i]),200,800));
+      derived = true;
+    }
+
+    if ((!reading || !math) && composite) {
+      const bias = mathHeavy.has(u.id) ? -20 : verbalHeavy.has(u.id) ? 10 : 0;
+      const estimatedReading = composite.map((score) => clamp(round10(score / 2 + bias),200,800));
+      const estimatedMath = composite.map((score,i) => clamp(round10(score - estimatedReading[i]),200,800));
+      if (!reading) reading = estimatedReading;
+      if (!math) math = estimatedMath;
+      derived = true;
+    }
+
+    if (!composite || !reading || !math) return null;
+
+    const browserHasSat = data.browser && [
+      data.browser.sat_composite_p25,data.browser.sat_composite_p50,data.browser.sat_composite_p75,
+      data.browser.sat_ebrw_p25,data.browser.sat_ebrw_p50,data.browser.sat_ebrw_p75,
+      data.browser.sat_math_p25,data.browser.sat_math_p50,data.browser.sat_math_p75
+    ].some((value) => Number.isFinite(Number(value)));
+
+    const federalYears = Object.values(data.federal || {})
+      .map((item) => Number(item?.data_year || item?.collection_year || 0))
+      .filter(Number.isFinite);
+    const federalYear = federalYears.length ? Math.max(...federalYears) : null;
+
+    const browserComplete = data.browser && [
+      "sat_composite_p25","sat_composite_p50","sat_composite_p75",
+      "sat_ebrw_p25","sat_ebrw_p50","sat_ebrw_p75",
+      "sat_math_p25","sat_math_p50","sat_math_p75"
+    ].every((key) => Number.isFinite(Number(data.browser[key])));
+
+    const status = browserComplete && !derived
+      ? "Reported CDS"
+      : browserHasSat
+        ? "Reported + derived"
+        : federalYear
+          ? "Latest available IPEDS"
+          : "Estimated";
+
+    let submitRate = browserValue(data,"sat_submit_rate");
+    if (!Number.isFinite(submitRate)) submitRate = federalValue(data,"sat_submit_rate");
+    if (Number.isFinite(submitRate) && submitRate <= 1) submitRate *= 100;
+
+    return {
+      sat:{composite,reading,math},
+      year: browserHasSat ? (data.browser.canonical_year || "Latest CDS") : (federalYear ? "IPEDS " + federalYear : u.year),
+      source:data.source_url || u.source,
+      dataStatus:status,
+      satSubmitRate:Number.isFinite(submitRate) ? Math.round(submitRate) : null
+    };
+  }
+
+  const brandMark = (domain) => "https://logo.clearbit.com/" + encodeURIComponent(domain) + "?size=256";
+  const fallbackMark = (domain) => "https://www.google.com/s2/favicons?sz=256&domain_url=https://" + encodeURIComponent(domain);
+
+  const universities = (Array.isArray(window.LEXLOGICA_TOP100) ? window.LEXLOGICA_TOP100 : []).map((meta) => {
+    const image = curatedImages[meta.id];
+    const seed = knownFallbacks[meta.id] || estimatedFromRank(meta.rank, meta.id);
+    return {
+      ...meta,
+      state:(meta.location.split(",").pop() || "").trim(),
+      year:seed.year,
+      sat:seed.sat,
+      dataStatus:knownFallbacks[meta.id] ? "Fallback until live data loads" : "Estimated until live data loads",
+      source:"https://www.collegedata.fyi/schools/" + meta.cdId,
+      image:image ? commons(image[0]) : null,
+      photoSource:image ? image[1] : null,
+      mark:universityMarks[meta.id] ? schoolMark(universityMarks[meta.id]) : brandMark(meta.domain),
+      markFallback:fallbackMark(meta.domain)
+    };
+  });
+
+  async function hydrateUniversityData() {
+    try {
+      const response = await fetch("/api/college-data", {
+        method:"POST",
+        headers:{"content-type":"application/json"},
+        body:JSON.stringify({
+          schools:universities.map((u) => ({id:u.id,name:u.name,cdId:u.cdId,state:u.state}))
+        })
+      });
+      if (!response.ok) throw new Error("SAT data request failed");
+      const payload = await response.json();
+      universities.forEach((u) => {
+        const hydrated = buildSatFromData(u, payload?.results?.[u.id]);
+        if (hydrated) Object.assign(u, hydrated);
+      });
+    } catch (error) {
+      console.warn("Using catalog fallback SAT estimates:", error);
+      universities.forEach((u) => {
+        if (/until live data loads/i.test(u.dataStatus)) {
+          u.dataStatus = knownFallbacks[u.id] ? "Latest saved fallback" : "Estimated";
+        }
+      });
+    }
+  }
 
   const input = document.getElementById("university-search");
   const results = document.getElementById("university-search-results");
@@ -327,9 +408,10 @@
     if (!u.mark) {
       return '<span class="' + cls + ' university-mark-wrap mark-missing" aria-hidden="true"></span>';
     }
+    const fallback = escapeHtml(u.markFallback || "");
     return '<span class="' + cls + ' university-mark-wrap" aria-hidden="true">' +
       '<img class="university-mark-image" src="' + escapeHtml(u.mark) + '" alt="" loading="lazy" referrerpolicy="no-referrer" ' +
-      'onerror="this.remove();this.parentElement.classList.add(\'mark-missing\')">' +
+      'data-fallback="' + fallback + '" onerror="if(this.dataset.fallback && !this.dataset.usedFallback){this.dataset.usedFallback=\'1\';this.src=this.dataset.fallback;}else{this.remove();this.parentElement.classList.add(\'mark-missing\');}">' +
     '</span>';
   }
 
@@ -414,18 +496,19 @@
       ? userProfile.readingWriting + userProfile.math
       : null;
 
+    const media = u.image
+      ? '<div class="university-featured-media"><img src="' + escapeHtml(u.image) + '" alt="' + escapeHtml(u.name) + ' campus" loading="eager">' +
+          (u.photoSource ? '<span class="university-photo-credit">Photo: <a href="' + escapeHtml(u.photoSource) + '" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></span>' : '') + '</div>'
+      : '<div class="university-featured-media university-campus-placeholder">' +
+          logoImg(u, "university-placeholder-logo") +
+          '<span>#' + u.rank + ' · Forbes 2025–26</span></div>';
+
     featured.innerHTML =
-      '<div class="university-featured-media">' +
-        '<img src="' + escapeHtml(u.image) + '" alt="' +
-          escapeHtml(u.name) + ' campus" loading="eager">' +
-        '<span class="university-photo-credit">Photo: <a href="' +
-          escapeHtml(u.photoSource) +
-          '" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></span>' +
-      '</div>' +
+      media +
       '<div class="university-featured-content">' +
         '<div class="university-featured-school">' +
           logoImg(u, "university-featured-logo") +
-          '<div><h3>' + escapeHtml(u.name) + '</h3><p>' +
+          '<div><span class="university-rank-chip">#' + u.rank + ' · Forbes 2025–26</span><h3>' + escapeHtml(u.name) + '</h3><p>' +
             escapeHtml(u.location) + '</p></div>' +
         '</div>' +
         '<div class="university-score-context">' +
@@ -444,7 +527,9 @@
           renderBand("Math", u.sat.math, "section", userProfile?.math) +
         '</div>' +
         '<div class="university-featured-meta">' +
-          '<span>Reporting year: <strong>' + escapeHtml(u.year) + '</strong></span>' +
+          '<span>Data year: <strong>' + escapeHtml(u.year) + '</strong></span>' +
+          '<span class="university-data-status">' + escapeHtml(u.dataStatus || "Reported") + '</span>' +
+          (Number.isFinite(u.satSubmitRate) ? '<span>SAT submitted by <strong>' + u.satSubmitRate + '%</strong></span>' : '') +
           (u.note ? '<span>' + escapeHtml(u.note) + '</span>' : '') +
           '<a href="' + escapeHtml(u.source) +
             '" target="_blank" rel="noopener noreferrer">View data source ↗</a>' +
@@ -454,15 +539,17 @@
 
   function card(u) {
     const [lower, median, upper] = u.sat.composite;
+    const media = u.image
+      ? '<div class="university-card-image"><img src="' + escapeHtml(u.image) + '" alt="' + escapeHtml(u.name) + ' campus" loading="lazy"></div>'
+      : '<div class="university-card-image university-card-placeholder">' + logoImg(u, "university-card-placeholder-logo") + '</div>';
 
     return '<article class="university-card" tabindex="0" role="button" data-id="' +
       escapeHtml(u.id) + '" aria-label="Show ' + escapeHtml(u.name) + ' SAT data">' +
-      '<div class="university-card-image"><img src="' + escapeHtml(u.image) +
-        '" alt="' + escapeHtml(u.name) + ' campus" loading="lazy"></div>' +
+      media +
       '<div class="university-card-body">' +
         '<div class="university-card-top">' +
           logoImg(u, "university-card-logo") +
-          '<div><h4>' + escapeHtml(u.name) + '</h4><p class="university-card-place">' +
+          '<div><span class="university-card-rank">#' + u.rank + '</span><h4>' + escapeHtml(u.name) + '</h4><p class="university-card-place">' +
             escapeHtml(u.location) + '</p></div>' +
         '</div>' +
         '<div class="university-card-scores">' +
@@ -470,6 +557,7 @@
           '<div><span>Median</span><strong>' + median + '</strong></div>' +
           '<div><span>Upper quartile</span><strong>' + upper + '</strong></div>' +
         '</div>' +
+        '<small class="university-card-data-status">' + escapeHtml(u.dataStatus || "") + ' · ' + escapeHtml(u.year) + '</small>' +
       '</div>' +
     '</article>';
   }
@@ -542,8 +630,8 @@
     }
 
     const matches = universities.filter((u) =>
-      [u.name, u.short, u.location].some((value) =>
-        value.toLowerCase().includes(query)
+      [u.name, u.short, u.location, String(u.rank)].some((value) =>
+        String(value).toLowerCase().includes(query)
       )
     );
 
@@ -566,8 +654,9 @@
     if (event.key === "Escape") results.hidden = true;
   });
 
-  renderFeatured(selectedUniversity);
-  renderGrid(universities);
+  featured.innerHTML = '<div class="university-catalog-loading">Loading Top 100 SAT data…</div>';
+  grid.innerHTML = '<div class="university-catalog-loading">Loading the latest available score ranges…</div>';
+  count.textContent = "100 schools";
 
   const profileForm = document.getElementById("sat-profile-form");
   const readingInput = document.getElementById("sat-reading-writing");
@@ -604,7 +693,7 @@
     updateGuideHighlights(reading, math);
   };
 
-  loadUserProfile().then(async (profile) => {
+  Promise.all([hydrateUniversityData(), loadUserProfile()]).then(async ([, profile]) => {
     userProfile = profile;
     try {
       const { data } = await absolutePrepSupabase.auth.getSession();
@@ -615,7 +704,9 @@
       mathInput.value = profile.math;
     }
     updateProfilePreview();
+    selectedUniversity = universities[0];
     renderFeatured(selectedUniversity);
+    renderGrid(universities);
   });
 
   readingInput?.addEventListener("input", updateProfilePreview);
