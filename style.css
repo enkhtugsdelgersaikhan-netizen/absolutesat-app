@@ -4724,3 +4724,10 @@ select:hover,
 /* Auth visibility must win over legacy dashboard-button display rules */
 .site-dashboard{display:none!important}
 .site-dashboard.is-authenticated{display:inline-flex!important}
+
+/* Crisp university marks: preserve source aspect ratio instead of stretching tiny favicons */
+.university-mark-wrap{display:flex!important;align-items:center;justify-content:center;overflow:hidden;background:#fff}
+.university-mark-image{display:block;width:88%!important;height:88%!important;max-width:88%!important;max-height:88%!important;object-fit:contain!important}
+.university-card-logo.university-mark-wrap,.university-featured-logo.university-mark-wrap{border:1px solid #dfe8e6;border-radius:10px}
+.university-search-logo.university-mark-wrap{border-radius:6px}
+.university-logo-monogram{font-weight:800;letter-spacing:-.04em;color:#0e7367;background:#edf7f4}
