@@ -4731,3 +4731,40 @@ select:hover,
 .university-card-logo.university-mark-wrap,.university-featured-logo.university-mark-wrap{border:1px solid #dfe8e6;border-radius:10px}
 .university-search-logo.university-mark-wrap{border-radius:6px}
 .university-logo-monogram{font-weight:800;letter-spacing:-.04em;color:#0e7367;background:#edf7f4}
+
+/* Reliable local university symbols — no remote logo assets */
+.university-symbol-badge{
+  display:inline-flex!important;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 auto;
+  overflow:visible!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+.university-symbol-svg{
+  display:block;
+  width:100%;
+  height:100%;
+  overflow:visible;
+}
+.university-symbol-svg rect{
+  fill:#ffffff;
+  stroke:#d8e5e2;
+  stroke-width:1.35;
+}
+.university-symbol-svg text{
+  fill:#0e7367;
+  font-family:Poppins,Arial,sans-serif;
+  font-size:22px;
+  font-weight:800;
+  letter-spacing:-1px;
+}
+.university-symbol-badge.is-medium .university-symbol-svg text{font-size:17px;letter-spacing:-.8px}
+.university-symbol-badge.is-wide .university-symbol-svg text{font-size:12px;letter-spacing:-.5px}
+.university-card-logo.university-symbol-badge,
+.university-featured-logo.university-symbol-badge,
+.university-search-logo.university-symbol-badge{
+  object-fit:initial!important;
+}
