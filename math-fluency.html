@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css?v=subjects-2">
 <link rel="stylesheet" href="/vocab.css?v=9">
-<link rel="stylesheet" href="/math-fluency.css?v=1">
+<link rel="stylesheet" href="/math-fluency.css?v=2">
 <script>
 window.MathJax={
   tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},
@@ -27,7 +27,7 @@ window.MathJax={
 <a class="formula-back" href="/mathematics">← Mathematics</a>
 <div class="page-eyebrow">SAT MATH · FORMULA FLUENCY</div>
 <h1>Learn math like vocabulary.</h1>
-<p>See a formula first. Decide what it means. Then reveal the definition, symbols, and a quick SAT-style example. Mark what you know and keep the rest in rotation.</p>
+<p>Read the question first and recall the relationship from memory. Reveal the answer only when you are ready, then review the formula, symbols, example, and common trap.</p>
 </section>
 
 <section class="vocab-content">
@@ -66,14 +66,16 @@ window.MathJax={
 <span id="formula-review-status" class="vocab-status-chip review hidden">Review</span>
 </div>
 
-<div class="formula-stage">
-<div id="formula-expression" class="formula-expression" aria-label="Formula"></div>
+<div class="formula-front">
+<div id="formula-icon" class="formula-icon" aria-hidden="true"></div>
 <p id="formula-topic" class="formula-topic"></p>
+<h2 id="formula-prompt" class="formula-prompt"></h2>
 </div>
 
 <div id="formula-definition" class="vocab-definition formula-definition hidden">
-<strong>Definition</strong>
-<p id="formula-meaning"></p>
+<strong>Answer</strong>
+<div id="formula-expression" class="formula-expression" aria-label="Formula"></div>
+<p id="formula-meaning" class="formula-meaning"></p>
 <div id="formula-symbols-wrap" class="formula-symbols">
 <strong>Symbols</strong>
 <p id="formula-symbols"></p>
@@ -83,7 +85,7 @@ window.MathJax={
 </div>
 
 <div class="vocab-pre-actions">
-<button id="reveal-button" class="vocab-primary">Reveal Definition</button>
+<button id="reveal-button" class="vocab-primary">Reveal Answer</button>
 </div>
 <div class="vocab-actions hidden" id="formula-actions">
 <button id="learning-button" class="vocab-secondary vocab-answer-button" type="button" aria-pressed="false">Still Learning</button>
@@ -100,7 +102,7 @@ window.MathJax={
 <script src="/supabase-config.js"></script>
 <script src="/auth-guard.js"></script>
 <script src="/auth.js?v=subjects-2"></script>
-<script src="/math-fluency.js?v=1"></script>
+<script src="/math-fluency.js?v=2"></script>
 <script>
 const menuButton=document.querySelector(".mobile-menu-button"),navigation=document.querySelector(".navigation");
 if(menuButton&&navigation){menuButton.addEventListener("click",()=>{const isOpen=navigation.classList.toggle("mobile-open");menuButton.setAttribute("aria-expanded",isOpen?"true":"false");});}
