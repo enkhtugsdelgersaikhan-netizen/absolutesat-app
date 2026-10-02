@@ -4324,3 +4324,22 @@ select:hover,
 
 /* Slight orange fill for the user's SAT score triangle */
 .university-shape-series.you{fill:rgba(240,90,50,.10)}
+
+/* Precision SAT quartile rails */
+.university-score-band-stack{gap:12px}
+.university-score-rail{padding:15px 16px 13px;overflow:visible}
+.university-score-rail .university-score-band-header{margin-bottom:24px}
+.sat-rail{position:relative;height:52px;margin:0 10px}
+.sat-rail-track{position:absolute;left:0;right:0;top:18px;height:5px;border-radius:999px;background:#e7efed}
+.sat-rail-middle{position:absolute;top:18px;height:5px;border-radius:999px;background:linear-gradient(90deg,#67dfe0,#18a99a,#075f58)}
+.sat-rail-marker{position:absolute;top:0;transform:translateX(-50%);width:1px;height:34px;z-index:2}
+.sat-rail-dot{position:absolute;left:50%;top:14px;width:12px;height:12px;border:2px solid #fff;border-radius:50%;transform:translateX(-50%);box-shadow:0 0 0 1px rgba(27,67,61,.12)}
+.sat-rail-marker-copy{position:absolute;left:50%;top:31px;display:flex;gap:4px;align-items:baseline;transform:translateX(-50%);white-space:nowrap}
+.sat-rail-marker-copy small{font-size:7px;font-weight:700;color:#7c8b88}.sat-rail-marker-copy strong{font-size:9px;color:#294842}
+.sat-rail-marker.lower .sat-rail-dot{background:#67dfe0}.sat-rail-marker.median .sat-rail-dot{background:#18a99a}.sat-rail-marker.upper .sat-rail-dot{background:#075f58}
+.sat-rail-marker.you{z-index:4}.sat-rail-marker.you .sat-rail-dot{top:11px;width:17px;height:17px;background:#f05a32;box-shadow:0 0 0 2px rgba(240,90,50,.13)}
+.sat-rail-marker.you .sat-rail-marker-copy{top:-13px;padding:2px 6px;border-radius:999px;background:#fff1ec;box-shadow:0 1px 4px rgba(116,53,34,.08)}
+.sat-rail-marker.you .sat-rail-marker-copy small,.sat-rail-marker.you .sat-rail-marker-copy strong{color:#d94b27}
+.sat-rail-scale-note{display:flex;justify-content:space-between;gap:12px;margin:1px 10px 0;color:#9aa7a4;font-size:7px}
+.sat-rail-scale-note span:nth-child(2){text-align:center}
+@media(max-width:620px){.university-score-rail{padding-left:12px;padding-right:12px}.sat-rail{margin:0 6px}.sat-rail-marker-copy small{display:none}}
