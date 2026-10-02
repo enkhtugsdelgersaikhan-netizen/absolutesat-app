@@ -73,11 +73,16 @@ async function federalRows(ids) {
   return all;
 }
 
+function hasNumericValue(value) {
+  if (value === null || value === undefined || value === "") return false;
+  return Number.isFinite(Number(value));
+}
+
 function chooseLatestSatRow(rows) {
   const sorted = [...rows].sort((a, b) => yearNumber(b.canonical_year) - yearNumber(a.canonical_year));
   const withScore = sorted.find((row) =>
     [row.sat_composite_p25,row.sat_composite_p50,row.sat_composite_p75,row.sat_ebrw_p25,row.sat_ebrw_p50,row.sat_ebrw_p75,row.sat_math_p25,row.sat_math_p50,row.sat_math_p75]
-      .some((value) => Number.isFinite(Number(value)))
+      .some(hasNumericValue)
   );
   return withScore || sorted[0] || null;
 }
@@ -115,14 +120,18 @@ async function resolveMissing(schools, alreadyFound) {
 module.exports = async function handler(req, res) {
   if (req.method === "GET") {
     try {
-      const rows = await browserRows(["mit"]);
+      const requestedId = String(req.query?.id || "mit").trim();
+      const rows = await browserRows([requestedId]);
       const latest = chooseLatestSatRow(rows);
+      const federal = await federalRows([requestedId]);
       return res.status(200).json({
         ok: true,
         provider: "CollegeData.FYI",
-        sample_school: latest?.school_name || "MIT",
+        requested_id: requestedId,
+        sample_school: latest?.school_name || requestedId,
         sample_year: latest?.canonical_year || null,
-        sample_sat_midpoint: latest?.sat_composite_p50 || null
+        browser: latest || null,
+        federal
       });
     } catch (error) {
       console.error("college-data health error", error);
