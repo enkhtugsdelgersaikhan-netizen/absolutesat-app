@@ -103,12 +103,16 @@
   }
 
   function federalValue(data, key) {
-    const value = Number(data?.federal?.[key]?.value_numeric);
+    const raw = data?.federal?.[key]?.value_numeric;
+    if (raw === null || raw === undefined || raw === "") return null;
+    const value = Number(raw);
     return Number.isFinite(value) ? value : null;
   }
 
   function browserValue(data, key) {
-    const value = Number(data?.browser?.[key]);
+    const raw = data?.browser?.[key];
+    if (raw === null || raw === undefined || raw === "") return null;
+    const value = Number(raw);
     return Number.isFinite(value) ? value : null;
   }
 
