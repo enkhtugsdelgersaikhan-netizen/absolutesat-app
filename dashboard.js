@@ -66,9 +66,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         ];
         const polygon = (values) => {
             const ratios = [
-                clamp(values.composite, 400, 1600),
-                clamp(values.reading, 200, 800),
-                clamp(values.math, 200, 800)
+                clamp(values.composite, 1200, 1600),
+                clamp(values.reading, 600, 800),
+                clamp(values.math, 600, 800)
             ];
             return vertices.map((v, i) => point(v, ratios[i]).join(",")).join(" ");
         };
