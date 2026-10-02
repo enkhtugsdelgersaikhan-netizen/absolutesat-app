@@ -331,9 +331,9 @@
             escapeHtml(u.location) + '</p></div>' +
         '</div>' +
         '<div class="university-card-scores">' +
-          '<div><span>Lower Q.</span><strong>' + lower + '</strong></div>' +
+          '<div><span>Lower quartile</span><strong>' + lower + '</strong></div>' +
           '<div><span>Median</span><strong>' + median + '</strong></div>' +
-          '<div><span>Upper Q.</span><strong>' + upper + '</strong></div>' +
+          '<div><span>Upper quartile</span><strong>' + upper + '</strong></div>' +
         '</div>' +
       '</div>' +
     '</article>';
