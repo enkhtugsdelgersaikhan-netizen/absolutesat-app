@@ -300,7 +300,7 @@
     if (!Number.isFinite(currentScore)) {
       return '<section class="university-impact-panel">' +
         '<div class="university-impact-panel-heading">' +
-          '<div><span>SAT IMPACT</span><h4>Relative effect on modeled admission chance</h4></div>' +
+          '<div><span>SAT IMPACT</span><h4>How your SAT changes your admission chance compared with an otherwise identical applicant at this school's median SAT</h4><p class="university-impact-relative-help">This is a <strong>relative change</strong>, not points added to your acceptance rate. For example, if the baseline chance were 10%, a +10% relative change would make it 11%, not 20%.</p></div>' +
         '</div>' +
         '<p class="university-impact-empty">Save your current SAT and optional goal in <a href="/dashboard">Dashboard</a> to see the estimate for this school.</p>' +
       '</section>';
@@ -310,7 +310,7 @@
       '<div class="university-impact-panel-heading">' +
         '<div>' +
           '<span>SAT IMPACT</span>' +
-          '<h4>Relative effect on modeled admission chance</h4>' +
+          '<h4>How your SAT changes your admission chance compared with an otherwise identical applicant at this school's median SAT</h4><p class="university-impact-relative-help">This is a <strong>relative change</strong>, not points added to your acceptance rate. For example, if the baseline chance were 10%, a +10% relative change would make it 11%, not 20%.</p>' +
         '</div>' +
         '<span class="university-impact-median">Median: ' + u.sat.composite[1] + '</span>' +
       '</div>' +
