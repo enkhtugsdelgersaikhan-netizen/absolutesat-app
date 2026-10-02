@@ -81,9 +81,12 @@ async function updateAbsolutePrepHeader(session = null) {
        LOGGED IN
     ======================================================== */
 
+    const dashboardButton = document.querySelector(".site-dashboard");
+
     if (session) {
 
         authButtons.classList.add("logged-in");
+        if (dashboardButton) dashboardButton.hidden = false;
 
         authButtons.innerHTML = "";
 
@@ -95,6 +98,9 @@ async function updateAbsolutePrepHeader(session = null) {
     /* ========================================================
        LOGGED OUT
     ======================================================== */
+
+    authButtons.classList.remove("logged-in");
+    if (dashboardButton) dashboardButton.hidden = true;
 
     authButtons.innerHTML = `
 
