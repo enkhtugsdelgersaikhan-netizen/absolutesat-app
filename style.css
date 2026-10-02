@@ -4685,3 +4685,22 @@ select:hover,
 @media(max-width:950px){
   .sat-weight-redesign,.sat-context-profile{height:auto}
 }
+
+/* Score editor should hug its content, not match the taller SAT-role card */
+.sat-context-workspace{align-items:start}
+.sat-context-profile{
+  height:auto;
+  min-height:0;
+  align-self:start;
+  display:block;
+}
+.sat-context-profile-form{
+  display:flex;
+  flex:none;
+  flex-direction:column;
+  gap:6px;
+}
+.sat-context-profile-actions{
+  margin-top:2px;
+  padding-top:0;
+}
