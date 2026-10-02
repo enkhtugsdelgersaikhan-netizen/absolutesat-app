@@ -181,6 +181,7 @@ async function buildAssets(schools) {
       page,
       symbolTitle,
       campusTitle,
+      pageImageLooksLikeSymbol,
       pageThumb: page.thumbnail?.source || page.original?.source || null,
       pageOriginal: page.original?.source || null
     };
