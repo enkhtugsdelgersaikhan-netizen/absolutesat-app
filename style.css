@@ -4383,3 +4383,9 @@ select:hover,
 @media(max-width:620px){
     .university-sat-container{width:calc(100% - 24px)}
 }
+
+/* Data-driven SAT standing under score saver */
+.sat-dataset-standing{margin-top:15px;padding:13px 14px;border:1px solid #d7e6e2;border-radius:12px;background:#f3f9f7}
+.sat-dataset-standing-kicker{display:block;margin-bottom:5px;color:#6e8580;font-size:8px;font-weight:800;letter-spacing:.11em}
+.sat-dataset-standing>strong{display:block;color:#0e7367;font-size:16px;line-height:1.2;letter-spacing:-.2px}
+.sat-dataset-standing>p{margin:5px 0 0;color:#667773;font-size:9px;line-height:1.5}
