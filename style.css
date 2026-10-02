@@ -3636,3 +3636,56 @@ select:hover,
 .university-position-label.at-upper .university-position-dot{background:#478c75}
 .university-position-label.above-upper{color:#285f50;border-color:#c9dfd7}
 .university-position-label.above-upper .university-position-dot{background:#347d67}
+
+
+/* Repair ~15% lead block: stable width, clean hierarchy, no jagged wrapping. */
+.sat-weight-context{
+    grid-template-columns:minmax(190px,220px) minmax(0,1fr);
+    align-items:start;
+    gap:18px;
+}
+.sat-weight-number{
+    width:100%;
+    min-width:0;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:flex-start;
+    gap:7px;
+    padding:16px 17px;
+}
+.university-sat-section .sat-weight-number strong{
+    display:block;
+    font-size:46px;
+    line-height:.95;
+    letter-spacing:-2px;
+}
+.sat-weight-number span{
+    display:block;
+    max-width:180px;
+    font-size:12px;
+    line-height:1.35;
+    font-weight:650;
+}
+.sat-weight-number small{
+    display:block;
+    max-width:180px;
+    padding-top:7px;
+    border-top:1px solid rgba(14,115,103,.14);
+    color:#7b8986;
+    font-size:9px;
+    line-height:1.35;
+    font-weight:500;
+}
+.sat-weight-three{
+    min-width:0;
+}
+.sat-weight-three p{
+    box-sizing:border-box;
+    line-height:1.58;
+}
+@media(max-width:900px){
+    .sat-weight-context{grid-template-columns:1fr}
+    .sat-weight-number{max-width:none}
+    .sat-weight-number span,.sat-weight-number small{max-width:none}
+}
