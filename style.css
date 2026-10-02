@@ -3246,3 +3246,31 @@ select:hover,
     .university-score-band-values span{font-size:7px}
     .university-score-band-values strong{font-size:15px}
 }
+
+
+/* Slim SAT quartile rail markers */
+.university-band-dot{
+    top:21px;
+    width:2px;
+    height:16px;
+    margin-left:-1px;
+    border:0;
+    border-radius:2px;
+    background:#4f8f86;
+    box-shadow:none;
+}
+.university-band-dot.median{
+    top:18px;
+    width:3px;
+    height:22px;
+    margin-left:-1px;
+    border:0;
+    border-radius:2px;
+    background:#075f57;
+    box-shadow:none;
+    transform:translateX(3px);
+}
+.university-band-dot.lower,
+.university-band-dot.upper{
+    background:#76aaa2;
+}
