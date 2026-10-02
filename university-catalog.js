@@ -248,7 +248,7 @@
           '<span class="university-impact-label">' + escapeHtml(label) + '</span>' +
           '<strong class="university-impact-score">—</strong>' +
         '</div>' +
-        '<p><a href="/dashboard">Add your SAT score →</a></p>' +
+        '<p>Set your SAT score above to personalize this estimate.</p>' +
       '</div>';
     }
 
@@ -281,7 +281,7 @@
         '<div class="university-impact-panel-heading">' +
           '<div><span>SAT IMPACT</span><h4>How your SAT changes your admission chance compared with an otherwise identical applicant at this school\'s median SAT</h4><p class="university-impact-relative-help">This is a <strong>relative change</strong>, not points added to your acceptance rate. For example, if the baseline chance were 10%, a +10% relative change would make it 11%, not 20%.</p></div>' +
         '</div>' +
-        '<p class="university-impact-empty">Save your current SAT in <a href="/dashboard">Dashboard</a> to see the estimate for this school.</p>' +
+        '<p class="university-impact-empty">Set your SAT score above to see the estimate for this school.</p>' +
       '</section>';
     }
 
@@ -409,7 +409,7 @@
                 '<span>Your SAT</span><strong>' + totalScore + '</strong><small>' +
                   userProfile.readingWriting + ' R&amp;W · ' + userProfile.math + ' Math</small>' +
               '</div>'
-            : '<a class="university-add-score-link" href="/dashboard">Add your SAT scores in Dashboard to see where you sit →</a>') +
+            : '<span class="university-add-score-link">Set your SAT scores above to see where you sit.</span>') +
         '</div>' +
         renderAdmissionsImpact(u, totalScore) +
         '<div class="university-score-band-stack">' +
@@ -544,8 +544,89 @@
   renderFeatured(selectedUniversity);
   renderGrid(universities);
 
-  loadUserProfile().then((profile) => {
+  const profileForm = document.getElementById("sat-profile-form");
+  const readingInput = document.getElementById("sat-reading-writing");
+  const mathInput = document.getElementById("sat-math");
+  const totalPreview = document.getElementById("sat-total-preview");
+  const profileSave = document.getElementById("sat-profile-save");
+  const profileClear = document.getElementById("sat-profile-clear");
+  const profileStatus = document.getElementById("sat-profile-status");
+  let profileUser = null;
+
+  const updateProfilePreview = () => {
+    const reading = Number(readingInput?.value);
+    const math = Number(mathInput?.value);
+    if (totalPreview) totalPreview.textContent =
+      validSectionScore(reading) && validSectionScore(math) ? String(reading + math) : "—";
+  };
+
+  loadUserProfile().then(async (profile) => {
+    userProfile = profile;
+    try {
+      const { data } = await absolutePrepSupabase.auth.getSession();
+      profileUser = data?.session?.user || null;
+    } catch {}
+    if (profile && readingInput && mathInput) {
+      readingInput.value = profile.readingWriting;
+      mathInput.value = profile.math;
+    }
+    updateProfilePreview();
+    renderFeatured(selectedUniversity);
+  });
+
+  readingInput?.addEventListener("input", updateProfilePreview);
+  mathInput?.addEventListener("input", updateProfilePreview);
+
+  profileForm?.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const reading = Number(readingInput.value);
+    const math = Number(mathInput.value);
+    if (!validSectionScore(reading) || !validSectionScore(math)) {
+      profileStatus.textContent = "Enter both section scores from 200–800 in 10-point increments.";
+      profileStatus.classList.add("error");
+      return;
+    }
+    if (!profileUser) {
+      profileStatus.innerHTML = 'Log in to save your SAT across devices. <a href="/login">Log in →</a>';
+      profileStatus.classList.add("error");
+      return;
+    }
+    const profile = { readingWriting: reading, math };
+    const key = "lexlogica_sat_profile:" + profileUser.id;
+    localStorage.setItem(key, JSON.stringify(profile));
+    profileSave.disabled = true;
+    profileSave.textContent = "Saving…";
+    const { error } = await absolutePrepSupabase.auth.updateUser({data:{
+      sat_reading_writing:reading, sat_math:math, sat_goal_reading_writing:null, sat_goal_math:null
+    }});
+    profileSave.disabled = false;
+    profileSave.textContent = "Save SAT scores";
+    if (error) {
+      profileStatus.textContent = "Saved on this device. Account sync was unavailable.";
+      profileStatus.classList.add("error");
+    } else {
+      profileStatus.textContent = "Saved — university comparisons updated.";
+      profileStatus.classList.remove("error");
+    }
     userProfile = profile;
     renderFeatured(selectedUniversity);
+  });
+
+  profileClear?.addEventListener("click", async () => {
+    readingInput.value = "";
+    mathInput.value = "";
+    updateProfilePreview();
+    userProfile = null;
+    renderFeatured(selectedUniversity);
+    if (!profileUser) {
+      profileStatus.textContent = "";
+      return;
+    }
+    localStorage.removeItem("lexlogica_sat_profile:" + profileUser.id);
+    const { error } = await absolutePrepSupabase.auth.updateUser({data:{
+      sat_reading_writing:null, sat_math:null, sat_goal_reading_writing:null, sat_goal_math:null
+    }});
+    profileStatus.textContent = error ? "Cleared on this device. Account sync was unavailable." : "Scores cleared.";
+    profileStatus.classList.toggle("error", Boolean(error));
   });
 })();
