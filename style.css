@@ -3039,3 +3039,210 @@ select:hover,
     font-weight:700;
     letter-spacing:.04em;
 }
+
+
+/* =========================================
+   UNIVERSITY QUARTILE DETAIL + USER MARKER
+========================================= */
+.university-featured{
+    grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);
+    min-height:560px;
+}
+.university-featured-content{
+    padding:30px 32px;
+}
+.university-score-context{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:16px;
+    margin:-2px 0 18px;
+}
+.university-score-context>p{
+    margin:0;
+    max-width:430px;
+    color:#71807e;
+    font-size:11px;
+    line-height:1.65;
+}
+.university-add-score-link{
+    display:inline-block;
+    color:#0e7367;
+    font-size:11px;
+    font-weight:600;
+    line-height:1.6;
+    text-decoration:none;
+}
+.university-add-score-link:hover{text-decoration:underline}
+.university-your-summary{
+    flex:0 0 auto;
+    min-width:156px;
+    padding:10px 12px;
+    border:1px solid #d7e5e1;
+    border-radius:11px;
+    background:#f5fbf9;
+}
+.university-your-summary span{
+    display:block;
+    color:#69817d;
+    font-size:9px;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+}
+.university-your-summary strong{
+    display:inline-block;
+    margin-top:2px;
+    color:#0b5e56;
+    font-size:22px;
+}
+.university-your-summary small{
+    display:block;
+    margin-top:1px;
+    color:#7a8987;
+    font-size:9px;
+}
+.university-score-band-stack{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+.university-score-band{
+    padding:14px 15px 13px;
+    border:1px solid #e0e8e6;
+    border-radius:13px;
+    background:#fbfdfc;
+}
+.university-score-band-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    margin-bottom:10px;
+}
+.university-score-band-header h4{
+    margin:0;
+    color:#1c3c37;
+    font-size:13px;
+    font-weight:600;
+}
+.university-user-relation{
+    color:#8a6a24;
+    font-size:9px;
+    line-height:1.4;
+    text-align:right;
+}
+.university-score-band-values{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:8px;
+}
+.university-score-band-values>div{
+    padding:7px 9px;
+    border-radius:9px;
+    background:#fff;
+}
+.university-score-band-values span{
+    display:block;
+    color:#84918f;
+    font-size:8px;
+    font-weight:600;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+}
+.university-score-band-values strong{
+    display:block;
+    margin-top:2px;
+    color:#143d36;
+    font-size:16px;
+}
+.university-band-rail{
+    position:relative;
+    height:42px;
+    margin-top:7px;
+}
+.university-band-track{
+    position:absolute;
+    left:1%;
+    right:1%;
+    top:27px;
+    height:4px;
+    border-radius:99px;
+    background:#dfe8e6;
+}
+.university-band-middle50{
+    position:absolute;
+    top:27px;
+    height:4px;
+    border-radius:99px;
+    background:#71b1a7;
+}
+.university-band-dot{
+    position:absolute;
+    top:23px;
+    width:12px;
+    height:12px;
+    margin-left:-6px;
+    border:2px solid #fff;
+    border-radius:50%;
+    background:#0e7367;
+    box-shadow:0 0 0 1px rgba(14,115,103,.22);
+}
+.university-band-dot.median{
+    top:21px;
+    width:16px;
+    height:16px;
+    margin-left:-8px;
+    background:#075f57;
+}
+.university-you-marker{
+    position:absolute;
+    top:0;
+    z-index:5;
+    width:0;
+    height:36px;
+}
+.university-you-label{
+    position:absolute;
+    left:0;
+    top:0;
+    transform:translateX(-50%);
+    padding:3px 6px;
+    border:1px solid #e8c66f;
+    border-radius:7px;
+    background:#fff9e8;
+    color:#8a6216;
+    font-size:9px;
+    font-weight:700;
+    line-height:1.2;
+    white-space:nowrap;
+    box-shadow:0 3px 8px rgba(93,66,16,.08);
+}
+.university-you-stem{
+    position:absolute;
+    left:-.5px;
+    top:18px;
+    width:1px;
+    height:10px;
+    background:#d7a83a;
+}
+.university-you-diamond{
+    position:absolute;
+    left:-5px;
+    top:22px;
+    color:#d79a14;
+    font-size:10px;
+    line-height:1;
+}
+.university-card-scores span{
+    white-space:nowrap;
+}
+@media(max-width:1000px){
+    .university-featured{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+    .university-score-context{flex-direction:column}
+    .university-your-summary{width:100%}
+    .university-score-band-values span{font-size:7px}
+    .university-score-band-values strong{font-size:15px}
+}
