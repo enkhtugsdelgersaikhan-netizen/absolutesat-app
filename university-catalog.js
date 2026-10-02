@@ -201,12 +201,7 @@
 
       if (!validSectionScore(reading) || !validSectionScore(math)) return null;
 
-      const profile = {
-        readingWriting: reading,
-        math,
-        goalReadingWriting: goalReading,
-        goalMath
-      };
+      const profile = { readingWriting: reading, math };
 
       localStorage.setItem(localKey, JSON.stringify(profile));
       return profile;
