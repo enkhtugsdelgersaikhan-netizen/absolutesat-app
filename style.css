@@ -4768,3 +4768,34 @@ select:hover,
 .university-search-logo.university-symbol-badge{
   object-fit:initial!important;
 }
+
+/* Actual university marks — verified school seals/crowns/wordmarks */
+.university-card-logo.university-mark-wrap,
+.university-featured-logo.university-mark-wrap,
+.university-search-logo.university-mark-wrap{
+  display:inline-flex!important;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 auto;
+  overflow:hidden!important;
+  background:#fff!important;
+  border:1px solid #dfe8e6!important;
+  box-shadow:none!important;
+}
+.university-mark-image{
+  display:block!important;
+  width:88%!important;
+  height:88%!important;
+  max-width:88%!important;
+  max-height:88%!important;
+  object-fit:contain!important;
+}
+.university-card-logo.university-mark-wrap .university-mark-image,
+.university-featured-logo.university-mark-wrap .university-mark-image{
+  border-radius:0!important;
+}
+.university-mark-wrap.mark-missing{
+  background:
+    radial-gradient(circle at 50% 42%,#dcebe7 0 18%,transparent 19%),
+    linear-gradient(145deg,#f4faf8,#eaf4f1)!important;
+}
