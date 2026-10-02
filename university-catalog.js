@@ -321,6 +321,33 @@
     '</section>';
   }
 
+  function universityScoreShape(u, currentScore, goalScore) {
+    const center = [160, 142];
+    const vertices = [[160,30],[63,198],[257,198]];
+    const norm = (v,min,max) => Math.max(0,Math.min(1,(v-min)/(max-min)));
+    const point = (v,r) => [center[0]+(v[0]-center[0])*r,center[1]+(v[1]-center[1])*r];
+    const points = (values) => {
+      const ratios=[norm(values.composite,400,1600),norm(values.reading,200,800),norm(values.math,200,800)];
+      return vertices.map((v,i)=>point(v,ratios[i]).join(",")).join(" ");
+    };
+    const grid=[.25,.5,.75,1].map(l=>'<polygon points="'+vertices.map(v=>point(v,l).join(",")).join(" ")+'" class="university-shape-grid"/>').join("");
+    const median={composite:u.sat.composite[1],reading:u.sat.reading[1],math:u.sat.math[1]};
+    const current=Number.isFinite(currentScore)&&userProfile?{composite:currentScore,reading:userProfile.readingWriting,math:userProfile.math}:null;
+    const goal=Number.isFinite(goalScore)&&userProfile?{composite:goalScore,reading:userProfile.goalReadingWriting,math:userProfile.goalMath}:null;
+    const poly=(v,cls)=>v?'<polygon points="'+points(v)+'" class="university-shape-series '+cls+'"/>':'';
+    return '<section class="university-shape-panel">'+
+      '<div class="university-shape-head"><div><span>SCORE SHAPES</span><h4>'+escapeHtml(u.short||u.name)+' median vs. you</h4></div>'+
+      '<div class="university-shape-legend"><span class="school"><i></i>School median</span><span class="you"><i></i>You</span><span class="goal"><i></i>Goal</span></div></div>'+
+      '<svg viewBox="0 0 320 235" role="img" aria-label="University median and your SAT score shapes">'+grid+
+      '<line x1="160" y1="142" x2="160" y2="30" class="university-shape-axis"/><line x1="160" y1="142" x2="63" y2="198" class="university-shape-axis"/><line x1="160" y1="142" x2="257" y2="198" class="university-shape-axis"/>'+
+      poly(median,"school")+poly(current,"you")+poly(goal,"goal")+
+      '<text x="160" y="16" text-anchor="middle" class="university-shape-label">Composite</text>'+
+      '<text x="42" y="220" text-anchor="middle" class="university-shape-label">R&W</text>'+
+      '<text x="278" y="220" text-anchor="middle" class="university-shape-label">Math</text></svg>'+
+      '<p>The school shape uses its reported median on all three SAT measures. Each axis is normalized to its own SAT scale.</p>'+
+    '</section>';
+  }
+
   function logoImg(u, cls) {
     const initials = u.short.slice(0, 3).toUpperCase();
     return '<img class="' + cls + '" src="' + escapeHtml(u.logo) +
@@ -444,6 +471,7 @@
             : '<a class="university-add-score-link" href="/dashboard">Add your SAT scores in Dashboard to see where you sit →</a>') +
         '</div>' +
         renderAdmissionsImpact(u, totalScore, goalTotal) +
+        universityScoreShape(u, totalScore, goalTotal) +
         '<div class="university-score-band-stack">' +
           renderBand("Composite", u.sat.composite, "composite", totalScore) +
           renderBand("Reading & Writing", u.sat.reading, "section", userProfile?.readingWriting) +
