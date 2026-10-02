@@ -1844,3 +1844,145 @@ main > * {
 .fluency-feedback{min-height:24px;margin-top:14px;color:#526174;font-size:14px}
 @media(max-width:950px){.study-grid-three{grid-template-columns:1fr;max-width:680px}.study-grid-three .study-card{min-height:0}.topic-preview-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.fluency-card{padding:20px}.fluency-options{grid-template-columns:1fr}.display-math{font-size:28px;padding:18px 10px}}
+
+
+/* =========================================
+   POLISHED INTERACTIONS — SUBTLE DEPTH
+========================================= */
+:root{
+    --ui-ease:cubic-bezier(.2,.7,.2,1);
+    --ui-shadow:0 2px 0 rgba(15,23,42,.08),0 4px 10px rgba(15,23,42,.06);
+    --ui-shadow-hover:0 3px 0 rgba(15,23,42,.08),0 7px 16px rgba(15,23,42,.08);
+    --ui-shadow-pressed:0 1px 0 rgba(15,23,42,.08),0 2px 6px rgba(15,23,42,.05);
+}
+
+button,
+.nav-button,
+.register-button,
+.login-button,
+.dashboard-button,
+.study-button,
+.hero-primary-button,
+.hero-secondary-button,
+.logout-button,
+.fluency-options button{
+    transition:
+        transform .18s var(--ui-ease),
+        box-shadow .18s var(--ui-ease),
+        background-color .18s var(--ui-ease),
+        border-color .18s var(--ui-ease),
+        color .18s var(--ui-ease),
+        opacity .18s var(--ui-ease);
+}
+
+.register-button,
+.login-button,
+.dashboard-button,
+.study-button,
+.hero-primary-button,
+.hero-secondary-button,
+.logout-button,
+.fluency-options button,
+.mobile-menu-button{
+    box-shadow:var(--ui-shadow);
+}
+
+.register-button:hover,
+.login-button:hover,
+.dashboard-button:hover,
+.study-button:hover,
+.hero-primary-button:hover,
+.hero-secondary-button:hover,
+.logout-button:hover,
+.fluency-options button:hover,
+.mobile-menu-button:hover{
+    transform:translateY(-1px);
+    box-shadow:var(--ui-shadow-hover);
+}
+
+.register-button:active,
+.login-button:active,
+.dashboard-button:active,
+.study-button:active,
+.hero-primary-button:active,
+.hero-secondary-button:active,
+.logout-button:active,
+.fluency-options button:active,
+.mobile-menu-button:active{
+    transform:translateY(1px) scale(.995);
+    box-shadow:var(--ui-shadow-pressed);
+    transition-duration:.09s;
+}
+
+.nav-button{
+    box-shadow:0 0 0 rgba(0,0,0,0);
+}
+.nav-button:hover{
+    transform:translateY(-1px);
+    box-shadow:0 3px 9px rgba(15,118,110,.08);
+}
+.nav-button:active{
+    transform:translateY(0);
+    box-shadow:0 1px 4px rgba(15,118,110,.06);
+}
+
+select,
+.guide-tools select{
+    box-shadow:0 1px 0 rgba(15,23,42,.05),0 2px 7px rgba(15,23,42,.035);
+    transition:
+        transform .18s var(--ui-ease),
+        box-shadow .18s var(--ui-ease),
+        border-color .18s var(--ui-ease),
+        background-color .18s var(--ui-ease);
+}
+select:hover,
+.guide-tools select:hover{
+    transform:translateY(-1px);
+    box-shadow:0 2px 0 rgba(15,23,42,.05),0 5px 12px rgba(15,23,42,.055);
+}
+select:focus,
+.guide-tools select:focus{
+    box-shadow:0 0 0 3px rgba(15,118,110,.09),0 3px 10px rgba(15,23,42,.05);
+}
+
+.navigation.mobile-open{
+    animation:absoluteDropdownReveal .22s var(--ui-ease) both;
+    box-shadow:0 12px 28px rgba(15,23,42,.09);
+}
+.navigation.mobile-open .nav-button{
+    transition:
+        transform .18s var(--ui-ease),
+        background-color .18s var(--ui-ease),
+        color .18s var(--ui-ease),
+        box-shadow .18s var(--ui-ease);
+}
+
+.study-card{
+    transition:
+        transform .22s var(--ui-ease),
+        box-shadow .22s var(--ui-ease),
+        border-color .22s var(--ui-ease),
+        background-color .22s var(--ui-ease);
+}
+.study-card:active{
+    transform:translateY(-1px) scale(.998);
+    box-shadow:0 8px 20px rgba(15,23,42,.06);
+}
+
+@media (prefers-reduced-motion: reduce){
+    button,
+    .nav-button,
+    .register-button,
+    .login-button,
+    .dashboard-button,
+    .study-button,
+    .hero-primary-button,
+    .hero-secondary-button,
+    .logout-button,
+    .fluency-options button,
+    select,
+    .study-card{
+        transition:none!important;
+        transform:none!important;
+    }
+}
