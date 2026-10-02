@@ -11,9 +11,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     const readingInput = document.getElementById("sat-reading-writing");
     const mathInput = document.getElementById("sat-math");
     const totalPreview = document.getElementById("sat-total-preview");
-    const goalReadingInput = document.getElementById("sat-goal-reading-writing");
-    const goalMathInput = document.getElementById("sat-goal-math");
-    const goalTotalPreview = document.getElementById("sat-goal-total-preview");
     const profileForm = document.getElementById("sat-profile-form");
     const profileSave = document.getElementById("sat-profile-save");
     const profileClear = document.getElementById("sat-profile-clear");
@@ -33,15 +30,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             const parsed = JSON.parse(raw);
             const reading = Number(parsed?.readingWriting);
             const math = Number(parsed?.math);
-            const goalReading = Number(parsed?.goalReadingWriting);
-            const goalMath = Number(parsed?.goalMath);
-            if (!validSectionScore(reading) || !validSectionScore(math)) return null;
-            return {
-                readingWriting: reading,
-                math,
-                goalReadingWriting: validSectionScore(goalReading) ? goalReading : null,
-                goalMath: validSectionScore(goalMath) ? goalMath : null
-            };
+            return { readingWriting: reading, math };
         } catch {
             return null;
         }
@@ -49,33 +38,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const metadataReading = Number(user.user_metadata?.sat_reading_writing);
     const metadataMath = Number(user.user_metadata?.sat_math);
-    const metadataGoalReading = Number(user.user_metadata?.sat_goal_reading_writing);
-    const metadataGoalMath = Number(user.user_metadata?.sat_goal_math);
     const localProfile = readLocalProfile();
 
     const initialProfile =
         validSectionScore(metadataReading) && validSectionScore(metadataMath)
-            ? {
-                readingWriting: metadataReading,
-                math: metadataMath,
-                goalReadingWriting: validSectionScore(metadataGoalReading)
-                    ? metadataGoalReading
-                    : localProfile?.goalReadingWriting ?? null,
-                goalMath: validSectionScore(metadataGoalMath)
-                    ? metadataGoalMath
-                    : localProfile?.goalMath ?? null
-            }
+            ? { readingWriting: metadataReading, math: metadataMath }
             : localProfile;
 
     if (initialProfile) {
         readingInput.value = initialProfile.readingWriting;
         mathInput.value = initialProfile.math;
-        if (validSectionScore(initialProfile.goalReadingWriting)) {
-            goalReadingInput.value = initialProfile.goalReadingWriting;
-        }
-        if (validSectionScore(initialProfile.goalMath)) {
-            goalMathInput.value = initialProfile.goalMath;
-        }
         localStorage.setItem(profileKey, JSON.stringify(initialProfile));
     }
 
@@ -125,39 +97,18 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (!satShapeChart) return;
         const reading = Number(readingInput?.value);
         const math = Number(mathInput?.value);
-        const goalReading = Number(goalReadingInput?.value);
-        const goalMath = Number(goalMathInput?.value);
-        const current = validSectionScore(reading) && validSectionScore(math)
-            ? { composite: reading + math, reading, math }
-            : null;
-        const goal = validSectionScore(goalReading) && validSectionScore(goalMath)
-            ? { composite: goalReading + goalMath, reading: goalReading, math: goalMath }
-            : null;
         satShapeChart.innerHTML = scoreShapeSvg([
-            { className: "is-current", values: current },
-            { className: "is-goal", values: goal }
+            { className: "is-current", values: current }
         ]);
     };
 
     const updateTotal = () => {
         const reading = Number(readingInput?.value);
         const math = Number(mathInput?.value);
-        const goalReading = Number(goalReadingInput?.value);
-        const goalMath = Number(goalMathInput?.value);
-
-        totalPreview.textContent =
-            validSectionScore(reading) && validSectionScore(math)
-                ? String(reading + math)
-                : "—";
-
-        goalTotalPreview.textContent =
-            validSectionScore(goalReading) && validSectionScore(goalMath)
-                ? String(goalReading + goalMath)
-                : "—";
         updateShape();
     };
 
-    [readingInput, mathInput, goalReadingInput, goalMathInput].forEach((input) => {
+    [readingInput, mathInput].forEach((input) => {
         input?.addEventListener("input", updateTotal);
     });
     updateTotal();
@@ -167,10 +118,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const reading = Number(readingInput.value);
         const math = Number(mathInput.value);
-        const goalReadingRaw = goalReadingInput.value.trim();
-        const goalMathRaw = goalMathInput.value.trim();
-        const goalReading = goalReadingRaw === "" ? null : Number(goalReadingRaw);
-        const goalMath = goalMathRaw === "" ? null : Number(goalMathRaw);
 
         if (!validSectionScore(reading) || !validSectionScore(math)) {
             profileStatus.textContent = "Enter valid current section scores from 200 to 800 in 10-point increments.";
@@ -178,23 +125,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             return;
         }
 
-        const oneGoalMissing = (goalReading === null) !== (goalMath === null);
-        const invalidGoal =
-            goalReading !== null &&
-            (!validSectionScore(goalReading) || !validSectionScore(goalMath));
-
-        if (oneGoalMissing || invalidGoal) {
-            profileStatus.textContent = "Enter both goal section scores, or leave both goal fields blank.";
-            profileStatus.classList.add("error");
-            return;
-        }
-
-        const profile = {
-            readingWriting: reading,
-            math,
-            goalReadingWriting: goalReading,
-            goalMath
-        };
+        const profile = { readingWriting: reading, math };
         localStorage.setItem(profileKey, JSON.stringify(profile));
 
         profileSave.disabled = true;
@@ -206,8 +137,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             data: {
                 sat_reading_writing: reading,
                 sat_math: math,
-                sat_goal_reading_writing: goalReading,
-                sat_goal_math: goalMath
+                sat_goal_reading_writing: null,
+                sat_goal_math: null
             }
         });
 
@@ -219,7 +150,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             profileStatus.textContent = "Saved on this device. Account sync was unavailable.";
             profileStatus.classList.add("error");
         } else {
-            profileStatus.textContent = "Saved. University comparisons will now show your current score, goal, and SAT impact.";
+            profileStatus.textContent = "Saved. University comparisons will now show your current SAT and score shape.";
             profileStatus.classList.remove("error");
         }
     });
@@ -227,8 +158,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     profileClear?.addEventListener("click", async () => {
         readingInput.value = "";
         mathInput.value = "";
-        goalReadingInput.value = "";
-        goalMathInput.value = "";
         updateTotal();
         localStorage.removeItem(profileKey);
         profileStatus.textContent = "Scores cleared.";
