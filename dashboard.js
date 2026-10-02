@@ -97,6 +97,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (!satShapeChart) return;
         const reading = Number(readingInput?.value);
         const math = Number(mathInput?.value);
+        const current =
+            validSectionScore(reading) && validSectionScore(math)
+                ? { composite: reading + math, reading, math }
+                : null;
+
         satShapeChart.innerHTML = scoreShapeSvg([
             { className: "is-current", values: current }
         ]);
@@ -105,6 +110,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     const updateTotal = () => {
         const reading = Number(readingInput?.value);
         const math = Number(mathInput?.value);
+
+        totalPreview.textContent =
+            validSectionScore(reading) && validSectionScore(math)
+                ? String(reading + math)
+                : "—";
+
         updateShape();
     };
 
