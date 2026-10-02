@@ -4187,3 +4187,77 @@ select:hover,
     .university-impact-grid{grid-template-columns:1fr}
     .university-impact-delta{grid-template-columns:1fr}
 }
+
+
+/* Cleaner, concise SAT impact summary */
+.university-impact-panel{
+    padding:13px 14px;
+    background:#fbfdfc;
+}
+.university-impact-panel-heading{
+    align-items:center;
+}
+.university-impact-panel-heading>div>span{
+    margin-bottom:2px;
+}
+.university-impact-panel-heading h4{
+    font-size:12px;
+}
+.university-impact-median{
+    flex:0 0 auto;
+    color:#7b8986;
+    font-size:9px;
+    font-weight:700;
+}
+.university-impact-grid{
+    margin-top:8px;
+}
+.university-impact-card{
+    padding:10px 11px;
+}
+.university-impact-main{
+    margin-top:6px;
+}
+.university-impact-main strong{
+    font-size:22px;
+}
+.university-impact-main span{
+    max-width:92px;
+    line-height:1.25;
+}
+.university-impact-card>p{
+    margin:6px 0 0;
+    font-size:8.5px;
+    line-height:1.5;
+}
+.university-impact-card>p strong{
+    color:inherit;
+    font-weight:800;
+}
+.university-impact-equation{
+    margin-top:6px;
+    padding-top:6px;
+}
+.university-impact-cap{
+    display:block;
+    margin-top:5px;
+    color:#8a9693;
+    font-size:7.5px;
+}
+.university-impact-delta{
+    grid-template-columns:auto auto minmax(0,1fr);
+    margin-top:7px;
+    padding:7px 9px;
+}
+.university-impact-delta>strong{
+    font-size:13px;
+}
+.university-impact-note{
+    margin-top:8px;
+    padding-top:7px;
+    font-size:8px;
+    line-height:1.5;
+}
+.university-impact-note strong{
+    color:#425f59;
+}
