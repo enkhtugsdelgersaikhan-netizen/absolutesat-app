@@ -278,11 +278,11 @@
       ? '<small class="university-impact-cap">Capped at reported quartile range</small>'
       : '';
 
-    const direction = impact.kPercent > 0.005
-      ? 'higher'
+    const comparisonCopy = impact.kPercent > 0.005
+      ? '<strong>' + Math.abs(impact.kPercent).toFixed(1) + '% higher</strong> than'
       : impact.kPercent < -0.005
-        ? 'lower'
-        : 'the same';
+        ? '<strong>' + Math.abs(impact.kPercent).toFixed(1) + '% lower</strong> than'
+        : '<strong>the same as</strong>';
 
     return '<div class="university-impact-card ' + impactTone(impact.k) + '">' +
       '<div class="university-impact-card-top">' +
@@ -293,8 +293,8 @@
         '<strong>' + signedPercent(impact.kPercent) + '</strong>' +
         '<span>relative admission chance</span>' +
       '</div>' +
-      '<p>Your modeled admission chance is <strong>' + Math.abs(impact.kPercent).toFixed(1) + '% ' + direction +
-        '</strong> than an otherwise identical applicant at ' + escapeHtml(u.short || u.name) +
+      '<p>Your modeled admission chance is ' + comparisonCopy +
+        ' an otherwise identical applicant at ' + escapeHtml(u.short || u.name) +
         '\'s median SAT.</p>' +
       '<div class="university-impact-equation">' +
         '<span>Equivalent multiplier</span>' +
@@ -322,18 +322,17 @@
     let delta = "";
     if (current && goal) {
       const relativeGain = ((goal.multiplier / current.multiplier) - 1) * 100;
-      const direction = relativeGain > 0.005
-        ? "higher"
+      const goalComparison = relativeGain > 0.005
+        ? Math.abs(relativeGain).toFixed(1) + '% higher than with your current SAT.'
         : relativeGain < -0.005
-          ? "lower"
-          : "the same";
+          ? Math.abs(relativeGain).toFixed(1) + '% lower than with your current SAT.'
+          : 'the same as with your current SAT.';
 
       delta =
         '<div class="university-impact-delta">' +
           '<span>Goal vs. current</span>' +
           '<strong>' + signedPercent(relativeGain) + '</strong>' +
-          '<p>Your goal score would make the modeled admission chance ' +
-            Math.abs(relativeGain).toFixed(1) + '% ' + direction + ' than with your current SAT.</p>' +
+          '<p>Your goal score would make the modeled admission chance ' + goalComparison + '</p>' +
         '</div>';
     }
 
