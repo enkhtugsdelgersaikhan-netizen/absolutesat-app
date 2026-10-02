@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css?v=subjects-2">
 <link rel="stylesheet" href="/vocab.css?v=9">
-<link rel="stylesheet" href="/math-fluency.css?v=2">
+<link rel="stylesheet" href="/math-fluency.css?v=3">
 <script>
 window.MathJax={
   tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},
@@ -32,7 +32,7 @@ window.MathJax={
 
 <section class="vocab-content">
 <div class="vocab-toolbar">
-<label class="vocab-search-wrap"><span>Search</span><input id="formula-search" type="search" placeholder="Search a formula or topic..." autocomplete="off"></label>
+<label class="vocab-search-wrap"><span>Search</span><input id="formula-search" type="search" placeholder="Search a topic, symbol, or formula..." autocomplete="off"></label>
 <label class="vocab-search-wrap"><span>Domain</span><select id="formula-category">
 <option value="all">All Domains</option>
 <option value="Algebra">Algebra</option>
@@ -102,7 +102,7 @@ window.MathJax={
 <script src="/supabase-config.js"></script>
 <script src="/auth-guard.js"></script>
 <script src="/auth.js?v=subjects-2"></script>
-<script src="/math-fluency.js?v=2"></script>
+<script src="/math-fluency.js?v=3"></script>
 <script>
 const menuButton=document.querySelector(".mobile-menu-button"),navigation=document.querySelector(".navigation");
 if(menuButton&&navigation){menuButton.addEventListener("click",()=>{const isOpen=navigation.classList.toggle("mobile-open");menuButton.setAttribute("aria-expanded",isOpen?"true":"false");});}
