@@ -144,13 +144,6 @@
   const featured = document.getElementById("university-featured");
   const grid = document.getElementById("university-catalog-grid");
   const count = document.getElementById("university-catalog-count");
-  const impactScore = document.getElementById("sat-impact-score");
-  const impactLower = document.getElementById("sat-impact-lower");
-  const impactMedian = document.getElementById("sat-impact-median");
-  const impactUpper = document.getElementById("sat-impact-upper");
-  const impactButton = document.getElementById("sat-impact-calculate");
-  const impactResult = document.getElementById("sat-impact-result");
-  const impactSchool = document.getElementById("sat-impact-school");
 
   if (!input || !results || !featured || !grid) return;
 
@@ -211,87 +204,6 @@
     return null;
   }
 
-  function satImpactValue() {
-    if (!impactScore || !impactLower || !impactMedian || !impactUpper || !impactResult) return;
-
-    const read = (el) => el.value.trim() === "" ? NaN : Number(el.value);
-    const score = read(impactScore);
-    const lower = read(impactLower);
-    const median = read(impactMedian);
-    const upper = read(impactUpper);
-
-    impactResult.classList.remove("is-negative", "is-positive", "is-error");
-
-    if (![score, lower, median, upper].every(Number.isFinite)) {
-      impactResult.innerHTML =
-        '<span class="sat-impact-result-label">Modeled SAT effect vs. median</span>' +
-        '<strong>Enter all four scores</strong>' +
-        '<p>Your SAT and the school\'s three composite anchors are required.</p>';
-      impactResult.classList.add("is-error");
-      return;
-    }
-
-    if ([score, lower, median, upper].some((value) => value < 400 || value > 1600)) {
-      impactResult.innerHTML =
-        '<span class="sat-impact-result-label">Check the scores</span>' +
-        '<strong>Use 400–1600</strong>' +
-        '<p>This calculator is for the composite SAT scale.</p>';
-      impactResult.classList.add("is-error");
-      return;
-    }
-
-    if (!(lower < median && median < upper)) {
-      impactResult.innerHTML =
-        '<span class="sat-impact-result-label">Check the quartiles</span>' +
-        '<strong>Lower &lt; Median &lt; Upper</strong>' +
-        '<p>The three school anchors must be in ascending order.</p>';
-      impactResult.classList.add("is-error");
-      return;
-    }
-
-    const rawPosition = score >= median
-      ? (score - median) / (upper - median)
-      : (score - median) / (median - lower);
-    const position = Math.max(-1, Math.min(1, rawPosition));
-    const impact = 3.75 * position;
-    const absImpact = Math.abs(impact);
-    const sign = impact > 0 ? "+" : impact < 0 ? "−" : "";
-    const schoolName = impactSchool?.textContent || "this school";
-    const capNote = rawPosition > 1
-      ? " Your score is above the upper quartile, so the model caps the effect at the upper-quartile anchor."
-      : rawPosition < -1
-        ? " Your score is below the lower quartile, so the model caps the effect at the lower-quartile anchor."
-        : "";
-    const relation = impact > 0
-      ? "stronger"
-      : impact < 0
-        ? "weaker"
-        : "the same";
-
-    if (impact > 0) impactResult.classList.add("is-positive");
-    if (impact < 0) impactResult.classList.add("is-negative");
-
-    impactResult.innerHTML =
-      '<span class="sat-impact-result-label">Modeled SAT effect vs. median</span>' +
-      '<strong>' + sign + absImpact.toFixed(2) + ' pp</strong>' +
-      '<p>Against an otherwise identical applicant at ' + escapeHtml(schoolName) +
-      '\'s median SAT, the model makes your overall application score ' +
-      relation + ' by ' + absImpact.toFixed(2) +
-      ' percentage points from SAT alone.' + escapeHtml(capNote) + '</p>';
-  }
-
-  function syncImpactCalculator(u) {
-    if (!u || !impactLower || !impactMedian || !impactUpper) return;
-    const [lower, median, upper] = u.sat.composite;
-    impactLower.value = lower;
-    impactMedian.value = median;
-    impactUpper.value = upper;
-    if (impactSchool) impactSchool.textContent = u.short || u.name;
-    if (userProfile && impactScore) {
-      impactScore.value = userProfile.readingWriting + userProfile.math;
-    }
-    if (impactScore?.value.trim()) satImpactValue();
-  }
 
   function logoImg(u, cls) {
     const initials = u.short.slice(0, 3).toUpperCase();
@@ -380,6 +292,12 @@
     const totalScore = userProfile
       ? userProfile.readingWriting + userProfile.math
       : null;
+    const goalTotal =
+      userProfile &&
+      validSectionScore(userProfile.goalReadingWriting) &&
+      validSectionScore(userProfile.goalMath)
+        ? userProfile.goalReadingWriting + userProfile.goalMath
+        : null;
 
     featured.innerHTML =
       '<div class="university-featured-media">' +
@@ -398,12 +316,18 @@
         '<div class="university-score-context">' +
           '<p>Quartiles among enrolled first-year students who submitted SAT scores.</p>' +
           (userProfile
-            ? '<div class="university-your-summary"><span>Your SAT</span><strong>' +
-                totalScore + '</strong><small>' +
-                userProfile.readingWriting + ' Reading &amp; Writing · ' +
-                userProfile.math + ' Math</small></div>'
+            ? '<div class="university-your-summary university-your-summary-pair">' +
+                '<div><span>Your SAT</span><strong>' + totalScore + '</strong><small>' +
+                  userProfile.readingWriting + ' R&amp;W · ' + userProfile.math + ' Math</small></div>' +
+                '<div><span>Goal</span><strong>' + (Number.isFinite(goalTotal) ? goalTotal : '—') + '</strong><small>' +
+                  (Number.isFinite(goalTotal)
+                    ? userProfile.goalReadingWriting + ' R&amp;W · ' + userProfile.goalMath + ' Math'
+                    : '<a href="/dashboard">Set goal →</a>') +
+                '</small></div>' +
+              '</div>'
             : '<a class="university-add-score-link" href="/dashboard">Add your SAT scores in Dashboard to see where you sit →</a>') +
         '</div>' +
+        renderAdmissionsImpact(u, totalScore, goalTotal) +
         '<div class="university-score-band-stack">' +
           renderBand("Composite", u.sat.composite, "composite", totalScore) +
           renderBand("Reading & Writing", u.sat.reading, "section", userProfile?.readingWriting) +
@@ -416,8 +340,6 @@
             '" target="_blank" rel="noopener noreferrer">View data source ↗</a>' +
         '</div>' +
       '</div>';
-
-    syncImpactCalculator(u);
   }
 
   function card(u) {
@@ -520,14 +442,6 @@
     renderSuggestions(matches);
   }
 
-  if (impactButton) impactButton.addEventListener("click", satImpactValue);
-  [impactScore, impactLower, impactMedian, impactUpper].forEach((el) => {
-    if (!el) return;
-    el.addEventListener("keydown", (event) => {
-      if (event.key === "Enter") satImpactValue();
-    });
-  });
-
   input.addEventListener("input", filter);
   input.addEventListener("focus", () => {
     if (input.value.trim()) filter();
@@ -549,6 +463,5 @@
   loadUserProfile().then((profile) => {
     userProfile = profile;
     renderFeatured(selectedUniversity);
-    syncImpactCalculator(selectedUniversity);
   });
 })();
