@@ -211,8 +211,9 @@
       source:"https://www.collegedata.fyi/schools/" + meta.cdId,
       image:image ? commons(image[0]) : null,
       photoSource:image ? image[1] : null,
-      mark:null,
-      markFallback:universityMarks[meta.id] ? schoolMark(universityMarks[meta.id]) : null
+      mark:universityMarks[meta.id] ? schoolMark(universityMarks[meta.id]) : null,
+      markFallback:universityMarks[meta.id] ? schoolMark(universityMarks[meta.id]) : null,
+      imageFallback:null
     };
   });
 
@@ -241,20 +242,28 @@
     }
   }
 
-  const UNIVERSITY_ASSET_CACHE_KEY = "lexlogica_university_assets_v2";
+  const UNIVERSITY_ASSET_CACHE_KEY = "lexlogica_university_assets_v4";
   const UNIVERSITY_ASSET_CACHE_MS = 30 * 24 * 60 * 60 * 1000;
 
   function applyUniversityAssets(assetResults) {
     universities.forEach((u) => {
       const asset = assetResults?.[u.id];
       if (!asset) return;
-      if (asset.mark_url) {
+      const currentMarkIsVector = /\.svg(?:$|\?)/i.test(String(u.mark || ""));
+      const assetMarkIsVector = Boolean(asset.mark_is_vector) || /\.svg(?:$|\?)/i.test(String(asset.mark_url || ""));
+      const assetMarkSize = Math.max(Number(asset.mark_width) || 0, Number(asset.mark_height) || 0);
+      const assetMarkIsSharp = assetMarkIsVector || assetMarkSize >= 256;
+
+      if (asset.mark_url && (!u.mark || assetMarkIsVector || (!currentMarkIsVector && assetMarkIsSharp))) {
         u.mark = asset.mark_url;
         u.markSource = asset.mark_source || null;
       }
       if (!u.image && asset.campus_url) {
         u.image = asset.campus_url;
         u.photoSource = asset.campus_source || null;
+      }
+      if (asset.campus_fallback_url && !u.imageFallback) {
+        u.imageFallback = asset.campus_fallback_url;
       }
     });
   }
@@ -551,7 +560,7 @@
       : null;
 
     const media = u.image
-      ? '<div class="university-featured-media"><img src="' + escapeHtml(u.image) + '" alt="' + escapeHtml(u.name) + ' campus" loading="eager" decoding="async" onerror="this.parentElement.classList.add(\'image-failed\');this.remove();">' +
+      ? '<div class="university-featured-media"><img src="' + escapeHtml(u.image) + '" alt="' + escapeHtml(u.name) + ' campus" loading="eager" decoding="async" data-fallback="' + escapeHtml(u.imageFallback || "") + '" onerror="if(this.dataset.fallback && !this.dataset.usedFallback){this.dataset.usedFallback=\'1\';this.src=this.dataset.fallback;}else{this.parentElement.classList.add(\'image-failed\');this.remove();}">' +
           (u.photoSource ? '<span class="university-photo-credit">Photo: <a href="' + escapeHtml(u.photoSource) + '" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></span>' : '') + '</div>'
       : '<div class="university-featured-media university-campus-placeholder">' +
           logoImg(u, "university-placeholder-logo") +
@@ -594,7 +603,7 @@
   function card(u) {
     const [lower, median, upper] = u.sat.composite;
     const media = u.image
-      ? '<div class="university-card-image"><img src="' + escapeHtml(u.image) + '" alt="' + escapeHtml(u.name) + ' campus" loading="lazy" decoding="async" onerror="this.parentElement.classList.add(\'image-failed\');this.remove();"></div>'
+      ? '<div class="university-card-image"><img src="' + escapeHtml(u.image) + '" alt="' + escapeHtml(u.name) + ' campus" loading="lazy" decoding="async" data-fallback="' + escapeHtml(u.imageFallback || "") + '" onerror="if(this.dataset.fallback && !this.dataset.usedFallback){this.dataset.usedFallback=\'1\';this.src=this.dataset.fallback;}else{this.parentElement.classList.add(\'image-failed\');this.remove();}"></div>'
       : '<div class="university-card-image university-card-placeholder">' + logoImg(u, "university-card-placeholder-logo") + '</div>';
 
     return '<article class="university-card" tabindex="0" role="button" data-id="' +
