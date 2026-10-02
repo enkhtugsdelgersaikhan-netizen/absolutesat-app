@@ -3471,3 +3471,55 @@ select:hover,
     .sat-weight-context{grid-template-columns:1fr}
     .sat-weight-three{grid-template-columns:1fr}
 }
+
+
+/* Categorical SAT position labels replace the score rail. */
+.university-position-label{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:6px 10px;
+    border:1px solid transparent;
+    border-radius:999px;
+    font-size:11px;
+    font-weight:700;
+    line-height:1.2;
+    text-align:center;
+}
+.university-position-label.below-lower{
+    color:#9f2f2f;
+    background:#fff0ef;
+    border-color:#f1c8c4;
+}
+.university-position-label.at-lower{
+    color:#a5522d;
+    background:#fff4ea;
+    border-color:#efd2b9;
+}
+.university-position-label.lower-to-median{
+    color:#8a671d;
+    background:#fff8df;
+    border-color:#eadca7;
+}
+.university-position-label.at-median{
+    color:#557125;
+    background:#f3f8e7;
+    border-color:#d3dfb4;
+}
+.university-position-label.median-to-upper{
+    color:#28705b;
+    background:#eaf7f1;
+    border-color:#bcded2;
+}
+.university-position-label.at-upper,
+.university-position-label.above-upper{
+    color:#17634f;
+    background:#e4f6ef;
+    border-color:#a9d8c8;
+}
+.university-score-band{
+    padding-bottom:13px;
+}
+.university-score-band-values{
+    margin-top:10px;
+}
