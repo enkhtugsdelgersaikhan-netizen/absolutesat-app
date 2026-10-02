@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=universities-3">
-    <link rel="stylesheet" href="dashboard.css?v=sat-profile-2">
+    <link rel="stylesheet" href="dashboard.css?v=sat-shape-1">
 </head>
 <body>
 <header class="header"><div class="header-container"><a href="/" class="logo-link" aria-label="LexLogica home"><img src="/Logo.png" alt="LexLogica" class="logo"></a><nav class="navigation" aria-label="Main navigation"><a href="/mathematics" class="nav-button">Mathematics</a><a href="/mock-tests" class="nav-button">Mock Tests</a><a href="/reading-writing" class="nav-button">Reading and Writing</a></nav><a href="/dashboard" class="dashboard-button site-dashboard">Dashboard</a><div class="auth-buttons"><a href="/login" class="login-button">Login</a></div><button class="mobile-menu-button" aria-label="Open navigation" aria-expanded="false" type="button">☰</button></div></header>
@@ -62,7 +62,9 @@
                 </div>
             </div>
 
-            <form id="sat-profile-form" class="sat-profile-form" novalidate>
+            <div class="sat-profile-workspace">
+                <div class="sat-profile-editor">
+<form id="sat-profile-form" class="sat-profile-form" novalidate>
                 <div class="sat-profile-group-label"><strong>Current SAT</strong><span>Your latest score</span></div>
                 <label class="sat-score-field" for="sat-reading-writing">
                     <span>Reading &amp; Writing</span>
@@ -98,6 +100,16 @@
             </form>
 
             <p class="sat-profile-note">Current and goal composites are calculated automatically by adding the two section scores. Your future goal is optional. Saved values are synced to your signed-in account when possible and cached on this device for fast access.</p>
+                </div>
+                <aside class="sat-shape-panel" aria-labelledby="sat-shape-title">
+                    <div class="sat-shape-heading">
+                        <div><span>SCORE SHAPE</span><h3 id="sat-shape-title">Current vs. goal</h3></div>
+                        <div class="sat-shape-legend"><span class="is-current"><i></i>Current</span><span class="is-goal"><i></i>Goal</span></div>
+                    </div>
+                    <div id="dashboard-sat-shape" class="sat-shape-chart" aria-live="polite"></div>
+                    <p>Each corner is its own SAT scale. Farther from the center means a higher score on that axis.</p>
+                </aside>
+            </div>
         </section>
 
 
@@ -142,7 +154,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js?v=subjects-1"></script>
-<script src="dashboard.js?v=sat-profile-2"></script>
+<script src="dashboard.js?v=sat-shape-1"></script>
 <script src="/study.js"></script>
 </body>
 </html>
