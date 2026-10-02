@@ -5,7 +5,7 @@
     "?width=1400";
 
   const logo = (domain) =>
-    "https://www.google.com/s2/favicons?sz=128&domain_url=https://" + domain;
+    "https://www.google.com/s2/favicons?sz=256&domain_url=https://" + domain;
 
   const universities = [
     {
