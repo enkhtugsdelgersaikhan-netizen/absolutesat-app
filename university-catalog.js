@@ -299,54 +299,6 @@
     '</section>';
   }
 
-  function universityScoreShape(u, currentScore) {
-    const center = [160, 142];
-    const vertices = [[160,30],[63,198],[257,198]];
-    const point = (v,r) => [center[0]+(v[0]-center[0])*r,center[1]+(v[1]-center[1])*r];
-
-    const lower={composite:u.sat.composite[0],reading:u.sat.reading[0],math:u.sat.math[0]};
-    const median={composite:u.sat.composite[1],reading:u.sat.reading[1],math:u.sat.math[1]};
-    const upper={composite:u.sat.composite[2],reading:u.sat.reading[2],math:u.sat.math[2]};
-    const current=Number.isFinite(currentScore)&&userProfile
-      ? {composite:currentScore,reading:userProfile.readingWriting,math:userProfile.math}
-      : null;
-
-    const axisRatio = (value, key) => {
-      const values = [lower[key], median[key], upper[key]];
-      if (current && Number.isFinite(current[key])) values.push(current[key]);
-      const min = Math.min(...values);
-      const max = Math.max(...values);
-      if (max === min) return 0.75;
-      return 0.5 + 0.5 * ((value - min) / (max - min));
-    };
-
-    const points = (values) => {
-      const ratios=[
-        axisRatio(values.composite,"composite"),
-        axisRatio(values.reading,"reading"),
-        axisRatio(values.math,"math")
-      ];
-      return vertices.map((v,i)=>point(v,ratios[i]).join(",")).join(" ");
-    };
-
-    const grid=[.5,.625,.75,.875,1].map(l=>
-      '<polygon points="'+vertices.map(v=>point(v,l).join(",")).join(" ")+'" class="university-shape-grid"/>'
-    ).join("");
-    const poly=(v,cls)=>v?'<polygon points="'+points(v)+'" class="university-shape-series '+cls+'"/>':'';
-
-    return '<section class="university-shape-panel">'+
-      '<div class="university-shape-head"><div><span>SCORE SHAPES</span><h4>'+escapeHtml(u.short||u.name)+' quartiles vs. you</h4></div>'+
-      '<div class="university-shape-legend"><span class="lower"><i></i>Lower quartile</span><span class="median"><i></i>Median</span><span class="upper"><i></i>Upper quartile</span><span class="you"><i></i>You</span></div></div>'+
-      '<svg viewBox="0 0 320 235" role="img" aria-label="University SAT quartiles and your score shape">'+grid+
-      '<line x1="160" y1="142" x2="160" y2="30" class="university-shape-axis"/><line x1="160" y1="142" x2="63" y2="198" class="university-shape-axis"/><line x1="160" y1="142" x2="257" y2="198" class="university-shape-axis"/>'+
-      poly(lower,"lower")+poly(median,"median")+poly(upper,"upper")+poly(current,"you")+
-      '<text x="160" y="16" text-anchor="middle" class="university-shape-label">Composite</text>'+
-      '<text x="42" y="220" text-anchor="middle" class="university-shape-label">R&amp;W</text>'+
-      '<text x="278" y="220" text-anchor="middle" class="university-shape-label">Math</text></svg>'+
-      '<p>Each axis auto-zooms to this comparison: the lowest of your score and the school\'s three quartiles sits halfway out, and the highest sits at the outer edge. Values between them are spaced linearly.</p>'+
-    '</section>';
-  }
-
   function logoImg(u, cls) {
     const initials = u.short.slice(0, 3).toUpperCase();
     return '<img class="' + cls + '" src="' + escapeHtml(u.logo) +
@@ -356,21 +308,16 @@
   }
 
   function railScale(values, type, userScore) {
-    const [lower, median, upper] = values;
-    const hardMin = type === "composite" ? 400 : 200;
-    const hardMax = type === "composite" ? 1600 : 800;
-    const step = type === "composite" ? 20 : 10;
-    const spread = Math.max(upper - lower, type === "composite" ? 80 : 40);
-    const padding = Math.max(spread * 0.65, type === "composite" ? 60 : 30);
-    const observedMin = Number.isFinite(userScore) ? Math.min(lower, userScore) : lower;
-    const observedMax = Number.isFinite(userScore) ? Math.max(upper, userScore) : upper;
-    let min = Math.max(hardMin, Math.floor((observedMin - padding) / step) * step);
-    let max = Math.min(hardMax, Math.ceil((observedMax + padding) / step) * step);
-    if (max <= min) max = Math.min(hardMax, min + step * 10);
-    const position = (score) => ((score - min) / (max - min)) * 100;
+    const compared = values.filter(Number.isFinite);
+    if (Number.isFinite(userScore)) compared.push(userScore);
+    const min = Math.min(...compared);
+    const max = Math.max(...compared);
+    const position = (score) => {
+      if (max === min) return 50;
+      return 8 + 84 * ((score - min) / (max - min));
+    };
     return { min, max, position };
   }
-
   function scoreRelationship(score, [lower, median, upper]) {
     if (score < lower) return "Below the lower quartile";
     if (score === lower) return "At the lower quartile";
@@ -405,29 +352,35 @@
     const [lower, median, upper] = values;
     const hasUser = Number.isFinite(userScore);
     const relation = hasUser ? positionDisplay(userScore, values) : null;
+    const scale = railScale(values, type, userScore);
+    const pos = (v) => scale.position(v).toFixed(2);
+    const marker = (kind, name, value) =>
+      '<div class="sat-rail-marker ' + kind + '" style="left:' + pos(value) + '%">' +
+        '<span class="sat-rail-dot" aria-hidden="true"></span>' +
+        '<span class="sat-rail-marker-copy"><small>' + name + '</small><strong>' + value + '</strong></span>' +
+      '</div>';
 
-    return '<section class="university-score-band">' +
+    return '<section class="university-score-band university-score-rail">' +
       '<div class="university-score-band-header">' +
         '<h4>' + escapeHtml(label) + '</h4>' +
         (hasUser
-          ? '<span class="university-position-label ' +
-              relationshipClass(userScore, values) + '">' +
+          ? '<span class="university-position-label ' + relationshipClass(userScore, values) + '">' +
               '<i class="university-position-dot" aria-hidden="true"></i>' +
-              '<span class="university-position-copy">' +
-                '<strong>' + escapeHtml(relation.title) + '</strong>' +
-                '<small>' + escapeHtml(relation.detail) + ' · Your score: ' + userScore + '</small>' +
-              '</span>' +
-            '</span>'
+              '<span class="university-position-copy"><strong>' + escapeHtml(relation.title) + '</strong>' +
+              '<small>Your score: ' + userScore + '</small></span></span>'
           : '') +
       '</div>' +
-      '<div class="university-score-band-values">' +
-        '<div><span>Lower quartile</span><strong>' + lower + '</strong></div>' +
-        '<div><span>Median</span><strong>' + median + '</strong></div>' +
-        '<div><span>Upper quartile</span><strong>' + upper + '</strong></div>' +
+      '<div class="sat-rail" role="img" aria-label="' + escapeHtml(label) + ': lower quartile ' + lower + ', median ' + median + ', upper quartile ' + upper + (hasUser ? ', your score ' + userScore : '') + '">' +
+        '<div class="sat-rail-track"></div>' +
+        '<div class="sat-rail-middle" style="left:' + pos(lower) + '%;width:' + (scale.position(upper)-scale.position(lower)).toFixed(2) + '%"></div>' +
+        marker("lower","Lower",lower) +
+        marker("median","Median",median) +
+        marker("upper","Upper",upper) +
+        (hasUser ? marker("you","You",userScore) : '') +
       '</div>' +
+      '<div class="sat-rail-scale-note"><span>' + scale.min + '</span><span>Auto-zoomed comparison</span><span>' + scale.max + '</span></div>' +
     '</section>';
   }
-
   function renderFeatured(u) {
     selectedUniversity = u;
 
@@ -459,7 +412,6 @@
             : '<a class="university-add-score-link" href="/dashboard">Add your SAT scores in Dashboard to see where you sit →</a>') +
         '</div>' +
         renderAdmissionsImpact(u, totalScore) +
-        universityScoreShape(u, totalScore) +
         '<div class="university-score-band-stack">' +
           renderBand("Composite", u.sat.composite, "composite", totalScore) +
           renderBand("Reading & Writing", u.sat.reading, "section", userProfile?.readingWriting) +
