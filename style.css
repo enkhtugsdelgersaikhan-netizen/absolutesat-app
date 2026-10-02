@@ -3996,3 +3996,194 @@ select:hover,
 @media(prefers-reduced-motion:reduce){
     .sat-impact-button{transition:none}
 }
+
+
+/* Personalized SAT admissions multiplier inside selected university */
+.university-your-summary-pair{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+    min-width:248px;
+}
+.university-your-summary-pair>div+div{
+    padding-left:10px;
+    border-left:1px solid #dce7e4;
+}
+.university-your-summary-pair small a{
+    color:#0e7367;
+    text-decoration:none;
+    font-weight:700;
+}
+.university-impact-panel{
+    margin:0 0 14px;
+    padding:15px;
+    border:1px solid #dbe7e4;
+    border-radius:14px;
+    background:linear-gradient(180deg,#fbfdfc 0%,#f7fbfa 100%);
+}
+.university-impact-panel-heading{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:12px;
+}
+.university-impact-panel-heading>div>span{
+    display:block;
+    margin-bottom:3px;
+    color:#0e7367;
+    font-size:8px;
+    font-weight:800;
+    letter-spacing:.11em;
+}
+.university-impact-panel-heading h4{
+    margin:0;
+    color:#24433e;
+    font-size:13px;
+    line-height:1.35;
+}
+.university-impact-assumption{
+    flex:0 0 auto;
+    padding:5px 7px;
+    border:1px solid #d6e5e1;
+    border-radius:999px;
+    background:#fff;
+    color:#607772;
+    font-size:9px;
+    font-weight:700;
+}
+.university-impact-definition,
+.university-impact-note,
+.university-impact-empty{
+    margin:8px 0 0;
+    color:#71807d;
+    font-size:9px;
+    line-height:1.55;
+}
+.university-impact-definition strong{color:#315e56}
+.university-impact-empty a,
+.university-impact-card a{
+    color:#0e7367;
+    font-weight:700;
+    text-decoration:none;
+}
+.university-impact-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:8px;
+    margin-top:10px;
+}
+.university-impact-card{
+    min-width:0;
+    padding:11px;
+    border:1px solid #dfe8e6;
+    border-radius:11px;
+    background:#fff;
+}
+.university-impact-card.positive{border-color:#d4e4de}
+.university-impact-card.negative{border-color:#eadbd9}
+.university-impact-card-top{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:8px;
+}
+.university-impact-label{
+    color:#7a8986;
+    font-size:8px;
+    font-weight:800;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+}
+.university-impact-score{
+    color:#274b44;
+    font-size:14px;
+}
+.university-impact-main{
+    display:flex;
+    align-items:baseline;
+    gap:6px;
+    margin-top:8px;
+}
+.university-impact-main strong{
+    color:#48665f;
+    font-size:20px;
+    line-height:1;
+    letter-spacing:-.45px;
+}
+.university-impact-card.positive .university-impact-main strong{color:#326958}
+.university-impact-card.negative .university-impact-main strong{color:#8b4d4a}
+.university-impact-main span{
+    color:#899592;
+    font-size:8px;
+}
+.university-impact-equation{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:8px;
+    margin-top:7px;
+    padding-top:7px;
+    border-top:1px solid #edf1f0;
+}
+.university-impact-equation span{
+    color:#83908d;
+    font-size:8px;
+}
+.university-impact-equation strong{
+    color:#244f47;
+    font-size:12px;
+}
+.university-impact-card>p{
+    margin:7px 0 0;
+    color:#71807d;
+    font-size:8px;
+    line-height:1.55;
+}
+.university-impact-card.is-empty{
+    display:flex;
+    min-height:112px;
+    flex-direction:column;
+    justify-content:center;
+}
+.university-impact-card.is-empty>strong{
+    margin-top:4px;
+    color:#687875;
+    font-size:18px;
+}
+.university-impact-delta{
+    display:grid;
+    grid-template-columns:auto auto minmax(0,1fr);
+    align-items:center;
+    gap:8px 10px;
+    margin-top:8px;
+    padding:8px 10px;
+    border:1px solid #dce8e5;
+    border-radius:10px;
+    background:#fff;
+}
+.university-impact-delta>span{
+    color:#788784;
+    font-size:8px;
+    font-weight:700;
+    text-transform:uppercase;
+}
+.university-impact-delta>strong{
+    color:#245d53;
+    font-size:11px;
+    white-space:nowrap;
+}
+.university-impact-delta>p{
+    margin:0;
+    color:#6e7d7a;
+    font-size:8px;
+    line-height:1.45;
+}
+.university-impact-note{
+    padding-top:8px;
+    border-top:1px solid #e5ecea;
+}
+@media(max-width:620px){
+    .university-your-summary-pair{width:100%;min-width:0}
+    .university-impact-grid{grid-template-columns:1fr}
+    .university-impact-delta{grid-template-columns:1fr}
+}
