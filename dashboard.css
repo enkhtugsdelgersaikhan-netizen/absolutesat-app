@@ -58,3 +58,129 @@
     opacity: .6;
     cursor: wait;
 }
+
+
+/* ============================================================
+   SAT PROFILE
+   ============================================================ */
+.dashboard-sat-profile{
+    margin-bottom:24px;
+    padding:28px;
+}
+.sat-profile-heading{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:24px;
+    margin-bottom:22px;
+}
+.sat-profile-heading .dashboard-muted{
+    max-width:760px;
+    margin:8px 0 0;
+}
+.sat-profile-heading .dashboard-muted strong{
+    color:#0f766e;
+    font-weight:600;
+}
+.sat-total-preview{
+    min-width:126px;
+    padding:13px 16px;
+    border:1px solid #cfe0dc;
+    border-radius:12px;
+    background:#f1faf7;
+    text-align:right;
+}
+.sat-total-preview span{
+    display:block;
+    color:#64817c;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+}
+.sat-total-preview strong{
+    display:block;
+    margin-top:3px;
+    color:#0f5e56;
+    font-size:28px;
+    line-height:1.1;
+}
+.sat-profile-form{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:14px 18px;
+}
+.sat-score-field{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+}
+.sat-score-field>span{
+    color:#334155;
+    font-size:13px;
+    font-weight:600;
+}
+.sat-score-field input{
+    width:100%;
+    height:50px;
+    padding:0 15px;
+    border:1px solid #cbd5e1;
+    border-radius:10px;
+    background:#fff;
+    color:#0f172a;
+    font:600 17px "Poppins",sans-serif;
+    outline:none;
+    transition:border-color .16s ease,box-shadow .16s ease;
+}
+.sat-score-field input:focus{
+    border-color:#6caea4;
+    box-shadow:0 0 0 3px rgba(15,118,110,.08);
+}
+.sat-score-field small{
+    color:#94a3b8;
+    font-size:10px;
+}
+.sat-profile-actions{
+    grid-column:1/-1;
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:10px 12px;
+    margin-top:5px;
+}
+.sat-profile-actions .dashboard-primary-button{
+    border:1px solid #0f766e;
+    cursor:pointer;
+}
+.dashboard-profile-clear{
+    height:48px;
+    padding:0 18px;
+    border:1px solid #cbd5e1;
+    border-radius:8px;
+    background:#fff;
+    color:#64748b;
+    font:600 13px "Poppins",sans-serif;
+    cursor:pointer;
+}
+.dashboard-profile-clear:hover{
+    border-color:#0f766e;
+    color:#0f766e;
+}
+.sat-profile-status{
+    color:#0f766e;
+    font-size:12px;
+    line-height:1.5;
+}
+.sat-profile-status.error{color:#b45309}
+.sat-profile-note{
+    margin:16px 0 0;
+    color:#94a3b8;
+    font-size:11px;
+    line-height:1.7;
+}
+@media(max-width:700px){
+    .sat-profile-heading{flex-direction:column}
+    .sat-total-preview{text-align:left}
+    .sat-profile-form{grid-template-columns:1fr}
+    .sat-profile-actions{grid-column:1}
+}
