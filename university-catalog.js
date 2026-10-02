@@ -302,18 +302,38 @@
   function universityScoreShape(u, currentScore) {
     const center = [160, 142];
     const vertices = [[160,30],[63,198],[257,198]];
-    const norm = (v,min,max) => Math.max(0,Math.min(1,(v-min)/(max-min)));
     const point = (v,r) => [center[0]+(v[0]-center[0])*r,center[1]+(v[1]-center[1])*r];
-    const points = (values) => {
-      const ratios=[norm(values.composite,1400,1600),norm(values.reading,700,800),norm(values.math,700,800)];
-      return vertices.map((v,i)=>point(v,ratios[i]).join(",")).join(" ");
-    };
-    const grid=[.25,.5,.75,1].map(l=>'<polygon points="'+vertices.map(v=>point(v,l).join(",")).join(" ")+'" class="university-shape-grid"/>').join("");
+
     const lower={composite:u.sat.composite[0],reading:u.sat.reading[0],math:u.sat.math[0]};
     const median={composite:u.sat.composite[1],reading:u.sat.reading[1],math:u.sat.math[1]};
     const upper={composite:u.sat.composite[2],reading:u.sat.reading[2],math:u.sat.math[2]};
-    const current=Number.isFinite(currentScore)&&userProfile?{composite:currentScore,reading:userProfile.readingWriting,math:userProfile.math}:null;
+    const current=Number.isFinite(currentScore)&&userProfile
+      ? {composite:currentScore,reading:userProfile.readingWriting,math:userProfile.math}
+      : null;
+
+    const axisRatio = (value, key) => {
+      const values = [lower[key], median[key], upper[key]];
+      if (current && Number.isFinite(current[key])) values.push(current[key]);
+      const min = Math.min(...values);
+      const max = Math.max(...values);
+      if (max === min) return 0.75;
+      return 0.5 + 0.5 * ((value - min) / (max - min));
+    };
+
+    const points = (values) => {
+      const ratios=[
+        axisRatio(values.composite,"composite"),
+        axisRatio(values.reading,"reading"),
+        axisRatio(values.math,"math")
+      ];
+      return vertices.map((v,i)=>point(v,ratios[i]).join(",")).join(" ");
+    };
+
+    const grid=[.5,.625,.75,.875,1].map(l=>
+      '<polygon points="'+vertices.map(v=>point(v,l).join(",")).join(" ")+'" class="university-shape-grid"/>'
+    ).join("");
     const poly=(v,cls)=>v?'<polygon points="'+points(v)+'" class="university-shape-series '+cls+'"/>':'';
+
     return '<section class="university-shape-panel">'+
       '<div class="university-shape-head"><div><span>SCORE SHAPES</span><h4>'+escapeHtml(u.short||u.name)+' quartiles vs. you</h4></div>'+
       '<div class="university-shape-legend"><span class="lower"><i></i>Lower quartile</span><span class="median"><i></i>Median</span><span class="upper"><i></i>Upper quartile</span><span class="you"><i></i>You</span></div></div>'+
@@ -321,9 +341,9 @@
       '<line x1="160" y1="142" x2="160" y2="30" class="university-shape-axis"/><line x1="160" y1="142" x2="63" y2="198" class="university-shape-axis"/><line x1="160" y1="142" x2="257" y2="198" class="university-shape-axis"/>'+
       poly(lower,"lower")+poly(median,"median")+poly(upper,"upper")+poly(current,"you")+
       '<text x="160" y="16" text-anchor="middle" class="university-shape-label">Composite</text>'+
-      '<text x="42" y="220" text-anchor="middle" class="university-shape-label">R&W</text>'+
+      '<text x="42" y="220" text-anchor="middle" class="university-shape-label">R&amp;W</text>'+
       '<text x="278" y="220" text-anchor="middle" class="university-shape-label">Math</text></svg>'+
-      '<p>Lower, median, and upper quartile shapes use the school\'s reported SAT values. Zoomed scale: 1400–1600 composite and 700–800 per section.</p>'+
+      '<p>Each axis auto-zooms to this comparison: the lowest of your score and the school\'s three quartiles sits halfway out, and the highest sits at the outer edge. Values between them are spaced linearly.</p>'+
     '</section>';
   }
 
