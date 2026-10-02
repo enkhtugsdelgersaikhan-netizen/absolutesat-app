@@ -140,93 +140,127 @@ statusSummary=document.getElementById("formula-status-summary");
 const STATE_KEY="lexlogica_formula_fluency_state_v1";
 
 const PROMPTS={
-  "slope-intercept":"A line has slope m and y-intercept b. How can its equation be written?",
-  "slope-two-points":"Given two points (x₁, y₁) and (x₂, y₂), how do you find the slope between them?",
-  "point-slope":"A line has slope m and passes through (x₁, y₁). What equation form can represent the line?",
-  "standard-linear":"What is the standard form of a linear equation in x and y?",
-  "linear-solve":"For ax + b = c, how can x be isolated?",
-  "direct-variation":"If y varies directly with x with constant of proportionality k, how are y and x related?",
-  "x-intercept":"What value do you set y equal to when finding an x-intercept?",
-  "y-intercept":"What value do you set x equal to when finding a y-intercept?",
-  "parallel-lines":"What relationship do the slopes of two nonvertical parallel lines have?",
-  "perpendicular-lines":"What relationship do the slopes of two nonvertical perpendicular lines have?",
-  "inequality-flip":"What happens to an inequality sign when both sides are multiplied or divided by a negative number?",
-  "difference-squares":"How does a difference of two perfect squares factor?",
-  "quadratic-formula":"What formula gives the solutions of ax² + bx + c = 0?",
-  "discriminant":"What expression determines how many real solutions a quadratic equation has?",
-  "vertex-x":"For y = ax² + bx + c, how do you find the x-coordinate of the vertex?",
-  "exponential-growth":"A quantity starts at P and grows by rate r each period. What model gives its value after t periods?",
-  "exponential-decay":"A quantity starts at P and decreases by rate r each period. What model gives its value after t periods?",
-  "percent":"How do you calculate what percent a part is of a whole?",
-  "percent-change":"How do you calculate percent change from an original value to a new value?",
-  "mean":"How do you calculate the arithmetic mean of n values?",
-  "weighted-mean":"How do you calculate a weighted mean?",
-  "probability":"For equally likely outcomes, how do you calculate the probability of event A?",
-  "complement":"If you know P(A), how do you find the probability that A does not occur?",
-  "conditional-probability":"How do you calculate the probability of A given that B has occurred?",
-  "rectangle-area":"What is the area of a rectangle with length ℓ and width w?",
-  "triangle-area":"What is the area of a triangle with base b and perpendicular height h?",
-  "trapezoid-area":"What is the area of a trapezoid with parallel bases b₁ and b₂ and height h?",
-  "circle-circumference":"What is the circumference of a circle with radius r?",
-  "circle-area":"What is the area of a circle with radius r?",
-  "arc-length-deg":"A circle has radius r and central angle θ measured in degrees. What is the arc length?",
-  "arc-length-rad":"A circle has radius r and central angle θ measured in radians. What is the arc length?",
-  "sector-area-deg":"A sector has radius r and central angle θ measured in degrees. What is its area?",
-  "sector-area-rad":"A sector has radius r and central angle θ measured in radians. What is its area?",
-  "circle-equation":"A circle has center (h, k) and radius r. What is its equation?",
-  "pythagorean":"In a right triangle with legs a and b and hypotenuse c, what relationship connects the side lengths?",
-  "distance":"How do you find the distance between (x₁, y₁) and (x₂, y₂)?",
-  "midpoint":"How do you find the midpoint of a segment with endpoints (x₁, y₁) and (x₂, y₂)?",
-  "45-45-90":"What is the side-length ratio in a 45°-45°-90° triangle?",
-  "30-60-90":"What is the side-length ratio in a 30°-60°-90° triangle?",
-  "sine":"In a right triangle, how is sin θ defined?",
-  "cosine":"In a right triangle, how is cos θ defined?",
-  "tangent":"In a right triangle, how is tan θ defined?",
-  "degree-radian":"What equality connects degrees and radians?",
-  "triangle-sum":"What is the sum of the three interior angles of a triangle?",
-  "polygon-sum":"What formula gives the sum of the interior angles of an n-sided polygon?",
-  "regular-exterior":"What is the measure of each exterior angle of a regular n-gon?",
-  "similarity":"If two figures are similar with linear scale factor k, how do corresponding side lengths compare?",
-  "scale-area":"If all lengths scale by a factor of k, by what factor does area change?",
-  "scale-volume":"If all lengths scale by a factor of k, by what factor does volume change?",
-  "rect-prism-volume":"What is the volume of a rectangular prism with length ℓ, width w, and height h?",
-  "rect-prism-sa":"What is the surface area of a rectangular prism with length ℓ, width w, and height h?",
-  "cylinder-volume":"What is the volume of a cylinder with radius r and height h?",
-  "cylinder-sa":"What is the surface area of a closed cylinder with radius r and height h?",
-  "sphere-volume":"What is the volume of a sphere with radius r?",
-  "sphere-area":"What is the surface area of a sphere with radius r?",
-  "cone-volume":"What is the volume of a cone with radius r and perpendicular height h?",
-  "pyramid-volume":"What is the volume of a pyramid with base area B and perpendicular height h?"
+"slope-intercept":"A line has slope m and y-intercept b. Write its equation in slope-intercept form.",
+"slope-two-points":"A line passes through (x₁, y₁) and (x₂, y₂). What formula gives its slope m?",
+"point-slope":"A line has slope m and passes through (x₁, y₁). Write its equation in point-slope form.",
+"standard-linear":"Write the standard form of a linear equation in x and y using constants A, B, and C.",
+"linear-solve":"If ax + b = c and a ≠ 0, what expression gives x?",
+"direct-variation":"If y varies directly with x and k is the constant of proportionality, write the equation relating y and x.",
+"linear-model":"A quantity starts at an initial value and changes by a constant rate for each unit of input. Write the general linear model.",
+"x-intercept":"When finding the x-intercept of an equation, what value must y equal?",
+"y-intercept":"When finding the y-intercept of an equation, what value must x equal?",
+"parallel-lines":"Two distinct nonvertical lines are parallel. What relationship must their slopes m₁ and m₂ satisfy?",
+"perpendicular-lines":"Two nonvertical lines are perpendicular. What equation relates their slopes m₁ and m₂?",
+"average-rate":"A function changes from (x₁, y₁) to (x₂, y₂). What formula gives its average rate of change?",
+"system-intersection":"Two lines are y = m₁x + b₁ and y = m₂x + b₂. How are these equations written together as a system?",
+"system-count":"Two lines have different slopes, m₁ ≠ m₂. How many intersection points—and therefore system solutions—must they have?",
+"inequality-flip":"If a < b and c is negative, what inequality results after multiplying both sides by c?",
+"compound-inequality":"x is greater than a and less than b. Write this as one compound inequality.",
+"distributive":"Expand a(b + c) using the distributive property.",
+"difference-squares":"Factor the difference of squares a² − b².",
+"perfect-square-plus":"Factor a² + 2ab + b² as a squared binomial.",
+"perfect-square-minus":"Factor a² − 2ab + b² as a squared binomial.",
+"exp-product":"When multiplying aᵐ by aⁿ, what power of a results?",
+"exp-quotient":"When dividing aᵐ by aⁿ for a ≠ 0, what power of a results?",
+"power-power":"When (aᵐ) is raised to the nth power, what exponent does a have?",
+"power-product":"When the product ab is raised to the nth power, how can the exponent be distributed?",
+"zero-exponent":"For nonzero a, what is a⁰ equal to?",
+"negative-exponent":"For nonzero a, rewrite a⁻ⁿ using only a positive exponent.",
+"rational-exponent":"Rewrite a^(m/n) using radical notation.",
+"quadratic-standard":"Write a quadratic equation with coefficients a, b, and c in standard form equal to zero.",
+"quadratic-formula":"For ax² + bx + c = 0, what formula gives the possible values of x?",
+"discriminant":"For ax² + bx + c = 0, what expression is the discriminant D?",
+"vertex-x":"For y = ax² + bx + c, what formula gives the x-coordinate of the vertex?",
+"vertex-form":"A parabola has vertex (h, k) and vertical scale factor a. Write its equation in vertex form.",
+"factored-quadratic":"A quadratic has roots r₁ and r₂ and leading coefficient a. Write it in factored form.",
+"root-sum":"For ax² + bx + c = 0 with roots r₁ and r₂, what is r₁ + r₂?",
+"root-product":"For ax² + bx + c = 0 with roots r₁ and r₂, what is r₁r₂?",
+"exponential-basic":"An exponential function has initial value a and growth factor b per unit x. Write its general equation.",
+"exponential-growth":"A quantity starts at P and grows by decimal rate r each period. What is its value A after t periods?",
+"exponential-decay":"A quantity starts at P and decreases by decimal rate r each period. What is its value A after t periods?",
+"function-value":"If a is the input to a function f, how is the corresponding output written in function notation?",
+"function-shift":"Starting from y = f(x), what equation shifts the graph right h units and up k units?",
+"absolute-value":"If |x − h| = k with k ≥ 0, what are the two possible values of x?",
+"rational-domain":"For a rational expression, what condition must every allowed input satisfy regarding the denominator?",
+"ratio":"Express the ratio a:b as a fraction.",
+"proportion":"If a/b = c/d, what cross-product equation follows?",
+"unit-rate":"A quantity of output is produced from a quantity of input. How is the unit rate calculated?",
+"percent":"A part is compared with a whole. What formula gives the percent?",
+"percent-change":"A value changes from original to new. What formula gives the percent change?",
+"percent-multiplier":"A value changes by decimal rate r. Write the multiplier form for finding the new value from the original value.",
+"reverse-percent":"A new value resulted from an increase or decrease by decimal rate r. How can the original value be recovered?",
+"mean":"For n observations x₁, x₂, …, xₙ, what formula gives the arithmetic mean x̄?",
+"weighted-mean":"Values xᵢ have weights wᵢ. What formula gives their weighted mean?",
+"range":"Given a data set's maximum and minimum values, how is the range calculated?",
+"iqr":"If Q₁ and Q₃ are the first and third quartiles, how is the interquartile range calculated?",
+"probability":"For equally likely outcomes, how is P(A) calculated from favorable and total outcomes?",
+"complement":"If P(A) is known, what formula gives P(Aᶜ), the probability that A does not occur?",
+"conditional-probability":"What formula gives P(A | B) in terms of P(A ∩ B) and P(B)?",
+"addition-probability":"What formula gives P(A ∪ B), the probability that A or B occurs?",
+"relative-frequency":"A category occurs a certain number of times within a relevant total. How is its relative frequency calculated?",
+"residual":"A model predicts ŷ for an observed value y. How is the residual calculated?",
+"sample-estimate":"A representative random sample produces a sample statistic. What population quantity is that statistic used to approximate?",
+"margin-error":"An estimate has a stated margin of error. How is the corresponding interval written?",
+"rectangle-area":"What is the area of a rectangle with length ℓ and width w?",
+"rectangle-perimeter":"What is the perimeter of a rectangle with length ℓ and width w?",
+"square-area":"What is the area of a square with side length s?",
+"triangle-area":"What is the area of a triangle with base b and perpendicular height h?",
+"trapezoid-area":"What is the area of a trapezoid with parallel bases b₁ and b₂ and height h?",
+"circle-circumference":"What is the circumference C of a circle with radius r or diameter d?",
+"circle-area":"What is the area A of a circle with radius r?",
+"diameter-radius":"How are a circle's diameter d and radius r related?",
+"arc-length-deg":"A circle has radius r and central angle θ measured in degrees. What formula gives the intercepted arc length L?",
+"arc-length-rad":"A circle has radius r and central angle θ measured in radians. What formula gives arc length L?",
+"sector-area-deg":"A sector has radius r and central angle θ measured in degrees. What formula gives its area?",
+"sector-area-rad":"A sector has radius r and central angle θ measured in radians. What formula gives its area?",
+"circle-equation":"A circle has center (h, k) and radius r. Write its equation in the coordinate plane.",
+"central-angle":"A central angle ∠AOB intercepts arc AB. How do their degree measures compare?",
+"inscribed-angle":"An inscribed angle ∠APB intercepts arc AB. How is the angle measure related to the intercepted arc measure?",
+"tangent-radius":"A tangent touches a circle at T, and O is the center. What is the angle relationship between radius OT and the tangent?",
+"pythagorean":"In a right triangle with legs a and b and hypotenuse c, what equation relates the three side lengths?",
+"distance":"What formula gives the distance d between (x₁, y₁) and (x₂, y₂)?",
+"midpoint":"What formula gives the midpoint M of endpoints (x₁, y₁) and (x₂, y₂)?",
+"45-45-90":"In a 45°-45°-90° triangle, if each leg has length x, what are the three side lengths in ratio form?",
+"30-60-90":"In a 30°-60°-90° triangle, if the short leg is x, what are the short leg, long leg, and hypotenuse?",
+"sine":"Relative to angle θ in a right triangle, what ratio defines sin θ?",
+"cosine":"Relative to angle θ in a right triangle, what ratio defines cos θ?",
+"tangent":"Relative to angle θ in a right triangle, what ratio defines tan θ?",
+"tan-sin-cos":"How can tan θ be written using sin θ and cos θ?",
+"complementary-trig":"For an acute angle θ, how is sin θ related to the cosine of its complementary angle?",
+"degree-radian":"What equality connects 180 degrees and radians?",
+"triangle-sum":"What equation expresses the sum of the three interior angles A, B, and C of a triangle?",
+"exterior-triangle":"A triangle has an exterior angle and two remote interior angles. What equation relates their measures?",
+"polygon-sum":"What formula gives the sum S of the interior angles of an n-sided polygon?",
+"regular-exterior":"What is the measure E of each exterior angle of a regular n-gon?",
+"similarity":"Two similar figures have linear scale factor k. How can ratios of corresponding side lengths be written?",
+"scale-area":"Two similar figures have linear scale factor k. What is the ratio of their areas A₂/A₁?",
+"scale-volume":"Two similar solids have linear scale factor k. What is the ratio of their volumes V₂/V₁?",
+"rect-prism-volume":"What is the volume V of a rectangular prism with length ℓ, width w, and height h?",
+"rect-prism-sa":"What is the surface area SA of a closed rectangular prism with length ℓ, width w, and height h?",
+"prism-diagonal":"What is the space diagonal d of a rectangular prism with dimensions ℓ, w, and h?",
+"cylinder-volume":"What is the volume V of a cylinder with radius r and height h?",
+"cylinder-sa":"What is the total surface area SA of a closed cylinder with radius r and height h?",
+"sphere-volume":"What is the volume V of a sphere with radius r?",
+"sphere-area":"What is the surface area SA of a sphere with radius r?",
+"cone-volume":"What is the volume V of a cone with radius r and perpendicular height h?",
+"pyramid-volume":"What is the volume V of a pyramid with base area B and perpendicular height h?"
 };
 
 function promptFor(item){
-  return PROMPTS[item.id]||("What formula or relationship should you know for "+item.topic.toLowerCase()+"?");
+  return PROMPTS[item.id]||item.topic;
 }
 
 function iconFor(item){
   const id=item.id;
-  let kind="algebra";
-  if(/cylinder/.test(id))kind="cylinder";
-  else if(/sphere/.test(id))kind="sphere";
-  else if(/circle|arc|sector|tangent-radius/.test(id))kind="circle";
-  else if(/triangle|pythagorean|sine|cosine|tangent|trig/.test(id))kind="triangle";
-  else if(/percent|probability|mean|range|residual|sample|margin|ratio|proportion|frequency/.test(id))kind="data";
-  else if(/quadratic|parabola|vertex|discriminant|root/.test(id))kind="parabola";
-  else if(/rect-prism|prism|pyramid|cone/.test(id))kind="solid";
-  else if(/line|slope|intercept|system|variation|linear/.test(id))kind="line";
-
-  const icons={
-    cylinder:'<svg viewBox="0 0 64 64" fill="none"><ellipse cx="32" cy="15" rx="17" ry="7" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/><path d="M15 15v31c0 3.9 7.6 7 17 7s17-3.1 17-7V15" fill="#f0fdfa" stroke="#0f766e" stroke-width="2"/><ellipse cx="32" cy="46" rx="17" ry="7" fill="#e6fffa" stroke="#0f766e" stroke-width="2"/></svg>',
-    sphere:'<svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="20" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/><ellipse cx="32" cy="32" rx="20" ry="8" stroke="#0284c7" stroke-width="1.8" opacity=".75"/><path d="M32 12c7 5 10 12 10 20S39 47 32 52M32 12c-7 5-10 12-10 20s3 15 10 20" stroke="#0284c7" stroke-width="1.5" opacity=".7"/></svg>',
-    circle:'<svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="20" fill="#fce7f3" stroke="#db2777" stroke-width="2"/><path d="M32 32L49 32" stroke="#db2777" stroke-width="2.2" stroke-linecap="round"/><circle cx="32" cy="32" r="2.8" fill="#db2777"/></svg>',
-    triangle:'<svg viewBox="0 0 64 64" fill="none"><path d="M13 49L31 15L52 49H13Z" fill="#fef3c7" stroke="#d97706" stroke-width="2"/><path d="M22 49V40H31" stroke="#d97706" stroke-width="2"/><path d="M18 44c2-3 4.8-4.5 8-4.5" stroke="#d97706" stroke-width="1.8" stroke-linecap="round"/></svg>',
-    data:'<svg viewBox="0 0 64 64" fill="none"><rect x="12" y="34" width="9" height="18" rx="3" fill="#a7f3d0"/><rect x="27" y="25" width="9" height="27" rx="3" fill="#6ee7b7"/><rect x="42" y="15" width="9" height="37" rx="3" fill="#34d399"/><path d="M11 53h42" stroke="#0f766e" stroke-width="2" stroke-linecap="round"/></svg>',
-    parabola:'<svg viewBox="0 0 64 64" fill="none"><path d="M13 48C20 18 44 18 51 48" stroke="#7c3aed" stroke-width="3" stroke-linecap="round"/><circle cx="32" cy="31" r="3.5" fill="#c4b5fd"/><path d="M10 52H54M32 10V55" stroke="#cbd5e1" stroke-width="1.5"/></svg>',
-    solid:'<svg viewBox="0 0 64 64" fill="none"><path d="M18 21L35 13L49 22L31 31L18 21Z" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/><path d="M18 21V43L31 51V31L18 21Z" fill="#f5f3ff" stroke="#6d28d9" stroke-width="2"/><path d="M31 31L49 22V43L31 51V31Z" fill="#ddd6fe" stroke="#6d28d9" stroke-width="2"/></svg>',
-    line:'<svg viewBox="0 0 64 64" fill="none"><path d="M11 50L51 18" stroke="#0f766e" stroke-width="3" stroke-linecap="round"/><circle cx="19" cy="44" r="4" fill="#5eead4"/><circle cx="43" cy="25" r="4" fill="#2dd4bf"/><path d="M10 54H54M14 10V54" stroke="#cbd5e1" stroke-width="1.5"/></svg>',
-    algebra:'<svg viewBox="0 0 64 64" fill="none"><rect x="11" y="13" width="42" height="38" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/><path d="M20 27h10M25 22v10M37 24h9M37 31h9M21 41l8-7M21 34l8 7" stroke="#3b82f6" stroke-width="2.3" stroke-linecap="round"/></svg>'
-  };
-  return icons[kind];
+  let file="sigma.svg";
+  if(/cylinder/.test(id)) file="cylinder.svg";
+  else if(/circle|arc|sector|tangent-radius|sphere/.test(id)) file="circle.svg";
+  else if(/triangle|pythagorean|sine|cosine|tangent|trig/.test(id)) file="triangle.svg";
+  else if(/percent/.test(id)) file="percent.svg";
+  else if(/probability|mean|range|residual|sample|margin|ratio|proportion|frequency|unit-rate/.test(id)) file="chart-no-axes-column-increasing.svg";
+  else if(/rect-prism|prism|pyramid|cone|scale-volume/.test(id)) file="box.svg";
+  else if(/radical|quadratic|vertex|discriminant|root|exp-|power-|zero-exponent|negative-exponent|rational-exponent/.test(id)) file="radical.svg";
+  return "/assets/formula-icons/"+file;
 }
 
 function loadState(){
@@ -306,10 +340,14 @@ function updateProgress(){
     progressBar.style.width=(solved/formulas.length*100)+"%";
     statusSummary.textContent=review+" review · "+(formulas.length-solved)+" unsolved";
 }
-function typeset(nodes){
+function typeset(nodes,attempt=0){
     if(window.MathJax&&MathJax.typesetPromise){
-        MathJax.typesetClear(nodes);
+        try{MathJax.typesetClear(nodes);}catch(e){}
         MathJax.typesetPromise(nodes).catch(()=>{});
+        return;
+    }
+    if(attempt<40){
+        window.setTimeout(()=>typeset(nodes,attempt+1),50);
     }
 }
 function render(){
@@ -327,12 +365,12 @@ function render(){
     catEl.textContent=item.category;
     topicEl.textContent=item.topic;
     promptEl.textContent=promptFor(item);
-    iconEl.innerHTML=iconFor(item);
-    expressionEl.innerHTML="\\\\["+item.formula+"\\\\]";
-    meaningEl.innerHTML=item.meaning;
-    symbolsEl.innerHTML=item.symbols||"";
-    exampleEl.innerHTML=item.example||"";
-    noteEl.innerHTML=item.note||"";
+    iconEl.innerHTML='<img src="'+iconFor(item)+'" alt="" draggable="false">';
+    expressionEl.textContent="\\["+item.formula+"\\]";
+    meaningEl.textContent=item.meaning;
+    symbolsEl.textContent=item.symbols||"";
+    exampleEl.textContent=item.example||"";
+    noteEl.textContent=item.note||"";
     symbolsWrap.classList.toggle("hidden",!item.symbols);
     noteWrap.classList.toggle("hidden",!item.note);
     updateStatusUI(item);
