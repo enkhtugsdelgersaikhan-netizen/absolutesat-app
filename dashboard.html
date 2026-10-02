@@ -43,50 +43,7 @@
         </div>
 
 
-        <section class="dashboard-panel dashboard-sat-profile">
-            <div class="dashboard-panel-heading sat-profile-heading">
-                <div>
-                    <div class="panel-eyebrow">SAT PROFILE</div>
-                    <h2>Your current SAT</h2>
-                    <p class="dashboard-muted sat-profile-intro">Save your latest section scores. LexLogica will use them to place your score precisely against each university’s reported SAT quartiles.</p>
-                </div>
-                <div class="sat-total-preview-group" aria-live="polite">
-                    <div class="sat-total-preview">
-                        <span>Current</span>
-                        <strong id="sat-total-preview">—</strong>
-                    </div>
-                </div>
-            </div>
-
-            <div class="sat-profile-workspace">
-                <div class="sat-profile-editor">
-<form id="sat-profile-form" class="sat-profile-form" novalidate>
-                <div class="sat-profile-group-label"><strong>Current SAT</strong><span>Your latest score</span></div>
-                <label class="sat-score-field" for="sat-reading-writing">
-                    <span>Reading &amp; Writing</span>
-                    <input id="sat-reading-writing" name="sat-reading-writing" type="number" min="200" max="800" step="10" inputmode="numeric" placeholder="e.g. 750">
-                    <small>200–800, in 10-point increments</small>
-                </label>
-
-                <label class="sat-score-field" for="sat-math">
-                    <span>Math</span>
-                    <input id="sat-math" name="sat-math" type="number" min="200" max="800" step="10" inputmode="numeric" placeholder="e.g. 780">
-                    <small>200–800, in 10-point increments</small>
-                </label>
-
-                <div class="sat-profile-actions">
-                    <button type="submit" class="dashboard-primary-button" id="sat-profile-save">Save SAT scores</button>
-                    <button type="button" class="dashboard-profile-clear" id="sat-profile-clear">Clear</button>
-                    <span id="sat-profile-status" class="sat-profile-status" role="status" aria-live="polite"></span>
-                </div>
-            </form>
-
-            <p class="sat-profile-note">Your composite is calculated automatically by adding the two section scores. Saved values are synced to your signed-in account when possible and cached on this device for fast access.</p>
-                </div>
-
-            </div>
-        </section>
-
+        
 
         <div class="dashboard-grid">
             <section class="dashboard-panel">
@@ -129,7 +86,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js?v=subjects-1"></script>
-<script src="dashboard.js?v=sat-profile-1"></script>
+<script src="dashboard.js?v=profile-moved-1"></script>
 <script src="/study.js"></script>
 </body>
 </html>
