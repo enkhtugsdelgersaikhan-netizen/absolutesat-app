@@ -4261,3 +4261,12 @@ select:hover,
 .university-impact-note strong{
     color:#425f59;
 }
+
+.university-impact-relative-help{
+    margin:4px 0 0;
+    max-width:620px;
+    color:#75837f;
+    font-size:8.5px;
+    line-height:1.45;
+}
+.university-impact-relative-help strong{color:#4b625d}
