@@ -235,7 +235,7 @@
     const upperPos = railPosition(upper, type);
     const hasUser = Number.isFinite(userScore);
     const userPos = hasUser ? railPosition(userScore, type) : null;
-    const markerLeft = hasUser ? Math.max(8, Math.min(92, userPos)) : null;
+    const markerLeft = userPos;
 
     return '<section class="university-score-band">' +
       '<div class="university-score-band-header">' +
