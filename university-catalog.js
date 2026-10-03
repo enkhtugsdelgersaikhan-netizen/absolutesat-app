@@ -519,29 +519,13 @@
       context = 'Your section profile is mixed, so the assessment balances each score by how far it sits between that section\'s quartile benchmarks.';
     }
 
-    return '<section class="university-impact-panel">' +
-      '<div class="university-impact-panel-heading">' +
-        '<div>' +
-          '<span>SAT IMPACT</span>' +
-          '<h4>What your SAT means at this school</h4>' +
-          '<p class="university-impact-relative-help">This uses the school\'s lower quartile, median, and upper quartile for Composite, R&amp;W, and Math. It describes the strength of your SAT here—not a numerical change in admission probability.</p>' +
-        '</div>' +
-        '<span class="university-impact-median">Composite median: ' + u.sat.composite[1] + '</span>' +
+    return '<section class="university-impact-panel university-impact-panel-compact">' +
+      '<span class="university-impact-kicker">SAT IMPACT</span>' +
+      '<div class="university-impact-compact-row">' +
+        '<strong class="university-impact-verdict ' + assessment.tone + '">' + assessment.label + '</strong>' +
+        '<span class="university-impact-school">at ' + school + '</span>' +
       '</div>' +
-      '<div class="university-impact-grid university-impact-grid-single">' +
-        '<div class="university-impact-card ' + assessment.tone + '">' +
-          '<div class="university-impact-card-top">' +
-            '<span class="university-impact-label">Your SAT</span>' +
-            '<strong class="university-impact-score">' + currentScore + '</strong>' +
-          '</div>' +
-          '<div class="university-impact-main">' +
-            '<strong>' + assessment.label + '</strong>' +
-            '<span>at ' + school + '</span>' +
-          '</div>' +
-          '<p><strong>' + assessment.summary + '</strong> ' + context + '</p>' +
-          '<small class="university-impact-score-detail">' + details + '</small>' +
-        '</div>' +
-      '</div>' +
+      '<p class="university-impact-compact-copy">' + assessment.summary + ' ' + context + '</p>' +
     '</section>';
   }
 
