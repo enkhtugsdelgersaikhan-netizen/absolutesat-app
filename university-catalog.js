@@ -473,31 +473,31 @@
 
     let label, tone, summary;
     if ((combined >= 1.5 && allAtOrAboveMedian) || (upperCount >= 2 && allAtOrAboveMedian)) {
-      label = "Clear SAT advantage";
+      label = "Well above typical range";
       tone = "positive";
       summary = "Your score combination is firmly above this school's typical SAT profile.";
     } else if (combined >= 0.75 || (allAboveMedian && combined >= 0.5)) {
-      label = "Meaningful SAT advantage";
+      label = "Above typical range";
       tone = "positive";
       summary = "Your score combination is stronger than this school's typical SAT profile.";
     } else if (combined >= 0.25) {
-      label = "Slight SAT advantage";
+      label = "Slightly above typical range";
       tone = "positive";
       summary = "Your score combination leans stronger than this school's typical SAT profile.";
     } else if (combined > -0.25) {
-      label = "SAT is neutral here";
+      label = "Typical range";
       tone = "neutral";
       summary = "Your score combination sits close to this school's typical SAT profile.";
     } else if (combined > -0.75) {
-      label = "Slight SAT disadvantage";
+      label = "Slightly below typical range";
       tone = "negative";
       summary = "Your score combination leans weaker than this school's typical SAT profile.";
     } else if (combined > -1.5 && belowLowerCount < 2) {
-      label = "Meaningful SAT disadvantage";
+      label = "Below typical range";
       tone = "negative";
       summary = "Your score combination is weaker than this school's typical SAT profile.";
     } else {
-      label = "Clear SAT disadvantage";
+      label = "Well below typical range";
       tone = "negative";
       summary = "Your score combination is firmly below this school's typical SAT profile.";
     }
