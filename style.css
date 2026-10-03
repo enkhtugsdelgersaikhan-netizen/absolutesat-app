@@ -5491,3 +5491,44 @@ select:hover,
   font-size:7px;
   line-height:1.45;
 }
+
+
+/* Merge the user's score into SAT Impact */
+.university-impact-merged-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:18px;
+  margin-bottom:7px;
+}
+.university-impact-score-summary{
+  display:flex;
+  align-items:baseline;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.university-impact-score-summary span{
+  color:#60736e;
+  font-size:7px;
+  font-weight:800;
+  letter-spacing:.09em;
+}
+.university-impact-score-summary strong{
+  color:#075f58;
+  font-size:22px;
+  line-height:1;
+}
+.university-impact-score-summary small{
+  color:#7f8e8a;
+  font-size:8px;
+}
+.university-impact-merged-head .university-impact-kicker{margin:0}
+
+/* Match impact verdict colors to the quartile-position labels */
+.university-impact-verdict.negative{color:#8b4d4a}
+.university-impact-verdict.neutral{color:#587368}
+.university-impact-verdict.positive{color:#416f62}
+.university-impact-verdict.positive:first-letter{color:inherit}
+@media(max-width:620px){
+  .university-impact-merged-head{align-items:flex-start;flex-direction:column-reverse;gap:7px}
+}
