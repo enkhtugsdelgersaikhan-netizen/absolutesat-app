@@ -5178,3 +5178,79 @@ select:hover,
     height:auto;
   }
 }
+
+
+/* Personalized SAT school-coverage guide */
+.sat-school-coverage-intro{
+  margin:4px 0 14px;
+  color:#71807d;
+  font-size:10px;
+  line-height:1.5;
+}
+.sat-school-coverage-columns{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+}
+.sat-school-coverage-card{
+  overflow:hidden;
+  border:1px solid #d5e4e0;
+  border-radius:14px;
+  background:#fbfdfc;
+}
+.sat-school-coverage-card-head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:10px;
+  padding:14px;
+  background:#eef6f4;
+  border-bottom:1px solid #d5e4e0;
+}
+.sat-school-coverage-card-head div{
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+}
+.sat-school-coverage-card-head span{
+  color:#164f47;
+  font-size:12px;
+  font-weight:800;
+}
+.sat-school-coverage-card-head strong{
+  color:#087d70;
+  font-size:24px;
+  line-height:1;
+}
+.sat-school-coverage-card-head small{
+  color:#8a9996;
+  font-size:8px;
+}
+.sat-school-coverage-stat{
+  display:grid;
+  grid-template-columns:62px minmax(0,1fr);
+  align-items:center;
+  gap:9px;
+  min-height:64px;
+  padding:10px 13px;
+  border-bottom:1px solid #e1eae7;
+}
+.sat-school-coverage-stat:last-child{
+  border-bottom:0;
+}
+.sat-school-coverage-stat strong{
+  color:#087d70;
+  font-size:20px;
+  line-height:1;
+}
+.sat-school-coverage-stat span{
+  color:#244f48;
+  font-size:10px;
+  font-weight:700;
+  line-height:1.35;
+}
+@media(max-width:760px){
+  .sat-school-coverage-columns{
+    grid-template-columns:1fr;
+  }
+}
