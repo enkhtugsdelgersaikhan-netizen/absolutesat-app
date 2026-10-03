@@ -533,13 +533,14 @@
     const combination = 'Composite: ' + cPos.band + ' · R&amp;W: ' + rPos.band + ' · Math: ' + mPos.band;
 
     return '<section class="university-impact-panel university-impact-panel-compact">' +
-      '<div class="university-impact-merged-head"><div class="university-impact-score-summary"><span>YOUR SAT</span><strong>' + currentScore + '</strong><small>' + readingScore + ' R&amp;W · ' + mathScore + ' Math</small></div><span class="university-impact-kicker">SAT IMPACT</span></div>' +
+      '<div class="university-impact-layout"><div class="university-impact-copy"><span class="university-impact-kicker">SAT IMPACT</span>' +
       '<div class="university-impact-compact-row">' +
         '<strong class="university-impact-verdict ' + assessment.tone + '">' + assessment.label + '</strong>' +
         '<span class="university-impact-school">at ' + school + '</span>' +
       '</div>' +
       '<p class="university-impact-compact-copy">' + assessment.summary + '</p>' +
-      '<p class="university-impact-combination">' + combination + '</p>' +
+      '<p class="university-impact-combination">' + combination + '</p></div>' +
+      '<div class="university-impact-score-summary"><span>YOUR SAT</span><strong>' + currentScore + '</strong><small>' + readingScore + ' R&amp;W · ' + mathScore + ' Math</small></div></div>' +
     '</section>';
   }
 
