@@ -852,7 +852,10 @@
 
   const actEquivalent = (guide, score) => {
     if (guide === "composite") return { label: "ACT Composite", value: nearestConcordance(score, ACT_COMPOSITE_POINTS) };
-    if (guide === "math") return { label: "ACT Math", value: nearestConcordance(score, ACT_MATH_POINTS) };
+    if (guide === "math") {
+      const exactHighMath = {800:36,790:35,780:35,770:35,760:34};
+      return { label: "ACT Math", value: exactHighMath[score] ?? nearestConcordance(score, ACT_MATH_POINTS) };
+    }
     return { label: "ACT English + Reading", value: nearestConcordance(score, ACT_ER_POINTS) };
   };
 
