@@ -800,28 +800,50 @@
       .filter((value) => value !== null && value !== undefined && value !== "" && Number.isFinite(Number(value)))
       .map(Number);
     if (!values.length) return null;
-    const cleared = values.filter((value) => score >= value).length;
-    return Math.round((cleared / values.length) * 100);
+    return Math.round((values.filter((value) => score >= value).length / values.length) * 100);
   };
 
-  const updateCoverageCard = (guide, section, score) => {
-    const card = document.querySelector('.sat-school-coverage-card[data-coverage="' + guide + '"]');
+  const strengthVerdict = (score, section) => {
+    if (!Number.isFinite(score)) return null;
+    const lower = coveragePercent(score, section, 0);
+    const median = coveragePercent(score, section, 1);
+    const upper = coveragePercent(score, section, 2);
+    if ([lower, median, upper].some((v) => v === null)) return null;
+
+    if (upper >= 80) return { label: "Exceptional", copy: "At or above the upper quartile at nearly every school in this catalog.", position: 96 };
+    if (upper >= 50 || median >= 90) return { label: "Very strong", copy: "At or above the median at nearly every school, and near the high end at many.", position: 78 };
+    if (median >= 70) return { label: "Very strong", copy: "At or above the median at most schools in this catalog.", position: 68 };
+    if (lower >= 80) return { label: "Competitive", copy: "Inside or above the typical submitted range at most schools in this catalog.", position: 50 };
+    if (lower >= 50) return { label: "Competitive at some schools", copy: "Within the typical submitted range at many schools, but below it at others.", position: 37 };
+    return { label: "Below typical here", copy: "Below the lower quartile at most schools in this selective catalog.", position: 14 };
+  };
+
+  const updateStrengthCard = (guide, section, score) => {
+    const card = document.querySelector('.sat-strength-card[data-strength="' + guide + '"]');
     if (!card) return;
-    const scoreNode = document.getElementById("coverage-score-" + guide);
+    const scoreNode = document.getElementById("strength-score-" + guide);
+    const labelNode = card.querySelector("[data-strength-label]");
+    const copyNode = card.querySelector("[data-strength-copy]");
+    const marker = card.querySelector("[data-strength-marker]");
+    const verdict = strengthVerdict(score, section);
     if (scoreNode) scoreNode.textContent = Number.isFinite(score) ? String(score) : "—";
-    [["lower",0],["median",1],["upper",2]].forEach(([name,index]) => {
-      const node = card.querySelector('[data-threshold="' + name + '"]');
-      const pct = coveragePercent(score, section, index);
-      if (node) node.textContent = pct === null ? "—" : pct + "%";
-    });
+    if (!verdict) {
+      if (labelNode) labelNode.textContent = "Enter your score";
+      if (copyNode) copyNode.textContent = guide === "composite" ? "Set both section scores to see how your composite compares." : "Set your score to see how it compares.";
+      if (marker) { marker.style.left = "0%"; marker.style.opacity = "0"; }
+      return;
+    }
+    if (labelNode) labelNode.textContent = verdict.label;
+    if (copyNode) copyNode.textContent = verdict.copy;
+    if (marker) { marker.style.left = verdict.position + "%"; marker.style.opacity = "1"; }
   };
 
   const updateGuideHighlights = (reading, math) => {
     const validReading = validSectionScore(reading);
     const validMath = validSectionScore(math);
-    updateCoverageCard("reading", "reading", validReading ? reading : NaN);
-    updateCoverageCard("math", "math", validMath ? math : NaN);
-    updateCoverageCard("composite", "composite", validReading && validMath ? reading + math : NaN);
+    updateStrengthCard("reading", "reading", validReading ? reading : NaN);
+    updateStrengthCard("math", "math", validMath ? math : NaN);
+    updateStrengthCard("composite", "composite", validReading && validMath ? reading + math : NaN);
   };
 
   const updateProfilePreview = () => {
