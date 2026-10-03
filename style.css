@@ -5254,3 +5254,87 @@ select:hover,
     grid-template-columns:1fr;
   }
 }
+
+
+/* Simple personalized SAT strength cards */
+.sat-score-strength-intro{
+  margin:4px 0 14px;
+  color:#71807d;
+  font-size:10px;
+  line-height:1.5;
+}
+.sat-score-strength-cards{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+}
+.sat-strength-card{
+  padding:15px;
+  border:1px solid #d5e4e0;
+  border-radius:14px;
+  background:#fbfdfc;
+}
+.sat-strength-top{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:12px;
+}
+.sat-strength-top span{
+  color:#315c55;
+  font-size:11px;
+  font-weight:800;
+}
+.sat-strength-top strong{
+  color:#087d70;
+  font-size:24px;
+  line-height:1;
+}
+.sat-strength-card h5{
+  margin:0 0 5px;
+  color:#103f38;
+  font-size:18px;
+  line-height:1.1;
+}
+.sat-strength-card>p{
+  min-height:42px;
+  margin:0 0 16px;
+  color:#71807d;
+  font-size:9px;
+  line-height:1.45;
+}
+.sat-strength-track{
+  position:relative;
+  height:7px;
+  margin:0 5px 8px;
+  border-radius:999px;
+  background:linear-gradient(90deg,#e8efed 0 25%,#d9ebe6 25% 50%,#b8ded5 50% 75%,#8acabe 75% 100%);
+}
+.sat-strength-track i{
+  position:absolute;
+  top:50%;
+  width:13px;
+  height:13px;
+  border:3px solid #fff;
+  border-radius:50%;
+  background:#087d70;
+  box-shadow:0 0 0 1px #087d70;
+  transform:translate(-50%,-50%);
+  transition:left .25s ease,opacity .2s ease;
+}
+.sat-strength-scale{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:3px;
+}
+.sat-strength-scale span{
+  color:#8a9996;
+  font-size:6.5px;
+  line-height:1.2;
+  text-align:center;
+}
+@media(max-width:760px){
+  .sat-score-strength-cards{grid-template-columns:1fr}
+  .sat-strength-card>p{min-height:0}
+}
