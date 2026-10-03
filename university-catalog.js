@@ -835,9 +835,36 @@
   const updateGuideHighlights = (reading, math) => {
     const validReading = validSectionScore(reading);
     const validMath = validSectionScore(math);
+    const composite = validReading && validMath ? reading + math : NaN;
     highlightGuideScore("reading", validReading ? reading : NaN);
     highlightGuideScore("math", validMath ? math : NaN);
-    highlightGuideScore("composite", validReading && validMath ? reading + math : NaN);
+    highlightGuideScore("composite", composite);
+
+    const summary = document.getElementById("sat-score-personal-summary");
+    if (!summary) return;
+    if (!validReading || !validMath) {
+      summary.innerHTML = '<p class="sat-score-summary-empty">Set your R&amp;W and Math scores to see the ranges that apply to you.</p>';
+      return;
+    }
+
+    const cards = [
+      ["Composite", "composite", composite],
+      ["Reading &amp; Writing", "reading", reading],
+      ["Math", "math", math]
+    ].map(([label, guide, score]) => {
+      const scale = document.querySelector('.sat-score-guide-scale[data-guide="' + guide + '"]');
+      const row = scale && Array.from(scale.querySelectorAll(".sat-score-scale-row")).find((item) => {
+        const min = item.dataset.min === undefined ? -Infinity : Number(item.dataset.min);
+        const max = item.dataset.max === undefined ? Infinity : Number(item.dataset.max);
+        return score >= min && score <= max;
+      });
+      if (!row) return "";
+      const meaning = row.querySelector("span")?.textContent || "";
+      const share = row.querySelector("em")?.textContent || "";
+      const advice = row.querySelector("i")?.textContent || "";
+      return '<article class="sat-score-summary-card"><div class="sat-score-summary-top"><span>' + label + '</span><strong>' + score + '</strong></div><h5>' + meaning + '</h5><p>' + share + '</p><small>' + advice + '</small></article>';
+    }).join("");
+    summary.innerHTML = cards;
   };
 
   const updateProfilePreview = () => {
