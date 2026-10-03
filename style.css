@@ -5430,3 +5430,18 @@ select:hover,
   .university-impact-components{grid-template-columns:1fr}
   .university-impact-average{align-items:flex-start;flex-direction:column;gap:4px}
 }
+
+
+.university-impact-score-detail{
+  display:block;
+  margin-top:8px;
+  padding-top:8px;
+  border-top:1px solid #dce8e5;
+  color:#7c8b87;
+  font-size:7px;
+  line-height:1.45;
+}
+.university-impact-card .university-impact-main>strong{
+  font-size:18px;
+  line-height:1.15;
+}
