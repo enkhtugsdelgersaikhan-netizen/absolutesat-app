@@ -5363,3 +5363,81 @@ select:hover,
   font-weight:700;
   line-height:1;
 }
+
+
+/* Expand the SAT guide + score editor to the full content width */
+.university-sat-container{
+  width:min(1480px,calc(100% - 64px))!important;
+  max-width:1480px!important;
+}
+.sat-guide-row{
+  grid-template-columns:minmax(0,1fr) 380px!important;
+  gap:22px!important;
+}
+.sat-guide-row .sat-score-guide,
+.sat-guide-score-panel{
+  font-size:1.08em;
+}
+.sat-score-guide-head h4{
+  font-size:18px!important;
+}
+.sat-score-scale-head{
+  padding:16px 16px 13px!important;
+}
+.sat-score-scale-head strong{
+  font-size:14px!important;
+}
+.sat-score-scale-head small{
+  font-size:8px!important;
+}
+.sat-score-scale-row{
+  padding:14px 14px!important;
+  min-height:76px;
+}
+.sat-score-scale-row>b{
+  font-size:11px!important;
+}
+.sat-score-scale-row>span{
+  font-size:10px!important;
+}
+.sat-score-scale-row>em,
+.sat-score-scale-row>i{
+  font-size:8.5px!important;
+}
+.sat-guide-score-panel{
+  padding:22px!important;
+}
+.sat-guide-score-panel .sat-context-profile-head h3{
+  font-size:20px!important;
+}
+.sat-guide-score-panel .sat-context-total strong{
+  font-size:29px!important;
+}
+.sat-guide-score-panel .sat-context-profile-inline>p{
+  font-size:10px!important;
+}
+.sat-guide-score-panel .sat-context-profile-form label>span{
+  font-size:10px!important;
+}
+.sat-guide-score-panel .sat-context-profile-form input{
+  height:42px!important;
+  font-size:15px!important;
+}
+.sat-guide-score-panel .sat-context-profile-actions button{
+  height:39px!important;
+  font-size:10px!important;
+}
+.sat-quartile-brief>span{font-size:9px!important}
+.sat-quartile-brief>div strong{font-size:10px!important}
+.sat-quartile-brief>div p,
+.sat-quartile-brief-note{font-size:9px!important}
+
+@media(max-width:1050px){
+  .university-sat-container{
+    width:min(100% - 32px,900px)!important;
+  }
+  .sat-guide-row{grid-template-columns:1fr!important}
+}
+@media(max-width:620px){
+  .university-sat-container{width:calc(100% - 24px)!important}
+}
