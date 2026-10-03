@@ -5750,3 +5750,8 @@ select:hover,
 .sat-score-all-ranges .sat-score-scale-row:nth-child(7) span{
   color:#8b4d4a;
 }
+
+
+/* Restored score guide: keep the original always-visible table presentation */
+.sat-score-guide>.sat-score-guide-columns{margin-top:14px}
+.sat-score-guide>.sat-score-guide-note{display:block;margin-top:9px}
