@@ -5608,3 +5608,84 @@ select:hover,
     min-width:0!important;
   }
 }
+
+
+/* Personalized score guide: show the user's three relevant bands first */
+.sat-score-personal-summary{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  margin-top:14px;
+}
+.sat-score-summary-card{
+  min-width:0;
+  padding:14px 15px;
+  border:1px solid #d9e8e4;
+  border-radius:13px;
+  background:#f7fbfa;
+}
+.sat-score-summary-top{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:10px;
+}
+.sat-score-summary-top span{
+  color:#60736e;
+  font-size:8px;
+  font-weight:700;
+}
+.sat-score-summary-top strong{
+  color:#087d70;
+  font-size:23px;
+  line-height:1;
+}
+.sat-score-summary-card h5{
+  margin:12px 0 4px;
+  color:#174b45;
+  font-size:11px;
+  line-height:1.25;
+}
+.sat-score-summary-card p{
+  margin:0 0 3px;
+  color:#9b5b28;
+  font-size:8px;
+  font-weight:700;
+}
+.sat-score-summary-card small{
+  color:#74837f;
+  font-size:8px;
+  line-height:1.35;
+}
+.sat-score-summary-empty{
+  grid-column:1/-1;
+  margin:0;
+  padding:14px 15px;
+  border:1px solid #d9e8e4;
+  border-radius:13px;
+  color:#74837f;
+  background:#f7fbfa;
+  font-size:9px;
+}
+.sat-score-all-ranges{
+  margin-top:12px;
+  border-top:1px solid #e3ece9;
+  padding-top:10px;
+}
+.sat-score-all-ranges>summary{
+  width:max-content;
+  cursor:pointer;
+  list-style:none;
+  color:#087d70;
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:.02em;
+}
+.sat-score-all-ranges>summary::-webkit-details-marker{display:none}
+.sat-score-all-ranges>summary::after{content:" +";font-size:11px}
+.sat-score-all-ranges[open]>summary::after{content:" −"}
+.sat-score-all-ranges .sat-score-guide-columns{margin-top:10px}
+.sat-score-all-ranges .sat-score-guide-note{display:block;margin-top:9px}
+@media(max-width:760px){
+  .sat-score-personal-summary{grid-template-columns:1fr}
+}
