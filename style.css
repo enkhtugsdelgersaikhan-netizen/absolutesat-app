@@ -5091,3 +5091,90 @@ select:hover,
     grid-column:1;
   }
 }
+
+
+/* SAT guide final composition: guide left, score saver + quartile brief right */
+.sat-guide-row{
+  grid-template-columns:minmax(0,1fr) 300px!important;
+  align-items:stretch!important;
+  margin-top:0!important;
+}
+.sat-guide-score-panel{
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  height:100%;
+  padding:16px;
+  box-sizing:border-box;
+  border:1px solid #d9e8e4;
+  border-radius:16px;
+  background:#f7fbfa;
+}
+.sat-guide-score-panel .sat-context-profile-inline{
+  width:100%!important;
+  max-width:none!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+.sat-guide-score-panel .sat-context-profile-inline>p{
+  font-size:9px!important;
+  margin:6px 0 10px!important;
+}
+.sat-guide-score-panel .sat-context-profile-form{
+  gap:6px!important;
+}
+.sat-guide-score-panel .sat-context-profile-form input{
+  height:35px!important;
+}
+.sat-guide-score-panel .sat-context-profile-actions button{
+  height:33px!important;
+}
+.sat-quartile-brief{
+  margin-top:auto;
+  padding-top:14px;
+  border-top:1px solid #d9e8e4;
+}
+.sat-quartile-brief>span{
+  display:block;
+  margin-bottom:6px;
+  color:#0e7367;
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:.11em;
+}
+.sat-quartile-brief>div{
+  display:grid;
+  grid-template-columns:92px minmax(0,1fr);
+  gap:8px;
+  padding:7px 0;
+  border-top:1px solid #e3ece9;
+}
+.sat-quartile-brief>div strong{
+  color:#28534c;
+  font-size:9px;
+}
+.sat-quartile-brief>div p,
+.sat-quartile-brief-note{
+  margin:0;
+  color:#71807d;
+  font-size:8px;
+  line-height:1.4;
+}
+.sat-quartile-brief-note{
+  margin-top:7px;
+  padding:8px;
+  border-radius:8px;
+  background:#eaf5f2;
+}
+@media(max-width:1050px){
+  .sat-guide-row{
+    grid-template-columns:1fr!important;
+  }
+  .sat-guide-score-panel{
+    height:auto;
+  }
+}
