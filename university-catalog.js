@@ -818,6 +818,44 @@
     return { label: "Below typical here", copy: "Below the lower quartile at most schools in this selective catalog.", position: 14 };
   };
 
+  const ACT_COMPOSITE_POINTS = [[1590,36],[1540,35],[1500,34],[1460,33],[1430,32],[1400,31],[1370,30],[1340,29],[1310,28],[1280,27],[1240,26],[1210,25],[1180,24],[1140,23],[1110,22],[1080,21],[1040,20],[1010,19],[970,18],[930,17],[890,16],[850,15],[800,14],[760,13],[710,12],[670,11],[630,10],[590,9]];
+  const ACT_MATH_POINTS = [[800,36],[780,35],[760,34],[740,33],[720,32],[710,31],[700,30],[680,29],[660,28],[640,27],[610,26],[590,25],[580,24],[560,23],[540,22],[530,21],[520,20],[510,19],[500,18],[470,17],[430,16],[400,15],[360,14],[330,13],[310,12],[280,11],[260,10]];
+  const ACT_ER_POINTS = [[800,72],[790,72],[780,71],[770,71],[760,70],[750,70],[740,69],[730,68],[720,67],[710,66],[700,64],[690,63],[680,61],[670,60],[660,58],[650,57],[640,55],[630,54],[620,52],[610,51],[600,49],[590,48],[580,46],[570,45],[560,44],[550,43],[540,42],[530,40],[520,39],[500,37],[480,34],[460,32],[440,30],[420,28],[400,26],[380,24],[360,22],[340,20],[320,18],[300,16],[280,14]];
+
+  const nearestConcordance = (score, points) => {
+    if (!Number.isFinite(score)) return null;
+    return points.reduce((best, point) => Math.abs(point[0] - score) < Math.abs(best[0] - score) ? point : best)[1];
+  };
+
+  const USER_PERCENTILES = {
+    composite: [[1600,99.9],[1570,99.7],[1550,99.3],[1540,99.0],[1520,98.0],[1500,97.0],[1450,95.0],[1400,93.0],[1350,89.0],[1300,85.0],[1250,80.0],[1200,75.0],[1150,69.0],[1100,62.0],[1050,55.0],[1000,47.0],[950,39.0],[900,32.0],[850,24.0],[800,17.0],[750,11.0],[700,6.0],[650,3.0],[600,2.0],[550,1.0],[400,0.1]],
+    reading: [[800,99.9],[790,99.7],[780,99.5],[770,99.0],[760,99.0],[750,98.0],[740,97.0],[730,96.0],[720,95.0],[710,94.0],[700,92.0],[650,84.0],[600,72.0],[550,59.0],[500,43.0],[450,29.0],[400,16.0],[350,6.0],[300,2.0],[200,0.1]],
+    math: [[800,99.9],[790,99.0],[780,98.0],[770,97.0],[760,96.0],[750,95.0],[700,91.0],[650,84.0],[600,75.0],[550,64.0],[500,50.0],[450,37.0],[400,21.0],[350,8.0],[300,2.0],[200,0.1]]
+  };
+
+  const estimatedUserPercentile = (score, guide) => {
+    if (!Number.isFinite(score)) return null;
+    const points = USER_PERCENTILES[guide];
+    if (!points) return null;
+    if (score >= points[0][0]) return points[0][1];
+    if (score <= points[points.length - 1][0]) return points[points.length - 1][1];
+    for (let i = 0; i < points.length - 1; i++) {
+      const [hiScore, hiPct] = points[i];
+      const [loScore, loPct] = points[i + 1];
+      if (score <= hiScore && score >= loScore) {
+        const t = (score - loScore) / (hiScore - loScore);
+        return Math.round((loPct + t * (hiPct - loPct)) * 10) / 10;
+      }
+    }
+    return null;
+  };
+
+  const actEquivalent = (guide, score) => {
+    if (guide === "composite") return { label: "ACT Composite", value: nearestConcordance(score, ACT_COMPOSITE_POINTS) };
+    if (guide === "math") return { label: "ACT Math", value: nearestConcordance(score, ACT_MATH_POINTS) };
+    return { label: "ACT English + Reading", value: nearestConcordance(score, ACT_ER_POINTS) };
+  };
+
   const updateStrengthCard = (guide, section, score) => {
     const card = document.querySelector('.sat-strength-card[data-strength="' + guide + '"]');
     if (!card) return;
@@ -825,8 +863,14 @@
     const labelNode = card.querySelector("[data-strength-label]");
     const copyNode = card.querySelector("[data-strength-copy]");
     const marker = card.querySelector("[data-strength-marker]");
+    const actNode = card.querySelector("[data-act-equivalent]");
+    const percentileNode = card.querySelector("[data-percentile]");
     const verdict = strengthVerdict(score, section);
+    const act = actEquivalent(guide, score);
+    const percentile = estimatedUserPercentile(score, guide);
     if (scoreNode) scoreNode.textContent = Number.isFinite(score) ? String(score) : "—";
+    if (actNode) actNode.textContent = act.value === null ? act.label + " —" : act.label + " ≈ " + act.value;
+    if (percentileNode) percentileNode.textContent = percentile === null ? "Percentile —" : "≈ " + percentile.toFixed(1) + "th percentile";
     if (!verdict) {
       if (labelNode) labelNode.textContent = "Enter your score";
       if (copyNode) copyNode.textContent = guide === "composite" ? "Set both section scores to see how your composite compares." : "Set your score to see how it compares.";
