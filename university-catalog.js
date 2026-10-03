@@ -793,22 +793,35 @@
   const profileStatus = document.getElementById("sat-profile-status");
   let profileUser = null;
 
-  const highlightGuideScore = (guide, score) => {
-    const scale = document.querySelector('.sat-score-guide-scale[data-guide="' + guide + '"]');
-    if (!scale) return;
-    scale.querySelectorAll(".sat-score-scale-row").forEach((row) => {
-      const min = row.dataset.min === undefined ? -Infinity : Number(row.dataset.min);
-      const max = row.dataset.max === undefined ? Infinity : Number(row.dataset.max);
-      row.classList.toggle("is-user-range", Number.isFinite(score) && score >= min && score <= max);
+  const coveragePercent = (score, section, quartileIndex) => {
+    if (!Number.isFinite(score)) return null;
+    const values = universities
+      .map((u) => u.sat?.[section]?.[quartileIndex])
+      .filter((value) => value !== null && value !== undefined && value !== "" && Number.isFinite(Number(value)))
+      .map(Number);
+    if (!values.length) return null;
+    const cleared = values.filter((value) => score >= value).length;
+    return Math.round((cleared / values.length) * 100);
+  };
+
+  const updateCoverageCard = (guide, section, score) => {
+    const card = document.querySelector('.sat-school-coverage-card[data-coverage="' + guide + '"]');
+    if (!card) return;
+    const scoreNode = document.getElementById("coverage-score-" + guide);
+    if (scoreNode) scoreNode.textContent = Number.isFinite(score) ? String(score) : "—";
+    [["lower",0],["median",1],["upper",2]].forEach(([name,index]) => {
+      const node = card.querySelector('[data-threshold="' + name + '"]');
+      const pct = coveragePercent(score, section, index);
+      if (node) node.textContent = pct === null ? "—" : pct + "%";
     });
   };
 
   const updateGuideHighlights = (reading, math) => {
     const validReading = validSectionScore(reading);
     const validMath = validSectionScore(math);
-    highlightGuideScore("reading", validReading ? reading : NaN);
-    highlightGuideScore("math", validMath ? math : NaN);
-    highlightGuideScore("composite", validReading && validMath ? reading + math : NaN);
+    updateCoverageCard("reading", "reading", validReading ? reading : NaN);
+    updateCoverageCard("math", "math", validMath ? math : NaN);
+    updateCoverageCard("composite", "composite", validReading && validMath ? reading + math : NaN);
   };
 
   const updateProfilePreview = () => {
