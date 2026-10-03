@@ -420,36 +420,65 @@
     }
   }
 
-  function satAdmissionImpact(score, [lower, median, upper]) {
+  function satScorePosition(score, [lower, median, upper]) {
     if (![score, lower, median, upper].every(Number.isFinite)) return null;
-
     const lowerSpan = Math.max(10, median - lower);
     const upperSpan = Math.max(10, upper - median);
-    const rawPosition = score >= median
+    const normalized = score >= median
       ? (score - median) / upperSpan
       : (score - median) / lowerSpan;
-
-    const quartilePosition = Math.max(-1, Math.min(1, rawPosition));
-    const k = 0.15 * quartilePosition;
-
     return {
-      k,
-      kPercent: k * 100,
-      multiplier: 1 + k,
-      cappedLow: rawPosition < -1,
-      cappedHigh: rawPosition > 1
+      score, lower, median, upper,
+      normalized,
+      distanceFromMedian: score - median
     };
   }
 
-  function signedPercent(value) {
-    if (Math.abs(value) < 0.005) return "0.0%";
-    return (value > 0 ? "+" : "−") + Math.abs(value).toFixed(1) + "%";
-  }
+  function satImpactAssessment(positions) {
+    const valid = positions.filter(Boolean);
+    if (valid.length !== 3) return null;
 
-  function impactTone(value) {
-    if (value > 0.00005) return "positive";
-    if (value < -0.00005) return "negative";
-    return "neutral";
+    // Average quartile-relative position across Composite, R&W, and Math.
+    // Keep some information beyond the quartile edges so 20 points above an
+    // upper quartile is distinguishable from merely touching it.
+    const avg = valid.reduce((sum, p) => sum + Math.max(-1.5, Math.min(1.5, p.normalized)), 0) / valid.length;
+    const aboveMedian = valid.filter((p) => p.score > p.median).length;
+    const belowMedian = valid.filter((p) => p.score < p.median).length;
+    const atOrAboveUpper = valid.filter((p) => p.score >= p.upper).length;
+    const atOrBelowLower = valid.filter((p) => p.score <= p.lower).length;
+
+    let label, tone, summary;
+    if (avg >= 1.05 || (atOrAboveUpper >= 2 && aboveMedian === 3)) {
+      label = "Clear SAT advantage";
+      tone = "positive";
+      summary = "Your SAT sits around or above this school's upper-quartile level overall.";
+    } else if (avg >= 0.45) {
+      label = "Meaningful SAT advantage";
+      tone = "positive";
+      summary = "Your SAT is comfortably above this school's median profile overall.";
+    } else if (avg >= 0.15) {
+      label = "Slight SAT advantage";
+      tone = "positive";
+      summary = "Your SAT is a little stronger than this school's median profile overall.";
+    } else if (avg > -0.15) {
+      label = "SAT is neutral here";
+      tone = "neutral";
+      summary = "Your SAT is very close to this school's median profile overall.";
+    } else if (avg > -0.45) {
+      label = "Slight SAT disadvantage";
+      tone = "negative";
+      summary = "Your SAT is a little below this school's median profile overall.";
+    } else if (avg > -1.05) {
+      label = "Meaningful SAT disadvantage";
+      tone = "negative";
+      summary = "Your SAT sits noticeably below this school's median profile overall.";
+    } else {
+      label = "Clear SAT disadvantage";
+      tone = "negative";
+      summary = "Your SAT is around or below this school's lower-quartile level overall.";
+    }
+
+    return { avg, aboveMedian, belowMedian, atOrAboveUpper, atOrBelowLower, label, tone, summary };
   }
 
   function renderAdmissionsImpact(u, currentScore, readingScore, mathScore) {
@@ -457,47 +486,60 @@
     if (!hasScores) {
       return '<section class="university-impact-panel">' +
         '<div class="university-impact-panel-heading">' +
-          '<div><span>SAT IMPACT</span><h4>How your SAT changes your admission chance compared with an otherwise identical applicant at this school\'s median SAT</h4><p class="university-impact-relative-help">This is a <strong>relative change</strong>, not points added to your acceptance rate. For example, if the baseline chance were 10%, a +10% relative change would make it 11%, not 20%.</p></div>' +
+          '<div><span>SAT IMPACT</span><h4>What your SAT means at this school</h4><p class="university-impact-relative-help">This compares your Composite, Reading &amp; Writing, and Math scores with this school\'s lower quartile, median, and upper quartile.</p></div>' +
         '</div>' +
-        '<p class="university-impact-empty">Set your SAT score above to see the estimate for this school.</p>' +
+        '<p class="university-impact-empty">Set your SAT score above to see the assessment for this school.</p>' +
       '</section>';
     }
 
-    const compositeImpact = satAdmissionImpact(currentScore, u.sat.composite);
-    const readingImpact = satAdmissionImpact(readingScore, u.sat.reading);
-    const mathImpact = satAdmissionImpact(mathScore, u.sat.math);
-    const impacts = [compositeImpact, readingImpact, mathImpact].filter(Boolean);
-    if (impacts.length !== 3) return "";
+    const positions = [
+      satScorePosition(currentScore, u.sat.composite),
+      satScorePosition(readingScore, u.sat.reading),
+      satScorePosition(mathScore, u.sat.math)
+    ];
+    const assessment = satImpactAssessment(positions);
+    if (!assessment) return "";
 
-    const averagePercent = impacts.reduce((sum, impact) => sum + impact.kPercent, 0) / impacts.length;
-    const averageK = averagePercent / 100;
     const school = escapeHtml(u.short || u.name);
-    const magnitude = Math.abs(averagePercent).toFixed(1);
-    const explanation = averagePercent > 0.005
-      ? 'Your SAT score is making your modeled admission chance <strong>' + magnitude + '% higher</strong> than an otherwise identical applicant—same grades, course rigor, extracurriculars, honors, essays, recommendations, and other factors—whose SAT is at ' + school + '\'s median.'
-      : averagePercent < -0.005
-        ? 'Your SAT score is making your modeled admission chance <strong>' + magnitude + '% lower</strong> than an otherwise identical applicant—same grades, course rigor, extracurriculars, honors, essays, recommendations, and other factors—whose SAT is at ' + school + '\'s median.'
-        : 'Your SAT is effectively at ' + school + '\'s median in this model, so it gives you <strong>no SAT-based increase or decrease</strong> relative to an otherwise identical applicant at the median.';
+    const [cPos, rPos, mPos] = positions;
+    const details = [
+      ['Composite', cPos],
+      ['R&amp;W', rPos],
+      ['Math', mPos]
+    ].map(([label, p]) => label + ' ' + p.score + ' vs ' + p.median + ' median').join(' · ');
+
+    let context;
+    if (assessment.atOrAboveUpper === 3) {
+      context = 'All three parts of your SAT are at or above ' + school + '\'s upper-quartile benchmarks.';
+    } else if (assessment.aboveMedian === 3) {
+      context = 'All three parts of your SAT are above ' + school + '\'s median benchmarks.';
+    } else if (assessment.belowMedian === 3) {
+      context = 'All three parts of your SAT are below ' + school + '\'s median benchmarks.';
+    } else {
+      context = 'Your section profile is mixed, so the assessment balances each score by how far it sits between that section\'s quartile benchmarks.';
+    }
 
     return '<section class="university-impact-panel">' +
       '<div class="university-impact-panel-heading">' +
         '<div>' +
           '<span>SAT IMPACT</span>' +
-          '<h4>How your SAT changes your admission chance compared with an otherwise identical applicant at this school\'s median SAT</h4><p class="university-impact-relative-help">This is a <strong>relative change</strong>, not points added to your acceptance rate. For example, if the baseline chance were 10%, a +10% relative change would make it 11%, not 20%.</p>' +
+          '<h4>What your SAT means at this school</h4>' +
+          '<p class="university-impact-relative-help">This uses the school\'s lower quartile, median, and upper quartile for Composite, R&amp;W, and Math. It describes the strength of your SAT here—not a numerical change in admission probability.</p>' +
         '</div>' +
-        '<span class="university-impact-median">Median: ' + u.sat.composite[1] + '</span>' +
+        '<span class="university-impact-median">Composite median: ' + u.sat.composite[1] + '</span>' +
       '</div>' +
       '<div class="university-impact-grid university-impact-grid-single">' +
-        '<div class="university-impact-card ' + impactTone(averageK) + '">' +
+        '<div class="university-impact-card ' + assessment.tone + '">' +
           '<div class="university-impact-card-top">' +
             '<span class="university-impact-label">Your SAT</span>' +
             '<strong class="university-impact-score">' + currentScore + '</strong>' +
           '</div>' +
           '<div class="university-impact-main">' +
-            '<strong>' + signedPercent(averagePercent) + '</strong>' +
-            '<span>relative admission chance</span>' +
+            '<strong>' + assessment.label + '</strong>' +
+            '<span>at ' + school + '</span>' +
           '</div>' +
-          '<p>' + explanation + '</p>' +
+          '<p><strong>' + assessment.summary + '</strong> ' + context + '</p>' +
+          '<small class="university-impact-score-detail">' + details + '</small>' +
         '</div>' +
       '</div>' +
     '</section>';
