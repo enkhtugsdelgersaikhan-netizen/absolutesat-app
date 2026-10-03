@@ -422,63 +422,91 @@
 
   function satScorePosition(score, [lower, median, upper]) {
     if (![score, lower, median, upper].every(Number.isFinite)) return null;
-    const lowerSpan = Math.max(10, median - lower);
-    const upperSpan = Math.max(10, upper - median);
-    const normalized = score >= median
-      ? (score - median) / upperSpan
-      : (score - median) / lowerSpan;
-    return {
-      score, lower, median, upper,
-      normalized,
-      distanceFromMedian: score - median
-    };
+
+    // Deliberately categorical: once a score clears an outer quartile,
+    // additional point differences do not make the SAT impact stronger.
+    let band, level;
+    if (score < lower) {
+      band = "Below lower quartile";
+      level = -2;
+    } else if (score === lower) {
+      band = "At lower quartile";
+      level = -1;
+    } else if (score < median) {
+      band = "Between lower quartile and median";
+      level = -1;
+    } else if (score === median) {
+      band = "At median";
+      level = 0;
+    } else if (score < upper) {
+      band = "Between median and upper quartile";
+      level = 1;
+    } else if (score === upper) {
+      band = "At upper quartile";
+      level = 2;
+    } else {
+      band = "Above upper quartile";
+      level = 2;
+    }
+
+    return { score, lower, median, upper, band, level };
   }
 
   function satImpactAssessment(positions) {
     const valid = positions.filter(Boolean);
     if (valid.length !== 3) return null;
 
-    // Average quartile-relative position across Composite, R&W, and Math.
-    // Keep some information beyond the quartile edges so 20 points above an
-    // upper quartile is distinguishable from merely touching it.
-    const avg = valid.reduce((sum, p) => sum + Math.max(-1.5, Math.min(1.5, p.normalized)), 0) / valid.length;
-    const aboveMedian = valid.filter((p) => p.score > p.median).length;
-    const belowMedian = valid.filter((p) => p.score < p.median).length;
-    const atOrAboveUpper = valid.filter((p) => p.score >= p.upper).length;
-    const atOrBelowLower = valid.filter((p) => p.score <= p.lower).length;
+    // Composite is the anchor; R&W and Math refine it. We use only quartile
+    // bands, never the raw point distance once a score is outside the IQR.
+    const [composite, reading, math] = valid;
+    const sectionAverage = (reading.level + math.level) / 2;
+    const combined = composite.level * 0.5 + sectionAverage * 0.5;
+
+    // Reward/penalize consistent combinations without allowing one extreme
+    // section to dominate the whole assessment.
+    const allAtOrAboveMedian = valid.every((p) => p.level >= 0);
+    const allAboveMedian = valid.every((p) => p.level > 0);
+    const allAtOrBelowMedian = valid.every((p) => p.level <= 0);
+    const allBelowMedian = valid.every((p) => p.level < 0);
+    const upperCount = valid.filter((p) => p.level === 2).length;
+    const belowLowerCount = valid.filter((p) => p.level === -2).length;
 
     let label, tone, summary;
-    if (avg >= 1.05 || (atOrAboveUpper >= 2 && aboveMedian === 3)) {
+    if ((combined >= 1.5 && allAtOrAboveMedian) || (upperCount >= 2 && allAtOrAboveMedian)) {
       label = "Clear SAT advantage";
       tone = "positive";
-      summary = "Your SAT sits around or above this school's upper-quartile level overall.";
-    } else if (avg >= 0.45) {
+      summary = "Your score combination is firmly above this school's typical SAT profile.";
+    } else if (combined >= 0.75 || (allAboveMedian && combined >= 0.5)) {
       label = "Meaningful SAT advantage";
       tone = "positive";
-      summary = "Your SAT is comfortably above this school's median profile overall.";
-    } else if (avg >= 0.15) {
+      summary = "Your score combination is stronger than this school's typical SAT profile.";
+    } else if (combined >= 0.25) {
       label = "Slight SAT advantage";
       tone = "positive";
-      summary = "Your SAT is a little stronger than this school's median profile overall.";
-    } else if (avg > -0.15) {
+      summary = "Your score combination leans stronger than this school's typical SAT profile.";
+    } else if (combined > -0.25) {
       label = "SAT is neutral here";
       tone = "neutral";
-      summary = "Your SAT is very close to this school's median profile overall.";
-    } else if (avg > -0.45) {
+      summary = "Your score combination sits close to this school's typical SAT profile.";
+    } else if (combined > -0.75) {
       label = "Slight SAT disadvantage";
       tone = "negative";
-      summary = "Your SAT is a little below this school's median profile overall.";
-    } else if (avg > -1.05) {
+      summary = "Your score combination leans weaker than this school's typical SAT profile.";
+    } else if (combined > -1.5 && belowLowerCount < 2) {
       label = "Meaningful SAT disadvantage";
       tone = "negative";
-      summary = "Your SAT sits noticeably below this school's median profile overall.";
+      summary = "Your score combination is weaker than this school's typical SAT profile.";
     } else {
       label = "Clear SAT disadvantage";
       tone = "negative";
-      summary = "Your SAT is around or below this school's lower-quartile level overall.";
+      summary = "Your score combination is firmly below this school's typical SAT profile.";
     }
 
-    return { avg, aboveMedian, belowMedian, atOrAboveUpper, atOrBelowLower, label, tone, summary };
+    return {
+      combined, label, tone, summary,
+      bands: valid.map((p) => p.band),
+      allAtOrAboveMedian, allAtOrBelowMedian
+    };
   }
 
   function renderAdmissionsImpact(u, currentScore, readingScore, mathScore) {
@@ -502,22 +530,7 @@
 
     const school = escapeHtml(u.short || u.name);
     const [cPos, rPos, mPos] = positions;
-    const details = [
-      ['Composite', cPos],
-      ['R&amp;W', rPos],
-      ['Math', mPos]
-    ].map(([label, p]) => label + ' ' + p.score + ' vs ' + p.median + ' median').join(' · ');
-
-    let context;
-    if (assessment.atOrAboveUpper === 3) {
-      context = 'All three parts of your SAT are at or above ' + school + '\'s upper-quartile benchmarks.';
-    } else if (assessment.aboveMedian === 3) {
-      context = 'All three parts of your SAT are above ' + school + '\'s median benchmarks.';
-    } else if (assessment.belowMedian === 3) {
-      context = 'All three parts of your SAT are below ' + school + '\'s median benchmarks.';
-    } else {
-      context = 'Your section profile is mixed, so the assessment balances each score by how far it sits between that section\'s quartile benchmarks.';
-    }
+    const combination = 'Composite: ' + cPos.band + ' · R&amp;W: ' + rPos.band + ' · Math: ' + mPos.band;
 
     return '<section class="university-impact-panel university-impact-panel-compact">' +
       '<span class="university-impact-kicker">SAT IMPACT</span>' +
@@ -525,7 +538,8 @@
         '<strong class="university-impact-verdict ' + assessment.tone + '">' + assessment.label + '</strong>' +
         '<span class="university-impact-school">at ' + school + '</span>' +
       '</div>' +
-      '<p class="university-impact-compact-copy">' + assessment.summary + ' ' + context + '</p>' +
+      '<p class="university-impact-compact-copy">' + assessment.summary + '</p>' +
+      '<p class="university-impact-combination">' + combination + '</p>' +
     '</section>';
   }
 
