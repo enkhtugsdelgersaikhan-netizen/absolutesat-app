@@ -533,7 +533,7 @@
     const combination = 'Composite: ' + cPos.band + ' · R&amp;W: ' + rPos.band + ' · Math: ' + mPos.band;
 
     return '<section class="university-impact-panel university-impact-panel-compact">' +
-      '<span class="university-impact-kicker">SAT IMPACT</span>' +
+      '<div class="university-impact-merged-head"><div class="university-impact-score-summary"><span>YOUR SAT</span><strong>' + currentScore + '</strong><small>' + readingScore + ' R&amp;W · ' + mathScore + ' Math</small></div><span class="university-impact-kicker">SAT IMPACT</span></div>' +
       '<div class="university-impact-compact-row">' +
         '<strong class="university-impact-verdict ' + assessment.tone + '">' + assessment.label + '</strong>' +
         '<span class="university-impact-school">at ' + school + '</span>' +
@@ -672,12 +672,7 @@
         '</div>' +
         '<div class="university-score-context">' +
           '<p>Quartiles among enrolled first-year students who submitted SAT scores.</p>' +
-          (userProfile
-            ? '<div class="university-your-summary">' +
-                '<span>Your SAT</span><strong>' + totalScore + '</strong><small>' +
-                  userProfile.readingWriting + ' R&amp;W · ' + userProfile.math + ' Math</small>' +
-              '</div>'
-            : '<span class="university-add-score-link">Set your SAT scores above to see where you sit.</span>') +
+          (!userProfile ? '<span class="university-add-score-link">Set your SAT scores above to see where you sit.</span>' : '') +
         '</div>' +
         renderAdmissionsImpact(u, totalScore, userProfile?.readingWriting, userProfile?.math) +
         '<div class="university-score-band-stack">' +
