@@ -5363,3 +5363,70 @@ select:hover,
   font-weight:700;
   line-height:1;
 }
+
+
+/* Three-part SAT admission impact */
+.university-impact-components{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:8px;
+  margin-top:12px;
+}
+.university-impact-component{
+  padding:10px 11px;
+  border:1px solid #dce8e5;
+  border-radius:10px;
+  background:#fff;
+}
+.university-impact-component span,
+.university-impact-component small{
+  display:block;
+  color:#71807d;
+  font-size:7px;
+  line-height:1.35;
+}
+.university-impact-component strong{
+  display:block;
+  margin:3px 0 2px;
+  color:#315c55;
+  font-size:16px;
+  line-height:1;
+}
+.university-impact-component.positive strong,
+.university-impact-average.positive strong{color:#087d70}
+.university-impact-component.negative strong,
+.university-impact-average.negative strong{color:#b45135}
+.university-impact-average{
+  display:flex;
+  align-items:baseline;
+  gap:9px;
+  margin-top:10px;
+  padding:12px 13px;
+  border-radius:10px;
+  background:#eef7f4;
+}
+.university-impact-average>span{
+  color:#52716b;
+  font-size:7px;
+  font-weight:800;
+  letter-spacing:.08em;
+}
+.university-impact-average>strong{
+  color:#315c55;
+  font-size:22px;
+  line-height:1;
+}
+.university-impact-average>small{
+  color:#71807d;
+  font-size:8px;
+}
+.university-impact-average-explanation{
+  margin:9px 0 0;
+  color:#687874;
+  font-size:8px;
+  line-height:1.5;
+}
+@media(max-width:620px){
+  .university-impact-components{grid-template-columns:1fr}
+  .university-impact-average{align-items:flex-start;flex-direction:column;gap:4px}
+}
