@@ -5338,3 +5338,10 @@ select:hover,
   .sat-score-strength-cards{grid-template-columns:1fr}
   .sat-strength-card>p{min-height:0}
 }
+
+
+/* Keep SAT save action flush with its control row */
+.sat-guide-score-panel .sat-context-profile-actions button:first-child{
+  box-shadow:none!important;
+  transform:none!important;
+}
