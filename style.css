@@ -5445,3 +5445,41 @@ select:hover,
   font-size:18px;
   line-height:1.15;
 }
+
+
+/* Compact SAT impact: the score summary and quartile rails already show the numbers */
+.university-impact-panel-compact{
+  padding:16px 20px;
+}
+.university-impact-kicker{
+  display:block;
+  margin-bottom:6px;
+  color:#087d70;
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:.12em;
+}
+.university-impact-compact-row{
+  display:flex;
+  align-items:baseline;
+  gap:7px;
+  flex-wrap:wrap;
+}
+.university-impact-verdict{
+  color:#315c55;
+  font-size:21px;
+  line-height:1.15;
+}
+.university-impact-verdict.positive{color:#087d70}
+.university-impact-verdict.negative{color:#b45135}
+.university-impact-school{
+  color:#7b8986;
+  font-size:9px;
+}
+.university-impact-compact-copy{
+  max-width:760px;
+  margin:6px 0 0;
+  color:#687874;
+  font-size:9px;
+  line-height:1.5;
+}
