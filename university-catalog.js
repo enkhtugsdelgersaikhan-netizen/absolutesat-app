@@ -452,24 +452,14 @@
     return "neutral";
   }
 
-  function renderImpactMetric(label, score, quartiles) {
-    const impact = satAdmissionImpact(score, quartiles);
-    if (!impact) return "";
-    return '<div class="university-impact-component ' + impactTone(impact.k) + '">' +
-      '<span>' + escapeHtml(label) + '</span>' +
-      '<strong>' + signedPercent(impact.kPercent) + '</strong>' +
-      '<small>vs. school median</small>' +
-    '</div>';
-  }
-
   function renderAdmissionsImpact(u, currentScore, readingScore, mathScore) {
     const hasScores = Number.isFinite(currentScore) && Number.isFinite(readingScore) && Number.isFinite(mathScore);
     if (!hasScores) {
       return '<section class="university-impact-panel">' +
         '<div class="university-impact-panel-heading">' +
-          '<div><span>SAT IMPACT</span><h4>Relative admission chance from your SAT</h4><p class="university-impact-relative-help">Composite, Reading &amp; Writing, and Math are each compared with this school\'s own SAT quartiles. Their three modeled relative changes are then averaged.</p></div>' +
+          '<div><span>SAT IMPACT</span><h4>How your SAT changes your admission chance compared with an otherwise identical applicant at this school\'s median SAT</h4><p class="university-impact-relative-help">This is a <strong>relative change</strong>, not points added to your acceptance rate. For example, if the baseline chance were 10%, a +10% relative change would make it 11%, not 20%.</p></div>' +
         '</div>' +
-        '<p class="university-impact-empty">Set both SAT section scores above to see the estimate for this school.</p>' +
+        '<p class="university-impact-empty">Set your SAT score above to see the estimate for this school.</p>' +
       '</section>';
     }
 
@@ -484,30 +474,32 @@
     const school = escapeHtml(u.short || u.name);
     const magnitude = Math.abs(averagePercent).toFixed(1);
     const explanation = averagePercent > 0.005
-      ? 'Averaging all three SAT comparisons, your modeled admission chance is <strong>' + magnitude + '% higher</strong> than an otherwise identical applicant whose Composite, R&amp;W, and Math scores are each at ' + school + '\'s median.'
+      ? 'Your SAT score is making your modeled admission chance <strong>' + magnitude + '% higher</strong> than an otherwise identical applicant—same grades, course rigor, extracurriculars, honors, essays, recommendations, and other factors—whose SAT is at ' + school + '\'s median.'
       : averagePercent < -0.005
-        ? 'Averaging all three SAT comparisons, your modeled admission chance is <strong>' + magnitude + '% lower</strong> than an otherwise identical applicant whose Composite, R&amp;W, and Math scores are each at ' + school + '\'s median.'
-        : 'Averaging all three SAT comparisons gives <strong>no SAT-based increase or decrease</strong> relative to an otherwise identical applicant at this school\'s medians.';
+        ? 'Your SAT score is making your modeled admission chance <strong>' + magnitude + '% lower</strong> than an otherwise identical applicant—same grades, course rigor, extracurriculars, honors, essays, recommendations, and other factors—whose SAT is at ' + school + '\'s median.'
+        : 'Your SAT is effectively at ' + school + '\'s median in this model, so it gives you <strong>no SAT-based increase or decrease</strong> relative to an otherwise identical applicant at the median.';
 
     return '<section class="university-impact-panel">' +
       '<div class="university-impact-panel-heading">' +
         '<div>' +
           '<span>SAT IMPACT</span>' +
-          '<h4>Relative admission chance from your SAT</h4>' +
-          '<p class="university-impact-relative-help">Each score is modeled separately against its matching school quartiles, then the three relative changes are averaged. This is a <strong>relative change</strong>, not points added to the acceptance rate.</p>' +
+          '<h4>How your SAT changes your admission chance compared with an otherwise identical applicant at this school\'s median SAT</h4><p class="university-impact-relative-help">This is a <strong>relative change</strong>, not points added to your acceptance rate. For example, if the baseline chance were 10%, a +10% relative change would make it 11%, not 20%.</p>' +
+        '</div>' +
+        '<span class="university-impact-median">Median: ' + u.sat.composite[1] + '</span>' +
+      '</div>' +
+      '<div class="university-impact-grid university-impact-grid-single">' +
+        '<div class="university-impact-card ' + impactTone(averageK) + '">' +
+          '<div class="university-impact-card-top">' +
+            '<span class="university-impact-label">Your SAT</span>' +
+            '<strong class="university-impact-score">' + currentScore + '</strong>' +
+          '</div>' +
+          '<div class="university-impact-main">' +
+            '<strong>' + signedPercent(averagePercent) + '</strong>' +
+            '<span>relative admission chance</span>' +
+          '</div>' +
+          '<p>' + explanation + '</p>' +
         '</div>' +
       '</div>' +
-      '<div class="university-impact-components">' +
-        renderImpactMetric("Composite · " + currentScore, currentScore, u.sat.composite) +
-        renderImpactMetric("R&W · " + readingScore, readingScore, u.sat.reading) +
-        renderImpactMetric("Math · " + mathScore, mathScore, u.sat.math) +
-      '</div>' +
-      '<div class="university-impact-average ' + impactTone(averageK) + '">' +
-        '<span>AVERAGED SAT IMPACT</span>' +
-        '<strong>' + signedPercent(averagePercent) + '</strong>' +
-        '<small>relative admission chance</small>' +
-      '</div>' +
-      '<p class="university-impact-average-explanation">' + explanation + '</p>' +
     '</section>';
   }
 
