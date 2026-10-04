@@ -54,12 +54,14 @@ function symbolScore(title) {
   if (badMedia.test(t)) return -100;
   let score = 0;
   if (/\.svg$/i.test(t)) score += 9;
-  if (/logo/i.test(t)) score += 12;
-  if (/seal/i.test(t)) score += 11;
-  if (/crest/i.test(t)) score += 10;
-  if (/shield/i.test(t)) score += 9;
-  if (/coat of arms/i.test(t)) score += 8;
-  if (/wordmark/i.test(t)) score += 7;
+  if (/seal/i.test(t)) score += 16;
+  if (/crest/i.test(t)) score += 15;
+  if (/shield/i.test(t)) score += 14;
+  if (/coat of arms/i.test(t)) score += 14;
+  if (/emblem/i.test(t)) score += 13;
+  if (/logo/i.test(t)) score += 10;
+  if (/monogram/i.test(t)) score += 10;
+  if (/wordmark|textlogo|horizontal/i.test(t)) score -= 3;
   if (/emblem/i.test(t)) score += 7;
   if (/monogram/i.test(t)) score += 6;
   if (/transparent/i.test(t)) score += 2;
@@ -270,7 +272,7 @@ function isGoodSymbolAsset(asset) {
   const height = Number(asset.height) || 0;
   const ratio = width && height ? Math.max(width / height, height / width) : 1;
   // Very wide text-only marks become tiny and fuzzy in the square symbol slot.
-  if (ratio > 4 && /wordmark|textlogo|horizontal/i.test(title)) return false;
+  if (ratio > 3) return false;
   return true;
 }
 
@@ -309,30 +311,32 @@ function commonsAsset(page) {
 }
 
 async function searchCommonsSymbol(school) {
-  const searches = [school.name + " logo", school.name + " seal"];
+  const searches = [school.name + " seal", school.name + " crest", school.name + " logo"];
+  const candidates = [];
   for (const query of searches) {
     const payload = await commonsQuery({
       generator: "search",
       gsrsearch: query,
       gsrnamespace: "6",
-      gsrlimit: "12",
+      gsrlimit: "10",
       prop: "imageinfo",
       iiprop: "url|size|mime|mediatype",
       iiurlwidth: "640"
     });
-    const ranked = (payload?.query?.pages || [])
-      .map((page) => {
-        const asset = commonsAsset(page);
-        return {
-          asset,
-          score: symbolScore(page.title) + schoolTokenScore(page.title, school.name)
-        };
-      })
-      .filter((item) => item.asset && item.score > 0 && isCrispSymbol(item.asset))
-      .sort((a, b) => b.score - a.score);
-    if (ranked.length) return ranked[0].asset;
+    for (const page of payload?.query?.pages || []) {
+      const asset = commonsAsset(page);
+      if (!asset || !isGoodSymbolAsset(asset)) continue;
+      const width = Number(asset.width) || 1;
+      const height = Number(asset.height) || 1;
+      const ratio = Math.max(width / height, height / width);
+      candidates.push({
+        asset,
+        score: symbolScore(page.title) + schoolTokenScore(page.title, school.name) - Math.max(0, ratio - 1) * 2
+      });
+    }
   }
-  return null;
+  candidates.sort((a, b) => b.score - a.score);
+  return candidates[0]?.asset || null;
 }
 
 async function searchCommonsCampus(school) {
