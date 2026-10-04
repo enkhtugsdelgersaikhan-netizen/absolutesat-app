@@ -5757,17 +5757,27 @@ select:hover,
 .sat-score-guide>.sat-score-guide-note{display:block;margin-top:9px}
 
 
-/* Keep the user's SAT rail marker visually identical even when it lands on a quartile. */
+/* Keep the user's SAT rail marker small, perfectly circular, and identical on every rail. */
 .sat-rail-marker.covered-by-user .sat-rail-dot{
-  opacity:0;
+  opacity:0!important;
 }
 .sat-rail-marker.you .sat-rail-dot{
-  box-sizing:border-box;
-  width:21px;
-  height:21px;
-  min-width:21px;
-  min-height:21px;
-  border:3px solid #fff;
-  border-radius:50%;
-  transform:translateX(-50%);
+  box-sizing:border-box!important;
+  display:block!important;
+  top:13px!important;
+  left:50%!important;
+  width:15px!important;
+  height:15px!important;
+  min-width:15px!important;
+  min-height:15px!important;
+  max-width:15px!important;
+  max-height:15px!important;
+  padding:0!important;
+  margin:0!important;
+  border:2px solid #fff!important;
+  border-radius:999px!important;
+  background:#f05a32!important;
+  box-shadow:0 0 0 1.5px rgba(240,90,50,.18)!important;
+  transform:translateX(-50%)!important;
+  aspect-ratio:1 / 1!important;
 }
