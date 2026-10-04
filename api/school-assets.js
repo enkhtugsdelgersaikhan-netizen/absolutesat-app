@@ -62,8 +62,6 @@ function symbolScore(title) {
   if (/logo/i.test(t)) score += 10;
   if (/monogram/i.test(t)) score += 10;
   if (/wordmark|textlogo|horizontal/i.test(t)) score -= 3;
-  if (/emblem/i.test(t)) score += 7;
-  if (/monogram/i.test(t)) score += 6;
   if (/transparent/i.test(t)) score += 2;
   if (campusTerms.test(t)) score -= 8;
   return score;
