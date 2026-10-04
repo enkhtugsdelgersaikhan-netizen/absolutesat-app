@@ -237,18 +237,29 @@ function normalizeQuestion(question) {
 
 function assignQuestionNumbers(questions) {
     const groupNumbers = new Map();
-    let nextNumber = 1;
+    const nextBySection = new Map();
 
     questions.forEach(question => {
-        const groupId = String(question.groupId);
+        const section =
+            String(question.section || "SAT");
+        const groupId =
+            section + "::" +
+            String(question.groupId);
 
         if (!groupNumbers.has(groupId)) {
+            const nextNumber =
+                nextBySection.get(section) ||
+                1;
+
             groupNumbers.set(
                 groupId,
                 nextNumber
             );
 
-            nextNumber++;
+            nextBySection.set(
+                section,
+                nextNumber + 1
+            );
         }
     });
 
@@ -259,20 +270,36 @@ function assignQuestionNumbers(questions) {
     };
 
     questions.forEach(question => {
+        const groupId =
+            String(question.section || "SAT") +
+            "::" +
+            String(question.groupId);
+
         question.question_number =
-            groupNumbers.get(
-                String(question.groupId)
-            );
+            groupNumbers.get(groupId);
     });
 
     questions.sort((a, b) => {
+        const sectionCompare =
+            String(a.section).localeCompare(
+                String(b.section)
+            );
+
+        if (sectionCompare !== 0) {
+            return sectionCompare;
+        }
+
         const groupA =
             groupNumbers.get(
+                String(a.section || "SAT") +
+                "::" +
                 String(a.groupId)
             ) || 999999;
 
         const groupB =
             groupNumbers.get(
+                String(b.section || "SAT") +
+                "::" +
                 String(b.groupId)
             ) || 999999;
 
