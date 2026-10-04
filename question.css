@@ -1341,7 +1341,7 @@
     cursor:not-allowed;
 }
 .question-passage-copy{
-    margin-top:18px;
+    margin-top:0;
 }
 .question-passage-table-wrap + .question-passage-copy,
 .question-graph-wrap + .question-passage-copy{
