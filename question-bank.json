@@ -1139,7 +1139,7 @@
       "correctAnswer": "A",
       "explanation": "The sentence needs an example showing that **total height and clear bole length can differ substantially for the same tree**. *Eucalyptus regnans* has the greatest total height in the table, 76 meters, but its clear bole extends only 28 meters. That 48-meter difference directly illustrates the distinction the passage describes.\n\nB provides a clear-bole measurement and a geographic fact but does not compare the two relevant measurements. C compares the total heights of two species rather than total height with clear bole length. D compares clear-bole lengths between two species, so it also fails to illustrate how the two measures can differ within one tree species.",
       "table": {
-        "caption": "",
+        "caption": "Dimensions of Selected Commercial Timber Trees",
         "headers": [
           "Tree species",
           "Total height (m)",
