@@ -774,7 +774,7 @@ function resetCardUI(){
 function updateStatusUI(word){
     const state=getWordState(word);
 
-    solvedStatusEl.textContent=state.solved?"Solved":"Unsolved";
+    solvedStatusEl.textContent=state.solved?"Know It":"Learning";
     solvedStatusEl.className="vocab-status-chip "+(state.solved?"solved":"unsolved");
 
     reviewStatusEl.classList.toggle("hidden",!state.review);
@@ -809,9 +809,9 @@ function updateProgress(){
         }
     }
 
-    progressText.textContent=solved+" of "+words.length+" solved";
+    progressText.textContent=solved+" of "+words.length+" known";
     progressBar.style.width=(solved/words.length*100)+"%";
-    statusSummary.textContent=review+" review · "+(words.length-solved)+" unsolved";
+    statusSummary.textContent=review+" review · "+(words.length-solved)+" learning";
 }
 
 function render(){
