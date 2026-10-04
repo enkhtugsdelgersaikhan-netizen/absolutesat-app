@@ -361,25 +361,6 @@
       "explanation": "D directly emphasizes the requested **difference in time period**. Baret’s fieldwork occurred in the eighteenth century, whereas Mexia’s major expeditions began in the twentieth century, more than a century later.\n\nA stresses a similarity rather than a difference. B discusses only Mexia and therefore cannot compare the two collectors. C discusses only Baret and likewise fails to establish how the timing of her work differed from Mexia’s."
     },
     {
-      "id": "rw-20261005-s1-q06",
-      "groupId": "rw-20261005-s1-q06",
-      "status": "staged",
-      "section": "Reading & Writing",
-      "domain": "Expression of Ideas",
-      "skill": "Transitions",
-      "difficulty": "Medium",
-      "passage": "During the early decades of radio astronomy, the Jodrell Bank Observatory in England became one of the field’s most consequential observing centers. _____ its large steerable radio telescope enabled astronomers to track rapidly changing celestial targets that less maneuverable instruments could not follow as effectively.",
-      "question": "Which choice completes the text with the most logical transition?",
-      "choices": {
-        "A": "Likewise,",
-        "B": "Nevertheless,",
-        "C": "Consequently,",
-        "D": "Indeed,"
-      },
-      "correctAnswer": "D",
-      "explanation": "The first sentence makes a claim about Jodrell Bank’s importance. The second provides specific evidence supporting that claim by identifying a capability of its telescope. **“Indeed,”** appropriately signals that the second statement confirms or substantiates the first.\n\nA is incorrect because “Likewise” normally introduces a similarity with another previously discussed case, but no comparable observatory has been introduced. B signals contrast, which is absent. C suggests that the telescope’s capability occurred as a result of the observatory becoming consequential, reversing the logical relationship; the capability helps explain the observatory’s importance."
-    },
-    {
       "id": "rw-20261005-s1-q07",
       "groupId": "rw-20261005-s1-q07",
       "status": "staged",
@@ -834,25 +815,6 @@
       },
       "correctAnswer": "C",
       "explanation": "The sentence contains two coordinated participial phrases describing what Cannon did while examining stellar spectra: **“identifying recurring spectral patterns”** and **“standardising the classification sequence.”** The parallel **-ing** forms correctly modify the subject “she.”\n\nA uses the past perfect and disrupts the grammatical parallelism with “identifying.” B shifts incorrectly into the present tense. D uses “would standardise,” which suggests a later action viewed from a past point rather than a second action occurring in parallel with “identifying.”"
-    },
-    {
-      "id": "rw-20261005-s4-q01",
-      "groupId": "rw-20261005-s4-q01",
-      "status": "staged",
-      "section": "Reading & Writing",
-      "domain": "Expression of Ideas",
-      "skill": "Transitions",
-      "difficulty": "Easy",
-      "passage": "Seismologists rely on several specialized instruments to characterize earthquake activity. _____ broadband seismometers record ground motion across a wide range of frequencies, while strainmeters detect extremely small deformations in Earth’s crust.",
-      "question": "Which choice completes the text with the most logical transition?",
-      "choices": {
-        "A": "Consequently,",
-        "B": "Thereafter,",
-        "C": "For example,",
-        "D": "Nevertheless,"
-      },
-      "correctAnswer": "C",
-      "explanation": "The first sentence makes a broad statement about the variety of instruments seismologists use. The second sentence supplies two specific examples—broadband seismometers and strainmeters—and explains what each measures. **“For example,”** therefore most precisely signals the relationship between the general statement and the specific illustrations.\n\nA is incorrect because the use of the two instruments is not presented as a consequence of the first sentence. B indicates chronological sequence, but no sequence of events is being described. D signals a contrast or concession, whereas the second sentence supports and illustrates the first rather than opposing it."
     },
     {
       "id": "rw-20261005-s4-q02",
@@ -2324,31 +2286,6 @@
       }
     },
     {
-      "id": "rw-20261005-b2-s4-q01",
-      "groupId": "rw-20261005-b2-s4-q01",
-      "status": "staged",
-      "section": "Reading & Writing",
-      "domain": "Information and Ideas",
-      "skill": "Central Ideas and Details",
-      "difficulty": "Easy",
-      "passage": "Established in 1911, the Alpine Research Library in Bern preserves expedition journals, topographic surveys, and early photographic records relating to mountain science. Its holdings now exceed 70,000 cataloged items. Since 2000, several newer institutions devoted to specialized environmental research have opened elsewhere in Europe. Among them is the Arctic Climate Archive in Tromsø, which opened in 2016 and concentrates on observational records from high-latitude monitoring stations.",
-      "question": "Which contrast does the text draw between the Alpine Research Library and the Arctic Climate Archive?",
-      "choices": {
-        "A": "The Arctic Climate Archive contains more cataloged items.",
-        "B": "The Alpine Research Library occupies a larger facility.",
-        "C": "The Arctic Climate Archive opened considerably more recently.",
-        "D": "The Arctic Climate Archive receives more researchers each year."
-      },
-      "correctAnswer": "C",
-      "explanation": "The passage gives founding dates for both institutions: the Alpine Research Library was established in **1911**, whereas the Arctic Climate Archive opened in **2016**. The supported contrast is therefore that the Arctic Climate Archive opened much more recently.\n\nA is unsupported because the text gives the size of only the Alpine Research Library’s holdings. B is unsupported because neither institution’s building size is given. D is also unsupported because the passage provides no information about annual visitors or researchers.\n\n---",
-      "choiceExplanations": {
-        "A": "A is unsupported because the text gives the size of only the Alpine Research Library’s holdings.",
-        "B": "B is unsupported because neither institution’s building size is given.",
-        "C": "The passage gives founding dates for both institutions: the Alpine Research Library was established in **1911**, whereas the Arctic Climate Archive opened in **2016**. The supported contrast is therefore that the Arctic Climate Archive opened much more recently.",
-        "D": "D is also unsupported because the passage provides no information about annual visitors or researchers. ---"
-      }
-    },
-    {
       "id": "rw-20261005-b2-s4-q02",
       "groupId": "rw-20261005-b2-s4-q02",
       "status": "staged",
@@ -3796,60 +3733,6 @@
       }
     },
     {
-      "id": "rw-20261005-b3-s5-q02",
-      "groupId": "rw-20261005-b3-s5-q02",
-      "status": "staged",
-      "section": "Reading & Writing",
-      "domain": "Information and Ideas",
-      "skill": "Command of Evidence",
-      "difficulty": "Easy",
-      "passage": "Modern side-scan sonar, autonomous underwater vehicles, and high-resolution seabed mapping have made locating shipwrecks substantially easier in the twenty-first century. Nevertheless, many important wrecks were discovered before those technologies became available. For example, _____",
-      "question": "Which choice most effectively uses data from the table to complete the statement?",
-      "choices": {
-        "A": "the *Mercator* and *Northwind* were both located before 2000.",
-        "B": "the *Valencia Star*, *Mercator*, and *Northwind* have all been located since 1893.",
-        "C": "the *Valencia Star* and *Mercator* were both located during the twentieth century.",
-        "D": "the *Northwind* was located in 1947."
-      },
-      "correctAnswer": "A",
-      "explanation": "The claim requires evidence that significant wreck discoveries occurred **before the twenty-first century**. The *Mercator* was located in 1947 and the *Northwind* in 1893, so both discoveries clearly satisfy that condition.\n\nB is technically compatible with the dates but does not emphasize the point that important discoveries occurred before modern twenty-first-century technologies. C is false because the *Valencia Star* was located in 2016. D is also false: the *Northwind* was located in 1893, not 1947.\n\n---",
-      "choiceExplanations": {
-        "A": "The claim requires evidence that significant wreck discoveries occurred **before the twenty-first century**. The *Mercator* was located in 1947 and the *Northwind* in 1893, so both discoveries clearly satisfy that condition.",
-        "B": "B is technically compatible with the dates but does not emphasize the point that important discoveries occurred before modern twenty-first-century technologies.",
-        "C": "C is false because the *Valencia Star* was located in 2016.",
-        "D": "D is also false: the *Northwind* was located in 1893, not 1947. ---"
-      },
-      "table": {
-        "caption": "Selected Shipwreck Discoveries in the North Atlantic",
-        "headers": [
-          "**Wreck**",
-          "**Approximate date of sinking**",
-          "**Year located**",
-          "**Principal remains identified**"
-        ],
-        "rows": [
-          [
-            "*Valencia Star*",
-            "18th century",
-            "2016",
-            "bronze cannon and ceramics"
-          ],
-          [
-            "*Mercator*",
-            "16th century",
-            "1947",
-            "timber hull and anchors"
-          ],
-          [
-            "*Northwind*",
-            "19th century",
-            "1893",
-            "iron fittings and cargo chests"
-          ]
-        ]
-      }
-    },
-    {
       "id": "rw-20261005-b3-s5-q03",
       "groupId": "rw-20261005-b3-s5-q03",
       "status": "staged",
@@ -4791,31 +4674,6 @@
         "max": 10,
         "tickStep": 1,
         "valueSuffix": ""
-      }
-    },
-    {
-      "id": "rw-20261005-b4-s3-q04",
-      "groupId": "rw-20261005-b4-s3-q04",
-      "status": "staged",
-      "section": "Reading & Writing",
-      "domain": "Expression of Ideas",
-      "skill": "Rhetorical Synthesis",
-      "difficulty": "Easy",
-      "passage": "While researching a topic, a student has taken the following notes:\n\n- The International Wetland Heritage designation recognizes wetlands of exceptional ecological significance.\n- The Aranda Marsh in southern Portugal received the designation in 2018.\n- Aranda was recognized primarily for providing winter habitat to large populations of migratory shorebirds.\n- The Kesari Fen in northern Estonia received the designation in 2021.\n- Kesari was recognized for preserving an unusually intact groundwater-fed peatland ecosystem.\n- Aranda and Kesari qualified under different ecological criteria.",
-      "question": "The student wants to emphasize a similarity between Aranda Marsh and Kesari Fen. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
-      "choices": {
-        "A": "Aranda Marsh was recognized for migratory-bird habitat, whereas Kesari Fen was recognized for its intact peatland ecosystem.",
-        "B": "Although they qualified under different ecological criteria, both Aranda Marsh and Kesari Fen received the International Wetland Heritage designation for their exceptional ecological significance.",
-        "C": "Aranda Marsh received its designation in 2018, three years before Kesari Fen received the same designation.",
-        "D": "Kesari Fen preserves a groundwater-fed peatland ecosystem, while Aranda Marsh provides winter habitat for migratory shorebirds."
-      },
-      "correctAnswer": "B",
-      "explanation": "The goal is to highlight what the two sites **have in common**. B explicitly states the shared feature: both received the same ecological designation because of their exceptional significance, even though the particular qualifying features differed.\n\nA and D emphasize differences in the ecological reasons for recognition. C emphasizes the difference in dates. Only B makes the similarity the central point.\n\n---",
-      "choiceExplanations": {
-        "A": "A and D emphasize differences in the ecological reasons for recognition.",
-        "B": "The goal is to highlight what the two sites **have in common**. B explicitly states the shared feature: both received the same ecological designation because of their exceptional significance, even though the particular qualifying features differed.",
-        "C": "C emphasizes the difference in dates.",
-        "D": "A and D emphasize differences in the ecological reasons for recognition. C emphasizes the difference in dates. Only B makes the similarity the central point. ---"
       }
     },
     {
