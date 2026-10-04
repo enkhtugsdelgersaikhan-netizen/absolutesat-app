@@ -28,6 +28,25 @@ const badMedia = /(commons-logo|wikimedia|wikidata|wikipedia|wikisource|wiktiona
 const symbolTerms = /(logo|seal|crest|shield|coat of arms|wordmark|emblem|brand mark|monogram)/i;
 const campusTerms = /(campus|hall|library|chapel|quad|quadrangle|building|tower|center|centre|college|university|aerial|administration|main building|academic)/i;
 
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+async function fetchWithRetry(url, options = {}, label = "request") {
+  let lastResponse = null;
+  for (let attempt = 0; attempt < 4; attempt++) {
+    const response = await fetch(url, options);
+    lastResponse = response;
+    if (response.ok) return response;
+    if (response.status !== 429 && response.status < 500) return response;
+    if (attempt === 3) break;
+    const retryAfter = Number(response.headers.get("retry-after"));
+    const waitMs = Number.isFinite(retryAfter) && retryAfter > 0
+      ? retryAfter * 1000
+      : 500 * Math.pow(2, attempt);
+    await sleep(waitMs);
+  }
+  return lastResponse;
+}
+
 const normFile = (title) => String(title || "").replace(/^File:/i, "");
 
 function symbolScore(title) {
@@ -84,12 +103,12 @@ async function wikiQuery(params) {
     origin: "*",
     ...params
   }).forEach(([key, value]) => url.searchParams.set(key, String(value)));
-  const response = await fetch(url, {
+  const response = await fetchWithRetry(url, {
     headers: {
       "User-Agent": "LexLogica/1.0 (educational SAT context catalog)",
       Accept: "application/json"
     }
-  });
+  }, "Wikipedia");
   if (!response.ok) throw new Error("Wikipedia request failed: " + response.status);
   return response.json();
 }
@@ -103,12 +122,12 @@ async function commonsQuery(params) {
     origin: "*",
     ...params
   }).forEach(([key, value]) => url.searchParams.set(key, String(value)));
-  const response = await fetch(url, {
+  const response = await fetchWithRetry(url, {
     headers: {
       "User-Agent": "LexLogica/1.0 (educational SAT context catalog)",
       Accept: "application/json"
     }
-  });
+  }, "Wikimedia Commons");
   if (!response.ok) throw new Error("Wikimedia Commons request failed: " + response.status);
   return response.json();
 }
@@ -121,12 +140,12 @@ async function wikidataQuery(params) {
     origin: "*",
     ...params
   }).forEach(([key, value]) => url.searchParams.set(key, String(value)));
-  const response = await fetch(url, {
+  const response = await fetchWithRetry(url, {
     headers: {
       "User-Agent": "LexLogica/1.0 (educational SAT context catalog)",
       Accept: "application/json"
     }
-  });
+  }, "Wikidata");
   if (!response.ok) throw new Error("Wikidata request failed: " + response.status);
   return response.json();
 }
