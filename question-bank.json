@@ -1445,6 +1445,1193 @@
       },
       "correctAnswer": "C",
       "explanation": "**“Poignant”** means deeply emotionally affecting, often because something evokes a strong sense of connection, loss, or distance. The passage argues that the handprints are powerful **because their great age makes the human connection across time especially striking**, so “poignant” precisely fits the context.\n\nA, “derivative,” means imitative or lacking originality and has nothing to do with the emotional effect described. B, “rudimentary,” means basic or undeveloped; the passage is not evaluating the handprints’ technical sophistication. D, “authoritative,” means commanding or reliably knowledgeable, which does not describe the emotional response produced by the ancient impressions. Screenshot 2026-10-05 035045"
+    },
+    {
+      "id": "rw-20261005-b2-s1-q01",
+      "groupId": "rw-20261005-b2-s1-q01",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "Easy",
+      "passage": "While researching a topic, a student has taken the following notes:\n\n- Aisha Rahman is a British Bangladeshi playwright.\n- *The Cartographer’s Daughter* is a play by Rahman.\n- The play premiered in 2018 at the Lantern Theatre in Manchester.\n- Its central character, Leena, works as an apprentice map conservator.\n- Leena discovers that a damaged nineteenth-century atlas contains annotations that may alter what is known about an Arctic expedition.",
+      "question": "The student wants to provide a brief overview of what happens in *The Cartographer’s Daughter*. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "choices": {
+        "A": "Aisha Rahman’s *The Cartographer’s Daughter* premiered at Manchester’s Lantern Theatre in 2018.",
+        "B": "*The Cartographer’s Daughter* follows apprentice map conservator Leena, who discovers potentially significant annotations hidden in a damaged nineteenth-century atlas.",
+        "C": "British Bangladeshi playwright Aisha Rahman wrote *The Cartographer’s Daughter*, a play about cartographic conservation.",
+        "D": "In 2018, a play about an apprentice conservator premiered at the Lantern Theatre in Manchester."
+      },
+      "correctAnswer": "B",
+      "explanation": "Choice B provides the clearest **plot overview**: it identifies the protagonist and describes the central event that drives the story, Leena’s discovery of consequential annotations in an old atlas.\n\nA focuses on publication-style background information—the playwright, venue, and year—rather than what happens in the play. C identifies the author and general subject matter but does not summarize the action. D likewise emphasizes the premiere and gives only a vague description of the protagonist’s occupation.\n\n---",
+      "choiceExplanations": {
+        "A": "A focuses on publication-style background information—the playwright, venue, and year—rather than what happens in the play.",
+        "B": "Choice B provides the clearest **plot overview**: it identifies the protagonist and describes the central event that drives the story, Leena’s discovery of consequential annotations in an old atlas.",
+        "C": "C identifies the author and general subject matter but does not summarize the action.",
+        "D": "D likewise emphasizes the premiere and gives only a vague description of the protagonist’s occupation. ---"
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s1-q02",
+      "groupId": "rw-20261005-b2-s1-q02",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Central Ideas and Details",
+      "difficulty": "Easy",
+      "passage": "Founded in 1876, the Maritime Heritage Museum of Valparaíso preserves navigational instruments, ship models, and archival records associated with Pacific trade. Its collections include more than 24,000 cataloged objects. In recent decades, several smaller institutions devoted to regional maritime history have opened elsewhere along the Chilean coast. One such institution, the Museo Costero de Chiloé, opened in 2019 and concentrates primarily on the boatbuilding and fishing traditions of communities in the Chiloé Archipelago.",
+      "question": "Which contrast does the text draw between the Maritime Heritage Museum of Valparaíso and the Museo Costero de Chiloé?",
+      "choices": {
+        "A": "The Museo Costero de Chiloé has a substantially larger collection.",
+        "B": "The Museo Costero de Chiloé opened much more recently.",
+        "C": "The Maritime Heritage Museum receives fewer visitors.",
+        "D": "The Museo Costero de Chiloé occupies a larger building."
+      },
+      "correctAnswer": "B",
+      "explanation": "The text states that the Maritime Heritage Museum was founded in **1876**, whereas the Museo Costero de Chiloé opened in **2019**. Thus the latter institution opened much more recently.\n\nA is unsupported because the text gives the size of only the Valparaíso museum’s collection. C provides no visitor data. D provides no information about the physical size of either museum.\n\n---",
+      "choiceExplanations": {
+        "A": "A is unsupported because the text gives the size of only the Valparaíso museum’s collection.",
+        "B": "The text states that the Maritime Heritage Museum was founded in **1876**, whereas the Museo Costero de Chiloé opened in **2019**. Thus the latter institution opened much more recently.",
+        "C": "C provides no visitor data.",
+        "D": "D provides no information about the physical size of either museum. ---"
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s1-q03",
+      "groupId": "rw-20261005-b2-s1-q03",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "Medium",
+      "passage": "Any proposal to increase the entrance fee at the privately managed Ardent Caverns should explain why additional revenue is necessary; even an extensive justification, however, may fail to persuade visitors who already regard the current fee as _____.",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "choices": {
+        "A": "provisional",
+        "B": "exorbitant",
+        "C": "contentious",
+        "D": "warranted"
+      },
+      "correctAnswer": "B",
+      "explanation": "**“Exorbitant”** means unreasonably or excessively high. The passage says that some visitors may remain unconvinced by any argument for raising the fee because they already believe the **current** fee is too high. “Exorbitant” therefore fits precisely.\n\nA, “provisional,” means temporary or subject to change, which does not explain resistance to a higher fee. C, “contentious,” means likely to provoke disagreement; a fee itself may be controversial, but the sentence specifically requires a word describing why visitors would oppose increasing its amount. D, “warranted,” means justified and would undermine the logic of the sentence, since visitors who regarded the current fee as justified would not necessarily resist an increase for that reason.\n\n---",
+      "choiceExplanations": {
+        "A": "A, “provisional,” means temporary or subject to change, which does not explain resistance to a higher fee.",
+        "B": "**“Exorbitant”** means unreasonably or excessively high. The passage says that some visitors may remain unconvinced by any argument for raising the fee because they already believe the **current** fee is too high. “Exorbitant” therefore fits precisely.",
+        "C": "C, “contentious,” means likely to provoke disagreement; a fee itself may be controversial, but the sentence specifically requires a word describing why visitors would oppose increasing its amount.",
+        "D": "D, “warranted,” means justified and would undermine the logic of the sentence, since visitors who regarded the current fee as justified would not necessarily resist an increase for that reason. ---"
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s1-q04",
+      "groupId": "rw-20261005-b2-s1-q04",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "An international research consortium periodically surveys accountants and business administrators to estimate how difficult companies find routine regulatory reporting in different countries. The consortium’s Compliance Burden Index ranges from 0, indicating minimal complexity, to 1, indicating extreme complexity. Among the countries shown in the table, the country with the least complex reporting system in 2025 was \\_\\_\\_\\_\\_",
+      "choices": {
+        "A": "Uruguay.",
+        "B": "Malaysia.",
+        "C": "Estonia.",
+        "D": "Portugal."
+      },
+      "correctAnswer": "C",
+      "explanation": "A lower index indicates **less complexity**, and Estonia has the lowest value in the table, **0.18**. Therefore, Estonia has the least complex reporting system among the four countries shown.\n\nPortugal’s value is 0.31, Uruguay’s is 0.39, and Malaysia’s is 0.46; all three are higher than Estonia’s and therefore indicate greater complexity.\n\n---",
+      "choiceExplanations": {
+        "A": "Portugal’s value is 0.31, Uruguay’s is 0.39, and Malaysia’s is 0.46; all three are higher than Estonia’s and therefore indicate greater complexity. ---",
+        "B": "Portugal’s value is 0.31, Uruguay’s is 0.39, and Malaysia’s is 0.46; all three are higher than Estonia’s and therefore indicate greater complexity. ---",
+        "C": "A lower index indicates **less complexity**, and Estonia has the lowest value in the table, **0.18**. Therefore, Estonia has the least complex reporting system among the four countries shown.",
+        "D": "Portugal’s value is 0.31, Uruguay’s is 0.39, and Malaysia’s is 0.46; all three are higher than Estonia’s and therefore indicate greater complexity. ---"
+      },
+      "table": {
+        "caption": "Administrative Compliance Burden Index for Four Countries, 2025",
+        "headers": [
+          "Country",
+          "Compliance Burden Index"
+        ],
+        "rows": [
+          [
+            "Malaysia",
+            "0.46"
+          ],
+          [
+            "Portugal",
+            "0.31"
+          ],
+          [
+            "Uruguay",
+            "0.39"
+          ],
+          [
+            "Estonia",
+            "0.18"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s1-q05",
+      "groupId": "rw-20261005-b2-s1-q05",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "Hard",
+      "passage": "Students investigating variation in drought tolerance among wild populations of the grass *Festuca borealis* compared ordinary plants with genetically modified plants in which the regulatory gene **Drt6** had been deactivated. Under identical water-limitation conditions, the modified plants wilted substantially sooner than the ordinary plants. The students therefore concluded that natural differences in drought tolerance among individual *F. borealis* plants are **solely attributable** to differences in the level at which **Drt6** is expressed.",
+      "question": "Which finding, if true, would most directly weaken the students’ conclusion?",
+      "choices": {
+        "A": "Plants lacking functional **Drt6** differed from ordinary plants primarily in their drought response.",
+        "B": "**Drt6** expression varies considerably among wild *F. borealis* populations growing in different environments.",
+        "C": "Some wild plants with nearly identical drought tolerance exhibited sharply different levels of **Drt6** expression.",
+        "D": "Deactivating **Drt6** did not appear to alter the expression of several other genes measured by the researchers."
+      },
+      "correctAnswer": "C",
+      "explanation": "The students make a very strong claim: that natural differences in drought tolerance are **solely attributable** to variation in **Drt6** expression. If plants with essentially the **same drought tolerance** can nevertheless have very different levels of **Drt6** expression, then variation in that gene cannot by itself completely determine the natural variation in drought tolerance.\n\nA strengthens rather than weakens the connection between **Drt6** and drought response. B shows that gene expression varies in nature but does not establish that such variation fails to explain drought tolerance. D rules out one possible complication involving other measured genes but does not challenge the conclusion.\n\n---",
+      "choiceExplanations": {
+        "A": "A strengthens rather than weakens the connection between **Drt6** and drought response.",
+        "B": "B shows that gene expression varies in nature but does not establish that such variation fails to explain drought tolerance.",
+        "C": "The students make a very strong claim: that natural differences in drought tolerance are **solely attributable** to variation in **Drt6** expression. If plants with essentially the **same drought tolerance** can nevertheless have very different levels of **Drt6** expression, then variation in that gene cannot by itself completely determine the natural variation in drought tolerance.",
+        "D": "D rules out one possible complication involving other measured genes but does not challenge the conclusion. ---"
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s1-q06",
+      "groupId": "rw-20261005-b2-s1-q06",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "Easy",
+      "passage": "The *Northern Observatory Reports* were among the numerous scientific periodicals established during the closing decades of the nineteenth century. _____ the journal was issued from 1887 through 1894.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "Nevertheless,",
+        "B": "By contrast,",
+        "C": "Ultimately,",
+        "D": "To be precise,"
+      },
+      "correctAnswer": "D",
+      "explanation": "The first sentence gives a **broad time period**: the closing decades of the nineteenth century. The second narrows that information to the exact publication years, 1887 through 1894. **“To be precise,”** logically introduces that more specific information.\n\nA signals a concession, but there is no apparent contradiction. B requires a contrast between two ideas, which is absent. C suggests a final outcome or concluding stage rather than a clarification of chronology.\n\n---",
+      "choiceExplanations": {
+        "A": "A signals a concession, but there is no apparent contradiction.",
+        "B": "B requires a contrast between two ideas, which is absent.",
+        "C": "C suggests a final outcome or concluding stage rather than a clarification of chronology. ---",
+        "D": "The first sentence gives a **broad time period**: the closing decades of the nineteenth century. The second narrows that information to the exact publication years, 1887 through 1894. **“To be precise,”** logically introduces that more specific information."
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s1-q07",
+      "groupId": "rw-20261005-b2-s1-q07",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "Medium",
+      "passage": "Engineers hypothesized that a titanium alloy would be more suitable than an aluminum alloy for the pressure-bearing frame of an autonomous deep-sea probe. To test the hypothesis, they created two computer models identical in dimensions, mass distribution, and external geometry; only the frame material differed. Both models were subjected to repeated simulated descents to 6,500 meters, where increasing hydrostatic pressure placed substantial compressive stress on the frames.",
+      "question": "Which finding from the simulations, if true, would most strongly support the engineers’ hypothesis?",
+      "choices": {
+        "A": "After repeated simulated descents, the aluminum-framed model exhibited substantially greater permanent deformation than the titanium-framed model.",
+        "B": "The titanium-framed model transmitted vibration through its structure for slightly longer than the aluminum-framed model.",
+        "C": "Both models experienced their greatest external pressure at approximately the same simulated depth.",
+        "D": "The titanium-framed model expanded slightly more than the aluminum-framed model when both were returned to surface pressure."
+      },
+      "correctAnswer": "A",
+      "explanation": "The hypothesis is that titanium is **more suitable for resisting the stresses imposed on the pressure-bearing frame**. If the aluminum frame suffers substantially more **permanent deformation** under identical pressure conditions, that directly indicates that titanium better maintains structural integrity.\n\nB concerns vibration rather than resistance to hydrostatic compression and could even identify a disadvantage of titanium. C is expected because both models undergo the same simulated descent and says nothing about which material performs better. D describes behavior after pressure is removed without establishing which material better withstands the critical deep-sea stresses.\n\n---",
+      "choiceExplanations": {
+        "A": "The hypothesis is that titanium is **more suitable for resisting the stresses imposed on the pressure-bearing frame**. If the aluminum frame suffers substantially more **permanent deformation** under identical pressure conditions, that directly indicates that titanium better maintains structural integrity.",
+        "B": "B concerns vibration rather than resistance to hydrostatic compression and could even identify a disadvantage of titanium.",
+        "C": "C is expected because both models undergo the same simulated descent and says nothing about which material performs better.",
+        "D": "D describes behavior after pressure is removed without establishing which material better withstands the critical deep-sea stresses. ---"
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s1-q08",
+      "groupId": "rw-20261005-b2-s1-q08",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "Easy",
+      "passage": "While researching a topic, a student has taken the following notes:\n\n- Sites designated as International Wetlands of Distinction must possess exceptional ecological significance under at least one recognized criterion.\n- Qualifying features may include migratory-bird habitat, rare plant communities, unusual hydrology, or critical breeding grounds.\n- The Marisma Verde Reserve in southern Spain received the designation because its seasonal lagoons support large populations of migratory waterbirds.\n- The reserve provides winter habitat for spoonbills, avocets, and several species of teal.\n- The Kaldra Peat Basin in Estonia received the designation because of its unusually intact raised-bog hydrology.\n- Its deep peat deposits preserve a largely undisturbed system of rain-fed pools and drainage channels.",
+      "question": "The student wants to indicate why the two sites received the designation. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "choices": {
+        "A": "Marisma Verde was designated because of its importance to migratory waterbirds, whereas Kaldra was designated for its unusually intact peatland hydrology.",
+        "B": "Both Marisma Verde and Kaldra contain unusually important habitat for migratory spoonbills, avocets, and teal.",
+        "C": "Kaldra’s intact bog hydrology earned it the designation, although other qualifying wetlands may be recognized for rare plant communities.",
+        "D": "Marisma Verde contains seasonally flooded lagoons, while Kaldra contains deep peat deposits and rain-fed pools."
+      },
+      "correctAnswer": "A",
+      "explanation": "A directly identifies the **specific reason each site received the designation**: Marisma Verde for migratory-bird habitat and Kaldra for intact peatland hydrology.\n\nB incorrectly attributes Marisma Verde’s bird-related features to both sites. C accurately explains only Kaldra’s selection and therefore does not fulfill the goal concerning both locations. D describes physical features of both places but does not explicitly connect those features to the reasons for designation.\n\n---",
+      "choiceExplanations": {
+        "A": "A directly identifies the **specific reason each site received the designation**: Marisma Verde for migratory-bird habitat and Kaldra for intact peatland hydrology.",
+        "B": "B incorrectly attributes Marisma Verde’s bird-related features to both sites.",
+        "C": "C accurately explains only Kaldra’s selection and therefore does not fulfill the goal concerning both locations.",
+        "D": "D describes physical features of both places but does not explicitly connect those features to the reasons for designation. ---"
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s1-q09",
+      "groupId": "rw-20261005-b2-s1-q09",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "Medium",
+      "passage": "Early photovoltaic efficiency records were often surpassed within only a few years as researchers refined semiconductor materials and cell architecture. In 1983, one laboratory prototype converted 18.2 percent of incoming solar energy into _____ in 1985, a different research group reported a prototype exceeding 20 percent efficiency.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "electricity, for example, and whereas",
+        "B": "electricity. For example, whereas",
+        "C": "electricity; for example,",
+        "D": "electricity, for example,"
+      },
+      "correctAnswer": "C",
+      "explanation": "Choice C correctly uses a semicolon to join the two closely related independent clauses, with the transitional phrase **“for example,”** set off by a comma. The second clause supplies a later example of a photovoltaic efficiency record being surpassed.\n\nA creates faulty coordination with **“and whereas.”** B leaves the clause beginning with “whereas” as a fragment after the period. D creates a comma splice by joining two independent clauses with only commas.",
+      "choiceExplanations": {
+        "A": "A creates faulty coordination with **“and whereas.”** B leaves the clause beginning with “whereas” as a fragment after the period.",
+        "B": "A creates faulty coordination with **“and whereas.”** B leaves the clause beginning with “whereas” as a fragment after the period.",
+        "C": "Choice C correctly uses a semicolon to join the two closely related independent clauses, with the transitional phrase **“for example,”** set off by a comma. The second clause supplies a later example of a photovoltaic efficiency record being surpassed.",
+        "D": "D creates a comma splice by joining two independent clauses with only commas."
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s2-q01",
+      "groupId": "rw-20261005-b2-s2-q01",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "Easy",
+      "passage": "Planetary scientists do not use a single universally accepted boundary for determining where a planet’s atmosphere ends and interplanetary space begins; _____ several operational definitions coexist, each emphasizing a different physical criterion. The Kármán-type approach relies on aerodynamic considerations, whereas an exobase-based approach identifies the altitude above which particle collisions become exceedingly rare.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "for example,\\",
+        "B": "however,\\",
+        "C": "as a result,\\",
+        "D": "in addition,"
+      },
+      "correctAnswer": "C",
+      "explanation": "The first clause explains that there is **no single universally accepted boundary**. The existence of several competing operational definitions follows directly from that lack of consensus, so **“as a result,”** correctly expresses cause and effect.\n\nA is incorrect because the second clause does not merely provide an example of the absence of agreement; it describes a consequence of that absence. B signals contrast, but the two ideas are consistent rather than opposed. D merely adds information and fails to capture the causal relationship.\n\n---",
+      "choiceExplanations": {
+        "A": "A is incorrect because the second clause does not merely provide an example of the absence of agreement; it describes a consequence of that absence.",
+        "B": "B signals contrast, but the two ideas are consistent rather than opposed.",
+        "C": "The first clause explains that there is **no single universally accepted boundary**. The existence of several competing operational definitions follows directly from that lack of consensus, so **“as a result,”** correctly expresses cause and effect.",
+        "D": "D merely adds information and fails to capture the causal relationship. ---"
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s2-q02",
+      "groupId": "rw-20261005-b2-s2-q02",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Text Structure and Purpose",
+      "difficulty": "Medium",
+      "passage": "Before mechanical refrigeration became widespread, commercial florists prolonged the life of cut flowers with cool cellars, blocks of harvested ice, and rapid transport from growers to markets. As electrically powered cold rooms became increasingly available to wholesalers during the early twentieth century, flowers could be stored at controlled temperatures for longer periods without wilting. Wholesalers consequently could receive larger shipments at once and replenish retailers less frequently.",
+      "question": "Which choice best states the main purpose of the text?",
+      "choices": {
+        "A": "To compare the biological processes that cause cut flowers to wilt under refrigerated and unrefrigerated conditions",
+        "B": "To argue that refrigeration caused florists to lose practical knowledge about handling freshly cut flowers",
+        "C": "To explain how refrigeration altered the storage and distribution practices of the commercial flower trade",
+        "D": "To describe the ideal temperatures for preserving different varieties of cut flowers"
+      },
+      "correctAnswer": "C",
+      "explanation": "The passage first describes storage methods used before mechanical refrigeration and then explains how cold rooms allowed wholesalers to keep flowers longer and change the frequency of shipments. Its main purpose is therefore to describe **how refrigeration changed storage and distribution practices**.\n\nA is incorrect because the passage does not explain the biology of wilting. B introduces a claim about lost practical knowledge that the text never makes. D is too narrow: no specific temperature recommendations are provided.\n\n---",
+      "choiceExplanations": {
+        "A": "A is incorrect because the passage does not explain the biology of wilting.",
+        "B": "B introduces a claim about lost practical knowledge that the text never makes.",
+        "C": "The passage first describes storage methods used before mechanical refrigeration and then explains how cold rooms allowed wholesalers to keep flowers longer and change the frequency of shipments. Its main purpose is therefore to describe **how refrigeration changed storage and distribution practices**.",
+        "D": "D is too narrow: no specific temperature recommendations are provided. ---"
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s2-q03",
+      "groupId": "rw-20261005-b2-s2-q03",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Form, Structure, and Sense",
+      "difficulty": "Medium",
+      "passage": "When the Bauhaus opened in Dessau in 1926, its faculty included designers interested in reconceiving furniture for industrial production. By that point, several of them _____ dissatisfied with ornamental conventions that treated furniture primarily as handcrafted decoration; instead, they were experimenting with tubular steel, standardized components, and forms suited to mass manufacture.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "are growing",
+        "B": "had grown",
+        "C": "grow",
+        "D": "will have grown"
+      },
+      "correctAnswer": "B",
+      "explanation": "The phrase **“By that point”** establishes a past reference point: the Bauhaus’s opening in Dessau in 1926. The designers’ dissatisfaction had developed **before** that past moment, so the past perfect **“had grown”** correctly expresses the sequence.\n\nA uses the present progressive and does not fit the historical past context. C uses the simple present. D uses the future perfect, which would place the change after a future reference point rather than before a past one.\n\n---",
+      "choiceExplanations": {
+        "A": "A uses the present progressive and does not fit the historical past context.",
+        "B": "The phrase **“By that point”** establishes a past reference point: the Bauhaus’s opening in Dessau in 1926. The designers’ dissatisfaction had developed **before** that past moment, so the past perfect **“had grown”** correctly expresses the sequence.",
+        "C": "C uses the simple present.",
+        "D": "D uses the future perfect, which would place the change after a future reference point rather than before a past one. ---"
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s2-q04",
+      "groupId": "rw-20261005-b2-s2-q04",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "Easy",
+      "passage": "A research group led by geochemist Lucía Barreto found that many deep-sea manganese nodules incorporate trace metals such as cobalt, nickel, and molybdenum. _____ nodules collected from the Clarion-Clipperton Zone contained elevated cobalt concentrations, while specimens from the Peru Basin contained comparatively high molybdenum concentrations.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "Consequently,",
+        "B": "Nevertheless,",
+        "C": "For example,",
+        "D": "Conversely,"
+      },
+      "correctAnswer": "C",
+      "explanation": "The first sentence makes a broad claim that manganese nodules can contain several trace metals. The second provides **specific instances** of that general claim by identifying particular metals detected in nodules from two regions. Therefore, **“For example,”** is the most logical transition.\n\nA incorrectly suggests that the regional concentrations are consequences of the broad statement. B signals an unexpected contrast, which is absent. D also signals opposition rather than illustration.\n\n---",
+      "choiceExplanations": {
+        "A": "A incorrectly suggests that the regional concentrations are consequences of the broad statement.",
+        "B": "B signals an unexpected contrast, which is absent.",
+        "C": "The first sentence makes a broad claim that manganese nodules can contain several trace metals. The second provides **specific instances** of that general claim by identifying particular metals detected in nodules from two regions. Therefore, **“For example,”** is the most logical transition.",
+        "D": "D also signals opposition rather than illustration. ---"
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s2-q05",
+      "groupId": "rw-20261005-b2-s2-q05",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "Easy",
+      "passage": "In a computer network, information can move through a hierarchy of routing systems that operate at different scales. _____ a device on a local network may first send a packet to a nearby router; that router can pass the packet to a regional gateway, which may then forward it toward a larger backbone network before the packet reaches its destination.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "By contrast,",
+        "B": "Likewise,",
+        "C": "For example,",
+        "D": "Nevertheless,"
+      },
+      "correctAnswer": "C",
+      "explanation": "The opening sentence introduces the general concept of information moving through a hierarchy of routing systems. The next sentence illustrates that process with a specific sequence involving a device, router, regional gateway, and backbone. **“For example,”** appropriately introduces the illustration.\n\nA and D both indicate contrast, but the second sentence supports rather than challenges the first. B would suggest a comparison with another previously described process, yet no such parallel example has been introduced.\n\n---",
+      "choiceExplanations": {
+        "A": "A and D both indicate contrast, but the second sentence supports rather than challenges the first.",
+        "B": "B would suggest a comparison with another previously described process, yet no such parallel example has been introduced. ---",
+        "C": "The opening sentence introduces the general concept of information moving through a hierarchy of routing systems. The next sentence illustrates that process with a specific sequence involving a device, router, regional gateway, and backbone. **“For example,”** appropriately introduces the illustration.",
+        "D": "A and D both indicate contrast, but the second sentence supports rather than challenges the first."
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s2-q06",
+      "groupId": "rw-20261005-b2-s2-q06",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "Hard",
+      "passage": "Established in 1954 as a modest regional archive, the Kittilä Heritage Centre now occupies a sprawling complex containing extensive collections of Sámi material culture, including woven bands, carved utensils, and _____ a nineteenth-century timber storehouse reconstructed on the grounds; and a working demonstration area devoted to traditional reindeer-herding equipment.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "ceremonial textiles,",
+        "B": "ceremonial textiles",
+        "C": "ceremonial textiles:",
+        "D": "ceremonial textiles;"
+      },
+      "correctAnswer": "D",
+      "explanation": "The sentence presents a complex series of three major features of the centre: **(1)** extensive collections of material culture, which themselves contain an internal list; **(2)** a reconstructed timber storehouse; and **(3)** a demonstration area. Because the first item already contains commas, semicolons appropriately separate the larger items. Thus a semicolon is needed after **“ceremonial textiles.”**\n\nA would leave only a comma between two large list elements even though the first already contains multiple internal commas, making the structure difficult to parse. B supplies no punctuation at all between the collection and the storehouse. C incorrectly uses a colon where the sentence requires separation among coordinated list items.\n\n---",
+      "choiceExplanations": {
+        "A": "A would leave only a comma between two large list elements even though the first already contains multiple internal commas, making the structure difficult to parse.",
+        "B": "B supplies no punctuation at all between the collection and the storehouse.",
+        "C": "C incorrectly uses a colon where the sentence requires separation among coordinated list items. ---",
+        "D": "The sentence presents a complex series of three major features of the centre: **(1)** extensive collections of material culture, which themselves contain an internal list; **(2)** a reconstructed timber storehouse; and **(3)** a demonstration area. Because the first item already contains commas, semicolons appropriately separate the larger items. Thus a semicolon is needed after **“ceremonial textiles.”**"
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s2-q07",
+      "groupId": "rw-20261005-b2-s2-q07",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "Easy",
+      "passage": "Passenger totals on heavily traveled rail corridors often favor domestic routes, since they connect major population centers within a single national system. Some international routes, however, carry passenger volumes comparable to or even greater than those of heavily traveled domestic routes, as can be seen by comparing the _____",
+      "question": "Which choice most effectively uses data from the table to complete the example?",
+      "choices": {
+        "A": "distance between Vienna and Budapest with the distance between Madrid and Barcelona.",
+        "B": "annual passenger total for Paris–Brussels with the annual passenger total for Madrid–Barcelona.",
+        "C": "annual passenger total for Milan–Rome with that for Madrid–Barcelona.",
+        "D": "distance of the Paris–Brussels route with its annual passenger total."
+      },
+      "correctAnswer": "B",
+      "explanation": "Paris–Brussels is an **international** route carrying 5,060,000 passengers, while Madrid–Barcelona is a **domestic** route carrying 4,820,000. Thus the international route carries slightly **more** passengers than the domestic one, directly illustrating the claim.\n\nA compares distances rather than passenger volumes. C compares two domestic routes and therefore cannot demonstrate the point about an international route rivaling a domestic one. D compares two different kinds of measurements—distance and passenger count—so it does not support the stated comparison.\n\n---",
+      "choiceExplanations": {
+        "A": "A compares distances rather than passenger volumes.",
+        "B": "Paris–Brussels is an **international** route carrying 5,060,000 passengers, while Madrid–Barcelona is a **domestic** route carrying 4,820,000. Thus the international route carries slightly **more** passengers than the domestic one, directly illustrating the claim.",
+        "C": "C compares two domestic routes and therefore cannot demonstrate the point about an international route rivaling a domestic one.",
+        "D": "D compares two different kinds of measurements—distance and passenger count—so it does not support the stated comparison. ---"
+      },
+      "table": {
+        "caption": "Selected High-Traffic Rail Routes, 2024",
+        "headers": [
+          "Route",
+          "Route type",
+          "Distance (km)",
+          "Annual passengers"
+        ],
+        "rows": [
+          [
+            "Madrid–Barcelona",
+            "Domestic",
+            "621",
+            "4,820,000"
+          ],
+          [
+            "Paris–Brussels",
+            "International",
+            "264",
+            "5,060,000"
+          ],
+          [
+            "Milan–Rome",
+            "Domestic",
+            "477",
+            "5,410,000"
+          ],
+          [
+            "Vienna–Budapest",
+            "International",
+            "243",
+            "4,970,000"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s2-q08",
+      "groupId": "rw-20261005-b2-s2-q08",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "Medium",
+      "passage": "Migratory birds use several physiological mechanisms to conserve energy during long flights. Bar-tailed godwits can temporarily reduce the mass of some digestive organs before undertaking transoceanic _____ ruby-throated hummingbirds, for instance, can accumulate extraordinarily large fat reserves before crossing the Gulf of Mexico.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "migration, for instance, while",
+        "B": "migration. For instance, while",
+        "C": "migration; for instance, while",
+        "D": "migration, for instance. While"
+      },
+      "correctAnswer": "A",
+      "explanation": "The sentence compares two different examples of migratory adaptation. The subordinating conjunction **“while”** correctly connects the godwit clause with the hummingbird clause, and **“for instance”** functions parenthetically within the sentence. Commas appropriately set off that parenthetical phrase.\n\nB leaves the sentence beginning with “while” as a fragment. C places a semicolon before a dependent clause introduced by “while,” which is incorrect. D again creates a fragment by beginning a new sentence with the dependent clause “While ruby-throated hummingbirds....”\n\n---",
+      "choiceExplanations": {
+        "A": "The sentence compares two different examples of migratory adaptation. The subordinating conjunction **“while”** correctly connects the godwit clause with the hummingbird clause, and **“for instance”** functions parenthetically within the sentence. Commas appropriately set off that parenthetical phrase.",
+        "B": "B leaves the sentence beginning with “while” as a fragment.",
+        "C": "C places a semicolon before a dependent clause introduced by “while,” which is incorrect.",
+        "D": "D again creates a fragment by beginning a new sentence with the dependent clause “While ruby-throated hummingbirds....” ---"
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s2-q09",
+      "groupId": "rw-20261005-b2-s2-q09",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "Medium",
+      "passage": "Type 430 stainless steel contains substantial chromium but little or no nickel and belongs to the ferritic class of stainless steels. _____ it responds differently to heat treatment than martensitic stainless steels do and generally cannot be hardened through conventional quenching.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "For instance,",
+        "B": "Even so,",
+        "C": "As such,",
+        "D": "Similarly,"
+      },
+      "correctAnswer": "C",
+      "explanation": "The first sentence identifies Type 430 as a **ferritic stainless steel**. The next sentence describes a consequence of that classification: its response to heat treatment differs from that of martensitic steels. **“As such,”** meaning “in that capacity” or “because it is of that type,” precisely conveys the relationship.\n\nA would make the heat-treatment behavior merely an example of the classification rather than a consequence associated with it. B introduces a concession that the context does not require. D suggests similarity, even though the sentence explicitly emphasizes a difference from martensitic steels.\n\n---",
+      "choiceExplanations": {
+        "A": "A would make the heat-treatment behavior merely an example of the classification rather than a consequence associated with it.",
+        "B": "B introduces a concession that the context does not require.",
+        "C": "The first sentence identifies Type 430 as a **ferritic stainless steel**. The next sentence describes a consequence of that classification: its response to heat treatment differs from that of martensitic steels. **“As such,”** meaning “in that capacity” or “because it is of that type,” precisely conveys the relationship.",
+        "D": "D suggests similarity, even though the sentence explicitly emphasizes a difference from martensitic steels. ---"
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s2-q10",
+      "groupId": "rw-20261005-b2-s2-q10",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "Hard",
+      "passage": "LT50 is the temperature at which 50 percent of sampled leaf tissue is damaged by freezing; lower LT50 values therefore indicate greater freezing tolerance. Previous studies suggest that this functional trait may vary with the environmental distributions of alpine plants. A student hypothesizes that, among the species shown, greater freezing tolerance will generally be associated with lower mean elevation and lower occupancy of high-elevation tundra. The student then compares LT50 values with the species’ distributions.",
+      "question": "Which choice best describes the extent to which the student’s hypothesis is supported by data from the table?",
+      "choices": {
+        "A": "The hypothesis is not supported because all five species occupy tundra at broadly similar rates despite substantial differences in freezing tolerance.",
+        "B": "The hypothesis is strongly supported because every successive decrease in LT50 corresponds to both a lower mean elevation and lower tundra occupancy.",
+        "C": "The hypothesis is moderately supported: greater freezing tolerance generally coincides with lower elevation and lower tundra occupancy, although *Silene monticola* departs from the overall pattern.",
+        "D": "The hypothesis is strongly supported because *Primula nivalis*, the least freezing-tolerant species, occurs at the highest mean elevation, whereas *Draba glacialis*, the most freezing-tolerant species, occurs at the lowest."
+      },
+      "correctAnswer": "C",
+      "explanation": "The overall pattern supports the hypothesis. From *Primula nivalis* through *Gentiana rupestris*, increasingly negative LT50 values correspond to progressively lower elevations and lower tundra occupancy. *Draba glacialis*, which has the most negative LT50 and therefore the greatest freezing tolerance, also occurs at by far the lowest mean elevation and has the lowest tundra occupancy. However, ***Silene monticola*** breaks the otherwise orderly relationship: despite being more freezing tolerant than *Gentiana rupestris*, it occurs at a **higher** mean elevation and has **higher** tundra occupancy. The evidence therefore provides substantial but not perfect support, making “moderately supported” the most accurate characterization.\n\nA is incorrect because tundra occupancy varies widely, from 29% to 88%. B is too strong because the pattern is not perfectly monotonic: *Silene monticola* is an exception. D correctly identifies the two endpoints, but evidence from only the extremes does not justify claiming that the entire five-species pattern strongly supports the hypothesis when one of the intermediate species clearly departs from it. Screenshot 2026-10-05 035757",
+      "choiceExplanations": {
+        "A": "A is incorrect because tundra occupancy varies widely, from 29% to 88%.",
+        "B": "B is too strong because the pattern is not perfectly monotonic: *Silene monticola* is an exception.",
+        "C": "The overall pattern supports the hypothesis. From *Primula nivalis* through *Gentiana rupestris*, increasingly negative LT50 values correspond to progressively lower elevations and lower tundra occupancy. *Draba glacialis*, which has the most negative LT50 and therefore the greatest freezing tolerance, also occurs at by far the lowest mean elevation and has the lowest tundra occupancy. However, ***Silene monticola*** breaks the otherwise orderly relationship: despite being more freezing tolerant than *Gentiana rupestris*, it occurs at a **higher** mean elevation and has **higher** tundra occupancy. The evidence therefore provides substantial but not perfect support, making “moderately supported” the most accurate characterization.",
+        "D": "D correctly identifies the two endpoints, but evidence from only the extremes does not justify claiming that the entire five-species pattern strongly supports the hypothesis when one of the intermediate species clearly departs from it."
+      },
+      "table": {
+        "caption": "Freezing Tolerance, Mean Elevation, and Tundra Occupancy for Five Alpine Plant Species",
+        "headers": [
+          "Species",
+          "LT50 temperature (°C)",
+          "Mean elevation (m)",
+          "Tundra occupancy (%)"
+        ],
+        "rows": [
+          [
+            "*Primula nivalis*",
+            "−8.4",
+            "2,940",
+            "88"
+          ],
+          [
+            "*Saxifraga borealis*",
+            "−9.1",
+            "2,710",
+            "82"
+          ],
+          [
+            "*Gentiana rupestris*",
+            "−10.3",
+            "2,460",
+            "76"
+          ],
+          [
+            "*Silene monticola*",
+            "−11.0",
+            "2,830",
+            "81"
+          ],
+          [
+            "*Draba glacialis*",
+            "−13.8",
+            "1,180",
+            "29"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s3-q01",
+      "groupId": "rw-20261005-b2-s3-q01",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Text Structure and Purpose",
+      "difficulty": "Medium",
+      "passage": "A board foot is a measure of volume, not length, despite a name that can suggest otherwise. One board foot represents the volume of a board 1 foot long, 1 foot wide, and 1 inch thick, equivalent to 144 cubic inches. Lumber dealers use the unit because ordinary linear measurements alone do not account for differences in both board width and thickness. For context, a plank measuring 8 feet by 10 inches by 1.5 inches contains 10 board feet, while a beam measuring 12 feet by 6 inches by 2 inches contains 12 board feet.",
+      "question": "Which choice best describes the overall structure of the text?",
+      "choices": {
+        "A": "It identifies several methods for measuring lumber, evaluates the accuracy of each, and recommends one method for commercial use.",
+        "B": "It corrects a possible misconception about a measurement term, defines the unit numerically, explains why the unit is useful, and gives examples of its application.",
+        "C": "It traces the historical development of lumber measurement, explains why linear measurements became obsolete, and describes two modern alternatives.",
+        "D": "It introduces a problem associated with measuring irregular pieces of wood and then proposes board feet as a new solution to that problem."
+      },
+      "correctAnswer": "B",
+      "explanation": "The text follows four clear stages. It first corrects the possible misconception that a “board foot” measures length. It then defines the unit precisely and gives its equivalent in cubic inches. Next, it explains why the measurement is useful in the lumber trade. Finally, it applies the measurement to two concrete examples. B captures all four parts accurately.\n\nA is incorrect because the passage does not compare several competing measurement systems or recommend one after evaluating them. C is incorrect because no historical development is discussed. D is incorrect because the text neither focuses on irregular pieces of wood nor presents the board foot as a newly proposed solution.\n\n---",
+      "choiceExplanations": {
+        "A": "A is incorrect because the passage does not compare several competing measurement systems or recommend one after evaluating them.",
+        "B": "The text follows four clear stages. It first corrects the possible misconception that a “board foot” measures length. It then defines the unit precisely and gives its equivalent in cubic inches. Next, it explains why the measurement is useful in the lumber trade. Finally, it applies the measurement to two concrete examples. B captures all four parts accurately.",
+        "C": "C is incorrect because no historical development is discussed.",
+        "D": "D is incorrect because the text neither focuses on irregular pieces of wood nor presents the board foot as a newly proposed solution. ---"
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s3-q02",
+      "groupId": "rw-20261005-b2-s3-q02",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "Easy",
+      "passage": "Some linguists have proposed that evidentiality need not be represented by a single grammatical _____ In a language with a more elaborate evidential system, separate forms may distinguish information personally witnessed by the speaker from information inferred or reported by someone else.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "marker, in",
+        "B": "marker. In",
+        "C": "marker which in",
+        "D": "marker in"
+      },
+      "correctAnswer": "B",
+      "explanation": "The first sentence is complete: “Some linguists have proposed that evidentiality need not be represented by a single grammatical marker.” The next sentence begins independently with “In a language with a more elaborate evidential system....” A period correctly separates the two complete sentences.\n\nA incorrectly joins two independent sentences with only a comma. C creates an ungrammatical relative-clause construction because “which” has no clear grammatical function. D runs the two sentences together without the punctuation needed to separate them.\n\n---",
+      "choiceExplanations": {
+        "A": "A incorrectly joins two independent sentences with only a comma.",
+        "B": "The first sentence is complete: “Some linguists have proposed that evidentiality need not be represented by a single grammatical marker.” The next sentence begins independently with “In a language with a more elaborate evidential system....” A period correctly separates the two complete sentences.",
+        "C": "C creates an ungrammatical relative-clause construction because “which” has no clear grammatical function.",
+        "D": "D runs the two sentences together without the punctuation needed to separate them. ---"
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s3-q03",
+      "groupId": "rw-20261005-b2-s3-q03",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "Easy",
+      "passage": "Between 2018 and 2023, the proportion of electricity generated from wind power in Uruguay increased from 29.4 percent to 35.7 percent. _____ renewable generation from wind also expanded across South America during the same period, though at a less uniform rate among individual countries.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "In other words,",
+        "B": "Eventually,",
+        "C": "For example,",
+        "D": "Concurrently,"
+      },
+      "correctAnswer": "D",
+      "explanation": "The first sentence describes a change in Uruguay over a specified period. The second describes a broader regional change occurring **during the same period**. “Concurrently” precisely signals that the developments happened at the same time.\n\nA is incorrect because the second sentence does not restate the first in different words. B implies that the regional trend occurred later as an eventual outcome. C would introduce Uruguay as an example of a previously stated regional trend, but the order is reversed: the Uruguay example comes first.\n\n---",
+      "choiceExplanations": {
+        "A": "A is incorrect because the second sentence does not restate the first in different words.",
+        "B": "B implies that the regional trend occurred later as an eventual outcome.",
+        "C": "C would introduce Uruguay as an example of a previously stated regional trend, but the order is reversed: the Uruguay example comes first. ---",
+        "D": "The first sentence describes a change in Uruguay over a specified period. The second describes a broader regional change occurring **during the same period**. “Concurrently” precisely signals that the developments happened at the same time."
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s3-q04",
+      "groupId": "rw-20261005-b2-s3-q04",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "Medium",
+      "passage": "With its carefully regulated alternation between planted courtyards and enclosed galleries, the traditional Korean *hanok* represents a highly developed approach to balancing architecture with seasonal _____ in contemporary reinterpretations, the same spatial logic continues to shape ventilation, daylight, and transitions between interior and exterior spaces.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "climate. in",
+        "B": "climate, in",
+        "C": "climate; in",
+        "D": "climate, in;"
+      },
+      "correctAnswer": "C",
+      "explanation": "Choice C correctly uses a semicolon to join the two closely related independent clauses. The second clause begins with the introductory phrase **“in contemporary reinterpretations,”** which is properly followed by a comma.\n\nA incorrectly begins a new sentence with the lowercase word **“in.”** B creates a comma splice between two independent clauses. D places the semicolon after the introductory phrase instead of between the independent clauses.",
+      "choiceExplanations": {
+        "A": "A incorrectly begins a new sentence with the lowercase word **“in.”** B creates a comma splice between two independent clauses.",
+        "B": "A incorrectly begins a new sentence with the lowercase word **“in.”** B creates a comma splice between two independent clauses.",
+        "C": "Choice C correctly uses a semicolon to join the two closely related independent clauses. The second clause begins with the introductory phrase **“in contemporary reinterpretations,”** which is properly followed by a comma.",
+        "D": "D places the semicolon after the introductory phrase instead of between the independent clauses."
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s3-q05",
+      "groupId": "rw-20261005-b2-s3-q05",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "Medium",
+      "passage": "A rare-book conservator is selecting a window film for a reading room. To protect temperature-sensitive materials, the conservator wants to block as much infrared heat as possible. However, because the room receives little artificial illumination, the selected film must still transmit **more than 15 percent** of visible light.",
+      "question": "Based on the conservator’s requirements and the data in the table, which film should be selected?",
+      "choices": {
+        "A": "ClearShield",
+        "B": "ThermBloc",
+        "C": "Lumex 22",
+        "D": "Solara 35"
+      },
+      "correctAnswer": "C",
+      "explanation": "The film must first satisfy the visible-light requirement. ClearShield, Solara 35, and Lumex 22 all transmit more than 15 percent of visible light, while ThermBloc transmits only 11 percent and is therefore disqualified. Among the qualifying films, Lumex 22 blocks the greatest percentage of infrared heat, **74 percent**.\n\nA allows more visible light but blocks much less infrared heat. D also qualifies but blocks only 61 percent of infrared heat. B has the greatest heat-blocking performance overall, but it fails the minimum visible-light requirement.\n\n---",
+      "choiceExplanations": {
+        "A": "A allows more visible light but blocks much less infrared heat.",
+        "B": "B has the greatest heat-blocking performance overall, but it fails the minimum visible-light requirement. ---",
+        "C": "The film must first satisfy the visible-light requirement. ClearShield, Solara 35, and Lumex 22 all transmit more than 15 percent of visible light, while ThermBloc transmits only 11 percent and is therefore disqualified. Among the qualifying films, Lumex 22 blocks the greatest percentage of infrared heat, **74 percent**.",
+        "D": "D also qualifies but blocks only 61 percent of infrared heat."
+      },
+      "table": {
+        "caption": "Thermal-Control Film Performance",
+        "headers": [
+          "Film",
+          "Visible light transmitted",
+          "Infrared heat blocked"
+        ],
+        "rows": [
+          [
+            "ClearShield",
+            "42%",
+            "48%"
+          ],
+          [
+            "Solara 35",
+            "31%",
+            "61%"
+          ],
+          [
+            "Lumex 22",
+            "19%",
+            "74%"
+          ],
+          [
+            "ThermBloc",
+            "11%",
+            "86%"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s3-q06",
+      "groupId": "rw-20261005-b2-s3-q06",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "Easy",
+      "passage": "Resilient coastal infrastructure _____ the possibility that shoreline conditions may shift substantially over a structure’s lifetime. Designers may therefore elevate electrical systems, incorporate movable flood barriers, and leave foundations capable of supporting later modifications.",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "choices": {
+        "A": "corroborates",
+        "B": "transcends",
+        "C": "accommodates",
+        "D": "quantifies"
+      },
+      "correctAnswer": "C",
+      "explanation": "To **accommodate** a possibility is to make provision for it or allow for it. The examples in the second sentence—elevated systems, movable barriers, and adaptable foundations—show designers preparing for future changes in shoreline conditions. Thus “accommodates” is the precise choice.\n\nA, “corroborates,” means confirms with evidence, which infrastructure cannot meaningfully do to a future possibility. B, “transcends,” means goes beyond or rises above something and does not convey preparation for change. D, “quantifies,” means expresses numerically, but the sentence concerns designing for possible future conditions, not measuring them.\n\n---",
+      "choiceExplanations": {
+        "A": "A, “corroborates,” means confirms with evidence, which infrastructure cannot meaningfully do to a future possibility.",
+        "B": "B, “transcends,” means goes beyond or rises above something and does not convey preparation for change.",
+        "C": "To **accommodate** a possibility is to make provision for it or allow for it. The examples in the second sentence—elevated systems, movable barriers, and adaptable foundations—show designers preparing for future changes in shoreline conditions. Thus “accommodates” is the precise choice.",
+        "D": "D, “quantifies,” means expresses numerically, but the sentence concerns designing for possible future conditions, not measuring them. ---"
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s3-q07",
+      "groupId": "rw-20261005-b2-s3-q07",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Cross-Text Connections",
+      "difficulty": "Medium",
+      "passage": "**Text 1**\n\nTo assess the importance of shallow seagrass meadows as feeding habitat for juvenile reef fish, marine ecologist Priya Deshmukh and her team recorded more than 1,600 feeding events between 8:00 a.m. and 5:00 p.m. during the summer growing season. They documented visits from numerous fish species, including juvenile parrotfish and rabbitfish, and concluded that the meadows support substantial daytime foraging activity.\n\n**Text 2**\n\nStudies of seagrass food webs have often emphasized organisms active during daylight, leaving nighttime interactions comparatively poorly documented. In a 2024 study, Lucas Mendel and colleagues separately measured daytime and nighttime feeding in the same habitat type. Although most observed feeding events occurred during daylight, nocturnal crustaceans removed substantially more detrital material per individual visit than the daytime grazers did.",
+      "question": "Based on the texts, how would the author of Text 2 most likely respond to the study described in Text 1?",
+      "choices": {
+        "A": "By arguing that the conclusions in Text 1 are unreliable because the researchers failed to distinguish among the daytime fish species they observed",
+        "B": "By suggesting that Text 1 may omit a potentially important category of feeding interactions by restricting its observations to daylight hours",
+        "C": "By claiming that the researchers in Text 1 should have studied coral reefs rather than seagrass meadows",
+        "D": "By arguing that the fish documented in Text 1 were probably responsible for most nighttime detritus removal as well"
+      },
+      "correctAnswer": "B",
+      "explanation": "Text 2 emphasizes that nighttime ecological interactions can matter greatly even when they are less frequent. Because Text 1 collected observations only between 8:00 a.m. and 5:00 p.m., the author of Text 2 would likely point out that the study could miss ecologically important nocturnal feeding activity.\n\nA is incorrect because Text 2’s concern is the omission of nighttime activity, not inadequate distinctions among daytime species. C introduces a habitat comparison that neither text raises. D is unsupported because Text 2 attributes substantial nighttime detritus removal to nocturnal crustaceans, not to the daytime fish discussed in Text 1.\n\n---",
+      "choiceExplanations": {
+        "A": "A is incorrect because Text 2’s concern is the omission of nighttime activity, not inadequate distinctions among daytime species.",
+        "B": "Text 2 emphasizes that nighttime ecological interactions can matter greatly even when they are less frequent. Because Text 1 collected observations only between 8:00 a.m. and 5:00 p.m., the author of Text 2 would likely point out that the study could miss ecologically important nocturnal feeding activity.",
+        "C": "C introduces a habitat comparison that neither text raises.",
+        "D": "D is unsupported because Text 2 attributes substantial nighttime detritus removal to nocturnal crustaceans, not to the daytime fish discussed in Text 1. ---"
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s3-q08",
+      "groupId": "rw-20261005-b2-s3-q08",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Central Ideas and Details",
+      "difficulty": "Medium",
+      "passage": "The following text is from Eleanor Voss’s 1897 essay *Portraits and Records*.\n\nA chronicle faithful to every invoice, date, and itinerary may possess the virtue of exactness and yet leave its subject curiously absent. The biographer who refuses every conjecture is rather like a draughtsman who records each measurement of a face but omits the expression. Accuracy is indispensable; still, when accuracy is treated as sufficient in itself, the living person may disappear beneath the abundance of verified particulars.",
+      "question": "Which choice best states the main idea of the text?",
+      "choices": {
+        "A": "Biographers should freely invent details whenever historical records contain gaps.",
+        "B": "Excessive commitment to factual documentation can produce an accurate biography that nevertheless fails to convey its subject vividly.",
+        "C": "Visual portraits generally provide more reliable information about historical figures than written biographies do.",
+        "D": "Historians disagree fundamentally about which kinds of documentary evidence should be considered trustworthy."
+      },
+      "correctAnswer": "B",
+      "explanation": "The passage does not reject factual accuracy; it explicitly calls accuracy “indispensable.” Instead, it argues that **accuracy alone may be insufficient** if a biography becomes so focused on verified details that the subject no longer feels alive or fully represented. B captures that balance.\n\nA goes too far because the author does not endorse fabrication. C mistakes the analogy involving a draughtsman for a literal claim that visual portraiture is superior. D is unsupported because the passage does not discuss disagreement among historians about source reliability.\n\n---",
+      "choiceExplanations": {
+        "A": "A goes too far because the author does not endorse fabrication.",
+        "B": "The passage does not reject factual accuracy; it explicitly calls accuracy “indispensable.” Instead, it argues that **accuracy alone may be insufficient** if a biography becomes so focused on verified details that the subject no longer feels alive or fully represented. B captures that balance.",
+        "C": "C mistakes the analogy involving a draughtsman for a literal claim that visual portraiture is superior.",
+        "D": "D is unsupported because the passage does not discuss disagreement among historians about source reliability. ---"
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s3-q09",
+      "groupId": "rw-20261005-b2-s3-q09",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "Easy",
+      "passage": "While researching a topic, a student has taken the following notes:\n\n- Architect Geoffrey Bawa worked extensively in Sri Lanka.\n- His designs often combine modern architecture with elements drawn from South Asian building traditions.\n- Bawa’s Ena de Silva House incorporates an internal courtyard modeled on longstanding regional domestic forms.\n- His Kandalama Hotel uses deep verandas and shaded transitional spaces associated with tropical vernacular architecture.\n- Both projects also employ modern structural systems.",
+      "question": "The student wants to emphasize a similarity between the Ena de Silva House and the Kandalama Hotel. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "choices": {
+        "A": "Bawa’s Ena de Silva House contains an internal courtyard inspired by regional domestic architecture.",
+        "B": "The Ena de Silva House incorporates a traditional courtyard, whereas the Kandalama Hotel makes extensive use of deep verandas and shaded transitional spaces.",
+        "C": "Geoffrey Bawa frequently combined modern construction with architectural traditions associated with South Asia.",
+        "D": "Although they draw on different vernacular features, both the Ena de Silva House and the Kandalama Hotel combine modern structural systems with elements of regional architectural tradition."
+      },
+      "correctAnswer": "D",
+      "explanation": "D explicitly compares **both projects** and identifies the relevant shared characteristic: each combines a modern structural system with features derived from regional architectural traditions. It therefore directly emphasizes a similarity while acknowledging that the specific traditional features differ.\n\nA discusses only one building. B emphasizes a difference between the projects rather than the broader similarity. C states a general fact about Bawa’s work but does not specifically connect the two named projects.\n\n---",
+      "choiceExplanations": {
+        "A": "A discusses only one building.",
+        "B": "B emphasizes a difference between the projects rather than the broader similarity.",
+        "C": "C states a general fact about Bawa’s work but does not specifically connect the two named projects. ---",
+        "D": "D explicitly compares **both projects** and identifies the relevant shared characteristic: each combines a modern structural system with features derived from regional architectural traditions. It therefore directly emphasizes a similarity while acknowledging that the specific traditional features differ."
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s3-q10",
+      "groupId": "rw-20261005-b2-s3-q10",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "Hard",
+      "passage": "A geology student is studying a volcanic rock whose minerals formed in successive stages. Published geochemical work indicates that \\\\(^{206}\\text{Pb}/^{204}\\text{Pb}\\\\) ratios above **18.30** in this volcanic province generally indicate incorporation of material from old continental crust, while progressively higher ratios indicate a larger crustal contribution. The crystal core formed first, followed by the rim and then the surrounding matrix.\n\nThe student concludes that the rock sample _____",
+      "question": "Which choice most effectively uses data from the table to complete the student’s conclusion?",
+      "choices": {
+        "A": "records a progressively decreasing but persistent contribution from continental crust during its formation.",
+        "B": "contains isotope ratios too similar across its growth zones to reveal meaningful changes in magma composition.",
+        "C": "records an increasing contribution from continental crust in each successive stage of mineral growth.",
+        "D": "began forming without continental-crust influence but acquired such influence during later stages."
+      },
+      "correctAnswer": "A",
+      "explanation": "All three ratios are above the stated **18.30 threshold**, so all three stages indicate some contribution from old continental crust. However, the ratio decreases from **19.42** in the core to **18.96** in the rim and then to **18.61** in the matrix. Because higher values correspond to a larger crustal contribution, the data indicate that this contribution **declined over time but never disappeared**.\n\nB is incorrect because the systematic decline is large enough, under the information supplied, to indicate a changing contribution. C reverses the trend: the ratios decrease rather than increase. D is incorrect because even the earliest zone, the core, has a value well above 18.30 and therefore already indicates crustal influence. Screenshot 2026-10-05 035953",
+      "choiceExplanations": {
+        "A": "All three ratios are above the stated **18.30 threshold**, so all three stages indicate some contribution from old continental crust. However, the ratio decreases from **19.42** in the core to **18.96** in the rim and then to **18.61** in the matrix. Because higher values correspond to a larger crustal contribution, the data indicate that this contribution **declined over time but never disappeared**.",
+        "B": "B is incorrect because the systematic decline is large enough, under the information supplied, to indicate a changing contribution.",
+        "C": "C reverses the trend: the ratios decrease rather than increase.",
+        "D": "D is incorrect because even the earliest zone, the core, has a value well above 18.30 and therefore already indicates crustal influence."
+      },
+      "table": {
+        "caption": "Lead-Isotope Ratios in Successive Growth Zones of a Feldspar Crystal",
+        "headers": [
+          "Crystal zone",
+          "\\\\(^{206}\\text{Pb}/^{204}\\text{Pb}\\\\) ratio"
+        ],
+        "rows": [
+          [
+            "Crystal core",
+            "19.42"
+          ],
+          [
+            "Crystal rim",
+            "18.96"
+          ],
+          [
+            "Surrounding matrix",
+            "18.61"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s4-q01",
+      "groupId": "rw-20261005-b2-s4-q01",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Central Ideas and Details",
+      "difficulty": "Easy",
+      "passage": "Established in 1911, the Alpine Research Library in Bern preserves expedition journals, topographic surveys, and early photographic records relating to mountain science. Its holdings now exceed 70,000 cataloged items. Since 2000, several newer institutions devoted to specialized environmental research have opened elsewhere in Europe. Among them is the Arctic Climate Archive in Tromsø, which opened in 2016 and concentrates on observational records from high-latitude monitoring stations.",
+      "question": "Which contrast does the text draw between the Alpine Research Library and the Arctic Climate Archive?",
+      "choices": {
+        "A": "The Arctic Climate Archive contains more cataloged items.",
+        "B": "The Alpine Research Library occupies a larger facility.",
+        "C": "The Arctic Climate Archive opened considerably more recently.",
+        "D": "The Arctic Climate Archive receives more researchers each year."
+      },
+      "correctAnswer": "C",
+      "explanation": "The passage gives founding dates for both institutions: the Alpine Research Library was established in **1911**, whereas the Arctic Climate Archive opened in **2016**. The supported contrast is therefore that the Arctic Climate Archive opened much more recently.\n\nA is unsupported because the text gives the size of only the Alpine Research Library’s holdings. B is unsupported because neither institution’s building size is given. D is also unsupported because the passage provides no information about annual visitors or researchers.\n\n---",
+      "choiceExplanations": {
+        "A": "A is unsupported because the text gives the size of only the Alpine Research Library’s holdings.",
+        "B": "B is unsupported because neither institution’s building size is given.",
+        "C": "The passage gives founding dates for both institutions: the Alpine Research Library was established in **1911**, whereas the Arctic Climate Archive opened in **2016**. The supported contrast is therefore that the Arctic Climate Archive opened much more recently.",
+        "D": "D is also unsupported because the passage provides no information about annual visitors or researchers. ---"
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s4-q02",
+      "groupId": "rw-20261005-b2-s4-q02",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "Medium",
+      "passage": "In the 1870s, engineer Émile Delacroix replaced the rigid iron vanes on a tidal-current instrument with thin, flexible bronze blades. The alteration seemed almost cosmetic, _____ revised blade geometry allowed the instrument to register weak currents that the earlier design often failed to detect.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "however, its",
+        "B": "however its",
+        "C": "however and its",
+        "D": "however. Its"
+      },
+      "correctAnswer": "D",
+      "explanation": "The first statement can stand as a complete sentence: “The alteration seemed almost cosmetic, however.” The next statement, beginning with **“Its revised blade geometry,”** is another independent sentence. A period after “however” correctly separates the two.\n\nA creates a comma splice: “The alteration seemed almost cosmetic” and “its revised blade geometry allowed...” are both independent clauses and cannot be joined merely with commas around “however.” B lacks necessary punctuation around “however” and also runs two independent clauses together. C produces illogical coordination because “and” cannot properly connect “however” to the following independent clause.\n\n---",
+      "choiceExplanations": {
+        "A": "A creates a comma splice: “The alteration seemed almost cosmetic” and “its revised blade geometry allowed...” are both independent clauses and cannot be joined merely with commas around “however.” B lacks necessary punctuation around “however” and also runs two independent clauses together.",
+        "B": "A creates a comma splice: “The alteration seemed almost cosmetic” and “its revised blade geometry allowed...” are both independent clauses and cannot be joined merely with commas around “however.” B lacks necessary punctuation around “however” and also runs two independent clauses together.",
+        "C": "C produces illogical coordination because “and” cannot properly connect “however” to the following independent clause. ---",
+        "D": "The first statement can stand as a complete sentence: “The alteration seemed almost cosmetic, however.” The next statement, beginning with **“Its revised blade geometry,”** is another independent sentence. A period after “however” correctly separates the two."
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s4-q03",
+      "groupId": "rw-20261005-b2-s4-q03",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Form, Structure, and Sense",
+      "difficulty": "Medium",
+      "passage": "A recipient of both the Kavli Prize in Nanoscience and the Franklin Medal, _____ a method of arranging conductive polymers into nanoscale channels that dramatically improved charge transport in experimental sensors.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "materials chemist Noura El-Sayed developed",
+        "B": "the development by materials chemist Noura El-Sayed involved",
+        "C": "nanoscale conductive channels were developed when Noura El-Sayed devised",
+        "D": "improved charge transport resulted from Noura El-Sayed developing"
+      },
+      "correctAnswer": "A",
+      "explanation": "The introductory phrase **“A recipient of both the Kavli Prize in Nanoscience and the Franklin Medal”** must logically modify the person who received those honors. A immediately places **“materials chemist Noura El-Sayed”** after the modifier, so the sentence is clear and grammatical.\n\nB incorrectly makes “the development” sound like the recipient of the awards. C similarly places “nanoscale conductive channels” immediately after the introductory modifier, creating the illogical implication that the channels received the prizes. D makes “improved charge transport” the apparent recipient, producing the same dangling-modifier problem.\n\n---",
+      "choiceExplanations": {
+        "A": "The introductory phrase **“A recipient of both the Kavli Prize in Nanoscience and the Franklin Medal”** must logically modify the person who received those honors. A immediately places **“materials chemist Noura El-Sayed”** after the modifier, so the sentence is clear and grammatical.",
+        "B": "B incorrectly makes “the development” sound like the recipient of the awards.",
+        "C": "C similarly places “nanoscale conductive channels” immediately after the introductory modifier, creating the illogical implication that the channels received the prizes.",
+        "D": "D makes “improved charge transport” the apparent recipient, producing the same dangling-modifier problem. ---"
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s4-q04",
+      "groupId": "rw-20261005-b2-s4-q04",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "Easy",
+      "passage": "As cultural geographer Amara Velasco explains, several traditional salt varieties from coastal regions are valued for their geographic specificity; _____ consumers prize them because their mineral composition and production methods are closely associated with particular local environments.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "still,",
+        "B": "that is,",
+        "C": "rather,",
+        "D": "consequently,"
+      },
+      "correctAnswer": "B",
+      "explanation": "The second clause **clarifies what “geographic specificity” means** in this context: the salts are valued because their composition and methods are tied to particular places. **“That is,”** appropriately introduces this explanation or restatement.\n\nA signals a concession, but there is no contradiction. C is generally used to correct or replace a previous formulation, which is not happening here. D signals a result, whereas the second clause explains the meaning of the first rather than presenting a consequence of it.\n\n---",
+      "choiceExplanations": {
+        "A": "A signals a concession, but there is no contradiction.",
+        "B": "The second clause **clarifies what “geographic specificity” means** in this context: the salts are valued because their composition and methods are tied to particular places. **“That is,”** appropriately introduces this explanation or restatement.",
+        "C": "C is generally used to correct or replace a previous formulation, which is not happening here.",
+        "D": "D signals a result, whereas the second clause explains the meaning of the first rather than presenting a consequence of it. ---"
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s4-q05",
+      "groupId": "rw-20261005-b2-s4-q05",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "Medium",
+      "passage": "Modern cybersecurity systems can automatically isolate a compromised server from the rest of a network, preventing suspicious traffic from spreading. There is good reason, however, that administrators configure such systems to act _____: disconnecting a server can interrupt legitimate services and erase access to data needed for ongoing operations, so isolation is most advantageous when there is evidence of an active threat.",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "choices": {
+        "A": "indiscriminately",
+        "B": "reactively",
+        "C": "gratuitously",
+        "D": "unremittingly"
+      },
+      "correctAnswer": "B",
+      "explanation": "**“Reactively”** means in response to a particular event or stimulus. The passage explains that isolating a server is costly and therefore most useful **when evidence of an active threat appears**. A reactive system waits for such a threat before taking disruptive action.\n\nA, “indiscriminately,” means without making careful distinctions and would conflict with the passage’s emphasis on acting only when warranted. C, “gratuitously,” means without sufficient reason and likewise contradicts the logic. D, “unremittingly,” means continuously or without stopping, which would make little sense for an action that should occur only when needed.\n\n---",
+      "choiceExplanations": {
+        "A": "A, “indiscriminately,” means without making careful distinctions and would conflict with the passage’s emphasis on acting only when warranted.",
+        "B": "**“Reactively”** means in response to a particular event or stimulus. The passage explains that isolating a server is costly and therefore most useful **when evidence of an active threat appears**. A reactive system waits for such a threat before taking disruptive action.",
+        "C": "C, “gratuitously,” means without sufficient reason and likewise contradicts the logic.",
+        "D": "D, “unremittingly,” means continuously or without stopping, which would make little sense for an action that should occur only when needed. ---"
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s4-q06",
+      "groupId": "rw-20261005-b2-s4-q06",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "Medium",
+      "passage": "A large museum once required timed tickets for several of its most popular galleries during peak periods, from 10:00 a.m. to 1:00 p.m. and from 3:00 to 5:00 p.m. When the requirement was eliminated, administrators expected wait times to increase during those periods in galleries that had previously used timed entry. Surprisingly, wait times also increased substantially outside the former peak periods and in galleries that had never required timed tickets. The data most clearly reflect this unexpected effect during _____",
+      "question": "Which choice most effectively uses data from the graph to complete the statement?",
+      "choices": {
+        "A": "10:00 a.m.–1:00 p.m. for the previously timed galleries.",
+        "B": "5:00–6:00 p.m. for both types of galleries.",
+        "C": "3:00–5:00 p.m. for the previously timed galleries.",
+        "D": "1:00–3:00 p.m. for the galleries that had never used timed tickets."
+      },
+      "correctAnswer": "B",
+      "explanation": "The unexpected pattern involves **both conditions** highlighted in the passage: increased waiting outside the former peak periods **and** increased waiting in galleries that had never been subject to timed entry. From 5:00 to 6:00 p.m., which is outside the former peak periods, wait times rise substantially for both previously timed galleries (1.8 minutes) and never-timed galleries (1.3 minutes). This makes B the strongest illustration.\n\nA and C describe increases during the exact peak periods in which administrators already expected previously timed galleries to become more congested. D shows an increase in never-timed galleries outside the peak period, but the increase is smaller and does not capture the striking simultaneous rise in both gallery types as clearly as B does.\n\n---",
+      "choiceExplanations": {
+        "A": "A and C describe increases during the exact peak periods in which administrators already expected previously timed galleries to become more congested.",
+        "B": "The unexpected pattern involves **both conditions** highlighted in the passage: increased waiting outside the former peak periods **and** increased waiting in galleries that had never been subject to timed entry. From 5:00 to 6:00 p.m., which is outside the former peak periods, wait times rise substantially for both previously timed galleries (1.8 minutes) and never-timed galleries (1.3 minutes). This makes B the strongest illustration.",
+        "C": "A and C describe increases during the exact peak periods in which administrators already expected previously timed galleries to become more congested.",
+        "D": "D shows an increase in never-timed galleries outside the peak period, but the increase is smaller and does not capture the striking simultaneous rise in both gallery types as clearly as B does. ---"
+      },
+      "table": {
+        "caption": "Change in Average Museum Entry Wait Time After Timed-Ticket Requirement Ended",
+        "headers": [
+          "Time",
+          "Previously timed galleries",
+          "Never-timed galleries"
+        ],
+        "rows": [
+          [
+            "8:00–10:00 a.m.",
+            "0.2 min",
+            "0.1 min"
+          ],
+          [
+            "10:00 a.m.–1:00 p.m.",
+            "2.6 min",
+            "0.4 min"
+          ],
+          [
+            "1:00–3:00 p.m.",
+            "0.4 min",
+            "0.7 min"
+          ],
+          [
+            "3:00–5:00 p.m.",
+            "2.2 min",
+            "0.5 min"
+          ],
+          [
+            "5:00–6:00 p.m.",
+            "1.8 min",
+            "1.3 min"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s4-q07",
+      "groupId": "rw-20261005-b2-s4-q07",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "Medium",
+      "passage": "While researching a topic, a student has taken the following notes:\n\n- In the 1940s, the Colonial Forestry Research Unit in Malaya focused heavily on identifying timber species useful for export.\n- Some researchers supported this commercially oriented model.\n- Other researchers argued that forestry studies should also incorporate soil science, watershed ecology, and Indigenous land-use practices.\n- Malaya became independent in 1957.\n- In the early 1960s, botanist Idris Hamzah reorganized the unit as an interdisciplinary Tropical Ecosystems Institute with a stronger emphasis on locally directed research.\n- Hamzah’s reforms formed part of a broader post-1945 movement in Asia and Africa to restructure scientific institutions inherited from colonial governments.",
+      "question": "The student wants to place Hamzah’s reorganization of the institute in historical context. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "choices": {
+        "A": "Researchers at the Colonial Forestry Research Unit disagreed over whether forestry research should remain focused on commercially valuable timber.",
+        "B": "After Malaya’s 1957 independence, Hamzah reorganized the institute around interdisciplinary, locally directed research, aligning the change with a wider postwar movement to reshape colonial scientific institutions.",
+        "C": "Hamzah’s early-1960s reforms added soil science and watershed ecology to a research program that had previously emphasized timber species.",
+        "D": "The Colonial Forestry Research Unit was established before Malaya became independent and included researchers with differing ideas about the proper scope of forestry science."
+      },
+      "correctAnswer": "B",
+      "explanation": "The goal is not simply to describe **what** Hamzah changed but to place the reorganization within a **larger historical setting**. B does this by connecting the early-1960s reform to Malaya’s 1957 independence and to the broader postwar restructuring of colonial scientific institutions.\n\nA explains an internal intellectual disagreement but not the broader historical context. C accurately summarizes part of the reform but omits independence and the wider decolonizing movement. D supplies background chronology but does not connect Hamzah’s reorganization to the broader historical trend.\n\n---",
+      "choiceExplanations": {
+        "A": "A explains an internal intellectual disagreement but not the broader historical context.",
+        "B": "The goal is not simply to describe **what** Hamzah changed but to place the reorganization within a **larger historical setting**. B does this by connecting the early-1960s reform to Malaya’s 1957 independence and to the broader postwar restructuring of colonial scientific institutions.",
+        "C": "C accurately summarizes part of the reform but omits independence and the wider decolonizing movement.",
+        "D": "D supplies background chronology but does not connect Hamzah’s reorganization to the broader historical trend. ---"
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s4-q08",
+      "groupId": "rw-20261005-b2-s4-q08",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "Easy",
+      "passage": "0",
+      "question": "Researchers studying changes in regional orchestras found that the number of subscription concerts offered per season generally declined between 2012–13 and 2022–23. A music administrator argued, however, that some orchestras experienced the opposite trend and actually increased their number of subscription performances. Which example from the graph most directly supports the administrator’s claim?",
+      "choices": {
+        "A": "Orchestra Aurora, which presented more than 80 concerts in both seasons.",
+        "B": "Orchestra Cadenza, which presented fewer concerts in 2022–23 than in 2012–13.",
+        "C": "Orchestra Aurora, which presented more concerts in 2012–13 than Orchestra Borealis did in 2022–23.",
+        "D": "Orchestra Borealis, which increased from 67 concerts in 2012–13 to 84 concerts in 2022–23."
+      },
+      "correctAnswer": "D",
+      "explanation": "The administrator claims that **some orchestras increased** their number of subscription concerts. Orchestra Borealis did exactly that, rising from **67** concerts in 2012–13 to **84** in 2022–23.\n\nA does not demonstrate an increase and in fact refers to Orchestra Aurora, whose total declined. B directly contradicts the administrator’s claim because Cadenza decreased. C compares two different orchestras in different seasons rather than showing that a single orchestra increased over time.\n\n---",
+      "choiceExplanations": {
+        "A": "A does not demonstrate an increase and in fact refers to Orchestra Aurora, whose total declined.",
+        "B": "B directly contradicts the administrator’s claim because Cadenza decreased.",
+        "C": "C compares two different orchestras in different seasons rather than showing that a single orchestra increased over time. ---",
+        "D": "The administrator claims that **some orchestras increased** their number of subscription concerts. Orchestra Borealis did exactly that, rising from **67** concerts in 2012–13 to **84** in 2022–23."
+      },
+      "table": {
+        "caption": "Subscription Concerts Per Season at Three Regional Orchestras",
+        "headers": [
+          "Orchestra",
+          "2012–13",
+          "2022–23"
+        ],
+        "rows": [
+          [
+            "Orchestra Aurora",
+            "118",
+            "86"
+          ],
+          [
+            "Orchestra Borealis",
+            "67",
+            "84"
+          ],
+          [
+            "Orchestra Cadenza",
+            "76",
+            "70"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s4-q09",
+      "groupId": "rw-20261005-b2-s4-q09",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Form, Structure, and Sense",
+      "difficulty": "Hard",
+      "passage": "With microscopic evidence of repeated repainting across several centuries, a pattern uncommon in surviving Renaissance devotional panels, _____ conventional accounts that the work was completed during a single workshop campaign, the Altieri panel is now studied as an example of cumulative artistic revision.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "has challenged",
+        "B": "challenging",
+        "C": "challenged",
+        "D": "have challenged"
+      },
+      "correctAnswer": "B",
+      "explanation": "The sentence’s main subject is **“the Altieri panel,”** and the main verb is **“is now studied.”** The phrase before that main clause must therefore remain subordinate. **“Challenging conventional accounts...”** functions correctly as a participial phrase modifying the panel and describing the implication of the evidence.\n\nA would introduce a finite verb, “has challenged,” before the sentence’s actual subject and main verb, disrupting the grammatical structure. C creates the same problem in the simple past. D is additionally incorrect in number because the singular panel would require “has,” not “have,” even if a finite verb were appropriate there.\n\n---",
+      "choiceExplanations": {
+        "A": "A would introduce a finite verb, “has challenged,” before the sentence’s actual subject and main verb, disrupting the grammatical structure.",
+        "B": "The sentence’s main subject is **“the Altieri panel,”** and the main verb is **“is now studied.”** The phrase before that main clause must therefore remain subordinate. **“Challenging conventional accounts...”** functions correctly as a participial phrase modifying the panel and describing the implication of the evidence.",
+        "C": "C creates the same problem in the simple past.",
+        "D": "D is additionally incorrect in number because the singular panel would require “has,” not “have,” even if a finite verb were appropriate there. ---"
+      }
+    },
+    {
+      "id": "rw-20261005-b2-s4-q10",
+      "groupId": "rw-20261005-b2-s4-q10",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Text Structure and Purpose",
+      "difficulty": "Medium",
+      "passage": "Some aviation-safety researchers advocate what is known as a “just culture,” in which pilots, mechanics, and air-traffic personnel can report errors and near misses without automatically being punished for every mistake. Such reporting is important because aviation safety systems improve when investigators can identify recurring weaknesses before those weaknesses contribute to major accidents. If employees fear that acknowledging an error will necessarily damage their careers, they may withhold information that could expose a systemic problem. A strong reporting culture can therefore make accident prevention more efficient.",
+      "question": "Which choice best states the main purpose of the text?",
+      "choices": {
+        "A": "To identify a specific procedural mistake commonly made by aviation personnel",
+        "B": "To provide examples of employees who reported errors despite the possibility of punishment",
+        "C": "To explain the importance of a reporting culture that encourages aviation personnel to acknowledge mistakes and near misses",
+        "D": "To describe the procedures investigators use to determine responsibility after an aviation accident"
+      },
+      "correctAnswer": "C",
+      "explanation": "The passage defines a **just culture** and then explains why it matters: open reporting helps investigators detect recurring systemic problems, whereas fear of punishment can suppress useful information. Its primary purpose is therefore to explain the value of encouraging aviation personnel to report errors and near misses.\n\nA is too narrow because no particular operational mistake is identified. B is incorrect because the passage gives no examples of individual employees. D concerns post-accident investigation procedures, whereas the passage focuses on reporting practices that can help identify risks **before** major accidents occur. Screenshot 2026-10-05 040132",
+      "choiceExplanations": {
+        "A": "A is too narrow because no particular operational mistake is identified.",
+        "B": "B is incorrect because the passage gives no examples of individual employees.",
+        "C": "The passage defines a **just culture** and then explains why it matters: open reporting helps investigators detect recurring systemic problems, whereas fear of punishment can suppress useful information. Its primary purpose is therefore to explain the value of encouraging aviation personnel to report errors and near misses.",
+        "D": "D concerns post-accident investigation procedures, whereas the passage focuses on reporting practices that can help identify risks **before** major accidents occur."
+      }
     }
   ]
 }
