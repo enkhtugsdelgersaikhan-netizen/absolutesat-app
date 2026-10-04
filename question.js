@@ -2381,6 +2381,13 @@ function renderChoices(
                     question.id
                 ];
 
+            const attemptedWrong =
+                wrongAttempts[
+                    question.id
+                ]?.includes(
+                    choice.letter
+                );
+
 
             const eliminated =
                 eliminatedChoices[
@@ -2402,39 +2409,26 @@ function renderChoices(
                 );
             }
 
+            if (attemptedWrong) {
+                button.classList.add(
+                    "incorrect-answer",
+                    "attempted-wrong"
+                );
+                button.disabled = true;
+            }
+
             if (checked) {
-
-                const selectedAnswer =
-                    answers[
-                        question.id
-                    ] || null;
-
-                const answeredCorrectly =
-                    selectedAnswer ===
-                    question.correct_answer;
-
                 if (
                     selected &&
-                    answeredCorrectly
+                    choice.letter ===
+                    question.correct_answer
                 ) {
-
                     button.classList.add(
                         "correct-answer"
                     );
-
-                } else if (
-                    selected &&
-                    !answeredCorrectly
-                ) {
-
-                    button.classList.add(
-                        "incorrect-answer"
-                    );
-
                 }
 
                 button.disabled = true;
-
             }
 
 
@@ -2508,7 +2502,10 @@ function renderChoices(
             );
 
 
-            if (checked) {
+            if (
+                checked ||
+                attemptedWrong
+            ) {
                 strikeButton.disabled =
                     true;
             }
@@ -2537,37 +2534,30 @@ function renderChoices(
                 strikeButton
             );
 
-            if (checked) {
-                const isCorrectChoice =
-                    choice.letter ===
-                    question.correct_answer;
+            const isCorrectChoice =
+                choice.letter ===
+                question.correct_answer;
 
-                const answeredCorrectly =
-                    answers[
-                        question.id
-                    ] ===
-                    question.correct_answer;
-
-                const shouldExplain =
+            const shouldExplain =
+                attemptedWrong ||
+                (
+                    checked &&
                     selected &&
-                    (
-                        !isCorrectChoice ||
-                        answeredCorrectly
+                    isCorrectChoice
+                );
+
+            if (shouldExplain) {
+                const reason =
+                    createChoiceReason(
+                        question,
+                        choice.letter,
+                        isCorrectChoice
                     );
 
-                if (shouldExplain) {
-                    const reason =
-                        createChoiceReason(
-                            question,
-                            choice.letter,
-                            isCorrectChoice
-                        );
-
-                    if (reason) {
-                        wrapper.appendChild(
-                            reason
-                        );
-                    }
+                if (reason) {
+                    wrapper.appendChild(
+                        reason
+                    );
                 }
             }
 
