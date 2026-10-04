@@ -1243,3 +1243,60 @@
         animation: none !important;
     }
 }
+
+
+/* Inline choice-specific explanations */
+.choice-wrapper.has-reason,
+.choice-wrapper:has(.choice-reason){
+    padding-bottom:0;
+}
+.choice-reason{
+    margin:8px 2px 2px 47px;
+    padding:10px 12px;
+    border-radius:8px;
+    font-size:12px;
+    line-height:1.55;
+    animation:answer-feedback-in .18s ease both;
+}
+.choice-reason-correct{
+    border:1px solid #b8dfc4;
+    background:#f4fbf6;
+    color:#315b3d;
+}
+.choice-reason-wrong{
+    border:1px solid #e8c2bd;
+    background:#fff8f7;
+    color:#6f4743;
+}
+.choice-reason-label{
+    margin-bottom:3px;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:.35px;
+    text-transform:uppercase;
+}
+.choice-reason-correct .choice-reason-label{
+    color:#2f7a47;
+}
+.choice-reason-wrong .choice-reason-label{
+    color:#a3534c;
+}
+.choice-reason-text{
+    color:inherit;
+}
+.answer-feedback{
+    padding:13px 16px;
+}
+.answer-feedback-title{
+    margin-bottom:2px;
+    font-size:14px;
+}
+.answer-feedback-explanation{
+    font-size:12px;
+    line-height:1.5;
+}
+@media(max-width:620px){
+    .choice-reason{
+        margin-left:0;
+    }
+}
