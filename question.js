@@ -2653,9 +2653,16 @@ function renderAnswerFeedback(
 ) {
 
     const checked =
-        checkedResults[
+        Boolean(
+            checkedResults[
+                question.id
+            ]
+        );
+
+    const attemptedWrong =
+        wrongAttempts[
             question.id
-        ];
+        ] || [];
 
 
     if (
@@ -2667,7 +2674,10 @@ function renderAnswerFeedback(
     }
 
 
-    if (!checked) {
+    if (
+        !checked &&
+        attemptedWrong.length === 0
+    ) {
 
         answerFeedback.classList.add(
             "hidden"
@@ -2688,50 +2698,62 @@ function renderAnswerFeedback(
         if (checkAnswerButton) {
             checkAnswerButton.disabled =
                 false;
+
+            checkAnswerButton.textContent =
+                "Check the selected answer";
         }
 
         return;
-
     }
 
 
-    const selected =
-        answers[
-            question.id
-        ] || null;
+    if (!checked) {
 
+        answerFeedback.classList.remove(
+            "hidden",
+            "correct",
+            "neutral"
+        );
 
-    const isCorrect =
-        selected ===
-        question.correct_answer;
+        answerFeedback.classList.add(
+            "incorrect"
+        );
+
+        answerFeedbackTitle.textContent =
+            "Try again";
+
+        answerFeedbackExplanation.textContent =
+            "That choice doesn’t work. Use the explanation under it, then choose another answer.";
+
+        if (checkAnswerButton) {
+            checkAnswerButton.disabled =
+                false;
+
+            checkAnswerButton.textContent =
+                "Check new answer";
+        }
+
+        return;
+    }
 
 
     answerFeedback.classList.remove(
         "hidden",
+        "incorrect",
         "neutral"
     );
 
-    answerFeedback.classList.toggle(
-        "correct",
-        isCorrect
-    );
-
-    answerFeedback.classList.toggle(
-        "incorrect",
-        !isCorrect
+    answerFeedback.classList.add(
+        "correct"
     );
 
 
     answerFeedbackTitle.textContent =
-        isCorrect
-            ? "Correct"
-            : "Not quite";
+        "Correct";
 
 
     answerFeedbackExplanation.textContent =
-        isCorrect
-            ? "The reasoning is attached to the answer you chose."
-            : "The note under your choice explains why it does not work. The correct answer stays hidden.";
+        "The reasoning is attached to the answer you chose.";
 
 
     if (checkAnswerButton) {
@@ -2739,11 +2761,10 @@ function renderAnswerFeedback(
             true;
 
         checkAnswerButton.textContent =
-            "Check the selected answer";
+            "Answer checked";
     }
 
 }
-
 
 async function checkAnswer() {
 
@@ -2787,7 +2808,7 @@ async function checkAnswer() {
 
         if (answerFeedbackExplanation) {
             answerFeedbackExplanation.textContent =
-                "Select one of the four choices before checking your answer.";
+                "Select one of the remaining choices before checking your answer.";
         }
 
         return;
@@ -2797,6 +2818,45 @@ async function checkAnswer() {
     const isCorrect =
         selected ===
         question.correct_answer;
+
+
+    if (!isCorrect) {
+
+        if (
+            !wrongAttempts[
+                question.id
+            ]
+        ) {
+            wrongAttempts[
+                question.id
+            ] = [];
+        }
+
+        if (
+            !wrongAttempts[
+                question.id
+            ].includes(selected)
+        ) {
+            wrongAttempts[
+                question.id
+            ].push(selected);
+        }
+
+        delete answers[
+            question.id
+        ];
+
+
+        renderCurrentQuestion();
+
+
+        await saveQuestionBankAttempt(
+            question.id,
+            false
+        );
+
+        return;
+    }
 
 
     checkedResults[
@@ -2809,11 +2869,10 @@ async function checkAnswer() {
 
     await saveQuestionBankAttempt(
         question.id,
-        isCorrect
+        true
     );
 
 }
-
 
 async function saveQuestionBankAttempt(
     questionId,
