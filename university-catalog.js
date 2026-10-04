@@ -670,8 +670,11 @@
     const pos = (v) => scale.position(v).toFixed(2);
     const marker = (kind, name, value) => {
       const covered = kind !== "you" && hasUser && value === userScore ? " covered-by-user" : "";
+      const dot = kind === "you"
+        ? ""
+        : '<span class="sat-rail-dot" aria-hidden="true"></span>';
       return '<div class="sat-rail-marker ' + kind + covered + '" style="left:' + pos(value) + '%">' +
-        '<span class="sat-rail-dot" aria-hidden="true"></span>' +
+        dot +
         '<span class="sat-rail-marker-copy"><small>' + name + '</small><strong>' + value + '</strong></span>' +
       '</div>';
     };
