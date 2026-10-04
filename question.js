@@ -2629,10 +2629,13 @@ function getChoiceExplanation(
     const direct =
         question.choice_explanations?.[
             letter
+        ] ||
+        question.choice_explanations?.[
+            String(letter).toLowerCase()
         ];
 
     if (direct) {
-        return direct;
+        return String(direct).trim();
     }
 
     const raw =
@@ -2654,10 +2657,73 @@ function getChoiceExplanation(
         letter ===
         question.correct_answer
     ) {
+        // Most legacy questions store the correct reasoning first,
+        // followed by "A/B/C/D is incorrect..." explanations.
+        // Stop before the first wrong-choice explanation so the
+        // correct choice never expands into the full answer key.
+        const wrongChoiceStart =
+            raw.search(
+                /(?:^|\s)(?:Choice\s+)?[A-D]\s+(?:is|was|would\s+be)\s+(?:incorrect|wrong)\b/i
+            );
+
         return (
-            paragraphs[0] ||
-            raw
+            wrongChoiceStart >= 0
+                ? raw.slice(
+                    0,
+                    wrongChoiceStart
+                )
+                : (
+                    paragraphs[0] ||
+                    raw
+                )
+        ).trim();
+    }
+
+    // Legacy explanations commonly use wording such as
+    // "B is incorrect because...". Isolate only that choice.
+    const wrongChoicePattern =
+        new RegExp(
+            "(?:^|\\s)(?:Choice\\s+)?" +
+            letter +
+            "\\s+(?:is|was|would\\s+be)\\s+(?:incorrect|wrong)\\b",
+            "i"
         );
+
+    const wrongMatch =
+        wrongChoicePattern.exec(raw);
+
+    if (wrongMatch) {
+        const startsWithSpace =
+            /^\s/.test(
+                wrongMatch[0]
+            );
+
+        const start =
+            wrongMatch.index +
+            (
+                startsWithSpace
+                    ? 1
+                    : 0
+            );
+
+        const rest =
+            raw.slice(start);
+
+        const nextWrong =
+            rest
+                .slice(1)
+                .search(
+                    /(?:^|\s)(?:Choice\s+)?[A-D]\s+(?:is|was|would\s+be)\s+(?:incorrect|wrong)\b/i
+                );
+
+        return (
+            nextWrong >= 0
+                ? rest.slice(
+                    0,
+                    nextWrong + 1
+                )
+                : rest
+        ).trim();
     }
 
     const markerPattern =
@@ -2721,9 +2787,10 @@ function getChoiceExplanation(
 
     return (
         sentenceMatch ||
-        raw
+        ""
     ).trim();
 }
+
 
 function createChoiceReason(
     question,
@@ -3093,7 +3160,6 @@ function selectAnswer(
 function renderAnswerFeedback(
     question
 ) {
-
     const checked =
         Boolean(
             checkedResults[
@@ -3106,7 +3172,6 @@ function renderAnswerFeedback(
             question.id
         ] || [];
 
-
     if (
         !answerFeedback ||
         !answerFeedbackTitle ||
@@ -3115,98 +3180,41 @@ function renderAnswerFeedback(
         return;
     }
 
-
-    if (
-        !checked &&
-        attemptedWrong.length === 0
-    ) {
-
-        answerFeedback.classList.add(
-            "hidden"
-        );
-
-        answerFeedback.classList.remove(
-            "correct",
-            "incorrect",
-            "neutral"
-        );
-
-        answerFeedbackTitle.textContent =
-            "";
-
-        answerFeedbackExplanation.textContent =
-            "";
-
-        if (checkAnswerButton) {
-            checkAnswerButton.disabled =
-                false;
-
-            checkAnswerButton.textContent =
-                "Check the selected answer";
-        }
-
-        return;
-    }
-
-
-    if (!checked) {
-
-        answerFeedback.classList.remove(
-            "hidden",
-            "correct",
-            "neutral"
-        );
-
-        answerFeedback.classList.add(
-            "incorrect"
-        );
-
-        answerFeedbackTitle.textContent =
-            "Try again";
-
-        answerFeedbackExplanation.textContent =
-            "That choice doesn’t work. Use the explanation under it, then choose another answer.";
-
-        if (checkAnswerButton) {
-            checkAnswerButton.disabled =
-                false;
-
-            checkAnswerButton.textContent =
-                "Check new answer";
-        }
-
-        return;
-    }
-
+    answerFeedback.classList.add(
+        "hidden"
+    );
 
     answerFeedback.classList.remove(
-        "hidden",
+        "correct",
         "incorrect",
         "neutral"
     );
 
-    answerFeedback.classList.add(
-        "correct"
-    );
-
-
     answerFeedbackTitle.textContent =
-        "Correct";
-
+        "";
 
     answerFeedbackExplanation.textContent =
-        "The reasoning is attached to the answer you chose.";
-
+        "";
 
     if (checkAnswerButton) {
-        checkAnswerButton.disabled =
-            true;
+        if (checked) {
+            checkAnswerButton.disabled =
+                true;
 
-        checkAnswerButton.textContent =
-            "Answer checked";
+            checkAnswerButton.textContent =
+                "Answer checked";
+        } else {
+            checkAnswerButton.disabled =
+                false;
+
+            checkAnswerButton.textContent =
+                attemptedWrong.length
+                    ? "Check new answer"
+                    : "Check the selected answer";
+        }
     }
-
 }
+
 
 async function checkAnswer() {
 
@@ -3605,21 +3613,15 @@ function updateNavigationButtons() {
     previousButton.disabled =
         currentQuestionIndex === 0;
 
+    nextButton.disabled =
+        currentQuestionIndex >=
+        questions.length - 1;
 
-    if (
-        currentQuestionIndex ===
-        questions.length - 1
-    ) {
+    previousButton.textContent =
+        "Previous";
 
-        nextButton.textContent =
-            "Finish";
-
-    } else {
-
-        nextButton.textContent =
-            "Next";
-
-    }
+    nextButton.textContent =
+        "Next";
 
 }
 
@@ -4256,7 +4258,11 @@ function showResultsReview() {
                 <div class="review-result-explanation">
                     <strong>Explanation:</strong><br>
                     ${escapeHtml(
-                        question.explanation
+                        getChoiceExplanation(
+                            question,
+                            question.correct_answer
+                        ) ||
+                        "No choice-specific explanation is available."
                     )}
                 </div>
 
@@ -4419,6 +4425,36 @@ if (checkAnswerButton) {
             event.preventDefault();
 
             checkAnswer();
+
+        }
+    );
+
+}
+
+
+if (previousButton) {
+
+    previousButton.addEventListener(
+        "click",
+        event => {
+
+            event.preventDefault();
+            goPrevious();
+
+        }
+    );
+
+}
+
+
+if (nextButton) {
+
+    nextButton.addEventListener(
+        "click",
+        event => {
+
+            event.preventDefault();
+            goNext();
 
         }
     );
