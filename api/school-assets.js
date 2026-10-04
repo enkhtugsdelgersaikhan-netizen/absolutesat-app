@@ -24,7 +24,7 @@ const titleOverrides = {
   "University of Nebraska–Lincoln": "University of Nebraska–Lincoln"
 };
 
-const badMedia = /(commons-logo|wikimedia|wikidata|wikipedia|wikisource|wiktionary|wikibooks|wikinews|wikiquote|wikiversity|mediawiki|icon|map|location|blank|question|checkmark|flag|football|basketball|athletics|sports|mascot|conference|wordmark.*athletic)/i;
+const badMedia = /(commons-logo|wikimedia|wikidata|wikipedia|wikisource|wiktionary|wikibooks|wikinews|wikiquote|wikiversity|mediawiki|icon|map|location|blank|question|checkmark|flag|football|basketball|athletics|sports|mascot|conference|medicine|medical|hospital|health system|healthcare|wordmark.*athletic)/i;
 const symbolTerms = /(logo|seal|crest|shield|coat of arms|wordmark|emblem|brand mark|monogram)/i;
 const campusTerms = /(campus|hall|library|chapel|quad|quadrangle|building|tower|center|centre|college|university|aerial|administration|main building|academic)/i;
 
