@@ -30,15 +30,15 @@
 <div class="vocab-status-buttons" role="group" aria-label="Vocabulary status filter">
 <button type="button" class="vocab-status-filter-button active" data-status="all">All</button>
 <button type="button" class="vocab-status-filter-button" data-status="review">Review</button>
-<button type="button" class="vocab-status-filter-button" data-status="unsolved">Unsolved</button>
-<button type="button" class="vocab-status-filter-button" data-status="solved">Solved</button>
+<button type="button" class="vocab-status-filter-button" data-status="unsolved">Learning</button>
+<button type="button" class="vocab-status-filter-button" data-status="solved">Know It</button>
 </div>
 </div>
 </div>
 
 <div class="vocab-progress">
-<div><strong id="vocab-progress-text">0 of 524 solved</strong><span id="vocab-count">524 words</span></div>
-<div class="vocab-status-summary" id="vocab-status-summary">0 review · 524 unsolved</div>
+<div><strong id="vocab-progress-text">0 of 524 known</strong><span id="vocab-count">524 words</span></div>
+<div class="vocab-status-summary" id="vocab-status-summary">0 review · 524 learning</div>
 <div class="progress-track"><div id="vocab-progress-bar"></div></div>
 </div>
 
@@ -47,7 +47,7 @@
 <article id="vocab-card" class="vocab-card">
 <div class="vocab-card-top"><span id="vocab-category-label">Academic</span></div>
 <div class="vocab-status-row">
-<span id="vocab-solved-status" class="vocab-status-chip unsolved">Unsolved</span>
+<span id="vocab-solved-status" class="vocab-status-chip unsolved">Learning</span>
 <span id="vocab-review-status" class="vocab-status-chip review hidden">Review</span>
 </div>
 <h2 id="vocab-word">Abate</h2>
@@ -78,7 +78,7 @@
 <script src="supabase-config.js"></script>
 <script src="auth-guard.js"></script>
 <script src="auth.js?v=subjects-1"></script>
-<script src="vocab.js?v=8"></script>
+<script src="vocab.js?v=9"></script>
 <script>
 const menuButton=document.querySelector(".mobile-menu-button"),navigation=document.querySelector(".navigation");
 if(menuButton&&navigation){menuButton.addEventListener("click",()=>{const isOpen=navigation.classList.toggle("mobile-open");menuButton.setAttribute("aria-expanded",isOpen?"true":"false");});}
