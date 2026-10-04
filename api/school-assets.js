@@ -175,7 +175,7 @@ async function fetchWikidataFileTitles(picks) {
       props: "claims"
     });
     for (const [qid, entity] of Object.entries(payload?.entities || {})) {
-      const symbolTitle = claimFile(entity, "P154") || claimFile(entity, "P94");
+      const symbolTitle = claimFile(entity, "P94") || claimFile(entity, "P154");
       const campusTitle = claimFile(entity, "P18");
       for (const schoolId of qidToSchoolIds.get(qid) || []) {
         byId.set(schoolId, { qid, symbolTitle, campusTitle });
@@ -260,6 +260,27 @@ function isCrispSymbol(asset) {
   if (!asset) return false;
   if (isVectorAsset(asset)) return true;
   return Math.max(Number(asset.width) || 0, Number(asset.height) || 0) >= 256;
+}
+
+function isGoodSymbolAsset(asset) {
+  if (!isCrispSymbol(asset)) return false;
+  const title = String(asset.title || "");
+  if (badMedia.test(title)) return false;
+  const width = Number(asset.width) || 0;
+  const height = Number(asset.height) || 0;
+  const ratio = width && height ? Math.max(width / height, height / width) : 1;
+  // Very wide text-only marks become tiny and fuzzy in the square symbol slot.
+  if (ratio > 4 && /wordmark|textlogo|horizontal/i.test(title)) return false;
+  return true;
+}
+
+function isGoodCampusAsset(asset) {
+  if (!asset || isVectorAsset(asset)) return false;
+  const title = String(asset.title || "");
+  if (badMedia.test(title) || symbolTerms.test(title)) return false;
+  const width = Number(asset.width) || 0;
+  const height = Number(asset.height) || 0;
+  return Math.max(width, height) >= 700;
 }
 
 function schoolTokenScore(title, schoolName) {
@@ -350,11 +371,11 @@ async function resolveCommonsFallbacks(picks, fileMap, wikidataById) {
     const wd = wikidataById?.get(pick.school.id) || {};
     const wikidataSymbol = wd.symbolTitle ? fileMap.get(wd.symbolTitle) : null;
     const pageSymbol = pick.symbolTitle ? fileMap.get(pick.symbolTitle) : null;
-    const currentSymbol = isCrispSymbol(wikidataSymbol) ? wikidataSymbol : pageSymbol;
+    const currentSymbol = isGoodSymbolAsset(wikidataSymbol) ? wikidataSymbol : pageSymbol;
     const wikidataCampus = wd.campusTitle ? fileMap.get(wd.campusTitle) : null;
     const currentCampus = wikidataCampus || (pick.campusTitle ? fileMap.get(pick.campusTitle) : null);
     const pageCampus = !pick.pageImageLooksLikeSymbol && pick.pageThumb;
-    return !isCrispSymbol(currentSymbol) || (!currentCampus && !pageCampus);
+    return !isGoodSymbolAsset(currentSymbol) || (!isGoodCampusAsset(currentCampus) && !pageCampus);
   });
 
   for (const group of chunks(work, 10)) {
@@ -362,12 +383,12 @@ async function resolveCommonsFallbacks(picks, fileMap, wikidataById) {
       const wd = wikidataById?.get(pick.school.id) || {};
       const wikidataSymbol = wd.symbolTitle ? fileMap.get(wd.symbolTitle) : null;
       const pageSymbol = pick.symbolTitle ? fileMap.get(pick.symbolTitle) : null;
-      const currentSymbol = isCrispSymbol(wikidataSymbol) ? wikidataSymbol : pageSymbol;
+      const currentSymbol = isGoodSymbolAsset(wikidataSymbol) ? wikidataSymbol : pageSymbol;
       const wikidataCampus = wd.campusTitle ? fileMap.get(wd.campusTitle) : null;
       const currentCampus = wikidataCampus || (pick.campusTitle ? fileMap.get(pick.campusTitle) : null);
       const pageCampus = !pick.pageImageLooksLikeSymbol && pick.pageThumb;
-      const needSymbol = !isCrispSymbol(currentSymbol);
-      const needCampus = !currentCampus && !pageCampus;
+      const needSymbol = !isGoodSymbolAsset(currentSymbol);
+      const needCampus = !isGoodCampusAsset(currentCampus) && !pageCampus;
       const [symbol, campuses] = await Promise.all([
         needSymbol ? searchCommonsSymbol(pick.school).catch(() => null) : Promise.resolve(null),
         needCampus ? searchCommonsCampus(pick.school).catch(() => []) : Promise.resolve([])
@@ -395,7 +416,7 @@ async function searchPageForSchool(school) {
   return best ? { school, page: best } : null;
 }
 
-async function buildAssets(schools) {
+async function buildAssets(schools, options = {}) {
   let pagePairs = await fetchPages(schools);
   const found = new Set(pagePairs.map((pair) => pair.school.id));
   const missing = schools.filter((school) => !found.has(school.id));
@@ -408,7 +429,7 @@ async function buildAssets(schools) {
   const picks = pagePairs.map(({ school, page }) => {
     const images = page.images || [];
     const pageImageName = page.pageimage ? "File:" + page.pageimage : null;
-    const pageImageLooksLikeSymbol = pageImageName ? symbolTerms.test(pageImageName) : false;
+    const pageImageLooksLikeSymbol = pageImageName ? (symbolTerms.test(pageImageName) || /\.svg$/i.test(pageImageName) || campusScore(pageImageName) <= 0) : false;
 
     const symbolTitle = pickFile(images, symbolScore, school.name);
     let campusTitle = pickFile(images, campusScore, school.name);
@@ -437,7 +458,9 @@ async function buildAssets(schools) {
     })
   );
 
-  const commonsFallbacks = await resolveCommonsFallbacks(picks, fileMap, wikidataById);
+  const commonsFallbacks = options.commonsFallbacks === false
+    ? new Map()
+    : await resolveCommonsFallbacks(picks, fileMap, wikidataById);
 
   const results = {};
   for (const pick of picks) {
@@ -445,20 +468,23 @@ async function buildAssets(schools) {
     const wikidataSymbol = wd.symbolTitle ? fileMap.get(wd.symbolTitle) : null;
     const pageSymbol = pick.symbolTitle ? fileMap.get(pick.symbolTitle) : null;
     const extra = commonsFallbacks.get(pick.school.id) || {};
-    const symbol = isCrispSymbol(wikidataSymbol)
+    const symbol = isGoodSymbolAsset(wikidataSymbol)
       ? wikidataSymbol
-      : isCrispSymbol(pageSymbol)
+      : isGoodSymbolAsset(pageSymbol)
         ? pageSymbol
-        : (extra.symbol || null);
+        : (isGoodSymbolAsset(extra.symbol) ? extra.symbol : null);
 
     const wikidataCampus = wd.campusTitle ? fileMap.get(wd.campusTitle) : null;
     const pageCampus = pick.campusTitle ? fileMap.get(pick.campusTitle) : null;
-    const pageCampusUrl = pageCampus?.url || (!pick.pageImageLooksLikeSymbol ? pick.pageThumb : null) || null;
-    const searchedCampuses = Array.isArray(extra.campuses) ? extra.campuses : [];
+    const validWikidataCampus = isGoodCampusAsset(wikidataCampus) ? wikidataCampus : null;
+    const validPageCampus = isGoodCampusAsset(pageCampus) ? pageCampus : null;
+    const pageThumbUrl = !pick.pageImageLooksLikeSymbol ? pick.pageThumb : null;
+    const pageCampusUrl = validPageCampus?.url || pageThumbUrl || null;
+    const searchedCampuses = Array.isArray(extra.campuses) ? extra.campuses.filter(isGoodCampusAsset) : [];
     const searchedPrimary = searchedCampuses[0] || null;
     const searchedSecondary = searchedCampuses[1] || null;
-    const campusUrl = wikidataCampus?.url || pageCampusUrl || searchedPrimary?.url || null;
-    const campusFallbackUrl = wikidataCampus?.url
+    const campusUrl = validWikidataCampus?.url || pageCampusUrl || searchedPrimary?.url || null;
+    const campusFallbackUrl = validWikidataCampus?.url
       ? (pageCampusUrl || searchedPrimary?.url || null)
       : pageCampusUrl
         ? (searchedPrimary?.url || null)
@@ -474,7 +500,7 @@ async function buildAssets(schools) {
       mark_is_vector: isVectorAsset(symbol),
       campus_url: campusUrl,
       campus_fallback_url: campusFallbackUrl,
-      campus_source: wikidataCampus?.source || pageCampus?.source || searchedPrimary?.source || ("https://en.wikipedia.org/wiki/" + encodeURIComponent(String(pick.page.title || "").replace(/ /g, "_")))
+      campus_source: validWikidataCampus?.source || validPageCampus?.source || searchedPrimary?.source || ("https://en.wikipedia.org/wiki/" + encodeURIComponent(String(pick.page.title || "").replace(/ /g, "_")))
     };
   }
 
@@ -521,7 +547,8 @@ module.exports = async function handler(req, res) {
       schools.map((school) => ({
         id: String(school.id || ""),
         name: String(school.name || "")
-      })).filter((school) => school.id && school.name)
+      })).filter((school) => school.id && school.name),
+      { commonsFallbacks: String(req.body?.mode || "full") !== "fast" }
     );
 
     res.setHeader("Cache-Control", "public, s-maxage=604800, stale-while-revalidate=2592000");
