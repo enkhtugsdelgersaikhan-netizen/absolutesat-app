@@ -1562,7 +1562,7 @@ async function loadQuestionById(
 
         const response =
             await fetch(
-                "/question-bank.json?v=9",
+                "/question-bank.json?v=10",
                 {
                     cache: "no-store"
                 }
