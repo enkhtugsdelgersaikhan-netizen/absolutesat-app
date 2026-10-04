@@ -315,7 +315,7 @@ function renderQuestionTable(
             .map(
                 header =>
                     "<th scope=\"col\">" +
-                    escapeHtml(
+                    renderInlineFormatting(
                         header
                     ) +
                     "</th>"
@@ -344,7 +344,7 @@ function renderQuestionTable(
     const caption =
         table.caption
             ? "<caption>" +
-                escapeHtml(
+                renderInlineFormatting(
                     table.caption
                 ) +
               "</caption>"
