@@ -29,7 +29,7 @@
       "skill": "Transitions",
       "difficulty": "Medium",
       "goal": "Choose the transition that most precisely signals a qualification or contrast.",
-      "passage": "An audio laboratory in Lausanne recovers sound from fragile wax cylinders by photographing microscopic variations in their grooves rather than placing a stylus on the recordings. _____ optical scanning is not the only method that can retrieve audio without conventional playback. A laboratory in Kyoto, for example, has reconstructed damaged recordings by measuring groove geometry with confocal microscopy.",
+      "passage": "An audio laboratory in Lausanne recovers sound from fragile wax cylinders by photographing microscopic variations in their grooves rather than placing a stylus on the recordings. _____ that photographic groove-imaging approach is not the only noncontact method that can retrieve audio without conventional playback. A laboratory in Kyoto, for example, has reconstructed damaged recordings by measuring groove geometry with confocal microscopy.",
       "question": "Which choice completes the text with the most logical transition?",
       "choices": {
         "A": "Likewise,",
@@ -38,7 +38,7 @@
         "D": "In other words,"
       },
       "correctAnswer": "B",
-      "explanation": "The first sentence describes one noncontact method for recovering audio. The next sentence qualifies that information by stating that this method is **not the only one**, and the final sentence introduces an alternative. **“However,”** correctly signals this qualification. A is incorrect because “Likewise” would suggest that the second sentence simply presents something similar rather than limiting the implication of the first. C is incorrect because the existence of another method is not a result of the Lausanne laboratory’s technique. D is incorrect because the second sentence does not restate the first in different words."
+      "explanation": "The first sentence describes one noncontact method for recovering audio. The next sentence qualifies that information by stating that **this particular approach is not the only one**, and the final sentence introduces an alternative. **“However,”** correctly signals this qualification. A is incorrect because “Likewise” would suggest that the second sentence simply presents something similar rather than limiting the implication of the first. C is incorrect because the existence of another method is not a result of the Lausanne laboratory’s technique. D is incorrect because the second sentence does not restate the first in different words."
     },
     {
       "id": "rw-words-context-supplement-003",
@@ -149,7 +149,7 @@
       "skill": "Boundaries",
       "difficulty": "Medium",
       "goal": "Choose the punctuation that correctly separates two complete sentences.",
-      "passage": "A quartz reference element designated *K-17*, fabricated in 1964, remained the optical calibration standard for every unit in the first production run of the _____ Establishing one physical artifact as the traceable standard for an entire instrument series is crucial, according to metrologists, when minute manufacturing differences must be distinguished from genuine spectral variation.",
+      "passage": "A quartz reference element designated *K-17*, fabricated in 1964, remained the optical calibration standard for every unit in the first production run of the _____ one physical artifact as the traceable standard for an entire instrument series is crucial, according to metrologists, when minute manufacturing differences must be distinguished from genuine spectral variation.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "choices": {
         "A": "*Helios* spectrometer, establishing",
@@ -158,7 +158,7 @@
         "D": "*Helios* spectrometer establishing"
       },
       "correctAnswer": "C",
-      "explanation": "The words before the blank form a complete sentence once **“*Helios* spectrometer”** is supplied. The material after the blank begins another complete sentence whose subject is the gerund phrase **“Establishing one physical artifact as the traceable standard for an entire instrument series”** and whose predicate is **“is crucial.”** A period correctly separates the two sentences. A creates a comma splice between complete grammatical units. B incorrectly coordinates “establishing” with “remained,” distorting the intended relationship. D provides no punctuation where the first sentence must end."
+      "explanation": "With choice C inserted, the first sentence ends after **“*Helios* spectrometer.”** The next sentence begins **“Establishing one physical artifact as the traceable standard for an entire instrument series is crucial.”** The gerund phrase beginning with “Establishing” functions as the subject of that second sentence, so a period correctly separates the two complete sentences. A incorrectly joins the sentences with a comma. B incorrectly coordinates “establishing” with “remained,” distorting the intended relationship. D provides no punctuation where the first sentence must end."
     },
     {
       "id": "rw-command-evidence-planets-007",
