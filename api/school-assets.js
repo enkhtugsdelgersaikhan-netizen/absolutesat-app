@@ -13,7 +13,15 @@ const titleOverrides = {
   "Stony Brook University, SUNY": "Stony Brook University",
   "CUNY, Baruch College": "Baruch College",
   "University of Oklahoma, Norman": "University of Oklahoma",
-  "University of Minnesota, Twin Cities": "University of Minnesota Twin Cities"
+  "University of Minnesota, Twin Cities": "University of Minnesota Twin Cities",
+  "University of Tennessee, Knoxville": "University of Tennessee",
+  "University at Buffalo, SUNY": "University at Buffalo",
+  "University at Albany, SUNY": "University at Albany, SUNY",
+  "University of Massachusetts Amherst": "University of Massachusetts Amherst",
+  "The Cooper Union": "Cooper Union",
+  "Franklin W. Olin College of Engineering": "Olin College",
+  "Pennsylvania State University": "Pennsylvania State University",
+  "University of Nebraska–Lincoln": "University of Nebraska–Lincoln"
 };
 
 const badMedia = /(commons-logo|wikimedia|wikidata|wikipedia|wikisource|wiktionary|wikibooks|wikinews|wikiquote|wikiversity|mediawiki|icon|map|location|blank|question|checkmark|flag|football|basketball|athletics|sports|mascot|conference|wordmark.*athletic)/i;
