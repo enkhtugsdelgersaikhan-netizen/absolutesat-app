@@ -1734,6 +1734,60 @@ function renderCurrentQuestion() {
             currentQuestionIndex + 1
         }`;
 
+    const isMathQuestion =
+        question.section === "Math";
+
+    const backToBank =
+        document.getElementById(
+            "back-to-question-bank"
+        );
+
+    if (backToBank) {
+        backToBank.href =
+            isMathQuestion
+                ? "/math-question-bank"
+                : "/reading-question-bank";
+    }
+
+    const mathNav =
+        document.getElementById(
+            "question-nav-math"
+        );
+
+    const readingNav =
+        document.getElementById(
+            "question-nav-reading"
+        );
+
+    if (mathNav && readingNav) {
+        mathNav.classList.toggle(
+            "active",
+            isMathQuestion
+        );
+        readingNav.classList.toggle(
+            "active",
+            !isMathQuestion
+        );
+
+        if (isMathQuestion) {
+            mathNav.setAttribute(
+                "aria-current",
+                "page"
+            );
+            readingNav.removeAttribute(
+                "aria-current"
+            );
+        } else {
+            readingNav.setAttribute(
+                "aria-current",
+                "page"
+            );
+            mathNav.removeAttribute(
+                "aria-current"
+            );
+        }
+    }
+
 
     questionText.innerHTML =
         renderInlineFormatting(
