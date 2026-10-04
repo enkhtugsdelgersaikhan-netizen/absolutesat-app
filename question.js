@@ -367,7 +367,7 @@ function renderQuestionTable(
 }
 
 
-function renderQuestionGraph(
+function renderQuestionHorizontalBarGraph(
     graph
 ) {
     if (
@@ -690,6 +690,448 @@ function renderQuestionGraph(
             '</div>' +
         '</figure>'
     );
+}
+
+
+
+function renderQuestionLineGraph(
+    graph
+) {
+    if (
+        !graph ||
+        !Array.isArray(graph.categories) ||
+        !Array.isArray(graph.series) ||
+        graph.categories.length < 2 ||
+        graph.series.length === 0
+    ) {
+        return "";
+    }
+
+    const width = 760;
+    const left = 62;
+    const right = 28;
+    const top = 64;
+    const bottom = 58;
+    const height = 390;
+    const plotWidth = width - left - right;
+    const plotHeight = height - top - bottom;
+
+    const allValues =
+        graph.series
+            .flatMap(item => item.values || [])
+            .map(Number)
+            .filter(Number.isFinite);
+
+    const configuredMin = Number(graph.min);
+    const configuredMax = Number(graph.max);
+
+    const minValue =
+        Number.isFinite(configuredMin)
+            ? configuredMin
+            : Math.min(0, ...allValues);
+
+    const maxValue =
+        Number.isFinite(configuredMax) &&
+        configuredMax > minValue
+            ? configuredMax
+            : Math.max(minValue + 1, ...allValues);
+
+    const tickStep =
+        Number(graph.tickStep) > 0
+            ? Number(graph.tickStep)
+            : (maxValue - minValue) / 4;
+
+    const scaleX =
+        index =>
+            left +
+            (
+                index /
+                (graph.categories.length - 1)
+            ) *
+            plotWidth;
+
+    const scaleY =
+        value =>
+            top +
+            (
+                (maxValue - value) /
+                (maxValue - minValue)
+            ) *
+            plotHeight;
+
+    const ticks = [];
+    for (
+        let value = minValue;
+        value <= maxValue + 0.0001;
+        value += tickStep
+    ) {
+        ticks.push(
+            Math.min(value, maxValue)
+        );
+        if (ticks.length > 20) break;
+    }
+
+    if (
+        Math.abs(
+            ticks[ticks.length - 1] -
+            maxValue
+        ) > 0.0001
+    ) {
+        ticks.push(maxValue);
+    }
+
+    const formatValue =
+        value => {
+            const n = Number(value);
+            const shown =
+                Number.isInteger(n)
+                    ? String(n)
+                    : n.toFixed(1);
+            return shown + (graph.valueSuffix || "");
+        };
+
+    const yGrid =
+        ticks.map(value => {
+            const y = scaleY(value);
+            return (
+                '<line class="question-graph-grid-line" x1="' +
+                left +
+                '" x2="' +
+                (left + plotWidth) +
+                '" y1="' +
+                y +
+                '" y2="' +
+                y +
+                '"></line>' +
+                '<text class="question-graph-tick" x="' +
+                (left - 9) +
+                '" y="' +
+                (y + 3) +
+                '" text-anchor="end">' +
+                escapeHtml(formatValue(value)) +
+                '</text>'
+            );
+        }).join("");
+
+    const xLabels =
+        graph.categories.map((category,index) => (
+            '<text class="question-graph-tick" x="' +
+            scaleX(index) +
+            '" y="' +
+            (height - bottom + 22) +
+            '" text-anchor="middle">' +
+            escapeHtml(category) +
+            '</text>'
+        )).join("");
+
+    const seriesSvg =
+        graph.series.map((item,seriesIndex) => {
+            const points =
+                (item.values || [])
+                    .map((value,index) => {
+                        const n=Number(value);
+                        if(!Number.isFinite(n)) return null;
+                        return [
+                            scaleX(index),
+                            scaleY(n),
+                            n
+                        ];
+                    })
+                    .filter(Boolean);
+
+            if(points.length===0) return "";
+
+            const polyline =
+                points.map(point =>
+                    point[0] + "," + point[1]
+                ).join(" ");
+
+            const pointSvg =
+                points.map(point => (
+                    '<circle class="question-graph-point graph-series-' +
+                    seriesIndex +
+                    '" cx="' +
+                    point[0] +
+                    '" cy="' +
+                    point[1] +
+                    '" r="4.2"></circle>'
+                )).join("");
+
+            return (
+                '<polyline class="question-graph-line graph-series-' +
+                seriesIndex +
+                '" points="' +
+                polyline +
+                '"></polyline>' +
+                pointSvg
+            );
+        }).join("");
+
+    const legend =
+        graph.series.map((item,index) => (
+            '<g>' +
+                '<line class="question-graph-line graph-series-' +
+                index +
+                '" x1="' +
+                (left + index * 150) +
+                '" x2="' +
+                (left + 20 + index * 150) +
+                '" y1="24" y2="24"></line>' +
+                '<circle class="question-graph-point graph-series-' +
+                index +
+                '" cx="' +
+                (left + 10 + index * 150) +
+                '" cy="24" r="3.5"></circle>' +
+                '<text class="question-graph-legend-text" x="' +
+                (left + 27 + index * 150) +
+                '" y="28">' +
+                escapeHtml(item.name || ("Series " + (index + 1))) +
+                '</text>' +
+            '</g>'
+        )).join("");
+
+    const caption =
+        graph.caption
+            ? '<figcaption class="question-graph-caption">' +
+                renderInlineFormatting(graph.caption) +
+              '</figcaption>'
+            : "";
+
+    return (
+        '<figure class="question-graph-wrap">' +
+            caption +
+            '<div class="question-graph-scroll">' +
+                '<svg class="question-graph" viewBox="0 0 ' +
+                width +
+                " " +
+                height +
+                '" role="img" aria-label="' +
+                escapeHtml(graph.caption || "Question data graph") +
+                '">' +
+                    legend +
+                    yGrid +
+                    '<line class="question-graph-axis-line" x1="' +
+                    left +
+                    '" x2="' +
+                    left +
+                    '" y1="' +
+                    top +
+                    '" y2="' +
+                    (top + plotHeight) +
+                    '"></line>' +
+                    '<line class="question-graph-axis-line" x1="' +
+                    left +
+                    '" x2="' +
+                    (left + plotWidth) +
+                    '" y1="' +
+                    (top + plotHeight) +
+                    '" y2="' +
+                    (top + plotHeight) +
+                    '"></line>' +
+                    xLabels +
+                    seriesSvg +
+                '</svg>' +
+            '</div>' +
+        '</figure>'
+    );
+}
+
+
+function renderQuestionVerticalBarGraph(
+    graph
+) {
+    if (
+        !graph ||
+        !Array.isArray(graph.categories) ||
+        !Array.isArray(graph.series) ||
+        graph.categories.length === 0 ||
+        graph.series.length === 0
+    ) {
+        return "";
+    }
+
+    const width = 760;
+    const left = 64;
+    const right = 28;
+    const top = 54;
+    const bottom = 64;
+    const height = 390;
+    const plotWidth = width - left - right;
+    const plotHeight = height - top - bottom;
+
+    const values =
+        graph.series
+            .flatMap(item => item.values || [])
+            .map(Number)
+            .filter(Number.isFinite);
+
+    const maxValue =
+        Number(graph.max) > 0
+            ? Number(graph.max)
+            : Math.max(1, ...values);
+
+    const tickStep =
+        Number(graph.tickStep) > 0
+            ? Number(graph.tickStep)
+            : maxValue / 4;
+
+    const ticks=[];
+    for(let value=0;value<=maxValue+0.0001;value+=tickStep){
+        ticks.push(Math.min(value,maxValue));
+        if(ticks.length>20) break;
+    }
+    if(Math.abs(ticks[ticks.length-1]-maxValue)>0.0001){
+        ticks.push(maxValue);
+    }
+
+    const y =
+        value =>
+            top +
+            (1 - value / maxValue) *
+            plotHeight;
+
+    const grid =
+        ticks.map(value => (
+            '<line class="question-graph-grid-line" x1="' +
+            left +
+            '" x2="' +
+            (left + plotWidth) +
+            '" y1="' +
+            y(value) +
+            '" y2="' +
+            y(value) +
+            '"></line>' +
+            '<text class="question-graph-tick" x="' +
+            (left - 9) +
+            '" y="' +
+            (y(value) + 3) +
+            '" text-anchor="end">' +
+            escapeHtml(String(value)) +
+            '</text>'
+        )).join("");
+
+    const groupWidth =
+        plotWidth / graph.categories.length;
+
+    const barCount =
+        Math.max(1, graph.series.length);
+
+    const barWidth =
+        Math.min(
+            58,
+            groupWidth * 0.62 / barCount
+        );
+
+    const bars =
+        graph.categories.map((category,catIndex) => {
+            const center =
+                left +
+                groupWidth * catIndex +
+                groupWidth / 2;
+
+            const seriesBars =
+                graph.series.map((item,seriesIndex) => {
+                    const value=Number(item.values?.[catIndex]);
+                    if(!Number.isFinite(value)) return "";
+                    const barX =
+                        center -
+                        (barWidth * barCount) / 2 +
+                        barWidth * seriesIndex;
+                    const barY=y(value);
+                    const barHeight =
+                        top + plotHeight - barY;
+
+                    return (
+                        '<rect class="question-graph-bar graph-series-' +
+                        seriesIndex +
+                        '" x="' +
+                        barX +
+                        '" y="' +
+                        barY +
+                        '" width="' +
+                        (barWidth - 3) +
+                        '" height="' +
+                        barHeight +
+                        '" rx="4"></rect>' +
+                        '<text class="question-graph-value" x="' +
+                        (barX + (barWidth - 3)/2) +
+                        '" y="' +
+                        (barY - 7) +
+                        '" text-anchor="middle">' +
+                        escapeHtml(String(value)) +
+                        '</text>'
+                    );
+                }).join("");
+
+            return (
+                seriesBars +
+                '<text class="question-graph-category" x="' +
+                center +
+                '" y="' +
+                (height - bottom + 25) +
+                '" text-anchor="middle">' +
+                escapeHtml(category) +
+                '</text>'
+            );
+        }).join("");
+
+    const caption =
+        graph.caption
+            ? '<figcaption class="question-graph-caption">' +
+                renderInlineFormatting(graph.caption) +
+              '</figcaption>'
+            : "";
+
+    return (
+        '<figure class="question-graph-wrap">' +
+            caption +
+            '<div class="question-graph-scroll">' +
+                '<svg class="question-graph" viewBox="0 0 ' +
+                width +
+                " " +
+                height +
+                '" role="img" aria-label="' +
+                escapeHtml(graph.caption || "Question data graph") +
+                '">' +
+                    grid +
+                    '<line class="question-graph-axis-line" x1="' +
+                    left +
+                    '" x2="' +
+                    left +
+                    '" y1="' +
+                    top +
+                    '" y2="' +
+                    (top + plotHeight) +
+                    '"></line>' +
+                    '<line class="question-graph-axis-line" x1="' +
+                    left +
+                    '" x2="' +
+                    (left + plotWidth) +
+                    '" y1="' +
+                    (top + plotHeight) +
+                    '" y2="' +
+                    (top + plotHeight) +
+                    '"></line>' +
+                    bars +
+                '</svg>' +
+            '</div>' +
+        '</figure>'
+    );
+}
+
+
+function renderQuestionGraph(
+    graph
+) {
+    if (graph?.type === "line") {
+        return renderQuestionLineGraph(graph);
+    }
+
+    if (graph?.type === "vertical-bar") {
+        return renderQuestionVerticalBarGraph(graph);
+    }
+
+    return renderQuestionHorizontalBarGraph(graph);
 }
 
 
