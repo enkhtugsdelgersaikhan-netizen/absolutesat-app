@@ -264,6 +264,1187 @@
       },
       "correctAnswer": "B",
       "explanation": "The passage contrasts treating personal preference as sufficient grounds for belief with the role of education, which directs people toward **standards of evidence, consistency, and examination** that claims can satisfy publicly. Thus the central idea is that education helps establish shared criteria for judging whether claims are justified. A goes beyond the passage: the author contrasts preference with disciplined judgment but does not claim that unwillingness to reconsider beliefs is the primary cause of disagreement. C focuses on the journal, which serves mainly as a setup for the author’s broader point about education. D is too narrow and extreme; the passage endorses evidence and examination but does not say that education must rely exclusively on scientific experiments or that every disagreement can be resolved that way."
+    },
+    {
+      "id": "rw-20261005-s1-q01",
+      "groupId": "rw-20261005-s1-q01",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "Easy",
+      "passage": "While researching a topic, a student has taken the following notes:\n\n- The Pritzker Architecture Prize recognizes architects whose built work has made significant contributions to humanity and the built environment.\n- Australian architect Glenn Murcutt received the prize in 2002.\n- Japanese architect Shigeru Ban received the prize in 2014.\n- Murcutt is particularly associated with environmentally responsive residential architecture.\n- Ban is known for experimenting with unconventional structural materials, including paper tubes.",
+      "question": "The student wants to emphasize the order in which Glenn Murcutt and Shigeru Ban received the Pritzker Architecture Prize. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "choices": {
+        "A": "Shigeru Ban, known for experimenting with unconventional structural materials, received the Pritzker Architecture Prize in 2014.",
+        "B": "The Pritzker Architecture Prize has recognized both Glenn Murcutt, whose work often responds closely to climate, and Shigeru Ban, who has employed paper tubes structurally.",
+        "C": "Glenn Murcutt received the Pritzker Architecture Prize in 2002; twelve years later, in 2014, Shigeru Ban received it.",
+        "D": "In 2002, Glenn Murcutt received the Pritzker Architecture Prize for a body of work that includes environmentally responsive residences."
+      },
+      "correctAnswer": "C",
+      "explanation": "Choice C most directly accomplishes the stated goal because it explicitly establishes the chronological relationship between the two architects: Murcutt received the prize first, in 2002, and Ban received it twelve years later, in 2014.\n\nA gives Ban’s year but does not establish when Murcutt received the prize, so it cannot emphasize the order between them. B mentions both architects but omits both dates and therefore does not communicate chronology. D gives Murcutt’s year but not Ban’s, so it likewise fails to establish the sequence."
+    },
+    {
+      "id": "rw-20261005-s1-q02",
+      "groupId": "rw-20261005-s1-q02",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "Medium",
+      "passage": "The completion of the Suez Canal in 1869 fundamentally altered commercial navigation between Europe and _____ vessels traveling between the Mediterranean and the Indian Ocean no longer needed to round the southern tip of Africa.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "Asia,",
+        "B": "Asia and",
+        "C": "Asia:",
+        "D": "Asia, consequently"
+      },
+      "correctAnswer": "C",
+      "explanation": "The material before the blank is an independent clause, and the material after the blank is also an independent clause. More importantly, the second clause explains **how** the canal altered navigation: ships no longer had to travel around southern Africa. A colon can correctly follow a complete clause when what follows explains or elaborates on it.\n\nA creates a comma splice by joining two independent clauses with only a comma. B lacks the comma required before the coordinating conjunction “and” when it joins two independent clauses. D also creates a comma splice; a transitional adverb such as “consequently” cannot by itself join two independent clauses with a comma."
+    },
+    {
+      "id": "rw-20261005-s1-q03",
+      "groupId": "rw-20261005-s1-q03",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Text Structure and Purpose",
+      "difficulty": "Medium",
+      "passage": "Plants do not always rely exclusively on their own tissues for defense. Some species respond to herbivore damage by recruiting other organisms that attack the herbivores. <u>When spider mites feed on lima bean leaves, for example, the damaged plants release airborne compounds that attract predatory mites.</u> Certain acacias employ another form of such recruitment by providing nectar and shelter to ants that attack browsing animals.",
+      "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+      "choices": {
+        "A": "It presents a specific instance of the broader defensive strategy described immediately before it.",
+        "B": "It establishes that chemical defenses are generally more effective than physical defenses in plants.",
+        "C": "It contrasts the defensive behavior of lima beans with the fundamentally different behavior of acacias.",
+        "D": "It explains why spider mites are more damaging to agricultural plants than predatory mites are."
+      },
+      "correctAnswer": "A",
+      "explanation": "The sentence immediately before the underlined one makes a general claim: some plants defend themselves by **recruiting other organisms** to attack herbivores. The underlined sentence then supplies a concrete example of that strategy, describing lima bean plants attracting predatory mites after being damaged by spider mites.\n\nB is incorrect because the passage never compares the effectiveness of chemical and physical defenses. C is incorrect because the acacia example is presented as another form of the same broad strategy, not as a fundamental contrast. D is incorrect because the sentence describes interactions among the organisms but does not compare how damaging the two mite species are."
+    },
+    {
+      "id": "rw-20261005-s1-q04",
+      "groupId": "rw-20261005-s1-q04",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "Easy",
+      "passage": "While researching a topic, a student has taken the following notes:\n\n- Akira Kurosawa was a Japanese film director and screenwriter.\n- Film scholar Donald Richie described Kurosawa’s visual style as combining precise composition with highly dynamic movement.\n- Kurosawa’s film *Rashomon* was released in 1950.\n- The film presents conflicting accounts of the same violent incident.\n- Actor Toshiro Mifune appears in the film.",
+      "question": "The student wants to introduce *Rashomon* to an audience already familiar with Akira Kurosawa. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "choices": {
+        "A": "Film scholar Donald Richie described Akira Kurosawa’s visual style as combining precise composition with dynamic movement.",
+        "B": "Released in 1950, Kurosawa’s *Rashomon* presents several conflicting accounts of the same violent incident.",
+        "C": "Toshiro Mifune, an actor who worked with Japanese director Akira Kurosawa, appears in *Rashomon*.",
+        "D": "Akira Kurosawa was a Japanese director and screenwriter whose visual style has received extensive critical attention."
+      },
+      "correctAnswer": "B",
+      "explanation": "The audience already knows who Kurosawa is, so the response should focus on **introducing the film**, not reintroducing the director. B identifies *Rashomon* as Kurosawa’s work, provides its release year, and describes a central feature of the film, making it an effective introduction.\n\nA discusses Kurosawa’s general style but does not introduce *Rashomon*. C supplies a cast detail, but that detail is less useful for introducing the film than its date and defining narrative feature. D provides background information about Kurosawa himself, which is unnecessary for an audience already familiar with him."
+    },
+    {
+      "id": "rw-20261005-s1-q05",
+      "groupId": "rw-20261005-s1-q05",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "Easy",
+      "passage": "While researching a topic, a student has taken the following notes:\n\n- Botanical collectors have helped document plant species from regions that were poorly represented in European and North American herbaria.\n- Jeanne Baret participated in Louis Antoine de Bougainville’s circumnavigation from 1766 to 1769 and collected botanical specimens during the voyage.\n- Baret’s collecting work took place in the eighteenth century.\n- Ynes Mexia began conducting major botanical collecting expeditions in 1925.\n- Mexia continued collecting extensively during the 1930s.",
+      "question": "The student wants to emphasize a difference between the periods in which Jeanne Baret and Ynes Mexia conducted their botanical fieldwork. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "choices": {
+        "A": "Both Jeanne Baret and Ynes Mexia contributed to the documentation of plant species through extensive field collecting.",
+        "B": "Ynes Mexia began major botanical expeditions in 1925 and continued her collecting work during the following decade.",
+        "C": "Jeanne Baret collected botanical specimens while participating in a circumnavigation from 1766 to 1769.",
+        "D": "Jeanne Baret’s major field collecting occurred more than a century before Ynes Mexia began her expeditions in 1925."
+      },
+      "correctAnswer": "D",
+      "explanation": "D directly emphasizes the requested **difference in time period**. Baret’s fieldwork occurred in the eighteenth century, whereas Mexia’s major expeditions began in the twentieth century, more than a century later.\n\nA stresses a similarity rather than a difference. B discusses only Mexia and therefore cannot compare the two collectors. C discusses only Baret and likewise fails to establish how the timing of her work differed from Mexia’s."
+    },
+    {
+      "id": "rw-20261005-s1-q06",
+      "groupId": "rw-20261005-s1-q06",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "Medium",
+      "passage": "During the early decades of radio astronomy, the Jodrell Bank Observatory in England became one of the field’s most consequential observing centers. _____ its large steerable radio telescope enabled astronomers to track rapidly changing celestial targets that less maneuverable instruments could not follow as effectively.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "Likewise,",
+        "B": "Nevertheless,",
+        "C": "Consequently,",
+        "D": "Indeed,"
+      },
+      "correctAnswer": "D",
+      "explanation": "The first sentence makes a claim about Jodrell Bank’s importance. The second provides specific evidence supporting that claim by identifying a capability of its telescope. **“Indeed,”** appropriately signals that the second statement confirms or substantiates the first.\n\nA is incorrect because “Likewise” normally introduces a similarity with another previously discussed case, but no comparable observatory has been introduced. B signals contrast, which is absent. C suggests that the telescope’s capability occurred as a result of the observatory becoming consequential, reversing the logical relationship; the capability helps explain the observatory’s importance."
+    },
+    {
+      "id": "rw-20261005-s1-q07",
+      "groupId": "rw-20261005-s1-q07",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Form, Structure, and Sense",
+      "difficulty": "Medium",
+      "passage": "To examine both the laboriously engraved plates of eighteenth-century natural-history books and the rapidly produced lithographs that became common in the nineteenth century _____ how changes in printing technology altered the circulation of scientific images.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "tracing",
+        "B": "are to trace",
+        "C": "to trace",
+        "D": "is to trace"
+      },
+      "correctAnswer": "D",
+      "explanation": "The infinitive phrase beginning with **“To examine”** functions as the singular subject of the sentence. It therefore requires the singular verb **“is.”** The construction “To examine ... is to trace ...” correctly establishes an equivalence between undertaking the comparison and tracing a historical development.\n\nA leaves the sentence without a finite main verb. B incorrectly uses the plural verb “are” with the singular infinitive phrase functioning as the subject. C also leaves the sentence without a finite main verb because both “To examine” and “to trace” are infinitive phrases."
+    },
+    {
+      "id": "rw-20261005-s1-q08",
+      "groupId": "rw-20261005-s1-q08",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "Easy",
+      "passage": "Modern commercial banana production depends heavily on genetically similar Cavendish plants. For growers, this genetic uniformity represents a substantial _____ Because individual plants often share susceptibility to the same pathogens, a disease capable of infecting one plantation may also threaten plantations thousands of kilometers away.",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "choices": {
+        "A": "discrepancy",
+        "B": "redundancy",
+        "C": "vulnerability",
+        "D": "solvency"
+      },
+      "correctAnswer": "C",
+      "explanation": "A **vulnerability** is a condition that makes something susceptible to harm. The following sentence explains exactly such a weakness: because the plants are genetically similar, a pathogen capable of infecting one population may threaten many others as well.\n\nA “discrepancy” is an inconsistency or difference, which does not fit the risk being described. B “redundancy” refers to duplication or excess capacity; genetic similarity creates the opposite of protective biological redundancy. D “solvency” concerns the ability to meet financial obligations and is unrelated to susceptibility to disease."
+    },
+    {
+      "id": "rw-20261005-s1-q09",
+      "groupId": "rw-20261005-s1-q09",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "Medium",
+      "passage": "A medieval manuscript may appear to contain only the text visible on its present pages, yet its parchment can preserve a far less obvious record. In many palimpsests, an earlier work was scraped or washed away so that the material could be reused; faint remnants of the first writing can nevertheless remain. Researchers using multispectral imaging photograph pages under numerous wavelengths, sometimes recovering words that ordinary illumination reveals only imperfectly or not at all. Such analyses have allowed scholars to reconstruct parts of the **hidden textual history** of manuscripts that otherwise seem to preserve only a single work.",
+      "question": "In context, the text’s characterization of a manuscript’s textual history as “hidden” most clearly conveys which idea?",
+      "choices": {
+        "A": "Earlier writing may remain undetectable without deliberate methods of observation designed to reveal it.",
+        "B": "Medieval scribes commonly encoded controversial messages so that only specially trained readers could decipher them.",
+        "C": "Most erased texts survive intact beneath later writing but are intentionally withheld from public view by manuscript owners.",
+        "D": "Earlier writing becomes visible primarily after prolonged exposure to ordinary daylight rather than through specialized examination."
+      },
+      "correctAnswer": "A",
+      "explanation": "The passage explains that traces of earlier writing may be extremely faint or invisible under ordinary illumination but can be recovered through **multispectral imaging**. Thus “hidden” means that the earlier textual record is not readily apparent and may require systematic, specialized examination to detect.\n\nB is incorrect because the passage discusses erased and overwritten texts, not deliberately encoded secret messages. C overstates both the preservation and intentional concealment of the earlier writing; neither claim appears in the text. D directly contradicts the passage, which emphasizes specialized imaging across multiple wavelengths rather than ordinary daylight."
+    },
+    {
+      "id": "rw-20261005-s1-q10",
+      "groupId": "rw-20261005-s1-q10",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "Medium",
+      "passage": "*Customs of the Upper Valley* is an 1891 autobiographical narrative by Emilia Torres, an educator and community organizer. In the work, Torres directly addresses the reader while explaining why members of her community use a particular kinship term broadly, writing, _____",
+      "question": "Which quotation from *Customs of the Upper Valley* most effectively illustrates the claim?",
+      "choices": {
+        "A": "“At harvest we carried the first baskets to the oldest household, and only afterward did each family fill its own storeroom.”",
+        "B": "“You may picture the road, reader, as a pale ribbon above the river, though after three days of rain it was hardly a road at all.”",
+        "C": "“We left San Aurelio before sunrise and reached the northern ridge by evening, where my aunt had already prepared a room for us.”",
+        "D": "“You will understand, reader, why we called even an unrelated elder *tía* or *tío* when you know that the words marked the duty of respect as much as they marked family descent.”"
+      },
+      "correctAnswer": "D",
+      "explanation": "The claim has **two requirements**: the narrator must directly address the reader, and the quotation must explain a community custom. D does both. The phrase **“You will understand, reader”** directly addresses the audience, while the remainder explains why the kinship terms *tía* and *tío* are applied even to unrelated elders.\n\nA describes a community custom, but the narrator does not address the reader directly. B directly addresses the reader but merely helps the reader visualize a road; it does not explain the stated custom. C is straightforward narration and does neither: it neither addresses the reader nor explains a customary use of kinship terminology. Screenshot 2026-10-05 032442-me…"
+    },
+    {
+      "id": "rw-20261005-s2-q01",
+      "groupId": "rw-20261005-s2-q01",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "Medium",
+      "passage": "A student is writing a research paper on the history of avalanche mitigation in the European Alps, situating the establishment of Switzerland’s Vallée de la Sionne experimental site in 1997 within a broader historical context. The student claims that some principles used in modern avalanche-control systems in Alpine regions originated long before the experimental site was established.",
+      "question": "Which quotation from a historian best supports the student’s claim?",
+      "choices": {
+        "A": "“Following the expansion of Alpine tourism after the Second World War, governments invested heavily in avalanche forecasting networks, snowpack monitoring, and controlled explosive release systems.”",
+        "B": "“By the early eighteenth century, communities near Andermatt were constructing stone deflection walls and maintaining protective forest belts, measures based on principles of flow diversion and energy dissipation that remain important in avalanche engineering today.”",
+        "C": "“Remote-triggering systems developed near the end of the twentieth century allow explosives to be deployed above unstable snowfields without requiring workers to enter the most dangerous terrain.”",
+        "D": "“Modern avalanche infrastructure is economically significant because roads, railways, ski areas, and mountain settlements often depend on reliable protection from destructive snow movement.”"
+      },
+      "correctAnswer": "B",
+      "explanation": "Choice B directly supports both parts of the claim. It identifies avalanche-mitigation practices used in the **early eighteenth century**, long before the 1997 experimental site, and explicitly states that principles underlying those practices **remain important in modern avalanche engineering**. It therefore establishes a historical lineage between much earlier methods and present-day techniques.\n\nA discusses the expansion of modern avalanche management after World War II but does not trace any modern principle to a much earlier period. C describes a relatively recent technological development and therefore provides no evidence of a long historical lineage. D establishes the contemporary importance of avalanche protection but says nothing about when the principles behind such protection originated."
+    },
+    {
+      "id": "rw-20261005-s2-q02",
+      "groupId": "rw-20261005-s2-q02",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "Medium",
+      "passage": "On August 7, 1991, the oceanographic vessel *Caldera* departed Reykjavík, beginning Expedition _____ nine days and fourteen hours, the expedition concluded when the vessel entered port at Tromsø.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "Pelagia-7, lasting",
+        "B": "Pelagia-7 lasting",
+        "C": "Pelagia-7. Lasting",
+        "D": "Pelagia-7, it lasted"
+      },
+      "correctAnswer": "C",
+      "explanation": "The first portion is a complete sentence: “On August 7, 1991, the oceanographic vessel *Caldera* departed Reykjavík, beginning Expedition Pelagia-7.” The next sentence begins with the participial phrase **“Lasting nine days and fourteen hours,”** which correctly modifies “the expedition.” A period therefore appropriately separates the two sentences.\n\nA incorrectly leaves the first independent clause connected by a comma to another independent clause beginning with “the expedition concluded,” producing a comma splice. B has the same underlying problem: although “lasting nine days and fourteen hours” can modify “Expedition Pelagia-7,” the sentence eventually reaches the independent clause “the expedition concluded” without appropriate separation from the earlier independent clause. D also creates an improper connection between independent clauses and awkwardly inserts “it lasted” before yet another independent clause."
+    },
+    {
+      "id": "rw-20261005-s2-q03",
+      "groupId": "rw-20261005-s2-q03",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "Easy",
+      "passage": "Community-owned solar networks can allow households to sell excess electricity directly to nearby users rather than routing every transaction through a conventional utility. Lower transaction fees, combined with the customer loyalty that can develop when residents buy power generated within their own neighborhoods, can _____ the long-term economic prospects of small local energy cooperatives.",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "choices": {
+        "A": "construe",
+        "B": "circumscribe",
+        "C": "bolster",
+        "D": "obviate"
+      },
+      "correctAnswer": "C",
+      "explanation": "To **bolster** something is to strengthen or support it. Both conditions identified in the passage—lower transaction fees and increased customer loyalty—could improve the economic prospects of small energy cooperatives, so “bolster” precisely expresses the intended effect.\n\nA, “construe,” means to interpret something in a particular way; transaction fees and customer loyalty do not interpret economic prospects. B, “circumscribe,” means to limit or restrict, which conflicts with the positive effects described. D, “obviate,” means to remove the need for something, but the sentence does not suggest that the cooperatives’ economic prospects cease to be relevant."
+    },
+    {
+      "id": "rw-20261005-s2-q04",
+      "groupId": "rw-20261005-s2-q04",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "Medium",
+      "passage": "Some scholars of technology argue that although specialized knowledge is indispensable when governments develop cybersecurity standards, technical expertise cannot be the only consideration. Decisions about encryption, digital identity, and infrastructure protection can affect privacy, commerce, elections, and access to public services. Cybersecurity policy is therefore too _____ to be left exclusively to engineers.",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "choices": {
+        "A": "tractable",
+        "B": "reputable",
+        "C": "consequential",
+        "D": "arcane"
+      },
+      "correctAnswer": "C",
+      "explanation": "The passage emphasizes that cybersecurity decisions can have broad effects on many areas of society. Calling cybersecurity policy **“consequential”** means that it has significant effects or implications, which explains why decisions about it should involve people beyond technical specialists.\n\nA, “tractable,” means manageable or readily dealt with and does not explain why broader participation is necessary. B, “reputable,” refers to being respected or having a good reputation, which is irrelevant to the argument. D, “arcane,” means understood by relatively few people; if anything, describing the field as arcane could support leaving it to specialists rather than expanding participation."
+    },
+    {
+      "id": "rw-20261005-s2-q05",
+      "groupId": "rw-20261005-s2-q05",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "Easy",
+      "passage": "In 1903, Marie Curie became the first woman to receive a Nobel Prize when she shared the Nobel Prize in Physics. _____ other women received Nobel Prizes in scientific fields, including Dorothy Crowfoot Hodgkin in Chemistry in 1964 and Donna Strickland in Physics in 2018.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "Previously,",
+        "B": "Namely,",
+        "C": "Subsequently,",
+        "D": "For example,"
+      },
+      "correctAnswer": "C",
+      "explanation": "The first sentence establishes an event in 1903, and the second identifies comparable events that occurred in 1964 and 2018. **“Subsequently,”** meaning afterward, accurately signals this chronological progression.\n\nA is incorrect because the later prizes were awarded after, not before, Curie’s 1903 prize. B is used to specify or rename something already stated; the second sentence instead introduces later events. D would signal that the later recipients are examples of a preceding general statement, but the first sentence is specifically about Curie rather than a general claim about women receiving Nobel Prizes."
+    },
+    {
+      "id": "rw-20261005-s2-q06",
+      "groupId": "rw-20261005-s2-q06",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Form, Structure, and Sense",
+      "difficulty": "Medium",
+      "passage": "With exceptionally low artificial light levels and broad views of the southern sky, NamibRand is one African _____ astrophotographers frequently recommend to travelers hoping to observe faint celestial objects.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "reserve, which",
+        "B": "reserve in which",
+        "C": "reserve, that",
+        "D": "reserve that"
+      },
+      "correctAnswer": "D",
+      "explanation": "The clause **“that astrophotographers frequently recommend to travelers”** restricts the meaning of “reserve” by identifying NamibRand as one reserve belonging to a particular group: reserves astrophotographers frequently recommend. Because the clause is essential to the structure and “reserve” functions as the direct object of “recommend,” **“reserve that”** is correct.\n\nA incorrectly sets off the relative clause with a comma, making it nonessential even though the construction “one African reserve” requires the following clause to identify the relevant category. B changes the grammatical relationship: “in which” would require something to occur *within* the reserve, but the sentence says astrophotographers recommend the reserve itself. C is incorrect because restrictive clauses introduced by “that” are not preceded by a comma."
+    },
+    {
+      "id": "rw-20261005-s2-q07",
+      "groupId": "rw-20261005-s2-q07",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "Medium",
+      "passage": "Although increasing the resolution of an Earth-observation satellite’s camera can improve the detail of each image, that improvement has only a modest effect on the expense of a scheduled orbital pass. Most of the cost arises from operating the spacecraft and receiving its data whether the pass yields hundreds of useful images or only a few; accordingly, satellite operators are _____ to schedule passes expected to produce very little usable imagery.",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "choices": {
+        "A": "exhorted",
+        "B": "entitled",
+        "C": "predisposed",
+        "D": "disinclined"
+      },
+      "correctAnswer": "D",
+      "explanation": "The passage explains that most of the cost of an orbital pass is incurred regardless of how many useful images are collected. Operators therefore have little economic incentive to schedule passes that are expected to yield very few usable images. **“Disinclined,”** meaning reluctant or unwilling, precisely expresses that idea.\n\nA, “exhorted,” means strongly urged, and the sentence provides no one who is urging the operators to schedule such passes. B, “entitled,” refers to having a right or claim and does not describe willingness. C, “predisposed,” means inclined in advance toward doing something, which is the opposite of what the economic logic suggests."
+    },
+    {
+      "id": "rw-20261005-s2-q08",
+      "groupId": "rw-20261005-s2-q08",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "Easy",
+      "passage": "In a 2018 study, planetary geologists used orbital spectroscopy to characterize the mineral composition of exposed rock within a large impact basin on Mars. _____ the researchers calculated the relative abundance of three mineral groups—pyroxenes, olivine-rich materials, and feldspathic minerals—within selected portions of the basin floor.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "Nevertheless,",
+        "B": "More specifically,",
+        "C": "Consequently,",
+        "D": "Instead,"
+      },
+      "correctAnswer": "B",
+      "explanation": "The first sentence states the study’s broad objective: characterizing the mineral composition of exposed rock. The second sentence narrows that objective by identifying the particular quantities the researchers measured—the relative abundances of three mineral groups. **“More specifically,”** correctly signals that the second statement provides a more detailed version of the first.\n\nA signals a contrast or concession, but the two statements are consistent. C indicates a cause-and-effect relationship, whereas the second sentence specifies the first rather than describing its consequence. D suggests that the researchers did something in place of the activity described in the first sentence, but calculating mineral abundances is part of that activity."
+    },
+    {
+      "id": "rw-20261005-s2-q09",
+      "groupId": "rw-20261005-s2-q09",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "Hard",
+      "passage": "The Fog Garden installations in Lima and Antofagasta are notable examples of architecture designed to collect atmospheric _____ former using elevated mesh screens to condense droplets from coastal fog and the latter integrating moisture-catching surfaces into a public pavilion.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "moisture. The",
+        "B": "moisture the",
+        "C": "moisture, as the",
+        "D": "moisture, the"
+      },
+      "correctAnswer": "D",
+      "explanation": "The words **“the former using ... and the latter integrating ...”** form an absolute construction that provides additional information about the two installations introduced earlier. A comma correctly separates this supplementary construction from the main clause: “The Fog Garden installations ... are notable examples of architecture designed to collect atmospheric moisture.”\n\nA is incorrect because a period would leave “The former using ... and the latter integrating ...” as a sentence fragment; the phrase contains participles rather than finite verbs. B lacks the punctuation needed to separate the main clause from the supplementary absolute construction. C introduces “as,” which would require a different grammatical structure and creates an illogical relationship between the main clause and the descriptive phrases."
+    },
+    {
+      "id": "rw-20261005-s2-q10",
+      "groupId": "rw-20261005-s2-q10",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Central Ideas and Details",
+      "difficulty": "Medium",
+      "passage": "In a 2012 experiment on auditory judgment, researchers played participants two short electronically generated musical phrases and asked them to select the one that sounded more rhythmically complex. The researchers then appeared to replay each participant’s chosen phrase but, on some trials, covertly substituted the phrase that the participant had rejected. Many participants did not detect the substitution and proceeded to explain which musical features had supposedly led them to choose the phrase they were hearing. Later studies reproduced the general effect using choices involving typefaces and consumer packaging.",
+      "question": "Based on the text, why was the covert substitution an important part of the experiment?",
+      "choices": {
+        "A": "It allowed the researchers to determine whether participants who initially regarded the two musical phrases as equally complex would eventually develop a stronger preference.",
+        "B": "It enabled the researchers to compare the cognitive processes involved in judging musical complexity with those involved in evaluating typefaces and product packaging.",
+        "C": "It helped the researchers test whether participants would rationalize an outcome they believed matched their own choice even when that outcome actually contradicted the choice they had made.",
+        "D": "It allowed the researchers to measure whether persuasive explanations from the researchers could induce participants to reverse an explicitly stated judgment."
+      },
+      "correctAnswer": "C",
+      "explanation": "The covert substitution created a discrepancy between the participants’ **actual choice** and the option they were led to believe they had chosen. Because many participants accepted the substituted phrase and then supplied reasons for supposedly choosing it, the researchers could investigate whether people would construct explanations for an outcome that appeared consistent with their intentions even though it actually contradicted those intentions.\n\nA is incorrect because the experiment was not designed primarily to identify participants who found the two phrases equally complex. B refers to later replications, but the substitution in the original experiment was not necessary for comparing music with other domains. D is incorrect because the researchers did not present persuasive counterarguments or openly ask participants to reverse their judgments; the crucial manipulation was that participants were **unaware** that their original selection had been replaced. Screenshot 2026-10-05 032640"
+    },
+    {
+      "id": "rw-20261005-s3-q01",
+      "groupId": "rw-20261005-s3-q01",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "Easy",
+      "passage": "A 1978 exhibition at the Museum of Modern Art introduced many American visitors to the landmark _____ *Migrant Mother* by Dorothea Lange. The image had already become one of the most widely reproduced photographs of the twentieth century.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "photograph:",
+        "B": "photograph,",
+        "C": "photograph",
+        "D": "photograph;"
+      },
+      "correctAnswer": "C",
+      "explanation": "The title *Migrant Mother* is essential to identifying which “landmark photograph” the sentence means. Because the title functions as a restrictive identifier rather than as additional, nonessential information, **no punctuation** should separate “photograph” from the title.\n\nA is incorrect because a colon would unnecessarily separate a noun from the title that identifies it. B is incorrect because the comma would suggest that *Migrant Mother* is nonessential supplementary information, even though the sentence relies on the title to specify the photograph. D is incorrect because a semicolon normally separates independent clauses, and neither “photograph” nor the title constitutes an independent clause."
+    },
+    {
+      "id": "rw-20261005-s3-q02",
+      "groupId": "rw-20261005-s3-q02",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "Medium",
+      "passage": "While researching a topic, a student has taken the following notes:\n\n- Many nineteenth-century harbor walls deteriorated because repeated contact with seawater weakened the mortar binding their stones.\n- Some Roman harbor structures have remained intact underwater for nearly two millennia.\n- Geochemist Marie Jackson found that Roman builders combined volcanic ash with lime in marine concrete.\n- Seawater entering the concrete promoted the growth of interlocking mineral crystals.\n- These crystals strengthened portions of the material instead of simply eroding them.\n- Researchers have experimented with volcanic-ash mixtures in modern marine concrete to reproduce this long-term strengthening process.",
+      "question": "The student wants to explain how a characteristic of Roman marine concrete was used to address durability problems in modern coastal construction. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "choices": {
+        "A": "Researchers studying Roman harbors found that some ancient concrete structures had remained underwater for nearly two thousand years despite continuous exposure to seawater.",
+        "B": "Because Roman builders mixed volcanic ash with lime, mineral crystals could develop when seawater penetrated the concrete, a process researchers have sought to reproduce in modern marine concrete to improve durability.",
+        "C": "Geochemist Marie Jackson determined that volcanic ash was present in Roman marine concrete and that nineteenth-century harbor walls often deteriorated after prolonged contact with seawater.",
+        "D": "Roman concrete could form interlocking mineral crystals in seawater, whereas many nineteenth-century harbor walls were constructed with mortar that weakened in marine environments."
+      },
+      "correctAnswer": "B",
+      "explanation": "B explains both the **relevant characteristic** of the Roman material and **how engineers applied it to the modern problem**. It identifies the volcanic-ash mixture, explains that seawater promotes strengthening mineral crystals, and states that researchers have attempted to reproduce this process in modern marine concrete.\n\nA establishes the durability of Roman concrete but does not explain the mechanism or its modern use. C mentions the ancient material and the modern problem but never connects them through the strengthening process. D accurately contrasts the materials, but it stops short of explaining that researchers intentionally reproduced the Roman mechanism in modern construction."
+    },
+    {
+      "id": "rw-20261005-s3-q03",
+      "groupId": "rw-20261005-s3-q03",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Inferences",
+      "difficulty": "Medium",
+      "passage": "Between 2008 and 2016, architect Alejandro Aravena’s firm developed several “incremental housing” projects in which residents initially received structurally complete but deliberately unfinished homes. The projects belong to a broader approach to social housing whose designers sometimes leave substantial portions of a dwelling for residents to construct or modify themselves, rather than determining every feature in advance.",
+      "question": "Based on the text, what can most reasonably be inferred about some of the homes in Aravena’s incremental housing projects?",
+      "choices": {
+        "A": "Their unfinished portions may have differed substantially from one another after residents modified them.",
+        "B": "They were probably less expensive to maintain than all conventionally completed social housing.",
+        "C": "Their residents were required to follow identical architectural plans when completing unfinished spaces.",
+        "D": "They likely became examples of the earliest social housing ever constructed in the countries where they appeared."
+      },
+      "correctAnswer": "A",
+      "explanation": "The passage explains that incremental housing deliberately leaves portions of a dwelling for **residents themselves to construct or modify** instead of having designers determine every feature. It is therefore reasonable to infer that different residents could complete those portions differently, producing substantial variation among homes.\n\nB is unsupported because the passage does not compare maintenance costs. C contradicts the idea that residents are given room to determine or modify features themselves. D is also unsupported: nothing in the text indicates that these projects were the first social housing projects in their countries."
+    },
+    {
+      "id": "rw-20261005-s3-q04",
+      "groupId": "rw-20261005-s3-q04",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Inferences",
+      "difficulty": "Medium",
+      "passage": "Meteorologists have long documented that cities are generally warmer than nearby rural areas, a phenomenon known as the urban heat-island effect. A 2017 study of temperature sensors mounted throughout central Singapore found especially large nighttime differences between densely built districts and surrounding vegetated areas, whereas a 2019 study using sensors in sparsely developed portions of northern Finland detected only small urban-rural differences. Across many studies, heat-island effects tend to be stronger in densely constructed environments than in lightly developed ones, raising the possibility that _____",
+      "question": "Which choice most logically completes the text?",
+      "choices": {
+        "A": "differences in urban development intensity may account for at least part of the contrast between the Singapore and Finland findings.",
+        "B": "the Singapore researchers probably used temperature sensors that were substantially more accurate than those used in Finland.",
+        "C": "the number of sensors in the Finland study was necessarily too small for the researchers to detect an urban heat-island effect.",
+        "D": "urban heat islands occur only in tropical climates and are largely absent from high-latitude regions."
+      },
+      "correctAnswer": "A",
+      "explanation": "The passage establishes a general pattern: **densely built environments tend to show stronger heat-island effects than lightly developed environments**. Because the Singapore study examined a densely constructed setting while the Finland study examined sparsely developed areas, the difference in development intensity could plausibly explain at least part of the difference between their findings.\n\nB is unsupported because the text provides no information about differences in sensor accuracy. C makes an unwarranted claim about sample size; the passage never states that too few sensors were used. D is too absolute and contradicts the passage’s reasoning: the text points to development intensity as a possible explanation, not to a categorical absence of the effect at high latitudes."
+    },
+    {
+      "id": "rw-20261005-s3-q05",
+      "groupId": "rw-20261005-s3-q05",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "Easy",
+      "passage": "While researching a topic, a student has taken the following notes:\n\n- *Endurance* was the expedition ship used by Antarctic explorer Ernest Shackleton during the Imperial Trans-Antarctic Expedition.\n- The ship sank in the Weddell Sea in 1915.\n- A search expedition located the wreck of *Endurance* in 2022.\n- HMS *Erebus* was one of two ships in Sir John Franklin’s Arctic expedition.\n- HMS *Erebus* disappeared in the nineteenth century.\n- Searchers located the wreck of HMS *Erebus* in 2014.\n- Both discoveries resolved long-standing questions about the locations of historically significant shipwrecks.",
+      "question": "The student wants to specify when the wreck of *Endurance* was located. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "choices": {
+        "A": "The wreck of *Endurance*, which had sunk in the Weddell Sea in 1915, was located in 2022.",
+        "B": "Searchers located HMS *Erebus*, another historically significant polar expedition ship, in 2014.",
+        "C": "Both *Endurance* and HMS *Erebus* were the subjects of long-running searches before their wrecks were found.",
+        "D": "*Endurance* sank during Ernest Shackleton’s Imperial Trans-Antarctic Expedition."
+      },
+      "correctAnswer": "A",
+      "explanation": "The goal is specifically to state **when the wreck of *Endurance* was located**. A directly names *Endurance* and gives the relevant discovery year, 2022.\n\nB supplies a discovery date, but it is the date for HMS *Erebus*, not *Endurance*. C mentions both discoveries without specifying the year in which *Endurance* was found. D gives the historical context of the ship’s sinking but does not state when the wreck was located."
+    },
+    {
+      "id": "rw-20261005-s3-q06",
+      "groupId": "rw-20261005-s3-q06",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "Medium",
+      "passage": "*The Cedar Valley* is a 1912 autobiographical novel by Eleanor Vane. Its narrator, Miriam Hale, has spent nearly her entire childhood in an isolated mountain settlement and describes herself as deeply attached to the cedar forests surrounding it, writing, _____",
+      "question": "Which quotation from *The Cedar Valley* most effectively illustrates the claim?",
+      "choices": {
+        "A": "“Beyond the mill road the cedars begin, their trunks crowding together until the afternoon seems to end an hour earlier beneath them.”",
+        "B": "“A dozen farms lie scattered below the eastern ridge, and in winter their roofs are sometimes the only marks by which a traveler can distinguish one field from another.”",
+        "C": "“The oldest cedars are the ones I seek first when I return; when I find a fresh stump among them, I feel as though some chamber of my own house has been torn away.”",
+        "D": "“My father came to the valley before I was born, and my mother often said that no sensible family would have remained after the first hard winter.”"
+      },
+      "correctAnswer": "C",
+      "explanation": "The claim is that Miriam feels a **deep emotional attachment** to the surrounding cedar forests. C most directly demonstrates that attachment: she actively seeks out the oldest trees and compares the loss of one to damage done to her own home. That figurative comparison communicates personal grief rather than mere familiarity with the landscape.\n\nA vividly describes the forest but does not reveal Miriam’s emotional response to it. B describes the settlement’s geography rather than the narrator’s feelings about the forest. D provides family history and an attitude attributed to Miriam’s mother, not evidence of Miriam’s own attachment to the cedars."
+    },
+    {
+      "id": "rw-20261005-s3-q07",
+      "groupId": "rw-20261005-s3-q07",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "Easy",
+      "passage": "Whatever reservations reviewers expressed when mathematician Benoit Mandelbrot’s *The Fractal Geometry of Nature* and architect Christopher Alexander’s *A Pattern Language* first appeared, both works are now discussed quite _____ in many fields beyond those in which they originated. Recent scholars have described the former as “conceptually transformative” and the latter as “enduringly generative.”",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "choices": {
+        "A": "provisionally",
+        "B": "favorably",
+        "C": "skeptically",
+        "D": "indifferently"
+      },
+      "correctAnswer": "B",
+      "explanation": "The descriptions **“conceptually transformative”** and **“enduringly generative”** are strongly positive evaluations. They therefore support the statement that the two works are now discussed **favorably**.\n\nA, “provisionally,” would suggest that scholars’ judgments are tentative, but the quotations emphasize value rather than uncertainty. C, “skeptically,” conflicts directly with the praise expressed in the quotations. D, “indifferently,” implies little interest or enthusiasm, which is also inconsistent with the positive assessments."
+    },
+    {
+      "id": "rw-20261005-s3-q08",
+      "groupId": "rw-20261005-s3-q08",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "Easy",
+      "passage": "While researching a topic, a student has taken the following notes:\n\n- EEPROM is a type of nonvolatile computer memory.\n- EEPROM retains stored information when electrical power is removed.\n- Flash memory is also a type of nonvolatile computer memory.\n- Flash memory retains stored information when electrical power is removed.\n- EEPROM can generally erase and rewrite smaller units of data than flash memory can.\n- Flash memory is widely used in solid-state drives and memory cards.",
+      "question": "The student wants to state one way in which EEPROM and flash memory are the same. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "choices": {
+        "A": "Both EEPROM and flash memory retain stored information even when electrical power is removed.",
+        "B": "Both EEPROM and flash memory generally erase and rewrite data only in large blocks.",
+        "C": "EEPROM and flash memory are both used primarily in solid-state drives and removable memory cards.",
+        "D": "EEPROM and flash memory lose their stored information whenever their power supply is interrupted."
+      },
+      "correctAnswer": "A",
+      "explanation": "The notes explicitly state the same characteristic for both technologies: each is **nonvolatile**, meaning that it retains stored information when power is removed. A accurately expresses that shared feature.\n\nB is incorrect because the notes distinguish the technologies by stating that EEPROM can generally erase and rewrite smaller units than flash memory. C attributes a specific common use of flash memory to both technologies even though the notes do not say that about EEPROM. D states the opposite of the shared characteristic given in the notes."
+    },
+    {
+      "id": "rw-20261005-s3-q09",
+      "groupId": "rw-20261005-s3-q09",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "Easy",
+      "passage": "A volcanic eruption near Akrotiri on the island of Thera buried Bronze Age buildings beneath thick deposits of ash, sealing paintings, ceramics, and architectural remains away from later disturbance. Because of this unusual preservation, _____ and her research team were able to analyze pigments whose microscopic layering remained largely intact.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "conservation scientist, Eleni Markou,",
+        "B": "conservation scientist Eleni Markou,",
+        "C": "conservation scientist, Eleni Markou",
+        "D": "conservation scientist Eleni Markou"
+      },
+      "correctAnswer": "D",
+      "explanation": "The professional description **“conservation scientist”** is directly followed by the name that identifies which scientist the sentence means. No punctuation is needed between the title and the name. The sentence therefore correctly reads “conservation scientist Eleni Markou and her research team....”\n\nA incorrectly inserts commas around the name, treating “Eleni Markou” as a nonessential interruption even though the name identifies the scientist. B incorrectly places a comma after the name, separating the compound subject “Eleni Markou and her research team.” C has the same first error as A and additionally leaves an unnecessary comma before the name."
+    },
+    {
+      "id": "rw-20261005-s3-q10",
+      "groupId": "rw-20261005-s3-q10",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Form, Structure, and Sense",
+      "difficulty": "Medium",
+      "passage": "Astronomer Annie Jump Cannon played a major role in the development of modern stellar classification. Working at the Harvard College Observatory around the turn of the twentieth century, she examined photographic spectra of hundreds of thousands of stars, identifying recurring spectral patterns and _____ the classification sequence that became the basis of the system astronomers still use today.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "had standardised",
+        "B": "standardises",
+        "C": "standardising",
+        "D": "would standardise"
+      },
+      "correctAnswer": "C",
+      "explanation": "The sentence contains two coordinated participial phrases describing what Cannon did while examining stellar spectra: **“identifying recurring spectral patterns”** and **“standardising the classification sequence.”** The parallel **-ing** forms correctly modify the subject “she.”\n\nA uses the past perfect and disrupts the grammatical parallelism with “identifying.” B shifts incorrectly into the present tense. D uses “would standardise,” which suggests a later action viewed from a past point rather than a second action occurring in parallel with “identifying.” Screenshot 2026-10-05 033918"
+    },
+    {
+      "id": "rw-20261005-s4-q01",
+      "groupId": "rw-20261005-s4-q01",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "Easy",
+      "passage": "Seismologists rely on several specialized instruments to characterize earthquake activity. _____ broadband seismometers record ground motion across a wide range of frequencies, while strainmeters detect extremely small deformations in Earth’s crust.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "Consequently,",
+        "B": "Thereafter,",
+        "C": "For example,",
+        "D": "Nevertheless,"
+      },
+      "correctAnswer": "C",
+      "explanation": "The first sentence makes a broad statement about the variety of instruments seismologists use. The second sentence supplies two specific examples—broadband seismometers and strainmeters—and explains what each measures. **“For example,”** therefore most precisely signals the relationship between the general statement and the specific illustrations.\n\nA is incorrect because the use of the two instruments is not presented as a consequence of the first sentence. B indicates chronological sequence, but no sequence of events is being described. D signals a contrast or concession, whereas the second sentence supports and illustrates the first rather than opposing it."
+    },
+    {
+      "id": "rw-20261005-s4-q02",
+      "groupId": "rw-20261005-s4-q02",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "Easy",
+      "passage": "During the 1950s, many furniture manufacturers embraced molded plastics and other newly available synthetic materials. Finnish designer Ilmari Tapiovaara, by contrast, _____ established woodworking practices; several of his chairs continued to rely on bent or laminated wood assembled with comparatively traditional joinery.",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "choices": {
+        "A": "repudiated",
+        "B": "continued to favor",
+        "C": "attributed",
+        "D": "reprimanded"
+      },
+      "correctAnswer": "B",
+      "explanation": "The contrast establishes that although many manufacturers adopted synthetic materials, Tapiovaara continued using established woodworking methods. **“Continued to favor”** precisely conveys that he maintained a preference for those traditional practices.\n\nA, “repudiated,” means rejected and would imply the opposite of what the examples show. C, “attributed,” means regarded something as being caused by or belonging to something else and does not fit the sentence grammatically or logically. D, “reprimanded,” means formally criticized or scolded, which has no sensible relationship to woodworking practices."
+    },
+    {
+      "id": "rw-20261005-s4-q03",
+      "groupId": "rw-20261005-s4-q03",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Central Ideas and Details",
+      "difficulty": "Medium",
+      "passage": "Architect Francis Kéré has received considerable attention for buildings that combine contemporary engineering with construction practices rooted in Burkina Faso, including the use of locally sourced materials and climate-responsive forms. Such synthesis is not unique to Kéré. In Bangladesh, architect Marina Tabassum has likewise incorporated regional materials and building traditions into projects shaped by contemporary architectural concerns.",
+      "question": "Which choice best states the main idea of the text?",
+      "choices": {
+        "A": "Contemporary architects in different regions are integrating local building traditions with modern architectural approaches.",
+        "B": "Architects who use locally available materials generally complete projects more cheaply than architects who use imported materials.",
+        "C": "Kéré’s work has encouraged architects outside Burkina Faso to reproduce West African construction techniques.",
+        "D": "Contemporary architecture is gradually abandoning engineered materials in favor of traditional construction methods."
+      },
+      "correctAnswer": "A",
+      "explanation": "The passage first describes Kéré’s integration of contemporary engineering with regional building traditions and then presents Tabassum as another architect who similarly combines local practices with contemporary design. The broader point is therefore that **multiple contemporary architects are integrating traditional or regional building methods with modern architectural approaches**.\n\nB is unsupported because the passage says nothing about comparative project costs. C wrongly proposes a causal relationship between Kéré’s work and other architects’ practices. D overstates the passage: the architects are combining traditional and contemporary approaches, not rejecting engineered or modern methods altogether."
+    },
+    {
+      "id": "rw-20261005-s4-q04",
+      "groupId": "rw-20261005-s4-q04",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Text Structure and Purpose",
+      "difficulty": "Hard",
+      "passage": "Previous materials-science studies have reported that, across structurally diverse steel alloys, average grain size is negatively associated with yield strength. Yet M. Okafor and colleagues, in a 2022 investigation of specimens cut from a single nickel-steel alloy, detected no statistically significant association between the two variables. The researchers noted that earlier studies included alloys produced under widely varying compositions and heat treatments, whereas their own specimens had nearly identical compositions and had been annealed within a narrow temperature interval, producing only a limited range of grain sizes and strengths.",
+      "question": "Which choice best states the main purpose of the text?",
+      "choices": {
+        "A": "To argue that restricting a study to one alloy proves that the previously observed relationship between grain size and yield strength does not exist",
+        "B": "To explain why a relationship detected across varied materials may not have appeared in a study whose samples exhibited relatively little variation",
+        "C": "To demonstrate that annealing temperature determines yield strength more strongly than grain size does in all nickel-steel alloys",
+        "D": "To establish that correlations between grain size and yield strength depend primarily on whether an alloy contains nickel"
+      },
+      "correctAnswer": "B",
+      "explanation": "The passage contrasts earlier studies that sampled **widely varied alloys and processing conditions** with a later study whose specimens were comparatively homogeneous. Because the later study contained only a narrow range of grain sizes and strengths, the passage suggests that this restricted variation may explain why the previously observed association was not detected. B accurately captures that explanatory purpose.\n\nA is incorrect because the passage does not claim that the earlier relationship is invalid; instead, it offers a reason the later study might not have detected it. C goes beyond the evidence by claiming that annealing temperature is universally more important than grain size. D similarly introduces a specific causal role for nickel that the passage never establishes."
+    },
+    {
+      "id": "rw-20261005-s4-q05",
+      "groupId": "rw-20261005-s4-q05",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "Medium",
+      "passage": "A student is writing an essay about the expansion of rapid-transit systems, arguing that increasing rail capacity may help cities respond to an anticipated widespread change in travel behavior.",
+      "question": "Which quotation from a publication by a transportation researcher would most effectively support the student’s claim?",
+      "choices": {
+        "A": "“Rail passengers consistently rate frequency and reliability among the most important characteristics of a satisfactory transit system.”",
+        "B": "“As metropolitan populations become denser and private vehicle ownership becomes less practical in many urban cores, the proportion of residents relying on public transportation for routine trips is projected to rise substantially.”",
+        "C": "“The energy consumption of an electric train depends partly on vehicle mass, acceleration patterns, passenger load, and the efficiency of regenerative braking.”",
+        "D": "“Transit agencies frequently redesign station entrances after observing pedestrian congestion during major sporting and cultural events.”"
+      },
+      "correctAnswer": "B",
+      "explanation": "The student’s claim concerns a **future widespread change in behavior**—greater use of public transportation—and argues that expanding rail capacity could help cities respond to that change. B directly supports the claim by predicting that a growing share of urban residents will rely on public transit for routine travel.\n\nA concerns qualities riders value but does not establish that transit use will increase. C provides technical information about train energy consumption rather than changes in travel behavior. D describes responses to temporary crowding at particular events, not an expected broad shift in how the public travels."
+    },
+    {
+      "id": "rw-20261005-s4-q06",
+      "groupId": "rw-20261005-s4-q06",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Text Structure and Purpose",
+      "difficulty": "Medium",
+      "passage": "The following text is adapted from John Dewey’s 1916 nonfiction book *Democracy and Education*.\n\nEducation is sometimes treated chiefly as preparation for conditions that lie somewhere in the future, as though the present experience of the learner were valuable only for what it might later produce. <u>Such a view turns the learner’s present life into little more than a means to an end that has not yet arrived.</u> But growth is not merely preparation for some later state; growth itself is a continuing process, and education must therefore find significance in present experience rather than continually postponing it.",
+      "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+      "choices": {
+        "A": "It identifies a limitation of an educational approach that Dewey criticizes.",
+        "B": "It introduces a disagreement among educators that Dewey regards as impossible to resolve.",
+        "C": "It describes a weakness in learners that Dewey believes formal education must correct.",
+        "D": "It provides evidence that future-oriented education is more effective than education focused on present experience."
+      },
+      "correctAnswer": "A",
+      "explanation": "The first sentence introduces an approach to education that treats present learning mainly as preparation for the future. The underlined sentence sharpens Dewey’s criticism by explaining a problematic consequence of that approach: it reduces present experience to a mere instrument for some later objective. Thus the sentence **emphasizes a limitation of the educational view Dewey rejects**.\n\nB is incorrect because the passage does not frame the issue as an unresolved controversy among educators. C misidentifies the target of criticism: Dewey is criticizing an educational philosophy, not a defect in learners. D reverses the passage’s position, since Dewey argues against treating present experience merely as preparation for the future."
+    },
+    {
+      "id": "rw-20261005-s4-q07",
+      "groupId": "rw-20261005-s4-q07",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "Medium",
+      "passage": "Some archaeological studies reconstruct centuries of regional commerce by mapping the distribution of thousands of ceramic fragments across many settlements. _____ this method with microstratigraphic analysis of residue from a single household hearth may initially seem peculiar, yet both approaches proceed from the assumption that seemingly modest physical traces can reveal much larger patterns of human activity.",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "choices": {
+        "A": "Supplanting",
+        "B": "Instituting",
+        "C": "Reconciling",
+        "D": "Contrasting"
+      },
+      "correctAnswer": "D",
+      "explanation": "The sentence places two markedly different archaeological approaches side by side: one examines large-scale ceramic distributions across many sites, whereas the other closely analyzes material from a single hearth. **“Contrasting”** correctly describes the act of comparing those differing approaches before the sentence explains the deeper principle they share.\n\nA, “supplanting,” means replacing one thing with another, which the sentence does not suggest. B, “instituting,” means establishing or introducing a practice. C, “reconciling,” would imply resolving an incompatibility between the two methods, but the sentence simply observes that comparing them may initially seem unusual."
+    },
+    {
+      "id": "rw-20261005-s4-q08",
+      "groupId": "rw-20261005-s4-q08",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "Medium",
+      "passage": "Newly identified minerals do not automatically receive officially recognized names. Researchers generally submit proposed names and analytical evidence to an international mineralogical committee, which evaluates whether each specimen represents a distinct mineral species. For example, several candidate minerals first described in field reports were not formally approved until much later. _____ years can separate a mineral’s initial collection from the acceptance of its official name.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "Conversely,",
+        "B": "Indeed,",
+        "C": "Similarly,",
+        "D": "Therefore,"
+      },
+      "correctAnswer": "B",
+      "explanation": "The preceding sentences establish that formal mineral naming involves a review process and note examples in which approval occurred considerably later than initial description. The final sentence **reinforces and emphasizes** that point by stating explicitly that the interval can last years. **“Indeed,”** is therefore the most logical transition.\n\nA introduces opposition, but the final sentence confirms rather than contradicts the preceding information. C normally introduces a comparable case, but the last sentence generalizes and emphasizes the same point rather than presenting a separate parallel example. D indicates a direct causal conclusion; although the review process may contribute to delay, the sentence functions primarily as emphatic confirmation, not as a deductive result of the immediately preceding example."
+    },
+    {
+      "id": "rw-20261005-s4-q09",
+      "groupId": "rw-20261005-s4-q09",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Inferences",
+      "difficulty": "Medium",
+      "passage": "Transportation economists studying travel patterns have examined whether payment structure influences the variety of destinations riders choose. Under a pay-per-ride system, every additional subway trip imposes another fare, so visiting an unfamiliar neighborhood carries an added monetary cost. An unlimited monthly pass, by contrast, requires the same payment whether its owner makes twenty trips or eighty; after the pass has been purchased, taking an additional trip generally costs the rider nothing. This reasoning suggests that _____",
+      "question": "Which choice most logically completes the text?",
+      "choices": {
+        "A": "riders with unlimited passes would likely travel to a wider variety of destinations than otherwise similar riders paying separately for each trip.",
+        "B": "transit agencies that replace individual fares with unlimited passes would necessarily collect more total revenue.",
+        "C": "riders who pay for individual trips would be more likely than pass holders to travel during peak commuting hours.",
+        "D": "unlimited-pass holders would generally take longer individual trips because distance rather than frequency determines the cost of each journey."
+      },
+      "correctAnswer": "A",
+      "explanation": "The passage focuses on the **marginal cost of making an additional trip**. For riders who pay separately, experimenting with another destination requires spending additional money. For unlimited-pass holders, an extra trip usually imposes no additional fare. That difference makes it reasonable to infer that unlimited-pass users would be more willing to make trips to a wider range of destinations.\n\nB is unsupported because nothing in the passage establishes how the fare systems affect total agency revenue. C introduces peak-hour travel, which is never discussed. D is incorrect because the passage says the pass removes the additional cost of another trip; it does not claim that trip distance determines fares or that pass holders take longer trips."
+    },
+    {
+      "id": "rw-20261005-s4-q10",
+      "groupId": "rw-20261005-s4-q10",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "Easy",
+      "passage": "While researching a topic, a student has taken the following notes:\n\n- Ganymede is a moon of Jupiter.\n- Ganymede has a diameter of approximately 5,268 kilometers.\n- Titan is a moon of Saturn.\n- Titan has a diameter of approximately 5,150 kilometers.\n- Mercury has a diameter of approximately 4,879 kilometers.\n- Both Ganymede and Titan are larger in diameter than Mercury.",
+      "question": "The student wants to emphasize a similarity between Ganymede and Titan. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "choices": {
+        "A": "Ganymede, which orbits Jupiter, has a diameter of approximately 5,268 kilometers.",
+        "B": "Although Ganymede and Titan orbit different planets, each has a diameter greater than that of Mercury.",
+        "C": "Titan has a diameter of approximately 5,150 kilometers, while Mercury’s diameter is approximately 4,879 kilometers.",
+        "D": "Ganymede is Jupiter’s moon, whereas Titan orbits Saturn."
+      },
+      "correctAnswer": "B",
+      "explanation": "B directly emphasizes a **shared characteristic**: despite orbiting different planets, both Ganymede and Titan are larger in diameter than Mercury. It therefore accomplishes the student’s stated goal of highlighting a similarity between the two moons.\n\nA discusses only Ganymede and therefore cannot establish a similarity. C compares Titan with Mercury rather than comparing Titan and Ganymede. D emphasizes a difference—the planets the moons orbit—rather than something the two have in common. Screenshot 2026-10-05 034114"
+    },
+    {
+      "id": "rw-20261005-s5-q01",
+      "groupId": "rw-20261005-s5-q01",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Text Structure and Purpose",
+      "difficulty": "Medium",
+      "passage": "Many cephalopods alter their appearance using specialized skin structures. Chromatophores contain pigment and can expand or contract rapidly, iridophores reflect particular wavelengths of light, and leucophores scatter ambient light broadly. In a laboratory experiment, marine biologist Lydia Mathger and her team selectively obscured iridophore activity in cuttlefish and found that certain metallic blue-green patterns became markedly less visible.",
+      "question": "Which choice best describes the overall structure of the text?",
+      "choices": {
+        "A": "It distinguishes several mechanisms of cephalopod camouflage and then argues that one of those mechanisms is more important than the others.",
+        "B": "It describes characteristics of several cephalopod skin structures and then discusses an experiment involving one of those structures.",
+        "C": "It presents the results of an experiment and then explains the biological structures responsible for those results.",
+        "D": "It identifies several colors produced by cuttlefish and then compares the wavelengths associated with those colors."
+      },
+      "correctAnswer": "B",
+      "explanation": "The text first provides background information about **three kinds of cephalopod skin structures**, briefly describing what each does. It then shifts to a specific experiment in which researchers manipulated one of those structures, the iridophores, and observed the resulting change in appearance. Choice B accurately captures that two-part organization.\n\nA is incorrect because the text never argues that iridophores are more important than chromatophores or leucophores. C reverses the actual order: the biological structures are described before the experiment. D is too narrow and inaccurate because the passage classifies skin structures, not colors, and does not compare wavelengths."
+    },
+    {
+      "id": "rw-20261005-s5-q02",
+      "groupId": "rw-20261005-s5-q02",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "Easy",
+      "passage": "A seventeenth-century astronomical manuscript preserved in Goa spent centuries in a coastal environment where heat and humidity can accelerate the deterioration of paper. _____ most of its pages remain flexible and readily legible. Conservators attribute this unusual survival partly to the manuscript’s paper, which was manufactured from exceptionally durable bast fibers.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "Accordingly,",
+        "B": "Even so,",
+        "C": "In addition,",
+        "D": "For example,"
+      },
+      "correctAnswer": "B",
+      "explanation": "The first sentence establishes conditions that would ordinarily be expected to damage the manuscript. The next sentence presents a **surprising contrast**: despite those unfavorable conditions, the pages remain in good condition. **“Even so,”** appropriately signals that concession.\n\nA is incorrect because the manuscript’s preservation is not a logical consequence of prolonged heat and humidity. C merely adds information and fails to express the contrast. D would introduce an example of the previous statement, but the preservation of the manuscript contradicts the expected effect of the conditions rather than exemplifying it."
+    },
+    {
+      "id": "rw-20261005-s5-q03",
+      "groupId": "rw-20261005-s5-q03",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Inferences",
+      "difficulty": "Medium",
+      "passage": "Ecologists have sometimes assumed that fruit-eating birds should concentrate on plants whose fruits contain the greatest concentrations of sugars and lipids. Yet when Camila Ortega and colleagues recorded feeding visits by toucans and related birds in a Panamanian forest, nutritional content was a comparatively weak predictor of which plants the birds visited. Instead, the correspondence between a bird’s gape width and a plant’s fruit diameter was substantially more predictive of feeding interactions.",
+      "question": "Which statement about the birds’ feeding patterns is most strongly supported by the text?",
+      "choices": {
+        "A": "A fruit’s physical compatibility with a bird’s feeding anatomy may lead that bird to visit a plant offering less nutritionally rich fruit instead of one offering richer but less manageable fruit.",
+        "B": "Birds rely on fruit size only when they cannot determine the nutritional content of fruits before attempting to consume them.",
+        "C": "Fruit-eating birds consistently choose nutritionally poor plants whenever those plants produce fruits that closely match the birds’ gape widths.",
+        "D": "Anatomical compatibility determines feeding patterns, whereas the nutritional composition of fruit has no relationship whatsoever to which plants birds visit."
+      },
+      "correctAnswer": "A",
+      "explanation": "The study found that **gape-width–fruit-size compatibility predicted feeding interactions more strongly than nutritional content did**. It is therefore reasonable to infer that a bird might select a physically compatible fruit even when another available fruit provides a greater nutritional reward. A expresses that possibility without overstating the evidence.\n\nB is unsupported because the text says nothing about whether birds know the nutritional value of fruits in advance. C is too absolute: the findings indicate a stronger predictive relationship, not that birds *consistently* choose nutritionally poorer fruits. D likewise overstates the result by claiming nutrition has no relationship at all; the passage says nutritional content was a **comparatively weak predictor**, not a nonexistent one."
+    },
+    {
+      "id": "rw-20261005-s5-q04",
+      "groupId": "rw-20261005-s5-q04",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Central Ideas and Details",
+      "difficulty": "Easy",
+      "passage": "“Assisted migration” is a conservation strategy in which organisms are deliberately moved to environments expected to remain suitable as climate conditions change. Ecologist Marissa Chen and colleagues systematically reviewed studies of several assisted-migration approaches, including moving populations toward cooler portions of their existing geographic ranges, establishing populations beyond their historical ranges, and transferring organisms to higher elevations. The reviewers found that **poleward within-range relocation** and **higher-elevation relocation** produced the most consistently favorable results for survival and population establishment.",
+      "question": "According to the text, which two assisted-migration approaches did Chen and colleagues conclude were most consistently successful?",
+      "choices": {
+        "A": "Establishment beyond historical ranges and higher-elevation relocation",
+        "B": "Poleward within-range relocation and establishment beyond historical ranges",
+        "C": "Poleward within-range relocation and higher-elevation relocation",
+        "D": "Higher-elevation relocation and long-distance transcontinental transfer"
+      },
+      "correctAnswer": "C",
+      "explanation": "The final sentence explicitly identifies **poleward within-range relocation** and **higher-elevation relocation** as the two approaches associated with the most consistently favorable outcomes. Therefore, C directly matches the information in the text.\n\nA incorrectly substitutes establishment beyond the historical range for poleward relocation. B includes poleward relocation but pairs it with the wrong second method. D includes higher-elevation relocation but introduces “long-distance transcontinental transfer,” which the passage does not identify as one of the reviewed methods."
+    },
+    {
+      "id": "rw-20261005-s5-q05",
+      "groupId": "rw-20261005-s5-q05",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "Medium",
+      "passage": "Although it would be excessive to describe the economic consequences of prolonged port closures as uniformly _____, several analyses suggest that even severe disruptions can produce surprisingly limited effects on national output when freight is rapidly rerouted. During one six-week closure, for example, nearby ports absorbed much of the displaced cargo, and quarterly GDP declined only marginally.",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "choices": {
+        "A": "devastating",
+        "B": "derivative",
+        "C": "anomalous",
+        "D": "negligible"
+      },
+      "correctAnswer": "A",
+      "explanation": "**“Devastating”** means causing severe damage. The passage says that even severe port closures can sometimes have only limited effects on national output when cargo is rerouted, so describing their consequences as uniformly devastating would overstate the evidence. B, “derivative,” means imitative or originating from something else and does not describe the magnitude of an economic effect. C, “anomalous,” means unusual or inconsistent with a pattern, which is not the issue being discussed. D, “negligible,” means so small as to be unimportant; the passage does not claim that the effects of port closures are always negligible."
+    },
+    {
+      "id": "rw-20261005-s5-q06",
+      "groupId": "rw-20261005-s5-q06",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "Medium",
+      "passage": "**Dimensions of Selected Commercial Timber Trees**\n\n| Tree species | Total height (m) | Primary region | Clear bole length (m) |\n|---|---:|---|---:|\n| *Entandrophragma cylindricum* | 48 | Central Africa | 31 |\n| *Dipterocarpus grandiflorus* | 52 | Southeast Asia | 18 |\n| *Cedrela odorata* | 39 | Tropical Americas | 24 |\n| *Agathis australis* | 44 | New Zealand | 16 |\n| *Eucalyptus regnans* | 76 | Southeastern Australia | 28 |\n\nForesters often describe a mature tree by its total height. For timber production, however, total height may not accurately indicate how much long, uninterrupted trunk is available: a tree’s **clear bole length**, measured from its base to the first major branch, can be substantially smaller. For example, _____",
+      "question": "Which choice most effectively uses data from the table to complete the example?",
+      "choices": {
+        "A": "*Eucalyptus regnans* reaches a total height of 76 meters but has a clear bole length of only 28 meters.",
+        "B": "*Entandrophragma cylindricum* has a 31-meter clear bole and grows primarily in Central Africa.",
+        "C": "*Cedrela odorata* has a total height of 39 meters, whereas *Agathis australis* reaches 44 meters.",
+        "D": "*Dipterocarpus grandiflorus* has a clear bole length of 18 meters, considerably less than the 31-meter clear bole of *Entandrophragma cylindricum*."
+      },
+      "correctAnswer": "A",
+      "explanation": "The sentence needs an example showing that **total height and clear bole length can differ substantially for the same tree**. *Eucalyptus regnans* has the greatest total height in the table, 76 meters, but its clear bole extends only 28 meters. That 48-meter difference directly illustrates the distinction the passage describes.\n\nB provides a clear-bole measurement and a geographic fact but does not compare the two relevant measurements. C compares the total heights of two species rather than total height with clear bole length. D compares clear-bole lengths between two species, so it also fails to illustrate how the two measures can differ within one tree species.",
+      "table": {
+        "caption": "",
+        "headers": [
+          "Tree species",
+          "Total height (m)",
+          "Primary region",
+          "Clear bole length (m)"
+        ],
+        "rows": [
+          [
+            "*Entandrophragma cylindricum*",
+            "48",
+            "Central Africa",
+            "31"
+          ],
+          [
+            "*Dipterocarpus grandiflorus*",
+            "52",
+            "Southeast Asia",
+            "18"
+          ],
+          [
+            "*Cedrela odorata*",
+            "39",
+            "Tropical Americas",
+            "24"
+          ],
+          [
+            "*Agathis australis*",
+            "44",
+            "New Zealand",
+            "16"
+          ],
+          [
+            "*Eucalyptus regnans*",
+            "76",
+            "Southeastern Australia",
+            "28"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "rw-20261005-s5-q07",
+      "groupId": "rw-20261005-s5-q07",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "Medium",
+      "passage": "Although electrospun polymer membranes are prized partly for their microscopic pore structures, the orientation of their fibers can also _____ the material with substantial tensile strength. When fibers are aligned rather than deposited randomly, stresses are distributed more efficiently along the membrane’s principal axis.",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "choices": {
+        "A": "divest",
+        "B": "endow",
+        "C": "delimit",
+        "D": "belie"
+      },
+      "correctAnswer": "B",
+      "explanation": "To **endow something with** a quality is to provide or equip it with that quality. The second sentence explains that aligned fibers enable stresses to be distributed more efficiently, thereby giving the membrane substantial tensile strength. “Endow” therefore fits both the meaning and the grammatical construction **“endow the material with.”**\n\nA, “divest,” means deprive and generally takes “of,” not “with”; it would also contradict the strengthening effect. C, “delimit,” means establish a boundary or limit, which does not fit. D, “belie,” means contradict or give a misleading impression of, and the construction “belie the material with strength” is both semantically and grammatically inappropriate."
+    },
+    {
+      "id": "rw-20261005-s5-q08",
+      "groupId": "rw-20261005-s5-q08",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "Hard",
+      "passage": "Researchers studying digital reading presented participants with two versions of the same dense technical article: one with conventional spacing and one with unusually wide spacing between lines. Participants reading the widely spaced version scrolled more slowly and made fewer rapid cursor movements. Because slower interaction can accompany reduced cognitive load, the researchers concluded that the wider spacing made the article easier to process. A critic noted, however, that slower scrolling can also occur when readers are struggling with difficult material and argued that the wider spacing may instead have increased processing difficulty.",
+      "question": "Which finding, if true, would most directly weaken the critic’s claim?",
+      "choices": {
+        "A": "Readers in both conditions had encountered articles on similar technical topics before participating in the experiment.",
+        "B": "Greater processing difficulty is generally associated with increased rereading and backward scrolling, but participants using the widely spaced version exhibited substantially less of both behaviors.",
+        "C": "Participants reported that they preferred the visual appearance of the conventional version to that of the widely spaced version.",
+        "D": "Rapid cursor movement has been found to correlate with impatience in some forms of online shopping."
+      },
+      "correctAnswer": "B",
+      "explanation": "The critic argues that **slower scrolling may indicate greater processing difficulty rather than easier processing**. B provides an independent behavioral indicator: if difficulty normally causes more rereading and backward scrolling, but those behaviors actually decreased in the wide-spacing condition, then the difficulty explanation becomes less plausible.\n\nA does not distinguish between the competing explanations because prior familiarity was similar in both groups. C concerns aesthetic preference rather than processing difficulty. D discusses cursor movement in a different context and does not address whether the widely spaced article was cognitively easier or harder to process."
+    },
+    {
+      "id": "rw-20261005-s5-q09",
+      "groupId": "rw-20261005-s5-q09",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "Easy",
+      "passage": "While researching a topic, a student has taken the following notes:\n\n- “EGOT” refers to winning an Emmy Award, a Grammy Award, an Academy Award (Oscar), and a Tony Award.\n- Each award recognizes achievement in a different branch of entertainment.\n- A person who wins all four competitive awards is commonly described as an EGOT winner.\n- Whoopi Goldberg completed the four-award combination in 2002.\n- Goldberg received an Oscar for *Ghost*.\n- She received a Tony as a producer of *Thoroughly Modern Millie*.",
+      "question": "The student wants to explain the EGOT achievement to an audience unfamiliar with it. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "choices": {
+        "A": "Whoopi Goldberg became an EGOT winner in 2002 after earning awards in several areas of entertainment, including an Oscar for *Ghost*.",
+        "B": "To achieve an EGOT, a person must win all four major entertainment honors represented by the acronym: an Emmy, a Grammy, an Oscar, and a Tony.",
+        "C": "Whoopi Goldberg received both an Academy Award for acting and a Tony Award as a producer before becoming widely known as an EGOT winner.",
+        "D": "Because the Emmy, Grammy, Oscar, and Tony recognize different branches of entertainment, performers such as Whoopi Goldberg can qualify for several of them."
+      },
+      "correctAnswer": "B",
+      "explanation": "The audience is unfamiliar with the achievement, so the most useful response should **define what completing an EGOT requires**. B does exactly that by identifying all four awards and explaining that winning each one constitutes the achievement.\n\nA gives an example but does not fully explain the requirement. C supplies details about only two of the four awards and assumes the audience already understands what “EGOT” means. D explains that the awards cover different areas but does not state that a person must win **all four** to become an EGOT winner."
+    },
+    {
+      "id": "rw-20261005-s5-q10",
+      "groupId": "rw-20261005-s5-q10",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "Medium",
+      "passage": "During a 2021 survey of deep-sea corals near the Azores, marine biologist Sofia Mendes and her colleagues documented twelve *Desmophyllum pertusum* _____ to the family Caryophylliidae, *D. pertusum* can form extensive reef structures in cold, deep water.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "colonies belonging",
+        "B": "colonies, belonging",
+        "C": "colonies and belonging",
+        "D": "colonies. Belonging"
+      },
+      "correctAnswer": "D",
+      "explanation": "The first portion forms a complete sentence: “During a 2021 survey ... Mendes and her colleagues documented twelve colonies of *Desmophyllum pertusum*.” The next portion begins with the participial phrase **“Belonging to the family Caryophylliidae,”** which correctly modifies the subject of the new sentence, *D. pertusum*. A period is therefore required between the two sentences.\n\nA would produce a comma splice later in the sentence: “Mendes ... documented twelve colonies belonging to the family Caryophylliidae, *D. pertusum* can form....” B has the same problem and additionally treats “belonging” as supplementary information about the colonies. C creates faulty coordination because “documented” and “belonging” cannot be linked by “and” in that structure. Screenshot 2026-10-05 034726"
+    },
+    {
+      "id": "rw-20261005-s6-q01",
+      "groupId": "rw-20261005-s6-q01",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Inferences",
+      "difficulty": "Medium",
+      "passage": "Producing extremely compact reference works can require editors to balance legibility against the amount of information placed on each page. The 2012 print edition of the *Handbook of Mediterranean Inscriptions* contains approximately 410,000 words across 820 pages, whereas the 2017 *Encyclopedia of Polar Navigation* contains roughly 525,000 words across 875 pages. These figures suggest that _____",
+      "question": "Which choice most logically completes the text?",
+      "choices": {
+        "A": "the original-language sources used in the *Handbook of Mediterranean Inscriptions* contain fewer words than their translated versions.",
+        "B": "the *Encyclopedia of Polar Navigation* was necessarily more expensive to print than the *Handbook of Mediterranean Inscriptions*.",
+        "C": "the *Encyclopedia of Polar Navigation* contains, on average, more words per page than the *Handbook of Mediterranean Inscriptions*.",
+        "D": "readers would need approximately the same amount of time to finish both works."
+      },
+      "correctAnswer": "C",
+      "explanation": "The *Handbook of Mediterranean Inscriptions* averages about 500 words per page: \\(410{,}000 \\div 820 = 500\\). The *Encyclopedia of Polar Navigation* averages about 600 words per page: \\(525{,}000 \\div 875 = 600\\). Therefore, the latter contains more words per page on average.\n\nA is unsupported because the passage provides no comparison between original-language sources and translations. B cannot be concluded from page and word counts alone because printing cost depends on many other variables. D is likewise unsupported: reading time depends on difficulty, layout, reader speed, and other factors not given."
+    },
+    {
+      "id": "rw-20261005-s6-q02",
+      "groupId": "rw-20261005-s6-q02",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Form, Structure, and Sense",
+      "difficulty": "Medium",
+      "passage": "Containing an estimated 81 percent iron by mass, _____",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "laboratory researchers classified the Okahandja meteorite, recovered in Namibia, as an iron meteorite.",
+        "B": "the classification assigned by laboratory researchers places the Okahandja meteorite, recovered in Namibia, among iron meteorites.",
+        "C": "the Okahandja meteorite, recovered in Namibia, was classified by laboratory researchers as an iron meteorite.",
+        "D": "among the specimens laboratory researchers classify as iron meteorites is the Okahandja meteorite, recovered in Namibia."
+      },
+      "correctAnswer": "C",
+      "explanation": "The introductory participial phrase **“Containing an estimated 81 percent iron by mass”** must logically modify the noun that immediately follows it. The thing containing that iron is **the Okahandja meteorite**, so C correctly places that noun immediately after the introductory modifier.\n\nA incorrectly suggests that the laboratory researchers contain 81 percent iron. B makes “the classification” the grammatical subject modified by the opening phrase, illogically implying that the classification contains iron. D similarly places “among the specimens” after the modifier rather than directly identifying the meteorite as the thing containing the iron."
+    },
+    {
+      "id": "rw-20261005-s6-q03",
+      "groupId": "rw-20261005-s6-q03",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Inferences",
+      "difficulty": "Medium",
+      "passage": "The following text is adapted from Helena March’s 1908 play *The Orchard Gate*. Clara and Edwin have met on a village road as Edwin prepares to attend an outdoor concert.\n\n**EDWIN:** If the clouds hold, I shall hear the quartet before supper. The organizers have even put chairs beneath the chestnut trees.\n\n**CLARA:** Then take an umbrella. Whenever I go anywhere without one, rain begins before I have gone half a mile.\n\n**EDWIN:** Clara, if the sky stayed blue from April until November, I believe you would carry a cracked parasol merely so that you might complain of the sun coming through it.",
+      "question": "Based on the text, what does Edwin most likely believe about Clara?",
+      "choices": {
+        "A": "Clara is concerned that Edwin has underestimated the likelihood of rain.",
+        "B": "Clara would probably find something objectionable even under favorable circumstances.",
+        "C": "Clara has repeatedly given Edwin unreliable predictions about the weather.",
+        "D": "Clara would prefer to accompany Edwin to the concert rather than remain at home."
+      },
+      "correctAnswer": "B",
+      "explanation": "Edwin imagines an extreme situation in which even perfect weather would not prevent Clara from finding something to complain about: she would supposedly carry a defective parasol just so the sunlight could bother her. This suggests that Edwin regards Clara as someone who **finds fault regardless of circumstances**.\n\nA describes Clara’s immediate warning but not Edwin’s broader judgment of her. C is too specific; Edwin does not claim that Clara is bad at forecasting weather. D is unsupported because Clara never indicates that she wants to attend the concert."
+    },
+    {
+      "id": "rw-20261005-s6-q04",
+      "groupId": "rw-20261005-s6-q04",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "Medium",
+      "passage": "Methods of arranging museum collections have differed substantially across institutions and periods. Some nineteenth-century cabinets in Vienna grouped mineral specimens primarily by color and outward appearance. Collections in _____ contrast, increasingly organized specimens according to chemical composition.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "Leiden; by",
+        "B": "Leiden, by",
+        "C": "Leiden, By",
+        "D": "Leiden—by"
+      },
+      "correctAnswer": "B",
+      "explanation": "The phrase **“by contrast”** is a parenthetical transition interrupting the sentence, so it must be set off with commas: “Collections in Leiden, by contrast, increasingly organized....” The comma following “contrast” is already supplied in the sentence, so the blank must provide **“Leiden, by.”**\n\nA incorrectly uses a semicolon between “Leiden” and the parenthetical expression. C incorrectly capitalizes “By” in the middle of a sentence. D uses an em dash before the phrase but a comma after it, creating mismatched punctuation for the parenthetical expression."
+    },
+    {
+      "id": "rw-20261005-s6-q05",
+      "groupId": "rw-20261005-s6-q05",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "Easy",
+      "passage": "In the 1909 ballet *Les Sylphides*, the anticipated entrance of the principal dancer is delayed through much of the opening sequence and acquires increasing dramatic importance when, near the end of the first section, it finally _____ choreographer Michel Fokine avoids conventional narrative development elsewhere in the ballet, emphasizing atmosphere and movement instead.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "occurs Fokine",
+        "B": "occurs. Fokine",
+        "C": "occurs that",
+        "D": "occurs. That"
+      },
+      "correctAnswer": "B",
+      "explanation": "The words ending with **“it finally occurs”** form a complete sentence. The next statement, beginning with **“Fokine avoids conventional narrative development,”** is another complete sentence. A period correctly separates the two independent sentences.\n\nA incorrectly runs two independent clauses together without punctuation. C produces an ungrammatical construction because “that” cannot connect “it finally occurs” to the independent clause that follows. D begins the second sentence with “That,” but “That choreographer Michel Fokine avoids...” would function as a dependent noun clause and would lack a main verb."
+    },
+    {
+      "id": "rw-20261005-s6-q06",
+      "groupId": "rw-20261005-s6-q06",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "Easy",
+      "passage": "While researching a topic, a student has taken the following notes:\n\n- Marine chemist Amina Rahal has participated in numerous deep-ocean expeditions.\n- Hydrothermal vents release mineral-rich fluids from beneath the seafloor.\n- On May 18, 2007, Rahal and geologists Tomás Velasco and Nari Okamoto identified the Pelagia vent field in the southern Atlantic.\n- The Pelagia field contains several unusually tall sulfide chimneys.\n- On August 3, 2011, Rahal and Okamoto identified the Mirador vent field farther north.",
+      "question": "The student wants to emphasize the discovery of the Pelagia vent field to an audience already familiar with Amina Rahal. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "choices": {
+        "A": "Marine chemist Amina Rahal has participated in several expeditions that identified hydrothermal vent fields in the Atlantic Ocean.",
+        "B": "Before helping identify the Mirador vent field in 2011, Rahal participated in another major deep-ocean discovery.",
+        "C": "On May 18, 2007, Rahal and colleagues Tomás Velasco and Nari Okamoto identified the Pelagia vent field in the southern Atlantic.",
+        "D": "Hydrothermal vents such as Pelagia release mineral-rich fluids and may develop unusually tall sulfide chimneys."
+      },
+      "correctAnswer": "C",
+      "explanation": "The audience already knows Rahal, so there is no need to introduce her profession or career. C focuses directly on the requested discovery and provides the relevant **date, collaborators, and location**.\n\nA gives general background about Rahal but does not emphasize the Pelagia discovery. B refers indirectly to an earlier discovery without naming Pelagia or giving its date. D explains hydrothermal vents and mentions Pelagia but does not identify when or by whom the field was discovered."
+    },
+    {
+      "id": "rw-20261005-s6-q07",
+      "groupId": "rw-20261005-s6-q07",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Inferences",
+      "difficulty": "Hard",
+      "passage": "Psychologist Elena Vorst and colleagues played participants a series of increasingly clear recordings of the same heavily distorted sentence. Participants were asked to identify the sentence as soon as they felt confident; on average, they succeeded at recording 9 of 12. When immediately replaying the sequence, however, participants later claimed that they had been able to recognize the sentence by recording 6, exhibiting hindsight bias. The researchers then explicitly explained this bias and asked participants to predict when a person who had never heard the sequence would recognize the sentence. The average prediction was again recording 6. This finding suggests that _____",
+      "question": "Which choice most logically completes the text?",
+      "choices": {
+        "A": "awareness of one’s own hindsight bias may not prevent that bias from influencing judgments about what another person should have known.",
+        "B": "hindsight bias occurs only when people are asked to remember their own earlier judgments rather than predict another person’s judgment.",
+        "C": "participants who receive an explanation of hindsight bias generally become more accurate at remembering when they first acquired information.",
+        "D": "people usually assume that others are less capable than they themselves are of identifying ambiguous information."
+      },
+      "correctAnswer": "A",
+      "explanation": "After experiencing hindsight bias themselves, participants were **explicitly told about the bias**. Nevertheless, when estimating when an uninformed person would identify the sentence, they still selected recording 6 rather than the actual average of recording 9. Thus merely making people aware of their own hindsight bias did not stop the same distorted perspective from affecting their judgments about others.\n\nB is contradicted by the experiment because the bias persisted when participants predicted another person’s performance. C is unsupported and conflicts with the persistence of the biased estimate. D gets the direction wrong: the participants assumed that others would recognize the sentence **earlier**, not later."
+    },
+    {
+      "id": "rw-20261005-s6-q08",
+      "groupId": "rw-20261005-s6-q08",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Text Structure and Purpose",
+      "difficulty": "Medium",
+      "passage": "The following text is adapted from Marianne Holt’s 1903 novel *A Week at Penmere*. The narrator and three acquaintances are sharing a rented cottage on the Welsh coast.\n\nI have observed that in a holiday household every person becomes convinced, after about two days, that the others are living entirely upon his labor. Felix maintained that he alone fetched the water and split the kindling, though I had seen him spend most of Tuesday repairing a fishing reel that was not broken. Nora considered the kitchen her private burden, forgetting that she entered it principally to ask whether tea was ready. As for Julian, he insisted with great dignity that keeping account of our expenses constituted the heaviest work of all.",
+      "question": "Which choice best describes the main purpose of the text?",
+      "choices": {
+        "A": "To explain why the narrator feels especially qualified to divide household responsibilities among the group",
+        "B": "To present a general observation by the narrator and illustrate it with examples from the group’s behavior",
+        "C": "To compare the practical importance of several different tasks required to maintain the cottage",
+        "D": "To describe an unexpected conflict that permanently damages the relationships among the travelers"
+      },
+      "correctAnswer": "B",
+      "explanation": "The narrator begins with a **generalization**: in a shared holiday household, each person comes to believe that everyone else is benefiting from that person’s work. The rest of the passage illustrates this observation through Felix, Nora, and Julian, each of whom exaggerates the importance of his or her own contribution.\n\nA is incorrect because the narrator does not claim authority to assign duties. C mistakes the humorous examples for a serious evaluation of which chores matter most. D overstates the situation: the passage depicts comic self-importance, not a destructive conflict."
+    },
+    {
+      "id": "rw-20261005-s6-q09",
+      "groupId": "rw-20261005-s6-q09",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Inferences",
+      "difficulty": "Medium",
+      "passage": "The following text is adapted from Leona Varga’s 1911 novel *The Linotype Room*. Tomas works as a junior clerk at a newspaper office in Budapest.\n\nBy half past eight, the composing room had already acquired its full metallic clatter. Two linotype operators bent over their keyboards, the proofreader had covered half a sheet with blue marks, and a messenger was arranging bundles beside the stairwell. Tomas slipped his coat onto its peg and, seeing every desk occupied, felt the same small sting of embarrassment he had felt the previous Monday. He opened the ledger at once and pretended not to notice the clock above the editor’s door.",
+      "question": "Based on the text, what can most reasonably be inferred about Tomas?",
+      "choices": {
+        "A": "Tomas is embarrassed that he has arrived after many of his coworkers have already begun working.",
+        "B": "Tomas finds the noise and activity of the composing room too overwhelming to perform his duties effectively.",
+        "C": "Tomas admires the enthusiasm of his coworkers and is becoming increasingly eager to work beside them.",
+        "D": "Tomas is mainly interested in watching the linotype operators rather than completing his clerical responsibilities."
+      },
+      "correctAnswer": "A",
+      "explanation": "Tomas notices that **every desk is already occupied**, experiences “a small sting of embarrassment,” and then deliberately avoids looking at the clock. Together, these details strongly imply that he feels self-conscious about arriving later than his coworkers.\n\nB is unsupported because the passage does not say the noise prevents him from working. C misreads his emotional reaction: embarrassment is not enthusiasm. D is also unsupported; although the linotype operators are described, Tomas immediately opens his ledger rather than stopping to watch them."
+    },
+    {
+      "id": "rw-20261005-s6-q10",
+      "groupId": "rw-20261005-s6-q10",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "Easy",
+      "passage": "The clay handprints preserved on the walls of several Upper Paleolithic caves are sometimes described as emotionally affecting despite being tens of thousands of years old. Yet the impressions may be especially _____ precisely because of that age: a viewer can place a hand beside one of the ancient outlines and immediately recognize a bodily gesture shared with a person separated from the present by an immense span of time.",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "choices": {
+        "A": "derivative",
+        "B": "rudimentary",
+        "C": "poignant",
+        "D": "authoritative"
+      },
+      "correctAnswer": "C",
+      "explanation": "**“Poignant”** means deeply emotionally affecting, often because something evokes a strong sense of connection, loss, or distance. The passage argues that the handprints are powerful **because their great age makes the human connection across time especially striking**, so “poignant” precisely fits the context.\n\nA, “derivative,” means imitative or lacking originality and has nothing to do with the emotional effect described. B, “rudimentary,” means basic or undeveloped; the passage is not evaluating the handprints’ technical sophistication. D, “authoritative,” means commanding or reliably knowledgeable, which does not describe the emotional response produced by the ancient impressions. Screenshot 2026-10-05 035045"
     }
   ]
 }
