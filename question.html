@@ -16,7 +16,7 @@
     >
 
     <link rel="stylesheet" href="style.css?v=subjects-1">
-    <link rel="stylesheet" href="question.css?v=9">
+    <link rel="stylesheet" href="question.css?v=10">
 </head>
 
 <body>
@@ -44,14 +44,6 @@
             </div>
 
             <div class="question-topbar-actions">
-                <button
-                    id="next-question-button"
-                    class="next-question-button topbar-next-button hidden"
-                    type="button"
-                >
-                    Next Question
-                </button>
-
                 <div class="timer-container">
                     <span class="timer-label">TIME ON QUESTION</span>
                     <div id="timer" class="timer">00:00</div>
@@ -85,21 +77,40 @@
                         Question 1
                     </span>
 
-                    <button
-                        id="review-button"
-                        class="review-button"
-                        type="button"
-                        aria-pressed="false"
-                    >
-                        <svg
-                            class="bookmark-icon"
-                            viewBox="0 0 24 24"
-                            aria-hidden="true"
+                    <div class="question-progress-actions">
+                        <div class="question-inline-navigation" aria-label="Question navigation">
+                            <button
+                                id="previous-button"
+                                class="question-nav-button"
+                                type="button"
+                            >
+                                Previous
+                            </button>
+                            <button
+                                id="next-button"
+                                class="question-nav-button"
+                                type="button"
+                            >
+                                Next
+                            </button>
+                        </div>
+
+                        <button
+                            id="review-button"
+                            class="review-button"
+                            type="button"
+                            aria-pressed="false"
                         >
-                            <path d="M6 4.5A2.5 2.5 0 0 1 8.5 2h7A2.5 2.5 0 0 1 18 4.5V21l-6-3.8L6 21V4.5z"></path>
-                        </svg>
-                        <span id="review-text">Mark for Review</span>
-                    </button>
+                            <svg
+                                class="bookmark-icon"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path d="M6 4.5A2.5 2.5 0 0 1 8.5 2h7A2.5 2.5 0 0 1 18 4.5V21l-6-3.8L6 21V4.5z"></path>
+                            </svg>
+                            <span id="review-text">Mark for Review</span>
+                        </button>
+                    </div>
 
                 </div>
 
@@ -241,7 +252,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js?v=subjects-1"></script>
-<script src="question.js?v=19"></script>
+<script src="question.js?v=20"></script>
 
 </body>
 </html>
