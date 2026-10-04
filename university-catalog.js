@@ -671,6 +671,9 @@
     const marker = (kind, name, value) => {
       const covered = kind !== "you" && hasUser && value === userScore ? " covered-by-user" : "";
       return '<div class="sat-rail-marker ' + kind + covered + '" style="left:' + pos(value) + '%">' +
+        '<svg class="sat-rail-marker-dot" viewBox="0 0 16 16" aria-hidden="true" focusable="false">' +
+          '<circle cx="8" cy="8" r="5.5"></circle>' +
+        '</svg>' +
         '<span class="sat-rail-marker-copy"><small>' + name + '</small><strong>' + value + '</strong></span>' +
       '</div>';
     };
