@@ -1,3 +1,279 @@
 {
-  "questions": []
+  "questions": [
+    {
+      "id": "rw-transitions-example-001",
+      "groupId": "rw-transitions-example-001",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "Medium",
+      "goal": "Choose the transition that most precisely shows an example relationship.",
+      "passage": "Some experimental archival programs are designed to test conservation methods that might later be adopted widely, whereas others foreground techniques developed for materials especially common in the host region. _____ the National Library of Finland’s use of a low-temperature anoxic chamber for resin-coated maps—a format especially common in Nordic collections—was particularly well suited to objects frequently damaged by conventional humidity treatments.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "By contrast,",
+        "B": "Accordingly,",
+        "C": "For instance,",
+        "D": "Furthermore,"
+      },
+      "correctAnswer": "C",
+      "explanation": "The first sentence presents two categories of experimental archival programs: those testing methods for broad adoption and those showcasing techniques especially suited to local materials. The second sentence gives a specific example of the second category, so **“For instance,”** most precisely signals that relationship. A is incorrect because the example does not contrast with the preceding idea; it illustrates one part of it. B is incorrect because the library’s use of the chamber is not presented as a consequence of the general statement. D is incorrect because the second sentence is not merely adding another independent point; it supplies a concrete example of the category just described."
+    },
+    {
+      "id": "rw-transitions-contrast-002",
+      "groupId": "rw-transitions-contrast-002",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "Medium",
+      "goal": "Choose the transition that most precisely signals a qualification or contrast.",
+      "passage": "An audio laboratory in Lausanne recovers sound from fragile wax cylinders by photographing microscopic variations in their grooves rather than placing a stylus on the recordings. _____ optical scanning is not the only method that can retrieve audio without conventional playback. A laboratory in Kyoto, for example, has reconstructed damaged recordings by measuring groove geometry with confocal microscopy.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "Likewise,",
+        "B": "However,",
+        "C": "Consequently,",
+        "D": "In other words,"
+      },
+      "correctAnswer": "B",
+      "explanation": "The first sentence describes one noncontact method for recovering audio. The next sentence qualifies that information by stating that this method is **not the only one**, and the final sentence introduces an alternative. **“However,”** correctly signals this qualification. A is incorrect because “Likewise” would suggest that the second sentence simply presents something similar rather than limiting the implication of the first. C is incorrect because the existence of another method is not a result of the Lausanne laboratory’s technique. D is incorrect because the second sentence does not restate the first in different words."
+    },
+    {
+      "id": "rw-words-context-supplement-003",
+      "groupId": "rw-words-context-supplement-003",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "Medium",
+      "goal": "Choose the word that most precisely expresses the relationship between two forms of evidence.",
+      "passage": "The long-standing hypothesis that juvenile vent snails can disperse between hydrothermal fields separated by tens of kilometers has depended heavily on circulation models rather than direct observations of the animals in transit. A study by oceanographer Mireya Salcedo analyzed trace-element signatures in shells collected from several distant vent systems; those geochemical measurements _____ model-based estimates of larval movement with an independent form of evidence.",
+      "question": "Which choice completes the text with the most logical and precise word?",
+      "choices": {
+        "A": "supersede",
+        "B": "obscure",
+        "C": "reproduce",
+        "D": "supplement"
+      },
+      "correctAnswer": "D",
+      "explanation": "To **supplement** something is to add to it or provide additional support. The geochemical measurements constitute an independent source of evidence added to the existing model-based estimates, so “supplement” precisely describes the relationship. A is incorrect because the passage does not indicate that the measurements replace or render the models unnecessary. B is incorrect because the new evidence clarifies or strengthens the investigation rather than making the estimates harder to understand. C is incorrect because the measurements are described as an **independent form of evidence**, not as a repetition of the models."
+    },
+    {
+      "id": "rw-central-details-factors-004",
+      "groupId": "rw-central-details-factors-004",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Central Ideas and Details",
+      "difficulty": "Easy",
+      "goal": "Identify the details in the passage that answer the question directly.",
+      "passage": "Engineers Priya Nanduri and colleagues investigated whether wheel-tread composition and warehouse lighting were associated with the navigation behavior of autonomous freight vehicles. The study relied partly on route logs collected by technicians at several distribution centers. Across eighteen months of observations, vehicles fitted with silica-rich treads executed corrective turns more frequently than vehicles fitted with polyurethane treads. The researchers also found that vehicles paused before aisle intersections more often under rapidly flickering fluorescent fixtures than under diffuse LED illumination.",
+      "question": "According to the text, which factors appeared to be associated with the vehicles’ navigation behavior?",
+      "choices": {
+        "A": "Lighting conditions but not wheel-tread composition",
+        "B": "Neither lighting conditions nor wheel-tread composition",
+        "C": "Wheel-tread composition but not lighting conditions",
+        "D": "Both wheel-tread composition and lighting conditions"
+      },
+      "correctAnswer": "D",
+      "explanation": "The passage identifies a behavioral difference associated with **wheel-tread composition**: vehicles with silica-rich treads made corrective turns more frequently than those with polyurethane treads. It also identifies a behavioral difference associated with **lighting conditions**: vehicles paused more frequently under flickering fluorescent lights than under diffuse LEDs. Therefore, both factors were associated with navigation behavior. A ignores the tread-related difference. B contradicts both reported findings. C recognizes the tread-related difference but ignores the lighting-related difference."
+    },
+    {
+      "id": "rw-command-evidence-table-005",
+      "groupId": "rw-command-evidence-table-005",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "Hard",
+      "goal": "Use multiple patterns in a table to determine which conclusion is best supported.",
+      "passage": "In a review of early metal additive-manufacturing platforms, engineer Sora Almeida and colleagues cataloged the occurrence of automated nozzle purging, a feature documented in several otherwise unrelated machine families. Because the feature appeared to have been developed independently more than once, the researchers examined characteristics that might be associated with its adoption, including staffing requirements, material-changeover duration, and the number of distinct material batches a system could process during a shift. Based on the systems shown in the table, the researchers concluded that _____",
+      "table": {
+        "caption": "Operating Characteristics of Select Additive-Manufacturing Systems",
+        "headers": [
+          "System designation",
+          "Automated nozzle purge?",
+          "Recalibration crew",
+          "Material-changeover time (minutes)",
+          "Maximum material batches per shift"
+        ],
+        "rows": [
+          [
+            "Ormond AX-4",
+            "No",
+            "1 technician",
+            "46",
+            "2"
+          ],
+          [
+            "Takeda M7",
+            "No",
+            "2 technicians",
+            "43",
+            "2"
+          ],
+          [
+            "Velinor Q2",
+            "Yes",
+            "2 technicians",
+            "18",
+            "9"
+          ],
+          [
+            "Serrat R5",
+            "Yes",
+            "1 technician",
+            "15",
+            "6"
+          ]
+        ]
+      },
+      "question": "Which choice most effectively uses data from the table to complete the conclusion?",
+      "choices": {
+        "A": "among systems requiring two technicians for recalibration, automated nozzle purging is associated with longer material-changeover times.",
+        "B": "material-changeover duration and capacity for multiple batches are more strongly associated with automated nozzle purging than recalibration-crew size is.",
+        "C": "automated nozzle purging occurs most often in systems with fewer opportunities to process multiple batches because those systems have longer changeover times.",
+        "D": "material-changeover duration, recalibration-crew size, and maximum batch capacity are equally associated with the presence of automated nozzle purging."
+      },
+      "correctAnswer": "B",
+      "explanation": "Both systems **without** automated purging have long changeover times, 46 and 43 minutes, and can process only 2 material batches per shift. Both systems **with** automated purging have much shorter changeover times, 18 and 15 minutes, and can process substantially more batches, 9 and 6. By contrast, recalibration-crew size does not distinguish the groups: each group contains one system requiring one technician and one requiring two. Thus changeover time and batch capacity show the stronger association. A reverses the relationship: among the two-technician systems, the model with automated purging has the **shorter** changeover time, 18 minutes rather than 43. C also reverses the pattern because purging appears in the systems capable of processing **more**, not fewer, batches. D is incorrect because crew size shows no consistent association with the feature, whereas the other two variables do."
+    },
+    {
+      "id": "rw-boundaries-helios-006",
+      "groupId": "rw-boundaries-helios-006",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "Medium",
+      "goal": "Choose the punctuation that correctly separates two complete sentences.",
+      "passage": "A quartz reference element designated *K-17*, fabricated in 1964, remained the optical calibration standard for every unit in the first production run of the _____ Establishing one physical artifact as the traceable standard for an entire instrument series is crucial, according to metrologists, when minute manufacturing differences must be distinguished from genuine spectral variation.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "*Helios* spectrometer, establishing",
+        "B": "*Helios* spectrometer and establishing",
+        "C": "*Helios* spectrometer. Establishing",
+        "D": "*Helios* spectrometer establishing"
+      },
+      "correctAnswer": "C",
+      "explanation": "The words before the blank form a complete sentence once **“*Helios* spectrometer”** is supplied. The material after the blank begins another complete sentence whose subject is the gerund phrase **“Establishing one physical artifact as the traceable standard for an entire instrument series”** and whose predicate is **“is crucial.”** A period correctly separates the two sentences. A creates a comma splice between complete grammatical units. B incorrectly coordinates “establishing” with “remained,” distorting the intended relationship. D provides no punctuation where the first sentence must end."
+    },
+    {
+      "id": "rw-command-evidence-planets-007",
+      "groupId": "rw-command-evidence-planets-007",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "Medium",
+      "goal": "Select the table evidence that most directly illustrates the stated relationship.",
+      "passage": "Because planetary mass and density measure different physical properties, a planet with substantially greater mass can nevertheless have a much lower mean density than a considerably less massive planet. The distinction can be illustrated most clearly by comparing _____",
+      "table": {
+        "caption": "Selected Planetary Properties",
+        "headers": [
+          "Planet",
+          "Mass (Earth = 1)",
+          "Mean density (g/cm³)",
+          "Equatorial radius (km)"
+        ],
+        "rows": [
+          [
+            "Earth",
+            "1.00",
+            "5.51",
+            "6,378"
+          ],
+          [
+            "Neptune",
+            "17.15",
+            "1.64",
+            "24,764"
+          ],
+          [
+            "Saturn",
+            "95.16",
+            "0.69",
+            "60,268"
+          ],
+          [
+            "Jupiter",
+            "317.83",
+            "1.33",
+            "71,492"
+          ]
+        ]
+      },
+      "question": "Which choice most effectively uses data from the table to complete the example?",
+      "choices": {
+        "A": "Jupiter, whose equatorial radius is 71,492 kilometers, with Saturn, whose equatorial radius is 60,268 kilometers.",
+        "B": "Saturn, with a mass of 95.16 Earth masses and a density of 0.69 g/cm³, with Earth, whose mass is 1.00 Earth mass and whose density is 5.51 g/cm³.",
+        "C": "Neptune and Jupiter, whose masses differ substantially even though Jupiter also has the greater equatorial radius.",
+        "D": "Earth, whose density is 5.51 g/cm³, with Neptune, whose equatorial radius is 24,764 kilometers."
+      },
+      "correctAnswer": "B",
+      "explanation": "The statement requires a comparison in which one planet has **much greater mass but much lower density** than another. Saturn has about 95 times Earth’s mass, yet its mean density is only 0.69 g/cm³ compared with Earth’s 5.51 g/cm³. That comparison directly demonstrates the point. A compares radii rather than establishing the required relationship between mass and density. C mentions a mass difference but does not use the density values needed to illustrate the claim. D provides Earth’s density and Neptune’s radius, so it does not compare the same two relevant quantities for both planets."
+    },
+    {
+      "id": "rw-form-sense-tense-008",
+      "groupId": "rw-form-sense-tense-008",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Form, Structure, and Sense",
+      "difficulty": "Medium",
+      "goal": "Choose the verb form that fits the sentence’s past-time framework and parallel structure.",
+      "passage": "Before the idea of “path voting” circulated widely among transportation planners, Danish urbanist Henrik Valgaard had described informal pedestrian tracks in a 1974 essay on public-space design. During a 2009 conference lecture that attracted considerable attention among planning scholars, Canadian planner Elise Morin _____ Valgaard’s observation and gave the phenomenon the name “path voting.”",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "had popularized",
+        "B": "has popularized",
+        "C": "would popularize",
+        "D": "popularized"
+      },
+      "correctAnswer": "D",
+      "explanation": "The sentence describes two coordinated actions performed by Elise Morin during the same past event: she **popularized** Valgaard’s observation and **gave** the phenomenon a name. Because both actions occur within the 2009 lecture, the simple past tense is appropriate for both. A unnecessarily shifts to the past perfect, which would place the popularizing before another past reference point rather than coordinate it with “gave.” B improperly shifts to the present perfect despite the specific past setting. C suggests a future action relative to a past viewpoint, which does not fit the sentence."
+    },
+    {
+      "id": "rw-command-evidence-quote-009",
+      "groupId": "rw-command-evidence-quote-009",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "Medium",
+      "goal": "Choose the quotation that most directly supports the stated claim.",
+      "passage": "*Harbor Glass* is a 1916 novel by Celia Morant. In the novel, Morant describes a copper weather vane mounted above an inn on the coast of Maine as having an intimate connection to a distant place, writing, _____",
+      "question": "Which quotation from *Harbor Glass* most effectively illustrates the claim?",
+      "choices": {
+        "A": "“When the fog pressed against the chimneys, the copper gull complained on its spindle, and Elias knew the tide would turn before midnight.”",
+        "B": "“Letters from Valparaíso remained beneath the ledger, their violet stamps brighter than anything else in the dim parlor.”",
+        "C": "“The gull turning over our roof was beaten from copper dug under the Atacama sun; sometimes, watching it wheel in snow, I imagine that dry country has not altogether left it.”",
+        "D": "“From the bluff, the freight lamps appeared to stitch the fishing road to Portland long before the harbor itself came into view.”"
+      },
+      "correctAnswer": "C",
+      "explanation": "The claim concerns the weather vane’s **connection to a faraway place**. Choice C directly establishes that connection by stating that the copper from which the vane was made came from the Atacama and by suggesting that the distant region remains symbolically present in the object. A describes the vane and its local coastal surroundings but establishes no connection to a distant location. B mentions a distant city, Valparaíso, but the letters—not the weather vane—are connected to that place. D describes a road connecting the local area with Portland, but it says nothing about the weather vane or its origins."
+    },
+    {
+      "id": "rw-central-main-idea-010",
+      "groupId": "rw-central-main-idea-010",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Central Ideas and Details",
+      "difficulty": "Medium",
+      "goal": "Identify the main idea that captures the passage’s central contrast and conclusion.",
+      "passage": "The following text is adapted from Harlan Webb’s 1887 nonfiction book *The Discipline of Inquiry*. A popular journal, defending every citizen’s liberty to accept whichever account most pleases him, treats judgment almost as though preference were sufficient warrant. Education has another office. It does not enthrone each person’s first impression as the measure by which claims must stand or fall; rather, it draws the mind toward standards of evidence, consistency, and examination, until what once seemed merely agreeable must answer to what can be justified before others.",
+      "question": "Which choice best states the main idea of the text?",
+      "choices": {
+        "A": "Disagreement persists primarily because most people are unwilling to reconsider beliefs that they find personally appealing.",
+        "B": "One function of education is to cultivate shared standards by which people can evaluate whether claims are justified.",
+        "C": "Public journals often unfairly portray citizens as incapable of distinguishing evidence from personal preference.",
+        "D": "Education should rely exclusively on scientific experimentation to resolve disagreements about which claims are true."
+      },
+      "correctAnswer": "B",
+      "explanation": "The passage contrasts treating personal preference as sufficient grounds for belief with the role of education, which directs people toward **standards of evidence, consistency, and examination** that claims can satisfy publicly. Thus the central idea is that education helps establish shared criteria for judging whether claims are justified. A goes beyond the passage: the author contrasts preference with disciplined judgment but does not claim that unwillingness to reconsider beliefs is the primary cause of disagreement. C focuses on the journal, which serves mainly as a setup for the author’s broader point about education. D is too narrow and extreme; the passage endorses evidence and examination but does not say that education must rely exclusively on scientific experiments or that every disagreement can be resolved that way."
+    }
+  ]
 }
