@@ -4332,7 +4332,7 @@ select:hover,
 .sat-rail{position:relative;height:52px;margin:0 10px}
 .sat-rail-track{position:absolute;left:0;right:0;top:18px;height:5px;border-radius:999px;background:#e7efed}
 .sat-rail-middle{position:absolute;top:18px;height:5px;border-radius:999px;background:linear-gradient(90deg,#67dfe0,#18a99a,#075f58)}
-.sat-rail-marker{position:absolute;top:0;transform:translateX(-50%);width:1px;height:34px;z-index:2}
+.sat-rail-marker{position:absolute;top:0;width:0;height:34px;z-index:2}
 .sat-rail-dot{position:absolute;left:50%;top:14px;width:12px;height:12px;border:2px solid #fff;border-radius:50%;transform:translateX(-50%);box-shadow:0 0 0 1px rgba(27,67,61,.12)}
 .sat-rail-marker-copy{position:absolute;left:50%;top:31px;display:flex;gap:4px;align-items:baseline;transform:translateX(-50%);white-space:nowrap}
 .sat-rail-marker-copy small{font-size:7px;font-weight:700;color:#7c8b88}.sat-rail-marker-copy strong{font-size:9px;color:#294842}
@@ -5757,57 +5757,34 @@ select:hover,
 .sat-score-guide>.sat-score-guide-note{display:block;margin-top:9px}
 
 
-/* User marker is rendered independently from quartile dots to prevent overlap/sizing conflicts. */
-.sat-rail-marker.covered-by-user .sat-rail-dot{
-  visibility:hidden!important;
-}
-.sat-rail-marker.you::before{
-  content:"";
-  position:absolute;
-  left:50%;
-  top:14px;
-  width:12px;
-  height:12px;
-  box-sizing:border-box;
-  transform:translateX(-50%);
-  border:2px solid #fff;
-  border-radius:50%;
-  background:#f05a32;
-  box-shadow:0 0 0 1px rgba(240,90,50,.18);
-  z-index:2;
-}
-.sat-rail-marker.you .sat-rail-dot{
-  display:none!important;
-}
 
 
-/* Canonical SAT rail marker geometry: every lower/median/upper/you dot is the exact same shape. */
-.sat-rail-marker .sat-rail-dot{display:none!important}
-.sat-rail-marker::before{
-  content:"";
+/* SAT rail marker geometry — one SVG, one size, one coordinate system for every dot. */
+.sat-rail-marker .sat-rail-dot,
+.sat-rail-marker::before{display:none!important}
+.sat-rail-marker-dot{
   position:absolute;
-  left:50%;
-  top:14px;
-  width:12px;
-  height:12px;
-  min-width:12px;
-  min-height:12px;
-  max-width:12px;
-  max-height:12px;
-  box-sizing:border-box;
-  transform:translateX(-50%);
-  border:2px solid #fff;
-  border-radius:50%;
-  box-shadow:0 0 0 1px rgba(27,67,61,.12);
-  z-index:2;
+  left:-8px;
+  top:10px;
+  display:block;
+  width:16px;
+  height:16px;
+  min-width:16px;
+  min-height:16px;
+  max-width:16px;
+  max-height:16px;
+  overflow:visible;
+  pointer-events:none;
 }
-.sat-rail-marker.lower::before{background:#67dfe0}
-.sat-rail-marker.median::before{background:#18a99a}
-.sat-rail-marker.upper::before{background:#075f58}
-.sat-rail-marker.you::before{
-  background:#f05a32;
-  box-shadow:0 0 0 1px rgba(240,90,50,.18);
+.sat-rail-marker-dot circle{
+  fill:currentColor;
+  stroke:#fff;
+  stroke-width:2;
+  vector-effect:non-scaling-stroke;
 }
-.sat-rail-marker.covered-by-user::before{
-  visibility:hidden;
-}
+.sat-rail-marker.lower{color:#67dfe0}
+.sat-rail-marker.median{color:#18a99a}
+.sat-rail-marker.upper{color:#075f58}
+.sat-rail-marker.you{color:#f05a32;z-index:4}
+.sat-rail-marker.covered-by-user .sat-rail-marker-dot{visibility:hidden}
+.sat-rail-marker-copy{left:0}
