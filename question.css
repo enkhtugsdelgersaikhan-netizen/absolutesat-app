@@ -1442,3 +1442,48 @@
         padding:13px 12px 10px;
     }
 }
+
+
+/* Additional graph types */
+.question-graph-line{
+    fill:none;
+    stroke-width:2.2;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    vector-effect:non-scaling-stroke;
+}
+.question-graph-point{
+    stroke:#ffffff;
+    stroke-width:1.6;
+    vector-effect:non-scaling-stroke;
+}
+.question-graph-line.graph-series-0{
+    stroke:#0f766e;
+}
+.question-graph-line.graph-series-1{
+    stroke:#668f87;
+}
+.question-graph-line.graph-series-2{
+    stroke:#9a7a4c;
+}
+.question-graph-line.graph-series-3{
+    stroke:#7b8794;
+}
+.question-graph-point.graph-series-0{
+    fill:#0f766e;
+}
+.question-graph-point.graph-series-1{
+    fill:#668f87;
+}
+.question-graph-point.graph-series-2{
+    fill:#9a7a4c;
+}
+.question-graph-point.graph-series-3{
+    fill:#7b8794;
+}
+.question-graph-bar.graph-series-2{
+    fill:#a88b62;
+}
+.question-graph-bar.graph-series-3{
+    fill:#87939f;
+}
