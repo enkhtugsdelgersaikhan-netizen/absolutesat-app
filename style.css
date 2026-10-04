@@ -5779,3 +5779,35 @@ select:hover,
 .sat-rail-marker.you .sat-rail-dot{
   display:none!important;
 }
+
+
+/* Canonical SAT rail marker geometry: every lower/median/upper/you dot is the exact same shape. */
+.sat-rail-marker .sat-rail-dot{display:none!important}
+.sat-rail-marker::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:14px;
+  width:12px;
+  height:12px;
+  min-width:12px;
+  min-height:12px;
+  max-width:12px;
+  max-height:12px;
+  box-sizing:border-box;
+  transform:translateX(-50%);
+  border:2px solid #fff;
+  border-radius:50%;
+  box-shadow:0 0 0 1px rgba(27,67,61,.12);
+  z-index:2;
+}
+.sat-rail-marker.lower::before{background:#67dfe0}
+.sat-rail-marker.median::before{background:#18a99a}
+.sat-rail-marker.upper::before{background:#075f58}
+.sat-rail-marker.you::before{
+  background:#f05a32;
+  box-shadow:0 0 0 1px rgba(240,90,50,.18);
+}
+.sat-rail-marker.covered-by-user::before{
+  visibility:hidden;
+}
