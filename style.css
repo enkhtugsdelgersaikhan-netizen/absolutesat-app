@@ -5765,7 +5765,7 @@ select:hover,
 .sat-rail-marker-dot{
   position:absolute;
   left:-8px;
-  top:10px;
+  top:1px;
   display:block;
   width:16px;
   height:16px;
