@@ -276,6 +276,10 @@ function renderInlineFormatting(value) {
 
     return escaped
         .replace(
+            /&lt;u&gt;([\s\S]*?)&lt;\/u&gt;/g,
+            "<u>$1</u>"
+        )
+        .replace(
             /\*\*([^*]+)\*\*/g,
             "<strong>$1</strong>"
         )
@@ -1210,7 +1214,7 @@ async function loadQuestionById(
 
         const response =
             await fetch(
-                "/question-bank.json?v=5",
+                "/question-bank.json?v=6",
                 {
                     cache: "no-store"
                 }
