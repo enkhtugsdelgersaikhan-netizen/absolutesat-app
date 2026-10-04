@@ -1046,20 +1046,28 @@ function setDropdownOptions(
 
 
 
-function getSkillsForSection() {
-    const domains =
+function getTaxonomyForSection() {
+    return (
         SAT_FILTER_TAXONOMY[activeSection] ||
-        {};
+        {}
+    );
+}
 
+function getSkillsForSection() {
     return [
         ...new Set(
-            Object.values(domains).flat()
+            Object.values(
+                getTaxonomyForSection()
+            ).flat()
         )
     ];
 }
 
 function renderSkillPicker() {
     if (!skillPicker) return;
+
+    const taxonomy =
+        getTaxonomyForSection();
 
     const skills =
         getSkillsForSection();
@@ -1073,26 +1081,77 @@ function renderSkillPicker() {
     const allActive =
         activeSkill.length === 0;
 
-    skillPicker.innerHTML =
-        '<button type="button" class="skill-choice skill-choice-all' +
+    const allButton =
+        '<button type="button" class="domain-choice domain-choice-all' +
         (allActive ? ' active' : '') +
-        '" data-skill="all" aria-pressed="' +
+        '" data-domain-action="all" aria-pressed="' +
         (allActive ? 'true' : 'false') +
-        '"><span>All skills</span><small>Show the full bank</small></button>' +
-        skills.map(skill => {
-            const active =
-                activeSkill.includes(skill);
+        '"><span class="domain-choice-kicker">EVERYTHING</span><strong>All skills</strong><small>Practice the full ' +
+        escapeHtml(activeSection) +
+        ' bank</small></button>';
 
-            return '<button type="button" class="skill-choice' +
-                (active ? ' active' : '') +
-                '" data-skill="' +
-                escapeHtml(skill) +
-                '" aria-pressed="' +
-                (active ? 'true' : 'false') +
-                '"><span>' +
-                escapeHtml(skill) +
-                '</span></button>';
-        }).join("");
+    const domains =
+        Object.entries(taxonomy)
+            .map(([domain, subtopics]) => {
+                const selectedCount =
+                    subtopics.filter(
+                        subtopic =>
+                            activeSkill.includes(
+                                subtopic
+                            )
+                    ).length;
+
+                const domainActive =
+                    selectedCount ===
+                    subtopics.length &&
+                    subtopics.length > 0;
+
+                const partial =
+                    selectedCount > 0 &&
+                    !domainActive;
+
+                const subtopicButtons =
+                    subtopics.map(subtopic => {
+                        const active =
+                            activeSkill.includes(
+                                subtopic
+                            );
+
+                        return '<button type="button" class="subtopic-choice' +
+                            (active ? ' active' : '') +
+                            '" data-skill="' +
+                            escapeHtml(subtopic) +
+                            '" aria-pressed="' +
+                            (active ? 'true' : 'false') +
+                            '"><span class="subtopic-check" aria-hidden="true">✓</span><span>' +
+                            escapeHtml(subtopic) +
+                            '</span></button>';
+                    }).join("");
+
+                return '<section class="domain-skill-group' +
+                    (partial ? ' partial' : '') +
+                    (domainActive ? ' active' : '') +
+                    '"><button type="button" class="domain-choice" data-domain="' +
+                    escapeHtml(domain) +
+                    '" aria-pressed="' +
+                    (domainActive ? 'true' : 'false') +
+                    '"><span class="domain-choice-kicker">DOMAIN</span><strong>' +
+                    escapeHtml(domain) +
+                    '</strong><small>' +
+                    (selectedCount > 0
+                        ? selectedCount + ' of ' + subtopics.length + ' selected'
+                        : subtopics.length + ' skills') +
+                    '</small><span class="domain-choice-mark" aria-hidden="true">✓</span></button><div class="subtopic-choice-grid">' +
+                    subtopicButtons +
+                    '</div></section>';
+            }).join("");
+
+    skillPicker.innerHTML =
+        '<div class="domain-all-row">' +
+        allButton +
+        '</div><div class="domain-skill-list">' +
+        domains +
+        '</div>';
 }
 
 
@@ -1630,29 +1689,77 @@ if (skillPicker) {
     skillPicker.addEventListener(
         "click",
         event => {
-            const button =
+            const allButton =
                 event.target.closest(
-                    ".skill-choice"
+                    '[data-domain-action="all"]'
                 );
 
-            if (!button) return;
+            const domainButton =
+                event.target.closest(
+                    "[data-domain]"
+                );
 
-            const skill =
-                button.dataset.skill ||
-                "all";
+            const skillButton =
+                event.target.closest(
+                    "[data-skill]"
+                );
 
-            if (skill === "all") {
+            if (
+                !allButton &&
+                !domainButton &&
+                !skillButton
+            ) return;
+
+            if (allButton) {
                 activeSkill = [];
-            } else if (
-                activeSkill.includes(skill)
-            ) {
-                activeSkill =
-                    activeSkill.filter(
-                        selected =>
-                            selected !== skill
+            } else if (domainButton) {
+                const domain =
+                    domainButton.dataset.domain;
+
+                const domainSkills =
+                    getTaxonomyForSection()[
+                        domain
+                    ] || [];
+
+                const allSelected =
+                    domainSkills.every(
+                        skill =>
+                            activeSkill.includes(
+                                skill
+                            )
                     );
-            } else {
-                activeSkill.push(skill);
+
+                if (allSelected) {
+                    activeSkill =
+                        activeSkill.filter(
+                            skill =>
+                                !domainSkills.includes(
+                                    skill
+                                )
+                        );
+                } else {
+                    activeSkill = [
+                        ...new Set([
+                            ...activeSkill,
+                            ...domainSkills
+                        ])
+                    ];
+                }
+            } else if (skillButton) {
+                const skill =
+                    skillButton.dataset.skill;
+
+                if (
+                    activeSkill.includes(skill)
+                ) {
+                    activeSkill =
+                        activeSkill.filter(
+                            selected =>
+                                selected !== skill
+                        );
+                } else {
+                    activeSkill.push(skill);
+                }
             }
 
             saveQuestionBankFilters();
