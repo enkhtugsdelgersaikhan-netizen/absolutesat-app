@@ -290,7 +290,7 @@
     }
   }
 
-  const UNIVERSITY_ASSET_CACHE_KEY = "lexlogica_university_assets_v9";
+  const UNIVERSITY_ASSET_CACHE_KEY = "lexlogica_university_assets_v10";
   const UNIVERSITY_ASSET_CACHE_MS = 30 * 24 * 60 * 60 * 1000;
 
   function applyUniversityAssets(assetResults) {
@@ -329,37 +329,61 @@
       }
     } catch {}
 
+    const paint = (mergedResults) => {
+      applyUniversityAssets(mergedResults);
+      if (selectedUniversity) renderFeatured(selectedUniversity);
+      filter();
+    };
+
     try {
-      const schools = universities
+      const initialSchools = universities
         .filter((u) => !cachedResults?.[u.id]?.mark_url || !cachedResults?.[u.id]?.campus_url)
         .map((u) => ({id:u.id,name:u.name}));
-      if (!schools.length) return;
-
-      const batches = [];
-      for (let i = 0; i < schools.length; i += 20) batches.push(schools.slice(i, i + 20));
+      if (!initialSchools.length) return;
 
       const mergedResults = {...cachedResults};
-      // Keep concurrency modest so Wikimedia requests stay reliable as the catalog grows.
-      for (let i = 0; i < batches.length; i += 1) {
-        const group = batches.slice(i, i + 1);
+
+      // Fast pass: Wikipedia page + Wikidata only. This resolves most schools in a
+      // handful of requests instead of making the catalog wait on Commons searches.
+      const fastBatches = [];
+      for (let i = 0; i < initialSchools.length; i += 20) fastBatches.push(initialSchools.slice(i, i + 20));
+
+      for (let i = 0; i < fastBatches.length; i += 3) {
+        const group = fastBatches.slice(i, i + 3);
         const settled = await Promise.allSettled(group.map(async (batch) => {
           const response = await fetch("/api/school-assets", {
             method:"POST",
             headers:{"content-type":"application/json"},
-            body:JSON.stringify({schools:batch})
+            body:JSON.stringify({schools:batch,mode:"fast"})
           });
-          if (!response.ok) throw new Error("University asset batch failed");
+          if (!response.ok) throw new Error("University asset fast batch failed");
           return response.json();
         }));
         settled.forEach((result) => {
           if (result.status === "fulfilled") Object.assign(mergedResults, result.value?.results || {});
         });
-        applyUniversityAssets(mergedResults);
+        paint(mergedResults);
+      }
 
-        // Paint each successful batch immediately. With a 200-school catalog,
-        // waiting for every remote image lookup made the first rows look broken.
-        if (selectedUniversity) renderFeatured(selectedUniversity);
-        filter();
+      // Slow refinement only for the minority still missing a real symbol or campus.
+      // Small batches keep Wikimedia rate limits from blanking out the rest of the page.
+      const unresolved = universities
+        .filter((u) => !mergedResults?.[u.id]?.mark_url || !mergedResults?.[u.id]?.campus_url)
+        .map((u) => ({id:u.id,name:u.name}));
+
+      for (let i = 0; i < unresolved.length; i += 5) {
+        const batch = unresolved.slice(i, i + 5);
+        try {
+          const response = await fetch("/api/school-assets", {
+            method:"POST",
+            headers:{"content-type":"application/json"},
+            body:JSON.stringify({schools:batch,mode:"full"})
+          });
+          if (!response.ok) continue;
+          const payload = await response.json();
+          Object.assign(mergedResults, payload?.results || {});
+          paint(mergedResults);
+        } catch {}
       }
 
       try {
