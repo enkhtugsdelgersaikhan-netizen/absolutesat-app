@@ -2,10 +2,11 @@
 const questionBankSupabase = supabaseClient;
 
 let allQuestions = [];
-let activeSection = "Reading & Writing";
+let activeSection =
+    document.body?.dataset.questionSection ||
+    "Reading & Writing";
 let activeSearch = "";
-let activeDomain = [];
-let activeSubtopic = [];
+let activeSkill = [];
 let activeDifficulty = [];
 let activeStatus = [];
 let reviewOnly = false;
@@ -18,12 +19,10 @@ const questionList = document.getElementById("question-list");
 const questionCount = document.getElementById("question-count");
 const resultsDescription = document.getElementById("results-description");
 const searchInput = document.getElementById("question-search");
-const topicFilter = document.getElementById("topic-filter");
+const skillPicker = document.getElementById("skill-picker-options");
 const difficultyFilter = document.getElementById("difficulty-filter");
 const statusFilter = document.getElementById("status-filter");
 const reviewOnlyCheckbox = document.getElementById("review-only");
-const sectionTabs = document.querySelectorAll(".section-tab");
-let subtopicFilter = null;
 
 const SAT_FILTER_TAXONOMY = {
     "Reading & Writing": {
@@ -89,80 +88,18 @@ function escapeHtml(value) {
         .replace(/'/g, "&#039;");
 }
 
-function ensureDomainSubtopicFilters() {
-    const existingGroup = topicFilter?.closest(".filter-group");
 
-    if (!existingGroup || subtopicFilter) {
-        return;
-    }
-
-    const label = existingGroup.querySelector("label");
-
-    if (label) {
-        label.textContent = "Domain";
-    }
-
-    topicFilter.dataset.filter = "domain";
-
-    const subtopicGroup = document.createElement("div");
-    subtopicGroup.className = "filter-group";
-    subtopicGroup.innerHTML = `
-        <label for="subtopic-filter">Subtopic</label>
-        <div class="filter-dropdown" id="subtopic-filter" data-filter="subtopic" data-value="all">
-            <button type="button" class="filter-dropdown-trigger" aria-haspopup="listbox" aria-expanded="false">
-                <span class="filter-dropdown-value">All Subtopics</span>
-                <span class="filter-dropdown-chevron" aria-hidden="true">⌄</span>
-            </button>
-            <div class="filter-dropdown-menu" role="listbox"></div>
-        </div>
-    `;
-
-    existingGroup.parentElement.insertBefore(
-        subtopicGroup,
-        difficultyFilter.closest(".filter-group")
-    );
-
-    subtopicFilter = document.getElementById("subtopic-filter");
-
-    const style = document.createElement("style");
-    style.textContent = `
-        .filters-row {
-            grid-template-columns:
-                minmax(0, 1.4fr)
-                minmax(0, 1.4fr)
-                minmax(180px, 1fr)
-                minmax(180px, 1fr) !important;
-        }
-
-        @media (max-width: 1000px) {
-            .filters-row {
-                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-            }
-        }
-
-        @media (max-width: 700px) {
-            .filters-row {
-                grid-template-columns: 1fr !important;
-            }
-        }
-    `;
-
-    document.head.appendChild(style);
-}
-
-ensureDomainSubtopicFilters();
-
-const QUESTION_BANK_FILTER_STORAGE_KEY = "absoluteprep-question-bank-filters";
+const QUESTION_BANK_FILTER_STORAGE_KEY =
+    "absoluteprep-question-bank-filters:" +
+    activeSection;
 
 function saveQuestionBankFilters() {
     try {
         localStorage.setItem(
             QUESTION_BANK_FILTER_STORAGE_KEY,
             JSON.stringify({
-                section: activeSection,
                 search: activeSearch,
-                domain: activeDomain,
-                subtopic: activeSubtopic,
+                skill: activeSkill,
                 difficulty: activeDifficulty,
                 status: activeStatus,
                 reviewOnly
@@ -188,27 +125,17 @@ function loadQuestionBankFilters() {
             return;
         }
 
-        const validSections =
-            Object.keys(SAT_FILTER_TAXONOMY);
-
-        if (validSections.includes(stored.section)) {
-            activeSection = stored.section;
-        }
-
         activeSearch =
             typeof stored.search === "string"
                 ? stored.search
                 : "";
 
-        activeDomain =
-            Array.isArray(stored.domain)
-                ? stored.domain
-                : [];
-
-        activeSubtopic =
-            Array.isArray(stored.subtopic)
-                ? stored.subtopic
-                : [];
+        activeSkill =
+            Array.isArray(stored.skill)
+                ? stored.skill
+                : Array.isArray(stored.subtopic)
+                    ? stored.subtopic
+                    : [];
 
         activeDifficulty =
             Array.isArray(stored.difficulty)
@@ -231,17 +158,6 @@ function loadQuestionBankFilters() {
 }
 
 function syncQuestionBankFilterUI() {
-    sectionTabs.forEach(tab => {
-        const isActive =
-            (tab.dataset.section || "Reading & Writing") ===
-            activeSection;
-
-        tab.classList.toggle(
-            "active",
-            isActive
-        );
-    });
-
     if (searchInput) {
         searchInput.value = activeSearch;
     }
@@ -250,6 +166,8 @@ function syncQuestionBankFilterUI() {
         reviewOnlyCheckbox.checked =
             reviewOnly;
     }
+
+    renderSkillPicker();
 }
 
 loadQuestionBankFilters();
@@ -807,8 +725,7 @@ async function loadQuestions() {
             stagedQuestions
         );
 
-    populateDomainFilter();
-    populateSubtopicFilter();
+    renderSkillPicker();
 
     await loadUserData();
 
@@ -1102,101 +1019,53 @@ function setDropdownOptions(
 
 
 
-function getDomainsForSection() {
-    return (
+function getSkillsForSection() {
+    const domains =
         SAT_FILTER_TAXONOMY[activeSection] ||
-        {}
-    );
+        {};
+
+    return [
+        ...new Set(
+            Object.values(domains).flat()
+        )
+    ];
 }
 
-function populateDomainFilter() {
-    if (!topicFilter) return;
+function renderSkillPicker() {
+    if (!skillPicker) return;
 
-    const domains =
-        getDomainsForSection();
+    const skills =
+        getSkillsForSection();
 
-    const options = [
-        {
-            value: "all",
-            label: "All Domains"
-        },
-        ...Object.keys(domains).map(domain => ({
-            value: domain,
-            label: domain
-        }))
-    ];
-
-    const validValues =
-        activeDomain.filter(
-            value =>
-                Object.prototype.hasOwnProperty.call(
-                    domains,
-                    value
-                )
+    activeSkill =
+        activeSkill.filter(
+            skill =>
+                skills.includes(skill)
         );
 
-    activeDomain = validValues;
+    const allActive =
+        activeSkill.length === 0;
 
-    setDropdownOptions(
-        topicFilter,
-        options,
-        activeDomain
-    );
-}
+    skillPicker.innerHTML =
+        '<button type="button" class="skill-choice skill-choice-all' +
+        (allActive ? ' active' : '') +
+        '" data-skill="all" aria-pressed="' +
+        (allActive ? 'true' : 'false') +
+        '"><span>All skills</span><small>Show the full bank</small></button>' +
+        skills.map(skill => {
+            const active =
+                activeSkill.includes(skill);
 
-function populateSubtopicFilter() {
-    if (!subtopicFilter) return;
-
-    const domains =
-        getDomainsForSection();
-
-    let subtopics = [];
-
-    if (activeDomain.length === 0) {
-        subtopics =
-            Object.values(domains).flat();
-    } else {
-        activeDomain.forEach(
-            domain => {
-                if (domains[domain]) {
-                    subtopics.push(
-                        ...domains[domain]
-                    );
-                }
-            }
-        );
-    }
-
-    const uniqueSubtopics =
-        [...new Set(subtopics)];
-
-    const validValues =
-        activeSubtopic.filter(
-            value =>
-                uniqueSubtopics.includes(
-                    value
-                )
-        );
-
-    activeSubtopic =
-        validValues;
-
-    const options = [
-        {
-            value: "all",
-            label: "All Subtopics"
-        },
-        ...uniqueSubtopics.map(subtopic => ({
-            value: subtopic,
-            label: subtopic
-        }))
-    ];
-
-    setDropdownOptions(
-        subtopicFilter,
-        options,
-        activeSubtopic
-    );
+            return '<button type="button" class="skill-choice' +
+                (active ? ' active' : '') +
+                '" data-skill="' +
+                escapeHtml(skill) +
+                '" aria-pressed="' +
+                (active ? 'true' : 'false') +
+                '"><span>' +
+                escapeHtml(skill) +
+                '</span></button>';
+        }).join("");
 }
 
 
@@ -1241,21 +1110,11 @@ function getFilteredQuestions() {
             );
     }
 
-    if (activeDomain.length > 0) {
+    if (activeSkill.length > 0) {
         questions =
             questions.filter(
                 question =>
-                    activeDomain.includes(
-                        question.domain
-                    )
-            );
-    }
-
-    if (activeSubtopic.length > 0) {
-        questions =
-            questions.filter(
-                question =>
-                    activeSubtopic.includes(
+                    activeSkill.includes(
                         question.topic
                     )
             );
@@ -1363,7 +1222,7 @@ function showEmptyState() {
         '</svg>' +
         '</div>' +
         '<h2>No questions found</h2>' +
-        '<p>Try changing your filters or search.</p>' +
+        '<p>Try choosing different skills, difficulty, status, or search terms.</p>' +
         '</div>';
 }
 
@@ -1655,8 +1514,7 @@ function renderQuestions() {
                 activeSection
         ).length &&
         !activeSearch &&
-        activeDomain.length === 0 &&
-        activeSubtopic.length === 0 &&
+        activeSkill.length === 0 &&
         activeDifficulty.length === 0 &&
         activeStatus.length === 0 &&
         !reviewOnly
@@ -1741,26 +1599,41 @@ if (searchInput) {
     );
 }
 
-setupFilterDropdown(
-    topicFilter,
-    values => {
-        activeDomain = values;
-        activeSubtopic = [];
-        saveQuestionBankFilters();
-        populateDomainFilter();
-        populateSubtopicFilter();
-        renderQuestions();
-    }
-);
+if (skillPicker) {
+    skillPicker.addEventListener(
+        "click",
+        event => {
+            const button =
+                event.target.closest(
+                    ".skill-choice"
+                );
 
-setupFilterDropdown(
-    subtopicFilter,
-    values => {
-        activeSubtopic = values;
-        saveQuestionBankFilters();
-        renderQuestions();
-    }
-);
+            if (!button) return;
+
+            const skill =
+                button.dataset.skill ||
+                "all";
+
+            if (skill === "all") {
+                activeSkill = [];
+            } else if (
+                activeSkill.includes(skill)
+            ) {
+                activeSkill =
+                    activeSkill.filter(
+                        selected =>
+                            selected !== skill
+                    );
+            } else {
+                activeSkill.push(skill);
+            }
+
+            saveQuestionBankFilters();
+            renderSkillPicker();
+            renderQuestions();
+        }
+    );
+}
 
 setupFilterDropdown(
     difficultyFilter,
@@ -1792,42 +1665,6 @@ if (reviewOnlyCheckbox) {
         }
     );
 }
-
-sectionTabs.forEach(
-    tab => {
-        tab.addEventListener(
-            "click",
-            () => {
-                sectionTabs.forEach(
-                    otherTab =>
-                        otherTab.classList.remove(
-                            "active"
-                        )
-                );
-
-                tab.classList.add(
-                    "active"
-                );
-
-                activeSection =
-                    tab.dataset.section ||
-                    "Reading & Writing";
-
-                activeDomain = [];
-                activeSubtopic = [];
-                activeDifficulty = [];
-                activeStatus = [];
-
-                saveQuestionBankFilters();
-
-                populateDomainFilter();
-                populateSubtopicFilter();
-
-                renderQuestions();
-            }
-        );
-    }
-);
 
 document.addEventListener(
     "click",
