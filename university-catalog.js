@@ -210,7 +210,8 @@
     };
   }
 
-  const universities = (Array.isArray(window.LEXLOGICA_TOP100) ? window.LEXLOGICA_TOP100 : []).map((meta) => {
+  const catalogSource = Array.isArray(window.LEXLOGICA_UNIVERSITIES) ? window.LEXLOGICA_UNIVERSITIES : (Array.isArray(window.LEXLOGICA_TOP100) ? window.LEXLOGICA_TOP100 : []);
+  const universities = catalogSource.map((meta) => {
     const image = curatedImages[meta.id];
     const seed = knownFallbacks[meta.id] || estimatedFromRank(meta.rank, meta.id);
     return {
@@ -254,17 +255,24 @@
 
   async function hydrateUniversityData() {
     try {
-      const response = await fetch("/api/college-data", {
-        method:"POST",
-        headers:{"content-type":"application/json"},
-        body:JSON.stringify({
-          schools:universities.map((u) => ({id:u.id,name:u.name,cdId:u.cdId,state:u.state}))
-        })
-      });
-      if (!response.ok) throw new Error("SAT data request failed");
-      const payload = await response.json();
+      const schools = universities.map((u) => ({id:u.id,name:u.name,cdId:u.cdId,state:u.state}));
+      const batches = [];
+      for (let i = 0; i < schools.length; i += 50) batches.push(schools.slice(i, i + 50));
+
+      const mergedResults = {};
+      for (const batch of batches) {
+        const response = await fetch("/api/college-data", {
+          method:"POST",
+          headers:{"content-type":"application/json"},
+          body:JSON.stringify({schools:batch})
+        });
+        if (!response.ok) throw new Error("SAT data request failed");
+        const payload = await response.json();
+        Object.assign(mergedResults, payload?.results || {});
+      }
+
       universities.forEach((u) => {
-        const hydrated = buildSatFromData(u, payload?.results?.[u.id]);
+        const hydrated = buildSatFromData(u, mergedResults[u.id]);
         if (hydrated) Object.assign(u, hydrated);
       });
     } catch (error) {
@@ -277,7 +285,7 @@
     }
   }
 
-  const UNIVERSITY_ASSET_CACHE_KEY = "lexlogica_university_assets_v7";
+  const UNIVERSITY_ASSET_CACHE_KEY = "lexlogica_university_assets_v8";
   const UNIVERSITY_ASSET_CACHE_MS = 30 * 24 * 60 * 60 * 1000;
 
   function applyUniversityAssets(assetResults) {
@@ -304,35 +312,45 @@
   }
 
   async function hydrateUniversityAssets() {
+    let cachedResults = {};
     try {
       const cachedRaw = localStorage.getItem(UNIVERSITY_ASSET_CACHE_KEY);
       if (cachedRaw) {
         const cached = JSON.parse(cachedRaw);
         if (cached?.savedAt && Date.now() - cached.savedAt < UNIVERSITY_ASSET_CACHE_MS && cached.results) {
-          applyUniversityAssets(cached.results);
-          return;
+          cachedResults = cached.results;
+          applyUniversityAssets(cachedResults);
         }
       }
     } catch {}
 
     try {
-      const schools = universities.map((u) => ({id:u.id,name:u.name}));
+      const schools = universities
+        .filter((u) => !cachedResults?.[u.id]?.mark_url || !cachedResults?.[u.id]?.campus_url)
+        .map((u) => ({id:u.id,name:u.name}));
+      if (!schools.length) return;
+
       const batches = [];
       for (let i = 0; i < schools.length; i += 20) batches.push(schools.slice(i, i + 20));
 
-      const payloads = await Promise.all(batches.map(async (batch) => {
-        const response = await fetch("/api/school-assets", {
-          method:"POST",
-          headers:{"content-type":"application/json"},
-          body:JSON.stringify({schools:batch})
+      const mergedResults = {...cachedResults};
+      // Keep concurrency modest so Wikimedia requests stay reliable as the catalog grows.
+      for (let i = 0; i < batches.length; i += 3) {
+        const group = batches.slice(i, i + 3);
+        const settled = await Promise.allSettled(group.map(async (batch) => {
+          const response = await fetch("/api/school-assets", {
+            method:"POST",
+            headers:{"content-type":"application/json"},
+            body:JSON.stringify({schools:batch})
+          });
+          if (!response.ok) throw new Error("University asset batch failed");
+          return response.json();
+        }));
+        settled.forEach((result) => {
+          if (result.status === "fulfilled") Object.assign(mergedResults, result.value?.results || {});
         });
-        if (!response.ok) throw new Error("University asset batch failed");
-        return response.json();
-      }));
-
-      const mergedResults = {};
-      payloads.forEach((payload) => Object.assign(mergedResults, payload?.results || {}));
-      applyUniversityAssets(mergedResults);
+        applyUniversityAssets(mergedResults);
+      }
 
       try {
         localStorage.setItem(UNIVERSITY_ASSET_CACHE_KEY, JSON.stringify({
@@ -809,9 +827,9 @@
     if (event.key === "Escape") results.hidden = true;
   });
 
-  featured.innerHTML = '<div class="university-catalog-loading">Loading Top 100 SAT data…</div>';
+  featured.innerHTML = '<div class="university-catalog-loading">Loading university SAT data…</div>';
   grid.innerHTML = '<div class="university-catalog-loading">Loading the latest available score ranges…</div>';
-  count.textContent = "100 schools";
+  count.textContent = universities.length + " universities";
 
   const profileForm = document.getElementById("sat-profile-form");
   const readingInput = document.getElementById("sat-reading-writing");
@@ -875,7 +893,7 @@
     updateGuideHighlights(reading, math);
   };
 
-  Promise.all([hydrateUniversityData(), hydrateUniversityAssets(), loadUserProfile()]).then(async ([, , profile]) => {
+  Promise.all([hydrateUniversityData(), loadUserProfile()]).then(async ([, profile]) => {
     userProfile = profile;
     try {
       const { data } = await absolutePrepSupabase.auth.getSession();
@@ -890,6 +908,12 @@
     selectedUniversity = universities[0];
     renderFeatured(selectedUniversity);
     renderGrid(universities);
+
+    hydrateUniversityAssets().then(() => {
+      const selected = selectedUniversity;
+      if (selected) renderFeatured(selected);
+      filter();
+    });
   });
 
   readingInput?.addEventListener("input", updateProfilePreview);
