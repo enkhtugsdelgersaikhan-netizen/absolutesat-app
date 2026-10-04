@@ -5788,3 +5788,76 @@ select:hover,
 .sat-rail-marker.you{color:#f05a32;z-index:4}
 .sat-rail-marker.covered-by-user .sat-rail-marker-dot{visibility:hidden}
 .sat-rail-marker-copy{left:0}
+
+
+/* ============================================================
+   CANONICAL SITE HEADER — one fixed placement on every page
+   ============================================================ */
+@media (min-width:951px){
+    .header-container{
+        position:relative!important;
+        width:min(1440px,calc(100% - 40px))!important;
+        max-width:1440px!important;
+        margin:0 auto!important;
+        padding:8px 0!important;
+        gap:0!important;
+        justify-content:flex-start!important;
+    }
+
+    .header-container .logo-link{
+        position:relative!important;
+        z-index:2;
+        flex:0 0 auto!important;
+    }
+
+    .header-container .navigation{
+        position:absolute!important;
+        left:50%!important;
+        top:50%!important;
+        transform:translate(-50%,-50%)!important;
+        width:auto!important;
+        flex:none!important;
+        margin:0!important;
+        gap:12px!important;
+        justify-content:center!important;
+        z-index:1;
+    }
+
+    .header-container .site-dashboard,
+    .header-container .auth-buttons{
+        position:relative!important;
+        z-index:2;
+    }
+
+    .header-container .site-dashboard{
+        margin-left:auto!important;
+    }
+
+    .header-container .site-dashboard[hidden]{
+        display:none!important;
+    }
+
+    .header-container .auth-buttons{
+        margin-left:8px!important;
+    }
+
+    .header-container .auth-buttons.logged-in,
+    .header-container .auth-buttons:empty{
+        display:none!important;
+        min-width:0!important;
+        margin-left:0!important;
+    }
+
+    .header-container .mobile-menu-button{
+        display:none!important;
+    }
+}
+
+@media (max-width:950px){
+    .header-container .site-dashboard{
+        margin-left:auto!important;
+    }
+    .header-container .site-dashboard[hidden]{
+        display:none!important;
+    }
+}
