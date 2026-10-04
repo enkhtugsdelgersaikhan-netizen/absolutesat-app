@@ -562,7 +562,7 @@ function resetCardUI(){
 }
 function updateStatusUI(item){
     const state=getState(item);
-    solvedStatusEl.textContent=state.solved?"Solved":"Unsolved";
+    solvedStatusEl.textContent=state.solved?"Know It":"Learning";
     solvedStatusEl.className="vocab-status-chip "+(state.solved?"solved":"unsolved");
     reviewStatusEl.classList.toggle("hidden",!state.review);
     reviewButton.textContent=state.review?"★ In Review":"☆ Mark for Review";
@@ -576,9 +576,9 @@ function updateStatusUI(item){
 function updateProgress(){
     const solved=formulas.filter(item=>getState(item).solved).length;
     const review=formulas.filter(item=>getState(item).review).length;
-    progressText.textContent=solved+" of "+formulas.length+" solved";
+    progressText.textContent=solved+" of "+formulas.length+" known";
     progressBar.style.width=(solved/formulas.length*100)+"%";
-    statusSummary.textContent=review+" review · "+(formulas.length-solved)+" unsolved";
+    statusSummary.textContent=review+" review · "+(formulas.length-solved)+" learning";
 }
 function typeset(nodes,attempt=0){
     if(window.MathJax&&MathJax.typesetPromise){
