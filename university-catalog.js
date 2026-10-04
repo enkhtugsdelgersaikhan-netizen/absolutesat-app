@@ -668,11 +668,13 @@
     const relation = hasUser ? positionDisplay(userScore, values) : null;
     const scale = railScale(values, type, userScore);
     const pos = (v) => scale.position(v).toFixed(2);
-    const marker = (kind, name, value) =>
-      '<div class="sat-rail-marker ' + kind + '" style="left:' + pos(value) + '%">' +
+    const marker = (kind, name, value) => {
+      const covered = kind !== "you" && hasUser && value === userScore ? " covered-by-user" : "";
+      return '<div class="sat-rail-marker ' + kind + covered + '" style="left:' + pos(value) + '%">' +
         '<span class="sat-rail-dot" aria-hidden="true"></span>' +
         '<span class="sat-rail-marker-copy"><small>' + name + '</small><strong>' + value + '</strong></span>' +
       '</div>';
+    };
 
     const quartileMarkers = lower === median && median === upper
       ? marker("median","Lower · Median · Upper",median)
