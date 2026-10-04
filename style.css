@@ -5755,3 +5755,19 @@ select:hover,
 /* Restored score guide: keep the original always-visible table presentation */
 .sat-score-guide>.sat-score-guide-columns{margin-top:14px}
 .sat-score-guide>.sat-score-guide-note{display:block;margin-top:9px}
+
+
+/* Keep the user's SAT rail marker visually identical even when it lands on a quartile. */
+.sat-rail-marker.covered-by-user .sat-rail-dot{
+  opacity:0;
+}
+.sat-rail-marker.you .sat-rail-dot{
+  box-sizing:border-box;
+  width:21px;
+  height:21px;
+  min-width:21px;
+  min-height:21px;
+  border:3px solid #fff;
+  border-radius:50%;
+  transform:translateX(-50%);
+}
