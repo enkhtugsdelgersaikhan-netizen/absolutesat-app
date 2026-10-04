@@ -2060,9 +2060,18 @@ function renderChoices(
 
             if (checked) {
 
+                const selectedAnswer =
+                    answers[
+                        question.id
+                    ] || null;
+
+                const answeredCorrectly =
+                    selectedAnswer ===
+                    question.correct_answer;
+
                 if (
-                    choice.letter ===
-                    question.correct_answer
+                    selected &&
+                    answeredCorrectly
                 ) {
 
                     button.classList.add(
@@ -2070,7 +2079,8 @@ function renderChoices(
                     );
 
                 } else if (
-                    selected
+                    selected &&
+                    !answeredCorrectly
                 ) {
 
                     button.classList.add(
@@ -2188,14 +2198,20 @@ function renderChoices(
                     choice.letter ===
                     question.correct_answer;
 
-                const isSelectedWrong =
-                    selected &&
-                    !isCorrectChoice;
+                const answeredCorrectly =
+                    answers[
+                        question.id
+                    ] ===
+                    question.correct_answer;
 
-                if (
-                    isCorrectChoice ||
-                    isSelectedWrong
-                ) {
+                const shouldExplain =
+                    selected &&
+                    (
+                        !isCorrectChoice ||
+                        answeredCorrectly
+                    );
+
+                if (shouldExplain) {
                     const reason =
                         createChoiceReason(
                             question,
@@ -2375,15 +2391,13 @@ function renderAnswerFeedback(
     answerFeedbackTitle.textContent =
         isCorrect
             ? "Correct"
-            : "Not quite — " +
-                question.correct_answer +
-                " is correct";
+            : "Not quite";
 
 
     answerFeedbackExplanation.textContent =
         isCorrect
-            ? "The reasoning is attached to the correct choice."
-            : "Compare the note under your choice with the reasoning under the correct answer.";
+            ? "The reasoning is attached to the answer you chose."
+            : "The note under your choice explains why it does not work. The correct answer stays hidden.";
 
 
     if (checkAnswerButton) {
