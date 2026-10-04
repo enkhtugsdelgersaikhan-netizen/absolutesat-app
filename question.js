@@ -1113,6 +1113,10 @@ function normalizeStagedQuestion(
         explanation:
             stagedQuestion.explanation ||
             "",
+        choice_explanations:
+            stagedQuestion.choiceExplanations ||
+            stagedQuestion.choice_explanations ||
+            null,
         difficulty:
             stagedQuestion.difficulty
                 ? (
@@ -1831,6 +1835,154 @@ function renderCurrentQuestion() {
 }
 
 
+
+function getChoiceExplanation(
+    question,
+    letter
+) {
+    const direct =
+        question.choice_explanations?.[
+            letter
+        ];
+
+    if (direct) {
+        return direct;
+    }
+
+    const raw =
+        String(
+            question.explanation || ""
+        ).trim();
+
+    if (!raw) {
+        return "";
+    }
+
+    const paragraphs =
+        raw
+            .split(/\n\s*\n/)
+            .map(part => part.trim())
+            .filter(Boolean);
+
+    if (
+        letter ===
+        question.correct_answer
+    ) {
+        return (
+            paragraphs[0] ||
+            raw
+        );
+    }
+
+    const markerPattern =
+        new RegExp(
+            "(?:^|\\n|(?<=[.!?])\\s+)" +
+            letter +
+            "(?=\\s|,|:|—)",
+            "g"
+        );
+
+    const match =
+        markerPattern.exec(raw);
+
+    if (match) {
+        const prefixLength =
+            match[0].search(/[A-D]/);
+
+        const start =
+            match.index +
+            Math.max(
+                prefixLength,
+                0
+            );
+
+        const rest =
+            raw.slice(start);
+
+        const next =
+            rest
+                .slice(1)
+                .search(
+                    /(?:^|\n|(?<=[.!?])\s+)[A-D](?=\s|,|:|—)/
+                );
+
+        return (
+            next >= 0
+                ? rest.slice(
+                    0,
+                    next + 1
+                )
+                : rest
+        ).trim();
+    }
+
+    const sentenceMatch =
+        paragraphs
+            .flatMap(
+                part =>
+                    part.split(
+                        /(?<=[.!?])\s+/
+                    )
+            )
+            .find(
+                sentence =>
+                    new RegExp(
+                        "(^|\\b)" +
+                        letter +
+                        "(?:\\b|,)"
+                    ).test(sentence)
+            );
+
+    return (
+        sentenceMatch ||
+        raw
+    ).trim();
+}
+
+function createChoiceReason(
+    question,
+    letter,
+    isCorrectChoice
+) {
+    const reason =
+        getChoiceExplanation(
+            question,
+            letter
+        );
+
+    if (!reason) {
+        return null;
+    }
+
+    const box =
+        document.createElement(
+            "div"
+        );
+
+    box.className =
+        "choice-reason " +
+        (
+            isCorrectChoice
+                ? "choice-reason-correct"
+                : "choice-reason-wrong"
+        );
+
+    box.innerHTML =
+        '<div class="choice-reason-label">' +
+        (
+            isCorrectChoice
+                ? "Why this works"
+                : "Why this doesn’t work"
+        ) +
+        '</div><div class="choice-reason-text">' +
+        renderInlineFormatting(
+            reason
+        ) +
+        '</div>';
+
+    return box;
+}
+
 /* ============================================================
    RENDER CHOICES
    ============================================================ */
@@ -2031,6 +2183,34 @@ function renderChoices(
                 strikeButton
             );
 
+            if (checked) {
+                const isCorrectChoice =
+                    choice.letter ===
+                    question.correct_answer;
+
+                const isSelectedWrong =
+                    selected &&
+                    !isCorrectChoice;
+
+                if (
+                    isCorrectChoice ||
+                    isSelectedWrong
+                ) {
+                    const reason =
+                        createChoiceReason(
+                            question,
+                            choice.letter,
+                            isCorrectChoice
+                        );
+
+                    if (reason) {
+                        wrapper.appendChild(
+                            reason
+                        );
+                    }
+                }
+            }
+
 
             choicesContainer.appendChild(
                 wrapper
@@ -2195,15 +2375,15 @@ function renderAnswerFeedback(
     answerFeedbackTitle.textContent =
         isCorrect
             ? "Correct"
-            : "Incorrect";
+            : "Not quite — " +
+                question.correct_answer +
+                " is correct";
 
 
-    answerFeedbackExplanation.innerHTML =
-        "<strong>Explanation</strong><br>" +
-        renderInlineFormatting(
-            question.explanation ||
-            "Review the question and compare your choice with the correct answer."
-        );
+    answerFeedbackExplanation.textContent =
+        isCorrect
+            ? "The reasoning is attached to the correct choice."
+            : "Compare the note under your choice with the reasoning under the correct answer.";
 
 
     if (checkAnswerButton) {
