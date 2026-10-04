@@ -335,8 +335,8 @@
 
       const mergedResults = {...cachedResults};
       // Keep concurrency modest so Wikimedia requests stay reliable as the catalog grows.
-      for (let i = 0; i < batches.length; i += 3) {
-        const group = batches.slice(i, i + 3);
+      for (let i = 0; i < batches.length; i += 1) {
+        const group = batches.slice(i, i + 1);
         const settled = await Promise.allSettled(group.map(async (batch) => {
           const response = await fetch("/api/school-assets", {
             method:"POST",
