@@ -5781,3 +5781,29 @@ select:hover,
   transform:translateX(-50%)!important;
   aspect-ratio:1 / 1!important;
 }
+
+
+/* FINAL rail-marker normalization: "You" uses the exact same geometry as every quartile dot. */
+.sat-rail-marker.you .sat-rail-dot{
+  box-sizing:border-box!important;
+  display:block!important;
+  left:50%!important;
+  top:14px!important;
+  width:12px!important;
+  height:12px!important;
+  min-width:12px!important;
+  min-height:12px!important;
+  max-width:12px!important;
+  max-height:12px!important;
+  padding:0!important;
+  margin:0!important;
+  border:2px solid #fff!important;
+  border-radius:50%!important;
+  background:#f05a32!important;
+  box-shadow:0 0 0 1px rgba(240,90,50,.18)!important;
+  transform:translateX(-50%)!important;
+  aspect-ratio:auto!important;
+}
+.sat-rail-marker.covered-by-user .sat-rail-dot{
+  visibility:hidden!important;
+}
