@@ -4337,7 +4337,7 @@ select:hover,
 .sat-rail-marker-copy{position:absolute;left:50%;top:31px;display:flex;gap:4px;align-items:baseline;transform:translateX(-50%);white-space:nowrap}
 .sat-rail-marker-copy small{font-size:7px;font-weight:700;color:#7c8b88}.sat-rail-marker-copy strong{font-size:9px;color:#294842}
 .sat-rail-marker.lower .sat-rail-dot{background:#67dfe0}.sat-rail-marker.median .sat-rail-dot{background:#18a99a}.sat-rail-marker.upper .sat-rail-dot{background:#075f58}
-.sat-rail-marker.you{z-index:4}.sat-rail-marker.you .sat-rail-dot{top:11px;width:17px;height:17px;background:#f05a32;box-shadow:0 0 0 2px rgba(240,90,50,.13)}
+.sat-rail-marker.you{z-index:4}
 .sat-rail-marker.you .sat-rail-marker-copy{top:-13px;padding:2px 6px;border-radius:999px;background:#fff1ec;box-shadow:0 1px 4px rgba(116,53,34,.08)}
 .sat-rail-marker.you .sat-rail-marker-copy small,.sat-rail-marker.you .sat-rail-marker-copy strong{color:#d94b27}
 .sat-rail-scale-note{display:flex;justify-content:space-between;gap:12px;margin:1px 10px 0;color:#9aa7a4;font-size:7px}
@@ -5757,53 +5757,25 @@ select:hover,
 .sat-score-guide>.sat-score-guide-note{display:block;margin-top:9px}
 
 
-/* Keep the user's SAT rail marker small, perfectly circular, and identical on every rail. */
-.sat-rail-marker.covered-by-user .sat-rail-dot{
-  opacity:0!important;
-}
-.sat-rail-marker.you .sat-rail-dot{
-  box-sizing:border-box!important;
-  display:block!important;
-  top:13px!important;
-  left:50%!important;
-  width:15px!important;
-  height:15px!important;
-  min-width:15px!important;
-  min-height:15px!important;
-  max-width:15px!important;
-  max-height:15px!important;
-  padding:0!important;
-  margin:0!important;
-  border:2px solid #fff!important;
-  border-radius:999px!important;
-  background:#f05a32!important;
-  box-shadow:0 0 0 1.5px rgba(240,90,50,.18)!important;
-  transform:translateX(-50%)!important;
-  aspect-ratio:1 / 1!important;
-}
-
-
-/* FINAL rail-marker normalization: "You" uses the exact same geometry as every quartile dot. */
-.sat-rail-marker.you .sat-rail-dot{
-  box-sizing:border-box!important;
-  display:block!important;
-  left:50%!important;
-  top:14px!important;
-  width:12px!important;
-  height:12px!important;
-  min-width:12px!important;
-  min-height:12px!important;
-  max-width:12px!important;
-  max-height:12px!important;
-  padding:0!important;
-  margin:0!important;
-  border:2px solid #fff!important;
-  border-radius:50%!important;
-  background:#f05a32!important;
-  box-shadow:0 0 0 1px rgba(240,90,50,.18)!important;
-  transform:translateX(-50%)!important;
-  aspect-ratio:auto!important;
-}
+/* User marker is rendered independently from quartile dots to prevent overlap/sizing conflicts. */
 .sat-rail-marker.covered-by-user .sat-rail-dot{
   visibility:hidden!important;
+}
+.sat-rail-marker.you::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:14px;
+  width:12px;
+  height:12px;
+  box-sizing:border-box;
+  transform:translateX(-50%);
+  border:2px solid #fff;
+  border-radius:50%;
+  background:#f05a32;
+  box-shadow:0 0 0 1px rgba(240,90,50,.18);
+  z-index:2;
+}
+.sat-rail-marker.you .sat-rail-dot{
+  display:none!important;
 }
