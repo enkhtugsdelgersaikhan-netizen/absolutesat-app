@@ -9,6 +9,11 @@
     encodeURIComponent(file) +
     "?width=400";
 
+  // Immediate school-specific fallback while Wikimedia campus/brand assets hydrate.
+  // This uses each institution's own web domain, so cards never sit as blank dashed boxes.
+  const officialSiteMark = (domain) =>
+    domain ? "https://www.google.com/s2/favicons?domain=" + encodeURIComponent(domain) + "&sz=256" : null;
+
   const universityMarks = {
     mit:"MIT logo 2003-2023.svg",
     stanford:"Seal of Leland Stanford Junior University.png",
@@ -224,8 +229,8 @@
       source:"https://www.collegedata.fyi/schools/" + meta.cdId,
       image:image ? commons(image[0]) : null,
       photoSource:image ? image[1] : null,
-      mark:universityMarks[meta.id] ? schoolMark(universityMarks[meta.id]) : null,
-      markFallback:universityMarks[meta.id] ? schoolMark(universityMarks[meta.id]) : null,
+      mark:universityMarks[meta.id] ? schoolMark(universityMarks[meta.id]) : officialSiteMark(meta.domain),
+      markFallback:universityMarks[meta.id] ? schoolMark(universityMarks[meta.id]) : officialSiteMark(meta.domain),
       imageFallback:null
     };
   });
@@ -285,7 +290,7 @@
     }
   }
 
-  const UNIVERSITY_ASSET_CACHE_KEY = "lexlogica_university_assets_v8";
+  const UNIVERSITY_ASSET_CACHE_KEY = "lexlogica_university_assets_v9";
   const UNIVERSITY_ASSET_CACHE_MS = 30 * 24 * 60 * 60 * 1000;
 
   function applyUniversityAssets(assetResults) {
@@ -350,6 +355,11 @@
           if (result.status === "fulfilled") Object.assign(mergedResults, result.value?.results || {});
         });
         applyUniversityAssets(mergedResults);
+
+        // Paint each successful batch immediately. With a 200-school catalog,
+        // waiting for every remote image lookup made the first rows look broken.
+        if (selectedUniversity) renderFeatured(selectedUniversity);
+        filter();
       }
 
       try {
