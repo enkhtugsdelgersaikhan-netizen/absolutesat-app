@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Question Bank | LexLogica</title>
+    <link rel="icon" type="image/png" href="/Favicon.png?v=b2788e22">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css?v=subjects-1">
+    <link rel="stylesheet" href="/question-bank.css?v=15">
+</head>
+<body data-question-section="Math">
+<header class="header"><div class="header-container"><a href="/" class="logo-link" aria-label="LexLogica home"><img src="/Logo.png" alt="LexLogica" class="logo"></a><nav class="navigation" aria-label="Main navigation"><a href="/mathematics" class="nav-button active" aria-current="page>Mathematics</a><a href="/mock-tests" class="nav-button">Mock Tests</a><a href="/reading-writing" class="nav-button">Reading and Writing</a></nav><a href="/dashboard" class="dashboard-button site-dashboard">Dashboard</a><div class="auth-buttons"><a href="/login" class="login-button">Login</a></div><button class="mobile-menu-button" aria-label="Open navigation" aria-expanded="false" type="button">☰</button></div></header>
+
+<main class="question-bank-page">
+    <section class="question-bank-header">
+        <div class="question-bank-header-copy">
+            <div class="page-eyebrow">PRACTICE</div>
+            <h1>Math Question Bank</h1>
+            <p>Practice SAT Math by skill, difficulty, and review status.</p>
+        </div>
+        <a class="question-bank-switch" href="/reading-question-bank">Reading & Writing Question Bank →</a>
+    </section>
+
+    <section class="question-bank-content">
+        <div class="search-container">
+            <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="11" cy="11" r="7"></circle>
+                <path d="M16.5 16.5L21 21"></path>
+            </svg>
+            <input type="search" id="question-search" placeholder="Search Math questions..." autocomplete="off">
+        </div>
+
+        <section class="skill-picker-panel" aria-labelledby="skill-picker-title">
+            <div class="skill-picker-head">
+                <div>
+                    <span>SKILLS</span>
+                    <h2 id="skill-picker-title">Choose what to practice</h2>
+                </div>
+                <p>Select one or several skills. Choose All skills to reset the selection.</p>
+            </div>
+            <div id="skill-picker-options" class="skill-picker-options" aria-label="Math Question Bank skills"></div>
+        </section>
+
+        <div class="filters-row question-bank-utility-filters">
+            <div class="filter-group">
+                <label for="difficulty-filter">Difficulty</label>
+                <div class="filter-dropdown" id="difficulty-filter" data-filter="difficulty" data-value="all">
+                    <button type="button" class="filter-dropdown-trigger" aria-haspopup="listbox" aria-expanded="false">
+                        <span class="filter-dropdown-value">All Difficulties</span>
+                        <span class="filter-dropdown-chevron" aria-hidden="true">⌄</span>
+                    </button>
+                    <div class="filter-dropdown-menu" role="listbox">
+                        <button type="button" class="filter-dropdown-option active" role="option" data-value="all" aria-selected="true">All Difficulties</button>
+                        <button type="button" class="filter-dropdown-option" role="option" data-value="Easy" aria-selected="false">Easy</button>
+                        <button type="button" class="filter-dropdown-option" role="option" data-value="Medium" aria-selected="false">Medium</button>
+                        <button type="button" class="filter-dropdown-option" role="option" data-value="Hard" aria-selected="false">Hard</button>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-group">
+                <label for="status-filter">Status</label>
+                <div class="filter-dropdown" id="status-filter" data-filter="status" data-value="all">
+                    <button type="button" class="filter-dropdown-trigger" aria-haspopup="listbox" aria-expanded="false">
+                        <span class="filter-dropdown-value">All Questions</span>
+                        <span class="filter-dropdown-chevron" aria-hidden="true">⌄</span>
+                    </button>
+                    <div class="filter-dropdown-menu" role="listbox">
+                        <button type="button" class="filter-dropdown-option active" role="option" data-value="all" aria-selected="true">All Questions</button>
+                        <button type="button" class="filter-dropdown-option" role="option" data-value="unanswered" aria-selected="false">Unsolved</button>
+                        <button type="button" class="filter-dropdown-option" role="option" data-value="solved" aria-selected="false">Solved</button>
+                        <button type="button" class="filter-dropdown-option" role="option" data-value="correct" aria-selected="false">Correct</button>
+                        <button type="button" class="filter-dropdown-option" role="option" data-value="incorrect" aria-selected="false">Incorrect</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="review-filter">
+            <label class="review-checkbox">
+                <input type="checkbox" id="review-only">
+                <span class="custom-checkbox"></span>
+                <span>Show only questions marked for review</span>
+            </label>
+        </div>
+
+        <div class="results-header">
+            <div>
+                <strong id="question-count">0 questions</strong>
+                <span id="results-description">in this section</span>
+            </div>
+        </div>
+
+        <div class="question-list" id="question-list">
+            <div class="empty-state" id="empty-state">
+                <div class="empty-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 3h12v18H6z"></path>
+                        <path d="M9 7h6"></path>
+                        <path d="M9 11h6"></path>
+                        <path d="M9 15h4"></path>
+                    </svg>
+                </div>
+                <h2>No questions yet</h2>
+                <p>Questions will appear here as they are added to LexLogica.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/supabase-config.js"></script>
+<script src="/auth-guard.js"></script>
+<script src="/auth.js?v=subjects-1"></script>
+<script src="/question-bank.js?v=14"></script>
+<script>
+const menuButton=document.querySelector(".mobile-menu-button");
+const navigation=document.querySelector(".navigation");
+if(menuButton&&navigation){menuButton.addEventListener("click",()=>{const isOpen=navigation.classList.toggle("mobile-open");menuButton.setAttribute("aria-expanded",isOpen?"true":"false");});}
+</script>
+</body>
+</html>
