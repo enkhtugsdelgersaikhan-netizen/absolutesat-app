@@ -45,15 +45,15 @@ window.MathJax={
 <div class="vocab-status-buttons" role="group" aria-label="Formula status filter">
 <button type="button" class="vocab-status-filter-button active" data-status="all">All</button>
 <button type="button" class="vocab-status-filter-button" data-status="review">Review</button>
-<button type="button" class="vocab-status-filter-button" data-status="unsolved">Unsolved</button>
-<button type="button" class="vocab-status-filter-button" data-status="solved">Solved</button>
+<button type="button" class="vocab-status-filter-button" data-status="unsolved">Learning</button>
+<button type="button" class="vocab-status-filter-button" data-status="solved">Know It</button>
 </div>
 </div>
 </div>
 
 <div class="vocab-progress">
-<div><strong id="formula-progress-text">0 solved</strong><span id="formula-count">0 formulas</span></div>
-<div class="vocab-status-summary" id="formula-status-summary">0 review · 0 unsolved</div>
+<div><strong id="formula-progress-text">0 known</strong><span id="formula-count">0 formulas</span></div>
+<div class="vocab-status-summary" id="formula-status-summary">0 review · 0 learning</div>
 <div class="progress-track"><div id="formula-progress-bar"></div></div>
 </div>
 
@@ -62,7 +62,7 @@ window.MathJax={
 <article id="formula-card" class="vocab-card formula-card-flash">
 <div class="vocab-card-top"><span id="formula-category-label">Algebra</span></div>
 <div class="vocab-status-row">
-<span id="formula-solved-status" class="vocab-status-chip unsolved">Unsolved</span>
+<span id="formula-solved-status" class="vocab-status-chip unsolved">Learning</span>
 <span id="formula-review-status" class="vocab-status-chip review hidden">Review</span>
 </div>
 
@@ -115,7 +115,7 @@ window.MathJax={
 <script src="/supabase-config.js"></script>
 <script src="/auth-guard.js"></script>
 <script src="/auth.js?v=subjects-2"></script>
-<script src="/math-fluency.js?v=5"></script>
+<script src="/math-fluency.js?v=6"></script>
 <script>
 const menuButton=document.querySelector(".mobile-menu-button"),navigation=document.querySelector(".navigation");
 if(menuButton&&navigation){menuButton.addEventListener("click",()=>{const isOpen=navigation.classList.toggle("mobile-open");menuButton.setAttribute("aria-expanded",isOpen?"true":"false");});}
