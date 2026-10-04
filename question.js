@@ -47,6 +47,7 @@ let timerInterval = null;
 
 let eliminatedChoices = {};
 let checkedResults = {};
+let wrongAttempts = {};
 
 
 let currentSet = null;
@@ -331,7 +332,7 @@ function renderQuestionTable(
                         .map(
                             cell =>
                                 "<td>" +
-                                escapeHtml(
+                                renderInlineFormatting(
                                     cell
                                 ) +
                                 "</td>"
@@ -366,18 +367,356 @@ function renderQuestionTable(
 }
 
 
+function renderQuestionGraph(
+    graph
+) {
+    if (
+        !graph ||
+        !Array.isArray(graph.categories) ||
+        !Array.isArray(graph.series) ||
+        graph.categories.length === 0 ||
+        graph.series.length === 0
+    ) {
+        return "";
+    }
+
+    const categories =
+        graph.categories;
+
+    const series =
+        graph.series.filter(
+            item =>
+                item &&
+                Array.isArray(item.values)
+        );
+
+    if (series.length === 0) {
+        return "";
+    }
+
+    const values =
+        series
+            .flatMap(item => item.values)
+            .map(value => Number(value))
+            .filter(Number.isFinite);
+
+    const configuredMax =
+        Number(graph.max);
+
+    const maxValue =
+        configuredMax > 0
+            ? configuredMax
+            : Math.max(1, ...values);
+
+    const configuredStep =
+        Number(graph.tickStep);
+
+    const tickStep =
+        configuredStep > 0
+            ? configuredStep
+            : maxValue / 4;
+
+    const width = 760;
+    const left = 180;
+    const right = 68;
+    const top = 70;
+    const bottom = 54;
+    const rowHeight = 66;
+    const plotWidth =
+        width - left - right;
+    const height =
+        top +
+        categories.length * rowHeight +
+        bottom;
+
+    const suffix =
+        graph.valueSuffix || "";
+
+    const formatValue =
+        value => {
+            const number =
+                Number(value);
+
+            if (!Number.isFinite(number)) {
+                return String(value ?? "");
+            }
+
+            return (
+                Number.isInteger(number)
+                    ? String(number)
+                    : number.toFixed(1)
+            ) + suffix;
+        };
+
+    const ticks = [];
+    for (
+        let tick = 0;
+        tick <= maxValue + 0.0001;
+        tick += tickStep
+    ) {
+        ticks.push(
+            Math.min(tick, maxValue)
+        );
+
+        if (ticks.length > 20) {
+            break;
+        }
+    }
+
+    if (
+        Math.abs(
+            ticks[ticks.length - 1] -
+            maxValue
+        ) > 0.0001
+    ) {
+        ticks.push(maxValue);
+    }
+
+    const legend =
+        series
+            .map(
+                (item, index) =>
+                    '<g>' +
+                        '<rect class="question-graph-bar graph-series-' +
+                        index +
+                        '" x="' +
+                        (left + index * 160) +
+                        '" y="18" width="13" height="13" rx="3"></rect>' +
+                        '<text class="question-graph-legend-text" x="' +
+                        (left + 20 + index * 160) +
+                        '" y="29">' +
+                        escapeHtml(
+                            item.name ||
+                            ("Series " + (index + 1))
+                        ) +
+                        '</text>' +
+                    '</g>'
+            )
+            .join("");
+
+    const grid =
+        ticks
+            .map(
+                tick => {
+                    const x =
+                        left +
+                        (tick / maxValue) *
+                        plotWidth;
+
+                    return (
+                        '<line class="question-graph-grid-line" x1="' +
+                        x +
+                        '" x2="' +
+                        x +
+                        '" y1="' +
+                        top +
+                        '" y2="' +
+                        (height - bottom) +
+                        '"></line>' +
+                        '<text class="question-graph-tick" x="' +
+                        x +
+                        '" y="' +
+                        (height - bottom + 22) +
+                        '" text-anchor="middle">' +
+                        escapeHtml(
+                            formatValue(tick)
+                        ) +
+                        '</text>'
+                    );
+                }
+            )
+            .join("");
+
+    const rows =
+        categories
+            .map(
+                (category, categoryIndex) => {
+                    const centerY =
+                        top +
+                        categoryIndex *
+                        rowHeight +
+                        rowHeight / 2;
+
+                    const barHeight =
+                        Math.max(
+                            9,
+                            Math.min(
+                                13,
+                                34 / series.length
+                            )
+                        );
+
+                    const totalBarsHeight =
+                        series.length *
+                        barHeight +
+                        (series.length - 1) * 4;
+
+                    const firstY =
+                        centerY -
+                        totalBarsHeight / 2;
+
+                    const bars =
+                        series
+                            .map(
+                                (item, seriesIndex) => {
+                                    const value =
+                                        Number(
+                                            item.values[
+                                                categoryIndex
+                                            ]
+                                        );
+
+                                    if (!Number.isFinite(value)) {
+                                        return "";
+                                    }
+
+                                    const barWidth =
+                                        Math.max(
+                                            0,
+                                            Math.min(
+                                                plotWidth,
+                                                (value / maxValue) *
+                                                plotWidth
+                                            )
+                                        );
+
+                                    const y =
+                                        firstY +
+                                        seriesIndex *
+                                        (barHeight + 4);
+
+                                    const nearEdge =
+                                        barWidth >
+                                        plotWidth - 48;
+
+                                    return (
+                                        '<rect class="question-graph-bar graph-series-' +
+                                        seriesIndex +
+                                        '" x="' +
+                                        left +
+                                        '" y="' +
+                                        y +
+                                        '" width="' +
+                                        barWidth +
+                                        '" height="' +
+                                        barHeight +
+                                        '" rx="3"></rect>' +
+                                        '<text class="question-graph-value" x="' +
+                                        (
+                                            nearEdge
+                                                ? left + barWidth - 5
+                                                : left + barWidth + 7
+                                        ) +
+                                        '" y="' +
+                                        (y + barHeight - 1) +
+                                        '" text-anchor="' +
+                                        (
+                                            nearEdge
+                                                ? "end"
+                                                : "start"
+                                        ) +
+                                        '">' +
+                                        escapeHtml(
+                                            formatValue(value)
+                                        ) +
+                                        '</text>'
+                                    );
+                                }
+                            )
+                            .join("");
+
+                    return (
+                        '<text class="question-graph-category" x="' +
+                        (left - 13) +
+                        '" y="' +
+                        (centerY + 4) +
+                        '" text-anchor="end">' +
+                        escapeHtml(category) +
+                        '</text>' +
+                        bars
+                    );
+                }
+            )
+            .join("");
+
+    const caption =
+        graph.caption
+            ? '<figcaption class="question-graph-caption">' +
+                renderInlineFormatting(
+                    graph.caption
+                ) +
+              '</figcaption>'
+            : "";
+
+    const axisLabel =
+        graph.xLabel
+            ? '<text class="question-graph-axis-label" x="' +
+                (left + plotWidth / 2) +
+                '" y="' +
+                (height - 5) +
+                '" text-anchor="middle">' +
+                escapeHtml(graph.xLabel) +
+              '</text>'
+            : "";
+
+    return (
+        '<figure class="question-graph-wrap">' +
+            caption +
+            '<div class="question-graph-scroll">' +
+                '<svg class="question-graph" viewBox="0 0 ' +
+                    width +
+                    " " +
+                    height +
+                    '" role="img" aria-label="' +
+                    escapeHtml(
+                        graph.caption ||
+                        "Question data graph"
+                    ) +
+                    '">' +
+                    legend +
+                    grid +
+                    '<line class="question-graph-axis-line" x1="' +
+                        left +
+                        '" x2="' +
+                        (left + plotWidth) +
+                        '" y1="' +
+                        (height - bottom) +
+                        '" y2="' +
+                        (height - bottom) +
+                    '"></line>' +
+                    rows +
+                    axisLabel +
+                '</svg>' +
+            '</div>' +
+        '</figure>'
+    );
+}
+
+
 function renderQuestionPassage(
     question
 ) {
+    const visual =
+        question.graph
+            ? renderQuestionGraph(
+                question.graph
+            )
+            : renderQuestionTable(
+                question.table
+            );
+
+    const copy =
+        question.passage
+            ? '<div class="question-passage-copy">' +
+                renderInlineFormatting(
+                    question.passage
+                ) +
+              '</div>'
+            : "";
 
     return (
-        renderInlineFormatting(
-            question.passage ||
-            ""
-        ) +
-        renderQuestionTable(
-            question.table
-        )
+        visual +
+        copy
     );
 }
 
@@ -580,6 +919,8 @@ function resetQuestionForNavigation() {
     eliminatedChoices = {};
 
     checkedResults = {};
+
+    wrongAttempts = {};
 
     markedForReview =
         {};
@@ -1138,6 +1479,9 @@ function normalizeStagedQuestion(
             "",
         table:
             stagedQuestion.table ||
+            null,
+        graph:
+            stagedQuestion.graph ||
             null
     };
 
