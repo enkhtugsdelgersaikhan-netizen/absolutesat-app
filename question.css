@@ -166,6 +166,51 @@
     font-weight: 600;
 }
 
+.question-progress-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    min-width: 0;
+}
+
+.question-inline-navigation {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.question-nav-button {
+    min-height: 38px;
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #475569;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background 0.18s ease,
+        border-color 0.18s ease,
+        color 0.18s ease,
+        transform 0.15s ease;
+}
+
+.question-nav-button:hover:not(:disabled) {
+    border-color: #8bc6bf;
+    background: #f7fbfa;
+    color: #0f766e;
+    transform: translateY(-1px);
+}
+
+.question-nav-button:disabled {
+    opacity: 0.42;
+    cursor: default;
+    transform: none;
+}
+
 .review-button {
     display: inline-flex;
     align-items: center;
@@ -1486,4 +1531,27 @@
 }
 .question-graph-bar.graph-series-3{
     fill:#87939f;
+}
+
+
+/* Inline question navigation beside Mark for Review */
+@media (max-width: 700px) {
+    .question-progress-row {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .question-progress-actions {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .question-inline-navigation {
+        gap: 6px;
+    }
+
+    .question-nav-button,
+    .review-button {
+        min-height: 36px;
+    }
 }
