@@ -1504,6 +1504,138 @@ function getExtendedLinearSeriesPoints(
 }
 
 
+function buildSmoothGraphPath(
+    points,
+    xScale,
+    yScale
+) {
+    if (
+        !Array.isArray(points) ||
+        points.length === 0
+    ) {
+        return "";
+    }
+
+    const scaled =
+        points.map(
+            point => [
+                xScale(
+                    Number(point[0])
+                ),
+                yScale(
+                    Number(point[1])
+                )
+            ]
+        );
+
+    if (scaled.length === 1) {
+        return (
+            "M " +
+            scaled[0][0] +
+            " " +
+            scaled[0][1]
+        );
+    }
+
+    if (scaled.length === 2) {
+        return (
+            "M " +
+            scaled[0][0] +
+            " " +
+            scaled[0][1] +
+            " L " +
+            scaled[1][0] +
+            " " +
+            scaled[1][1]
+        );
+    }
+
+    let path =
+        "M " +
+        scaled[0][0] +
+        " " +
+        scaled[0][1];
+
+    const tension = 0.16;
+
+    for (
+        let i = 0;
+        i < scaled.length - 1;
+        i++
+    ) {
+        const p0 =
+            scaled[
+                Math.max(
+                    0,
+                    i - 1
+                )
+            ];
+
+        const p1 =
+            scaled[i];
+
+        const p2 =
+            scaled[i + 1];
+
+        const p3 =
+            scaled[
+                Math.min(
+                    scaled.length - 1,
+                    i + 2
+                )
+            ];
+
+        const cp1x =
+            p1[0] +
+            (
+                p2[0] -
+                p0[0]
+            ) *
+            tension;
+
+        const cp1y =
+            p1[1] +
+            (
+                p2[1] -
+                p0[1]
+            ) *
+            tension;
+
+        const cp2x =
+            p2[0] -
+            (
+                p3[0] -
+                p1[0]
+            ) *
+            tension;
+
+        const cp2y =
+            p2[1] -
+            (
+                p3[1] -
+                p1[1]
+            ) *
+            tension;
+
+        path +=
+            " C " +
+            cp1x +
+            " " +
+            cp1y +
+            ", " +
+            cp2x +
+            " " +
+            cp2y +
+            ", " +
+            p2[0] +
+            " " +
+            p2[1];
+    }
+
+    return path;
+}
+
+
 function renderQuestionXYGraph(graph) {
     const xMin =
         Number.isFinite(Number(graph?.xMin))
@@ -1857,26 +1989,43 @@ function renderQuestionXYGraph(graph) {
                     const linePoints =
                         extended || points;
 
-                    const polyline =
+                    const lineMarkup =
                         item.connect === false
                             ? ""
                             : (
-                                '<polyline class="question-xy-series series-' +
-                                seriesIndex +
-                                '" points="' +
-                                linePoints
-                                    .map(
-                                        point =>
-                                            xScale(
-                                                point[0]
-                                            ) +
-                                            "," +
-                                            yScale(
-                                                point[1]
-                                            )
+                                extended
+                                    ? (
+                                        '<path class="question-xy-series series-' +
+                                        seriesIndex +
+                                        '" d="M ' +
+                                        xScale(
+                                            linePoints[0][0]
+                                        ) +
+                                        " " +
+                                        yScale(
+                                            linePoints[0][1]
+                                        ) +
+                                        " L " +
+                                        xScale(
+                                            linePoints[1][0]
+                                        ) +
+                                        " " +
+                                        yScale(
+                                            linePoints[1][1]
+                                        ) +
+                                        '"></path>'
                                     )
-                                    .join(" ") +
-                                '"></polyline>'
+                                    : (
+                                        '<path class="question-xy-series series-' +
+                                        seriesIndex +
+                                        '" d="' +
+                                        buildSmoothGraphPath(
+                                            linePoints,
+                                            xScale,
+                                            yScale
+                                        ) +
+                                        '"></path>'
+                                    )
                             );
 
                     const visiblePointIndices =
@@ -2018,7 +2167,7 @@ function renderQuestionXYGraph(graph) {
                             : "";
 
                     return (
-                        polyline +
+                        lineMarkup +
                         dots +
                         pointLabels
                     );
@@ -4646,19 +4795,32 @@ function renderStudentResponse(question) {
         );
     }
 
-    if (checked) {
-        const reason =
-            createChoiceReason(
-                question,
-                question.correct_answer || "",
-                true
+    if (
+        (
+            checked ||
+            hasWrongAttempt
+        ) &&
+        question.explanation
+    ) {
+        const explanation =
+            document.createElement(
+                "div"
             );
 
-        if (reason) {
-            wrapper.appendChild(
-                reason
-            );
-        }
+        explanation.className =
+            "student-response-explanation";
+
+        explanation.innerHTML =
+            '<div class="student-response-explanation-label">Explanation</div>' +
+            '<div class="student-response-explanation-text">' +
+            renderInlineFormatting(
+                question.explanation
+            ) +
+            '</div>';
+
+        wrapper.appendChild(
+            explanation
+        );
     }
 
     choicesContainer.appendChild(
