@@ -100,11 +100,11 @@
         "D": "\\(C=\\frac{3}{7}x+12\\)"
       },
       "correctAnswer": "A",
-      "explanation": "The slope is\n\n\\[47-2615-6=219=73.\\]\nUsing (6,26),\n\n\\[26=73(6)+b=14+b,\\]\n\\[so b=12. Thus,\\]\n\\[ \\boxed{C=\\frac73x+12}. \\]",
+      "explanation": "The slope is\n\\[\n\\frac{47-26}{15-6}=\\frac{21}{9}=\\frac73.\n\\]\nUsing \\((6,26)\\),\n\\[\n26=\\frac73(6)+b=14+b,\n\\]\nso \\(b=12\\). Therefore,\n\\[\n\\boxed{C=\\frac73x+12}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 3,
       "choiceExplanations": {
-        "A": "The slope is\n\n\\[47-2615-6=219=73.\\]\nUsing (6,26),\n\n\\[26=73(6)+b=14+b,\\]\n\\[so b=12. Thus,\\]\n\\[ \\boxed{C=\\frac73x+12}. \\]",
+        "A": "The slope is\n\\[\n\\frac{47-26}{15-6}=\\frac{21}{9}=\\frac73.\n\\]\nUsing \\((6,26)\\),\n\\[\n26=\\frac73(6)+b=14+b,\n\\]\nso \\(b=12\\). Therefore,\n\\[\n\\boxed{C=\\frac73x+12}.\n\\]",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -256,11 +256,11 @@
         "D": "\\(f(x)=8x+29\\)"
       },
       "correctAnswer": "A",
-      "explanation": "The slope is\n\n\\[37-55-(-3)=328=4.\\]\n\\[So f(x)=4x+b. Using f(-3)=5,\\]\n\n\\[5=4(-3)+b,\\]\n\\[so b=17. Therefore,\\]\n\\[ \\boxed{f(x)=4x+17}. \\]",
+      "explanation": "The slope is\n\\[\n\\frac{37-5}{5-(-3)}=\\frac{32}{8}=4.\n\\]\nSo \\(f(x)=4x+b\\). Using \\(f(-3)=5\\),\n\\[\n5=4(-3)+b,\n\\]\nso \\(b=17\\). Therefore,\n\\[\n\\boxed{f(x)=4x+17}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 8,
       "choiceExplanations": {
-        "A": "The slope is\n\n\\[37-55-(-3)=328=4.\\]\n\\[So f(x)=4x+b. Using f(-3)=5,\\]\n\n\\[5=4(-3)+b,\\]\n\\[so b=17. Therefore,\\]\n\\[ \\boxed{f(x)=4x+17}. \\]",
+        "A": "The slope is\n\\[\n\\frac{37-5}{5-(-3)}=\\frac{32}{8}=4.\n\\]\nSo \\(f(x)=4x+b\\). Using \\(f(-3)=5\\),\n\\[\n5=4(-3)+b,\n\\]\nso \\(b=17\\). Therefore,\n\\[\n\\boxed{f(x)=4x+17}.\n\\]",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -532,11 +532,11 @@
         "D": "\\(\\frac{26}{3}\\)"
       },
       "correctAnswer": "A",
-      "explanation": "Forty-five minutes of cycling is three 15-minute intervals, so cycling uses\n\n\\[3(140)=420\\]\ncalories. The rowing must account for\n\n\\[1860-420=1440.\\]\nThat is\n\n\\[1440180=8\\]\n20-minute intervals, or 160 minutes:\n\\[ 160\\div60=\\boxed{\\frac83\\text{ hours}}. \\]",
+      "explanation": "Forty-five minutes of cycling is three 15-minute intervals, so cycling uses\n\\[\n3(140)=420\n\\]\ncalories. The rowing must account for\n\\[\n1860-420=1440.\n\\]\nThat is\n\\[\n\\frac{1440}{180}=8\n\\]\n20-minute intervals, or 160 minutes. Therefore,\n\\[\n160\\div60=\\boxed{\\frac83\\text{ hours}}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 19,
       "choiceExplanations": {
-        "A": "Forty-five minutes of cycling is three 15-minute intervals, so cycling uses\n\n\\[3(140)=420\\]\ncalories. The rowing must account for\n\n\\[1860-420=1440.\\]\nThat is\n\n\\[1440180=8\\]\n20-minute intervals, or 160 minutes:\n\\[ 160\\div60=\\boxed{\\frac83\\text{ hours}}. \\]",
+        "A": "Forty-five minutes of cycling is three 15-minute intervals, so cycling uses\n\\[\n3(140)=420\n\\]\ncalories. The rowing must account for\n\\[\n1860-420=1440.\n\\]\nThat is\n\\[\n\\frac{1440}{180}=8\n\\]\n20-minute intervals, or 160 minutes. Therefore,\n\\[\n160\\div60=\\boxed{\\frac83\\text{ hours}}.\n\\]",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -587,12 +587,12 @@
         "D": "\\(w=x+3.6\\)"
       },
       "correctAnswer": "B",
-      "explanation": "From the table,\n\n\\[5Wh=18kJ.\\]\nTherefore, each kilojoule equals 518 watt-hours:\n\\[ \\boxed{w=\\frac5{18}x}. \\]",
+      "explanation": "From the table,\n\\[\n5\\text{ Wh}=18\\text{ kJ}.\n\\]\nTherefore each kilojoule equals \\(\\frac5{18}\\) watt-hours, so\n\\[\n\\boxed{w=\\frac5{18}x}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 21,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "From the table,\n\n\\[5Wh=18kJ.\\]\nTherefore, each kilojoule equals 518 watt-hours:\n\\[ \\boxed{w=\\frac5{18}x}. \\]",
+        "B": "From the table,\n\\[\n5\\text{ Wh}=18\\text{ kJ}.\n\\]\nTherefore each kilojoule equals \\(\\frac5{18}\\) watt-hours, so\n\\[\n\\boxed{w=\\frac5{18}x}.\n\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
@@ -630,7 +630,7 @@
       "question": "For an electric circuit,\n\n\\[I=VR,\\]\nwhere I is current in amperes, V is potential difference in volts, and R is resistance in ohms.\nA circuit has resistance 390 ohms. Its total potential difference is 9n+6 volts when n identical batteries are connected. If the current must be no more than 0.20 ampere, what is the greatest possible integer value of n?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "Apply the current limit:\n\n\\[9n+63900.20.\\]\nThus,\n\n\\[9n+678,\\]\nso\n\n9n72\nand\n\nn8.\nThe greatest integer possible is \\(\\boxed{8}\\).",
+      "explanation": "The current limit is\n\\[\n\\frac{9n+6}{390}\\le0.20.\n\\]\nThus\n\\[\n9n+6\\le78,\n\\]\nso\n\\[\n9n\\le72\n\\]\nand \\(n\\le8\\). The greatest possible integer value is\n\\[\n\\boxed{8}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 22,
       "answerType": "student-response",
@@ -973,12 +973,12 @@
         "D": "\\(11 and 13\\)"
       },
       "correctAnswer": "B",
-      "explanation": "\\[Cross-multiply:\\]\n\n\\[5(2x-5)=3(x+7).\\]\nThen\n\n\\[10x-25=3x+21,\\]\nso\n\n\\[7x=46\\]\nand\n\n\\[x=467.\\]\nTherefore,\n\n\\[x+2=6078.57,\\]\nwhich is between\n\\[ \\boxed{8\\text{ and }9}. \\]",
+      "explanation": "Cross-multiply:\n\\[\n5(2x-5)=3(x+7).\n\\]\nThen\n\\[\n10x-25=3x+21,\n\\]\nso\n\\[\n7x=46\n\\]\nand\n\\[\nx=\\frac{46}{7}.\n\\]\nTherefore,\n\\[\nx+2=\\frac{60}{7}\\approx8.57,\n\\]\nwhich is between \\(8\\) and \\(9\\).",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 37,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "\\[Cross-multiply:\\]\n\n\\[5(2x-5)=3(x+7).\\]\nThen\n\n\\[10x-25=3x+21,\\]\nso\n\n\\[7x=46\\]\nand\n\n\\[x=467.\\]\nTherefore,\n\n\\[x+2=6078.57,\\]\nwhich is between\n\\[ \\boxed{8\\text{ and }9}. \\]",
+        "B": "Cross-multiply:\n\\[\n5(2x-5)=3(x+7).\n\\]\nThen\n\\[\n10x-25=3x+21,\n\\]\nso\n\\[\n7x=46\n\\]\nand\n\\[\nx=\\frac{46}{7}.\n\\]\nTherefore,\n\\[\nx+2=\\frac{60}{7}\\approx8.57,\n\\]\nwhich is between \\(8\\) and \\(9\\).",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
@@ -1000,11 +1000,11 @@
         "D": "\\[ \\begin{cases} s+p\\le120\\\\ s\\le2p \\end{cases} \\]"
       },
       "correctAnswer": "A",
-      "explanation": "“At most 120” gives\n\n\\[s+p120.\\]\nThe fraction condition is\n\n\\[s23(s+p).\\]\nMultiply by 3:\n\n\\[3s2s+2p,\\]\nso\n\ns2p.\nThus choice A is correct.",
+      "explanation": "“At most 120” gives\n\\[\ns+p\\le120.\n\\]\n“At least two-thirds standard” gives\n\\[\ns\\ge\\frac23(s+p).\n\\]\nMultiplying by 3,\n\\[\n3s\\ge2s+2p,\n\\]\nso\n\\[\ns\\ge2p.\n\\]\nThus choice A is correct.",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 38,
       "choiceExplanations": {
-        "A": "“At most 120” gives\n\n\\[s+p120.\\]\nThe fraction condition is\n\n\\[s23(s+p).\\]\nMultiply by 3:\n\n\\[3s2s+2p,\\]\nso\n\ns2p.\nThus choice A is correct.",
+        "A": "“At most 120” gives\n\\[\ns+p\\le120.\n\\]\n“At least two-thirds standard” gives\n\\[\ns\\ge\\frac23(s+p).\n\\]\nMultiplying by 3,\n\\[\n3s\\ge2s+2p,\n\\]\nso\n\\[\ns\\ge2p.\n\\]\nThus choice A is correct.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -1049,7 +1049,7 @@
       "question": "The table shows three points on the same line, where \\(k\\) and \\(n\\) are constants. The slope of the line is \\(-\\frac32\\). What is the value of \\(k+n\\)?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "\\[Using (4,7) and (k,-5),\\]\n\n\\[-5-7k-4=-32.\\]\nThus,\n\n\\[-12k-4=-32,\\]\n\\[so k-4=8 and k=12.\\]\nFrom x=4 to x=16, the change in x is 12, so the change in y is\n\n\\[-32(12)=-18.\\]\nHence\n\n\\[n=7-18=-11.\\]\nTherefore,\n\\[ k+n=12-11=\\boxed{1}. \\]",
+      "explanation": "Using \\((4,7)\\) and \\((k,-5)\\),\n\\[\n\\frac{-5-7}{k-4}=-\\frac32.\n\\]\nThus\n\\[\n\\frac{-12}{k-4}=-\\frac32,\n\\]\nso \\(k-4=8\\) and \\(k=12\\). From \\(x=4\\) to \\(x=16\\), the change in \\(x\\) is 12, so the change in \\(y\\) is\n\\[\n-\\frac32(12)=-18.\n\\]\nHence \\(n=7-18=-11\\), and\n\\[\nk+n=12-11=\\boxed1.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 40,
       "answerType": "student-response",
@@ -1226,7 +1226,7 @@
       "question": "Line \\(r\\) is shown in the coordinate plane. The marked points on \\(r\\) are \\((-4,5)\\) and \\((2,-3)\\). Line \\(s\\), not shown, is perpendicular to \\(r\\). What is the slope of \\(s\\)?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "The slope of r is\n\n\\[-3-52-(-4)=-86=-43.\\]\nA perpendicular line has the opposite reciprocal slope:\n\\[ \\boxed{\\frac34}. \\]",
+      "explanation": "The slope of line \\(r\\) is\n\\[\n\\frac{-3-5}{2-(-4)}=\\frac{-8}{6}=-\\frac43.\n\\]\nA perpendicular line has the opposite reciprocal slope:\n\\[\n\\boxed{\\frac34}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 42,
       "answerType": "student-response",
@@ -1401,10 +1401,10 @@
       "skill": "Linear inequalities in one or two variables",
       "difficulty": "Medium",
       "passage": "",
-      "question": "A number p is no greater than 5-4q. Also, q=2r+1. If r=-32, what is the greatest possible value of p?",
+      "question": "A number \\(p\\) is no greater than \\(5-4q\\). Also, \\(q=2r+1\\). If \\(r=-\\frac32\\), what is the greatest possible value of \\(p\\)?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "First,\n\n\\[q=2-32+1=-2.\\]\nThen\n\n\\[p5-4(-2)=13.\\]\nSo the greatest possible value is \\(\\boxed{13}\\).",
+      "explanation": "First,\n\\[\nq=2\\left(-\\frac32\\right)+1=-2.\n\\]\nThen\n\\[\np\\le5-4(-2)=13.\n\\]\nSo the greatest possible value is\n\\[\n\\boxed{13}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 46,
       "answerType": "student-response",
@@ -1479,7 +1479,7 @@
       "question": "Line \\(\\ell\\) passes through (2,-5) and is parallel to the line\n\n\\[3x-2y=14.\\]\nIf \\(\\ell\\) also passes through (8,k), what is k?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "Rewrite the given line:\n\n\\[y=32x-7.\\]\nA parallel line has slope 32. From x=2 to x=8, the change in x is 6, so the change in y is\n\n\\[32(6)=9.\\]\nThus,\n\\[ k=-5+9=\\boxed4. \\]",
+      "explanation": "Rewrite the given line:\n\\[\ny=\\frac32x-7.\n\\]\nA parallel line has slope \\(\\frac32\\). From \\(x=2\\) to \\(x=8\\), the change in \\(x\\) is 6, so the change in \\(y\\) is\n\\[\n\\frac32(6)=9.\n\\]\nThus\n\\[\nk=-5+9=\\boxed4.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 49,
       "answerType": "student-response",
@@ -1499,7 +1499,7 @@
       "question": "What is the slope of the graph of\n\n\\[2y=3(4x-5)-(x+7)\\]\n\\[in the xy-plane?\\]",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "Simplify:\n\n\\[2y=12x-15-x-7=11x-22.\\]\nDivide by 2:\n\n\\[y=112x-11.\\]\nSo the slope is \\(\\boxed{\\frac{11}{2}}\\).",
+      "explanation": "Simplify:\n\\[\n2y=12x-15-x-7=11x-22.\n\\]\nDivide by 2:\n\\[\ny=\\frac{11}{2}x-11.\n\\]\nSo the slope is\n\\[\n\\boxed{\\frac{11}{2}}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 50,
       "answerType": "student-response",
@@ -1551,13 +1551,13 @@
         "D": "\\(72\\)"
       },
       "correctAnswer": "C",
-      "explanation": "For infinitely many solutions, the second equation must be a multiple of the first.\nSince\n\n\\[-12(12)=-6,\\]\nthe scale factor is 12. Therefore,\n\n\\[a=1223=8\\]\nand\n\n\\[c=12(5)=60.\\]\nThus,\n\\[ a+c=8+60=\\boxed{68}. \\]",
+      "explanation": "For infinitely many solutions, the second equation must be a multiple of the first. Multiplying\n\\[\n\\frac23x-\\frac12y=5\n\\]\nby 12 gives\n\\[\n8x-6y=60.\n\\]\nTherefore \\(a=8\\) and \\(c=60\\), so\n\\[\na+c=8+60=\\boxed{68}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 52,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
-        "C": "For infinitely many solutions, the second equation must be a multiple of the first.\nSince\n\n\\[-12(12)=-6,\\]\nthe scale factor is 12. Therefore,\n\n\\[a=1223=8\\]\nand\n\n\\[c=12(5)=60.\\]\nThus,\n\\[ a+c=8+60=\\boxed{68}. \\]",
+        "C": "For infinitely many solutions, the second equation must be a multiple of the first. Multiplying\n\\[\n\\frac23x-\\frac12y=5\n\\]\nby 12 gives\n\\[\n8x-6y=60.\n\\]\nTherefore \\(a=8\\) and \\(c=60\\), so\n\\[\na+c=8+60=\\boxed{68}.\n\\]",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
     },
@@ -1578,11 +1578,11 @@
         "D": "\\(\\displaystyle g(x)=-\\frac38x+1\\)"
       },
       "correctAnswer": "A",
-      "explanation": "The graphed line passes through (-4,8) and (4,2), so its slope is\n\n\\[2-84-(-4)=-34.\\]\nIts equation is\n\n\\[2g(x)-3=-34x+5.\\]\nAdd 3:\n\n\\[2g(x)=-34x+8.\\]\nDivide by 2:\n\\[ \\boxed{g(x)=-\\frac38x+4}. \\]",
+      "explanation": "The graphed line passes through \\((-4,8)\\) and \\((4,2)\\), so its slope is\n\\[\n\\frac{2-8}{4-(-4)}=-\\frac34.\n\\]\nThus\n\\[\n2g(x)-3=-\\frac34x+5.\n\\]\nAdd 3:\n\\[\n2g(x)=-\\frac34x+8.\n\\]\nDivide by 2:\n\\[\n\\boxed{g(x)=-\\frac38x+4}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 53,
       "choiceExplanations": {
-        "A": "The graphed line passes through (-4,8) and (4,2), so its slope is\n\n\\[2-84-(-4)=-34.\\]\nIts equation is\n\n\\[2g(x)-3=-34x+5.\\]\nAdd 3:\n\n\\[2g(x)=-34x+8.\\]\nDivide by 2:\n\\[ \\boxed{g(x)=-\\frac38x+4}. \\]",
+        "A": "The graphed line passes through \\((-4,8)\\) and \\((4,2)\\), so its slope is\n\\[\n\\frac{2-8}{4-(-4)}=-\\frac34.\n\\]\nThus\n\\[\n2g(x)-3=-\\frac34x+5.\n\\]\nAdd 3:\n\\[\n2g(x)=-\\frac34x+8.\n\\]\nDivide by 2:\n\\[\n\\boxed{g(x)=-\\frac38x+4}.\n\\]",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -1628,13 +1628,13 @@
         "D": "\\(\\displaystyle B=98-\\frac{250}{0.8}(x-600)\\)"
       },
       "correctAnswer": "C",
-      "explanation": "The reference value 98 occurs at x=600, not x=0. The rate is\n\n\\[-0.8250\\]\ndegrees per meter. Therefore,\n\\[ \\boxed{B=98-\\frac{0.8}{250}(x-600)}. \\]",
+      "explanation": "The reference value 98 occurs at \\(x=600\\), not \\(x=0\\). The rate is\n\\[\n-\\frac{0.8}{250}\n\\]\ndegree Celsius per meter. Therefore,\n\\[\n\\boxed{B=98-\\frac{0.8}{250}(x-600)}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 54,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
-        "C": "The reference value 98 occurs at x=600, not x=0. The rate is\n\n\\[-0.8250\\]\ndegrees per meter. Therefore,\n\\[ \\boxed{B=98-\\frac{0.8}{250}(x-600)}. \\]",
+        "C": "The reference value 98 occurs at \\(x=600\\), not \\(x=0\\). The rate is\n\\[\n-\\frac{0.8}{250}\n\\]\ndegree Celsius per meter. Therefore,\n\\[\n\\boxed{B=98-\\frac{0.8}{250}(x-600)}.\n\\]",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
     },
@@ -1940,7 +1940,7 @@
       "question": "The plotted points represent combinations of bronze parts and silver parts that cost exactly \\(\\$66\\).\nThe price of each bronze part is constant, and the price of each silver part is constant. What is the price, in dollars, of one bronze part?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "Compare (3,9) and (6,7). Three additional bronze parts replace two silver parts without changing the total cost.\nIf bronze costs b and silver costs s,\n\n\\[3b=2s,\\]\n\\[so s=32b.\\]\nUsing (3,9),\n\n\\[3b+932b=66.\\]\nThus\n\n\\[332b=66\\]\nand\n\\[ \\boxed{b=4}. \\]",
+      "explanation": "Compare \\((3,9)\\) and \\((6,7)\\). Three additional bronze parts replace two silver parts without changing the total cost. If bronze costs \\(b\\) and silver costs \\(s\\),\n\\[\n3b=2s,\n\\]\nso\n\\[\ns=\\frac32b.\n\\]\nUsing \\((3,9)\\),\n\\[\n3b+9\\left(\\frac32b\\right)=66.\n\\]\nThus\n\\[\n\\frac{33}{2}b=66,\n\\]\nso\n\\[\n\\boxed{b=4}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 66,
       "answerType": "student-response",
@@ -2066,12 +2066,12 @@
         "D": "\\(\\displaystyle L(d)=12d+5.4\\)"
       },
       "correctAnswer": "B",
-      "explanation": "The unit rate is\n\n\\[5.412=0.45=920.\\]\nThus,\n\\[ \\boxed{L(d)=\\frac9{20}d}. \\]",
+      "explanation": "The unit rate is\n\\[\n\\frac{5.4}{12}=0.45=\\frac9{20}.\n\\]\nThus\n\\[\n\\boxed{L(d)=\\frac9{20}d}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 71,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "The unit rate is\n\n\\[5.412=0.45=920.\\]\nThus,\n\\[ \\boxed{L(d)=\\frac9{20}d}. \\]",
+        "B": "The unit rate is\n\\[\n\\frac{5.4}{12}=0.45=\\frac9{20}.\n\\]\nThus\n\\[\n\\boxed{L(d)=\\frac9{20}d}.\n\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
@@ -2093,11 +2093,11 @@
         "D": "\\(33\\)"
       },
       "correctAnswer": "A",
-      "explanation": "The slope is\n\n\\[m=-2-333-(-2)=-7.\\]\n\\[Using x=3,\\]\n\n\\[-2=-7(3)+b,\\]\n\\[so b=19. Therefore,\\]\n\\[ m-2b=-7-38=\\boxed{-45}. \\]",
+      "explanation": "The slope is\n\\[\nm=\\frac{-2-33}{3-(-2)}=\\frac{-35}{5}=-7.\n\\]\nUsing \\(x=3\\),\n\\[\n-2=-7(3)+b,\n\\]\nso \\(b=19\\). Therefore,\n\\[\nm-2b=-7-38=\\boxed{-45}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 72,
       "choiceExplanations": {
-        "A": "The slope is\n\n\\[m=-2-333-(-2)=-7.\\]\n\\[Using x=3,\\]\n\n\\[-2=-7(3)+b,\\]\n\\[so b=19. Therefore,\\]\n\\[ m-2b=-7-38=\\boxed{-45}. \\]",
+        "A": "The slope is\n\\[\nm=\\frac{-2-33}{3-(-2)}=\\frac{-35}{5}=-7.\n\\]\nUsing \\(x=3\\),\n\\[\n-2=-7(3)+b,\n\\]\nso \\(b=19\\). Therefore,\n\\[\nm-2b=-7-38=\\boxed{-45}.\n\\]",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -2140,11 +2140,11 @@
         "D": "\\(V(t)=85-73t\\)"
       },
       "correctAnswer": "A",
-      "explanation": "The rate is\n\n\\[61-8211-4=-3.\\]\nUsing (4,82),\n\n\\[82=-3(4)+b,\\]\n\\[so b=94.\\]\nThus,\n\\[ \\boxed{V(t)=94-3t}. \\]",
+      "explanation": "The rate is\n\\[\n\\frac{61-82}{11-4}=\\frac{-21}{7}=-3.\n\\]\nUsing \\((4,82)\\),\n\\[\n82=-3(4)+b,\n\\]\nso \\(b=94\\). Thus,\n\\[\n\\boxed{V(t)=94-3t}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 74,
       "choiceExplanations": {
-        "A": "The rate is\n\n\\[61-8211-4=-3.\\]\nUsing (4,82),\n\n\\[82=-3(4)+b,\\]\n\\[so b=94.\\]\nThus,\n\\[ \\boxed{V(t)=94-3t}. \\]",
+        "A": "The rate is\n\\[\n\\frac{61-82}{11-4}=\\frac{-21}{7}=-3.\n\\]\nUsing \\((4,82)\\),\n\\[\n82=-3(4)+b,\n\\]\nso \\(b=94\\). Thus,\n\\[\n\\boxed{V(t)=94-3t}.\n\\]",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -2167,12 +2167,12 @@
         "D": "\\(5\\)"
       },
       "correctAnswer": "B",
-      "explanation": "The slope is\n\n\\[2-173-(-2)=-3.\\]\nFrom x=3 to x=5 is an increase of 2, so f(x) decreases by 6:\n\\[ f(5)=2-6=\\boxed{-4}. \\]",
+      "explanation": "The slope is\n\\[\n\\frac{2-17}{3-(-2)}=\\frac{-15}{5}=-3.\n\\]\nFrom \\(x=3\\) to \\(x=5\\) is an increase of 2, so \\(f(x)\\) decreases by 6:\n\\[\nf(5)=2-6=\\boxed{-4}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 75,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "The slope is\n\n\\[2-173-(-2)=-3.\\]\nFrom x=3 to x=5 is an increase of 2, so f(x) decreases by 6:\n\\[ f(5)=2-6=\\boxed{-4}. \\]",
+        "B": "The slope is\n\\[\n\\frac{2-17}{3-(-2)}=\\frac{-15}{5}=-3.\n\\]\nFrom \\(x=3\\) to \\(x=5\\) is an increase of 2, so \\(f(x)\\) decreases by 6:\n\\[\nf(5)=2-6=\\boxed{-4}.\n\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
@@ -2215,11 +2215,11 @@
         "D": "\\(\\displaystyle f(x)=-\\frac32x-5\\)"
       },
       "correctAnswer": "A",
-      "explanation": "The slope is\n\n\\[-4-116-(-4)=-32.\\]\n\\[Using (-4,11),\\]\n\n\\[11=-32(-4)+b=6+b,\\]\n\\[so b=5. Therefore,\\]\n\\[ \\boxed{f(x)=-\\frac32x+5}. \\]",
+      "explanation": "The slope is\n\\[\n\\frac{-4-11}{6-(-4)}=\\frac{-15}{10}=-\\frac32.\n\\]\nUsing \\((-4,11)\\),\n\\[\n11=-\\frac32(-4)+b=6+b,\n\\]\nso \\(b=5\\). Therefore,\n\\[\n\\boxed{f(x)=-\\frac32x+5}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 76,
       "choiceExplanations": {
-        "A": "The slope is\n\n\\[-4-116-(-4)=-32.\\]\n\\[Using (-4,11),\\]\n\n\\[11=-32(-4)+b=6+b,\\]\n\\[so b=5. Therefore,\\]\n\\[ \\boxed{f(x)=-\\frac32x+5}. \\]",
+        "A": "The slope is\n\\[\n\\frac{-4-11}{6-(-4)}=\\frac{-15}{10}=-\\frac32.\n\\]\nUsing \\((-4,11)\\),\n\\[\n11=-\\frac32(-4)+b=6+b,\n\\]\nso \\(b=5\\). Therefore,\n\\[\n\\boxed{f(x)=-\\frac32x+5}.\n\\]",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -2346,7 +2346,7 @@
       "question": "A venue sold 44 tickets. Standard tickets cost \\(\\$18\\) each, and premium tickets cost \\(\\$27\\) each. Total ticket revenue was \\(\\$963\\).\nHow many dollars of the revenue came from premium tickets?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "If all 44 tickets were standard, revenue would be\n\n\\[44(18)=792.\\]\nActual revenue is 963, an extra\n\n\\[963-792=171.\\]\nEach premium ticket contributes 27-18=9 extra dollars, so\n\n\\[1719=19\\]\npremium tickets were sold.\nPremium revenue:\n\\[ 19(27)=\\boxed{513}. \\]",
+      "explanation": "If all 44 tickets were standard, revenue would be\n\\[\n44(18)=792.\n\\]\nThe actual revenue is 963, an extra\n\\[\n963-792=171.\n\\]\nEach premium ticket contributes \\(27-18=9\\) extra dollars, so\n\\[\n\\frac{171}{9}=19\n\\]\npremium tickets were sold. Premium-ticket revenue is\n\\[\n19(27)=\\boxed{513}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 78,
       "answerType": "student-response",
@@ -2372,12 +2372,12 @@
         "D": "\\(\\displaystyle M=5t+\\frac52\\)"
       },
       "correctAnswer": "B",
-      "explanation": "The graph passes through the origin and (2,5). Therefore,\n\n\\[slope=52.\\]\nSince the intercept is 0,\n\\[ \\boxed{M=\\frac52t}. \\]",
+      "explanation": "The graph passes through the origin and \\((2,5)\\). Therefore,\n\\[\n\\text{slope}=\\frac52.\n\\]\nSince the intercept is 0,\n\\[\n\\boxed{M=\\frac52t}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 79,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "The graph passes through the origin and (2,5). Therefore,\n\n\\[slope=52.\\]\nSince the intercept is 0,\n\\[ \\boxed{M=\\frac52t}. \\]",
+        "B": "The graph passes through the origin and \\((2,5)\\). Therefore,\n\\[\n\\text{slope}=\\frac52.\n\\]\nSince the intercept is 0,\n\\[\n\\boxed{M=\\frac52t}.\n\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
@@ -2777,12 +2777,12 @@
         "D": "\\(9\\)"
       },
       "correctAnswer": "B",
-      "explanation": "If s sampling cases are carried, using exactly 14 cases minimizes the weight and gives 14-s sensor cases. Thus,\n\n\\[25s+18(14-s)301.\\]\nThis simplifies to\n\n\\[7s+252301,\\]\nso 7s49 and s7. Therefore, the maximum is 7.",
+      "explanation": "If \\(s\\) sampling cases are carried, using exactly 14 cases minimizes the mass and gives \\(14-s\\) sensor cases. Thus,\n\\[\n25s+18(14-s)\\le301.\n\\]\nThis simplifies to\n\\[\n7s+252\\le301,\n\\]\nso\n\\[\n7s\\le49\n\\]\nand \\(s\\le7\\). Therefore, the maximum is\n\\[\n\\boxed7.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 90,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "If s sampling cases are carried, using exactly 14 cases minimizes the weight and gives 14-s sensor cases. Thus,\n\n\\[25s+18(14-s)301.\\]\nThis simplifies to\n\n\\[7s+252301,\\]\nso 7s49 and s7. Therefore, the maximum is 7.",
+        "B": "If \\(s\\) sampling cases are carried, using exactly 14 cases minimizes the mass and gives \\(14-s\\) sensor cases. Thus,\n\\[\n25s+18(14-s)\\le301.\n\\]\nThis simplifies to\n\\[\n7s+252\\le301,\n\\]\nso\n\\[\n7s\\le49\n\\]\nand \\(s\\le7\\). Therefore, the maximum is\n\\[\n\\boxed7.\n\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
@@ -2799,7 +2799,7 @@
       "question": "The table gives two points on a line in the xy-plane, where \\(c\\) is a constant. The y-intercept of the line is \\((c-4,d)\\). What is the value of \\(d\\)?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "\\[A y-intercept has x=0, so\\]\n\n\\[c-4=0c=4.\\]\nThe two points are therefore (11,22) and (19,-10), giving slope\n\n\\[-10-2219-11=-4.\\]\n\\[Using y=-4x+b and (11,22),\\]\n\n\\[22=-44+b,\\]\n\\[so b=d=66.\\]",
+      "explanation": "A y-intercept has \\(x=0\\), so\n\\[\nc-4=0\\quad\\Rightarrow\\quad c=4.\n\\]\nThe two points are therefore \\((11,22)\\) and \\((19,-10)\\), giving slope\n\\[\n\\frac{-10-22}{19-11}=-4.\n\\]\nUsing \\(y=-4x+b\\) and \\((11,22)\\),\n\\[\n22=-44+b,\n\\]\nso\n\\[\nb=d=\\boxed{66}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 91,
       "answerType": "student-response",
@@ -2966,7 +2966,7 @@
       "question": "In the system below, p is a constant.\n\\[ \\begin{cases} 2(x+3y)-5=7x\\\\[2mm] 5x-\\dfrac p2y=8.5 \\end{cases} \\]\nIf the system has no solution, what is the value of p?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "Rewrite the first equation:\n\n\\[2x+6y-5=7x\\]\n\n\\[5x-6y=-5.\\]\nFor the second line to be parallel, its y-coefficient must also be -6. Therefore,\n\n\\[-p^{2}=-6,\\]\nso p=12. The constants differ, so the lines are distinct.",
+      "explanation": "Rewrite the first equation:\n\\[\n2x+6y-5=7x\n\\]\nso\n\\[\n5x-6y=-5.\n\\]\nFor the second line to be parallel, its y-coefficient must also be \\(-6\\). Therefore,\n\\[\n-\\frac p2=-6,\n\\]\nso\n\\[\n\\boxed{p=12}.\n\\]\nThe constants differ, so the lines are distinct.",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 96,
       "answerType": "student-response",
@@ -3325,12 +3325,12 @@
       "question": "Line q is defined by\n\n\\[4(2x-y)=3x+5y-7.\\]\nLine r is perpendicular to line q in the xy-plane. What is the slope of line r?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "Simplify the equation:\n\n\\[8x-4y=3x+5y-7\\]\n\n\\[5x-9y=-7.\\]\nThus,\n\n\\[y=59x+79,\\]\nso line q has slope 59. A perpendicular line has the negative reciprocal slope,\n\n\\[-95.\\]",
+      "explanation": "Simplify:\n\\[\n8x-4y=3x+5y-7\n\\]\nso\n\\[\n5x-9y=-7.\n\\]\nThus\n\\[\ny=\\frac59x+\\frac79,\n\\]\nso line \\(q\\) has slope \\(\\frac59\\). A perpendicular line has slope\n\\[\n\\boxed{-\\frac95}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 107,
       "answerType": "student-response",
       "acceptedAnswers": [
-        "-95"
+        "-9/5"
       ]
     },
     {
@@ -3874,7 +3874,7 @@
       "question": "A supplier's invoice is modeled by\n\n\\[36x+27y=702,\\]\nwhere x is the number of packs of filters purchased and each pack contains exactly 3 filters, while y is the number of individual valves purchased. The coefficients represent the cost, in dollars, of one pack of filters and one valve, respectively.\nHow many dollars more does one valve cost than one filter?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "A 3-filter pack costs $36, so one filter costs\n\n\\[363=12.\\]\nOne valve costs $27. The difference is\n\n\\[27-12=15.\\]",
+      "explanation": "A 3-filter pack costs $36, so one filter costs\n\\[\n\\frac{36}{3}=12.\n\\]\nOne valve costs $27. The difference is\n\\[\n27-12=\\boxed{15}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 124,
       "answerType": "student-response",
@@ -4142,12 +4142,12 @@
         "D": "\\(\\displaystyle \\frac{3.75}{4}(100)m=18\\)"
       },
       "correctAnswer": "B",
-      "explanation": "The car uses\n\n4100\ngallon per mile. At $3.75 per gallon, the cost per mile is\n\n4100(3.75).\nMultiplying this by m and setting the savings equal to $18 gives\n\n\\[4100(3.75)m=18.\\]",
+      "explanation": "The car uses\n\\[\n\\frac4{100}\n\\]\ngallon per mile. At $3.75 per gallon, the cost per mile is\n\\[\n\\frac4{100}(3.75).\n\\]\nMultiplying by \\(m\\) and setting the savings equal to $18 gives\n\\[\n\\boxed{\\frac4{100}(3.75)m=18}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 134,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "The car uses\n\n4100\ngallon per mile. At $3.75 per gallon, the cost per mile is\n\n4100(3.75).\nMultiplying this by m and setting the savings equal to $18 gives\n\n\\[4100(3.75)m=18.\\]",
+        "B": "The car uses\n\\[\n\\frac4{100}\n\\]\ngallon per mile. At $3.75 per gallon, the cost per mile is\n\\[\n\\frac4{100}(3.75).\n\\]\nMultiplying by \\(m\\) and setting the savings equal to $18 gives\n\\[\n\\boxed{\\frac4{100}(3.75)m=18}.\n\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
@@ -4164,7 +4164,7 @@
       "question": "The equation\n\n\\[4(2b+g)=1,040\\]\nrelates the numbers b and g. If b=73, what is the value of g?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "Divide both sides by 4:\n\n\\[2b+g=260.\\]\n\\[Substitute b=73:\\]\n\n\\[146+g=260.\\]\nTherefore,\n\n\\[g=114.\\]\n\n1\nMaterials scientists Leila Banerjee, Tomás Eklund, and colleagues investigated whether people from different cultural backgrounds can distinguish hand-spun yarn from machine-spun yarn by touch alone. Participants from 19 societies, including communities in Nepal, Senegal, and Estonia, handled randomized cotton swatches while blindfolded. Half the swatches had been woven from hand-spun yarn and half from machine-spun yarn. After analyzing participants’ classifications, the researchers concluded that the capacity to distinguish the two production methods appears to be broadly shared across cultures.\nWhich potential finding from another study, if true, would most directly strengthen the researchers’ conclusion?\nA. The amount of variation in thread diameter within hand-spun textiles differs substantially among weaving traditions and geographic regions.\nB. Participants from Nepal and Senegal can often identify the region in which an unfamiliar textile was woven by examining its decorative pattern.\nC. Hand-spun yarn consistently exhibits greater small-scale variation in thread thickness than machine-spun yarn, regardless of the society in which either type is produced.\nD. The accuracy with which people identify hand-spun textiles is correlated with the proportion of households in their communities that still practice traditional weaving.\nCorrect answer: C\nChoice C most directly strengthens the conclusion because it identifies a physical difference between hand-spun and machine-spun yarn that remains consistent across societies. If hand-spun yarn reliably has greater small-scale irregularity regardless of where it is produced, people from many different cultural backgrounds could potentially use the same tactile cue to distinguish the two production methods. That finding would help explain why the ability observed in the study could be broadly cross-cultural.\nChoice A weakens the idea of a stable cross-cultural cue because it emphasizes variation among traditions. Choice B concerns recognition of regional decorative styles rather than the tactile distinction between hand-spun and machine-spun yarn. Choice D suggests that classification ability varies according to local weaving practices, which would make the ability appear less universal rather than more so. LexLogica_dedup_part_12_master_…\n\n2\nWhile researching a topic, a student has taken the following notes:\nThe Teylers Museum in Haarlem, the Netherlands, displays a nineteenth-century Wimshurst electrostatic machine.\nA Wimshurst machine contains two large insulating disks mounted parallel to one another.\nThe disks rotate in opposite directions and are fitted with numerous metal sectors.\nNeutralizer bars positioned across the disks help redistribute electric charge.\nTurning a hand crank rotates the disks and can generate a substantial difference in electrical potential.\nWimshurst machines were commonly used in demonstrations involving high-voltage electricity.\nThe student wants to specify the parts of a Wimshurst machine. Which choice most effectively uses relevant information from the notes to accomplish this goal?\nA. By generating a large electrical potential when its crank is turned, a Wimshurst machine can be used in demonstrations of high-voltage phenomena.\nB. The Wimshurst machine displayed at the Teylers Museum was constructed during the nineteenth century.\nC. As its two disks turn in opposite directions, a Wimshurst machine redistributes electric charge across their surfaces.\nD. A Wimshurst machine consists of two parallel insulating disks fitted with metal sectors and crossed by neutralizer bars.\nCorrect answer: D\nChoice D directly accomplishes the goal by identifying several physical components of the machine: two insulating disks, metal sectors, and neutralizer bars.\nChoice A explains the machine’s function rather than specifying its parts. Choice B provides historical and location information but identifies no components. Choice C describes what happens when the disks rotate, but it focuses on operation rather than giving the clearest description of the machine’s constituent parts. LexLogica_dedup_part_12_master_…\n\n3\nThe nickel-iron batteries used in some early twentieth-century electric vehicles typically stored only about 30 watt-hours of energy per kilogram. Modern lithium-ion cells are far more energy-dense. _____ some commercial lithium-ion cells can store more than 250 watt-hours per kilogram.\nWhich choice completes the text with the most logical transition?\nA. Nevertheless,\nB. Specifically,\nC. In conclusion,\nD. Conversely,\nCorrect answer: B\nChoice B, “Specifically,” is correct because the final sentence provides a precise numerical example supporting the preceding general statement that lithium-ion cells are much more energy-dense.\nChoice A, “Nevertheless,” indicates a contrast or concession, but the numerical information reinforces rather than qualifies the preceding claim. Choice C, “In conclusion,” would signal a summary or final inference rather than introduce supporting detail. Choice D, “Conversely,” introduces an opposing relationship, yet the last sentence and the preceding sentence point in the same direction. LexLogica_dedup_part_12_master_…\n\n4\nTo examine how disruptions in maritime shipping affect manufacturing, economist Mirela Stoian and colleagues analyzed production records from 64 factories between 2011 and 2022. Using statistical models to estimate the effect of delays, the researchers found that for every 10 percent increase in average shipping time, output of products requiring components from three or more overseas suppliers declined by 31 percent. Output of products assembled entirely from components manufactured at the same facility, however, remained essentially unchanged. These findings suggest that _____\nA. as the number of overseas suppliers required for a product increases, that product’s tolerance for shipping delays decreases by a fixed proportion.\nB. output of products requiring several overseas suppliers declined by 31 percent over the period studied, whereas output of fully integrated products did not decline.\nC. products dependent exclusively on either of two particular overseas suppliers are more vulnerable to shipping delays than products requiring components from three or more suppliers.\nD. relying on a single integrated production site may confer some resilience to disruptions in maritime shipping.\nCorrect answer: D\nChoice D is the best inference. Products whose production depended on several overseas suppliers became less abundant as shipping delays increased, whereas products made entirely from components produced at one site were essentially unaffected. That contrast suggests that avoiding a multi-stage international supply chain may provide some protection against shipping disruptions.\nChoice A is too specific: the study does not establish a fixed proportional relationship between the number of suppliers and vulnerability. Choice B merely restates part of the reported result and also omits the crucial qualification that the 31 percent decline occurred for every 10 percent increase in shipping time. Choice C introduces a comparison involving two particular suppliers that the passage never makes. LexLogica_dedup_part_12_master_…\n\n5\nText 1\nIn 2017, the Las Nubes coffee cooperative in western Colombia received an international sustainability certification recognizing its environmental and labor practices. The certification was already familiar to many specialty-coffee buyers. By earning it, the cooperative gained wider access to premium purchasers and obtained higher average contract prices, demonstrating the commercial value of the designation.\nText 2\nMany growers at Las Nubes expected demand for their coffee to increase once the cooperative received sustainability certification. Researchers Valeria Castaño and Idris Morel, however, argue that certification by itself cannot guarantee stronger sales. Producers must still cultivate relationships with importers, communicate the meaning of the certification, and distinguish their coffee from other certified products. Without those efforts, some prospective buyers may never encounter the cooperative’s coffee at all.\nWhich choice best describes a difference in how the authors of the texts view the commercial benefits of certification?\nA. The author of Text 1 regards certification’s benefits as shorter-lived than the author of Text 2 does.\nB. The author of Text 1 assumes that only coffee growers benefit from certification, whereas the author of Text 2 claims that importers receive most of the benefits.\nC. The author of Text 1 presents commercial benefits as following from certification itself, whereas the author of Text 2 argues that additional effort is needed to realize those benefits fully.\nD. The author of Text 1 views certification as commercially beneficial, whereas the author of Text 2 doubts that certification can provide any benefit at all.\nCorrect answer: C\nChoice C accurately captures the difference. Text 1 presents increased buyer access and higher contract prices as benefits that followed from receiving the certification. Text 2 is more conditional: certification can be useful, but growers must also build buyer relationships, explain the designation, and market the product effectively.\nChoice A introduces a disagreement about how long the benefits last; neither text discusses duration. Choice B misstates both texts because neither argues that only one group benefits. Choice D overstates Text 2’s skepticism. Text 2 does not deny that certification can help; it argues that certification alone may be insufficient. LexLogica_dedup_part_12_master_…\n\n6\nThe Nebra sky disc, a Bronze Age bronze artifact inlaid with gold representations of celestial objects, has been interpreted in several ways; _____ object is commonly associated with prehistoric observation of the night sky.\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA. these\nB. those\nC. all\nD. this\nCorrect answer: D\nChoice D, “this,” correctly refers to the singular noun “Nebra sky disc.” The sentence is discussing one specific object, so a singular demonstrative is required.\nChoices A and B, “these” and “those,” are plural demonstratives and therefore cannot grammatically refer to a single disc. Choice C, “all,” also implies multiple objects or members of a group and does not agree with the singular referent. LexLogica_dedup_part_12_master_…\n\n7\nThe genetic identity of a barley population cultivated in eastern Anatolia roughly seven thousand years ago has not been directly established, but researchers suspect that it belonged to the West Eurasian domesticated-barley complex. Surviving landraces in that complex fall into two major genetic branches, the Zagros branch and the Aegean branch. Several domesticated-barley alleles are also present in genetically distinct wild barley populations from eastern Anatolia; researchers believe that those alleles entered the wild populations through ancient cross-pollination during the period when the vanished cultivated population dominated local agriculture. Notably, all of the introgressed alleles identified so far trace to the Zagros branch, suggesting that _____\nA. the vanished cultivated population was probably the common ancestor of both the Zagros and Aegean branches.\nB. the Aegean branch did not emerge until after cultivation of the vanished barley population had ended.\nC. the vanished barley population was more likely affiliated with the Zagros branch than with the Aegean branch.\nD. the vanished barley population contributed genetic material equally to the Zagros branch, the Aegean branch, and local wild barley.\nCorrect answer: C\nChoice C is the most logical inference. The wild barley populations acquired domesticated alleles during a period when the vanished cultivated population was widespread nearby. Because those introgressed alleles specifically match the Zagros branch, the vanished cultivated population was more likely genetically affiliated with that branch than with the Aegean branch.\nChoice A goes much further than the evidence supports: nothing indicates that the vanished population was ancestral to both major branches. Choice B makes an unsupported chronological claim about when the Aegean branch originated. Choice D contradicts the evidence because the introgressed alleles identified in the wild populations trace specifically to the Zagros branch, not equally to both domesticated branches. LexLogica_dedup_part_12_master_…\n\n8\nAs sediment accumulates behind aging hydroelectric dams, reservoirs can lose storage capacity and eventually become uneconomical to operate. This process, known as reservoir sedimentation, can affect municipal utilities that have invested heavily in dams and transmission infrastructure. The financial importance of possible decommissioning to those utilities is clear, and agencies should disclose such risks when planning long-term budgets, <u>but the interests of workers whose livelihoods depend on dam operations are no less important: if facilities close, maintenance crews and local contractors should receive meaningful assistance in moving to other employment.</u>\nWhich choice best describes the function of the underlined portion in the text as a whole?\nA. It extends the discussion from one group affected by dam decommissioning to another group whose stake in the issue may be less immediately apparent.\nB. It contrasts workers’ obvious financial interest in dam operations with the less evident financial interest of municipal utilities discussed earlier.\nC. It explains that utilities have concealed the financial consequences of sedimentation and describes how that concealment has harmed dam workers.\nD. It provides general background about reservoir sedimentation that applies equally to both utilities and workers introduced elsewhere in the text.\nCorrect answer: A\nChoice A accurately describes the rhetorical function of the underlined portion. Before the underlined section, the passage discusses the obvious financial interest of municipal utilities. The underlined material then broadens the discussion to another affected group—workers and contractors—and argues that their interests deserve attention as well.\nChoice B reverses the passage: the utility’s interest is described as obvious, while the workers are introduced afterward as another group that should not be overlooked. Choice C invents concealment by utilities; the passage merely says risks should be disclosed. Choice D is incorrect because the underlined portion does not provide general background about sedimentation. Instead, it focuses specifically on the consequences of possible closures for workers. LexLogica_dedup_part_12_master_…\n\n9\nWhile researching a topic, a student has taken the following notes:\nAstronomers have identified two planets orbiting the star HD 28196.\nHD 28196 b has a radius about 1.5 times that of Earth.\nDensity estimates indicate that HD 28196 b is predominantly rocky.\nHD 28196 c has a radius about 7.8 times that of Earth.\nSpectroscopic observations indicate that HD 28196 c possesses a deep hydrogen-helium atmosphere and is classified as a gas giant.\nBoth planets complete their orbits in less than one Earth year.\nThe student wants to emphasize a difference between the two planets. Which choice most effectively uses relevant information from the notes to accomplish this goal?\nA. HD 28196 b and HD 28196 c both orbit the same star and complete their orbits in less than one Earth year.\nB. Although both planets orbit HD 28196, HD 28196 b is predominantly rocky, whereas HD 28196 c is a gas giant with a deep hydrogen-helium atmosphere.\nC. Astronomers have determined the approximate radii and compositions of both planets orbiting HD 28196.\nD. HD 28196 c has a deep hydrogen-helium atmosphere and completes its orbit in less than one Earth year.\nCorrect answer: B\nChoice B most effectively emphasizes a difference because it directly contrasts the planets’ compositions: one is predominantly rocky, while the other is a gas giant with a substantial hydrogen-helium atmosphere.\nChoice A emphasizes similarities rather than a difference. Choice C states that information is available about both planets but does not actually contrast them. Choice D describes only HD 28196 c, so it cannot establish a difference between the two planets. LexLogica_dedup_part_12_master_…\n\n10\nShould the city reconnect its former tidal marsh to the estuary? Hydrodynamic models can be used to determine whether wetland restoration will ultimately reduce storm-surge damage, according to some _____ 2024 simulation data suggested that reopening two historical channels could lower peak flood levels in the surrounding district by approximately 14 percent.\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA. coastal engineers; in the\nB. coastal engineers the\nC. coastal engineers. The\nD. coastal engineers, the\nCorrect answer: C\nChoice C correctly separates two independent sentences. The first ends with “according to some coastal engineers.” The next begins “The 2024 simulation data suggested…” Both are grammatically complete, so a period is appropriate.\nChoice A is incorrect because after the semicolon, “in the 2024 simulation data suggested” does not form a grammatical independent clause. Choice B places two independent clauses next to each other without any punctuation, creating a run-on sentence. Choice D joins two independent clauses with only a comma, creating a comma splice. LexLogica_dedup_part_12_master_…",
+      "explanation": "Divide both sides by 4:\n\\[\n2b+g=260.\n\\]\nSubstitute \\(b=73\\):\n\\[\n146+g=260.\n\\]\nTherefore,\n\\[\n\\boxed{g=114}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 135,
       "answerType": "student-response",
@@ -4189,12 +4189,12 @@
         "D": "\\(41\\)"
       },
       "correctAnswer": "B",
-      "explanation": "Let the smaller integer be n. Then the larger integer is 3n+5.\n\n\\[n(3n+5)=492\\]\n\n\\[3n2+5n-492=0\\]\n\n\\[(3n+41)(n-12)=0\\]\nBecause n is positive,\n\n\\[n=12.\\]",
+      "explanation": "Let the smaller integer be \\(n\\). Then the larger integer is \\(3n+5\\).\n\\[\nn(3n+5)=492\n\\]\nso\n\\[\n3n^2+5n-492=0.\n\\]\nFactor:\n\\[\n(3n+41)(n-12)=0.\n\\]\nBecause \\(n\\) is positive,\n\\[\n\\boxed{n=12}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 137,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "Let the smaller integer be n. Then the larger integer is 3n+5.\n\n\\[n(3n+5)=492\\]\n\n\\[3n2+5n-492=0\\]\n\n\\[(3n+41)(n-12)=0\\]\nBecause n is positive,\n\n\\[n=12.\\]",
+        "B": "Let the smaller integer be \\(n\\). Then the larger integer is \\(3n+5\\).\n\\[\nn(3n+5)=492\n\\]\nso\n\\[\n3n^2+5n-492=0.\n\\]\nFactor:\n\\[\n(3n+41)(n-12)=0.\n\\]\nBecause \\(n\\) is positive,\n\\[\n\\boxed{n=12}.\n\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
@@ -4208,10 +4208,10 @@
       "skill": "Equivalent expressions",
       "difficulty": "Hard",
       "passage": "",
-      "question": "The equation\n\n\\[9x2+(6k-12)x+(k^{2}-8k+20)=0\\]\nhas exactly one real solution. What is the value of k?",
+      "question": "The equation\n\\[\n9x^2+(6k-12)x+(k^2-8k+20)=0\n\\]\nhas exactly one real solution. What is the value of \\(k\\)?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "A quadratic has exactly one real solution when its discriminant is 0.\n\n\\[(6k-12)^{2}-4(9)(k^{2}-8k+20)=0\\]\nFactor out 36:\n\n\\[36(k-2)^{2}-(k^{2}-8k+20)=0\\]\n\n\\[36(4k-16)=0\\]\nThus,\n\n\\[4k-16=0\\]\nand\n\\[ \\boxed{k=4}. \\]",
+      "explanation": "A quadratic has exactly one real solution when its discriminant is 0:\n\\[\n(6k-12)^2-4(9)(k^2-8k+20)=0.\n\\]\nFactor out 36:\n\\[\n36\\left[(k-2)^2-(k^2-8k+20)\\right]=0.\n\\]\nThe expression in brackets simplifies to \\(4k-16\\), so\n\\[\n4k-16=0\n\\]\nand\n\\[\n\\boxed{k=4}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 138,
       "answerType": "student-response",
@@ -4263,12 +4263,12 @@
         "D": "\\(\\displaystyle \\frac16\\sqrt{\\frac{q}{11r}}\\)"
       },
       "correctAnswer": "B",
-      "explanation": "Subtract the first fraction from the right side:\n\n\\[3q2r=78-5121p2=1124p2.\\]\nCross-multiplying gives\n\n\\[72qp2=22r,\\]\nso\n\n\\[36qp2=11r.\\]\nThus,\n\n\\[p^{2}=11r36q.\\]\n\\[Because p>0,\\]\n\\[ \\boxed{p=\\frac16\\sqrt{\\frac{11r}{q}}}. \\]",
+      "explanation": "Subtract \\(\\frac{5}{12p^2}\\) from both sides:\n\\[\n\\frac{3q}{2r}=\\frac{7}{8p^2}-\\frac{5}{12p^2}\n=\\frac{11}{24p^2}.\n\\]\nCross-multiply:\n\\[\n72qp^2=22r,\n\\]\nso\n\\[\n36qp^2=11r.\n\\]\nThus\n\\[\np^2=\\frac{11r}{36q}.\n\\]\nBecause \\(p>0\\),\n\\[\n\\boxed{p=\\frac16\\sqrt{\\frac{11r}{q}}}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 140,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "Subtract the first fraction from the right side:\n\n\\[3q2r=78-5121p2=1124p2.\\]\nCross-multiplying gives\n\n\\[72qp2=22r,\\]\nso\n\n\\[36qp2=11r.\\]\nThus,\n\n\\[p^{2}=11r36q.\\]\n\\[Because p>0,\\]\n\\[ \\boxed{p=\\frac16\\sqrt{\\frac{11r}{q}}}. \\]",
+        "B": "Subtract \\(\\frac{5}{12p^2}\\) from both sides:\n\\[\n\\frac{3q}{2r}=\\frac{7}{8p^2}-\\frac{5}{12p^2}\n=\\frac{11}{24p^2}.\n\\]\nCross-multiply:\n\\[\n72qp^2=22r,\n\\]\nso\n\\[\n36qp^2=11r.\n\\]\nThus\n\\[\np^2=\\frac{11r}{36q}.\n\\]\nBecause \\(p>0\\),\n\\[\n\\boxed{p=\\frac16\\sqrt{\\frac{11r}{q}}}.\n\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
@@ -4425,12 +4425,12 @@
         "D": "\\(14\\)"
       },
       "correctAnswer": "B",
-      "explanation": "Factor out 512:\n\n\\[512x2-28.\\]\nSince\n\n\\[28=(27)^{2},\\]\nthe difference of squares gives\n\n\\[512(x-27)(x+27).\\]\nThus,\n\\[ \\boxed{k=2\\sqrt7}. \\]",
+      "explanation": "Factor out \\(\\frac5{12}\\):\n\\[\n\\frac5{12}(x^2-28).\n\\]\nSince\n\\[\n28=(2\\sqrt7)^2,\n\\]\nthe difference of squares gives\n\\[\n\\frac5{12}(x-2\\sqrt7)(x+2\\sqrt7).\n\\]\nThus\n\\[\n\\boxed{k=2\\sqrt7}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 148,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "Factor out 512:\n\n\\[512x2-28.\\]\nSince\n\n\\[28=(27)^{2},\\]\nthe difference of squares gives\n\n\\[512(x-27)(x+27).\\]\nThus,\n\\[ \\boxed{k=2\\sqrt7}. \\]",
+        "B": "Factor out \\(\\frac5{12}\\):\n\\[\n\\frac5{12}(x^2-28).\n\\]\nSince\n\\[\n28=(2\\sqrt7)^2,\n\\]\nthe difference of squares gives\n\\[\n\\frac5{12}(x-2\\sqrt7)(x+2\\sqrt7).\n\\]\nThus\n\\[\n\\boxed{k=2\\sqrt7}.\n\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
@@ -4506,12 +4506,12 @@
         "D": "\\(28\\)"
       },
       "correctAnswer": "B",
-      "explanation": "Let h be the height. Then the base is 2h-5.\n\n\\[12h(2h-5)=161\\]\n\n\\[2h2-5h-322=0.\\]\nFactor:\n\n\\[(2h+23)(h-14)=0.\\]\nThe positive solution is\n\\[ \\boxed{14}. \\]",
+      "explanation": "Let \\(h\\) be the height. Then the base is \\(2h-5\\). The area equation is\n\\[\n\\frac12h(2h-5)=161.\n\\]\nThus\n\\[\n2h^2-5h-322=0.\n\\]\nFactor:\n\\[\n(2h+23)(h-14)=0.\n\\]\nThe positive solution is\n\\[\n\\boxed{14}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 151,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "Let h be the height. Then the base is 2h-5.\n\n\\[12h(2h-5)=161\\]\n\n\\[2h2-5h-322=0.\\]\nFactor:\n\n\\[(2h+23)(h-14)=0.\\]\nThe positive solution is\n\\[ \\boxed{14}. \\]",
+        "B": "Let \\(h\\) be the height. Then the base is \\(2h-5\\). The area equation is\n\\[\n\\frac12h(2h-5)=161.\n\\]\nThus\n\\[\n2h^2-5h-322=0.\n\\]\nFactor:\n\\[\n(2h+23)(h-14)=0.\n\\]\nThe positive solution is\n\\[\n\\boxed{14}.\n\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
@@ -4582,7 +4582,7 @@
       "question": "The function \\[h(t)=-16(t-1)^2+c\\] models an object's height, in feet, \\(t\\) seconds after it is released. At \\(t=0\\), the object is 9 feet above the floor. How many seconds after being released does the model predict the object first reaches the floor?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "\\[Use h(0)=9:\\]\n\n\\[-16(0-1)^{2}+c=9\\]\n\n\\[c=25.\\]\nSo\n\n\\[h(t)=-16(t-1)^{2}+25.\\]\n\\[At the floor, h(t)=0:\\]\n\n\\[16(t-1)^{2}=25\\]\n\n\\[t-1=54.\\]\nThus,\n\n\\[t=94ort=-14.\\]\nOnly the nonnegative time is valid:\n\\[ \\boxed{\\frac94}. \\]",
+      "explanation": "Use \\(h(0)=9\\):\n\\[\n-16(0-1)^2+c=9,\n\\]\nso \\(c=25\\). Therefore\n\\[\nh(t)=-16(t-1)^2+25.\n\\]\nAt the floor, \\(h(t)=0\\):\n\\[\n16(t-1)^2=25.\n\\]\nHence\n\\[\nt-1=\\pm\\frac54,\n\\]\nso\n\\[\nt=\\frac94\\quad\\text{or}\\quad t=-\\frac14.\n\\]\nOnly the nonnegative time is valid:\n\\[\n\\boxed{\\frac94}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 154,
       "answerType": "student-response",
@@ -4635,13 +4635,13 @@
         "D": "\\(\\frac74\\)"
       },
       "correctAnswer": "C",
-      "explanation": "Write both sides with base 5:\n\n\\[252t-1=(52)2t-1=54t-2\\]\nand\n\n\\[125=53.\\]\nTherefore,\n\n\\[4t-2=3\\]\n\n\\[4t=5\\]\n\\[ \\boxed{t=\\frac54}. \\]",
+      "explanation": "Write both sides with base 5:\n\\[\n25^{2t-1}=(5^2)^{2t-1}=5^{4t-2}\n\\]\nand\n\\[\n125=5^3.\n\\]\nTherefore\n\\[\n4t-2=3,\n\\]\nso\n\\[\n\\boxed{t=\\frac54}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 156,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
-        "C": "Write both sides with base 5:\n\n\\[252t-1=(52)2t-1=54t-2\\]\nand\n\n\\[125=53.\\]\nTherefore,\n\n\\[4t-2=3\\]\n\n\\[4t=5\\]\n\\[ \\boxed{t=\\frac54}. \\]",
+        "C": "Write both sides with base 5:\n\\[\n25^{2t-1}=(5^2)^{2t-1}=5^{4t-2}\n\\]\nand\n\\[\n125=5^3.\n\\]\nTherefore\n\\[\n4t-2=3,\n\\]\nso\n\\[\n\\boxed{t=\\frac54}.\n\\]",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
     },
@@ -4681,7 +4681,7 @@
       "skill": "Linear equations in one variable",
       "difficulty": "Medium",
       "passage": "",
-      "question": "The kinetic energy K, in joules, of an object with mass m, in kilograms, and speed v, in meters per second, is\n\n\\[K=12mv2.\\]\nObject A has a mass of 6 kilograms and a speed of 8 meters per second. Object B has a mass of 24 kilograms and the same kinetic energy as object A.\nWhat is the speed of object B, in meters per second?",
+      "question": "The kinetic energy \\(K\\), in joules, of an object with mass \\(m\\), in kilograms, and speed \\(v\\), in meters per second, is\n\\[\nK=\\frac12mv^2.\n\\]\nObject A has a mass of 6 kilograms and a speed of 8 meters per second. Object B has a mass of 24 kilograms and the same kinetic energy as object A. What is the speed of object B, in meters per second?",
       "choices": {
         "A": "\\(2\\)",
         "B": "\\(4\\)",
@@ -4689,12 +4689,12 @@
         "D": "\\(16\\)"
       },
       "correctAnswer": "B",
-      "explanation": "For object A,\n\n\\[K=12(6)(82)=192.\\]\nFor object B,\n\n\\[192=12(24)v^{2}=12v2.\\]\nThus,\n\n\\[v^{2}=16.\\]\nSpeed is nonnegative, so\n\\[ \\boxed{v=4}. \\]",
+      "explanation": "For object A,\n\\[\nK=\\frac12(6)(8^2)=192.\n\\]\nFor object B,\n\\[\n192=\\frac12(24)v^2=12v^2.\n\\]\nThus\n\\[\nv^2=16.\n\\]\nSpeed is nonnegative, so\n\\[\n\\boxed{v=4}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 158,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "For object A,\n\n\\[K=12(6)(82)=192.\\]\nFor object B,\n\n\\[192=12(24)v^{2}=12v2.\\]\nThus,\n\n\\[v^{2}=16.\\]\nSpeed is nonnegative, so\n\\[ \\boxed{v=4}. \\]",
+        "B": "For object A,\n\\[\nK=\\frac12(6)(8^2)=192.\n\\]\nFor object B,\n\\[\n192=\\frac12(24)v^2=12v^2.\n\\]\nThus\n\\[\nv^2=16.\n\\]\nSpeed is nonnegative, so\n\\[\n\\boxed{v=4}.\n\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
@@ -5029,12 +5029,12 @@
         "D": "\\(1<x<3\\)"
       },
       "correctAnswer": "B",
-      "explanation": "\\[The x-intercepts are\\]\n\n\\[x=52andx=-4.\\]\nThe vertex lies midway between them:\n\n\\[52-42=-322=-34.\\]\nSince\n\n\\[-1<-34<0,\\]\nchoice B is correct.",
+      "explanation": "The x-intercepts are\n\\[\nx=\\frac52\\quad\\text{and}\\quad x=-4.\n\\]\nThe vertex lies midway between them:\n\\[\n\\frac{\\frac52+(-4)}{2}=-\\frac34.\n\\]\nSince\n\\[\n-1<-\\frac34<0,\n\\]\nchoice B is correct.",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 168,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "\\[The x-intercepts are\\]\n\n\\[x=52andx=-4.\\]\nThe vertex lies midway between them:\n\n\\[52-42=-322=-34.\\]\nSince\n\n\\[-1<-34<0,\\]\nchoice B is correct.",
+        "B": "The x-intercepts are\n\\[\nx=\\frac52\\quad\\text{and}\\quad x=-4.\n\\]\nThe vertex lies midway between them:\n\\[\n\\frac{\\frac52+(-4)}{2}=-\\frac34.\n\\]\nSince\n\\[\n-1<-\\frac34<0,\n\\]\nchoice B is correct.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
@@ -5129,7 +5129,7 @@
       "skill": "Linear equations in one variable",
       "difficulty": "Medium",
       "passage": "",
-      "question": "The equation\n\n\\[q=5-18r+2\\]\n\\[relates q and r, where r-2 and q<5.\\]\nWhich expression gives r in terms of q?",
+      "question": "The equation\n\\[\nq=5-\\frac{18}{r+2}\n\\]\nrelates \\(q\\) and \\(r\\), where \\(r\\ne-2\\) and \\(q<5\\). Which expression gives \\(r\\) in terms of \\(q\\)?",
       "choices": {
         "A": "\\(\\displaystyle \\frac{2q+8}{5-q}\\)",
         "B": "\\(\\displaystyle \\frac{2q-8}{5-q}\\)",
@@ -5137,11 +5137,11 @@
         "D": "\\(\\displaystyle \\frac{5-q}{2q+8}\\)"
       },
       "correctAnswer": "A",
-      "explanation": "Rearrange:\n\n\\[5-q=18r+2.\\]\nTherefore,\n\n\\[r+2=185-q.\\]\nSo\n\\[ r=\\frac{18}{5-q}-2 =\\frac{18-2(5-q)}{5-q} =\\boxed{\\frac{2q+8}{5-q}}. \\]",
+      "explanation": "Rearrange:\n\\[\n5-q=\\frac{18}{r+2}.\n\\]\nTherefore,\n\\[\nr+2=\\frac{18}{5-q}.\n\\]\nSo\n\\[\nr=\\frac{18}{5-q}-2\n=\\frac{18-2(5-q)}{5-q}\n=\\boxed{\\frac{2q+8}{5-q}}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 174,
       "choiceExplanations": {
-        "A": "Rearrange:\n\n\\[5-q=18r+2.\\]\nTherefore,\n\n\\[r+2=185-q.\\]\nSo\n\\[ r=\\frac{18}{5-q}-2 =\\frac{18-2(5-q)}{5-q} =\\boxed{\\frac{2q+8}{5-q}}. \\]",
+        "A": "Rearrange:\n\\[\n5-q=\\frac{18}{r+2}.\n\\]\nTherefore,\n\\[\nr+2=\\frac{18}{5-q}.\n\\]\nSo\n\\[\nr=\\frac{18}{5-q}-2\n=\\frac{18-2(5-q)}{5-q}\n=\\boxed{\\frac{2q+8}{5-q}}.\n\\]",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -5210,7 +5210,7 @@
       "skill": "Equivalent expressions",
       "difficulty": "Medium",
       "passage": "",
-      "question": "Which expression is equivalent to\n\n\\[18a7b4-30a5b6?\\]",
+      "question": "Which expression is equivalent to\n\\[\n18a^7b^4-30a^5b^6?\n\\]",
       "choices": {
         "A": "\\(\\displaystyle 6a^5b^4(3a^2-5b^2)\\)",
         "B": "\\(\\displaystyle 6a^5b^4(3a^2-5b)\\)",
@@ -5218,11 +5218,11 @@
         "D": "\\(\\displaystyle 3a^5b^4(6a^2-5b^2)\\)"
       },
       "correctAnswer": "A",
-      "explanation": "The greatest common factor is\n\n6a5b4.\nFactoring it out gives\n\n\\[18a7b4-30a5b6=6a5b4(3a2-5b2).\\]",
+      "explanation": "The greatest common factor is\n\\[\n6a^5b^4.\n\\]\nFactoring it out gives\n\\[\n18a^7b^4-30a^5b^6\n=6a^5b^4(3a^2-5b^2).\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 177,
       "choiceExplanations": {
-        "A": "The greatest common factor is\n\n6a5b4.\nFactoring it out gives\n\n\\[18a7b4-30a5b6=6a5b4(3a2-5b2).\\]",
+        "A": "The greatest common factor is\n\\[\n6a^5b^4.\n\\]\nFactoring it out gives\n\\[\n18a^7b^4-30a^5b^6\n=6a^5b^4(3a^2-5b^2).\n\\]",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -5245,12 +5245,12 @@
         "D": "\\(\\displaystyle B(t)=500(0.90)^t\\)"
       },
       "correctAnswer": "B",
-      "explanation": "Over 2 years, the growth factor is\n\n\\[605500=1.21.\\]\nThe annual factor is therefore\n\n\\[1.21=1.10.\\]\nSince the initial balance is 500,\n\\[ \\boxed{B(t)=500(1.10)^t}. \\]",
+      "explanation": "Over 2 years, the growth factor is\n\\[\n\\frac{605}{500}=1.21.\n\\]\nThe annual growth factor is therefore\n\\[\n\\sqrt{1.21}=1.10.\n\\]\nSince the initial balance is 500,\n\\[\n\\boxed{B(t)=500(1.10)^t}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 178,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "Over 2 years, the growth factor is\n\n\\[605500=1.21.\\]\nThe annual factor is therefore\n\n\\[1.21=1.10.\\]\nSince the initial balance is 500,\n\\[ \\boxed{B(t)=500(1.10)^t}. \\]",
+        "B": "Over 2 years, the growth factor is\n\\[\n\\frac{605}{500}=1.21.\n\\]\nThe annual growth factor is therefore\n\\[\n\\sqrt{1.21}=1.10.\n\\]\nSince the initial balance is 500,\n\\[\n\\boxed{B(t)=500(1.10)^t}.\n\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
@@ -5454,11 +5454,11 @@
         "D": "\\(x-2y=20\\)"
       },
       "correctAnswer": "A",
-      "explanation": "The slope is\n\n\\[-3-94-(-2)=-126=-2.\\]\n\\[So y=-2x+b. Using (-2,9),\\]\n\n\\[9=4+b,\\]\n\\[so b=5. Thus\\]\n\n\\[y=-2x+5,\\]\nor\n\n\\[2x+y=5.\\]",
+      "explanation": "The slope is\n\\[\n\\frac{-3-9}{4-(-2)}=\\frac{-12}{6}=-2.\n\\]\nSo \\(y=-2x+b\\). Using \\((-2,9)\\),\n\\[\n9=4+b,\n\\]\nso \\(b=5\\). Thus\n\\[\ny=-2x+5,\n\\]\nor\n\\[\n\\boxed{2x+y=5}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 186,
       "choiceExplanations": {
-        "A": "The slope is\n\n\\[-3-94-(-2)=-126=-2.\\]\n\\[So y=-2x+b. Using (-2,9),\\]\n\n\\[9=4+b,\\]\n\\[so b=5. Thus\\]\n\n\\[y=-2x+5,\\]\nor\n\n\\[2x+y=5.\\]",
+        "A": "The slope is\n\\[\n\\frac{-3-9}{4-(-2)}=\\frac{-12}{6}=-2.\n\\]\nSo \\(y=-2x+b\\). Using \\((-2,9)\\),\n\\[\n9=4+b,\n\\]\nso \\(b=5\\). Thus\n\\[\ny=-2x+5,\n\\]\nor\n\\[\n\\boxed{2x+y=5}.\n\\]",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -5656,12 +5656,12 @@
         "D": "12 percentage points"
       },
       "correctAnswer": "B",
-      "explanation": "Using the points (1,26) and (5,50), the hourly rate is\n\n\\[50-265-1=244=6\\]\npercentage points per hour.\nThirty minutes is half an hour, so the increase is\n\n\\[612=3.\\]",
+      "explanation": "Using the points \\((1,26)\\) and \\((5,50)\\), the hourly rate is\n\\[\n\\frac{50-26}{5-1}=\\frac{24}{4}=6\n\\]\npercentage points per hour. Thirty minutes is half an hour, so the increase is\n\\[\n6\\left(\\frac12\\right)=\\boxed3.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 194,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "Using the points (1,26) and (5,50), the hourly rate is\n\n\\[50-265-1=244=6\\]\npercentage points per hour.\nThirty minutes is half an hour, so the increase is\n\n\\[612=3.\\]",
+        "B": "Using the points \\((1,26)\\) and \\((5,50)\\), the hourly rate is\n\\[\n\\frac{50-26}{5-1}=\\frac{24}{4}=6\n\\]\npercentage points per hour. Thirty minutes is half an hour, so the increase is\n\\[\n6\\left(\\frac12\\right)=\\boxed3.\n\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
@@ -5798,12 +5798,12 @@
       "question": "Consider the system\n\n\\[4x-6y=10\\]\n\n\\[3(k-1)x+12=9y+2x,\\]\nwhere k is a constant. If the system has no solution, what is the value of k?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "The first equation has slope\n\n23.\nRewrite the second:\n\n\\[(3k-5)x-9y=-12,\\]\nso its slope is\n\n\\[3k-59.\\]\nFor no solution, the lines must be parallel:\n\n\\[3k-59=23.\\]\nThus,\n\n\\[3k-5=6,\\]\nso\n\n\\[k=113.\\]\nThe two equations then have different intercepts, so the parallel lines are distinct.",
+      "explanation": "The first equation has slope\n\\[\n\\frac23.\n\\]\nRewrite the second:\n\\[\n(3k-5)x-9y=-12,\n\\]\nso its slope is\n\\[\n\\frac{3k-5}{9}.\n\\]\nFor no solution, the lines must be parallel:\n\\[\n\\frac{3k-5}{9}=\\frac23.\n\\]\nThus\n\\[\n3k-5=6,\n\\]\nso\n\\[\n\\boxed{k=\\frac{11}{3}}.\n\\]\nThe intercepts differ, so the lines are distinct.",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 198,
       "answerType": "student-response",
       "acceptedAnswers": [
-        "113"
+        "11/3"
       ]
     },
     {
@@ -5845,7 +5845,7 @@
       "question": "Line k is parallel to the line\n\n\\[4x+5y=20\\]\nand has y-intercept (0,12). What is the x-coordinate of the x-intercept of line k?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "The given line has slope\n\n\\[-45.\\]\nA parallel line has the same slope, so\n\n\\[y=-45x+12.\\]\n\\[At the x-intercept, y=0:\\]\n\n\\[0=-45x+12.\\]\nThus,\n\n\\[x=15.\\]",
+      "explanation": "The given line has slope\n\\[\n-\\frac45.\n\\]\nA parallel line has the same slope, so\n\\[\ny=-\\frac45x+12.\n\\]\nAt the x-intercept, \\(y=0\\):\n\\[\n0=-\\frac45x+12.\n\\]\nThus\n\\[\n\\boxed{x=15}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 200,
       "answerType": "student-response",
@@ -6131,7 +6131,7 @@
       "question": "Line k is perpendicular to the line\n\n\\[2x-3y=12\\]\nand has x-intercept (8,0). What is the y-coordinate of the y-intercept of line k?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "Rewrite the given line:\n\n\\[y=23x-4.\\]\nIts slope is 23, so the perpendicular slope is\n\n\\[-32.\\]\nUsing (8,0),\n\n\\[y=-32(x-8).\\]\n\\[At x=0,\\]\n\n\\[y=-32(-8)=12.\\]",
+      "explanation": "Rewrite the given line:\n\\[\ny=\\frac23x-4.\n\\]\nIts slope is \\(\\frac23\\), so the perpendicular slope is\n\\[\n-\\frac32.\n\\]\nUsing \\((8,0)\\),\n\\[\ny=-\\frac32(x-8).\n\\]\nAt \\(x=0\\),\n\\[\ny=-\\frac32(-8)=\\boxed{12}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 210,
       "answerType": "student-response",
@@ -6286,7 +6286,7 @@
       "question": "On a 324-mile trip, Lena drove at 48 miles per hour for the first 2 hours 15 minutes. She then drove at 72 miles per hour for the remaining y hours.\nWhat is the value of y?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "Convert 2 hours 15 minutes to\n\n\\[2.25=94\\]\nhours.\nThe first part of the trip was\n\n\\[4894=108\\]\nmiles. Thus,\n\n\\[108+72y=324.\\]\nSo\n\n\\[72y=216\\]\nand\n\n\\[y=3.\\]",
+      "explanation": "Convert 2 hours 15 minutes to\n\\[\n2.25=\\frac94\n\\]\nhours. The first part of the trip was\n\\[\n48\\left(\\frac94\\right)=108\n\\]\nmiles. Thus,\n\\[\n108+72y=324.\n\\]\nSo\n\\[\n72y=216\n\\]\nand\n\\[\n\\boxed{y=3}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 215,
       "answerType": "student-response",
@@ -6456,10 +6456,10 @@
       "skill": "Linear functions",
       "difficulty": "Medium",
       "passage": "",
-      "question": "The functions f and g are defined by\n\n\\[f(x)=34x-5\\]\nand\n\n\\[g(x)=12x+6.\\]\nIf\n\n\\[h(x)=2f(x)-g(x),\\]\nwhat is the x-coordinate of the x-intercept of the graph of y=h(x)?",
+      "question": "The functions \\(f\\) and \\(g\\) are defined by\n\\[\nf(x)=\\frac34x-5\n\\]\nand\n\\[\ng(x)=\\frac12x+6.\n\\]\nIf\n\\[\nh(x)=2f(x)-g(x),\n\\]\nwhat is the x-coordinate of the x-intercept of the graph of \\(y=h(x)\\)?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "\\[Compute h(x):\\]\n\n\\[h(x)=234x-5-12x+6.\\]\nThus,\n\n\\[h(x)=32x-10-12x-6=x-16.\\]\n\\[At the x-intercept,\\]\n\n\\[h(x)=0,\\]\nso\n\n\\[x=16.\\]",
+      "explanation": "Compute \\(h(x)\\):\n\\[\nh(x)=2\\left(\\frac34x-5\\right)-\\left(\\frac12x+6\\right).\n\\]\nThus\n\\[\nh(x)=\\frac32x-10-\\frac12x-6=x-16.\n\\]\nAt the x-intercept, \\(h(x)=0\\), so\n\\[\n\\boxed{x=16}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 220,
       "answerType": "student-response",
@@ -6632,12 +6632,12 @@
       "question": "The equation\n\n\\[(2x-11)^{2}=(x-2)^{2}\\]\nhas two distinct real solutions. What is the sum of the solutions?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "Use the difference of squares:\n\n\\[(2x-11)^{2}-(x-2)^{2}=0\\]\n\n\\[[(2x-11)-(x-2)][(2x-11)+(x-2)]=0\\]\n\n\\[(x-9)(3x-13)=0\\]\nSo the solutions are 9 and 133. Their sum is\n\n\\[9+133=403.\\]",
+      "explanation": "Use the difference of squares:\n\\[\n(2x-11)^2-(x-2)^2=0.\n\\]\nThen\n\\[\n[(2x-11)-(x-2)][(2x-11)+(x-2)]=0,\n\\]\nso\n\\[\n(x-9)(3x-13)=0.\n\\]\nThe solutions are\n\\[\n9\\quad\\text{and}\\quad\\frac{13}{3}.\n\\]\nTheir sum is\n\\[\n9+\\frac{13}{3}=\\boxed{\\frac{40}{3}}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 226,
       "answerType": "student-response",
       "acceptedAnswers": [
-        "403"
+        "40/3"
       ]
     },
     {
@@ -6886,7 +6886,7 @@
       "skill": "Equivalent expressions",
       "difficulty": "Medium",
       "passage": "",
-      "question": "For positive x and y, which expression is equivalent to\n\n3125x12y6?",
+      "question": "For positive \\(x\\) and \\(y\\), which expression is equivalent to\n\\[\n\\sqrt[3]{\\frac{125x^{12}}{y^6}}?\n\\]",
       "choices": {
         "A": "\\(\\displaystyle \\frac{5x^4}{y^2}\\)",
         "B": "\\(\\displaystyle \\frac{5x^3}{y^2}\\)",
@@ -6894,11 +6894,11 @@
         "D": "\\(\\displaystyle \\frac{5x^4}{y^3}\\)"
       },
       "correctAnswer": "A",
-      "explanation": "Take the cube root of each factor:\n\n\\[3125=5,3x12=x^{4},3y6=y^{2}.\\]\nTherefore,\n\n\\[3125x12y6=5x4y2.\\]",
+      "explanation": "Take the cube root of each factor:\n\\[\n\\sqrt[3]{125}=5,\\qquad\n\\sqrt[3]{x^{12}}=x^4,\\qquad\n\\sqrt[3]{y^6}=y^2.\n\\]\nTherefore,\n\\[\n\\sqrt[3]{\\frac{125x^{12}}{y^6}}\n=\\boxed{\\frac{5x^4}{y^2}}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 237,
       "choiceExplanations": {
-        "A": "Take the cube root of each factor:\n\n\\[3125=5,3x12=x^{4},3y6=y^{2}.\\]\nTherefore,\n\n\\[3125x12y6=5x4y2.\\]",
+        "A": "Take the cube root of each factor:\n\\[\n\\sqrt[3]{125}=5,\\qquad\n\\sqrt[3]{x^{12}}=x^4,\\qquad\n\\sqrt[3]{y^6}=y^2.\n\\]\nTherefore,\n\\[\n\\sqrt[3]{\\frac{125x^{12}}{y^6}}\n=\\boxed{\\frac{5x^4}{y^2}}.\n\\]",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -6994,10 +6994,10 @@
       "skill": "Linear equations in one variable",
       "difficulty": "Easy",
       "passage": "",
-      "question": "The function\n\n\\[f(x)=2x4-3x2+5x+11\\]\npasses through the point (-2,b). What is the value of b?",
+      "question": "The function\n\\[\nf(x)=2x^4-3x^2+5x+11\n\\]\npasses through the point \\((-2,b)\\). What is the value of \\(b\\)?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "\\[Evaluate f(-2):\\]\n\n\\[b=2(-2)^{4}-3(-2)^{2}+5(-2)+11.\\]\n\n\\[b=32-12-10+11=21.\\]",
+      "explanation": "Evaluate \\(f(-2)\\):\n\\[\nb=2(-2)^4-3(-2)^2+5(-2)+11.\n\\]\nThus\n\\[\nb=32-12-10+11=\\boxed{21}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 241,
       "answerType": "student-response",
@@ -7122,7 +7122,7 @@
       "skill": "Linear equations in one variable",
       "difficulty": "Medium",
       "passage": "",
-      "question": "What is the minimum value of\n\n\\[g(x)=2x2-16x+41?\\]",
+      "question": "What is the minimum value of\n\\[\ng(x)=2x^2-16x+41?\n\\]",
       "choices": {
         "A": "\\(4\\)",
         "B": "\\(9\\)",
@@ -7130,12 +7130,12 @@
         "D": "\\(41\\)"
       },
       "correctAnswer": "B",
-      "explanation": "Complete the square:\n\n\\[g(x)=2(x^{2}-8x)+41\\]\n\n\\[=2[(x-4)^{2}-16]+41\\]\n\n\\[=2(x-4)^{2}+9.\\]\nSince (x-4)20, the minimum value is\n\n9.",
+      "explanation": "Complete the square:\n\\[\ng(x)=2(x^2-8x)+41\n=2[(x-4)^2-16]+41\n=2(x-4)^2+9.\n\\]\nSince \\((x-4)^2\\ge0\\), the minimum value is\n\\[\n\\boxed9.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 246,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "Complete the square:\n\n\\[g(x)=2(x^{2}-8x)+41\\]\n\n\\[=2[(x-4)^{2}-16]+41\\]\n\n\\[=2(x-4)^{2}+9.\\]\nSince (x-4)20, the minimum value is\n\n9.",
+        "B": "Complete the square:\n\\[\ng(x)=2(x^2-8x)+41\n=2[(x-4)^2-16]+41\n=2(x-4)^2+9.\n\\]\nSince \\((x-4)^2\\ge0\\), the minimum value is\n\\[\n\\boxed9.\n\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
@@ -7250,15 +7250,15 @@
       "skill": "Equivalent expressions",
       "difficulty": "Medium",
       "passage": "",
-      "question": "The expression\n\n\\[6x4+35x2+36\\]\ncan be written as\n\n\\[(3x2+a)(2x2+b),\\]\nwhere a and b are positive integers, and also as\n\n\\[(3x2+c)(2x2+d),\\]\nwhere c and d are positive nonintegers. What is a+c?",
+      "question": "The expression\n\\[\n6x^4+35x^2+36\n\\]\ncan be written as\n\\[\n(3x^2+a)(2x^2+b),\n\\]\nwhere \\(a\\) and \\(b\\) are positive integers, and also as\n\\[\n(3x^2+c)(2x^2+d),\n\\]\nwhere \\(c\\) and \\(d\\) are positive nonintegers. What is \\(a+c\\)?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "For the integer factorization,\n\n\\[ab=36,3b+2a=35.\\]\nThe positive integer pair satisfying both is\n\n\\[a=4,b=9.\\]\nFor the noninteger factorization,\n\n\\[cd=36,3d+2c=35.\\]\n\\[Since d=36/c,\\]\n\n\\[108c+2c=35.\\]\n\n\\[2c2-35c+108=0\\]\n\n\\[(2c-27)(c-4)=0.\\]\nThe positive noninteger value is\n\n\\[c=272.\\]\nHence\n\n\\[a+c=4+272=352.\\]",
+      "explanation": "For the integer factorization,\n\\[\nab=36,\\qquad 3b+2a=35.\n\\]\nThe positive integer pair is \\(a=4,b=9\\).\n\nFor the noninteger factorization,\n\\[\ncd=36,\\qquad 3d+2c=35.\n\\]\nSince \\(d=36/c\\),\n\\[\n\\frac{108}{c}+2c=35.\n\\]\nThus\n\\[\n2c^2-35c+108=0\n\\]\nand\n\\[\n(2c-27)(c-4)=0.\n\\]\nThe positive noninteger value is\n\\[\nc=\\frac{27}{2}.\n\\]\nHence\n\\[\na+c=4+\\frac{27}{2}=\\boxed{\\frac{35}{2}}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 251,
       "answerType": "student-response",
       "acceptedAnswers": [
-        "352"
+        "35/2"
       ]
     },
     {
@@ -7273,12 +7273,13 @@
       "question": "What is a positive solution to\n\n\\[(2x-7)(x+4)(x-5)(3x+2)=0?\\]",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "By the zero-product property,\n\n\\[2x-7=0,x+4=0,x-5=0,3x+2=0.\\]\nThe solutions are\n\n\\[72,-4,5,-23.\\]\nThe positive solutions are\n\n72and5.",
+      "explanation": "By the zero-product property,\n\\[\n2x-7=0,\\quad x+4=0,\\quad x-5=0,\\quad 3x+2=0.\n\\]\nThe solutions are\n\\[\n\\frac72,-4,5,-\\frac23.\n\\]\nThe positive solutions are\n\\[\n\\boxed{\\frac72\\text{ and }5}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 253,
       "answerType": "student-response",
       "acceptedAnswers": [
-        "72or5"
+        "7/2",
+        "5"
       ]
     },
     {
@@ -7387,12 +7388,12 @@
       "question": "The function\n\n\\[f(x)=(2x-3)(x+5)\\]\nis graphed in the xy-plane. What is the greater x-coordinate of an x-intercept of the graph?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "\\[At an x-intercept,\\]\n\n\\[f(x)=0.\\]\nSo\n\n\\[(2x-3)(x+5)=0.\\]\nThus\n\n\\[x=32\\]\nor\n\n\\[x=-5.\\]\nThe greater value is\n\n32.",
+      "explanation": "At an x-intercept, \\(f(x)=0\\):\n\\[\n(2x-3)(x+5)=0.\n\\]\nThus\n\\[\nx=\\frac32\n\\]\nor\n\\[\nx=-5.\n\\]\nThe greater value is\n\\[\n\\boxed{\\frac32}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 258,
       "answerType": "student-response",
       "acceptedAnswers": [
-        "32"
+        "3/2"
       ]
     },
     {
@@ -7512,10 +7513,10 @@
       "skill": "Equivalent expressions",
       "difficulty": "Easy",
       "passage": "",
-      "question": "The expression\n\n\\[0.56x2+0.88x+1.20\\]\nis equivalent to\n\n\\[a(7x2+11x+15),\\]\nwhere a>0. What is the value of 1a?",
+      "question": "The expression\n\\[\n0.56x^2+0.88x+1.20\n\\]\nis equivalent to\n\\[\na(7x^2+11x+15),\n\\]\nwhere \\(a>0\\). What is the value of \\(\\frac1a\\)?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "Compare corresponding coefficients:\n\n\\[7a=0.56.\\]\nThus\n\n\\[a=0.08.\\]\nTherefore,\n\n\\[1a=10.08=12.5.\\]",
+      "explanation": "Compare corresponding coefficients:\n\\[\n7a=0.56.\n\\]\nThus\n\\[\na=0.08.\n\\]\nTherefore,\n\\[\n\\frac1a=\\frac1{0.08}=\\boxed{12.5}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 263,
       "answerType": "student-response",
@@ -7532,7 +7533,7 @@
       "skill": "Equivalent expressions",
       "difficulty": "Medium",
       "passage": "",
-      "question": "Which expression is equivalent to\n\n\\[2x2-12x+11?\\]",
+      "question": "Which expression is equivalent to\n\\[\n2x^2-12x+11?\n\\]",
       "choices": {
         "A": "\\(2(x-3)^{2}-7\\)",
         "B": "\\(2(x+3)^{2}-7\\)",
@@ -7540,11 +7541,11 @@
         "D": "\\(2(x-6)^{2}-61\\)"
       },
       "correctAnswer": "A",
-      "explanation": "Factor 2 from the quadratic terms:\n\n\\[2(x^{2}-6x)+11.\\]\nComplete the square:\n\n\\[x^{2}-6x=(x-3)^{2}-9.\\]\nSo\n\n\\[2[(x-3)^{2}-9]+11=2(x-3)^{2}-7.\\]",
+      "explanation": "Factor 2 from the quadratic terms:\n\\[\n2(x^2-6x)+11.\n\\]\nComplete the square:\n\\[\nx^2-6x=(x-3)^2-9.\n\\]\nSo\n\\[\n2[(x-3)^2-9]+11\n=\\boxed{2(x-3)^2-7}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 264,
       "choiceExplanations": {
-        "A": "Factor 2 from the quadratic terms:\n\n\\[2(x^{2}-6x)+11.\\]\nComplete the square:\n\n\\[x^{2}-6x=(x-3)^{2}-9.\\]\nSo\n\n\\[2[(x-3)^{2}-9]+11=2(x-3)^{2}-7.\\]",
+        "A": "Factor 2 from the quadratic terms:\n\\[\n2(x^2-6x)+11.\n\\]\nComplete the square:\n\\[\nx^2-6x=(x-3)^2-9.\n\\]\nSo\n\\[\n2[(x-3)^2-9]+11\n=\\boxed{2(x-3)^2-7}.\n\\]",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -7559,7 +7560,7 @@
       "skill": "Equivalent expressions",
       "difficulty": "Easy",
       "passage": "",
-      "question": "The expression\n\n\\[4(x^{2}+px+5)-6x(p-2)\\]\nis equivalent to\n\n\\[4x2-40x+20.\\]\nWhat is the value of p?",
+      "question": "The expression\n\\[\n4(x^2+px+5)-6x(p-2)\n\\]\nis equivalent to\n\\[\n4x^2-40x+20.\n\\]\nWhat is the value of \\(p\\)?",
       "choices": {
         "A": "\\(14\\)",
         "B": "\\(26\\)",
@@ -7567,12 +7568,12 @@
         "D": "\\(52\\)"
       },
       "correctAnswer": "B",
-      "explanation": "Expand:\n\n\\[4x2+4px+20-6px+12x.\\]\n\\[Combine the x-terms:\\]\n\n\\[4x2+(12-2p)x+20.\\]\nMatch coefficients with\n\n\\[4x2-40x+20:\\]\n\n\\[12-2p=-40.\\]\nThus\n\n\\[-2p=-52\\]\nand\n\n\\[p=26.\\]",
+      "explanation": "Expand:\n\\[\n4x^2+4px+20-6px+12x.\n\\]\nCombine the x-terms:\n\\[\n4x^2+(12-2p)x+20.\n\\]\nMatch coefficients with\n\\[\n4x^2-40x+20:\n\\]\n\\[\n12-2p=-40.\n\\]\nThus\n\\[\np=\\boxed{26}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 265,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "Expand:\n\n\\[4x2+4px+20-6px+12x.\\]\n\\[Combine the x-terms:\\]\n\n\\[4x2+(12-2p)x+20.\\]\nMatch coefficients with\n\n\\[4x2-40x+20:\\]\n\n\\[12-2p=-40.\\]\nThus\n\n\\[-2p=-52\\]\nand\n\n\\[p=26.\\]",
+        "B": "Expand:\n\\[\n4x^2+4px+20-6px+12x.\n\\]\nCombine the x-terms:\n\\[\n4x^2+(12-2p)x+20.\n\\]\nMatch coefficients with\n\\[\n4x^2-40x+20:\n\\]\n\\[\n12-2p=-40.\n\\]\nThus\n\\[\np=\\boxed{26}.\n\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
@@ -7586,7 +7587,7 @@
       "skill": "Nonlinear functions",
       "difficulty": "Medium",
       "passage": "",
-      "question": "The function f is defined by\n\n\\[f(x)=20x-2x2.\\]\nThe function g is defined by\n\n\\[g(x)=3f(x+4)-7.\\]\nWhat is the maximum value of g?",
+      "question": "The function \\(f\\) is defined by\n\\[\nf(x)=20x-2x^2.\n\\]\nThe function \\(g\\) is defined by\n\\[\ng(x)=3f(x+4)-7.\n\\]\nWhat is the maximum value of \\(g\\)?",
       "choices": {
         "A": "\\(43\\)",
         "B": "\\(50\\)",
@@ -7594,16 +7595,16 @@
         "D": "\\(157\\)"
       },
       "correctAnswer": "C",
-      "explanation": "Rewrite f in vertex form:\n\n\\[f(x)=-2(x-5)^{2}+50.\\]\nSo the maximum value of f is 50.\nReplacing x with x+4 shifts the graph horizontally, so the maximum remains 50. Then\n\n\\[g=3(50)-7=143.\\]",
+      "explanation": "Rewrite \\(f\\) in vertex form:\n\\[\nf(x)=-2(x-5)^2+50.\n\\]\nSo the maximum value of \\(f\\) is 50. Replacing \\(x\\) with \\(x+4\\) shifts the graph horizontally, so the maximum remains 50. Therefore,\n\\[\ng_{\\max}=3(50)-7=\\boxed{143}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 266,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
-        "C": "Rewrite f in vertex form:\n\n\\[f(x)=-2(x-5)^{2}+50.\\]\nSo the maximum value of f is 50.\nReplacing x with x+4 shifts the graph horizontally, so the maximum remains 50. Then\n\n\\[g=3(50)-7=143.\\]",
+        "C": "Rewrite \\(f\\) in vertex form:\n\\[\nf(x)=-2(x-5)^2+50.\n\\]\nSo the maximum value of \\(f\\) is 50. Replacing \\(x\\) with \\(x+4\\) shifts the graph horizontally, so the maximum remains 50. Therefore,\n\\[\ng_{\\max}=3(50)-7=\\boxed{143}.\n\\]",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "desmosMethod": "Enter\n\n\\[g(x)=320(x+4)-2(x+4)^{2}-7.\\]\nGraph it and inspect the vertex. Its y-coordinate is 143, which is the maximum value."
+      "desmosMethod": "Enter\n\\[\ng(x)=3\\left(20(x+4)-2(x+4)^2\\right)-7.\n\\]\nThe vertex has y-coordinate \\(143\\), so the maximum value is \\(143\\)."
     },
     {
       "id": "math-20261006-batch465-q267",
@@ -8255,7 +8256,7 @@
       "skill": "Linear equations in one variable",
       "difficulty": "Medium",
       "passage": "",
-      "question": "If\n\n\\[34(2x-5)=56(x+3),\\]\nthe value of\n\n\\[23x-1\\]\nis between which pair of numbers?",
+      "question": "If\n\\[\n\\frac34(2x-5)=\\frac56(x+3),\n\\]\nthe value of\n\\[\n\\frac23x-1\n\\]\nis between which pair of numbers?",
       "choices": {
         "A": "\\(4.5 and 5\\)",
         "B": "\\(5 and 5.5\\)",
@@ -8263,12 +8264,12 @@
         "D": "\\(6 and 6.5\\)"
       },
       "correctAnswer": "B",
-      "explanation": "Multiply the equation by 12:\n\n\\[9(2x-5)=10(x+3).\\]\nThus,\n\n\\[18x-45=10x+30\\]\n\n\\[8x=75\\]\n\n\\[x=758.\\]\nThen\n\n\\[23x-1=23758-1=214=5.25.\\]\nSo the value lies between\n\\[ \\boxed{5\\text{ and }5.5}. \\]",
+      "explanation": "Multiply the equation by 12:\n\\[\n9(2x-5)=10(x+3).\n\\]\nThus\n\\[\n18x-45=10x+30,\n\\]\nso\n\\[\nx=\\frac{75}{8}.\n\\]\nThen\n\\[\n\\frac23x-1\n=\\frac23\\left(\\frac{75}{8}\\right)-1\n=\\frac{21}{4}=5.25.\n\\]\nSo the value lies between \\(5\\) and \\(5.5\\).",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 290,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "Multiply the equation by 12:\n\n\\[9(2x-5)=10(x+3).\\]\nThus,\n\n\\[18x-45=10x+30\\]\n\n\\[8x=75\\]\n\n\\[x=758.\\]\nThen\n\n\\[23x-1=23758-1=214=5.25.\\]\nSo the value lies between\n\\[ \\boxed{5\\text{ and }5.5}. \\]",
+        "B": "Multiply the equation by 12:\n\\[\n9(2x-5)=10(x+3).\n\\]\nThus\n\\[\n18x-45=10x+30,\n\\]\nso\n\\[\nx=\\frac{75}{8}.\n\\]\nThen\n\\[\n\\frac23x-1\n=\\frac23\\left(\\frac{75}{8}\\right)-1\n=\\frac{21}{4}=5.25.\n\\]\nSo the value lies between \\(5\\) and \\(5.5\\).",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
@@ -8454,7 +8455,7 @@
       "question": "A kayak rental costs \\(\\$42\\) per hour plus a one-time \\(\\$35\\) equipment fee. A coupon reduces the final charge by \\(\\$18\\). A customer wants to spend no more than \\(\\$310\\).\nIf kayaks can be rented only for a whole number of hours, what is the maximum number of hours the customer can rent one?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "Let h be the number of hours:\n\n\\[42h+35-18310.\\]\nThus,\n\n42h293\n\nh293426.98.\nThe greatest allowable whole number is\n\\[ \\boxed{6}. \\]",
+      "explanation": "Let \\(h\\) be the number of hours:\n\\[\n42h+35-18\\le310.\n\\]\nThus\n\\[\n42h\\le293,\n\\]\nso\n\\[\nh\\le\\frac{293}{42}\\approx6.98.\n\\]\nThe greatest allowable whole number is\n\\[\n\\boxed6.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 298,
       "answerType": "student-response",
@@ -8639,10 +8640,10 @@
       "skill": "Linear functions",
       "difficulty": "Hard",
       "passage": "",
-      "question": "A line has slope 52, passes through (0,5), and is defined by\n\n\\[4y=(p-3)x+20,\\]\nwhere p is a constant.\nWhat is the value of p?",
+      "question": "A line has slope \\(\\frac52\\), passes through \\((0,5)\\), and is defined by\n\\[\n4y=(p-3)x+20,\n\\]\nwhere \\(p\\) is a constant. What is the value of \\(p\\)?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "Divide by 4:\n\n\\[y=p-34x+5.\\]\nTherefore,\n\n\\[p-34=52.\\]\nSo\n\n\\[p-3=10\\]\nand\n\\[ \\boxed{p=13}. \\]",
+      "explanation": "Divide by 4:\n\\[\ny=\\frac{p-3}{4}x+5.\n\\]\nTherefore,\n\\[\n\\frac{p-3}{4}=\\frac52.\n\\]\nSo \\(p-3=10\\), giving\n\\[\n\\boxed{p=13}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 305,
       "answerType": "student-response",
@@ -9428,12 +9429,12 @@
       "question": "What is the slope of the line defined by\n\n\\[6x+15y=40\\]\n\\[in the xy-plane?\\]",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "Solve for y:\n\n\\[15y=-6x+40\\]\n\n\\[y=-25x+83.\\]\nTherefore, the slope is\n\n\\[-25.\\]",
+      "explanation": "Solve for \\(y\\):\n\\[\n15y=-6x+40\n\\]\nso\n\\[\ny=-\\frac25x+\\frac83.\n\\]\nTherefore, the slope is\n\\[\n\\boxed{-\\frac25}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 335,
       "answerType": "student-response",
       "acceptedAnswers": [
-        "-25"
+        "-2/5"
       ]
     },
     {
@@ -9493,7 +9494,7 @@
       "skill": "Linear inequalities in one or two variables",
       "difficulty": "Medium",
       "passage": "",
-      "question": "A theater company can spend at most \\(\\$540\\) renting m standard costumes and n specialty costumes. A standard costume costs \\(\\$18\\). Each specialty costume has a \\(\\$22\\) rental charge and a required \\(\\$5\\) cleaning charge.\nThe inequality\n\n\\[18m+27n540\\]\nmodels the situation.\nWhat does 27n represent?",
+      "question": "A theater company can spend at most \\(\\$540\\) renting \\(m\\) standard costumes and \\(n\\) specialty costumes. A standard costume costs \\(\\$18\\). Each specialty costume has a \\(\\$22\\) rental charge and a required \\(\\$5\\) cleaning charge.\n\nThe inequality\n\\[\n18m+27n\\le540\n\\]\nmodels the situation. What does \\(27n\\) represent?",
       "choices": {
         "A": "The total rental and cleaning cost of the n specialty costumes",
         "B": "The cost of renting one specialty costume before its cleaning charge",
@@ -9501,11 +9502,11 @@
         "D": "The number of specialty costumes that can be rented for \\(\\$27\\)"
       },
       "correctAnswer": "A",
-      "explanation": "Each specialty costume costs\n\n\\[22+5=27\\]\ndollars in total. Therefore, 27n is the total cost of n specialty costumes, including both charges.",
+      "explanation": "Each specialty costume costs\n\\[\n22+5=27\n\\]\ndollars in total. Therefore, \\(27n\\) is the total rental and cleaning cost of the \\(n\\) specialty costumes.",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 337,
       "choiceExplanations": {
-        "A": "Each specialty costume costs\n\n\\[22+5=27\\]\ndollars in total. Therefore, 27n is the total cost of n specialty costumes, including both charges.",
+        "A": "Each specialty costume costs\n\\[\n22+5=27\n\\]\ndollars in total. Therefore, \\(27n\\) is the total rental and cleaning cost of the \\(n\\) specialty costumes.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -10417,7 +10418,7 @@
       "question": "A line in the xy-plane passes through (-3,14) and (5,-10) and has equation\n\n\\[y=mx+b.\\]\nWhat is the value of b?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "The slope is\n\n\\[m=-10-145-(-3)=-248=-3.\\]\n\\[Using (-3,14),\\]\n\n\\[14=-3(-3)+b=9+b.\\]\nThus\n\n\\[b=5.\\]",
+      "explanation": "The slope is\n\\[\nm=\\frac{-10-14}{5-(-3)}=\\frac{-24}{8}=-3.\n\\]\nUsing \\((-3,14)\\),\n\\[\n14=-3(-3)+b=9+b.\n\\]\nThus\n\\[\n\\boxed{b=5}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 366,
       "answerType": "student-response",
@@ -10562,10 +10563,10 @@
       "skill": "Nonlinear functions",
       "difficulty": "Hard",
       "passage": "",
-      "question": "The sum of\n\n\\[4x2-(3x-11)\\]\nand\n\n\\[-x^{2}+5(x-2)\\]\ncan be written as ax2+bx+c, where a, b, and c are constants. What is the value of a+b+c?",
+      "question": "The sum of\n\\[\n4x^2-(3x-11)\n\\]\nand\n\\[\n-x^2+5(x-2)\n\\]\ncan be written as \\(ax^2+bx+c\\), where \\(a\\), \\(b\\), and \\(c\\) are constants. What is the value of \\(a+b+c\\)?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "For a polynomial ax2+bx+c, substituting x=1 gives a+b+c. Evaluate the original sum at x=1:\n\n\\[4-(3-11)+[-1+5(1-2)]=12-6=6.\\]",
+      "explanation": "For a polynomial \\(ax^2+bx+c\\), substituting \\(x=1\\) gives \\(a+b+c\\). Evaluate the original sum at \\(x=1\\):\n\\[\n4-(3-11)+[-1+5(1-2)]\n=12-6\n=\\boxed6.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 372,
       "answerType": "student-response",
@@ -10582,10 +10583,10 @@
       "skill": "Equivalent expressions",
       "difficulty": "Hard",
       "passage": "",
-      "question": "The expression\n\n\\[(2x-3)(x+5)+(x-1)(x+4)\\]\nis equivalent to ax2+bx+c, where a, b, and c are constants. What is the value of b?",
+      "question": "The expression\n\\[\n(2x-3)(x+5)+(x-1)(x+4)\n\\]\nis equivalent to \\(ax^2+bx+c\\), where \\(a\\), \\(b\\), and \\(c\\) are constants. What is the value of \\(b\\)?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "Expand both products:\n\n\\[(2x-3)(x+5)=2x2+7x-15\\]\nand\n\n\\[(x-1)(x+4)=x^{2}+3x-4.\\]\nAdding gives\n\n\\[3x2+10x-19,\\]\n\\[so b=10.\\]",
+      "explanation": "Expand:\n\\[\n(2x-3)(x+5)=2x^2+7x-15\n\\]\nand\n\\[\n(x-1)(x+4)=x^2+3x-4.\n\\]\nAdding gives\n\\[\n3x^2+10x-19,\n\\]\nso\n\\[\n\\boxed{b=10}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 373,
       "answerType": "student-response",
@@ -10778,7 +10779,7 @@
       "skill": "Equivalent expressions",
       "difficulty": "Medium",
       "passage": "",
-      "question": "Which expression is equivalent to\n\n\\[3p-q22-2p2?\\]",
+      "question": "Which expression is equivalent to\n\\[\n\\left(3p-\\frac q2\\right)^2-2p^2?\n\\]",
       "choices": {
         "A": "\\(\\displaystyle 7p^2-3pq+\\frac{q^2}{4}\\)",
         "B": "\\(\\displaystyle 7p^2-\\frac32pq+\\frac{q^2}{4}\\)",
@@ -10786,11 +10787,11 @@
         "D": "\\(\\displaystyle 7p^2+3pq+\\frac{q^2}{4}\\)"
       },
       "correctAnswer": "A",
-      "explanation": "Square the binomial:\n\n\\[3p-q22=9p2-3pq+q24.\\]\nSubtracting 2p2 gives\n\n\\[7p2-3pq+q24.\\]",
+      "explanation": "Square the binomial:\n\\[\n\\left(3p-\\frac q2\\right)^2\n=9p^2-3pq+\\frac{q^2}{4}.\n\\]\nSubtracting \\(2p^2\\) gives\n\\[\n\\boxed{7p^2-3pq+\\frac{q^2}{4}}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 381,
       "choiceExplanations": {
-        "A": "Square the binomial:\n\n\\[3p-q22=9p2-3pq+q24.\\]\nSubtracting 2p2 gives\n\n\\[7p2-3pq+q24.\\]",
+        "A": "Square the binomial:\n\\[\n\\left(3p-\\frac q2\\right)^2\n=9p^2-3pq+\\frac{q^2}{4}.\n\\]\nSubtracting \\(2p^2\\) gives\n\\[\n\\boxed{7p^2-3pq+\\frac{q^2}{4}}.\n\\]",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -10805,20 +10806,20 @@
       "skill": "Linear functions",
       "difficulty": "Medium",
       "passage": "",
-      "question": "The function f is defined by\n\n\\[f(x)=2x2+11x-21.\\]\nWhich of the following is an x-intercept of the graph of y=f(x)?",
+      "question": "The function \\(f\\) is defined by\n\\[\nf(x)=2x^2+11x-21.\n\\]\nWhich of the following is an x-intercept of the graph of \\(y=f(x)\\)?",
       "choices": {
         "A": "\\((0,-7)\\)",
         "B": "\\((-7,0)\\)",
         "C": "\\((7,0)\\)",
-        "D": "\\(0,32\\)"
+        "D": "\\(\\left(\\frac32,0\\right)\\)"
       },
       "correctAnswer": "B",
-      "explanation": "\\[At an x-intercept, f(x)=0:\\]\n\n\\[2x2+11x-21=(2x-3)(x+7)=0.\\]\nThus x=32 or x=-7. Of the choices, (-7,0) is an x-intercept.",
+      "explanation": "At an x-intercept, \\(f(x)=0\\):\n\\[\n2x^2+11x-21=(2x-3)(x+7)=0.\n\\]\nThus\n\\[\nx=\\frac32\\quad\\text{or}\\quad x=-7.\n\\]\nOf the choices, \\((-7,0)\\) is an x-intercept.",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 382,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "\\[At an x-intercept, f(x)=0:\\]\n\n\\[2x2+11x-21=(2x-3)(x+7)=0.\\]\nThus x=32 or x=-7. Of the choices, (-7,0) is an x-intercept.",
+        "B": "At an x-intercept, \\(f(x)=0\\):\n\\[\n2x^2+11x-21=(2x-3)(x+7)=0.\n\\]\nThus\n\\[\nx=\\frac32\\quad\\text{or}\\quad x=-7.\n\\]\nOf the choices, \\((-7,0)\\) is an x-intercept.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
@@ -11091,7 +11092,7 @@
       "skill": "Linear equations in one variable",
       "difficulty": "Medium",
       "passage": "",
-      "question": "The function\n\n\\[h(t)=-16t2+96t+45\\]\nmodels the height, in feet, of an object t seconds after launch. It is also known that h(1)=125. What does the number 45 represent?",
+      "question": "The function\n\\[\nh(t)=-16t^2+96t+45\n\\]\nmodels the height, in feet, of an object \\(t\\) seconds after launch. It is also known that \\(h(1)=125\\). What does the number 45 represent?",
       "choices": {
         "A": "The object's initial height, in feet",
         "B": "The object's maximum height, in feet",
@@ -11099,11 +11100,11 @@
         "D": "The time, in seconds, at which the object reaches maximum height"
       },
       "correctAnswer": "A",
-      "explanation": "Initial height corresponds to t=0:\n\n\\[h(0)=-16(0)^{2}+96(0)+45=45.\\]\nTherefore, the object begins 45 feet above the ground.",
+      "explanation": "Initial height corresponds to \\(t=0\\):\n\\[\nh(0)=-16(0)^2+96(0)+45=45.\n\\]\nTherefore, the object begins\n\\[\n\\boxed{45\\text{ feet}}\n\\]\nabove the ground.",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 393,
       "choiceExplanations": {
-        "A": "Initial height corresponds to t=0:\n\n\\[h(0)=-16(0)^{2}+96(0)+45=45.\\]\nTherefore, the object begins 45 feet above the ground.",
+        "A": "Initial height corresponds to \\(t=0\\):\n\\[\nh(0)=-16(0)^2+96(0)+45=45.\n\\]\nTherefore, the object begins\n\\[\n\\boxed{45\\text{ feet}}\n\\]\nabove the ground.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -11121,7 +11122,7 @@
       "question": "What is the sum of the solutions to\n\n\\[(x-2)^{2}=5x+14?\\]",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "Expand and rearrange:\n\n\\[x^{2}-4x+4=5x+14\\]\n\n\\[x^{2}-9x-10=0.\\]\n\\[For x^{2}-9x-10=0, the sum of the roots is\\]\n\n\\[--91=9.\\]",
+      "explanation": "Expand and rearrange:\n\\[\nx^2-4x+4=5x+14\n\\]\nso\n\\[\nx^2-9x-10=0.\n\\]\nFor \\(x^2-9x-10=0\\), the sum of the roots is\n\\[\n-\\frac{-9}{1}=\\boxed9.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 394,
       "answerType": "student-response",
@@ -11165,20 +11166,20 @@
       "skill": "Equivalent expressions",
       "difficulty": "Medium",
       "passage": "",
-      "question": "Which expression is equivalent to\n\n\\[(11p2-4p+7)-3p2-(5p-2)?\\]",
+      "question": "Which expression is equivalent to\n\\[\n(11p^2-4p+7)-\\left[3p^2-(5p-2)\\right]?\n\\]",
       "choices": {
-        "A": "\\(8p2-9p+5\\)",
-        "B": "\\(8p2+p+5\\)",
-        "C": "\\(14p2+p+9\\)",
-        "D": "\\(8p2-9p+9\\)"
+        "A": "\\(8p^2-9p+5\\)",
+        "B": "\\(8p^2+p+5\\)",
+        "C": "\\(14p^2+p+9\\)",
+        "D": "\\(8p^2-9p+9\\)"
       },
       "correctAnswer": "B",
-      "explanation": "First simplify the bracket:\n\n\\[3p2-(5p-2)=3p2-5p+2.\\]\nThen subtract the entire expression:\n\n\\[11p2-4p+7-3p2+5p-2=8p2+p+5.\\]",
+      "explanation": "First simplify the bracket:\n\\[\n3p^2-(5p-2)=3p^2-5p+2.\n\\]\nThen subtract:\n\\[\n11p^2-4p+7-(3p^2-5p+2)\n=\\boxed{8p^2+p+5}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 396,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "First simplify the bracket:\n\n\\[3p2-(5p-2)=3p2-5p+2.\\]\nThen subtract the entire expression:\n\n\\[11p2-4p+7-3p2+5p-2=8p2+p+5.\\]",
+        "B": "First simplify the bracket:\n\\[\n3p^2-(5p-2)=3p^2-5p+2.\n\\]\nThen subtract:\n\\[\n11p^2-4p+7-(3p^2-5p+2)\n=\\boxed{8p^2+p+5}.\n\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
@@ -11192,10 +11193,10 @@
       "skill": "Equivalent expressions",
       "difficulty": "Medium",
       "passage": "",
-      "question": "One linear factor of\n\n\\[6x3+102x2+432x\\]\ncan be written as 2x+b, where b is a positive integer. What is the smallest possible value of b?",
+      "question": "One linear factor of\n\\[\n6x^3+102x^2+432x\n\\]\ncan be written as \\(2x+b\\), where \\(b\\) is a positive integer. What is the smallest possible value of \\(b\\)?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "Factor:\n\n\\[6x3+102x2+432x=6x(x^{2}+17x+72)\\]\n\n\\[=6x(x+8)(x+9).\\]\nSince 2(x+8)=2x+16 is also a factor, b=16 is possible. The other positive choice from x+9 would give b=18. Therefore, the smallest is\n\n16.",
+      "explanation": "Factor:\n\\[\n6x^3+102x^2+432x\n=6x(x^2+17x+72)\n=6x(x+8)(x+9).\n\\]\nSince \\(2(x+8)=2x+16\\) is also a factor, \\(b=16\\) is possible. The other positive value from \\(x+9\\) would give \\(b=18\\). Therefore,\n\\[\n\\boxed{16}\n\\]\nis the smallest possible value.",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 397,
       "answerType": "student-response",
@@ -11389,19 +11390,19 @@
       "skill": "Lines, angles, and triangles",
       "difficulty": "Medium",
       "passage": "",
-      "question": "The area of a rectangle is represented by\n\n\\[3x2+19x+20\\]\nsquare units. Its width is 3x+4 units. Which expression represents its length?",
+      "question": "The area of a rectangle is represented by\n\\[\n3x^2+19x+20\n\\]\nsquare units. Its width is \\(3x+4\\) units. Which expression represents its length?",
       "choices": {
         "A": "\\(x+5\\)",
         "B": "\\(3x+5\\)",
         "C": "\\(x+4\\)",
-        "D": "\\(3x2+19x+20\\)"
+        "D": "\\(3x^2+19x+20\\)"
       },
       "correctAnswer": "A",
-      "explanation": "Factor the area:\n\n\\[3x2+19x+20=(3x+4)(x+5).\\]\nSince\n\narea=(width)(length),\n\\[and the width is 3x+4, the length is\\]\n\n\\[x+5.\\]",
+      "explanation": "Factor the area:\n\\[\n3x^2+19x+20=(3x+4)(x+5).\n\\]\nSince\n\\[\n\\text{area}=(\\text{width})(\\text{length}),\n\\]\nand the width is \\(3x+4\\), the length is\n\\[\n\\boxed{x+5}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 404,
       "choiceExplanations": {
-        "A": "Factor the area:\n\n\\[3x2+19x+20=(3x+4)(x+5).\\]\nSince\n\narea=(width)(length),\n\\[and the width is 3x+4, the length is\\]\n\n\\[x+5.\\]",
+        "A": "Factor the area:\n\\[\n3x^2+19x+20=(3x+4)(x+5).\n\\]\nSince\n\\[\n\\text{area}=(\\text{width})(\\text{length}),\n\\]\nand the width is \\(3x+4\\), the length is\n\\[\n\\boxed{x+5}.\n\\]",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -11471,7 +11472,7 @@
       "skill": "Equivalent expressions",
       "difficulty": "Hard",
       "passage": "",
-      "question": "For x13,\n\n\\[6x2+7x-33x-1=ax+d,\\]\nwhere a and d are constants. What is the value of a+d?",
+      "question": "For \\(x\\ne\\frac13\\),\n\\[\n\\frac{6x^2+7x-3}{3x-1}=ax+d,\n\\]\nwhere \\(a\\) and \\(d\\) are constants. What is the value of \\(a+d\\)?",
       "choices": {
         "A": "\\(2\\)",
         "B": "\\(3\\)",
@@ -11479,13 +11480,13 @@
         "D": "\\(6\\)"
       },
       "correctAnswer": "C",
-      "explanation": "Factor the numerator:\n\n\\[6x2+7x-3=(3x-1)(2x+3).\\]\nThus,\n\n\\[6x2+7x-33x-1=2x+3.\\]\n\\[So a=2, d=3, and\\]\n\n\\[a+d=5.\\]",
+      "explanation": "Factor the numerator:\n\\[\n6x^2+7x-3=(3x-1)(2x+3).\n\\]\nThus, for \\(x\\ne\\frac13\\),\n\\[\n\\frac{6x^2+7x-3}{3x-1}=2x+3.\n\\]\nSo \\(a=2\\), \\(d=3\\), and\n\\[\n\\boxed{a+d=5}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 407,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
-        "C": "Factor the numerator:\n\n\\[6x2+7x-3=(3x-1)(2x+3).\\]\nThus,\n\n\\[6x2+7x-33x-1=2x+3.\\]\n\\[So a=2, d=3, and\\]\n\n\\[a+d=5.\\]",
+        "C": "Factor the numerator:\n\\[\n6x^2+7x-3=(3x-1)(2x+3).\n\\]\nThus, for \\(x\\ne\\frac13\\),\n\\[\n\\frac{6x^2+7x-3}{3x-1}=2x+3.\n\\]\nSo \\(a=2\\), \\(d=3\\), and\n\\[\n\\boxed{a+d=5}.\n\\]",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
     },
@@ -11579,10 +11580,10 @@
       "skill": "Linear equations in one variable",
       "difficulty": "Hard",
       "passage": "",
-      "question": "The expression\n\n\\[(1800+24y2)-6(3y2-70)+2(5y2-130)\\]\ncan be written as ay2+b, where a and b are constants. What is the value of a+b?",
+      "question": "The expression\n\\[\n(1800+24y^2)-6(3y^2-70)+2(5y^2-130)\n\\]\ncan be written as \\(ay^2+b\\), where \\(a\\) and \\(b\\) are constants. What is the value of \\(a+b\\)?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "Distribute and combine:\n\n\\[1800+24y2-18y2+420+10y2-260.\\]\n\\[The y^{2}-coefficient is\\]\n\n\\[24-18+10=16,\\]\nand the constant is\n\n\\[1800+420-260=1960.\\]\nThus,\n\n\\[a+b=16+1960=1976.\\]",
+      "explanation": "Distribute and combine:\n\\[\n1800+24y^2-18y^2+420+10y^2-260.\n\\]\nThe \\(y^2\\)-coefficient is\n\\[\n24-18+10=16,\n\\]\nand the constant is\n\\[\n1800+420-260=1960.\n\\]\nThus\n\\[\na+b=16+1960=\\boxed{1976}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 411,
       "answerType": "student-response",
@@ -11647,10 +11648,10 @@
       "skill": "Equivalent expressions",
       "difficulty": "Hard",
       "passage": "",
-      "question": "The expression\n\n\\[(4x2+11x-3)+(2x2-10x-9)\\]\ncan be written in the form\n\n\\[(3x-4)(2x+k),\\]\nwhere k is a constant. What is the value of k?",
+      "question": "The expression\n\\[\n(4x^2+11x-3)+(2x^2-10x-9)\n\\]\ncan be written in the form\n\\[\n(3x-4)(2x+k),\n\\]\nwhere \\(k\\) is a constant. What is the value of \\(k\\)?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "First combine the polynomials:\n\n\\[6x2+x-12.\\]\nFactor:\n\n\\[6x2+x-12=(3x-4)(2x+3).\\]\nTherefore,\n\n\\[k=3.\\]",
+      "explanation": "First combine the polynomials:\n\\[\n6x^2+x-12.\n\\]\nFactor:\n\\[\n6x^2+x-12=(3x-4)(2x+3).\n\\]\nTherefore,\n\\[\n\\boxed{k=3}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 413,
       "answerType": "student-response",
@@ -11770,7 +11771,7 @@
       "skill": "Equivalent expressions",
       "difficulty": "Medium",
       "passage": "",
-      "question": "If s=2m+n, which of the following is equivalent to\n\n\\[25x2-16m2-16mn-4n2?\\]",
+      "question": "If \\(s=2m+n\\), which of the following is equivalent to\n\\[\n25x^2-16m^2-16mn-4n^2?\n\\]",
       "choices": {
         "A": "\\((5x-2s)(5x+2s)\\)",
         "B": "\\((5x-s)(5x+s)\\)",
@@ -11778,11 +11779,11 @@
         "D": "\\((5x-4s)(5x+s)\\)"
       },
       "correctAnswer": "A",
-      "explanation": "Since\n\n\\[16m2+16mn+4n2=4(2m+n)^{2}=4s2,\\]\nthe expression becomes\n\n\\[25x2-4s2=(5x)^{2}-(2s)^{2}.\\]\nUsing the difference of squares gives\n\n\\[(5x-2s)(5x+2s).\\]",
+      "explanation": "Since\n\\[\n16m^2+16mn+4n^2=4(2m+n)^2=4s^2,\n\\]\nthe expression becomes\n\\[\n25x^2-4s^2=(5x)^2-(2s)^2.\n\\]\nUsing the difference of squares gives\n\\[\n\\boxed{(5x-2s)(5x+2s)}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 418,
       "choiceExplanations": {
-        "A": "Since\n\n\\[16m2+16mn+4n2=4(2m+n)^{2}=4s2,\\]\nthe expression becomes\n\n\\[25x2-4s2=(5x)^{2}-(2s)^{2}.\\]\nUsing the difference of squares gives\n\n\\[(5x-2s)(5x+2s).\\]",
+        "A": "Since\n\\[\n16m^2+16mn+4n^2=4(2m+n)^2=4s^2,\n\\]\nthe expression becomes\n\\[\n25x^2-4s^2=(5x)^2-(2s)^2.\n\\]\nUsing the difference of squares gives\n\\[\n\\boxed{(5x-2s)(5x+2s)}.\n\\]",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -12034,7 +12035,7 @@
       "skill": "Equivalent expressions",
       "difficulty": "Medium",
       "passage": "",
-      "question": "Which of the following is equivalent to\n\n\\[34x-2-12(x+6)?\\]",
+      "question": "Which of the following is equivalent to\n\\[\n\\left(\\frac34x-2\\right)-\\frac12(x+6)?\n\\]",
       "choices": {
         "A": "\\(\\displaystyle \\frac54x+1\\)",
         "B": "\\(\\displaystyle \\frac14x+1\\)",
@@ -12042,13 +12043,13 @@
         "D": "\\(\\displaystyle -\\frac14x-5\\)"
       },
       "correctAnswer": "C",
-      "explanation": "\\[Distribute -12:\\]\n\n\\[34x-2-12x-3.\\]\nThen\n\n\\[34-12x-5=14x-5.\\]",
+      "explanation": "Distribute \\(-\\frac12\\):\n\\[\n\\frac34x-2-\\frac12x-3.\n\\]\nThen\n\\[\n\\left(\\frac34-\\frac12\\right)x-5\n=\\boxed{\\frac14x-5}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 428,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
-        "C": "\\[Distribute -12:\\]\n\n\\[34x-2-12x-3.\\]\nThen\n\n\\[34-12x-5=14x-5.\\]",
+        "C": "Distribute \\(-\\frac12\\):\n\\[\n\\frac34x-2-\\frac12x-3.\n\\]\nThen\n\\[\n\\left(\\frac34-\\frac12\\right)x-5\n=\\boxed{\\frac14x-5}.\n\\]",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
     },
@@ -12146,12 +12147,12 @@
       "question": "The function f is defined by\n\n\\[f(x)=3x(x-8)+5x+14.\\]\nFor what value of x does f(x) reach its minimum?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "First rewrite the function:\n\n\\[f(x)=3x2-19x+14.\\]\n\\[For ax2+bx+c, the vertex occurs at\\]\n\n\\[x=-b2a.\\]\nTherefore,\n\n\\[x=--192(3)=196.\\]\nSince the leading coefficient is positive, this is the minimum.",
+      "explanation": "First rewrite the function:\n\\[\nf(x)=3x^2-19x+14.\n\\]\nFor \\(ax^2+bx+c\\), the vertex occurs at\n\\[\nx=-\\frac{b}{2a}.\n\\]\nTherefore,\n\\[\nx=-\\frac{-19}{2(3)}=\\boxed{\\frac{19}{6}}.\n\\]\nSince the leading coefficient is positive, this is the minimum.",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 432,
       "answerType": "student-response",
       "acceptedAnswers": [
-        "\\(\\displaystyle 19/6\\)"
+        "19/6"
       ],
       "desmosMethod": "Enter\n\n\\[y=3x(x-8)+5x+14.\\]\nInspect the vertex. Its x-coordinate is approximately 3.1667, which equals\n\n196."
     },
@@ -12164,7 +12165,7 @@
       "skill": "Nonlinear functions",
       "difficulty": "Medium",
       "passage": "",
-      "question": "The function\n\n\\[h(x)=x^{3}+ax2+bx+c\\]\nhas integer constants a, b, and c. Two of its zeros are 4 and -3, and the sum of all three zeros is 6. What is the value of c?",
+      "question": "The function\n\\[\nh(x)=x^3+ax^2+bx+c\n\\]\nhas integer constants \\(a\\), \\(b\\), and \\(c\\). Two of its zeros are 4 and -3, and the sum of all three zeros is 6. What is the value of \\(c\\)?",
       "choices": {},
       "correctAnswer": "",
       "explanation": "If the third zero is r,\n\n\\[4+(-3)+r=6,\\]\n\\[so r=5.\\]\nThus\n\n\\[h(x)=(x-4)(x+3)(x-5).\\]\nThe constant term is the product of the constant terms:\n\n\\[(-4)(3)(-5)=60.\\]\n\\[Therefore, c=60.\\]",
@@ -12265,19 +12266,19 @@
       "skill": "Equivalent expressions",
       "difficulty": "Medium",
       "passage": "",
-      "question": "Which of the following is equivalent to\n\n\\[18a3b2+24a2b4?\\]",
+      "question": "Which of the following is equivalent to\n\\[\n18a^3b^2+24a^2b^4?\n\\]",
       "choices": {
-        "A": "\\(6a2b2(3a+4b2)\\)",
-        "B": "\\(6a2b2(3a+4b)\\)",
-        "C": "\\(6a2b(3a+4b3)\\)",
-        "D": "\\(3a2b2(6a+4b2)\\)"
+        "A": "\\(6a^2b^2(3a+4b^2)\\)",
+        "B": "\\(6a^2b^2(3a+4b)\\)",
+        "C": "\\(6a^2b(3a+4b^3)\\)",
+        "D": "\\(3a^2b^2(6a+4b^2)\\)"
       },
       "correctAnswer": "A",
-      "explanation": "The greatest common factor is\n\n6a2b2.\nFactoring it out gives\n\n\\[6a2b2(3a+4b2).\\]",
+      "explanation": "The greatest common factor is\n\\[\n6a^2b^2.\n\\]\nFactoring it out gives\n\\[\n\\boxed{6a^2b^2(3a+4b^2)}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 438,
       "choiceExplanations": {
-        "A": "The greatest common factor is\n\n6a2b2.\nFactoring it out gives\n\n\\[6a2b2(3a+4b2).\\]",
+        "A": "The greatest common factor is\n\\[\n6a^2b^2.\n\\]\nFactoring it out gives\n\\[\n\\boxed{6a^2b^2(3a+4b^2)}.\n\\]",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -12346,10 +12347,10 @@
       "skill": "Equivalent expressions",
       "difficulty": "Medium",
       "passage": "",
-      "question": "In the equation\n\n\\[15(2x-k)(x^{2}-12x+35)=0,\\]\nk is a positive constant. The sum of the solutions is 23. What is the value of k?",
+      "question": "In the equation\n\\[\n\\frac15(2x-k)(x^2-12x+35)=0,\n\\]\n\\(k\\) is a positive constant. The sum of the solutions is 23. What is the value of \\(k\\)?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "Factor the quadratic:\n\n\\[x^{2}-12x+35=(x-5)(x-7).\\]\nThe three solutions are\n\n\\[k^{2}, 5, 7.\\]\nTheir sum is 23:\n\n\\[k^{2}+5+7=23.\\]\nSo\n\n\\[k^{2}=11\\]\nand\n\n\\[k=22.\\]",
+      "explanation": "Factor the quadratic:\n\\[\nx^2-12x+35=(x-5)(x-7).\n\\]\nThe three solutions are\n\\[\n\\frac{k}{2},\\ 5,\\ 7.\n\\]\nTheir sum is 23:\n\\[\n\\frac{k}{2}+5+7=23.\n\\]\nSo\n\\[\n\\frac{k}{2}=11\n\\]\nand\n\\[\n\\boxed{k=22}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 441,
       "answerType": "student-response",
@@ -12721,7 +12722,7 @@
       "question": "For an exponential function \\(f\\), the table shows several values, where \\(b>1\\). If \\[f(k)=b^{35},\\] what is the value of \\(k\\)?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "From x=-1 to x=1, x increases by 2 while the exponent of b increases from 2 to 8, an increase of 6. Thus the exponent increases by 3 for each increase of 1 in x.\nSo the exponent has the form\n\n\\[3x+c.\\]\n\\[Using x=1,\\]\n\n\\[3(1)+c=8,\\]\n\\[so c=5. Hence\\]\n\n\\[f(x)=b3x+5.\\]\nSet\n\n\\[3k+5=35,\\]\ngiving\n\n\\[k=10.\\]",
+      "explanation": "From \\(x=-1\\) to \\(x=1\\), \\(x\\) increases by 2 while the exponent of \\(b\\) increases from 2 to 8, an increase of 6. Thus the exponent increases by 3 for each increase of 1 in \\(x\\). So the exponent has the form\n\\[\n3x+c.\n\\]\nUsing \\(x=1\\),\n\\[\n3(1)+c=8,\n\\]\nso \\(c=5\\). Hence\n\\[\nf(x)=b^{3x+5}.\n\\]\nSet\n\\[\n3k+5=35,\n\\]\ngiving\n\\[\n\\boxed{k=10}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 456,
       "answerType": "student-response",
@@ -12786,10 +12787,10 @@
       "skill": "Lines, angles, and triangles",
       "difficulty": "Medium",
       "passage": "",
-      "question": "The area of a triangle is\n\n\\[3x2-30\\]\nsquare centimeters. Its base is 3x+18 centimeters and its height is 2x-8 centimeters, where x>4. What is the value of x?",
+      "question": "The area of a triangle is\n\\[\n3x^2-30\n\\]\nsquare centimeters. Its base is \\(3x+18\\) centimeters and its height is \\(2x-8\\) centimeters, where \\(x>4\\). What is the value of \\(x\\)?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "Use the triangle area formula:\n\n\\[12(3x+18)(2x-8)=3x2-30.\\]\nSince\n\n\\[12(2x-8)=x-4,\\]\nthe left side is\n\n\\[(3x+18)(x-4)=3x2+6x-72.\\]\nThus\n\n\\[3x2+6x-72=3x2-30.\\]\nCancel 3x2:\n\n\\[6x-72=-30.\\]\nSo\n\n\\[6x=42\\]\nand\n\n\\[x=7.\\]",
+      "explanation": "Use the triangle area formula:\n\\[\n\\frac12(3x+18)(2x-8)=3x^2-30.\n\\]\nSince\n\\[\n\\frac12(2x-8)=x-4,\n\\]\nthe left side is\n\\[\n(3x+18)(x-4)=3x^2+6x-72.\n\\]\nThus\n\\[\n3x^2+6x-72=3x^2-30.\n\\]\nCancel \\(3x^2\\):\n\\[\n6x-72=-30.\n\\]\nSo\n\\[\n6x=42\n\\]\nand\n\\[\n\\boxed{x=7}.\n\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 458,
       "answerType": "student-response",
