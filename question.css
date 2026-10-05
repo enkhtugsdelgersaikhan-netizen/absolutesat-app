@@ -2080,3 +2080,85 @@
         max-width:none;
     }
 }
+
+
+/* OCT 6 BLUEBOOK CONTENT FONT + RESTORED CHOICE PLACEMENT */
+/* College Board documents Bluebook test content as Noto Serif 15/24. */
+.question-passage,
+.sat-answer-pane .question-text,
+.sat-answer-pane .choice-text,
+.choice-reason-text,
+.answer-feedback-explanation,
+.review-result-explanation{
+    font-family:"Noto Serif",Georgia,"Times New Roman",serif!important;
+    font-size:15px!important;
+    line-height:24px!important;
+    letter-spacing:0!important;
+}
+.question-passage,
+.sat-answer-pane .choice-text,
+.choice-reason-text,
+.answer-feedback-explanation,
+.review-result-explanation{
+    font-weight:400!important;
+}
+.sat-answer-pane .question-text{
+    font-weight:700!important;
+}
+
+/* Restore the original left-to-right answer placement.
+   Only correct the vertical relationship between the badge and answer text. */
+.sat-answer-pane .choice{
+    display:flex!important;
+    grid-template-columns:none!important;
+    justify-content:flex-start!important;
+    align-items:center!important;
+    gap:15px!important;
+    min-height:62px!important;
+    height:auto!important;
+    padding:12px 48px 12px 16px!important;
+}
+.sat-answer-pane .choice-letter{
+    flex:0 0 30px!important;
+    width:30px!important;
+    height:30px!important;
+    align-self:center!important;
+    justify-self:auto!important;
+    margin:0!important;
+}
+.sat-answer-pane .choice-text{
+    display:flex!important;
+    flex:1 1 auto!important;
+    min-width:0!important;
+    min-height:30px!important;
+    width:auto!important;
+    max-width:none!important;
+    align-items:center!important;
+    align-self:center!important;
+    justify-self:auto!important;
+    margin:0!important;
+    padding:0!important;
+    text-align:left!important;
+    transform:translateY(-1px);
+}
+
+/* Keep the real inline SVG chevrons visible. */
+.question-nav-symbol{
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    flex:0 0 14px!important;
+    width:14px!important;
+    height:14px!important;
+}
+.question-nav-symbol svg{
+    display:block!important;
+    width:14px!important;
+    height:14px!important;
+    overflow:visible!important;
+    fill:none!important;
+    stroke:currentColor!important;
+    stroke-width:2!important;
+    stroke-linecap:round!important;
+    stroke-linejoin:round!important;
+}
