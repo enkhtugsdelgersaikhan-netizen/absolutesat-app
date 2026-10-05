@@ -2634,14 +2634,44 @@ function getChoiceExplanation(
             String(letter).toLowerCase()
         ];
 
+    let fallbackDirect = "";
+
     if (direct) {
-        return String(direct).trim();
+        fallbackDirect =
+            String(direct)
+                .replace(
+                    /\\s*---\\s*$/g,
+                    ""
+                )
+                .trim();
+
+        const leadingLabel =
+            fallbackDirect.match(
+                /^(?:Choice\\s+)?([A-D])(?=\\s|,|:|—|\\.)/i
+            );
+
+        // Some older imported explanations were accidentally
+        // attached to more than one choice. If the stored reason
+        // begins with a different answer letter, fall through and
+        // recover the matching explanation from the full rationale.
+        if (
+            !leadingLabel ||
+            leadingLabel[1].toUpperCase() ===
+                String(letter).toUpperCase()
+        ) {
+            return fallbackDirect;
+        }
     }
 
     const raw =
         String(
             question.explanation || ""
-        ).trim();
+        )
+            .replace(
+                /\\s*---\\s*$/g,
+                ""
+            )
+            .trim();
 
     if (!raw) {
         return "";
@@ -2787,6 +2817,7 @@ function getChoiceExplanation(
 
     return (
         sentenceMatch ||
+        fallbackDirect ||
         ""
     ).trim();
 }
