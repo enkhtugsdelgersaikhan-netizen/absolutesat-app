@@ -1120,9 +1120,286 @@ function renderQuestionVerticalBarGraph(
 }
 
 
+function renderQuestionXYGraph(graph) {
+    const xMin =
+        Number.isFinite(Number(graph?.xMin))
+            ? Number(graph.xMin)
+            : -10;
+    const xMax =
+        Number.isFinite(Number(graph?.xMax))
+            ? Number(graph.xMax)
+            : 10;
+    const yMin =
+        Number.isFinite(Number(graph?.yMin))
+            ? Number(graph.yMin)
+            : -10;
+    const yMax =
+        Number.isFinite(Number(graph?.yMax))
+            ? Number(graph.yMax)
+            : 10;
+
+    if (
+        xMax <= xMin ||
+        yMax <= yMin
+    ) {
+        return "";
+    }
+
+    const width = 640;
+    const height = 430;
+    const left = 54;
+    const right = 24;
+    const top = 32;
+    const bottom = 46;
+    const plotWidth =
+        width - left - right;
+    const plotHeight =
+        height - top - bottom;
+
+    const xScale =
+        value =>
+            left +
+            (
+                (value - xMin) /
+                (xMax - xMin)
+            ) *
+            plotWidth;
+
+    const yScale =
+        value =>
+            top +
+            (
+                (yMax - value) /
+                (yMax - yMin)
+            ) *
+            plotHeight;
+
+    const xStep =
+        Number(graph.xStep) > 0
+            ? Number(graph.xStep)
+            : 1;
+    const yStep =
+        Number(graph.yStep) > 0
+            ? Number(graph.yStep)
+            : 1;
+
+    let grid = "";
+
+    for (
+        let x =
+            Math.ceil(xMin / xStep) *
+            xStep;
+        x <= xMax + 1e-9;
+        x += xStep
+    ) {
+        const px =
+            xScale(x);
+        const axis =
+            Math.abs(x) < 1e-9;
+
+        grid +=
+            '<line class="' +
+            (
+                axis
+                    ? "question-xy-axis"
+                    : "question-xy-grid"
+            ) +
+            '" x1="' +
+            px +
+            '" x2="' +
+            px +
+            '" y1="' +
+            top +
+            '" y2="' +
+            (top + plotHeight) +
+            '"></line>';
+
+        if (
+            !axis &&
+            Number.isInteger(x)
+        ) {
+            grid +=
+                '<text class="question-xy-tick" x="' +
+                px +
+                '" y="' +
+                (top + plotHeight + 20) +
+                '" text-anchor="middle">' +
+                escapeHtml(x) +
+                '</text>';
+        }
+    }
+
+    for (
+        let y =
+            Math.ceil(yMin / yStep) *
+            yStep;
+        y <= yMax + 1e-9;
+        y += yStep
+    ) {
+        const py =
+            yScale(y);
+        const axis =
+            Math.abs(y) < 1e-9;
+
+        grid +=
+            '<line class="' +
+            (
+                axis
+                    ? "question-xy-axis"
+                    : "question-xy-grid"
+            ) +
+            '" x1="' +
+            left +
+            '" x2="' +
+            (left + plotWidth) +
+            '" y1="' +
+            py +
+            '" y2="' +
+            py +
+            '"></line>';
+
+        if (
+            !axis &&
+            Number.isInteger(y)
+        ) {
+            grid +=
+                '<text class="question-xy-tick" x="' +
+                (left - 9) +
+                '" y="' +
+                (py + 4) +
+                '" text-anchor="end">' +
+                escapeHtml(y) +
+                '</text>';
+        }
+    }
+
+    const series =
+        (graph.series || [])
+            .map(
+                (item, seriesIndex) => {
+                    const points =
+                        Array.isArray(item?.points)
+                            ? item.points
+                                .filter(
+                                    point =>
+                                        Array.isArray(point) &&
+                                        Number.isFinite(
+                                            Number(point[0])
+                                        ) &&
+                                        Number.isFinite(
+                                            Number(point[1])
+                                        )
+                                )
+                            : [];
+
+                    if (!points.length) {
+                        return "";
+                    }
+
+                    const polyline =
+                        item.connect === false
+                            ? ""
+                            : (
+                                '<polyline class="question-xy-series series-' +
+                                seriesIndex +
+                                '" points="' +
+                                points
+                                    .map(
+                                        point =>
+                                            xScale(
+                                                Number(point[0])
+                                            ) +
+                                            "," +
+                                            yScale(
+                                                Number(point[1])
+                                            )
+                                    )
+                                    .join(" ") +
+                                '"></polyline>'
+                            );
+
+                    const dots =
+                        points
+                            .filter(
+                                (
+                                    point,
+                                    pointIndex
+                                ) =>
+                                    item.showPoints ||
+                                    (
+                                        Array.isArray(
+                                            item.highlightIndices
+                                        ) &&
+                                        item.highlightIndices.includes(
+                                            pointIndex
+                                        )
+                                    )
+                            )
+                            .map(
+                                point =>
+                                    '<circle class="question-xy-point series-' +
+                                    seriesIndex +
+                                    '" cx="' +
+                                    xScale(
+                                        Number(point[0])
+                                    ) +
+                                    '" cy="' +
+                                    yScale(
+                                        Number(point[1])
+                                    ) +
+                                    '" r="4.5"></circle>'
+                            )
+                            .join("");
+
+                    return (
+                        polyline +
+                        dots
+                    );
+                }
+            )
+            .join("");
+
+    const caption =
+        graph.caption
+            ? '<figcaption>' +
+                renderInlineFormatting(
+                    graph.caption
+                ) +
+              '</figcaption>'
+            : "";
+
+    return (
+        '<figure class="question-graph-wrap question-xy-wrap">' +
+            caption +
+            '<div class="question-graph-scroll">' +
+                '<svg class="question-xy-graph" viewBox="0 0 ' +
+                    width +
+                    " " +
+                    height +
+                    '" role="img" aria-label="' +
+                    escapeHtml(
+                        graph.caption ||
+                        "Coordinate graph"
+                    ) +
+                    '">' +
+                    grid +
+                    series +
+                '</svg>' +
+            '</div>' +
+        '</figure>'
+    );
+}
+
+
 function renderQuestionGraph(
     graph
 ) {
+    if (graph?.type === "xy") {
+        return renderQuestionXYGraph(
+            graph
+        );
+    }
+
     if (graph?.type === "line") {
         return renderQuestionLineGraph(graph);
     }
@@ -1924,7 +2201,29 @@ function normalizeStagedQuestion(
             null,
         graph:
             stagedQuestion.graph ||
-            null
+            null,
+        choice_tables:
+            stagedQuestion.choiceTables ||
+            stagedQuestion.choice_tables ||
+            null,
+        answer_type:
+            stagedQuestion.answerType ||
+            stagedQuestion.answer_type ||
+            "multiple-choice",
+        accepted_answers:
+            Array.isArray(
+                stagedQuestion.acceptedAnswers ||
+                stagedQuestion.accepted_answers
+            )
+                ? (
+                    stagedQuestion.acceptedAnswers ||
+                    stagedQuestion.accepted_answers
+                )
+                : [],
+        desmos_method:
+            stagedQuestion.desmosMethod ||
+            stagedQuestion.desmos_method ||
+            ""
     };
 
 }
@@ -2002,9 +2301,14 @@ async function loadQuestionById(
 
     try {
 
+        const stagedBankUrl =
+            String(questionId).startsWith("math-")
+                ? "/math-question-bank.json?v=1"
+                : "/question-bank.json?v=17";
+
         const response =
             await fetch(
-                "/question-bank.json?v=17",
+                stagedBankUrl,
                 {
                     cache: "no-store"
                 }
@@ -2508,6 +2812,56 @@ function updateQuestionNavigator() {
    RENDER CURRENT QUESTION
    ============================================================ */
 
+function typesetQuestionMath() {
+    if (
+        !window.MathJax ||
+        typeof window.MathJax.typesetPromise !==
+            "function"
+    ) {
+        window.setTimeout(
+            typesetQuestionMath,
+            120
+        );
+        return;
+    }
+
+    const target =
+        document.getElementById(
+            "question-app"
+        );
+
+    if (!target) {
+        return;
+    }
+
+    try {
+        if (
+            typeof window.MathJax.typesetClear ===
+            "function"
+        ) {
+            window.MathJax.typesetClear(
+                [target]
+            );
+        }
+
+        window.MathJax.typesetPromise(
+            [target]
+        ).catch(
+            error =>
+                console.warn(
+                    "MathJax render failed:",
+                    error
+                )
+        );
+    } catch (error) {
+        console.warn(
+            "MathJax render failed:",
+            error
+        );
+    }
+}
+
+
 function renderCurrentQuestion() {
 
     const question =
@@ -2530,6 +2884,21 @@ function renderCurrentQuestion() {
 
     const isMathQuestion =
         question.section === "Math";
+
+    document.body.classList.toggle(
+        "math-question-active",
+        isMathQuestion
+    );
+
+    const calculatorButton =
+        document.getElementById(
+            "desmos-toggle-button"
+        );
+
+    if (calculatorButton) {
+        calculatorButton.hidden =
+            !isMathQuestion;
+    }
 
     const backToBank =
         document.getElementById(
@@ -2617,6 +2986,8 @@ function renderCurrentQuestion() {
     updateQuestionNavigator();
 
     updateNextQuestionButton();
+
+    typesetQuestionMath();
 
 }
 
@@ -2710,6 +3081,19 @@ function getChoiceExplanation(
     question,
     letter
 ) {
+    if (
+        question.answer_type ===
+        "student-response" &&
+        (
+            !letter ||
+            !question.choice_explanations
+        )
+    ) {
+        return String(
+            question.explanation || ""
+        ).trim();
+    }
+
     const direct =
         question.choice_explanations?.[
             letter
@@ -2952,6 +3336,235 @@ function createChoiceReason(
     return box;
 }
 
+function renderChoiceMiniTable(table) {
+    if (
+        !table ||
+        !Array.isArray(table.headers) ||
+        !Array.isArray(table.rows)
+    ) {
+        return "";
+    }
+
+    return (
+        '<table class="choice-mini-table">' +
+            '<thead><tr>' +
+                table.headers
+                    .map(
+                        header =>
+                            '<th>' +
+                            renderInlineFormatting(header) +
+                            '</th>'
+                    )
+                    .join("") +
+            '</tr></thead>' +
+            '<tbody>' +
+                table.rows
+                    .map(
+                        row =>
+                            '<tr>' +
+                                row
+                                    .map(
+                                        cell =>
+                                            '<td>' +
+                                            renderInlineFormatting(cell) +
+                                            '</td>'
+                                    )
+                                    .join("") +
+                            '</tr>'
+                    )
+                    .join("") +
+            '</tbody>' +
+        '</table>'
+    );
+}
+
+
+function parseStudentResponseValue(value) {
+    const text =
+        String(value ?? "")
+            .trim()
+            .replace(/,/g, "");
+
+    if (!text) {
+        return null;
+    }
+
+    const fraction =
+        text.match(
+            /^(-?\d+(?:\.\d+)?)\s*\/\s*(-?\d+(?:\.\d+)?)$/
+        );
+
+    if (fraction) {
+        const numerator =
+            Number(fraction[1]);
+        const denominator =
+            Number(fraction[2]);
+
+        if (
+            Number.isFinite(numerator) &&
+            Number.isFinite(denominator) &&
+            denominator !== 0
+        ) {
+            return numerator / denominator;
+        }
+    }
+
+    const numeric =
+        Number(text);
+
+    return Number.isFinite(numeric)
+        ? numeric
+        : null;
+}
+
+
+function studentResponseIsCorrect(
+    question,
+    value
+) {
+    const submitted =
+        parseStudentResponseValue(value);
+
+    if (submitted === null) {
+        return false;
+    }
+
+    const accepted =
+        (
+            Array.isArray(question.accepted_answers)
+                ? question.accepted_answers
+                : []
+        )
+            .map(parseStudentResponseValue)
+            .filter(
+                value =>
+                    value !== null
+            );
+
+    return accepted.some(
+        answer =>
+            Math.abs(
+                submitted - answer
+            ) <= 1e-9
+    );
+}
+
+
+function renderStudentResponse(question) {
+    const wrapper =
+        document.createElement("div");
+
+    wrapper.className =
+        "student-response-wrapper";
+
+    const label =
+        document.createElement("label");
+
+    label.className =
+        "student-response-label";
+
+    label.setAttribute(
+        "for",
+        "student-response-input"
+    );
+
+    label.textContent =
+        "Enter your answer";
+
+    const input =
+        document.createElement("input");
+
+    input.id =
+        "student-response-input";
+
+    input.className =
+        "student-response-input";
+
+    input.type =
+        "text";
+
+    input.inputMode =
+        "decimal";
+
+    input.autocomplete =
+        "off";
+
+    input.placeholder =
+        "Integer, decimal, or fraction";
+
+    input.value =
+        answers[question.id] || "";
+
+    const checked =
+        checkedResults[
+            question.id
+        ];
+
+    if (checked) {
+        input.classList.add(
+            "correct-answer"
+        );
+        input.disabled = true;
+    }
+
+    input.addEventListener(
+        "input",
+        () => {
+            answers[question.id] =
+                input.value;
+            updateQuestionNavigator();
+            renderAnswerFeedback(
+                question
+            );
+        }
+    );
+
+    wrapper.appendChild(label);
+    wrapper.appendChild(input);
+
+    const previousWrong =
+        wrongAttempts[
+            question.id
+        ];
+
+    if (
+        Array.isArray(previousWrong) &&
+        previousWrong.length &&
+        !checked
+    ) {
+        const hint =
+            document.createElement("div");
+
+        hint.className =
+            "student-response-retry";
+
+        hint.textContent =
+            "That answer is not correct. Try again.";
+
+        wrapper.appendChild(hint);
+    }
+
+    if (checked) {
+        const reason =
+            createChoiceReason(
+                question,
+                question.correct_answer || "",
+                true
+            );
+
+        if (reason) {
+            wrapper.appendChild(
+                reason
+            );
+        }
+    }
+
+    choicesContainer.appendChild(
+        wrapper
+    );
+}
+
+
 /* ============================================================
    RENDER CHOICES
    ============================================================ */
@@ -2961,6 +3574,16 @@ function renderChoices(
 ) {
 
     choicesContainer.innerHTML = "";
+
+    if (
+        question.answer_type ===
+        "student-response"
+    ) {
+        renderStudentResponse(
+            question
+        );
+        return;
+    }
 
 
     const choices = [
@@ -3064,9 +3687,19 @@ function renderChoices(
                     )}
                 </span>
 
-                <span class="choice-text">${renderInlineFormatting(
-                    choice.text
-                )}</span>
+                <span class="choice-text">${
+                    question.choice_tables?.[
+                        choice.letter
+                    ]
+                        ? renderChoiceMiniTable(
+                            question.choice_tables[
+                                choice.letter
+                            ]
+                        )
+                        : renderInlineFormatting(
+                            choice.text
+                        )
+                }</span>
             `;
 
 
@@ -3380,8 +4013,16 @@ async function checkAnswer() {
 
 
     const isCorrect =
-        selected ===
-        question.correct_answer;
+        question.answer_type ===
+        "student-response"
+            ? studentResponseIsCorrect(
+                question,
+                selected
+            )
+            : (
+                selected ===
+                question.correct_answer
+            );
 
 
     if (!isCorrect) {
@@ -3406,9 +4047,14 @@ async function checkAnswer() {
             ].push(selected);
         }
 
-        delete answers[
-            question.id
-        ];
+        if (
+            question.answer_type !==
+            "student-response"
+        ) {
+            delete answers[
+                question.id
+            ];
+        }
 
 
         renderCurrentQuestion();
@@ -4634,3 +5280,97 @@ if (
    ============================================================ */
 
 initialize();
+
+
+function initializeDesmosPanel() {
+    const toggle =
+        document.getElementById(
+            "desmos-toggle-button"
+        );
+    const panel =
+        document.getElementById(
+            "desmos-panel"
+        );
+    const close =
+        document.getElementById(
+            "desmos-close-button"
+        );
+    const frame =
+        document.getElementById(
+            "desmos-frame"
+        );
+
+    if (
+        !toggle ||
+        !panel ||
+        !frame
+    ) {
+        return;
+    }
+
+    const openPanel =
+        () => {
+            if (!frame.src) {
+                frame.src =
+                    "https://www.desmos.com/calculator?embed";
+            }
+
+            panel.classList.remove(
+                "hidden"
+            );
+
+            panel.setAttribute(
+                "aria-hidden",
+                "false"
+            );
+        };
+
+    const closePanel =
+        () => {
+            panel.classList.add(
+                "hidden"
+            );
+
+            panel.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+        };
+
+    toggle.addEventListener(
+        "click",
+        openPanel
+    );
+
+    close?.addEventListener(
+        "click",
+        closePanel
+    );
+
+    panel.addEventListener(
+        "click",
+        event => {
+            if (
+                event.target === panel
+            ) {
+                closePanel();
+            }
+        }
+    );
+
+    document.addEventListener(
+        "keydown",
+        event => {
+            if (
+                event.key === "Escape" &&
+                !panel.classList.contains(
+                    "hidden"
+                )
+            ) {
+                closePanel();
+            }
+        }
+    );
+}
+
+initializeDesmosPanel();
