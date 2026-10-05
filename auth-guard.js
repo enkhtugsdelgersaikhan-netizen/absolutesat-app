@@ -12,7 +12,41 @@
     } = await supabaseClient.auth.getSession();
 
 
-    if (error || !session) {
+    const user =
+        session && session.user;
+
+    const isGoogleUser =
+        Boolean(
+            user &&
+            (
+                user.app_metadata?.provider === "google" ||
+                (
+                    Array.isArray(
+                        user.app_metadata?.providers
+                    ) &&
+                    user.app_metadata.providers.includes(
+                        "google"
+                    )
+                ) ||
+                (
+                    Array.isArray(
+                        user.identities
+                    ) &&
+                    user.identities.some(
+                        identity =>
+                            identity?.provider ===
+                            "google"
+                    )
+                )
+            )
+        );
+
+
+    if (
+        error ||
+        !session ||
+        !isGoogleUser
+    ) {
 
         const currentPath =
             window.location.pathname;
