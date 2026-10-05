@@ -1946,7 +1946,51 @@
       "answerType": "student-response",
       "acceptedAnswers": [
         "4"
-      ]
+      ],
+      "graph": {
+        "type": "xy",
+        "caption": "Bronze-part and silver-part combinations totaling $66",
+        "xMin": 0,
+        "xMax": 16,
+        "yMin": 0,
+        "yMax": 12,
+        "xStep": 2,
+        "yStep": 1,
+        "xLabel": "Bronze parts",
+        "yLabel": "Silver parts",
+        "series": [
+          {
+            "points": [
+              [
+                0,
+                11
+              ],
+              [
+                3,
+                9
+              ],
+              [
+                6,
+                7
+              ],
+              [
+                9,
+                5
+              ],
+              [
+                12,
+                3
+              ],
+              [
+                15,
+                1
+              ]
+            ],
+            "showPoints": true,
+            "connect": false
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-batch465-q067",
@@ -2085,7 +2129,7 @@
       "skill": "Linear functions",
       "difficulty": "Easy",
       "passage": "",
-      "question": "Some values of the linear function f are shown.\nx\n\\[f(x)\\]\n\\[-2\\]\n33\n3\n\\[-2\\]\n7\n\\[-30\\]\n\n\\[If f(x)=mx+b, what is m-2b?\\]",
+      "question": "Some values of the linear function \\(f\\) are shown. If \\(f(x)=mx+b\\), what is \\(m-2b\\)?",
       "choices": {
         "A": "\\(-45\\)",
         "B": "\\(-31\\)",
@@ -2101,6 +2145,27 @@
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
+      },
+      "table": {
+        "caption": "Selected values of f",
+        "headers": [
+          "x",
+          "\\(f(x)\\)"
+        ],
+        "rows": [
+          [
+            "\\(-2\\)",
+            "33"
+          ],
+          [
+            "3",
+            "\\(-2\\)"
+          ],
+          [
+            "7",
+            "\\(-30\\)"
+          ]
+        ]
       }
     },
     {
@@ -4790,7 +4855,7 @@
       "skill": "Equivalent expressions",
       "difficulty": "Medium",
       "passage": "",
-      "question": "Selected values of a polynomial p are shown.\nx\n\\[p(x)\\]\n\\[-4\\]\n18\n\\[-2\\]\n0\n0\n\\[-10\\]\n3\n7\n5\n0\n\nThe polynomial q is defined by\n\n\\[q(x)=p(x-3).\\]\nWhich expression must be a factor of q(x)?",
+      "question": "Selected values of a polynomial \\(p\\) are shown. The polynomial \\(q\\) is defined by \\(q(x)=p(x-3)\\). Which expression must be a factor of \\(q(x)\\)?",
       "choices": {
         "A": "\\((x+2)(x-5)\\)",
         "B": "\\((x-1)(x-8)\\)",
@@ -4806,6 +4871,35 @@
         "B": "The table shows\n\n\\[p(-2)=0andp(5)=0.\\]\nFor q(x)=p(x-3), zeros occur when\n\n\\[x-3=-2x=1\\]\nand\n\n\\[x-3=5x=8.\\]\nTherefore,\n\n\\[(x-1)(x-8)\\]\n\\[must be a factor of q(x).\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
+      },
+      "table": {
+        "caption": "Selected values of p",
+        "headers": [
+          "x",
+          "\\(p(x)\\)"
+        ],
+        "rows": [
+          [
+            "\\(-4\\)",
+            "18"
+          ],
+          [
+            "\\(-2\\)",
+            "0"
+          ],
+          [
+            "0",
+            "\\(-10\\)"
+          ],
+          [
+            "3",
+            "7"
+          ],
+          [
+            "5",
+            "0"
+          ]
+        ]
       }
     },
     {
@@ -5237,7 +5331,7 @@
       "skill": "Equivalent expressions",
       "difficulty": "Medium",
       "passage": "",
-      "question": "A savings account grows exponentially. Selected values are shown.\nTime t, in years\nAccount balance, in dollars\n0\n500.00\n2\n605.00\n4\n732.05\n\nWhich equation best models the balance B(t)?",
+      "question": "A savings account grows exponentially. Selected values are shown. Which equation best models the balance \\(B(t)\\)?",
       "choices": {
         "A": "\\(\\displaystyle B(t)=500(1.21)^t\\)",
         "B": "\\(\\displaystyle B(t)=500(1.10)^t\\)",
@@ -5253,6 +5347,27 @@
         "B": "Over 2 years, the growth factor is\n\\[\n\\frac{605}{500}=1.21.\n\\]\nThe annual growth factor is therefore\n\\[\n\\sqrt{1.21}=1.10.\n\\]\nSince the initial balance is 500,\n\\[\n\\boxed{B(t)=500(1.10)^t}.\n\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
+      },
+      "table": {
+        "caption": "Savings account balance",
+        "headers": [
+          "Time t (years)",
+          "Account balance (dollars)"
+        ],
+        "rows": [
+          [
+            "0",
+            "500.00"
+          ],
+          [
+            "2",
+            "605.00"
+          ],
+          [
+            "4",
+            "732.05"
+          ]
+        ]
       }
     },
     {
@@ -7727,7 +7842,78 @@
         "3",
         "9"
       ],
-      "desmosMethod": "Enter\n\n\\[y=-12(x-5)^{2}+13\\]\nand\n\n\\[y=-x+14.\\]\nInspect the two intersection points. Their x-coordinates are 3 and 9, so either is a valid value of a."
+      "desmosMethod": "Enter\n\n\\[y=-12(x-5)^{2}+13\\]\nand\n\n\\[y=-x+14.\\]\nInspect the two intersection points. Their x-coordinates are 3 and 9, so either is a valid value of a.",
+      "graph": {
+        "type": "xy",
+        "caption": "Graph of f(x)",
+        "xMin": -2,
+        "xMax": 12,
+        "yMin": -8,
+        "yMax": 15,
+        "xStep": 2,
+        "yStep": 2,
+        "xLabel": "x",
+        "yLabel": "f(x)",
+        "series": [
+          {
+            "points": [
+              [
+                -1,
+                -5
+              ],
+              [
+                0,
+                0.5
+              ],
+              [
+                1,
+                5
+              ],
+              [
+                2,
+                8.5
+              ],
+              [
+                3,
+                11
+              ],
+              [
+                4,
+                12.5
+              ],
+              [
+                5,
+                13
+              ],
+              [
+                6,
+                12.5
+              ],
+              [
+                7,
+                11
+              ],
+              [
+                8,
+                8.5
+              ],
+              [
+                9,
+                5
+              ],
+              [
+                10,
+                0.5
+              ],
+              [
+                11,
+                -5
+              ]
+            ],
+            "showPoints": false
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-batch465-q273",
@@ -10226,7 +10412,7 @@
       "skill": "Systems of two linear equations in two variables",
       "difficulty": "Medium",
       "passage": "",
-      "question": "Two lines are graphed in the xy-plane and intersect at the marked point.\ny\n4 |\\\n3 | \\\n2 |  \\\n1 |   \\\n\\[0 +----\\---------------- x\\]\n\\[-1 |     ●\\]\n\\[-2 |    / \\\\]\n\\[-3 |   /\\]\n0 1 2 3 4 5\n\\[The marked intersection is (4,-1).\\]\nWhich system has the same solution as the graphed system?",
+      "question": "Two lines are graphed in the xy-plane and intersect at the marked point \\((4,-1)\\). Which system has the same solution as the graphed system?",
       "choices": {
         "A": "\\[ \\begin{cases} x-y=5\\\\ x+2y=2 \\end{cases} \\]",
         "B": "\\[ \\begin{cases} x-y=3\\\\ x+2y=2 \\end{cases} \\]",
@@ -10242,6 +10428,57 @@
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
+      },
+      "graph": {
+        "type": "xy",
+        "caption": "Two lines intersecting at the marked point",
+        "xMin": 0,
+        "xMax": 6,
+        "yMin": -4,
+        "yMax": 3,
+        "xStep": 1,
+        "yStep": 1,
+        "xLabel": "x",
+        "yLabel": "y",
+        "series": [
+          {
+            "points": [
+              [
+                1,
+                -4
+              ],
+              [
+                4,
+                -1
+              ],
+              [
+                6,
+                1
+              ]
+            ],
+            "showPoints": false,
+            "highlightIndices": [
+              1
+            ]
+          },
+          {
+            "points": [
+              [
+                0,
+                1
+              ],
+              [
+                4,
+                -1
+              ],
+              [
+                6,
+                -2
+              ]
+            ],
+            "showPoints": false
+          }
+        ]
       }
     },
     {
@@ -10834,7 +11071,7 @@
       "skill": "Nonlinear functions",
       "difficulty": "Medium",
       "passage": "",
-      "question": "The graph below models an index I as a function of x, where x is measured in tens of meters.\nI\n18 |                 ●\n16 |             ╭───┴───╮\n14 |          ╭──╯       ╰──╮\n12 |       ╭──╯             ╰──╮\n10 |    ╭──╯                   ╰──╮\n\\[+---------+---------+---------+--------- x\\]\n0        10        20        30        40\nThe vertex occurs halfway between x=20 and x=30. According to the model, at what distance, in meters, is the index greatest?",
+      "question": "The graph models an index \\(I\\) as a function of \\(x\\), where \\(x\\) is measured in tens of meters. The vertex occurs halfway between \\(x=20\\) and \\(x=30\\). According to the model, at what distance, in meters, is the index greatest?",
       "choices": {
         "A": "\\(18\\)",
         "B": "\\(25\\)",
@@ -10850,6 +11087,64 @@
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "The maximum occurs at the vertex, whose x-coordinate is\n\n\\[20+302=25.\\]\nSince x is measured in tens of meters,\n\n\\[25(10)=250\\]\nmeters.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
+      },
+      "graph": {
+        "type": "xy",
+        "caption": "Index I as a function of x",
+        "xMin": 0,
+        "xMax": 40,
+        "yMin": 8,
+        "yMax": 20,
+        "xStep": 10,
+        "yStep": 2,
+        "xLabel": "x (tens of meters)",
+        "yLabel": "I",
+        "series": [
+          {
+            "points": [
+              [
+                0,
+                10
+              ],
+              [
+                5,
+                12
+              ],
+              [
+                10,
+                14
+              ],
+              [
+                15,
+                16
+              ],
+              [
+                20,
+                17.5
+              ],
+              [
+                25,
+                18
+              ],
+              [
+                30,
+                17.5
+              ],
+              [
+                35,
+                16
+              ],
+              [
+                40,
+                14
+              ]
+            ],
+            "showPoints": false,
+            "highlightIndices": [
+              5
+            ]
+          }
+        ]
       }
     },
     {
@@ -11019,10 +11314,10 @@
       "passage": "",
       "question": "The function\n\n\\[f(x)=2(x+4)^{2}-3\\]\nis graphed in the xy-plane. Which of the following could be its graph?",
       "choices": {
-        "A": "Graph A opens downward and has vertex (-4,-3).",
-        "B": "Graph B opens upward and has vertex (4,-3).",
-        "C": "Graph C opens upward and has vertex (-4,-3).",
-        "D": "Graph D opens upward and has vertex (-3,-4)."
+        "A": "Graph A",
+        "B": "Graph B",
+        "C": "Graph C",
+        "D": "Graph D"
       },
       "correctAnswer": "C",
       "explanation": "The function is in vertex form\n\n\\[f(x)=a(x-h)^{2}+k.\\]\nHere h=-4, k=-3, and a=2>0. Therefore, the graph has vertex (-4,-3) and opens upward.",
@@ -11033,6 +11328,332 @@
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "The function is in vertex form\n\n\\[f(x)=a(x-h)^{2}+k.\\]\nHere h=-4, k=-3, and a=2>0. Therefore, the graph has vertex (-4,-3) and opens upward.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
+      },
+      "choiceGraphs": {
+        "A": {
+          "xMin": -8,
+          "xMax": 8,
+          "yMin": -8,
+          "yMax": 8,
+          "series": [
+            {
+              "points": [
+                [
+                  -8,
+                  -8.6
+                ],
+                [
+                  -7,
+                  -6.15
+                ],
+                [
+                  -6,
+                  -4.4
+                ],
+                [
+                  -5,
+                  -3.35
+                ],
+                [
+                  -4,
+                  -3
+                ],
+                [
+                  -3,
+                  -3.35
+                ],
+                [
+                  -2,
+                  -4.4
+                ],
+                [
+                  -1,
+                  -6.15
+                ],
+                [
+                  0,
+                  -8.6
+                ],
+                [
+                  1,
+                  -11.75
+                ],
+                [
+                  2,
+                  -15.6
+                ],
+                [
+                  3,
+                  -20.15
+                ],
+                [
+                  4,
+                  -25.4
+                ],
+                [
+                  5,
+                  -31.349999999999998
+                ],
+                [
+                  6,
+                  -38
+                ],
+                [
+                  7,
+                  -45.349999999999994
+                ],
+                [
+                  8,
+                  -53.4
+                ]
+              ]
+            }
+          ],
+          "ariaLabel": "Graph A: a downward-opening parabola with vertex at (-4, -3)"
+        },
+        "B": {
+          "xMin": -8,
+          "xMax": 8,
+          "yMin": -8,
+          "yMax": 8,
+          "series": [
+            {
+              "points": [
+                [
+                  -8,
+                  47.4
+                ],
+                [
+                  -7,
+                  39.349999999999994
+                ],
+                [
+                  -6,
+                  32
+                ],
+                [
+                  -5,
+                  25.349999999999998
+                ],
+                [
+                  -4,
+                  19.4
+                ],
+                [
+                  -3,
+                  14.149999999999999
+                ],
+                [
+                  -2,
+                  9.6
+                ],
+                [
+                  -1,
+                  5.75
+                ],
+                [
+                  0,
+                  2.5999999999999996
+                ],
+                [
+                  1,
+                  0.1499999999999999
+                ],
+                [
+                  2,
+                  -1.6
+                ],
+                [
+                  3,
+                  -2.65
+                ],
+                [
+                  4,
+                  -3
+                ],
+                [
+                  5,
+                  -2.65
+                ],
+                [
+                  6,
+                  -1.6
+                ],
+                [
+                  7,
+                  0.1499999999999999
+                ],
+                [
+                  8,
+                  2.5999999999999996
+                ]
+              ]
+            }
+          ],
+          "ariaLabel": "Graph B: an upward-opening parabola with vertex at (4, -3)"
+        },
+        "C": {
+          "xMin": -8,
+          "xMax": 8,
+          "yMin": -8,
+          "yMax": 8,
+          "series": [
+            {
+              "points": [
+                [
+                  -8,
+                  2.5999999999999996
+                ],
+                [
+                  -7,
+                  0.1499999999999999
+                ],
+                [
+                  -6,
+                  -1.6
+                ],
+                [
+                  -5,
+                  -2.65
+                ],
+                [
+                  -4,
+                  -3
+                ],
+                [
+                  -3,
+                  -2.65
+                ],
+                [
+                  -2,
+                  -1.6
+                ],
+                [
+                  -1,
+                  0.1499999999999999
+                ],
+                [
+                  0,
+                  2.5999999999999996
+                ],
+                [
+                  1,
+                  5.75
+                ],
+                [
+                  2,
+                  9.6
+                ],
+                [
+                  3,
+                  14.149999999999999
+                ],
+                [
+                  4,
+                  19.4
+                ],
+                [
+                  5,
+                  25.349999999999998
+                ],
+                [
+                  6,
+                  32
+                ],
+                [
+                  7,
+                  39.349999999999994
+                ],
+                [
+                  8,
+                  47.4
+                ]
+              ]
+            }
+          ],
+          "ariaLabel": "Graph C: an upward-opening parabola with vertex at (-4, -3)"
+        },
+        "D": {
+          "xMin": -8,
+          "xMax": 8,
+          "yMin": -8,
+          "yMax": 8,
+          "series": [
+            {
+              "points": [
+                [
+                  -8,
+                  4.75
+                ],
+                [
+                  -7,
+                  1.5999999999999996
+                ],
+                [
+                  -6,
+                  -0.8500000000000001
+                ],
+                [
+                  -5,
+                  -2.6
+                ],
+                [
+                  -4,
+                  -3.65
+                ],
+                [
+                  -3,
+                  -4
+                ],
+                [
+                  -2,
+                  -3.65
+                ],
+                [
+                  -1,
+                  -2.6
+                ],
+                [
+                  0,
+                  -0.8500000000000001
+                ],
+                [
+                  1,
+                  1.5999999999999996
+                ],
+                [
+                  2,
+                  4.75
+                ],
+                [
+                  3,
+                  8.6
+                ],
+                [
+                  4,
+                  13.149999999999999
+                ],
+                [
+                  5,
+                  18.4
+                ],
+                [
+                  6,
+                  24.349999999999998
+                ],
+                [
+                  7,
+                  31
+                ],
+                [
+                  8,
+                  38.349999999999994
+                ]
+              ]
+            }
+          ],
+          "ariaLabel": "Graph D: an upward-opening parabola with vertex at (-3, -4)"
+        }
       }
     },
     {
