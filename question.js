@@ -270,10 +270,89 @@ function escapeHtml(value) {
 }
 
 
+function repairCommonMathNotation(value) {
+    const source =
+        String(
+            value === null ||
+            value === undefined
+                ? ""
+                : value
+        );
+
+    return source.replace(
+        /\\\(([\s\S]*?)\\\)|\\\[([\s\S]*?)\\\]/g,
+        match => {
+            const isDisplay =
+                match.startsWith(
+                    "\\["
+                );
+            const body =
+                match.slice(
+                    2,
+                    -2
+                );
+
+            const repaired =
+                body.replace(
+                    /([a-zA-Z])([2-9])\b/g,
+                    (
+                        token,
+                        variable,
+                        exponent,
+                        offset,
+                        full
+                    ) => {
+                        const before =
+                            full.slice(
+                                Math.max(
+                                    0,
+                                    offset - 14
+                                ),
+                                offset
+                            );
+
+                        if (
+                            /\\(?:d?frac)\s*$/.test(
+                                before
+                            ) ||
+                            /\\[a-zA-Z]+$/.test(
+                                before
+                            )
+                        ) {
+                            return token;
+                        }
+
+                        return (
+                            variable +
+                            "^{" +
+                            exponent +
+                            "}"
+                        );
+                    }
+                );
+
+            return (
+                isDisplay
+                    ? "\\[" +
+                        repaired +
+                        "\\]"
+                    : "\\(" +
+                        repaired +
+                        "\\)"
+            );
+        }
+    );
+}
+
+
 function renderInlineFormatting(value) {
 
     const escaped =
-        escapeHtml(value);
+        escapeHtml(
+            repairCommonMathNotation(
+                value
+            )
+        );
 
     return escaped
         .replace(
@@ -5663,9 +5742,11 @@ function initializeDesmosPanel() {
         document.getElementById(
             "desmos-frame"
         );
-    const resizeHandle =
-        panel?.querySelector(
-            ".desmos-resize-handle"
+    const resizeHandles =
+        Array.from(
+            panel?.querySelectorAll(
+                ".desmos-resize-handle"
+            ) || []
         );
 
     if (
@@ -5674,7 +5755,7 @@ function initializeDesmosPanel() {
         !card ||
         !handle ||
         !frame ||
-        !resizeHandle
+        resizeHandles.length === 0
     ) {
         return;
     }
@@ -5685,9 +5766,15 @@ function initializeDesmosPanel() {
     let dragOffsetY = 0;
     let resizeStartX = 0;
     let resizeStartY = 0;
+    let resizeStartLeft = 0;
+    let resizeStartTop = 0;
     let resizeStartWidth = 0;
     let resizeStartHeight = 0;
+    let resizeDirection = "";
+    let activeResizeHandle = null;
     let resizeFrame = null;
+    let pendingLeft = 0;
+    let pendingTop = 0;
     let pendingWidth = 0;
     let pendingHeight = 0;
 
@@ -5919,15 +6006,21 @@ function initializeDesmosPanel() {
         () => {
             resizeFrame = null;
 
+            card.style.left =
+                pendingLeft + "px";
+            card.style.top =
+                pendingTop + "px";
             card.style.width =
                 pendingWidth + "px";
             card.style.height =
                 pendingHeight + "px";
         };
 
-    resizeHandle.addEventListener(
-        "pointerdown",
-        event => {
+    const beginResize =
+        (
+            event,
+            resizeHandle
+        ) => {
             if (event.button !== 0) {
                 return;
             }
@@ -5939,6 +6032,10 @@ function initializeDesmosPanel() {
                 rect.left + "px";
             card.style.top =
                 rect.top + "px";
+            card.style.width =
+                rect.width + "px";
+            card.style.height =
+                rect.height + "px";
             card.style.transform =
                 "none";
 
@@ -5946,10 +6043,29 @@ function initializeDesmosPanel() {
                 event.clientX;
             resizeStartY =
                 event.clientY;
+            resizeStartLeft =
+                rect.left;
+            resizeStartTop =
+                rect.top;
             resizeStartWidth =
                 rect.width;
             resizeStartHeight =
                 rect.height;
+            resizeDirection =
+                resizeHandle.dataset
+                    .resizeDirection ||
+                "se";
+            activeResizeHandle =
+                resizeHandle;
+
+            pendingLeft =
+                resizeStartLeft;
+            pendingTop =
+                resizeStartTop;
+            pendingWidth =
+                resizeStartWidth;
+            pendingHeight =
+                resizeStartHeight;
 
             resizing = true;
             card.classList.add(
@@ -5962,65 +6078,128 @@ function initializeDesmosPanel() {
 
             event.preventDefault();
             event.stopPropagation();
-        }
-    );
+        };
 
-    resizeHandle.addEventListener(
-        "pointermove",
+    const continueResize =
         event => {
             if (!resizing) {
                 return;
             }
 
-            const rect =
-                card.getBoundingClientRect();
+            const dx =
+                event.clientX -
+                resizeStartX;
+            const dy =
+                event.clientY -
+                resizeStartY;
 
             const minWidth =
                 window.innerWidth <= 700
                     ? 280
                     : 420;
             const minHeight = 280;
+            const viewportPadding = 8;
 
-            const maxWidth =
-                Math.max(
-                    minWidth,
-                    window.innerWidth -
-                    rect.left -
-                    8
-                );
-            const maxHeight =
-                Math.max(
-                    minHeight,
-                    window.innerHeight -
-                    rect.top -
-                    8
-                );
+            const startRight =
+                resizeStartLeft +
+                resizeStartWidth;
+            const startBottom =
+                resizeStartTop +
+                resizeStartHeight;
 
-            pendingWidth =
-                Math.min(
-                    Math.max(
-                        resizeStartWidth +
-                        (
-                            event.clientX -
-                            resizeStartX
+            let nextLeft =
+                resizeStartLeft;
+            let nextTop =
+                resizeStartTop;
+            let nextWidth =
+                resizeStartWidth;
+            let nextHeight =
+                resizeStartHeight;
+
+            if (
+                resizeDirection.includes(
+                    "e"
+                )
+            ) {
+                nextWidth =
+                    Math.min(
+                        Math.max(
+                            resizeStartWidth +
+                            dx,
+                            minWidth
                         ),
+                        window.innerWidth -
+                        resizeStartLeft -
+                        viewportPadding
+                    );
+            }
+
+            if (
+                resizeDirection.includes(
+                    "w"
+                )
+            ) {
+                nextLeft =
+                    Math.min(
+                        Math.max(
+                            resizeStartLeft +
+                            dx,
+                            viewportPadding
+                        ),
+                        startRight -
                         minWidth
-                    ),
-                    maxWidth
-                );
+                    );
+                nextWidth =
+                    startRight -
+                    nextLeft;
+            }
 
-            pendingHeight =
-                Math.min(
-                    Math.max(
-                        resizeStartHeight +
-                        (
-                            event.clientY -
-                            resizeStartY
+            if (
+                resizeDirection.includes(
+                    "s"
+                )
+            ) {
+                nextHeight =
+                    Math.min(
+                        Math.max(
+                            resizeStartHeight +
+                            dy,
+                            minHeight
                         ),
+                        window.innerHeight -
+                        resizeStartTop -
+                        viewportPadding
+                    );
+            }
+
+            if (
+                resizeDirection.includes(
+                    "n"
+                )
+            ) {
+                nextTop =
+                    Math.min(
+                        Math.max(
+                            resizeStartTop +
+                            dy,
+                            viewportPadding
+                        ),
+                        startBottom -
                         minHeight
-                    ),
-                    maxHeight
-                );
+                    );
+                nextHeight =
+                    startBottom -
+                    nextTop;
+            }
+
+            pendingLeft =
+                nextLeft;
+            pendingTop =
+                nextTop;
+            pendingWidth =
+                nextWidth;
+            pendingHeight =
+                nextHeight;
 
             if (!resizeFrame) {
                 resizeFrame =
@@ -6028,8 +6207,7 @@ function initializeDesmosPanel() {
                         applyResize
                     );
             }
-        }
-    );
+        };
 
     const stopResizing =
         event => {
@@ -6052,23 +6230,46 @@ function initializeDesmosPanel() {
             );
 
             if (
+                activeResizeHandle &&
                 event?.pointerId !==
-                undefined
+                    undefined
             ) {
-                resizeHandle.releasePointerCapture?.(
-                    event.pointerId
-                );
+                activeResizeHandle
+                    .releasePointerCapture?.(
+                        event.pointerId
+                    );
             }
+
+            activeResizeHandle = null;
+            resizeDirection = "";
         };
 
-    resizeHandle.addEventListener(
-        "pointerup",
-        stopResizing
-    );
+    resizeHandles.forEach(
+        resizeHandle => {
+            resizeHandle.addEventListener(
+                "pointerdown",
+                event =>
+                    beginResize(
+                        event,
+                        resizeHandle
+                    )
+            );
 
-    resizeHandle.addEventListener(
-        "pointercancel",
-        stopResizing
+            resizeHandle.addEventListener(
+                "pointermove",
+                continueResize
+            );
+
+            resizeHandle.addEventListener(
+                "pointerup",
+                stopResizing
+            );
+
+            resizeHandle.addEventListener(
+                "pointercancel",
+                stopResizing
+            );
+        }
     );
 
     toggle.addEventListener(
