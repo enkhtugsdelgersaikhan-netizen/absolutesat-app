@@ -1423,7 +1423,7 @@
         "D": "\\(4x+3y=13\\)"
       },
       "correctAnswer": "C",
-      "explanation": "The slope is\n\n\\[8-11-1-(-5)=-34.\\]\nSo a standard-form equation has coefficient ratio 3:4. Substituting (-5,11),\n\n\\[3(-5)+4(11)=29.\\]\nTherefore,\n\\[ \\boxed{3x+4y=29}. \\]",
+      "explanation": "The slope is\n\\[\\frac{8-11}{-1-(-5)}=-\\frac34.\\]\nSo a standard-form equation has coefficient ratio \\(3:4\\). Substituting \\((-5,11)\\),\n\\[3(-5)+4(11)=29.\\]\nTherefore,\n\\[\\boxed{3x+4y=29}.\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 45,
       "choiceExplanations": {
@@ -5351,7 +5351,7 @@
         "D": "\\(10x^2-22\\)"
       },
       "correctAnswer": "A",
-      "explanation": "Distribute:\n\n\\[8x2-12-2x2-10.\\]\nCombine like terms:\n\\[ \\boxed{6x^2-22}. \\]",
+      "explanation": "Distribute:\n\\[8x^2-12-2x^2-10.\\]\nCombine like terms:\n\\[\\boxed{6x^2-22}.\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 176,
       "choiceExplanations": {
@@ -5453,7 +5453,7 @@
         "D": "\\(7x^2-9x+4\\)"
       },
       "correctAnswer": "A",
-      "explanation": "The first two terms combine:\n\n\\[5(2x2-3x)-2(2x2-3x)=3(2x2-3x).\\]\nTherefore,\n\n\\[3(2x2-3x)+(x^{2}-4)=6x2-9x+x^{2}-4\\]\n\\[ =\\boxed{7x^2-9x-4}. \\]",
+      "explanation": "The first two terms combine:\n\\[5(2x^2-3x)-2(2x^2-3x)=3(2x^2-3x).\\]\nTherefore,\n\\[3(2x^2-3x)+(x^2-4)=6x^2-9x+x^2-4\\]\n\\[=\\boxed{7x^2-9x-4}.\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 179,
       "choiceExplanations": {
@@ -6215,7 +6215,7 @@
         "D": "\\(\\displaystyle c=\\frac27(s+15)\\)"
       },
       "correctAnswer": "A",
-      "explanation": "From the table,\n\n\\[sc=50-2910-4=216=72.\\]\nThus,\n\n\\[s=72c+15.\\]\nSolving for c,\n\n\\[c=27(s-15).\\]",
+      "explanation": "From the table,\n\\[\\frac{50-29}{10-4}=\\frac{21}{6}=\\frac72.\\]\nThus,\n\\[s=\\frac72c+15.\\]\nSolving for \\(c\\),\n\\[\\boxed{c=\\frac27(s-15)}.\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 206,
       "choiceExplanations": {
@@ -6391,7 +6391,7 @@
         "D": "The monthly cost increases by one dollar for every 8 devices added."
       },
       "correctAnswer": "B",
-      "explanation": "Using (2,42) and (5,66),\n\n\\[slope=66-425-2=8.\\]\nSince x is the number of devices and y is monthly cost, the slope means \\(\\$8\\) per additional device.",
+      "explanation": "Using \\((2,42)\\) and \\((5,66)\\),\n\\[\\text{slope}=\\frac{66-42}{5-2}=8.\\]\nSince \\(x\\) is the number of devices and \\(y\\) is monthly cost, the slope means \\(\\$8\\) per additional device.",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 213,
       "choiceExplanations": {
@@ -7203,7 +7203,7 @@
         "D": "\\(-2\\)"
       },
       "correctAnswer": "A",
-      "explanation": "Expand:\n\n\\[2(x^{2}-4x+4)=x^{2}-2x+8.\\]\n\n\\[2x2-8x+8=x^{2}-2x+8.\\]\n\n\\[x^{2}-6x=0\\]\n\n\\[x(x-6)=0.\\]\n\\[Thus x=0 or x=6, and 6 is listed.\\]",
+      "explanation": "Expand:\n\\[2(x^2-4x+4)=x^2-2x+8.\\]\n\\[2x^2-8x+8=x^2-2x+8.\\]\n\\[x^2-6x=0\\]\n\\[x(x-6)=0.\\]\nThus \\(x=0\\) or \\(x=6\\), and 6 is listed.",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 242,
       "choiceExplanations": {
@@ -7338,7 +7338,7 @@
         "D": "\\(8\\)"
       },
       "correctAnswer": "B",
-      "explanation": "Expand only enough to identify the axis:\n\n\\[(x-11)(x+3)=x^{2}-8x-33.\\]\nThus\n\n\\[f(x)=2x2-16x-71.\\]\n\\[The vertex has x-coordinate\\]\n\n\\[--162(2)=4.\\]",
+      "explanation": "Expand only enough to identify the axis:\n\\[(x-11)(x+3)=x^2-8x-33.\\]\nThus\n\\[f(x)=2x^2-16x-71.\\]\nThe vertex has x-coordinate\n\\[\\frac{-(-16)}{2(2)}=\\boxed4.\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 247,
       "choiceExplanations": {
@@ -7547,7 +7547,7 @@
         "D": "\\(\\displaystyle b=3(7a-2c)\\)"
       },
       "correctAnswer": "A",
-      "explanation": "Subtract 7a:\n\n\\[-3b=2c-7a.\\]\n\\[Multiply by -1:\\]\n\n\\[3b=7a-2c.\\]\nThen divide by 3:\n\n\\[b=7a-2c3.\\]",
+      "explanation": "Subtract \\(7a\\):\n\\[-3b=2c-7a.\\]\nMultiply by \\(-1\\):\n\\[3b=7a-2c.\\]\nThen divide by 3:\n\\[\\boxed{b=\\frac{7a-2c}{3}}.\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 257,
       "choiceExplanations": {
@@ -8336,7 +8336,7 @@
         "D": "The system initially stores 12 GB of data per hour."
       },
       "correctAnswer": "B",
-      "explanation": "Using (3,27) and (7,47),\n\n\\[m=47-277-3=204=5.\\]\nSince y is gigabytes and x is hours, the slope means\n\\[ \\boxed{5\\text{ additional GB per hour}}. \\]",
+      "explanation": "Using \\((3,27)\\) and \\((7,47)\\),\n\\[m=\\frac{47-27}{7-3}=\\frac{20}{4}=5.\\]\nSince \\(y\\) is gigabytes and \\(x\\) is hours, the slope means\n\\[\\boxed{5\\text{ additional GB per hour}}.\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 285,
       "choiceExplanations": {
@@ -8413,7 +8413,7 @@
         "D": "\\(200\\)"
       },
       "correctAnswer": "C",
-      "explanation": "From (4,110) to (12,170), the slope is\n\n\\[170-11012-4=608=7.5.\\]\nMoving from x=12 to x=14 increases y by\n\n\\[2(7.5)=15.\\]\nThus,\n\\[ 170+15=\\boxed{185}. \\]",
+      "explanation": "From \\((4,110)\\) to \\((12,170)\\), the slope is\n\\[\\frac{170-110}{12-4}=\\frac{60}{8}=7.5.\\]\nMoving from \\(x=12\\) to \\(x=14\\) increases \\(y\\) by\n\\[2(7.5)=15.\\]\nThus,\n\\[170+15=\\boxed{185}.\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 287,
       "choiceExplanations": {
@@ -8826,7 +8826,7 @@
         "D": "\\((2,0)\\)"
       },
       "correctAnswer": "A",
-      "explanation": "Using the labeled points (2,1) and (6,7),\n\n\\[m=7-16-2=32.\\]\n\\[Using y=mx+b with (2,1),\\]\n\n\\[1=32(2)+b=3+b,\\]\n\\[so b=-2. Therefore, the y-intercept is\\]\n\\[ \\boxed{(0,-2)}. \\]",
+      "explanation": "Using the labeled points \\((2,1)\\) and \\((6,7)\\),\n\\[m=\\frac{7-1}{6-2}=\\frac32.\\]\nUsing \\(y=mx+b\\) with \\((2,1)\\),\n\\[1=\\frac32(2)+b=3+b,\\]\nso \\(b=-2\\). Therefore, the y-intercept is\n\\[\\boxed{(0,-2)}.\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 303,
       "choiceExplanations": {
@@ -9049,7 +9049,7 @@
         "D": "\\(V(t)=30t+900\\)"
       },
       "correctAnswer": "A",
-      "explanation": "The slope is\n\n\\[1080-8402024-2016=2408=30.\\]\n\\[In 2016, t=2. Therefore,\\]\n\n\\[840=30(2)+b,\\]\n\\[so b=780. Hence,\\]\n\\[ \\boxed{V(t)=30t+780}. \\]",
+      "explanation": "The slope is\n\\[\\frac{1080-840}{2024-2016}=\\frac{240}{8}=30.\\]\nIn 2016, \\(t=2\\). Therefore,\n\\[840=30(2)+b,\\]\nso \\(b=780\\). Hence,\n\\[\\boxed{V(t)=30t+780}.\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 311,
       "choiceExplanations": {
@@ -10390,13 +10390,13 @@
       "passage": "",
       "question": "The graphs of linear functions \\(f\\) and \\(g\\) are shown. The graph of \\(f\\) passes through \\((0,10)\\) and \\((6,7)\\). The graph of \\(g\\) passes through \\((0,2)\\) and \\((6,7)\\). Which pair of equations could represent \\(f\\) and \\(g\\)?",
       "choices": {
-        "A": "\\(f(x)=-12x+10,g(x)=56x+2\\)",
-        "B": "\\(f(x)=12x+10,g(x)=56x+2\\)",
-        "C": "\\(f(x)=-12x+7,g(x)=56x+10\\)",
-        "D": "\\(f(x)=-56x+10,g(x)=12x+2\\)"
+        "A": "\\(f(x)=-\\frac12x+10,\\quad g(x)=\\frac56x+2\\)",
+        "B": "\\(f(x)=\\frac12x+10,\\quad g(x)=\\frac56x+2\\)",
+        "C": "\\(f(x)=-\\frac12x+7,\\quad g(x)=\\frac56x+10\\)",
+        "D": "\\(f(x)=-\\frac56x+10,\\quad g(x)=\\frac12x+2\\)"
       },
       "correctAnswer": "A",
-      "explanation": "For f,\n\n\\[mf=7-106-0=-12,\\]\n\\[and its y-intercept is 10, so\\]\n\n\\[f(x)=-12x+10.\\]\nFor g,\n\n\\[mg=7-26-0=56,\\]\n\\[with y-intercept 2, so\\]\n\n\\[g(x)=56x+2.\\]",
+      "explanation": "For \\(f\\),\n\\[m_f=\\frac{7-10}{6-0}=-\\frac12,\\]\nand its y-intercept is 10, so\n\\[f(x)=-\\frac12x+10.\\]\nFor \\(g\\),\n\\[m_g=\\frac{7-2}{6-0}=\\frac56,\\]\nwith y-intercept 2, so\n\\[g(x)=\\frac56x+2.\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 358,
       "choiceExplanations": {
@@ -10591,7 +10591,7 @@
         "D": "\\(None\\)"
       },
       "correctAnswer": "B",
-      "explanation": "Expand the right side:\n\n\\[a(x-b)+2x=(a+2)x-ab.\\]\nFor no solution, the x-coefficients must match:\n\n\\[a+2=7,\\]\n\\[so a=5.\\]\nThe constants must be different:\n\n\\[-5b12,\\]\nso\n\n\\[b-125.\\]\nThus I and III must be true.",
+      "explanation": "Expand the right side:\n\\[a(x-b)+2x=(a+2)x-ab.\\]\nFor no solution, the x-coefficients must match:\n\\[a+2=7,\\]\nso \\(a=5\\). The constants must be different:\n\\[-5b\\ne12,\\]\nso\n\\[b\\ne-\\frac{12}{5}.\\]\nThus I and III must be true.",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 362,
       "choiceExplanations": {
@@ -10765,15 +10765,15 @@
       "skill": "Equivalent expressions",
       "difficulty": "Easy",
       "passage": "",
-      "question": "Which of the following expressions is equivalent to 18x4y-30x2y3?",
+      "question": "Which of the following expressions is equivalent to\n\\[18x^4y-30x^2y^3?\\]",
       "choices": {
-        "A": "\\(6x2y(3x2-5y2)\\)",
-        "B": "\\(6xy(3x3-5xy2)\\)",
-        "C": "\\(3x2y(6x2-5y2)\\)",
-        "D": "\\(6x2y(3x2-5y3)\\)"
+        "A": "\\(6x^2y(3x^2-5y^2)\\)",
+        "B": "\\(6xy(3x^3-5xy^2)\\)",
+        "C": "\\(3x^2y(6x^2-5y^2)\\)",
+        "D": "\\(6x^2y(3x^2-5y^3)\\)"
       },
       "correctAnswer": "A",
-      "explanation": "The greatest common factor of 18x4y and 30x2y3 is 6x2y. Factoring it out gives\n\n\\[18x4y-30x2y3=6x2y(3x2-5y2).\\]",
+      "explanation": "The greatest common factor of \\(18x^4y\\) and \\(30x^2y^3\\) is \\(6x^2y\\). Factoring it out gives\n\\[18x^4y-30x^2y^3=\\boxed{6x^2y(3x^2-5y^2)}.\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 368,
       "choiceExplanations": {
@@ -12025,13 +12025,13 @@
       "passage": "",
       "question": "Which expression is equivalent to\n\n\\[3(2x-5)(x+4)-2x(x-1)?\\]",
       "choices": {
-        "A": "\\(4x2+11x-60\\)",
-        "B": "\\(8x2+7x-60\\)",
-        "C": "\\(4x2+7x-60\\)",
-        "D": "\\(8x2+11x-20\\)"
+        "A": "\\(4x^2+11x-60\\)",
+        "B": "\\(8x^2+7x-60\\)",
+        "C": "\\(4x^2+7x-60\\)",
+        "D": "\\(8x^2+11x-20\\)"
       },
       "correctAnswer": "A",
-      "explanation": "First,\n\n\\[(2x-5)(x+4)=2x2+3x-20.\\]\nMultiplying by 3 gives\n\n\\[6x2+9x-60.\\]\nAlso,\n\n\\[-2x(x-1)=-2x2+2x.\\]\nCombining gives\n\n\\[4x2+11x-60.\\]",
+      "explanation": "First,\n\\[(2x-5)(x+4)=2x^2+3x-20.\\]\nMultiplying by 3 gives\n\\[6x^2+9x-60.\\]\nAlso,\n\\[-2x(x-1)=-2x^2+2x.\\]\nCombining gives\n\\[\\boxed{4x^2+11x-60}.\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 402,
       "choiceExplanations": {
@@ -12676,7 +12676,7 @@
         "D": "\\(\\displaystyle \\frac{11\\pm\\sqrt{205}}3\\)"
       },
       "correctAnswer": "B",
-      "explanation": "Rewrite the equation in standard quadratic form:\n\n\\[3x2-12x=7-x\\]\n\n\\[3x2-11x-7=0.\\]\nUsing the quadratic formula,\n\n\\[x=11(-11)^{2}-4(3)(-7)6=112056.\\]",
+      "explanation": "Rewrite the equation in standard quadratic form:\n\\[3x^2-12x=7-x\\]\n\\[3x^2-11x-7=0.\\]\nUsing the quadratic formula,\n\\[x=\\frac{11\\pm\\sqrt{(-11)^2-4(3)(-7)}}{6}=\\boxed{\\frac{11\\pm\\sqrt{205}}6}.\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 426,
       "choiceExplanations": {
@@ -12757,7 +12757,7 @@
         "D": "\\(3\\)"
       },
       "correctAnswer": "A",
-      "explanation": "The original equation requires x^{2} and x-2. Multiply by (x-2)(x+2):\n\n\\[(2x+1)(x+2)-3(x-2)=20.\\]\nExpanding gives\n\n\\[2x2+2x+8=20,\\]\nso\n\n\\[x^{2}+x-6=0.\\]\nThus\n\n\\[(x+3)(x-2)=0.\\]\nThe candidates are -3 and 2, but x=2 is not in the domain. Therefore, x=-3.",
+      "explanation": "The original equation requires \\(x\\ne2\\) and \\(x\\ne-2\\). Multiply by \\((x-2)(x+2)\\):\n\\[(2x+1)(x+2)-3(x-2)=20.\\]\nExpanding gives\n\\[2x^2+2x+8=20,\\]\nso\n\\[x^2+x-6=0.\\]\nThus\n\\[(x+3)(x-2)=0.\\]\nThe candidates are \\(-3\\) and \\(2\\), but \\(x=2\\) is not in the domain. Therefore, \\(x=-3\\).",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 429,
       "choiceExplanations": {
@@ -12880,7 +12880,7 @@
         "D": "\\((2x-5)^3\\)"
       },
       "correctAnswer": "B",
-      "explanation": "Factor the radicand:\n\n\\[4x2-20x+25=(2x-5)^{2}.\\]\nTherefore,\n\n\\[6(2x-5)^{2}=(2x-5)^{2}/6=(2x-5)1/3.\\]\n\\[The condition x>52 ensures 2x-5>0.\\]",
+      "explanation": "Factor the radicand:\n\\[4x^2-20x+25=(2x-5)^2.\\]\nTherefore,\n\\[\\sqrt[6]{(2x-5)^2}=(2x-5)^{2/6}=(2x-5)^{1/3}.\\]\nThe condition \\(x>\\frac52\\) ensures \\(2x-5>0\\).",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 434,
       "choiceExplanations": {
@@ -13297,7 +13297,7 @@
       "skill": "Ratios, rates, proportional relationships, and units",
       "difficulty": "Hard",
       "passage": "",
-      "question": "For positive values of u and v, consider\n\n3u20v114u46v2.\nWhich of the following are equivalent to the expression?\n\nI.u2v33u2v4\n\nII.3u8v104",
+      "question": "For positive values of \\(u\\) and \\(v\\), consider\n\\[\\frac{\\sqrt[3]{u^{20}v^{11}}}{4u^4\\sqrt[6]{v^2}}.\\]\nWhich of the following are equivalent to the expression?\n\nI. \\(\\displaystyle \\frac{u^2v^3\\sqrt[3]{u^2v}}{4}\\)\n\nII. \\(\\displaystyle \\frac{\\sqrt[3]{u^8v^{10}}}{4}\\)",
       "choices": {
         "A": "\\(I only\\)",
         "B": "\\(II only\\)",
@@ -13305,7 +13305,7 @@
         "D": "\\(Neither I nor II\\)"
       },
       "correctAnswer": "C",
-      "explanation": "Rewrite using rational exponents:\n\n\\[u20/3v11/34u4v1/3=u8/3v10/34.\\]\nStatement I is\n\n\\[u^{2}+2/3v3+1/34=u8/3v10/34.\\]\nStatement II is also\n\n\\[u8/3v10/34.\\]\nTherefore, both are equivalent.",
+      "explanation": "Rewrite using rational exponents:\n\\[\\frac{u^{20/3}v^{11/3}}{4u^4v^{1/3}}=\\frac{u^{8/3}v^{10/3}}4.\\]\nStatement I is\n\\[\\frac{u^{2+2/3}v^{3+1/3}}4=\\frac{u^{8/3}v^{10/3}}4.\\]\nStatement II is also\n\\[\\frac{u^{8/3}v^{10/3}}4.\\]\nTherefore, both are equivalent.",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 452,
       "choiceExplanations": {
@@ -13523,13 +13523,13 @@
       "passage": "",
       "question": "Which of the following is equivalent to\n\n\\[(2x-3y)(x+4y)+5y(x-2y)?\\]",
       "choices": {
-        "A": "\\(2x2+10xy+22y2\\)",
-        "B": "\\(2x2+10xy-22y2\\)",
-        "C": "\\(2x2-10xy-22y2\\)",
-        "D": "\\(2x2+5xy-2y2\\)"
+        "A": "\\(2x^2+10xy+22y^2\\)",
+        "B": "\\(2x^2+10xy-22y^2\\)",
+        "C": "\\(2x^2-10xy-22y^2\\)",
+        "D": "\\(2x^2+5xy-2y^2\\)"
       },
       "correctAnswer": "B",
-      "explanation": "Expand each product:\n\n\\[(2x-3y)(x+4y)=2x2+5xy-12y2\\]\nand\n\n\\[5y(x-2y)=5xy-10y2.\\]\nAdding gives\n\n\\[2x2+10xy-22y2.\\]",
+      "explanation": "Expand each product:\n\\[(2x-3y)(x+4y)=2x^2+5xy-12y^2\\]\nand\n\\[5y(x-2y)=5xy-10y^2.\\]\nAdding gives\n\\[\\boxed{2x^2+10xy-22y^2}.\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 460,
       "choiceExplanations": {
