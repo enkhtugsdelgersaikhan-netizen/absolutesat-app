@@ -147,6 +147,17 @@
           188
         ],
         "notes": "Reconstructed geometry/trigonometry notation from source solutions, including pi, radicals, tangent/sine/cosine labels, ratios, and student-response equivalents."
+      },
+      "chunkC": {
+        "added": 40,
+        "range": "201-337",
+        "intentionallyUnrecovered": [
+          210,
+          296,
+          320,
+          337
+        ],
+        "notes": "Recovered all remaining verifiable items in this range. Box-plot items lacking full visual coordinates and one internally inconsistent vessel item were left out rather than fabricated."
       }
     }
   },
@@ -26105,6 +26116,995 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
+    },
+    {
+      "id": "math-20261006-new409-q201",
+      "groupId": "math-20261006-new409-q201",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Circles",
+      "difficulty": "Easy",
+      "passage": "A circle has diameter endpoints \\((-2,4)\\) and \\((6,-2)\\).",
+      "question": "Which equation represents the circle?",
+      "choices": {
+        "A": "\\((x-2)^2+(y-1)^2=25\\)",
+        "B": "\\((x+2)^2+(y-1)^2=25\\)",
+        "C": "\\((x-2)^2+(y+1)^2=25\\)",
+        "D": "\\((x-2)^2+(y-1)^2=50\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "The center is the midpoint:\n\\[\\left(\\frac{-2+6}{2},\\frac{4+(-2)}2\\right)=(2,1).\\]\nThe radius squared is\n\\[(6-2)^2+(-2-1)^2=16+9=25.\\]\nThus\n\\[\\boxed{(x-2)^2+(y-1)^2=25}.\\]",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 201,
+      "choiceExplanations": {
+        "A": "The center is the midpoint:\n\\[\\left(\\frac{-2+6}{2},\\frac{4+(-2)}2\\right)=(2,1).\\]\nThe radius squared is\n\\[(6-2)^2+(-2-1)^2=16+9=25.\\]\nThus\n\\[\\boxed{(x-2)^2+(y-1)^2=25}.\\]",
+        "B": "This choice does not satisfy the relationships or conditions given in the question.",
+        "C": "This choice does not satisfy the relationships or conditions given in the question.",
+        "D": "This choice does not satisfy the relationships or conditions given in the question."
+      }
+    },
+    {
+      "id": "math-20261006-new409-q202",
+      "groupId": "math-20261006-new409-q202",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Lines, angles, and triangles",
+      "difficulty": "Easy",
+      "passage": "An angle measures \\(\\frac{7\\pi}{15}\\) radians.",
+      "question": "What is the measure, in degrees, of its supplement?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The angle is\n\\[\\frac{7\\pi}{15}\\cdot\\frac{180^\\circ}{\\pi}=84^\\circ.\\]\nIts supplement is\n\\[180^\\circ-84^\\circ=\\boxed{96^\\circ}.\\]",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 202,
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "96"
+      ]
+    },
+    {
+      "id": "math-20261006-new409-q203",
+      "groupId": "math-20261006-new409-q203",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Circles",
+      "difficulty": "Easy",
+      "passage": "The graph of\n\\[x^2+y^2-12x+8y-12=0\\]\nis a circle.",
+      "question": "What is the center?",
+      "choices": {
+        "A": "\\((-6,4)\\)",
+        "B": "\\((-6,-4)\\)",
+        "C": "\\((6,4)\\)",
+        "D": "\\((6,-4)\\)"
+      },
+      "correctAnswer": "D",
+      "explanation": "Complete the squares:\n\\[(x-6)^2+(y+4)^2=64.\\]\nTherefore the center is \\(\\boxed{(6,-4)}\\).",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 203,
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions given in the question.",
+        "B": "This choice does not satisfy the relationships or conditions given in the question.",
+        "C": "This choice does not satisfy the relationships or conditions given in the question.",
+        "D": "Complete the squares:\n\\[(x-6)^2+(y+4)^2=64.\\]\nTherefore the center is \\(\\boxed{(6,-4)}\\)."
+      }
+    },
+    {
+      "id": "math-20261006-new409-q204",
+      "groupId": "math-20261006-new409-q204",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Circles",
+      "difficulty": "Easy",
+      "passage": "A right circular cone has radius \\(r\\), height \\(4r\\), and volume \\(288\\pi\\) cubic feet.",
+      "question": "What is \\(r\\)?",
+      "choices": {
+        "A": "\\(4\\)",
+        "B": "\\(6\\)",
+        "C": "\\(8\\)",
+        "D": "\\(12\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "Using \\(V=\\frac13\\pi r^2h\\),\n\\[288\\pi=\\frac13\\pi r^2(4r)=\\frac43\\pi r^3.\\]\nThus \\(r^3=216\\), so \\(\\boxed{r=6}\\).",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 204,
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions given in the question.",
+        "B": "Using \\(V=\\frac13\\pi r^2h\\),\n\\[288\\pi=\\frac13\\pi r^2(4r)=\\frac43\\pi r^3.\\]\nThus \\(r^3=216\\), so \\(\\boxed{r=6}\\).",
+        "C": "This choice does not satisfy the relationships or conditions given in the question.",
+        "D": "This choice does not satisfy the relationships or conditions given in the question."
+      }
+    },
+    {
+      "id": "math-20261006-new409-q205",
+      "groupId": "math-20261006-new409-q205",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Lines, angles, and triangles",
+      "difficulty": "Easy",
+      "passage": "The angle measures of a triangle are\n\\[(2a+10)^\\circ,\\quad(3a-5)^\\circ,\\quad(a+25)^\\circ.\\]",
+      "question": "What is the measure of the largest angle?",
+      "choices": {
+        "A": "\\(50^\\circ\\)",
+        "B": "\\(60^\\circ\\)",
+        "C": "\\(70^\\circ\\)",
+        "D": "\\(75^\\circ\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "The angles total \\(180^\\circ\\):\n\\[(2a+10)+(3a-5)+(a+25)=180.\\]\nThus \\(a=25\\), giving angles \\(60^\\circ,70^\\circ,50^\\circ\\). The largest is \\(\\boxed{70^\\circ}\\).",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 205,
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions given in the question.",
+        "B": "This choice does not satisfy the relationships or conditions given in the question.",
+        "C": "The angles total \\(180^\\circ\\):\n\\[(2a+10)+(3a-5)+(a+25)=180.\\]\nThus \\(a=25\\), giving angles \\(60^\\circ,70^\\circ,50^\\circ\\). The largest is \\(\\boxed{70^\\circ}\\).",
+        "D": "This choice does not satisfy the relationships or conditions given in the question."
+      }
+    },
+    {
+      "id": "math-20261006-new409-q206",
+      "groupId": "math-20261006-new409-q206",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Circles",
+      "difficulty": "Easy",
+      "passage": "Circle A is defined by\n\\[x^2+y^2-8x+6y=11.\\]\nCircle B is a translation of circle A and has equation\n\\[(x-h)^2+(y-k)^2=c.\\]",
+      "question": "What is the value of \\(\\frac c4\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Completing the square for circle A gives\n\\[(x-4)^2+(y+3)^2=36.\\]\nA translation does not change the radius, so \\(c=36\\). Therefore,\n\\[\\boxed{\\frac c4=9}.\\]",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 206,
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "9"
+      ]
+    },
+    {
+      "id": "math-20261006-new409-q207",
+      "groupId": "math-20261006-new409-q207",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Lines, angles, and triangles",
+      "difficulty": "Hard",
+      "passage": "For triangles \\(ABC\\) and \\(DEF\\),\n\\[m\\angle B=m\\angle E=38^\\circ,\\qquad AB=12,\\qquad DE=18.\\]\nConsider:\n\nI. \\(m\\angle A=m\\angle D\\)\n\nII. \\(m\\angle C=m\\angle F\\)\n\nIII. \\(\\frac{AC}{DF}=\\frac23\\)",
+      "question": "Which statements are individually sufficient to prove the triangles similar?",
+      "choices": {
+        "A": "I, II, and III are each sufficient.",
+        "B": "I and II are each sufficient, but III is not.",
+        "C": "II and III are each sufficient, but I is not.",
+        "D": "III is sufficient, but I and II are not."
+      },
+      "correctAnswer": "B",
+      "explanation": "Statement I gives two pairs of equal angles, so AA proves similarity. Statement II does the same. For III,\n\\[\\frac{AB}{DE}=\\frac{12}{18}=\\frac23=\\frac{AC}{DF},\\]\nbut the known equal angle is not the included angle between those proportional side pairs, so SAS does not apply. Thus only I and II are individually sufficient.",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 207,
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions given in the question.",
+        "B": "Statement I gives two pairs of equal angles, so AA proves similarity. Statement II does the same. For III,\n\\[\\frac{AB}{DE}=\\frac{12}{18}=\\frac23=\\frac{AC}{DF},\\]\nbut the known equal angle is not the included angle between those proportional side pairs, so SAS does not apply. Thus only I and II are individually sufficient.",
+        "C": "This choice does not satisfy the relationships or conditions given in the question.",
+        "D": "This choice does not satisfy the relationships or conditions given in the question."
+      }
+    },
+    {
+      "id": "math-20261006-new409-q208",
+      "groupId": "math-20261006-new409-q208",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Lines, angles, and triangles",
+      "difficulty": "Easy",
+      "passage": "Three lines intersect at point \\(P\\). On one side of one line, three adjacent angles form a straight angle. The middle angle is vertical to a \\(60^\\circ\\) angle. The left angle is twice the right angle. Let the right angle be \\(z^\\circ\\).",
+      "question": "What is \\(z\\)?",
+      "choices": {
+        "A": "\\(30\\)",
+        "B": "\\(40\\)",
+        "C": "\\(50\\)",
+        "D": "\\(60\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "The middle angle is \\(60^\\circ\\). Thus\n\\[2z+60+z=180.\\]\nSo \\(3z=120\\), giving \\(\\boxed{z=40}\\).",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 208,
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions given in the question.",
+        "B": "The middle angle is \\(60^\\circ\\). Thus\n\\[2z+60+z=180.\\]\nSo \\(3z=120\\), giving \\(\\boxed{z=40}\\).",
+        "C": "This choice does not satisfy the relationships or conditions given in the question.",
+        "D": "This choice does not satisfy the relationships or conditions given in the question."
+      }
+    },
+    {
+      "id": "math-20261006-new409-q209",
+      "groupId": "math-20261006-new409-q209",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Area and volume",
+      "difficulty": "Easy",
+      "passage": "A rectangle has width \\(w\\) and length \\(3w-4\\). Its perimeter is \\(64\\) units.",
+      "question": "What is the length of the rectangle?",
+      "choices": {
+        "A": "\\(18\\)",
+        "B": "\\(21\\)",
+        "C": "\\(23\\)",
+        "D": "\\(27\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "Using the perimeter,\n\\[2[(3w-4)+w]=64.\\]\nThus \\(8w-8=64\\), so \\(w=9\\). The length is\n\\[3(9)-4=\\boxed{23}.\\]",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 209,
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions given in the question.",
+        "B": "This choice does not satisfy the relationships or conditions given in the question.",
+        "C": "Using the perimeter,\n\\[2[(3w-4)+w]=64.\\]\nThus \\(8w-8=64\\), so \\(w=9\\). The length is\n\\[3(9)-4=\\boxed{23}.\\]",
+        "D": "This choice does not satisfy the relationships or conditions given in the question."
+      }
+    },
+    {
+      "id": "math-20261006-new409-q211",
+      "groupId": "math-20261006-new409-q211",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Lines, angles, and triangles",
+      "difficulty": "Easy",
+      "passage": "Two parallel lines are intersected by a transversal. A pair of same-side interior angles have measures \\((4x+6)^\\circ\\) and \\((2x+30)^\\circ\\).",
+      "question": "What is the measure of the larger angle?",
+      "choices": {
+        "A": "\\(78^\\circ\\)",
+        "B": "\\(96^\\circ\\)",
+        "C": "\\(102^\\circ\\)",
+        "D": "\\(108^\\circ\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "Same-side interior angles are supplementary:\n\\[(4x+6)+(2x+30)=180.\\]\nThus \\(x=24\\). The angles are \\(102^\\circ\\) and \\(78^\\circ\\), so the larger is \\(\\boxed{102^\\circ}\\).",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 211,
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions given in the question.",
+        "B": "This choice does not satisfy the relationships or conditions given in the question.",
+        "C": "Same-side interior angles are supplementary:\n\\[(4x+6)+(2x+30)=180.\\]\nThus \\(x=24\\). The angles are \\(102^\\circ\\) and \\(78^\\circ\\), so the larger is \\(\\boxed{102^\\circ}\\).",
+        "D": "This choice does not satisfy the relationships or conditions given in the question."
+      }
+    },
+    {
+      "id": "math-20261006-new409-q212",
+      "groupId": "math-20261006-new409-q212",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Lines, angles, and triangles",
+      "difficulty": "Easy",
+      "passage": "In triangle \\(ABC\\), \\(m\\angle C=47^\\circ\\) and\n\\[m\\angle A:m\\angle B=3:4.\\]",
+      "question": "What is \\(m\\angle B\\)?",
+      "choices": {
+        "A": "\\(57^\\circ\\)",
+        "B": "\\(68^\\circ\\)",
+        "C": "\\(76^\\circ\\)",
+        "D": "\\(84^\\circ\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "Angles \\(A\\) and \\(B\\) total \\(133^\\circ\\). The ratio has \\(7\\) equal parts, so each part is \\(19^\\circ\\). Therefore,\n\\[m\\angle B=4(19^\\circ)=\\boxed{76^\\circ}.\\]",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 212,
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions given in the question.",
+        "B": "This choice does not satisfy the relationships or conditions given in the question.",
+        "C": "Angles \\(A\\) and \\(B\\) total \\(133^\\circ\\). The ratio has \\(7\\) equal parts, so each part is \\(19^\\circ\\). Therefore,\n\\[m\\angle B=4(19^\\circ)=\\boxed{76^\\circ}.\\]",
+        "D": "This choice does not satisfy the relationships or conditions given in the question."
+      }
+    },
+    {
+      "id": "math-20261006-new409-q213",
+      "groupId": "math-20261006-new409-q213",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Circles",
+      "difficulty": "Easy",
+      "passage": "A circle has radius \\(10\\) units. A minor arc is subtended by a \\(72^\\circ\\) central angle.",
+      "question": "What is the length of the minor arc?",
+      "choices": {
+        "A": "\\(2\\pi\\)",
+        "B": "\\(4\\pi\\)",
+        "C": "\\(5\\pi\\)",
+        "D": "\\(8\\pi\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "The circumference is \\(20\\pi\\). The arc is \\(72/360=1/5\\) of the circle, so its length is\n\\[\\frac15(20\\pi)=\\boxed{4\\pi}.\\]",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 213,
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions given in the question.",
+        "B": "The circumference is \\(20\\pi\\). The arc is \\(72/360=1/5\\) of the circle, so its length is\n\\[\\frac15(20\\pi)=\\boxed{4\\pi}.\\]",
+        "C": "This choice does not satisfy the relationships or conditions given in the question.",
+        "D": "This choice does not satisfy the relationships or conditions given in the question."
+      }
+    },
+    {
+      "id": "math-20261006-new409-q214",
+      "groupId": "math-20261006-new409-q214",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Lines, angles, and triangles",
+      "difficulty": "Hard",
+      "passage": "Triangles \\(ABC\\) and \\(DEF\\) are similar. Angles \\(C\\) and \\(F\\) are right angles, and \\(A\\leftrightarrow D\\). Also,\n\\[\\tan A=\\frac5{12},\\qquad EF=35.\\]",
+      "question": "What is the length of hypotenuse \\(DE\\)?",
+      "choices": {
+        "A": "\\(84\\)",
+        "B": "\\(89\\)",
+        "C": "\\(91\\)",
+        "D": "\\(105\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "Since \\(A\\leftrightarrow D\\), \\(\\tan D=5/12\\). In triangle \\(DEF\\),\n\\[\\frac{EF}{DF}=\\frac5{12}.\\]\nWith \\(EF=35=7(5)\\), \\(DF=84=7(12)\\). The corresponding \\(5\\)-\\(12\\)-\\(13\\) hypotenuse is\n\\[7(13)=\\boxed{91}.\\]",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 214,
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions given in the question.",
+        "B": "This choice does not satisfy the relationships or conditions given in the question.",
+        "C": "Since \\(A\\leftrightarrow D\\), \\(\\tan D=5/12\\). In triangle \\(DEF\\),\n\\[\\frac{EF}{DF}=\\frac5{12}.\\]\nWith \\(EF=35=7(5)\\), \\(DF=84=7(12)\\). The corresponding \\(5\\)-\\(12\\)-\\(13\\) hypotenuse is\n\\[7(13)=\\boxed{91}.\\]",
+        "D": "This choice does not satisfy the relationships or conditions given in the question."
+      }
+    },
+    {
+      "id": "math-20261006-new409-q215",
+      "groupId": "math-20261006-new409-q215",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Lines, angles, and triangles",
+      "difficulty": "Medium",
+      "passage": "Triangle \\(ABC\\) has side lengths \\(AB=10\\), \\(BC=14\\), and \\(AC=16\\). Triangle \\(DEF\\) has side lengths \\(DE=15\\), \\(DF=21\\), and \\(EF=24\\). Also, \\(m\\angle BAC=43^\\circ\\).",
+      "question": "What is \\(m\\angle DEF\\), in degrees?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The side ratios are\n\\[\\frac{15}{10}=\\frac{21}{14}=\\frac{24}{16}=\\frac32,\\]\nso the triangles are similar by SSS. Vertex \\(A\\) corresponds to \\(E\\), so\n\\[\\boxed{m\\angle DEF=43^\\circ}.\\]",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 215,
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "43"
+      ]
+    },
+    {
+      "id": "math-20261006-new409-q216",
+      "groupId": "math-20261006-new409-q216",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Lines, angles, and triangles",
+      "difficulty": "Easy",
+      "passage": "Angle \\(A\\) measures \\(\\frac{5\\pi}{6}\\) radians. Angle \\(B\\) measures \\(15^\\circ\\) less than angle \\(A\\).",
+      "question": "What is the measure of angle \\(B\\), in radians?",
+      "choices": {
+        "A": "\\(\\frac{2\\pi}{3}\\)",
+        "B": "\\(\\frac{3\\pi}{4}\\)",
+        "C": "\\(\\frac{5\\pi}{6}\\)",
+        "D": "\\(\\frac{11\\pi}{12}\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "Angle \\(A\\) is \\(150^\\circ\\), so angle \\(B\\) is \\(135^\\circ\\). Converting,\n\\[135^\\circ\\left(\\frac\\pi{180^\\circ}\\right)=\\boxed{\\frac{3\\pi}{4}}.\\]",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 216,
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions given in the question.",
+        "B": "Angle \\(A\\) is \\(150^\\circ\\), so angle \\(B\\) is \\(135^\\circ\\). Converting,\n\\[135^\\circ\\left(\\frac\\pi{180^\\circ}\\right)=\\boxed{\\frac{3\\pi}{4}}.\\]",
+        "C": "This choice does not satisfy the relationships or conditions given in the question.",
+        "D": "This choice does not satisfy the relationships or conditions given in the question."
+      }
+    },
+    {
+      "id": "math-20261006-new409-q217",
+      "groupId": "math-20261006-new409-q217",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Area and volume",
+      "difficulty": "Easy",
+      "passage": "Rectangles \\(ABCD\\) and \\(WXYZ\\) are similar, with \\(A,B,C,D\\leftrightarrow W,X,Y,Z\\). Also,\n\\[AB=18,\\qquad BC=30,\\qquad XY=25.\\]",
+      "question": "What is \\(YZ\\)?",
+      "choices": {
+        "A": "\\(12\\)",
+        "B": "\\(15\\)",
+        "C": "\\(18\\)",
+        "D": "\\(25\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "Since \\(BC\\leftrightarrow XY\\), the scale factor is \\(25/30=5/6\\). Also \\(CD=AB=18\\), and \\(CD\\leftrightarrow YZ\\). Thus\n\\[YZ=18\\left(\\frac56\\right)=\\boxed{15}.\\]",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 217,
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions given in the question.",
+        "B": "Since \\(BC\\leftrightarrow XY\\), the scale factor is \\(25/30=5/6\\). Also \\(CD=AB=18\\), and \\(CD\\leftrightarrow YZ\\). Thus\n\\[YZ=18\\left(\\frac56\\right)=\\boxed{15}.\\]",
+        "C": "This choice does not satisfy the relationships or conditions given in the question.",
+        "D": "This choice does not satisfy the relationships or conditions given in the question."
+      }
+    },
+    {
+      "id": "math-20261006-new409-q218",
+      "groupId": "math-20261006-new409-q218",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Area and volume",
+      "difficulty": "Easy",
+      "passage": "A rectangular panel is \\(2.4\\) meters long and \\(350\\) centimeters wide.",
+      "question": "What is its area, in square meters?",
+      "choices": {
+        "A": "\\(0.84\\)",
+        "B": "\\(5.9\\)",
+        "C": "\\(8.4\\)",
+        "D": "\\(840\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "Convert \\(350\\) cm to \\(3.5\\) m. Then\n\\[A=(2.4)(3.5)=\\boxed{8.4}\\text{ m}^2.\\]",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 218,
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions given in the question.",
+        "B": "This choice does not satisfy the relationships or conditions given in the question.",
+        "C": "Convert \\(350\\) cm to \\(3.5\\) m. Then\n\\[A=(2.4)(3.5)=\\boxed{8.4}\\text{ m}^2.\\]",
+        "D": "This choice does not satisfy the relationships or conditions given in the question."
+      }
+    },
+    {
+      "id": "math-20261006-new409-q219",
+      "groupId": "math-20261006-new409-q219",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Circles",
+      "difficulty": "Hard",
+      "passage": "Circle M is defined by\n\\[x^2+y^2-6x+8y=0.\\]\nCircle P has the same center, and its radius is \\(\\frac32\\) times circle M's radius.",
+      "question": "Which equation represents circle P?",
+      "choices": {
+        "A": "\\((x-3)^2+(y+4)^2=\\frac{225}{4}\\)",
+        "B": "\\((x-3)^2+(y+4)^2=\\frac{75}{2}\\)",
+        "C": "\\((x+3)^2+(y-4)^2=\\frac{225}{4}\\)",
+        "D": "\\((x-3)^2+(y+4)^2=25\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "Circle M can be written as\n\\[(x-3)^2+(y+4)^2=25,\\]\nso its radius is \\(5\\). Circle P has radius \\(15/2\\), so its radius squared is \\(225/4\\), with the same center.",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 219,
+      "choiceExplanations": {
+        "A": "Circle M can be written as\n\\[(x-3)^2+(y+4)^2=25,\\]\nso its radius is \\(5\\). Circle P has radius \\(15/2\\), so its radius squared is \\(225/4\\), with the same center.",
+        "B": "This choice does not satisfy the relationships or conditions given in the question.",
+        "C": "This choice does not satisfy the relationships or conditions given in the question.",
+        "D": "This choice does not satisfy the relationships or conditions given in the question."
+      }
+    },
+    {
+      "id": "math-20261006-new409-q220",
+      "groupId": "math-20261006-new409-q220",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Lines, angles, and triangles",
+      "difficulty": "Easy",
+      "passage": "In isosceles triangle \\(ABC\\), \\(AB=BC\\). Side \\(AC\\) is extended beyond \\(C\\), forming an exterior angle of \\((4x+20)^\\circ\\). The vertex angle \\(B\\) measures \\(x^\\circ\\).",
+      "question": "What is \\(x\\)?",
+      "choices": {
+        "A": "\\(16\\)",
+        "B": "\\(20\\)",
+        "C": "\\(24\\)",
+        "D": "\\(32\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "The interior angle at \\(C\\) is \\(160-4x\\), and angle \\(A\\) has the same measure. Thus\n\\[2(160-4x)+x=180.\\]\nSolving gives \\(\\boxed{x=20}\\).",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 220,
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions given in the question.",
+        "B": "The interior angle at \\(C\\) is \\(160-4x\\), and angle \\(A\\) has the same measure. Thus\n\\[2(160-4x)+x=180.\\]\nSolving gives \\(\\boxed{x=20}\\).",
+        "C": "This choice does not satisfy the relationships or conditions given in the question.",
+        "D": "This choice does not satisfy the relationships or conditions given in the question."
+      }
+    },
+    {
+      "id": "math-20261006-new409-q221",
+      "groupId": "math-20261006-new409-q221",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Lines, angles, and triangles",
+      "difficulty": "Easy",
+      "passage": "Triangles \\(ABC\\) and \\(DEF\\) are congruent, with \\(A,B,C\\leftrightarrow F,D,E\\). Angles \\(B\\) and \\(D\\) are right angles. An exterior angle at \\(A\\) measures \\(127^\\circ\\).",
+      "question": "What is \\(m\\angle E\\), in degrees?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The interior angle at \\(A\\) is \\(53^\\circ\\). Since \\(B=90^\\circ\\),\n\\[m\\angle C=180^\\circ-90^\\circ-53^\\circ=37^\\circ.\\]\nBecause \\(C\\leftrightarrow E\\), \\(\\boxed{m\\angle E=37^\\circ}\\).",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 221,
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "37"
+      ]
+    },
+    {
+      "id": "math-20261006-new409-q222",
+      "groupId": "math-20261006-new409-q222",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Circles",
+      "difficulty": "Easy",
+      "passage": "A circle has diameter \\(18.4\\) cm. A smaller concentric circle has diameter \\(75\\%\\) of the larger circle's diameter.",
+      "question": "What is the radius, in centimeters, of the smaller circle?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The smaller diameter is\n\\[0.75(18.4)=13.8.\\]\nIts radius is half of this:\n\\[\\boxed{6.9}.\\]",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 222,
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "6.9"
+      ]
+    },
+    {
+      "id": "math-20261006-new409-q223",
+      "groupId": "math-20261006-new409-q223",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Area and volume",
+      "difficulty": "Easy",
+      "passage": "A right rectangular prism has a rectangular base whose length is \\(3\\) inches greater than its width. The base perimeter is \\(34\\) inches, and the prism's volume is \\(1260\\) cubic inches.",
+      "question": "What is the height of the prism?",
+      "choices": {
+        "A": "\\(14\\)",
+        "B": "\\(16\\)",
+        "C": "\\(18\\)",
+        "D": "\\(21\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "Let the width be \\(w\\). Then\n\\[2[w+(w+3)]=34,\\]\nso \\(w=7\\) and the length is \\(10\\). The base area is \\(70\\). Thus\n\\[1260=70h,\\]\nso \\(\\boxed{h=18}\\).",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 223,
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions given in the question.",
+        "B": "This choice does not satisfy the relationships or conditions given in the question.",
+        "C": "Let the width be \\(w\\). Then\n\\[2[w+(w+3)]=34,\\]\nso \\(w=7\\) and the length is \\(10\\). The base area is \\(70\\). Thus\n\\[1260=70h,\\]\nso \\(\\boxed{h=18}\\).",
+        "D": "This choice does not satisfy the relationships or conditions given in the question."
+      }
+    },
+    {
+      "id": "math-20261006-new409-q224",
+      "groupId": "math-20261006-new409-q224",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Lines, angles, and triangles",
+      "difficulty": "Easy",
+      "passage": "Two adjacent angles form a straight angle. Their measures are \\((3t+12)^\\circ\\) and \\((5t-8)^\\circ\\).",
+      "question": "What is the value of \\(t\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "A straight angle is \\(180^\\circ\\):\n\\[(3t+12)+(5t-8)=180.\\]\nThus \\(8t=176\\), so \\(\\boxed{t=22}\\).",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 224,
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "22"
+      ]
+    },
+    {
+      "id": "math-20261006-new409-q225",
+      "groupId": "math-20261006-new409-q225",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Area and volume",
+      "difficulty": "Easy",
+      "passage": "Two right rectangular prisms are similar. Prism P has \\(27\\) times the volume of prism Q. One edge of P is \\(5\\) cm longer than its corresponding edge in Q.",
+      "question": "What is the length, in centimeters, of that edge of prism Q?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Since volumes scale by the cube of a length factor,\n\\[\\sqrt[3]{27}=3.\\]\nSo the edge of P is three times the edge of Q. If the edge of Q is \\(x\\),\n\\[3x=x+5,\\]\nso \\(\\boxed{x=2.5}\\).",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 225,
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "2.5"
+      ]
+    },
+    {
+      "id": "math-20261006-new409-q226",
+      "groupId": "math-20261006-new409-q226",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Area and volume",
+      "difficulty": "Hard",
+      "passage": "Triangle \\(ABC\\) is right at \\(C\\). Point \\(D\\) lies on \\(AC\\), point \\(E\\) lies on \\(BC\\), and \\(DE\\parallel AB\\). Also,\n\\[AD=30,\\qquad CD=12,\\]\nand the area of triangle \\(ABC\\) is \\(756\\) square units.",
+      "question": "What is the length of \\(BE\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Since \\(AC=42\\),\n\\[756=\\frac12(42)(BC),\\]\nso \\(BC=36\\). Similarity gives\n\\[\\frac{CE}{CB}=\\frac{CD}{CA}=\\frac{12}{42}=\\frac27,\\]\nso \\(CE=72/7\\). Therefore,\n\\[BE=36-\\frac{72}{7}=\\boxed{\\frac{180}{7}}.\\]",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 226,
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "180/7"
+      ]
+    },
+    {
+      "id": "math-20261006-new409-q227",
+      "groupId": "math-20261006-new409-q227",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Circles",
+      "difficulty": "Medium",
+      "passage": "An inscribed angle measures \\(63^\\circ\\) and intercepts minor arc \\(AB\\). The arc has length \\(7\\pi\\).",
+      "question": "What is the circumference of the circle?",
+      "choices": {
+        "A": "\\(10\\pi\\)",
+        "B": "\\(14\\pi\\)",
+        "C": "\\(20\\pi\\)",
+        "D": "\\(28\\pi\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "The intercepted arc measures \\(126^\\circ\\), so it is \\(126/360=7/20\\) of the circle. Thus\n\\[7\\pi=\\frac7{20}C,\\]\nwhich gives \\(\\boxed{C=20\\pi}\\).",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 227,
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions given in the question.",
+        "B": "This choice does not satisfy the relationships or conditions given in the question.",
+        "C": "The intercepted arc measures \\(126^\\circ\\), so it is \\(126/360=7/20\\) of the circle. Thus\n\\[7\\pi=\\frac7{20}C,\\]\nwhich gives \\(\\boxed{C=20\\pi}\\).",
+        "D": "This choice does not satisfy the relationships or conditions given in the question."
+      }
+    },
+    {
+      "id": "math-20261006-new409-q228",
+      "groupId": "math-20261006-new409-q228",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Area and volume",
+      "difficulty": "Easy",
+      "passage": "A right triangle has hypotenuse \\(17\\) and one leg \\(8\\).",
+      "question": "What is its area?",
+      "choices": {
+        "A": "\\(30\\)",
+        "B": "\\(60\\)",
+        "C": "\\(68\\)",
+        "D": "\\(120\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "The other leg is\n\\[\\sqrt{17^2-8^2}=15.\\]\nTherefore the area is\n\\[\\frac12(8)(15)=\\boxed{60}.\\]",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 228,
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions given in the question.",
+        "B": "The other leg is\n\\[\\sqrt{17^2-8^2}=15.\\]\nTherefore the area is\n\\[\\frac12(8)(15)=\\boxed{60}.\\]",
+        "C": "This choice does not satisfy the relationships or conditions given in the question.",
+        "D": "This choice does not satisfy the relationships or conditions given in the question."
+      }
+    },
+    {
+      "id": "math-20261006-new409-q229",
+      "groupId": "math-20261006-new409-q229",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Area and volume",
+      "difficulty": "Hard",
+      "passage": "A right square pyramid has total surface area \\(384\\) square inches. The combined area of its four lateral faces is \\(\\frac58\\) of the total surface area.",
+      "question": "What is the height of the pyramid?",
+      "choices": {
+        "A": "\\(6\\)",
+        "B": "\\(8\\)",
+        "C": "\\(10\\)",
+        "D": "\\(12\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "The lateral area is \\(240\\), so the base area is \\(144\\) and the base side is \\(12\\). Each lateral face has area \\(60\\), so its slant height \\(\\ell\\) satisfies\n\\[60=\\frac12(12)\\ell,\\]\ngiving \\(\\ell=10\\). Then\n\\[h^2+6^2=10^2,\\]\nso \\(\\boxed{h=8}\\).",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 229,
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions given in the question.",
+        "B": "The lateral area is \\(240\\), so the base area is \\(144\\) and the base side is \\(12\\). Each lateral face has area \\(60\\), so its slant height \\(\\ell\\) satisfies\n\\[60=\\frac12(12)\\ell,\\]\ngiving \\(\\ell=10\\). Then\n\\[h^2+6^2=10^2,\\]\nso \\(\\boxed{h=8}\\).",
+        "C": "This choice does not satisfy the relationships or conditions given in the question.",
+        "D": "This choice does not satisfy the relationships or conditions given in the question."
+      }
+    },
+    {
+      "id": "math-20261006-new409-q230",
+      "groupId": "math-20261006-new409-q230",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Lines, angles, and triangles",
+      "difficulty": "Medium",
+      "passage": "An equilateral triangle has perimeter \\(54\\). An altitude is drawn from one vertex to the opposite side.",
+      "question": "What is the altitude's length?",
+      "choices": {
+        "A": "\\(9\\sqrt2\\)",
+        "B": "\\(9\\sqrt3\\)",
+        "C": "\\(18\\sqrt2\\)",
+        "D": "\\(18\\sqrt3\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "Each side is \\(18\\). The altitude of an equilateral triangle is\n\\[\\frac{\\sqrt3}{2}(18)=\\boxed{9\\sqrt3}.\\]",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 230,
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions given in the question.",
+        "B": "Each side is \\(18\\). The altitude of an equilateral triangle is\n\\[\\frac{\\sqrt3}{2}(18)=\\boxed{9\\sqrt3}.\\]",
+        "C": "This choice does not satisfy the relationships or conditions given in the question.",
+        "D": "This choice does not satisfy the relationships or conditions given in the question."
+      }
+    },
+    {
+      "id": "math-20261006-new409-q231",
+      "groupId": "math-20261006-new409-q231",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Area and volume",
+      "difficulty": "Easy",
+      "passage": "A right prism has a square base with side length \\(12\\) inches. Its total surface area is \\(624\\) square inches.",
+      "question": "What is its volume, in cubic inches?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "If the height is \\(h\\), then\n\\[2(12^2)+4(12)h=624.\\]\nThus \\(h=7\\). The volume is\n\\[12^2(7)=\\boxed{1008}.\\]",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 231,
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "1008"
+      ]
+    },
+    {
+      "id": "math-20261006-new409-q232",
+      "groupId": "math-20261006-new409-q232",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Area and volume",
+      "difficulty": "Easy",
+      "passage": "The perimeter of a square is \\(8x+20\\) centimeters.",
+      "question": "Which expression gives its area?",
+      "choices": {
+        "A": "\\((8x+20)^2\\)",
+        "B": "\\(4x^2+10x+25\\)",
+        "C": "\\((2x+5)^2\\)",
+        "D": "\\(8x+20\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "A side is one-fourth of the perimeter:\n\\[\\frac{8x+20}{4}=2x+5.\\]\nTherefore the area is\n\\[\\boxed{(2x+5)^2}.\\]",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 232,
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions given in the question.",
+        "B": "This choice does not satisfy the relationships or conditions given in the question.",
+        "C": "A side is one-fourth of the perimeter:\n\\[\\frac{8x+20}{4}=2x+5.\\]\nTherefore the area is\n\\[\\boxed{(2x+5)^2}.\\]",
+        "D": "This choice does not satisfy the relationships or conditions given in the question."
+      }
+    },
+    {
+      "id": "math-20261006-new409-q233",
+      "groupId": "math-20261006-new409-q233",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Circles",
+      "difficulty": "Easy",
+      "passage": "The equation\n\\[x^2+y^2-8x+6y=12\\]\ndefines a circle. Point \\(P=(10,-2)\\) lies on the circle, and \\(PQ\\) is a diameter.",
+      "question": "What are the coordinates of \\(Q\\)?",
+      "choices": {
+        "A": "\\((-2,-4)\\)",
+        "B": "\\((-2,4)\\)",
+        "C": "\\((2,-4)\\)",
+        "D": "\\((4,-2)\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "Completing the square gives\n\\[(x-4)^2+(y+3)^2=37,\\]\nso the center is \\((4,-3)\\), the midpoint of \\(P\\) and \\(Q\\). Solving midpoint equations gives \\(Q=\\boxed{(-2,-4)}\\).",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 233,
+      "choiceExplanations": {
+        "A": "Completing the square gives\n\\[(x-4)^2+(y+3)^2=37,\\]\nso the center is \\((4,-3)\\), the midpoint of \\(P\\) and \\(Q\\). Solving midpoint equations gives \\(Q=\\boxed{(-2,-4)}\\).",
+        "B": "This choice does not satisfy the relationships or conditions given in the question.",
+        "C": "This choice does not satisfy the relationships or conditions given in the question.",
+        "D": "This choice does not satisfy the relationships or conditions given in the question."
+      }
+    },
+    {
+      "id": "math-20261006-new409-q234",
+      "groupId": "math-20261006-new409-q234",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Lines, angles, and triangles",
+      "difficulty": "Hard",
+      "passage": "Lines \\(AE\\) and \\(BD\\) intersect at \\(C\\), so triangles \\(ABC\\) and \\(DCE\\) have congruent vertical angles at \\(C\\). Consider:\n\nI. \\(AB\\parallel DE\\)\n\nII. \\(AC=CE\\)",
+      "question": "Which statement is sufficient by itself to prove triangle \\(ABC\\) congruent to triangle \\(DCE\\)?",
+      "choices": {
+        "A": "I only",
+        "B": "II only",
+        "C": "Both I and II",
+        "D": "Neither I nor II"
+      },
+      "correctAnswer": "D",
+      "explanation": "Statement I can establish additional equal angles and therefore similarity, but similarity alone does not prove equal size. Statement II gives only one equal side together with the vertical-angle pair, which is not enough for a congruence theorem. Therefore neither statement is sufficient by itself.",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 234,
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions given in the question.",
+        "B": "This choice does not satisfy the relationships or conditions given in the question.",
+        "C": "This choice does not satisfy the relationships or conditions given in the question.",
+        "D": "Statement I can establish additional equal angles and therefore similarity, but similarity alone does not prove equal size. Statement II gives only one equal side together with the vertical-angle pair, which is not enough for a congruence theorem. Therefore neither statement is sufficient by itself."
+      }
+    },
+    {
+      "id": "math-20261006-new409-q315",
+      "groupId": "math-20261006-new409-q315",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Area and volume",
+      "difficulty": "Easy",
+      "passage": "A triangle has area equal to \\(\\frac38\\) of the area of a \\(48\\)-cm by \\(30\\)-cm rectangle. The triangle's base is \\(45\\) cm.",
+      "question": "What is the triangle's height, in centimeters?",
+      "choices": {
+        "A": "\\(12\\)",
+        "B": "\\(24\\)",
+        "C": "\\(30\\)",
+        "D": "\\(48\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "The rectangle's area is \\(1440\\), so the triangle's area is\n\\[\\frac38(1440)=540.\\]\nUsing \\(540=\\frac12(45)h\\), we get \\(\\boxed{h=24}\\).",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 315,
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions given in the question.",
+        "B": "The rectangle's area is \\(1440\\), so the triangle's area is\n\\[\\frac38(1440)=540.\\]\nUsing \\(540=\\frac12(45)h\\), we get \\(\\boxed{h=24}\\).",
+        "C": "This choice does not satisfy the relationships or conditions given in the question.",
+        "D": "This choice does not satisfy the relationships or conditions given in the question."
+      }
+    },
+    {
+      "id": "math-20261006-new409-q316",
+      "groupId": "math-20261006-new409-q316",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Lines, angles, and triangles",
+      "difficulty": "Medium",
+      "passage": "A right triangle has two \\(45^\\circ\\) acute angles. Its legs have lengths \\(3x+4\\) and \\(5x-10\\).",
+      "question": "What is the length of the hypotenuse?",
+      "choices": {
+        "A": "\\(25\\)",
+        "B": "\\(25\\sqrt2\\)",
+        "C": "\\(50\\)",
+        "D": "\\(50\\sqrt2\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "A \\(45^\\circ\\)-\\(45^\\circ\\)-\\(90^\\circ\\) triangle has equal legs:\n\\[3x+4=5x-10.\\]\nThus \\(x=7\\), and each leg is \\(25\\). The hypotenuse is\n\\[\\boxed{25\\sqrt2}.\\]",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 316,
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions given in the question.",
+        "B": "A \\(45^\\circ\\)-\\(45^\\circ\\)-\\(90^\\circ\\) triangle has equal legs:\n\\[3x+4=5x-10.\\]\nThus \\(x=7\\), and each leg is \\(25\\). The hypotenuse is\n\\[\\boxed{25\\sqrt2}.\\]",
+        "C": "This choice does not satisfy the relationships or conditions given in the question.",
+        "D": "This choice does not satisfy the relationships or conditions given in the question."
+      }
+    },
+    {
+      "id": "math-20261006-new409-q317",
+      "groupId": "math-20261006-new409-q317",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Lines, angles, and triangles",
+      "difficulty": "Easy",
+      "passage": "One side of a triangle is extended, creating an exterior angle of \\(5x^\\circ\\). The two remote interior angles measure \\((2x+10)^\\circ\\) and \\((x+20)^\\circ\\).",
+      "question": "What is the measure of the exterior angle?",
+      "choices": {
+        "A": "\\(45^\\circ\\)",
+        "B": "\\(60^\\circ\\)",
+        "C": "\\(75^\\circ\\)",
+        "D": "\\(105^\\circ\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "By the exterior angle theorem,\n\\[5x=(2x+10)+(x+20).\\]\nThus \\(2x=30\\), so \\(x=15\\). The exterior angle is\n\\[5(15)=\\boxed{75^\\circ}.\\]",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 317,
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions given in the question.",
+        "B": "This choice does not satisfy the relationships or conditions given in the question.",
+        "C": "By the exterior angle theorem,\n\\[5x=(2x+10)+(x+20).\\]\nThus \\(2x=30\\), so \\(x=15\\). The exterior angle is\n\\[5(15)=\\boxed{75^\\circ}.\\]",
+        "D": "This choice does not satisfy the relationships or conditions given in the question."
+      }
+    },
+    {
+      "id": "math-20261006-new409-q322",
+      "groupId": "math-20261006-new409-q322",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Circles",
+      "difficulty": "Hard",
+      "passage": "A circle with center \\(O\\) has circumference \\(14\\pi\\) cm. From point \\(P\\) outside the circle, \\(PA\\) and \\(PB\\) are tangent at \\(A\\) and \\(B\\). Also, \\(OP=25\\) cm.",
+      "question": "What is the area, in square centimeters, of quadrilateral \\(OAPB\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The radius is \\(7\\). Since a radius is perpendicular to a tangent,\n\\[PA=\\sqrt{25^2-7^2}=24.\\]\nThe quadrilateral is two congruent right triangles, so its area is\n\\[2\\left(\\frac12\\cdot7\\cdot24\\right)=\\boxed{168}.\\]",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 322,
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "168"
+      ]
+    },
+    {
+      "id": "math-20261006-new409-q323",
+      "groupId": "math-20261006-new409-q323",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Area and volume",
+      "difficulty": "Medium",
+      "passage": "Triangles A and B are similar. Each side of triangle A is \\(\\frac32\\) times its corresponding side in triangle B. The sum of their areas is \\(325\\) square inches.",
+      "question": "What is the area, in square inches, of triangle B?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The area scale factor is\n\\[\\left(\\frac32\\right)^2=\\frac94.\\]\nIf triangle B has area \\(A\\), then\n\\[A+\\frac94A=325.\\]\nThus \\(\\frac{13}{4}A=325\\), so \\(\\boxed{A=100}\\).",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 323,
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "100"
+      ]
+    },
+    {
+      "id": "math-20261006-new409-q324",
+      "groupId": "math-20261006-new409-q324",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Circles",
+      "difficulty": "Hard",
+      "passage": "Circle A is represented by\n\\[x^2+y^2-6x+8y+m=0.\\]\nCircle B has the same center, and its diameter is \\(\\frac53\\) times circle A's diameter. The point \\((9,4)\\) lies on circle B.",
+      "question": "What is the value of \\(m\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Complete the square:\n\\[(x-3)^2+(y+4)^2=25-m.\\]\nThe common center is \\((3,-4)\\). Its distance to \\((9,4)\\) is \\(10\\), so circle B has radius \\(10\\). Since \\(r_B=\\frac53r_A\\), circle A has radius \\(6\\). Thus\n\\[25-m=36,\\]\nso \\(\\boxed{m=-11}\\).",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 324,
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "-11"
+      ]
+    },
+    {
+      "id": "math-20261006-new409-q325",
+      "groupId": "math-20261006-new409-q325",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Lines, angles, and triangles",
+      "difficulty": "Easy",
+      "passage": "A \\(30^\\circ\\)-\\(60^\\circ\\)-\\(90^\\circ\\) triangle has a perimeter that is \\(30\\) units greater than the length of its longer leg.",
+      "question": "What is the length of the longest side?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Let the shortest leg be \\(x\\). The side lengths are \\(x\\), \\(x\\sqrt3\\), and \\(2x\\). The condition gives\n\\[x+x\\sqrt3+2x=x\\sqrt3+30.\\]\nThus \\(3x=30\\), so \\(x=10\\). The hypotenuse is \\(\\boxed{20}\\).",
+      "sourceBatch": "2026-10-06-new-paste409-audited",
+      "sourceQuestionNumber": 325,
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "20"
+      ]
     }
   ]
 }
