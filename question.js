@@ -294,7 +294,7 @@ function repairCommonMathNotation(value) {
 
             const repaired =
                 body.replace(
-                    /([a-zA-Z])([2-9])\b/g,
+                    /([a-zA-Z])([2-9])(?=\b|[a-zA-Z])/g,
                     (
                         token,
                         variable,
@@ -1199,6 +1199,311 @@ function renderQuestionVerticalBarGraph(
 }
 
 
+function getNiceGraphStep(
+    range,
+    targetTicks
+) {
+    const safeRange =
+        Math.abs(
+            Number(range)
+        );
+
+    if (
+        !Number.isFinite(safeRange) ||
+        safeRange <= 0
+    ) {
+        return 1;
+    }
+
+    const raw =
+        safeRange /
+        Math.max(
+            2,
+            Number(targetTicks) || 8
+        );
+
+    const magnitude =
+        Math.pow(
+            10,
+            Math.floor(
+                Math.log10(raw)
+            )
+        );
+
+    const normalized =
+        raw / magnitude;
+
+    let nice = 1;
+
+    if (normalized > 7.5) {
+        nice = 10;
+    } else if (normalized > 3.5) {
+        nice = 5;
+    } else if (normalized > 2.25) {
+        nice = 2.5;
+    } else if (normalized > 1.5) {
+        nice = 2;
+    }
+
+    return nice * magnitude;
+}
+
+
+function formatGraphTick(
+    value,
+    step
+) {
+    const numeric =
+        Math.abs(Number(value)) < 1e-10
+            ? 0
+            : Number(value);
+
+    if (!Number.isFinite(numeric)) {
+        return "";
+    }
+
+    const safeStep =
+        Math.abs(
+            Number(step)
+        );
+
+    let decimals = 0;
+
+    if (
+        Number.isFinite(safeStep) &&
+        safeStep > 0 &&
+        safeStep < 1
+    ) {
+        decimals =
+            Math.min(
+                4,
+                Math.max(
+                    0,
+                    Math.ceil(
+                        -Math.log10(
+                            safeStep
+                        )
+                    ) + 1
+                )
+            );
+    } else if (
+        Number.isFinite(safeStep) &&
+        Math.abs(
+            safeStep -
+            Math.round(safeStep)
+        ) > 1e-9
+    ) {
+        decimals = 1;
+    }
+
+    return numeric
+        .toFixed(decimals)
+        .replace(/\.0+$/, "")
+        .replace(
+            /(\.\d*?[1-9])0+$/,
+            "$1"
+        );
+}
+
+
+function getExtendedLinearSeriesPoints(
+    points,
+    xMin,
+    xMax,
+    yMin,
+    yMax
+) {
+    if (
+        !Array.isArray(points) ||
+        points.length < 2
+    ) {
+        return null;
+    }
+
+    const first =
+        points[0].map(Number);
+
+    const second =
+        points.find(
+            point =>
+                Math.abs(
+                    Number(point[0]) -
+                    first[0]
+                ) > 1e-10 ||
+                Math.abs(
+                    Number(point[1]) -
+                    first[1]
+                ) > 1e-10
+        );
+
+    if (!second) {
+        return null;
+    }
+
+    const x1 = first[0];
+    const y1 = first[1];
+    const x2 = Number(second[0]);
+    const y2 = Number(second[1]);
+    const dx = x2 - x1;
+    const dy = y2 - y1;
+
+    const collinear =
+        points.every(
+            point => {
+                const px =
+                    Number(point[0]);
+                const py =
+                    Number(point[1]);
+
+                return Math.abs(
+                    dx * (py - y1) -
+                    dy * (px - x1)
+                ) <=
+                    1e-7 *
+                    Math.max(
+                        1,
+                        Math.abs(dx),
+                        Math.abs(dy)
+                    );
+            }
+        );
+
+    if (!collinear) {
+        return null;
+    }
+
+    if (Math.abs(dx) < 1e-10) {
+        if (
+            x1 < xMin ||
+            x1 > xMax
+        ) {
+            return null;
+        }
+
+        return [
+            [x1, yMin],
+            [x1, yMax]
+        ];
+    }
+
+    const slope = dy / dx;
+    const candidates = [];
+
+    const addCandidate =
+        (x, y) => {
+            if (
+                x >= xMin - 1e-8 &&
+                x <= xMax + 1e-8 &&
+                y >= yMin - 1e-8 &&
+                y <= yMax + 1e-8 &&
+                Number.isFinite(x) &&
+                Number.isFinite(y)
+            ) {
+                const duplicate =
+                    candidates.some(
+                        point =>
+                            Math.abs(
+                                point[0] - x
+                            ) < 1e-7 &&
+                            Math.abs(
+                                point[1] - y
+                            ) < 1e-7
+                    );
+
+                if (!duplicate) {
+                    candidates.push(
+                        [x, y]
+                    );
+                }
+            }
+        };
+
+    addCandidate(
+        xMin,
+        y1 +
+            slope *
+            (xMin - x1)
+    );
+
+    addCandidate(
+        xMax,
+        y1 +
+            slope *
+            (xMax - x1)
+    );
+
+    if (Math.abs(slope) > 1e-10) {
+        addCandidate(
+            x1 +
+                (yMin - y1) /
+                slope,
+            yMin
+        );
+
+        addCandidate(
+            x1 +
+                (yMax - y1) /
+                slope,
+            yMax
+        );
+    } else {
+        addCandidate(
+            xMin,
+            y1
+        );
+
+        addCandidate(
+            xMax,
+            y1
+        );
+    }
+
+    if (candidates.length < 2) {
+        return null;
+    }
+
+    let bestPair = [
+        candidates[0],
+        candidates[1]
+    ];
+    let bestDistance = -1;
+
+    for (
+        let i = 0;
+        i < candidates.length;
+        i++
+    ) {
+        for (
+            let j = i + 1;
+            j < candidates.length;
+            j++
+        ) {
+            const distance =
+                Math.pow(
+                    candidates[i][0] -
+                    candidates[j][0],
+                    2
+                ) +
+                Math.pow(
+                    candidates[i][1] -
+                    candidates[j][1],
+                    2
+                );
+
+            if (distance > bestDistance) {
+                bestDistance = distance;
+                bestPair = [
+                    candidates[i],
+                    candidates[j]
+                ];
+            }
+        }
+    }
+
+    return bestPair;
+}
+
+
 function renderQuestionXYGraph(graph) {
     const xMin =
         Number.isFinite(Number(graph?.xMin))
@@ -1224,12 +1529,12 @@ function renderQuestionXYGraph(graph) {
         return "";
     }
 
-    const width = 640;
-    const height = 430;
-    const left = 54;
-    const right = 24;
-    const top = 32;
-    const bottom = 46;
+    const width = 720;
+    const height = 500;
+    const left = 78;
+    const right = 34;
+    const top = 34;
+    const bottom = 72;
     const plotWidth =
         width - left - right;
     const plotHeight =
@@ -1253,35 +1558,107 @@ function renderQuestionXYGraph(graph) {
             ) *
             plotHeight;
 
-    const xStep =
+    const configuredXStep =
         Number(graph.xStep) > 0
             ? Number(graph.xStep)
-            : 1;
-    const yStep =
+            : null;
+    const configuredYStep =
         Number(graph.yStep) > 0
             ? Number(graph.yStep)
-            : 1;
+            : null;
+
+    const xGridStep =
+        configuredXStep ||
+        getNiceGraphStep(
+            xMax - xMin,
+            Math.min(
+                22,
+                plotWidth / 30
+            )
+        );
+
+    const yGridStep =
+        configuredYStep ||
+        getNiceGraphStep(
+            yMax - yMin,
+            Math.min(
+                20,
+                plotHeight / 24
+            )
+        );
+
+    const desiredXLabelStep =
+        getNiceGraphStep(
+            xMax - xMin,
+            plotWidth / 52
+        );
+
+    const desiredYLabelStep =
+        getNiceGraphStep(
+            yMax - yMin,
+            plotHeight / 31
+        );
+
+    const xLabelEvery =
+        Math.max(
+            1,
+            Math.ceil(
+                desiredXLabelStep /
+                xGridStep -
+                1e-9
+            )
+        );
+
+    const yLabelEvery =
+        Math.max(
+            1,
+            Math.ceil(
+                desiredYLabelStep /
+                yGridStep -
+                1e-9
+            )
+        );
+
+    const xStart =
+        Math.ceil(
+            xMin / xGridStep -
+            1e-10
+        ) * xGridStep;
+
+    const yStart =
+        Math.ceil(
+            yMin / yGridStep -
+            1e-10
+        ) * yGridStep;
 
     let grid = "";
 
+    let xIndex = 0;
+
     for (
-        let x =
-            Math.ceil(xMin / xStep) *
-            xStep;
+        let x = xStart;
         x <= xMax + 1e-9;
-        x += xStep
+        x += xGridStep
     ) {
         const px =
             xScale(x);
         const axis =
             Math.abs(x) < 1e-9;
+        const major =
+            xIndex %
+                xLabelEvery ===
+            0;
 
         grid +=
             '<line class="' +
             (
                 axis
                     ? "question-xy-axis"
-                    : "question-xy-grid"
+                    : (
+                        major
+                            ? "question-xy-grid question-xy-grid-major"
+                            : "question-xy-grid question-xy-grid-minor"
+                    )
             ) +
             '" x1="' +
             px +
@@ -1293,39 +1670,61 @@ function renderQuestionXYGraph(graph) {
             (top + plotHeight) +
             '"></line>';
 
-        if (
-            !axis &&
-            Number.isInteger(x)
-        ) {
+        if (major) {
             grid +=
+                '<line class="question-xy-tick-mark" x1="' +
+                px +
+                '" x2="' +
+                px +
+                '" y1="' +
+                (top + plotHeight) +
+                '" y2="' +
+                (top + plotHeight + 6) +
+                '"></line>' +
                 '<text class="question-xy-tick" x="' +
                 px +
                 '" y="' +
-                (top + plotHeight + 20) +
+                (top + plotHeight + 24) +
                 '" text-anchor="middle">' +
-                escapeHtml(x) +
+                escapeHtml(
+                    formatGraphTick(
+                        x,
+                        xGridStep *
+                        xLabelEvery
+                    )
+                ) +
                 '</text>';
         }
+
+        xIndex++;
     }
 
+    let yIndex = 0;
+
     for (
-        let y =
-            Math.ceil(yMin / yStep) *
-            yStep;
+        let y = yStart;
         y <= yMax + 1e-9;
-        y += yStep
+        y += yGridStep
     ) {
         const py =
             yScale(y);
         const axis =
             Math.abs(y) < 1e-9;
+        const major =
+            yIndex %
+                yLabelEvery ===
+            0;
 
         grid +=
             '<line class="' +
             (
                 axis
                     ? "question-xy-axis"
-                    : "question-xy-grid"
+                    : (
+                        major
+                            ? "question-xy-grid question-xy-grid-major"
+                            : "question-xy-grid question-xy-grid-minor"
+                    )
             ) +
             '" x1="' +
             left +
@@ -1337,20 +1736,75 @@ function renderQuestionXYGraph(graph) {
             py +
             '"></line>';
 
-        if (
-            !axis &&
-            Number.isInteger(y)
-        ) {
+        if (major) {
             grid +=
+                '<line class="question-xy-tick-mark" x1="' +
+                (left - 6) +
+                '" x2="' +
+                left +
+                '" y1="' +
+                py +
+                '" y2="' +
+                py +
+                '"></line>' +
                 '<text class="question-xy-tick" x="' +
-                (left - 9) +
+                (left - 11) +
                 '" y="' +
                 (py + 4) +
                 '" text-anchor="end">' +
-                escapeHtml(y) +
+                escapeHtml(
+                    formatGraphTick(
+                        y,
+                        yGridStep *
+                        yLabelEvery
+                    )
+                ) +
                 '</text>';
         }
+
+        yIndex++;
     }
+
+    const axes =
+        '<rect class="question-xy-plot-border" x="' +
+        left +
+        '" y="' +
+        top +
+        '" width="' +
+        plotWidth +
+        '" height="' +
+        plotHeight +
+        '"></rect>' +
+        (
+            yMin <= 0 &&
+            yMax >= 0
+                ? '<line class="question-xy-axis question-xy-axis-emphasis" x1="' +
+                    left +
+                    '" x2="' +
+                    (left + plotWidth) +
+                    '" y1="' +
+                    yScale(0) +
+                    '" y2="' +
+                    yScale(0) +
+                    '" marker-end="url(#question-xy-arrow)"></line>'
+                : ""
+        ) +
+        (
+            xMin <= 0 &&
+            xMax >= 0
+                ? '<line class="question-xy-axis question-xy-axis-emphasis" x1="' +
+                    xScale(0) +
+                    '" x2="' +
+                    xScale(0) +
+                    '" y1="' +
+                    (top + plotHeight) +
+                    '" y2="' +
+                    top +
+                    '" marker-end="url(#question-xy-arrow)"></line>'
+                : ""
+        );
+
+    const legendItems = [];
 
     const series =
         (graph.series || [])
@@ -1369,11 +1823,39 @@ function renderQuestionXYGraph(graph) {
                                             Number(point[1])
                                         )
                                 )
+                                .map(
+                                    point => [
+                                        Number(point[0]),
+                                        Number(point[1])
+                                    ]
+                                )
                             : [];
 
                     if (!points.length) {
                         return "";
                     }
+
+                    if (item.label) {
+                        legendItems.push({
+                            label:
+                                String(item.label),
+                            seriesIndex
+                        });
+                    }
+
+                    const extended =
+                        item.connect === false
+                            ? null
+                            : getExtendedLinearSeriesPoints(
+                                points,
+                                xMin,
+                                xMax,
+                                yMin,
+                                yMax
+                            );
+
+                    const linePoints =
+                        extended || points;
 
                     const polyline =
                         item.connect === false
@@ -1382,89 +1864,231 @@ function renderQuestionXYGraph(graph) {
                                 '<polyline class="question-xy-series series-' +
                                 seriesIndex +
                                 '" points="' +
-                                points
+                                linePoints
                                     .map(
                                         point =>
                                             xScale(
-                                                Number(point[0])
+                                                point[0]
                                             ) +
                                             "," +
                                             yScale(
-                                                Number(point[1])
+                                                point[1]
                                             )
                                     )
                                     .join(" ") +
                                 '"></polyline>'
                             );
 
-                    const dots =
+                    const visiblePointIndices =
                         points
-                            .filter(
+                            .map(
                                 (
                                     point,
                                     pointIndex
-                                ) =>
+                                ) => ({
+                                    point,
+                                    pointIndex
+                                })
+                            )
+                            .filter(
+                                entry =>
                                     item.showPoints ||
                                     (
                                         Array.isArray(
                                             item.highlightIndices
                                         ) &&
                                         item.highlightIndices.includes(
-                                            pointIndex
+                                            entry.pointIndex
                                         )
                                     )
-                            )
+                            );
+
+                    const dots =
+                        visiblePointIndices
                             .map(
-                                point =>
-                                    '<circle class="question-xy-point series-' +
-                                    seriesIndex +
-                                    '" cx="' +
-                                    xScale(
-                                        Number(point[0])
-                                    ) +
-                                    '" cy="' +
-                                    yScale(
-                                        Number(point[1])
-                                    ) +
-                                    '" r="4.5"></circle>'
+                                entry => {
+                                    const highlighted =
+                                        Array.isArray(
+                                            item.highlightIndices
+                                        ) &&
+                                        item.highlightIndices.includes(
+                                            entry.pointIndex
+                                        );
+
+                                    return (
+                                        '<circle class="question-xy-point series-' +
+                                        seriesIndex +
+                                        (
+                                            highlighted
+                                                ? " question-xy-point-highlight"
+                                                : ""
+                                        ) +
+                                        '" cx="' +
+                                        xScale(
+                                            entry.point[0]
+                                        ) +
+                                        '" cy="' +
+                                        yScale(
+                                            entry.point[1]
+                                        ) +
+                                        '" r="' +
+                                        (
+                                            highlighted
+                                                ? "6"
+                                                : "5"
+                                        ) +
+                                        '"></circle>'
+                                    );
+                                }
                             )
                             .join("");
 
+                    const labelPoints =
+                        Boolean(
+                            item.labelPoints ||
+                            graph.labelPoints
+                        );
+
+                    const pointLabels =
+                        labelPoints
+                            ? visiblePointIndices
+                                .map(
+                                    entry => {
+                                        const px =
+                                            xScale(
+                                                entry.point[0]
+                                            );
+                                        const py =
+                                            yScale(
+                                                entry.point[1]
+                                            );
+                                        const nearRight =
+                                            px >
+                                            left +
+                                            plotWidth -
+                                            80;
+                                        const nearTop =
+                                            py <
+                                            top + 28;
+
+                                        return (
+                                            '<text class="question-xy-point-label" x="' +
+                                            (
+                                                px +
+                                                (
+                                                    nearRight
+                                                        ? -9
+                                                        : 9
+                                                )
+                                            ) +
+                                            '" y="' +
+                                            (
+                                                py +
+                                                (
+                                                    nearTop
+                                                        ? 18
+                                                        : -9
+                                                )
+                                            ) +
+                                            '" text-anchor="' +
+                                            (
+                                                nearRight
+                                                    ? "end"
+                                                    : "start"
+                                            ) +
+                                            '">' +
+                                            escapeHtml(
+                                                "(" +
+                                                formatGraphTick(
+                                                    entry.point[0],
+                                                    xGridStep
+                                                ) +
+                                                ", " +
+                                                formatGraphTick(
+                                                    entry.point[1],
+                                                    yGridStep
+                                                ) +
+                                                ")"
+                                            ) +
+                                            '</text>'
+                                        );
+                                    }
+                                )
+                                .join("")
+                            : "";
+
                     return (
                         polyline +
-                        dots
+                        dots +
+                        pointLabels
                     );
                 }
             )
             .join("");
 
+    const xLabel =
+        graph.xLabel ||
+        "x";
+
+    const yLabel =
+        graph.yLabel ||
+        "y";
+
     const axisLabels =
-        (
-            graph.xLabel
-                ? '<text class="question-xy-axis-label question-xy-x-label" x="' +
-                    (left + plotWidth) +
-                    '" y="' +
-                    (height - 7) +
-                    '" text-anchor="end">' +
-                    escapeHtml(graph.xLabel) +
-                  '</text>'
-                : ""
-        ) +
-        (
-            graph.yLabel
-                ? '<text class="question-xy-axis-label question-xy-y-label" x="' +
-                    (left + 6) +
-                    '" y="' +
-                    (top + 14) +
-                    '" text-anchor="start">' +
-                    escapeHtml(graph.yLabel) +
-                  '</text>'
-                : ""
-        );
+        '<text class="question-xy-axis-label question-xy-x-label" x="' +
+        (left + plotWidth / 2) +
+        '" y="' +
+        (height - 13) +
+        '" text-anchor="middle">' +
+        escapeHtml(xLabel) +
+        '</text>' +
+        '<text class="question-xy-axis-label question-xy-y-label" transform="translate(20 ' +
+        (top + plotHeight / 2) +
+        ') rotate(-90)" text-anchor="middle">' +
+        escapeHtml(yLabel) +
+        '</text>';
+
+    const legend =
+        legendItems.length
+            ? (
+                '<g class="question-xy-legend">' +
+                legendItems
+                    .map(
+                        (
+                            entry,
+                            index
+                        ) =>
+                            '<g transform="translate(' +
+                            (
+                                left +
+                                plotWidth -
+                                118
+                            ) +
+                            " " +
+                            (
+                                top +
+                                18 +
+                                index * 22
+                            ) +
+                            ')">' +
+                            '<line class="question-xy-series series-' +
+                            entry.seriesIndex +
+                            '" x1="0" x2="22" y1="0" y2="0"></line>' +
+                            '<text class="question-xy-legend-text" x="30" y="4">' +
+                            escapeHtml(
+                                entry.label
+                            ) +
+                            '</text>' +
+                            '</g>'
+                    )
+                    .join("") +
+                '</g>'
+            )
+            : "";
 
     const caption =
         graph.caption
-            ? '<figcaption>' +
+            ? '<figcaption class="question-graph-caption">' +
                 renderInlineFormatting(
                     graph.caption
                 ) +
@@ -1485,15 +2109,34 @@ function renderQuestionXYGraph(graph) {
                         "Coordinate graph"
                     ) +
                     '">' +
+                    '<defs>' +
+                        '<clipPath id="question-xy-clip">' +
+                            '<rect x="' +
+                            left +
+                            '" y="' +
+                            top +
+                            '" width="' +
+                            plotWidth +
+                            '" height="' +
+                            plotHeight +
+                            '"></rect>' +
+                        '</clipPath>' +
+                        '<marker id="question-xy-arrow" markerWidth="7" markerHeight="7" refX="5.5" refY="3.5" orient="auto" markerUnits="strokeWidth">' +
+                            '<path d="M0,0 L7,3.5 L0,7 z" class="question-xy-arrow-head"></path>' +
+                        '</marker>' +
+                    '</defs>' +
                     grid +
-                    series +
+                    axes +
+                    '<g clip-path="url(#question-xy-clip)">' +
+                        series +
+                    '</g>' +
+                    legend +
                     axisLabels +
                 '</svg>' +
             '</div>' +
         '</figure>'
     );
 }
-
 
 function renderQuestionGraph(
     graph
@@ -3911,9 +4554,26 @@ function renderStudentResponse(question) {
             question.id
         ];
 
+    const previousWrong =
+        wrongAttempts[
+            question.id
+        ];
+
+    const hasWrongAttempt =
+        Array.isArray(
+            previousWrong
+        ) &&
+        previousWrong.length > 0 &&
+        !checked;
+
     if (checked) {
         input.classList.add(
             "correct-answer"
+        );
+        input.disabled = true;
+    } else if (hasWrongAttempt) {
+        input.classList.add(
+            "incorrect-answer"
         );
         input.disabled = true;
     }
@@ -3933,26 +4593,57 @@ function renderStudentResponse(question) {
     wrapper.appendChild(label);
     wrapper.appendChild(input);
 
-    const previousWrong =
-        wrongAttempts[
-            question.id
-        ];
+    if (hasWrongAttempt) {
+        const result =
+            document.createElement(
+                "div"
+            );
 
-    if (
-        Array.isArray(previousWrong) &&
-        previousWrong.length &&
-        !checked
-    ) {
-        const hint =
-            document.createElement("div");
+        result.className =
+            "student-response-reveal";
 
-        hint.className =
-            "student-response-retry";
+        const accepted =
+            (
+                Array.isArray(
+                    question.accepted_answers
+                )
+                    ? question.accepted_answers
+                    : []
+            )
+                .map(
+                    value =>
+                        String(value).trim()
+                )
+                .filter(Boolean);
 
-        hint.textContent =
-            "That answer is not correct. Try again.";
+        const fallback =
+            String(
+                question.correct_answer ||
+                ""
+            ).trim();
 
-        wrapper.appendChild(hint);
+        const displayedAnswers =
+            accepted.length
+                ? accepted
+                : (
+                    fallback
+                        ? [fallback]
+                        : []
+                );
+
+        result.innerHTML =
+            '<span class="student-response-reveal-label">Correct answer</span>' +
+            '<strong class="student-response-reveal-value">' +
+            escapeHtml(
+                displayedAnswers.join(
+                    " or "
+                ) || "—"
+            ) +
+            '</strong>';
+
+        wrapper.appendChild(
+            result
+        );
     }
 
     if (checked) {
@@ -4379,7 +5070,16 @@ function renderAnswerFeedback(
         "";
 
     if (checkAnswerButton) {
-        if (checked) {
+        const studentResponseRevealed =
+            question.answer_type ===
+                "student-response" &&
+            attemptedWrong.length > 0 &&
+            !checked;
+
+        if (
+            checked ||
+            studentResponseRevealed
+        ) {
             checkAnswerButton.disabled =
                 true;
 
