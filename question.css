@@ -301,7 +301,7 @@
 .choice {
     width: 100%;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 15px;
     padding: 17px 52px 17px 18px;
     border: 1.5px solid #d5dee8;
@@ -409,7 +409,9 @@
 }
 
 .choice-text {
-    padding-top: 4px;
+    flex: 1 1 auto;
+    min-width: 0;
+    padding-top: 0;
     white-space: pre-line;
 }
 
