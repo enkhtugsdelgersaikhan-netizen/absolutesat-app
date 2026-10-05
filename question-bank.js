@@ -90,7 +90,7 @@ function escapeHtml(value) {
 
 
 const QUESTION_BANK_FILTER_STORAGE_KEY =
-    "absoluteprep-question-bank-filters:" +
+    "absoluteprep-question-bank-filters:v2:" +
     activeSection;
 
 function saveQuestionBankFilters() {
@@ -166,6 +166,58 @@ function syncQuestionBankFilterUI() {
         reviewOnlyCheckbox.checked =
             reviewOnly;
     }
+
+    const syncDropdown = (
+        dropdown,
+        values
+    ) => {
+        if (!dropdown) return [];
+
+        const options = [
+            ...dropdown.querySelectorAll(
+                ".filter-dropdown-option"
+            )
+        ].map(option => ({
+            value:
+                option.dataset.value ||
+                "all",
+            label:
+                option.textContent.trim()
+        }));
+
+        const allowed =
+            new Set(
+                options
+                    .map(option => option.value)
+                    .filter(value => value !== "all")
+            );
+
+        const validValues =
+            (Array.isArray(values) ? values : [])
+                .filter(value =>
+                    allowed.has(value)
+                );
+
+        setDropdownSelections(
+            dropdown,
+            validValues,
+            options
+        );
+
+        return validValues;
+    };
+
+    activeDifficulty =
+        syncDropdown(
+            difficultyFilter,
+            activeDifficulty
+        );
+
+    activeStatus =
+        syncDropdown(
+            statusFilter,
+            activeStatus
+        );
 
     renderSkillPicker();
 }
