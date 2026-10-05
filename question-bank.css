@@ -1150,3 +1150,85 @@
     background:#eef8f5!important;
     box-shadow:0 1px 3px rgba(15,118,110,.035)!important;
 }
+
+
+/* Nested domain cards — subtopics visibly live inside the domain control */
+.domain-skill-list{
+    gap:14px;
+}
+.domain-skill-group{
+    padding:0!important;
+    overflow:hidden;
+    border:1px solid #cfe0dc!important;
+    border-radius:16px!important;
+    background:linear-gradient(180deg,#f9fcfb 0%,#f3f8f7 100%)!important;
+    box-shadow:0 2px 7px rgba(15,23,42,.025)!important;
+}
+.domain-skill-group:hover{
+    border-color:#abcfc7!important;
+    box-shadow:0 4px 10px rgba(15,23,42,.035)!important;
+}
+.domain-skill-group.active,
+.domain-skill-group.partial{
+    border-color:#86bdb2!important;
+    background:linear-gradient(180deg,#f5fbf9 0%,#edf7f4 100%)!important;
+}
+.domain-choice{
+    min-height:76px!important;
+    padding:14px 52px 13px 16px!important;
+    border:0!important;
+    border-radius:0!important;
+    background:transparent!important;
+    box-shadow:none!important;
+}
+.domain-choice:hover{
+    transform:none!important;
+    background:rgba(255,255,255,.58)!important;
+    box-shadow:none!important;
+}
+.domain-choice:active{
+    transform:none!important;
+    background:rgba(237,247,244,.9)!important;
+    box-shadow:none!important;
+}
+.domain-skill-group.active .domain-choice,
+.domain-skill-group.partial .domain-choice{
+    background:transparent!important;
+}
+.domain-skill-group.active .domain-choice:hover,
+.domain-skill-group.partial .domain-choice:hover{
+    background:rgba(255,255,255,.48)!important;
+}
+.subtopic-choice-grid{
+    position:relative;
+    margin:0!important;
+    padding:13px 14px 14px!important;
+    border-top:1px solid #d8e7e3;
+    background:rgba(255,255,255,.52);
+}
+.domain-skill-group.active .subtopic-choice-grid,
+.domain-skill-group.partial .subtopic-choice-grid{
+    border-top-color:#c6ded8;
+    background:rgba(255,255,255,.46);
+}
+.subtopic-choice{
+    background:rgba(255,255,255,.92)!important;
+    border-color:#d3e1de!important;
+}
+.subtopic-choice:hover{
+    border-color:#9fc8bf!important;
+    background:#ffffff!important;
+}
+.subtopic-choice.active{
+    border-color:#73b2a5!important;
+    background:#eaf6f2!important;
+}
+@media(max-width:620px){
+    .domain-choice{
+        min-height:70px!important;
+        padding:13px 48px 12px 14px!important;
+    }
+    .subtopic-choice-grid{
+        padding:11px 12px 12px!important;
+    }
+}
