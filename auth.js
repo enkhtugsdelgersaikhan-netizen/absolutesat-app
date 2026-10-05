@@ -155,17 +155,10 @@ async function updateAbsolutePrepHeader(session = null) {
     authButtons.innerHTML = `
 
         <a
-            href="/register"
-            class="register-button"
-        >
-            Sign up
-        </a>
-
-        <a
             href="/login"
-            class="login-button"
+            class="login-button get-started-button"
         >
-            Log in
+            Get started
         </a>
 
     `;
