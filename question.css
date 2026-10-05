@@ -2274,6 +2274,39 @@
     text-align:right;
     overflow-wrap:anywhere;
 }
+.student-response-explanation{
+    width:100%;
+    margin-top:14px;
+    padding:15px 17px;
+    box-sizing:border-box;
+    border:1px solid #d7e2df;
+    border-radius:10px;
+    background:#f8faf9;
+}
+.student-response-explanation-label{
+    margin-bottom:7px;
+    color:#31524a;
+    font-family:Poppins,sans-serif;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+}
+.student-response-explanation-text{
+    color:#334b45;
+    font-family:"Noto Serif",Georgia,"Times New Roman",serif;
+    font-size:15px;
+    line-height:1.75;
+    white-space:pre-line;
+}
+.student-response-explanation-text mjx-container:not([display="true"]){
+    margin-left:.14em!important;
+    margin-right:.14em!important;
+}
+.student-response-explanation-text mjx-container[display="true"]{
+    margin-top:.65em!important;
+    margin-bottom:.65em!important;
+}
 .choice-mini-table{
     border-collapse:collapse;
     min-width:160px;
@@ -2293,8 +2326,10 @@
 .question-xy-graph{
     display:block;
     width:100%;
-    min-width:620px;
+    min-width:680px;
     height:auto;
+    shape-rendering:geometricPrecision;
+    text-rendering:geometricPrecision;
 }
 .question-xy-grid{
     vector-effect:non-scaling-stroke;
@@ -2391,9 +2426,11 @@
 .question-xy-series{
     fill:none;
     stroke:#0e7367;
-    stroke-width:3;
+    stroke-width:2.6;
     stroke-linecap:round;
     stroke-linejoin:round;
+    vector-effect:non-scaling-stroke;
+    shape-rendering:geometricPrecision;
 }
 .question-xy-series.series-1{
     stroke:#d18b42;
