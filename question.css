@@ -2004,3 +2004,79 @@
         font-size:14px;
     }
 }
+
+
+/* OCT 6 CHOICE GROUP CENTER + NAV SVG */
+/* Match the test prompt typography without changing passage/choice/site fonts. */
+.sat-answer-pane .question-text{
+    font-family:Arial,"Helvetica Neue",Helvetica,sans-serif!important;
+    font-size:18px!important;
+    font-weight:700!important;
+    line-height:1.32!important;
+    letter-spacing:-0.01em!important;
+}
+
+/* Center the visible answer payload (badge + text) as one unit. */
+.sat-answer-pane .choice{
+    position:relative;
+    display:grid!important;
+    grid-template-columns:30px fit-content(min(560px, calc(100% - 96px)));
+    justify-content:center!important;
+    align-items:center!important;
+    column-gap:14px!important;
+    min-height:62px!important;
+    padding:12px 48px!important;
+}
+.sat-answer-pane .choice-letter{
+    grid-column:1;
+    justify-self:center;
+    align-self:center!important;
+    margin:0!important;
+}
+.sat-answer-pane .choice-text{
+    grid-column:2;
+    justify-self:start;
+    align-self:center!important;
+    width:auto!important;
+    max-width:560px;
+    margin:0!important;
+    padding:0!important;
+    text-align:left!important;
+}
+.sat-answer-pane .choice-strike-button{
+    position:absolute;
+    top:50%!important;
+    right:12px!important;
+    transform:translateY(-50%)!important;
+}
+
+/* Real SVG icons are in the buttons; do not rely on font glyph pseudo-elements. */
+.question-nav-symbol{
+    display:inline-flex!important;
+    width:14px!important;
+    height:14px!important;
+    font-size:inherit!important;
+}
+.question-nav-symbol::before{
+    content:none!important;
+}
+.question-nav-symbol svg{
+    display:block;
+    width:14px;
+    height:14px;
+    fill:none;
+    stroke:currentColor;
+    stroke-width:2;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+@media(max-width:700px){
+    .sat-answer-pane .choice{
+        grid-template-columns:30px minmax(0,1fr);
+        justify-content:stretch!important;
+        padding:11px 44px 11px 13px!important;
+    }
+    .sat-answer-pane .choice-text{
+        max-width:none;
+    }
+}
