@@ -8225,7 +8225,7 @@
         "A": "\\(3w-3\\)",
         "B": "\\(6w-6\\)",
         "C": "\\(4w-6\\)",
-        "D": "\\(2w2-3w\\)"
+        "D": "\\(2w^2-3w\\)"
       },
       "correctAnswer": "B",
       "explanation": "\\[The length is 2w-3. Therefore,\\]\n\\[ P=2w+2(2w-3) =2w+4w-6 =\\boxed{6w-6}. \\]",
@@ -9140,7 +9140,7 @@
         "D": "\\(-\\frac38\\)"
       },
       "correctAnswer": "D",
-      "explanation": "Rewrite the equation:\n\n\\[3y-6=8x+6\\]\n\n\\[3y=8x+12\\]\n\n\\[y=83x+4.\\]\nThe slope of m is 83. A perpendicular line has the negative reciprocal slope:\n\\[ \\boxed{-\\frac38}. \\]",
+      "explanation": "Rewrite the equation:\n\\[3y-6=8x+6\\]\n\\[3y=8x+12\\]\n\\[y=\\frac83x+4.\\]\nThe slope of line \\(m\\) is \\(\\frac83\\). A perpendicular line has the negative reciprocal slope:\n\\[\\boxed{-\\frac38}.\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 315,
       "choiceExplanations": {
@@ -12363,7 +12363,7 @@
         "D": "\\(\\displaystyle T=\\frac{m}{Lv^2}+T_0\\)"
       },
       "correctAnswer": "A",
-      "explanation": "Multiply by m:\n\n\\[mv2=L(T-T0).\\]\nDivide by L:\n\n\\[mv2L=T-T0.\\]\nAdd T0:\n\n\\[T=T0+mv2L.\\]",
+      "explanation": "Multiply by \\(m\\):\n\\[mv^2=L(T-T_0).\\]\nDivide by \\(L\\):\n\\[\\frac{mv^2}{L}=T-T_0.\\]\nAdd \\(T_0\\):\n\\[\\boxed{T=T_0+\\frac{mv^2}{L}}.\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 414,
       "choiceExplanations": {
@@ -12988,7 +12988,7 @@
         "D": "\\(\\displaystyle m=\\frac{v^2}{2E}\\)"
       },
       "correctAnswer": "A",
-      "explanation": "Multiply by 2:\n\n\\[2E=mv2.\\]\n\\[Then divide by v^{2}:\\]\n\n\\[m=2Ev2.\\]",
+      "explanation": "Multiply by 2:\n\\[2E=mv^2.\\]\nThen divide by \\(v^2\\):\n\\[\\boxed{m=\\frac{2E}{v^2}}.\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 439,
       "choiceExplanations": {
