@@ -604,3 +604,40 @@ body {
         font-size: 25px;
     }
 }
+
+
+/* GOOGLE-ONLY AUTH CARD */
+.google-only-auth-card{
+    text-align:center;
+}
+.google-auth-mark{
+    width:48px;
+    height:48px;
+    margin:0 auto 18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid #e2e8f0;
+    border-radius:14px;
+    background:#ffffff;
+    box-shadow:0 5px 16px rgba(15,23,42,.06);
+}
+.google-auth-mark .google-icon{
+    width:24px;
+    height:24px;
+}
+.google-primary-button{
+    min-height:52px;
+}
+.google-primary-button span{
+    display:inline-block;
+}
+.google-account-note{
+    margin:14px 0 0;
+    color:#7b8798;
+    font-size:12px;
+    line-height:1.55;
+}
+.google-primary-button.is-loading span{
+    opacity:.72;
+}
