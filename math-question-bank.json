@@ -190,6 +190,27 @@
         71,
         74,
         84
+      ],
+      "chunk2": [
+        236,
+        238,
+        244,
+        245,
+        247,
+        248,
+        252,
+        258,
+        263,
+        267,
+        268,
+        278,
+        279,
+        280,
+        282,
+        287,
+        294,
+        295,
+        300
       ]
     }
   },
@@ -16770,12 +16791,12 @@
         "D": "9.6"
       },
       "correctAnswer": "B",
-      "explanation": "Exclude Trial B and average the remaining five values:\n\n\\[6+4+9+8+105=375=7.4\\]",
+      "explanation": "Exclude Trial B and average the remaining five values:\n\\[\\frac{6+4+9+8+10}{5}=\\frac{37}{5}=\\boxed{7.4}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 236,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "Exclude Trial B and average the remaining five values:\n\n\\[6+4+9+8+105=375=7.4\\]",
+        "B": "Exclude Trial B and average the remaining five values:\n\\[\\frac{6+4+9+8+10}{5}=\\frac{37}{5}=\\boxed{7.4}.\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
@@ -16846,7 +16867,7 @@
       "question": "What is this speed, in miles per hour?\n\n\\[1\\text{ mile}=5{,}280\\text{ feet}\\]",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "Convert seconds to hours and feet to miles:\n\n22fts^3,600s1hr1mi5,280ft=15mihr.",
+      "explanation": "Use dimensional analysis:\n\\[22\\frac{\\text{ft}}{\\text{s}}\\cdot\\frac{3600\\text{ s}}{1\\text{ hr}}\\cdot\\frac{1\\text{ mi}}{5280\\text{ ft}}=\\boxed{15\\frac{\\text{mi}}{\\text{hr}}}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 238,
       "answerType": "student-response",
@@ -17143,13 +17164,13 @@
         "D": "90"
       },
       "correctAnswer": "C",
-      "explanation": "If N is the total number of coins,\n\n\\[18N=0.24\\]\nTherefore,\n\n\\[N=180.24=75\\]",
+      "explanation": "If \\(N\\) is the total number of coins,\n\\[\\frac{18}{N}=0.24.\\]\nTherefore,\n\\[N=\\frac{18}{0.24}=\\boxed{75}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 244,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
-        "C": "If N is the total number of coins,\n\n\\[18N=0.24\\]\nTherefore,\n\n\\[N=180.24=75\\]",
+        "C": "If \\(N\\) is the total number of coins,\n\\[\\frac{18}{N}=0.24.\\]\nTherefore,\n\\[N=\\frac{18}{0.24}=\\boxed{75}.\\]",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
     },
@@ -17170,12 +17191,12 @@
         "D": "39"
       },
       "correctAnswer": "B",
-      "explanation": "The slope is\n\n\\[20-4450-10=-2440=-0.6\\]\nFrom x=10 to x=35 is an increase of 25, so the predicted y-value decreases by\n\n\\[0.6(25)=15\\]\nTherefore,\n\n\\[44-15=29\\]",
+      "explanation": "The slope is\n\\[\\frac{20-44}{50-10}=\\frac{-24}{40}=-0.6.\\]\nFrom \\(x=10\\) to \\(x=35\\) is an increase of \\(25\\), so the predicted \\(y\\)-value decreases by \\(0.6(25)=15\\). Therefore,\n\\[44-15=\\boxed{29}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 245,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "The slope is\n\n\\[20-4450-10=-2440=-0.6\\]\nFrom x=10 to x=35 is an increase of 25, so the predicted y-value decreases by\n\n\\[0.6(25)=15\\]\nTherefore,\n\n\\[44-15=29\\]",
+        "B": "The slope is\n\\[\\frac{20-44}{50-10}=\\frac{-24}{40}=-0.6.\\]\nFrom \\(x=10\\) to \\(x=35\\) is an increase of \\(25\\), so the predicted \\(y\\)-value decreases by \\(0.6(25)=15\\). Therefore,\n\\[44-15=\\boxed{29}.\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
@@ -17266,7 +17287,7 @@
       "question": "What is the value of x?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "The mean for Laboratory A is\n\n\\[12+15+18+21+245=18\\]\nTherefore, Laboratory B has mean 20. Its six values must sum to\n\n\\[6(20)=120\\]\nThe five known values sum to\n\n\\[10+16+19+20+23=88\\]\nThus,\n\n\\[x=120-88=32\\]",
+      "explanation": "The mean for Laboratory A is\n\\[\\frac{12+15+18+21+24}{5}=18.\\]\nTherefore Laboratory B has mean \\(20\\), so its six values sum to \\(120\\). The five known values sum to \\(88\\), giving\n\\[x=120-88=\\boxed{32}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 247,
       "answerType": "student-response",
@@ -17291,13 +17312,13 @@
         "D": "81"
       },
       "correctAnswer": "C",
-      "explanation": "Study A gives the interval\n\n\\[744=[70,78]\\]\nStudy B gives\n\n\\[793=[76,82]\\]\nTheir overlap is\n\n[76,78].\nOnly 77 lies in both intervals.",
+      "explanation": "Study A gives\n\\[74\\pm4=[70,78].\\]\nStudy B gives\n\\[79\\pm3=[76,82].\\]\nThe overlap is \\([76,78]\\), so only \\(\\boxed{77}\\) is consistent with both.",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 248,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
-        "C": "Study A gives the interval\n\n\\[744=[70,78]\\]\nStudy B gives\n\n\\[793=[76,82]\\]\nTheir overlap is\n\n[76,78].\nOnly 77 lies in both intervals.",
+        "C": "Study A gives\n\\[74\\pm4=[70,78].\\]\nStudy B gives\n\\[79\\pm3=[76,82].\\]\nThe overlap is \\([76,78]\\), so only \\(\\boxed{77}\\) is consistent with both.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
     },
@@ -17460,11 +17481,11 @@
         "D": "Neither I nor II"
       },
       "correctAnswer": "A",
-      "explanation": "For Program A,\n\n\\[mean=347749.6,\\]\nwhile Program B has mean\n\n314744.9.\nSo statement I is true.\nThe medians are the fourth values:\n\n45and46.\nThus statement II is false.",
+      "explanation": "For Program A,\n\\[\\text{mean}=\\frac{347}{7}\\approx49.6,\\]\nwhile Program B has mean\n\\[\\frac{314}{7}\\approx44.9.\\]\nSo statement I is true. The medians are \\(45\\) and \\(46\\), so statement II is false.",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 252,
       "choiceExplanations": {
-        "A": "For Program A,\n\n\\[mean=347749.6,\\]\nwhile Program B has mean\n\n314744.9.\nSo statement I is true.\nThe medians are the fourth values:\n\n45and46.\nThus statement II is false.",
+        "A": "For Program A,\n\\[\\text{mean}=\\frac{347}{7}\\approx49.6,\\]\nwhile Program B has mean\n\\[\\frac{314}{7}\\approx44.9.\\]\nSo statement I is true. The medians are \\(45\\) and \\(46\\), so statement II is false.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -17689,12 +17710,12 @@
         "D": "0.6"
       },
       "correctAnswer": "B",
-      "explanation": "Use the two approximate points:\n\n\\[m=30-5460-20=-2440=-0.6\\]",
+      "explanation": "Using \\((20,54)\\) and \\((60,30)\\),\n\\[m=\\frac{30-54}{60-20}=\\frac{-24}{40}=\\boxed{-0.6}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 258,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "Use the two approximate points:\n\n\\[m=30-5460-20=-2440=-0.6\\]",
+        "B": "Using \\((20,54)\\) and \\((60,30)\\),\n\\[m=\\frac{30-54}{60-20}=\\frac{-24}{40}=\\boxed{-0.6}.\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
@@ -17868,13 +17889,13 @@
         "D": "26"
       },
       "correctAnswer": "C",
-      "explanation": "There are\n\n\\[5+8=13\\]\ntotal ratio parts. Water accounts for 813 of the mixture:\n\n\\[39813=24\\]",
+      "explanation": "There are \\(5+8=13\\) ratio parts. Water accounts for \\(8/13\\) of the mixture:\n\\[39\\left(\\frac8{13}\\right)=\\boxed{24}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 263,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
-        "C": "There are\n\n\\[5+8=13\\]\ntotal ratio parts. Water accounts for 813 of the mixture:\n\n\\[39813=24\\]",
+        "C": "There are \\(5+8=13\\) ratio parts. Water accounts for \\(8/13\\) of the mixture:\n\\[39\\left(\\frac8{13}\\right)=\\boxed{24}.\\]",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
     },
@@ -18007,12 +18028,12 @@
         "D": "56"
       },
       "correctAnswer": "B",
-      "explanation": "With 8 values, the median is the average of the 4th and 5th values:\n\n\\[13+b^2=14,\\]\n\\[so b=15\\]\nThe range gives\n\n\\[c-4=22,\\]\n\\[so c=26\\]\nA mean of 14 means the total is\n\n\\[8(14)=112\\]\nThe known values excluding a sum to\n\n\\[4+10+13+15+18+21+26=107,\\]\n\\[so a=5\\]\nTherefore,\n\n\\[a+b+c=5+15+26=46\\]",
+      "explanation": "With \\(8\\) values, the median is the average of the fourth and fifth values:\n\\[\\frac{13+b}{2}=14,\\]\nso \\(b=15\\). The range gives \\(c-4=22\\), so \\(c=26\\). A mean of \\(14\\) means the total is \\(112\\). The known values excluding \\(a\\) sum to \\(107\\), so \\(a=5\\). Therefore,\n\\[a+b+c=5+15+26=\\boxed{46}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 267,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "With 8 values, the median is the average of the 4th and 5th values:\n\n\\[13+b^2=14,\\]\n\\[so b=15\\]\nThe range gives\n\n\\[c-4=22,\\]\n\\[so c=26\\]\nA mean of 14 means the total is\n\n\\[8(14)=112\\]\nThe known values excluding a sum to\n\n\\[4+10+13+15+18+21+26=107,\\]\n\\[so a=5\\]\nTherefore,\n\n\\[a+b+c=5+15+26=46\\]",
+        "B": "With \\(8\\) values, the median is the average of the fourth and fifth values:\n\\[\\frac{13+b}{2}=14,\\]\nso \\(b=15\\). The range gives \\(c-4=22\\), so \\(c=26\\). A mean of \\(14\\) means the total is \\(112\\). The known values excluding \\(a\\) sum to \\(107\\), so \\(a=5\\). Therefore,\n\\[a+b+c=5+15+26=\\boxed{46}.\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
@@ -18026,7 +18047,7 @@
       "skill": "Ratios, rates, proportional relationships, and units",
       "difficulty": "Easy",
       "passage": "A rectangular wildlife preserve is 2,640 yards long and 1,760 yards wide.",
-      "question": "What is its area, in square miles?\n\n\\[1mile=1,760yards\\]",
+      "question": "What is its area, in square miles?\n\\[1\\text{ mile}=1{,}760\\text{ yards}.\\]",
       "choices": {
         "A": "0.75",
         "B": "1",
@@ -18034,13 +18055,13 @@
         "D": "2.25"
       },
       "correctAnswer": "C",
-      "explanation": "The area in square yards is\n\n\\[2640(1760)\\]\nSince\n\n\\[1squaremile=(1760)2squareyards,\\]\nthe area in square miles is\n\n\\[2640(1760)(1760)^2=26401760=1.5\\]",
+      "explanation": "The area in square yards is \\(2640(1760)\\). Since\n\\[1\\text{ mi}^2=(1760)^2\\text{ yd}^2,\\]\nthe area in square miles is\n\\[\\frac{2640(1760)}{(1760)^2}=\\frac{2640}{1760}=\\boxed{1.5}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 268,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
-        "C": "The area in square yards is\n\n\\[2640(1760)\\]\nSince\n\n\\[1squaremile=(1760)2squareyards,\\]\nthe area in square miles is\n\n\\[2640(1760)(1760)^2=26401760=1.5\\]",
+        "C": "The area in square yards is \\(2640(1760)\\). Since\n\\[1\\text{ mi}^2=(1760)^2\\text{ yd}^2,\\]\nthe area in square miles is\n\\[\\frac{2640(1760)}{(1760)^2}=\\frac{2640}{1760}=\\boxed{1.5}.\\]",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
     },
@@ -18345,7 +18366,7 @@
       "domain": "Problem-Solving and Data Analysis",
       "skill": "One-variable data: distributions and measures of center and spread",
       "difficulty": "Easy",
-      "passage": "For",
+      "passage": "",
       "question": "which data set is the mean greater than the median?",
       "choices": {
         "A": "4,6,8,10,12,14,16",
@@ -18354,13 +18375,13 @@
         "D": "2,4,6,8,10,12,14"
       },
       "correctAnswer": "C",
-      "explanation": "For choice C, the median is 10. Its mean is\n\n\\[8+9+9+10+10+11+277=847=12\\]\nSince 12>10, the mean is greater than the median.",
+      "explanation": "For choice C, the median is \\(10\\). Its mean is\n\\[\\frac{8+9+9+10+10+11+27}{7}=\\frac{84}{7}=12.\\]\nSince \\(12>10\\), the mean is greater than the median.",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 278,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
-        "C": "For choice C, the median is 10. Its mean is\n\n\\[8+9+9+10+10+11+277=847=12\\]\nSince 12>10, the mean is greater than the median.",
+        "C": "For choice C, the median is \\(10\\). Its mean is\n\\[\\frac{8+9+9+10+10+11+27}{7}=\\frac{84}{7}=12.\\]\nSince \\(12>10\\), the mean is greater than the median.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
     },
@@ -18381,11 +18402,11 @@
         "D": "\\(y=2.7x-8\\)"
       },
       "correctAnswer": "A",
-      "explanation": "Across the data, an increase of about 10 in x corresponds to an increase of about 17 in y, giving a slope near\n\n\\[1710=1.7\\]\nExtending the trend back toward x=0 gives a y-intercept near 3. Thus,\n\\[ \\boxed{y=1.7x+3}. \\]",
+      "explanation": "Across the data, an increase of about \\(10\\) in \\(x\\) corresponds to an increase of about \\(17\\) in \\(y\\), giving slope\n\\[\\frac{17}{10}=1.7.\\]\nExtending the trend toward \\(x=0\\) gives an intercept near \\(3\\), so \\(\\boxed{y=1.7x+3}\\).",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 279,
       "choiceExplanations": {
-        "A": "Across the data, an increase of about 10 in x corresponds to an increase of about 17 in y, giving a slope near\n\n\\[1710=1.7\\]\nExtending the trend back toward x=0 gives a y-intercept near 3. Thus,\n\\[ \\boxed{y=1.7x+3}. \\]",
+        "A": "Across the data, an increase of about \\(10\\) in \\(x\\) corresponds to an increase of about \\(17\\) in \\(y\\), giving slope\n\\[\\frac{17}{10}=1.7.\\]\nExtending the trend toward \\(x=0\\) gives an intercept near \\(3\\), so \\(\\boxed{y=1.7x+3}\\).",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -18452,11 +18473,11 @@
         "D": "For every additional 10 grams of fertilizer, the predicted increase in plant height rises by about 10 centimeters."
       },
       "correctAnswer": "A",
-      "explanation": "Using two points on the line, approximately (10,18) and (75,44),\n\n\\[m=44-1875-10=2665=0.4\\]\nThe slope therefore represents about 0.4 centimeter of additional predicted growth per additional gram of fertilizer.",
+      "explanation": "Using approximately \\((10,18)\\) and \\((75,44)\\),\n\\[m=\\frac{44-18}{75-10}=\\frac{26}{65}=0.4.\\]\nThus each additional gram of fertilizer is associated with about \\(0.4\\) centimeter of additional predicted growth.",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 280,
       "choiceExplanations": {
-        "A": "Using two points on the line, approximately (10,18) and (75,44),\n\n\\[m=44-1875-10=2665=0.4\\]\nThe slope therefore represents about 0.4 centimeter of additional predicted growth per additional gram of fertilizer.",
+        "A": "Using approximately \\((10,18)\\) and \\((75,44)\\),\n\\[m=\\frac{44-18}{75-10}=\\frac{26}{65}=0.4.\\]\nThus each additional gram of fertilizer is associated with about \\(0.4\\) centimeter of additional predicted growth.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -18579,8 +18600,8 @@
       "domain": "Problem-Solving and Data Analysis",
       "skill": "Ratios, rates, proportional relationships, and units",
       "difficulty": "Easy",
-      "passage": "A solid metal cube has density 2.7 grams per cubic centimeter and mass 7.4088 kilograms.\nTo the nearest tenth of a centimeter,",
-      "question": "what is the length of one edge of the cube?",
+      "passage": "A solid metal cube has density \\(2.7\\) grams per cubic centimeter and mass \\(7.4088\\) kilograms.",
+      "question": "To the nearest tenth of a centimeter, what is the length of one edge of the cube?",
       "choices": {
         "A": "12.4",
         "B": "13.2",
@@ -18588,13 +18609,13 @@
         "D": "15.1"
       },
       "correctAnswer": "C",
-      "explanation": "Convert the mass:\n\n\\[7.4088kg=7,408.8g\\]\nThe volume is\n\n\\[V=7,408.82.7=2,744cm^3\\]\nFor a cube,\n\n\\[s^3=2,744\\]\n\\[Since 143=2,744,\\]\n\\[ \\boxed{s=14.0\\text{ cm}}. \\]",
+      "explanation": "Convert the mass:\n\\[7.4088\\text{ kg}=7408.8\\text{ g}.\\]\nThe volume is\n\\[V=\\frac{7408.8}{2.7}=2744\\text{ cm}^3.\\]\nFor a cube, \\(s^3=2744\\), and since \\(14^3=2744\\),\n\\[\\boxed{s=14.0\\text{ cm}}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 282,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
-        "C": "Convert the mass:\n\n\\[7.4088kg=7,408.8g\\]\nThe volume is\n\n\\[V=7,408.82.7=2,744cm^3\\]\nFor a cube,\n\n\\[s^3=2,744\\]\n\\[Since 143=2,744,\\]\n\\[ \\boxed{s=14.0\\text{ cm}}. \\]",
+        "C": "Convert the mass:\n\\[7.4088\\text{ kg}=7408.8\\text{ g}.\\]\nThe volume is\n\\[V=\\frac{7408.8}{2.7}=2744\\text{ cm}^3.\\]\nFor a cube, \\(s^3=2744\\), and since \\(14^3=2744\\),\n\\[\\boxed{s=14.0\\text{ cm}}.\\]",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
     },
@@ -18734,12 +18755,12 @@
         "D": "165"
       },
       "correctAnswer": "B",
-      "explanation": "At concentration indices near 50 and 60, the responses are approximately 123 and 150. A value of 55 is about halfway between them, so a reasonable prediction is around\n\n\\[123+1502=136.5\\]\nThe closest choice is \\(\\boxed{135}\\).",
+      "explanation": "At concentration indices near \\(50\\) and \\(60\\), the responses are about \\(123\\) and \\(150\\). At \\(55\\), a reasonable midpoint estimate is\n\\[\\frac{123+150}{2}=136.5.\\]\nThe closest choice is \\(\\boxed{135}\\).",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 287,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "At concentration indices near 50 and 60, the responses are approximately 123 and 150. A value of 55 is about halfway between them, so a reasonable prediction is around\n\n\\[123+1502=136.5\\]\nThe closest choice is \\(\\boxed{135}\\).",
+        "B": "At concentration indices near \\(50\\) and \\(60\\), the responses are about \\(123\\) and \\(150\\). At \\(55\\), a reasonable midpoint estimate is\n\\[\\frac{123+150}{2}=136.5.\\]\nThe closest choice is \\(\\boxed{135}\\).",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
@@ -19032,12 +19053,12 @@
         "D": "1,050 meters per second"
       },
       "correctAnswer": "B",
-      "explanation": "Convert kilometers to meters and hours to seconds:\n\n\\[631,0003,600=17.5\\]\nThus,\n\\[ \\boxed{63\\text{ km/h}=17.5\\text{ m/s}}. \\]",
+      "explanation": "Convert units:\n\\[63\\frac{\\text{ km}}{\\text{ hr}}\\cdot\\frac{1000\\text{ m}}{1\\text{ km}}\\cdot\\frac{1\\text{ hr}}{3600\\text{ s}}=\\boxed{17.5\\frac{\\text{ m}}{\\text{ s}}}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 294,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "Convert kilometers to meters and hours to seconds:\n\n\\[631,0003,600=17.5\\]\nThus,\n\\[ \\boxed{63\\text{ km/h}=17.5\\text{ m/s}}. \\]",
+        "B": "Convert units:\n\\[63\\frac{\\text{ km}}{\\text{ hr}}\\cdot\\frac{1000\\text{ m}}{1\\text{ km}}\\cdot\\frac{1\\text{ hr}}{3600\\text{ s}}=\\boxed{17.5\\frac{\\text{ m}}{\\text{ s}}}.\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
@@ -19051,7 +19072,7 @@
       "skill": "One-variable data: distributions and measures of center and spread",
       "difficulty": "Hard",
       "passage": "A wildlife preserve covers 420 acres. To estimate the total number of a certain shrub, a researcher randomly selects six nonoverlapping 2-acre plots. The numbers of shrubs counted in the six plots are\n\n96, 108, 102, 114, 90, 120.\nBased on the sample mean,",
-      "question": "which range contains the best estimate for the number of these shrubs in the entire preserve?",
+      "question": "Which range contains the best estimate for the number of these shrubs in the entire preserve?",
       "choices": {
         "A": "10,500 to 11,500",
         "B": "20,500 to 21,500",
@@ -19059,13 +19080,13 @@
         "D": "43,500 to 44,500"
       },
       "correctAnswer": "C",
-      "explanation": "The mean per 2-acre plot is\n\n\\[96+108+102+114+90+1206=6306=105\\]\nSo the estimated rate is\n\n\\[1052=52.5\\]\nshrubs per acre. For 420 acres,\n\n\\[52.5(420)=22,050\\]\nThus the estimate lies between\n\\[ \\boxed{21{,}500\\text{ and }22{,}500}. \\]",
+      "explanation": "The mean per \\(2\\)-acre plot is\n\\[\\frac{96+108+102+114+90+120}{6}=\\frac{630}{6}=105.\\]\nThat is \\(105/2=52.5\\) shrubs per acre. For \\(420\\) acres,\n\\[52.5(420)=22{,}050.\\]\nThus the estimate lies between \\(\\boxed{21{,}500\\text{ and }22{,}500}\\).",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 295,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
-        "C": "The mean per 2-acre plot is\n\n\\[96+108+102+114+90+1206=6306=105\\]\nSo the estimated rate is\n\n\\[1052=52.5\\]\nshrubs per acre. For 420 acres,\n\n\\[52.5(420)=22,050\\]\nThus the estimate lies between\n\\[ \\boxed{21{,}500\\text{ and }22{,}500}. \\]",
+        "C": "The mean per \\(2\\)-acre plot is\n\\[\\frac{96+108+102+114+90+120}{6}=\\frac{630}{6}=105.\\]\nThat is \\(105/2=52.5\\) shrubs per acre. For \\(420\\) acres,\n\\[52.5(420)=22{,}050.\\]\nThus the estimate lies between \\(\\boxed{21{,}500\\text{ and }22{,}500}\\).",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
     },
@@ -19153,12 +19174,12 @@
         "D": "1:2"
       },
       "correctAnswer": "B",
-      "explanation": "Snack A contains\n\n\\[3(8)=24\\]\ngrams of protein, so its cost per gram is\n\n\\[2.1624=0.09\\]\nSnack B contains\n\n\\[2(10)=20\\]\ngrams, so its cost per gram is\n\n\\[1.2020=0.06\\]\nThus,\n\\[ 0.09:0.06=\\boxed{3:2}. \\]",
+      "explanation": "Snack A contains \\(3(8)=24\\) grams of protein, so its cost per gram is\n\\[\\frac{2.16}{24}=0.09.\\]\nSnack B contains \\(2(10)=20\\) grams, so its cost per gram is\n\\[\\frac{1.20}{20}=0.06.\\]\nThus\n\\[0.09:0.06=\\boxed{3:2}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 300,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "Snack A contains\n\n\\[3(8)=24\\]\ngrams of protein, so its cost per gram is\n\n\\[2.1624=0.09\\]\nSnack B contains\n\n\\[2(10)=20\\]\ngrams, so its cost per gram is\n\n\\[1.2020=0.06\\]\nThus,\n\\[ 0.09:0.06=\\boxed{3:2}. \\]",
+        "B": "Snack A contains \\(3(8)=24\\) grams of protein, so its cost per gram is\n\\[\\frac{2.16}{24}=0.09.\\]\nSnack B contains \\(2(10)=20\\) grams, so its cost per gram is\n\\[\\frac{1.20}{20}=0.06.\\]\nThus\n\\[0.09:0.06=\\boxed{3:2}.\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
