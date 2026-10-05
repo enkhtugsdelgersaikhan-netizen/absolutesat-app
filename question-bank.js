@@ -757,9 +757,14 @@ async function loadQuestions() {
     let stagedQuestions = [];
 
     try {
+        const bankUrl =
+            activeSection === "Math"
+                ? "/math-question-bank.json?v=1"
+                : "/question-bank.json?v=17";
+
         const response =
             await fetch(
-                "/question-bank.json?v=17",
+                bankUrl,
                 { cache: "no-store" }
             );
 
