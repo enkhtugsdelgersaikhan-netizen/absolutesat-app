@@ -2139,7 +2139,7 @@
     margin:0!important;
     padding:0!important;
     text-align:left!important;
-    transform:translateY(-1px);
+    transform:none!important;
 }
 
 /* Keep the real inline SVG chevrons visible. */
