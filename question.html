@@ -16,7 +16,7 @@
     >
 
     <link rel="stylesheet" href="style.css?v=subjects-1">
-    <link rel="stylesheet" href="question.css?v=23">
+    <link rel="stylesheet" href="question.css?v=24">
 </head>
 
 <body>
@@ -296,11 +296,14 @@
             loading="lazy"
             allow="clipboard-read; clipboard-write"
         ></iframe>
-        <div
-            class="desmos-resize-handle"
-            role="separator"
-            aria-label="Resize calculator"
-        ></div>
+        <div class="desmos-resize-handle" data-resize-direction="n" aria-hidden="true"></div>
+        <div class="desmos-resize-handle" data-resize-direction="s" aria-hidden="true"></div>
+        <div class="desmos-resize-handle" data-resize-direction="e" aria-hidden="true"></div>
+        <div class="desmos-resize-handle" data-resize-direction="w" aria-hidden="true"></div>
+        <div class="desmos-resize-handle" data-resize-direction="ne" aria-hidden="true"></div>
+        <div class="desmos-resize-handle" data-resize-direction="nw" aria-hidden="true"></div>
+        <div class="desmos-resize-handle" data-resize-direction="se" aria-hidden="true"></div>
+        <div class="desmos-resize-handle" data-resize-direction="sw" aria-hidden="true"></div>
     </section>
 </div>
 
@@ -330,7 +333,7 @@ window.MathJax = {
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js?v=subjects-1"></script>
-<script src="question.js?v=35"></script>
+<script src="question.js?v=36"></script>
 
 </body>
 </html>
