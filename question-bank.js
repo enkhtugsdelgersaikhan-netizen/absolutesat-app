@@ -1130,18 +1130,6 @@ function renderSkillPicker() {
                 skills.includes(skill)
         );
 
-    const allActive =
-        activeSkill.length === 0;
-
-    const allButton =
-        '<button type="button" class="domain-choice domain-choice-all' +
-        (allActive ? ' active' : '') +
-        '" data-domain-action="all" aria-pressed="' +
-        (allActive ? 'true' : 'false') +
-        '"><span class="domain-choice-kicker">EVERYTHING</span><strong>All skills</strong><small>Practice the full ' +
-        escapeHtml(activeSection) +
-        ' bank</small></button>';
-
     const domains =
         Object.entries(taxonomy)
             .map(([domain, subtopics]) => {
@@ -1199,9 +1187,7 @@ function renderSkillPicker() {
             }).join("");
 
     skillPicker.innerHTML =
-        '<div class="domain-all-row">' +
-        allButton +
-        '</div><div class="domain-skill-list">' +
+        '<div class="domain-skill-list">' +
         domains +
         '</div>';
 }
@@ -1741,11 +1727,6 @@ if (skillPicker) {
     skillPicker.addEventListener(
         "click",
         event => {
-            const allButton =
-                event.target.closest(
-                    '[data-domain-action="all"]'
-                );
-
             const domainButton =
                 event.target.closest(
                     "[data-domain]"
@@ -1757,14 +1738,11 @@ if (skillPicker) {
                 );
 
             if (
-                !allButton &&
                 !domainButton &&
                 !skillButton
             ) return;
 
-            if (allButton) {
-                activeSkill = [];
-            } else if (domainButton) {
+            if (domainButton) {
                 const domain =
                     domainButton.dataset.domain;
 
