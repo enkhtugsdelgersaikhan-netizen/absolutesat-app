@@ -5870,3 +5870,15 @@ select:hover,
 .site-dashboard:not([hidden]) + .auth-buttons{
     margin-left:7px;
 }
+
+
+/* FIX LOGGED-OUT HEADER RIGHT ALIGNMENT */
+@media (min-width:951px){
+    .header-container .site-dashboard[hidden] + .auth-buttons{
+        margin-left:auto!important;
+    }
+
+    .header-container .site-dashboard:not([hidden]) + .auth-buttons{
+        margin-left:8px!important;
+    }
+}
