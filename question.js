@@ -2164,10 +2164,132 @@ async function loadReviewStatesForQuestions(
     }
 }
 
+function splitMathQuestionContent(
+    stagedQuestion
+) {
+    const rawQuestion =
+        String(
+            stagedQuestion.question ||
+            ""
+        ).trim();
+
+    const existingPassage =
+        String(
+            stagedQuestion.passage ||
+            ""
+        ).trim();
+
+    if (
+        stagedQuestion.section !==
+        "Math"
+    ) {
+        return {
+            passage:
+                existingPassage,
+            question:
+                rawQuestion
+        };
+    }
+
+    const markers =
+        [
+            /\bAccording to[^?\n]{0,100},\s*(?:at what|what|which|how)\b/gi,
+            /\bAt what\b/gi,
+            /\bFor what\b/gi,
+            /\bIn which\b/gi,
+            /\bWhich\b/gi,
+            /\bWhat\b/gi,
+            /\bHow\b/gi
+        ];
+
+    let stemStart = -1;
+
+    markers.forEach(
+        pattern => {
+            let match;
+
+            while (
+                (
+                    match =
+                        pattern.exec(
+                            rawQuestion
+                        )
+                )
+            ) {
+                if (
+                    match.index >
+                    stemStart
+                ) {
+                    stemStart =
+                        match.index;
+                }
+            }
+        }
+    );
+
+    if (
+        stemStart <= 0
+    ) {
+        return {
+            passage:
+                existingPassage,
+            question:
+                rawQuestion
+        };
+    }
+
+    const info =
+        rawQuestion
+            .slice(
+                0,
+                stemStart
+            )
+            .trim();
+
+    const stem =
+        rawQuestion
+            .slice(
+                stemStart
+            )
+            .trim();
+
+    if (
+        info.length < 12 ||
+        stem.length < 8
+    ) {
+        return {
+            passage:
+                existingPassage,
+            question:
+                rawQuestion
+        };
+    }
+
+    return {
+        passage:
+            [
+                existingPassage,
+                info
+            ]
+                .filter(Boolean)
+                .join(
+                    "\n\n"
+                ),
+        question:
+            stem
+    };
+}
+
+
 function normalizeStagedQuestion(
     stagedQuestion,
     index
 ) {
+
+    const split =
+        splitMathQuestionContent(
+            stagedQuestion
+        );
 
     return {
         id:
@@ -2175,11 +2297,9 @@ function normalizeStagedQuestion(
         question_number:
             index + 1,
         passage:
-            stagedQuestion.passage ||
-            "",
+            split.passage,
         question_text:
-            stagedQuestion.question ||
-            "",
+            split.question,
         choice_a:
             stagedQuestion.choices?.A ||
             "",
@@ -2981,6 +3101,18 @@ function renderCurrentQuestion() {
     }
 
 
+    const contextLabel =
+        document.getElementById(
+            "question-context-label"
+        );
+
+    if (contextLabel) {
+        contextLabel.textContent =
+            isMathQuestion
+                ? "INFORMATION"
+                : "PASSAGE";
+    }
+
     questionText.innerHTML =
         renderInlineFormatting(
             question.question_text
@@ -2992,9 +3124,16 @@ function renderCurrentQuestion() {
                 question
             );
 
+        const hasContext =
+            Boolean(
+                question.passage ||
+                question.graph ||
+                question.table
+            );
+
         questionPassage.parentElement?.classList.toggle(
             "has-passage",
-            Boolean(question.passage)
+            hasContext
         );
     }
 
