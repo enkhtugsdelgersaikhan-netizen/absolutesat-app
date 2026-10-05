@@ -2191,41 +2191,23 @@ function splitMathQuestionContent(
         };
     }
 
-    const markers =
-        [
-            /\bAccording to[^?\n]{0,100},\s*(?:at what|what|which|how)\b/gi,
-            /\bAt what\b/gi,
-            /\bFor what\b/gi,
-            /\bIn which\b/gi,
-            /\bWhich\b/gi,
-            /\bWhat\b/gi,
-            /\bHow\b/gi
-        ];
+    const stemPattern =
+        /\b(?:According to[^?\n]{0,100},\s*(?:at what|what|which|how)|At what|For what|In which|Which|What|How)\b/gi;
 
     let stemStart = -1;
+    let match;
 
-    markers.forEach(
-        pattern => {
-            let match;
-
-            while (
-                (
-                    match =
-                        pattern.exec(
-                            rawQuestion
-                        )
+    while (
+        (
+            match =
+                stemPattern.exec(
+                    rawQuestion
                 )
-            ) {
-                if (
-                    match.index >
-                    stemStart
-                ) {
-                    stemStart =
-                        match.index;
-                }
-            }
-        }
-    );
+        )
+    ) {
+        stemStart =
+            match.index;
+    }
 
     if (
         stemStart <= 0
