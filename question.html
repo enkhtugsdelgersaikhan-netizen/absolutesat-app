@@ -16,7 +16,7 @@
     >
 
     <link rel="stylesheet" href="style.css?v=subjects-1">
-    <link rel="stylesheet" href="question.css?v=17">
+    <link rel="stylesheet" href="question.css?v=18">
 </head>
 
 <body>
@@ -44,6 +44,15 @@
             </div>
 
             <div class="question-topbar-actions">
+                <button
+                    id="desmos-toggle-button"
+                    class="desmos-toggle-button"
+                    type="button"
+                    hidden
+                >
+                    <span class="desmos-toggle-icon" aria-hidden="true">⌁</span>
+                    Calculator
+                </button>
                 <div class="timer-container">
                     <span class="timer-label">TIME ON QUESTION</span>
                     <div id="timer" class="timer">00:00</div>
@@ -248,13 +257,67 @@
 
 </main>
 
+<div
+    id="desmos-panel"
+    class="desmos-panel hidden"
+    aria-hidden="true"
+>
+    <section
+        class="desmos-panel-card"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Desmos graphing calculator"
+    >
+        <div class="desmos-panel-head">
+            <div>
+                <span>CALCULATOR</span>
+                <strong>Desmos</strong>
+            </div>
+            <button
+                id="desmos-close-button"
+                type="button"
+                aria-label="Close calculator"
+            >
+                ×
+            </button>
+        </div>
+        <iframe
+            id="desmos-frame"
+            class="desmos-frame"
+            title="Desmos graphing calculator"
+            loading="lazy"
+            allow="clipboard-read; clipboard-write"
+        ></iframe>
+    </section>
+</div>
 
-
-
+<script>
+window.MathJax = {
+    tex: {
+        inlineMath: [["\\(", "\\)"]],
+        displayMath: [["\\[", "\\]"]],
+        processEscapes: true
+    },
+    options: {
+        skipHtmlTags: [
+            "script",
+            "noscript",
+            "style",
+            "textarea",
+            "pre",
+            "code"
+        ]
+    }
+};
+</script>
+<script
+    defer
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+></script>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js?v=subjects-1"></script>
-<script src="question.js?v=28"></script>
+<script src="question.js?v=29"></script>
 
 </body>
 </html>
