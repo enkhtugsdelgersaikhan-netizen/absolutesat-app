@@ -2162,3 +2162,201 @@
     stroke-linecap:round!important;
     stroke-linejoin:round!important;
 }
+
+
+/* MATH RESPONSE + DESMOS */
+.student-response-wrapper{
+    margin-top:22px;
+}
+.student-response-label{
+    display:block;
+    margin-bottom:8px;
+    color:#53645f;
+    font-family:"Noto Serif",Georgia,serif;
+    font-size:13px;
+    font-weight:700;
+}
+.student-response-input{
+    width:min(100%,340px);
+    min-height:54px;
+    box-sizing:border-box;
+    padding:12px 14px;
+    border:1.5px solid #aebfbb;
+    border-radius:9px;
+    background:#fff;
+    color:#173b36;
+    font-family:"Noto Serif",Georgia,serif;
+    font-size:17px;
+    line-height:1.4;
+    outline:none;
+}
+.student-response-input:focus{
+    border-color:#0e7367;
+    box-shadow:0 0 0 3px rgba(14,115,103,.1);
+}
+.student-response-input.correct-answer{
+    border-color:#3d8c66;
+    background:#f1faf5;
+}
+.student-response-retry{
+    margin-top:8px;
+    color:#a14b45;
+    font-family:"Noto Serif",Georgia,serif;
+    font-size:13px;
+    line-height:1.5;
+}
+.choice-mini-table{
+    border-collapse:collapse;
+    min-width:160px;
+    font-family:"Noto Serif",Georgia,serif;
+    font-size:14px;
+}
+.choice-mini-table th,
+.choice-mini-table td{
+    padding:4px 12px;
+    border:1px solid #bdc9c6;
+    text-align:center;
+}
+.choice-mini-table th{
+    background:#f5f8f7;
+    font-weight:700;
+}
+.question-xy-graph{
+    display:block;
+    width:100%;
+    min-width:520px;
+    height:auto;
+}
+.question-xy-grid{
+    stroke:#e1e8e6;
+    stroke-width:1;
+}
+.question-xy-axis{
+    stroke:#6e817c;
+    stroke-width:1.6;
+}
+.question-xy-tick{
+    fill:#6e817c;
+    font:11px Poppins,sans-serif;
+}
+.question-xy-series{
+    fill:none;
+    stroke:#0e7367;
+    stroke-width:3;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+.question-xy-series.series-1{
+    stroke:#d18b42;
+}
+.question-xy-series.series-2{
+    stroke:#6879b8;
+}
+.question-xy-point{
+    fill:#0e7367;
+    stroke:#fff;
+    stroke-width:1.5;
+}
+.question-xy-point.series-1{
+    fill:#d18b42;
+}
+.question-xy-point.series-2{
+    fill:#6879b8;
+}
+.desmos-toggle-button{
+    min-height:44px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+    padding:9px 14px;
+    border:1px solid #c9d8d4;
+    border-radius:10px;
+    background:#fff;
+    color:#24554d;
+    font-family:Poppins,sans-serif;
+    font-size:13px;
+    font-weight:700;
+    cursor:pointer;
+}
+.desmos-toggle-button:hover{
+    border-color:#8ab4ab;
+    background:#f8fcfb;
+}
+.desmos-toggle-icon{
+    font-size:20px;
+    line-height:1;
+}
+.desmos-panel{
+    position:fixed;
+    inset:0;
+    z-index:2500;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:22px;
+    background:rgba(15,23,42,.46);
+    backdrop-filter:blur(3px);
+}
+.desmos-panel-card{
+    width:min(1040px,96vw);
+    height:min(720px,88vh);
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+    border:1px solid #d0dcda;
+    border-radius:16px;
+    background:#fff;
+    box-shadow:0 24px 70px rgba(15,23,42,.24);
+}
+.desmos-panel-head{
+    min-height:58px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    padding:10px 14px 10px 18px;
+    border-bottom:1px solid #e0e8e6;
+}
+.desmos-panel-head>div{
+    display:flex;
+    align-items:baseline;
+    gap:9px;
+}
+.desmos-panel-head span{
+    color:#76908a;
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:.13em;
+}
+.desmos-panel-head strong{
+    color:#173b36;
+    font-size:16px;
+}
+.desmos-panel-head button{
+    width:36px;
+    height:36px;
+    border:0;
+    border-radius:9px;
+    background:#f1f5f4;
+    color:#50645f;
+    font-size:24px;
+    cursor:pointer;
+}
+.desmos-frame{
+    flex:1;
+    width:100%;
+    min-height:0;
+    border:0;
+    background:#fff;
+}
+@media(max-width:700px){
+    .desmos-panel{
+        padding:8px;
+    }
+    .desmos-panel-card{
+        width:100%;
+        height:94vh;
+        border-radius:12px;
+    }
+}
