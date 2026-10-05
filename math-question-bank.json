@@ -211,6 +211,12 @@
         294,
         295,
         300
+      ],
+      "chunk3": [
+        327,
+        333,
+        346,
+        368
       ]
     }
   },
@@ -19897,12 +19903,12 @@
         "D": "144"
       },
       "correctAnswer": "B",
-      "explanation": "The two given vertices are endpoints of a diagonal. Its length is\n\n\\[5-(-7)=12\\]\nFor a square with diagonal d,\n\n\\[A=d22\\]\nTherefore,\n\\[ A=\\frac{12^2}{2}=\\boxed{72}. \\]",
+      "explanation": "The two given vertices are endpoints of a diagonal of length\n\\[5-(-7)=12.\\]\nFor a square with diagonal \\(d\\),\n\\[A=\\frac{d^2}{2}.\\]\nTherefore,\n\\[A=\\frac{12^2}{2}=\\boxed{72}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 327,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "The two given vertices are endpoints of a diagonal. Its length is\n\n\\[5-(-7)=12\\]\nFor a square with diagonal d,\n\n\\[A=d22\\]\nTherefore,\n\\[ A=\\frac{12^2}{2}=\\boxed{72}. \\]",
+        "B": "The two given vertices are endpoints of a diagonal of length\n\\[5-(-7)=12.\\]\nFor a square with diagonal \\(d\\),\n\\[A=\\frac{d^2}{2}.\\]\nTherefore,\n\\[A=\\frac{12^2}{2}=\\boxed{72}.\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
@@ -20081,13 +20087,13 @@
         "D": "17"
       },
       "correctAnswer": "C",
-      "explanation": "At x=6, the data point has y13, while the line of best fit predicts approximately 17.\nThus, the absolute difference is\n\\[ |13-17|=\\boxed4. \\]",
+      "explanation": "At \\(x=6\\), the data point has \\(y\\approx13\\), while the line of best fit predicts about \\(17\\). Thus,\n\\[|13-17|=\\boxed4.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 333,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
-        "C": "At x=6, the data point has y13, while the line of best fit predicts approximately 17.\nThus, the absolute difference is\n\\[ |13-17|=\\boxed4. \\]",
+        "C": "At \\(x=6\\), the data point has \\(y\\approx13\\), while the line of best fit predicts about \\(17\\). Thus,\n\\[|13-17|=\\boxed4.\\]",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "graph": {
@@ -20589,11 +20595,11 @@
         "D": ""
       },
       "correctAnswer": "A",
-      "explanation": "Transform each distinct value:\n\n35,59,713,917.\nThe frequencies remain unchanged:\n\n2, 3, 1, 2.\nTherefore, choice A is correct.",
+      "explanation": "Transform each distinct value using \\(2x-1\\):\n\\[3\\mapsto5,\\quad5\\mapsto9,\\quad7\\mapsto13,\\quad9\\mapsto17.\\]\nThe frequencies remain \\(2,3,1,2\\), respectively. Therefore choice A is correct.",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 346,
       "choiceExplanations": {
-        "A": "Transform each distinct value:\n\n35,59,713,917.\nThe frequencies remain unchanged:\n\n2, 3, 1, 2.\nTherefore, choice A is correct.",
+        "A": "Transform each distinct value using \\(2x-1\\):\n\\[3\\mapsto5,\\quad5\\mapsto9,\\quad7\\mapsto13,\\quad9\\mapsto17.\\]\nThe frequencies remain \\(2,3,1,2\\), respectively. Therefore choice A is correct.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -21522,7 +21528,7 @@
       "question": "What is the largest integer in data set A?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "The 11 known integers have total\n\n\\[11(51)=561\\]\nLet the missing integer be x. The overall mean is\n\n\\[561+x12\\]\nBecause this mean is an integer, 561+x must be divisible by 12. Since\n\\[ 561\\equiv9\\pmod{12}, \\]\n\\(x\\equiv^3\\pmod{12}\\).\nThe mean is greater than 51, so x>51, and x<70. The only integer in that range congruent to \\(3\\pmod{12}\\) is\n\n63.\nSince all listed values are below 63, the largest value is 63.",
+      "explanation": "The \\(11\\) known integers total\n\\[11(51)=561.\\]\nLet the missing integer be \\(x\\). The overall mean is\n\\[\\frac{561+x}{12}.\\]\nFor this to be an integer, \\(561+x\\) must be divisible by \\(12\\). Since\n\\[561\\equiv9\\pmod{12},\\]\nwe need \\(x\\equiv3\\pmod{12}\\). Also \\(51<x<70\\), so the only possibility is \\(x=63\\). Thus the largest value is \\(\\boxed{63}\\).",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 368,
       "answerType": "student-response",
