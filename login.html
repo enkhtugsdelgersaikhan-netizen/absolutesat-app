@@ -31,7 +31,7 @@
 
     <link
         rel="stylesheet"
-        href="style.css?v=subjects-1"
+        href="style.css?v=google-auth-1"
     >
 
     <style>
@@ -169,8 +169,13 @@
 
         .google-login {
             width: 100%;
-            margin-top: 14px;
+            min-height: 52px;
+            margin-top: 6px;
             padding: 11px 16px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 11px;
             border: 1px solid #cbd5e1;
             border-radius: 8px;
             background: #ffffff;
@@ -188,6 +193,46 @@
         .google-login:disabled {
             opacity: 0.6;
             cursor: not-allowed;
+        }
+
+        .google-login-icon {
+            width: 20px;
+            height: 20px;
+            flex: 0 0 20px;
+        }
+
+        .google-only-auth-card {
+            text-align: center;
+        }
+
+        .google-auth-mark {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            background: #ffffff;
+            box-shadow: 0 5px 16px rgba(15, 23, 42, 0.06);
+        }
+
+        .google-auth-mark .google-login-icon {
+            width: 24px;
+            height: 24px;
+            flex-basis: 24px;
+        }
+
+        .google-account-note {
+            margin: 14px 0 0;
+            color: #7b8798;
+            font-size: 12px;
+            line-height: 1.55;
+        }
+
+        .google-primary-login.is-loading span {
+            opacity: 0.72;
         }
 
         .divider {
@@ -231,98 +276,55 @@
 <body>
 
 
-<header class="header"><div class="header-container"><a href="/" class="logo-link" aria-label="LexLogica home"><img src="/Logo.png" alt="LexLogica" class="logo"></a><nav class="navigation" aria-label="Main navigation"><a href="/mathematics" class="nav-button">Mathematics</a><a href="/mock-tests" class="nav-button">Mock Tests</a><a href="/reading-writing" class="nav-button">Reading and Writing</a></nav><a href="/dashboard" class="dashboard-button site-dashboard" hidden aria-hidden="true">Dashboard</a><div class="auth-buttons"><a href="/login" class="login-button">Login</a></div><button class="mobile-menu-button" aria-label="Open navigation" aria-expanded="false" type="button">☰</button></div></header>
+<header class="header"><div class="header-container"><a href="/" class="logo-link" aria-label="LexLogica home"><img src="/Logo.png" alt="LexLogica" class="logo"></a><nav class="navigation" aria-label="Main navigation"><a href="/mathematics" class="nav-button">Mathematics</a><a href="/mock-tests" class="nav-button">Mock Tests</a><a href="/reading-writing" class="nav-button">Reading and Writing</a></nav><a href="/dashboard" class="dashboard-button site-dashboard" hidden aria-hidden="true">Dashboard</a><div class="auth-buttons"><a href="/register" class="register-button">Sign up</a><a href="/login" class="login-button">Log in</a></div><button class="mobile-menu-button" aria-label="Open navigation" aria-expanded="false" type="button">☰</button></div></header>
 
 
 <main class="login-page">
 
-    <div class="login-card">
+    <div class="login-card google-only-auth-card">
+
+        <div class="google-auth-mark" aria-hidden="true">
+            <svg class="google-login-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="#4285F4" d="M21.35 12.27c0-.78-.07-1.53-.22-2.27H12v4.3h5.22a4.46 4.46 0 0 1-1.94 2.93v2.43h3.14c1.84-1.69 2.93-4.18 2.93-7.39z"></path>
+                    <path fill="#34A853" d="M12 21.5c2.63 0 4.84-.87 6.45-2.36l-3.14-2.43c-.87.58-1.98.92-3.31.92-2.54 0-4.7-1.72-5.47-4.03H3.29v2.5A9.74 9.74 0 0 0 12 21.5z"></path>
+                    <path fill="#FBBC05" d="M6.53 13.6A5.85 5.85 0 0 1 6.23 12c0-.56.1-1.1.3-1.6V7.9H3.29A9.5 9.5 0 0 0 2.5 12c0 1.48.35 2.88.79 4.1l3.24-2.5z"></path>
+                    <path fill="#EA4335" d="M12 6.38c1.43 0 2.71.49 3.72 1.45l2.79-2.79C16.84 3.49 14.63 2.5 12 2.5a9.74 9.74 0 0 0-8.71 5.4l3.24 2.5C7.3 8.1 9.46 6.38 12 6.38z"></path>
+                </svg>
+        </div>
 
         <h1>Welcome back.</h1>
 
         <p class="login-subtitle">
-            Sign in to continue your SAT preparation.
+            LexLogica accounts use Google sign-in only.
         </p>
-
-
-        <form
-            id="login-form"
-            class="login-form"
-        >
-
-            <div class="form-group">
-
-                <label for="email">
-                    Email
-                </label>
-
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    autocomplete="email"
-                    required
-                >
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label for="password">
-                    Password
-                </label>
-
-                <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    autocomplete="current-password"
-                    required
-                >
-
-            </div>
-
-
-            <button
-                type="submit"
-                id="login-submit"
-                class="login-submit"
-            >
-                Login
-            </button>
-
-        </form>
-
-
-        <div class="divider">
-            OR
-        </div>
-
 
         <button
             type="button"
             id="google-login"
-            class="google-login"
+            class="google-login google-primary-login"
         >
-            Continue with Google
+            <svg class="google-login-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="#4285F4" d="M21.35 12.27c0-.78-.07-1.53-.22-2.27H12v4.3h5.22a4.46 4.46 0 0 1-1.94 2.93v2.43h3.14c1.84-1.69 2.93-4.18 2.93-7.39z"></path>
+                    <path fill="#34A853" d="M12 21.5c2.63 0 4.84-.87 6.45-2.36l-3.14-2.43c-.87.58-1.98.92-3.31.92-2.54 0-4.7-1.72-5.47-4.03H3.29v2.5A9.74 9.74 0 0 0 12 21.5z"></path>
+                    <path fill="#FBBC05" d="M6.53 13.6A5.85 5.85 0 0 1 6.23 12c0-.56.1-1.1.3-1.6V7.9H3.29A9.5 9.5 0 0 0 2.5 12c0 1.48.35 2.88.79 4.1l3.24-2.5z"></path>
+                    <path fill="#EA4335" d="M12 6.38c1.43 0 2.71.49 3.72 1.45l2.79-2.79C16.84 3.49 14.63 2.5 12 2.5a9.74 9.74 0 0 0-8.71 5.4l3.24 2.5C7.3 8.1 9.46 6.38 12 6.38z"></path>
+                </svg>
+            <span>Sign in with Google</span>
         </button>
 
+        <p class="google-account-note">
+            Use the Google account you want linked to your LexLogica progress.
+        </p>
 
         <div
             id="login-message"
             class="login-message"
+            aria-live="polite"
         ></div>
 
-
         <div class="login-register">
-
-            Don't have an account?
-
-            <a href="/register">
-                Register
-            </a>
-
+            New to LexLogica?
+            <a href="/register">Create your account</a>
         </div>
 
     </div>
@@ -338,10 +340,8 @@
 const SUPABASE_URL =
     "https://ikvvixdyztyqqxkveois.supabase.co";
 
-
 const SUPABASE_PUBLISHABLE_KEY =
     "sb_publishable_nO5HUWPidf4U_MMK0-HYEA_vuOR0POg";
-
 
 const supabaseClient =
     window.supabase.createClient(
@@ -349,28 +349,13 @@ const supabaseClient =
         SUPABASE_PUBLISHABLE_KEY
     );
 
-
-const loginForm =
-    document.getElementById("login-form");
-
-const emailInput =
-    document.getElementById("email");
-
-const passwordInput =
-    document.getElementById("password");
-
-const loginSubmit =
-    document.getElementById("login-submit");
-
 const googleLogin =
     document.getElementById("google-login");
 
 const loginMessage =
     document.getElementById("login-message");
 
-
 function getRedirectUrl() {
-
     const params =
         new URLSearchParams(
             window.location.search
@@ -389,23 +374,42 @@ function getRedirectUrl() {
     return "/question-bank";
 }
 
+function isGoogleUser(user) {
+    return Boolean(
+        user &&
+        (
+            user.app_metadata?.provider === "google" ||
+            (
+                Array.isArray(
+                    user.app_metadata?.providers
+                ) &&
+                user.app_metadata.providers.includes(
+                    "google"
+                )
+            ) ||
+            (
+                Array.isArray(
+                    user.identities
+                ) &&
+                user.identities.some(
+                    identity =>
+                        identity?.provider ===
+                        "google"
+                )
+            )
+        )
+    );
+}
 
-function showMessage(
-    message,
-    type
-) {
-
+function showMessage(message, type) {
     loginMessage.textContent =
         message;
 
     loginMessage.className =
         `login-message ${type}`;
-
 }
 
-
 async function checkExistingSession() {
-
     const {
         data: {
             user
@@ -413,145 +417,49 @@ async function checkExistingSession() {
     } =
         await supabaseClient.auth.getUser();
 
-    if (user) {
-
+    if (
+        user &&
+        isGoogleUser(user)
+    ) {
         window.location.replace(
             getRedirectUrl()
         );
-
+        return;
     }
 
+    if (user) {
+        await supabaseClient.auth.signOut({
+            scope: "local"
+        });
+    }
 }
-
-
-/* =================================
-   EMAIL LOGIN
-================================= */
-
-loginForm.addEventListener(
-    "submit",
-    async (event) => {
-
-        event.preventDefault();
-
-        const email =
-            emailInput.value.trim();
-
-        const password =
-            passwordInput.value;
-
-        loginSubmit.disabled = true;
-
-        loginSubmit.textContent =
-            "Logging in...";
-
-        loginMessage.className =
-            "login-message";
-
-
-        const {
-            data,
-            error
-        } =
-            await supabaseClient.auth.signInWithPassword({
-                email,
-                password
-            });
-
-
-        if (error) {
-
-            console.error(error);
-
-            showMessage(
-                error.message,
-                "error"
-            );
-
-            loginSubmit.disabled =
-                false;
-
-            loginSubmit.textContent =
-                "Login";
-
-            return;
-        }
-
-
-        if (!data.session) {
-
-            showMessage(
-                "Login succeeded, but no session was created. Please try again.",
-                "error"
-            );
-
-            loginSubmit.disabled =
-                false;
-
-            loginSubmit.textContent =
-                "Login";
-
-            return;
-        }
-
-
-        showMessage(
-            "Login successful. Redirecting...",
-            "success"
-        );
-
-
-        setTimeout(
-            () => {
-
-                window.location.replace(
-                    getRedirectUrl()
-                );
-
-            },
-            300
-        );
-
-    }
-);
-
-
-/* =================================
-   GOOGLE LOGIN
-================================= */
 
 googleLogin.addEventListener(
     "click",
     async () => {
-
-        googleLogin.disabled =
-            true;
-
-        googleLogin.textContent =
-            "Connecting...";
-
+        googleLogin.disabled = true;
+        googleLogin.classList.add(
+            "is-loading"
+        );
 
         const redirectUrl =
             window.location.origin +
             getRedirectUrl();
 
-
         const {
             error
         } =
             await supabaseClient.auth.signInWithOAuth({
-
                 provider: "google",
-
                 options: {
-                    redirectTo: redirectUrl
+                    redirectTo: redirectUrl,
+                    queryParams: {
+                        prompt: "select_account"
+                    }
                 }
-
             });
 
-
         if (error) {
-
             console.error(error);
 
             showMessage(
@@ -559,43 +467,13 @@ googleLogin.addEventListener(
                 "error"
             );
 
-            googleLogin.disabled =
-                false;
-
-            googleLogin.textContent =
-                "Continue with Google";
-
-        }
-
-    }
-);
-
-
-/* =================================
-   AUTH STATE
-================================= */
-
-supabaseClient.auth.onAuthStateChange(
-    (event, session) => {
-
-        if (
-            event === "SIGNED_IN" &&
-            session
-        ) {
-
-            window.location.replace(
-                getRedirectUrl()
+            googleLogin.disabled = false;
+            googleLogin.classList.remove(
+                "is-loading"
             );
-
         }
-
     }
 );
-
-
-/* =================================
-   MOBILE MENU
-================================= */
 
 const menuButton =
     document.querySelector(
@@ -607,36 +485,27 @@ const navigation =
         ".navigation"
     );
 
-
 if (
     menuButton &&
     navigation
 ) {
-
     menuButton.addEventListener(
         "click",
         () => {
-
             const isOpen =
                 navigation.classList.toggle(
                     "mobile-open"
                 );
 
-
             menuButton.setAttribute(
                 "aria-expanded",
-                isOpen ? "true" : "false"
+                isOpen
+                    ? "true"
+                    : "false"
             );
-
         }
     );
-
 }
-
-
-/* =================================
-   START
-================================= */
 
 checkExistingSession();
 
