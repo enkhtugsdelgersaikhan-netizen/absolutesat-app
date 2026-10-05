@@ -29,6 +29,44 @@ const absolutePrepSupabase =
 
 
 /* ============================================================
+   GOOGLE-ONLY SESSION POLICY
+   ============================================================ */
+
+function isAbsolutePrepGoogleSession(session) {
+    const user = session && session.user;
+
+    if (!user) {
+        return false;
+    }
+
+    const primaryProvider =
+        user.app_metadata &&
+        user.app_metadata.provider;
+
+    const linkedProviders =
+        user.app_metadata &&
+        Array.isArray(user.app_metadata.providers)
+            ? user.app_metadata.providers
+            : [];
+
+    const identities =
+        Array.isArray(user.identities)
+            ? user.identities
+            : [];
+
+    return (
+        primaryProvider === "google" ||
+        linkedProviders.includes("google") ||
+        identities.some(
+            identity =>
+                identity &&
+                identity.provider === "google"
+        )
+    );
+}
+
+
+/* ============================================================
    UPDATE HEADER
    ============================================================ */
 
@@ -77,11 +115,23 @@ async function updateAbsolutePrepHeader(session = null) {
     }
 
 
+    const dashboardButton = document.querySelector(".site-dashboard");
+
+    if (
+        session &&
+        !isAbsolutePrepGoogleSession(session)
+    ) {
+        await absolutePrepSupabase.auth.signOut({
+            scope: "local"
+        });
+
+        session = null;
+    }
+
+
     /* ========================================================
        LOGGED IN
     ======================================================== */
-
-    const dashboardButton = document.querySelector(".site-dashboard");
 
     if (session) {
 
@@ -108,14 +158,14 @@ async function updateAbsolutePrepHeader(session = null) {
             href="/register"
             class="register-button"
         >
-            Register
+            Sign up
         </a>
 
         <a
             href="/login"
             class="login-button"
         >
-            Login
+            Log in
         </a>
 
     `;
