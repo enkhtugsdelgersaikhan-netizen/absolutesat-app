@@ -272,11 +272,13 @@ function escapeHtml(value) {
 
 function repairCommonMathNotation(value) {
     const source =
-        String(
-            value === null ||
-            value === undefined
-                ? ""
-                : value
+        normalizeAccidentalDisplayProse(
+            String(
+                value === null ||
+                value === undefined
+                    ? ""
+                    : value
+            )
         );
 
     return source.replace(
@@ -1504,6 +1506,169 @@ function getExtendedLinearSeriesPoints(
 }
 
 
+function getQuadraticGraphSamples(
+    points,
+    xMin,
+    xMax
+) {
+    if (
+        !Array.isArray(points) ||
+        points.length < 3
+    ) {
+        return null;
+    }
+
+    const first = points[0];
+    const middle =
+        points[
+            Math.floor(
+                points.length / 2
+            )
+        ];
+    const last =
+        points[
+            points.length - 1
+        ];
+
+    const x1 = Number(first[0]);
+    const y1 = Number(first[1]);
+    const x2 = Number(middle[0]);
+    const y2 = Number(middle[1]);
+    const x3 = Number(last[0]);
+    const y3 = Number(last[1]);
+
+    const determinant =
+        x1 * x1 * (x2 - x3) -
+        x1 * (x2 * x2 - x3 * x3) +
+        x2 * x2 * x3 -
+        x2 * x3 * x3;
+
+    if (
+        !Number.isFinite(
+            determinant
+        ) ||
+        Math.abs(determinant) <
+            1e-9
+    ) {
+        return null;
+    }
+
+    const a =
+        (
+            y1 * (x2 - x3) -
+            x1 * (y2 - y3) +
+            y2 * x3 -
+            x2 * y3
+        ) /
+        determinant;
+
+    const b =
+        (
+            x1 * x1 * (y2 - y3) -
+            y1 * (x2 * x2 - x3 * x3) +
+            x2 * x2 * y3 -
+            y2 * x3 * x3
+        ) /
+        determinant;
+
+    const c =
+        (
+            x1 * x1 *
+            (x2 * y3 - y2 * x3) -
+            x1 *
+            (
+                x2 * x2 * y3 -
+                y2 * x3 * x3
+            ) +
+            y1 *
+            (
+                x2 * x2 * x3 -
+                x2 * x3 * x3
+            )
+        ) /
+        determinant;
+
+    if (
+        ![a, b, c].every(
+            Number.isFinite
+        ) ||
+        Math.abs(a) < 1e-8
+    ) {
+        return null;
+    }
+
+    const yValues =
+        points.map(
+            point =>
+                Number(point[1])
+        );
+
+    const yRange =
+        Math.max(
+            1,
+            Math.max(...yValues) -
+            Math.min(...yValues)
+        );
+
+    const matchesQuadratic =
+        points.every(
+            point => {
+                const x =
+                    Number(point[0]);
+                const actual =
+                    Number(point[1]);
+                const expected =
+                    a * x * x +
+                    b * x +
+                    c;
+
+                return (
+                    Math.abs(
+                        actual -
+                        expected
+                    ) <=
+                    Math.max(
+                        1e-5,
+                        yRange * 0.002
+                    )
+                );
+            }
+        );
+
+    if (!matchesQuadratic) {
+        return null;
+    }
+
+    const sampleCount = 220;
+    const samples = [];
+
+    for (
+        let i = 0;
+        i <= sampleCount;
+        i++
+    ) {
+        const x =
+            xMin +
+            (
+                (xMax - xMin) *
+                i /
+                sampleCount
+            );
+
+        samples.push(
+            [
+                x,
+                a * x * x +
+                    b * x +
+                    c
+            ]
+        );
+    }
+
+    return samples;
+}
+
+
 function buildSmoothGraphPath(
     points,
     xScale,
@@ -1986,8 +2151,22 @@ function renderQuestionXYGraph(graph) {
                                 yMax
                             );
 
+                    const quadraticSamples =
+                        (
+                            item.connect === false ||
+                            extended
+                        )
+                            ? null
+                            : getQuadraticGraphSamples(
+                                points,
+                                xMin,
+                                xMax
+                            );
+
                     const linePoints =
-                        extended || points;
+                        extended ||
+                        quadraticSamples ||
+                        points;
 
                     const lineMarkup =
                         item.connect === false
@@ -3035,13 +3214,91 @@ async function loadReviewStatesForQuestions(
     }
 }
 
+function normalizeAccidentalDisplayProse(
+    value
+) {
+    const source =
+        String(
+            value === null ||
+            value === undefined
+                ? ""
+                : value
+        );
+
+    return source.replace(
+        /\\\[([\s\S]*?)\\\]/g,
+        (
+            match,
+            body
+        ) => {
+            const trimmed =
+                String(body || "")
+                    .trim();
+
+            if (
+                !trimmed ||
+                /[\\^_{}]/.test(
+                    trimmed
+                )
+            ) {
+                return match;
+            }
+
+            const startsLikeProse =
+                /^(?:what|which|how|if|is|in|and|intersect|one|the|at|for|from|since|using|then|thus|substitute|match|multiply|divide|add|subtract|let|rewrite|solve|first|because|therefore|when|set|so|only|each|now|this|that|both|line|statement|speed|area|volume|total)\b/i
+                    .test(
+                        trimmed
+                    );
+
+            const wordCount =
+                (
+                    trimmed.match(
+                        /\b[A-Za-z]{2,}\b/g
+                    ) || []
+                ).length;
+
+            return (
+                startsLikeProse &&
+                wordCount >= 2
+            )
+                ? trimmed
+                : match;
+        }
+    );
+}
+
+
+function normalizeQuestionStemText(
+    value
+) {
+    const text =
+        String(value || "")
+            .trim();
+
+    if (
+        /^(?:what|which|how|at what|for what|in which)\b/i
+            .test(text)
+    ) {
+        return (
+            text.charAt(0)
+                .toUpperCase() +
+            text.slice(1)
+        );
+    }
+
+    return text;
+}
+
+
 function splitMathQuestionContent(
     stagedQuestion
 ) {
     const rawQuestion =
-        String(
-            stagedQuestion.question ||
-            ""
+        normalizeAccidentalDisplayProse(
+            String(
+                stagedQuestion.question ||
+                ""
+            )
         ).trim();
 
     const existingPassage =
@@ -3100,11 +3357,13 @@ function splitMathQuestionContent(
             .trim();
 
     const stem =
-        rawQuestion
-            .slice(
-                stemStart
-            )
-            .trim();
+        normalizeQuestionStemText(
+            rawQuestion
+                .slice(
+                    stemStart
+                )
+                .trim()
+        );
 
     if (
         info.length < 12 ||
