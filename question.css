@@ -410,6 +410,7 @@
 
 .choice-text {
     padding-top: 4px;
+    white-space: pre-line;
 }
 
 .choice.correct-answer {
@@ -1328,6 +1329,7 @@
 }
 .choice-reason-text{
     color:inherit;
+    white-space:pre-line;
 }
 .answer-feedback{
     padding:13px 16px;
@@ -1387,6 +1389,7 @@
 }
 .question-passage-copy{
     margin-top:0;
+    white-space:pre-line;
 }
 .question-passage-table-wrap + .question-passage-copy,
 .question-graph-wrap + .question-passage-copy{
