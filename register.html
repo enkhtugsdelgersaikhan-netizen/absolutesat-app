@@ -30,10 +30,10 @@
         rel="stylesheet"
     >
 
-    <link rel="stylesheet" href="/style.css?v=subjects-1">
+    <link rel="stylesheet" href="/style.css?v=google-auth-1">
     <link
         rel="stylesheet"
-        href="auth.css"
+        href="auth.css?v=google-auth-1"
     >
 
 </head>
@@ -46,7 +46,7 @@
          HEADER
     ========================================== -->
 
-    <header class="header"><div class="header-container"><a href="/" class="logo-link" aria-label="LexLogica home"><img src="/Logo.png" alt="LexLogica" class="logo"></a><nav class="navigation" aria-label="Main navigation"><a href="/mathematics" class="nav-button">Mathematics</a><a href="/mock-tests" class="nav-button">Mock Tests</a><a href="/reading-writing" class="nav-button">Reading and Writing</a></nav><a href="/dashboard" class="dashboard-button site-dashboard" hidden aria-hidden="true">Dashboard</a><div class="auth-buttons"><a href="/login" class="login-button">Login</a></div><button class="mobile-menu-button" aria-label="Open navigation" aria-expanded="false" type="button">☰</button></div></header>
+    <header class="header"><div class="header-container"><a href="/" class="logo-link" aria-label="LexLogica home"><img src="/Logo.png" alt="LexLogica" class="logo"></a><nav class="navigation" aria-label="Main navigation"><a href="/mathematics" class="nav-button">Mathematics</a><a href="/mock-tests" class="nav-button">Mock Tests</a><a href="/reading-writing" class="nav-button">Reading and Writing</a></nav><a href="/dashboard" class="dashboard-button site-dashboard" hidden aria-hidden="true">Dashboard</a><div class="auth-buttons"><a href="/register" class="register-button">Sign up</a><a href="/login" class="login-button">Log in</a></div><button class="mobile-menu-button" aria-label="Open navigation" aria-expanded="false" type="button">☰</button></div></header>
 
 
 
@@ -56,206 +56,53 @@
 
     <main class="auth-page">
 
-        <section class="auth-card">
+        <section class="auth-card google-only-auth-card">
 
+            <div class="google-auth-mark" aria-hidden="true">
+                <svg class="google-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="#4285F4" d="M21.35 12.27c0-.78-.07-1.53-.22-2.27H12v4.3h5.22a4.46 4.46 0 0 1-1.94 2.93v2.43h3.14c1.84-1.69 2.93-4.18 2.93-7.39z"></path>
+                    <path fill="#34A853" d="M12 21.5c2.63 0 4.84-.87 6.45-2.36l-3.14-2.43c-.87.58-1.98.92-3.31.92-2.54 0-4.7-1.72-5.47-4.03H3.29v2.5A9.74 9.74 0 0 0 12 21.5z"></path>
+                    <path fill="#FBBC05" d="M6.53 13.6A5.85 5.85 0 0 1 6.23 12c0-.56.1-1.1.3-1.6V7.9H3.29A9.5 9.5 0 0 0 2.5 12c0 1.48.35 2.88.79 4.1l3.24-2.5z"></path>
+                    <path fill="#EA4335" d="M12 6.38c1.43 0 2.71.49 3.72 1.45l2.79-2.79C16.84 3.49 14.63 2.5 12 2.5a9.74 9.74 0 0 0-8.71 5.4l3.24 2.5C7.3 8.1 9.46 6.38 12 6.38z"></path>
+                </svg>
+            </div>
 
             <h1 class="auth-heading">
                 Create your account
             </h1>
 
-
             <p class="auth-subheading">
-                Join LexLogica and start practicing smarter.
+                LexLogica accounts are created with Google only.
             </p>
-
-
-
-            <!-- =====================================
-                 REGISTER FORM
-            ====================================== -->
-
-            <form
-                id="register-form"
-                class="auth-form"
-            >
-
-
-                <!-- EMAIL -->
-
-                <div class="form-group">
-
-                    <label
-                        for="email"
-                        class="form-label"
-                    >
-                        Email
-                    </label>
-
-
-                    <input
-                        id="email"
-                        type="email"
-                        class="form-input"
-                        placeholder="you@example.com"
-                        autocomplete="email"
-                        required
-                    >
-
-                </div>
-
-
-
-                <!-- PASSWORD -->
-
-                <div class="form-group">
-
-                    <label
-                        for="password"
-                        class="form-label"
-                    >
-                        Password
-                    </label>
-
-
-                    <input
-                        id="password"
-                        type="password"
-                        class="form-input"
-                        placeholder="Create a password"
-                        autocomplete="new-password"
-                        minlength="6"
-                        required
-                    >
-
-                </div>
-
-
-
-                <!-- CONFIRM PASSWORD -->
-
-                <div class="form-group">
-
-                    <label
-                        for="confirm-password"
-                        class="form-label"
-                    >
-                        Confirm password
-                    </label>
-
-
-                    <input
-                        id="confirm-password"
-                        type="password"
-                        class="form-input"
-                        placeholder="Enter your password again"
-                        autocomplete="new-password"
-                        minlength="6"
-                        required
-                    >
-
-                </div>
-
-
-
-                <!-- CREATE ACCOUNT BUTTON -->
-
-                <button
-                    id="register-button"
-                    type="submit"
-                    class="auth-submit"
-                >
-                    Create Account
-                </button>
-
-
-            </form>
-
-
-
-            <!-- =====================================
-                 DIVIDER
-            ====================================== -->
-
-            <div class="auth-divider">
-
-                <span>or</span>
-
-            </div>
-
-
-
-            <!-- =====================================
-                 GOOGLE BUTTON
-            ====================================== -->
 
             <button
                 id="google-button"
                 type="button"
-                class="google-button"
+                class="google-button google-primary-button"
             >
-
-
-                <svg
-                    class="google-icon"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                >
-
-                    <path
-                        fill="#4285F4"
-                        d="M21.35 12.27c0-.78-.07-1.53-.22-2.27H12v4.3h5.22a4.46 4.46 0 0 1-1.94 2.93v2.43h3.14c1.84-1.69 2.93-4.18 2.93-7.39z"
-                    />
-
-                    <path
-                        fill="#34A853"
-                        d="M12 21.5c2.63 0 4.84-.87 6.45-2.36l-3.14-2.43c-.87.58-1.98.92-3.31.92-2.54 0-4.7-1.72-5.47-4.03H3.29v2.5A9.74 9.74 0 0 0 12 21.5z"
-                    />
-
-                    <path
-                        fill="#FBBC05"
-                        d="M6.53 13.6A5.85 5.85 0 0 1 6.23 12c0-.56.1-1.1.3-1.6V7.9H3.29A9.5 9.5 0 0 0 2.5 12c0 1.48.35 2.88.79 4.1l3.24-2.5z"
-                    />
-
-                    <path
-                        fill="#EA4335"
-                        d="M12 6.38c1.43 0 2.71.49 3.72 1.45l2.79-2.79C16.84 3.49 14.63 2.5 12 2.5a9.74 9.74 0 0 0-8.71 5.4l3.24 2.5C7.3 8.1 9.46 6.38 12 6.38z"
-                    />
-
+                <svg class="google-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="#4285F4" d="M21.35 12.27c0-.78-.07-1.53-.22-2.27H12v4.3h5.22a4.46 4.46 0 0 1-1.94 2.93v2.43h3.14c1.84-1.69 2.93-4.18 2.93-7.39z"></path>
+                    <path fill="#34A853" d="M12 21.5c2.63 0 4.84-.87 6.45-2.36l-3.14-2.43c-.87.58-1.98.92-3.31.92-2.54 0-4.7-1.72-5.47-4.03H3.29v2.5A9.74 9.74 0 0 0 12 21.5z"></path>
+                    <path fill="#FBBC05" d="M6.53 13.6A5.85 5.85 0 0 1 6.23 12c0-.56.1-1.1.3-1.6V7.9H3.29A9.5 9.5 0 0 0 2.5 12c0 1.48.35 2.88.79 4.1l3.24-2.5z"></path>
+                    <path fill="#EA4335" d="M12 6.38c1.43 0 2.71.49 3.72 1.45l2.79-2.79C16.84 3.49 14.63 2.5 12 2.5a9.74 9.74 0 0 0-8.71 5.4l3.24 2.5C7.3 8.1 9.46 6.38 12 6.38z"></path>
                 </svg>
-
-
-                Continue with Google
-
-
+                <span>Sign up with Google</span>
             </button>
 
-
-
-            <!-- =====================================
-                 MESSAGE
-            ====================================== -->
+            <p class="google-account-note">
+                Your Google account securely identifies your LexLogica profile and keeps your study progress tied to one account.
+            </p>
 
             <div
                 id="auth-message"
                 class="auth-message"
+                aria-live="polite"
             ></div>
 
-
-
-            <!-- =====================================
-                 LOGIN LINK
-            ====================================== -->
-
             <p class="auth-bottom-text">
-
                 Already have an account?
-
-                <a href="/login">
-                    Log in
-                </a>
-
+                <a href="/login">Log in</a>
             </p>
-
 
         </section>
 
@@ -282,308 +129,117 @@
 
     <script>
 
-        const registerForm =
-            document.getElementById("register-form");
-
-        const registerButton =
-            document.getElementById("register-button");
-
         const googleButton =
-            document.getElementById("google-button");
+            document.getElementById(
+                "google-button"
+            );
 
         const message =
-            document.getElementById("auth-message");
-
-
-
-        /* =====================================
-           SHOW MESSAGE
-        ====================================== */
+            document.getElementById(
+                "auth-message"
+            );
 
         function showMessage(text, type) {
-
-            message.innerHTML = text;
-
+            message.textContent = text;
             message.className =
-                "auth-message show " + type;
-
+                "auth-message show " +
+                type;
         }
 
-
-
-        /* =====================================
-           BUTTON LOADING
-        ====================================== */
-
-        function setLoading(
-            button,
-            loading,
-            text
-        ) {
-
-            button.disabled = loading;
-
-
-            if (loading) {
-
-                button.innerHTML = `
-                    <span class="button-loading">
-                        <span class="spinner"></span>
-                        ${text}
-                    </span>
-                `;
-
-            } else {
-
-                button.textContent = text;
-
-            }
-
+        function isGoogleUser(user) {
+            return Boolean(
+                user &&
+                (
+                    user.app_metadata?.provider ===
+                        "google" ||
+                    (
+                        Array.isArray(
+                            user.app_metadata?.providers
+                        ) &&
+                        user.app_metadata.providers.includes(
+                            "google"
+                        )
+                    ) ||
+                    (
+                        Array.isArray(
+                            user.identities
+                        ) &&
+                        user.identities.some(
+                            identity =>
+                                identity?.provider ===
+                                "google"
+                        )
+                    )
+                )
+            );
         }
 
-
-
-        /* =====================================
-           EMAIL REGISTRATION
-        ====================================== */
-
-        registerForm.addEventListener(
-            "submit",
-            async function (event) {
-
-                event.preventDefault();
-
-
-                message.className =
-                    "auth-message";
-
-
-                const email =
-                    document
-                        .getElementById("email")
-                        .value
-                        .trim();
-
-
-                const password =
-                    document
-                        .getElementById("password")
-                        .value;
-
-
-                const confirmPassword =
-                    document
-                        .getElementById("confirm-password")
-                        .value;
-
-
-
-                /* ================================
-                   CHECK PASSWORDS
-                ================================= */
-
-                if (password !== confirmPassword) {
-
-                    showMessage(
-                        "Passwords do not match.",
-                        "error"
-                    );
-
-                    return;
-
+        async function checkExistingSession() {
+            const {
+                data: {
+                    user
                 }
+            } =
+                await supabaseClient.auth.getUser();
 
-
-
-                /* ================================
-                   PASSWORD LENGTH
-                ================================= */
-
-                if (password.length < 6) {
-
-                    showMessage(
-                        "Your password must be at least 6 characters.",
-                        "error"
-                    );
-
-                    return;
-
-                }
-
-
-
-                /* ================================
-                   LOADING
-                ================================= */
-
-                setLoading(
-                    registerButton,
-                    true,
-                    "Creating account..."
+            if (
+                user &&
+                isGoogleUser(user)
+            ) {
+                window.location.replace(
+                    "/"
                 );
-
-
-
-                /* ================================
-                   SUPABASE SIGN UP
-                ================================= */
-
-                const {
-                    data,
-                    error
-                } =
-                    await supabaseClient.auth.signUp({
-
-                        email: email,
-
-                        password: password,
-
-                        options: {
-
-                            emailRedirectTo:
-                                window.location.origin + "/"
-
-                        }
-
-                    });
-
-
-
-                /* ================================
-                   STOP LOADING
-                ================================= */
-
-                setLoading(
-                    registerButton,
-                    false,
-                    "Create Account"
-                );
-
-
-
-                /* ================================
-                   SUPABASE ERROR
-                ================================= */
-
-                if (error) {
-
-                    showMessage(
-                        error.message,
-                        "error"
-                    );
-
-                    return;
-
-                }
-
-
-
-                /* ================================
-                   EXISTING ACCOUNT CHECK
-                ================================= */
-
-                if (
-                    data.user &&
-                    data.user.identities &&
-                    data.user.identities.length === 0
-                ) {
-
-                    showMessage(
-                        'An account with this email already exists. <a href="/login">Log in here.</a>',
-                        "error"
-                    );
-
-                    return;
-
-                }
-
-
-
-                /* ================================
-                   ACCOUNT CREATED + LOGGED IN
-                ================================= */
-
-                if (
-                    data.user &&
-                    data.session
-                ) {
-
-                    window.location.href = "/";
-
-                    return;
-
-                }
-
-
-
-                /* ================================
-                   EMAIL CONFIRMATION
-                ================================= */
-
-                showMessage(
-                    "Account created successfully. Please check your email to confirm your account.",
-                    "success"
-                );
-
+                return;
             }
-        );
 
-
-
-        /* =====================================
-           GOOGLE SIGN UP
-        ====================================== */
+            if (user) {
+                await supabaseClient.auth.signOut({
+                    scope: "local"
+                });
+            }
+        }
 
         googleButton.addEventListener(
             "click",
             async function () {
-
                 googleButton.disabled = true;
-
-                googleButton.textContent =
-                    "Connecting to Google...";
-
-
+                googleButton.classList.add(
+                    "is-loading"
+                );
 
                 const {
                     error
                 } =
                     await supabaseClient.auth.signInWithOAuth({
-
                         provider: "google",
-
                         options: {
-
                             redirectTo:
-                                window.location.origin + "/"
-
+                                window.location.origin +
+                                "/",
+                            queryParams: {
+                                prompt:
+                                    "select_account"
+                            }
                         }
-
                     });
 
-
-
-                /* ================================
-                   GOOGLE ERROR
-                ================================= */
-
                 if (error) {
+                    googleButton.disabled =
+                        false;
 
-                    googleButton.disabled = false;
-
-                    googleButton.textContent =
-                        "Continue with Google";
-
+                    googleButton.classList.remove(
+                        "is-loading"
+                    );
 
                     showMessage(
                         error.message,
                         "error"
                     );
-
                 }
-
             }
         );
+
+        checkExistingSession();
 
     </script>
 
