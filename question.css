@@ -1174,6 +1174,29 @@
     display: none;
 }
 
+.sat-passage-pane:not(.has-passage) .sat-pane-label{
+    opacity:.55;
+}
+
+.question-passage-copy{
+    max-width:100%;
+}
+
+.question-passage mjx-container[display="true"],
+.question-text mjx-container[display="true"],
+.choice-text mjx-container[display="true"]{
+    max-width:100%;
+    overflow-x:auto;
+    overflow-y:hidden;
+    padding-bottom:2px;
+}
+
+.question-passage mjx-container,
+.question-text mjx-container,
+.choice-text mjx-container{
+    line-height:1.25;
+}
+
 .question-passage-table-wrap {
     width: 100%;
     margin: 24px 0 4px;
