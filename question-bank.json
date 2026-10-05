@@ -16200,21 +16200,2080 @@
       "explanation": "The passage begins with organisms commonly associated with bioluminescence and then broadens the reader’s understanding by explaining that terrestrial fungi and insects can also produce light. Its main purpose is therefore to show that the trait occurs in a wider range of organisms than people may initially assume.",
       "sourceBatch": "2026-10-05-new89",
       "sourceQuestionNumber": 89
+    },
+    {
+      "id": "rw-20261005-audit79-q001",
+      "groupId": "rw-20261005-audit79-q001",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "Medium",
+      "passage": "While researching a topic, a student has taken the following notes:\nPhotographer Mireya Solano is known for large-format photographs of abandoned industrial interiors.\nHer photograph After the Last Shift (46 × 68 in) depicts a former textile mill shortly before sunrise.\nA rusted loom occupies the extreme lower-left portion of the image.\nA broken clerestory window appears near the upper-right edge of the frame.\nPale morning light enters through the window and crosses the otherwise shadowed machinery.\nSolano frequently uses strong diagonal compositions to direct viewers’ attention across an image.",
+      "question": "The student wants to emphasize the locations of the two prominent objects in After the Last Shift. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "choices": {
+        "A": "In After the Last Shift, a rusted loom appears at the extreme lower left of the photograph, while a broken clerestory window occupies a position near the upper-right edge.",
+        "B": "Measuring 46 by 68 inches, After the Last Shift is a large-format photograph of an abandoned textile mill shortly before sunrise.",
+        "C": "Solano uses light entering through a broken clerestory window to create a strong diagonal across the machinery in After the Last Shift.",
+        "D": "Like many of Solano’s photographs, After the Last Shift depicts an industrial interior whose abandoned machinery remains visually prominent."
+      },
+      "correctAnswer": "A",
+      "explanation": "it directly identifies where both objects are positioned: the loom is at the extreme lower left, and the window is near the upper-right edge. Those are precisely the notes relevant to the student’s goal.",
+      "choiceExplanations": {
+        "A": "it directly identifies where both objects are positioned: the loom is at the extreme lower left, and the window is near the upper-right edge. Those are precisely the notes relevant to the student’s goal.",
+        "B": "provides the photograph’s dimensions, subject, and time of day but says nothing about where the two objects appear.",
+        "C": "identifies the window and discusses the direction of the light, but it does not state the locations of both the window and the loom.",
+        "D": "describes the photograph more generally and mentions industrial machinery, but it does not specify the objects’ positions within the frame."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 1,
+      "sourceMarker": "13"
+    },
+    {
+      "id": "rw-20261005-audit79-q002",
+      "groupId": "rw-20261005-audit79-q002",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Inferences",
+      "difficulty": "Hard",
+      "passage": "For decades, seismologists classified certain faults as either active or inactive largely according to whether those faults had produced detectable movement during a specified span of geological time. Researchers Leena Varma and Nicolás Estevez have argued, however, that such labels can become unstable as measurement technology improves. Instruments capable of detecting millimeter-scale deformation sometimes reveal motion along faults formerly regarded as inactive, while longer observation records can show that supposedly active faults remain quiet for extended periods. These observations suggest that ______",
+      "question": "Which choice most logically completes the text?",
+      "choices": {
+        "A": "faults currently classified as active should automatically be considered more dangerous than any fault classified as inactive.",
+        "B": "faults previously labeled inactive generally begin moving because monitoring equipment has become more sensitive.",
+        "C": "improved instruments will eventually eliminate the need to distinguish among different categories of faults.",
+        "D": "geological agencies may periodically need to reconsider how particular faults are classified as new measurements become available."
+      },
+      "correctAnswer": "D",
+      "explanation": "The passage explains that improved measurements can reveal evidence inconsistent with earlier classifications. If supposedly inactive faults show measurable movement and supposedly active ones can remain quiet for long periods, then existing classifications may need to be reevaluated as evidence changes.",
+      "choiceExplanations": {
+        "B": "mistakes detection for causation.",
+        "A": "goes beyond the passage, which discusses classification rather than comparative danger.",
+        "C": "is too extreme: better measurements may complicate or refine categories, but nothing suggests that categories will become unnecessary.",
+        "D": "The passage explains that improved measurements can reveal evidence inconsistent with earlier classifications. If supposedly inactive faults show measurable movement and supposedly active ones can remain quiet for long periods, then existing classifications may need to be reevaluated as evidence changes."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 2,
+      "sourceMarker": "15"
+    },
+    {
+      "id": "rw-20261005-audit79-q003",
+      "groupId": "rw-20261005-audit79-q003",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Inferences",
+      "difficulty": "Medium",
+      "passage": "Both compact and full-scale atmospheric water generators extract water vapor from humid air by cooling it until condensation forms. The portable Ardea-12 unit weighs 48 kilograms and can produce as much as 18 liters of water per day under favorable conditions. The industrial Meridien-900, by contrast, has a mass of approximately 1,700 kilograms and can generate as much as 620 liters per day.",
+      "question": "Based on the text, what can most reasonably be concluded about the Ardea-12 and the Meridien-900?",
+      "choices": {
+        "A": "Both machines can produce as much as 620 liters of water per day when humidity is sufficiently high.",
+        "B": "The Meridien-900 can produce more water in a day than the Ardea-12 can.",
+        "C": "Because it is smaller, the Ardea-12 converts atmospheric moisture into water more efficiently than the Meridien-900 does.",
+        "D": "The Meridien-900’s water production prevents smaller atmospheric water generators from functioning effectively nearby."
+      },
+      "correctAnswer": "B",
+      "explanation": "the passage directly states that the Ardea-12 can produce up to 18 liters per day, whereas the Meridien-900 can produce up to 620 liters per day. Thus, the larger machine is capable of producing more water daily.",
+      "choiceExplanations": {
+        "A": "incorrectly assigns the Meridien-900’s maximum output to both machines.",
+        "B": "the passage directly states that the Ardea-12 can produce up to 18 liters per day, whereas the Meridien-900 can produce up to 620 liters per day. Thus, the larger machine is capable of producing more water daily.",
+        "C": "introduces a claim about efficiency, but only total output and mass are provided; the passage does not establish efficiency per unit of mass, energy, or humidity.",
+        "D": "invents an interaction between the machines that the text never suggests."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 3,
+      "sourceMarker": "16"
+    },
+    {
+      "id": "rw-20261005-audit79-q004",
+      "groupId": "rw-20261005-audit79-q004",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Form, Structure, and Sense",
+      "difficulty": "Easy",
+      "passage": "Lake Titicaca lies on the border between Peru and Bolivia and ______ an estimated 893 cubic kilometers of water, making it one of South America’s largest freshwater reservoirs by volume.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "containing",
+        "B": "has contained",
+        "C": "contains",
+        "D": "contained"
+      },
+      "correctAnswer": "C",
+      "explanation": "contains is correct. The sentence has the compound predicate “lies … and contains.” Both verbs describe present characteristics of the singular subject Lake Titicaca, so the simple-present singular verb contains is required.",
+      "choiceExplanations": {
+        "C": "contains is correct. The sentence has the compound predicate “lies … and contains.” Both verbs describe present characteristics of the singular subject Lake Titicaca, so the simple-present singular verb contains is required.",
+        "A": "containing, cannot function as the second finite verb in the coordinated construction.",
+        "B": "has contained, unnecessarily shifts to the present perfect and breaks the parallel relationship with lies.",
+        "D": "contained, shifts into the past tense even though the sentence describes a current geographical fact."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 4,
+      "sourceMarker": "17"
+    },
+    {
+      "id": "rw-20261005-audit79-q005",
+      "groupId": "rw-20261005-audit79-q005",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "Medium",
+      "passage": "A number of contemporary chefs ______ conventional boundaries between culinary traditions. At her Copenhagen restaurant, Anika Watanabe pairs Japanese kombu broth with Danish smoked rye, while chef Mateo Ríos incorporates Korean gochujang fermentation into techniques derived from classical French charcuterie.",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "choices": {
+        "A": "codify",
+        "B": "preserve",
+        "C": "police",
+        "D": "efface"
+      },
+      "correctAnswer": "D",
+      "explanation": "efface is correct. To efface a distinction or boundary is to erase or diminish it. The examples show chefs deliberately combining techniques and ingredients associated with different culinary traditions, thereby making the boundaries between those traditions less distinct.",
+      "choiceExplanations": {
+        "C": "police, would suggest enforcing or guarding the distinctions, which also contradicts the blending described.",
+        "A": "codify, means to organize something into a formal system and does not fit the examples of hybridization.",
+        "B": "preserve, means to maintain the boundaries, the opposite of what the chefs are doing.",
+        "D": "efface is correct. To efface a distinction or boundary is to erase or diminish it. The examples show chefs deliberately combining techniques and ingredients associated with different culinary traditions, thereby making the boundaries between those traditions less distinct."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 5,
+      "sourceMarker": "18"
+    },
+    {
+      "id": "rw-20261005-audit79-q006",
+      "groupId": "rw-20261005-audit79-q006",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "Easy",
+      "passage": "After examining the correspondence of marine biologist Helen Battle, who conducted early plankton surveys in the North Atlantic, a historian located expedition journals by two additional scientists who worked aboard the same research ______ oceanographer Keiko Matsuda and zoologist Rafael Ibáñez.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "vessel:",
+        "B": "vessel;",
+        "C": "vessel",
+        "D": "vessel,"
+      },
+      "correctAnswer": "A",
+      "explanation": "vessel: is correct because the words following the blank identify the two additional scientists mentioned immediately before it.",
+      "choiceExplanations": {
+        "D": "colon can appropriately introduce a list or specific elaboration after a grammatically complete clause: the historian located journals by two additional scientists who worked aboard the same research vessel : oceanographer Keiko Matsuda and zoologist Rafael Ibáñez.",
+        "A": "vessel: is correct because the words following the blank identify the two additional scientists mentioned immediately before it.",
+        "B": "is incorrect because a semicolon normally joins two independent clauses, but “oceanographer Keiko Matsuda and zoologist Rafael Ibáñez” is not an independent clause.",
+        "C": "provides no punctuation to mark the transition from the general reference to the names identifying those scientists."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 6,
+      "sourceMarker": "19"
+    },
+    {
+      "id": "rw-20261005-audit79-q007",
+      "groupId": "rw-20261005-audit79-q007",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "Medium",
+      "passage": "Early twentieth-century archaeological illustrations often reconstructed ruined palaces as pristine monuments, omitting collapsed walls, later additions, and other evidence of change. Archaeologist Mara Velasco objected to this convention, arguing that accurate drawings should show a site’s accumulated history rather than imitate earlier illustrations that instead ______ the monuments’ grandeur while suppressing signs of deterioration.",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "choices": {
+        "A": "attenuated",
+        "B": "foregrounded",
+        "C": "rectified",
+        "D": "obscured"
+      },
+      "correctAnswer": "B",
+      "explanation": "foregrounded is correct because foregrounded means made especially prominent or emphasized. The earlier illustrations presented the monuments as pristine and grand while deliberately omitting evidence of deterioration, so they emphasized grandeur.",
+      "choiceExplanations": {
+        "B": "foregrounded is correct because foregrounded means made especially prominent or emphasized. The earlier illustrations presented the monuments as pristine and grand while deliberately omitting evidence of deterioration, so they emphasized grandeur.",
+        "A": "attenuated, means weakened or reduced, which is the opposite of what the idealized drawings did to the monuments’ grandeur.",
+        "C": "rectified, means corrected, but the passage describes the earlier illustrations as misleading rather than corrective.",
+        "D": "obscured, means concealed; although the drawings obscured signs of deterioration, they did not obscure the monuments’ grandeur—they highlighted it."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 7,
+      "sourceMarker": "20"
+    },
+    {
+      "id": "rw-20261005-audit79-q008",
+      "groupId": "rw-20261005-audit79-q008",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "Medium",
+      "passage": "While researching a topic, a student has taken the following notes:\nMeerKAT is a radio telescope array in South Africa.\nIt consists of 64 dish antennas.\nThe Atacama Large Millimeter/submillimeter Array (ALMA) is located in northern Chile.\nALMA can operate with as many as 66 antennas.\nBoth MeerKAT and ALMA are astronomical interferometers.\nAn interferometer combines signals collected by multiple antennas so that the antennas can function together as a much larger observing system.",
+      "question": "The student wants to emphasize a similarity between MeerKAT and ALMA. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "choices": {
+        "A": "Both MeerKAT and ALMA are located in regions selected for astronomical observations, although the two facilities are on different continents.",
+        "B": "MeerKAT has 64 dish antennas, whereas ALMA can use as many as 66 antennas.",
+        "C": "Although MeerKAT is located in South Africa and ALMA in Chile, each array uses signals from multiple antennas together as an astronomical interferometer.",
+        "D": "ALMA can operate with more antennas than MeerKAT, whose array consists of 64 dishes in South Africa."
+      },
+      "correctAnswer": "C",
+      "explanation": "it directly emphasizes the significant feature the two observatories share: both are interferometers that combine signals from multiple antennas.",
+      "choiceExplanations": {
+        "A": "states that both are used for astronomy but adds the unsupported claim that their locations were selected for observational reasons; the notes do not provide that information.",
+        "B": "emphasizes a numerical difference, not a similarity.",
+        "C": "it directly emphasizes the significant feature the two observatories share: both are interferometers that combine signals from multiple antennas.",
+        "D": "again highlights a difference in antenna count rather than the shared characteristic requested."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 8,
+      "sourceMarker": "21"
+    },
+    {
+      "id": "rw-20261005-audit79-q009",
+      "groupId": "rw-20261005-audit79-q009",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "Medium",
+      "passage": "While researching a topic, a student has taken the following notes:\nCollage is an artistic technique in which materials from different sources are assembled into a single composition.\nCollages may incorporate photographs, printed text, painted paper, fabric, or other materials.\nHannah Höch created Cut with the Kitchen Knife (1919–20), a large photomontage.\nHöch’s work relies heavily on photographs and printed images cut from mass-media publications.\nRomare Bearden created The Block (1971), a six-panel collage depicting life on a Harlem street.\nBearden’s work combines photographic fragments with painted and colored papers.",
+      "question": "The student wants to emphasize a difference between the two works. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "choices": {
+        "A": "Hannah Höch and Romare Bearden both created major collage works during the twentieth century.",
+        "B": "Höch’s Cut with the Kitchen Knife and Bearden’s The Block demonstrate that photographic material can be incorporated into collage.",
+        "C": "Collage artists may use photographs, printed text, fabric, painted paper, and many other materials in a single composition.",
+        "D": "Although both works are collages, Cut with the Kitchen Knife relies heavily on mass-media photographs and printed images, whereas The Block combines photographic fragments with painted and colored papers."
+      },
+      "correctAnswer": "D",
+      "explanation": "it explicitly compares the materials used in the two works and identifies a meaningful difference: Höch’s piece depends heavily on mass-media photographs and printed imagery, while Bearden’s combines photographic fragments with painted and colored papers.",
+      "choiceExplanations": {
+        "B": "also emphasizes a similarity—both incorporate photographic material—rather than the contrasting use of materials requested by the student.",
+        "A": "states a similarity rather than a difference.",
+        "C": "provides general information about collage but does not compare the two specific works.",
+        "D": "it explicitly compares the materials used in the two works and identifies a meaningful difference: Höch’s piece depends heavily on mass-media photographs and printed imagery, while Bearden’s combines photographic fragments with painted and colored papers."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 9,
+      "sourceMarker": "22"
+    },
+    {
+      "id": "rw-20261005-audit79-q010",
+      "groupId": "rw-20261005-audit79-q010",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Form, Structure, and Sense",
+      "difficulty": "Easy",
+      "passage": "During the 2029 International Autonomous Aircraft Challenge, the prototype Kestrel X4 completed seventeen consecutive test flights without a navigation failure. By the close of the competition, the aircraft had logged more autonomous flight hours than any other entry and _____ first among twenty-six prototypes for route-completion reliability.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "was ranked",
+        "B": "have been ranking",
+        "C": "were ranked",
+        "D": "is ranking"
+      },
+      "correctAnswer": "A",
+      "explanation": "The subject of the blank is the singular noun “aircraft.” The competition has already concluded, so the ranking is also a completed event in the past. The singular past passive construction “was ranked” therefore fits both the subject and the time frame.",
+      "choiceExplanations": {
+        "B": "uses the plural auxiliary “have” and an inappropriate progressive construction.",
+        "A": "The subject of the blank is the singular noun “aircraft.” The competition has already concluded, so the ranking is also a completed event in the past. The singular past passive construction “was ranked” therefore fits both the subject and the time frame.",
+        "C": "uses the plural verb “were,” which does not agree with the singular subject.",
+        "D": "shifts into the present progressive even though the passage describes a completed competition."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 10,
+      "sourceMarker": "1"
+    },
+    {
+      "id": "rw-20261005-audit79-q011",
+      "groupId": "rw-20261005-audit79-q011",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Form, Structure, and Sense",
+      "difficulty": "Easy",
+      "passage": "In tree-ring climatology, unusually narrow growth rings can indicate years in which drought or other environmental stresses limited tree growth. For example, an extended sequence of narrow rings appears in many southwestern North American pines dating to the late thirteenth century. Dendrochronologist Elena Marchesi’s monograph Forests as Archives _____ the interpretation of such growth patterns in detail.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "discussing",
+        "B": "discusses",
+        "C": "to discuss",
+        "D": "having discussed"
+      },
+      "correctAnswer": "B",
+      "explanation": "The subject “Dendrochronologist Elena Marchesi’s monograph Forests as Archives” requires a finite main verb. Because the subject is singular and the sentence states a general fact about the book, the singular present-tense verb “discusses” is correct.",
+      "choiceExplanations": {
+        "B": "The subject “Dendrochronologist Elena Marchesi’s monograph Forests as Archives” requires a finite main verb. Because the subject is singular and the sentence states a general fact about the book, the singular present-tense verb “discusses” is correct.",
+        "A": "is a participle and would leave the sentence without a finite main verb.",
+        "C": "is an infinitive and cannot independently serve as the predicate.",
+        "D": "is a perfect participial phrase and likewise does not provide the required finite verb."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 11,
+      "sourceMarker": "2"
+    },
+    {
+      "id": "rw-20261005-audit79-q012",
+      "groupId": "rw-20261005-audit79-q012",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "Medium",
+      "passage": "While researching a topic, a student has taken the following notes:\nMarisol Vega is a Chilean installation artist.\nVega is known for large works that combine projected light with reflective metal.\nTidal Memory debuted in 2024 at the Maritime Arts Pavilion in Busan, South Korea.\nTidal Memory consists of suspended aluminum panels illuminated by moving blue projections.\nThe installation occupies approximately 310 square meters.",
+      "question": "The student wants to emphasize when and where Tidal Memory debuted. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "choices": {
+        "A": "Tidal Memory occupies approximately 310 square meters and consists of suspended aluminum panels illuminated by blue projections.",
+        "B": "Marisol Vega, a Chilean installation artist, is known for large works combining reflective metal and projected light.",
+        "C": "In 2024, Marisol Vega debuted Tidal Memory at the Maritime Arts Pavilion in Busan, South Korea.",
+        "D": "Like many of Vega’s installations, Tidal Memory is a large-scale work combining metal surfaces with projected light."
+      },
+      "correctAnswer": "C",
+      "explanation": "The stated goal is to emphasize when and where the installation debuted. A supplies both required details directly: the year 2024 and the location the Maritime Arts Pavilion in Busan, South Korea.",
+      "choiceExplanations": {
+        "A": "describes the installation’s size and materials.",
+        "B": "describes Vega and her artistic practice but gives neither the debut date nor the venue.",
+        "C": "The stated goal is to emphasize when and where the installation debuted. A supplies both required details directly: the year 2024 and the location the Maritime Arts Pavilion in Busan, South Korea.",
+        "D": "explains how the work relates to Vega’s broader practice but likewise omits the requested time and place."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 12,
+      "sourceMarker": "3"
+    },
+    {
+      "id": "rw-20261005-audit79-q013",
+      "groupId": "rw-20261005-audit79-q013",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "Easy",
+      "passage": "Across her 2017 collection Margins of Measurement, statistician and essayist Elara Voss moves from playful discussions of probability puzzles to much more serious examinations of medical uncertainty. Despite the differences in subject matter, Voss repeatedly emphasizes the limits of confident inference and urges readers to distinguish what evidence establishes from what it merely suggests. _____ the sentence printed beneath her office clock reads, “Certainty should arrive last.”",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "Conversely,",
+        "B": "Still,",
+        "C": "Nowadays,",
+        "D": "Fittingly,"
+      },
+      "correctAnswer": "D",
+      "explanation": "Voss’s office motto closely matches the intellectual attitude described in the preceding sentence: caution about certainty and careful attention to what evidence actually supports. “Fittingly” signals that the motto is appropriately consistent with her broader outlook.",
+      "choiceExplanations": {
+        "C": "refers to the present time and does not express the logical relationship between Voss’s writing and her motto.",
+        "A": "would introduce an opposing idea, but the motto reinforces rather than contradicts the preceding description.",
+        "B": "also suggests concession or contrast where none exists.",
+        "D": "Voss’s office motto closely matches the intellectual attitude described in the preceding sentence: caution about certainty and careful attention to what evidence actually supports. “Fittingly” signals that the motto is appropriately consistent with her broader outlook."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 13,
+      "sourceMarker": "4"
+    },
+    {
+      "id": "rw-20261005-audit79-q014",
+      "groupId": "rw-20261005-audit79-q014",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "Medium",
+      "passage": "Samuel Taylor Coleridge’s 1798 poem The Rime of the Ancient Mariner depicts sailors whose collective behavior is profoundly altered by the physical misery of a windless voyage marked by extreme heat and thirst.",
+      "question": "Which quotation from The Rime of the Ancient Mariner most effectively illustrates the claim?",
+      "choices": {
+        "A": "“With throats unslaked, with black lips baked, / We could nor laugh nor wail”",
+        "B": "“The Sun came up upon the left, / Out of the sea came he!”",
+        "C": "“The fair breeze blew, the white foam flew, / The furrow followed free”",
+        "D": "“The ship was cheered, the harbour cleared, / Merrily did we drop”"
+      },
+      "correctAnswer": "A",
+      "explanation": "most directly connects the sailors’ physical suffering with a change in their collective behavior. Their parched throats and “baked” lips leave them unable even to laugh or cry out, showing that the conditions of the voyage have altered how the group behaves.",
+      "choiceExplanations": {
+        "C": "describes brisk movement under favorable wind and does not portray suffering.",
+        "A": "most directly connects the sailors’ physical suffering with a change in their collective behavior. Their parched throats and “baked” lips leave them unable even to laugh or cry out, showing that the conditions of the voyage have altered how the group behaves.",
+        "B": "describes the sun’s position rather than its effect on the sailors.",
+        "D": "depicts the ship’s cheerful departure from harbor, the opposite of the exhausting conditions identified in the claim."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 14,
+      "sourceMarker": "5"
+    },
+    {
+      "id": "rw-20261005-audit79-q015",
+      "groupId": "rw-20261005-audit79-q015",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Central Ideas and Details",
+      "difficulty": "Medium",
+      "passage": "The following text is adapted from Leila M. Harcourt’s 1912 novel The Cedar Room. Amira, who has recently returned to the house where she spent part of her childhood, remembers evenings with her grandmother.\nThe rain against the shutters brought back the evenings when Grandmother sat beside the lamp and recited old verses in a language Amira had never learned. She had understood almost none of the words. What remained was the cadence: Grandmother’s voice rose and settled with such measured gentleness that, even on nights when thunder shook the panes, Amira had usually fallen asleep before the lamp was extinguished.",
+      "question": "Based on the text, what does Amira mainly remember about the evenings when her grandmother recited to her?",
+      "choices": {
+        "A": "That she eventually learned the language in which her grandmother recited",
+        "B": "That the rhythm and sound of her grandmother’s voice made her feel calm",
+        "C": "That thunderstorms often prevented her grandmother from finishing the verses",
+        "D": "That the meanings of the verses interested her more than the way they sounded"
+      },
+      "correctAnswer": "B",
+      "explanation": "The passage explicitly says that Amira understood almost none of the words, so the meaning of the verses was not what stayed with her. Instead, she remembers the cadence and the “measured gentleness” of her grandmother’s voice, which soothed her enough to fall asleep even during storms.",
+      "choiceExplanations": {
+        "B": "The passage explicitly says that Amira understood almost none of the words, so the meaning of the verses was not what stayed with her. Instead, she remembers the cadence and the “measured gentleness” of her grandmother’s voice, which soothed her enough to fall asleep even during storms.",
+        "A": "contradicts the statement that Amira never learned the language.",
+        "C": "is incorrect because the passage says Amira fell asleep despite the thunder, not that the storms interrupted the recitations.",
+        "D": "reverses the emphasis of the passage: sound and rhythm, not semantic meaning, are what she remembers."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 15,
+      "sourceMarker": "6"
+    },
+    {
+      "id": "rw-20261005-audit79-q016",
+      "groupId": "rw-20261005-audit79-q016",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "Easy",
+      "passage": "Flood-control channels have long been controversial in coastal cities because they can protect dense neighborhoods while disrupting tidal ecosystems. Urban planner and flood-resilience _____ has argued that Rotterdam’s newer projects are most successful when engineered defenses are combined with restored wetlands.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "advocate, Mireille Tan,",
+        "B": "advocate Mireille Tan,",
+        "C": "advocate Mireille Tan",
+        "D": "advocate, Mireille Tan"
+      },
+      "correctAnswer": "C",
+      "explanation": "The phrase “advocate Mireille Tan” identifies which flood-resilience advocate is being discussed. Because the name is essential to identifying the subject, no comma should separate the occupational description from the name. No comma is needed after “Tan” either because the subject flows directly into the verb “has argued.”",
+      "choiceExplanations": {
+        "D": "wrongly inserts a comma between the title and the identifying name.",
+        "A": "This choice does not satisfy the evidence, wording, or grammatical requirement established by the question.",
+        "B": "incorrectly places a comma after the name, separating the complete subject from its verb.",
+        "C": "The phrase “advocate Mireille Tan” identifies which flood-resilience advocate is being discussed. Because the name is essential to identifying the subject, no comma should separate the occupational description from the name. No comma is needed after “Tan” either because the subject flows directly into the verb “has argued.”"
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 16,
+      "sourceMarker": "7"
+    },
+    {
+      "id": "rw-20261005-audit79-q017",
+      "groupId": "rw-20261005-audit79-q017",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Inferences",
+      "difficulty": "Medium",
+      "passage": "Meteorite recovery teams working in Antarctica often collect hundreds of ordinary chondrites from a single ice field. Much rarer carbonaceous chondrites are scientifically valuable because they can preserve primitive organic compounds and hydrated minerals. At several large recovery sites, carbonaceous chondrites have been found alongside ordinary chondrites, but they represent only a tiny fraction of the specimens recovered. It is therefore not surprising that _____",
+      "question": "Which choice most logically completes the text?",
+      "choices": {
+        "A": "recovery teams generally discard ordinary chondrites after locating a carbonaceous specimen.",
+        "B": "most ordinary chondrites contain greater concentrations of primitive organic compounds than carbonaceous chondrites do.",
+        "C": "carbonaceous chondrites are recovered only from ice fields where ordinary chondrites are absent.",
+        "D": "some Antarctic recovery sites have yielded no carbonaceous chondrites at all."
+      },
+      "correctAnswer": "D",
+      "explanation": "The passage establishes that carbonaceous chondrites are much rarer than ordinary chondrites and make up only a tiny fraction of meteorites at sites where both occur. Given that rarity, it logically follows that some individual recovery sites might contain none at all.",
+      "choiceExplanations": {
+        "A": "introduces a recovery practice for which no evidence is provided.",
+        "B": "contradicts the passage’s explanation of why carbonaceous chondrites are scientifically valuable.",
+        "C": "also contradicts the text, which explicitly says the two types have been found together.",
+        "D": "The passage establishes that carbonaceous chondrites are much rarer than ordinary chondrites and make up only a tiny fraction of meteorites at sites where both occur. Given that rarity, it logically follows that some individual recovery sites might contain none at all."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 17,
+      "sourceMarker": "8"
+    },
+    {
+      "id": "rw-20261005-audit79-q018",
+      "groupId": "rw-20261005-audit79-q018",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "Medium",
+      "passage": "_____ though Linear B appeared to generations of scholars, the script eventually yielded to sustained analysis by Michael Ventris and collaborators, who demonstrated in the early 1950s that it represented an early form of Greek.",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "choices": {
+        "A": "Intractable",
+        "B": "Impeccable",
+        "C": "Unequivocal",
+        "D": "Incidental"
+      },
+      "correctAnswer": "A",
+      "explanation": "“Intractable” can describe a problem that seems exceptionally difficult to solve. The contrast introduced by “though” makes that meaning essential: Linear B appeared resistant to solution, yet scholars eventually deciphered it.",
+      "choiceExplanations": {
+        "B": "“impeccable,” means flawless and does not describe a difficult interpretive problem.",
+        "A": "“Intractable” can describe a problem that seems exceptionally difficult to solve. The contrast introduced by “though” makes that meaning essential: Linear B appeared resistant to solution, yet scholars eventually deciphered it.",
+        "C": "“unequivocal,” means unambiguous, which conflicts with the script’s long resistance to decipherment.",
+        "D": "“incidental,” means secondary or minor and does not fit the contrast with its eventual solution."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 18,
+      "sourceMarker": "9"
+    },
+    {
+      "id": "rw-20261005-audit79-q019",
+      "groupId": "rw-20261005-audit79-q019",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "Easy",
+      "passage": "Members of the nineteenth-century Helios Astronomical Society sometimes withheld precise coordinates of newly discovered comets until they had verified their observations, but complete secrecy about discoveries was relatively uncommon once the evidence seemed secure. _____ members announced their results at society meetings, circulated observing notes to colleagues, or sent reports to scientific journals.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "Fittingly,",
+        "B": "More often,",
+        "C": "For example,",
+        "D": "Granted,"
+      },
+      "correctAnswer": "B",
+      "explanation": "The first sentence says that complete secrecy was relatively uncommon. The next sentence describes the behavior that happened more frequently instead: astronomers publicly shared their findings through meetings, correspondence, or journals. “More often” precisely signals that contrast in frequency.",
+      "choiceExplanations": {
+        "D": "would introduce a concession, but the second sentence does not qualify the first.",
+        "A": "suggests appropriateness rather than relative frequency.",
+        "B": "The first sentence says that complete secrecy was relatively uncommon. The next sentence describes the behavior that happened more frequently instead: astronomers publicly shared their findings through meetings, correspondence, or journals. “More often” precisely signals that contrast in frequency.",
+        "C": "would merely introduce an example; although the listed behaviors are examples, the central logical relationship is that these behaviors occurred more frequently than secrecy."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 19,
+      "sourceMarker": "10"
+    },
+    {
+      "id": "rw-20261005-audit79-q020",
+      "groupId": "rw-20261005-audit79-q020",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Inferences",
+      "difficulty": "Hard",
+      "passage": "Ecologist Nerea Valdés, Jun Park, and colleagues developed a model for predicting which amphibian species are likely to occur in wetlands across a mountainous region. The researchers drew heavily on observations submitted to a popular citizen-science platform. Although the platform supplies thousands of geographically precise records, users tend to submit observations from wetlands near roads, trails, and population centers far more often than from isolated sites. Even with this limitation, the dataset provides unusually extensive information about regional species distributions.",
+      "question": "According to the text, what is one potential drawback of Valdés and colleagues’ method?",
+      "choices": {
+        "A": "It relies primarily on observations that are likely to become outdated as amphibian populations migrate.",
+        "B": "It applies a data-collection technique developed for urban environments to habitats where it has not previously been tested.",
+        "C": "It may produce conclusions that do not fully represent amphibian communities in less accessible wetlands.",
+        "D": "It may cause researchers to identify the geographic boundaries of individual wetlands inaccurately."
+      },
+      "correctAnswer": "C",
+      "explanation": "The passage states that observations are disproportionately submitted from wetlands near roads, trails, and population centers. Remote wetlands are therefore sampled less thoroughly.",
+      "choiceExplanations": {
+        "D": "is incorrect because the passage concerns which species are documented at different sites, not researchers’ ability to determine the physical boundaries of wetlands.",
+        "A": "model based on those observations could consequently produce conclusions that do not represent amphibian communities across all wetlands in the region.",
+        "B": "is incorrect because nothing indicates that the data-collection method originated in urban research or has not been used in mountainous habitats.",
+        "C": "The passage states that observations are disproportionately submitted from wetlands near roads, trails, and population centers. Remote wetlands are therefore sampled less thoroughly."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 20,
+      "sourceMarker": "33"
+    },
+    {
+      "id": "rw-20261005-audit79-q021",
+      "groupId": "rw-20261005-audit79-q021",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "Medium",
+      "passage": "While researching a topic, a student has taken the following notes:\nThe Hope Diamond is a blue diamond weighing approximately 45.5 carats.\nHistoric gemstones have sometimes been named for people who possessed them.\nHenry Philip Hope was a nineteenth-century British banker and gemstone collector.\nThe diamond entered Hope’s collection during the nineteenth century.\nThe name “Hope Diamond” derives from Henry Philip Hope’s ownership of the stone.",
+      "question": "The student wants to explain how the Hope Diamond got its name. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "choices": {
+        "A": "At approximately 45.5 carats, the Hope Diamond is a large blue gemstone that once belonged to a British collector.",
+        "B": "Like some other historically significant gemstones, the Hope Diamond is notable for its unusual color and documented ownership history.",
+        "C": "Henry Philip Hope was a British banker whose collection contained numerous valuable gemstones during the nineteenth century.",
+        "D": "The Hope Diamond was named for Henry Philip Hope, a nineteenth-century collector who owned the gemstone."
+      },
+      "correctAnswer": "D",
+      "explanation": "The question asks specifically how the diamond got its name, and B directly explains that the name comes from former owner Henry Philip Hope.",
+      "choiceExplanations": {
+        "B": "discusses general characteristics and ownership history without identifying the source of the name.",
+        "A": "is incorrect because although it mentions an owner, it never explains that the diamond’s name derives from that person.",
+        "C": "provides information about Hope but does not connect his name to the naming of the diamond.",
+        "D": "The question asks specifically how the diamond got its name, and B directly explains that the name comes from former owner Henry Philip Hope."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 21,
+      "sourceMarker": "34"
+    },
+    {
+      "id": "rw-20261005-audit79-q022",
+      "groupId": "rw-20261005-audit79-q022",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "Medium",
+      "passage": "The following text is adapted from Sarah Orne Jewett’s 1896 novel The Country of the Pointed Firs. The narrator is observing a coastal settlement in Maine.\nAcross the quiet harbor, the clustered roofs appeared between dark ranks of spruce, while beyond them a narrow church steeple rose against the paling sky. Fishing boats moved almost imperceptibly at their moorings, and the last brightness of evening lay across the water. From the hill, the whole peaceful prospect seemed at once intimate and unexpectedly grand.",
+      "question": "As used in the text, what does the word “prospect” most nearly mean?",
+      "choices": {
+        "A": "View",
+        "B": "Examination",
+        "C": "Possibility",
+        "D": "Undertaking"
+      },
+      "correctAnswer": "A",
+      "explanation": "View is correct. The passage describes what the narrator can visually take in from the hill: roofs, trees, a steeple, boats, and the harbor. In this context, prospect means a scene or view visible from a particular position.",
+      "choiceExplanations": {
+        "C": "is incorrect because prospect can mean a future possibility, but the passage is describing a physical landscape rather than something that may happen.",
+        "A": "View is correct. The passage describes what the narrator can visually take in from the hill: roofs, trees, a steeple, boats, and the harbor. In this context, prospect means a scene or view visible from a particular position.",
+        "B": "is incorrect because the narrator is observing scenery, not conducting an examination or investigation.",
+        "D": "is incorrect because prospect does not mean an undertaking in this context; nothing in the sentence refers to a project or enterprise."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 22,
+      "sourceMarker": "35"
+    },
+    {
+      "id": "rw-20261005-audit79-q023",
+      "groupId": "rw-20261005-audit79-q023",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "Medium",
+      "passage": "While researching a topic, a student has taken the following notes:\nA currency is a monetary system officially used within a country.\nNewly independent countries sometimes replace currencies inherited from earlier political arrangements.\nGhana introduced the Ghanaian pound in 1958.\nThe cedi replaced the Ghanaian pound in 1965.\nGhana continues to use a form of the cedi as its official currency.",
+      "question": "The student wants to specify how long Ghana officially used the Ghanaian pound. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "choices": {
+        "A": "Ghana adopted the cedi in 1965 after replacing a currency that had been introduced several years earlier.",
+        "B": "The Ghanaian pound served as Ghana’s official currency from 1958 until 1965.",
+        "C": "The Ghanaian pound was introduced in 1958, whereas Ghana today uses a form of the cedi.",
+        "D": "Countries sometimes replace existing monetary systems, as Ghana did when it adopted the cedi."
+      },
+      "correctAnswer": "B",
+      "explanation": "It gives both endpoints needed to specify the period of use: the Ghanaian pound was introduced in 1958 and replaced in 1965.",
+      "choiceExplanations": {
+        "A": "is incorrect because it identifies the replacement year but gives only a vague description of when the previous currency began.",
+        "B": "It gives both endpoints needed to specify the period of use: the Ghanaian pound was introduced in 1958 and replaced in 1965.",
+        "C": "supplies the beginning year and identifies the current currency but does not state when use of the Ghanaian pound ended.",
+        "D": "explains the general phenomenon of currency replacement without specifying the length of time the Ghanaian pound was used."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 23,
+      "sourceMarker": "36"
+    },
+    {
+      "id": "rw-20261005-audit79-q024",
+      "groupId": "rw-20261005-audit79-q024",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "Easy",
+      "passage": "It was the sort of puzzle that could occupy a forensic linguist for _____ whether three anonymous pamphlets, despite conspicuous differences in spelling and punctuation, had been written by the same person.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "weeks. Determining",
+        "B": "weeks; determining",
+        "C": "weeks: determining",
+        "D": "weeks, determining:"
+      },
+      "correctAnswer": "C",
+      "explanation": "weeks: determining is correct. The clause before the blank—“It was the sort of puzzle that could occupy a forensic linguist for weeks”—is complete. The phrase that follows explains specifically what the puzzle consists of.",
+      "choiceExplanations": {
+        "C": "weeks: determining is correct. The clause before the blank—“It was the sort of puzzle that could occupy a forensic linguist for weeks”—is complete. The phrase that follows explains specifically what the puzzle consists of.",
+        "A": "colon appropriately introduces that elaboration.",
+        "B": "is incorrect because a semicolon generally joins two independent clauses, but “determining whether...” is not an independent clause.",
+        "D": "is incorrect because the colon after “determining” has no grammatical justification, and the comma before the participial phrase does not clearly establish the intended explanatory relationship."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 24,
+      "sourceMarker": "37"
+    },
+    {
+      "id": "rw-20261005-audit79-q025",
+      "groupId": "rw-20261005-audit79-q025",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "Easy",
+      "passage": "When archivist Lian Okafor created an online index of early Caribbean newspapers, her original purpose was modest. Several libraries had separate catalogs, and she wanted a single page where she could locate issue dates without repeatedly searching each institution’s website. “I built it because I kept needing the same information,” she later explained. _____, the index has since become an indispensable reference for historians tracing printers, editors, advertisements, and publication networks across the region.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "Consequently,",
+        "B": "Furthermore,",
+        "C": "Subsequently,",
+        "D": "Nevertheless,"
+      },
+      "correctAnswer": "D",
+      "explanation": "Nevertheless, is correct. The passage contrasts Okafor’s initially modest intention with the unexpectedly important role the index later came to play. Nevertheless appropriately signals that contrast: despite its unambitious origin, the resource became highly significant.",
+      "choiceExplanations": {
+        "D": "Nevertheless, is correct. The passage contrasts Okafor’s initially modest intention with the unexpectedly important role the index later came to play. Nevertheless appropriately signals that contrast: despite its unambitious origin, the resource became highly significant.",
+        "A": "is incorrect because Consequently would suggest that the index became indispensable because Okafor’s ambitions were modest, a causal relationship the passage does not establish.",
+        "B": "is incorrect because Furthermore merely adds a related point and fails to signal the contrast between modest origins and major eventual importance.",
+        "C": "is incorrect because Subsequently indicates only sequence in time; although the later development did occur afterward, the key relationship is unexpected contrast."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 25,
+      "sourceMarker": "38"
+    },
+    {
+      "id": "rw-20261005-audit79-q027",
+      "groupId": "rw-20261005-audit79-q027",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Central Ideas and Details",
+      "difficulty": "Medium",
+      "passage": "Archaeologist Sofia Benítez and colleagues have investigated cases in which pottery produced at different settlements developed similar painted motifs because artisans worked from a shared decorative model. Separately, Lukas Weber and colleagues have studied instances in which comparable motifs emerged independently because potters faced similar practical constraints when decorating vessels of the same shape. How frequently visual similarity results from shared models rather than independent development remains uncertain. To investigate that question, Maya Chen and Idris Halim evaluated evidence for both mechanisms within the same corpus of Bronze Age ceramics in a 2021 study.",
+      "question": "Which choice best states the main idea of the text?",
+      "choices": {
+        "A": "Chen and Halim examined two possible mechanisms for decorative similarity together, making their study broader in scope than the earlier studies described.",
+        "B": "Chen and Halim based their analysis entirely on datasets originally assembled by Benítez and Weber.",
+        "C": "Before Chen and Halim’s study, archaeologists generally assumed that similar pottery decoration always resulted from artisans using a shared model.",
+        "D": "Both Benítez’s study and Chen and Halim’s study directly compared shared-model explanations with independent-development explanations."
+      },
+      "correctAnswer": "A",
+      "explanation": "Benítez’s team studied similarity arising from shared models, whereas Weber’s team studied similarity arising independently under similar constraints. Chen and Halim then investigated both mechanisms in a single study. Thus, the later study addresses the phenomenon more comprehensively than either earlier study described.",
+      "choiceExplanations": {
+        "C": "is incorrect because the text never says that archaeologists generally assumed only one mechanism was possible.",
+        "A": "Benítez’s team studied similarity arising from shared models, whereas Weber’s team studied similarity arising independently under similar constraints. Chen and Halim then investigated both mechanisms in a single study. Thus, the later study addresses the phenomenon more comprehensively than either earlier study described.",
+        "B": "is incorrect because the passage does not state that Chen and Halim reused the earlier researchers’ datasets.",
+        "D": "is incorrect because Benítez’s study is described as focusing on shared decorative models, not as directly comparing both explanations."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 27,
+      "sourceMarker": "40"
+    },
+    {
+      "id": "rw-20261005-audit79-q028",
+      "groupId": "rw-20261005-audit79-q028",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "Medium",
+      "passage": "Engineer and inventor Hertha Ayrton conducted influential research on electric arcs and fluid vortices and became the first woman to read her own paper before the Royal Society. Even so, her place in broad public memory remains more _____ than that of scientific figures whose names became permanently associated with widely used inventions or units of measurement.",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "choices": {
+        "A": "conspicuous",
+        "B": "precarious",
+        "C": "meritorious",
+        "D": "entrenched"
+      },
+      "correctAnswer": "B",
+      "explanation": "precarious is correct. In this context, precarious means insecure or uncertain. The sentence acknowledges Ayrton’s significant accomplishments but contrasts them with the stronger, more stable public recognition enjoyed by scientific figures whose names are continually reinforced through familiar inventions or units.",
+      "choiceExplanations": {
+        "A": "is incorrect because conspicuous means highly noticeable; that would work against the contrast suggesting that her public recognition is comparatively less secure.",
+        "B": "precarious is correct. In this context, precarious means insecure or uncertain. The sentence acknowledges Ayrton’s significant accomplishments but contrasts them with the stronger, more stable public recognition enjoyed by scientific figures whose names are continually reinforced through familiar inventions or units.",
+        "C": "is incorrect because meritorious concerns deserving praise, whereas the sentence is about the stability of historical memory, not whether Ayrton deserves recognition.",
+        "D": "is incorrect because entrenched means firmly established, essentially the opposite of the intended meaning."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 28,
+      "sourceMarker": "41"
+    },
+    {
+      "id": "rw-20261005-audit79-q029",
+      "groupId": "rw-20261005-audit79-q029",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "Hard",
+      "passage": "Mina Deshpande and colleagues assembled a database of studies measuring microplastic concentrations in coastal waters. Each study received a reproducibility rating, with higher scores indicating that sampling and laboratory procedures were described more clearly, and a classification-consistency rating, with higher scores indicating closer agreement between the study’s particle categories and those used in the database. Using these ratings, a second research team concluded that the sampling methodology was explained more clearly in a study by Elena Rossi and colleagues than in a study by Marcus Vale and colleagues.",
+      "question": "Which finding, if true, would most directly challenge the second research team’s conclusion?",
+      "choices": {
+        "A": "Rossi’s study received high ratings for both reproducibility and classification consistency.",
+        "B": "Vale’s study received low ratings for both reproducibility and classification consistency.",
+        "C": "Rossi’s study received a lower reproducibility rating than Vale’s study did.",
+        "D": "Rossi’s study received a lower classification-consistency rating than Vale’s study did."
+      },
+      "correctAnswer": "C",
+      "explanation": "The conclusion concerns which study explained its methodology more clearly. The passage states that the reproducibility rating specifically measures how clearly sampling and laboratory procedures are described. If Rossi’s study had a lower reproducibility rating than Vale’s, that finding would directly contradict the conclusion that Rossi explained its methodology more clearly.",
+      "choiceExplanations": {
+        "D": "is incorrect because classification consistency measures alignment of particle categories with the database, not clarity of methodological explanation; a lower score on that separate measure would not directly undermine the stated conclusion.",
+        "A": "is incorrect because a high reproducibility rating for Rossi would support rather than challenge the conclusion.",
+        "B": "is incorrect because a low reproducibility rating for Vale would also tend to support the conclusion that Rossi’s methodology was more clearly presented.",
+        "C": "The conclusion concerns which study explained its methodology more clearly. The passage states that the reproducibility rating specifically measures how clearly sampling and laboratory procedures are described. If Rossi’s study had a lower reproducibility rating than Vale’s, that finding would directly contradict the conclusion that Rossi explained its methodology more clearly."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 29,
+      "sourceMarker": "42"
+    },
+    {
+      "id": "rw-20261005-audit79-q030",
+      "groupId": "rw-20261005-audit79-q030",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "Medium",
+      "passage": "Until radar surveys began resolving channels beneath the Greenland Ice Sheet, scientists’ understanding of how meltwater moved through the subglacial landscape was comparatively _____. Recent measurements tracing seasonal changes in buried drainage networks have produced a much sharper account of how water is routed beneath the ice.",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "choices": {
+        "A": "granular",
+        "B": "unprecedented",
+        "C": "orthodox",
+        "D": "indeterminate"
+      },
+      "correctAnswer": "D",
+      "explanation": "Choice B, “indeterminate,” is correct because it means uncertain or not clearly established. The second sentence says that recent measurements have produced a “much sharper account,” implying that scientists’ previous understanding lacked clarity or precision.",
+      "choiceExplanations": {
+        "B": "Choice D, “unprecedented,” means never before known or experienced and does not logically describe the clarity of scientific understanding.",
+        "A": "Choice A, “granular,” means highly detailed, which conflicts with the contrast between the earlier understanding and the newly sharpened one.",
+        "C": "Choice C, “orthodox,” means conventional or widely accepted; nothing in the passage concerns whether the earlier understanding conformed to established beliefs.",
+        "D": "Choice B, “indeterminate,” is correct because it means uncertain or not clearly established. The second sentence says that recent measurements have produced a “much sharper account,” implying that scientists’ previous understanding lacked clarity or precision."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 30,
+      "sourceMarker": "43 part_14_pages_131-140"
+    },
+    {
+      "id": "rw-20261005-audit79-q031",
+      "groupId": "rw-20261005-audit79-q031",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "Easy",
+      "passage": "Rotterdam completed another major expansion of its storm-surge barrier network in 2024. _____ engineers anticipate that additional gates and pumping capacity may eventually be required as sea-level projections and patterns of extreme rainfall continue to change.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "Even so,",
+        "B": "For example,",
+        "C": "In other words,",
+        "D": "Conversely,"
+      },
+      "correctAnswer": "A",
+      "explanation": "Choice B, “Even so,” is correct because the second sentence qualifies the apparent finality of the first. Although the barrier network was expanded very recently, engineers still expect that more expansion may eventually be necessary.",
+      "choiceExplanations": {
+        "B": "Choice A, “For example,” would indicate that the second sentence illustrates the first, but it instead presents a limitation on what the recent expansion can accomplish permanently.",
+        "A": "Choice B, “Even so,” is correct because the second sentence qualifies the apparent finality of the first. Although the barrier network was expanded very recently, engineers still expect that more expansion may eventually be necessary.",
+        "C": "Choice C, “In other words,” would signal a restatement, yet the second sentence adds a new idea rather than rephrasing the first.",
+        "D": "Choice D, “Conversely,” suggests an opposing situation or reversed relationship, which is not present."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 31,
+      "sourceMarker": "44 part_14_pages_131-140"
+    },
+    {
+      "id": "rw-20261005-audit79-q032",
+      "groupId": "rw-20261005-audit79-q032",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "Medium",
+      "passage": "Although relatively few early-stage biotechnology companies qualify for listing on major national exchanges, a regional investment platform can _____ such firms by introducing their founders to investors and advisers who understand the specialized risks of drug development and medical-device approval.",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "choices": {
+        "A": "classify",
+        "B": "foster",
+        "C": "circumscribe",
+        "D": "audit"
+      },
+      "correctAnswer": "B",
+      "explanation": "Choice B, “foster,” means to encourage or promote the development of something. Connecting young biotechnology companies with knowledgeable investors and advisers could help those companies develop and succeed, so “foster” precisely expresses the relationship described.",
+      "choiceExplanations": {
+        "B": "Choice B, “foster,” means to encourage or promote the development of something. Connecting young biotechnology companies with knowledgeable investors and advisers could help those companies develop and succeed, so “foster” precisely expresses the relationship described.",
+        "A": "Choice A, “classify,” means to sort into categories and does not convey support for a company’s development.",
+        "C": "Choice C, “circumscribe,” means to restrict or limit, essentially the opposite of what the platform is described as doing.",
+        "D": "Choice D, “audit,” means to formally examine records or accounts; the passage describes providing connections and support, not inspecting financial information."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 32,
+      "sourceMarker": "45 part_14_pages_131-140"
+    },
+    {
+      "id": "rw-20261005-audit79-q033",
+      "groupId": "rw-20261005-audit79-q033",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "Medium",
+      "passage": "The following text is adapted from Frances Hodgson Burnett’s 1911 novel The Secret Garden. In the passage, Dickon works among newly emerging plants in a neglected garden. Burnett depicts the patient and deliberate care with which Dickon tends the garden, writing, _____",
+      "question": "Which quotation from the text most effectively illustrates the claim?",
+      "choices": {
+        "A": "“A robin came down from the wall, cocked his head toward the beds, and began to sing as though the morning belonged to him.”",
+        "B": "“Beyond the trees the wind moved restlessly, shaking last year’s leaves from branches that had remained bare all winter.”",
+        "C": "“Dickon knelt beside each green point, loosened the hard earth around it with his fingers, and settled the soil back gently.”",
+        "D": "“Mary hurried along the path, astonished that so much green had appeared where she remembered only brown stems and empty ground.”"
+      },
+      "correctAnswer": "C",
+      "explanation": "most directly supports the claim. Dickon attends to the plants individually, loosens compacted soil with his hands, and carefully replaces the soil. Those specific, controlled actions demonstrate both patience and deliberate care.",
+      "choiceExplanations": {
+        "B": "describes the weather and surrounding vegetation but provides no evidence about Dickon’s behavior.",
+        "A": "focuses on the robin rather than Dickon’s work.",
+        "C": "most directly supports the claim. Dickon attends to the plants individually, loosens compacted soil with his hands, and carefully replaces the soil. Those specific, controlled actions demonstrate both patience and deliberate care.",
+        "D": "shows Mary’s surprise at the garden’s transformation; although the change may indirectly reflect successful gardening, it does not directly depict the careful manner in which Dickon tends the plants."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 33,
+      "sourceMarker": "46 part_14_pages_131-140"
+    },
+    {
+      "id": "rw-20261005-audit79-q035",
+      "groupId": "rw-20261005-audit79-q035",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "Medium",
+      "passage": "While researching a topic, a student has taken the following notes:\nAn automatic water clock was constructed in Korea in 1434 during the reign of King Sejong.\nThe clock announced the time automatically by activating mechanical figures and sound-producing devices.\nIts Korean name is jagyeongnu.\nA reconstructed jagyeongnu is displayed at the National Palace Museum of Korea.\nThe museum also preserves instruments associated with traditional Korean astronomy.",
+      "question": "The student wants to specify the water clock’s name in Korean. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "choices": {
+        "A": "Constructed during King Sejong’s reign, the automatic water clock could announce the time with mechanical figures and sounds.",
+        "B": "The National Palace Museum of Korea displays a reconstruction of an automatic water clock built in 1434.",
+        "C": "Traditional Korean astronomical instruments are preserved alongside a reconstruction of the historic water clock.",
+        "D": "The automatic water clock is called jagyeongnu in Korean."
+      },
+      "correctAnswer": "D",
+      "explanation": "directly accomplishes the student’s stated goal by providing the relevant term, jagyeongnu, and identifying it as the Korean name for the automatic water clock.",
+      "choiceExplanations": {
+        "C": "provides contextual information about the museum’s collection rather than specifying what the clock is called in Korean.",
+        "A": "explains when the clock was made and how it functioned but does not provide its Korean name.",
+        "B": "identifies the location of a reconstruction but likewise omits the requested term.",
+        "D": "directly accomplishes the student’s stated goal by providing the relevant term, jagyeongnu, and identifying it as the Korean name for the automatic water clock."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 35,
+      "sourceMarker": "48 part_14_pages_131-140"
+    },
+    {
+      "id": "rw-20261005-audit79-q036",
+      "groupId": "rw-20261005-audit79-q036",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Text Structure and Purpose",
+      "difficulty": "Hard",
+      "passage": "In masonry construction, corbeling is a technique in which each successive course of stone projects slightly beyond the course beneath it, allowing builders to narrow and eventually span an opening without constructing a true arch. <u>At the Treasury of Atreus in Mycenae, each circular course of masonry extends farther inward than the one below, progressively reducing the chamber’s diameter toward its summit.</u> Comparable forms of corbeling appear in structures built by several other ancient societies.",
+      "question": "Which choice best describes the function of the underlined portion in the text as a whole?",
+      "choices": {
+        "A": "It elaborates on the definition of corbeling by showing how the technique operates in a particular structure.",
+        "B": "It identifies an exception that reveals an important limitation of the construction technique defined earlier.",
+        "C": "It explains why ancient builders abandoned true arches in favor of corbeled construction.",
+        "D": "It emphasizes how frequently the same structure was imitated by unrelated ancient societies."
+      },
+      "correctAnswer": "A",
+      "explanation": "The first sentence defines corbeling in general terms. The underlined sentence then applies that definition to a specific building, explaining how successive rings of masonry project inward and narrow the chamber. It therefore makes the abstract description concrete through an example.",
+      "choiceExplanations": {
+        "B": "is incorrect because the Treasury of Atreus illustrates the technique rather than exposing an exception to it.",
+        "A": "The first sentence defines corbeling in general terms. The underlined sentence then applies that definition to a specific building, explaining how successive rings of masonry project inward and narrow the chamber. It therefore makes the abstract description concrete through an example.",
+        "C": "introduces a historical explanation that the passage does not provide; nothing says builders abandoned arches or explains why they might have done so.",
+        "D": "concerns imitation and frequency, whereas the underlined sentence focuses only on how corbeling functions in one structure."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 36,
+      "sourceMarker": "49 part_14_pages_131-140"
+    },
+    {
+      "id": "rw-20261005-audit79-q037",
+      "groupId": "rw-20261005-audit79-q037",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "Easy",
+      "passage": "The Ardent Foundation’s charter states that its grants should “expand public access to primary-source _____ in 2025, for instance, the foundation financed the digitization of thousands of uncatalogued maps held by regional libraries.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "collections,”",
+        "B": "collections”;",
+        "C": "collections”",
+        "D": "collections” and,"
+      },
+      "correctAnswer": "B",
+      "explanation": "The sentence contains two independent clauses: “The Ardent Foundation’s charter states that its grants should ‘expand public access to primary-source collections’” and “in 2025, for instance, the foundation financed....” A semicolon can correctly join these closely related independent clauses. Because a semicolon is not part of the quoted material, it appears outside the closing quotation mark.",
+      "choiceExplanations": {
+        "D": "is ungrammatical because a coordinating conjunction cannot be followed immediately by a comma in this construction.",
+        "A": "creates a comma splice by joining two independent clauses with only a comma.",
+        "B": "The sentence contains two independent clauses: “The Ardent Foundation’s charter states that its grants should ‘expand public access to primary-source collections’” and “in 2025, for instance, the foundation financed....” A semicolon can correctly join these closely related independent clauses. Because a semicolon is not part of the quoted material, it appears outside the closing quotation mark.",
+        "C": "provides no punctuation at all between the two independent clauses, creating a run-on sentence."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 37,
+      "sourceMarker": "50 part_14_pages_131-140"
+    },
+    {
+      "id": "rw-20261005-audit79-q038",
+      "groupId": "rw-20261005-audit79-q038",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "Medium",
+      "passage": "Integrated pest management reduces reliance on routine applications of broad-spectrum pesticides by combining techniques such as biological control, crop rotation, and carefully timed chemical treatment. The approach can therefore be understood as an effort to _____ the ecological damage associated with repeatedly spraying chemicals that affect both target pests and beneficial organisms.",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "choices": {
+        "A": "codify",
+        "B": "amplify",
+        "C": "mitigate",
+        "D": "replicate"
+      },
+      "correctAnswer": "C",
+      "explanation": "Choice C, “mitigate,” means to make something harmful less severe. Because integrated pest management reduces dependence on broad-spectrum spraying and substitutes more targeted methods, it can reasonably be described as an effort to reduce, or mitigate, the resulting ecological damage.",
+      "choiceExplanations": {
+        "C": "Choice C, “mitigate,” means to make something harmful less severe. Because integrated pest management reduces dependence on broad-spectrum spraying and substitutes more targeted methods, it can reasonably be described as an effort to reduce, or mitigate, the resulting ecological damage.",
+        "A": "Choice A, “codify,” means to arrange principles or rules systematically and does not fit the stated goal.",
+        "B": "Choice B, “amplify,” means to increase or intensify, the opposite of the intended effect.",
+        "D": "Choice D, “replicate,” means to reproduce or copy, but the approach is meant to reduce ecological damage rather than reproduce it."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 38,
+      "sourceMarker": "51 part_14_pages_131-140"
+    },
+    {
+      "id": "rw-20261005-audit79-q039",
+      "groupId": "rw-20261005-audit79-q039",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Form, Structure, and Sense",
+      "difficulty": "Easy",
+      "passage": "Hydrologists, civil engineers, and municipal planners presented dozens of proposals at the 2026 Delta Infrastructure Forum. Elena Rossi’s permeable-pavement model drew especially close scrutiny from delegates, as _____ represented a substantial departure from the impermeable road surfaces still used throughout much of the region.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "they",
+        "B": "these",
+        "C": "we",
+        "D": "it"
+      },
+      "correctAnswer": "D",
+      "explanation": "Choice C, “it,” is correct because the pronoun refers to the singular noun phrase “Elena Rossi’s permeable-pavement model.” Since “model” is singular, the singular pronoun “it” agrees with its antecedent.",
+      "choiceExplanations": {
+        "C": "Choice D, “we,” refers to the speaker and at least one other person, but the antecedent is an inanimate model, so “we” is both grammatically and logically inappropriate.",
+        "A": "Choice A, “they,” is plural and therefore does not agree with the singular antecedent.",
+        "B": "Choice B, “these,” is also plural and would require a plural antecedent.",
+        "D": "Choice C, “it,” is correct because the pronoun refers to the singular noun phrase “Elena Rossi’s permeable-pavement model.” Since “model” is singular, the singular pronoun “it” agrees with its antecedent."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 39,
+      "sourceMarker": "52 part_14_pages_131-140"
+    },
+    {
+      "id": "rw-20261005-audit79-q042",
+      "groupId": "rw-20261005-audit79-q042",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "Easy",
+      "passage": "In parts of southern Chile, certain volcanic peaks are commonly known ______ descriptive local names that refer to their color, shape, or surrounding landscape. For instance, Cerro Colorado is frequently called “the Red Mountain,” a name derived from the iron-rich rock exposed along its upper slopes.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "by",
+        "B": "by,",
+        "C": "by:",
+        "D": "by—"
+      },
+      "correctAnswer": "A",
+      "explanation": "by is correct because the idiomatic expression is known by a name. No punctuation is needed between the preposition by and its object, descriptive local names.",
+      "choiceExplanations": {
+        "C": "incorrectly inserts a colon between a preposition and its object.",
+        "A": "by is correct because the idiomatic expression is known by a name. No punctuation is needed between the preposition by and its object, descriptive local names.",
+        "B": "similarly places an unnecessary comma after the preposition.",
+        "D": "incorrectly uses an em dash in a position where the sentence requires uninterrupted grammatical continuity."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 42,
+      "sourceMarker": "105"
+    },
+    {
+      "id": "rw-20261005-audit79-q043",
+      "groupId": "rw-20261005-audit79-q043",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "Easy",
+      "passage": "Although saxophonist Melissa Aldana has appeared on numerous acclaimed jazz recordings, she was not part of the ensemble that recorded the album’s opening track, “Northern Lights______ she joined the group several months after the session took place.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": ",” however;",
+        "B": ".” However,",
+        "C": ",” however,",
+        "D": "” however"
+      },
+      "correctAnswer": "B",
+      "explanation": ".” However, is correct. The first clause is a complete sentence ending with the quoted song title, so the period belongs inside the closing quotation mark. However, then begins a new sentence and appropriately signals the contrast between Aldana not appearing on the recording and her later joining the group.",
+      "choiceExplanations": {
+        "A": "incorrectly creates a comma before the closing quotation mark and then places a semicolon after however.",
+        "B": ".” However, is correct. The first clause is a complete sentence ending with the quoted song title, so the period belongs inside the closing quotation mark. However, then begins a new sentence and appropriately signals the contrast between Aldana not appearing on the recording and her later joining the group.",
+        "C": "creates a comma splice because it attempts to connect two independent clauses with only a comma and a transitional adverb.",
+        "D": "provides neither the punctuation needed to end the first independent clause nor the comma conventionally following introductory however."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 43,
+      "sourceMarker": "106"
+    },
+    {
+      "id": "rw-20261005-audit79-q044",
+      "groupId": "rw-20261005-audit79-q044",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Rhetorical Synthesis",
+      "difficulty": "Medium",
+      "passage": "While researching a topic, a student has taken the following notes:\nThe Vickers scale measures the hardness of materials by determining how strongly they resist indentation.\nHigher Vickers hardness values indicate harder materials.\nAnnealed copper has a Vickers hardness of approximately 50 HV.\nCommercially pure titanium can have a Vickers hardness of approximately 160 HV.\nHardened tool steel can exceed 700 HV.",
+      "question": "The student wants to explain how hard commercially pure titanium is in relation to the other two materials. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "choices": {
+        "A": "Annealed copper, commercially pure titanium, and hardened tool steel can all be compared using the Vickers hardness scale.",
+        "B": "Hardened tool steel can exceed 700 HV, which means it resists indentation much more strongly than annealed copper does.",
+        "C": "Commercially pure titanium, at approximately 160 HV, is harder than annealed copper at about 50 HV but substantially softer than hardened tool steel at more than 700 HV.",
+        "D": "Because commercially pure titanium measures approximately 160 HV, it is one of the hardest materials that can be evaluated using the Vickers scale."
+      },
+      "correctAnswer": "C",
+      "explanation": "it directly places titanium’s hardness relative to both comparison materials. Its value of about 160 HV is greater than copper’s 50 HV but far below tool steel’s value of more than 700 HV.",
+      "choiceExplanations": {
+        "A": "merely states that all three materials can be measured on the same scale; it does not explain their relative hardness.",
+        "B": "compares steel with copper but does not establish titanium’s position relative to either one.",
+        "C": "it directly places titanium’s hardness relative to both comparison materials. Its value of about 160 HV is greater than copper’s 50 HV but far below tool steel’s value of more than 700 HV.",
+        "D": "accurately cites titanium’s approximate value but makes an unsupported claim that titanium is among the hardest materials measurable by the Vickers scale."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 44,
+      "sourceMarker": "107"
+    },
+    {
+      "id": "rw-20261005-audit79-q046",
+      "groupId": "rw-20261005-audit79-q046",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Text Structure and Purpose",
+      "difficulty": "Hard",
+      "passage": "Medication-reminder apps can improve adherence for some patients, but merely adding reminders to a treatment plan does not reliably produce the same result across populations. As health-behavior researcher Kavita Menon argues, models of patients’ decisions about whether to take prescribed medication remain too narrow: some studies emphasize cost, others emphasize trust in clinicians, perceived side effects, or daily routines. Yet adherence decisions occur under conditions in which several such factors may interact, and their relative importance can differ from one patient to another.",
+      "question": "Which choice best states the main purpose of the text?",
+      "choices": {
+        "A": "To explain why comparing medication-adherence rates across patient populations is methodologically difficult",
+        "B": "To identify reminder apps as the most reliable intervention for increasing medication adherence",
+        "C": "To describe how financial considerations influence patients’ decisions more strongly than other variables do",
+        "D": "To argue that explanations of medication-taking decisions should account for multiple interacting influences rather than isolated factors"
+      },
+      "correctAnswer": "D",
+      "explanation": "The passage begins by rejecting the idea that one intervention—reminders—will predictably improve adherence everywhere. It then explains that existing studies often isolate particular influences even though actual decisions reflect several conditions operating together. Thus, the passage’s central purpose is to argue for a more comprehensive account of medication-taking behavior.",
+      "choiceExplanations": {
+        "C": "is too narrow and unsupported: cost is only one of several influences the passage identifies, and it is never presented as the dominant one.",
+        "A": "is incorrect because the passage is not primarily about the technical difficulty of comparing adherence rates across groups.",
+        "B": "directly contradicts the opening sentence, which says reminders do not reliably produce the same result across populations.",
+        "D": "The passage begins by rejecting the idea that one intervention—reminders—will predictably improve adherence everywhere. It then explains that existing studies often isolate particular influences even though actual decisions reflect several conditions operating together. Thus, the passage’s central purpose is to argue for a more comprehensive account of medication-taking behavior."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 46,
+      "sourceMarker": "1"
+    },
+    {
+      "id": "rw-20261005-audit79-q047",
+      "groupId": "rw-20261005-audit79-q047",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Form, Structure, and Sense",
+      "difficulty": "Easy",
+      "passage": "In 2019, geochemist Noura Kassem _____ at the Icelandic Meteorological Office, analyzing volcanic gases collected near active fissures.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "was working",
+        "B": "to have worked",
+        "C": "working",
+        "D": "to work"
+      },
+      "correctAnswer": "A",
+      "explanation": "” The introductory phrase “In 2019” establishes a past time, and the sentence needs a finite verb to complete the independent clause whose subject is “geochemist Noura Kassem.” “Was working” supplies that verb and naturally describes an activity in progress during that period.",
+      "choiceExplanations": {
+        "B": "“to have worked,” is an infinitive phrase and cannot independently serve as the predicate here.",
+        "A": "” The introductory phrase “In 2019” establishes a past time, and the sentence needs a finite verb to complete the independent clause whose subject is “geochemist Noura Kassem.” “Was working” supplies that verb and naturally describes an activity in progress during that period.",
+        "C": "“working,” is a participle; without an auxiliary verb such as “was,” it leaves the sentence without a finite verb.",
+        "D": "“to work,” is also an infinitive and creates the same structural problem."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 47,
+      "sourceMarker": "2"
+    },
+    {
+      "id": "rw-20261005-audit79-q048",
+      "groupId": "rw-20261005-audit79-q048",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "Medium",
+      "passage": "The significance of an experimental aircraft is not determined solely by whether its final flight succeeded. Engineers must also consider the financing, manufacturing capacity, and technical support that made continued testing possible. In one prototype program, emergency funding arrived only days before the laboratory would otherwise have been forced to _____ the trial series altogether.",
+      "question": "Which choice completes the text with the most logical and precise word?",
+      "choices": {
+        "A": "reciprocate",
+        "B": "discontinue",
+        "C": "annotate",
+        "D": "reconcile"
+      },
+      "correctAnswer": "B",
+      "explanation": "” The sentence explains that without emergency funding, continued testing would no longer have been possible. To “discontinue” the trial series means to stop it, which fits the context precisely.",
+      "choiceExplanations": {
+        "C": "“annotate,” means to add explanatory notes, which has no logical connection to the laboratory losing funding.",
+        "A": "“reciprocate,” means to respond to an action or feeling with a corresponding one and does not fit a trial series.",
+        "B": "” The sentence explains that without emergency funding, continued testing would no longer have been possible. To “discontinue” the trial series means to stop it, which fits the context precisely.",
+        "D": "“reconcile,” means to bring conflicting things into agreement or restore harmony; a trial series itself is not something the laboratory would “reconcile” because of insufficient financing."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 48,
+      "sourceMarker": "3"
+    },
+    {
+      "id": "rw-20261005-audit79-q049",
+      "groupId": "rw-20261005-audit79-q049",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Text Structure and Purpose",
+      "difficulty": "Hard",
+      "passage": "The Halden Museum of Contemporary Art maintains a collection of kinetic sculpture. Visitors can activate some works directly, but pieces whose mechanisms are considered too fragile are represented by prerecorded videos showing the sculptures in motion. The museum argues that these recordings preserve the appearance of movement while protecting vulnerable objects. <u>Yet motion in kinetic sculpture is not merely something to observe from a distance; a viewer’s changing position, timing, and physical proximity can determine how the work is experienced.</u>",
+      "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+      "choices": {
+        "A": "It identifies a characteristic shared by fragile kinetic sculptures but absent from sculptures that visitors can activate.",
+        "B": "It presents a principle about kinetic art that both the museum and the author rely on to justify video-only display.",
+        "C": "It introduces a consideration that partly challenges the museum’s claim that a video can adequately substitute for encountering the sculpture itself.",
+        "D": "It describes a misconception about kinetic sculpture that explains why museums generally refuse to preserve such works."
+      },
+      "correctAnswer": "C",
+      "explanation": "The museum defends video presentation by arguing that recordings preserve the appearance of movement. The underlined sentence complicates that argument by stating that the experience of kinetic sculpture also depends on the viewer’s own position, timing, and proximity. Those aspects cannot necessarily be reproduced by watching a fixed recording, so the sentence provides a reason the museum’s substitute may be incomplete.",
+      "choiceExplanations": {
+        "D": "is unsupported because the passage says nothing about museums generally refusing to preserve kinetic sculpture.",
+        "A": "is incorrect because the underlined sentence describes kinetic sculpture generally, not a property exclusive to fragile pieces.",
+        "B": "reverses the sentence’s function: rather than supporting the museum’s justification, the sentence raises a limitation of that justification.",
+        "C": "The museum defends video presentation by arguing that recordings preserve the appearance of movement. The underlined sentence complicates that argument by stating that the experience of kinetic sculpture also depends on the viewer’s own position, timing, and proximity. Those aspects cannot necessarily be reproduced by watching a fixed recording, so the sentence provides a reason the museum’s substitute may be incomplete."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 49,
+      "sourceMarker": "4"
+    },
+    {
+      "id": "rw-20261005-audit79-q050",
+      "groupId": "rw-20261005-audit79-q050",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Inferences",
+      "difficulty": "Hard",
+      "passage": "Early pharmacological compilations drew on medical traditions that were separated by centuries and considerable geographical distance. The thirteenth-century botanist Ibn al-Baytar assembled remedies from numerous Greek, Persian, and Arabic sources. His compendium includes a treatment using clove oil to relieve tooth pain. Dioscorides’s first-century De materia medica, one source frequently consulted by later pharmacologists, contains no reference to cloves, whereas a tenth-century Persian medical text discusses their medicinal use. This evidence suggests that _____",
+      "question": "Which choice most logically completes the text?",
+      "choices": {
+        "A": "Ibn al-Baytar considered every Persian remedy more reliable than the treatments described by Dioscorides.",
+        "B": "Ibn al-Baytar’s treatment for tooth pain was historically more accurate than every remedy recorded in De materia medica.",
+        "C": "Dioscorides deliberately omitted clove remedies because he regarded them as ineffective.",
+        "D": "Ibn al-Baytar likely encountered a medicinal source or tradition concerning cloves that was unavailable to Dioscorides."
+      },
+      "correctAnswer": "D",
+      "explanation": "Ibn al-Baytar includes a clove-based treatment, but the much earlier work by Dioscorides does not mention cloves, while a later Persian source does. The most reasonable inference is that Ibn al-Baytar obtained the information from a source or medical tradition that arose after, or was otherwise unavailable to, Dioscorides.",
+      "choiceExplanations": {
+        "B": "introduces a claim about historical or medical accuracy that the evidence does not address.",
+        "A": "is too broad: nothing indicates that Ibn al-Baytar preferred every Persian remedy to every Greek one.",
+        "C": "is unsupported because absence of a treatment from Dioscorides’s work does not establish deliberate rejection.",
+        "D": "Ibn al-Baytar includes a clove-based treatment, but the much earlier work by Dioscorides does not mention cloves, while a later Persian source does. The most reasonable inference is that Ibn al-Baytar obtained the information from a source or medical tradition that arose after, or was otherwise unavailable to, Dioscorides."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 50,
+      "sourceMarker": "5"
+    },
+    {
+      "id": "rw-20261005-audit79-q051",
+      "groupId": "rw-20261005-audit79-q051",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "Easy",
+      "passage": "Oceanographers commonly classify marine sediment into several broad categories according to its origin, including lithogenous, biogenous, and hydrogenous sediment. _____ abyssal red clay is generally classified as lithogenous, whereas calcareous ooze is classified as biogenous.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "For instance,",
+        "B": "Consequently,",
+        "C": "Nevertheless,",
+        "D": "Similarly,"
+      },
+      "correctAnswer": "A",
+      "explanation": "Red clay illustrates one category, while calcareous ooze illustrates another.",
+      "choiceExplanations": {
+        "A": "Red clay illustrates one category, while calcareous ooze illustrates another.",
+        "B": "“Consequently,” would indicate that the classifications of red clay and ooze are consequences of the existence of several sediment categories, but the second sentence is functioning as an example, not as a result.",
+        "C": "“Nevertheless,” signals contrast with an expectation, which is not present.",
+        "D": "“Similarly,” signals a parallel relationship between two statements, but the second sentence primarily exemplifies the general claim rather than merely presenting a similar idea."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 51,
+      "sourceMarker": "6"
+    },
+    {
+      "id": "rw-20261005-audit79-q052",
+      "groupId": "rw-20261005-audit79-q052",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "Medium",
+      "passage": "A continuous kiln operates without regularly cooling between production cycles, whereas a batch kiln is heated and cooled for separate loads. Because batch kilns do not operate continuously, they might be expected to produce less material annually. Nevertheless, a batch facility can sometimes produce substantially more in a year than a continuous facility does. For example, _____",
+      "question": "Which choice most effectively uses data from the table to complete the example?",
+      "choices": {
+        "A": "Mora Works and Tessin Kiln both use continuous firing, but Tessin Kiln produces more annually than Mora Works does.",
+        "B": "Nara Refractories, a batch facility, has a higher average annual output than Tessin Kiln, the continuous facility with the highest annual output in the table.",
+        "C": "Qamar Ceramics has a lower average annual output than either of the two continuous facilities shown.",
+        "D": "Nara Refractories produces more material annually than Qamar Ceramics, although both facilities use batch firing."
+      },
+      "correctAnswer": "B",
+      "explanation": "The sentence needs an example demonstrating that a batch facility can outperform a continuous facility in annual production. Nara Refractories is a batch facility producing 74,900 metric tons annually, while Tessin Kiln, the higher-output of the two continuous facilities, produces 32,700 metric tons. That comparison directly demonstrates the claim.",
+      "choiceExplanations": {
+        "C": "provides an example in the opposite direction: one batch facility produces less than the continuous facilities.",
+        "A": "compares two continuous facilities, so it does not establish anything about batch versus continuous production.",
+        "B": "The sentence needs an example demonstrating that a batch facility can outperform a continuous facility in annual production. Nara Refractories is a batch facility producing 74,900 metric tons annually, while Tessin Kiln, the higher-output of the two continuous facilities, produces 32,700 metric tons. That comparison directly demonstrates the claim.",
+        "D": "compares two batch facilities and therefore does not support the cross-category claim."
+      },
+      "table": {
+        "caption": "Selected Ceramic Production Facilities",
+        "headers": [
+          "Facility",
+          "Country",
+          "Firing mode",
+          "Average annual output (metric tons)",
+          "Principal fuel"
+        ],
+        "rows": [
+          [
+            "Mora Works",
+            "Spain",
+            "continuous",
+            "18,400",
+            "natural gas"
+          ],
+          [
+            "Tessin Kiln",
+            "Italy",
+            "continuous",
+            "32,700",
+            "biogas"
+          ],
+          [
+            "Qamar Ceramics",
+            "Jordan",
+            "batch",
+            "2,600",
+            "electricity"
+          ],
+          [
+            "Nara Refractories",
+            "Japan",
+            "batch",
+            "74,900",
+            "hydrogen blend"
+          ]
+        ]
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 52,
+      "sourceMarker": "7"
+    },
+    {
+      "id": "rw-20261005-audit79-q053",
+      "groupId": "rw-20261005-audit79-q053",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "Medium",
+      "passage": "The following text is from John Keats’s 1820 poem Ode on Melancholy.\n“Ay, in the very temple of Delight\nVeil’d Melancholy has her sovran shrine”",
+      "question": "As used in the text, what does the word “sovran” most nearly mean?",
+      "choices": {
+        "A": "concealed",
+        "B": "ancient",
+        "C": "supreme",
+        "D": "temporary"
+      },
+      "correctAnswer": "C",
+      "explanation": "” “Sovran” is an archaic spelling of “sovereign.” In this context, it describes Melancholy’s shrine as possessing supreme or ruling status within the “temple of Delight.”",
+      "choiceExplanations": {
+        "D": "“temporary,” conveys nearly the opposite of the authority implied by “sovereign.”",
+        "A": "This choice does not satisfy the evidence, wording, or grammatical requirement established by the question.",
+        "B": "This choice does not satisfy the evidence, wording, or grammatical requirement established by the question.",
+        "C": "” “Sovran” is an archaic spelling of “sovereign.” In this context, it describes Melancholy’s shrine as possessing supreme or ruling status within the “temple of Delight.”"
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 53,
+      "sourceMarker": "8"
+    },
+    {
+      "id": "rw-20261005-audit79-q054",
+      "groupId": "rw-20261005-audit79-q054",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "Hard",
+      "passage": "A research article on translating ancient drama argues that historical accuracy in language is not always a translator’s only priority. Although some translators preserve archaic syntax and vocabulary, others deliberately introduce contemporary expressions when doing so helps an audience recognize distinctions in status, humor, or emotional tone. The article notes that such modernization is sometimes a calculated interpretive choice rather than an accidental departure from the source’s historical setting.",
+      "question": "Which quotation from an interview with a translator would most effectively support the article’s claim?",
+      "choices": {
+        "A": "“I try to reproduce every grammatical feature that can be carried into English, even when the resulting phrasing sounds unfamiliar to modern audiences.”",
+        "B": "“When I first began translating classical plays, I sometimes used present-day expressions without realizing how historically specific those expressions were.”",
+        "C": "“Translations should never contain language that readers could identify with a period later than that of the original work.”",
+        "D": "“Sometimes I retain an archaic construction, but if a modern idiom makes a character’s arrogance or social position immediately legible, I may deliberately use it.”"
+      },
+      "correctAnswer": "D",
+      "explanation": "The article’s claim is that translators may intentionally use contemporary language when doing so communicates something important about character or social relations. Choice B directly describes that deliberate practice: the translator knowingly chooses a modern idiom when it makes arrogance or social position clearer.",
+      "choiceExplanations": {
+        "B": "does involve modern expressions, but the translator says those expressions were used without realizing it; that would represent an accidental anachronism, not the intentional strategy the article discusses.",
+        "A": "emphasizes preservation of historical linguistic features rather than deliberate modernization.",
+        "C": "directly rejects the practice described in the passage.",
+        "D": "The article’s claim is that translators may intentionally use contemporary language when doing so communicates something important about character or social relations. Choice B directly describes that deliberate practice: the translator knowingly chooses a modern idiom when it makes arrogance or social position clearer."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 54,
+      "sourceMarker": "9"
+    },
+    {
+      "id": "rw-20261005-audit79-q055",
+      "groupId": "rw-20261005-audit79-q055",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "Medium",
+      "passage": "The following text is adapted from Charlotte Brontë’s 1847 novel Jane Eyre. Jane reflects on hardships she has experienced before reaching adulthood.\nThough I had learned to speak of those years without trembling, I knew how much I had borne before reaching this quieter life: loneliness, humiliation, and uncertainties that had once seemed without end.",
+      "question": "As used in the text, what does the word “borne” most nearly mean?",
+      "choices": {
+        "A": "endured",
+        "B": "transported",
+        "C": "produced",
+        "D": "revealed"
+      },
+      "correctAnswer": "A",
+      "explanation": "” The sentence lists hardships—“loneliness, humiliation, and uncertainties”—that Jane has experienced and survived. In this context, “borne” means tolerated or endured difficult circumstances.",
+      "choiceExplanations": {
+        "A": "” The sentence lists hardships—“loneliness, humiliation, and uncertainties”—that Jane has experienced and survived. In this context, “borne” means tolerated or endured difficult circumstances.",
+        "B": "“transported,” is another possible meaning of “borne,” as when something is carried from one place to another, but nothing in the passage concerns physical movement.",
+        "C": "“produced,” can fit expressions such as “borne fruit,” but Jane did not create the hardships listed.",
+        "D": "“revealed,” does not fit either the grammar or the meaning of the sentence."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 55,
+      "sourceMarker": "10"
+    },
+    {
+      "id": "rw-20261005-audit79-q056",
+      "groupId": "rw-20261005-audit79-q056",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "Easy",
+      "passage": "In 2022, internationally exhibited ceramic artist Hanae Morioka presented installations at the Alder Contemporary Arts Center and the Kiyomizu Design Museum in Canada and ____ Working with translucent porcelain, oxidized metallic glazes, and rigorously repeated geometric forms, Morioka creates surfaces that critics have described as simultaneously archaeological and futuristic.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "Japan respectively,",
+        "B": "Japan, respectively.",
+        "C": "Japan; respectively,",
+        "D": "Japan, respectively;"
+      },
+      "correctAnswer": "B",
+      "explanation": "Japan, respectively. is correct. The word “respectively” indicates that the two locations correspond in order to the two institutions: the Alder Contemporary Arts Center is in Canada, and the Kiyomizu Design Museum is in Japan. Because “respectively” is a supplementary adverb at the end of the sentence, it is appropriately preceded by a comma.",
+      "choiceExplanations": {
+        "B": "Japan, respectively. is correct. The word “respectively” indicates that the two locations correspond in order to the two institutions: the Alder Contemporary Arts Center is in Canada, and the Kiyomizu Design Museum is in Japan. Because “respectively” is a supplementary adverb at the end of the sentence, it is appropriately preceded by a comma.",
+        "A": "period is then needed to close the sentence before “Working” begins the next sentence.",
+        "C": "incorrectly uses a semicolon between “Japan” and “respectively,” even though what follows the semicolon is not an independent clause.",
+        "D": "incorrectly ends the first sentence with a semicolon, creating an improper connection to the participial phrase beginning “Working.”"
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 56,
+      "sourceMarker": "1"
+    },
+    {
+      "id": "rw-20261005-audit79-q061",
+      "groupId": "rw-20261005-audit79-q061",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Text Structure and Purpose",
+      "difficulty": "Hard",
+      "passage": "On the Danish island of Samsø, several villages obtain heat through locally coordinated district-energy systems. <u>Using networks of insulated pipes supplied by biomass boilers and other community-scale energy sources, these systems distribute heat to homes while allowing local cooperatives to participate in their operation.</u> Some rural communities in Austria employ comparable arrangements in which heat production and distribution are organized at the municipal or cooperative level. Both approaches differ from centralized systems in which distant utilities own the infrastructure and make most operational decisions.",
+      "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+      "choices": {
+        "A": "It proposes modifications that would improve the efficiency of a particular district-energy system.",
+        "B": "It encourages residents of Samsø to participate directly in local energy cooperatives.",
+        "C": "It provides a basic description of how a particular type of community energy system operates.",
+        "D": "It explains how the Danish systems differ from the Austrian systems discussed later in the text."
+      },
+      "correctAnswer": "C",
+      "explanation": "The underlined sentence identifies the systems’ physical mechanism—networks of insulated pipes supplied by community-scale energy sources—and notes their cooperative organization. It therefore gives the reader a basic description of how the Samsø systems operate, establishing an example that the following sentences can compare with other community-based systems.",
+      "choiceExplanations": {
+        "D": "is incorrect because the sentence appears before the Austrian example and does not distinguish the two systems; the following sentence explicitly characterizes the Austrian arrangements as comparable rather than contrasting them with the Danish ones.",
+        "A": "is incorrect because the sentence does not recommend any improvements or evaluate the systems’ efficiency.",
+        "B": "is incorrect because the sentence describes cooperative participation but does not urge residents to take part.",
+        "C": "The underlined sentence identifies the systems’ physical mechanism—networks of insulated pipes supplied by community-scale energy sources—and notes their cooperative organization. It therefore gives the reader a basic description of how the Samsø systems operate, establishing an example that the following sentences can compare with other community-based systems."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 61,
+      "sourceMarker": "6"
+    },
+    {
+      "id": "rw-20261005-audit79-q062",
+      "groupId": "rw-20261005-audit79-q062",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "Medium",
+      "passage": "Today, the Arclight Seed Register is widely used by conservationists, but when botanist Mara Vescari launched it in 1934, it was intended mainly to advertise her family’s nursery. Vescari hoped to increase sales by encouraging customers to request unusual seeds, compare germination results, and mail their observations back to her _____ as the register expanded in scope and credibility, its promotional notes were gradually replaced by standardized descriptions used by seed banks.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "laboratory,",
+        "B": "laboratory and",
+        "C": "laboratory",
+        "D": "laboratory;"
+      },
+      "correctAnswer": "D",
+      "explanation": "The material before the blank forms a complete independent clause: Vescari “hoped to increase sales by encouraging customers to ... mail their observations back to her laboratory.” The material after the blank is also an independent clause: “as the register expanded in scope and credibility, its promotional notes were gradually replaced....” A semicolon can correctly join these closely related independent clauses, so C is correct.",
+      "choiceExplanations": {
+        "C": "creates a run-on sentence by placing the two independent clauses together without sufficient punctuation.",
+        "A": "creates a comma splice.",
+        "B": "produces an illogical coordination because “and as the register expanded” does not properly complete the earlier series of actions.",
+        "D": "The material before the blank forms a complete independent clause: Vescari “hoped to increase sales by encouraging customers to ... mail their observations back to her laboratory.” The material after the blank is also an independent clause: “as the register expanded in scope and credibility, its promotional notes were gradually replaced....” A semicolon can correctly join these closely related independent clauses, so C is correct."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 62,
+      "sourceMarker": "73"
+    },
+    {
+      "id": "rw-20261005-audit79-q064",
+      "groupId": "rw-20261005-audit79-q064",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "Medium",
+      "passage": "A diamond stylus can scratch sapphire, whereas a steel stylus generally cannot. The disparity is largely _____ of diamond’s three-dimensional network of exceptionally strong carbon-carbon bonds, which resists deformation much more effectively than the metallic bonding in ordinary steel.",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "choices": {
+        "A": "a consequence",
+        "B": "an objective",
+        "C": "a repudiation",
+        "D": "an explanation"
+      },
+      "correctAnswer": "A",
+      "explanation": "The bonding structure described in the sentence causes or produces the difference in scratching ability, so that difference is “a consequence” of diamond’s atomic structure.",
+      "choiceExplanations": {
+        "C": "“a repudiation,” means a rejection or disavowal and does not describe a causal relationship.",
+        "A": "The bonding structure described in the sentence causes or produces the difference in scratching ability, so that difference is “a consequence” of diamond’s atomic structure.",
+        "B": "“an objective,” means a goal, but the difference in hardness is not something the bonding structure is trying to achieve.",
+        "D": "“an explanation,” would reverse the relationship: the atomic structure is an explanation for the disparity; the disparity itself is not an explanation of the atomic structure."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 64,
+      "sourceMarker": "75"
+    },
+    {
+      "id": "rw-20261005-audit79-q065",
+      "groupId": "rw-20261005-audit79-q065",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "Medium",
+      "passage": "A set of spiral markings incised into antler fragments from the Late Pleistocene site of Varnes Hollow may have served as notation, ornament, ritual symbolism, or something else entirely. Because no written account survives from the community that produced the markings, and because comparable objects provide no decisive interpretive key, the question of what meaning the makers assigned to the spirals is ultimately _____.",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "choices": {
+        "A": "imperative",
+        "B": "irresolvable",
+        "C": "self-validating",
+        "D": "inevitable"
+      },
+      "correctAnswer": "B",
+      "explanation": "The passage emphasizes that the evidence needed to settle the question does not survive. Therefore, the meaning of the markings is “irresolvable,” or incapable of being conclusively determined.",
+      "choiceExplanations": {
+        "B": "The passage emphasizes that the evidence needed to settle the question does not survive. Therefore, the meaning of the markings is “irresolvable,” or incapable of being conclusively determined.",
+        "A": "“imperative,” means urgently necessary and does not describe whether a question can be answered.",
+        "C": "“self-validating,” suggests that something confirms itself, which is unrelated to the lack of evidence.",
+        "D": "“inevitable,” means certain to occur and likewise does not fit the idea that the interpretation cannot be settled."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 65,
+      "sourceMarker": "77"
+    },
+    {
+      "id": "rw-20261005-audit79-q066",
+      "groupId": "rw-20261005-audit79-q066",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "Easy",
+      "passage": "In reconstructing how a medieval trade language developed, historical linguists _____ compare loanwords preserved in four coastal dialects with terminology found in merchants’ account books from the same period.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "Soraya Banerjee and Tomás Leclerc,",
+        "B": "Soraya Banerjee, and Tomás Leclerc",
+        "C": "Soraya Banerjee and Tomás Leclerc",
+        "D": "Soraya Banerjee, and Tomás Leclerc,"
+      },
+      "correctAnswer": "C",
+      "explanation": "The names Soraya Banerjee and Tomás Leclerc are essential to identifying which historical linguists the sentence refers to, so they should not be separated from the noun phrase by commas. The complete subject is “historical linguists Soraya Banerjee and Tomás Leclerc,” followed directly by the verb “compare.” Thus, A is correct.",
+      "choiceExplanations": {
+        "A": "incorrectly inserts a comma between the subject and its verb.",
+        "B": "incorrectly places a comma between the two members of the compound subject.",
+        "C": "The names Soraya Banerjee and Tomás Leclerc are essential to identifying which historical linguists the sentence refers to, so they should not be separated from the noun phrase by commas. The complete subject is “historical linguists Soraya Banerjee and Tomás Leclerc,” followed directly by the verb “compare.” Thus, A is correct.",
+        "D": "contains both errors."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 66,
+      "sourceMarker": "78"
+    },
+    {
+      "id": "rw-20261005-audit79-q067",
+      "groupId": "rw-20261005-audit79-q067",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Form, Structure, and Sense",
+      "difficulty": "Easy",
+      "passage": "A palimpsest is a manuscript that _____ traces of earlier writing even after its original surface has been scraped or washed so that another text can be written over it.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "had retained",
+        "B": "retain",
+        "C": "was retaining",
+        "D": "retains"
+      },
+      "correctAnswer": "D",
+      "explanation": "The relative pronoun “that” refers to the singular noun “manuscript,” so the verb must also be singular. Because the sentence states a general defining characteristic of a palimpsest, the simple present tense is appropriate. “Retains” therefore correctly supplies both subject-verb agreement and tense.",
+      "choiceExplanations": {
+        "D": "The relative pronoun “that” refers to the singular noun “manuscript,” so the verb must also be singular. Because the sentence states a general defining characteristic of a palimpsest, the simple present tense is appropriate. “Retains” therefore correctly supplies both subject-verb agreement and tense.",
+        "A": "unnecessarily uses the past perfect, which requires a relationship between two past events.",
+        "B": "is plural and does not agree with manuscript.",
+        "C": "uses the past progressive, which would describe an action occurring at a particular past moment rather than a general property."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 67,
+      "sourceMarker": "79"
+    },
+    {
+      "id": "rw-20261005-audit79-q068",
+      "groupId": "rw-20261005-audit79-q068",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "Medium",
+      "passage": "The Asteria Oral History Collective was founded to ensure that recordings of disappearing regional dialects remain accessible to the communities in which those dialects developed. The collective _____ this commitment by financing community-run archives, training local interviewers, and returning digitized recordings to the families of the original speakers.",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "choices": {
+        "A": "demonstrates",
+        "B": "supersedes",
+        "C": "infers",
+        "D": "precedes"
+      },
+      "correctAnswer": "A",
+      "explanation": "The actions listed—funding archives, training interviewers, and returning recordings—are concrete ways in which the collective shows its commitment. Therefore, “demonstrates” is the most precise choice.",
+      "choiceExplanations": {
+        "B": "“supersedes,” means replaces or displaces, which does not fit the relationship between the commitment and the actions.",
+        "A": "The actions listed—funding archives, training interviewers, and returning recordings—are concrete ways in which the collective shows its commitment. Therefore, “demonstrates” is the most precise choice.",
+        "C": "“infers,” means draws a conclusion from evidence; the collective is not deducing its own commitment.",
+        "D": "“precedes,” means comes before, but the sentence describes how the actions express the commitment, not their chronological relationship to it."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 68,
+      "sourceMarker": "80"
+    },
+    {
+      "id": "rw-20261005-audit79-q069",
+      "groupId": "rw-20261005-audit79-q069",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Command of Evidence",
+      "difficulty": "Hard",
+      "passage": "Mapping soil salinity across large agricultural regions ordinarily requires researchers to collect and chemically analyze many soil cores, a slow and expensive process. Remote-sensing specialist Elena Kovács and colleagues found that microwave measurements taken from aircraft often change as saline soils retain different amounts of moisture. The researchers therefore hypothesized that airborne microwave reflectance could serve as a practical proxy for soil salinity, reducing the need for extensive core sampling.",
+      "question": "Which finding, if true, would most directly weaken the hypothesis presented in the text?",
+      "choices": {
+        "A": "Aircraft can collect microwave measurements over substantially larger areas in a single day than field teams can sample using soil cores.",
+        "B": "Several nonsaline soils produce microwave reflectance values similar to those of saline soils when vegetation density and recent rainfall differ, and the resulting variation has no stable relationship to measured salinity.",
+        "C": "Saline soils contain several dissolved ions in addition to sodium and chloride, whereas standard laboratory analyses can identify the individual ions present.",
+        "D": "Repeated airborne measurements of the same exposed saline field under similar moisture conditions produce nearly identical reflectance values."
+      },
+      "correctAnswer": "B",
+      "explanation": "For microwave reflectance to function as a useful proxy, it must correspond reliably to soil salinity. B directly undermines that requirement: if nonsaline soils can produce similar reflectance values because vegetation and rainfall alter the signal in an unpredictable way, then reflectance would not reliably indicate salinity.",
+      "choiceExplanations": {
+        "B": "For microwave reflectance to function as a useful proxy, it must correspond reliably to soil salinity. B directly undermines that requirement: if nonsaline soils can produce similar reflectance values because vegetation and rainfall alter the signal in an unpredictable way, then reflectance would not reliably indicate salinity.",
+        "A": "strengthens the practical argument for remote sensing because it shows that the method is efficient.",
+        "C": "shows that laboratory analysis provides more detailed chemical information, but it does not establish that reflectance fails as a salinity proxy.",
+        "D": "strengthens the hypothesis by showing that the airborne measurements are reproducible under comparable conditions."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 69,
+      "sourceMarker": "81"
+    },
+    {
+      "id": "rw-20261005-audit79-q070",
+      "groupId": "rw-20261005-audit79-q070",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Inferences",
+      "difficulty": "Hard",
+      "passage": "A 2017 study of Mediterranean shrublands found a positive association between seed mass and the probability that dormant seeds would germinate after exposure to wildfire-like heat. Several subsequent studies at ecologically similar sites reported comparable results, leading some botanists to propose that heavier seeds generally withstand fire cues better than lighter seeds. However, when Nandita Rao and colleagues studied seasonally burned savannas in northern Australia, they found a negative association between seed mass and postfire germination. If similar findings emerge from other ecosystems outside the Mediterranean region, that pattern would suggest that _____",
+      "question": "Which choice most logically completes the text?",
+      "choices": {
+        "A": "the Australian study probably measured seed mass less precisely than the Mediterranean studies did.",
+        "B": "seeds in northern Australia are generally heavier than seeds from every Mediterranean shrubland species examined.",
+        "C": "the relationship between seed mass and postfire germination may reflect ecological conditions characteristic of certain Mediterranean systems rather than a universal biological pattern.",
+        "D": "most Mediterranean studies must have accidentally measured a plant trait other than seed mass."
+      },
+      "correctAnswer": "C",
+      "explanation": "The Mediterranean studies found one relationship, while the Australian study found the opposite. If additional non-Mediterranean studies also produce different results, the most reasonable inference is that the positive relationship observed around the Mediterranean depends on regional ecological conditions rather than representing a universal rule. That is exactly what C states.",
+      "choiceExplanations": {
+        "C": "The Mediterranean studies found one relationship, while the Australian study found the opposite. If additional non-Mediterranean studies also produce different results, the most reasonable inference is that the positive relationship observed around the Mediterranean depends on regional ecological conditions rather than representing a universal rule. That is exactly what C states.",
+        "A": "speculates about measurement error without evidence.",
+        "B": "concerns absolute seed mass rather than the relationship between seed mass and germination.",
+        "D": "likewise assumes methodological error even though the contrasting findings can be explained by genuine ecological differences."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 70,
+      "sourceMarker": "82"
+    },
+    {
+      "id": "rw-20261005-audit79-q071",
+      "groupId": "rw-20261005-audit79-q071",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Inferences",
+      "difficulty": "Medium",
+      "passage": "An oceanography student is comparing the efficiency of TrenchScope with that of the other three mapping programs.",
+      "question": "According to the table, TrenchScope produced an average of 18.4 usable seafloor profiles per vessel-day, ranking it ______",
+      "choices": {
+        "A": "above all three of the other mapping programs.",
+        "B": "above RidgeWatch and approximately equal to AbyssNet.",
+        "C": "below both AbyssNet and RidgeWatch but above Pelagic Survey.",
+        "D": "below AbyssNet but above both RidgeWatch and Pelagic Survey."
+      },
+      "correctAnswer": "D",
+      "explanation": "TrenchScope averaged 18.4 profiles per vessel-day. AbyssNet’s average was higher at 23.9, while RidgeWatch and Pelagic Survey had lower averages of 14.1 and 7.8, respectively. Therefore, TrenchScope ranked below AbyssNet but above the other two programs, making A correct.",
+      "choiceExplanations": {
+        "A": "is incorrect because AbyssNet exceeded TrenchScope.",
+        "B": "is incorrect because 18.4 is not approximately equal to 23.9.",
+        "C": "incorrectly places RidgeWatch above TrenchScope even though RidgeWatch averaged only 14.1 profiles per vessel-day.",
+        "D": "TrenchScope averaged 18.4 profiles per vessel-day. AbyssNet’s average was higher at 23.9, while RidgeWatch and Pelagic Survey had lower averages of 14.1 and 7.8, respectively. Therefore, TrenchScope ranked below AbyssNet but above the other two programs, making A correct."
+      },
+      "table": {
+        "caption": "Performance of Four Deep-Sea Mapping Programs in 2028",
+        "headers": [
+          "Mapping program",
+          "Usable seafloor profiles collected",
+          "Vessel-days of operation",
+          "Average usable profiles per vessel-day"
+        ],
+        "rows": [
+          [
+            "RidgeWatch",
+            "8,742",
+            "620",
+            "14.1"
+          ],
+          [
+            "TrenchScope",
+            "7,820",
+            "425",
+            "18.4"
+          ],
+          [
+            "Pelagic Survey",
+            "5,694",
+            "730",
+            "7.8"
+          ],
+          [
+            "AbyssNet",
+            "10,038",
+            "420",
+            "23.9"
+          ]
+        ]
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 71,
+      "sourceMarker": "Question 1"
+    },
+    {
+      "id": "rw-20261005-audit79-q072",
+      "groupId": "rw-20261005-audit79-q072",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Words in Context",
+      "difficulty": "Medium",
+      "passage": "The following text is from Lydia S. Merritt’s 1907 novel The Narrow Platform. After arriving in the mountain town where she has accepted a teaching position, Clara Vale sees the steep route leading from the railway station to her lodging.\nClara stepped down with her valise and regarded the stone stairway rising between the houses. Twenty-seven uneven flights, the porter had said, and no carriage could manage them. Her enthusiasm for the journey, so vigorous an hour before, suddenly seemed less dependable.",
+      "question": "As used in the text, what does the word “regarded” most nearly mean?",
+      "choices": {
+        "A": "looked at",
+        "B": "respected",
+        "C": "considered characteristic of",
+        "D": "supervised"
+      },
+      "correctAnswer": "A",
+      "explanation": "Clara has just arrived and visually takes in the long stone stairway ahead of her. In this context, “regarded” means “looked at” or “observed.” Thus, B is correct.",
+      "choiceExplanations": {
+        "B": "uses regarded in the sense of respecting someone, as in “a highly regarded scholar,” which does not fit.",
+        "A": "Clara has just arrived and visually takes in the long stone stairway ahead of her. In this context, “regarded” means “looked at” or “observed.” Thus, B is correct.",
+        "C": "reflects the construction “regarded as,” meaning considered to be something, but no such judgment is being expressed here.",
+        "D": "means watched over or managed, which is unrelated to Clara’s observation of the stairs."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 72,
+      "sourceMarker": "Question 2"
+    },
+    {
+      "id": "rw-20261005-audit79-q073",
+      "groupId": "rw-20261005-audit79-q073",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "skill": "Cross-Text Connections",
+      "difficulty": "Hard",
+      "passage": "Text 1\nFor much of the twentieth century, archaeologists studying Bronze Age glass in the eastern Mediterranean concluded that most beads recovered from major settlements had been produced locally. Chemical analyses at several extensively excavated coastal palace sites repeatedly identified compositions consistent with nearby raw materials, reinforcing the view that long-distance exchange played only a limited role in supplying ordinary glass ornaments.\nText 2\nA broader survey by archaeologist Samira El-Khoury and colleagues found that glass beads from inland cemeteries frequently contain trace-element signatures associated with production centers hundreds of kilometers away. The researchers argue that the earlier picture of overwhelmingly local production may reflect where archaeologists traditionally concentrated excavations: monumental coastal centers, where locally produced glass appears to have been unusually common, received far more study than smaller inland sites.",
+      "question": "Based on the texts, how would El-Khoury and colleagues in Text 2 most likely respond to the view described in Text 1?",
+      "choices": {
+        "A": "They would contend that long-distance exchange existed but had little effect on the composition of glass used away from coastal palace sites.",
+        "B": "They would argue that it was influenced by researchers’ tendency to investigate certain kinds of archaeological sites more extensively than others.",
+        "C": "They would suggest that differences between coastal and inland glass arose primarily because inland craftspeople lacked access to suitable raw materials.",
+        "D": "They would maintain that chemical analysis is generally incapable of distinguishing locally manufactured glass from imported glass."
+      },
+      "correctAnswer": "B",
+      "explanation": "Text 2 explicitly attributes the earlier conclusion partly to sampling bias: archaeologists disproportionately studied monumental coastal centers, where local glass happened to be common. El-Khoury and colleagues would therefore argue that the view in Text 1 was shaped by the kinds of sites researchers tended to examine. Choice A is correct.",
+      "choiceExplanations": {
+        "A": "contradicts Text 2, which finds strong evidence of long-distance exchange at inland sites.",
+        "B": "Text 2 explicitly attributes the earlier conclusion partly to sampling bias: archaeologists disproportionately studied monumental coastal centers, where local glass happened to be common. El-Khoury and colleagues would therefore argue that the view in Text 1 was shaped by the kinds of sites researchers tended to examine. Choice A is correct.",
+        "C": "offers an explanation for inland imports that the passage never gives.",
+        "D": "contradicts the study itself, which uses chemical signatures to distinguish likely production origins."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 73,
+      "sourceMarker": "Question 3"
+    },
+    {
+      "id": "rw-20261005-audit79-q074",
+      "groupId": "rw-20261005-audit79-q074",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "skill": "Inferences",
+      "difficulty": "Medium",
+      "passage": "During the 1970s and 1980s, rising fuel prices and competition from industrial ceramics caused many traditional pottery workshops in Valdara to close. Beginning in the 1990s, municipal grants and growing demand from heritage tourism helped independent workshops reopen.",
+      "question": "Researchers argue that by 2015 this revival was evident across all three districts represented in the graph, as shown by the ______",
+      "choices": {
+        "A": "difference between the number of workshops in the North Quarter and Hill District in 2015.",
+        "B": "decrease in the number of active workshops in all three districts from 1970 to 1990.",
+        "C": "increase in the number of active workshops in all three districts from 1990 to 2015.",
+        "D": "similarity between the River Ward and Hill District workshop totals in 2000."
+      },
+      "correctAnswer": "C",
+      "explanation": "The claim concerns a revival beginning after the period of decline and becoming evident across all three districts. From 1990 to 2015, the North Quarter rises from 16 to 44 workshops, River Ward from 18 to 37, and Hill District from 14 to 29. Thus, all three show substantial increases, making B the strongest evidence.",
+      "choiceExplanations": {
+        "B": "is supported by the graph, but it documents the earlier decline rather than the subsequent recovery.",
+        "A": "describes a difference between two districts but does not demonstrate a broad revival.",
+        "C": "The claim concerns a revival beginning after the period of decline and becoming evident across all three districts. From 1990 to 2015, the North Quarter rises from 16 to 44 workshops, River Ward from 18 to 37, and Hill District from 14 to 29. Thus, all three show substantial increases, making B the strongest evidence.",
+        "D": "concerns similarity between two districts at one point in time and does not establish an increase."
+      },
+      "graph": {
+        "type": "line",
+        "caption": "Active Ceramic Workshops in Three Districts of Valdara",
+        "categories": [
+          "1970",
+          "1990",
+          "2000",
+          "2015"
+        ],
+        "series": [
+          {
+            "name": "North Quarter",
+            "values": [
+              38,
+              16,
+              19,
+              44
+            ]
+          },
+          {
+            "name": "River Ward",
+            "values": [
+              31,
+              18,
+              23,
+              37
+            ]
+          },
+          {
+            "name": "Hill District",
+            "values": [
+              26,
+              14,
+              17,
+              29
+            ]
+          }
+        ],
+        "min": 0,
+        "max": 45,
+        "tickStep": 5
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 74,
+      "sourceMarker": "Question 4"
+    },
+    {
+      "id": "rw-20261005-audit79-q075",
+      "groupId": "rw-20261005-audit79-q075",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "Easy",
+      "passage": "One of the earliest documented appearances of the word kimono in English occurs in nineteenth-century travel writing about Japan. The term was not coined by those English-language writers, however; ______ English adopted it from Japanese, where kimono developed from words meaning roughly “thing to wear.”",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "consequently,",
+        "B": "similarly,",
+        "C": "ultimately,",
+        "D": "rather,"
+      },
+      "correctAnswer": "D",
+      "explanation": "The sentence first rejects one possibility—the idea that English-language writers coined the term—and then supplies the correct alternative: English adopted the word from Japanese. “Rather,” appropriately introduces that correction or replacement, so C is correct.",
+      "choiceExplanations": {
+        "C": "can indicate a final stage in a process, but it does not express the contrast between what did not happen and what happened instead as precisely as “rather.”",
+        "A": "signals a result, but borrowing the term is not presented as a consequence of the writers’ failure to coin it.",
+        "B": "indicates similarity between two ideas rather than correction.",
+        "D": "The sentence first rejects one possibility—the idea that English-language writers coined the term—and then supplies the correct alternative: English adopted the word from Japanese. “Rather,” appropriately introduces that correction or replacement, so C is correct."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 75,
+      "sourceMarker": "Question 5"
+    },
+    {
+      "id": "rw-20261005-audit79-q076",
+      "groupId": "rw-20261005-audit79-q076",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "Easy",
+      "passage": "Under magnification, crystals of the mineral wavellite often radiate outward from a central point in overlapping blades, producing a form that resembles the petals of a flower. ______ mineral collectors commonly describe such aggregates as “rosettes.”",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "Aptly,",
+        "B": "Nevertheless,",
+        "C": "Besides,",
+        "D": "Second,"
+      },
+      "correctAnswer": "A",
+      "explanation": "The term “rosettes” is appropriate because the crystal aggregates visually resemble flowers. “Aptly,” meaning fittingly or appropriately, expresses that connection between appearance and name. Therefore, B is correct.",
+      "choiceExplanations": {
+        "B": "signals an unexpected contrast, but the name is consistent with the appearance.",
+        "A": "The term “rosettes” is appropriate because the crystal aggregates visually resemble flowers. “Aptly,” meaning fittingly or appropriately, expresses that connection between appearance and name. Therefore, B is correct.",
+        "C": "merely adds another point and does not convey that the label is especially suitable.",
+        "D": "indicates a second step or item in a sequence, and no such sequence has been established."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 76,
+      "sourceMarker": "Question 6"
+    },
+    {
+      "id": "rw-20261005-audit79-q077",
+      "groupId": "rw-20261005-audit79-q077",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Transitions",
+      "difficulty": "Easy",
+      "passage": "From a distance, the pale, finely layered deposits at Cerro Lumbre and Basin K may appear nearly identical, ______ sedimentologists can distinguish their origins from microscopic grain orientation: the Cerro Lumbre deposit formed during a submarine turbidity current, while the Basin K deposit accumulated as windblown dune sediment.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "choices": {
+        "A": "moreover,",
+        "B": "though",
+        "C": "therefore,",
+        "D": "for example,"
+      },
+      "correctAnswer": "B",
+      "explanation": "The sentence establishes a contrast: the two deposits look alike, yet specialists can determine that they formed through very different processes. The subordinating conjunction “though” correctly signals that contrast: they may look nearly identical, though sedimentologists can distinguish their origins. Thus, D is correct.",
+      "choiceExplanations": {
+        "D": "would introduce an example, but the second clause is not an example of the first.",
+        "A": "indicates addition rather than contrast.",
+        "B": "The sentence establishes a contrast: the two deposits look alike, yet specialists can determine that they formed through very different processes. The subordinating conjunction “though” correctly signals that contrast: they may look nearly identical, though sedimentologists can distinguish their origins. Thus, D is correct.",
+        "C": "indicates a result; being visually similar does not cause the deposits to have different origins."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 77,
+      "sourceMarker": "Question 7"
+    },
+    {
+      "id": "rw-20261005-audit79-q078",
+      "groupId": "rw-20261005-audit79-q078",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Boundaries",
+      "difficulty": "Easy",
+      "passage": "Over the past three decades, field recordings of endangered languages, ceremonial chants, and disappearing regional dialects have been entered into a specialized ______ Global Archive of Spoken Heritage. Submissions are evaluated by linguists, archivists, and representatives of the communities whose recordings are being considered.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "catalogue; the",
+        "B": "catalogue. The",
+        "C": "catalogue, the",
+        "D": "catalogue the"
+      },
+      "correctAnswer": "C",
+      "explanation": "“The Global Archive of Spoken Heritage” renames and specifies the preceding noun “catalogue.” It therefore functions as an appositive and should be set off with a comma: “a specialized catalogue, the Global Archive of Spoken Heritage.” Choice A is correct.",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the evidence, wording, or grammatical requirement established by the question.",
+        "B": "incorrectly creates the fragment “The Global Archive of Spoken Heritage.” Choice C improperly uses a semicolon before a noun phrase; a semicolon generally joins independent clauses, and the material following it is not a complete clause.",
+        "C": "“The Global Archive of Spoken Heritage” renames and specifies the preceding noun “catalogue.” It therefore functions as an appositive and should be set off with a comma: “a specialized catalogue, the Global Archive of Spoken Heritage.” Choice A is correct.",
+        "D": "lacks the punctuation needed to introduce the appositive."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 78,
+      "sourceMarker": "Question 8"
+    },
+    {
+      "id": "rw-20261005-audit79-q079",
+      "groupId": "rw-20261005-audit79-q079",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Form, Structure, and Sense",
+      "difficulty": "Easy",
+      "passage": "In 2019, the provincial government designated the Ardent Marsh complex as a protected ecological corridor, ______ its unusually intact reed beds, migratory-bird habitat, and connections between three previously isolated nature reserves.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "choices": {
+        "A": "they cited",
+        "B": "has cited",
+        "C": "cited",
+        "D": "citing"
+      },
+      "correctAnswer": "D",
+      "explanation": "The sentence already contains its main verb, “designated.” The participle “citing” correctly introduces a modifying phrase explaining the government’s reason for the designation: it designated the area while citing those ecological features. Therefore, C is correct.",
+      "choiceExplanations": {
+        "C": "creates an additional past-tense main verb after a comma, producing an ungrammatical structure.",
+        "A": "creates a second independent clause without appropriate punctuation or a coordinating conjunction.",
+        "B": "also introduces another finite verb phrase and incorrectly shifts to the present perfect tense.",
+        "D": "The sentence already contains its main verb, “designated.” The participle “citing” correctly introduces a modifying phrase explaining the government’s reason for the designation: it designated the area while citing those ecological features. Therefore, C is correct."
+      },
+      "sourceBatch": "2026-10-05-audit79",
+      "sourceQuestionNumber": 79,
+      "sourceMarker": "Question 9"
     }
   ],
   "lastUpdated": "2026-10-05",
   "answerDistribution": {
-    "A": 142,
-    "B": 142,
-    "C": 142,
-    "D": 141
+    "A": 159,
+    "B": 159,
+    "C": 159,
+    "D": 159
   },
-  "answerDistributionNote": "Balanced across the full 567-question bank; formatting audit completed; no answer-key streak exceeds 3 consecutive questions.",
+  "answerDistributionNote": "Balanced across the full 636-question bank; audited batch added after duplicate/reskin and formatting review; no answer-key streak exceeds 3 consecutive questions.",
   "formattingAudit": {
     "date": "2026-10-05",
     "questionCount": 567,
     "newQuestionsAdded": 89,
     "nativeVisualsAdded": 8,
+    "criticalFormattingFlagsRemaining": 0
+  },
+  "latestQuestionAudit": {
+    "date": "2026-10-05",
+    "sourceQuestions": 79,
+    "deployedQuestions": 69,
+    "removedQuestions": 10,
+    "repairedFormattingQuestions": 4,
+    "nativeVisualsAdded": 3,
+    "finalQuestionCount": 636,
     "criticalFormattingFlagsRemaining": 0
   }
 }
