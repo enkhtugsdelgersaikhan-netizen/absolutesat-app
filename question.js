@@ -4027,7 +4027,10 @@ function renderChoices(
                 question.correct_answer;
 
             const shouldExplain =
-                attemptedWrong ||
+                (
+                    attemptedWrong &&
+                    question.section !== "Math"
+                ) ||
                 (
                     checked &&
                     selected &&
@@ -5523,6 +5526,14 @@ function initializeDesmosPanel() {
         document.getElementById(
             "desmos-panel"
         );
+    const card =
+        panel?.querySelector(
+            ".desmos-panel-card"
+        );
+    const handle =
+        panel?.querySelector(
+            ".desmos-panel-head"
+        );
     const close =
         document.getElementById(
             "desmos-close-button"
@@ -5535,10 +5546,67 @@ function initializeDesmosPanel() {
     if (
         !toggle ||
         !panel ||
+        !card ||
+        !handle ||
         !frame
     ) {
         return;
     }
+
+    let dragging = false;
+    let dragOffsetX = 0;
+    let dragOffsetY = 0;
+
+    const clampCardToViewport =
+        () => {
+            const rect =
+                card.getBoundingClientRect();
+
+            const maxLeft =
+                Math.max(
+                    0,
+                    window.innerWidth -
+                    Math.min(
+                        rect.width,
+                        window.innerWidth
+                    )
+                );
+
+            const maxTop =
+                Math.max(
+                    0,
+                    window.innerHeight -
+                    Math.min(
+                        rect.height,
+                        window.innerHeight
+                    )
+                );
+
+            const nextLeft =
+                Math.min(
+                    Math.max(
+                        rect.left,
+                        0
+                    ),
+                    maxLeft
+                );
+
+            const nextTop =
+                Math.min(
+                    Math.max(
+                        rect.top,
+                        0
+                    ),
+                    maxTop
+                );
+
+            card.style.left =
+                nextLeft + "px";
+            card.style.top =
+                nextTop + "px";
+            card.style.transform =
+                "none";
+        };
 
     const openPanel =
         () => {
@@ -5555,6 +5623,10 @@ function initializeDesmosPanel() {
                 "aria-hidden",
                 "false"
             );
+
+            requestAnimationFrame(
+                clampCardToViewport
+            );
         };
 
     const closePanel =
@@ -5567,7 +5639,128 @@ function initializeDesmosPanel() {
                 "aria-hidden",
                 "true"
             );
+
+            dragging = false;
         };
+
+    handle.addEventListener(
+        "pointerdown",
+        event => {
+            if (
+                event.button !== 0 ||
+                event.target.closest(
+                    "button"
+                )
+            ) {
+                return;
+            }
+
+            const rect =
+                card.getBoundingClientRect();
+
+            card.style.left =
+                rect.left + "px";
+            card.style.top =
+                rect.top + "px";
+            card.style.transform =
+                "none";
+
+            dragOffsetX =
+                event.clientX -
+                rect.left;
+            dragOffsetY =
+                event.clientY -
+                rect.top;
+
+            dragging = true;
+
+            handle.setPointerCapture?.(
+                event.pointerId
+            );
+
+            event.preventDefault();
+        }
+    );
+
+    handle.addEventListener(
+        "pointermove",
+        event => {
+            if (!dragging) {
+                return;
+            }
+
+            const width =
+                card.offsetWidth;
+            const height =
+                card.offsetHeight;
+
+            const maxLeft =
+                Math.max(
+                    0,
+                    window.innerWidth -
+                    width
+                );
+            const maxTop =
+                Math.max(
+                    0,
+                    window.innerHeight -
+                    height
+                );
+
+            const left =
+                Math.min(
+                    Math.max(
+                        event.clientX -
+                        dragOffsetX,
+                        0
+                    ),
+                    maxLeft
+                );
+
+            const top =
+                Math.min(
+                    Math.max(
+                        event.clientY -
+                        dragOffsetY,
+                        0
+                    ),
+                    maxTop
+                );
+
+            card.style.left =
+                left + "px";
+            card.style.top =
+                top + "px";
+        }
+    );
+
+    const stopDragging =
+        event => {
+            if (!dragging) {
+                return;
+            }
+
+            dragging = false;
+
+            if (
+                event?.pointerId !==
+                undefined
+            ) {
+                handle.releasePointerCapture?.(
+                    event.pointerId
+                );
+            }
+        };
+
+    handle.addEventListener(
+        "pointerup",
+        stopDragging
+    );
+
+    handle.addEventListener(
+        "pointercancel",
+        stopDragging
+    );
 
     toggle.addEventListener(
         "click",
@@ -5579,13 +5772,15 @@ function initializeDesmosPanel() {
         closePanel
     );
 
-    panel.addEventListener(
-        "click",
-        event => {
+    window.addEventListener(
+        "resize",
+        () => {
             if (
-                event.target === panel
+                !panel.classList.contains(
+                    "hidden"
+                )
             ) {
-                closePanel();
+                clampCardToViewport();
             }
         }
     );
