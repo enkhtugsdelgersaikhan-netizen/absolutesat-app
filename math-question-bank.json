@@ -8044,15 +8044,15 @@
       "skill": "Equivalent expressions",
       "difficulty": "Easy",
       "passage": "",
-      "question": "Which expression is equivalent to\n\n\\[(3x2-2x+5)-2(x^{2}+4x-1)-(x^{2}-3)?\\]",
+      "question": "Which expression is equivalent to\n\\[(3x^2-2x+5)-2(x^2+4x-1)-(x^2-3)?\\]",
       "choices": {
-        "A": "\\(2x2-10x+4\\)",
-        "B": "\\(2x2+6x+4\\)",
-        "C": "\\(4x2-10x+6\\)",
-        "D": "\\(2x2-10x+6\\)"
+        "A": "\\(2x^2-10x+4\\)",
+        "B": "\\(2x^2+6x+4\\)",
+        "C": "\\(4x^2-10x+6\\)",
+        "D": "\\(2x^2-10x+6\\)"
       },
       "correctAnswer": "A",
-      "explanation": "Simplify the bracket:\n\n\\[2(x^{2}+4x-1)-(x^{2}-3)\\]\n\n\\[=2x2+8x-2-x^{2}+3=x^{2}+8x+1.\\]\nThen\n\n\\[3x2-2x+5-(x^{2}+8x+1)=2x2-10x+4.\\]",
+      "explanation": "Simplify the middle expression:\n\\[2(x^2+4x-1)=2x^2+8x-2.\\]\nThen\n\\[(3x^2-2x+5)-(2x^2+8x-2)-(x^2-3)=\\boxed{2x^2-10x+4}.\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 275,
       "choiceExplanations": {
@@ -9901,15 +9901,15 @@
       "skill": "Ratios, rates, proportional relationships, and units",
       "difficulty": "Easy",
       "passage": "",
-      "question": "A sensor recorded temperatures t satisfying\n\n14t38.\nAfter calibration, every displayed temperature d is 6 degrees lower than the original recorded value.\nWhich inequality gives all possible values of d?",
+      "question": "A sensor recorded temperatures \\(t\\) satisfying\n\\[14\\le t\\le38.\\]\nAfter calibration, every displayed temperature \\(d\\) is 6 degrees lower than the original recorded value. Which inequality gives all possible values of \\(d\\)?",
       "choices": {
-        "A": "\\(20d44\\)",
-        "B": "\\(8d32\\)",
-        "C": "\\(14d32\\)",
-        "D": "\\(8d38\\)"
+        "A": "\\(20\\le d\\le44\\)",
+        "B": "\\(8\\le d\\le32\\)",
+        "C": "\\(14\\le d\\le32\\)",
+        "D": "\\(8\\le d\\le38\\)"
       },
       "correctAnswer": "B",
-      "explanation": "Since\n\n\\[d=t-6,\\]\nsubtract 6 from all parts of the original inequality:\n\n\\[14-6d38-6.\\]\nTherefore,\n\n8d32.",
+      "explanation": "Since\n\\[d=t-6,\\]\nsubtract 6 from all parts of the original inequality:\n\\[14-6\\le d\\le38-6.\\]\nTherefore,\n\\[\\boxed{8\\le d\\le32}.\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 342,
       "choiceExplanations": {
@@ -10241,13 +10241,13 @@
       "passage": "",
       "question": "A survey vehicle first travels 18 miles to reach a test route. It then travels for 6 hours at an average speed between 42 and 47 miles per hour, inclusive.\nIf d is the vehicle's total distance, in miles, from its starting point after the 6 hours on the test route, which inequality represents all possible values of d?",
       "choices": {
-        "A": "\\(252d282\\)",
-        "B": "\\(270d300\\)",
-        "C": "\\(60d65\\)",
+        "A": "\\(252\\le d\\le282\\)",
+        "B": "\\(270\\le d\\le300\\)",
+        "C": "\\(60\\le d\\le65\\)",
         "D": "\\(270<d<300\\)"
       },
       "correctAnswer": "B",
-      "explanation": "The distance traveled on the test route is between\n\n\\[6(42)=252\\]\nand\n\n\\[6(47)=282.\\]\nIncluding the initial 18 miles gives\n\n\\[252+18d282+18,\\]\nso\n\n270d300.",
+      "explanation": "The distance traveled on the test route is between\n\\[6(42)=252\\]\nand\n\\[6(47)=282.\\]\nIncluding the initial 18 miles gives\n\\[252+18\\le d\\le282+18,\\]\nso\n\\[\\boxed{270\\le d\\le300}.\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 353,
       "choiceExplanations": {
