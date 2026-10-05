@@ -5882,3 +5882,11 @@ select:hover,
         margin-left:8px!important;
     }
 }
+
+
+/* SINGLE GET STARTED AUTH CTA */
+.get-started-button{
+    min-width:118px;
+    padding-left:18px;
+    padding-right:18px;
+}
