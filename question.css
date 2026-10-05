@@ -2125,6 +2125,28 @@
 .review-result-explanation{
     font-weight:400!important;
 }
+
+/* Keep explanation prose from visually running into inline math.
+   MathJax renders inline expressions as their own containers, so give
+   them explicit breathing room instead of relying on collapsed HTML spaces. */
+.choice-reason-text,
+.answer-feedback-explanation,
+.review-result-explanation{
+    line-height:26px!important;
+    word-spacing:.035em!important;
+}
+.choice-reason-text mjx-container:not([display="true"]),
+.answer-feedback-explanation mjx-container:not([display="true"]),
+.review-result-explanation mjx-container:not([display="true"]){
+    margin-left:.16em!important;
+    margin-right:.16em!important;
+}
+.choice-reason-text mjx-container[display="true"],
+.answer-feedback-explanation mjx-container[display="true"],
+.review-result-explanation mjx-container[display="true"]{
+    margin-top:.55em!important;
+    margin-bottom:.55em!important;
+}
 .sat-answer-pane .question-text{
     font-weight:700!important;
 }
