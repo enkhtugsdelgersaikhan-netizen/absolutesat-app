@@ -5663,20 +5663,33 @@ function initializeDesmosPanel() {
         document.getElementById(
             "desmos-frame"
         );
+    const resizeHandle =
+        panel?.querySelector(
+            ".desmos-resize-handle"
+        );
 
     if (
         !toggle ||
         !panel ||
         !card ||
         !handle ||
-        !frame
+        !frame ||
+        !resizeHandle
     ) {
         return;
     }
 
     let dragging = false;
+    let resizing = false;
     let dragOffsetX = 0;
     let dragOffsetY = 0;
+    let resizeStartX = 0;
+    let resizeStartY = 0;
+    let resizeStartWidth = 0;
+    let resizeStartHeight = 0;
+    let resizeFrame = null;
+    let pendingWidth = 0;
+    let pendingHeight = 0;
 
     const clampCardToViewport =
         () => {
@@ -5762,6 +5775,19 @@ function initializeDesmosPanel() {
             );
 
             dragging = false;
+            resizing = false;
+
+            if (resizeFrame) {
+                cancelAnimationFrame(
+                    resizeFrame
+                );
+                resizeFrame = null;
+            }
+
+            card.classList.remove(
+                "is-dragging",
+                "is-resizing"
+            );
         };
 
     handle.addEventListener(
@@ -5794,6 +5820,9 @@ function initializeDesmosPanel() {
                 rect.top;
 
             dragging = true;
+            card.classList.add(
+                "is-dragging"
+            );
 
             handle.setPointerCapture?.(
                 event.pointerId
@@ -5862,6 +5891,9 @@ function initializeDesmosPanel() {
             }
 
             dragging = false;
+            card.classList.remove(
+                "is-dragging"
+            );
 
             if (
                 event?.pointerId !==
@@ -5881,6 +5913,162 @@ function initializeDesmosPanel() {
     handle.addEventListener(
         "pointercancel",
         stopDragging
+    );
+
+    const applyResize =
+        () => {
+            resizeFrame = null;
+
+            card.style.width =
+                pendingWidth + "px";
+            card.style.height =
+                pendingHeight + "px";
+        };
+
+    resizeHandle.addEventListener(
+        "pointerdown",
+        event => {
+            if (event.button !== 0) {
+                return;
+            }
+
+            const rect =
+                card.getBoundingClientRect();
+
+            card.style.left =
+                rect.left + "px";
+            card.style.top =
+                rect.top + "px";
+            card.style.transform =
+                "none";
+
+            resizeStartX =
+                event.clientX;
+            resizeStartY =
+                event.clientY;
+            resizeStartWidth =
+                rect.width;
+            resizeStartHeight =
+                rect.height;
+
+            resizing = true;
+            card.classList.add(
+                "is-resizing"
+            );
+
+            resizeHandle.setPointerCapture?.(
+                event.pointerId
+            );
+
+            event.preventDefault();
+            event.stopPropagation();
+        }
+    );
+
+    resizeHandle.addEventListener(
+        "pointermove",
+        event => {
+            if (!resizing) {
+                return;
+            }
+
+            const rect =
+                card.getBoundingClientRect();
+
+            const minWidth =
+                window.innerWidth <= 700
+                    ? 280
+                    : 420;
+            const minHeight = 280;
+
+            const maxWidth =
+                Math.max(
+                    minWidth,
+                    window.innerWidth -
+                    rect.left -
+                    8
+                );
+            const maxHeight =
+                Math.max(
+                    minHeight,
+                    window.innerHeight -
+                    rect.top -
+                    8
+                );
+
+            pendingWidth =
+                Math.min(
+                    Math.max(
+                        resizeStartWidth +
+                        (
+                            event.clientX -
+                            resizeStartX
+                        ),
+                        minWidth
+                    ),
+                    maxWidth
+                );
+
+            pendingHeight =
+                Math.min(
+                    Math.max(
+                        resizeStartHeight +
+                        (
+                            event.clientY -
+                            resizeStartY
+                        ),
+                        minHeight
+                    ),
+                    maxHeight
+                );
+
+            if (!resizeFrame) {
+                resizeFrame =
+                    requestAnimationFrame(
+                        applyResize
+                    );
+            }
+        }
+    );
+
+    const stopResizing =
+        event => {
+            if (!resizing) {
+                return;
+            }
+
+            resizing = false;
+
+            if (resizeFrame) {
+                cancelAnimationFrame(
+                    resizeFrame
+                );
+                resizeFrame = null;
+                applyResize();
+            }
+
+            card.classList.remove(
+                "is-resizing"
+            );
+
+            if (
+                event?.pointerId !==
+                undefined
+            ) {
+                resizeHandle.releasePointerCapture?.(
+                    event.pointerId
+                );
+            }
+        };
+
+    resizeHandle.addEventListener(
+        "pointerup",
+        stopResizing
+    );
+
+    resizeHandle.addEventListener(
+        "pointercancel",
+        stopResizing
     );
 
     toggle.addEventListener(
