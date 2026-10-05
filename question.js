@@ -2004,7 +2004,7 @@ async function loadQuestionById(
 
         const response =
             await fetch(
-                "/question-bank.json?v=16",
+                "/question-bank.json?v=17",
                 {
                     cache: "no-store"
                 }
@@ -2622,6 +2622,90 @@ function renderCurrentQuestion() {
 
 
 
+function isolateCorrectChoiceExplanation(value) {
+    let text =
+        String(value || "")
+            .replace(/\\s*---\\s*$/g, "")
+            .trim();
+
+    if (!text) {
+        return "";
+    }
+
+    const markerPattern =
+        /(^|\\n+|(?<=[.!?])\\s+)(?:Choice\\s+)?([A-D])(?=\\s*(?:[,.:—]|\\s+(?:is|was|would|could|does|did|means|refers|creates|cannot|can't|fails|incorrect|wrong|unsupported|overstates|understates|reverses|misreads|suggests|assumes|uses|has|gives|identifies|introduces|emphasizes|states|claims|implies|describes|concerns|corresponds|typically|also|instead|directly|explicitly|provides|supplies|mentions|omits|conflicts|repeats|focuses|places|requires|pairs|adds|addresses|asserts|praises|establishes|indicates|shows|captures|correctly)))/gi;
+
+    const markers = [];
+    let match;
+
+    while ((match = markerPattern.exec(text))) {
+        markers.push({
+            index:
+                match.index +
+                (
+                    match[1]
+                        ? match[1].length
+                        : 0
+                )
+        });
+
+        if (markerPattern.lastIndex === match.index) {
+            markerPattern.lastIndex += 1;
+        }
+    }
+
+    let end = text.length;
+
+    if (
+        markers.length > 0 &&
+        markers[0].index === 0
+    ) {
+        if (markers.length > 1) {
+            end = markers[1].index;
+        }
+    } else if (markers.length > 0) {
+        end = markers[0].index;
+    } else {
+        const paragraphs =
+            text
+                .split(/\\n\\s*\\n/)
+                .map(part => part.trim())
+                .filter(Boolean);
+
+        if (paragraphs.length > 1) {
+            end = paragraphs[0].length;
+        }
+    }
+
+    text =
+        text
+            .slice(0, end)
+            .trim()
+            .replace(
+                /^(?:Choice\\s+)?[A-D](?=\\s*(?:[,.:—]|\\s+(?:is|was|would|could|does|did|means|refers|creates|cannot|can't|fails|incorrect|wrong|unsupported|overstates|understates|reverses|misreads|suggests|assumes|uses|has|gives|identifies|introduces|emphasizes|states|claims|implies|describes|concerns|corresponds|typically|also|instead|directly|explicitly|provides|supplies|mentions|omits|conflicts|repeats|focuses|places|requires|pairs|adds|addresses|asserts|praises|establishes|indicates|shows|captures|correctly)))/i,
+                "This choice"
+            )
+            .replace(
+                /\\bmaking\\s+[A-D]\\s+(?:the\\s+)?(?:most\\s+)?(?:logical\\s+and\\s+)?(?:precise\\s+)?choice\\b/gi,
+                "making it the correct choice"
+            )
+            .replace(
+                /\\bmaking\\s+[A-D]\\s+correct\\b/gi,
+                "making this choice correct"
+            )
+            .replace(
+                /\\b(?:Therefore|Thus|Hence),?\\s+[A-D]\\s+is\\s+correct\\b/gi,
+                match =>
+                    match.replace(
+                        /[A-D]\\s+is\\s+correct/i,
+                        "this choice is correct"
+                    )
+            );
+
+    return text.trim();
+}
+
+
 function getChoiceExplanation(
     question,
     letter
@@ -2654,6 +2738,15 @@ function getChoiceExplanation(
         // attached to more than one choice. If the stored reason
         // begins with a different answer letter, fall through and
         // recover the matching explanation from the full rationale.
+        if (
+            letter ===
+            question.correct_answer
+        ) {
+            return isolateCorrectChoiceExplanation(
+                fallbackDirect
+            );
+        }
+
         if (
             !leadingLabel ||
             leadingLabel[1].toUpperCase() ===
@@ -2696,17 +2789,9 @@ function getChoiceExplanation(
                 /(?:^|\s)(?:Choice\s+)?[A-D]\s+(?:is|was|would\s+be)\s+(?:incorrect|wrong)\b/i
             );
 
-        return (
-            wrongChoiceStart >= 0
-                ? raw.slice(
-                    0,
-                    wrongChoiceStart
-                )
-                : (
-                    paragraphs[0] ||
-                    raw
-                )
-        ).trim();
+        return isolateCorrectChoiceExplanation(
+            raw
+        );
     }
 
     // Legacy explanations commonly use wording such as
