@@ -2454,32 +2454,67 @@
 }
 .desmos-resize-handle{
     position:absolute;
-    right:0;
-    bottom:0;
-    z-index:4;
-    width:26px;
-    height:26px;
-    cursor:nwse-resize;
+    z-index:6;
     touch-action:none;
     user-select:none;
 }
-.desmos-resize-handle::before,
-.desmos-resize-handle::after{
-    content:"";
-    position:absolute;
-    right:5px;
-    bottom:5px;
-    width:10px;
-    height:1.5px;
-    border-radius:999px;
-    background:#8da39d;
-    transform:rotate(-45deg);
-    transform-origin:right center;
+.desmos-resize-handle[data-resize-direction="n"]{
+    top:0;
+    left:14px;
+    right:14px;
+    height:9px;
+    cursor:ns-resize;
 }
-.desmos-resize-handle::after{
-    width:6px;
-    right:5px;
-    bottom:9px;
+.desmos-resize-handle[data-resize-direction="s"]{
+    bottom:0;
+    left:14px;
+    right:14px;
+    height:9px;
+    cursor:ns-resize;
+}
+.desmos-resize-handle[data-resize-direction="e"]{
+    top:14px;
+    right:0;
+    bottom:14px;
+    width:9px;
+    cursor:ew-resize;
+}
+.desmos-resize-handle[data-resize-direction="w"]{
+    top:14px;
+    left:0;
+    bottom:14px;
+    width:9px;
+    cursor:ew-resize;
+}
+.desmos-resize-handle[data-resize-direction="ne"],
+.desmos-resize-handle[data-resize-direction="nw"],
+.desmos-resize-handle[data-resize-direction="se"],
+.desmos-resize-handle[data-resize-direction="sw"]{
+    width:16px;
+    height:16px;
+}
+.desmos-resize-handle[data-resize-direction="ne"]{
+    top:0;
+    right:0;
+    cursor:nesw-resize;
+}
+.desmos-resize-handle[data-resize-direction="nw"]{
+    top:0;
+    left:0;
+    cursor:nwse-resize;
+}
+.desmos-resize-handle[data-resize-direction="se"]{
+    right:0;
+    bottom:0;
+    cursor:nwse-resize;
+}
+.desmos-resize-handle[data-resize-direction="sw"]{
+    left:0;
+    bottom:0;
+    cursor:nesw-resize;
+}
+.desmos-panel-card.is-resizing .desmos-resize-handle{
+    background:transparent;
 }
 @media(max-width:700px){
     .desmos-panel-card{
