@@ -1359,6 +1359,30 @@ function renderQuestionXYGraph(graph) {
             )
             .join("");
 
+    const axisLabels =
+        (
+            graph.xLabel
+                ? '<text class="question-xy-axis-label question-xy-x-label" x="' +
+                    (left + plotWidth) +
+                    '" y="' +
+                    (height - 7) +
+                    '" text-anchor="end">' +
+                    escapeHtml(graph.xLabel) +
+                  '</text>'
+                : ""
+        ) +
+        (
+            graph.yLabel
+                ? '<text class="question-xy-axis-label question-xy-y-label" x="' +
+                    (left + 6) +
+                    '" y="' +
+                    (top + 14) +
+                    '" text-anchor="start">' +
+                    escapeHtml(graph.yLabel) +
+                  '</text>'
+                : ""
+        );
+
     const caption =
         graph.caption
             ? '<figcaption>' +
@@ -1384,6 +1408,7 @@ function renderQuestionXYGraph(graph) {
                     '">' +
                     grid +
                     series +
+                    axisLabels +
                 '</svg>' +
             '</div>' +
         '</figure>'
@@ -2205,6 +2230,10 @@ function normalizeStagedQuestion(
         choice_tables:
             stagedQuestion.choiceTables ||
             stagedQuestion.choice_tables ||
+            null,
+        choice_graphs:
+            stagedQuestion.choiceGraphs ||
+            stagedQuestion.choice_graphs ||
             null,
         answer_type:
             stagedQuestion.answerType ||
@@ -3379,6 +3408,188 @@ function renderChoiceMiniTable(table) {
 }
 
 
+function renderChoiceMiniGraph(graph) {
+    if (!graph) {
+        return "";
+    }
+
+    const xMin =
+        Number.isFinite(Number(graph.xMin))
+            ? Number(graph.xMin)
+            : -10;
+    const xMax =
+        Number.isFinite(Number(graph.xMax))
+            ? Number(graph.xMax)
+            : 10;
+    const yMin =
+        Number.isFinite(Number(graph.yMin))
+            ? Number(graph.yMin)
+            : -10;
+    const yMax =
+        Number.isFinite(Number(graph.yMax))
+            ? Number(graph.yMax)
+            : 10;
+
+    if (
+        xMax <= xMin ||
+        yMax <= yMin
+    ) {
+        return "";
+    }
+
+    const width = 260;
+    const height = 170;
+    const left = 22;
+    const right = 12;
+    const top = 10;
+    const bottom = 20;
+    const plotWidth =
+        width - left - right;
+    const plotHeight =
+        height - top - bottom;
+
+    const xScale =
+        value =>
+            left +
+            (
+                (value - xMin) /
+                (xMax - xMin)
+            ) *
+            plotWidth;
+
+    const yScale =
+        value =>
+            top +
+            (
+                (yMax - value) /
+                (yMax - yMin)
+            ) *
+            plotHeight;
+
+    let grid = "";
+
+    for (
+        let x = Math.ceil(xMin / 2) * 2;
+        x <= xMax;
+        x += 2
+    ) {
+        grid +=
+            '<line class="choice-graph-grid" x1="' +
+            xScale(x) +
+            '" x2="' +
+            xScale(x) +
+            '" y1="' +
+            top +
+            '" y2="' +
+            (top + plotHeight) +
+            '"></line>';
+    }
+
+    for (
+        let y = Math.ceil(yMin / 2) * 2;
+        y <= yMax;
+        y += 2
+    ) {
+        grid +=
+            '<line class="choice-graph-grid" x1="' +
+            left +
+            '" x2="' +
+            (left + plotWidth) +
+            '" y1="' +
+            yScale(y) +
+            '" y2="' +
+            yScale(y) +
+            '"></line>';
+    }
+
+    if (xMin <= 0 && xMax >= 0) {
+        grid +=
+            '<line class="choice-graph-axis" x1="' +
+            xScale(0) +
+            '" x2="' +
+            xScale(0) +
+            '" y1="' +
+            top +
+            '" y2="' +
+            (top + plotHeight) +
+            '"></line>';
+    }
+
+    if (yMin <= 0 && yMax >= 0) {
+        grid +=
+            '<line class="choice-graph-axis" x1="' +
+            left +
+            '" x2="' +
+            (left + plotWidth) +
+            '" y1="' +
+            yScale(0) +
+            '" y2="' +
+            yScale(0) +
+            '"></line>';
+    }
+
+    const series =
+        (graph.series || [])
+            .map(
+                item => {
+                    const points =
+                        Array.isArray(item?.points)
+                            ? item.points.filter(
+                                point =>
+                                    Array.isArray(point) &&
+                                    Number.isFinite(
+                                        Number(point[0])
+                                    ) &&
+                                    Number.isFinite(
+                                        Number(point[1])
+                                    )
+                            )
+                            : [];
+
+                    if (!points.length) {
+                        return "";
+                    }
+
+                    return (
+                        '<polyline class="choice-graph-series" points="' +
+                        points
+                            .map(
+                                point =>
+                                    xScale(
+                                        Number(point[0])
+                                    ) +
+                                    "," +
+                                    yScale(
+                                        Number(point[1])
+                                    )
+                            )
+                            .join(" ") +
+                        '"></polyline>'
+                    );
+                }
+            )
+            .join("");
+
+    return (
+        '<div class="choice-graph-wrap">' +
+            '<svg class="choice-mini-graph" viewBox="0 0 ' +
+            width +
+            " " +
+            height +
+            '" role="img" aria-label="' +
+            escapeHtml(
+                graph.ariaLabel ||
+                "Graph choice"
+            ) +
+            '">' +
+                grid +
+                series +
+            '</svg>' +
+        '</div>'
+    );
+}
+
+
 function parseStudentResponseValue(value) {
     const text =
         String(value ?? "")
@@ -3688,16 +3899,37 @@ function renderChoices(
                 </span>
 
                 <span class="choice-text">${
-                    question.choice_tables?.[
+                    question.choice_graphs?.[
                         choice.letter
                     ]
-                        ? renderChoiceMiniTable(
-                            question.choice_tables[
+                        ? (
+                            renderChoiceMiniGraph(
+                                question.choice_graphs[
+                                    choice.letter
+                                ]
+                            ) +
+                            (
+                                choice.text
+                                    ? '<span class="choice-graph-label">' +
+                                        renderInlineFormatting(
+                                            choice.text
+                                        ) +
+                                      '</span>'
+                                    : ""
+                            )
+                        )
+                        : (
+                            question.choice_tables?.[
                                 choice.letter
                             ]
-                        )
-                        : renderInlineFormatting(
-                            choice.text
+                                ? renderChoiceMiniTable(
+                                    question.choice_tables[
+                                        choice.letter
+                                    ]
+                                )
+                                : renderInlineFormatting(
+                                    choice.text
+                                )
                         )
                 }</span>
             `;
@@ -5312,7 +5544,7 @@ function initializeDesmosPanel() {
         () => {
             if (!frame.src) {
                 frame.src =
-                    "https://www.desmos.com/calculator?embed";
+                    "https://www.desmos.com/calculator";
             }
 
             panel.classList.remove(
