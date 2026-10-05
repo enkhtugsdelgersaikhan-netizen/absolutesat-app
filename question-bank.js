@@ -759,7 +759,7 @@ async function loadQuestions() {
     try {
         const bankUrl =
             activeSection === "Math"
-                ? "/math-question-bank.json?v=1"
+                ? "/math-question-bank.json?v=2"
                 : "/question-bank.json?v=17";
 
         const response =
