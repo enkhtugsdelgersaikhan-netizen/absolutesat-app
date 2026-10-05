@@ -16,7 +16,7 @@
     >
 
     <link rel="stylesheet" href="style.css?v=subjects-1">
-    <link rel="stylesheet" href="question.css?v=11">
+    <link rel="stylesheet" href="question.css?v=12">
 </head>
 
 <body>
@@ -84,14 +84,16 @@
                                 class="question-nav-button"
                                 type="button"
                             >
-                                Previous
+                                <span class="question-nav-symbol" aria-hidden="true">←</span>
+                                <span>Previous</span>
                             </button>
                             <button
                                 id="next-button"
                                 class="question-nav-button"
                                 type="button"
                             >
-                                Next
+                                <span>Next</span>
+                                <span class="question-nav-symbol" aria-hidden="true">→</span>
                             </button>
                         </div>
 
@@ -252,7 +254,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js?v=subjects-1"></script>
-<script src="question.js?v=24"></script>
+<script src="question.js?v=25"></script>
 
 </body>
 </html>
