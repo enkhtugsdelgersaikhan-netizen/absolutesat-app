@@ -2329,23 +2329,32 @@
     position:fixed;
     inset:0;
     z-index:2500;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:22px;
-    background:rgba(15,23,42,.46);
-    backdrop-filter:blur(3px);
+    display:block;
+    padding:0;
+    background:transparent;
+    backdrop-filter:none;
+    pointer-events:none;
 }
 .desmos-panel-card{
-    width:min(1040px,96vw);
-    height:min(720px,88vh);
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    width:min(1040px,calc(100vw - 44px));
+    height:min(720px,calc(100vh - 44px));
+    min-width:420px;
+    min-height:320px;
+    max-width:calc(100vw - 8px);
+    max-height:calc(100vh - 8px);
     display:flex;
     flex-direction:column;
     overflow:hidden;
+    resize:both;
+    pointer-events:auto;
     border:1px solid #d0dcda;
     border-radius:16px;
     background:#fff;
-    box-shadow:0 24px 70px rgba(15,23,42,.24);
+    box-shadow:0 18px 55px rgba(15,23,42,.22);
 }
 .desmos-panel-head{
     min-height:58px;
@@ -2355,6 +2364,9 @@
     gap:20px;
     padding:10px 14px 10px 18px;
     border-bottom:1px solid #e0e8e6;
+    cursor:move;
+    user-select:none;
+    touch-action:none;
 }
 .desmos-panel-head>div{
     display:flex;
@@ -2389,12 +2401,13 @@
     background:#fff;
 }
 @media(max-width:700px){
-    .desmos-panel{
-        padding:8px;
-    }
     .desmos-panel-card{
-        width:100%;
-        height:94vh;
+        width:calc(100vw - 16px);
+        height:min(82vh,680px);
+        min-width:280px;
+        min-height:280px;
+        max-width:calc(100vw - 8px);
+        max-height:calc(100vh - 8px);
         border-radius:12px;
     }
 }
