@@ -99,6 +99,11 @@
       "collisionReduction": true,
       "extendedLinearSeries": true,
       "axisLabels": true
+    },
+    "formattingGuard": {
+      "date": "2026-10-06",
+      "accidentalDisplayProseCleaned": true,
+      "splitDelimiterProtection": true
     }
   },
   "questions": [
@@ -138,7 +143,7 @@
       "skill": "Linear equations in one variable",
       "difficulty": "Easy",
       "passage": "",
-      "question": "If\n\n\\[7(2x-3)=5(2x-3)+34,\\]\n\\[what is the value of 3(2x-3)-4?\\]",
+      "question": "If\n\n\\[7(2x-3)=5(2x-3)+34,\\]\nwhat is the value of 3(2x-3)-4?",
       "choices": {
         "A": "\\(17\\)",
         "B": "\\(47\\)",
@@ -624,7 +629,7 @@
       "skill": "Systems of two linear equations in two variables",
       "difficulty": "Medium",
       "passage": "",
-      "question": "The solution to the system\n\\[ \\begin{cases} 4x+3y=31\\\\ 2x-5y=-17 \\end{cases} \\]\n\\[is (x,y). What is the value of 3x-y?\\]",
+      "question": "The solution to the system\n\\[ \\begin{cases} 4x+3y=31\\\\ 2x-5y=-17 \\end{cases} \\]\nis (x,y). What is the value of 3x-y?",
       "choices": {
         "A": "\\(-7\\)",
         "B": "\\(7\\)",
@@ -1574,7 +1579,7 @@
       "skill": "Equivalent expressions",
       "difficulty": "Easy",
       "passage": "",
-      "question": "What is the slope of the graph of\n\n\\[2y=3(4x-5)-(x+7)\\]\n\\[in the xy-plane?\\]",
+      "question": "What is the slope of the graph of\n\n\\[2y=3(4x-5)-(x+7)\\]\nin the xy-plane?",
       "choices": {},
       "correctAnswer": "",
       "explanation": "Simplify:\n\\[\n2y=12x-15-x-7=11x-22.\n\\]\nDivide by 2:\n\\[\ny=\\frac{11}{2}x-11.\n\\]\nSo the slope is\n\\[\n\\boxed{\\frac{11}{2}}.\n\\]",
@@ -1781,7 +1786,7 @@
       "skill": "Linear equations in one variable",
       "difficulty": "Easy",
       "passage": "",
-      "question": "If (x,y) is the solution to\n\n\\[9x+2y=17\\]\n\n\\[5x-5y=2,\\]\n\\[what is the value of 4x+7y?\\]",
+      "question": "If (x,y) is the solution to\n\n\\[9x+2y=17\\]\n\n\\[5x-5y=2,\\]\nwhat is the value of 4x+7y?",
       "choices": {
         "A": "\\(2\\)",
         "B": "\\(15\\)",
@@ -3304,7 +3309,7 @@
       "skill": "Systems of two linear equations in two variables",
       "difficulty": "Medium",
       "passage": "",
-      "question": "The solution to the system\n\\[ \\begin{cases} 4u+v=13\\\\ 2u-3v=-11 \\end{cases} \\]\n\\[is (u,v). What is the value of 3u+2v?\\]",
+      "question": "The solution to the system\n\\[ \\begin{cases} 4u+v=13\\\\ 2u-3v=-11 \\end{cases} \\]\nis (u,v). What is the value of 3u+2v?",
       "choices": {
         "A": "\\(13\\)",
         "B": "\\(14\\)",
@@ -3451,7 +3456,7 @@
       "skill": "Linear equations in one variable",
       "difficulty": "Easy",
       "passage": "",
-      "question": "If\n\n\\[5x-7=18,\\]\n\\[what is the value of 15x+4?\\]",
+      "question": "If\n\n\\[5x-7=18,\\]\nwhat is the value of 15x+4?",
       "choices": {
         "A": "\\(71\\)",
         "B": "\\(75\\)",
@@ -3839,7 +3844,7 @@
       "skill": "Evaluating statistical claims: observational studies and experiments",
       "difficulty": "Easy",
       "passage": "",
-      "question": "At how many points do the graphs of\n\n\\[4(y-2)=6x+1\\]\nand\n\n\\[3y-5x=7\\]\n\\[intersect in the xy-plane?\\]",
+      "question": "At how many points do the graphs of\n\n\\[4(y-2)=6x+1\\]\nand\n\n\\[3y-5x=7\\]\nintersect in the xy-plane?",
       "choices": {
         "A": "\\(0\\)",
         "B": "\\(1\\)",
@@ -4266,7 +4271,7 @@
       "skill": "Linear equations in one variable",
       "difficulty": "Easy",
       "passage": "",
-      "question": "If x satisfies\n\n\\[3(4x-10)+7=5(2x-5)-1,\\]\n\\[what is the value of 2x-5?\\]",
+      "question": "If x satisfies\n\n\\[3(4x-10)+7=5(2x-5)-1,\\]\nwhat is the value of 2x-5?",
       "choices": {
         "A": "\\(-8\\)",
         "B": "\\(-1\\)",
@@ -4630,7 +4635,7 @@
       "skill": "Linear equations in one variable",
       "difficulty": "Easy",
       "passage": "",
-      "question": "The function f is defined by\n\n\\[f(x)=x^{2}+4x-5x+2.\\]\n\\[If h=5, what is the value of f(2-h)?\\]",
+      "question": "The function f is defined by\n\n\\[f(x)=x^{2}+4x-5x+2.\\]\nIf h=5, what is the value of f(2-h)?",
       "choices": {
         "A": "\\(-8\\)",
         "B": "\\(4\\)",
@@ -4813,7 +4818,7 @@
       "skill": "Linear equations in one variable",
       "difficulty": "Easy",
       "passage": "",
-      "question": "The function f is defined by\n\n\\[f(x)=432-x.\\]\n\\[What is f(-1)?\\]",
+      "question": "The function f is defined by\n\n\\[f(x)=432-x.\\]\nWhat is f(-1)?",
       "choices": {
         "A": "\\(12\\)",
         "B": "\\(36\\)",
@@ -5166,15 +5171,15 @@
       "skill": "Nonlinear functions",
       "difficulty": "Medium",
       "passage": "",
-      "question": "A quadratic function has vertex\n\n\\[74,-2.\\]\n\\[One x-intercept is\\]\n\n\\[-52,0.\\]\nWhat is the other x-intercept?",
+      "question": "A quadratic function has vertex\n\\[\\left(\\frac74,-2\\right).\\]\nOne x-intercept is\n\\[\\left(-\\frac52,0\\right).\\]\nWhat is the other x-intercept?",
       "choices": {
         "A": "\\((1,0)\\)",
-        "B": "\\(72,0\\)",
+        "B": "\\(\\left(\\frac72,0\\right)\\)",
         "C": "\\((6,0)\\)",
         "D": "\\((9,0)\\)"
       },
       "correctAnswer": "C",
-      "explanation": "The axis of symmetry is\n\n\\[x=74,\\]\nso the average of the two roots is 74.\nLet the other root be r:\n\n\\[-52+r^{2}=74.\\]\nThus,\n\n\\[-52+r=72\\]\nand\n\n\\[r=6.\\]\nTherefore, the other intercept is\n\\[ \\boxed{(6,0)}. \\]",
+      "explanation": "The axis of symmetry is\n\\[x=\\frac74.\\]\nTherefore the average of the two roots is \\(\\frac74\\). Let the other root be \\(r\\):\n\\[\\frac{-\\frac52+r}{2}=\\frac74.\\]\nThen\n\\[-\\frac52+r=\\frac72,\\]\nso\n\\[r=6.\\]\nTherefore, the other x-intercept is\n\\[\\boxed{(6,0)}.\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 166,
       "choiceExplanations": {
@@ -5531,7 +5536,7 @@
       "skill": "Linear equations in one variable",
       "difficulty": "Easy",
       "passage": "",
-      "question": "The function f is defined by\n\n\\[f(x)=4-3x.\\]\n\\[If 2q+5=-1, what is the value of f(q)?\\]",
+      "question": "The function f is defined by\n\n\\[f(x)=4-3x.\\]\nIf 2q+5=-1, what is the value of f(q)?",
       "choices": {
         "A": "\\(1\\)",
         "B": "\\(7\\)",
@@ -6369,7 +6374,7 @@
       "skill": "Systems of two linear equations in two variables",
       "difficulty": "Medium",
       "passage": "",
-      "question": "The solution to the system\n\n\\[2y=3x+5\\]\n\n\\[4x+y=19\\]\n\\[is (x,y). What is the value of x+y?\\]",
+      "question": "The solution to the system\n\n\\[2y=3x+5\\]\n\n\\[4x+y=19\\]\nis (x,y). What is the value of x+y?",
       "choices": {
         "A": "\\(7\\)",
         "B": "\\(8\\)",
@@ -6830,7 +6835,7 @@
       "skill": "Systems of two linear equations in two variables",
       "difficulty": "Medium",
       "passage": "",
-      "question": "The solution to the system\n\n\\[2x+5y=23\\]\n\n\\[4x-y=13\\]\n\\[is (x,y). What is the value of x+y?\\]",
+      "question": "The solution to the system\n\n\\[2x+5y=23\\]\n\n\\[4x-y=13\\]\nis (x,y). What is the value of x+y?",
       "choices": {
         "A": "\\(5\\)",
         "B": "\\(6\\)",
@@ -7404,7 +7409,7 @@
       "skill": "Linear equations in one variable",
       "difficulty": "Hard",
       "passage": "",
-      "question": "\\[In the xy-plane, the graphs\\]\n\n\\[y=(x-3)^{2}+4\\]\nand\n\n\\[y=4x-12\\]\nintersect at exactly one point. What is the y-coordinate of that point?",
+      "question": "In the xy-plane, the graphs\n\n\\[y=(x-3)^{2}+4\\]\nand\n\n\\[y=4x-12\\]\nintersect at exactly one point. What is the y-coordinate of that point?",
       "choices": {},
       "correctAnswer": "",
       "explanation": "Set the expressions equal:\n\n\\[(x-3)^{2}+4=4x-12.\\]\n\n\\[x^{2}-6x+13=4x-12\\]\n\n\\[x^{2}-10x+25=0\\]\n\n\\[(x-5)^{2}=0.\\]\n\\[Thus x=5. Then\\]\n\n\\[y=4(5)-12=8.\\]",
@@ -8294,7 +8299,7 @@
       "skill": "Linear equations in one variable",
       "difficulty": "Easy",
       "passage": "",
-      "question": "A warehouse contains r large containers and s small containers. The quantities satisfy\n\n\\[2r+s=480.\\]\n\\[If r=135, what is the value of s?\\]",
+      "question": "A warehouse contains \\(r\\) large containers and \\(s\\) small containers. The quantities satisfy\n\n\\[2r+s=480.\\]\nIf \\(r=135\\), what is the value of \\(s\\)?",
       "choices": {
         "A": "\\(75\\)",
         "B": "\\(210\\)",
@@ -8302,7 +8307,7 @@
         "D": "\\(345\\)"
       },
       "correctAnswer": "B",
-      "explanation": "\\[Substitute r=135:\\]\n\n\\[2(135)+s=480.\\]\nSo\n\n\\[270+s=480\\]\nand\n\\[ \\boxed{s=210}. \\]",
+      "explanation": "Substitute \\(r=135\\):\n\\[2(135)+s=480.\\]\nSo\n\\[270+s=480,\\]\nand therefore\n\\[\\boxed{s=210}.\\]",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 282,
       "choiceExplanations": {
@@ -8703,7 +8708,7 @@
       "skill": "Linear equations in one variable",
       "difficulty": "Easy",
       "passage": "",
-      "question": "If\n\n\\[4(3x+1)+3(6x+2)=90,\\]\n\\[what is the value of 3x+1?\\]",
+      "question": "If\n\n\\[4(3x+1)+3(6x+2)=90,\\]\nwhat is the value of 3x+1?",
       "choices": {
         "A": "\\(6\\)",
         "B": "\\(9\\)",
@@ -9022,7 +9027,7 @@
       "skill": "Linear equations in one variable",
       "difficulty": "Medium",
       "passage": "",
-      "question": "The function g is defined by\n\n\\[g(x)=3(2x-5)-4(x+1).\\]\n\\[What is g(12)?\\]",
+      "question": "The function g is defined by\n\n\\[g(x)=3(2x-5)-4(x+1).\\]\nWhat is g(12)?",
       "choices": {},
       "correctAnswer": "",
       "explanation": "Substitute 12:\n\\[ g(12)=3(24-5)-4(13) =3(19)-52 =57-52 =\\boxed{5}. \\]",
@@ -9141,7 +9146,7 @@
       "skill": "Linear functions",
       "difficulty": "Medium",
       "passage": "",
-      "question": "What is the y-coordinate of the y-intercept of the graph of\n\n\\[4(x-2y)+6=30\\]\n\\[in the xy-plane?\\]",
+      "question": "What is the y-coordinate of the y-intercept of the graph of\n\n\\[4(x-2y)+6=30\\]\nin the xy-plane?",
       "choices": {},
       "correctAnswer": "",
       "explanation": "\\[At the y-intercept, x=0:\\]\n\n\\[4(0-2y)+6=30.\\]\nThus,\n\n\\[-8y=24\\]\nand\n\\[ \\boxed{y=-3}. \\]",
@@ -9736,7 +9741,7 @@
       "skill": "Linear functions",
       "difficulty": "Easy",
       "passage": "",
-      "question": "What is the slope of the line defined by\n\n\\[6x+15y=40\\]\n\\[in the xy-plane?\\]",
+      "question": "What is the slope of the line defined by\n\n\\[6x+15y=40\\]\nin the xy-plane?",
       "choices": {},
       "correctAnswer": "",
       "explanation": "Solve for \\(y\\):\n\\[\n15y=-6x+40\n\\]\nso\n\\[\ny=-\\frac25x+\\frac83.\n\\]\nTherefore, the slope is\n\\[\n\\boxed{-\\frac25}.\n\\]",
@@ -10327,7 +10332,7 @@
       "skill": "Linear functions",
       "difficulty": "Medium",
       "passage": "",
-      "question": "The line\n\n\\[4(x+2)-3y=2x+18\\]\n\\[is graphed in the xy-plane.\\]\nWhat is the x-coordinate of its x-intercept?",
+      "question": "The line\n\n\\[4(x+2)-3y=2x+18\\]\nis graphed in the xy-plane.\nWhat is the x-coordinate of its x-intercept?",
       "choices": {},
       "correctAnswer": "",
       "explanation": "\\[At the x-intercept, y=0. Substitute:\\]\n\n\\[4(x+2)=2x+18.\\]\nThen\n\n\\[4x+8=2x+18,\\]\nso\n\n\\[2x=10\\]\nand\n\n\\[x=5.\\]",
@@ -10347,7 +10352,7 @@
       "skill": "Linear functions",
       "difficulty": "Easy",
       "passage": "",
-      "question": "What is the y-intercept of the graph of\n\n\\[6x+4y=28\\]\n\\[in the xy-plane?\\]",
+      "question": "What is the y-intercept of the graph of\n\n\\[6x+4y=28\\]\nin the xy-plane?",
       "choices": {
         "A": "\\((-7,0)\\)",
         "B": "\\((7,0)\\)",
@@ -10759,7 +10764,7 @@
       "skill": "Linear equations in one variable",
       "difficulty": "Medium",
       "passage": "",
-      "question": "For the function f,\n\n\\[f(2x-1)=3x+4\\]\nfor all values of x.\n\\[What is f(9)?\\]",
+      "question": "For the function f,\n\n\\[f(2x-1)=3x+4\\]\nfor all values of x.\nWhat is f(9)?",
       "choices": {
         "A": "\\(14\\)",
         "B": "\\(31\\)",
@@ -11826,7 +11831,7 @@
       "skill": "Linear equations in one variable",
       "difficulty": "Easy",
       "passage": "",
-      "question": "\\[In the xy-plane, the graphs\\]\n\n\\[y=x^{2}-5x+3\\]\nand\n\n\\[y=2x+3\\]\nintersect at (0,3) and (a,2a+3). What is the value of a?",
+      "question": "In the xy-plane, the graphs\n\n\\[y=x^{2}-5x+3\\]\nand\n\n\\[y=2x+3\\]\nintersect at (0,3) and (a,2a+3). What is the value of a?",
       "choices": {},
       "correctAnswer": "",
       "explanation": "At an intersection,\n\n\\[x^{2}-5x+3=2x+3.\\]\nThus,\n\n\\[x^{2}-7x=0\\]\n\n\\[x(x-7)=0.\\]\n\\[The two x-coordinates are 0 and 7. Therefore,\\]\n\n\\[a=7.\\]",
@@ -12498,7 +12503,7 @@
       "skill": "Linear equations in one variable",
       "difficulty": "Easy",
       "passage": "",
-      "question": "If (x,y) satisfies\n\n\\[y=x^{2}-4x+3\\]\nand\n\n\\[y=3x-7,\\]\n\\[and x>3, what is the value of xy?\\]",
+      "question": "If (x,y) satisfies\n\n\\[y=x^{2}-4x+3\\]\nand\n\n\\[y=3x-7,\\]\nand x>3, what is the value of xy?",
       "choices": {
         "A": "\\(10\\)",
         "B": "\\(25\\)",
@@ -12709,7 +12714,7 @@
       "skill": "Linear equations in one variable",
       "difficulty": "Easy",
       "passage": "",
-      "question": "The function g is defined by\n\n\\[g(t)=2(t-1)^{3}+5.\\]\n\\[If g(t)=59, what is the value of t?\\]",
+      "question": "The function g is defined by\n\n\\[g(t)=2(t-1)^{3}+5.\\]\nIf g(t)=59, what is the value of t?",
       "choices": {
         "A": "\\(2\\)",
         "B": "\\(3\\)",
