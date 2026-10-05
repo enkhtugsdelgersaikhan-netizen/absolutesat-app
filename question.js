@@ -2979,11 +2979,9 @@ function renderChoices(
                     )}
                 </span>
 
-                <span class="choice-text">
-                    ${renderInlineFormatting(
-                        choice.text
-                    )}
-                </span>
+                <span class="choice-text">${renderInlineFormatting(
+                    choice.text
+                )}</span>
             `;
 
 
