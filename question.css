@@ -2239,6 +2239,44 @@
     fill:#6e817c;
     font:11px Poppins,sans-serif;
 }
+.question-xy-axis-label{
+    fill:#425650;
+    font:600 12px Poppins,sans-serif;
+}
+.choice-graph-wrap{
+    width:min(100%,300px);
+    margin:2px 0 4px;
+}
+.choice-mini-graph{
+    display:block;
+    width:100%;
+    height:auto;
+    border:1px solid #dce5e2;
+    border-radius:8px;
+    background:#fff;
+}
+.choice-graph-grid{
+    stroke:#edf2f0;
+    stroke-width:1;
+}
+.choice-graph-axis{
+    stroke:#7b8f89;
+    stroke-width:1.25;
+}
+.choice-graph-series{
+    fill:none;
+    stroke:#0e7367;
+    stroke-width:2.5;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+.choice-graph-label{
+    display:block;
+    margin-top:6px;
+    font-size:13px;
+    font-weight:600;
+    color:#445650;
+}
 .question-xy-series{
     fill:none;
     stroke:#0e7367;
