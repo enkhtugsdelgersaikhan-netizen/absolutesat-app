@@ -1154,6 +1154,9 @@
 
 /* Nested domain cards — subtopics visibly live inside the domain control */
 .domain-skill-list{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    align-items:start;
     gap:14px;
 }
 .domain-skill-group{
@@ -1201,6 +1204,7 @@
 }
 .subtopic-choice-grid{
     position:relative;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
     margin:0!important;
     padding:13px 14px 14px!important;
     border-top:1px solid #d8e7e3;
@@ -1223,12 +1227,18 @@
     border-color:#73b2a5!important;
     background:#eaf6f2!important;
 }
+@media(max-width:780px){
+    .domain-skill-list{
+        grid-template-columns:1fr;
+    }
+}
 @media(max-width:620px){
     .domain-choice{
         min-height:70px!important;
         padding:13px 48px 12px 14px!important;
     }
     .subtopic-choice-grid{
+        grid-template-columns:1fr!important;
         padding:11px 12px 12px!important;
     }
 }
