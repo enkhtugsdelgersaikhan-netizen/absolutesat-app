@@ -1242,3 +1242,40 @@
         padding:11px 12px 12px!important;
     }
 }
+
+
+/* OCT 6 RESPONSIVE QUESTION BANK SCALE */
+.question-bank-header,
+.question-bank-content{
+    width:min(94vw,1440px);
+}
+.question-bank-header{
+    padding-top:clamp(38px,4.4vw,64px);
+    padding-bottom:clamp(28px,3vw,42px);
+}
+.question-bank-header h1{
+    font-size:clamp(34px,2.4vw,42px);
+}
+.question-bank-header p{
+    font-size:clamp(14px,.3vw + 12px,16px);
+    line-height:1.65;
+}
+.skill-picker-panel{
+    padding:clamp(16px,1.7vw,24px)!important;
+}
+.question-list{
+    gap:clamp(10px,1vw,14px);
+}
+@media(max-width:700px){
+    .question-bank-header,
+    .question-bank-content{
+        width:calc(100% - 28px);
+    }
+    .question-bank-header{
+        padding-top:30px;
+        padding-bottom:24px;
+    }
+    .question-bank-header h1{
+        font-size:32px;
+    }
+}
