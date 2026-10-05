@@ -3648,12 +3648,6 @@ function updateNavigationButtons() {
         currentQuestionIndex >=
         questions.length - 1;
 
-    previousButton.textContent =
-        "Previous";
-
-    nextButton.textContent =
-        "Next";
-
 }
 
 
