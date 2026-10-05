@@ -50,8 +50,13 @@
                     type="button"
                     hidden
                 >
-                    <span class="desmos-toggle-icon" aria-hidden="true">⌁</span>
-                    Calculator
+                    <span class="desmos-toggle-icon" aria-hidden="true">
+                        <svg viewBox="0 0 20 20" width="16" height="16">
+                            <rect x="3" y="2.5" width="14" height="15" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M6 6h8M6 9.5h2M10 9.5h2M14 9.5h.01M6 13h2M10 13h2M14 13h.01" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                    Desmos
                 </button>
                 <div class="timer-container">
                     <span class="timer-label">TIME ON QUESTION</span>
@@ -271,7 +276,7 @@
         <div class="desmos-panel-head">
             <div>
                 <span>CALCULATOR</span>
-                <strong>Desmos</strong>
+                <strong>Desmos Graphing Calculator</strong>
             </div>
             <button
                 id="desmos-close-button"
@@ -317,7 +322,7 @@ window.MathJax = {
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js?v=subjects-1"></script>
-<script src="question.js?v=29"></script>
+<script src="question.js?v=30"></script>
 
 </body>
 </html>
