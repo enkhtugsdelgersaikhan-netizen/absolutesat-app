@@ -5861,3 +5861,12 @@ select:hover,
         display:none!important;
     }
 }
+
+
+/* GOOGLE-ONLY AUTH HEADER ALIGNMENT */
+.auth-buttons{
+    margin-left:auto;
+}
+.site-dashboard:not([hidden]) + .auth-buttons{
+    margin-left:7px;
+}
