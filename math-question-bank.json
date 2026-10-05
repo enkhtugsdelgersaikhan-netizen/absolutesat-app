@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "generatedAt": "2026-10-06",
   "sourceBatch": "2026-10-06-math-batch465",
   "audit": {
@@ -26,7 +26,16 @@
       442
     ],
     "multipleChoice": 351,
-    "studentResponse": 96
+    "studentResponse": 96,
+    "difficultyCalibration": {
+      "approach": "SAT-style three-band calibration",
+      "targetMix": {
+        "Easy": 134,
+        "Medium": 224,
+        "Hard": 89
+      },
+      "note": "Direct computation/reading questions shifted toward Easy; multi-step, parameter, transformed-function, and inference-heavy questions shifted toward Hard."
+    }
   },
   "questions": [
     {
@@ -219,7 +228,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent expressions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "For what value of x is\n\n\\[5(2x-3)-4=3(x+7)+2x?\\]",
       "choices": {
@@ -740,7 +749,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear inequalities in one or two variables",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "A manufactured component is acceptable if its actual mass m, in grams, satisfies\n\n24.6m25.2.\nA measuring device consistently reports a value 0.3 gram greater than the actual mass. Which of the following device readings could correspond to an acceptable component?",
       "choices": {
@@ -767,7 +776,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent expressions",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "",
       "question": "The graph of\n\n\\[5x-4y=12\\]\nis translated 3 units to the right and 2 units down in the xy-plane. What is the x-coordinate of the x-intercept of the resulting graph?",
       "choices": {},
@@ -869,7 +878,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Nonlinear equations in one variable",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "A line crosses the y-axis at (0,-6). Its x-intercept has a positive x-coordinate equal to twice the absolute value of its y-intercept.\nWhat is the slope of the line?",
       "choices": {
@@ -990,7 +999,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent expressions",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "",
       "question": "A factory will assemble at most 120 sensors in one shift. At least two-thirds of the sensors assembled must be standard models. If \\(s\\) is the number of standard sensors and \\(p\\) is the number of premium sensors, which system of inequalities represents these restrictions?",
       "choices": {
@@ -1085,7 +1094,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear functions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "The graph shows a linear relationship between \\(x\\) and \\(y\\). Which table gives three x-values and their corresponding y-values for the relationship shown?",
       "choices": {
@@ -1221,7 +1230,7 @@
       "section": "Math",
       "domain": "Geometry and Trigonometry",
       "skill": "Lines, angles, and triangles",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "Line \\(r\\) is shown in the coordinate plane. The marked points on \\(r\\) are \\((-4,5)\\) and \\((2,-3)\\). Line \\(s\\), not shown, is perpendicular to \\(r\\). What is the slope of \\(s\\)?",
       "choices": {},
@@ -1299,7 +1308,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear equations in two variables",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "The table shows three values of \\(x\\) and their corresponding values of \\(y\\). The relationship is linear. Which equation represents this relationship?",
       "choices": {
@@ -1645,7 +1654,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear inequalities in one or two variables",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "Which point is a solution to\n\n\\[2y-3x>7?\\]",
       "choices": {
@@ -2046,7 +2055,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear equations in one variable",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "A cargo vehicle carries x small containers weighing 3.5 kilograms each and y large containers weighing 8 kilograms each. The cargo satisfies\n\n\\[3.5x+8y=64.\\]\nWhat is the best interpretation of 64?",
       "choices": {
@@ -2073,7 +2082,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent expressions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "How many solutions does the equation\n\n\\[4(2x-3)-5=3(2x+1)+x\\]\nhave?",
       "choices": {
@@ -2100,7 +2109,7 @@
       "section": "Math",
       "domain": "Problem-Solving and Data Analysis",
       "skill": "Ratios, rates, proportional relationships, and units",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "A machine uses 5.4 liters of coolant for every 12 kilometers it operates. If L(d) is the number of liters used after d kilometers, which function defines L?",
       "choices": {
@@ -2297,7 +2306,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Nonlinear equations in one variable",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "For which table are all listed ordered pairs solutions to\n\n\\[2y-3x8?\\]",
       "choices": {
@@ -2676,7 +2685,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Nonlinear equations in one variable",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "Which table gives three solutions to\n\n\\[5x+2y=18?\\]",
       "choices": {
@@ -3186,7 +3195,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Systems of two linear equations in two variables",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "",
       "question": "A laboratory buys two types of test cartridges. Each type A cartridge costs x dollars, and each type B cartridge costs y dollars.\nOne order contains 3 type A cartridges and 2 type B cartridges. Its $186 total includes a $12 shipping fee. A second order contains 5 type A cartridges and 1 type B cartridge. Its $226 total includes an $8 shipping fee.\nWhich system can be used to determine x and y?",
       "choices": {
@@ -3287,7 +3296,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Systems of two linear equations in two variables",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "The graph represents a system of two linear equations. The solid intersection point is the solution. If \\((x,y)\\) is the solution to the system, what is the value of \\(x+y\\)?",
       "choices": {
@@ -3405,7 +3414,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear equations in one variable",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "The graph models combinations of 3-meter fence panels and 2-meter fence panels that make a 36-meter fence. The x-coordinate is the number of 3-meter panels, and the y-coordinate is the number of 2-meter panels. Which statement best interprets the marked point \\(P=(6,9)\\)?",
       "choices": {
@@ -3825,7 +3834,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear equations in one variable",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "Which table gives three values of x and their corresponding values of y for the equation\n\n\\[3x+2y=18?\\]",
       "choices": {
@@ -4062,7 +4071,7 @@
       "section": "Math",
       "domain": "Problem-Solving and Data Analysis",
       "skill": "Ratios, rates, proportional relationships, and units",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "",
       "question": "A theater distributes 320 admission passes for a performance. Of these, 20 are complimentary and generate no revenue. All remaining passes are either adult tickets costing $18 each or student tickets costing $10 each. Revenue from the paid tickets is $4,280.\nIf a is the number of paid adult tickets and s is the number of paid student tickets, which system represents the situation?",
       "choices": {
@@ -4143,7 +4152,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear equations in one variable",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "A technician spends 3 minutes on each type A test and 2 minutes on each type B test. In one work session, the technician completes a type A tests and b type B tests, where\n\n\\[3a+2b=180.\\]\nWhat does the number 180 represent in this context?",
       "choices": {
@@ -4399,7 +4408,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear equations in one variable",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "How many distinct real solutions does the equation\n\n\\[2(x-3)^{2}+4=(x-3)^{2}-1\\]\nhave?",
       "choices": {
@@ -4588,7 +4597,7 @@
       "section": "Math",
       "domain": "Problem-Solving and Data Analysis",
       "skill": "Evaluating statistical claims: observational studies and experiments",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "",
       "question": "The two solutions to the system\n\n\\[y=x^{2}-4x+1\\]\n\n\\[y=2x-5\\]\n\\[are (x1,y1) and (x^{2},y^{2}). What is y1+y^{2}?\\]",
       "choices": {
@@ -4717,7 +4726,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear equations in one variable",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "The function f is defined by\n\n\\[f(x)=432-x.\\]\n\\[What is f(-1)?\\]",
       "choices": {
@@ -4798,7 +4807,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear functions",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "",
       "question": "The functions f and g are defined below, where a and b are integers such that\n\n\\[2<a<b.\\]\n\\[I. \\(\\displaystyle f(x)=a(2)^{x+1}+b\\)\\]\n\\[II. \\(\\displaystyle g(x)=a(4)^{x-b}\\)\\]\nWhich equation displays, as a constant or coefficient, the y-coordinate of the y-intercept of its corresponding graph?",
       "choices": {
@@ -4853,7 +4862,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent expressions",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "",
       "question": "Selected values of a polynomial \\(p\\) are shown. The polynomial \\(q\\) is defined by \\(q(x)=p(x-3)\\). Which expression must be a factor of \\(q(x)\\)?",
       "choices": {
@@ -5248,7 +5257,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent expressions",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "",
       "question": "Which ordered pair is the solution to the system\n\n\\[y=(x+1)(x-7)\\]\nand\n\n\\[y=-2x-11?\\]",
       "choices": {
@@ -5275,7 +5284,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent expressions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "Which expression is equivalent to \\[4(2x^2-3)-2(x^2+5)?\\]",
       "choices": {
@@ -5302,7 +5311,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent expressions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "Which expression is equivalent to\n\\[\n18a^7b^4-30a^5b^6?\n\\]",
       "choices": {
@@ -5377,7 +5386,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent expressions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "Which expression is equivalent to \\[5(2x^2-3x)-2(2x^2-3x)+(x^2-4)?\\]",
       "choices": {
@@ -5687,7 +5696,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear inequalities in one or two variables",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "Six storage bins each contain at least 18 books but no more than 24 books. Two of the bins contain a total of 43 books.\nWhich of the following could be the total number of books in all six bins?",
       "choices": {
@@ -5761,7 +5770,7 @@
       "section": "Math",
       "domain": "Problem-Solving and Data Analysis",
       "skill": "Percentages",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "The graph shows the percent charge \\(y\\) of a battery \\(x\\) hours after charging began. The relationship is linear. At what rate does the battery's charge increase for each 30 minutes?",
       "choices": {
@@ -6002,7 +6011,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear equations in one variable",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "What value of \\(x\\) satisfies \\[\\frac{3(x-4)}5=18?\\]",
       "choices": {
@@ -6315,7 +6324,7 @@
       "section": "Math",
       "domain": "Problem-Solving and Data Analysis",
       "skill": "One-variable data: distributions and measures of center and spread",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "The graph shows the monthly cost \\(y\\), in dollars, for a device-management service when \\(x\\) devices are enrolled. What is the best interpretation of the slope of the graph?",
       "choices": {
@@ -6471,7 +6480,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Systems of two linear equations in two variables",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "A system of two linear equations is graphed. Each grid interval represents 1 unit. Which point is the solution to the system?",
       "choices": {
@@ -6742,7 +6751,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear equations in one variable",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "",
       "question": "The equation\n\n\\[(2x-11)^{2}=(x-2)^{2}\\]\nhas two distinct real solutions. What is the sum of the solutions?",
       "choices": {},
@@ -6762,7 +6771,7 @@
       "section": "Math",
       "domain": "Geometry and Trigonometry",
       "skill": "Circles",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "",
       "question": "In the system\n\n\\[x^{2}+y^{2}=169\\]\n\n\\[y=mx+b,\\]\nm and b are negative constants. The graphs intersect at (-5,q), where q<0. Which expression represents 3b?",
       "choices": {
@@ -6789,7 +6798,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent expressions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "Which expression is equivalent to\n\n\\[5(3x-2y)-2(x+4y)-(x-3y)?\\]",
       "choices": {
@@ -6843,7 +6852,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent expressions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "Which expression is equivalent to\n\n\\[42(x-3)+5-3(x+2)?\\]",
       "choices": {
@@ -6870,7 +6879,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Nonlinear functions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "What is the product of all solutions to\n\n\\[(2x-5)(x+3)(x-4)=0?\\]",
       "choices": {
@@ -7289,7 +7298,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear equations in one variable",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "",
       "question": "\\[In the xy-plane, the graphs\\]\n\n\\[y=(x-3)^{2}+4\\]\nand\n\n\\[y=4x-12\\]\nintersect at exactly one point. What is the y-coordinate of that point?",
       "choices": {},
@@ -7336,7 +7345,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Nonlinear functions",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "",
       "question": "A quadratic function f has vertex (-2,5) and passes through (1,32). What is the value of\n\n\\[f(2)-f(-1)?\\]",
       "choices": {
@@ -7363,7 +7372,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent expressions",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "",
       "question": "The expression\n\\[\n6x^4+35x^2+36\n\\]\ncan be written as\n\\[\n(3x^2+a)(2x^2+b),\n\\]\nwhere \\(a\\) and \\(b\\) are positive integers, and also as\n\\[\n(3x^2+c)(2x^2+d),\n\\]\nwhere \\(c\\) and \\(d\\) are positive nonintegers. What is \\(a+c\\)?",
       "choices": {},
@@ -7976,7 +7985,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent expressions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "Which expression is equivalent to\n\n\\[(3x2-2x+5)-2(x^{2}+4x-1)-(x^{2}-3)?\\]",
       "choices": {
@@ -8057,7 +8066,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Systems of two linear equations in two variables",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "",
       "question": "A building currently has annual electricity costs of \\(\\$3{,}950\\). A new energy system will cost \\(\\$21{,}600\\) to install, but the building will receive a \\(\\$3{,}000\\) rebate. After installation, annual electricity costs are expected to be \\(\\$1{,}760\\), and the system will require \\(\\$610\\) in annual maintenance.\nWhich inequality can be solved to find t, the number of years after installation when the accumulated savings exceed the net installation cost?",
       "choices": {
@@ -8233,7 +8242,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear equations in one variable",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "A coordinator has 278 badges. She sets aside 20 badges for replacements. After giving each participant 7 badges, 6 badges remain undistributed.\nHow many participants received badges?",
       "choices": {
@@ -8260,7 +8269,7 @@
       "section": "Math",
       "domain": "Problem-Solving and Data Analysis",
       "skill": "One-variable data: distributions and measures of center and spread",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "The graph shows the amount of data stored by a monitoring system after \\(t\\) hours. What is the best interpretation of the slope of the graph?",
       "choices": {
@@ -8656,7 +8665,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear equations in one variable",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "A courier service charges a \\(\\$18\\) pickup fee plus \\(\\$1.25\\) per kilometer traveled. A customer uses a \\(\\$7\\) coupon on a 42-kilometer delivery.\nWhat is the final charge?",
       "choices": {
@@ -8750,7 +8759,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear functions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "The line shown is graphed in the xy-plane. What is the y-intercept of the line?",
       "choices": {
@@ -9379,7 +9388,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent expressions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "What value of x satisfies the equation\n\n\\[5(3x-4)+2=7x+30?\\]",
       "choices": {
@@ -9480,7 +9489,7 @@
       "section": "Math",
       "domain": "Problem-Solving and Data Analysis",
       "skill": "Ratios, rates, proportional relationships, and units",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "",
       "question": "A shipping company compares two carriers for the same shipment. If the shipment contains x crates of type A and y crates of type B, its cost would be modeled by\n\n\\[8x+5y=67\\]\nfor Carrier 1 and\n\n\\[5x+9y=83\\]\nfor Carrier 2.\nHow many crates are in the shipment altogether?",
       "choices": {
@@ -9833,7 +9842,7 @@
       "section": "Math",
       "domain": "Problem-Solving and Data Analysis",
       "skill": "Ratios, rates, proportional relationships, and units",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "A sensor recorded temperatures t satisfying\n\n14t38.\nAfter calibration, every displayed temperature d is 6 degrees lower than the original recorded value.\nWhich inequality gives all possible values of d?",
       "choices": {
@@ -9968,7 +9977,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Systems of two linear equations in two variables",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "",
       "question": "A science program orders x field notebooks and y specimen cases. It must order at least 30 items total. Each notebook costs \\(\\$6\\), each specimen case costs \\(\\$4\\), and the entire order has a fixed \\(\\$12\\) shipping charge. The total cost cannot exceed \\(\\$180\\).\nWhich system of inequalities models the situation?",
       "choices": {
@@ -10042,7 +10051,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear equations in one variable",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "Which table gives values that satisfy\n\n\\[y=-12x+17?\\]",
       "choices": {
@@ -10218,7 +10227,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear functions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "What is the y-intercept of the graph of\n\n\\[6x+4y=28\\]\n\\[in the xy-plane?\\]",
       "choices": {
@@ -10245,7 +10254,7 @@
       "section": "Math",
       "domain": "Problem-Solving and Data Analysis",
       "skill": "Ratios, rates, proportional relationships, and units",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "The table shows the amount of solution collected from drainage areas of different sizes. The relationship is proportional. Which equation could define \\(f\\)?",
       "choices": {
@@ -10410,7 +10419,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Systems of two linear equations in two variables",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "Two lines are graphed in the xy-plane and intersect at the marked point \\((4,-1)\\). Which system has the same solution as the graphed system?",
       "choices": {
@@ -10596,7 +10605,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear equations in one variable",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "The equation\n\n\\[F=3.40d+8.75s+12\\]\ngives the total charge F, in dollars, for ordering d drinks and s sandwiches from a café. The \\(\\$12\\) charge is a fixed delivery fee.\nWhat does 8.75 represent?",
       "choices": {
@@ -10697,7 +10706,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent expressions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "Which of the following expressions is equivalent to 18x4y-30x2y3?",
       "choices": {
@@ -10771,7 +10780,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear equations in one variable",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "Let x be the number of years after the beginning of 2022. At x=2, a program has 5,400 participants. Beginning then, the number of participants is predicted to decrease by \\(4\\%\\) each year. Which function models the predicted number P(x)?",
       "choices": {
@@ -10987,7 +10996,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent expressions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "Which expression is equivalent to\n\n\\[3m2(2m-5)-m(m^{2}-4m)?\\]",
       "choices": {
@@ -11236,7 +11245,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent expressions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "For w>0, which expression is equivalent to\n\n\\[w5/6?\\]",
       "choices": {
@@ -11310,7 +11319,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Nonlinear functions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "The function\n\n\\[f(x)=2(x+4)^{2}-3\\]\nis graphed in the xy-plane. Which of the following could be its graph?",
       "choices": {
@@ -11785,7 +11794,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent expressions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "Which expression is equivalent to\n\\[\n(11p^2-4p+7)-\\left[3p^2-(5p-2)\\right]?\n\\]",
       "choices": {
@@ -11812,7 +11821,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent expressions",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "",
       "question": "One linear factor of\n\\[\n6x^3+102x^2+432x\n\\]\ncan be written as \\(2x+b\\), where \\(b\\) is a positive integer. What is the smallest possible value of \\(b\\)?",
       "choices": {},
@@ -11886,7 +11895,7 @@
       "section": "Math",
       "domain": "Problem-Solving and Data Analysis",
       "skill": "Evaluating statistical claims: observational studies and experiments",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "",
       "question": "The table shows values of \\(x\\) and \\(g(x)\\), where \\(g(x)=f(x)+7\\) and \\(f\\) is a quadratic function. What is the y-coordinate of the y-intercept of the graph of \\(f\\)?",
       "choices": {},
@@ -11928,7 +11937,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear functions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "The function \\[g(x)=7\\left(\\frac13\\right)^{x-2}\\] is graphed in the xy-plane. What is the y-intercept?",
       "choices": {
@@ -11955,7 +11964,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent expressions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "Which expression is equivalent to\n\n\\[3(2x-5)(x+4)-2x(x-1)?\\]",
       "choices": {
@@ -11982,7 +11991,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent expressions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "Which expression is equivalent to\n\n\\[5a3b-2ab3+7a3b+4ab3?\\]",
       "choices": {
@@ -12036,7 +12045,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Nonlinear functions",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "",
       "question": "A quadratic function models the height of an object after launch. The object begins 75 feet above the ground and reaches a maximum height of 363 feet 4 seconds after launch. One second before the object returns to its launch height on the way down, what is its height, in feet?",
       "choices": {
@@ -12145,7 +12154,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Nonlinear equations in one variable",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "How many real solutions does the equation\n\n\\[2|3x-5|+4=-6\\]\nhave?",
       "choices": {
@@ -12172,7 +12181,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent expressions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "Which expression is equivalent to the sum\n\n\\[2x2(3x2-x+4)+x^{2}(x^{2}+5x-9)?\\]",
       "choices": {
@@ -12546,7 +12555,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent expressions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "Which of the following is equivalent to\n\n\\[4-(3x-5)-2(x+1)?\\]",
       "choices": {
@@ -12654,7 +12663,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent expressions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "Which of the following is equivalent to\n\\[\n\\left(\\frac34x-2\\right)-\\frac12(x+6)?\n\\]",
       "choices": {
@@ -12736,7 +12745,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear equations in one variable",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "Which of the following values of x satisfies\n\n\\[5x2-20=160?\\]",
       "choices": {
@@ -12784,7 +12793,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Nonlinear functions",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "",
       "question": "The function\n\\[\nh(x)=x^3+ax^2+bx+c\n\\]\nhas integer constants \\(a\\), \\(b\\), and \\(c\\). Two of its zeros are 4 and -3, and the sum of all three zeros is 6. What is the value of \\(c\\)?",
       "choices": {},
@@ -12885,7 +12894,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent expressions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "Which of the following is equivalent to\n\\[\n18a^3b^2+24a^2b^4?\n\\]",
       "choices": {
@@ -12966,7 +12975,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent expressions",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "",
       "question": "In the equation\n\\[\n\\frac15(2x-k)(x^2-12x+35)=0,\n\\]\n\\(k\\) is a positive constant. The sum of the solutions is 23. What is the value of \\(k\\)?",
       "choices": {},
@@ -13067,7 +13076,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent expressions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "Which of the following is equivalent to\n\n\\[3(2ab-5)-2(ab+1)?\\]",
       "choices": {
@@ -13338,7 +13347,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Nonlinear functions",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "",
       "question": "For an exponential function \\(f\\), the table shows several values, where \\(b>1\\). If \\[f(k)=b^{35},\\] what is the value of \\(k\\)?",
       "choices": {},
@@ -13379,7 +13388,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent expressions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "Which of the following is equivalent to\n\n\\[-8x+20?\\]",
       "choices": {
@@ -13406,7 +13415,7 @@
       "section": "Math",
       "domain": "Geometry and Trigonometry",
       "skill": "Lines, angles, and triangles",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "",
       "question": "The area of a triangle is\n\\[\n3x^2-30\n\\]\nsquare centimeters. Its base is \\(3x+18\\) centimeters and its height is \\(2x-8\\) centimeters, where \\(x>4\\). What is the value of \\(x\\)?",
       "choices": {},
@@ -13535,7 +13544,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear equations in one variable",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "",
       "question": "In the xy-plane, a and c are positive constants. How many times do the graphs\n\n\\[y=a(x-2)^{2}-3c\\]\nand\n\n\\[y=c\\]\nintersect?",
       "choices": {
