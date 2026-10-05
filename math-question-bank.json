@@ -217,6 +217,12 @@
         333,
         346,
         368
+      ],
+      "angleNotation": [
+        11,
+        12,
+        13,
+        22
       ]
     }
   },
@@ -14119,11 +14125,11 @@
       "domain": "Geometry and Trigonometry",
       "skill": "Lines, angles, and triangles",
       "difficulty": "Hard",
-      "passage": "Lines AD and BE intersect at C. Points A,C,D are collinear, and points B,C,E are collinear. Triangle ABC lies on one side of C, and triangle CDE lies on the opposite side.\nIf\n\nmA=38,mB=47,mD=29,",
-      "question": "what is the measure, in degrees, of the exterior angle at E formed by extending DE beyond E?",
+      "passage": "Lines \\(AD\\) and \\(BE\\) intersect at \\(C\\). Points \\(A,C,D\\) are collinear, and points \\(B,C,E\\) are collinear. Triangle \\(ABC\\) lies on one side of \\(C\\), and triangle \\(CDE\\) lies on the opposite side. Also,\n\\[m\\angle A=38^\\circ,\\qquad m\\angle B=47^\\circ,\\qquad m\\angle D=29^\\circ.\\]",
+      "question": "What is the measure, in degrees, of the exterior angle at \\(E\\) formed by extending \\(DE\\) beyond \\(E\\)?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "In triangle ABC,\n\n\\[mACB=180-38-47=95\\]\nVertical angles are congruent, so\n\n\\[mDCE=95\\]\nThen in triangle CDE,\n\n\\[mE=180-95-29=56\\]\nThe exterior angle at E is supplementary to 56:\n\\[ 180-56=\\boxed{124}. \\]",
+      "explanation": "In triangle \\(ABC\\),\n\\[m\\angle ACB=180^\\circ-38^\\circ-47^\\circ=95^\\circ.\\]\nVertical angles are congruent, so \\(m\\angle DCE=95^\\circ\\). Then\n\\[m\\angle E=180^\\circ-95^\\circ-29^\\circ=56^\\circ.\\]\nThe exterior angle is\n\\[180^\\circ-56^\\circ=\\boxed{124^\\circ}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 11,
       "answerType": "student-response",
@@ -14139,7 +14145,7 @@
       "domain": "Geometry and Trigonometry",
       "skill": "Lines, angles, and triangles",
       "difficulty": "Easy",
-      "passage": "Lines AB and DE are parallel. Segments AE and BD intersect at C. Suppose\n\n\\[mACB=62,\\]\n\n\\[mBAC=(3p+4),\\]\nand\n\n\\[mDEC=(2p+18)\\]\nAlso,\n\n\\[mCDE=(2q-8)\\]",
+      "passage": "Lines \\(AB\\) and \\(DE\\) are parallel. Segments \\(AE\\) and \\(BD\\) intersect at \\(C\\). Suppose\n\\[m\\angle ACB=62^\\circ,\\]\n\\[m\\angle BAC=3p+4,\\]\n\\[m\\angle DEC=2p+18,\\]\nand\n\\[m\\angle CDE=2q-8.\\]",
       "question": "What is the value of q?",
       "choices": {
         "A": "32",
@@ -14148,13 +14154,13 @@
         "D": "44"
       },
       "correctAnswer": "C",
-      "explanation": "Because ABDE,\n\\[ \\angle BAC\\cong\\angle DEC. \\]\nThus,\n\n\\[3p+4=2p+18,\\]\nso p=14, and each of those angles is 46.\nVertical angles give\n\n\\[mDCE=62\\]\nTherefore,\n\n\\[mCDE=180-62-46=72\\]\nSo\n\n\\[2q-8=72,\\]\nwhich gives\n\\[ \\boxed{q=40}. \\]",
+      "explanation": "Because \\(AB\\parallel DE\\), \\(\\angle BAC\\cong\\angle DEC\\). Thus\n\\[3p+4=2p+18,\\]\nso \\(p=14\\), and each angle is \\(46^\\circ\\). Vertical angles give \\(m\\angle DCE=62^\\circ\\). Therefore,\n\\[m\\angle CDE=180^\\circ-62^\\circ-46^\\circ=72^\\circ.\\]\nSo\n\\[2q-8=72,\\]\nwhich gives \\(\\boxed{q=40}\\).",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 12,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
-        "C": "Because ABDE,\n\\[ \\angle BAC\\cong\\angle DEC. \\]\nThus,\n\n\\[3p+4=2p+18,\\]\nso p=14, and each of those angles is 46.\nVertical angles give\n\n\\[mDCE=62\\]\nTherefore,\n\n\\[mCDE=180-62-46=72\\]\nSo\n\n\\[2q-8=72,\\]\nwhich gives\n\\[ \\boxed{q=40}. \\]",
+        "C": "Because \\(AB\\parallel DE\\), \\(\\angle BAC\\cong\\angle DEC\\). Thus\n\\[3p+4=2p+18,\\]\nso \\(p=14\\), and each angle is \\(46^\\circ\\). Vertical angles give \\(m\\angle DCE=62^\\circ\\). Therefore,\n\\[m\\angle CDE=180^\\circ-62^\\circ-46^\\circ=72^\\circ.\\]\nSo\n\\[2q-8=72,\\]\nwhich gives \\(\\boxed{q=40}\\).",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
     },
@@ -14166,11 +14172,11 @@
       "domain": "Geometry and Trigonometry",
       "skill": "Lines, angles, and triangles",
       "difficulty": "Medium",
-      "passage": "In triangle ABC, mB=35. The exterior angle at C has a measure 5 greater than twice mB.",
+      "passage": "In triangle \\(ABC\\), \\(m\\angle B=35^\\circ\\). The exterior angle at \\(C\\) is \\(5^\\circ\\) greater than twice \\(m\\angle B\\).",
       "question": "What is the measure, in degrees, of the exterior angle at A?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "The exterior angle at C is\n\n\\[2(35)+5=75\\]\nThus the interior angle at C is\n\n\\[180-75=105\\]\nThe exterior angle at A equals the sum of the two remote interior angles:\n\\[ 35+105=\\boxed{140}. \\]",
+      "explanation": "The exterior angle at \\(C\\) is\n\\[2(35^\\circ)+5^\\circ=75^\\circ.\\]\nThus the interior angle at \\(C\\) is \\(105^\\circ\\). The exterior angle at \\(A\\) equals the sum of the two remote interior angles:\n\\[35^\\circ+105^\\circ=\\boxed{140^\\circ}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 13,
       "answerType": "student-response",
@@ -14348,8 +14354,8 @@
       "domain": "Geometry and Trigonometry",
       "skill": "Lines, angles, and triangles",
       "difficulty": "Easy",
-      "passage": "In triangle ABC, AB=AC. Side BC is extended beyond B, forming an exterior angle of 118 at B.",
-      "question": "What is mA?",
+      "passage": "In triangle \\(ABC\\), \\(AB=AC\\). Side \\(BC\\) is extended beyond \\(B\\), forming an exterior angle of \\(118^\\circ\\) at \\(B\\).",
+      "question": "What is \\(m\\angle A\\)?",
       "choices": {
         "A": "52",
         "B": "56",
@@ -14357,12 +14363,12 @@
         "D": "68"
       },
       "correctAnswer": "B",
-      "explanation": "The interior angle at B is\n\n\\[180-118=62\\]\nSince AB=AC, the base angles at B and C are equal, so both are 62. Therefore,\n\\[ m\\angle A=180-62-62=\\boxed{56^\\circ}. \\]",
+      "explanation": "The interior angle at \\(B\\) is\n\\[180^\\circ-118^\\circ=62^\\circ.\\]\nSince \\(AB=AC\\), the base angles at \\(B\\) and \\(C\\) are both \\(62^\\circ\\). Therefore,\n\\[m\\angle A=180^\\circ-62^\\circ-62^\\circ=\\boxed{56^\\circ}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 22,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "The interior angle at B is\n\n\\[180-118=62\\]\nSince AB=AC, the base angles at B and C are equal, so both are 62. Therefore,\n\\[ m\\angle A=180-62-62=\\boxed{56^\\circ}. \\]",
+        "B": "The interior angle at \\(B\\) is\n\\[180^\\circ-118^\\circ=62^\\circ.\\]\nSince \\(AB=AC\\), the base angles at \\(B\\) and \\(C\\) are both \\(62^\\circ\\). Therefore,\n\\[m\\angle A=180^\\circ-62^\\circ-62^\\circ=\\boxed{56^\\circ}.\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
