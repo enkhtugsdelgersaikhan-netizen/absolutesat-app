@@ -1806,3 +1806,201 @@
         gap:12px;
     }
 }
+
+
+/* OCT 6 FINAL COMPACT SAT QUESTION LAYOUT */
+/* Desktop geometry: use available width without scaling typography with viewport width. */
+.question-page{
+    min-height:calc(100vh - 72px);
+    padding:18px 20px 36px;
+}
+.question-app{
+    width:min(calc(100vw - 40px),1480px);
+    margin:0 auto;
+}
+.question-topbar,
+.question-layout{
+    width:100%;
+    max-width:none;
+    margin-left:auto;
+    margin-right:auto;
+}
+.question-layout{
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+    gap:18px;
+}
+.sat-question-pane{
+    min-height:620px;
+}
+.sat-passage-pane .question-passage{
+    padding:14px 34px 32px;
+    font-size:17px;
+    line-height:1.68;
+}
+.sat-answer-pane{
+    padding:0 28px 24px;
+}
+.sat-answer-pane .question-progress-row{
+    min-height:68px;
+    padding:0;
+    gap:14px;
+}
+#question-number{
+    font-size:14px;
+    line-height:1.3;
+}
+.question-progress-actions{
+    gap:8px;
+}
+.question-inline-navigation{
+    gap:7px;
+}
+.question-nav-button{
+    min-height:40px;
+    padding:8px 12px;
+    gap:5px;
+    font-size:13px;
+}
+.question-nav-button::before,
+.question-nav-button::after{
+    display:none;
+}
+.question-nav-symbol{
+    display:inline-flex!important;
+    align-items:center;
+    justify-content:center;
+    width:12px;
+    height:12px;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:0;
+    line-height:1;
+}
+#previous-button .question-nav-symbol::before{
+    content:"‹";
+    font-size:19px;
+    font-weight:700;
+}
+#next-button .question-nav-symbol::before{
+    content:"›";
+    font-size:19px;
+    font-weight:700;
+}
+.review-button{
+    min-height:40px;
+    padding:8px 12px;
+    font-size:13px;
+}
+.sat-answer-pane .question-card{
+    flex:0 0 auto;
+    padding:16px 0 18px;
+}
+.sat-answer-pane .question-text{
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:18px;
+    font-weight:600;
+    line-height:1.36;
+    letter-spacing:0;
+}
+.sat-answer-pane .choices{
+    margin-top:22px;
+    gap:10px;
+}
+.sat-answer-pane .choice{
+    min-height:62px;
+    height:auto;
+    padding:12px 48px 12px 16px;
+    gap:14px;
+    align-items:center;
+    font-size:15px;
+    line-height:1.42;
+}
+.sat-answer-pane .choice-letter{
+    flex:0 0 30px;
+    width:30px;
+    height:30px;
+    align-self:center;
+}
+.sat-answer-pane .choice-text{
+    display:block;
+    flex:1 1 auto;
+    min-width:0;
+    min-height:0;
+    padding:0;
+    margin:0;
+    align-self:center;
+    line-height:1.42;
+}
+.sat-answer-pane .choice-strike-button{
+    top:50%;
+    right:12px;
+    width:28px;
+    height:28px;
+}
+.sat-answer-pane .question-actions{
+    margin-top:10px;
+}
+.sat-answer-pane .check-answer-button{
+    min-height:42px;
+    padding:9px 16px;
+}
+
+/* Preserve essentially the same apparent type/control size on large screens. */
+@media(min-width:1500px){
+    .question-app{
+        width:min(calc(100vw - 48px),1540px);
+    }
+    .sat-passage-pane .question-passage{
+        font-size:17px;
+    }
+    .sat-answer-pane .question-text{
+        font-size:18px;
+    }
+    .sat-answer-pane .choice{
+        font-size:15px;
+    }
+}
+@media(max-width:1100px){
+    .question-app{
+        width:calc(100vw - 28px);
+    }
+    .question-page{
+        padding-left:14px;
+        padding-right:14px;
+    }
+    .sat-answer-pane{
+        padding-left:22px;
+        padding-right:22px;
+    }
+    .sat-passage-pane .question-passage{
+        padding-left:26px;
+        padding-right:26px;
+    }
+}
+@media(max-width:900px){
+    .question-layout{
+        grid-template-columns:1fr;
+    }
+    .sat-question-pane{
+        min-height:auto;
+    }
+}
+@media(max-width:700px){
+    .question-app{
+        width:100%;
+    }
+    .question-page{
+        padding:14px 12px 32px;
+    }
+    .sat-answer-pane{
+        padding-left:16px;
+        padding-right:16px;
+    }
+    .sat-answer-pane .question-text{
+        font-size:17px;
+    }
+    .sat-answer-pane .choice{
+        min-height:58px;
+        padding:11px 44px 11px 13px;
+        font-size:14px;
+    }
+}
