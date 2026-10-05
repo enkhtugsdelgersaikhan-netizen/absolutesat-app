@@ -159,6 +159,38 @@
         ],
         "notes": "Recovered all remaining verifiable items in this range. Box-plot items lacking full visual coordinates and one internally inconsistent vessel item were left out rather than fabricated."
       }
+    },
+    "newPasteFormattingSweep20261006": {
+      "chunk1": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        17,
+        18,
+        25,
+        26,
+        29,
+        31,
+        34,
+        37,
+        42,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        57,
+        58,
+        64,
+        68,
+        70,
+        71,
+        74,
+        84
+      ]
     }
   },
   "questions": [
@@ -13886,7 +13918,7 @@
       "skill": "Equivalent expressions",
       "difficulty": "Easy",
       "passage": "",
-      "question": "Which expression is equivalent to\n\n\\[2x^2-18x-104?\\]",
+      "question": "Which expression is equivalent to\n\\[2x^2-18x-104\\]?",
       "choices": {
         "A": "\\(2(x-13)(x+4)\\)",
         "B": "\\(2(x-4)(x+13)\\)",
@@ -13915,10 +13947,10 @@
       "passage": "At the start of an experiment, a culture contains 360 bacteria. Under fixed conditions, the population increases by \\(25\\%\\) every 6 hours.",
       "question": "Which function models the population P(t) after t hours?",
       "choices": {
-        "A": "\\(P(t)=360(1.25)6t\\)",
-        "B": "\\(P(t)=360(0.25)t/6\\)",
-        "C": "\\(P(t)=360(1.25)t/6\\)",
-        "D": "\\(P(t)=3601+t24\\)"
+        "A": "\\(P(t)=360(1.25)^{6t}\\)",
+        "B": "\\(P(t)=360(0.25)^{t/6}\\)",
+        "C": "\\(P(t)=360(1.25)^{t/6}\\)",
+        "D": "\\(P(t)=360\\left(1+\\frac{t}{24}\\right)\\)"
       },
       "correctAnswer": "C",
       "explanation": "Each 6-hour interval multiplies the population by\n\n\\[1+0.25=1.25\\]\nIn t hours, there are t/6 such intervals. Therefore,\n\\[ \\boxed{P(t)=360(1.25)^{t/6}}. \\]",
@@ -13940,10 +13972,10 @@
       "skill": "Linear equations in one variable",
       "difficulty": "Easy",
       "passage": "",
-      "question": "Which expression is equivalent to\n\n\\[(4x^3-2x+7)+(5x^3+3x^2-9)?\\]",
+      "question": "Which expression is equivalent to\n\\[(4x^3-2x+7)+(5x^3+3x^2-9)\\]?",
       "choices": {
         "A": "\\(9x^3+3x^2-2x-2\\)",
-        "B": "\\(9x6+3x^2-2x-2\\)",
+        "B": "\\(9x^6+3x^2-2x-2\\)",
         "C": "\\(9x^3+3x^2-2x+16\\)",
         "D": "\\(x^3+3x^2-2x-2\\)"
       },
@@ -13966,7 +13998,7 @@
       "domain": "Problem-Solving and Data Analysis",
       "skill": "One-variable data: distributions and measures of center and spread",
       "difficulty": "Easy",
-      "passage": "The function\n\n\\[N(t)=240(0.82)t-3\\]\nmodels the estimated number of nesting pairs of a bird species in a preserve, where t is the number of years after 2020.",
+      "passage": "The function\n\\[N(t)=240(0.82)^{t-3}\\]\nmodels the estimated number of nesting pairs of a bird species in a preserve, where \\(t\\) is the number of years after 2020.",
       "question": "Which choice best interprets 240 in this context?",
       "choices": {
         "A": "The estimated number of nesting pairs in 2020",
@@ -13994,7 +14026,7 @@
       "skill": "Equivalent expressions",
       "difficulty": "Easy",
       "passage": "",
-      "question": "Which expression is equivalent to\n\n18x^3y-30x^2y^2?",
+      "question": "Which expression is equivalent to\n\\[18x^3y-30x^2y^2\\]?",
       "choices": {
         "A": "\\(6x^2y(3x-5y)\\)",
         "B": "\\(6xy(3x^2-5y)\\)",
@@ -14208,13 +14240,13 @@
       "domain": "Geometry and Trigonometry",
       "skill": "Lines, angles, and triangles",
       "difficulty": "Easy",
-      "passage": "A transversal t intersects lines \\(\\ell\\) and m. At the intersection with \\(\\ell\\), angles 1 and 2 form a linear pair. At the intersection with m, angles 3 and 4 form a linear pair. Angles 1 and 3 are corresponding angles.\n\\[If m1=112,\\]",
-      "question": "which additional information is sufficient to prove that \\(\\ell\\parallel m\\)?",
+      "passage": "A transversal \\(t\\) intersects lines \\(\\ell\\) and \\(m\\). At the intersection with \\(\\ell\\), angles 1 and 2 form a linear pair. At the intersection with \\(m\\), angles 3 and 4 form a linear pair. Angles 1 and 3 are corresponding angles.\n\\[m\\angle1=112^\\circ.\\]",
+      "question": "Which additional information is sufficient to prove that \\(\\ell\\parallel m\\)?",
       "choices": {
-        "A": "\\(m^3=112\\)",
-        "B": "\\(m^2=68\\)",
-        "C": "\\(m^3+m4=180\\)",
-        "D": "\\(m^3=68\\)"
+        "A": "\\(m\\angle3=112^\\circ\\)",
+        "B": "\\(m\\angle2=68^\\circ\\)",
+        "C": "\\(m\\angle3+m\\angle4=180^\\circ\\)",
+        "D": "\\(m\\angle3=68^\\circ\\)"
       },
       "correctAnswer": "A",
       "explanation": "Angles 1 and 3 are corresponding. If both measure 112, then the corresponding angles are congruent. By the converse of the corresponding-angles theorem, the lines must be parallel.\n\\[ \\boxed{\\ell\\parallel m} \\]",
@@ -14244,12 +14276,12 @@
         "D": "144"
       },
       "correctAnswer": "B",
-      "explanation": "A square with perimeter 24 has side length\n\n\\[244=6\\]\nIts area is\n\n\\[62=36\\]\nTherefore, the total area is\n\\[ 84+36=\\boxed{120}. \\]",
+      "explanation": "A square with perimeter \\(24\\) has side length\n\\[\\frac{24}{4}=6.\\]\nIts area is \\(6^2=36\\). Therefore the total area is\n\\[84+36=\\boxed{120}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 18,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "A square with perimeter 24 has side length\n\n\\[244=6\\]\nIts area is\n\n\\[62=36\\]\nTherefore, the total area is\n\\[ 84+36=\\boxed{120}. \\]",
+        "B": "A square with perimeter \\(24\\) has side length\n\\[\\frac{24}{4}=6.\\]\nIts area is \\(6^2=36\\). Therefore the total area is\n\\[84+36=\\boxed{120}.\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
@@ -14372,12 +14404,12 @@
         "D": "72"
       },
       "correctAnswer": "B",
-      "explanation": "The area scale factor is\n\n\\[720320=94\\]\nTherefore, the side-length scale factor is\n\n\\[94=32\\]\nSo rectangle B's perimeter is\n\n\\[7232=108\\]\nThe difference is\n\\[ 108-72=\\boxed{36}. \\]",
+      "explanation": "The area scale factor is\n\\[\\frac{720}{320}=\\frac94.\\]\nTherefore the side-length scale factor is\n\\[\\sqrt{\\frac94}=\\frac32.\\]\nRectangle B's perimeter is \\(72\\cdot\\frac32=108\\), so the difference is\n\\[108-72=\\boxed{36}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 25,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "The area scale factor is\n\n\\[720320=94\\]\nTherefore, the side-length scale factor is\n\n\\[94=32\\]\nSo rectangle B's perimeter is\n\n\\[7232=108\\]\nThe difference is\n\\[ 108-72=\\boxed{36}. \\]",
+        "B": "The area scale factor is\n\\[\\frac{720}{320}=\\frac94.\\]\nTherefore the side-length scale factor is\n\\[\\sqrt{\\frac94}=\\frac32.\\]\nRectangle B's perimeter is \\(72\\cdot\\frac32=108\\), so the difference is\n\\[108-72=\\boxed{36}.\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
@@ -14399,13 +14431,13 @@
         "D": "144"
       },
       "correctAnswer": "C",
-      "explanation": "The linear scale factor is\n\n\\[24.514=74\\]\nSo the larger perimeter is\n\n\\[4874=84\\]\nThe sum is\n\\[ 48+84=\\boxed{132}. \\]",
+      "explanation": "The linear scale factor is\n\\[\\frac{24.5}{14}=\\frac74.\\]\nSo the larger perimeter is\n\\[48\\left(\\frac74\\right)=84.\\]\nThe sum is \\(48+84=\\boxed{132}\\).",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 26,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
-        "C": "The linear scale factor is\n\n\\[24.514=74\\]\nSo the larger perimeter is\n\n\\[4874=84\\]\nThe sum is\n\\[ 48+84=\\boxed{132}. \\]",
+        "C": "The linear scale factor is\n\\[\\frac{24.5}{14}=\\frac74.\\]\nSo the larger perimeter is\n\\[48\\left(\\frac74\\right)=84.\\]\nThe sum is \\(48+84=\\boxed{132}\\).",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
     },
@@ -14444,7 +14476,7 @@
       "domain": "Geometry and Trigonometry",
       "skill": "Lines, angles, and triangles",
       "difficulty": "Easy",
-      "passage": "In triangle ABC, point D lies on AB, point E lies on AC, and DEBC.\nIf\n\n\\[AD:DB=3:2\\]\nand\n\n\\[DE=18,\\]",
+      "passage": "In triangle \\(ABC\\), point \\(D\\) lies on \\(AB\\), point \\(E\\) lies on \\(AC\\), and \\(DE\\parallel BC\\). Also,\n\\[AD:DB=3:2\\]\nand\n\\[DE=18.\\]",
       "question": "what is the length of BC?",
       "choices": {
         "A": "24",
@@ -14453,13 +14485,13 @@
         "D": "36"
       },
       "correctAnswer": "C",
-      "explanation": "Since\n\n\\[AD:DB=3:2,\\]\nthe entire side AB corresponds to 5 equal parts, so\n\n\\[ADAB=35\\]\nBecause the triangles are similar,\n\n\\[DEBC=35\\]\nThus,\n\n\\[18BC=35,\\]\nso\n\\[ \\boxed{BC=30}. \\]",
+      "explanation": "Since \\(AD:DB=3:2\\),\n\\[\\frac{AD}{AB}=\\frac35.\\]\nBecause triangles \\(ADE\\) and \\(ABC\\) are similar,\n\\[\\frac{DE}{BC}=\\frac35.\\]\nThus\n\\[\\frac{18}{BC}=\\frac35,\\]\nso \\(\\boxed{BC=30}\\).",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 29,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
-        "C": "Since\n\n\\[AD:DB=3:2,\\]\nthe entire side AB corresponds to 5 equal parts, so\n\n\\[ADAB=35\\]\nBecause the triangles are similar,\n\n\\[DEBC=35\\]\nThus,\n\n\\[18BC=35,\\]\nso\n\\[ \\boxed{BC=30}. \\]",
+        "C": "Since \\(AD:DB=3:2\\),\n\\[\\frac{AD}{AB}=\\frac35.\\]\nBecause triangles \\(ADE\\) and \\(ABC\\) are similar,\n\\[\\frac{DE}{BC}=\\frac35.\\]\nThus\n\\[\\frac{18}{BC}=\\frac35,\\]\nso \\(\\boxed{BC=30}\\).",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
     },
@@ -14471,22 +14503,22 @@
       "domain": "Geometry and Trigonometry",
       "skill": "Lines, angles, and triangles",
       "difficulty": "Medium",
-      "passage": "In triangles ABC and DEF,\n\n\\[mA=mD=48,\\]\n\n\\[AB=10,\\]\nand\n\n\\[DE=15\\]",
+      "passage": "In triangles \\(ABC\\) and \\(DEF\\),\n\\[m\\angle A=m\\angle D=48^\\circ,\\qquad AB=10,\\qquad DE=15.\\]",
       "question": "Which additional information is sufficient to prove that triangle ABC is similar to triangle DEF?",
       "choices": {
-        "A": "\\(BC=14 and EF=21\\)",
-        "B": "\\(AC=15 and DF=20\\)",
-        "C": "\\(AC=14 and DF=21\\)",
-        "D": "\\(mB=62 and mE=70\\)"
+        "A": "\\(BC=14\\) and \\(EF=21\\)",
+        "B": "\\(AC=15\\) and \\(DF=20\\)",
+        "C": "\\(AC=14\\) and \\(DF=21\\)",
+        "D": "\\(m\\angle B=62^\\circ\\) and \\(m\\angle E=70^\\circ\\)"
       },
       "correctAnswer": "C",
-      "explanation": "The given angles A and D are congruent and are included between the corresponding side pairs.\nFor choice C,\n\n\\[ABDE=1015=23\\]\nand\n\n\\[ACDF=1421=23\\]\nThus the triangles are similar by SAS.",
+      "explanation": "The given equal angles are included between the corresponding side pairs. For choice C,\n\\[\\frac{AB}{DE}=\\frac{10}{15}=\\frac23\\]\nand\n\\[\\frac{AC}{DF}=\\frac{14}{21}=\\frac23.\\]\nThus the triangles are similar by SAS.",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 31,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
-        "C": "The given angles A and D are congruent and are included between the corresponding side pairs.\nFor choice C,\n\n\\[ABDE=1015=23\\]\nand\n\n\\[ACDF=1421=23\\]\nThus the triangles are similar by SAS.",
+        "C": "The given equal angles are included between the corresponding side pairs. For choice C,\n\\[\\frac{AB}{DE}=\\frac{10}{15}=\\frac23\\]\nand\n\\[\\frac{AC}{DF}=\\frac{14}{21}=\\frac23.\\]\nThus the triangles are similar by SAS.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
     },
@@ -14527,13 +14559,13 @@
         "D": "24 meters"
       },
       "correctAnswer": "C",
-      "explanation": "The tree's shadow is\n\n\\[8+6=14\\]\nThe similar triangles give\n\n\\[128=h14\\]\nThus,\n\\[ h=14\\left(\\frac{12}{8}\\right)=\\boxed{21}. \\]",
+      "explanation": "The tree's shadow is \\(8+6=14\\) meters. Similar triangles give\n\\[\\frac{12}{8}=\\frac{h}{14}.\\]\nThus\n\\[h=14\\left(\\frac{12}{8}\\right)=\\boxed{21}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 34,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
-        "C": "The tree's shadow is\n\n\\[8+6=14\\]\nThe similar triangles give\n\n\\[128=h14\\]\nThus,\n\\[ h=14\\left(\\frac{12}{8}\\right)=\\boxed{21}. \\]",
+        "C": "The tree's shadow is \\(8+6=14\\) meters. Similar triangles give\n\\[\\frac{12}{8}=\\frac{h}{14}.\\]\nThus\n\\[h=14\\left(\\frac{12}{8}\\right)=\\boxed{21}.\\]",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
     },
@@ -14665,11 +14697,11 @@
       "domain": "Geometry and Trigonometry",
       "skill": "Area and volume",
       "difficulty": "Medium",
-      "passage": "The points\n\n\\[A(-4,-2),B(2,6),C(14,-3),D(8,-11)\\]\nare the vertices of a rectangle in order.",
+      "passage": "The points\n\\[A(-4,-2),\\ B(2,6),\\ C(14,-3),\\ D(8,-11)\\]\nare the vertices of a rectangle in order.",
       "question": "What is the area, in square units, of the rectangle?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "Two adjacent side lengths are\n\n\\[AB=62+82=10\\]\nand\n\n\\[BC=122+(-9)^2=15\\]\nThus,\n\\[ A=10(15)=\\boxed{150}. \\]",
+      "explanation": "Two adjacent side lengths are\n\\[AB=\\sqrt{6^2+8^2}=10\\]\nand\n\\[BC=\\sqrt{12^2+(-9)^2}=15.\\]\nThus the area is\n\\[10(15)=\\boxed{150}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 37,
       "answerType": "student-response",
@@ -14694,14 +14726,14 @@
         "D": "343"
       },
       "correctAnswer": "D",
-      "explanation": "If the edge length is s,\n\n\\[6s^2=294\\]\nThus,\n\n\\[s^2=49\\]\n\\[and s=7. Therefore,\\]\n\\[ V=s^3=7^3=\\boxed{343}. \\]",
+      "explanation": "If the edge length is \\(s\\),\n\\[6s^2=294.\\]\nThus \\(s^2=49\\), so \\(s=7\\). Therefore,\n\\[V=s^3=7^3=\\boxed{343}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 42,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
-        "D": "If the edge length is s,\n\n\\[6s^2=294\\]\nThus,\n\n\\[s^2=49\\]\n\\[and s=7. Therefore,\\]\n\\[ V=s^3=7^3=\\boxed{343}. \\]"
+        "D": "If the edge length is \\(s\\),\n\\[6s^2=294.\\]\nThus \\(s^2=49\\), so \\(s=7\\). Therefore,\n\\[V=s^3=7^3=\\boxed{343}.\\]"
       }
     },
     {
@@ -14813,7 +14845,7 @@
       "domain": "Problem-Solving and Data Analysis",
       "skill": "Percentages",
       "difficulty": "Easy",
-      "passage": "A traveler exchanges 1,530 Canadian dollars for euros. The exchange rate is 1 euro =1.50 Canadian dollars. After the conversion, the exchange service deducts a fee equal to \\(3\\%\\) of the converted euro amount.",
+      "passage": "A traveler exchanges 1,530 Canadian dollars for euros. The exchange rate is \\(1\\) euro = \\(1.50\\) Canadian dollars. After conversion, the service deducts a fee equal to \\(3\\%\\) of the converted euro amount.",
       "question": "How many euros does the traveler receive?",
       "choices": {
         "A": "€989.40",
@@ -14822,11 +14854,11 @@
         "D": "€1,484.10"
       },
       "correctAnswer": "A",
-      "explanation": "First convert Canadian dollars to euros:\n\n\\[15301.50=1020\\]\nAfter a \\(3\\%\\) fee, the traveler keeps \\(97\\%\\):\n\n\\[1020(0.97)=989.40\\]",
+      "explanation": "First convert to euros:\n\\[\\frac{1530}{1.50}=1020.\\]\nAfter a \\(3\\%\\) fee, the traveler keeps \\(97\\%\\):\n\\[1020(0.97)=\\boxed{989.40}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 49,
       "choiceExplanations": {
-        "A": "First convert Canadian dollars to euros:\n\n\\[15301.50=1020\\]\nAfter a \\(3\\%\\) fee, the traveler keeps \\(97\\%\\):\n\n\\[1020(0.97)=989.40\\]",
+        "A": "First convert to euros:\n\\[\\frac{1530}{1.50}=1020.\\]\nAfter a \\(3\\%\\) fee, the traveler keeps \\(97\\%\\):\n\\[1020(0.97)=\\boxed{989.40}.\\]",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -14849,12 +14881,12 @@
         "D": "17"
       },
       "correctAnswer": "B",
-      "explanation": "Order the ten values:\n\n7,9,11,12,14,16,18,19,22,24.\nFor ten values, the median is the mean of the fifth and sixth values:\n\n\\[14+162=15\\]",
+      "explanation": "Order the ten values:\n\\[7,9,11,12,14,16,18,19,22,24.\\]\nThe median is the average of the fifth and sixth values:\n\\[\\frac{14+16}{2}=\\boxed{15}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 50,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "Order the ten values:\n\n7,9,11,12,14,16,18,19,22,24.\nFor ten values, the median is the mean of the fifth and sixth values:\n\n\\[14+162=15\\]",
+        "B": "Order the ten values:\n\\[7,9,11,12,14,16,18,19,22,24.\\]\nThe median is the average of the fifth and sixth values:\n\\[\\frac{14+16}{2}=\\boxed{15}.\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
@@ -14871,7 +14903,7 @@
       "question": "What is the mass of the cube, in grams?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "Since 10 millimeters =1 centimeter,\n\n\\[25mm=2.5cm\\]\nThe volume is\n\n\\[(2.5)^3=15.625cm^3\\]\nMass equals density times volume:\n\n\\[0.64(15.625)=10\\]",
+      "explanation": "Since \\(10\\) millimeters equals \\(1\\) centimeter,\n\\[25\\text{ mm}=2.5\\text{ cm}.\\]\nThe volume is\n\\[(2.5)^3=15.625\\text{ cm}^3.\\]\nMass equals density times volume:\n\\[0.64(15.625)=\\boxed{10}\\text{ g}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 51,
       "answerType": "student-response",
@@ -14891,7 +14923,7 @@
       "question": "According to the model, how many dollars greater is the predicted annual maintenance cost for a building that is 12 years older?",
       "choices": {},
       "correctAnswer": "",
-      "explanation": "A 12-year increase corresponds to\n\n\\[124=3\\]\nhorizontal units. The predicted vertical increase is\n\n\\[1.75(3)=5.25\\]\nhundreds of dollars. Thus the predicted increase is\n\n\\[5.25(100)=525\\]\ndollars.",
+      "explanation": "A \\(12\\)-year increase corresponds to\n\\[\\frac{12}{4}=3\\]\nhorizontal units. The predicted vertical increase is\n\\[1.75(3)=5.25\\]\nhundreds of dollars, or\n\\[5.25(100)=\\boxed{525}\\text{ dollars}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 52,
       "answerType": "student-response",
@@ -14916,11 +14948,11 @@
         "D": "Neither the means nor medians are different."
       },
       "correctAnswer": "A",
-      "explanation": "Each set has eight values, so its median is the average of the fourth and fifth values:\n\n\\[16+192=17.5\\]\nThus the medians are equal.\nThe sums are 136 and 160, so the means are\n\n17and20,\nrespectively. Therefore, only the means differ.",
+      "explanation": "Each set has eight values, so the median is the average of the fourth and fifth values:\n\\[\\frac{16+19}{2}=17.5.\\]\nThus the medians are equal. The sums are \\(136\\) and \\(160\\), so the means are \\(17\\) and \\(20\\), respectively. Therefore only the means differ.",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 53,
       "choiceExplanations": {
-        "A": "Each set has eight values, so its median is the average of the fourth and fifth values:\n\n\\[16+192=17.5\\]\nThus the medians are equal.\nThe sums are 136 and 160, so the means are\n\n17and20,\nrespectively. Therefore, only the means differ.",
+        "A": "Each set has eight values, so the median is the average of the fourth and fifth values:\n\\[\\frac{16+19}{2}=17.5.\\]\nThus the medians are equal. The sums are \\(136\\) and \\(160\\), so the means are \\(17\\) and \\(20\\), respectively. Therefore only the means differ.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -14935,7 +14967,7 @@
       "skill": "Ratios, rates, proportional relationships, and units",
       "difficulty": "Easy",
       "passage": "A rectangular surface has an area of 5.5 square yards.",
-      "question": "What is its area, in square inches?\n\n\\[1yard=36inches\\]",
+      "question": "What is its area, in square inches?\n\\[1\\text{ yard}=36\\text{ inches}.\\]",
       "choices": {
         "A": "198",
         "B": "2,592",
@@ -14943,13 +14975,13 @@
         "D": "14,256"
       },
       "correctAnswer": "C",
-      "explanation": "Because the units are squared,\n\n\\[1yd^2=(36)^2=1296in^2\\]\nThus,\n\n\\[5.5(1296)=7128\\]",
+      "explanation": "Because the units are squared,\n\\[1\\text{ yd}^2=(36)^2=1296\\text{ in}^2.\\]\nThus\n\\[5.5(1296)=\\boxed{7128}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 54,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
-        "C": "Because the units are squared,\n\n\\[1yd^2=(36)^2=1296in^2\\]\nThus,\n\n\\[5.5(1296)=7128\\]",
+        "C": "Because the units are squared,\n\\[1\\text{ yd}^2=(36)^2=1296\\text{ in}^2.\\]\nThus\n\\[5.5(1296)=\\boxed{7128}.\\]",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
     },
@@ -15082,12 +15114,12 @@
         "D": "190"
       },
       "correctAnswer": "B",
-      "explanation": "From the graph, the stopping distance is about 190 feet at 55 mph and about 80 to 85 feet at 35 mph.\nThe difference is approximately\n\n\\[190-80110\\]\nfeet.",
+      "explanation": "From the graph, the stopping distance is about \\(190\\) feet at \\(55\\) mph and about \\(80\\) feet at \\(35\\) mph. The difference is approximately\n\\[190-80=\\boxed{110}\\text{ feet}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 57,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "From the graph, the stopping distance is about 190 feet at 55 mph and about 80 to 85 feet at 35 mph.\nThe difference is approximately\n\n\\[190-80110\\]\nfeet.",
+        "B": "From the graph, the stopping distance is about \\(190\\) feet at \\(55\\) mph and about \\(80\\) feet at \\(35\\) mph. The difference is approximately\n\\[190-80=\\boxed{110}\\text{ feet}.\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
@@ -15152,14 +15184,14 @@
         "D": ""
       },
       "correctAnswer": "D",
-      "explanation": "For a linear relationship, the rate of change must remain constant even when the x-intervals differ.\nFor choice D, the successive slopes are\n\n\\[11-52-0=3,\\]\n\n\\[20-115-2=3,\\]\nand\n\n\\[35-209-5=154\\]\nSince these are not all equal, the relationship is nonlinear.",
+      "explanation": "A linear relationship must have constant rate of change. For choice D, the successive slopes are\n\\[\\frac{11-5}{2-0}=3,\\qquad \\frac{20-11}{5-2}=3,\\qquad \\frac{35-20}{9-5}=\\frac{15}{4}.\\]\nSince these are not all equal, choice D is nonlinear.",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 58,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
-        "D": "For a linear relationship, the rate of change must remain constant even when the x-intervals differ.\nFor choice D, the successive slopes are\n\n\\[11-52-0=3,\\]\n\n\\[20-115-2=3,\\]\nand\n\n\\[35-209-5=154\\]\nSince these are not all equal, the relationship is nonlinear."
+        "D": "A linear relationship must have constant rate of change. For choice D, the successive slopes are\n\\[\\frac{11-5}{2-0}=3,\\qquad \\frac{20-11}{5-2}=3,\\qquad \\frac{35-20}{9-5}=\\frac{15}{4}.\\]\nSince these are not all equal, choice D is nonlinear."
       },
       "choiceTables": {
         "A": {
@@ -15398,12 +15430,12 @@
         "D": "168.75"
       },
       "correctAnswer": "B",
-      "explanation": "The shift lasts\n\n\\[7.5(60)=450\\]\nminutes.\nInspection time is\n\n\\[0.24(450)=108\\]\nminutes. Field inspections take\n\n\\[58(108)=67.5\\]\nminutes.",
+      "explanation": "The shift lasts\n\\[7.5(60)=450\\]\nminutes. Inspection time is\n\\[0.24(450)=108\\]\nminutes. Field inspections take\n\\[\\frac58(108)=\\boxed{67.5}\\text{ minutes}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 64,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "The shift lasts\n\n\\[7.5(60)=450\\]\nminutes.\nInspection time is\n\n\\[0.24(450)=108\\]\nminutes. Field inspections take\n\n\\[58(108)=67.5\\]\nminutes.",
+        "B": "The shift lasts\n\\[7.5(60)=450\\]\nminutes. Inspection time is\n\\[0.24(450)=108\\]\nminutes. Field inspections take\n\\[\\frac58(108)=\\boxed{67.5}\\text{ minutes}.\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       }
@@ -15566,7 +15598,7 @@
       "skill": "Linear inequalities in one or two variables",
       "difficulty": "Medium",
       "passage": "A museum records the ages of artifacts in one collection.",
-      "question": "what fraction are at least 200 years old?",
+      "question": "What fraction are at least 200 years old?",
       "choices": {
         "A": "\\(\\displaystyle \\frac{2}{15}\\)",
         "B": "\\(\\displaystyle \\frac4{19}\\)",
@@ -15574,12 +15606,12 @@
         "D": "\\(\\displaystyle \\frac12\\)"
       },
       "correctAnswer": "B",
-      "explanation": "The conditional sample contains\n\n\\[19+11+8=38\\]\nartifacts.\nOf these, 8 are at least 200 years old. Therefore,\n\n\\[838=419\\]",
+      "explanation": "The conditional sample contains \\(19+11+8=38\\) artifacts. Of these, \\(8\\) are at least 200 years old. Therefore,\n\\[\\frac8{38}=\\boxed{\\frac4{19}}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 68,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "The conditional sample contains\n\n\\[19+11+8=38\\]\nartifacts.\nOf these, 8 are at least 200 years old. Therefore,\n\n\\[838=419\\]",
+        "B": "The conditional sample contains \\(19+11+8=38\\) artifacts. Of these, \\(8\\) are at least 200 years old. Therefore,\n\\[\\frac8{38}=\\boxed{\\frac4{19}}.\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
@@ -15669,7 +15701,7 @@
       "skill": "Ratios, rates, proportional relationships, and units",
       "difficulty": "Easy",
       "passage": "A machine packages p boxes every h minutes at a constant rate.",
-      "question": "Which expression represents the number of boxes the machine packages in 3h+7 minutes?",
+      "question": "Which expression represents the number of boxes the machine packages in \\(3h+7\\) minutes?",
       "choices": {
         "A": "\\(\\displaystyle \\frac{p(3h+7)}{h}\\)",
         "B": "\\(p(3h+7)\\)",
@@ -15677,11 +15709,11 @@
         "D": "\\(3p+7h\\)"
       },
       "correctAnswer": "A",
-      "explanation": "The rate is\n\nph\nboxes per minute. Therefore, in 3h+7 minutes, the number packaged is\n\n\\[ph(3h+7)=p(3h+7)h\\]",
+      "explanation": "The packaging rate is\n\\[\\frac ph\\]\nboxes per minute. Therefore, in \\(3h+7\\) minutes, the number packaged is\n\\[\\boxed{\\frac{p(3h+7)}{h}}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 70,
       "choiceExplanations": {
-        "A": "The rate is\n\nph\nboxes per minute. Therefore, in 3h+7 minutes, the number packaged is\n\n\\[ph(3h+7)=p(3h+7)h\\]",
+        "A": "The packaging rate is\n\\[\\frac ph\\]\nboxes per minute. Therefore, in \\(3h+7\\) minutes, the number packaged is\n\\[\\boxed{\\frac{p(3h+7)}{h}}.\\]",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -15704,12 +15736,12 @@
         "D": "\\(\\$57\\)"
       },
       "correctAnswer": "B",
-      "explanation": "The qualifying widths are 36,42,48, and 54 cm, with prices\n\n31, 43, 52, 61.\nTheir average is\n\n\\[31+43+52+614=1874=46.75\\]\nTo the nearest dollar, this is \\(\\$47\\).",
+      "explanation": "The qualifying widths are \\(36,42,48,54\\) cm, with prices \\(31,43,52,61\\). Their average is\n\\[\\frac{31+43+52+61}{4}=\\frac{187}{4}=46.75.\\]\nTo the nearest dollar, this is \\(\\boxed{\\$47}\\).",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 71,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "The qualifying widths are 36,42,48, and 54 cm, with prices\n\n31, 43, 52, 61.\nTheir average is\n\n\\[31+43+52+614=1874=46.75\\]\nTo the nearest dollar, this is \\(\\$47\\).",
+        "B": "The qualifying widths are \\(36,42,48,54\\) cm, with prices \\(31,43,52,61\\). Their average is\n\\[\\frac{31+43+52+61}{4}=\\frac{187}{4}=46.75.\\]\nTo the nearest dollar, this is \\(\\boxed{\\$47}\\).",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
@@ -15844,7 +15876,7 @@
       "skill": "Ratios, rates, proportional relationships, and units",
       "difficulty": "Easy",
       "passage": "The function\n\n\\[V(t)=18t\\]\ngives the volume, in liters, pumped after t minutes. For positive k,\n\n\\[V(5k)-V(k)\\]\nis",
-      "question": "how many times V(2k)?",
+      "question": "How many times \\(V(2k)\\) is \\(V(5k)-V(k)\\)?",
       "choices": {
         "A": "2",
         "B": "3",
@@ -15852,11 +15884,11 @@
         "D": "6"
       },
       "correctAnswer": "A",
-      "explanation": "\\[V(5k)-V(k)=18(5k)-18k=72k\\]\nAlso,\n\n\\[V(2k)=36k\\]\nThus,\n\n\\[72k36k=2\\]",
+      "explanation": "\\[V(5k)-V(k)=18(5k)-18k=72k.\\]\nAlso,\n\\[V(2k)=36k.\\]\nThus\n\\[\\frac{72k}{36k}=\\boxed2.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 74,
       "choiceExplanations": {
-        "A": "\\[V(5k)-V(k)=18(5k)-18k=72k\\]\nAlso,\n\n\\[V(2k)=36k\\]\nThus,\n\n\\[72k36k=2\\]",
+        "A": "\\[V(5k)-V(k)=18(5k)-18k=72k.\\]\nAlso,\n\\[V(2k)=36k.\\]\nThus\n\\[\\frac{72k}{36k}=\\boxed2.\\]",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -16359,11 +16391,11 @@
         "D": "\\(\\displaystyle y=-2.01x+8.2\\)"
       },
       "correctAnswer": "A",
-      "explanation": "Across the data, y rises by about 36 while x rises by about 18, giving a slope near\n\n\\[3618=2\\]\nExtending the trend toward x=0 gives an intercept near 8. Therefore,\n\n\\[y=2.01x+8.2\\]\nis the best model.",
+      "explanation": "Across the data, \\(y\\) rises by about \\(36\\) while \\(x\\) rises by about \\(18\\), giving a slope near\n\\[\\frac{36}{18}=2.\\]\nExtending the trend toward \\(x=0\\) gives an intercept near \\(8\\), so \\(y=2.01x+8.2\\) is the best model.",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 84,
       "choiceExplanations": {
-        "A": "Across the data, y rises by about 36 while x rises by about 18, giving a slope near\n\n\\[3618=2\\]\nExtending the trend toward x=0 gives an intercept near 8. Therefore,\n\n\\[y=2.01x+8.2\\]\nis the best model.",
+        "A": "Across the data, \\(y\\) rises by about \\(36\\) while \\(x\\) rises by about \\(18\\), giving a slope near\n\\[\\frac{36}{18}=2.\\]\nExtending the trend toward \\(x=0\\) gives an intercept near \\(8\\), so \\(y=2.01x+8.2\\) is the best model.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
