@@ -4922,7 +4922,7 @@ html:not(.lexlogica-dark-mode) #desmos-frame{
 .mock-review-question-text::selection,
 .mock-review-choice-text::selection,
 .mock-review-choice-explanation::selection{
-    background:rgba(255,222,77,.62);
+    background:rgba(0,210,255,.68);
     color:inherit;
 }
 
@@ -4944,7 +4944,7 @@ html.lexlogica-dark-mode .question-page .mock-review-context::selection,
 html.lexlogica-dark-mode .question-page .mock-review-question-text::selection,
 html.lexlogica-dark-mode .question-page .mock-review-choice-text::selection,
 html.lexlogica-dark-mode .question-page .mock-review-choice-explanation::selection{
-    background:rgba(0,33,178,.68);
+    background:rgba(0,75,255,.72);
     color:inherit;
 }
 
@@ -4957,7 +4957,7 @@ html.lexlogica-dark-mode .question-page .mock-review-choice-explanation::selecti
     padding:0;
     margin:0;
     border-radius:2px;
-    background:rgba(255,222,77,.58);
+    background:rgba(0,210,255,.64);
     color:#fff;
     box-decoration-break:clone;
     -webkit-box-decoration-break:clone;
@@ -4992,13 +4992,11 @@ html.lexlogica-dark-mode .question-page .mock-review-choice-explanation::selecti
 
 html.lexlogica-dark-mode .question-page .persistent-text-highlight{
     /*
-     * Exact RGB inverse of the light highlight:
-     * rgb(255,222,77) -> rgb(0,33,178).
-     * The page-wide invert turns this back into the same warm yellow
-     * visually, while #fff becomes black so the highlighted text is
-     * inverted relative to the surrounding light-on-dark text.
+     * The Question page is literally inverted in dark mode.
+     * rgb(0,75,255) is authored here so the visible result after
+     * inversion is a bright yellow/orange highlight.
      */
-    background:rgba(0,33,178,.58);
+    background:rgba(0,75,255,.68);
     color:#fff;
 }
 
