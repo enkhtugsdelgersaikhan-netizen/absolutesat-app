@@ -3484,3 +3484,42 @@ body.mock-test-active .question-bank-peeker{
         width:min(310px,calc(100vw - 20px));
     }
 }
+
+
+/* ============================================================
+   DARK MODE: ISOLATE DESMOS FROM TEXT-SELECTION REPAINTS
+   ============================================================ */
+
+/*
+ * The global theme normally inverts the entire <html> element in one
+ * compositing layer. Chromium can repaint a cross-origin iframe in that
+ * same layer when nearby MathJax/text selection changes, which makes
+ * Desmos visibly flip colors. On the question page, invert the four
+ * visible top-level surfaces independently instead. The page looks the
+ * same, but selecting question text can no longer repaint the calculator.
+ */
+html.lexlogica-dark-mode{
+    filter:none!important;
+    background:#000;
+}
+
+html.lexlogica-dark-mode body{
+    background:#000;
+}
+
+html.lexlogica-dark-mode body > .header,
+html.lexlogica-dark-mode body > .question-page,
+html.lexlogica-dark-mode body > .question-bank-peeker,
+html.lexlogica-dark-mode body > #desmos-panel{
+    filter:invert(1);
+}
+
+html.lexlogica-dark-mode body > #desmos-panel{
+    isolation:isolate;
+    will-change:filter,transform;
+}
+
+html.lexlogica-dark-mode #desmos-frame{
+    isolation:isolate;
+    backface-visibility:hidden;
+}
