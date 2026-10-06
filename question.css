@@ -3625,7 +3625,7 @@ html.lexlogica-dark-mode body{
 html.lexlogica-dark-mode body > .header,
 html.lexlogica-dark-mode body > .question-page,
 html.lexlogica-dark-mode body > .question-bank-peeker{
-    filter:invert(1);
+    filter:invert(1) brightness(1.08);
 }
 
 html.lexlogica-dark-mode body > #desmos-panel,
