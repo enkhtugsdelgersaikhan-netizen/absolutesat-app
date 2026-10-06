@@ -16,7 +16,7 @@
     >
 
     <link rel="stylesheet" href="style.css?v=dark-2">
-    <link rel="stylesheet" href="question.css?v=62">
+    <link rel="stylesheet" href="question.css?v=63">
 </head>
 
 <body>
@@ -332,6 +332,18 @@
 
             <div class="results-message" id="results-message"></div>
 
+            <section
+                id="mock-domain-performance"
+                class="mock-domain-performance hidden"
+                aria-label="Domain performance"
+            >
+                <div class="mock-domain-performance-head">
+                    <span>Performance by domain</span>
+                    <small>Correct answers from your routed test</small>
+                </div>
+                <div id="mock-domain-performance-grid"></div>
+            </section>
+
 
             <div class="results-actions">
 
@@ -365,6 +377,11 @@
             <h2>Question Review</h2>
 
             <div id="results-review-list"></div>
+
+            <div
+                id="mock-review-detail"
+                class="mock-review-detail hidden"
+            ></div>
 
         </div>
 
@@ -502,7 +519,7 @@ window.MathJax = {
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js?v=dark-1"></script>
-<script src="question.js?v=63"></script>
+<script src="question.js?v=64"></script>
 
 </body>
 </html>
