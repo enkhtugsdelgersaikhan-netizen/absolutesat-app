@@ -24,7 +24,8 @@ table{max-width:100%}
 .sat-guide-row,.sat-context-workspace{width:100%!important;max-width:none!important}
 
 .study-page{width:min(1120px,calc(100% - 40px))!important;max-width:1120px!important;margin-left:auto!important;margin-right:auto!important;padding:var(--lex-section) 0 80px!important}
-.study-grid,.study-grid-two,.study-grid-three{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.study-grid,.study-grid-two{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.study-grid-three{grid-template-columns:repeat(3,minmax(0,1fr))!important}
 .study-card{min-width:0!important;padding:clamp(24px,2.4vw,32px)!important}
 .resources-page{width:min(var(--lex-content),calc(100% - 40px))!important;max-width:var(--lex-content)!important;margin-left:auto!important;margin-right:auto!important}
 .resources-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
@@ -70,6 +71,7 @@ table{max-width:100%}
 .skill-picker-options{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 .question-list{grid-template-columns:repeat(14,minmax(0,1fr))!important}
 .sat-guide-row,.sat-context-workspace,.dashboard-grid{grid-template-columns:1fr!important}
+.study-grid-three{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 }
 @media(max-width:950px){
 .header-container,.question-bank-header,.question-bank-content,.dashboard-header,.dashboard-content,.features-container,.university-sat-container,.study-page,.resources-page,.vocab-page,.mock-page{width:calc(100% - 32px)!important;max-width:none!important}
