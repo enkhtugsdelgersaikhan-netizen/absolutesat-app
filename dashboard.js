@@ -169,6 +169,106 @@ document.addEventListener("DOMContentLoaded", async () => {
         return Array.isArray(history) ? history : [];
     }
 
+    function mergePracticeAttempts(
+        serverAttempts,
+        localHistory
+    ) {
+        const server = (
+            Array.isArray(serverAttempts)
+                ? serverAttempts
+                : []
+        )
+            .filter(row => row && row.question_id)
+            .map(row => ({
+                ...row,
+                created_at:
+                    row.created_at ||
+                    row.answered_at ||
+                    null
+            }));
+
+        const local = (
+            Array.isArray(localHistory)
+                ? localHistory
+                : []
+        )
+            .filter(row => row && row.question_id)
+            .map(row => ({
+                question_id:
+                    String(row.question_id),
+                is_correct:
+                    Boolean(row.is_correct),
+                created_at:
+                    row.answered_at ||
+                    row.created_at ||
+                    null,
+                answered_at:
+                    row.answered_at ||
+                    row.created_at ||
+                    null,
+                elapsed_seconds:
+                    row.elapsed_seconds,
+                section:
+                    row.section,
+                domain:
+                    row.domain,
+                subtopic:
+                    row.subtopic,
+                difficulty:
+                    row.difficulty,
+                source:
+                    "local-first-attempt"
+            }))
+            .filter(row =>
+                Number.isFinite(
+                    new Date(row.created_at || 0)
+                        .getTime()
+                )
+            );
+
+        /*
+         * Local analytics records one event per question's first attempt.
+         * Once that tracker began, use it instead of the server rows for
+         * that period so retries do not inflate "questions answered" and
+         * fresh practice appears immediately. Older server history is kept.
+         */
+        if (!local.length) {
+            return server;
+        }
+
+        const firstLocalTime =
+            Math.min(
+                ...local.map(row =>
+                    new Date(row.created_at)
+                        .getTime()
+                )
+            );
+
+        const historicalServer =
+            server.filter(row => {
+                const time =
+                    new Date(
+                        row.created_at || 0
+                    ).getTime();
+
+                return (
+                    Number.isFinite(time) &&
+                    time <
+                        firstLocalTime -
+                        5000
+                );
+            });
+
+        return [
+            ...historicalServer,
+            ...local
+        ].sort((a, b) =>
+            new Date(a.created_at || 0) -
+            new Date(b.created_at || 0)
+        );
+    }
+
+
     function getResetTime() {
         const value = localStorage.getItem(RESET_KEY);
         if (!value) return null;
@@ -772,28 +872,32 @@ document.addEventListener("DOMContentLoaded", async () => {
             ? metadataResult.value
             : { map: new Map(), subtopics: new Map() };
 
-        let attempts;
-        if (attemptsResult.status === "fulfilled") {
-            attempts = attemptsResult.value.filter(row => afterReset(row, resetTime));
-        } else {
-            attempts = localHistory.map(row => ({
-                question_id: row.question_id,
-                is_correct: row.is_correct,
-                created_at: row.answered_at
-            }));
+        let serverAttempts = [];
 
+        if (attemptsResult.status === "fulfilled") {
+            serverAttempts =
+                attemptsResult.value.filter(
+                    row =>
+                        afterReset(
+                            row,
+                            resetTime
+                        )
+                );
+        } else {
             els.note.hidden = false;
             els.note.textContent =
-                "Server practice history could not be loaded, so this view is using the timing history saved on this device.";
-            console.warn("Dashboard attempt history unavailable:", attemptsResult.reason);
+                "Server practice history could not be loaded, so this view is using practice history saved on this device.";
+            console.warn(
+                "Dashboard attempt history unavailable:",
+                attemptsResult.reason
+            );
         }
 
-        attempts = attempts
-            .filter(row => row && row.question_id)
-            .map(row => ({
-                ...row,
-                created_at: row.created_at || row.answered_at || null
-            }));
+        const attempts =
+            mergePracticeAttempts(
+                serverAttempts,
+                localHistory
+            );
 
         renderKpis(attempts);
         renderSevenDay(attempts);
