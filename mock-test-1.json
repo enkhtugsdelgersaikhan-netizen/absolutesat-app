@@ -2,7 +2,7 @@
   "version": 1,
   "id": "mock-test-1",
   "title": "SAT Mock Test 1",
-  "description": "A full adaptive LexLogica SAT practice test built from reserved Question Bank items.",
+  "description": "A full adaptive LexLogica SAT practice test built from the LexLogica question inventory.",
   "generatedAt": "2026-10-06",
   "timing": {
     "readingWritingModuleMinutes": 32,
