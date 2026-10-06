@@ -737,3 +737,159 @@
     .mock-performance-chart,
     .mock-performance-chart svg{min-height:280px!important;height:280px!important}
 }
+
+
+/* Final dashboard layout cleanup */
+.dashboard-chart-grid{
+    grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)!important;
+    align-items:stretch!important;
+}
+.dashboard-activity-panel,
+.dashboard-trend-panel{
+    min-height:0!important;
+    padding:18px 20px!important;
+}
+.dashboard-activity-panel .dashboard-panel-heading,
+.dashboard-trend-panel .dashboard-panel-heading{
+    margin-bottom:10px!important;
+}
+
+.dashboard-chart-empty-state{
+    min-height:150px!important;
+    height:150px!important;
+    display:flex!important;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:10px 18px!important;
+    box-sizing:border-box;
+    text-align:center;
+    color:#879793;
+}
+.dashboard-chart-empty-state>strong{
+    color:#47625c;
+    font-size:10px;
+}
+.dashboard-chart-empty-state>span{
+    margin-top:4px;
+    font-size:7.5px;
+    line-height:1.4;
+}
+.empty-day-strip,
+.mock-empty-slots{
+    display:grid;
+    width:min(100%,560px);
+    margin-top:13px;
+    gap:7px;
+}
+.empty-day-strip{
+    grid-template-columns:repeat(7,minmax(0,1fr));
+}
+.mock-empty-slots{
+    grid-template-columns:repeat(8,minmax(0,1fr));
+}
+.empty-day-strip>div,
+.mock-empty-slots>div{
+    padding:6px 3px;
+    border:1px solid #e1eae8;
+    border-radius:7px;
+    background:#f8fbfa;
+}
+.empty-day-strip b,
+.mock-empty-slots b{
+    display:block;
+    color:#6f817d;
+    font-size:8px;
+}
+.empty-day-strip small,
+.mock-empty-slots small{
+    display:block;
+    margin-top:2px;
+    color:#9aa6a3;
+    font-size:6.5px;
+}
+.empty-day-strip .is-today{
+    border-color:#afd2ca;
+    background:#eef8f5;
+}
+.empty-day-strip .is-today small{
+    color:#0e7367;
+    font-weight:800;
+}
+
+.seven-day-chart{
+    min-height:185px!important;
+    height:185px!important;
+    padding:5px 8px 0 38px!important;
+}
+.activity-bars{
+    min-height:175px!important;
+}
+.activity-day{
+    height:175px!important;
+}
+.activity-bar-track{
+    height:132px!important;
+}
+.activity-axis-title{
+    top:83px!important;
+}
+.activity-scale span{
+    font-size:7.5px!important;
+}
+
+.mock-performance-chart{
+    min-height:220px!important;
+    height:220px!important;
+}
+.mock-performance-chart svg{
+    height:220px!important;
+}
+
+/* Bottom cards: same height on desktop */
+.dashboard-insight-grid{
+    grid-template-columns:minmax(0,1fr) 300px!important;
+    align-items:stretch!important;
+}
+.dashboard-priority-panel,
+.dashboard-account-panel{
+    height:174px!important;
+    min-height:174px!important;
+    box-sizing:border-box;
+}
+.dashboard-priority-panel{
+    overflow:hidden;
+}
+.dashboard-priority-panel .dashboard-panel-heading{
+    margin-bottom:8px!important;
+}
+.dashboard-priority-panel .dashboard-empty-state{
+    padding:18px 10px!important;
+}
+.priority-item{
+    padding:8px 10px!important;
+}
+.priority-item p{
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+}
+.dashboard-account-panel .dashboard-muted{
+    font-size:7.5px!important;
+    line-height:1.4!important;
+}
+.dashboard-reset,
+.dashboard-logout{
+    height:29px!important;
+    margin-top:7px!important;
+}
+
+@media(max-width:1100px){
+    .dashboard-chart-grid{grid-template-columns:1fr!important}
+    .dashboard-priority-panel,
+    .dashboard-account-panel{
+        height:auto!important;
+        min-height:0!important;
+    }
+}
