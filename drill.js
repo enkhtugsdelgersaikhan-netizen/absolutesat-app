@@ -6,11 +6,10 @@ const DRILL_BASE_SECONDS = DRILL_SECTION === "Math"
   ? Math.round((70 * 60) / 44)
   : Math.round((64 * 60) / 54);
 const DRILL_LIMIT = 10;
+const DRILL_PACE_ADJUSTMENT = 0.25;
 
 const domainSelect = document.getElementById("drill-domain");
 const subtopicSelect = document.getElementById("drill-subtopic");
-const pacePercentRow = document.getElementById("drill-percent-row");
-const pacePercentInput = document.getElementById("drill-percent");
 const availability = document.getElementById("drill-availability");
 const startButton = document.getElementById("drill-start");
 const summaryFocus = document.getElementById("drill-summary-focus");
@@ -36,16 +35,26 @@ function selectedPace() {
   return document.querySelector('input[name="drill-pace"]:checked')?.value || "average";
 }
 
-function pacePercent() {
-  const n = Number(pacePercentInput?.value);
-  return Math.max(5, Math.min(75, Number.isFinite(n) ? n : 25));
-}
-
 function targetSeconds() {
   const mode = selectedPace();
-  const percent = pacePercent() / 100;
-  if (mode === "thorough") return Math.round(DRILL_BASE_SECONDS * (1 + percent));
-  if (mode === "dart") return Math.max(15, Math.round(DRILL_BASE_SECONDS * (1 - percent)));
+
+  if (mode === "thorough") {
+    return Math.round(
+      DRILL_BASE_SECONDS *
+      (1 + DRILL_PACE_ADJUSTMENT)
+    );
+  }
+
+  if (mode === "dart") {
+    return Math.max(
+      15,
+      Math.round(
+        DRILL_BASE_SECONDS *
+        (1 - DRILL_PACE_ADJUSTMENT)
+      )
+    );
+  }
+
   return DRILL_BASE_SECONDS;
 }
 
@@ -208,8 +217,10 @@ function eligibleQuestions() {
 
 function updateBuilder() {
   const pace = selectedPace();
-  const percent = pacePercent();
-  pacePercentRow.hidden = pace === "average";
+  const percent =
+    Math.round(
+      DRILL_PACE_ADJUSTMENT * 100
+    );
 
   const eligible = eligibleQuestions();
   const count = Math.min(DRILL_LIMIT, eligible.length);
@@ -305,7 +316,10 @@ function startDrill() {
   if (!selected.length) return;
 
   const mode = selectedPace();
-  const percent = pacePercent();
+  const percent =
+    Math.round(
+      DRILL_PACE_ADJUSTMENT * 100
+    );
   const target = targetSeconds();
   const session = {
     id: "drill-" + Date.now(),
@@ -388,7 +402,6 @@ async function initializeDrill() {
     updateBuilder
   );
 
-  pacePercentInput.addEventListener("input", updateBuilder);
   startButton.addEventListener("click", startDrill);
 
   updateBuilder();
