@@ -55,7 +55,6 @@ function renderTest(test,userId){
         <div class="mock-module">
             <strong>${escapeHtml(module.label)} · ${escapeHtml(module.module)}</strong>
             <span>${module.questions} questions · ${module.minutes} minutes</span>
-            ${module.adaptive?'<em>Adaptive route</em>':index===2?'<em>After 10-minute break</em>':''}
         </div>
     `).join("");
 
