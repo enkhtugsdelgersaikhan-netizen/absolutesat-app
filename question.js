@@ -7204,8 +7204,8 @@ async function loadQuestionById(
 
         const stagedBankUrl =
             String(questionId).startsWith("math-")
-                ? "/math-question-bank.json?v=2"
-                : "/question-bank.json?v=17";
+                ? "/math-question-bank.json?v=4"
+                : "/question-bank.json?v=19";
 
         const response =
             await fetch(

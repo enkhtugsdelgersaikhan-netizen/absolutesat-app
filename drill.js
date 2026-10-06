@@ -1,7 +1,7 @@
 const DRILL_SECTION = document.body.dataset.drillSection || "Math";
 const DRILL_BANK_URL = DRILL_SECTION === "Math"
-  ? "/math-question-bank.json?v=2"
-  : "/question-bank.json?v=17";
+  ? "/math-question-bank.json?v=4"
+  : "/question-bank.json?v=19";
 const DRILL_BASE_SECONDS = DRILL_SECTION === "Math"
   ? Math.round((70 * 60) / 44)
   : Math.round((64 * 60) / 54);

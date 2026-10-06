@@ -26,14 +26,15 @@ const reviewOnlyCheckbox = document.getElementById("review-only");
 
 const SAT_FILTER_TAXONOMY = {
     "Reading & Writing": {
-        "Information and Ideas": [
-            "Central Ideas and Details",
-            "Command of Evidence",
-            "Inferences"
+        "Information & Ideas": [
+            "Central Ideas & Details",
+            "Inferences",
+            "Textual Command of Evidence",
+            "Qualitative Command of Evidence"
         ],
-        "Craft and Structure": [
+        "Craft & Structure": [
             "Words in Context",
-            "Text Structure and Purpose",
+            "Text Structure & Purpose",
             "Cross-Text Connections"
         ],
         "Expression of Ideas": [
@@ -42,37 +43,35 @@ const SAT_FILTER_TAXONOMY = {
         ],
         "Standard English Conventions": [
             "Boundaries",
-            "Form, Structure, and Sense"
+            "Form, Structure & Sense"
         ]
     },
     "Math": {
         "Algebra": [
-            "Linear equations in one variable",
-            "Linear functions",
-            "Linear equations in two variables",
-            "Systems of two linear equations in two variables",
-            "Linear inequalities in one or two variables"
+            "Linear Equations",
+            "Linear Functions",
+            "Systems of Linear Equations",
+            "Linear Inequalities",
+            "Other Algebra"
         ],
         "Advanced Math": [
-            "Nonlinear functions",
-            "Nonlinear equations in one variable",
-            "Systems of equations in two variables",
-            "Equivalent expressions"
+            "Quadratics",
+            "Equivalent Expressions",
+            "Polynomial Functions",
+            "Exponential Functions",
+            "Rational/Radical Equations",
+            "Nonlinear Equations/Functions"
         ],
-        "Problem-Solving and Data Analysis": [
-            "Ratios, rates, proportional relationships, and units",
-            "Percentages",
-            "One-variable data: distributions and measures of center and spread",
-            "Two-variable data: models and scatterplots",
-            "Probability and conditional probability",
-            "Inference from sample statistics and margin of error",
-            "Evaluating statistical claims: observational studies and experiments"
+        "Problem-Solving & Data Analysis": [
+            "Ratio, Rates, Percentages",
+            "Statistics",
+            "Probability"
         ],
-        "Geometry and Trigonometry": [
-            "Area and volume",
-            "Lines, angles, and triangles",
-            "Right triangles and trigonometry",
-            "Circles"
+        "Geometry & Trigonometry": [
+            "Lines, Angles, and Triangles",
+            "Area and Volume",
+            "Circles",
+            "Trigonometry"
         ]
     }
 };
@@ -90,7 +89,7 @@ function escapeHtml(value) {
 
 
 const QUESTION_BANK_FILTER_STORAGE_KEY =
-    "absoluteprep-question-bank-filters:v3:" +
+    "absoluteprep-question-bank-filters:v4:" +
     activeSection;
 
 function saveQuestionBankFilters() {
@@ -759,8 +758,8 @@ async function loadQuestions() {
     try {
         const bankUrl =
             activeSection === "Math"
-                ? "/math-question-bank.json?v=3"
-                : "/question-bank.json?v=18";
+                ? "/math-question-bank.json?v=4"
+                : "/question-bank.json?v=19";
 
         const response =
             await fetch(
