@@ -69,6 +69,308 @@ function questionSubtopic(q) {
   return String(q.subtopic || q.skill || q.topic || "").trim();
 }
 
+function getDrillDropdownValue(
+  dropdown
+) {
+  return String(
+    dropdown?.dataset?.value || ""
+  );
+}
+
+function closeDrillDropdowns(
+  except = null
+) {
+  document
+    .querySelectorAll(
+      ".drill-dropdown.open"
+    )
+    .forEach(
+      dropdown => {
+        if (dropdown === except) {
+          return;
+        }
+
+        dropdown.classList.remove(
+          "open"
+        );
+
+        dropdown
+          .querySelector(
+            ".drill-dropdown-trigger"
+          )
+          ?.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+      }
+    );
+}
+
+function setDrillDropdownOptions(
+  dropdown,
+  options,
+  selectedValue
+) {
+  if (!dropdown) {
+    return;
+  }
+
+  const normalizedOptions =
+    options.map(
+      option =>
+        typeof option === "string"
+          ? {
+              value: option,
+              label: option
+            }
+          : option
+    );
+
+  const validValues =
+    normalizedOptions.map(
+      option =>
+        String(option.value)
+    );
+
+  const nextValue =
+    validValues.includes(
+      String(selectedValue)
+    )
+      ? String(selectedValue)
+      : (
+          validValues[0] ||
+          ""
+        );
+
+  dropdown.dataset.value =
+    nextValue;
+
+  dropdown.innerHTML = "";
+
+  const trigger =
+    document.createElement(
+      "button"
+    );
+
+  trigger.type = "button";
+  trigger.className =
+    "drill-dropdown-trigger";
+  trigger.setAttribute(
+    "aria-haspopup",
+    "listbox"
+  );
+  trigger.setAttribute(
+    "aria-expanded",
+    "false"
+  );
+
+  const valueNode =
+    document.createElement(
+      "span"
+    );
+
+  valueNode.className =
+    "drill-dropdown-value";
+
+  const selectedOption =
+    normalizedOptions.find(
+      option =>
+        String(option.value) ===
+        nextValue
+    );
+
+  valueNode.textContent =
+    selectedOption?.label || "—";
+
+  const chevron =
+    document.createElement(
+      "span"
+    );
+
+  chevron.className =
+    "drill-dropdown-chevron";
+  chevron.setAttribute(
+    "aria-hidden",
+    "true"
+  );
+  chevron.textContent = "⌄";
+
+  trigger.append(
+    valueNode,
+    chevron
+  );
+
+  const menu =
+    document.createElement(
+      "div"
+    );
+
+  menu.className =
+    "drill-dropdown-menu";
+  menu.setAttribute(
+    "role",
+    "listbox"
+  );
+
+  normalizedOptions.forEach(
+    option => {
+      const button =
+        document.createElement(
+          "button"
+        );
+
+      const optionValue =
+        String(option.value);
+
+      button.type = "button";
+      button.className =
+        "drill-dropdown-option";
+
+      button.dataset.value =
+        optionValue;
+
+      button.setAttribute(
+        "role",
+        "option"
+      );
+
+      const active =
+        optionValue ===
+        nextValue;
+
+      button.classList.toggle(
+        "active",
+        active
+      );
+
+      button.setAttribute(
+        "aria-selected",
+        active
+          ? "true"
+          : "false"
+      );
+
+      button.textContent =
+        option.label;
+
+      button.addEventListener(
+        "click",
+        event => {
+          event.preventDefault();
+          event.stopPropagation();
+
+          dropdown.dataset.value =
+            optionValue;
+
+          valueNode.textContent =
+            option.label;
+
+          menu
+            .querySelectorAll(
+              ".drill-dropdown-option"
+            )
+            .forEach(
+              item => {
+                const isActive =
+                  item.dataset.value ===
+                  optionValue;
+
+                item.classList.toggle(
+                  "active",
+                  isActive
+                );
+
+                item.setAttribute(
+                  "aria-selected",
+                  isActive
+                    ? "true"
+                    : "false"
+                );
+              }
+            );
+
+          dropdown.classList.remove(
+            "open"
+          );
+
+          trigger.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+          dropdown.dispatchEvent(
+            new CustomEvent(
+              "drillchange",
+              {
+                bubbles: true,
+                detail: {
+                  value:
+                    optionValue
+                }
+              }
+            )
+          );
+        }
+      );
+
+      menu.appendChild(
+        button
+      );
+    }
+  );
+
+  trigger.addEventListener(
+    "click",
+    event => {
+      event.preventDefault();
+      event.stopPropagation();
+
+      const willOpen =
+        !dropdown.classList.contains(
+          "open"
+        );
+
+      closeDrillDropdowns(
+        willOpen
+          ? dropdown
+          : null
+      );
+
+      dropdown.classList.toggle(
+        "open",
+        willOpen
+      );
+
+      trigger.setAttribute(
+        "aria-expanded",
+        willOpen
+          ? "true"
+          : "false"
+      );
+    }
+  );
+
+  dropdown.append(
+    trigger,
+    menu
+  );
+}
+
+document.addEventListener(
+  "click",
+  () =>
+    closeDrillDropdowns()
+);
+
+document.addEventListener(
+  "keydown",
+  event => {
+    if (event.key === "Escape") {
+      closeDrillDropdowns();
+    }
+  }
+);
+
 function getDomainMap() {
   const domains = new Map();
 
@@ -101,26 +403,22 @@ function buildDomainOptions() {
   const domains =
     getDomainMap();
 
-  domainSelect.innerHTML = "";
+  const options =
+    [...domains.keys()]
+      .sort();
 
-  [...domains.keys()]
-    .sort()
-    .forEach(domain => {
-      const option =
-        document.createElement(
-          "option"
-        );
+  const previous =
+    getDrillDropdownValue(
+      domainSelect
+    );
 
-      option.value =
-        domain;
-
-      option.textContent =
-        domain;
-
-      domainSelect.appendChild(
-        option
-      );
-    });
+  setDrillDropdownOptions(
+    domainSelect,
+    options,
+    options.includes(previous)
+      ? previous
+      : options[0]
+  );
 
   buildSubtopicOptions();
 }
@@ -130,7 +428,9 @@ function buildSubtopicOptions() {
     getDomainMap();
 
   const selectedDomain =
-    domainSelect.value;
+    getDrillDropdownValue(
+      domainSelect
+    );
 
   const subtopics =
     [
@@ -142,42 +442,34 @@ function buildSubtopicOptions() {
     ].sort();
 
   const previous =
-    subtopicSelect.value;
+    getDrillDropdownValue(
+      subtopicSelect
+    );
 
-  subtopicSelect.innerHTML =
-    '<option value="">All subtopics</option>';
+  const options = [
+    {
+      value: "",
+      label: "All subtopics"
+    },
+    ...subtopics.map(
+      subtopic => ({
+        value:
+          subtopic,
+        label:
+          subtopic
+      })
+    )
+  ];
 
-  subtopics.forEach(
-    subtopic => {
-      const option =
-        document.createElement(
-          "option"
-        );
-
-      option.value =
-        subtopic;
-
-      option.textContent =
-        subtopic;
-
-      subtopicSelect.appendChild(
-        option
-      );
-    }
-  );
-
-  if (
-    previous &&
+  setDrillDropdownOptions(
+    subtopicSelect,
+    options,
     subtopics.includes(
       previous
     )
-  ) {
-    subtopicSelect.value =
-      previous;
-  } else {
-    subtopicSelect.value =
-      "";
-  }
+      ? previous
+      : ""
+  );
 }
 
 function focusMatches(q) {
@@ -185,10 +477,10 @@ function focusMatches(q) {
     String(q.domain || "").trim();
 
   const selectedDomain =
-    domainSelect.value;
+    getDrillDropdownValue(domainSelect);
 
   const selectedSubtopic =
-    subtopicSelect.value;
+    getDrillDropdownValue(subtopicSelect);
 
   if (
     domain !== selectedDomain
@@ -225,12 +517,12 @@ function updateBuilder() {
   const eligible = eligibleQuestions();
   const count = Math.min(DRILL_LIMIT, eligible.length);
   const focusLabel =
-    subtopicSelect.value
+    getDrillDropdownValue(subtopicSelect)
       ? "Subtopic — " +
-        subtopicSelect.value
+        getDrillDropdownValue(subtopicSelect)
       : "Domain — " +
         (
-          domainSelect.value ||
+          getDrillDropdownValue(domainSelect) ||
           "—"
         );
   const difficulty = selectedDifficulty();
@@ -325,21 +617,21 @@ function startDrill() {
     id: "drill-" + Date.now(),
     section: DRILL_SECTION,
     domain:
-      domainSelect.value,
+      getDrillDropdownValue(domainSelect),
     subtopic:
-      subtopicSelect.value || null,
+      getDrillDropdownValue(subtopicSelect) || null,
     focus:
-      subtopicSelect.value
+      getDrillDropdownValue(subtopicSelect)
         ? "subtopic::" +
-          subtopicSelect.value
+          getDrillDropdownValue(subtopicSelect)
         : "domain::" +
-          domainSelect.value,
+          getDrillDropdownValue(domainSelect),
     focusLabel:
-      subtopicSelect.value
+      getDrillDropdownValue(subtopicSelect)
         ? "Subtopic — " +
-          subtopicSelect.value
+          getDrillDropdownValue(subtopicSelect)
         : "Domain — " +
-          domainSelect.value,
+          getDrillDropdownValue(domainSelect),
     difficulty: selectedDifficulty(),
     paceMode: mode,
     pacePercent: mode === "average" ? 0 : percent,
@@ -390,7 +682,7 @@ async function initializeDrill() {
     .forEach(input => input.addEventListener("change", updateBuilder));
 
   domainSelect.addEventListener(
-    "change",
+    "drillchange",
     () => {
       buildSubtopicOptions();
       updateBuilder();
@@ -398,7 +690,7 @@ async function initializeDrill() {
   );
 
   subtopicSelect.addEventListener(
-    "change",
+    "drillchange",
     updateBuilder
   );
 
