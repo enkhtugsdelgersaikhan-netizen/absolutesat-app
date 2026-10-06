@@ -97,6 +97,16 @@ const questionPassage =
         "question-passage"
     );
 
+const mathQuestionContext =
+    document.getElementById(
+        "math-question-context"
+    );
+
+const mathQuestionContextContent =
+    document.getElementById(
+        "math-question-context-content"
+    );
+
 const choicesContainer =
     document.getElementById(
         "choices"
@@ -4296,23 +4306,45 @@ function renderCurrentQuestion() {
             question.question_text
         );
 
+    const hasContext =
+        Boolean(
+            question.passage ||
+            question.graph ||
+            question.table
+        );
+
     if (questionPassage) {
         questionPassage.innerHTML =
-            renderQuestionPassage(
-                question
-            );
-
-        const hasContext =
-            Boolean(
-                question.passage ||
-                question.graph ||
-                question.table
-            );
+            isMathQuestion
+                ? ""
+                : renderQuestionPassage(
+                    question
+                );
 
         questionPassage.parentElement?.classList.toggle(
             "has-passage",
-            hasContext
+            !isMathQuestion &&
+                hasContext
         );
+    }
+
+    if (
+        mathQuestionContext &&
+        mathQuestionContextContent
+    ) {
+        mathQuestionContext.classList.toggle(
+            "hidden",
+            !isMathQuestion ||
+                !hasContext
+        );
+
+        mathQuestionContextContent.innerHTML =
+            isMathQuestion &&
+            hasContext
+                ? renderQuestionPassage(
+                    question
+                )
+                : "";
     }
 
 
