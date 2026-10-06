@@ -1007,5 +1007,29 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 
+    window.addEventListener(
+        "storage",
+        event => {
+            if (
+                event.key ===
+                HISTORY_KEY
+            ) {
+                loadAnalytics();
+            }
+        }
+    );
+
+    document.addEventListener(
+        "visibilitychange",
+        () => {
+            if (
+                document.visibilityState ===
+                "visible"
+            ) {
+                loadAnalytics();
+            }
+        }
+    );
+
     await loadAnalytics();
 });
