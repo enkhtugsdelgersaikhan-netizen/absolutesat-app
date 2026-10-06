@@ -10441,6 +10441,23 @@ async function checkAnswer() {
                 question.correct_answer
             );
 
+    const isFirstPracticeAttempt =
+        !checkedResults[question.id] &&
+        !(
+            Array.isArray(
+                wrongAttempts[question.id]
+            ) &&
+            wrongAttempts[question.id].length
+        );
+
+    if (isFirstPracticeAttempt) {
+        recordPracticeAnalyticsEvent(
+            question,
+            isCorrect,
+            elapsedSeconds
+        );
+    }
+
     const firstDrillAttempt =
         drillMode
             ? recordDrillResult(
@@ -10532,6 +10549,97 @@ async function checkAnswer() {
     );
 
 }
+
+function recordPracticeAnalyticsEvent(
+    question,
+    isCorrect,
+    seconds
+) {
+    if (
+        !currentUser ||
+        !question ||
+        mockTestMode
+    ) {
+        return;
+    }
+
+    try {
+        const key =
+            "absoluteprep-practice-history:" +
+            currentUser.id;
+
+        const stored =
+            JSON.parse(
+                localStorage.getItem(key) ||
+                "[]"
+            );
+
+        const history =
+            Array.isArray(stored)
+                ? stored
+                : [];
+
+        const elapsed =
+            Math.max(
+                0,
+                Math.min(
+                    3600,
+                    Math.round(
+                        Number(seconds) || 0
+                    )
+                )
+            );
+
+        history.push({
+            question_id:
+                String(question.id),
+            is_correct:
+                Boolean(isCorrect),
+            elapsed_seconds:
+                elapsed,
+            answered_at:
+                new Date().toISOString(),
+            section:
+                question.section ||
+                (
+                    String(question.id)
+                        .startsWith("math-")
+                        ? "Math"
+                        : "Reading & Writing"
+                ),
+            domain:
+                question.domain ||
+                question.topic ||
+                "",
+            subtopic:
+                question.subtopic ||
+                question.skill ||
+                question.topic ||
+                "Other",
+            difficulty:
+                question.difficulty ||
+                ""
+        });
+
+        if (history.length > 5000) {
+            history.splice(
+                0,
+                history.length - 5000
+            );
+        }
+
+        localStorage.setItem(
+            key,
+            JSON.stringify(history)
+        );
+    } catch (error) {
+        console.warn(
+            "Could not save local practice analytics:",
+            error
+        );
+    }
+}
+
 
 async function saveQuestionBankAttempt(
     questionId,
