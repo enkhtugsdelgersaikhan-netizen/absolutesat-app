@@ -8197,14 +8197,6 @@ function getQuestionBankPeekerStatus(
         String(question.id);
 
     if (
-        checkedResults[
-            question.id
-        ] === true
-    ) {
-        return "correct";
-    }
-
-    if (
         Array.isArray(
             wrongAttempts[
                 question.id
@@ -8215,6 +8207,14 @@ function getQuestionBankPeekerStatus(
         ].length > 0
     ) {
         return "incorrect";
+    }
+
+    if (
+        checkedResults[
+            question.id
+        ] === true
+    ) {
+        return "correct";
     }
 
     if (!currentUser) {
@@ -10668,17 +10668,22 @@ async function saveQuestionBankAttempt(
                 localStorage.getItem(key) || "{}"
             );
 
-        stored[String(questionId)] = {
-            is_correct:
-                Boolean(isCorrect),
-            updated_at:
-                new Date().toISOString()
-        };
+        const id =
+            String(questionId);
 
-        localStorage.setItem(
-            key,
-            JSON.stringify(stored)
-        );
+        if (!stored[id]) {
+            stored[id] = {
+                is_correct:
+                    Boolean(isCorrect),
+                created_at:
+                    new Date().toISOString()
+            };
+
+            localStorage.setItem(
+                key,
+                JSON.stringify(stored)
+            );
+        }
     } catch (storageError) {
         console.warn(
             "Could not save local question status:",
