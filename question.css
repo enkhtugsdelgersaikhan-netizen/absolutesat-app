@@ -5160,3 +5160,23 @@ body.math-question-active .math-question-context-content::selection{
     background:Highlight;
     color:HighlightText;
 }
+
+
+/* ============================================================
+   DRILL MODE
+   ============================================================ */
+body.drill-mode .question-bank-peeker{
+    display:none!important;
+}
+body.drill-mode .timer-container{
+    min-width:154px;
+}
+body.drill-mode .timer-label{
+    color:#0f766e;
+}
+body.drill-mode #set-title::after{
+    content:" · 10 max";
+    color:#94a3b8;
+    font-size:.62em;
+    font-weight:600;
+}
