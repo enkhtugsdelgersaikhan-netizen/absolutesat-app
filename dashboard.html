@@ -5,89 +5,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | LexLogica</title>
     <link rel="icon" type="image/png" href="/Favicon.png?v=b2788e22">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=dark-2">
-    <link rel="stylesheet" href="dashboard.css?v=sat-profile-1">
-<link rel="stylesheet" href="/responsive.css?v=1"></head>
+    <link rel="stylesheet" href="dashboard.css?v=analytics-1">
+    <link rel="stylesheet" href="/responsive.css?v=1">
+</head>
 <body>
 <header class="header"><div class="header-container"><a href="/" class="logo-link" aria-label="LexLogica home"><img src="/Logo.png" alt="LexLogica" class="logo"></a><nav class="navigation" aria-label="Main navigation"><a href="/mathematics" class="nav-button">Mathematics</a><a href="/mock-tests" class="nav-button">Mock Tests</a><a href="/reading-writing" class="nav-button">Reading and Writing</a></nav><a href="/dashboard" class="dashboard-button site-dashboard" hidden aria-hidden="true">Dashboard</a><div class="auth-buttons"><a href="/login" class="login-button">Login</a></div><button class="mobile-menu-button" aria-label="Open navigation" aria-expanded="false" type="button">☰</button></div></header>
 
 <main class="dashboard-page">
     <section class="dashboard-header">
         <div>
-            <div class="page-eyebrow">YOUR STUDY SPACE</div>
+            <div class="page-eyebrow">PRACTICE ANALYTICS</div>
             <h1>Dashboard</h1>
-            <p>Keep track of your SAT practice and jump back into studying.</p>
+            <p>See what you are practicing, how efficiently you are answering, and where the next points are most likely to come from.</p>
         </div>
     </section>
 
-    <section class="dashboard-content">
-        <div class="dashboard-stats">
-            <article class="dashboard-card">
-                <span class="dashboard-card-label">Questions Answered</span>
-                <strong id="questions-answered">0</strong>
-                <span class="dashboard-card-note">Your completed practice questions</span>
+    <section class="dashboard-content" aria-live="polite">
+        <div class="dashboard-kpis">
+            <article class="dashboard-kpi">
+                <span>Practice streak</span>
+                <strong id="streak">—</strong>
+                <small>Consecutive practice days</small>
             </article>
-            <article class="dashboard-card">
-                <span class="dashboard-card-label">Accuracy</span>
-                <strong id="accuracy">—</strong>
-                <span class="dashboard-card-note">Based on answered questions</span>
-            </article>
-            <article class="dashboard-card">
-                <span class="dashboard-card-label">Practice Streak</span>
-                <strong id="streak">0 days</strong>
-                <span class="dashboard-card-note">Keep building your routine</span>
+            <article class="dashboard-kpi">
+                <span>Questions answered</span>
+                <strong id="questions-answered">—</strong>
+                <small>Total saved practice answers</small>
             </article>
         </div>
 
+        <div class="dashboard-chart-grid">
+            <section class="dashboard-panel dashboard-activity-panel">
+                <div class="dashboard-panel-heading">
+                    <div>
+                        <div class="panel-eyebrow">LAST 7 DAYS</div>
+                        <h2>Questions answered</h2>
+                    </div>
+                    <div class="dashboard-legend" aria-label="Chart legend">
+                        <span><i class="is-correct"></i>Correct</span>
+                        <span><i class="is-incorrect"></i>Incorrect</span>
+                    </div>
+                </div>
+                <div id="seven-day-chart" class="seven-day-chart dashboard-empty-chart">Loading practice history…</div>
+            </section>
 
-        
+            <section class="dashboard-panel dashboard-trend-panel">
+                <div class="dashboard-panel-heading">
+                    <div>
+                        <div class="panel-eyebrow">RECENT PERFORMANCE</div>
+                        <h2>Practice score trend</h2>
+                        <p>20-question rolling accuracy</p>
+                    </div>
+                    <strong id="practice-score-current" class="practice-score-current">—</strong>
+                </div>
+                <div id="practice-score-chart" class="practice-score-chart dashboard-empty-chart">Loading practice history…</div>
+            </section>
+        </div>
 
-        <div class="dashboard-grid">
+        <section class="dashboard-panel dashboard-subtopic-panel">
+            <div class="dashboard-panel-heading dashboard-table-heading">
+                <div>
+                    <div class="panel-eyebrow">SUBTOPIC PERFORMANCE</div>
+                    <h2>Accuracy and pace by skill</h2>
+                </div>
+                <div class="dashboard-filter-group" role="group" aria-label="Filter subtopics by section">
+                    <button type="button" class="is-active" data-subtopic-filter="all">All</button>
+                    <button type="button" data-subtopic-filter="rw">R&amp;W</button>
+                    <button type="button" data-subtopic-filter="math">Math</button>
+                </div>
+            </div>
+
+            <div class="dashboard-table-wrap">
+                <table class="dashboard-subtopic-table">
+                    <thead>
+                        <tr>
+                            <th>Section</th>
+                            <th>Subtopic</th>
+                            <th class="is-number">Answered</th>
+                            <th class="is-number">Accuracy</th>
+                            <th class="is-number">Avg. time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="subtopic-table-body">
+                        <tr><td colspan="5" class="dashboard-table-empty">Loading subtopic analytics…</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="dashboard-benchmark-note">Color benchmark: 90%+ accuracy, about 71 seconds per R&amp;W question, and 95 seconds per Math question. Redder text means farther from the preferred benchmark. Average time uses first-attempt timing recorded from this analytics update onward.</p>
+        </section>
+
+        <div class="dashboard-insight-grid">
             <section class="dashboard-panel">
                 <div class="dashboard-panel-heading">
                     <div>
-                        <div class="panel-eyebrow">PRACTICE</div>
-                        <h2>Pick up where you left off</h2>
+                        <div class="panel-eyebrow">NEXT BEST WORK</div>
+                        <h2>What to practice next</h2>
                     </div>
                 </div>
-                <div class="dashboard-actions">
-                    <a href="/question-bank" class="dashboard-action">
-                        <span><strong>Question Bank</strong><small>Practice individual SAT questions</small></span>
-                        <span aria-hidden="true">→</span>
-                    </a>
-                    <a href="/mock-tests" class="dashboard-action">
-                        <span><strong>Mock Tests</strong><small>Take a full SAT-style test</small></span>
-                        <span aria-hidden="true">→</span>
-                    </a>
-                    <a href="/vocab" class="dashboard-action">
-                        <span><strong>Vocabulary</strong><small>Build your SAT vocabulary</small></span>
-                        <span aria-hidden="true">→</span>
-                    </a>
+                <div id="priority-list" class="priority-list">
+                    <div class="dashboard-empty-state">Loading priorities…</div>
                 </div>
             </section>
 
             <section class="dashboard-panel">
                 <div class="dashboard-panel-heading">
                     <div>
-                        <div class="panel-eyebrow">ACCOUNT</div>
-                        <h2>Quick settings</h2>
+                        <div class="panel-eyebrow">DIFFICULTY PROFILE</div>
+                        <h2>Where errors are happening</h2>
                     </div>
                 </div>
-                <p class="dashboard-muted">Manage your account and practice data from here. Resetting your practice data permanently removes your saved question attempts, reviews, and question-set results.</p>
+                <div id="difficulty-profile" class="difficulty-profile">
+                    <div class="dashboard-empty-state">Loading difficulty data…</div>
+                </div>
+            </section>
+
+            <section class="dashboard-panel dashboard-account-panel">
+                <div class="dashboard-panel-heading">
+                    <div>
+                        <div class="panel-eyebrow">ACCOUNT</div>
+                        <h2>Practice data</h2>
+                    </div>
+                </div>
+                <p class="dashboard-muted">Resetting removes saved practice attempts, reviews, question-set results, timing history, and vocabulary progress.</p>
                 <button type="button" class="dashboard-reset" id="dashboard-reset">Reset all practice data</button>
                 <button type="button" class="dashboard-logout" id="dashboard-logout">Log out</button>
             </section>
         </div>
+
+        <div id="dashboard-data-note" class="dashboard-data-note" hidden></div>
     </section>
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js?v=dark-3"></script>
-<script src="dashboard.js?v=profile-moved-1"></script>
+<script src="dashboard.js?v=analytics-1"></script>
 <script src="/study.js"></script>
 </body>
 </html>
-
