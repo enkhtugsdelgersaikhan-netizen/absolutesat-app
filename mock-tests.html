@@ -5,44 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mock Tests | LexLogica</title>
     <link rel="icon" type="image/png" href="/Favicon.png?v=b2788e22">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=soft3d-1">
-    <link rel="stylesheet" href="mock-tests.css">
+    <link rel="stylesheet" href="style.css?v=subjects-1">
+    <link rel="stylesheet" href="mock-tests.css?v=2">
 </head>
 <body class="mock-tests-protected">
 
 <header class="header"><div class="header-container"><a href="/" class="logo-link" aria-label="LexLogica home"><img src="/Logo.png" alt="LexLogica" class="logo"></a><nav class="navigation" aria-label="Main navigation"><a href="/mathematics" class="nav-button">Mathematics</a><a href="/mock-tests" class="nav-button active" aria-current="page">Mock Tests</a><a href="/reading-writing" class="nav-button">Reading and Writing</a></nav><a href="/dashboard" class="dashboard-button site-dashboard" hidden aria-hidden="true">Dashboard</a><div class="auth-buttons"><a href="/login" class="login-button">Login</a></div><button class="mobile-menu-button" aria-label="Open navigation" aria-expanded="false" type="button">☰</button></div></header>
 
-<main class="mock-tests-page" id="mock-tests-content">
-    <section class="mock-tests-header">
-        <div class="page-eyebrow">FULL-LENGTH PRACTICE</div>
-        <h1>Mock Tests</h1>
-        <p>Take a complete practice test under timed conditions and review your performance afterward.</p>
+<main class="mock-page">
+    <section class="mock-hero">
+        <div class="mock-hero-copy">
+            <div class="mock-eyebrow">FULL-LENGTH PRACTICE</div>
+            <h1>Take the test like it counts.</h1>
+            <p>Four timed modules, adaptive second modules, one uninterrupted testing flow. Questions used here are reserved from the practice banks so your mock stays unseen until test day.</p>
+        </div>
+        <div class="mock-hero-stats" aria-label="Mock test structure">
+            <div><strong>98</strong><span>questions per route</span></div>
+            <div><strong>2h 14m</strong><span>testing time</span></div>
+            <div><strong>4</strong><span>timed modules</span></div>
+        </div>
     </section>
 
-    <section class="mock-tests-list">
-        <div id="mock-tests-loading" class="mock-tests-state">
-            <div class="loading-spinner"></div>
-            <p>Loading mock tests...</p>
+    <section class="mock-section-head">
+        <div>
+            <span>AVAILABLE NOW</span>
+            <h2>Practice tests</h2>
         </div>
-        <div id="mock-tests-grid" class="mock-tests-grid hidden"></div>
-        <div id="mock-tests-empty" class="mock-tests-state hidden">
-            <h2>No mock tests available yet</h2>
-            <p>Mock tests will appear here as soon as they are added to LexLogica.</p>
-        </div>
-        <div id="mock-tests-error" class="mock-tests-state hidden">
-            <h2>We couldn't load the mock tests</h2>
-            <p>Please refresh the page and try again.</p>
-        </div>
+        <p>Your progress is saved on this device, so you can leave and resume later.</p>
+    </section>
+
+    <section id="mock-tests-loading" class="mock-state">
+        <div class="loading-spinner"></div>
+        <p>Preparing your tests...</p>
+    </section>
+
+    <section id="mock-tests-grid" class="mock-grid hidden" aria-live="polite"></section>
+
+    <section id="mock-tests-error" class="mock-state hidden">
+        <h2>Couldn’t load the mock tests</h2>
+        <p>Refresh the page and try again.</p>
+    </section>
+
+    <section class="mock-explainer">
+        <article>
+            <span class="mock-explainer-index">01</span>
+            <div>
+                <h3>Adaptive by section</h3>
+                <p>Your first Reading & Writing module determines its second-module route. Math adapts separately after Math Module 1.</p>
+            </div>
+        </article>
+        <article>
+            <span class="mock-explainer-index">02</span>
+            <div>
+                <h3>No answer feedback mid-test</h3>
+                <p>You can move backward, mark questions for review, and change answers, but explanations stay hidden until the test is finished.</p>
+            </div>
+        </article>
+        <article>
+            <span class="mock-explainer-index">03</span>
+            <div>
+                <h3>Reserved questions</h3>
+                <p>Mock-test questions are hidden from the ordinary Question Banks without being deleted, preserving a clean first attempt.</p>
+            </div>
+        </article>
     </section>
 </main>
 
-
-
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js?v=subjects-1"></script>
-<script src="mock-tests.js"></script>
+<script src="mock-tests.js?v=2"></script>
 </body>
 </html>
