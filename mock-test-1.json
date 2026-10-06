@@ -10,9 +10,8 @@
     "breakMinutes": 10
   },
   "routing": {
-    "note": "LexLogica practice routing, not an official College Board routing formula.",
-    "readingWritingHighMinCorrect": 17,
-    "mathHighMinCorrect": 14
+    "note": "LexLogica practice routing: use the easier second module only when more than one-third of Module 1 questions are missed. Incorrect and unanswered questions both count as missed.",
+    "easierModuleIfMissedFractionGreaterThan": 0.3333333333333333
   },
   "questionCountPerRoute": 98,
   "uniqueReservedQuestions": 120,
