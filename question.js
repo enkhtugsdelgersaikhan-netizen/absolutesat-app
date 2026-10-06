@@ -7328,7 +7328,7 @@ async function loadQuestionById(
 
         const stagedBankUrl =
             String(questionId).startsWith("math-")
-                ? "/math-question-bank.json?v=4"
+                ? "/math-question-bank.json?v=5"
                 : "/question-bank.json?v=19";
 
         const response =
