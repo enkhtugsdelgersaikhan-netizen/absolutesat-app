@@ -14,6 +14,7 @@ let reviewOnly = false;
 let userAttempts = [];
 let userReviews = [];
 let localReviewOverrides = {};
+let reservedMockQuestionIds = new Set();
 
 const questionList = document.getElementById("question-list");
 const questionCount = document.getElementById("question-count");
@@ -756,15 +757,54 @@ async function loadUserData() {
 
 const FALLBACK_QUESTIONS = [];
 
+async function loadReservedMockQuestionIds() {
+    try {
+        const response =
+            await fetch(
+                "/mock-test-reservations.json?v=4",
+                { cache: "no-store" }
+            );
+
+        if (!response.ok) {
+            throw new Error(
+                "Reservations returned " +
+                response.status
+            );
+        }
+
+        const data =
+            await response.json();
+
+        reservedMockQuestionIds =
+            new Set(
+                (
+                    data.allQuestionIds ||
+                    []
+                ).map(String)
+            );
+    } catch (error) {
+        reservedMockQuestionIds =
+            new Set();
+
+        console.warn(
+            "Could not load mock-test reservations:",
+            error
+        );
+    }
+}
+
+
 async function loadQuestions() {
     showLoading();
+
+    await loadReservedMockQuestionIds();
 
     let stagedQuestions = [];
 
     try {
         const bankUrl =
             activeSection === "Math"
-                ? "/math-question-bank.json?v=4"
+                ? "/math-question-bank.json?v=5"
                 : "/question-bank.json?v=19";
 
         const response =
@@ -788,7 +828,13 @@ async function loadQuestions() {
                 .filter(
                     question =>
                         question.status ===
-                        "staged"
+                            "staged" &&
+                        !reservedMockQuestionIds
+                            .has(
+                                String(
+                                    question.id
+                                )
+                            )
                 )
                 .map(
                     normalizeQuestion
