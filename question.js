@@ -315,6 +315,57 @@ function normalizeMathEscapes(value) {
 }
 
 
+function normalizeMathLayoutText(value) {
+    const mathSegments = [];
+
+    const protectedSource =
+        normalizeMathEscapes(
+            value
+        ).replace(
+            /\\\(([\s\S]*?)\\\)|\\\[([\s\S]*?)\\\]/g,
+            match => {
+                const index =
+                    mathSegments.push(
+                        match
+                    ) - 1;
+
+                return (
+                    "\uE002MATHLAYOUT" +
+                    index +
+                    "\uE003"
+                );
+            }
+        );
+
+    const compact =
+        protectedSource
+            .replace(
+                /\r\n?/g,
+                "\n"
+            )
+            .replace(
+                /[ \t]*\n[ \t]*/g,
+                " "
+            )
+            .replace(
+                /[ \t]{2,}/g,
+                " "
+            )
+            .trim();
+
+    return compact.replace(
+        /\uE002MATHLAYOUT(\d+)\uE003/g,
+        (
+            match,
+            index
+        ) =>
+            mathSegments[
+                Number(index)
+            ] || ""
+    );
+}
+
+
 function repairCommonMathNotation(value) {
     const source =
         normalizeAccidentalDisplayProse(
@@ -389,11 +440,18 @@ function repairCommonMathNotation(value) {
 }
 
 
-function renderInlineFormatting(value) {
+function renderInlineFormatting(
+    value,
+    compactMathLayout = false
+) {
 
     const repaired =
         repairCommonMathNotation(
-            value
+            compactMathLayout
+                ? normalizeMathLayoutText(
+                    value
+                )
+                : value
         );
 
     // Protect TeX before applying lightweight Markdown formatting.
@@ -2582,7 +2640,9 @@ function renderQuestionPassage(
         question.passage
             ? '<div class="question-passage-copy">' +
                 renderInlineFormatting(
-                    question.passage
+                    question.passage,
+                    question.section ===
+                        "Math"
                 ) +
               '</div>'
             : "";
@@ -4303,7 +4363,8 @@ function renderCurrentQuestion() {
 
     questionText.innerHTML =
         renderInlineFormatting(
-            question.question_text
+            question.question_text,
+            isMathQuestion
         );
 
     const hasContext =
@@ -5322,7 +5383,9 @@ function renderChoices(
                                 choice.text
                                     ? '<span class="choice-graph-label">' +
                                         renderInlineFormatting(
-                                            choice.text
+                                            choice.text,
+                                            question.section ===
+                                                "Math"
                                         ) +
                                       '</span>'
                                     : ""
@@ -5338,7 +5401,9 @@ function renderChoices(
                                     ]
                                 )
                                 : renderInlineFormatting(
-                                    choice.text
+                                    choice.text,
+                                    question.section ===
+                                        "Math"
                                 )
                         )
                 }</span>
