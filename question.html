@@ -16,7 +16,7 @@
     >
 
     <link rel="stylesheet" href="style.css?v=subjects-1">
-    <link rel="stylesheet" href="question.css?v=47">
+    <link rel="stylesheet" href="question.css?v=49">
 </head>
 
 <body>
@@ -90,9 +90,30 @@
 
                 <div class="question-progress-row">
 
-                    <span id="question-number">
-                        Question 1
-                    </span>
+                    <div class="question-progress-identity">
+                        <span id="question-number">
+                            Question 1
+                        </span>
+
+                        <div
+                            id="question-metadata"
+                            class="question-metadata hidden"
+                            aria-label="Question classification"
+                        >
+                            <span
+                                id="question-domain"
+                                class="question-meta-pill question-meta-domain"
+                            ></span>
+                            <span
+                                id="question-subtopic"
+                                class="question-meta-pill question-meta-subtopic"
+                            ></span>
+                            <span
+                                id="question-difficulty"
+                                class="question-meta-pill question-meta-difficulty"
+                            ></span>
+                        </div>
+                    </div>
 
                     <div class="question-progress-actions">
                         <div class="question-inline-navigation" aria-label="Question navigation">
@@ -346,7 +367,7 @@ window.MathJax = {
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js?v=subjects-1"></script>
-<script src="question.js?v=48"></script>
+<script src="question.js?v=49"></script>
 
 </body>
 </html>
