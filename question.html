@@ -16,7 +16,7 @@
     >
 
     <link rel="stylesheet" href="style.css?v=dark-2">
-    <link rel="stylesheet" href="question.css?v=68">
+    <link rel="stylesheet" href="question.css?v=69">
 </head>
 
 <body>
@@ -77,6 +77,42 @@
                         class="sat-pane-label"
                     >
                         PASSAGE
+                    </div>
+
+                    <div
+                        id="reading-highlight-tools-host"
+                        class="highlight-tools-host"
+                    >
+                        <div
+                            id="text-highlight-tools"
+                            class="text-highlight-tools"
+                        >
+                            <div
+                                class="text-highlight-hint"
+                                title="Drag across text to highlight. Highlight highlighted text again to remove it."
+                                aria-label="Highlighting: drag across text. Highlight highlighted text again to remove it."
+                            >
+                                <svg viewBox="0 0 18 18" aria-hidden="true">
+                                    <path d="m5.1 11.8 6.8-6.8 2.1 2.1-6.8 6.8H5.1v-2.1Z"></path>
+                                    <path d="M4 15h10"></path>
+                                </svg>
+                                <span>Drag to highlight</span>
+                            </div>
+
+                            <button
+                                id="clear-highlights-button"
+                                class="clear-highlights-button"
+                                type="button"
+                                title="Erase all highlights on this question"
+                                aria-label="Erase all highlights on this question"
+                            >
+                                <svg viewBox="0 0 18 18" aria-hidden="true">
+                                    <path d="m6.1 4.2 7.7 7.7-3 3H6.6L3.5 11.8l2.6-7.6Z"></path>
+                                    <path d="M9.2 14.9H15"></path>
+                                </svg>
+                                <span>Erase all</span>
+                            </button>
+                        </div>
                     </div>
 
                     <div
@@ -194,18 +230,6 @@
                             </button>
                         </div>
 
-                        <div
-                            class="text-highlight-hint"
-                            title="Drag across text to highlight. Highlight it again to remove it."
-                            aria-label="Highlighting: drag across text. Highlight selected text again to remove it."
-                        >
-                            <svg viewBox="0 0 18 18" aria-hidden="true">
-                                <path d="m5.1 11.8 6.8-6.8 2.1 2.1-6.8 6.8H5.1v-2.1Z"></path>
-                                <path d="M4 15h10"></path>
-                            </svg>
-                            <span>Drag text to highlight</span>
-                        </div>
-
                         <button
                             id="review-button"
                             class="review-button"
@@ -231,14 +255,25 @@
                         id="math-question-context"
                         class="math-question-context hidden"
                     >
-                        <div class="math-question-context-label">
-                            INFORMATION
+                        <div class="math-question-context-header">
+                            <div class="math-question-context-label">
+                                INFORMATION
+                            </div>
+                            <div
+                                id="math-highlight-tools-host"
+                                class="highlight-tools-host"
+                            ></div>
                         </div>
                         <div
                             id="math-question-context-content"
                             class="math-question-context-content"
                         ></div>
                     </div>
+
+                    <div
+                        id="math-highlight-tools-fallback"
+                        class="math-highlight-tools-fallback hidden"
+                    ></div>
 
                     <div
                         id="question-text"
@@ -605,7 +640,7 @@ window.MathJax = {
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js?v=dark-3"></script>
-<script src="question.js?v=68"></script>
+<script src="question.js?v=69"></script>
 
 </body>
 </html>
