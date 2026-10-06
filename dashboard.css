@@ -624,3 +624,29 @@
     .seven-day-chart{padding-left:34px}
     .activity-grid-line{left:34px}
 }
+
+
+/* Make mock-test chart labels easier to read without changing chart geometry. */
+.dashboard-mock-legend{
+    font-size:10px!important;
+    gap:12px!important;
+}
+.dashboard-mock-legend i{
+    width:9px!important;
+    height:9px!important;
+}
+.mock-axis-label{
+    font-size:9px!important;
+    font-weight:600;
+}
+.mock-axis-title{
+    font-size:9px!important;
+    font-weight:800!important;
+}
+.mock-x-label{
+    font-size:9px!important;
+    font-weight:600;
+}
+.mock-x-label.is-complete{
+    font-weight:800!important;
+}
