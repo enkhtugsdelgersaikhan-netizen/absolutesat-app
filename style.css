@@ -5999,3 +5999,22 @@ html.lexlogica-dark-mode .university-logo-monogram{
 .sat-score-scale-row.is-user-range>b{color:#0e7367}
 .sat-score-scale-row.is-user-range>span,
 .sat-score-scale-row.is-user-range>span strong{color:#526864}
+
+
+/* Keep score guide and score-entry panel exactly aligned in height */
+.sat-guide-row{
+  align-items:stretch!important;
+}
+.sat-guide-row > .sat-score-guide,
+.sat-guide-row > .sat-guide-score-panel{
+  align-self:stretch!important;
+  height:auto!important;
+  min-height:100%;
+  box-sizing:border-box;
+}
+@media(max-width:1050px){
+  .sat-guide-row > .sat-score-guide,
+  .sat-guide-row > .sat-guide-score-panel{
+    min-height:0;
+  }
+}
