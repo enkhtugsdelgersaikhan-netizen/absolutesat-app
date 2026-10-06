@@ -259,6 +259,31 @@ const resultsMessage =
         "results-message"
     );
 
+const mockSectionScores =
+    document.getElementById(
+        "mock-section-scores"
+    );
+
+const mockRwScore =
+    document.getElementById(
+        "mock-rw-score"
+    );
+
+const mockMathScore =
+    document.getElementById(
+        "mock-math-score"
+    );
+
+const mockRwRaw =
+    document.getElementById(
+        "mock-rw-raw"
+    );
+
+const mockMathRaw =
+    document.getElementById(
+        "mock-math-raw"
+    );
+
 const reviewResultsButton =
     document.getElementById(
         "review-results-button"
@@ -3693,6 +3718,123 @@ function setMockCurrentIndex(
 }
 
 
+function roundSatScoreToNearestTen(
+    value
+) {
+    return Math.round(
+        Number(value) / 10
+    ) * 10;
+}
+
+
+function calculateMockSatScores(
+    readingWritingCorrect,
+    mathCorrect
+) {
+    const r =
+        Math.max(
+            0,
+            Math.min(
+                54,
+                Number(
+                    readingWritingCorrect
+                ) || 0
+            )
+        );
+
+    const m =
+        Math.max(
+            0,
+            Math.min(
+                44,
+                Number(
+                    mathCorrect
+                ) || 0
+            )
+        );
+
+    const readingWriting =
+        roundSatScoreToNearestTen(
+            200 +
+            600 * (
+                r / 54
+            )
+        );
+
+    const math =
+        roundSatScoreToNearestTen(
+            200 +
+            600 * (
+                m / 44
+            )
+        );
+
+    const total =
+        roundSatScoreToNearestTen(
+            400 +
+            600 * (
+                r / 54 +
+                m / 44
+            )
+        );
+
+    return {
+        total:
+            Math.max(
+                400,
+                Math.min(
+                    1600,
+                    total
+                )
+            ),
+        readingWriting:
+            Math.max(
+                200,
+                Math.min(
+                    800,
+                    readingWriting
+                )
+            ),
+        math:
+            Math.max(
+                200,
+                Math.min(
+                    800,
+                    math
+                )
+            )
+    };
+}
+
+
+function mockModuleUsesEasierRoute(
+    result
+) {
+    if (
+        !result ||
+        !Number.isFinite(
+            Number(result.total)
+        ) ||
+        Number(result.total) <= 0
+    ) {
+        return false;
+    }
+
+    const missed =
+        Number(
+            result.incorrect || 0
+        ) +
+        Number(
+            result.unanswered || 0
+        );
+
+    return (
+        missed >
+        Number(result.total) / 3
+    );
+}
+
+
 function scoreMockQuestions(
     questionList
 ) {
@@ -4412,17 +4554,13 @@ function finishMockModule(
         mockState.currentStage ===
             "rw_m1"
     ) {
-        const threshold =
-            mockManifest.routing
-                ?.readingWritingHighMinCorrect ||
-            17;
-
         mockState.routes
             .readingWriting =
-            result.correct >=
-                threshold
-                ? "high"
-                : "low";
+            mockModuleUsesEasierRoute(
+                result
+            )
+                ? "low"
+                : "high";
 
         mockState.currentStage =
             "rw_m2";
@@ -4448,16 +4586,12 @@ function finishMockModule(
         mockState.currentStage ===
             "math_m1"
     ) {
-        const threshold =
-            mockManifest.routing
-                ?.mathHighMinCorrect ||
-            14;
-
         mockState.routes.math =
-            result.correct >=
-                threshold
-                ? "high"
-                : "low";
+            mockModuleUsesEasierRoute(
+                result
+            )
+                ? "low"
+                : "high";
 
         mockState.currentStage =
             "math_m2";
@@ -4561,10 +4695,14 @@ function showMockFinalResults() {
         "mock-results-active"
     );
 
+    const satScores =
+        calculateMockSatScores(
+            rwResult.correct,
+            mathResult.correct
+        );
+
     scoreNumber.textContent =
-        results.correct +
-        "/" +
-        results.total;
+        satScores.total;
 
     const scoreLabel =
         document.querySelector(
@@ -4573,7 +4711,34 @@ function showMockFinalResults() {
 
     if (scoreLabel) {
         scoreLabel.textContent =
-            "Raw correct";
+            "SAT score";
+    }
+
+    if (mockSectionScores) {
+        mockSectionScores
+            .classList.remove(
+                "hidden"
+            );
+    }
+
+    if (mockRwScore) {
+        mockRwScore.textContent =
+            satScores.readingWriting;
+    }
+
+    if (mockMathScore) {
+        mockMathScore.textContent =
+            satScores.math;
+    }
+
+    if (mockRwRaw) {
+        mockRwRaw.textContent =
+            rwResult.correct;
+    }
+
+    if (mockMathRaw) {
+        mockMathRaw.textContent =
+            mathResult.correct;
     }
 
     correctCount.textContent =
@@ -4604,16 +4769,21 @@ function showMockFinalResults() {
             : "lower";
 
     resultsMessage.textContent =
-        "Reading & Writing: " +
+        "Estimated SAT score: " +
+        satScores.total +
+        ". Reading & Writing: " +
+        satScores.readingWriting +
+        " (" +
         rwResult.correct +
-        "/54 · Math: " +
+        "/54 correct). Math: " +
+        satScores.math +
+        " (" +
         mathResult.correct +
-        "/44. " +
-        "Your adaptive routes were " +
+        "/44 correct). Adaptive routes: " +
         rwRoute +
-        " for Reading & Writing and " +
+        " Reading & Writing, " +
         mathRoute +
-        " for Math.";
+        " Math.";
 
     const backLink =
         document.getElementById(
@@ -9549,6 +9719,10 @@ function showResults(
         "hidden"
     );
 
+
+    mockSectionScores?.classList.add(
+        "hidden"
+    );
 
     scoreNumber.textContent =
         `${results.percentage}%`;
