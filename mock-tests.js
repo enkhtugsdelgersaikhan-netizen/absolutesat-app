@@ -49,32 +49,45 @@ function renderTest(test,userId){
         );
     }catch{}
 
-    const started=Boolean(state&&!state.completed);
-    const completed=Boolean(state&&state.completed);
-    const modules=(test.sections||[]).map((module,index)=>`
+    const available=
+        test.available!==false &&
+        test.populated!==false;
+    const started=Boolean(available&&state&&!state.completed);
+    const completed=Boolean(available&&state&&state.completed);
+    const modules=(test.sections||[]).map(module=>`
         <div class="mock-module">
             <strong>${escapeHtml(module.label)} · ${escapeHtml(module.module)}</strong>
-            <span>${module.questions} questions · ${module.minutes} minutes</span>
+            <span>${
+                available
+                    ? module.questions+" questions"
+                    : (module.plannedQuestions||module.questions||0)+" questions planned"
+            } · ${module.minutes} minutes</span>
         </div>
     `).join("");
 
     return `
-        <article class="mock-card">
+        <article class="mock-card ${available?"":"mock-card-unavailable"}">
             <div class="mock-card-top">
                 <div>
                     <div class="mock-card-kicker">
                         <span>LEXLOGICA PRACTICE</span>
-                        <span class="mock-status">${completed?"COMPLETED":started?"IN PROGRESS":"READY"}</span>
+                        <span class="mock-status">${available?(completed?"COMPLETED":started?"IN PROGRESS":"READY"):"AWAITING QUESTIONS"}</span>
                     </div>
                     <h3>${escapeHtml(test.title)}</h3>
                     <p class="mock-card-description">${escapeHtml(test.description)}</p>
                 </div>
                 <div class="mock-card-action">
-                    <a class="mock-start" href="/question?mock=${encodeURIComponent(test.id)}${completed?"&restart=1":""}">
-                        ${started?"Resume test":completed?"Retake test":"Start test"}
-                        <span aria-hidden="true">→</span>
-                    </a>
-                    <span class="mock-progress-note">${escapeHtml(progressLabel(state))}</span>
+                    ${
+                        available
+                            ? `<a class="mock-start" href="/question?mock=${encodeURIComponent(test.id)}${completed?"&restart=1":""}">
+                                ${started?"Resume test":completed?"Retake test":"Start test"}
+                                <span aria-hidden="true">→</span>
+                               </a>`
+                            : `<button class="mock-start mock-start-disabled" type="button" disabled>
+                                Awaiting questions
+                               </button>`
+                    }
+                    <span class="mock-progress-note">${available?escapeHtml(progressLabel(state)):"Not populated yet"}</span>
                 </div>
             </div>
             <div class="mock-module-strip">${modules}</div>
@@ -92,7 +105,7 @@ async function initializeMockTests(){
             return;
         }
 
-        const response=await fetch("/mock-tests-catalog.json?v=1",{cache:"no-store"});
+        const response=await fetch("/mock-tests-catalog.json?v=2",{cache:"no-store"});
         if(!response.ok)throw new Error("Catalog returned "+response.status);
 
         const catalog=await response.json();
