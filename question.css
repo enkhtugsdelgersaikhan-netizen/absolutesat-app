@@ -2758,3 +2758,14 @@ body.math-question-active .sat-answer-pane .choices{
         padding-bottom:18px;
     }
 }
+
+
+/* Math content typography: serif like the original SAT-style presentation.
+   UI controls/labels remain sans-serif; prose is upright via the rule above. */
+body.math-question-active .math-question-context-content,
+body.math-question-active .sat-answer-pane .question-text,
+body.math-question-active .sat-answer-pane .choice-text,
+body.math-question-active .choice-reason-text,
+body.math-question-active .answer-feedback-explanation{
+    font-family:"Noto Serif", Georgia, "Times New Roman", serif!important;
+}
