@@ -330,6 +330,21 @@ const resultsReviewList =
         "results-review-list"
     );
 
+const mockReviewDetail =
+    document.getElementById(
+        "mock-review-detail"
+    );
+
+const mockDomainPerformance =
+    document.getElementById(
+        "mock-domain-performance"
+    );
+
+const mockDomainPerformanceGrid =
+    document.getElementById(
+        "mock-domain-performance-grid"
+    );
+
 const checkAnswerButton =
     document.getElementById(
         "check-answer-button"
@@ -4840,6 +4855,10 @@ function showMockFinalResults() {
     resultsSetTitle.textContent =
         mockManifest.title ||
         "SAT Mock Test";
+
+    renderMockDomainPerformance(
+        results.detailedResults
+    );
 
     const rwRoute =
         mockState.routes
@@ -10006,6 +10025,10 @@ function showResults(
         "hidden"
     );
 
+    mockDomainPerformance?.classList.add(
+        "hidden"
+    );
+
     scoreNumber.textContent =
         `${results.percentage}%`;
 
@@ -10059,6 +10082,775 @@ function showResults(
 }
 
 
+function calculateMockDomainPerformance(
+    detailedResults
+) {
+    const groups =
+        new Map();
+
+    (
+        Array.isArray(
+            detailedResults
+        )
+            ? detailedResults
+            : []
+    ).forEach(
+        result => {
+            const question =
+                result.question;
+
+            if (!question) {
+                return;
+            }
+
+            const section =
+                question.section ||
+                question.mock_review_section ||
+                "Other";
+
+            const domain =
+                question.domain ||
+                question.topic ||
+                "Other";
+
+            const key =
+                section +
+                "\u0000" +
+                domain;
+
+            if (!groups.has(key)) {
+                groups.set(
+                    key,
+                    {
+                        section,
+                        domain,
+                        correct: 0,
+                        total: 0
+                    }
+                );
+            }
+
+            const group =
+                groups.get(key);
+
+            group.total += 1;
+
+            if (
+                result.status ===
+                "correct"
+            ) {
+                group.correct += 1;
+            }
+        }
+    );
+
+    const sectionOrder = [
+        "Reading & Writing",
+        "Math"
+    ];
+
+    const domainOrder = {
+        "Reading & Writing": [
+            "Craft and Structure",
+            "Information and Ideas",
+            "Standard English Conventions",
+            "Expression of Ideas"
+        ],
+        "Math": [
+            "Algebra",
+            "Advanced Math",
+            "Problem-Solving and Data Analysis",
+            "Geometry and Trigonometry"
+        ]
+    };
+
+    return Array.from(
+        groups.values()
+    ).sort(
+        (
+            left,
+            right
+        ) => {
+            const sectionDifference =
+                sectionOrder.indexOf(
+                    left.section
+                ) -
+                sectionOrder.indexOf(
+                    right.section
+                );
+
+            if (sectionDifference) {
+                return sectionDifference;
+            }
+
+            const order =
+                domainOrder[
+                    left.section
+                ] || [];
+
+            const leftIndex =
+                order.indexOf(
+                    left.domain
+                );
+
+            const rightIndex =
+                order.indexOf(
+                    right.domain
+                );
+
+            if (
+                leftIndex >= 0 ||
+                rightIndex >= 0
+            ) {
+                return (
+                    (
+                        leftIndex >= 0
+                            ? leftIndex
+                            : 999
+                    ) -
+                    (
+                        rightIndex >= 0
+                            ? rightIndex
+                            : 999
+                    )
+                );
+            }
+
+            return left.domain
+                .localeCompare(
+                    right.domain
+                );
+        }
+    );
+}
+
+
+function renderMockDomainPerformance(
+    detailedResults
+) {
+    if (
+        !mockDomainPerformance ||
+        !mockDomainPerformanceGrid
+    ) {
+        return;
+    }
+
+    const groups =
+        calculateMockDomainPerformance(
+            detailedResults
+        );
+
+    if (!groups.length) {
+        mockDomainPerformance
+            .classList.add(
+                "hidden"
+            );
+        return;
+    }
+
+    const sections =
+        new Map();
+
+    groups.forEach(
+        group => {
+            if (
+                !sections.has(
+                    group.section
+                )
+            ) {
+                sections.set(
+                    group.section,
+                    []
+                );
+            }
+
+            sections
+                .get(
+                    group.section
+                )
+                .push(
+                    group
+                );
+        }
+    );
+
+    mockDomainPerformanceGrid
+        .innerHTML =
+        Array.from(
+            sections.entries()
+        )
+            .map(
+                (
+                    [
+                        section,
+                        sectionGroups
+                    ]
+                ) =>
+                    '<div class="mock-domain-section">' +
+                        '<div class="mock-domain-section-title">' +
+                            escapeHtml(
+                                section
+                            ) +
+                        '</div>' +
+                        '<div class="mock-domain-cards">' +
+                            sectionGroups
+                                .map(
+                                    group => {
+                                        const percentage =
+                                            group.total
+                                                ? Math.round(
+                                                    (
+                                                        group.correct /
+                                                        group.total
+                                                    ) *
+                                                    100
+                                                )
+                                                : 0;
+
+                                        return (
+                                            '<div class="mock-domain-card">' +
+                                                '<div class="mock-domain-card-top">' +
+                                                    '<span>' +
+                                                        escapeHtml(
+                                                            group.domain
+                                                        ) +
+                                                    '</span>' +
+                                                    '<strong>' +
+                                                        group.correct +
+                                                        '/' +
+                                                        group.total +
+                                                    '</strong>' +
+                                                '</div>' +
+                                                '<div class="mock-domain-meter" aria-label="' +
+                                                    escapeHtml(
+                                                        group.domain
+                                                    ) +
+                                                    ': ' +
+                                                    percentage +
+                                                    ' percent correct">' +
+                                                    '<i style="width:' +
+                                                        percentage +
+                                                        '%"></i>' +
+                                                '</div>' +
+                                                '<small>' +
+                                                    percentage +
+                                                    '% correct' +
+                                                '</small>' +
+                                            '</div>'
+                                        );
+                                    }
+                                )
+                                .join(
+                                    ""
+                                ) +
+                        '</div>' +
+                    '</div>'
+            )
+            .join(
+                ""
+            );
+
+    mockDomainPerformance
+        .classList.remove(
+            "hidden"
+        );
+}
+
+
+function getMockReviewChoiceContent(
+    question,
+    letter
+) {
+    const choiceText =
+        getChoiceText(
+            question,
+            letter
+        );
+
+    if (
+        question.choice_graphs?.[
+            letter
+        ]
+    ) {
+        return (
+            renderChoiceMiniGraph(
+                question.choice_graphs[
+                    letter
+                ]
+            ) +
+            (
+                choiceText
+                    ? '<span class="choice-graph-label">' +
+                        renderQuestionContent(
+                            question,
+                            choiceText
+                        ) +
+                      '</span>'
+                    : ""
+            )
+        );
+    }
+
+    if (
+        question.choice_tables?.[
+            letter
+        ]
+    ) {
+        return renderChoiceMiniTable(
+            question.choice_tables[
+                letter
+            ],
+            question
+        );
+    }
+
+    return renderQuestionContent(
+        question,
+        choiceText
+    );
+}
+
+
+function renderMockReviewQuestion(
+    detailedResults,
+    selectedIndex
+) {
+    if (!mockReviewDetail) {
+        return;
+    }
+
+    const result =
+        detailedResults[
+            selectedIndex
+        ];
+
+    if (!result) {
+        mockReviewDetail
+            .classList.add(
+                "hidden"
+            );
+        return;
+    }
+
+    const question =
+        result.question;
+
+    const context =
+        (
+            question.passage ||
+            question.graph ||
+            question.table
+        )
+            ? (
+                '<div class="mock-review-context">' +
+                    '<div class="mock-review-context-label">' +
+                        (
+                            question.section ===
+                                "Math"
+                                ? "Information"
+                                : "Passage"
+                        ) +
+                    '</div>' +
+                    renderQuestionPassage(
+                        question
+                    ) +
+                '</div>'
+            )
+            : "";
+
+    const metaParts = [
+        question.mock_review_section ||
+            question.section,
+        question.mock_review_module,
+        question.domain
+    ].filter(
+        Boolean
+    );
+
+    let answerArea = "";
+
+    if (
+        question.answer_type ===
+        "student-response"
+    ) {
+        const accepted =
+            Array.isArray(
+                question.accepted_answers
+            ) &&
+            question.accepted_answers
+                .length
+                ? question
+                    .accepted_answers
+                    .join(
+                        " or "
+                    )
+                : String(
+                    question.correct_answer ||
+                    ""
+                );
+
+        answerArea =
+            '<div class="mock-review-student-response">' +
+                '<div>' +
+                    '<span>Your answer</span>' +
+                    '<strong>' +
+                        escapeHtml(
+                            result.selected ||
+                            "No answer"
+                        ) +
+                    '</strong>' +
+                '</div>' +
+                '<div>' +
+                    '<span>Correct answer</span>' +
+                    '<strong>' +
+                        renderQuestionContent(
+                            question,
+                            accepted
+                        ) +
+                    '</strong>' +
+                '</div>' +
+            '</div>' +
+            '<div class="mock-review-response-explanation">' +
+                '<span>Explanation</span>' +
+                '<div>' +
+                    renderQuestionContent(
+                        question,
+                        question.explanation ||
+                        "No explanation is available."
+                    ) +
+                '</div>' +
+            '</div>';
+    } else {
+        const letters = [
+            "A",
+            "B",
+            "C",
+            "D"
+        ];
+
+        answerArea =
+            '<div class="mock-review-choices">' +
+                letters
+                    .map(
+                        letter => {
+                            const isCorrect =
+                                letter ===
+                                question.correct_answer;
+
+                            const isSelected =
+                                result.selected ===
+                                letter;
+
+                            const explanation =
+                                getChoiceExplanation(
+                                    question,
+                                    letter
+                                ) ||
+                                (
+                                    isCorrect
+                                        ? question.explanation
+                                        : ""
+                                ) ||
+                                "No choice-specific explanation is available.";
+
+                            return (
+                                '<div class="mock-review-choice ' +
+                                    (
+                                        isCorrect
+                                            ? "correct "
+                                            : ""
+                                    ) +
+                                    (
+                                        isSelected
+                                            ? "selected "
+                                            : ""
+                                    ) +
+                                    '">' +
+                                    '<div class="mock-review-choice-row">' +
+                                        '<span class="mock-review-choice-letter">' +
+                                            letter +
+                                        '</span>' +
+                                        '<div class="mock-review-choice-text">' +
+                                            getMockReviewChoiceContent(
+                                                question,
+                                                letter
+                                            ) +
+                                        '</div>' +
+                                        '<div class="mock-review-choice-badges">' +
+                                            (
+                                                isSelected
+                                                    ? '<span class="your-answer">Your answer</span>'
+                                                    : ""
+                                            ) +
+                                            (
+                                                isCorrect
+                                                    ? '<span class="correct-answer">Correct</span>'
+                                                    : ""
+                                            ) +
+                                        '</div>' +
+                                    '</div>' +
+                                    '<div class="mock-review-choice-explanation ' +
+                                        (
+                                            isCorrect
+                                                ? "correct"
+                                                : "wrong"
+                                        ) +
+                                        '">' +
+                                        '<strong>' +
+                                            (
+                                                isCorrect
+                                                    ? "Why this works"
+                                                    : "Why this doesn’t work"
+                                            ) +
+                                        '</strong>' +
+                                        '<div>' +
+                                            renderQuestionContent(
+                                                question,
+                                                explanation
+                                            ) +
+                                        '</div>' +
+                                    '</div>' +
+                                '</div>'
+                            );
+                        }
+                    )
+                    .join(
+                        ""
+                    ) +
+            '</div>';
+    }
+
+    mockReviewDetail.innerHTML =
+        '<div class="mock-review-detail-head">' +
+            '<div>' +
+                '<span>' +
+                    escapeHtml(
+                        metaParts.join(
+                            " · "
+                        )
+                    ) +
+                '</span>' +
+                '<strong>Question ' +
+                    (
+                        selectedIndex +
+                        1
+                    ) +
+                '</strong>' +
+            '</div>' +
+            '<span class="mock-review-detail-status ' +
+                result.status +
+                '">' +
+                (
+                    result.status ===
+                        "correct"
+                        ? "Correct"
+                        : result.status ===
+                            "incorrect"
+                            ? "Incorrect"
+                            : "Unanswered"
+                ) +
+            '</span>' +
+        '</div>' +
+        context +
+        '<div class="mock-review-question-text">' +
+            renderQuestionContent(
+                question,
+                question.question_text
+            ) +
+        '</div>' +
+        answerArea;
+
+    mockReviewDetail
+        .classList.remove(
+            "hidden"
+        );
+
+    resultsReviewList
+        ?.querySelectorAll(
+            ".mock-review-symbol"
+        )
+        .forEach(
+            (
+                button,
+                index
+            ) => {
+                button.classList.toggle(
+                    "selected",
+                    index ===
+                        selectedIndex
+                );
+            }
+        );
+
+    typesetQuestionMath();
+}
+
+
+function renderMockResultsReview(
+    results
+) {
+    if (
+        !resultsReviewList ||
+        !mockReviewDetail
+    ) {
+        return;
+    }
+
+    const detailedResults =
+        results.detailedResults || [];
+
+    const groups =
+        new Map();
+
+    detailedResults.forEach(
+        (
+            result,
+            index
+        ) => {
+            const question =
+                result.question;
+
+            const label =
+                (
+                    question.mock_review_section ||
+                    question.section ||
+                    "Questions"
+                ) +
+                " · " +
+                (
+                    question.mock_review_module ||
+                    ""
+                );
+
+            if (!groups.has(label)) {
+                groups.set(
+                    label,
+                    []
+                );
+            }
+
+            groups
+                .get(label)
+                .push({
+                    result,
+                    index
+                });
+        }
+    );
+
+    resultsReviewList.innerHTML =
+        Array.from(
+            groups.entries()
+        )
+            .map(
+                (
+                    [
+                        label,
+                        items
+                    ]
+                ) =>
+                    '<section class="mock-review-group">' +
+                        '<div class="mock-review-group-title">' +
+                            escapeHtml(
+                                label
+                            ) +
+                        '</div>' +
+                        '<div class="mock-review-symbol-grid">' +
+                            items
+                                .map(
+                                    (
+                                        item,
+                                        localIndex
+                                    ) => {
+                                        const reviewed =
+                                            markedForReview[
+                                                item.result
+                                                    .question
+                                                    .id
+                                            ] ===
+                                            true;
+
+                                        return (
+                                            '<button ' +
+                                                'type="button" ' +
+                                                'class="mock-review-symbol ' +
+                                                    item.result.status +
+                                                    '" ' +
+                                                'data-mock-review-index="' +
+                                                    item.index +
+                                                    '" ' +
+                                                'aria-label="Review question ' +
+                                                    (
+                                                        localIndex +
+                                                        1
+                                                    ) +
+                                                    '">' +
+                                                '<span>' +
+                                                    (
+                                                        localIndex +
+                                                        1
+                                                    ) +
+                                                '</span>' +
+                                                '<i class="mock-review-status-dot"></i>' +
+                                                (
+                                                    reviewed
+                                                        ? '<b class="mock-review-bookmark" aria-hidden="true"></b>'
+                                                        : ""
+                                                ) +
+                                            '</button>'
+                                        );
+                                    }
+                                )
+                                .join(
+                                    ""
+                                ) +
+                        '</div>' +
+                    '</section>'
+            )
+            .join(
+                ""
+            );
+
+    resultsReviewList
+        .querySelectorAll(
+            "[data-mock-review-index]"
+        )
+        .forEach(
+            button => {
+                button.addEventListener(
+                    "click",
+                    () => {
+                        const index =
+                            Number(
+                                button.dataset
+                                    .mockReviewIndex
+                            );
+
+                        renderMockReviewQuestion(
+                            detailedResults,
+                            index
+                        );
+                    }
+                );
+            }
+        );
+
+    const firstIndex =
+        detailedResults.findIndex(
+            result =>
+                result.status !==
+                "correct"
+        );
+
+    renderMockReviewQuestion(
+        detailedResults,
+        firstIndex >= 0
+            ? firstIndex
+            : 0
+    );
+}
+
+
 /* ============================================================
    SHOW QUESTION REVIEW
    ============================================================ */
@@ -10092,8 +10884,19 @@ function showResultsReview() {
     resultsReviewList.innerHTML =
         "";
 
+    if (mockReviewDetail) {
+        mockReviewDetail
+            .classList.add(
+                "hidden"
+            );
+    }
 
-    results.detailedResults.forEach(
+    if (mockTestMode) {
+        renderMockResultsReview(
+            results
+        );
+    } else {
+        results.detailedResults.forEach(
         (
             result,
             index
@@ -10230,6 +11033,9 @@ function showResultsReview() {
         }
     );
 
+
+
+    }
 
     resultsReview.classList.remove(
         "hidden"
