@@ -6234,3 +6234,104 @@ body.dark-mode .question-diagram-polygon.question-diagram-shaded{
         padding:17px!important;
     }
 }
+
+
+/* ============================================================
+   UNIFIED LEXLOGICA SURFACE SYSTEM
+   Based on the university catalog: restrained depth, quiet borders.
+   ============================================================ */
+:root{
+    --ll-surface:#ffffff;
+    --ll-surface-soft:#f8fbfa;
+    --ll-border:#dbe4e2;
+    --ll-border-strong:#c9d9d5;
+    --ll-border-hover:#9bc8c0;
+    --ll-text:#173b36;
+    --ll-muted:#6f817d;
+    --ll-accent:#0e7367;
+    --ll-radius:14px;
+    --ll-radius-sm:10px;
+    --ll-shadow:0 4px 14px rgba(15,23,42,.045);
+    --ll-shadow-hover:0 8px 20px rgba(15,23,42,.065);
+    --ll-control-shadow:0 2px 6px rgba(15,23,42,.04);
+}
+
+/* Cards / sections */
+.feature-card,
+.study-card,
+.sat-score-guide,
+.sat-guide-score-panel,
+.sat-context-profile,
+.sat-guide-explainer,
+.sat-impact-panel{
+    border-color:var(--ll-border)!important;
+    border-radius:var(--ll-radius)!important;
+    background:var(--ll-surface)!important;
+    box-shadow:var(--ll-shadow)!important;
+}
+.feature-card:hover,
+.study-card:hover{
+    transform:translateY(-2px)!important;
+    border-color:var(--ll-border-hover)!important;
+    box-shadow:var(--ll-shadow-hover)!important;
+}
+
+/* Home feature icons: no flat floating pastel blocks, no heavy 3D. */
+.home-features-compact .feature-icon,
+.feature-icon{
+    border:1px solid #cfe0dc!important;
+    border-radius:10px!important;
+    background:#eef7f5!important;
+    color:var(--ll-accent)!important;
+    box-shadow:0 2px 5px rgba(15,23,42,.035)!important;
+}
+
+/* General controls */
+.nav-button,
+.login-button,
+.dashboard-button,
+.study-button,
+.hero-primary-button,
+.hero-secondary-button,
+.sat-context-profile-actions button,
+.sat-impact-button{
+    border-radius:10px!important;
+    box-shadow:var(--ll-control-shadow)!important;
+    transition:
+        transform .16s ease,
+        border-color .16s ease,
+        background-color .16s ease,
+        box-shadow .16s ease,
+        color .16s ease!important;
+}
+.nav-button:hover,
+.login-button:hover,
+.dashboard-button:hover,
+.study-button:hover,
+.hero-primary-button:hover,
+.hero-secondary-button:hover,
+.sat-context-profile-actions button:hover,
+.sat-impact-button:hover{
+    transform:translateY(-1px)!important;
+    box-shadow:0 4px 10px rgba(15,23,42,.055)!important;
+}
+.nav-button:active,
+.login-button:active,
+.dashboard-button:active,
+.study-button:active,
+.hero-primary-button:active,
+.hero-secondary-button:active,
+.sat-context-profile-actions button:active,
+.sat-impact-button:active{
+    transform:translateY(0)!important;
+    box-shadow:0 1px 3px rgba(15,23,42,.035)!important;
+}
+
+/* Keep university surfaces as the reference, not an exception. */
+.university-card,
+.university-search-row{
+    box-shadow:var(--ll-shadow)!important;
+}
+.university-card:hover{
+    box-shadow:var(--ll-shadow-hover)!important;
+}
