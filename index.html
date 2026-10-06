@@ -33,7 +33,7 @@
 
     <link
         rel="stylesheet"
-        href="style.css?v=score-guide-2"
+        href="style.css?v=score-guide-3"
     >
 
 <link rel="stylesheet" href="/responsive.css?v=1"></head>
@@ -335,6 +335,48 @@
 <script src="auth.js?v=dark-3"></script>
 <script src="/university-top100.js?v=top100-1"></script>
 <script src="/university-catalog.js?v=assets-hires-1"></script>
+<script>
+(function () {
+    const guide = document.querySelector(".sat-guide-row > .sat-score-guide");
+    const panel = document.querySelector(".sat-guide-row > .sat-guide-score-panel");
+    if (!guide || !panel) return;
+
+    let syncing = false;
+
+    function syncSatGuideHeight() {
+        if (syncing) return;
+        syncing = true;
+
+        panel.classList.remove("sat-guide-score-panel-tight");
+        panel.style.height = "";
+
+        if (window.innerWidth <= 1050) {
+            syncing = false;
+            return;
+        }
+
+        const target = Math.ceil(guide.getBoundingClientRect().height);
+        panel.classList.add("sat-guide-score-panel-tight");
+        panel.style.height = target + "px";
+
+        if (panel.scrollHeight > target + 2) {
+            panel.style.height = "";
+        }
+
+        syncing = false;
+    }
+
+    window.addEventListener("resize", syncSatGuideHeight);
+    window.addEventListener("load", syncSatGuideHeight);
+
+    if ("ResizeObserver" in window) {
+        const observer = new ResizeObserver(syncSatGuideHeight);
+        observer.observe(guide);
+    }
+
+    requestAnimationFrame(syncSatGuideHeight);
+})();
+</script>
 
 </body>
 </html>
