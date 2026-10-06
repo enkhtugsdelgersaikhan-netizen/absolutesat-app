@@ -7238,6 +7238,9 @@ function normalizeStagedQuestion(
         graph:
             stagedQuestion.graph ||
             null,
+        diagram:
+            stagedQuestion.diagram ||
+            null,
         choice_tables:
             stagedQuestion.choiceTables ||
             stagedQuestion.choice_tables ||
