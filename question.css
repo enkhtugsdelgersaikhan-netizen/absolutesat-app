@@ -3091,3 +3091,109 @@ body.mock-results-active .score-circle #score-number{
         max-width:none;
     }
 }
+
+
+/* ============================================================
+   QUESTION BANK CLASSIFICATION + STABLE CHOICE CROSS-OUT
+   ============================================================ */
+.question-progress-identity{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:9px 12px;
+    min-width:0;
+}
+
+.question-metadata{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:6px;
+    min-width:0;
+}
+
+.question-meta-pill{
+    display:inline-flex;
+    align-items:center;
+    min-height:25px;
+    max-width:340px;
+    padding:4px 9px;
+    border:1px solid #dce4ed;
+    border-radius:999px;
+    background:#f8fafc;
+    color:#5f6f82;
+    font-size:11px;
+    font-weight:600;
+    line-height:1.2;
+    white-space:normal;
+}
+
+.question-meta-domain{
+    background:#f4f8f8;
+    border-color:#d6e7e5;
+    color:#3e6563;
+}
+
+.question-meta-subtopic{
+    background:#f8fafc;
+    color:#526174;
+}
+
+.question-meta-difficulty[data-difficulty="easy"]{
+    background:#f3faf6;
+    border-color:#d7eadf;
+    color:#49715a;
+}
+
+.question-meta-difficulty[data-difficulty="medium"]{
+    background:#fff9ee;
+    border-color:#eee1bf;
+    color:#846a2d;
+}
+
+.question-meta-difficulty[data-difficulty="hard"]{
+    background:#fff4f4;
+    border-color:#efdada;
+    color:#8a5050;
+}
+
+/* Mock tests intentionally never expose domain/subtopic/difficulty. */
+body.mock-test-active .question-metadata{
+    display:none!important;
+}
+
+/*
+ * Cross-out is purely visual. The choice DOM stays intact so MathJax,
+ * graphs, tables, superscripts, fractions, and spacing cannot be lost.
+ */
+.choice-strike-button.active{
+    border-color:#fca5a5;
+    background:#fef2f2;
+    color:#dc2626;
+}
+
+.choice.eliminated .choice-text{
+    opacity:.68;
+}
+
+/* Do not apply one continuous text-decoration across rich MathJax/table
+   content; that can visually cut through fractions and restructure math. */
+.choice.eliminated .choice-text{
+    text-decoration:none!important;
+}
+
+.choice.eliminated .choice-text::after{
+    content:"";
+}
+
+@media(max-width:900px){
+    .question-progress-identity{
+        align-items:flex-start;
+        flex-direction:column;
+        gap:7px;
+    }
+
+    .question-meta-pill{
+        max-width:280px;
+    }
+}
