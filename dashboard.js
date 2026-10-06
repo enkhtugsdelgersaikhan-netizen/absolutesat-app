@@ -22,8 +22,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         streak: document.getElementById("streak"),
         answered: document.getElementById("questions-answered"),
         sevenDay: document.getElementById("seven-day-chart"),
-        scoreChart: document.getElementById("practice-score-chart"),
-        scoreCurrent: document.getElementById("practice-score-current"),
+        mockChart: document.getElementById("mock-performance-chart"),
         subtopicBody: document.getElementById("subtopic-table-body"),
         priority: document.getElementById("priority-list"),
         difficulty: document.getElementById("difficulty-profile"),
@@ -216,6 +215,15 @@ document.addEventListener("DOMContentLoaded", async () => {
         els.answered.textContent = attempts.length.toLocaleString();
     }
 
+    function getNiceActivityMaximum(value) {
+        const maximum = Math.max(0, Number(value) || 0);
+        if (maximum <= 5) return 5;
+        if (maximum <= 10) return 10;
+        if (maximum <= 20) return Math.ceil(maximum / 5) * 5;
+        if (maximum <= 50) return Math.ceil(maximum / 10) * 10;
+        return Math.ceil(maximum / 20) * 20;
+    }
+
     function renderSevenDay(attempts) {
         const today = startOfLocalDay(new Date());
         const days = [];
@@ -235,26 +243,39 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
 
         const maxTotal = Math.max(
-            1,
+            0,
             ...days.map(day => day.correct + day.incorrect)
         );
+        const scaleMax = getNiceActivityMaximum(maxTotal);
+        const scaleMid = Math.round(scaleMax / 2);
         const maxHeight = 156;
 
-        els.sevenDay.classList.remove("dashboard-empty-chart");
-        els.sevenDay.innerHTML = days.map((day, index) => {
+        const grid =
+            '<div class="activity-scale" aria-hidden="true">' +
+                '<span style="bottom:186px">' + scaleMax + '</span>' +
+                '<span style="bottom:108px">' + scaleMid + '</span>' +
+                '<span style="bottom:30px">0</span>' +
+            '</div>' +
+            '<div class="activity-grid-line" style="bottom:186px"></div>' +
+            '<div class="activity-grid-line" style="bottom:108px"></div>' +
+            '<div class="activity-grid-line" style="bottom:30px"></div>';
+
+        const bars = days.map((day, index) => {
             const total = day.correct + day.incorrect;
+            const totalHeight = total
+                ? Math.round(total / scaleMax * maxHeight)
+                : 0;
             const correctHeight = total
-                ? Math.max(day.correct ? 3 : 0, Math.round(day.correct / maxTotal * maxHeight))
+                ? Math.round(totalHeight * day.correct / total)
                 : 0;
-            const incorrectHeight = total
-                ? Math.max(day.incorrect ? 3 : 0, Math.round(day.incorrect / maxTotal * maxHeight))
-                : 0;
+            const incorrectHeight = Math.max(0, totalHeight - correctHeight);
             const label = day.date.toLocaleDateString(undefined, { weekday: "short" });
             const full = day.date.toLocaleDateString(undefined, { month: "short", day: "numeric" });
+
             return (
                 '<div class="activity-day' + (index === 6 ? ' is-today' : '') +
                 '" title="' + escapeHtml(full + ": " + total + " answered") + '">' +
-                    '<div class="activity-count">' + (total || "") + '</div>' +
+                    '<div class="activity-count">' + total + '</div>' +
                     '<div class="activity-bar-track" aria-label="' +
                         escapeHtml(total + " questions: " + day.correct + " correct, " + day.incorrect + " incorrect") + '">' +
                         '<div class="activity-segment incorrect" style="height:' + incorrectHeight + 'px"></div>' +
@@ -264,75 +285,201 @@ document.addEventListener("DOMContentLoaded", async () => {
                 '</div>'
             );
         }).join("");
+
+        els.sevenDay.classList.remove("dashboard-empty-chart");
+        els.sevenDay.innerHTML =
+            grid +
+            '<div class="activity-bars">' +
+                bars +
+            '</div>' +
+            '<div class="activity-axis-title">Questions</div>';
     }
 
-    function rollingPracticeScores(attempts) {
-        const ordered = attempts
-            .filter(row => row.created_at || row.answered_at)
-            .slice()
-            .sort((a, b) =>
-                new Date(a.created_at || a.answered_at) -
-                new Date(b.created_at || b.answered_at)
+    function roundSatScoreToNearestTen(value) {
+        return Math.round(Number(value) / 10) * 10;
+    }
+
+    function calculateMockSatScores(readingWritingCorrect, mathCorrect) {
+        const r = Math.max(0, Math.min(54, Number(readingWritingCorrect) || 0));
+        const m = Math.max(0, Math.min(44, Number(mathCorrect) || 0));
+
+        const readingWriting = roundSatScoreToNearestTen(
+            200 + 600 * (r / 54)
+        );
+        const math = roundSatScoreToNearestTen(
+            200 + 600 * (m / 44)
+        );
+        const composite = roundSatScoreToNearestTen(
+            400 + 600 * (r / 54 + m / 44)
+        );
+
+        return {
+            composite: Math.max(400, Math.min(1600, composite)),
+            readingWriting: Math.max(200, Math.min(800, readingWriting)),
+            math: Math.max(200, Math.min(800, math))
+        };
+    }
+
+    function getMockScoresFromState(state) {
+        if (!state || !state.completed) return null;
+
+        const stored = state.satScores;
+        if (
+            stored &&
+            Number.isFinite(Number(stored.composite)) &&
+            Number.isFinite(Number(stored.readingWriting)) &&
+            Number.isFinite(Number(stored.math))
+        ) {
+            return {
+                composite: Number(stored.composite),
+                readingWriting: Number(stored.readingWriting),
+                math: Number(stored.math)
+            };
+        }
+
+        const modules = state.completedModules || {};
+        const hasRequiredModules =
+            modules.rw_m1 &&
+            modules.rw_m2 &&
+            modules.math_m1 &&
+            modules.math_m2;
+
+        if (!hasRequiredModules) return null;
+
+        const rwCorrect =
+            Number(modules.rw_m1.correct || 0) +
+            Number(modules.rw_m2.correct || 0);
+        const mathCorrect =
+            Number(modules.math_m1.correct || 0) +
+            Number(modules.math_m2.correct || 0);
+
+        return calculateMockSatScores(rwCorrect, mathCorrect);
+    }
+
+    function loadMockPerformance() {
+        const tests = [];
+
+        for (let index = 1; index <= 8; index += 1) {
+            const id = "mock-test-" + index;
+            const key =
+                "lexlogica-mock-state:" +
+                user.id +
+                ":" +
+                id;
+
+            const state = safeJson(
+                localStorage.getItem(key) || "null",
+                null
             );
 
-        return ordered.map((row, index) => {
-            const start = Math.max(0, index - 19);
-            const windowRows = ordered.slice(start, index + 1);
-            const correct = windowRows.filter(item => Boolean(item.is_correct)).length;
-            return {
-                index: index + 1,
-                score: Math.round(correct / windowRows.length * 100)
-            };
-        });
+            tests.push({
+                index,
+                id,
+                scores: getMockScoresFromState(state)
+            });
+        }
+
+        return tests;
     }
 
-    function renderPracticeTrend(attempts) {
-        const points = rollingPracticeScores(attempts);
+    function renderMockPerformance() {
+        const tests = loadMockPerformance();
+        const completed = tests.filter(test => test.scores);
 
-        if (!points.length) {
-            els.scoreCurrent.textContent = "—";
-            els.scoreChart.classList.add("dashboard-empty-chart");
-            els.scoreChart.textContent = "Answer practice questions to build a score trend.";
+        if (!completed.length) {
+            els.mockChart.classList.add("dashboard-empty-chart");
+            els.mockChart.textContent =
+                "Complete a mock test to add its Composite, R&W, and Math scores here.";
             return;
         }
 
-        const shown = points.slice(-80);
         const width = 760;
-        const height = 220;
-        const left = 38;
-        const right = 12;
-        const top = 14;
-        const bottom = 28;
+        const height = 245;
+        const left = 48;
+        const right = 48;
+        const top = 18;
+        const bottom = 38;
         const plotWidth = width - left - right;
         const plotHeight = height - top - bottom;
-        const x = i => left + (shown.length === 1 ? plotWidth / 2 : i / (shown.length - 1) * plotWidth);
-        const y = value => top + (100 - value) / 100 * plotHeight;
-        const coords = shown.map((point, i) => [x(i), y(point.score)]);
-        const path = coords.map((point, i) =>
-            (i === 0 ? "M " : " L ") + point[0].toFixed(1) + " " + point[1].toFixed(1)
-        ).join("");
-        const area = coords.length
-            ? path + " L " + coords[coords.length - 1][0].toFixed(1) + " " + (top + plotHeight) +
-              " L " + coords[0][0].toFixed(1) + " " + (top + plotHeight) + " Z"
-            : "";
-        const grids = [100, 75, 50, 25].map(value =>
-            '<line class="trend-grid" x1="' + left + '" x2="' + (left + plotWidth) +
-            '" y1="' + y(value) + '" y2="' + y(value) + '"></line>' +
-            '<text class="trend-label" x="' + (left - 7) + '" y="' + (y(value) + 3) +
-            '" text-anchor="end">' + value + '</text>'
-        ).join("");
-        const last = coords[coords.length - 1];
+        const x = index =>
+            left + ((index - 1) / 7) * plotWidth;
+        const yComposite = score =>
+            top + ((1600 - score) / 1200) * plotHeight;
+        const ySection = score =>
+            top + ((800 - score) / 600) * plotHeight;
 
-        els.scoreCurrent.textContent = points[points.length - 1].score;
-        els.scoreChart.classList.remove("dashboard-empty-chart");
-        els.scoreChart.innerHTML =
-            '<svg viewBox="0 0 ' + width + ' ' + height + '" role="img" aria-label="20-question rolling practice accuracy trend">' +
-                grids +
-                '<path class="trend-area" d="' + area + '"></path>' +
-                '<path class="trend-line" d="' + path + '"></path>' +
-                '<circle class="trend-dot" cx="' + last[0] + '" cy="' + last[1] + '" r="4"></circle>' +
-                '<text class="trend-label" x="' + left + '" y="' + (height - 5) + '">older</text>' +
-                '<text class="trend-label" x="' + (left + plotWidth) + '" y="' + (height - 5) + '" text-anchor="end">latest</text>' +
+        const compositeTicks = [1600,1300,1000,700,400];
+        const sectionTicks = [800,650,500,350,200];
+
+        const grid = compositeTicks.map((value, i) => {
+            const y = yComposite(value);
+            return (
+                '<line class="mock-grid" x1="' + left + '" x2="' + (width-right) +
+                    '" y1="' + y + '" y2="' + y + '"></line>' +
+                '<text class="mock-axis-label" x="' + (left-7) + '" y="' + (y+3) +
+                    '" text-anchor="end">' + value + '</text>' +
+                '<text class="mock-axis-label" x="' + (width-right+7) + '" y="' + (y+3) +
+                    '" text-anchor="start">' + sectionTicks[i] + '</text>'
+            );
+        }).join("");
+
+        const xLabels = tests.map(test =>
+            '<text class="mock-x-label' + (test.scores ? ' is-complete' : '') +
+                '" x="' + x(test.index) + '" y="' + (height-8) +
+                '" text-anchor="middle">Mock ' + test.index + '</text>'
+        ).join("");
+
+        const buildSeries = (key, yFn, className, label) => {
+            const points = completed.map(test => ({
+                test,
+                x: x(test.index),
+                y: yFn(test.scores[key]),
+                value: test.scores[key]
+            }));
+
+            const line = points.length > 1
+                ? '<polyline class="mock-series ' + className + '" points="' +
+                    points.map(point => point.x + ',' + point.y).join(' ') +
+                    '"></polyline>'
+                : "";
+
+            const dots = points.map(point =>
+                '<g>' +
+                    '<circle class="mock-dot ' + className + '" cx="' + point.x +
+                        '" cy="' + point.y + '" r="4.5">' +
+                        '<title>Mock ' + point.test.index + ' · ' +
+                            escapeHtml(label) + ': ' + point.value + '</title>' +
+                    '</circle>' +
+                '</g>'
+            ).join("");
+
+            return line + dots;
+        };
+
+        const emptySlots = tests
+            .filter(test => !test.scores)
+            .map(test =>
+                '<circle class="mock-empty-dot" cx="' + x(test.index) +
+                    '" cy="' + (top + plotHeight) + '" r="3"></circle>'
+            )
+            .join("");
+
+        els.mockChart.classList.remove("dashboard-empty-chart");
+        els.mockChart.innerHTML =
+            '<svg viewBox="0 0 ' + width + ' ' + height +
+                '" role="img" aria-label="Mock test Composite, Reading and Writing, and Math score performance">' +
+                grid +
+                '<text class="mock-axis-title" x="10" y="' + (top + plotHeight/2) +
+                    '" transform="rotate(-90 10 ' + (top + plotHeight/2) +
+                    ')" text-anchor="middle">Composite</text>' +
+                '<text class="mock-axis-title" x="' + (width-10) + '" y="' + (top + plotHeight/2) +
+                    '" transform="rotate(90 ' + (width-10) + ' ' + (top + plotHeight/2) +
+                    ')" text-anchor="middle">Section</text>' +
+                buildSeries("composite", yComposite, "is-composite", "Composite") +
+                buildSeries("readingWriting", ySection, "is-rw", "R&W") +
+                buildSeries("math", ySection, "is-math", "Math") +
+                emptySlots +
+                xLabels +
             '</svg>';
     }
 
@@ -384,7 +531,11 @@ document.addEventListener("DOMContentLoaded", async () => {
             const meta =
                 metadata.map.get(String(row.question_id)) ||
                 fallbackMeta.get(String(row.question_id));
-            const seconds = Number(row.elapsed_seconds);
+            const rawSeconds = Number(row.elapsed_seconds);
+            const seconds =
+                Number.isFinite(rawSeconds)
+                    ? Math.min(180, rawSeconds)
+                    : rawSeconds;
 
             if (!meta || !Number.isFinite(seconds) || seconds <= 0) return;
 
@@ -615,7 +766,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         renderKpis(attempts);
         renderSevenDay(attempts);
-        renderPracticeTrend(attempts);
+        renderMockPerformance();
 
         currentSubtopicRows = buildSubtopicRows(
             attempts,
