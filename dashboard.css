@@ -650,3 +650,90 @@
 .mock-x-label.is-complete{
     font-weight:800!important;
 }
+
+
+/* Make mock performance the dominant chart. */
+.dashboard-chart-grid{
+    grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr)!important;
+}
+.dashboard-trend-panel{
+    padding:22px 24px!important;
+}
+.mock-performance-chart{
+    min-height:330px!important;
+}
+.mock-performance-chart svg{
+    height:330px!important;
+}
+
+/* Compact, wider recommendation area; difficulty panel retired. */
+.dashboard-insight-grid{
+    grid-template-columns:minmax(0,1fr) 300px!important;
+    align-items:start!important;
+}
+.dashboard-priority-panel{
+    padding:18px 20px!important;
+}
+.dashboard-priority-panel .dashboard-panel-heading{
+    align-items:center;
+    margin-bottom:11px!important;
+}
+.priority-method{
+    max-width:330px;
+    color:#899995;
+    font-size:7.5px;
+    line-height:1.4;
+    text-align:right;
+}
+.priority-list{
+    display:grid!important;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:9px!important;
+}
+.priority-item{
+    display:block!important;
+    min-height:0!important;
+    padding:11px 12px!important;
+}
+.priority-rank{
+    width:auto!important;
+    height:auto!important;
+    margin-bottom:6px;
+    display:inline-flex!important;
+    padding:3px 7px;
+    border-radius:999px!important;
+    font-size:7px!important;
+}
+.priority-item strong{
+    font-size:9px!important;
+    line-height:1.35;
+}
+.priority-item p{
+    margin-top:4px!important;
+    font-size:7.2px!important;
+    line-height:1.4!important;
+}
+.priority-meta{
+    margin-top:6px!important;
+}
+.priority-meta span{
+    padding:2px 5px!important;
+    font-size:6.5px!important;
+}
+.dashboard-account-panel{
+    padding:18px!important;
+}
+.dashboard-account-panel .dashboard-panel-heading{
+    margin-bottom:10px!important;
+}
+@media(max-width:1100px){
+    .dashboard-chart-grid{grid-template-columns:1fr!important}
+    .dashboard-insight-grid{grid-template-columns:1fr!important}
+    .priority-list{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+}
+@media(max-width:760px){
+    .priority-method{text-align:left;max-width:none}
+    .priority-list{grid-template-columns:1fr!important}
+    .mock-performance-chart,
+    .mock-performance-chart svg{min-height:280px!important;height:280px!important}
+}
