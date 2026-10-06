@@ -366,6 +366,208 @@ function normalizeMathLayoutText(value) {
 }
 
 
+function repairDroppedFractionCommands(body) {
+    const source =
+        String(body || "");
+
+    // A recurring import failure drops the command name from
+    // \\frac{numerator}{denominator} but leaves the two argument
+    // groups behind. MathJax then renders {30}{2} as 302. Recover
+    // those adjacent balanced groups conservatively inside TeX.
+    let output = "";
+    let index = 0;
+
+    const readGroup =
+        start => {
+            if (
+                source[start] !== "{"
+            ) {
+                return null;
+            }
+
+            let depth = 0;
+
+            for (
+                let cursor = start;
+                cursor < source.length;
+                cursor += 1
+            ) {
+                const char =
+                    source[cursor];
+
+                if (char === "{") {
+                    depth += 1;
+                } else if (char === "}") {
+                    depth -= 1;
+
+                    if (depth === 0) {
+                        return {
+                            start,
+                            end:
+                                cursor + 1,
+                            content:
+                                source.slice(
+                                    start + 1,
+                                    cursor
+                                )
+                        };
+                    }
+                }
+            }
+
+            return null;
+        };
+
+    while (
+        index < source.length
+    ) {
+        if (
+            source[index] !== "{"
+        ) {
+            output +=
+                source[index];
+
+            index += 1;
+            continue;
+        }
+
+        const previous =
+            index > 0
+                ? source[index - 1]
+                : "";
+
+        // Do not reinterpret normal TeX arguments/subscripts,
+        // such as ^{2}, _{n}, \\sqrt{x}, or command arguments.
+        if (
+            previous === "^" ||
+            previous === "_" ||
+            previous === "\\"
+        ) {
+            output +=
+                source[index];
+
+            index += 1;
+            continue;
+        }
+
+        const first =
+            readGroup(
+                index
+            );
+
+        if (!first) {
+            output +=
+                source[index];
+
+            index += 1;
+            continue;
+        }
+
+        let secondStart =
+            first.end;
+
+        while (
+            secondStart <
+                source.length &&
+            /\s/.test(
+                source[
+                    secondStart
+                ]
+            )
+        ) {
+            secondStart += 1;
+        }
+
+        const second =
+            readGroup(
+                secondStart
+            );
+
+        if (
+            !second
+        ) {
+            output +=
+                source.slice(
+                    index,
+                    first.end
+                );
+
+            index =
+                first.end;
+            continue;
+        }
+
+        const before =
+            source.slice(
+                Math.max(
+                    0,
+                    index - 16
+                ),
+                index
+            );
+
+        const looksLikeCommandArgument =
+            /\\[A-Za-z]+\s*$/.test(
+                before
+            );
+
+        if (
+            looksLikeCommandArgument
+        ) {
+            output +=
+                source.slice(
+                    index,
+                    first.end
+                );
+
+            index =
+                first.end;
+            continue;
+        }
+
+        const numerator =
+            first.content.trim();
+
+        const denominator =
+            second.content.trim();
+
+        const plausibleFraction =
+            numerator.length > 0 &&
+            denominator.length > 0 &&
+            denominator.length <= 24 &&
+            !/[;,]/.test(
+                denominator
+            );
+
+        if (
+            !plausibleFraction
+        ) {
+            output +=
+                source.slice(
+                    index,
+                    first.end
+                );
+
+            index =
+                first.end;
+            continue;
+        }
+
+        output +=
+            "\\frac{" +
+            first.content +
+            "}{" +
+            second.content +
+            "}";
+
+        index =
+            second.end;
+    }
+
+    return output;
+}
+
+
 function repairCommonMathNotation(value) {
     const source =
         normalizeAccidentalDisplayProse(
@@ -388,7 +590,9 @@ function repairCommonMathNotation(value) {
                 );
 
             const repaired =
-                body.replace(
+                repairDroppedFractionCommands(
+                    body
+                ).replace(
                     /([a-zA-Z])([2-9])(?=\b|[a-zA-Z])/g,
                     (
                         token,
@@ -4768,7 +4972,9 @@ function createChoiceReason(
         ) +
         '</div><div class="choice-reason-text">' +
         renderInlineFormatting(
-            reason
+            reason,
+            question.section ===
+                "Math"
         ) +
         '</div>';
 
