@@ -717,8 +717,21 @@ function renderInlineFormatting(
 
 }
 
+function renderQuestionContent(
+    question,
+    value
+) {
+    return renderInlineFormatting(
+        value,
+        question?.section ===
+            "Math"
+    );
+}
+
+
 function renderQuestionTable(
-    table
+    table,
+    compactMathLayout = false
 ) {
 
     if (
@@ -739,7 +752,8 @@ function renderQuestionTable(
                 header =>
                     "<th scope=\"col\">" +
                     renderInlineFormatting(
-                        header
+                        header,
+                        compactMathLayout
                     ) +
                     "</th>"
             )
@@ -755,7 +769,8 @@ function renderQuestionTable(
                             cell =>
                                 "<td>" +
                                 renderInlineFormatting(
-                                    cell
+                                    cell,
+                                    compactMathLayout
                                 ) +
                                 "</td>"
                         )
@@ -768,7 +783,8 @@ function renderQuestionTable(
         table.caption
             ? "<caption>" +
                 renderInlineFormatting(
-                    table.caption
+                    table.caption,
+                    compactMathLayout
                 ) +
               "</caption>"
             : "";
@@ -2837,16 +2853,17 @@ function renderQuestionPassage(
                 question.graph
             )
             : renderQuestionTable(
-                question.table
+                question.table,
+                question.section ===
+                    "Math"
             );
 
     const copy =
         question.passage
             ? '<div class="question-passage-copy">' +
-                renderInlineFormatting(
-                    question.passage,
-                    question.section ===
-                        "Math"
+                renderQuestionContent(
+                    question,
+                    question.passage
                 ) +
               '</div>'
             : "";
@@ -4426,12 +4443,16 @@ function typesetQuestionMath() {
         return;
     }
 
-    const target =
+    const targets = [
         document.getElementById(
             "question-app"
-        );
+        ),
+        document.getElementById(
+            "results-screen"
+        )
+    ].filter(Boolean);
 
-    if (!target) {
+    if (targets.length === 0) {
         return;
     }
 
@@ -4441,12 +4462,12 @@ function typesetQuestionMath() {
             "function"
         ) {
             window.MathJax.typesetClear(
-                [target]
+                targets
             );
         }
 
         window.MathJax.typesetPromise(
-            [target]
+            targets
         ).catch(
             error =>
                 console.warn(
@@ -4566,9 +4587,9 @@ function renderCurrentQuestion() {
     }
 
     questionText.innerHTML =
-        renderInlineFormatting(
-            question.question_text,
-            isMathQuestion
+        renderQuestionContent(
+            question,
+            question.question_text
         );
 
     const hasContext =
@@ -4971,17 +4992,19 @@ function createChoiceReason(
                 : "Why this doesn’t work"
         ) +
         '</div><div class="choice-reason-text">' +
-        renderInlineFormatting(
-            reason,
-            question.section ===
-                "Math"
+        renderQuestionContent(
+            question,
+            reason
         ) +
         '</div>';
 
     return box;
 }
 
-function renderChoiceMiniTable(table) {
+function renderChoiceMiniTable(
+    table,
+    question = null
+) {
     if (
         !table ||
         !Array.isArray(table.headers) ||
@@ -4997,7 +5020,10 @@ function renderChoiceMiniTable(table) {
                     .map(
                         header =>
                             '<th>' +
-                            renderInlineFormatting(header) +
+                            renderQuestionContent(
+                                question,
+                                header
+                            ) +
                             '</th>'
                     )
                     .join("") +
@@ -5011,7 +5037,10 @@ function renderChoiceMiniTable(table) {
                                     .map(
                                         cell =>
                                             '<td>' +
-                                            renderInlineFormatting(cell) +
+                                            renderQuestionContent(
+                                                question,
+                                                cell
+                                            ) +
                                             '</td>'
                                     )
                                     .join("") +
@@ -5437,7 +5466,8 @@ function renderStudentResponse(question) {
         explanation.innerHTML =
             '<div class="student-response-explanation-label">Explanation</div>' +
             '<div class="student-response-explanation-text">' +
-            renderInlineFormatting(
+            renderQuestionContent(
+                question,
                 question.explanation
             ) +
             '</div>';
@@ -5588,10 +5618,9 @@ function renderChoices(
                             (
                                 choice.text
                                     ? '<span class="choice-graph-label">' +
-                                        renderInlineFormatting(
-                                            choice.text,
-                                            question.section ===
-                                                "Math"
+                                        renderQuestionContent(
+                                            question,
+                                            choice.text
                                         ) +
                                       '</span>'
                                     : ""
@@ -5604,12 +5633,12 @@ function renderChoices(
                                 ? renderChoiceMiniTable(
                                     question.choice_tables[
                                         choice.letter
-                                    ]
+                                    ],
+                                    question
                                 )
-                                : renderInlineFormatting(
-                                    choice.text,
-                                    question.section ===
-                                        "Math"
+                                : renderQuestionContent(
+                                    question,
+                                    choice.text
                                 )
                         )
                 }</span>
@@ -6915,28 +6944,32 @@ function showResultsReview() {
                 </div>
 
                 <div class="review-result-question">
-                    ${escapeHtml(
+                    ${renderQuestionContent(
+                        question,
                         question.question_text
                     )}
                 </div>
 
                 <div class="review-result-answer">
                     <strong>Your answer:</strong>
-                    ${escapeHtml(
+                    ${renderQuestionContent(
+                        question,
                         selectedText
                     )}
                 </div>
 
                 <div class="review-result-answer">
                     <strong>Correct answer:</strong>
-                    ${escapeHtml(
+                    ${renderQuestionContent(
+                        question,
                         correctText
                     )}
                 </div>
 
                 <div class="review-result-explanation">
                     <strong>Explanation:</strong><br>
-                    ${escapeHtml(
+                    ${renderQuestionContent(
+                        question,
                         getChoiceExplanation(
                             question,
                             question.correct_answer
@@ -6964,6 +6997,8 @@ function showResultsReview() {
     reviewResultsButton.textContent =
         "Hide Review";
 
+
+    typesetQuestionMath();
 
     resultsReview.scrollIntoView({
 
