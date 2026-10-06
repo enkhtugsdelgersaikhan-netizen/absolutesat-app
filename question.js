@@ -4522,6 +4522,25 @@ function renderCurrentQuestion() {
             !isMathQuestion;
     }
 
+    const desmosPanel =
+        document.getElementById(
+            "desmos-panel"
+        );
+
+    if (
+        !isMathQuestion &&
+        desmosPanel
+    ) {
+        desmosPanel.classList.add(
+            "hidden"
+        );
+
+        desmosPanel.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+    }
+
     const backToBank =
         document.getElementById(
             "back-to-question-bank"
@@ -7356,6 +7375,16 @@ function initializeDesmosPanel() {
 
     const openPanel =
         () => {
+            if (
+                toggle.hidden ||
+                !document.body.classList.contains(
+                    "math-question-active"
+                )
+            ) {
+                closePanel();
+                return;
+            }
+
             if (!frame.src) {
                 frame.src =
                     "https://www.desmos.com/calculator";
