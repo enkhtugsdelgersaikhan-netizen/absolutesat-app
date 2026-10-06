@@ -4155,3 +4155,560 @@ body.mock-results-active .results-message{
         border-bottom:0;
     }
 }
+
+
+/* ============================================================
+   MOCK DOMAIN PERFORMANCE + SYMBOL REVIEW
+   ============================================================ */
+
+.mock-domain-performance{
+    width:min(760px,100%);
+    margin:24px auto 6px;
+    padding:18px;
+    border:1px solid #dfe7eb;
+    border-radius:14px;
+    background:#fff;
+    text-align:left;
+}
+
+.mock-domain-performance-head{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:14px;
+    margin-bottom:16px;
+}
+
+.mock-domain-performance-head > span{
+    color:#25394a;
+    font-size:13px;
+    font-weight:700;
+}
+
+.mock-domain-performance-head > small{
+    color:#85919c;
+    font-size:10px;
+}
+
+.mock-domain-section + .mock-domain-section{
+    margin-top:18px;
+    padding-top:17px;
+    border-top:1px solid #edf1f3;
+}
+
+.mock-domain-section-title{
+    margin-bottom:10px;
+    color:#667584;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+}
+
+.mock-domain-cards{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:9px;
+}
+
+.mock-domain-card{
+    padding:11px 12px;
+    border:1px solid #e3eaed;
+    border-radius:10px;
+    background:#fafcfc;
+}
+
+.mock-domain-card-top{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:12px;
+}
+
+.mock-domain-card-top span{
+    color:#445766;
+    font-size:10px;
+    font-weight:600;
+    line-height:1.35;
+}
+
+.mock-domain-card-top strong{
+    flex:0 0 auto;
+    color:#213849;
+    font-size:12px;
+}
+
+.mock-domain-meter{
+    height:5px;
+    margin-top:9px;
+    overflow:hidden;
+    border-radius:999px;
+    background:#e9eef0;
+}
+
+.mock-domain-meter i{
+    display:block;
+    height:100%;
+    border-radius:inherit;
+    background:#769b94;
+}
+
+.mock-domain-card small{
+    display:block;
+    margin-top:5px;
+    color:#89959e;
+    font-size:9px;
+}
+
+
+/* Mock review uses neutral symbols; difficulty never changes their color. */
+body.mock-results-active .results-review{
+    width:min(920px,100%);
+    margin:28px auto 0;
+}
+
+body.mock-results-active .results-review h2{
+    margin-bottom:14px;
+    color:#203446;
+    font-size:20px;
+}
+
+body.mock-results-active #results-review-list{
+    display:block;
+}
+
+.mock-review-group{
+    padding:14px 0 16px;
+    border-bottom:1px solid #e7edef;
+}
+
+.mock-review-group:first-child{
+    padding-top:0;
+}
+
+.mock-review-group-title{
+    margin-bottom:9px;
+    color:#6b7987;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:.075em;
+    text-transform:uppercase;
+}
+
+.mock-review-symbol-grid{
+    display:grid;
+    grid-template-columns:repeat(12,42px);
+    gap:9px;
+}
+
+.mock-review-symbol{
+    position:relative;
+    width:42px;
+    height:42px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:0;
+    border:1px solid #ccd7dd;
+    border-radius:10px;
+    background:#f7f9fa;
+    color:#536673;
+    font:700 11px/1 "Poppins",sans-serif;
+    cursor:pointer;
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.86),
+        0 2px 5px rgba(15,23,42,.055);
+    transition:
+        transform .13s ease,
+        border-color .13s ease,
+        box-shadow .13s ease,
+        background .13s ease;
+}
+
+.mock-review-symbol:hover{
+    transform:translateY(-1px);
+    border-color:#91a5ae;
+    background:#fff;
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.92),
+        0 4px 9px rgba(15,23,42,.08);
+}
+
+.mock-review-symbol.selected{
+    border-color:#607c87;
+    background:#fff;
+    box-shadow:
+        0 0 0 2px #fff,
+        0 0 0 4px #607c87,
+        0 4px 10px rgba(42,65,77,.12);
+}
+
+.mock-review-status-dot{
+    position:absolute;
+    right:4px;
+    bottom:4px;
+    width:7px;
+    height:7px;
+    border:1.5px solid #fff;
+    border-radius:50%;
+    background:#98a6af;
+}
+
+.mock-review-symbol.correct .mock-review-status-dot{
+    background:#36a56f;
+}
+
+.mock-review-symbol.incorrect .mock-review-status-dot{
+    background:#d75e5e;
+}
+
+.mock-review-symbol.unanswered .mock-review-status-dot{
+    background:#98a6af;
+}
+
+.mock-review-bookmark{
+    position:absolute;
+    top:-4px;
+    right:-3px;
+    width:9px;
+    height:12px;
+    border:1px solid #9a8250;
+    border-radius:2px 2px 4px 4px;
+    background:#d7bd7a;
+    box-shadow:0 0 0 2px #fff;
+}
+
+.mock-review-detail{
+    margin-top:22px;
+    padding:22px;
+    border:1px solid #dce5e9;
+    border-radius:14px;
+    background:#fff;
+    text-align:left;
+}
+
+.mock-review-detail-head{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:14px;
+    margin-bottom:18px;
+}
+
+.mock-review-detail-head > div{
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+}
+
+.mock-review-detail-head > div > span{
+    color:#7c8994;
+    font-size:10px;
+    font-weight:600;
+}
+
+.mock-review-detail-head > div > strong{
+    color:#213748;
+    font-size:16px;
+}
+
+.mock-review-detail-status{
+    padding:5px 8px;
+    border:1px solid #d7e0e4;
+    border-radius:999px;
+    color:#667681;
+    font-size:9px;
+    font-weight:700;
+}
+
+.mock-review-detail-status.correct{
+    border-color:#b8dcc9;
+    background:#f1faf5;
+    color:#39775a;
+}
+
+.mock-review-detail-status.incorrect{
+    border-color:#e5c3c3;
+    background:#fff5f5;
+    color:#955050;
+}
+
+.mock-review-context{
+    margin-bottom:18px;
+    padding:16px 17px;
+    border:1px solid #e2e8eb;
+    border-radius:10px;
+    background:#fafbfc;
+    color:#34495a;
+    font-family:"Noto Serif",Georgia,serif;
+    font-size:14px;
+    line-height:1.65;
+}
+
+.mock-review-context-label{
+    margin-bottom:8px;
+    color:#7b8895;
+    font-family:"Poppins",sans-serif;
+    font-size:9px;
+    font-weight:700;
+    letter-spacing:.09em;
+    text-transform:uppercase;
+}
+
+.mock-review-question-text{
+    margin-bottom:19px;
+    color:#172a3b;
+    font-family:"Noto Serif",Georgia,serif;
+    font-size:16px;
+    font-weight:700;
+    line-height:1.65;
+}
+
+.mock-review-choices{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.mock-review-choice{
+    overflow:hidden;
+    border:1px solid #dce5e9;
+    border-radius:11px;
+    background:#fff;
+}
+
+.mock-review-choice-row{
+    min-height:58px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:11px 13px;
+}
+
+.mock-review-choice.correct .mock-review-choice-row{
+    background:#f6fbf8;
+}
+
+.mock-review-choice.selected:not(.correct) .mock-review-choice-row{
+    background:#fff8f7;
+}
+
+.mock-review-choice-letter{
+    flex:0 0 29px;
+    width:29px;
+    height:29px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid #bdcad0;
+    border-radius:50%;
+    color:#4d6070;
+    font:700 12px/1 "Poppins",sans-serif;
+}
+
+.mock-review-choice.correct .mock-review-choice-letter{
+    border-color:#75ae91;
+    color:#39775a;
+}
+
+.mock-review-choice.selected:not(.correct) .mock-review-choice-letter{
+    border-color:#cb8f8f;
+    color:#975454;
+}
+
+.mock-review-choice-text{
+    flex:1 1 auto;
+    min-width:0;
+    color:#2e4252;
+    font-family:"Noto Serif",Georgia,serif;
+    font-size:14px;
+    line-height:1.55;
+}
+
+.mock-review-choice-badges{
+    flex:0 0 auto;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+    gap:5px;
+}
+
+.mock-review-choice-badges span{
+    padding:4px 6px;
+    border-radius:999px;
+    font:700 8px/1 "Poppins",sans-serif;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+}
+
+.mock-review-choice-badges .your-answer{
+    background:#eef2f4;
+    color:#63727d;
+}
+
+.mock-review-choice-badges .correct-answer{
+    background:#e9f7ef;
+    color:#39775a;
+}
+
+.mock-review-choice-explanation{
+    padding:12px 14px 13px;
+    border-top:1px solid #e6ecef;
+    background:#fafcfc;
+}
+
+.mock-review-choice-explanation > strong{
+    display:block;
+    margin-bottom:5px;
+    color:#526572;
+    font-size:9px;
+    font-weight:700;
+    letter-spacing:.055em;
+    text-transform:uppercase;
+}
+
+.mock-review-choice-explanation.correct > strong{
+    color:#39775a;
+}
+
+.mock-review-choice-explanation.wrong > strong{
+    color:#8a6262;
+}
+
+.mock-review-choice-explanation > div{
+    color:#52616d;
+    font-family:"Noto Serif",Georgia,serif;
+    font-size:12px;
+    line-height:1.65;
+}
+
+.mock-review-student-response{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+}
+
+.mock-review-student-response > div{
+    padding:13px 14px;
+    border:1px solid #e0e7ea;
+    border-radius:10px;
+    background:#fafcfc;
+}
+
+.mock-review-student-response span,
+.mock-review-response-explanation > span{
+    display:block;
+    margin-bottom:5px;
+    color:#7c8994;
+    font-size:9px;
+    font-weight:700;
+    letter-spacing:.055em;
+    text-transform:uppercase;
+}
+
+.mock-review-student-response strong{
+    color:#263c4c;
+    font-family:"Noto Serif",Georgia,serif;
+    font-size:15px;
+}
+
+.mock-review-response-explanation{
+    margin-top:11px;
+    padding:13px 14px;
+    border:1px solid #e0e7ea;
+    border-radius:10px;
+    background:#fafcfc;
+}
+
+.mock-review-response-explanation > div{
+    color:#4e606c;
+    font-family:"Noto Serif",Georgia,serif;
+    font-size:12px;
+    line-height:1.65;
+}
+
+
+/* Separate neutral symbol treatment for literal-invert dark mode. */
+html.lexlogica-dark-mode .mock-review-symbol{
+    filter:invert(1)!important;
+    background:#11171b!important;
+    border-color:#3d4b53!important;
+    color:#d7e2e7!important;
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.035),
+        0 2px 7px rgba(0,0,0,.26)!important;
+}
+
+html.lexlogica-dark-mode .mock-review-symbol:hover{
+    filter:invert(1)!important;
+    background:#171f24!important;
+    border-color:#728791!important;
+}
+
+html.lexlogica-dark-mode .mock-review-symbol.selected{
+    filter:invert(1)!important;
+    background:#172026!important;
+    border-color:#9ab2bc!important;
+    box-shadow:
+        0 0 0 2px #0c1114,
+        0 0 0 4px #9ab2bc,
+        0 3px 11px rgba(0,0,0,.32)!important;
+}
+
+html.lexlogica-dark-mode .mock-review-symbol .mock-review-status-dot{
+    border-color:#11171b!important;
+}
+
+html.lexlogica-dark-mode .mock-review-bookmark{
+    border-color:#b9a06b!important;
+    background:#c5ab70!important;
+    box-shadow:0 0 0 2px #11171b!important;
+}
+
+@media(max-width:760px){
+    .mock-domain-cards{
+        grid-template-columns:1fr;
+    }
+
+    .mock-review-symbol-grid{
+        grid-template-columns:repeat(8,40px);
+        gap:8px;
+    }
+
+    .mock-review-symbol{
+        width:40px;
+        height:40px;
+    }
+}
+
+@media(max-width:520px){
+    .mock-domain-performance-head{
+        align-items:flex-start;
+        flex-direction:column;
+        gap:3px;
+    }
+
+    .mock-review-symbol-grid{
+        grid-template-columns:repeat(6,38px);
+    }
+
+    .mock-review-symbol{
+        width:38px;
+        height:38px;
+    }
+
+    .mock-review-choice-row{
+        align-items:flex-start;
+        flex-wrap:wrap;
+    }
+
+    .mock-review-choice-badges{
+        width:100%;
+        justify-content:flex-start;
+        padding-left:41px;
+    }
+
+    .mock-review-student-response{
+        grid-template-columns:1fr;
+    }
+}
