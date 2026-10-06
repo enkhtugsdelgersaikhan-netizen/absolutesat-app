@@ -2859,3 +2859,11 @@ body.math-question-active .review-result-answer em,
 body.math-question-active .review-result-explanation em{
     font-style:normal!important;
 }
+
+
+/* Desmos is Math-only. Even if stale UI state survives navigation,
+   Reading & Writing can never display the calculator panel. */
+body:not(.math-question-active) #desmos-toggle-button,
+body:not(.math-question-active) #desmos-panel{
+    display:none!important;
+}
