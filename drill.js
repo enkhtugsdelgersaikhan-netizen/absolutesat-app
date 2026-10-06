@@ -7,7 +7,8 @@ const DRILL_BASE_SECONDS = DRILL_SECTION === "Math"
   : Math.round((64 * 60) / 54);
 const DRILL_LIMIT = 10;
 
-const focusSelect = document.getElementById("drill-focus");
+const domainSelect = document.getElementById("drill-domain");
+const subtopicSelect = document.getElementById("drill-subtopic");
 const pacePercentRow = document.getElementById("drill-percent-row");
 const pacePercentInput = document.getElementById("drill-percent");
 const availability = document.getElementById("drill-availability");
@@ -59,36 +60,141 @@ function questionSubtopic(q) {
   return String(q.subtopic || q.skill || q.topic || "").trim();
 }
 
-function buildFocusOptions() {
+function getDomainMap() {
   const domains = new Map();
+
   drillQuestions.forEach(q => {
-    const domain = String(q.domain || "Other").trim() || "Other";
-    const subtopic = questionSubtopic(q);
-    if (!domains.has(domain)) domains.set(domain, new Set());
-    if (subtopic) domains.get(domain).add(subtopic);
+    const domain =
+      String(q.domain || "Other").trim() ||
+      "Other";
+
+    const subtopic =
+      questionSubtopic(q);
+
+    if (!domains.has(domain)) {
+      domains.set(
+        domain,
+        new Set()
+      );
+    }
+
+    if (subtopic) {
+      domains
+        .get(domain)
+        .add(subtopic);
+    }
   });
 
-  focusSelect.innerHTML = "";
-  [...domains.keys()].sort().forEach(domain => {
-    const domainOption = document.createElement("option");
-    domainOption.value = "domain::" + domain;
-    domainOption.textContent = "Domain — " + domain;
-    focusSelect.appendChild(domainOption);
+  return domains;
+}
 
-    [...domains.get(domain)].sort().forEach(subtopic => {
-      const option = document.createElement("option");
-      option.value = "subtopic::" + subtopic;
-      option.textContent = "↳ Subtopic — " + subtopic;
-      focusSelect.appendChild(option);
+function buildDomainOptions() {
+  const domains =
+    getDomainMap();
+
+  domainSelect.innerHTML = "";
+
+  [...domains.keys()]
+    .sort()
+    .forEach(domain => {
+      const option =
+        document.createElement(
+          "option"
+        );
+
+      option.value =
+        domain;
+
+      option.textContent =
+        domain;
+
+      domainSelect.appendChild(
+        option
+      );
     });
-  });
+
+  buildSubtopicOptions();
+}
+
+function buildSubtopicOptions() {
+  const domains =
+    getDomainMap();
+
+  const selectedDomain =
+    domainSelect.value;
+
+  const subtopics =
+    [
+      ...(
+        domains.get(
+          selectedDomain
+        ) || []
+      )
+    ].sort();
+
+  const previous =
+    subtopicSelect.value;
+
+  subtopicSelect.innerHTML =
+    '<option value="">All subtopics</option>';
+
+  subtopics.forEach(
+    subtopic => {
+      const option =
+        document.createElement(
+          "option"
+        );
+
+      option.value =
+        subtopic;
+
+      option.textContent =
+        subtopic;
+
+      subtopicSelect.appendChild(
+        option
+      );
+    }
+  );
+
+  if (
+    previous &&
+    subtopics.includes(
+      previous
+    )
+  ) {
+    subtopicSelect.value =
+      previous;
+  } else {
+    subtopicSelect.value =
+      "";
+  }
 }
 
 function focusMatches(q) {
-  const [type, ...parts] = String(focusSelect.value || "").split("::");
-  const value = parts.join("::");
-  if (type === "subtopic") return questionSubtopic(q) === value;
-  return String(q.domain || "").trim() === value;
+  const domain =
+    String(q.domain || "").trim();
+
+  const selectedDomain =
+    domainSelect.value;
+
+  const selectedSubtopic =
+    subtopicSelect.value;
+
+  if (
+    domain !== selectedDomain
+  ) {
+    return false;
+  }
+
+  if (!selectedSubtopic) {
+    return true;
+  }
+
+  return (
+    questionSubtopic(q) ===
+    selectedSubtopic
+  );
 }
 
 function eligibleQuestions() {
@@ -107,7 +213,15 @@ function updateBuilder() {
 
   const eligible = eligibleQuestions();
   const count = Math.min(DRILL_LIMIT, eligible.length);
-  const focusLabel = focusSelect.selectedOptions[0]?.textContent?.replace(/^↳\s*/, "") || "—";
+  const focusLabel =
+    subtopicSelect.value
+      ? "Subtopic — " +
+        subtopicSelect.value
+      : "Domain — " +
+        (
+          domainSelect.value ||
+          "—"
+        );
   const difficulty = selectedDifficulty();
   const target = targetSeconds();
 
@@ -196,8 +310,22 @@ function startDrill() {
   const session = {
     id: "drill-" + Date.now(),
     section: DRILL_SECTION,
-    focus: focusSelect.value,
-    focusLabel: focusSelect.selectedOptions[0]?.textContent?.replace(/^↳\s*/, "") || "",
+    domain:
+      domainSelect.value,
+    subtopic:
+      subtopicSelect.value || null,
+    focus:
+      subtopicSelect.value
+        ? "subtopic::" +
+          subtopicSelect.value
+        : "domain::" +
+          domainSelect.value,
+    focusLabel:
+      subtopicSelect.value
+        ? "Subtopic — " +
+          subtopicSelect.value
+        : "Domain — " +
+          domainSelect.value,
     difficulty: selectedDifficulty(),
     paceMode: mode,
     pacePercent: mode === "average" ? 0 : percent,
@@ -242,11 +370,24 @@ async function initializeDrill() {
   );
 
   await loadSolvedState();
-  buildFocusOptions();
+  buildDomainOptions();
 
   document.querySelectorAll('input[name="drill-difficulty"],input[name="drill-pace"]')
     .forEach(input => input.addEventListener("change", updateBuilder));
-  focusSelect.addEventListener("change", updateBuilder);
+
+  domainSelect.addEventListener(
+    "change",
+    () => {
+      buildSubtopicOptions();
+      updateBuilder();
+    }
+  );
+
+  subtopicSelect.addEventListener(
+    "change",
+    updateBuilder
+  );
+
   pacePercentInput.addEventListener("input", updateBuilder);
   startButton.addEventListener("click", startDrill);
 
