@@ -4886,3 +4886,64 @@ html:not(.lexlogica-dark-mode) #desmos-frame{
     mix-blend-mode:normal!important;
     opacity:1!important;
 }
+
+
+/* ============================================================
+   WHOLE-WORD TEXT SELECTION
+   ============================================================ */
+
+.question-passage,
+.question-text,
+.choice-text,
+.choice-reason-text,
+.answer-feedback-explanation,
+.student-response-explanation-text,
+.review-result-question,
+.review-result-answer,
+.review-result-explanation,
+.mock-review-context,
+.mock-review-question-text,
+.mock-review-choice-text,
+.mock-review-choice-explanation{
+    user-select:text;
+    -webkit-user-select:text;
+}
+
+.question-passage::selection,
+.question-text::selection,
+.choice-text::selection,
+.choice-reason-text::selection,
+.answer-feedback-explanation::selection,
+.student-response-explanation-text::selection,
+.review-result-question::selection,
+.review-result-answer::selection,
+.review-result-explanation::selection,
+.mock-review-context::selection,
+.mock-review-question-text::selection,
+.mock-review-choice-text::selection,
+.mock-review-choice-explanation::selection{
+    background:rgba(255,222,77,.62);
+    color:inherit;
+}
+
+/*
+ * The Question page uses a literal inversion in dark mode. Use the
+ * complementary pre-inversion selection color so the visible result
+ * remains a warm highlighter yellow instead of turning blue.
+ */
+html.lexlogica-dark-mode .question-page .question-passage::selection,
+html.lexlogica-dark-mode .question-page .question-text::selection,
+html.lexlogica-dark-mode .question-page .choice-text::selection,
+html.lexlogica-dark-mode .question-page .choice-reason-text::selection,
+html.lexlogica-dark-mode .question-page .answer-feedback-explanation::selection,
+html.lexlogica-dark-mode .question-page .student-response-explanation-text::selection,
+html.lexlogica-dark-mode .question-page .review-result-question::selection,
+html.lexlogica-dark-mode .question-page .review-result-answer::selection,
+html.lexlogica-dark-mode .question-page .review-result-explanation::selection,
+html.lexlogica-dark-mode .question-page .mock-review-context::selection,
+html.lexlogica-dark-mode .question-page .mock-review-question-text::selection,
+html.lexlogica-dark-mode .question-page .mock-review-choice-text::selection,
+html.lexlogica-dark-mode .question-page .mock-review-choice-explanation::selection{
+    background:rgba(0,32,155,.68);
+    color:inherit;
+}
