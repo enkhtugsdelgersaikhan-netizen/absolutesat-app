@@ -40,6 +40,7 @@ let answers = {};
 
 let markedForReview = {};
 let localReviewOverrides = {};
+let mockNavigatorFilter = "all";
 
 let elapsedSeconds = 0;
 
@@ -217,6 +218,36 @@ const reviewText =
 const questionNavigator =
     document.getElementById(
         "question-navigator"
+    );
+
+const questionNavigatorToggle =
+    document.getElementById(
+        "question-navigator-toggle"
+    );
+
+const questionNavigatorPopover =
+    document.getElementById(
+        "question-navigator-popover"
+    );
+
+const questionNavigatorClose =
+    document.getElementById(
+        "question-navigator-close"
+    );
+
+const mockNavPosition =
+    document.getElementById(
+        "mock-nav-position"
+    );
+
+const mockNavUnansweredCount =
+    document.getElementById(
+        "mock-nav-unanswered-count"
+    );
+
+const mockNavReviewCount =
+    document.getElementById(
+        "mock-nav-review-count"
     );
 
 const submitButton =
@@ -4503,6 +4534,14 @@ function loadMockStage(
         "hidden"
     );
 
+    questionNavigatorToggle
+        ?.classList.remove(
+            "hidden"
+        );
+
+    mockNavigatorFilter =
+        "all";
+
     renderQuestionNavigator();
 
     renderCurrentQuestion();
@@ -4816,22 +4855,38 @@ function showMockFinalResults() {
             ? "higher"
             : "lower";
 
-    resultsMessage.textContent =
-        "Estimated SAT score: " +
-        satScores.total +
-        ". Reading & Writing: " +
-        satScores.readingWriting +
-        " (" +
-        rwResult.correct +
-        "/54 correct). Math: " +
-        satScores.math +
-        " (" +
-        mathResult.correct +
-        "/44 correct). Adaptive routes: " +
-        rwRoute +
-        " Reading & Writing, " +
-        mathRoute +
-        " Math.";
+    resultsMessage.innerHTML =
+        '<div class="mock-results-summary">' +
+            '<div class="mock-results-summary-item mock-results-summary-total">' +
+                '<span>Estimated SAT</span>' +
+                '<strong>' +
+                    satScores.total +
+                '</strong>' +
+                '<small>400–1600 scale</small>' +
+            '</div>' +
+            '<div class="mock-results-summary-item">' +
+                '<span>Reading &amp; Writing</span>' +
+                '<strong>' +
+                    satScores.readingWriting +
+                '</strong>' +
+                '<small>' +
+                    rwResult.correct +
+                    '/54 correct · ' +
+                    rwRoute +
+                    ' route</small>' +
+            '</div>' +
+            '<div class="mock-results-summary-item">' +
+                '<span>Math</span>' +
+                '<strong>' +
+                    satScores.math +
+                '</strong>' +
+                '<small>' +
+                    mathResult.correct +
+                    '/44 correct · ' +
+                    mathRoute +
+                    ' route</small>' +
+            '</div>' +
+        '</div>';
 
     const backLink =
         document.getElementById(
@@ -6367,6 +6422,168 @@ async function loadQuestionSet(
    RENDER QUESTION NAVIGATOR
    ============================================================ */
 
+function setMockQuestionNavigatorOpen(
+    open
+) {
+    if (
+        !questionNavigatorPopover ||
+        !questionNavigatorToggle
+    ) {
+        return;
+    }
+
+    const shouldOpen =
+        Boolean(
+            open &&
+            mockTestMode
+        );
+
+    questionNavigatorPopover
+        .classList.toggle(
+            "hidden",
+            !shouldOpen
+        );
+
+    questionNavigatorToggle
+        .setAttribute(
+            "aria-expanded",
+            shouldOpen
+                ? "true"
+                : "false"
+        );
+}
+
+
+function mockQuestionHasAnswer(
+    question
+) {
+    if (!question) {
+        return false;
+    }
+
+    const value =
+        answers[
+            question.id
+        ];
+
+    return !(
+        value === undefined ||
+        value === null ||
+        String(value).trim() === ""
+    );
+}
+
+
+function applyMockNavigatorFilter() {
+    if (!questionNavigator) {
+        return;
+    }
+
+    const buttons =
+        questionNavigator
+            .querySelectorAll(
+                ".question-number-button"
+            );
+
+    buttons.forEach(
+        button => {
+            const answered =
+                button.classList
+                    .contains(
+                        "answered"
+                    );
+
+            const review =
+                button.classList
+                    .contains(
+                        "review"
+                    );
+
+            const visible =
+                mockNavigatorFilter ===
+                    "all" ||
+                (
+                    mockNavigatorFilter ===
+                        "unanswered" &&
+                    !answered
+                ) ||
+                (
+                    mockNavigatorFilter ===
+                        "review" &&
+                    review
+                );
+
+            button.classList.toggle(
+                "navigator-filter-hidden",
+                !visible
+            );
+        }
+    );
+
+    document
+        .querySelectorAll(
+            "[data-mock-nav-filter]"
+        )
+        .forEach(
+            button => {
+                button.classList.toggle(
+                    "active",
+                    button.dataset
+                        .mockNavFilter ===
+                        mockNavigatorFilter
+                );
+            }
+        );
+}
+
+
+function updateMockNavigatorSummary() {
+    if (!mockTestMode) {
+        return;
+    }
+
+    const unanswered =
+        questions.filter(
+            question =>
+                !mockQuestionHasAnswer(
+                    question
+                )
+        ).length;
+
+    const review =
+        questions.filter(
+            question =>
+                markedForReview[
+                    question.id
+                ] === true
+        ).length;
+
+    if (mockNavPosition) {
+        mockNavPosition.textContent =
+            (
+                currentQuestionIndex +
+                1
+            ) +
+            " of " +
+            questions.length;
+    }
+
+    if (mockNavUnansweredCount) {
+        mockNavUnansweredCount
+            .textContent =
+            unanswered;
+    }
+
+    if (mockNavReviewCount) {
+        mockNavReviewCount
+            .textContent =
+            review;
+    }
+
+    applyMockNavigatorFilter();
+}
+
+
 function renderQuestionNavigator() {
 
     if (!questionNavigator) {
@@ -6408,7 +6625,17 @@ function renderQuestionNavigator() {
                     currentQuestionIndex =
                         index;
 
+                    if (mockTestMode) {
+                        setMockCurrentIndex(
+                            index
+                        );
+                    }
+
                     resetQuestionTimer();
+
+                    setMockQuestionNavigatorOpen(
+                        false
+                    );
 
                     renderCurrentQuestion();
 
@@ -6462,10 +6689,10 @@ function updateQuestionNavigator() {
                 questions[index];
 
 
-            const answer =
-                answers[
-                    question.id
-                ];
+            const isAnswered =
+                mockQuestionHasAnswer(
+                    question
+                );
 
 
             const isMarked =
@@ -6476,7 +6703,12 @@ function updateQuestionNavigator() {
 
             button.classList.toggle(
                 "answered",
-                Boolean(answer)
+                isAnswered
+            );
+
+            button.classList.toggle(
+                "unanswered",
+                !isAnswered
             );
 
 
@@ -6487,6 +6719,8 @@ function updateQuestionNavigator() {
 
         }
     );
+
+    updateMockNavigatorSummary();
 
 }
 
@@ -10127,6 +10361,99 @@ function showError(
 /* ============================================================
    EVENT LISTENERS
    ============================================================ */
+
+questionNavigatorToggle?.addEventListener(
+    "click",
+    event => {
+        event.preventDefault();
+        event.stopPropagation();
+
+        if (!mockTestMode) {
+            return;
+        }
+
+        const isOpen =
+            questionNavigatorToggle
+                .getAttribute(
+                    "aria-expanded"
+                ) === "true";
+
+        setMockQuestionNavigatorOpen(
+            !isOpen
+        );
+    }
+);
+
+
+questionNavigatorClose?.addEventListener(
+    "click",
+    () =>
+        setMockQuestionNavigatorOpen(
+            false
+        )
+);
+
+
+document
+    .querySelectorAll(
+        "[data-mock-nav-filter]"
+    )
+    .forEach(
+        button => {
+            button.addEventListener(
+                "click",
+                event => {
+                    event.stopPropagation();
+
+                    mockNavigatorFilter =
+                        button.dataset
+                            .mockNavFilter ||
+                        "all";
+
+                    applyMockNavigatorFilter();
+                }
+            );
+        }
+    );
+
+
+document.addEventListener(
+    "click",
+    event => {
+        if (
+            questionNavigatorPopover &&
+            !questionNavigatorPopover
+                .classList.contains(
+                    "hidden"
+                ) &&
+            !questionNavigatorPopover
+                .contains(
+                    event.target
+                ) &&
+            !questionNavigatorToggle
+                ?.contains(
+                    event.target
+                )
+        ) {
+            setMockQuestionNavigatorOpen(
+                false
+            );
+        }
+    }
+);
+
+
+document.addEventListener(
+    "keydown",
+    event => {
+        if (event.key === "Escape") {
+            setMockQuestionNavigatorOpen(
+                false
+            );
+        }
+    }
+);
+
 
 if (reviewButton) {
 
