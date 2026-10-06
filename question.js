@@ -3257,6 +3257,124 @@ function renderQuestionGraph(
 }
 
 
+function renderQuestionDiagram(diagram) {
+    if (!diagram || typeof diagram !== "object") {
+        return "";
+    }
+
+    const width = Math.max(240, Number(diagram.width) || 420);
+    const height = Math.max(180, Number(diagram.height) || 300);
+    const esc = value => escapeHtml(String(value ?? ""));
+
+    const lineMarkup = (diagram.lines || []).map(line => {
+        const x1 = Number(line.x1);
+        const y1 = Number(line.y1);
+        const x2 = Number(line.x2);
+        const y2 = Number(line.y2);
+        if (![x1,y1,x2,y2].every(Number.isFinite)) return "";
+        return '<line class="question-diagram-line' +
+            (line.dashed ? ' question-diagram-dashed' : '') +
+            '" x1="' + x1 + '" y1="' + y1 +
+            '" x2="' + x2 + '" y2="' + y2 + '"></line>';
+    }).join("");
+
+    const polygonMarkup = (diagram.polygons || []).map(poly => {
+        if (!Array.isArray(poly.points) || poly.points.length < 3) return "";
+        const points = poly.points
+            .filter(point => Array.isArray(point) && point.length >= 2)
+            .map(point => Number(point[0]) + "," + Number(point[1]))
+            .join(" ");
+        if (!points) return "";
+        return '<polygon class="question-diagram-polygon' +
+            (poly.shaded ? ' question-diagram-shaded' : '') +
+            '" points="' + points + '"></polygon>';
+    }).join("");
+
+    const circleMarkup = (diagram.circles || []).map(circle => {
+        const cx = Number(circle.cx);
+        const cy = Number(circle.cy);
+        const r = Number(circle.r);
+        if (![cx,cy,r].every(Number.isFinite) || r <= 0) return "";
+        return '<circle class="question-diagram-circle" cx="' + cx +
+            '" cy="' + cy + '" r="' + r + '"></circle>';
+    }).join("");
+
+    const ellipseMarkup = (diagram.ellipses || []).map(ellipse => {
+        const cx = Number(ellipse.cx);
+        const cy = Number(ellipse.cy);
+        const rx = Number(ellipse.rx);
+        const ry = Number(ellipse.ry);
+        if (![cx,cy,rx,ry].every(Number.isFinite) || rx <= 0 || ry <= 0) return "";
+        return '<ellipse class="question-diagram-circle" cx="' + cx +
+            '" cy="' + cy + '" rx="' + rx + '" ry="' + ry + '"></ellipse>';
+    }).join("");
+
+    const pointMarkup = (diagram.points || []).map(point => {
+        const x = Number(point.x);
+        const y = Number(point.y);
+        if (![x,y].every(Number.isFinite)) return "";
+        const dot = point.hideDot
+            ? ""
+            : '<circle class="question-diagram-point" cx="' + x + '" cy="' + y + '" r="3.7"></circle>';
+        const dx = Number.isFinite(Number(point.dx)) ? Number(point.dx) : 8;
+        const dy = Number.isFinite(Number(point.dy)) ? Number(point.dy) : -8;
+        const anchor = point.anchor || (dx < 0 ? "end" : "start");
+        const label = point.label
+            ? '<text class="question-diagram-point-label" x="' + (x + dx) +
+              '" y="' + (y + dy) + '" text-anchor="' + esc(anchor) + '">' +
+              esc(point.label) + '</text>'
+            : "";
+        return dot + label;
+    }).join("");
+
+    const labelMarkup = (diagram.labels || []).map(label => {
+        const x = Number(label.x);
+        const y = Number(label.y);
+        if (![x,y].every(Number.isFinite)) return "";
+        return '<text class="question-diagram-label' +
+            (label.emphasis ? ' question-diagram-label-emphasis' : '') +
+            '" x="' + x + '" y="' + y +
+            '" text-anchor="' + esc(label.anchor || "middle") + '">' +
+            esc(label.text || "") + '</text>';
+    }).join("");
+
+    const rightAngleMarkup = (diagram.rightAngles || []).map(mark => {
+        const x = Number(mark.x);
+        const y = Number(mark.y);
+        const size = Number(mark.size) || 14;
+        const rotation = Number(mark.rotation) || 0;
+        if (![x,y,size,rotation].every(Number.isFinite)) return "";
+        return '<path class="question-diagram-right-angle" transform="rotate(' +
+            rotation + ' ' + x + ' ' + y + ')" d="M ' + x + ' ' + (y-size) +
+            ' L ' + (x+size) + ' ' + (y-size) + ' L ' + (x+size) + ' ' + y + '"></path>';
+    }).join("");
+
+    const tickMarkup = (diagram.ticks || []).map(tick => {
+        const x = Number(tick.x);
+        const y = Number(tick.y);
+        const angle = Number(tick.angle) || 0;
+        const size = Number(tick.size) || 10;
+        if (![x,y,angle,size].every(Number.isFinite)) return "";
+        return '<line class="question-diagram-tick" x1="' + (x-size/2) +
+            '" y1="' + y + '" x2="' + (x+size/2) + '" y2="' + y +
+            '" transform="rotate(' + angle + ' ' + x + ' ' + y + ')"></line>';
+    }).join("");
+
+    const caption = diagram.caption
+        ? '<figcaption class="question-diagram-caption">' +
+          renderInlineFormatting(diagram.caption, true) +
+          '</figcaption>'
+        : "";
+
+    return '<figure class="question-diagram-wrap">' +
+        '<svg class="question-diagram" viewBox="0 0 ' + width + ' ' + height +
+        '" role="img" aria-label="' + esc(diagram.alt || diagram.caption || "Geometry diagram") + '">' +
+        polygonMarkup + lineMarkup + circleMarkup + ellipseMarkup +
+        rightAngleMarkup + tickMarkup + pointMarkup + labelMarkup +
+        '</svg>' + caption + '</figure>';
+}
+
+
 function renderQuestionPassage(
     question
 ) {
@@ -3265,10 +3383,16 @@ function renderQuestionPassage(
             ? renderQuestionGraph(
                 question.graph
             )
-            : renderQuestionTable(
-                question.table,
-                question.section ===
-                    "Math"
+            : (
+                question.diagram
+                    ? renderQuestionDiagram(
+                        question.diagram
+                    )
+                    : renderQuestionTable(
+                        question.table,
+                        question.section ===
+                            "Math"
+                    )
             );
 
     const copy =
