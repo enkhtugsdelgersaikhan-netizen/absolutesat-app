@@ -8098,6 +8098,57 @@ function renderCurrentQuestion() {
             question.table
         );
 
+    const highlightTools =
+        document.getElementById(
+            "text-highlight-tools"
+        );
+
+    const readingHighlightHost =
+        document.getElementById(
+            "reading-highlight-tools-host"
+        );
+
+    const mathHighlightHost =
+        document.getElementById(
+            "math-highlight-tools-host"
+        );
+
+    const mathHighlightFallback =
+        document.getElementById(
+            "math-highlight-tools-fallback"
+        );
+
+    const mathHasInformation =
+        isMathQuestion &&
+        hasContext;
+
+    const highlightTarget =
+        isMathQuestion
+            ? (
+                mathHasInformation
+                    ? mathHighlightHost
+                    : mathHighlightFallback
+            )
+            : readingHighlightHost;
+
+    if (
+        highlightTools &&
+        highlightTarget &&
+        highlightTools.parentElement !==
+            highlightTarget
+    ) {
+        highlightTarget.appendChild(
+            highlightTools
+        );
+    }
+
+    mathHighlightFallback
+        ?.classList.toggle(
+            "hidden",
+            !isMathQuestion ||
+                mathHasInformation
+        );
+
     if (questionPassage) {
         questionPassage.innerHTML =
             isMathQuestion
@@ -12763,141 +12814,9 @@ function initializeWholeWordTextSelection() {
             );
         };
 
-    let rightDrag = null;
-    let suppressNextContextMenu =
-        false;
-
-    document.addEventListener(
-        "mousedown",
-        event => {
-            if (
-                event.button !== 2
-            ) {
-                return;
-            }
-
-            const root =
-                getRoot(
-                    event.target
-                );
-
-            if (!root) {
-                return;
-            }
-
-            const anchor =
-                getCaretAtPoint(
-                    event.clientX,
-                    event.clientY
-                );
-
-            if (
-                !anchor ||
-                getRoot(anchor.node) !==
-                    root
-            ) {
-                return;
-            }
-
-            rightDrag = {
-                root,
-                anchor,
-                startX:
-                    event.clientX,
-                startY:
-                    event.clientY,
-                moved: false
-            };
-
-            event.preventDefault();
-        },
-        true
-    );
-
-    document.addEventListener(
-        "mousemove",
-        event => {
-            if (
-                !rightDrag ||
-                (
-                    event.buttons &
-                    2
-                ) === 0
-            ) {
-                return;
-            }
-
-            if (
-                Math.hypot(
-                    event.clientX -
-                        rightDrag.startX,
-                    event.clientY -
-                        rightDrag.startY
-                ) >= 3
-            ) {
-                rightDrag.moved =
-                    true;
-            }
-
-            const focus =
-                getCaretAtPoint(
-                    event.clientX,
-                    event.clientY
-                );
-
-            const range =
-                buildRange(
-                    rightDrag.anchor,
-                    focus,
-                    rightDrag.root
-                );
-
-            if (
-                range &&
-                !range.collapsed
-            ) {
-                const selection =
-                    window.getSelection();
-
-                selection
-                    ?.removeAllRanges();
-
-                selection
-                    ?.addRange(
-                        snapRangeToWholeWords(
-                            range
-                        )
-                    );
-            }
-
-            event.preventDefault();
-        },
-        true
-    );
-
     document.addEventListener(
         "mouseup",
         event => {
-            if (
-                event.button === 2 &&
-                rightDrag
-            ) {
-                if (
-                    rightDrag.moved
-                ) {
-                    commitCurrentSelection();
-
-                    suppressNextContextMenu =
-                        true;
-                }
-
-                rightDrag =
-                    null;
-
-                event.preventDefault();
-                return;
-            }
-
             if (
                 event.button === 0
             ) {
@@ -12905,27 +12824,6 @@ function initializeWholeWordTextSelection() {
                     commitCurrentSelection
                 );
             }
-        },
-        true
-    );
-
-    document.addEventListener(
-        "contextmenu",
-        event => {
-            if (
-                suppressNextContextMenu &&
-                getRoot(
-                    event.target
-                )
-            ) {
-                event.preventDefault();
-                suppressNextContextMenu =
-                    false;
-                return;
-            }
-
-            suppressNextContextMenu =
-                false;
         },
         true
     );
@@ -12967,11 +12865,45 @@ function initializeWholeWordTextSelection() {
 
         restore() {
             restoreAll();
+        },
+
+        clear() {
+            state.ranges = [];
+
+            document
+                .querySelectorAll(
+                    "mark.persistent-text-highlight"
+                )
+                .forEach(
+                    mark => {
+                        mark.replaceWith(
+                            document.createTextNode(
+                                mark.textContent ||
+                                ""
+                            )
+                        );
+                    }
+                );
+
+            window.getSelection()
+                ?.removeAllRanges();
         }
     };
 }
 
 initializeWholeWordTextSelection();
+
+document
+    .getElementById(
+        "clear-highlights-button"
+    )
+    ?.addEventListener(
+        "click",
+        () => {
+            window.lexLogicaHighlighter
+                ?.clear();
+        }
+    );
 
 
 function initializeDesmosPanel() {
