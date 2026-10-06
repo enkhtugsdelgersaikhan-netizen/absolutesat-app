@@ -6433,37 +6433,14 @@ function renderQuestionBankPeeker() {
         return;
     }
 
-    const start =
-        Math.max(
-            0,
-            Math.min(
-                currentQuestionIndex -
-                    3,
-                Math.max(
-                    0,
-                    questions.length -
-                        7
-                )
-            )
-        );
-
-    const nearby =
-        questions.slice(
-            start,
-            start + 7
-        );
-
     questionBankPeekerList.innerHTML =
         "";
 
-    nearby.forEach(
+    questions.forEach(
         (
             item,
-            offset
+            index
         ) => {
-            const index =
-                start +
-                offset;
 
             const button =
                 document.createElement(
@@ -6481,6 +6458,9 @@ function renderQuestionBankPeeker() {
                         ? " current"
                         : ""
                 );
+
+            button.dataset.peekerIndex =
+                String(index);
 
             const difficulty =
                 String(
@@ -6575,6 +6555,62 @@ function renderQuestionBankPeeker() {
                 );
         }
     );
+
+    if (
+        questionBankPeekerPanel &&
+        !questionBankPeekerPanel
+            .classList.contains(
+                "hidden"
+            )
+    ) {
+        window.requestAnimationFrame(
+            () =>
+                scrollQuestionBankPeekerToCurrent(
+                    "auto"
+                )
+        );
+    }
+}
+
+
+function scrollQuestionBankPeekerToCurrent(
+    behavior = "auto"
+) {
+    if (
+        !questionBankPeekerList ||
+        !questionBankPeekerPanel ||
+        questionBankPeekerPanel
+            .classList.contains(
+                "hidden"
+            )
+    ) {
+        return;
+    }
+
+    const currentTile =
+        questionBankPeekerList.querySelector(
+            ".question-bank-peeker-item.current"
+        );
+
+    if (!currentTile) {
+        return;
+    }
+
+    const targetTop =
+        currentTile.offsetTop -
+        (
+            questionBankPeekerList.clientHeight -
+            currentTile.offsetHeight
+        ) / 2;
+
+    questionBankPeekerList.scrollTo({
+        top:
+            Math.max(
+                0,
+                targetTop
+            ),
+        behavior
+    });
 }
 
 
@@ -6601,6 +6637,15 @@ function setQuestionBankPeekerOpen(
                 ? "true"
                 : "false"
         );
+
+    if (open) {
+        window.requestAnimationFrame(
+            () =>
+                scrollQuestionBankPeekerToCurrent(
+                    "auto"
+                )
+        );
+    }
 }
 
 
