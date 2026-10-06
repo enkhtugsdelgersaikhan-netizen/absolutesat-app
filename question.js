@@ -93,6 +93,26 @@ const questionNumber =
         "question-number"
     );
 
+const questionMetadata =
+    document.getElementById(
+        "question-metadata"
+    );
+
+const questionDomain =
+    document.getElementById(
+        "question-domain"
+    );
+
+const questionSubtopic =
+    document.getElementById(
+        "question-subtopic"
+    );
+
+const questionDifficulty =
+    document.getElementById(
+        "question-difficulty"
+    );
+
 const questionText =
     document.getElementById(
         "question-text"
@@ -5773,6 +5793,45 @@ function renderCurrentQuestion() {
             currentQuestionIndex + 1
         }`;
 
+    const isQuestionBankQuestion =
+        !mockTestMode &&
+        currentSet === null;
+
+    if (questionMetadata) {
+        questionMetadata.classList.toggle(
+            "hidden",
+            !isQuestionBankQuestion
+        );
+    }
+
+    if (isQuestionBankQuestion) {
+        if (questionDomain) {
+            questionDomain.textContent =
+                question.domain ||
+                "SAT";
+        }
+
+        if (questionSubtopic) {
+            questionSubtopic.textContent =
+                question.topic ||
+                "SAT Practice";
+        }
+
+        if (questionDifficulty) {
+            const difficulty =
+                question.difficulty ||
+                "Medium";
+
+            questionDifficulty.textContent =
+                difficulty;
+
+            questionDifficulty.dataset.difficulty =
+                String(
+                    difficulty
+                ).toLowerCase();
+        }
+    }
+
     const isMathQuestion =
         question.section === "Math";
 
@@ -6821,6 +6880,9 @@ function renderChoices(
             wrapper.className =
                 "choice-wrapper";
 
+            wrapper.dataset.choiceLetter =
+                choice.letter;
+
 
             const button =
                 document.createElement(
@@ -6976,6 +7038,14 @@ function renderChoices(
                 );
 
 
+            strikeButton.classList.toggle(
+                "active",
+                Boolean(
+                    isEliminated
+                )
+            );
+
+
             strikeButton.textContent =
                 isEliminated
                     ? "×"
@@ -7094,6 +7164,8 @@ function toggleEliminatedChoice(
         );
 
 
+    let isEliminated;
+
     if (existingIndex >= 0) {
 
         choices.splice(
@@ -7101,20 +7173,86 @@ function toggleEliminatedChoice(
             1
         );
 
+        isEliminated =
+            false;
+
     } else {
 
         choices.push(
             choiceLetter
         );
 
+        isEliminated =
+            true;
+
     }
 
 
-    renderChoices(
-        questions[
-            currentQuestionIndex
-        ]
-    );
+    /*
+     * Do not rebuild the entire answer-choice DOM here.
+     *
+     * Re-rendering choices destroys MathJax-rendered nodes,
+     * graph/table layout, and inline formatting. Cross-out is
+     * only a visual state change, so update the existing choice
+     * in place instead.
+     */
+    const wrapper =
+        choicesContainer
+            ?.querySelector(
+                `.choice-wrapper[data-choice-letter="${
+                    CSS.escape(
+                        String(
+                            choiceLetter
+                        )
+                    )
+                }"]`
+            );
+
+    const choiceButton =
+        wrapper?.querySelector(
+            ".choice"
+        );
+
+    const strikeButton =
+        wrapper?.querySelector(
+            ".choice-strike-button"
+        );
+
+    choiceButton
+        ?.classList.toggle(
+            "eliminated",
+            isEliminated
+        );
+
+    if (strikeButton) {
+        strikeButton.textContent =
+            isEliminated
+                ? "×"
+                : "✕";
+
+        strikeButton.setAttribute(
+            "aria-label",
+            isEliminated
+                ? "Remove cross out"
+                : "Cross out choice"
+        );
+
+        strikeButton.setAttribute(
+            "title",
+            isEliminated
+                ? "Remove cross out"
+                : "Cross out choice"
+        );
+
+        strikeButton.classList.toggle(
+            "active",
+            isEliminated
+        );
+    }
+
+    if (mockTestMode) {
+        saveMockState();
+    }
 
 }
 
