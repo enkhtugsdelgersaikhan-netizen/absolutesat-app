@@ -2794,3 +2794,68 @@ body.math-question-active .sat-answer-pane .question-text br,
 body.math-question-active .sat-answer-pane .choice-text br{
     line-height:1.15;
 }
+
+
+/* ============================================================
+   SYSTEMIC MATH RICH-TEXT NORMALIZATION
+   The same spacing/MathJax rules apply to stems, choices,
+   explanations, student responses, and result-review content.
+   ============================================================ */
+body.math-question-active .question-text,
+body.math-question-active .choice-text,
+body.math-question-active .choice-reason-text,
+body.math-question-active .answer-feedback-explanation,
+body.math-question-active .student-response-explanation-text,
+body.math-question-active .review-result-question,
+body.math-question-active .review-result-answer,
+body.math-question-active .review-result-explanation,
+body.math-question-active .math-question-context-content{
+    white-space:normal!important;
+    overflow-wrap:normal;
+    word-break:normal;
+}
+
+body.math-question-active .question-text mjx-container:not([display="true"]),
+body.math-question-active .choice-text mjx-container:not([display="true"]),
+body.math-question-active .choice-reason-text mjx-container:not([display="true"]),
+body.math-question-active .answer-feedback-explanation mjx-container:not([display="true"]),
+body.math-question-active .student-response-explanation-text mjx-container:not([display="true"]),
+body.math-question-active .review-result-question mjx-container:not([display="true"]),
+body.math-question-active .review-result-answer mjx-container:not([display="true"]),
+body.math-question-active .review-result-explanation mjx-container:not([display="true"]),
+body.math-question-active .math-question-context-content mjx-container:not([display="true"]){
+    display:inline-block!important;
+    margin-left:.12em!important;
+    margin-right:.12em!important;
+    vertical-align:baseline!important;
+}
+
+body.math-question-active .question-text mjx-container[display="true"],
+body.math-question-active .choice-text mjx-container[display="true"],
+body.math-question-active .choice-reason-text mjx-container[display="true"],
+body.math-question-active .answer-feedback-explanation mjx-container[display="true"],
+body.math-question-active .student-response-explanation-text mjx-container[display="true"],
+body.math-question-active .review-result-question mjx-container[display="true"],
+body.math-question-active .review-result-answer mjx-container[display="true"],
+body.math-question-active .review-result-explanation mjx-container[display="true"],
+body.math-question-active .math-question-context-content mjx-container[display="true"]{
+    display:block!important;
+    max-width:100%;
+    margin:.5em auto!important;
+    padding:0!important;
+    overflow-x:auto;
+    overflow-y:hidden;
+}
+
+body.math-question-active .student-response-explanation-text,
+body.math-question-active .review-result-explanation{
+    font-family:"Noto Serif",Georgia,"Times New Roman",serif!important;
+    line-height:1.6;
+}
+
+body.math-question-active .student-response-explanation-text em,
+body.math-question-active .review-result-question em,
+body.math-question-active .review-result-answer em,
+body.math-question-active .review-result-explanation em{
+    font-style:normal!important;
+}
