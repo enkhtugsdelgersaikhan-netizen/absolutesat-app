@@ -301,3 +301,18 @@
     font-weight:700;
     line-height:1.2;
 }
+
+@media(max-width:620px){
+    .mock-hero-facts{
+        grid-template-columns:1fr;
+    }
+
+    .mock-hero-facts > span{
+        border-right:0;
+        border-bottom:1px solid var(--mock-line);
+    }
+
+    .mock-hero-facts > span:last-child{
+        border-bottom:0;
+    }
+}
