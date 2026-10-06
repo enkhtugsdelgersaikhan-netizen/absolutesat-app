@@ -71,7 +71,7 @@ function renderTest(test,userId){
                     <p class="mock-card-description">${escapeHtml(test.description)}</p>
                 </div>
                 <div class="mock-card-action">
-                    <a class="mock-start" href="/question?mock=${encodeURIComponent(test.id)}">
+                    <a class="mock-start" href="/question?mock=${encodeURIComponent(test.id)}${completed?"&restart=1":""}">
                         ${started?"Resume test":completed?"Retake test":"Start test"}
                         <span aria-hidden="true">→</span>
                     </a>
