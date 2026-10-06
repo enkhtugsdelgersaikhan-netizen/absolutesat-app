@@ -336,3 +336,21 @@
     transform:none;
     cursor:not-allowed;
 }
+
+
+/* University-style mock cards */
+.mock-card{
+    border:1px solid #dbe4e2!important;
+    border-radius:14px!important;
+    background:#fff!important;
+    box-shadow:0 4px 14px rgba(15,23,42,.045)!important;
+}
+.mock-card:hover{
+    transform:translateY(-2px)!important;
+    border-color:#9bc8c0!important;
+    box-shadow:0 8px 20px rgba(15,23,42,.065)!important;
+}
+.mock-card-action{
+    border-radius:9px!important;
+    box-shadow:0 2px 6px rgba(15,23,42,.035)!important;
+}
