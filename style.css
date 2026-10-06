@@ -5902,7 +5902,7 @@ select:hover,
  */
 html.lexlogica-dark-mode{
     background:#000;
-    filter:invert(1);
+    filter:invert(1) brightness(1.08);
 }
 
 /*
