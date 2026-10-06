@@ -5123,3 +5123,27 @@ html.lexlogica-dark-mode .question-page .clear-highlights-button{
         flex-wrap:wrap;
     }
 }
+
+
+/* ============================================================
+   MATH: NATIVE TEXT SELECTION ONLY
+   ============================================================ */
+
+/*
+ * Persistent highlighting is a Reading & Writing tool only.
+ * Math keeps ordinary browser text selection and never shows the
+ * highlighter/eraser controls.
+ */
+body.math-question-active .text-highlight-tools{
+    display:none!important;
+}
+
+body.math-question-active .question-text::selection,
+body.math-question-active .choice-text::selection,
+body.math-question-active .choice-reason-text::selection,
+body.math-question-active .answer-feedback-explanation::selection,
+body.math-question-active .student-response-explanation-text::selection,
+body.math-question-active .math-question-context-content::selection{
+    background:Highlight;
+    color:HighlightText;
+}
