@@ -295,6 +295,51 @@ const mockSectionScores =
         "mock-section-scores"
     );
 
+const mockScoreGauges =
+    document.getElementById(
+        "mock-score-gauges"
+    );
+
+const mockTotalGaugeScore =
+    document.getElementById(
+        "mock-total-gauge-score"
+    );
+
+const mockRwGaugeScore =
+    document.getElementById(
+        "mock-rw-gauge-score"
+    );
+
+const mockMathGaugeScore =
+    document.getElementById(
+        "mock-math-gauge-score"
+    );
+
+const mockRwGaugeRaw =
+    document.getElementById(
+        "mock-rw-gauge-raw"
+    );
+
+const mockMathGaugeRaw =
+    document.getElementById(
+        "mock-math-gauge-raw"
+    );
+
+const mockTotalGaugeProgress =
+    document.getElementById(
+        "mock-total-gauge-progress"
+    );
+
+const mockRwGaugeProgress =
+    document.getElementById(
+        "mock-rw-gauge-progress"
+    );
+
+const mockMathGaugeProgress =
+    document.getElementById(
+        "mock-math-gauge-progress"
+    );
+
 const mockRwScore =
     document.getElementById(
         "mock-rw-score"
@@ -3812,6 +3857,108 @@ function roundSatScoreToNearestTen(
 }
 
 
+function updateMockScoreGauge(
+    path,
+    score,
+    minimum,
+    maximum
+) {
+    if (!path) {
+        return;
+    }
+
+    const range =
+        Math.max(
+            1,
+            maximum - minimum
+        );
+
+    const progress =
+        Math.max(
+            0,
+            Math.min(
+                1,
+                (
+                    Number(score) -
+                    minimum
+                ) /
+                range
+            )
+        );
+
+    path.style.strokeDasharray =
+        "100";
+
+    path.style.strokeDashoffset =
+        String(
+            100 -
+            progress * 100
+        );
+}
+
+
+function renderMockScoreGauges(
+    satScores,
+    rwCorrect,
+    mathCorrect
+) {
+    if (!mockScoreGauges) {
+        return;
+    }
+
+    mockScoreGauges
+        .classList.remove(
+            "hidden"
+        );
+
+    if (mockTotalGaugeScore) {
+        mockTotalGaugeScore.textContent =
+            satScores.total;
+    }
+
+    if (mockRwGaugeScore) {
+        mockRwGaugeScore.textContent =
+            satScores.readingWriting;
+    }
+
+    if (mockMathGaugeScore) {
+        mockMathGaugeScore.textContent =
+            satScores.math;
+    }
+
+    if (mockRwGaugeRaw) {
+        mockRwGaugeRaw.textContent =
+            rwCorrect;
+    }
+
+    if (mockMathGaugeRaw) {
+        mockMathGaugeRaw.textContent =
+            mathCorrect;
+    }
+
+    updateMockScoreGauge(
+        mockTotalGaugeProgress,
+        satScores.total,
+        400,
+        1600
+    );
+
+    updateMockScoreGauge(
+        mockRwGaugeProgress,
+        satScores.readingWriting,
+        200,
+        800
+    );
+
+    updateMockScoreGauge(
+        mockMathGaugeProgress,
+        satScores.math,
+        200,
+        800
+    );
+}
+
+
 function calculateMockSatScores(
     readingWritingCorrect,
     mathCorrect
@@ -3977,6 +4124,42 @@ function scoreMockQuestions(
 }
 
 
+function syncLexLogicaThemeFromStorage() {
+    try {
+        const stored =
+            localStorage.getItem(
+                "lexlogica-theme"
+            );
+
+        if (
+            typeof applyLexLogicaTheme ===
+                "function"
+        ) {
+            applyLexLogicaTheme(
+                stored === "dark"
+                    ? "dark"
+                    : "light"
+            );
+            return;
+        }
+
+        document.documentElement
+            .classList.toggle(
+                "lexlogica-dark-mode",
+                stored === "dark"
+            );
+
+        document.documentElement
+            .style.colorScheme =
+            stored === "dark"
+                ? "dark"
+                : "light";
+    } catch {
+        /* Theme sync is best-effort in restricted storage contexts. */
+    }
+}
+
+
 function closeMockGate() {
     document
         .getElementById(
@@ -4002,6 +4185,8 @@ function closeMockGate() {
 
 function showMockBreak() {
     closeMockGate();
+
+    syncLexLogicaThemeFromStorage();
 
     questionApp.classList.add(
         "hidden"
@@ -4150,6 +4335,8 @@ function continueFromMockBreak() {
 
     mockState.breakDeadline =
         null;
+
+    syncLexLogicaThemeFromStorage();
 
     mockState.moduleDeadline =
         null;
@@ -4453,6 +4640,8 @@ function orderMockQuestionsLikeRealTest(
 function loadMockStage(
     resetDeadline = false
 ) {
+    syncLexLogicaThemeFromStorage();
+
     if (
         !mockTestMode ||
         !mockManifest ||
@@ -4728,6 +4917,8 @@ function finishMockModule(
 
 
 function showMockFinalResults() {
+    syncLexLogicaThemeFromStorage();
+
     if (
         !mockTestMode ||
         !mockState
@@ -4803,6 +4994,18 @@ function showMockFinalResults() {
             mathResult.correct
         );
 
+    renderMockScoreGauges(
+        satScores,
+        rwResult.correct,
+        mathResult.correct
+    );
+
+    document.querySelector(
+        ".score-circle"
+    )?.classList.add(
+        "hidden"
+    );
+
     scoreNumber.textContent =
         satScores.total;
 
@@ -4818,7 +5021,7 @@ function showMockFinalResults() {
 
     if (mockSectionScores) {
         mockSectionScores
-            .classList.remove(
+            .classList.add(
                 "hidden"
             );
     }
@@ -4875,36 +5078,13 @@ function showMockFinalResults() {
             : "lower";
 
     resultsMessage.innerHTML =
-        '<div class="mock-results-summary">' +
-            '<div class="mock-results-summary-item mock-results-summary-total">' +
-                '<span>Estimated SAT</span>' +
-                '<strong>' +
-                    satScores.total +
-                '</strong>' +
-                '<small>400–1600 scale</small>' +
-            '</div>' +
-            '<div class="mock-results-summary-item">' +
-                '<span>Reading &amp; Writing</span>' +
-                '<strong>' +
-                    satScores.readingWriting +
-                '</strong>' +
-                '<small>' +
-                    rwResult.correct +
-                    '/54 correct · ' +
-                    rwRoute +
-                    ' route</small>' +
-            '</div>' +
-            '<div class="mock-results-summary-item">' +
-                '<span>Math</span>' +
-                '<strong>' +
-                    satScores.math +
-                '</strong>' +
-                '<small>' +
-                    mathResult.correct +
-                    '/44 correct · ' +
-                    mathRoute +
-                    ' route</small>' +
-            '</div>' +
+        '<div class="mock-route-summary">' +
+            '<span>Reading &amp; Writing · <strong>' +
+                rwRoute +
+                ' route</strong></span>' +
+            '<span>Math · <strong>' +
+                mathRoute +
+                ' route</strong></span>' +
         '</div>';
 
     const backLink =
@@ -10022,6 +10202,16 @@ function showResults(
 
 
     mockSectionScores?.classList.add(
+        "hidden"
+    );
+
+    mockScoreGauges?.classList.add(
+        "hidden"
+    );
+
+    document.querySelector(
+        ".score-circle"
+    )?.classList.remove(
         "hidden"
     );
 
