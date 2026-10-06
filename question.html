@@ -16,7 +16,7 @@
     >
 
     <link rel="stylesheet" href="style.css?v=dark-2">
-    <link rel="stylesheet" href="question.css?v=61">
+    <link rel="stylesheet" href="question.css?v=62">
 </head>
 
 <body>
@@ -101,6 +101,58 @@
                         <span id="question-number">
                             Question 1
                         </span>
+
+                        <button
+                            id="question-navigator-toggle"
+                            class="mock-question-menu-toggle hidden"
+                            type="button"
+                            aria-label="Open question navigator"
+                            aria-expanded="false"
+                            aria-controls="question-navigator-popover"
+                        >
+                            <svg viewBox="0 0 16 16" aria-hidden="true">
+                                <path d="m4.5 6 3.5 3.5L11.5 6"></path>
+                            </svg>
+                        </button>
+
+                        <div
+                            id="question-navigator-popover"
+                            class="mock-question-menu hidden"
+                            role="dialog"
+                            aria-label="Question navigator"
+                        >
+                            <div class="mock-question-menu-head">
+                                <div>
+                                    <strong>Questions</strong>
+                                    <span id="mock-nav-position">1 of 1</span>
+                                </div>
+                                <button
+                                    id="question-navigator-close"
+                                    type="button"
+                                    aria-label="Close question navigator"
+                                >×</button>
+                            </div>
+
+                            <div class="mock-question-menu-filters" aria-label="Question filters">
+                                <button class="active" type="button" data-mock-nav-filter="all">
+                                    All
+                                </button>
+                                <button type="button" data-mock-nav-filter="unanswered">
+                                    Unanswered <span id="mock-nav-unanswered-count">0</span>
+                                </button>
+                                <button type="button" data-mock-nav-filter="review">
+                                    Review <span id="mock-nav-review-count">0</span>
+                                </button>
+                            </div>
+
+                            <div id="question-navigator" class="question-navigator"></div>
+
+                            <div class="mock-question-menu-legend">
+                                <span><i class="unanswered"></i>Unanswered</span>
+                                <span><i class="answered"></i>Answered</span>
+                                <span><i class="review"></i>Review</span>
+                            </div>
+                        </div>
 
                         <div
                             id="question-metadata"
@@ -450,7 +502,7 @@ window.MathJax = {
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js?v=dark-1"></script>
-<script src="question.js?v=62"></script>
+<script src="question.js?v=63"></script>
 
 </body>
 </html>
