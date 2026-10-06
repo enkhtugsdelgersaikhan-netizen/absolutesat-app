@@ -1375,3 +1375,57 @@ html.lexlogica-dark-mode .question-review-icon.active{
 html.lexlogica-dark-mode .question-review-icon:hover{
     color:#fff177!important;
 }
+
+
+/* ============================================================
+   LIGHT MODE DEPTH NORMALIZATION
+   Match university cards: tinted surface + border + soft shadow.
+   ============================================================ */
+html:not(.lexlogica-dark-mode) .question-icon{
+    border-width:1px!important;
+    border-radius:12px!important;
+    transform:none!important;
+    filter:none!important;
+}
+html:not(.lexlogica-dark-mode) .question-icon.difficulty-easy{
+    background:#edf7f2!important;
+    border-color:#afd1c4!important;
+    color:#356f5d!important;
+    box-shadow:0 3px 8px rgba(53,111,93,.045)!important;
+}
+html:not(.lexlogica-dark-mode) .question-icon.difficulty-medium{
+    background:#fff8e9!important;
+    border-color:#e4cf9d!important;
+    color:#806522!important;
+    box-shadow:0 3px 8px rgba(128,101,34,.04)!important;
+}
+html:not(.lexlogica-dark-mode) .question-icon.difficulty-hard{
+    background:#fff1ef!important;
+    border-color:#dfbcb6!important;
+    color:#8a4f49!important;
+    box-shadow:0 3px 8px rgba(138,79,73,.04)!important;
+}
+html:not(.lexlogica-dark-mode) .question-icon:hover{
+    transform:translateY(-1px)!important;
+    filter:none!important;
+    box-shadow:0 6px 12px rgba(15,23,42,.06)!important;
+}
+html:not(.lexlogica-dark-mode) .question-icon:active{
+    transform:none!important;
+    box-shadow:0 2px 5px rgba(15,23,42,.04)!important;
+}
+html:not(.lexlogica-dark-mode) .question-status-dot{
+    box-shadow:none!important;
+}
+html:not(.lexlogica-dark-mode) .question-review-icon{
+    border:1px solid #dbe4e2!important;
+    background:#fff!important;
+    box-shadow:0 2px 5px rgba(15,23,42,.055)!important;
+}
+html:not(.lexlogica-dark-mode) .skill-picker-panel,
+html:not(.lexlogica-dark-mode) .domain-skill-group{
+    box-shadow:0 4px 14px rgba(15,23,42,.04)!important;
+}
+html:not(.lexlogica-dark-mode) .subtopic-choice{
+    box-shadow:0 2px 5px rgba(15,23,42,.025)!important;
+}
