@@ -5896,6 +5896,15 @@ async function loadMockTest(
     mockManifest =
         await response.json();
 
+    if (
+        mockManifest?.populated === false
+    ) {
+        showError(
+            "This mock test has not been populated with questions yet."
+        );
+        return;
+    }
+
     const key =
         getMockStateStorageKey();
 
