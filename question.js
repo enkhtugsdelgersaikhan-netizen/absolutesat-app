@@ -270,14 +270,46 @@ function escapeHtml(value) {
 }
 
 
+function normalizeMathEscapes(value) {
+    let source =
+        String(
+            value === null ||
+            value === undefined
+                ? ""
+                : value
+        );
+
+    // Imported question data occasionally contains TeX that has
+    // been escaped twice (for example \\\\( ... \\\\) or
+    // \\\\[ ... \\\\]). MathJax only recognizes the normal
+    // single-backslash delimiters, so repair those conservatively.
+    source = source.replace(
+        /\\\\([()\[\]])/g,
+        "\\$1"
+    );
+
+    // Once a math segment is recognized, collapse a duplicated
+    // backslash before TeX command names such as \\frac or \\sqrt.
+    // This is intentionally limited to delimited math so prose and
+    // legitimate line breaks elsewhere are untouched.
+    source = source.replace(
+        /\\\(([\s\S]*?)\\\)|\\\[([\s\S]*?)\\\]/g,
+        match =>
+            match.replace(
+                /\\\\(?=[A-Za-z])/g,
+                "\\"
+            )
+    );
+
+    return source;
+}
+
+
 function repairCommonMathNotation(value) {
     const source =
         normalizeAccidentalDisplayProse(
-            String(
-                value === null ||
-                value === undefined
-                    ? ""
-                    : value
+            normalizeMathEscapes(
+                value
             )
         );
 
@@ -349,30 +381,67 @@ function repairCommonMathNotation(value) {
 
 function renderInlineFormatting(value) {
 
-    const escaped =
-        escapeHtml(
-            repairCommonMathNotation(
-                value
-            )
+    const repaired =
+        repairCommonMathNotation(
+            value
         );
 
-    return escaped
-        .replace(
-            /&lt;u&gt;([\s\S]*?)&lt;\/u&gt;/g,
-            "<u>$1</u>"
-        )
-        .replace(
-            /\*\*([^*]+)\*\*/g,
-            "<strong>$1</strong>"
-        )
-        .replace(
-            /\*([^*]+)\*/g,
-            "<em>$1</em>"
-        )
-        .replace(
-            /_([^_]+)_/g,
-            "<em>$1</em>"
+    // Protect TeX before applying lightweight Markdown formatting.
+    // Otherwise underscores used for subscripts (T_0, x_1, etc.)
+    // and asterisks inside equations can be mistaken for emphasis
+    // markers and corrupt otherwise valid MathJax input.
+    const mathSegments = [];
+
+    const protectedSource =
+        repaired.replace(
+            /\\\(([\s\S]*?)\\\)|\\\[([\s\S]*?)\\\]/g,
+            match => {
+                const index =
+                    mathSegments.push(
+                        match
+                    ) - 1;
+
+                return (
+                    "\uE000MATH" +
+                    index +
+                    "\uE001"
+                );
+            }
         );
+
+    const escaped =
+        escapeHtml(
+            protectedSource
+        )
+            .replace(
+                /&lt;u&gt;([\s\S]*?)&lt;\/u&gt;/g,
+                "<u>$1</u>"
+            )
+            .replace(
+                /\*\*([^*]+)\*\*/g,
+                "<strong>$1</strong>"
+            )
+            .replace(
+                /\*([^*]+)\*/g,
+                "<em>$1</em>"
+            )
+            .replace(
+                /_([^_]+)_/g,
+                "<em>$1</em>"
+            );
+
+    return escaped.replace(
+        /\uE000MATH(\d+)\uE001/g,
+        (
+            match,
+            index
+        ) =>
+            escapeHtml(
+                mathSegments[
+                    Number(index)
+                ] || ""
+            )
+    );
 
 }
 
@@ -3218,11 +3287,8 @@ function normalizeAccidentalDisplayProse(
     value
 ) {
     const source =
-        String(
-            value === null ||
-            value === undefined
-                ? ""
-                : value
+        normalizeMathEscapes(
+            value
         );
 
     return source.replace(
