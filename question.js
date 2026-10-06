@@ -56,6 +56,13 @@ let currentUser = null;
 
 let submitted = false;
 
+let mockTestMode = false;
+let mockManifest = null;
+let mockTestId = null;
+let mockState = null;
+let mockTimerInterval = null;
+let mockBreakInterval = null;
+
 
 /* ============================================================
    DOM ELEMENTS
@@ -3191,6 +3198,1256 @@ async function goToNextQuestion() {
 
 
 /* ============================================================
+   MOCK TEST MODE
+   ============================================================ */
+
+function getMockStateStorageKey() {
+    if (
+        !currentUser ||
+        !mockTestId
+    ) {
+        return null;
+    }
+
+    return (
+        "lexlogica-mock-state:" +
+        currentUser.id +
+        ":" +
+        mockTestId
+    );
+}
+
+
+function saveMockState() {
+    if (
+        !mockTestMode ||
+        !mockState
+    ) {
+        return;
+    }
+
+    mockState.answers =
+        answers;
+
+    mockState.markedForReview =
+        markedForReview;
+
+    const key =
+        getMockStateStorageKey();
+
+    if (!key) {
+        return;
+    }
+
+    try {
+        localStorage.setItem(
+            key,
+            JSON.stringify(
+                mockState
+            )
+        );
+    } catch (error) {
+        console.warn(
+            "Could not save mock-test progress:",
+            error
+        );
+    }
+}
+
+
+function getMockStageInfo(
+    stage = mockState?.currentStage
+) {
+    const map = {
+        rw_m1: {
+            sectionKey: "readingWriting",
+            sectionLabel:
+                "Reading and Writing",
+            moduleLabel:
+                "Module 1",
+            minutes:
+                mockManifest?.timing
+                    ?.readingWritingModuleMinutes ||
+                32
+        },
+        rw_m2: {
+            sectionKey: "readingWriting",
+            sectionLabel:
+                "Reading and Writing",
+            moduleLabel:
+                "Module 2",
+            minutes:
+                mockManifest?.timing
+                    ?.readingWritingModuleMinutes ||
+                32
+        },
+        math_m1: {
+            sectionKey: "math",
+            sectionLabel:
+                "Math",
+            moduleLabel:
+                "Module 1",
+            minutes:
+                mockManifest?.timing
+                    ?.mathModuleMinutes ||
+                35
+        },
+        math_m2: {
+            sectionKey: "math",
+            sectionLabel:
+                "Math",
+            moduleLabel:
+                "Module 2",
+            minutes:
+                mockManifest?.timing
+                    ?.mathModuleMinutes ||
+                35
+        }
+    };
+
+    return map[stage] || null;
+}
+
+
+function getMockStageEntries(
+    stage = mockState?.currentStage
+) {
+    const info =
+        getMockStageInfo(
+            stage
+        );
+
+    if (
+        !info ||
+        !mockManifest
+    ) {
+        return [];
+    }
+
+    const section =
+        mockManifest.sections?.[
+            info.sectionKey
+        ];
+
+    if (!section) {
+        return [];
+    }
+
+    if (
+        stage === "rw_m1" ||
+        stage === "math_m1"
+    ) {
+        return (
+            section.module1 ||
+            []
+        );
+    }
+
+    const route =
+        info.sectionKey ===
+            "readingWriting"
+            ? mockState?.routes
+                ?.readingWriting
+            : mockState?.routes
+                ?.math;
+
+    return route === "low"
+        ? (
+            section.module2Low ||
+            []
+        )
+        : (
+            section.module2High ||
+            []
+        );
+}
+
+
+function normalizeMockEntries(
+    entries
+) {
+    return (
+        entries || []
+    ).map(
+        (
+            entry,
+            index
+        ) => {
+            const normalized =
+                normalizeStagedQuestion(
+                    entry.question,
+                    index
+                );
+
+            normalized.mock_request_id =
+                entry.requestId;
+
+            normalized.mock_target_domain =
+                entry.targetDomain;
+
+            normalized.mock_target_subtopic =
+                entry.targetSubtopic;
+
+            normalized.mock_target_difficulty =
+                entry.targetDifficulty;
+
+            return normalized;
+        }
+    );
+}
+
+
+function getMockAllRouteQuestions() {
+    if (
+        !mockManifest ||
+        !mockState
+    ) {
+        return [];
+    }
+
+    const rw =
+        mockManifest.sections
+            ?.readingWriting;
+
+    const math =
+        mockManifest.sections
+            ?.math;
+
+    const rwSecond =
+        mockState.routes
+            ?.readingWriting ===
+                "low"
+            ? rw?.module2Low
+            : rw?.module2High;
+
+    const mathSecond =
+        mockState.routes
+            ?.math ===
+                "low"
+            ? math?.module2Low
+            : math?.module2High;
+
+    return normalizeMockEntries(
+        [
+            ...(rw?.module1 || []),
+            ...(rwSecond || []),
+            ...(math?.module1 || []),
+            ...(mathSecond || [])
+        ]
+    );
+}
+
+
+function getMockCurrentIndex() {
+    return Number(
+        mockState
+            ?.currentQuestionIndexByStage
+            ?.[
+                mockState.currentStage
+            ] || 0
+    );
+}
+
+
+function setMockCurrentIndex(
+    index
+) {
+    if (!mockState) {
+        return;
+    }
+
+    if (
+        !mockState
+            .currentQuestionIndexByStage
+    ) {
+        mockState
+            .currentQuestionIndexByStage =
+            {};
+    }
+
+    mockState
+        .currentQuestionIndexByStage[
+            mockState.currentStage
+        ] =
+        index;
+
+    saveMockState();
+}
+
+
+function scoreMockQuestions(
+    questionList
+) {
+    let correct = 0;
+    let incorrect = 0;
+    let unanswered = 0;
+
+    questionList.forEach(
+        question => {
+            const selected =
+                answers[
+                    question.id
+                ];
+
+            if (
+                selected ===
+                    undefined ||
+                selected ===
+                    null ||
+                String(selected)
+                    .trim() ===
+                    ""
+            ) {
+                unanswered += 1;
+                return;
+            }
+
+            const isCorrect =
+                question.answer_type ===
+                    "student-response"
+                    ? studentResponseIsCorrect(
+                        question,
+                        selected
+                    )
+                    : (
+                        selected ===
+                        question.correct_answer
+                    );
+
+            if (isCorrect) {
+                correct += 1;
+            } else {
+                incorrect += 1;
+            }
+        }
+    );
+
+    return {
+        correct,
+        incorrect,
+        unanswered,
+        total:
+            questionList.length
+    };
+}
+
+
+function closeMockGate() {
+    document
+        .getElementById(
+            "mock-gate-overlay"
+        )
+        ?.remove();
+
+    document.body
+        .classList.remove(
+            "mock-gate-open"
+        );
+
+    if (mockBreakInterval) {
+        clearInterval(
+            mockBreakInterval
+        );
+
+        mockBreakInterval =
+            null;
+    }
+}
+
+
+function showMockBreak() {
+    closeMockGate();
+
+    questionApp.classList.add(
+        "hidden"
+    );
+
+    resultsScreen.classList.add(
+        "hidden"
+    );
+
+    const breakMinutes =
+        mockManifest?.timing
+            ?.breakMinutes ||
+        10;
+
+    if (
+        !mockState.breakDeadline
+    ) {
+        mockState.breakDeadline =
+            Date.now() +
+            breakMinutes *
+                60 *
+                1000;
+
+        saveMockState();
+    }
+
+    const overlay =
+        document.createElement(
+            "div"
+        );
+
+    overlay.id =
+        "mock-gate-overlay";
+
+    overlay.className =
+        "mock-gate-overlay";
+
+    overlay.innerHTML = `
+        <section class="mock-gate-card">
+            <div class="mock-gate-eyebrow">SECTION BREAK</div>
+            <h2>Reading and Writing complete.</h2>
+            <p>Math is next. Take the break, then continue when you’re ready.</p>
+            <div class="mock-break-clock" id="mock-break-clock">10:00</div>
+            <button type="button" class="mock-gate-primary" id="mock-break-continue">
+                Continue to Math
+            </button>
+            <a class="mock-gate-exit" href="/mock-tests">Exit to Mock Tests</a>
+        </section>
+    `;
+
+    document.body
+        .appendChild(
+            overlay
+        );
+
+    document.body
+        .classList.add(
+            "mock-gate-open"
+        );
+
+    const clock =
+        document.getElementById(
+            "mock-break-clock"
+        );
+
+    const continueButton =
+        document.getElementById(
+            "mock-break-continue"
+        );
+
+    const updateBreak =
+        () => {
+            const remaining =
+                Math.max(
+                    0,
+                    Math.ceil(
+                        (
+                            mockState
+                                .breakDeadline -
+                            Date.now()
+                        ) /
+                        1000
+                    )
+                );
+
+            const minutes =
+                Math.floor(
+                    remaining /
+                    60
+                );
+
+            const seconds =
+                remaining %
+                60;
+
+            if (clock) {
+                clock.textContent =
+                    `${String(
+                        minutes
+                    ).padStart(
+                        2,
+                        "0"
+                    )}:${String(
+                        seconds
+                    ).padStart(
+                        2,
+                        "0"
+                    )}`;
+            }
+
+            if (
+                remaining <= 0
+            ) {
+                continueFromMockBreak();
+            }
+        };
+
+    continueButton
+        ?.addEventListener(
+            "click",
+            continueFromMockBreak
+        );
+
+    updateBreak();
+
+    mockBreakInterval =
+        setInterval(
+            updateBreak,
+            1000
+        );
+}
+
+
+function continueFromMockBreak() {
+    if (
+        !mockTestMode ||
+        !mockState
+    ) {
+        return;
+    }
+
+    closeMockGate();
+
+    mockState.currentStage =
+        "math_m1";
+
+    mockState.breakDeadline =
+        null;
+
+    mockState.moduleDeadline =
+        null;
+
+    saveMockState();
+
+    loadMockStage(
+        true
+    );
+}
+
+
+function startMockModuleTimer() {
+    if (
+        !mockTestMode ||
+        !mockState ||
+        mockState.currentStage ===
+            "break" ||
+        mockState.completed
+    ) {
+        return;
+    }
+
+    if (mockTimerInterval) {
+        clearInterval(
+            mockTimerInterval
+        );
+    }
+
+    const info =
+        getMockStageInfo();
+
+    if (!info) {
+        return;
+    }
+
+    if (
+        !mockState.moduleDeadline
+    ) {
+        mockState.moduleDeadline =
+            Date.now() +
+            info.minutes *
+                60 *
+                1000;
+
+        saveMockState();
+    }
+
+    const tick =
+        () => {
+            const remaining =
+                Math.max(
+                    0,
+                    Math.ceil(
+                        (
+                            mockState
+                                .moduleDeadline -
+                            Date.now()
+                        ) /
+                        1000
+                    )
+                );
+
+            mockState
+                .moduleRemainingSeconds =
+                remaining;
+
+            updateTimerDisplay();
+
+            if (
+                remaining <= 0
+            ) {
+                clearInterval(
+                    mockTimerInterval
+                );
+
+                mockTimerInterval =
+                    null;
+
+                finishMockModule(
+                    true
+                );
+            }
+        };
+
+    tick();
+
+    mockTimerInterval =
+        setInterval(
+            tick,
+            1000
+        );
+}
+
+
+function updateMockTimerDisplay() {
+    if (
+        !timerElement ||
+        !mockState
+    ) {
+        return;
+    }
+
+    const remaining =
+        Number(
+            mockState
+                .moduleRemainingSeconds
+        );
+
+    const safeRemaining =
+        Number.isFinite(
+            remaining
+        )
+            ? Math.max(
+                0,
+                remaining
+            )
+            : 0;
+
+    const minutes =
+        Math.floor(
+            safeRemaining /
+            60
+        );
+
+    const seconds =
+        safeRemaining %
+        60;
+
+    timerElement.textContent =
+        `${String(
+            minutes
+        ).padStart(
+            2,
+            "0"
+        )}:${String(
+            seconds
+        ).padStart(
+            2,
+            "0"
+        )}`;
+
+    timerElement
+        .classList.toggle(
+            "warning",
+            safeRemaining <=
+                5 * 60 &&
+            safeRemaining >
+                60
+        );
+
+    timerElement
+        .classList.toggle(
+            "danger",
+            safeRemaining <=
+                60
+        );
+}
+
+
+function updateMockTopbar() {
+    if (
+        !mockTestMode ||
+        !mockState
+    ) {
+        return;
+    }
+
+    const info =
+        getMockStageInfo();
+
+    if (!info) {
+        return;
+    }
+
+    const smallLabel =
+        document.querySelector(
+            ".question-set-info .small-label"
+        );
+
+    if (smallLabel) {
+        smallLabel.textContent =
+            "SAT MOCK TEST 1";
+    }
+
+    setTitle.textContent =
+        info.sectionLabel +
+        " · " +
+        info.moduleLabel;
+
+    const timerLabel =
+        document.querySelector(
+            ".timer-label"
+        );
+
+    if (timerLabel) {
+        timerLabel.textContent =
+            "TIME REMAINING";
+    }
+
+    questionNumber.textContent =
+        "Question " +
+        (
+            currentQuestionIndex +
+            1
+        ) +
+        " of " +
+        questions.length;
+}
+
+
+function loadMockStage(
+    resetDeadline = false
+) {
+    if (
+        !mockTestMode ||
+        !mockManifest ||
+        !mockState
+    ) {
+        return;
+    }
+
+    if (
+        mockState.completed
+    ) {
+        showMockFinalResults();
+        return;
+    }
+
+    if (
+        mockState.currentStage ===
+            "break"
+    ) {
+        showMockBreak();
+        return;
+    }
+
+    closeMockGate();
+
+    const entries =
+        getMockStageEntries();
+
+    questions =
+        normalizeMockEntries(
+            entries
+        );
+
+    currentQuestionIndex =
+        Math.min(
+            Math.max(
+                0,
+                getMockCurrentIndex()
+            ),
+            Math.max(
+                0,
+                questions.length -
+                    1
+            )
+        );
+
+    answers =
+        mockState.answers ||
+        {};
+
+    markedForReview =
+        mockState.markedForReview ||
+        {};
+
+    checkedResults =
+        {};
+
+    wrongAttempts =
+        {};
+
+    eliminatedChoices =
+        {};
+
+    submitted =
+        false;
+
+    if (resetDeadline) {
+        mockState.moduleDeadline =
+            null;
+
+        mockState
+            .moduleRemainingSeconds =
+            null;
+    }
+
+    resultsScreen.classList.add(
+        "hidden"
+    );
+
+    questionApp.classList.remove(
+        "hidden"
+    );
+
+    loadingScreen.classList.add(
+        "hidden"
+    );
+
+    renderQuestionNavigator();
+
+    renderCurrentQuestion();
+
+    updateMockTopbar();
+
+    startMockModuleTimer();
+}
+
+
+function finishMockModule(
+    automatic = false
+) {
+    if (
+        !mockTestMode ||
+        !mockState ||
+        mockState.completed
+    ) {
+        return;
+    }
+
+    const result =
+        scoreMockQuestions(
+            questions
+        );
+
+    if (
+        !automatic &&
+        result.unanswered >
+            0
+    ) {
+        const shouldFinish =
+            window.confirm(
+                "You have " +
+                result.unanswered +
+                " unanswered question" +
+                (
+                    result.unanswered ===
+                        1
+                        ? ""
+                        : "s"
+                ) +
+                ". Finish this module anyway?"
+            );
+
+        if (!shouldFinish) {
+            return;
+        }
+    } else if (
+        !automatic
+    ) {
+        const shouldFinish =
+            window.confirm(
+                "Finish this module? You won’t be able to return to it."
+            );
+
+        if (!shouldFinish) {
+            return;
+        }
+    }
+
+    if (mockTimerInterval) {
+        clearInterval(
+            mockTimerInterval
+        );
+
+        mockTimerInterval =
+            null;
+    }
+
+    if (
+        !mockState.completedModules
+    ) {
+        mockState.completedModules =
+            {};
+    }
+
+    mockState.completedModules[
+        mockState.currentStage
+    ] = {
+        ...result,
+        completedAt:
+            new Date()
+                .toISOString()
+    };
+
+    if (
+        mockState.currentStage ===
+            "rw_m1"
+    ) {
+        const threshold =
+            mockManifest.routing
+                ?.readingWritingHighMinCorrect ||
+            17;
+
+        mockState.routes
+            .readingWriting =
+            result.correct >=
+                threshold
+                ? "high"
+                : "low";
+
+        mockState.currentStage =
+            "rw_m2";
+
+    } else if (
+        mockState.currentStage ===
+            "rw_m2"
+    ) {
+        mockState.currentStage =
+            "break";
+
+        mockState.breakDeadline =
+            Date.now() +
+            (
+                mockManifest.timing
+                    ?.breakMinutes ||
+                10
+            ) *
+                60 *
+                1000;
+
+    } else if (
+        mockState.currentStage ===
+            "math_m1"
+    ) {
+        const threshold =
+            mockManifest.routing
+                ?.mathHighMinCorrect ||
+            14;
+
+        mockState.routes.math =
+            result.correct >=
+                threshold
+                ? "high"
+                : "low";
+
+        mockState.currentStage =
+            "math_m2";
+
+    } else if (
+        mockState.currentStage ===
+            "math_m2"
+    ) {
+        mockState.completed =
+            true;
+
+        mockState.completedAt =
+            new Date()
+                .toISOString();
+    }
+
+    mockState.moduleDeadline =
+        null;
+
+    mockState
+        .moduleRemainingSeconds =
+        null;
+
+    saveMockState();
+
+    if (
+        mockState.completed
+    ) {
+        showMockFinalResults();
+    } else if (
+        mockState.currentStage ===
+            "break"
+    ) {
+        showMockBreak();
+    } else {
+        loadMockStage(
+            true
+        );
+    }
+}
+
+
+function showMockFinalResults() {
+    if (
+        !mockTestMode ||
+        !mockState
+    ) {
+        return;
+    }
+
+    closeMockGate();
+
+    if (mockTimerInterval) {
+        clearInterval(
+            mockTimerInterval
+        );
+
+        mockTimerInterval =
+            null;
+    }
+
+    questions =
+        getMockAllRouteQuestions();
+
+    const results =
+        calculateResults();
+
+    const rwQuestions =
+        questions.filter(
+            question =>
+                question.section ===
+                "Reading & Writing"
+        );
+
+    const mathQuestions =
+        questions.filter(
+            question =>
+                question.section ===
+                "Math"
+        );
+
+    const rwResult =
+        scoreMockQuestions(
+            rwQuestions
+        );
+
+    const mathResult =
+        scoreMockQuestions(
+            mathQuestions
+        );
+
+    questionApp.classList.add(
+        "hidden"
+    );
+
+    resultsScreen.classList.remove(
+        "hidden"
+    );
+
+    document.body.classList.add(
+        "mock-results-active"
+    );
+
+    scoreNumber.textContent =
+        results.correct +
+        "/" +
+        results.total;
+
+    const scoreLabel =
+        document.querySelector(
+            ".score-circle span"
+        );
+
+    if (scoreLabel) {
+        scoreLabel.textContent =
+            "Raw correct";
+    }
+
+    correctCount.textContent =
+        results.correct;
+
+    incorrectCount.textContent =
+        results.incorrect;
+
+    unansweredCount.textContent =
+        results.unanswered;
+
+    resultsSetTitle.textContent =
+        mockManifest.title ||
+        "SAT Mock Test";
+
+    const rwRoute =
+        mockState.routes
+            ?.readingWriting ===
+                "high"
+            ? "higher"
+            : "lower";
+
+    const mathRoute =
+        mockState.routes
+            ?.math ===
+                "high"
+            ? "higher"
+            : "lower";
+
+    resultsMessage.textContent =
+        "Reading & Writing: " +
+        rwResult.correct +
+        "/54 · Math: " +
+        mathResult.correct +
+        "/44. " +
+        "Your adaptive routes were " +
+        rwRoute +
+        " for Reading & Writing and " +
+        mathRoute +
+        " for Math.";
+
+    const backLink =
+        document.getElementById(
+            "back-to-question-bank"
+        );
+
+    if (backLink) {
+        backLink.href =
+            "/mock-tests";
+
+        backLink.textContent =
+            "Back to Mock Tests";
+    }
+
+    mockState.completed =
+        true;
+
+    saveMockState();
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+
+async function loadMockTest(
+    id
+) {
+    mockTestMode =
+        true;
+
+    mockTestId =
+        id;
+
+    document.body.classList.add(
+        "mock-test-active"
+    );
+
+    const response =
+        await fetch(
+            "/" +
+            encodeURIComponent(id) +
+            ".json?v=1",
+            {
+                cache: "no-store"
+            }
+        );
+
+    if (!response.ok) {
+        throw new Error(
+            "Mock test returned " +
+            response.status
+        );
+    }
+
+    mockManifest =
+        await response.json();
+
+    const key =
+        getMockStateStorageKey();
+
+    const params =
+        new URLSearchParams(
+            window.location.search
+        );
+
+    const restart =
+        params.get(
+            "restart"
+        ) ===
+        "1";
+
+    if (
+        restart &&
+        key
+    ) {
+        localStorage.removeItem(
+            key
+        );
+    }
+
+    let stored =
+        null;
+
+    if (key) {
+        try {
+            stored =
+                JSON.parse(
+                    localStorage.getItem(
+                        key
+                    ) ||
+                    "null"
+                );
+        } catch {
+            stored =
+                null;
+        }
+    }
+
+    mockState =
+        stored &&
+        stored.testId ===
+            id
+            ? stored
+            : {
+                testId:
+                    id,
+                currentStage:
+                    "rw_m1",
+                completed:
+                    false,
+                answers:
+                    {},
+                markedForReview:
+                    {},
+                routes:
+                    {},
+                completedModules:
+                    {},
+                currentQuestionIndexByStage:
+                    {},
+                moduleDeadline:
+                    null,
+                moduleRemainingSeconds:
+                    null,
+                breakDeadline:
+                    null,
+                startedAt:
+                    new Date()
+                        .toISOString()
+            };
+
+    answers =
+        mockState.answers ||
+        {};
+
+    markedForReview =
+        mockState.markedForReview ||
+        {};
+
+    saveMockState();
+
+    loadMockStage(
+        false
+    );
+}
+
+
+/* ============================================================
    INITIALIZE
    ============================================================ */
 
@@ -3274,11 +4531,23 @@ async function initialize() {
                 window.location.search
             );
 
+        const mockId =
+            params.get("mock");
+
         const questionId =
             params.get("id");
 
         const slug =
             params.get("set");
+
+
+        if (mockId) {
+            await loadMockTest(
+                mockId
+            );
+
+            return;
+        }
 
 
         /*
@@ -4670,6 +5939,11 @@ function renderCurrentQuestion() {
 
     updateNextQuestionButton();
 
+    if (mockTestMode) {
+        updateMockTopbar();
+        saveMockState();
+    }
+
     typesetQuestionMath();
 
 }
@@ -5404,6 +6678,11 @@ function renderStudentResponse(question) {
         () => {
             answers[question.id] =
                 input.value;
+
+            if (mockTestMode) {
+                saveMockState();
+            }
+
             updateQuestionNavigator();
             renderAnswerFeedback(
                 question
@@ -5862,6 +7141,10 @@ function selectAnswer(
         questionId
     ] = answer;
 
+    if (mockTestMode) {
+        saveMockState();
+    }
+
 
     renderCurrentQuestion();
 
@@ -5907,6 +7190,11 @@ function renderAnswerFeedback(
     answerFeedbackExplanation.textContent =
         "";
 
+    if (mockTestMode) {
+        updateNavigationButtons();
+        return;
+    }
+
     if (checkAnswerButton) {
         const studentResponseRevealed =
             question.answer_type ===
@@ -5937,6 +7225,13 @@ function renderAnswerFeedback(
 
 
 async function checkAnswer() {
+
+    if (mockTestMode) {
+        finishMockModule(
+            false
+        );
+        return;
+    }
 
     const question =
         questions[
@@ -6184,6 +7479,11 @@ async function toggleReview() {
     updateReviewButton();
     updateQuestionNavigator();
 
+    if (mockTestMode) {
+        saveMockState();
+        return;
+    }
+
     if (!currentUser) {
         return;
     }
@@ -6301,6 +7601,12 @@ function goPrevious() {
 
     currentQuestionIndex--;
 
+    if (mockTestMode) {
+        setMockCurrentIndex(
+            currentQuestionIndex
+        );
+    }
+
     resetQuestionTimer();
 
     renderCurrentQuestion();
@@ -6326,6 +7632,12 @@ function goNext() {
 
     currentQuestionIndex++;
 
+    if (mockTestMode) {
+        setMockCurrentIndex(
+            currentQuestionIndex
+        );
+    }
+
     resetQuestionTimer();
 
     renderCurrentQuestion();
@@ -6346,9 +7658,28 @@ function updateNavigationButtons() {
     previousButton.disabled =
         currentQuestionIndex === 0;
 
-    nextButton.disabled =
+    const atEnd =
         currentQuestionIndex >=
         questions.length - 1;
+
+    nextButton.disabled =
+        atEnd;
+
+    if (
+        mockTestMode &&
+        checkAnswerButton
+    ) {
+        checkAnswerButton.classList.toggle(
+            "hidden",
+            !atEnd
+        );
+
+        checkAnswerButton.disabled =
+            false;
+
+        checkAnswerButton.textContent =
+            "Finish Module";
+    }
 
 }
 
@@ -6359,12 +7690,22 @@ function updateNavigationButtons() {
 
 function startTimer() {
 
+    if (mockTestMode) {
+        startMockModuleTimer();
+        return;
+    }
+
     resetQuestionTimer();
 
 }
 
 
 function resetQuestionTimer() {
+
+    if (mockTestMode) {
+        updateMockTimerDisplay();
+        return;
+    }
 
     if (timerInterval) {
 
@@ -6407,6 +7748,11 @@ function resetQuestionTimer() {
    ============================================================ */
 
 function updateTimerDisplay() {
+
+    if (mockTestMode) {
+        updateMockTimerDisplay();
+        return;
+    }
 
     const minutes =
         Math.floor(
@@ -6569,8 +7915,16 @@ function calculateResults() {
                         "unanswered";
 
                 } else if (
-                    selected ===
-                    question.correct_answer
+                    question.answer_type ===
+                        "student-response"
+                        ? studentResponseIsCorrect(
+                            question,
+                            selected
+                        )
+                        : (
+                            selected ===
+                            question.correct_answer
+                        )
                 ) {
 
                     correct++;
@@ -6922,26 +8276,51 @@ function showResultsReview() {
 
             const selectedText =
                 result.selected
-                    ? `${
-                        result.selected
-                    }. ${
-                        getChoiceText(
-                            question,
-                            result.selected
-                        )
-                    }`
+                    ? (
+                        question.answer_type ===
+                            "student-response"
+                            ? String(
+                                result.selected
+                            )
+                            : `${
+                                result.selected
+                            }. ${
+                                getChoiceText(
+                                    question,
+                                    result.selected
+                                )
+                            }`
+                    )
                     : "No answer";
 
 
             const correctText =
-                `${
-                    question.correct_answer
-                }. ${
-                    getChoiceText(
-                        question,
-                        question.correct_answer
+                question.answer_type ===
+                    "student-response"
+                    ? (
+                        Array.isArray(
+                            question.accepted_answers
+                        ) &&
+                        question.accepted_answers
+                            .length
+                            ? question
+                                .accepted_answers
+                                .join(
+                                    " or "
+                                )
+                            : String(
+                                question.correct_answer ||
+                                ""
+                            )
                     )
-                }`;
+                    : `${
+                        question.correct_answer
+                    }. ${
+                        getChoiceText(
+                            question,
+                            question.correct_answer
+                        )
+                    }`;
 
 
             const item =
