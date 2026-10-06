@@ -7909,6 +7909,11 @@ function renderCurrentQuestion() {
 
     }
 
+    window.lexLogicaHighlighter
+        ?.setQuestion(
+            question.id
+        );
+
 
     questionNumber.textContent =
         `Question ${
@@ -8151,6 +8156,9 @@ function renderCurrentQuestion() {
     }
 
     renderQuestionBankPeeker();
+
+    window.lexLogicaHighlighter
+        ?.restore();
 
     typesetQuestionMath();
 
@@ -10904,6 +10912,12 @@ function renderMockReviewQuestion(
     const question =
         result.question;
 
+    window.lexLogicaHighlighter
+        ?.setQuestion(
+            "review:" +
+            question.id
+        );
+
     const context =
         (
             question.passage ||
@@ -11859,7 +11873,7 @@ initialize();
 
 
 function initializeWholeWordTextSelection() {
-    const selectableSelector = [
+    const selectableSelectors = [
         ".question-passage",
         ".question-text",
         ".choice-text",
@@ -11873,9 +11887,12 @@ function initializeWholeWordTextSelection() {
         ".mock-review-question-text",
         ".mock-review-choice-text",
         ".mock-review-choice-explanation"
-    ].join(
-        ","
-    );
+    ];
+
+    const selectableSelector =
+        selectableSelectors.join(
+            ","
+        );
 
     const blockedSelector = [
         "mjx-container",
@@ -11888,6 +11905,11 @@ function initializeWholeWordTextSelection() {
     ].join(
         ","
     );
+
+    const state = {
+        questionId: null,
+        ranges: []
+    };
 
     const wordCharacter =
         character =>
@@ -11917,6 +11939,211 @@ function initializeWholeWordTextSelection() {
 
             return element.closest(
                 selectableSelector
+            );
+        };
+
+    const getRootKey =
+        root => {
+            if (!root) {
+                return null;
+            }
+
+            for (
+                const selector of
+                    selectableSelectors
+            ) {
+                if (
+                    !root.matches(
+                        selector
+                    )
+                ) {
+                    continue;
+                }
+
+                const siblings =
+                    Array.from(
+                        document.querySelectorAll(
+                            selector
+                        )
+                    );
+
+                const index =
+                    siblings.indexOf(
+                        root
+                    );
+
+                if (index >= 0) {
+                    return (
+                        selector +
+                        ":" +
+                        index
+                    );
+                }
+            }
+
+            return null;
+        };
+
+    const resolveRootKey =
+        key => {
+            if (!key) {
+                return null;
+            }
+
+            const separator =
+                key.lastIndexOf(
+                    ":"
+                );
+
+            if (separator < 0) {
+                return null;
+            }
+
+            const selector =
+                key.slice(
+                    0,
+                    separator
+                );
+
+            const index =
+                Number(
+                    key.slice(
+                        separator + 1
+                    )
+                );
+
+            if (
+                !Number.isInteger(
+                    index
+                ) ||
+                index < 0
+            ) {
+                return null;
+            }
+
+            return (
+                document.querySelectorAll(
+                    selector
+                )[
+                    index
+                ] ||
+                null
+            );
+        };
+
+    const eligibleTextNodes =
+        root => {
+            if (!root) {
+                return [];
+            }
+
+            const walker =
+                document.createTreeWalker(
+                    root,
+                    NodeFilter.SHOW_TEXT,
+                    {
+                        acceptNode:
+                            node => {
+                                if (
+                                    !node.nodeValue
+                                ) {
+                                    return NodeFilter
+                                        .FILTER_REJECT;
+                                }
+
+                                const parent =
+                                    node.parentElement;
+
+                                if (
+                                    !parent ||
+                                    parent.closest(
+                                        blockedSelector
+                                    )
+                                ) {
+                                    return NodeFilter
+                                        .FILTER_REJECT;
+                                }
+
+                                return NodeFilter
+                                    .FILTER_ACCEPT;
+                            }
+                    }
+                );
+
+            const nodes = [];
+            let node;
+
+            while (
+                (
+                    node =
+                        walker.nextNode()
+                )
+            ) {
+                nodes.push(
+                    node
+                );
+            }
+
+            return nodes;
+        };
+
+    const textMap =
+        root => {
+            let cursor = 0;
+
+            return eligibleTextNodes(
+                root
+            ).map(
+                node => {
+                    const start =
+                        cursor;
+
+                    cursor +=
+                        node.nodeValue
+                            .length;
+
+                    return {
+                        node,
+                        start,
+                        end:
+                            cursor
+                    };
+                }
+            );
+        };
+
+    const absoluteOffset =
+        (
+            root,
+            node,
+            offset
+        ) => {
+            const map =
+                textMap(
+                    root
+                );
+
+            const entry =
+                map.find(
+                    item =>
+                        item.node ===
+                        node
+                );
+
+            if (!entry) {
+                return null;
+            }
+
+            return (
+                entry.start +
+                Math.max(
+                    0,
+                    Math.min(
+                        Number(offset) || 0,
+                        entry.end -
+                            entry.start
+                    )
+                )
             );
         };
 
@@ -12086,13 +12313,13 @@ function initializeWholeWordTextSelection() {
                 return range;
             }
 
-            let startNode =
+            const startNode =
                 range.startContainer;
 
             let startOffset =
                 range.startOffset;
 
-            let endNode =
+            const endNode =
                 range.endContainer;
 
             let endOffset =
@@ -12157,7 +12384,258 @@ function initializeWholeWordTextSelection() {
             return range;
         };
 
-    const applyRangeToSelection =
+    const unwrapRootHighlights =
+        root => {
+            root?.querySelectorAll(
+                "mark.persistent-text-highlight"
+            )
+                .forEach(
+                    mark => {
+                        mark.replaceWith(
+                            document.createTextNode(
+                                mark.textContent ||
+                                ""
+                            )
+                        );
+                    }
+                );
+
+            root?.normalize();
+        };
+
+    const xorIntervals =
+        (
+            existing,
+            start,
+            end
+        ) => {
+            const points =
+                new Set([
+                    start,
+                    end
+                ]);
+
+            existing.forEach(
+                interval => {
+                    points.add(
+                        interval.start
+                    );
+                    points.add(
+                        interval.end
+                    );
+                }
+            );
+
+            const sorted =
+                Array.from(
+                    points
+                )
+                    .filter(
+                        Number.isFinite
+                    )
+                    .sort(
+                        (
+                            a,
+                            b
+                        ) =>
+                            a - b
+                    );
+
+            const result = [];
+
+            for (
+                let index = 0;
+                index <
+                    sorted.length - 1;
+                index += 1
+            ) {
+                const left =
+                    sorted[index];
+
+                const right =
+                    sorted[
+                        index + 1
+                    ];
+
+                if (
+                    right <= left
+                ) {
+                    continue;
+                }
+
+                const midpoint =
+                    (
+                        left +
+                        right
+                    ) / 2;
+
+                const wasHighlighted =
+                    existing.some(
+                        interval =>
+                            midpoint >=
+                                interval.start &&
+                            midpoint <
+                                interval.end
+                    );
+
+                const selected =
+                    midpoint >= start &&
+                    midpoint < end;
+
+                if (
+                    wasHighlighted !==
+                    selected
+                ) {
+                    const previous =
+                        result[
+                            result.length -
+                            1
+                        ];
+
+                    if (
+                        previous &&
+                        previous.end ===
+                            left
+                    ) {
+                        previous.end =
+                            right;
+                    } else {
+                        result.push({
+                            start:
+                                left,
+                            end:
+                                right
+                        });
+                    }
+                }
+            }
+
+            return result;
+        };
+
+    const renderRootHighlights =
+        rootKey => {
+            const root =
+                resolveRootKey(
+                    rootKey
+                );
+
+            if (!root) {
+                return;
+            }
+
+            unwrapRootHighlights(
+                root
+            );
+
+            const intervals =
+                state.ranges
+                    .filter(
+                        item =>
+                            item.rootKey ===
+                            rootKey
+                    )
+                    .sort(
+                        (
+                            a,
+                            b
+                        ) =>
+                            b.start -
+                            a.start
+                    );
+
+            if (!intervals.length) {
+                return;
+            }
+
+            const map =
+                textMap(
+                    root
+                );
+
+            intervals.forEach(
+                interval => {
+                    const pieces =
+                        map
+                            .map(
+                                item => ({
+                                    item,
+                                    start:
+                                        Math.max(
+                                            interval.start,
+                                            item.start
+                                        ),
+                                    end:
+                                        Math.min(
+                                            interval.end,
+                                            item.end
+                                        )
+                                })
+                            )
+                            .filter(
+                                piece =>
+                                    piece.end >
+                                    piece.start
+                            )
+                            .reverse();
+
+                    pieces.forEach(
+                        piece => {
+                            const range =
+                                document
+                                    .createRange();
+
+                            try {
+                                range.setStart(
+                                    piece.item.node,
+                                    piece.start -
+                                        piece.item.start
+                                );
+
+                                range.setEnd(
+                                    piece.item.node,
+                                    piece.end -
+                                        piece.item.start
+                                );
+
+                                const mark =
+                                    document.createElement(
+                                        "mark"
+                                    );
+
+                                mark.className =
+                                    "persistent-text-highlight";
+
+                                range.surroundContents(
+                                    mark
+                                );
+                            } catch {
+                                /* Skip a stale fragment after a rerender. */
+                            }
+                        }
+                    );
+                }
+            );
+        };
+
+    const restoreAll =
+        () => {
+            const rootKeys =
+                Array.from(
+                    new Set(
+                        state.ranges.map(
+                            item =>
+                                item.rootKey
+                        )
+                    )
+                );
+
+            rootKeys.forEach(
+                renderRootHighlights
+            );
+        };
+
+    const commitRange =
         range => {
             if (
                 !range ||
@@ -12166,20 +12644,105 @@ function initializeWholeWordTextSelection() {
                 return;
             }
 
-            const selection =
-                window.getSelection();
+            const snapped =
+                snapRangeToWholeWords(
+                    range.cloneRange()
+                );
 
-            if (!selection) {
+            const root =
+                getRoot(
+                    snapped
+                        .startContainer
+                );
+
+            if (
+                !root ||
+                getRoot(
+                    snapped.endContainer
+                ) !== root
+            ) {
                 return;
             }
 
-            selection.removeAllRanges();
-            selection.addRange(
-                range
+            const rootKey =
+                getRootKey(
+                    root
+                );
+
+            const start =
+                absoluteOffset(
+                    root,
+                    snapped.startContainer,
+                    snapped.startOffset
+                );
+
+            const end =
+                absoluteOffset(
+                    root,
+                    snapped.endContainer,
+                    snapped.endOffset
+                );
+
+            if (
+                !rootKey ||
+                start === null ||
+                end === null ||
+                end <= start
+            ) {
+                return;
+            }
+
+            const existing =
+                state.ranges
+                    .filter(
+                        item =>
+                            item.rootKey ===
+                            rootKey
+                    )
+                    .map(
+                        item => ({
+                            start:
+                                item.start,
+                            end:
+                                item.end
+                        })
+                    );
+
+            const toggled =
+                xorIntervals(
+                    existing,
+                    start,
+                    end
+                );
+
+            state.ranges =
+                state.ranges
+                    .filter(
+                        item =>
+                            item.rootKey !==
+                            rootKey
+                    )
+                    .concat(
+                        toggled.map(
+                            item => ({
+                                rootKey,
+                                start:
+                                    item.start,
+                                end:
+                                    item.end
+                            })
+                        )
+                    );
+
+            renderRootHighlights(
+                rootKey
             );
+
+            window.getSelection()
+                ?.removeAllRanges();
         };
 
-    const snapCurrentSelection =
+    const commitCurrentSelection =
         () => {
             const selection =
                 window.getSelection();
@@ -12193,31 +12756,9 @@ function initializeWholeWordTextSelection() {
                 return;
             }
 
-            const range =
+            commitRange(
                 selection.getRangeAt(
                     0
-                );
-
-            const startRoot =
-                getRoot(
-                    range.startContainer
-                );
-
-            const endRoot =
-                getRoot(
-                    range.endContainer
-                );
-
-            if (
-                !startRoot ||
-                startRoot !== endRoot
-            ) {
-                return;
-            }
-
-            applyRangeToSelection(
-                snapRangeToWholeWords(
-                    range.cloneRange()
                 )
             );
         };
@@ -12315,11 +12856,18 @@ function initializeWholeWordTextSelection() {
                 range &&
                 !range.collapsed
             ) {
-                applyRangeToSelection(
-                    snapRangeToWholeWords(
-                        range
-                    )
-                );
+                const selection =
+                    window.getSelection();
+
+                selection
+                    ?.removeAllRanges();
+
+                selection
+                    ?.addRange(
+                        snapRangeToWholeWords(
+                            range
+                        )
+                    );
             }
 
             event.preventDefault();
@@ -12337,7 +12885,8 @@ function initializeWholeWordTextSelection() {
                 if (
                     rightDrag.moved
                 ) {
-                    snapCurrentSelection();
+                    commitCurrentSelection();
+
                     suppressNextContextMenu =
                         true;
                 }
@@ -12352,10 +12901,9 @@ function initializeWholeWordTextSelection() {
             if (
                 event.button === 0
             ) {
-                window
-                    .requestAnimationFrame(
-                        snapCurrentSelection
-                    );
+                window.requestAnimationFrame(
+                    commitCurrentSelection
+                );
             }
         },
         true
@@ -12381,8 +12929,47 @@ function initializeWholeWordTextSelection() {
         },
         true
     );
-}
 
+    window.lexLogicaHighlighter = {
+        setQuestion(
+            questionId
+        ) {
+            const nextId =
+                String(
+                    questionId ?? ""
+                );
+
+            if (
+                state.questionId !==
+                nextId
+            ) {
+                state.questionId =
+                    nextId;
+
+                state.ranges = [];
+
+                document
+                    .querySelectorAll(
+                        "mark.persistent-text-highlight"
+                    )
+                    .forEach(
+                        mark => {
+                            mark.replaceWith(
+                                document.createTextNode(
+                                    mark.textContent ||
+                                    ""
+                                )
+                            );
+                        }
+                    );
+            }
+        },
+
+        restore() {
+            restoreAll();
+        }
+    };
+}
 
 initializeWholeWordTextSelection();
 
