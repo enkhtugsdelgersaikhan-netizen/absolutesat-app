@@ -7,7 +7,7 @@
 <link rel="icon" type="image/png" href="/Favicon.png?v=b2788e22">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css?v=dark-2">
-<link rel="stylesheet" href="/drill.css?v=2">
+<link rel="stylesheet" href="/drill.css?v=3">
 <link rel="stylesheet" href="/responsive.css?v=1">
 </head>
 <body data-drill-section="Math">
@@ -25,10 +25,21 @@
     <section class="drill-panel">
       <div class="drill-section">
         <div class="drill-section-head">
-          <div><span>01 · Focus</span><h2>Choose one domain or subtopic</h2></div>
-          <p>Only unsolved Question Bank questions from this focus can be selected.</p>
+          <div><span>01 · Focus</span><h2>Choose a domain and subtopic</h2></div>
+          <p>Pick a domain, then optionally narrow the drill to one subtopic.</p>
         </div>
-        <select id="drill-focus" class="drill-focus-select" aria-label="Drill focus"></select>
+        <div class="drill-focus-grid">
+          <div class="drill-focus-field">
+            <label for="drill-domain">Domain</label>
+            <select id="drill-domain" class="drill-focus-select" aria-label="Drill domain"></select>
+          </div>
+          <div class="drill-focus-field">
+            <label for="drill-subtopic">Subtopic</label>
+            <select id="drill-subtopic" class="drill-focus-select" aria-label="Drill subtopic">
+              <option value="">All subtopics</option>
+            </select>
+          </div>
+        </div>
       </div>
 
       <div class="drill-section">
@@ -79,7 +90,7 @@
 <script src="/supabase-config.js"></script>
 <script src="/auth-guard.js"></script>
 <script src="/auth.js?v=dark-3"></script>
-<script src="/drill.js?v=2"></script>
+<script src="/drill.js?v=3"></script>
 <script>
 const menuButton=document.querySelector(".mobile-menu-button");const navigation=document.querySelector(".navigation");if(menuButton&&navigation){menuButton.addEventListener("click",()=>{const isOpen=navigation.classList.toggle("mobile-open");menuButton.setAttribute("aria-expanded",isOpen?"true":"false");});}
 </script>
