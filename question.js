@@ -11858,6 +11858,535 @@ if (
 initialize();
 
 
+function initializeWholeWordTextSelection() {
+    const selectableSelector = [
+        ".question-passage",
+        ".question-text",
+        ".choice-text",
+        ".choice-reason-text",
+        ".answer-feedback-explanation",
+        ".student-response-explanation-text",
+        ".review-result-question",
+        ".review-result-answer",
+        ".review-result-explanation",
+        ".mock-review-context",
+        ".mock-review-question-text",
+        ".mock-review-choice-text",
+        ".mock-review-choice-explanation"
+    ].join(
+        ","
+    );
+
+    const blockedSelector = [
+        "mjx-container",
+        "svg",
+        "button",
+        "input",
+        "textarea",
+        "select",
+        "[contenteditable='true']"
+    ].join(
+        ","
+    );
+
+    const wordCharacter =
+        character =>
+            /[A-Za-z0-9À-ÖØ-öø-ÿĀ-ž’'\-]/.test(
+                character || ""
+            );
+
+    const getRoot =
+        node => {
+            const element =
+                node?.nodeType ===
+                    Node.ELEMENT_NODE
+                    ? node
+                    : node?.parentElement;
+
+            if (!element) {
+                return null;
+            }
+
+            if (
+                element.closest(
+                    blockedSelector
+                )
+            ) {
+                return null;
+            }
+
+            return element.closest(
+                selectableSelector
+            );
+        };
+
+    const getCaretAtPoint =
+        (
+            clientX,
+            clientY
+        ) => {
+            if (
+                typeof document
+                    .caretPositionFromPoint ===
+                    "function"
+            ) {
+                const position =
+                    document
+                        .caretPositionFromPoint(
+                            clientX,
+                            clientY
+                        );
+
+                if (
+                    position?.offsetNode
+                ) {
+                    return {
+                        node:
+                            position
+                                .offsetNode,
+                        offset:
+                            position.offset
+                    };
+                }
+            }
+
+            if (
+                typeof document
+                    .caretRangeFromPoint ===
+                    "function"
+            ) {
+                const range =
+                    document
+                        .caretRangeFromPoint(
+                            clientX,
+                            clientY
+                        );
+
+                if (range) {
+                    return {
+                        node:
+                            range
+                                .startContainer,
+                        offset:
+                            range
+                                .startOffset
+                    };
+                }
+            }
+
+            return null;
+        };
+
+    const compareCaretPoints =
+        (
+            left,
+            right
+        ) => {
+            if (
+                left.node ===
+                right.node
+            ) {
+                return (
+                    left.offset -
+                    right.offset
+                );
+            }
+
+            const leftRange =
+                document.createRange();
+
+            const rightRange =
+                document.createRange();
+
+            try {
+                leftRange.setStart(
+                    left.node,
+                    left.offset
+                );
+                leftRange.collapse(
+                    true
+                );
+
+                rightRange.setStart(
+                    right.node,
+                    right.offset
+                );
+                rightRange.collapse(
+                    true
+                );
+
+                return leftRange
+                    .compareBoundaryPoints(
+                        Range.START_TO_START,
+                        rightRange
+                    );
+            } catch {
+                return 0;
+            }
+        };
+
+    const buildRange =
+        (
+            first,
+            second,
+            root
+        ) => {
+            if (
+                !first ||
+                !second ||
+                getRoot(first.node) !==
+                    root ||
+                getRoot(second.node) !==
+                    root
+            ) {
+                return null;
+            }
+
+            const range =
+                document.createRange();
+
+            try {
+                if (
+                    compareCaretPoints(
+                        first,
+                        second
+                    ) <= 0
+                ) {
+                    range.setStart(
+                        first.node,
+                        first.offset
+                    );
+                    range.setEnd(
+                        second.node,
+                        second.offset
+                    );
+                } else {
+                    range.setStart(
+                        second.node,
+                        second.offset
+                    );
+                    range.setEnd(
+                        first.node,
+                        first.offset
+                    );
+                }
+            } catch {
+                return null;
+            }
+
+            return range;
+        };
+
+    const snapRangeToWholeWords =
+        range => {
+            if (
+                !range ||
+                range.collapsed
+            ) {
+                return range;
+            }
+
+            let startNode =
+                range.startContainer;
+
+            let startOffset =
+                range.startOffset;
+
+            let endNode =
+                range.endContainer;
+
+            let endOffset =
+                range.endOffset;
+
+            if (
+                startNode.nodeType ===
+                    Node.TEXT_NODE
+            ) {
+                const text =
+                    startNode.nodeValue ||
+                    "";
+
+                while (
+                    startOffset > 0 &&
+                    wordCharacter(
+                        text[
+                            startOffset -
+                            1
+                        ]
+                    )
+                ) {
+                    startOffset -= 1;
+                }
+            }
+
+            if (
+                endNode.nodeType ===
+                    Node.TEXT_NODE
+            ) {
+                const text =
+                    endNode.nodeValue ||
+                    "";
+
+                while (
+                    endOffset <
+                        text.length &&
+                    wordCharacter(
+                        text[
+                            endOffset
+                        ]
+                    )
+                ) {
+                    endOffset += 1;
+                }
+            }
+
+            try {
+                range.setStart(
+                    startNode,
+                    startOffset
+                );
+
+                range.setEnd(
+                    endNode,
+                    endOffset
+                );
+            } catch {
+                return range;
+            }
+
+            return range;
+        };
+
+    const applyRangeToSelection =
+        range => {
+            if (
+                !range ||
+                range.collapsed
+            ) {
+                return;
+            }
+
+            const selection =
+                window.getSelection();
+
+            if (!selection) {
+                return;
+            }
+
+            selection.removeAllRanges();
+            selection.addRange(
+                range
+            );
+        };
+
+    const snapCurrentSelection =
+        () => {
+            const selection =
+                window.getSelection();
+
+            if (
+                !selection ||
+                selection.rangeCount ===
+                    0 ||
+                selection.isCollapsed
+            ) {
+                return;
+            }
+
+            const range =
+                selection.getRangeAt(
+                    0
+                );
+
+            const startRoot =
+                getRoot(
+                    range.startContainer
+                );
+
+            const endRoot =
+                getRoot(
+                    range.endContainer
+                );
+
+            if (
+                !startRoot ||
+                startRoot !== endRoot
+            ) {
+                return;
+            }
+
+            applyRangeToSelection(
+                snapRangeToWholeWords(
+                    range.cloneRange()
+                )
+            );
+        };
+
+    let rightDrag = null;
+    let suppressNextContextMenu =
+        false;
+
+    document.addEventListener(
+        "mousedown",
+        event => {
+            if (
+                event.button !== 2
+            ) {
+                return;
+            }
+
+            const root =
+                getRoot(
+                    event.target
+                );
+
+            if (!root) {
+                return;
+            }
+
+            const anchor =
+                getCaretAtPoint(
+                    event.clientX,
+                    event.clientY
+                );
+
+            if (
+                !anchor ||
+                getRoot(anchor.node) !==
+                    root
+            ) {
+                return;
+            }
+
+            rightDrag = {
+                root,
+                anchor,
+                startX:
+                    event.clientX,
+                startY:
+                    event.clientY,
+                moved: false
+            };
+
+            event.preventDefault();
+        },
+        true
+    );
+
+    document.addEventListener(
+        "mousemove",
+        event => {
+            if (
+                !rightDrag ||
+                (
+                    event.buttons &
+                    2
+                ) === 0
+            ) {
+                return;
+            }
+
+            if (
+                Math.hypot(
+                    event.clientX -
+                        rightDrag.startX,
+                    event.clientY -
+                        rightDrag.startY
+                ) >= 3
+            ) {
+                rightDrag.moved =
+                    true;
+            }
+
+            const focus =
+                getCaretAtPoint(
+                    event.clientX,
+                    event.clientY
+                );
+
+            const range =
+                buildRange(
+                    rightDrag.anchor,
+                    focus,
+                    rightDrag.root
+                );
+
+            if (
+                range &&
+                !range.collapsed
+            ) {
+                applyRangeToSelection(
+                    snapRangeToWholeWords(
+                        range
+                    )
+                );
+            }
+
+            event.preventDefault();
+        },
+        true
+    );
+
+    document.addEventListener(
+        "mouseup",
+        event => {
+            if (
+                event.button === 2 &&
+                rightDrag
+            ) {
+                if (
+                    rightDrag.moved
+                ) {
+                    snapCurrentSelection();
+                    suppressNextContextMenu =
+                        true;
+                }
+
+                rightDrag =
+                    null;
+
+                event.preventDefault();
+                return;
+            }
+
+            if (
+                event.button === 0
+            ) {
+                window
+                    .requestAnimationFrame(
+                        snapCurrentSelection
+                    );
+            }
+        },
+        true
+    );
+
+    document.addEventListener(
+        "contextmenu",
+        event => {
+            if (
+                suppressNextContextMenu &&
+                getRoot(
+                    event.target
+                )
+            ) {
+                event.preventDefault();
+                suppressNextContextMenu =
+                    false;
+                return;
+            }
+
+            suppressNextContextMenu =
+                false;
+        },
+        true
+    );
+}
+
+
+initializeWholeWordTextSelection();
+
+
 function initializeDesmosPanel() {
     const toggle =
         document.getElementById(
