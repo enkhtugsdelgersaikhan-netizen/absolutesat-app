@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "tests": [
+    {
+      "id": "mock-test-1",
+      "title": "SAT Mock Test 1",
+      "subtitle": "Full adaptive practice",
+      "description": "A complete four-module SAT simulation built from reserved LexLogica questions.",
+      "questionsPerRoute": 98,
+      "testingMinutes": 134,
+      "breakMinutes": 10,
+      "sections": [
+        {
+          "label": "Reading & Writing",
+          "module": "Module 1",
+          "questions": 27,
+          "minutes": 32
+        },
+        {
+          "label": "Reading & Writing",
+          "module": "Module 2",
+          "questions": 27,
+          "minutes": 32,
+          "adaptive": true
+        },
+        {
+          "label": "Math",
+          "module": "Module 1",
+          "questions": 22,
+          "minutes": 35
+        },
+        {
+          "label": "Math",
+          "module": "Module 2",
+          "questions": 22,
+          "minutes": 35,
+          "adaptive": true
+        }
+      ]
+    }
+  ]
+}
