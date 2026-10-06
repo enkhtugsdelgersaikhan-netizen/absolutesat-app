@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "id": "mock-test-2",
+  "title": "SAT Mock Test 2",
+  "description": "Empty adaptive LexLogica SAT mock-test shell. Questions will be populated later.",
+  "generatedAt": "2026-10-07",
+  "populated": false,
+  "timing": {
+    "readingWritingModuleMinutes": 32,
+    "mathModuleMinutes": 35,
+    "breakMinutes": 10
+  },
+  "routing": {
+    "note": "Use the easier second module only when more than one-third of Module 1 questions are missed. Incorrect and unanswered questions both count as missed.",
+    "easierModuleIfMissedFractionGreaterThan": 0.3333333333333333
+  },
+  "questionCountPerRoute": 0,
+  "plannedQuestionCountPerRoute": 98,
+  "uniqueReservedQuestions": 0,
+  "sections": {
+    "readingWriting": {
+      "label": "Reading and Writing",
+      "module1": [],
+      "module2Low": [],
+      "module2High": []
+    },
+    "math": {
+      "label": "Math",
+      "module1": [],
+      "module2Low": [],
+      "module2High": []
+    }
+  },
+  "audit": {
+    "populated": false,
+    "questionBankHiding": false,
+    "note": "Empty shell. No questions are assigned or hidden from the Question Bank."
+  }
+}
