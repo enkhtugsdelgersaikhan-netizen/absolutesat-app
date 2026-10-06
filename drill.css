@@ -35,14 +35,6 @@
   border-color:#0f766e;background:#eaf7f4;box-shadow:0 0 0 2px rgba(15,118,110,.06)
 }
 .drill-choice input:checked+.drill-choice-card strong{color:#0b675f}
-.drill-percent-row{display:flex;align-items:center;gap:10px;margin-top:12px;padding:12px 14px;border:1px solid #e1e9e7;border-radius:10px;background:#fbfdfc}
-.drill-percent-row[hidden]{display:none}
-.drill-percent-row label{color:#516661;font-size:12px;font-weight:600}
-.drill-percent-control{display:flex;align-items:center;margin-left:auto}
-.drill-percent-control input{
-  width:74px;height:38px;padding:0 9px;border:1px solid #cfdcda;border-radius:8px;background:#fff;color:#173b36;font:700 13px Poppins,sans-serif;text-align:right;outline:none
-}
-.drill-percent-control span{margin-left:4px;color:#63736f;font-size:12px;font-weight:700}
 .drill-summary{position:sticky;top:112px;padding:22px}
 .drill-summary>span{display:block;color:#0f766e;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
 .drill-summary h2{margin:5px 0 16px;color:#173b36;font-size:20px}
