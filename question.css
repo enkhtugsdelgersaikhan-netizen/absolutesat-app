@@ -2666,3 +2666,95 @@
 body.math-question-active #question-app em {
     font-style: normal;
 }
+
+
+/* ============================================================
+   MATH: SINGLE STACKED QUESTION BLOCK
+   Information + question stay above the answer choices.
+   Reading & Writing keeps the two-pane SAT layout.
+   ============================================================ */
+body.math-question-active .question-layout{
+    display:block!important;
+    width:min(100%,980px)!important;
+    max-width:980px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+}
+
+body.math-question-active .sat-passage-pane{
+    display:none!important;
+}
+
+body.math-question-active .sat-answer-pane{
+    width:100%;
+    min-height:0!important;
+    padding:0 30px 26px!important;
+}
+
+body.math-question-active .sat-answer-pane .question-card{
+    width:100%;
+    padding:26px 0 20px!important;
+}
+
+body.math-question-active .math-question-context{
+    margin:0 0 22px;
+    padding:0 0 22px;
+    border-bottom:1px solid #e2e8f0;
+}
+
+body.math-question-active .math-question-context-label{
+    margin-bottom:12px;
+    color:#64748b;
+    font-family:Arial,"Helvetica Neue",Helvetica,sans-serif;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:1.35px;
+}
+
+body.math-question-active .math-question-context-content{
+    color:#172033;
+    font-family:Arial,"Helvetica Neue",Helvetica,sans-serif;
+    font-size:16px;
+    font-weight:400;
+    line-height:1.65;
+    white-space:pre-line;
+}
+
+body.math-question-active .math-question-context-content .question-passage-copy{
+    max-width:100%;
+}
+
+body.math-question-active .math-question-context-content mjx-container[display="true"]{
+    max-width:100%;
+    overflow-x:auto;
+    overflow-y:hidden;
+    padding-bottom:2px;
+}
+
+body.math-question-active .sat-answer-pane .question-text{
+    margin:0;
+}
+
+body.math-question-active .sat-answer-pane .choices{
+    margin-top:28px!important;
+}
+
+@media(max-width:700px){
+    body.math-question-active .question-layout{
+        width:100%!important;
+    }
+
+    body.math-question-active .sat-answer-pane{
+        padding-left:16px!important;
+        padding-right:16px!important;
+    }
+
+    body.math-question-active .sat-answer-pane .question-card{
+        padding-top:20px!important;
+    }
+
+    body.math-question-active .math-question-context{
+        margin-bottom:18px;
+        padding-bottom:18px;
+    }
+}
