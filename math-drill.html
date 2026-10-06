@@ -7,7 +7,7 @@
 <link rel="icon" type="image/png" href="/Favicon.png?v=b2788e22">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css?v=dark-2">
-<link rel="stylesheet" href="/drill.css?v=4">
+<link rel="stylesheet" href="/drill.css?v=5">
 <link rel="stylesheet" href="/responsive.css?v=1">
 </head>
 <body data-drill-section="Math">
@@ -30,14 +30,12 @@
         </div>
         <div class="drill-focus-grid">
           <div class="drill-focus-field">
-            <label for="drill-domain">Domain</label>
-            <select id="drill-domain" class="drill-focus-select" aria-label="Drill domain"></select>
+            <label id="drill-domain-label">Domain</label>
+            <div id="drill-domain" class="drill-dropdown" aria-labelledby="drill-domain-label" data-value=""></div>
           </div>
           <div class="drill-focus-field">
-            <label for="drill-subtopic">Subtopic</label>
-            <select id="drill-subtopic" class="drill-focus-select" aria-label="Drill subtopic">
-              <option value="">All subtopics</option>
-            </select>
+            <label id="drill-subtopic-label">Subtopic</label>
+            <div id="drill-subtopic" class="drill-dropdown" aria-labelledby="drill-subtopic-label" data-value=""></div>
           </div>
         </div>
       </div>
@@ -86,7 +84,7 @@
 <script src="/supabase-config.js"></script>
 <script src="/auth-guard.js"></script>
 <script src="/auth.js?v=dark-3"></script>
-<script src="/drill.js?v=4"></script>
+<script src="/drill.js?v=5"></script>
 <script>
 const menuButton=document.querySelector(".mobile-menu-button");const navigation=document.querySelector(".navigation");if(menuButton&&navigation){menuButton.addEventListener("click",()=>{const isOpen=navigation.classList.toggle("mobile-open");menuButton.setAttribute("aria-expanded",isOpen?"true":"false");});}
 </script>
