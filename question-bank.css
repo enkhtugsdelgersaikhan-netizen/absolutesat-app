@@ -1280,98 +1280,98 @@
     }
 }
 
-
 /* ============================================================
    DARK MODE: DARK NEON QUESTION ICONS
    ============================================================ */
 
 /*
- * The full Question Bank is literally inverted by the global theme.
- * Counter-invert the interactive question symbols, then draw them with
- * a deliberately dark, higher-contrast neon palette.
+ * The global theme literally inverts the whole page. Counter-invert
+ * the Question Bank symbols, then force the dark/neon palette with
+ * !important because the older tactile tile styles also use !important.
  */
 html.lexlogica-dark-mode .question-icon,
 html.lexlogica-dark-mode .question-review-icon{
-    filter:invert(1);
+    filter:invert(1)!important;
 }
 
 html.lexlogica-dark-mode .question-icon{
-    background:#101519;
-    border-color:#2a353b;
-    color:#d8e4e8;
+    background:#101519!important;
+    border-color:#2a353b!important;
+    color:#d8e4e8!important;
     box-shadow:
         inset 0 1px 0 rgba(255,255,255,.035),
-        0 0 0 1px rgba(0,0,0,.28);
+        0 0 0 1px rgba(0,0,0,.28)!important;
 }
 
 html.lexlogica-dark-mode .question-icon.difficulty-easy{
-    background:#071a13;
-    border-color:#18e891;
-    color:#65ffba;
+    background:#071a13!important;
+    border-color:#18e891!important;
+    color:#65ffba!important;
     box-shadow:
-        inset 0 0 22px rgba(24,232,145,.08),
-        0 0 10px rgba(24,232,145,.24);
+        inset 0 0 22px rgba(24,232,145,.10),
+        0 0 10px rgba(24,232,145,.30)!important;
 }
 
 html.lexlogica-dark-mode .question-icon.difficulty-medium{
-    background:#1c1705;
-    border-color:#ffd84a;
-    color:#ffe77a;
+    background:#1c1705!important;
+    border-color:#ffd84a!important;
+    color:#ffe77a!important;
     box-shadow:
-        inset 0 0 22px rgba(255,216,74,.075),
-        0 0 10px rgba(255,216,74,.2);
+        inset 0 0 22px rgba(255,216,74,.09),
+        0 0 10px rgba(255,216,74,.25)!important;
 }
 
 html.lexlogica-dark-mode .question-icon.difficulty-hard{
-    background:#1d090d;
-    border-color:#ff4f68;
-    color:#ff8192;
+    background:#1d090d!important;
+    border-color:#ff4f68!important;
+    color:#ff8192!important;
     box-shadow:
-        inset 0 0 22px rgba(255,79,104,.08),
-        0 0 10px rgba(255,79,104,.24);
+        inset 0 0 22px rgba(255,79,104,.10),
+        0 0 10px rgba(255,79,104,.30)!important;
 }
 
 html.lexlogica-dark-mode .question-icon:hover{
-    transform:translateY(-2px);
-    box-shadow:
-        inset 0 0 22px rgba(255,255,255,.035),
-        0 0 15px currentColor;
+    filter:invert(1)!important;
+    transform:translateY(-2px)!important;
+}
+
+html.lexlogica-dark-mode .question-icon:active{
+    filter:invert(1)!important;
 }
 
 html.lexlogica-dark-mode .question-status-dot{
-    border-color:#071012;
-    box-shadow:0 0 9px currentColor;
+    border-color:#071012!important;
 }
 
 html.lexlogica-dark-mode .question-status-dot.unanswered{
-    background:#647681;
-    color:#647681;
+    background:#647681!important;
+    box-shadow:0 0 7px rgba(100,118,129,.42)!important;
 }
 
 html.lexlogica-dark-mode .question-status-dot.correct{
-    background:#2cff88;
-    color:#2cff88;
+    background:#2cff88!important;
+    box-shadow:0 0 9px rgba(44,255,136,.70)!important;
 }
 
 html.lexlogica-dark-mode .question-status-dot.incorrect{
-    background:#ff4059;
-    color:#ff4059;
+    background:#ff4059!important;
+    box-shadow:0 0 9px rgba(255,64,89,.70)!important;
 }
 
 html.lexlogica-dark-mode .question-review-icon{
-    background:#101519;
-    border:1px solid #415059;
-    color:#8ea0aa;
-    box-shadow:0 0 7px rgba(142,160,170,.16);
+    background:#101519!important;
+    border:1px solid #415059!important;
+    color:#8ea0aa!important;
+    box-shadow:0 0 7px rgba(142,160,170,.18)!important;
 }
 
 html.lexlogica-dark-mode .question-review-icon.active{
-    border-color:#ffe14d;
-    background:#171505;
-    color:#ffe14d;
-    box-shadow:0 0 11px rgba(255,225,77,.42);
+    border-color:#ffe14d!important;
+    background:#171505!important;
+    color:#ffe14d!important;
+    box-shadow:0 0 11px rgba(255,225,77,.50)!important;
 }
 
 html.lexlogica-dark-mode .question-review-icon:hover{
-    color:#fff177;
+    color:#fff177!important;
 }
