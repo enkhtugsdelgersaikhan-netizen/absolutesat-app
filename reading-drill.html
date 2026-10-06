@@ -7,7 +7,7 @@
 <link rel="icon" type="image/png" href="/Favicon.png?v=b2788e22">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css?v=dark-2">
-<link rel="stylesheet" href="/drill.css?v=3">
+<link rel="stylesheet" href="/drill.css?v=4">
 <link rel="stylesheet" href="/responsive.css?v=1">
 </head>
 <body data-drill-section="Reading & Writing">
@@ -60,13 +60,9 @@
           <p>Average is based on total SAT section time ÷ total questions. The timer never auto-skips.</p>
         </div>
         <div class="drill-choice-grid">
-          <label class="drill-choice"><input type="radio" name="drill-pace" value="average" checked><span class="drill-choice-card"><strong>Average</strong><span>1:11 target per question.</span></span></label>
-          <label class="drill-choice"><input type="radio" name="drill-pace" value="thorough"><span class="drill-choice-card"><strong>Thorough</strong><span>Give yourself X% more time than average.</span></span></label>
-          <label class="drill-choice"><input type="radio" name="drill-pace" value="dart"><span class="drill-choice-card"><strong>Dart</strong><span>Use X% less time than average.</span></span></label>
-        </div>
-        <div id="drill-percent-row" class="drill-percent-row" hidden>
-          <label for="drill-percent">Pace adjustment</label>
-          <div class="drill-percent-control"><input id="drill-percent" type="number" min="5" max="75" step="5" value="25"><span>%</span></div>
+          <label class="drill-choice"><input type="radio" name="drill-pace" value="thorough"><span class="drill-choice-card"><strong>Thorough</strong><span>1:29 per question · 25% more time.</span></span></label>
+          <label class="drill-choice"><input type="radio" name="drill-pace" value="average" checked><span class="drill-choice-card"><strong>Average</strong><span>1:11 per question · SAT-average pace.</span></span></label>
+          <label class="drill-choice"><input type="radio" name="drill-pace" value="dart"><span class="drill-choice-card"><strong>Dart</strong><span>0:53 per question · 25% less time.</span></span></label>
         </div>
       </div>
     </section>
@@ -90,7 +86,7 @@
 <script src="/supabase-config.js"></script>
 <script src="/auth-guard.js"></script>
 <script src="/auth.js?v=dark-3"></script>
-<script src="/drill.js?v=3"></script>
+<script src="/drill.js?v=4"></script>
 <script>
 const menuButton=document.querySelector(".mobile-menu-button");const navigation=document.querySelector(".navigation");if(menuButton&&navigation){menuButton.addEventListener("click",()=>{const isOpen=navigation.classList.toggle("mobile-open");menuButton.setAttribute("aria-expanded",isOpen?"true":"false");});}
 </script>
