@@ -7905,7 +7905,121 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Right rectangular prism",
+        "lines": [
+          {
+            "x1": 85,
+            "y1": 90,
+            "x2": 285,
+            "y2": 90,
+            "dashed": false
+          },
+          {
+            "x1": 285,
+            "y1": 90,
+            "x2": 350,
+            "y2": 55,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 55,
+            "x2": 150,
+            "y2": 55,
+            "dashed": false
+          },
+          {
+            "x1": 150,
+            "y1": 55,
+            "x2": 85,
+            "y2": 90,
+            "dashed": false
+          },
+          {
+            "x1": 85,
+            "y1": 90,
+            "x2": 85,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 285,
+            "y1": 90,
+            "x2": 285,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 55,
+            "x2": 350,
+            "y2": 190,
+            "dashed": false
+          },
+          {
+            "x1": 150,
+            "y1": 55,
+            "x2": 150,
+            "y2": 190,
+            "dashed": false
+          },
+          {
+            "x1": 85,
+            "y1": 225,
+            "x2": 285,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 285,
+            "y1": 225,
+            "x2": 350,
+            "y2": 190,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 190,
+            "x2": 150,
+            "y2": 190,
+            "dashed": false
+          },
+          {
+            "x1": 150,
+            "y1": 190,
+            "x2": 85,
+            "y2": 225,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 180,
+            "y": 250,
+            "text": "length ℓ",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 105,
+            "y": 238,
+            "text": "width = ℓ/2 − 2",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 365,
+            "y": 145,
+            "text": "height 12",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-batch465-q245",
@@ -15051,7 +15165,114 @@
         "124"
       ],
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Intersecting triangles",
+        "lines": [
+          {
+            "x1": 85,
+            "y1": 55,
+            "x2": 335,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 335,
+            "y1": 55,
+            "x2": 85,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 85,
+            "y1": 55,
+            "x2": 335,
+            "y2": 55,
+            "dashed": false
+          },
+          {
+            "x1": 85,
+            "y1": 245,
+            "x2": 335,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 85,
+            "y1": 245,
+            "x2": 35,
+            "y2": 245,
+            "dashed": false
+          }
+        ],
+        "points": [
+          {
+            "x": 85,
+            "y": 55,
+            "label": "A",
+            "dx": -10,
+            "dy": -10,
+            "hideDot": false
+          },
+          {
+            "x": 335,
+            "y": 55,
+            "label": "B",
+            "dx": 8,
+            "dy": -10,
+            "hideDot": false
+          },
+          {
+            "x": 210,
+            "y": 150,
+            "label": "C",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 335,
+            "y": 245,
+            "label": "D",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 85,
+            "y": 245,
+            "label": "E",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 115,
+            "y": 78,
+            "text": "38°",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 305,
+            "y": 78,
+            "text": "47°",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 305,
+            "y": 225,
+            "text": "29°",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q012",
@@ -15080,7 +15301,114 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Parallel lines with intersecting transversals",
+        "lines": [
+          {
+            "x1": 60,
+            "y1": 65,
+            "x2": 360,
+            "y2": 65,
+            "dashed": false
+          },
+          {
+            "x1": 60,
+            "y1": 235,
+            "x2": 360,
+            "y2": 235,
+            "dashed": false
+          },
+          {
+            "x1": 90,
+            "y1": 65,
+            "x2": 330,
+            "y2": 235,
+            "dashed": false
+          },
+          {
+            "x1": 330,
+            "y1": 65,
+            "x2": 90,
+            "y2": 235,
+            "dashed": false
+          }
+        ],
+        "points": [
+          {
+            "x": 90,
+            "y": 65,
+            "label": "A",
+            "dx": -8,
+            "dy": -10,
+            "hideDot": false
+          },
+          {
+            "x": 330,
+            "y": 65,
+            "label": "B",
+            "dx": 8,
+            "dy": -10,
+            "hideDot": false
+          },
+          {
+            "x": 210,
+            "y": 150,
+            "label": "C",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 90,
+            "y": 235,
+            "label": "D",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 330,
+            "y": 235,
+            "label": "E",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 185,
+            "y": 130,
+            "text": "62°",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 128,
+            "y": 92,
+            "text": "3p+4",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 288,
+            "y": 208,
+            "text": "2p+18",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 128,
+            "y": 208,
+            "text": "2q−8",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q013",
@@ -15102,7 +15430,97 @@
         "140"
       ],
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Triangle diagram",
+        "polygons": [
+          {
+            "points": [
+              [
+                70,
+                235
+              ],
+              [
+                350,
+                235
+              ],
+              [
+                205,
+                48
+              ]
+            ]
+          }
+        ],
+        "points": [
+          {
+            "x": 70,
+            "y": 235,
+            "label": "A",
+            "dx": -10,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 235,
+            "label": "B",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 205,
+            "y": 48,
+            "label": "C",
+            "dx": 0,
+            "dy": -10,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 102,
+            "y": 218,
+            "text": "∠A",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 320,
+            "y": 218,
+            "text": "∠C ext.",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 205,
+            "y": 75,
+            "text": "35°",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [],
+        "ticks": [],
+        "lines": [
+          {
+            "x1": 70,
+            "y1": 235,
+            "x2": 25,
+            "y2": 235,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 235,
+            "x2": 395,
+            "y2": 235,
+            "dashed": false
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q014",
@@ -15160,7 +15578,73 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Parallel lines cut by a transversal",
+        "lines": [
+          {
+            "x1": 45,
+            "y1": 80,
+            "x2": 375,
+            "y2": 80,
+            "dashed": false
+          },
+          {
+            "x1": 45,
+            "y1": 215,
+            "x2": 375,
+            "y2": 215,
+            "dashed": false
+          },
+          {
+            "x1": 115,
+            "y1": 25,
+            "x2": 305,
+            "y2": 265,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 35,
+            "y": 75,
+            "text": "ℓ",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 35,
+            "y": 210,
+            "text": "m",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 305,
+            "y": 260,
+            "text": "t",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 154,
+            "y": 69,
+            "text": "5x+7",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 265,
+            "y": 205,
+            "text": "3x+43",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "points": []
+      }
     },
     {
       "id": "math-20261006-new409-q016",
@@ -15189,7 +15673,72 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Right circular cylinder",
+        "ellipses": [
+          {
+            "cx": 210,
+            "cy": 75,
+            "rx": 90,
+            "ry": 28
+          },
+          {
+            "cx": 210,
+            "cy": 225,
+            "rx": 90,
+            "ry": 28
+          }
+        ],
+        "lines": [
+          {
+            "x1": 120,
+            "y1": 75,
+            "x2": 120,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 300,
+            "y1": 75,
+            "x2": 300,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 75,
+            "x2": 300,
+            "y2": 75,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 325,
+            "y": 150,
+            "text": "h = 20",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 255,
+            "y": 75,
+            "text": "r",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 210,
+            "y": 270,
+            "text": "V = 500π",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q017",
@@ -15218,7 +15767,94 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Parallel lines cut by a transversal",
+        "lines": [
+          {
+            "x1": 45,
+            "y1": 80,
+            "x2": 375,
+            "y2": 80,
+            "dashed": false
+          },
+          {
+            "x1": 45,
+            "y1": 215,
+            "x2": 375,
+            "y2": 215,
+            "dashed": false
+          },
+          {
+            "x1": 115,
+            "y1": 25,
+            "x2": 305,
+            "y2": 265,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 35,
+            "y": 75,
+            "text": "ℓ",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 35,
+            "y": 210,
+            "text": "m",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 305,
+            "y": 260,
+            "text": "t",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 155,
+            "y": 67,
+            "text": "1",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 195,
+            "y": 98,
+            "text": "2",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 250,
+            "y": 201,
+            "text": "3",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 285,
+            "y": 235,
+            "text": "4",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 130,
+            "y": 45,
+            "text": "112°",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "points": []
+      }
     },
     {
       "id": "math-20261006-new409-q018",
@@ -15247,7 +15883,80 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 280,
+        "alt": "Triangle and square",
+        "polygons": [
+          {
+            "points": [
+              [
+                35,
+                225
+              ],
+              [
+                180,
+                225
+              ],
+              [
+                95,
+                80
+              ]
+            ]
+          },
+          {
+            "points": [
+              [
+                245,
+                85
+              ],
+              [
+                380,
+                85
+              ],
+              [
+                380,
+                220
+              ],
+              [
+                245,
+                220
+              ]
+            ]
+          }
+        ],
+        "labels": [
+          {
+            "x": 105,
+            "y": 70,
+            "text": "Triangle R",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 312,
+            "y": 75,
+            "text": "Square S",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 104,
+            "y": 245,
+            "text": "Area 84",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 312,
+            "y": 245,
+            "text": "Perimeter 24",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q020",
@@ -15305,7 +16014,101 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Isosceles triangle diagram",
+        "polygons": [
+          {
+            "points": [
+              [
+                70,
+                235
+              ],
+              [
+                350,
+                235
+              ],
+              [
+                205,
+                48
+              ]
+            ]
+          }
+        ],
+        "points": [
+          {
+            "x": 70,
+            "y": 235,
+            "label": "A",
+            "dx": -10,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 235,
+            "label": "B",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 205,
+            "y": 48,
+            "label": "C",
+            "dx": 0,
+            "dy": -10,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 205,
+            "y": 75,
+            "text": "∠A",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 93,
+            "y": 218,
+            "text": "118° exterior",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 35,
+            "y": 220,
+            "text": "extension",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [],
+        "ticks": [
+          {
+            "x": 137,
+            "y": 142,
+            "angle": -36
+          },
+          {
+            "x": 275,
+            "y": 142,
+            "angle": 36
+          }
+        ],
+        "lines": [
+          {
+            "x1": 70,
+            "y1": 235,
+            "x2": 28,
+            "y2": 235,
+            "dashed": false
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q023",
@@ -15327,7 +16130,85 @@
         "72"
       ],
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Isosceles triangle diagram",
+        "polygons": [
+          {
+            "points": [
+              [
+                70,
+                235
+              ],
+              [
+                350,
+                235
+              ],
+              [
+                205,
+                48
+              ]
+            ]
+          }
+        ],
+        "points": [
+          {
+            "x": 70,
+            "y": 235,
+            "label": "A",
+            "dx": -10,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 235,
+            "label": "B",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 205,
+            "y": 48,
+            "label": "C",
+            "dx": 0,
+            "dy": -10,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 205,
+            "y": 75,
+            "text": "4x+12",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 103,
+            "y": 218,
+            "text": "8x+6 exterior",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [],
+        "ticks": [
+          {
+            "x": 137,
+            "y": 142,
+            "angle": -36
+          },
+          {
+            "x": 275,
+            "y": 142,
+            "angle": 36
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q024",
@@ -15356,7 +16237,65 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Circles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Right circular cylinder",
+        "ellipses": [
+          {
+            "cx": 210,
+            "cy": 75,
+            "rx": 90,
+            "ry": 28
+          },
+          {
+            "cx": 210,
+            "cy": 225,
+            "rx": 90,
+            "ry": 28
+          }
+        ],
+        "lines": [
+          {
+            "x1": 120,
+            "y1": 75,
+            "x2": 120,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 300,
+            "y1": 75,
+            "x2": 300,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 75,
+            "x2": 300,
+            "y2": 75,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 245,
+            "y": 72,
+            "text": "C = 14π",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 325,
+            "y": 150,
+            "text": "h = r + 3",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q025",
@@ -15385,7 +16324,84 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 280,
+        "alt": "Similar rectangles",
+        "polygons": [
+          {
+            "points": [
+              [
+                35,
+                115
+              ],
+              [
+                170,
+                115
+              ],
+              [
+                170,
+                220
+              ],
+              [
+                35,
+                220
+              ]
+            ]
+          },
+          {
+            "points": [
+              [
+                235,
+                60
+              ],
+              [
+                390,
+                60
+              ],
+              [
+                390,
+                220
+              ],
+              [
+                235,
+                220
+              ]
+            ]
+          }
+        ],
+        "labels": [
+          {
+            "x": 102,
+            "y": 105,
+            "text": "A",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 312,
+            "y": 50,
+            "text": "B",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 105,
+            "y": 245,
+            "text": "Area 320",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 310,
+            "y": 245,
+            "text": "Area 720",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q026",
@@ -15414,7 +16430,112 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 280,
+        "alt": "Similar triangles",
+        "polygons": [
+          {
+            "points": [
+              [
+                35,
+                225
+              ],
+              [
+                175,
+                225
+              ],
+              [
+                80,
+                85
+              ]
+            ]
+          },
+          {
+            "points": [
+              [
+                235,
+                235
+              ],
+              [
+                390,
+                235
+              ],
+              [
+                335,
+                55
+              ]
+            ]
+          }
+        ],
+        "points": [
+          {
+            "x": 35,
+            "y": 225,
+            "label": "A",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 175,
+            "y": 225,
+            "label": "B",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 80,
+            "y": 85,
+            "label": "C",
+            "dx": 0,
+            "dy": -10,
+            "hideDot": false
+          },
+          {
+            "x": 235,
+            "y": 235,
+            "label": "D",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 390,
+            "y": 235,
+            "label": "E",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 335,
+            "y": 55,
+            "label": "F",
+            "dx": 0,
+            "dy": -10,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 82,
+            "y": 165,
+            "text": "14",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 335,
+            "y": 150,
+            "text": "24.5",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q027",
@@ -15443,7 +16564,107 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Triangle with parallel interior segment",
+        "lines": [
+          {
+            "x1": 205,
+            "y1": 40,
+            "x2": 55,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 205,
+            "y1": 40,
+            "x2": 355,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 55,
+            "y1": 245,
+            "x2": 355,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 130,
+            "y1": 142,
+            "x2": 280,
+            "y2": 142,
+            "dashed": false
+          }
+        ],
+        "points": [
+          {
+            "x": 205,
+            "y": 40,
+            "label": "A",
+            "dx": 0,
+            "dy": -10,
+            "hideDot": false
+          },
+          {
+            "x": 55,
+            "y": 245,
+            "label": "B",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 355,
+            "y": 245,
+            "label": "C",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 130,
+            "y": 142,
+            "label": "D",
+            "dx": -10,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 280,
+            "y": 142,
+            "label": "E",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 207,
+            "y": 155,
+            "text": "parallel",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 78,
+            "y": 205,
+            "text": "34°",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 325,
+            "y": 205,
+            "text": "x+8",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q029",
@@ -15472,7 +16693,107 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Triangle with parallel interior segment",
+        "lines": [
+          {
+            "x1": 205,
+            "y1": 40,
+            "x2": 55,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 205,
+            "y1": 40,
+            "x2": 355,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 55,
+            "y1": 245,
+            "x2": 355,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 130,
+            "y1": 142,
+            "x2": 280,
+            "y2": 142,
+            "dashed": false
+          }
+        ],
+        "points": [
+          {
+            "x": 205,
+            "y": 40,
+            "label": "A",
+            "dx": 0,
+            "dy": -10,
+            "hideDot": false
+          },
+          {
+            "x": 55,
+            "y": 245,
+            "label": "B",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 355,
+            "y": 245,
+            "label": "C",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 130,
+            "y": 142,
+            "label": "D",
+            "dx": -10,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 280,
+            "y": 142,
+            "label": "E",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 205,
+            "y": 130,
+            "text": "DE = 18",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 105,
+            "y": 155,
+            "text": "3",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 82,
+            "y": 205,
+            "text": "2",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q031",
@@ -15501,7 +16822,126 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 280,
+        "alt": "Similar triangles",
+        "polygons": [
+          {
+            "points": [
+              [
+                35,
+                225
+              ],
+              [
+                175,
+                225
+              ],
+              [
+                80,
+                85
+              ]
+            ]
+          },
+          {
+            "points": [
+              [
+                235,
+                235
+              ],
+              [
+                390,
+                235
+              ],
+              [
+                335,
+                55
+              ]
+            ]
+          }
+        ],
+        "points": [
+          {
+            "x": 35,
+            "y": 225,
+            "label": "A",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 175,
+            "y": 225,
+            "label": "B",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 80,
+            "y": 85,
+            "label": "C",
+            "dx": 0,
+            "dy": -10,
+            "hideDot": false
+          },
+          {
+            "x": 235,
+            "y": 235,
+            "label": "D",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 390,
+            "y": 235,
+            "label": "E",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 335,
+            "y": 55,
+            "label": "F",
+            "dx": 0,
+            "dy": -10,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 70,
+            "y": 205,
+            "text": "10",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 275,
+            "y": 205,
+            "text": "15",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 73,
+            "y": 112,
+            "text": "48°",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 283,
+            "y": 95,
+            "text": "48°",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q033",
@@ -15523,7 +16963,121 @@
         "352"
       ],
       "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Right rectangular prism",
+        "lines": [
+          {
+            "x1": 85,
+            "y1": 90,
+            "x2": 285,
+            "y2": 90,
+            "dashed": false
+          },
+          {
+            "x1": 285,
+            "y1": 90,
+            "x2": 350,
+            "y2": 55,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 55,
+            "x2": 150,
+            "y2": 55,
+            "dashed": false
+          },
+          {
+            "x1": 150,
+            "y1": 55,
+            "x2": 85,
+            "y2": 90,
+            "dashed": false
+          },
+          {
+            "x1": 85,
+            "y1": 90,
+            "x2": 85,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 285,
+            "y1": 90,
+            "x2": 285,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 55,
+            "x2": 350,
+            "y2": 190,
+            "dashed": false
+          },
+          {
+            "x1": 150,
+            "y1": 55,
+            "x2": 150,
+            "y2": 190,
+            "dashed": false
+          },
+          {
+            "x1": 85,
+            "y1": 225,
+            "x2": 285,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 285,
+            "y1": 225,
+            "x2": 350,
+            "y2": 190,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 190,
+            "x2": 150,
+            "y2": 190,
+            "dashed": false
+          },
+          {
+            "x1": 150,
+            "y1": 190,
+            "x2": 85,
+            "y2": 225,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 190,
+            "y": 250,
+            "text": "length = 11",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 95,
+            "y": 238,
+            "text": "width = 8",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 365,
+            "y": 145,
+            "text": "height = 4",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q034",
@@ -15756,7 +17310,100 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Rectangle diagram",
+        "lines": [
+          {
+            "x1": 65,
+            "y1": 70,
+            "x2": 350,
+            "y2": 70,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 70,
+            "x2": 350,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 225,
+            "x2": 65,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 65,
+            "y1": 225,
+            "x2": 65,
+            "y2": 70,
+            "dashed": false
+          }
+        ],
+        "points": [
+          {
+            "x": 65,
+            "y": 70,
+            "label": "A",
+            "dx": -8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 70,
+            "label": "B",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 225,
+            "label": "C",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 65,
+            "y": 225,
+            "label": "D",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 210,
+            "y": 150,
+            "text": "Area 432",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 210,
+            "y": 245,
+            "text": "length = 3 × width",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 65,
+            "y": 225,
+            "size": 14,
+            "rotation": 0
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q045",
@@ -21054,7 +22701,100 @@
         "9"
       ],
       "subtopic": "Trigonometry",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Right triangle with altitude to the hypotenuse",
+        "lines": [
+          {
+            "x1": 55,
+            "y1": 235,
+            "x2": 210,
+            "y2": 55,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 55,
+            "x2": 365,
+            "y2": 235,
+            "dashed": false
+          },
+          {
+            "x1": 365,
+            "y1": 235,
+            "x2": 55,
+            "y2": 235,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 55,
+            "x2": 210,
+            "y2": 235,
+            "dashed": false
+          }
+        ],
+        "points": [
+          {
+            "x": 55,
+            "y": 235,
+            "label": "A",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 210,
+            "y": 55,
+            "label": "B",
+            "dx": 0,
+            "dy": -10,
+            "hideDot": false
+          },
+          {
+            "x": 365,
+            "y": 235,
+            "label": "C",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 210,
+            "y": 235,
+            "label": "D",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 210,
+            "y": 235,
+            "size": 14,
+            "rotation": 0
+          }
+        ],
+        "labels": [
+          {
+            "x": 230,
+            "y": 145,
+            "text": "BD = 12",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 210,
+            "y": 260,
+            "text": "AC = 25",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q321",
@@ -24608,7 +26348,84 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Circles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 270,
+        "alt": "Square and rectangle",
+        "polygons": [
+          {
+            "points": [
+              [
+                40,
+                85
+              ],
+              [
+                175,
+                85
+              ],
+              [
+                175,
+                220
+              ],
+              [
+                40,
+                220
+              ]
+            ]
+          },
+          {
+            "points": [
+              [
+                235,
+                105
+              ],
+              [
+                390,
+                105
+              ],
+              [
+                390,
+                220
+              ],
+              [
+                235,
+                220
+              ]
+            ]
+          }
+        ],
+        "labels": [
+          {
+            "x": 108,
+            "y": 75,
+            "text": "Square",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 312,
+            "y": 95,
+            "text": "Rectangle",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 110,
+            "y": 245,
+            "text": "circle area = square area",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 312,
+            "y": 245,
+            "text": "same area",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q021",
@@ -24637,7 +26454,88 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Trigonometry",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Right triangle diagram",
+        "polygons": [
+          {
+            "points": [
+              [
+                70,
+                235
+              ],
+              [
+                350,
+                235
+              ],
+              [
+                70,
+                55
+              ]
+            ]
+          }
+        ],
+        "points": [
+          {
+            "x": 70,
+            "y": 235,
+            "label": "C",
+            "dx": -10,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 235,
+            "label": "B",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 70,
+            "y": 55,
+            "label": "A",
+            "dx": -10,
+            "dy": -8,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 95,
+            "y": 205,
+            "text": "90°",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 300,
+            "y": 220,
+            "text": "5x−2",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 90,
+            "y": 78,
+            "text": "3x+12",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 70,
+            "y": 235,
+            "size": 16,
+            "rotation": 0
+          }
+        ],
+        "ticks": []
+      }
     },
     {
       "id": "math-20261006-new409-q028",
@@ -24695,7 +26593,88 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Trigonometry",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Right triangle diagram",
+        "polygons": [
+          {
+            "points": [
+              [
+                70,
+                235
+              ],
+              [
+                350,
+                235
+              ],
+              [
+                70,
+                55
+              ]
+            ]
+          }
+        ],
+        "points": [
+          {
+            "x": 70,
+            "y": 235,
+            "label": "C",
+            "dx": -10,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 235,
+            "label": "B",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 70,
+            "y": 55,
+            "label": "A",
+            "dx": -10,
+            "dy": -8,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 220,
+            "y": 155,
+            "text": "25",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 65,
+            "y": 150,
+            "text": "15",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 92,
+            "y": 78,
+            "text": "A",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 70,
+            "y": 235,
+            "size": 16,
+            "rotation": 0
+          }
+        ],
+        "ticks": []
+      }
     },
     {
       "id": "math-20261006-new409-q032",
@@ -24782,7 +26761,92 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Circles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 290,
+        "alt": "Circle diagram",
+        "circles": [
+          {
+            "cx": 210,
+            "cy": 145,
+            "r": 100
+          }
+        ],
+        "points": [
+          {
+            "x": 210,
+            "y": 145,
+            "label": "O",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 123.39745962155612,
+            "y": 95,
+            "label": "A",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 244.20201433256688,
+            "y": 51.03073792140917,
+            "label": "B",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 303.9692620785909,
+            "y": 179.20201433256688,
+            "label": "C",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          }
+        ],
+        "lines": [
+          {
+            "x1": 210,
+            "y1": 145,
+            "x2": 123.39745962155612,
+            "y2": 95,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 145,
+            "x2": 244.20201433256688,
+            "y2": 51.03073792140917,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 145,
+            "x2": 303.9692620785909,
+            "y2": 179.20201433256688,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 170,
+            "y": 82,
+            "text": "45°",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 245,
+            "y": 105,
+            "text": "135°",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q040",
@@ -24804,7 +26868,88 @@
         "336"
       ],
       "subtopic": "Trigonometry",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Right triangle diagram",
+        "polygons": [
+          {
+            "points": [
+              [
+                70,
+                235
+              ],
+              [
+                350,
+                235
+              ],
+              [
+                70,
+                55
+              ]
+            ]
+          }
+        ],
+        "points": [
+          {
+            "x": 70,
+            "y": 235,
+            "label": "C",
+            "dx": -10,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 235,
+            "label": "A",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 70,
+            "y": 55,
+            "label": "B",
+            "dx": -10,
+            "dy": -8,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 220,
+            "y": 150,
+            "text": "AB = 50",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 305,
+            "y": 218,
+            "text": "B",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 145,
+            "y": 100,
+            "text": "sin B = 7/25",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 70,
+            "y": 235,
+            "size": 16,
+            "rotation": 0
+          }
+        ],
+        "ticks": []
+      }
     },
     {
       "id": "math-20261006-new409-q041",
@@ -24833,7 +26978,81 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Trigonometry",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Right triangle diagram",
+        "polygons": [
+          {
+            "points": [
+              [
+                70,
+                235
+              ],
+              [
+                350,
+                235
+              ],
+              [
+                70,
+                55
+              ]
+            ]
+          }
+        ],
+        "points": [
+          {
+            "x": 70,
+            "y": 235,
+            "label": "C",
+            "dx": -10,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 235,
+            "label": "A",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 70,
+            "y": 55,
+            "label": "B",
+            "dx": -10,
+            "dy": -8,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 155,
+            "y": 245,
+            "text": "equal legs",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 58,
+            "y": 150,
+            "text": "equal legs",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 70,
+            "y": 235,
+            "size": 16,
+            "rotation": 0
+          }
+        ],
+        "ticks": []
+      }
     },
     {
       "id": "math-20261006-new409-q043",
@@ -24862,7 +27081,65 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Circles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Right circular cylinder",
+        "ellipses": [
+          {
+            "cx": 210,
+            "cy": 75,
+            "rx": 90,
+            "ry": 28
+          },
+          {
+            "cx": 210,
+            "cy": 225,
+            "rx": 90,
+            "ry": 28
+          }
+        ],
+        "lines": [
+          {
+            "x1": 120,
+            "y1": 75,
+            "x2": 120,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 300,
+            "y1": 75,
+            "x2": 300,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 75,
+            "x2": 300,
+            "y2": 75,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 325,
+            "y": 150,
+            "text": "h = 18",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 245,
+            "y": 72,
+            "text": "diameter = 6",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q046",
@@ -24891,7 +27168,98 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Circles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Two right circular cylinders",
+        "ellipses": [
+          {
+            "cx": 115,
+            "cy": 80,
+            "rx": 65,
+            "ry": 22
+          },
+          {
+            "cx": 115,
+            "cy": 220,
+            "rx": 65,
+            "ry": 22
+          },
+          {
+            "cx": 315,
+            "cy": 80,
+            "rx": 65,
+            "ry": 22
+          },
+          {
+            "cx": 315,
+            "cy": 220,
+            "rx": 65,
+            "ry": 22
+          }
+        ],
+        "lines": [
+          {
+            "x1": 50,
+            "y1": 80,
+            "x2": 50,
+            "y2": 220,
+            "dashed": false
+          },
+          {
+            "x1": 180,
+            "y1": 80,
+            "x2": 180,
+            "y2": 220,
+            "dashed": false
+          },
+          {
+            "x1": 250,
+            "y1": 80,
+            "x2": 250,
+            "y2": 220,
+            "dashed": false
+          },
+          {
+            "x1": 380,
+            "y1": 80,
+            "x2": 380,
+            "y2": 220,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 115,
+            "y": 260,
+            "text": "r=12, h=40",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 315,
+            "y": 260,
+            "text": "r=15, h=32",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 115,
+            "y": 45,
+            "text": "A",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 315,
+            "y": 45,
+            "text": "B",
+            "emphasis": true,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q092",
@@ -25068,7 +27436,129 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Triangle with parallel interior segment",
+        "lines": [
+          {
+            "x1": 205,
+            "y1": 40,
+            "x2": 55,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 205,
+            "y1": 40,
+            "x2": 355,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 55,
+            "y1": 245,
+            "x2": 355,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 130,
+            "y1": 142,
+            "x2": 280,
+            "y2": 142,
+            "dashed": false
+          },
+          {
+            "x1": 130,
+            "y1": 142,
+            "x2": 205,
+            "y2": 245,
+            "dashed": false
+          }
+        ],
+        "points": [
+          {
+            "x": 205,
+            "y": 40,
+            "label": "A",
+            "dx": 0,
+            "dy": -10,
+            "hideDot": false
+          },
+          {
+            "x": 55,
+            "y": 245,
+            "label": "B",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 355,
+            "y": 245,
+            "label": "C",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 130,
+            "y": 142,
+            "label": "D",
+            "dx": -10,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 280,
+            "y": 142,
+            "label": "E",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 205,
+            "y": 245,
+            "label": "F",
+            "dx": 0,
+            "dy": 18,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 205,
+            "y": 128,
+            "text": "DE ∥ BC",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 103,
+            "y": 125,
+            "text": "AD = 8",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 85,
+            "y": 205,
+            "text": "DB = 12",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 210,
+            "y": 263,
+            "text": "BC = 25",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q097",
@@ -25148,7 +27638,107 @@
         "24"
       ],
       "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Rectangle diagram",
+        "lines": [
+          {
+            "x1": 65,
+            "y1": 70,
+            "x2": 350,
+            "y2": 70,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 70,
+            "x2": 350,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 225,
+            "x2": 65,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 65,
+            "y1": 225,
+            "x2": 65,
+            "y2": 70,
+            "dashed": false
+          },
+          {
+            "x1": 65,
+            "y1": 225,
+            "x2": 350,
+            "y2": 70,
+            "dashed": false
+          }
+        ],
+        "points": [
+          {
+            "x": 65,
+            "y": 70,
+            "label": "A",
+            "dx": -8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 70,
+            "label": "B",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 225,
+            "label": "C",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 65,
+            "y": 225,
+            "label": "D",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 210,
+            "y": 145,
+            "text": "diagonal 25",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 210,
+            "y": 250,
+            "text": "perimeter 62",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 65,
+            "y": 225,
+            "size": 14,
+            "rotation": 0
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q100",
@@ -25177,7 +27767,81 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Trigonometry",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Right triangle diagram",
+        "polygons": [
+          {
+            "points": [
+              [
+                70,
+                235
+              ],
+              [
+                350,
+                235
+              ],
+              [
+                70,
+                55
+              ]
+            ]
+          }
+        ],
+        "points": [
+          {
+            "x": 70,
+            "y": 235,
+            "label": "A",
+            "dx": -10,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 235,
+            "label": "B",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 70,
+            "y": 55,
+            "label": "C",
+            "dx": -10,
+            "dy": -8,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 60,
+            "y": 145,
+            "text": "6",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 185,
+            "y": 250,
+            "text": "Area 33",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 70,
+            "y": 235,
+            "size": 16,
+            "rotation": 0
+          }
+        ],
+        "ticks": []
+      }
     },
     {
       "id": "math-20261006-new409-q101",
@@ -25199,7 +27863,81 @@
         "24"
       ],
       "subtopic": "Trigonometry",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Right triangle diagram",
+        "polygons": [
+          {
+            "points": [
+              [
+                70,
+                235
+              ],
+              [
+                350,
+                235
+              ],
+              [
+                70,
+                55
+              ]
+            ]
+          }
+        ],
+        "points": [
+          {
+            "x": 70,
+            "y": 235,
+            "label": "A",
+            "dx": -10,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 235,
+            "label": "B",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 70,
+            "y": 55,
+            "label": "C",
+            "dx": -10,
+            "dy": -8,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 215,
+            "y": 135,
+            "text": "26",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 205,
+            "y": 250,
+            "text": "longer − shorter = 14",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 70,
+            "y": 235,
+            "size": 16,
+            "rotation": 0
+          }
+        ],
+        "ticks": []
+      }
     },
     {
       "id": "math-20261006-new409-q102",
@@ -25228,7 +27966,107 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Circles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 290,
+        "alt": "Circle diagram",
+        "circles": [
+          {
+            "cx": 210,
+            "cy": 145,
+            "r": 100
+          }
+        ],
+        "points": [
+          {
+            "x": 210,
+            "y": 145,
+            "label": "O",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 123.39745962155612,
+            "y": 95,
+            "label": "A",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 244.20201433256688,
+            "y": 51.03073792140917,
+            "label": "B",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 303.9692620785909,
+            "y": 179.20201433256688,
+            "label": "C",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 175.79798566743312,
+            "y": 238.96926207859084,
+            "label": "D",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          }
+        ],
+        "lines": [
+          {
+            "x1": 210,
+            "y1": 145,
+            "x2": 123.39745962155612,
+            "y2": 95,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 145,
+            "x2": 244.20201433256688,
+            "y2": 51.03073792140917,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 145,
+            "x2": 303.9692620785909,
+            "y2": 179.20201433256688,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 145,
+            "x2": 175.79798566743312,
+            "y2": 238.96926207859084,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 135,
+            "y": 105,
+            "text": "π/6",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 285,
+            "y": 180,
+            "text": "45°",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q103",
@@ -25257,7 +28095,107 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Triangle with parallel interior segment",
+        "lines": [
+          {
+            "x1": 205,
+            "y1": 40,
+            "x2": 55,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 205,
+            "y1": 40,
+            "x2": 355,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 55,
+            "y1": 245,
+            "x2": 355,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 130,
+            "y1": 142,
+            "x2": 280,
+            "y2": 142,
+            "dashed": false
+          }
+        ],
+        "points": [
+          {
+            "x": 205,
+            "y": 40,
+            "label": "A",
+            "dx": 0,
+            "dy": -10,
+            "hideDot": false
+          },
+          {
+            "x": 55,
+            "y": 245,
+            "label": "B",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 355,
+            "y": 245,
+            "label": "C",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 130,
+            "y": 142,
+            "label": "D",
+            "dx": -10,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 280,
+            "y": 142,
+            "label": "E",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 205,
+            "y": 128,
+            "text": "DE ∥ BC",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 132,
+            "y": 132,
+            "text": "58°",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 340,
+            "y": 220,
+            "text": "137° exterior",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q104",
@@ -25286,7 +28224,98 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Circles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Two right circular cylinders",
+        "ellipses": [
+          {
+            "cx": 115,
+            "cy": 80,
+            "rx": 65,
+            "ry": 22
+          },
+          {
+            "cx": 115,
+            "cy": 220,
+            "rx": 65,
+            "ry": 22
+          },
+          {
+            "cx": 315,
+            "cy": 80,
+            "rx": 65,
+            "ry": 22
+          },
+          {
+            "cx": 315,
+            "cy": 220,
+            "rx": 65,
+            "ry": 22
+          }
+        ],
+        "lines": [
+          {
+            "x1": 50,
+            "y1": 80,
+            "x2": 50,
+            "y2": 220,
+            "dashed": false
+          },
+          {
+            "x1": 180,
+            "y1": 80,
+            "x2": 180,
+            "y2": 220,
+            "dashed": false
+          },
+          {
+            "x1": 250,
+            "y1": 80,
+            "x2": 250,
+            "y2": 220,
+            "dashed": false
+          },
+          {
+            "x1": 380,
+            "y1": 80,
+            "x2": 380,
+            "y2": 220,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 115,
+            "y": 260,
+            "text": "V = 54",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 315,
+            "y": 260,
+            "text": "r × 3/2; h × 2/3",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 115,
+            "y": 45,
+            "text": "A",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 315,
+            "y": 45,
+            "text": "B",
+            "emphasis": true,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q105",
@@ -25315,7 +28344,73 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Parallel lines cut by a transversal",
+        "lines": [
+          {
+            "x1": 45,
+            "y1": 80,
+            "x2": 375,
+            "y2": 80,
+            "dashed": false
+          },
+          {
+            "x1": 45,
+            "y1": 215,
+            "x2": 375,
+            "y2": 215,
+            "dashed": false
+          },
+          {
+            "x1": 115,
+            "y1": 25,
+            "x2": 305,
+            "y2": 265,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 35,
+            "y": 75,
+            "text": "ℓ",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 35,
+            "y": 210,
+            "text": "m",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 305,
+            "y": 260,
+            "text": "t",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 148,
+            "y": 67,
+            "text": "4x+11",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 270,
+            "y": 206,
+            "text": "7x−25",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "points": []
+      }
     },
     {
       "id": "math-20261006-new409-q106",
@@ -25337,7 +28432,88 @@
         "29"
       ],
       "subtopic": "Trigonometry",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Right triangle diagram",
+        "polygons": [
+          {
+            "points": [
+              [
+                70,
+                235
+              ],
+              [
+                350,
+                235
+              ],
+              [
+                70,
+                55
+              ]
+            ]
+          }
+        ],
+        "points": [
+          {
+            "x": 70,
+            "y": 235,
+            "label": "C",
+            "dx": -10,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 235,
+            "label": "X",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 70,
+            "y": 55,
+            "label": "Z",
+            "dx": -10,
+            "dy": -8,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 65,
+            "y": 150,
+            "text": "21",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 205,
+            "y": 248,
+            "text": "20",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 90,
+            "y": 77,
+            "text": "Z",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 70,
+            "y": 235,
+            "size": 16,
+            "rotation": 0
+          }
+        ],
+        "ticks": []
+      }
     },
     {
       "id": "math-20261006-new409-q107",
@@ -25366,7 +28542,100 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Rectangle diagram",
+        "lines": [
+          {
+            "x1": 65,
+            "y1": 70,
+            "x2": 350,
+            "y2": 70,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 70,
+            "x2": 350,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 225,
+            "x2": 65,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 65,
+            "y1": 225,
+            "x2": 65,
+            "y2": 70,
+            "dashed": false
+          }
+        ],
+        "points": [
+          {
+            "x": 65,
+            "y": 70,
+            "label": "A",
+            "dx": -8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 70,
+            "label": "B",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 225,
+            "label": "C",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 65,
+            "y": 225,
+            "label": "D",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 210,
+            "y": 245,
+            "text": "length = width + 10",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 210,
+            "y": 150,
+            "text": "Area 336",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 65,
+            "y": 225,
+            "size": 14,
+            "rotation": 0
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q108",
@@ -25395,7 +28664,107 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Rectangle diagram",
+        "lines": [
+          {
+            "x1": 65,
+            "y1": 70,
+            "x2": 350,
+            "y2": 70,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 70,
+            "x2": 350,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 225,
+            "x2": 65,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 65,
+            "y1": 225,
+            "x2": 65,
+            "y2": 70,
+            "dashed": false
+          }
+        ],
+        "points": [
+          {
+            "x": 65,
+            "y": 70,
+            "label": "A",
+            "dx": -8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 70,
+            "label": "B",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 225,
+            "label": "C",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 65,
+            "y": 225,
+            "label": "D",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 210,
+            "y": 245,
+            "text": "3x+2",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 48,
+            "y": 150,
+            "text": "x−1",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 210,
+            "y": 150,
+            "text": "Perimeter 42",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 65,
+            "y": 225,
+            "size": 14,
+            "rotation": 0
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q109",
@@ -25417,7 +28786,97 @@
         "135"
       ],
       "subtopic": "Trigonometry",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Triangle diagram",
+        "polygons": [
+          {
+            "points": [
+              [
+                70,
+                235
+              ],
+              [
+                350,
+                235
+              ],
+              [
+                205,
+                48
+              ]
+            ]
+          }
+        ],
+        "points": [
+          {
+            "x": 70,
+            "y": 235,
+            "label": "A",
+            "dx": -10,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 235,
+            "label": "B",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 205,
+            "y": 48,
+            "label": "C",
+            "dx": 0,
+            "dy": -10,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 205,
+            "y": 78,
+            "text": "A = 90°",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 315,
+            "y": 218,
+            "text": "C",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 365,
+            "y": 218,
+            "text": "D",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [],
+        "ticks": [],
+        "lines": [
+          {
+            "x1": 70,
+            "y1": 235,
+            "x2": 25,
+            "y2": 235,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 235,
+            "x2": 395,
+            "y2": 235,
+            "dashed": false
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q110",
@@ -25439,7 +28898,77 @@
         "36"
       ],
       "subtopic": "Circles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 290,
+        "alt": "Circle diagram",
+        "circles": [
+          {
+            "cx": 210,
+            "cy": 145,
+            "r": 100
+          }
+        ],
+        "points": [
+          {
+            "x": 210,
+            "y": 145,
+            "label": "O",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 123.39745962155612,
+            "y": 95,
+            "label": "A",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 244.20201433256688,
+            "y": 51.03073792140917,
+            "label": "B",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          }
+        ],
+        "lines": [
+          {
+            "x1": 210,
+            "y1": 145,
+            "x2": 123.39745962155612,
+            "y2": 95,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 145,
+            "x2": 244.20201433256688,
+            "y2": 51.03073792140917,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 160,
+            "y": 88,
+            "text": "minor arc 100°",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 245,
+            "y": 235,
+            "text": "major arc length 52π",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q111",
@@ -25490,7 +29019,77 @@
         "7/24"
       ],
       "subtopic": "Circles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 290,
+        "alt": "Circle diagram",
+        "circles": [
+          {
+            "cx": 210,
+            "cy": 145,
+            "r": 100
+          }
+        ],
+        "points": [
+          {
+            "x": 210,
+            "y": 145,
+            "label": "O",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 123.39745962155612,
+            "y": 95,
+            "label": "A",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 244.20201433256688,
+            "y": 51.03073792140917,
+            "label": "B",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          }
+        ],
+        "lines": [
+          {
+            "x1": 210,
+            "y1": 145,
+            "x2": 123.39745962155612,
+            "y2": 95,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 145,
+            "x2": 244.20201433256688,
+            "y2": 51.03073792140917,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 210,
+            "y": 35,
+            "text": "diameter 18",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 250,
+            "y": 235,
+            "text": "arc length 21π/4",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q113",
@@ -25614,7 +29213,88 @@
         "4"
       ],
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Right triangle diagram",
+        "polygons": [
+          {
+            "points": [
+              [
+                70,
+                235
+              ],
+              [
+                350,
+                235
+              ],
+              [
+                70,
+                55
+              ]
+            ]
+          }
+        ],
+        "points": [
+          {
+            "x": 70,
+            "y": 235,
+            "label": "A",
+            "dx": -10,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 235,
+            "label": "B",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 70,
+            "y": 55,
+            "label": "C",
+            "dx": -10,
+            "dy": -8,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 90,
+            "y": 80,
+            "text": "30°",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 315,
+            "y": 220,
+            "text": "60°",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 80,
+            "y": 218,
+            "text": "90°",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 70,
+            "y": 235,
+            "size": 16,
+            "rotation": 0
+          }
+        ],
+        "ticks": []
+      }
     },
     {
       "id": "math-20261006-new409-q119",
@@ -25636,7 +29316,105 @@
         "16"
       ],
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Triangle formed by transversals across parallel lines",
+        "lines": [
+          {
+            "x1": 45,
+            "y1": 125,
+            "x2": 375,
+            "y2": 125,
+            "dashed": false
+          },
+          {
+            "x1": 45,
+            "y1": 245,
+            "x2": 375,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 35,
+            "x2": 90,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 35,
+            "x2": 330,
+            "y2": 245,
+            "dashed": false
+          }
+        ],
+        "points": [
+          {
+            "x": 210,
+            "y": 35,
+            "label": "X",
+            "dx": 0,
+            "dy": -10,
+            "hideDot": false
+          },
+          {
+            "x": 145,
+            "y": 125,
+            "label": "A",
+            "dx": -8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 275,
+            "y": 125,
+            "label": "B",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 30,
+            "y": 120,
+            "text": "p",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 30,
+            "y": 240,
+            "text": "q",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 145,
+            "y": 110,
+            "text": "3w+12",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 210,
+            "y": 65,
+            "text": "47°",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 300,
+            "y": 230,
+            "text": "corresponding angle",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q120",
@@ -25665,7 +29443,107 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Angles around point P",
+        "lines": [
+          {
+            "x1": 210,
+            "y1": 220,
+            "x2": 70,
+            "y2": 60,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 220,
+            "x2": 150,
+            "y2": 40,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 220,
+            "x2": 280,
+            "y2": 45,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 220,
+            "x2": 365,
+            "y2": 75,
+            "dashed": false
+          }
+        ],
+        "points": [
+          {
+            "x": 210,
+            "y": 220,
+            "label": "P",
+            "dx": 0,
+            "dy": 20,
+            "hideDot": false
+          },
+          {
+            "x": 70,
+            "y": 60,
+            "label": "Q",
+            "dx": -8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "label": "R",
+            "dx": -8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 280,
+            "y": 45,
+            "label": "S",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 365,
+            "y": 75,
+            "label": "T",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 123,
+            "y": 95,
+            "text": "2x+5",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 315,
+            "y": 105,
+            "text": "5x−31",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 215,
+            "y": 140,
+            "text": "34°",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q121",
@@ -25694,7 +29572,112 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 280,
+        "alt": "Similar triangles",
+        "polygons": [
+          {
+            "points": [
+              [
+                35,
+                225
+              ],
+              [
+                175,
+                225
+              ],
+              [
+                80,
+                85
+              ]
+            ]
+          },
+          {
+            "points": [
+              [
+                235,
+                235
+              ],
+              [
+                390,
+                235
+              ],
+              [
+                335,
+                55
+              ]
+            ]
+          }
+        ],
+        "points": [
+          {
+            "x": 35,
+            "y": 225,
+            "label": "A",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 175,
+            "y": 225,
+            "label": "B",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 80,
+            "y": 85,
+            "label": "C",
+            "dx": 0,
+            "dy": -10,
+            "hideDot": false
+          },
+          {
+            "x": 235,
+            "y": 235,
+            "label": "D",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 390,
+            "y": 235,
+            "label": "E",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 335,
+            "y": 55,
+            "label": "F",
+            "dx": 0,
+            "dy": -10,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 72,
+            "y": 112,
+            "text": "4x+7",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 283,
+            "y": 95,
+            "text": "7x−20",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q122",
@@ -25723,7 +29706,91 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 270,
+        "alt": "Square and rectangle",
+        "polygons": [
+          {
+            "points": [
+              [
+                40,
+                85
+              ],
+              [
+                175,
+                85
+              ],
+              [
+                175,
+                220
+              ],
+              [
+                40,
+                220
+              ]
+            ]
+          },
+          {
+            "points": [
+              [
+                235,
+                105
+              ],
+              [
+                390,
+                105
+              ],
+              [
+                390,
+                220
+              ],
+              [
+                235,
+                220
+              ]
+            ]
+          }
+        ],
+        "labels": [
+          {
+            "x": 108,
+            "y": 75,
+            "text": "Square",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 312,
+            "y": 95,
+            "text": "Rectangle",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 105,
+            "y": 245,
+            "text": "side 8",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 312,
+            "y": 245,
+            "text": "length 10",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 210,
+            "y": 262,
+            "text": "same perimeter",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q123",
@@ -25752,7 +29819,72 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Circles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Right circular cylinder",
+        "ellipses": [
+          {
+            "cx": 210,
+            "cy": 75,
+            "rx": 90,
+            "ry": 28
+          },
+          {
+            "cx": 210,
+            "cy": 225,
+            "rx": 90,
+            "ry": 28
+          }
+        ],
+        "lines": [
+          {
+            "x1": 120,
+            "y1": 75,
+            "x2": 120,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 300,
+            "y1": 75,
+            "x2": 300,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 75,
+            "x2": 300,
+            "y2": 75,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 245,
+            "y": 72,
+            "text": "C = 10π",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 325,
+            "y": 150,
+            "text": "h ?",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 210,
+            "y": 270,
+            "text": "V = 300π",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q124",
@@ -25774,7 +29906,81 @@
         "20/29"
       ],
       "subtopic": "Trigonometry",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Right triangle diagram",
+        "polygons": [
+          {
+            "points": [
+              [
+                70,
+                235
+              ],
+              [
+                350,
+                235
+              ],
+              [
+                70,
+                55
+              ]
+            ]
+          }
+        ],
+        "points": [
+          {
+            "x": 70,
+            "y": 235,
+            "label": "A",
+            "dx": -10,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 235,
+            "label": "B",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 70,
+            "y": 55,
+            "label": "C",
+            "dx": -10,
+            "dy": -8,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 215,
+            "y": 135,
+            "text": "hypotenuse 29",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 200,
+            "y": 255,
+            "text": "Area 210",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 70,
+            "y": 235,
+            "size": 16,
+            "rotation": 0
+          }
+        ],
+        "ticks": []
+      }
     },
     {
       "id": "math-20261006-new409-q125",
@@ -25803,7 +30009,128 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Right rectangular prism",
+        "lines": [
+          {
+            "x1": 85,
+            "y1": 90,
+            "x2": 285,
+            "y2": 90,
+            "dashed": false
+          },
+          {
+            "x1": 285,
+            "y1": 90,
+            "x2": 350,
+            "y2": 55,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 55,
+            "x2": 150,
+            "y2": 55,
+            "dashed": false
+          },
+          {
+            "x1": 150,
+            "y1": 55,
+            "x2": 85,
+            "y2": 90,
+            "dashed": false
+          },
+          {
+            "x1": 85,
+            "y1": 90,
+            "x2": 85,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 285,
+            "y1": 90,
+            "x2": 285,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 55,
+            "x2": 350,
+            "y2": 190,
+            "dashed": false
+          },
+          {
+            "x1": 150,
+            "y1": 55,
+            "x2": 150,
+            "y2": 190,
+            "dashed": false
+          },
+          {
+            "x1": 85,
+            "y1": 225,
+            "x2": 285,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 285,
+            "y1": 225,
+            "x2": 350,
+            "y2": 190,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 190,
+            "x2": 150,
+            "y2": 190,
+            "dashed": false
+          },
+          {
+            "x1": 150,
+            "y1": 190,
+            "x2": 85,
+            "y2": 225,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 180,
+            "y": 250,
+            "text": "4",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 105,
+            "y": 238,
+            "text": "7",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 365,
+            "y": 145,
+            "text": "h",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 220,
+            "y": 130,
+            "text": "space diagonal √114",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q126",
@@ -25832,7 +30159,87 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Parallel lines with perpendicular transversal",
+        "lines": [
+          {
+            "x1": 45,
+            "y1": 80,
+            "x2": 375,
+            "y2": 80,
+            "dashed": false
+          },
+          {
+            "x1": 45,
+            "y1": 220,
+            "x2": 375,
+            "y2": 220,
+            "dashed": false
+          },
+          {
+            "x1": 90,
+            "y1": 25,
+            "x2": 300,
+            "y2": 270,
+            "dashed": false
+          },
+          {
+            "x1": 320,
+            "y1": 20,
+            "x2": 105,
+            "y2": 265,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 30,
+            "y": 75,
+            "text": "m",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 30,
+            "y": 215,
+            "text": "n",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 300,
+            "y": 265,
+            "text": "t",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 110,
+            "y": 260,
+            "text": "u",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 135,
+            "y": 68,
+            "text": "143°",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 198,
+            "y": 151,
+            "size": 13,
+            "rotation": 40
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q127",
@@ -25854,7 +30261,81 @@
         "24"
       ],
       "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Triangle diagram",
+        "polygons": [
+          {
+            "points": [
+              [
+                70,
+                235
+              ],
+              [
+                350,
+                235
+              ],
+              [
+                205,
+                48
+              ]
+            ]
+          }
+        ],
+        "points": [
+          {
+            "x": 70,
+            "y": 235,
+            "label": "A",
+            "dx": -10,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 235,
+            "label": "B",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 205,
+            "y": 48,
+            "label": "C",
+            "dx": 0,
+            "dy": -10,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 205,
+            "y": 250,
+            "text": "base",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 120,
+            "y": 145,
+            "text": "height = 3/4 base",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 205,
+            "y": 145,
+            "text": "Area 216",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [],
+        "ticks": []
+      }
     },
     {
       "id": "math-20261006-new409-q128",
@@ -25876,7 +30357,133 @@
         "51"
       ],
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 280,
+        "alt": "Two right triangles",
+        "polygons": [
+          {
+            "points": [
+              [
+                35,
+                225
+              ],
+              [
+                175,
+                225
+              ],
+              [
+                35,
+                90
+              ]
+            ]
+          },
+          {
+            "points": [
+              [
+                235,
+                225
+              ],
+              [
+                390,
+                225
+              ],
+              [
+                235,
+                70
+              ]
+            ]
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 35,
+            "y": 225,
+            "size": 14,
+            "rotation": 0
+          },
+          {
+            "x": 235,
+            "y": 225,
+            "size": 14,
+            "rotation": 0
+          }
+        ],
+        "points": [
+          {
+            "x": 35,
+            "y": 225,
+            "label": "A",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 175,
+            "y": 225,
+            "label": "B",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 35,
+            "y": 90,
+            "label": "C",
+            "dx": -8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 235,
+            "y": 225,
+            "label": "D",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 390,
+            "y": 225,
+            "label": "E",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 235,
+            "y": 70,
+            "label": "F",
+            "dx": -8,
+            "dy": -8,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 60,
+            "y": 155,
+            "text": "16",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 115,
+            "y": 240,
+            "text": "30",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 260,
+            "y": 155,
+            "text": "24",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q129",
@@ -25934,7 +30541,73 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Parallel lines cut by a transversal",
+        "lines": [
+          {
+            "x1": 45,
+            "y1": 80,
+            "x2": 375,
+            "y2": 80,
+            "dashed": false
+          },
+          {
+            "x1": 45,
+            "y1": 215,
+            "x2": 375,
+            "y2": 215,
+            "dashed": false
+          },
+          {
+            "x1": 115,
+            "y1": 25,
+            "x2": 305,
+            "y2": 265,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 35,
+            "y": 75,
+            "text": "ℓ",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 35,
+            "y": 210,
+            "text": "m",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 305,
+            "y": 260,
+            "text": "t",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 150,
+            "y": 67,
+            "text": "2x+14",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 278,
+            "y": 205,
+            "text": "5x−9",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "points": []
+      }
     },
     {
       "id": "math-20261006-new409-q131",
@@ -25992,7 +30665,88 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Trigonometry",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Right triangle diagram",
+        "polygons": [
+          {
+            "points": [
+              [
+                70,
+                235
+              ],
+              [
+                350,
+                235
+              ],
+              [
+                70,
+                55
+              ]
+            ]
+          }
+        ],
+        "points": [
+          {
+            "x": 70,
+            "y": 235,
+            "label": "C",
+            "dx": -10,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 235,
+            "label": "B",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 70,
+            "y": 55,
+            "label": "A",
+            "dx": -10,
+            "dy": -8,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 65,
+            "y": 150,
+            "text": "d",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 95,
+            "y": 80,
+            "text": "θ",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 220,
+            "y": 140,
+            "text": "hypotenuse",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 70,
+            "y": 235,
+            "size": 16,
+            "rotation": 0
+          }
+        ],
+        "ticks": []
+      }
     },
     {
       "id": "math-20261006-new409-q133",
@@ -26014,7 +30768,149 @@
         "18"
       ],
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Triangle with parallel interior segment",
+        "lines": [
+          {
+            "x1": 205,
+            "y1": 40,
+            "x2": 55,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 205,
+            "y1": 40,
+            "x2": 355,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 55,
+            "y1": 245,
+            "x2": 355,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 130,
+            "y1": 142,
+            "x2": 280,
+            "y2": 142,
+            "dashed": false
+          },
+          {
+            "x1": 205,
+            "y1": 40,
+            "x2": 205,
+            "y2": 245,
+            "dashed": false
+          }
+        ],
+        "points": [
+          {
+            "x": 205,
+            "y": 40,
+            "label": "A",
+            "dx": 0,
+            "dy": -10,
+            "hideDot": false
+          },
+          {
+            "x": 55,
+            "y": 245,
+            "label": "B",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 355,
+            "y": 245,
+            "label": "C",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 130,
+            "y": 142,
+            "label": "D",
+            "dx": -10,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 280,
+            "y": 142,
+            "label": "E",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 205,
+            "y": 245,
+            "label": "D",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 205,
+            "y": 128,
+            "text": "EF ∥ BC",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 205,
+            "y": 250,
+            "text": "D",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 115,
+            "y": 205,
+            "text": "30°",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 205,
+            "y": 145,
+            "text": "EF = 24√3",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 205,
+            "y": 245,
+            "size": 14,
+            "rotation": 0
+          }
+        ],
+        "ticks": [
+          {
+            "x": 168,
+            "y": 91,
+            "angle": -36
+          },
+          {
+            "x": 243,
+            "y": 91,
+            "angle": 36
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q134",
@@ -26094,7 +30990,121 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Right rectangular prism",
+        "lines": [
+          {
+            "x1": 85,
+            "y1": 90,
+            "x2": 285,
+            "y2": 90,
+            "dashed": false
+          },
+          {
+            "x1": 285,
+            "y1": 90,
+            "x2": 350,
+            "y2": 55,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 55,
+            "x2": 150,
+            "y2": 55,
+            "dashed": false
+          },
+          {
+            "x1": 150,
+            "y1": 55,
+            "x2": 85,
+            "y2": 90,
+            "dashed": false
+          },
+          {
+            "x1": 85,
+            "y1": 90,
+            "x2": 85,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 285,
+            "y1": 90,
+            "x2": 285,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 55,
+            "x2": 350,
+            "y2": 190,
+            "dashed": false
+          },
+          {
+            "x1": 150,
+            "y1": 55,
+            "x2": 150,
+            "y2": 190,
+            "dashed": false
+          },
+          {
+            "x1": 85,
+            "y1": 225,
+            "x2": 285,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 285,
+            "y1": 225,
+            "x2": 350,
+            "y2": 190,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 190,
+            "x2": 150,
+            "y2": 190,
+            "dashed": false
+          },
+          {
+            "x1": 150,
+            "y1": 190,
+            "x2": 85,
+            "y2": 225,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 180,
+            "y": 250,
+            "text": "square base",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 220,
+            "y": 130,
+            "text": "base diagonal 6√2",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 365,
+            "y": 145,
+            "text": "h = 5",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q137",
@@ -26123,7 +31133,81 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Trigonometry",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Triangle diagram",
+        "polygons": [
+          {
+            "points": [
+              [
+                70,
+                235
+              ],
+              [
+                350,
+                235
+              ],
+              [
+                205,
+                48
+              ]
+            ]
+          }
+        ],
+        "points": [
+          {
+            "x": 70,
+            "y": 235,
+            "label": "A",
+            "dx": -10,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 235,
+            "label": "B",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 205,
+            "y": 48,
+            "label": "C",
+            "dx": 0,
+            "dy": -10,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 137,
+            "y": 140,
+            "text": "16",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 280,
+            "y": 140,
+            "text": "25",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 205,
+            "y": 78,
+            "text": "θ",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [],
+        "ticks": []
+      }
     },
     {
       "id": "math-20261006-new409-q138",
@@ -26254,7 +31338,81 @@
         "21/29"
       ],
       "subtopic": "Trigonometry",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Right triangle diagram",
+        "polygons": [
+          {
+            "points": [
+              [
+                70,
+                235
+              ],
+              [
+                350,
+                235
+              ],
+              [
+                70,
+                55
+              ]
+            ]
+          }
+        ],
+        "points": [
+          {
+            "x": 70,
+            "y": 235,
+            "label": "K",
+            "dx": -10,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 235,
+            "label": "L",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 70,
+            "y": 55,
+            "label": "J",
+            "dx": -10,
+            "dy": -8,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 210,
+            "y": 138,
+            "text": "JL = 29",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 64,
+            "y": 150,
+            "text": "JK = 20",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 70,
+            "y": 235,
+            "size": 16,
+            "rotation": 0
+          }
+        ],
+        "ticks": []
+      }
     },
     {
       "id": "math-20261006-new409-q143",
@@ -26283,7 +31441,84 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Circles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 290,
+        "alt": "Circle diagram",
+        "circles": [
+          {
+            "cx": 210,
+            "cy": 145,
+            "r": 100
+          }
+        ],
+        "points": [
+          {
+            "x": 210,
+            "y": 145,
+            "label": "O",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 125,
+            "y": 90,
+            "label": "A",
+            "dx": -8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 305,
+            "y": 105,
+            "label": "B",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          }
+        ],
+        "lines": [
+          {
+            "x1": 210,
+            "y1": 145,
+            "x2": 125,
+            "y2": 90,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 145,
+            "x2": 305,
+            "y2": 105,
+            "dashed": false
+          },
+          {
+            "x1": 125,
+            "y1": 90,
+            "x2": 305,
+            "y2": 105,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 166,
+            "y": 110,
+            "text": "36°",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 258,
+            "y": 132,
+            "text": "radius 15",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q144",
@@ -26312,7 +31547,88 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Trigonometry",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Right triangle diagram",
+        "polygons": [
+          {
+            "points": [
+              [
+                70,
+                235
+              ],
+              [
+                350,
+                235
+              ],
+              [
+                70,
+                55
+              ]
+            ]
+          }
+        ],
+        "points": [
+          {
+            "x": 70,
+            "y": 235,
+            "label": "C",
+            "dx": -10,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 235,
+            "label": "B",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 70,
+            "y": 55,
+            "label": "A",
+            "dx": -10,
+            "dy": -8,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 90,
+            "y": 80,
+            "text": "A",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 210,
+            "y": 145,
+            "text": "cos A = 7/25",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 210,
+            "y": 250,
+            "text": "BC = 72",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 70,
+            "y": 235,
+            "size": 16,
+            "rotation": 0
+          }
+        ],
+        "ticks": []
+      }
     },
     {
       "id": "math-20261006-new409-q145",
@@ -26341,7 +31657,65 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Circles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Right circular cylinder",
+        "ellipses": [
+          {
+            "cx": 210,
+            "cy": 75,
+            "rx": 90,
+            "ry": 28
+          },
+          {
+            "cx": 210,
+            "cy": 225,
+            "rx": 90,
+            "ry": 28
+          }
+        ],
+        "lines": [
+          {
+            "x1": 120,
+            "y1": 75,
+            "x2": 120,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 300,
+            "y1": 75,
+            "x2": 300,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 75,
+            "x2": 300,
+            "y2": 75,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 245,
+            "y": 72,
+            "text": "diameter 18",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 325,
+            "y": 150,
+            "text": "height 14",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q146",
@@ -26370,7 +31744,74 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Triangle diagram",
+        "polygons": [
+          {
+            "points": [
+              [
+                70,
+                235
+              ],
+              [
+                350,
+                235
+              ],
+              [
+                205,
+                48
+              ]
+            ]
+          }
+        ],
+        "points": [
+          {
+            "x": 70,
+            "y": 235,
+            "label": "A",
+            "dx": -10,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 235,
+            "label": "B",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 205,
+            "y": 48,
+            "label": "C",
+            "dx": 0,
+            "dy": -10,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 205,
+            "y": 250,
+            "text": "base = 2(14)−3",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 110,
+            "y": 145,
+            "text": "height 14",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [],
+        "ticks": []
+      }
     },
     {
       "id": "math-20261006-new409-q147",
@@ -26399,7 +31840,91 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 280,
+        "alt": "Similar rectangles",
+        "polygons": [
+          {
+            "points": [
+              [
+                35,
+                115
+              ],
+              [
+                170,
+                115
+              ],
+              [
+                170,
+                220
+              ],
+              [
+                35,
+                220
+              ]
+            ]
+          },
+          {
+            "points": [
+              [
+                235,
+                60
+              ],
+              [
+                390,
+                60
+              ],
+              [
+                390,
+                220
+              ],
+              [
+                235,
+                220
+              ]
+            ]
+          }
+        ],
+        "labels": [
+          {
+            "x": 102,
+            "y": 105,
+            "text": "A",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 312,
+            "y": 50,
+            "text": "B",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 105,
+            "y": 245,
+            "text": "Area 147",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 312,
+            "y": 245,
+            "text": "Area 300",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 312,
+            "y": 145,
+            "text": "long side 30",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q148",
@@ -26428,7 +31953,88 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Trigonometry",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Right triangle diagram",
+        "polygons": [
+          {
+            "points": [
+              [
+                70,
+                235
+              ],
+              [
+                350,
+                235
+              ],
+              [
+                70,
+                55
+              ]
+            ]
+          }
+        ],
+        "points": [
+          {
+            "x": 70,
+            "y": 235,
+            "label": "C",
+            "dx": -10,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 235,
+            "label": "B",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 70,
+            "y": 55,
+            "label": "A",
+            "dx": -10,
+            "dy": -8,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 210,
+            "y": 138,
+            "text": "AB = 37",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 65,
+            "y": 150,
+            "text": "AC = 12",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 235,
+            "y": 185,
+            "text": "DE ∥ AC",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 70,
+            "y": 235,
+            "size": 16,
+            "rotation": 0
+          }
+        ],
+        "ticks": []
+      }
     },
     {
       "id": "math-20261006-new409-q149",
@@ -26450,7 +32056,100 @@
         "20"
       ],
       "subtopic": "Trigonometry",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Right triangle with altitude to the hypotenuse",
+        "lines": [
+          {
+            "x1": 55,
+            "y1": 235,
+            "x2": 210,
+            "y2": 55,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 55,
+            "x2": 365,
+            "y2": 235,
+            "dashed": false
+          },
+          {
+            "x1": 365,
+            "y1": 235,
+            "x2": 55,
+            "y2": 235,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 55,
+            "x2": 210,
+            "y2": 235,
+            "dashed": false
+          }
+        ],
+        "points": [
+          {
+            "x": 55,
+            "y": 235,
+            "label": "A",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 210,
+            "y": 55,
+            "label": "B",
+            "dx": 0,
+            "dy": -10,
+            "hideDot": false
+          },
+          {
+            "x": 365,
+            "y": 235,
+            "label": "C",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 210,
+            "y": 235,
+            "label": "D",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 210,
+            "y": 235,
+            "size": 14,
+            "rotation": 0
+          }
+        ],
+        "labels": [
+          {
+            "x": 145,
+            "y": 220,
+            "text": "BD = 12",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 180,
+            "y": 105,
+            "text": "tan ∠CAD = 5/3",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q150",
@@ -26530,7 +32229,126 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Trigonometry",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 280,
+        "alt": "Two right triangles",
+        "polygons": [
+          {
+            "points": [
+              [
+                35,
+                225
+              ],
+              [
+                175,
+                225
+              ],
+              [
+                35,
+                90
+              ]
+            ]
+          },
+          {
+            "points": [
+              [
+                235,
+                225
+              ],
+              [
+                390,
+                225
+              ],
+              [
+                235,
+                70
+              ]
+            ]
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 35,
+            "y": 225,
+            "size": 14,
+            "rotation": 0
+          },
+          {
+            "x": 235,
+            "y": 225,
+            "size": 14,
+            "rotation": 0
+          }
+        ],
+        "points": [
+          {
+            "x": 35,
+            "y": 225,
+            "label": "A",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 175,
+            "y": 225,
+            "label": "B",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 35,
+            "y": 90,
+            "label": "C",
+            "dx": -8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 235,
+            "y": 225,
+            "label": "D",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 390,
+            "y": 225,
+            "label": "E",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 235,
+            "y": 70,
+            "label": "F",
+            "dx": -8,
+            "dy": -8,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 70,
+            "y": 145,
+            "text": "∠P = 37°",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 290,
+            "y": 145,
+            "text": "∠Z = 37°",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q153",
@@ -26559,7 +32377,83 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Equilateral triangle",
+        "polygons": [
+          {
+            "points": [
+              [
+                70,
+                235
+              ],
+              [
+                350,
+                235
+              ],
+              [
+                205,
+                48
+              ]
+            ]
+          }
+        ],
+        "points": [
+          {
+            "x": 70,
+            "y": 235,
+            "label": "A",
+            "dx": -10,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 235,
+            "label": "B",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 205,
+            "y": 48,
+            "label": "C",
+            "dx": 0,
+            "dy": -10,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 205,
+            "y": 145,
+            "text": "Area = 243√3",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [],
+        "ticks": [
+          {
+            "x": 137,
+            "y": 142,
+            "angle": -36
+          },
+          {
+            "x": 277,
+            "y": 142,
+            "angle": 36
+          },
+          {
+            "x": 210,
+            "y": 235,
+            "angle": 90
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q154",
@@ -26588,7 +32482,119 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 280,
+        "alt": "Similar triangles",
+        "polygons": [
+          {
+            "points": [
+              [
+                35,
+                225
+              ],
+              [
+                175,
+                225
+              ],
+              [
+                80,
+                85
+              ]
+            ]
+          },
+          {
+            "points": [
+              [
+                235,
+                235
+              ],
+              [
+                390,
+                235
+              ],
+              [
+                335,
+                55
+              ]
+            ]
+          }
+        ],
+        "points": [
+          {
+            "x": 35,
+            "y": 225,
+            "label": "A",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 175,
+            "y": 225,
+            "label": "B",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 80,
+            "y": 85,
+            "label": "C",
+            "dx": 0,
+            "dy": -10,
+            "hideDot": false
+          },
+          {
+            "x": 235,
+            "y": 235,
+            "label": "D",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 390,
+            "y": 235,
+            "label": "E",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 335,
+            "y": 55,
+            "label": "F",
+            "dx": 0,
+            "dy": -10,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 72,
+            "y": 112,
+            "text": "3x+8",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 285,
+            "y": 95,
+            "text": "5x−20",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 145,
+            "y": 212,
+            "text": "67°",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q155",
@@ -26639,7 +32645,73 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Parallel lines cut by a transversal",
+        "lines": [
+          {
+            "x1": 45,
+            "y1": 80,
+            "x2": 375,
+            "y2": 80,
+            "dashed": false
+          },
+          {
+            "x1": 45,
+            "y1": 215,
+            "x2": 375,
+            "y2": 215,
+            "dashed": false
+          },
+          {
+            "x1": 115,
+            "y1": 25,
+            "x2": 305,
+            "y2": 265,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 35,
+            "y": 75,
+            "text": "ℓ",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 35,
+            "y": 210,
+            "text": "m",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 305,
+            "y": 260,
+            "text": "t",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 150,
+            "y": 67,
+            "text": "4x+6",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 275,
+            "y": 205,
+            "text": "7x−48",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "points": []
+      }
     },
     {
       "id": "math-20261006-new409-q158",
@@ -26719,7 +32791,100 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Trigonometry",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Right triangle with altitude to the hypotenuse",
+        "lines": [
+          {
+            "x1": 55,
+            "y1": 235,
+            "x2": 210,
+            "y2": 55,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 55,
+            "x2": 365,
+            "y2": 235,
+            "dashed": false
+          },
+          {
+            "x1": 365,
+            "y1": 235,
+            "x2": 55,
+            "y2": 235,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 55,
+            "x2": 210,
+            "y2": 235,
+            "dashed": false
+          }
+        ],
+        "points": [
+          {
+            "x": 55,
+            "y": 235,
+            "label": "A",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 210,
+            "y": 55,
+            "label": "B",
+            "dx": 0,
+            "dy": -10,
+            "hideDot": false
+          },
+          {
+            "x": 365,
+            "y": 235,
+            "label": "C",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 210,
+            "y": 235,
+            "label": "D",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 210,
+            "y": 235,
+            "size": 14,
+            "rotation": 0
+          }
+        ],
+        "labels": [
+          {
+            "x": 120,
+            "y": 180,
+            "text": "AB = 8",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 300,
+            "y": 180,
+            "text": "AC = 15",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q161",
@@ -26748,7 +32913,100 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Rectangle diagram",
+        "lines": [
+          {
+            "x1": 65,
+            "y1": 70,
+            "x2": 350,
+            "y2": 70,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 70,
+            "x2": 350,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 225,
+            "x2": 65,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 65,
+            "y1": 225,
+            "x2": 65,
+            "y2": 70,
+            "dashed": false
+          }
+        ],
+        "points": [
+          {
+            "x": 65,
+            "y": 70,
+            "label": "A",
+            "dx": -8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 70,
+            "label": "B",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 350,
+            "y": 225,
+            "label": "C",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 65,
+            "y": 225,
+            "label": "D",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 210,
+            "y": 245,
+            "text": "2x+3",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 48,
+            "y": 150,
+            "text": "x−1",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 65,
+            "y": 225,
+            "size": 14,
+            "rotation": 0
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q162",
@@ -26821,7 +33079,72 @@
         "8"
       ],
       "subtopic": "Circles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Right circular cylinder",
+        "ellipses": [
+          {
+            "cx": 210,
+            "cy": 75,
+            "rx": 90,
+            "ry": 28
+          },
+          {
+            "cx": 210,
+            "cy": 225,
+            "rx": 90,
+            "ry": 28
+          }
+        ],
+        "lines": [
+          {
+            "x1": 120,
+            "y1": 75,
+            "x2": 120,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 300,
+            "y1": 75,
+            "x2": 300,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 75,
+            "x2": 300,
+            "y2": 75,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 245,
+            "y": 72,
+            "text": "r",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 325,
+            "y": 150,
+            "text": "3r",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 210,
+            "y": 270,
+            "text": "V = 1536π",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q165",
@@ -26850,7 +33173,112 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 280,
+        "alt": "Similar triangles",
+        "polygons": [
+          {
+            "points": [
+              [
+                35,
+                225
+              ],
+              [
+                175,
+                225
+              ],
+              [
+                80,
+                85
+              ]
+            ]
+          },
+          {
+            "points": [
+              [
+                235,
+                235
+              ],
+              [
+                390,
+                235
+              ],
+              [
+                335,
+                55
+              ]
+            ]
+          }
+        ],
+        "points": [
+          {
+            "x": 35,
+            "y": 225,
+            "label": "A",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 175,
+            "y": 225,
+            "label": "B",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 80,
+            "y": 85,
+            "label": "C",
+            "dx": 0,
+            "dy": -10,
+            "hideDot": false
+          },
+          {
+            "x": 235,
+            "y": 235,
+            "label": "D",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 390,
+            "y": 235,
+            "label": "E",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 335,
+            "y": 55,
+            "label": "F",
+            "dx": 0,
+            "dy": -10,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 100,
+            "y": 205,
+            "text": "XY = 32",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 310,
+            "y": 205,
+            "text": "corresponding AB",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q166",
@@ -26872,7 +33300,66 @@
         "100"
       ],
       "subtopic": "Circles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Right circular cone",
+        "ellipses": [
+          {
+            "cx": 210,
+            "cy": 230,
+            "rx": 95,
+            "ry": 27
+          }
+        ],
+        "lines": [
+          {
+            "x1": 210,
+            "y1": 45,
+            "x2": 115,
+            "y2": 230,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 45,
+            "x2": 305,
+            "y2": 230,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 45,
+            "x2": 210,
+            "y2": 230,
+            "dashed": true
+          },
+          {
+            "x1": 210,
+            "y1": 230,
+            "x2": 305,
+            "y2": 230,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 260,
+            "y": 230,
+            "text": "C = 10π",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 228,
+            "y": 145,
+            "text": "h = 12",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q167",
@@ -26901,7 +33388,77 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Circles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 290,
+        "alt": "Circle diagram",
+        "circles": [
+          {
+            "cx": 210,
+            "cy": 145,
+            "r": 100
+          }
+        ],
+        "points": [
+          {
+            "x": 210,
+            "y": 145,
+            "label": "O",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 295,
+            "y": 90,
+            "label": "P",
+            "dx": 8,
+            "dy": -8,
+            "hideDot": false
+          }
+        ],
+        "lines": [
+          {
+            "x1": 210,
+            "y1": 145,
+            "x2": 295,
+            "y2": 90,
+            "dashed": false
+          },
+          {
+            "x1": 245,
+            "y1": 12,
+            "x2": 390,
+            "y2": 235,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 215,
+            "y": 145,
+            "text": "center (2,−3)",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 315,
+            "y": 75,
+            "text": "P, x = 8",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 295,
+            "y": 90,
+            "size": 13,
+            "rotation": 58
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q168",
@@ -26930,7 +33487,119 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 280,
+        "alt": "Similar triangles",
+        "polygons": [
+          {
+            "points": [
+              [
+                35,
+                225
+              ],
+              [
+                175,
+                225
+              ],
+              [
+                80,
+                85
+              ]
+            ]
+          },
+          {
+            "points": [
+              [
+                235,
+                235
+              ],
+              [
+                390,
+                235
+              ],
+              [
+                335,
+                55
+              ]
+            ]
+          }
+        ],
+        "points": [
+          {
+            "x": 35,
+            "y": 225,
+            "label": "A",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 175,
+            "y": 225,
+            "label": "B",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 80,
+            "y": 85,
+            "label": "C",
+            "dx": 0,
+            "dy": -10,
+            "hideDot": false
+          },
+          {
+            "x": 235,
+            "y": 235,
+            "label": "D",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 390,
+            "y": 235,
+            "label": "E",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 335,
+            "y": 55,
+            "label": "F",
+            "dx": 0,
+            "dy": -10,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 105,
+            "y": 205,
+            "text": "side 9",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 315,
+            "y": 205,
+            "text": "side 15",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 105,
+            "y": 245,
+            "text": "area 54",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q169",
@@ -26959,7 +33628,65 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Circles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Right circular cylinder",
+        "ellipses": [
+          {
+            "cx": 210,
+            "cy": 75,
+            "rx": 90,
+            "ry": 28
+          },
+          {
+            "cx": 210,
+            "cy": 225,
+            "rx": 90,
+            "ry": 28
+          }
+        ],
+        "lines": [
+          {
+            "x1": 120,
+            "y1": 75,
+            "x2": 120,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 300,
+            "y1": 75,
+            "x2": 300,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 75,
+            "x2": 300,
+            "y2": 75,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 245,
+            "y": 72,
+            "text": "r",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 325,
+            "y": 150,
+            "text": "h = 2r − 3",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q170",
@@ -26988,7 +33715,126 @@
         "D": "In triangle \\(ABC\\), \\(m\\angle B=53^\\circ\\). In triangle \\(DEF\\), \\(m\\angle E=37^\\circ\\). Both triangles therefore have angles \\(37^\\circ,53^\\circ,90^\\circ\\), so they are already similar by AA."
       },
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 280,
+        "alt": "Two right triangles",
+        "polygons": [
+          {
+            "points": [
+              [
+                35,
+                225
+              ],
+              [
+                175,
+                225
+              ],
+              [
+                35,
+                90
+              ]
+            ]
+          },
+          {
+            "points": [
+              [
+                235,
+                225
+              ],
+              [
+                390,
+                225
+              ],
+              [
+                235,
+                70
+              ]
+            ]
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 35,
+            "y": 225,
+            "size": 14,
+            "rotation": 0
+          },
+          {
+            "x": 235,
+            "y": 225,
+            "size": 14,
+            "rotation": 0
+          }
+        ],
+        "points": [
+          {
+            "x": 35,
+            "y": 225,
+            "label": "A",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 175,
+            "y": 225,
+            "label": "B",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 35,
+            "y": 90,
+            "label": "C",
+            "dx": -8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 235,
+            "y": 225,
+            "label": "D",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 390,
+            "y": 225,
+            "label": "E",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 235,
+            "y": 70,
+            "label": "F",
+            "dx": -8,
+            "dy": -8,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 85,
+            "y": 125,
+            "text": "37°",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 285,
+            "y": 120,
+            "text": "53°",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q171",
@@ -27046,7 +33892,126 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Trigonometry",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 280,
+        "alt": "Two right triangles",
+        "polygons": [
+          {
+            "points": [
+              [
+                35,
+                225
+              ],
+              [
+                175,
+                225
+              ],
+              [
+                35,
+                90
+              ]
+            ]
+          },
+          {
+            "points": [
+              [
+                235,
+                225
+              ],
+              [
+                390,
+                225
+              ],
+              [
+                235,
+                70
+              ]
+            ]
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 35,
+            "y": 225,
+            "size": 14,
+            "rotation": 0
+          },
+          {
+            "x": 235,
+            "y": 225,
+            "size": 14,
+            "rotation": 0
+          }
+        ],
+        "points": [
+          {
+            "x": 35,
+            "y": 225,
+            "label": "A",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 175,
+            "y": 225,
+            "label": "B",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 35,
+            "y": 90,
+            "label": "C",
+            "dx": -8,
+            "dy": -8,
+            "hideDot": false
+          },
+          {
+            "x": 235,
+            "y": 225,
+            "label": "D",
+            "dx": -8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 390,
+            "y": 225,
+            "label": "E",
+            "dx": 8,
+            "dy": 18,
+            "hideDot": false
+          },
+          {
+            "x": 235,
+            "y": 70,
+            "label": "F",
+            "dx": -8,
+            "dy": -8,
+            "hideDot": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 105,
+            "y": 155,
+            "text": "AB = 26",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 95,
+            "y": 240,
+            "text": "BC = 10",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q173",
@@ -27907,7 +34872,73 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Circles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Right circular cone",
+        "ellipses": [
+          {
+            "cx": 210,
+            "cy": 230,
+            "rx": 95,
+            "ry": 27
+          }
+        ],
+        "lines": [
+          {
+            "x1": 210,
+            "y1": 45,
+            "x2": 115,
+            "y2": 230,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 45,
+            "x2": 305,
+            "y2": 230,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 45,
+            "x2": 210,
+            "y2": 230,
+            "dashed": true
+          },
+          {
+            "x1": 210,
+            "y1": 230,
+            "x2": 305,
+            "y2": 230,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 255,
+            "y": 230,
+            "text": "r",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 230,
+            "y": 145,
+            "text": "h = 4r",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 210,
+            "y": 275,
+            "text": "V = 288π",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q205",
@@ -28401,7 +35432,128 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Right rectangular prism",
+        "lines": [
+          {
+            "x1": 85,
+            "y1": 90,
+            "x2": 285,
+            "y2": 90,
+            "dashed": false
+          },
+          {
+            "x1": 285,
+            "y1": 90,
+            "x2": 350,
+            "y2": 55,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 55,
+            "x2": 150,
+            "y2": 55,
+            "dashed": false
+          },
+          {
+            "x1": 150,
+            "y1": 55,
+            "x2": 85,
+            "y2": 90,
+            "dashed": false
+          },
+          {
+            "x1": 85,
+            "y1": 90,
+            "x2": 85,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 285,
+            "y1": 90,
+            "x2": 285,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 55,
+            "x2": 350,
+            "y2": 190,
+            "dashed": false
+          },
+          {
+            "x1": 150,
+            "y1": 55,
+            "x2": 150,
+            "y2": 190,
+            "dashed": false
+          },
+          {
+            "x1": 85,
+            "y1": 225,
+            "x2": 285,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 285,
+            "y1": 225,
+            "x2": 350,
+            "y2": 190,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 190,
+            "x2": 150,
+            "y2": 190,
+            "dashed": false
+          },
+          {
+            "x1": 150,
+            "y1": 190,
+            "x2": 85,
+            "y2": 225,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 180,
+            "y": 250,
+            "text": "L = W + 3",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 105,
+            "y": 238,
+            "text": "base P = 34",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 365,
+            "y": 145,
+            "text": "h",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 220,
+            "y": 130,
+            "text": "V = 1260",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q224",
@@ -28445,7 +35597,198 @@
         "2.5"
       ],
       "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Two similar rectangular prisms",
+        "polygons": [
+          {
+            "points": [
+              [
+                30,
+                120
+              ],
+              [
+                145,
+                120
+              ],
+              [
+                175,
+                95
+              ],
+              [
+                60,
+                95
+              ]
+            ]
+          },
+          {
+            "points": [
+              [
+                230,
+                90
+              ],
+              [
+                365,
+                90
+              ],
+              [
+                395,
+                60
+              ],
+              [
+                260,
+                60
+              ]
+            ]
+          }
+        ],
+        "lines": [
+          {
+            "x1": 30,
+            "y1": 120,
+            "x2": 30,
+            "y2": 220,
+            "dashed": false
+          },
+          {
+            "x1": 145,
+            "y1": 120,
+            "x2": 145,
+            "y2": 220,
+            "dashed": false
+          },
+          {
+            "x1": 175,
+            "y1": 95,
+            "x2": 175,
+            "y2": 195,
+            "dashed": false
+          },
+          {
+            "x1": 60,
+            "y1": 95,
+            "x2": 60,
+            "y2": 195,
+            "dashed": false
+          },
+          {
+            "x1": 30,
+            "y1": 220,
+            "x2": 145,
+            "y2": 220,
+            "dashed": false
+          },
+          {
+            "x1": 145,
+            "y1": 220,
+            "x2": 175,
+            "y2": 195,
+            "dashed": false
+          },
+          {
+            "x1": 175,
+            "y1": 195,
+            "x2": 60,
+            "y2": 195,
+            "dashed": false
+          },
+          {
+            "x1": 60,
+            "y1": 195,
+            "x2": 30,
+            "y2": 220,
+            "dashed": false
+          },
+          {
+            "x1": 230,
+            "y1": 90,
+            "x2": 230,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 365,
+            "y1": 90,
+            "x2": 365,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 395,
+            "y1": 60,
+            "x2": 395,
+            "y2": 195,
+            "dashed": false
+          },
+          {
+            "x1": 260,
+            "y1": 60,
+            "x2": 260,
+            "y2": 195,
+            "dashed": false
+          },
+          {
+            "x1": 230,
+            "y1": 225,
+            "x2": 365,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 365,
+            "y1": 225,
+            "x2": 395,
+            "y2": 195,
+            "dashed": false
+          },
+          {
+            "x1": 395,
+            "y1": 195,
+            "x2": 260,
+            "y2": 195,
+            "dashed": false
+          },
+          {
+            "x1": 260,
+            "y1": 195,
+            "x2": 230,
+            "y2": 225,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 103,
+            "y": 75,
+            "text": "Q",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 330,
+            "y": 40,
+            "text": "P",
+            "emphasis": true,
+            "anchor": "middle"
+          },
+          {
+            "x": 100,
+            "y": 255,
+            "text": "Q",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 330,
+            "y": 255,
+            "text": "P: 27× volume",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q226",
@@ -28605,7 +35948,121 @@
         "1008"
       ],
       "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-07-v1",
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Right rectangular prism",
+        "lines": [
+          {
+            "x1": 85,
+            "y1": 90,
+            "x2": 285,
+            "y2": 90,
+            "dashed": false
+          },
+          {
+            "x1": 285,
+            "y1": 90,
+            "x2": 350,
+            "y2": 55,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 55,
+            "x2": 150,
+            "y2": 55,
+            "dashed": false
+          },
+          {
+            "x1": 150,
+            "y1": 55,
+            "x2": 85,
+            "y2": 90,
+            "dashed": false
+          },
+          {
+            "x1": 85,
+            "y1": 90,
+            "x2": 85,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 285,
+            "y1": 90,
+            "x2": 285,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 55,
+            "x2": 350,
+            "y2": 190,
+            "dashed": false
+          },
+          {
+            "x1": 150,
+            "y1": 55,
+            "x2": 150,
+            "y2": 190,
+            "dashed": false
+          },
+          {
+            "x1": 85,
+            "y1": 225,
+            "x2": 285,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 285,
+            "y1": 225,
+            "x2": 350,
+            "y2": 190,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 190,
+            "x2": 150,
+            "y2": 190,
+            "dashed": false
+          },
+          {
+            "x1": 150,
+            "y1": 190,
+            "x2": 85,
+            "y2": 225,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 180,
+            "y": 250,
+            "text": "square base 12",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 365,
+            "y": 145,
+            "text": "h",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 220,
+            "y": 130,
+            "text": "SA = 624",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
     },
     {
       "id": "math-20261006-new409-q232",
