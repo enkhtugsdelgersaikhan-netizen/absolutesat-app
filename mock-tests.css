@@ -316,3 +316,23 @@
         border-bottom:0;
     }
 }
+
+.mock-card-unavailable::before{
+    background:#a6b8b5;
+}
+.mock-card-unavailable .mock-status{
+    border-color:#dde5e3;
+    background:#f6f8f8;
+    color:#70817e;
+}
+.mock-card-unavailable .mock-card-description{
+    color:#7e8c89;
+}
+.mock-start-disabled,
+.mock-start-disabled:hover{
+    border-color:#d7e0de;
+    background:#eef2f1;
+    color:#879591;
+    transform:none;
+    cursor:not-allowed;
+}
