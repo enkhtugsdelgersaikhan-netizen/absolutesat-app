@@ -66,6 +66,7 @@ let mockBreakInterval = null;
 
 let drillMode = false;
 let drillSession = null;
+let lastDrillResults = null;
 const DRILL_SESSION_STORAGE_KEY =
     "absoluteprep-drill-session";
 
@@ -298,6 +299,46 @@ const resultsSetTitle =
 const resultsMessage =
     document.getElementById(
         "results-message"
+    );
+
+const resultsEyebrow =
+    document.querySelector(
+        ".results-eyebrow"
+    );
+
+const resultsHeadingTitle =
+    document.querySelector(
+        ".results-heading h1"
+    );
+
+const drillPerformance =
+    document.getElementById(
+        "drill-performance"
+    );
+
+const drillAverageTime =
+    document.getElementById(
+        "drill-average-time"
+    );
+
+const drillTargetTime =
+    document.getElementById(
+        "drill-target-time"
+    );
+
+const drillOnPace =
+    document.getElementById(
+        "drill-on-pace"
+    );
+
+const drillPaceNote =
+    document.getElementById(
+        "drill-pace-note"
+    );
+
+const backToQuestionBank =
+    document.getElementById(
+        "back-to-question-bank"
     );
 
 const mockSectionScores =
@@ -3430,6 +3471,406 @@ function getCurrentDrillElapsed() {
 }
 
 
+function recordDrillResult(
+    question,
+    selected,
+    isCorrect
+) {
+    if (
+        !drillMode ||
+        !drillSession ||
+        !question
+    ) {
+        return false;
+    }
+
+    if (
+        !drillSession.results ||
+        typeof drillSession.results !==
+            "object"
+    ) {
+        drillSession.results = {};
+    }
+
+    const key =
+        String(question.id);
+
+    if (
+        drillSession.results[key]
+    ) {
+        return false;
+    }
+
+    saveCurrentDrillElapsed();
+
+    drillSession.results[key] = {
+        status:
+            isCorrect
+                ? "correct"
+                : "incorrect",
+        selected:
+            selected === undefined ||
+            selected === null
+                ? null
+                : String(selected),
+        timeSpent:
+            elapsedSeconds,
+        answeredAt:
+            new Date().toISOString()
+    };
+
+    saveDrillSession();
+
+    return true;
+}
+
+
+function calculateDrillResults() {
+    const storedResults =
+        drillSession?.results &&
+        typeof drillSession.results ===
+            "object"
+            ? drillSession.results
+            : {};
+
+    let correct = 0;
+    let incorrect = 0;
+    let unanswered = 0;
+
+    const detailedResults =
+        questions.map(
+            question => {
+                const stored =
+                    storedResults[
+                        String(question.id)
+                    ];
+
+                let status =
+                    stored?.status ||
+                    "unanswered";
+
+                if (
+                    status !== "correct" &&
+                    status !== "incorrect"
+                ) {
+                    status =
+                        "unanswered";
+                }
+
+                if (status === "correct") {
+                    correct += 1;
+                } else if (
+                    status === "incorrect"
+                ) {
+                    incorrect += 1;
+                } else {
+                    unanswered += 1;
+                }
+
+                const timeSpent =
+                    Number.isFinite(
+                        Number(
+                            stored?.timeSpent
+                        )
+                    )
+                        ? Number(
+                            stored.timeSpent
+                        )
+                        : Number(
+                            drillSession?.timeSpent?.[
+                                String(
+                                    question.id
+                                )
+                            ] || 0
+                        );
+
+                return {
+                    question,
+                    selected:
+                        stored?.selected ||
+                        null,
+                    status,
+                    timeSpent:
+                        Math.max(
+                            0,
+                            timeSpent || 0
+                        )
+                };
+            }
+        );
+
+    const total =
+        detailedResults.length;
+
+    const percentage =
+        total
+            ? Math.round(
+                (
+                    correct /
+                    total
+                ) * 100
+            )
+            : 0;
+
+    return {
+        correct,
+        incorrect,
+        unanswered,
+        total,
+        percentage,
+        detailedResults
+    };
+}
+
+
+function formatDrillTime(
+    totalSeconds
+) {
+    const total =
+        Math.max(
+            0,
+            Math.round(
+                Number(totalSeconds) ||
+                0
+            )
+        );
+
+    return (
+        Math.floor(total / 60) +
+        ":" +
+        String(total % 60)
+            .padStart(
+                2,
+                "0"
+            )
+    );
+}
+
+
+function showDrillResults(
+    results
+) {
+    lastDrillResults =
+        results;
+
+    questionApp.classList.add(
+        "hidden"
+    );
+
+    resultsScreen.classList.remove(
+        "hidden"
+    );
+
+    document.body.classList.add(
+        "drill-results-active"
+    );
+
+    if (resultsEyebrow) {
+        resultsEyebrow.textContent =
+            "DRILL COMPLETE";
+    }
+
+    if (resultsHeadingTitle) {
+        resultsHeadingTitle.textContent =
+            "Drill Performance";
+    }
+
+    mockSectionScores?.classList.add(
+        "hidden"
+    );
+
+    mockScoreGauges?.classList.add(
+        "hidden"
+    );
+
+    document.querySelector(
+        ".score-circle"
+    )?.classList.remove(
+        "hidden"
+    );
+
+    scoreNumber.textContent =
+        results.percentage + "%";
+
+    correctCount.textContent =
+        results.correct;
+
+    incorrectCount.textContent =
+        results.incorrect;
+
+    unansweredCount.textContent =
+        results.unanswered;
+
+    resultsSetTitle.textContent =
+        (
+            drillSession?.focusLabel ||
+            "Targeted practice"
+        ) +
+        " · " +
+        (
+            drillSession?.difficulty ||
+            ""
+        );
+
+    const answered =
+        results.detailedResults.filter(
+            result =>
+                result.status !==
+                "unanswered"
+        );
+
+    const totalTime =
+        answered.reduce(
+            (
+                sum,
+                result
+            ) =>
+                sum +
+                (
+                    Number(
+                        result.timeSpent
+                    ) || 0
+                ),
+            0
+        );
+
+    const averageTime =
+        answered.length
+            ? totalTime /
+                answered.length
+            : 0;
+
+    const target =
+        Math.max(
+            1,
+            Number(
+                drillSession?.targetSeconds
+            ) || 1
+        );
+
+    const onPaceCount =
+        answered.filter(
+            result =>
+                Number(
+                    result.timeSpent
+                ) <=
+                target
+        ).length;
+
+    if (drillAverageTime) {
+        drillAverageTime.textContent =
+            formatDrillTime(
+                averageTime
+            );
+    }
+
+    if (drillTargetTime) {
+        drillTargetTime.textContent =
+            formatDrillTime(
+                target
+            );
+    }
+
+    if (drillOnPace) {
+        drillOnPace.textContent =
+            answered.length
+                ? (
+                    Math.round(
+                        (
+                            onPaceCount /
+                            answered.length
+                        ) * 100
+                    ) +
+                    "%"
+                )
+                : "—";
+    }
+
+    if (drillPaceNote) {
+        const difference =
+            Math.round(
+                averageTime - target
+            );
+
+        if (!answered.length) {
+            drillPaceNote.textContent =
+                "No answered questions to measure yet.";
+        } else if (
+            Math.abs(difference) <= 3
+        ) {
+            drillPaceNote.textContent =
+                "Your average pace was almost exactly on target.";
+        } else if (
+            difference < 0
+        ) {
+            drillPaceNote.textContent =
+                "You averaged " +
+                formatDrillTime(
+                    Math.abs(
+                        difference
+                    )
+                ) +
+                " faster than your target.";
+        } else {
+            drillPaceNote.textContent =
+                "You averaged " +
+                formatDrillTime(
+                    difference
+                ) +
+                " slower than your target.";
+        }
+    }
+
+    drillPerformance?.classList.remove(
+        "hidden"
+    );
+
+    renderMockDomainPerformance(
+        results.detailedResults
+    );
+
+    if (
+        results.percentage >= 90
+    ) {
+        resultsMessage.textContent =
+            "Excellent drill. Review the misses and keep the pace that produced this accuracy.";
+    } else if (
+        results.percentage >= 70
+    ) {
+        resultsMessage.textContent =
+            "Solid drill. Review the misses, then repeat this skill until the accuracy and pace are both comfortable.";
+    } else {
+        resultsMessage.textContent =
+            "This is a useful weak spot to keep drilling. Review the questions below before starting another set.";
+    }
+
+    if (reviewResultsButton) {
+        reviewResultsButton.textContent =
+            "Review Questions";
+    }
+
+    resultsReview?.classList.add(
+        "hidden"
+    );
+
+    if (backToQuestionBank) {
+        backToQuestionBank.href =
+            drillSession?.section ===
+                "Math"
+                ? "/math-drill"
+                : "/reading-drill";
+
+        backToQuestionBank.textContent =
+            "Start Another Drill";
+    }
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+
 function finishDrill() {
     if (!drillMode || !drillSession) {
         return;
@@ -3437,8 +3878,26 @@ function finishDrill() {
 
     saveCurrentDrillElapsed();
 
+    const results =
+        calculateDrillResults();
+
     drillSession.completedAt =
         new Date().toISOString();
+
+    drillSession.finalResults = {
+        correct:
+            results.correct,
+        incorrect:
+            results.incorrect,
+        unanswered:
+            results.unanswered,
+        total:
+            results.total,
+        percentage:
+            results.percentage
+    };
+
+    saveDrillSession();
 
     if (currentUser) {
         try {
@@ -3472,18 +3931,9 @@ function finishDrill() {
         }
     }
 
-    sessionStorage.removeItem(
-        DRILL_SESSION_STORAGE_KEY
+    showDrillResults(
+        results
     );
-
-    sessionStorage.removeItem(
-        "absoluteprep-question-bank-navigation"
-    );
-
-    window.location.href =
-        drillSession.section === "Math"
-            ? "/math-drill?complete=1"
-            : "/reading-drill?complete=1";
 }
 
 
@@ -5210,7 +5660,10 @@ function showMockFinalResults() {
         getMockAllRouteQuestions();
 
     const results =
-        calculateResults();
+        drillMode &&
+        lastDrillResults
+            ? lastDrillResults
+            : calculateResults();
 
     const rwQuestions =
         questions.filter(
@@ -9820,6 +10273,26 @@ async function checkAnswer() {
                 question.correct_answer
             );
 
+    const firstDrillAttempt =
+        drillMode
+            ? recordDrillResult(
+                question,
+                selected,
+                isCorrect
+            )
+            : false;
+
+    if (
+        firstDrillAttempt &&
+        timerInterval
+    ) {
+        clearInterval(
+            timerInterval
+        );
+
+        timerInterval = null;
+    }
+
 
     if (!isCorrect) {
 
@@ -11579,16 +12052,14 @@ function renderMockResultsReview(
                 result.question;
 
             const label =
-                (
+                [
                     question.mock_review_section ||
-                    question.section ||
-                    "Questions"
-                ) +
-                " · " +
-                (
-                    question.mock_review_module ||
-                    ""
-                );
+                        question.section ||
+                        "Questions",
+                    question.mock_review_module
+                ]
+                    .filter(Boolean)
+                    .join(" · ");
 
             if (!groups.has(label)) {
                 groups.set(
@@ -11759,7 +12230,10 @@ function showResultsReview() {
             );
     }
 
-    if (mockTestMode) {
+    if (
+        mockTestMode ||
+        drillMode
+    ) {
         renderMockResultsReview(
             results
         );
