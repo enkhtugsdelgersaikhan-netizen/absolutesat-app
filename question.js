@@ -7909,12 +7909,6 @@ function renderCurrentQuestion() {
 
     }
 
-    window.lexLogicaHighlighter
-        ?.setQuestion(
-            question.id
-        );
-
-
     questionNumber.textContent =
         `Question ${
             currentQuestionIndex + 1
@@ -7922,6 +7916,12 @@ function renderCurrentQuestion() {
 
     const isMathQuestion =
         question.section === "Math";
+
+    window.lexLogicaHighlighter
+        ?.setQuestion(
+            question.id,
+            !isMathQuestion
+        );
 
     const isQuestionBankQuestion =
         !mockTestMode &&
@@ -8108,45 +8108,29 @@ function renderCurrentQuestion() {
             "reading-highlight-tools-host"
         );
 
-    const mathHighlightHost =
-        document.getElementById(
-            "math-highlight-tools-host"
-        );
-
-    const mathHighlightFallback =
-        document.getElementById(
-            "math-highlight-tools-fallback"
-        );
-
-    const mathHasInformation =
-        isMathQuestion &&
-        hasContext;
-
-    const highlightTarget =
-        isMathQuestion
-            ? (
-                mathHasInformation
-                    ? mathHighlightHost
-                    : mathHighlightFallback
-            )
-            : readingHighlightHost;
-
     if (
         highlightTools &&
-        highlightTarget &&
+        readingHighlightHost &&
         highlightTools.parentElement !==
-            highlightTarget
+            readingHighlightHost
     ) {
-        highlightTarget.appendChild(
+        readingHighlightHost.appendChild(
             highlightTools
         );
     }
 
-    mathHighlightFallback
+    highlightTools
         ?.classList.toggle(
             "hidden",
-            !isMathQuestion ||
-                mathHasInformation
+            isMathQuestion
+        );
+
+    document
+        .getElementById(
+            "math-highlight-tools-fallback"
+        )
+        ?.classList.add(
+            "hidden"
         );
 
     if (questionPassage) {
@@ -10966,7 +10950,9 @@ function renderMockReviewQuestion(
     window.lexLogicaHighlighter
         ?.setQuestion(
             "review:" +
-            question.id
+            question.id,
+            question.section !==
+                "Math"
         );
 
     const context =
@@ -11959,7 +11945,8 @@ function initializeWholeWordTextSelection() {
 
     const state = {
         questionId: null,
-        ranges: []
+        ranges: [],
+        enabled: true
     };
 
     const wordCharacter =
@@ -11970,6 +11957,10 @@ function initializeWholeWordTextSelection() {
 
     const getRoot =
         node => {
+            if (!state.enabled) {
+                return null;
+            }
+
             const element =
                 node?.nodeType ===
                     Node.ELEMENT_NODE
@@ -12830,16 +12821,30 @@ function initializeWholeWordTextSelection() {
 
     window.lexLogicaHighlighter = {
         setQuestion(
-            questionId
+            questionId,
+            enabled = true
         ) {
             const nextId =
                 String(
                     questionId ?? ""
                 );
 
+            const nextEnabled =
+                Boolean(
+                    enabled
+                );
+
+            const modeChanged =
+                state.enabled !==
+                nextEnabled;
+
+            state.enabled =
+                nextEnabled;
+
             if (
                 state.questionId !==
-                nextId
+                    nextId ||
+                modeChanged
             ) {
                 state.questionId =
                     nextId;
@@ -12864,6 +12869,10 @@ function initializeWholeWordTextSelection() {
         },
 
         restore() {
+            if (!state.enabled) {
+                return;
+            }
+
             restoreAll();
         },
 
