@@ -16,7 +16,7 @@
     >
 
     <link rel="stylesheet" href="style.css?v=dark-1">
-    <link rel="stylesheet" href="question.css?v=52">
+    <link rel="stylesheet" href="question.css?v=53">
 </head>
 
 <body>
@@ -306,6 +306,68 @@
 
 </main>
 
+
+<aside
+    id="question-bank-peeker"
+    class="question-bank-peeker hidden"
+    aria-label="Question Bank peeker"
+>
+    <button
+        id="question-bank-peeker-toggle"
+        class="question-bank-peeker-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="question-bank-peeker-panel"
+    >
+        <span class="question-bank-peeker-icon" aria-hidden="true">
+            <svg viewBox="0 0 20 20">
+                <rect x="3" y="3" width="14" height="14" rx="3"></rect>
+                <path d="M6.5 7h7M6.5 10h7M6.5 13h4.5"></path>
+            </svg>
+        </span>
+        <span>Question Bank</span>
+        <span id="question-bank-peeker-position" class="question-bank-peeker-position"></span>
+    </button>
+
+    <section
+        id="question-bank-peeker-panel"
+        class="question-bank-peeker-panel hidden"
+    >
+        <div class="question-bank-peeker-head">
+            <div>
+                <span>QUESTION BANK</span>
+                <strong>Filtered set</strong>
+            </div>
+            <button
+                id="question-bank-peeker-close"
+                type="button"
+                aria-label="Close Question Bank peeker"
+            >
+                ×
+            </button>
+        </div>
+
+        <div
+            id="question-bank-peeker-filters"
+            class="question-bank-peeker-filters"
+        ></div>
+
+        <div
+            id="question-bank-peeker-list"
+            class="question-bank-peeker-list"
+        ></div>
+
+        <a
+            id="question-bank-peeker-open"
+            class="question-bank-peeker-open"
+            href="/reading-question-bank"
+        >
+            Open Question Bank
+            <span aria-hidden="true">↗</span>
+        </a>
+    </section>
+</aside>
+
 <div
     id="desmos-panel"
     class="desmos-panel hidden"
@@ -374,7 +436,7 @@ window.MathJax = {
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js?v=dark-1"></script>
-<script src="question.js?v=52"></script>
+<script src="question.js?v=53"></script>
 
 </body>
 </html>
