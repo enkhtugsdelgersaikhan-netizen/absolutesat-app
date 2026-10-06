@@ -98,6 +98,16 @@ const questionMetadata =
         "question-metadata"
     );
 
+const questionProgressIdentity =
+    document.getElementById(
+        "question-progress-identity"
+    );
+
+const readingQuestionMetadataHost =
+    document.getElementById(
+        "reading-question-metadata-host"
+    );
+
 const questionDomain =
     document.getElementById(
         "question-domain"
@@ -5934,9 +5944,37 @@ function renderCurrentQuestion() {
             currentQuestionIndex + 1
         }`;
 
+    const isMathQuestion =
+        question.section === "Math";
+
     const isQuestionBankQuestion =
         !mockTestMode &&
         currentSet === null;
+
+    /*
+     * Question Bank classification belongs with the content it describes:
+     * Math keeps it beside the question number; Reading & Writing places it
+     * at the top of the passage/information pane.
+     */
+    if (
+        questionMetadata &&
+        isQuestionBankQuestion
+    ) {
+        const metadataParent =
+            isMathQuestion
+                ? questionProgressIdentity
+                : readingQuestionMetadataHost;
+
+        if (
+            metadataParent &&
+            questionMetadata.parentElement !==
+                metadataParent
+        ) {
+            metadataParent.appendChild(
+                questionMetadata
+            );
+        }
+    }
 
     if (questionMetadata) {
         questionMetadata.classList.toggle(
@@ -5972,9 +6010,6 @@ function renderCurrentQuestion() {
                 ).toLowerCase();
         }
     }
-
-    const isMathQuestion =
-        question.section === "Math";
 
     document.body.classList.toggle(
         "math-question-active",
