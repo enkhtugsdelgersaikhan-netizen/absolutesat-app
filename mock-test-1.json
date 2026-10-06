@@ -3210,7 +3210,7 @@
             "skill": "Linear inequalities in one or two variables",
             "difficulty": "Hard",
             "passage": "",
-            "question": "For an electric circuit,\n\n\\[I=VR,\\]\nwhere I is current in amperes, V is potential difference in volts, and R is resistance in ohms.\nA circuit has resistance 390 ohms. Its total potential difference is 9n+6 volts when n identical batteries are connected. If the current must be no more than 0.20 ampere, what is the greatest possible integer value of n?",
+            "question": "For an electric circuit,\n\n\\[I=\\frac{V}{R}\\]\nwhere I is current in amperes, V is potential difference in volts, and R is resistance in ohms.\nA circuit has resistance 390 ohms. Its total potential difference is 9n+6 volts when n identical batteries are connected. If the current must be no more than 0.20 ampere, what is the greatest possible integer value of n?",
             "choices": {},
             "correctAnswer": "",
             "explanation": "The current limit is\n\\[\n\\frac{9n+6}{390}\\le0.20.\n\\]\nThus\n\\[\n9n+6\\le78,\n\\]\nso\n\\[\n9n\\le72\n\\]\nand \\(n\\le8\\). The greatest possible integer value is\n\\[\n\\boxed{8}.\n\\]",
