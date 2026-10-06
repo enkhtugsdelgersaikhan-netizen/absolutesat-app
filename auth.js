@@ -11,6 +11,9 @@
 const LEXLOGICA_THEME_KEY =
     "lexlogica-theme";
 
+let lexLogicaThemeObserver =
+    null;
+
 function getStoredLexLogicaTheme() {
     try {
         return localStorage.getItem(
@@ -108,7 +111,81 @@ function applyLexLogicaTheme(
             : "light";
 
     updateLexLogicaThemeButton();
+
+    observeLexLogicaThemePersistence();
 }
+
+function ensureStoredLexLogicaThemeApplied() {
+    const stored =
+        getStoredLexLogicaTheme();
+
+    const shouldBeDark =
+        stored === "dark";
+
+    const isDark =
+        document.documentElement
+            .classList.contains(
+                "lexlogica-dark-mode"
+            );
+
+    if (
+        shouldBeDark !==
+        isDark
+    ) {
+        applyLexLogicaTheme(
+            shouldBeDark
+                ? "dark"
+                : "light"
+        );
+    }
+}
+
+
+function observeLexLogicaThemePersistence() {
+    if (
+        lexLogicaThemeObserver ||
+        !document.documentElement
+    ) {
+        return;
+    }
+
+    lexLogicaThemeObserver =
+        new MutationObserver(
+            () => {
+                ensureStoredLexLogicaThemeApplied();
+            }
+        );
+
+    lexLogicaThemeObserver.observe(
+        document.documentElement,
+        {
+            attributes: true,
+            attributeFilter: [
+                "class"
+            ]
+        }
+    );
+
+    window.addEventListener(
+        "storage",
+        event => {
+            if (
+                event.key ===
+                LEXLOGICA_THEME_KEY
+            ) {
+                ensureStoredLexLogicaThemeApplied();
+            }
+        }
+    );
+
+    window.addEventListener(
+        "pageshow",
+        () => {
+            ensureStoredLexLogicaThemeApplied();
+        }
+    );
+}
+
 
 function initializeLexLogicaTheme() {
     const stored =
