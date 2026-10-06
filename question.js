@@ -645,11 +645,88 @@ function repairDroppedFractionCommands(body) {
 }
 
 
+
+function repairKnownEquationCorruptions(value) {
+    let source =
+        String(
+            value === null ||
+            value === undefined
+                ? ""
+                : value
+        );
+
+    /*
+     * Repair a small set of physically impossible Ohm's-law imports only
+     * when the surrounding text explicitly identifies current, voltage
+     * (or potential difference), and resistance. This keeps the repair
+     * narrow and avoids rewriting ordinary algebra that happens to use
+     * I, V, and R as unrelated variables.
+     */
+    const isOhmsLawContext =
+        /\bcurrent\b/i.test(source) &&
+        /\b(?:voltage|potential\s+difference)\b/i.test(source) &&
+        /\bresistance\b/i.test(source);
+
+    if (!isOhmsLawContext) {
+        return source;
+    }
+
+    const repairDelimitedEquation =
+        body => {
+            const compact =
+                String(body || "")
+                    .replace(/\s+/g, "");
+
+            if (/^I=VR,?$/.test(compact)) {
+                return "I=\\frac{V}{R}";
+            }
+
+            if (/^V=I\/R,?$/.test(compact)) {
+                return "V=IR";
+            }
+
+            if (/^R=VI,?$/.test(compact)) {
+                return "R=\\frac{V}{I}";
+            }
+
+            return body;
+        };
+
+    source = source.replace(
+        /\\\[([\s\S]*?)\\\]/g,
+        (
+            match,
+            body
+        ) =>
+            "\\[" +
+            repairDelimitedEquation(
+                body
+            ) +
+            "\\]"
+    );
+
+    return source.replace(
+        /\\\(([\s\S]*?)\\\)/g,
+        (
+            match,
+            body
+        ) =>
+            "\\(" +
+            repairDelimitedEquation(
+                body
+            ) +
+            "\\)"
+    );
+}
+
+
 function repairCommonMathNotation(value) {
     const source =
         normalizeAccidentalDisplayProse(
-            normalizeMathEscapes(
-                value
+            repairKnownEquationCorruptions(
+                normalizeMathEscapes(
+                    value
+                )
             )
         );
 
