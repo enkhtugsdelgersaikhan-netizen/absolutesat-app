@@ -4866,12 +4866,25 @@ async function loadReviewStatesForQuestions(
 function normalizeAccidentalDisplayProse(
     value
 ) {
-    const source =
+    let source =
         normalizeMathEscapes(
             value
         );
 
-    return source.replace(
+    /*
+     * Some imported Math questions incorrectly wrap ordinary prose
+     * in MathJax delimiters. TeX math mode discards normal spaces and
+     * italicizes letters, turning text such as
+     *
+     *     \\(The slope is undefined.\\)
+     *
+     * into something visually close to "Theslopeisundefined".
+     *
+     * Recover prose before MathJax sees it. This is deliberately
+     * conservative: real formulas stay in math mode.
+     */
+
+    source = source.replace(
         /\\\[([\s\S]*?)\\\]/g,
         (
             match,
@@ -4909,6 +4922,134 @@ function normalizeAccidentalDisplayProse(
             )
                 ? trimmed
                 : match;
+        }
+    );
+
+    return source.replace(
+        /\\\(([\s\S]*?)\\\)/g,
+        (
+            match,
+            body
+        ) => {
+            const trimmed =
+                String(body || "")
+                    .trim();
+
+            if (!trimmed) {
+                return match;
+            }
+
+            /*
+             * Already-correct text commands should be left alone.
+             */
+            if (
+                /\\text\s*\{/.test(
+                    trimmed
+                )
+            ) {
+                return match;
+            }
+
+            const words =
+                trimmed.match(
+                    /\b[A-Za-z]{2,}\b/g
+                ) || [];
+
+            const lowerCaseWords =
+                words.filter(
+                    word =>
+                        /[a-z]/.test(
+                            word
+                        )
+                );
+
+            const hasStrongMathSyntax =
+                /[=<>^_{}]/.test(
+                    trimmed
+                ) ||
+                /\\[A-Za-z]+/.test(
+                    trimmed
+                );
+
+            const romanChoice =
+                /^(?:(?:I|II|III)(?:\s+and\s+(?:I|II|III))?|(?:I|II|III))\s+only$/i
+                    .test(
+                        trimmed
+                    ) ||
+                /^(?:Neither\s+I\s+nor\s+II|I\s+and\s+II)$/i
+                    .test(
+                        trimmed
+                    );
+
+            const plainLanguageChoice =
+                !hasStrongMathSyntax &&
+                (
+                    (
+                        words.length >=
+                            2 &&
+                        lowerCaseWords.length >=
+                            1
+                    ) ||
+                    /\s+(?:and|or|nor)\s+/i
+                        .test(
+                            trimmed
+                        ) ||
+                    romanChoice
+                );
+
+            const proseHeavyMixedChoice =
+                /^(?:the|all|there|exactly|neither|none|no|one|two|three|four)\b/i
+                    .test(
+                        trimmed
+                    ) &&
+                lowerCaseWords.length >=
+                    3;
+
+            /*
+             * If the entire segment is prose, remove math mode
+             * altogether. Numbers and punctuation remain untouched.
+             */
+            if (
+                plainLanguageChoice ||
+                proseHeavyMixedChoice
+            ) {
+                return trimmed;
+            }
+
+            /*
+             * Mixed expressions such as
+             *     x > 2 and y < -1
+             * should remain mathematical, but English connectors
+             * need explicit TeX text mode so their spaces survive.
+             */
+            const repaired =
+                trimmed
+                    .replace(
+                        /\s+(rather\s+than|for\s+every|for\s+each|such\s+that|at\s+most|at\s+least)\s+/gi,
+                        (
+                            token,
+                            phrase
+                        ) =>
+                            "\\text{ " +
+                            phrase +
+                            " }"
+                    )
+                    .replace(
+                        /\s+(and|or|nor|where|than|for|with|without)\s+/gi,
+                        (
+                            token,
+                            word
+                        ) =>
+                            "\\text{ " +
+                            word +
+                            " }"
+                    );
+
+            return (
+                "\\(" +
+                repaired +
+                "\\)"
+            );
         }
     );
 }
