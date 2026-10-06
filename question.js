@@ -6596,8 +6596,21 @@ function scrollQuestionBankPeekerToCurrent(
         return;
     }
 
+    const listRect =
+        questionBankPeekerList
+            .getBoundingClientRect();
+
+    const tileRect =
+        currentTile
+            .getBoundingClientRect();
+
+    const tileTopInList =
+        questionBankPeekerList.scrollTop +
+        tileRect.top -
+        listRect.top;
+
     const targetTop =
-        currentTile.offsetTop -
+        tileTopInList -
         (
             questionBankPeekerList.clientHeight -
             currentTile.offsetHeight
