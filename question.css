@@ -4944,7 +4944,7 @@ html.lexlogica-dark-mode .question-page .mock-review-context::selection,
 html.lexlogica-dark-mode .question-page .mock-review-question-text::selection,
 html.lexlogica-dark-mode .question-page .mock-review-choice-text::selection,
 html.lexlogica-dark-mode .question-page .mock-review-choice-explanation::selection{
-    background:rgba(0,32,155,.68);
+    background:rgba(0,33,178,.68);
     color:inherit;
 }
 
@@ -4958,7 +4958,7 @@ html.lexlogica-dark-mode .question-page .mock-review-choice-explanation::selecti
     margin:0;
     border-radius:2px;
     background:rgba(255,222,77,.58);
-    color:inherit;
+    color:#fff;
     box-decoration-break:clone;
     -webkit-box-decoration-break:clone;
 }
@@ -4991,7 +4991,15 @@ html.lexlogica-dark-mode .question-page .mock-review-choice-explanation::selecti
 }
 
 html.lexlogica-dark-mode .question-page .persistent-text-highlight{
-    background:rgba(0,32,155,.60);
+    /*
+     * Exact RGB inverse of the light highlight:
+     * rgb(255,222,77) -> rgb(0,33,178).
+     * The page-wide invert turns this back into the same warm yellow
+     * visually, while #fff becomes black so the highlighted text is
+     * inverted relative to the surrounding light-on-dark text.
+     */
+    background:rgba(0,33,178,.58);
+    color:#fff;
 }
 
 @media(max-width:760px){
