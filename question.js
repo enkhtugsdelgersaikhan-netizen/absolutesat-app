@@ -357,6 +357,43 @@ function escapeHtml(value) {
 }
 
 
+function normalizeCompactFractionArguments(
+    value
+) {
+    /*
+     * TeX allows compact fractions such as \\frac12 and \\frac ba,
+     * where the next two tokens are the numerator and denominator.
+     * Our prose-spacing repair must not mistake adjacent letter
+     * arguments (ba, ph, ca, etc.) for an English word.
+     *
+     * Canonicalize the common single-token shorthand before any prose
+     * analysis. This preserves the exact mathematics while making the
+     * argument boundaries explicit to every later renderer pass.
+     */
+    return String(
+        value === null ||
+        value === undefined
+            ? ""
+            : value
+    ).replace(
+        /\\((?:d|t)?frac)\s*([A-Za-z0-9])\s*([A-Za-z0-9])/g,
+        (
+            match,
+            command,
+            numerator,
+            denominator
+        ) =>
+            "\\" +
+            command +
+            "{" +
+            numerator +
+            "}{" +
+            denominator +
+            "}"
+    );
+}
+
+
 function normalizeMathEscapes(value) {
     let source =
         String(
@@ -414,9 +451,11 @@ function normalizeMathEscapes(value) {
     source = source.replace(
         /\\\(([\s\S]*?)\\\)|\\\[([\s\S]*?)\\\]/g,
         match =>
-            match.replace(
-                /\\\\(?=[A-Za-z])/g,
-                "\\"
+            normalizeCompactFractionArguments(
+                match.replace(
+                    /\\\\(?=[A-Za-z])/g,
+                    "\\"
+                )
             )
     );
 
