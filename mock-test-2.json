@@ -2915,62 +2915,6 @@
       "label": "Math",
       "module1": [
         {
-          "requestId": "mock-2-math-m1-01",
-          "targetDomain": "Algebra",
-          "targetSubtopic": "Linear Equations",
-          "targetDifficulty": "Medium",
-          "question": {
-            "id": "math-20261006-batch465-q073",
-            "groupId": "math-20261006-batch465-q073",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Algebra",
-            "skill": "Linear Equations",
-            "difficulty": "Medium",
-            "passage": "",
-            "question": "What value of x satisfies\n\n\\[4(2x-3)-3(x+5)=2(x+9)?\\]",
-            "choices": {},
-            "correctAnswer": "",
-            "explanation": "Expand:\n\n\\[8x-12-3x-15=2x+18.\\]\nSo\n\n\\[5x-27=2x+18.\\]\nThen\n\n\\[3x=45,\\]\ngiving\n\\[ \\boxed{x=15}. \\]",
-            "sourceBatch": "2026-10-06-math-batch465",
-            "sourceQuestionNumber": 73,
-            "answerType": "student-response",
-            "acceptedAnswers": [
-              "15"
-            ],
-            "subtopic": "Linear Equations",
-            "classificationVersion": "2026-10-07-v1"
-          }
-        },
-        {
-          "requestId": "mock-2-math-m1-02",
-          "targetDomain": "Algebra",
-          "targetSubtopic": "Linear Equations",
-          "targetDifficulty": "Hard",
-          "question": {
-            "id": "math-20261006-batch465-q013",
-            "groupId": "math-20261006-batch465-q013",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Algebra",
-            "skill": "Linear Equations",
-            "difficulty": "Hard",
-            "passage": "",
-            "question": "For a function g,\n\n\\[g(ax+3)=2x-5\\]\nfor all real x, where a is a positive constant. If g(11)=7, what is the value of a?",
-            "choices": {},
-            "correctAnswer": "",
-            "explanation": "For the output to equal 7,\n\n\\[2x-5=7,\\]\nso x=6. The corresponding input to g must therefore be 11:\n\n\\[6a+3=11.\\]\nThus,\n\n\\[6a=8\\]\nand\n\\[ \\boxed{a=\\frac43}. \\]",
-            "sourceBatch": "2026-10-06-math-batch465",
-            "sourceQuestionNumber": 13,
-            "answerType": "student-response",
-            "acceptedAnswers": [
-              "4/3"
-            ],
-            "subtopic": "Linear Equations",
-            "classificationVersion": "2026-10-07-v1"
-          }
-        },
-        {
           "requestId": "mock-2-math-m1-03",
           "targetDomain": "Algebra",
           "targetSubtopic": "Linear Functions",
@@ -2995,130 +2939,6 @@
               "-2/5"
             ],
             "subtopic": "Linear Functions",
-            "classificationVersion": "2026-10-07-v1"
-          }
-        },
-        {
-          "requestId": "mock-2-math-m1-04",
-          "targetDomain": "Algebra",
-          "targetSubtopic": "Linear Functions",
-          "targetDifficulty": "Medium",
-          "question": {
-            "id": "math-20261006-new409-q333",
-            "groupId": "math-20261006-new409-q333",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Algebra",
-            "skill": "Linear Functions",
-            "difficulty": "Medium",
-            "passage": "",
-            "question": "Which value is closest to the absolute difference between the y-coordinate of the data point with \\(x=6\\) and the y-value predicted by the line of best fit at \\(x=6\\)?",
-            "choices": {
-              "A": "1",
-              "B": "3",
-              "C": "4",
-              "D": "17"
-            },
-            "correctAnswer": "C",
-            "explanation": "At \\(x=6\\), the data point has \\(y\\approx13\\), while the line of best fit predicts about \\(17\\). Thus,\n\\[|13-17|=\\boxed4.\\]",
-            "sourceBatch": "2026-10-06-new-paste409-audited",
-            "sourceQuestionNumber": 333,
-            "choiceExplanations": {
-              "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "At \\(x=6\\), the data point has \\(y\\approx13\\), while the line of best fit predicts about \\(17\\). Thus,\n\\[|13-17|=\\boxed4.\\]",
-              "D": "This choice does not satisfy the relationships or conditions given in the question."
-            },
-            "graph": {
-              "type": "xy",
-              "caption": "Scatterplot with line of best fit",
-              "xMin": 0,
-              "xMax": 10,
-              "yMin": 5,
-              "yMax": 25,
-              "xStep": 1,
-              "yStep": 2,
-              "xLabel": "x",
-              "yLabel": "y",
-              "series": [
-                {
-                  "points": [
-                    [
-                      2,
-                      9
-                    ],
-                    [
-                      4,
-                      14
-                    ],
-                    [
-                      6,
-                      13
-                    ],
-                    [
-                      8,
-                      22
-                    ]
-                  ],
-                  "connect": false,
-                  "showPoints": true
-                },
-                {
-                  "points": [
-                    [
-                      0,
-                      5
-                    ],
-                    [
-                      6,
-                      17
-                    ],
-                    [
-                      10,
-                      25
-                    ]
-                  ],
-                  "label": "Line of best fit",
-                  "showPoints": false
-                }
-              ]
-            },
-            "subtopic": "Linear Functions",
-            "classificationVersion": "2026-10-07-v1"
-          }
-        },
-        {
-          "requestId": "mock-2-math-m1-05",
-          "targetDomain": "Algebra",
-          "targetSubtopic": "Systems of Linear Equations",
-          "targetDifficulty": "Hard",
-          "question": {
-            "id": "math-20261006-batch465-q278",
-            "groupId": "math-20261006-batch465-q278",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Algebra",
-            "skill": "Systems of Linear Equations",
-            "difficulty": "Hard",
-            "passage": "",
-            "question": "A building currently has annual electricity costs of \\(\\$3{,}950\\). A new energy system will cost \\(\\$21{,}600\\) to install, but the building will receive a \\(\\$3{,}000\\) rebate. After installation, annual electricity costs are expected to be \\(\\$1{,}760\\), and the system will require \\(\\$610\\) in annual maintenance.\nWhich inequality can be solved to find t, the number of years after installation when the accumulated savings exceed the net installation cost?",
-            "choices": {
-              "A": "\\((3950-1760-610)t>21600-3000\\)",
-              "B": "\\((3950-1760+610)t>21600-3000\\)",
-              "C": "\\((3950-1760-610)t<21600-3000\\)",
-              "D": "\\((3950-1760)t>21600+3000\\)"
-            },
-            "correctAnswer": "A",
-            "explanation": "The yearly savings are\n\n\\[3950-(1760+610)=1580.\\]\nThe net installation cost is\n\n\\[21600-3000=18600.\\]\nSavings exceed the cost when\n\\[ \\boxed{1580t>18600}, \\]\nwhich is choice A.",
-            "sourceBatch": "2026-10-06-math-batch465",
-            "sourceQuestionNumber": 278,
-            "choiceExplanations": {
-              "A": "The yearly savings are\n\n\\[3950-(1760+610)=1580.\\]\nThe net installation cost is\n\n\\[21600-3000=18600.\\]\nSavings exceed the cost when\n\\[ \\boxed{1580t>18600}, \\]\nwhich is choice A.",
-              "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "This choice does not satisfy the relationships or conditions given in the question.",
-              "D": "This choice does not satisfy the relationships or conditions given in the question."
-            },
-            "subtopic": "Systems of Linear Equations",
             "classificationVersion": "2026-10-07-v1"
           }
         },
@@ -3159,76 +2979,6 @@
           }
         },
         {
-          "requestId": "mock-2-math-m1-07",
-          "targetDomain": "Algebra",
-          "targetSubtopic": "Linear Inequalities",
-          "targetDifficulty": "Medium",
-          "question": {
-            "id": "math-20261006-batch465-q043",
-            "groupId": "math-20261006-batch465-q043",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Algebra",
-            "skill": "Linear Inequalities",
-            "difficulty": "Medium",
-            "passage": "",
-            "question": "A shipping company accepts rectangular boxes only if the perimeter of the base plus the height does not exceed 148 inches.\nA box has width x inches, length 3x-2 inches, and height 52 inches. Which inequality gives all possible values of x?",
-            "choices": {
-              "A": "\\(0<x\\le12.5\\)",
-              "B": "\\(\\frac23<x\\le12.5\\)",
-              "C": "\\(\\frac23\\le x<12\\)",
-              "D": "\\(2<x\\le25\\)"
-            },
-            "correctAnswer": "B",
-            "explanation": "The base perimeter is\n\\[2[x+(3x-2)]=8x-4.\\]\nApply the shipping restriction:\n\\[8x-4+52\\le148.\\]\nThus,\n\\[8x\\le100\\]\nand\n\\[x\\le12.5.\\]\nAlso, the length must be positive:\n\\[3x-2>0\\Rightarrow x>\\frac23.\\]\nTherefore,\n\\[\\boxed{\\frac23<x\\le12.5}.\\]",
-            "sourceBatch": "2026-10-06-math-batch465",
-            "sourceQuestionNumber": 43,
-            "choiceExplanations": {
-              "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "The base perimeter is\n\n\\[2[x+(3x-2)]=8x-4.\\]\nApply the shipping restriction:\n\n\\[8x-4+52148.\\]\nThus,\n\n8x100\nand\n\nx12.5.\nAlso, the length must be positive:\n\n\\[3x-2>0x>23.\\]\nTherefore,\n\\[ \\boxed{\\frac23<x\\le12.5}. \\]",
-              "C": "This choice does not satisfy the relationships or conditions given in the question.",
-              "D": "This choice does not satisfy the relationships or conditions given in the question."
-            },
-            "subtopic": "Linear Inequalities",
-            "classificationVersion": "2026-10-07-v1"
-          }
-        },
-        {
-          "requestId": "mock-2-math-m1-08",
-          "targetDomain": "Algebra",
-          "targetSubtopic": "Other Algebra",
-          "targetDifficulty": "Hard",
-          "question": {
-            "id": "math-20261006-batch465-q439",
-            "groupId": "math-20261006-batch465-q439",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Algebra",
-            "skill": "Other Algebra",
-            "difficulty": "Hard",
-            "passage": "",
-            "question": "The formula \\[E=\\frac12mv^2\\] relates the kinetic energy \\(E\\), mass \\(m\\), and speed \\(v\\), where \\(v\\ne0\\). Which equation expresses \\(m\\) in terms of \\(E\\) and \\(v\\)?",
-            "choices": {
-              "A": "\\(\\displaystyle m=\\frac{2E}{v^2}\\)",
-              "B": "\\(\\displaystyle m=\\frac{E}{2v^2}\\)",
-              "C": "\\(m=2Ev^2\\)",
-              "D": "\\(\\displaystyle m=\\frac{v^2}{2E}\\)"
-            },
-            "correctAnswer": "A",
-            "explanation": "Multiply by 2:\n\\[2E=mv^2.\\]\nThen divide by \\(v^2\\):\n\\[\\boxed{m=\\frac{2E}{v^2}}.\\]",
-            "sourceBatch": "2026-10-06-math-batch465",
-            "sourceQuestionNumber": 439,
-            "choiceExplanations": {
-              "A": "Multiply by 2:\n\n\\[2E=mv2.\\]\n\\[Then divide by v^{2}:\\]\n\n\\[m=2Ev2.\\]",
-              "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "This choice does not satisfy the relationships or conditions given in the question.",
-              "D": "This choice does not satisfy the relationships or conditions given in the question."
-            },
-            "subtopic": "Other Algebra",
-            "classificationVersion": "2026-10-07-v1"
-          }
-        },
-        {
           "requestId": "mock-2-math-m1-09",
           "targetDomain": "Advanced Math",
           "targetSubtopic": "Quadratics",
@@ -3257,69 +3007,6 @@
           }
         },
         {
-          "requestId": "mock-2-math-m1-10",
-          "targetDomain": "Advanced Math",
-          "targetSubtopic": "Quadratics",
-          "targetDifficulty": "Medium",
-          "question": {
-            "id": "math-20261006-batch465-q421",
-            "groupId": "math-20261006-batch465-q421",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Advanced Math",
-            "skill": "Quadratics",
-            "difficulty": "Medium",
-            "passage": "",
-            "question": "What is the positive solution to \\[\\frac{78}{x+5}=x-2?\\]",
-            "choices": {},
-            "correctAnswer": "",
-            "explanation": "\\[Multiply by x+5:\\]\n\n\\[78=(x-2)(x+5).\\]\nThus\n\n\\[78=x^{2}+3x-10,\\]\nso\n\n\\[x^{2}+3x-88=0.\\]\nFactoring gives\n\n\\[(x-8)(x+11)=0.\\]\nThe positive solution is\n\n8.",
-            "sourceBatch": "2026-10-06-math-batch465",
-            "sourceQuestionNumber": 421,
-            "answerType": "student-response",
-            "acceptedAnswers": [
-              "8"
-            ],
-            "subtopic": "Quadratics",
-            "classificationVersion": "2026-10-07-v1"
-          }
-        },
-        {
-          "requestId": "mock-2-math-m1-11",
-          "targetDomain": "Advanced Math",
-          "targetSubtopic": "Equivalent Expressions",
-          "targetDifficulty": "Hard",
-          "question": {
-            "id": "math-20261006-batch465-q307",
-            "groupId": "math-20261006-batch465-q307",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Advanced Math",
-            "skill": "Equivalent Expressions",
-            "difficulty": "Hard",
-            "passage": "",
-            "question": "For groups of at least 16 people, a guide service charges a fixed booking fee of $45, $20 per person for the first 16 people, and $13 for each additional person. Which function gives the total charge \\(C(n)\\), in dollars, for a group of \\(n\\) people, where \\(n\\ge16\\)?",
-            "choices": {
-              "A": "\\(C(n)=13n+157\\)",
-              "B": "\\(C(n)=13n+365\\)",
-              "C": "\\(C(n)=20n+45\\)",
-              "D": "\\(C(n)=13n+253\\)"
-            },
-            "correctAnswer": "A",
-            "explanation": "The first 16 people cost\n\n\\[16(20)=320.\\]\nThe additional n-16 people cost 13(n-16). Including the fee,\n\n\\[C(n)=45+320+13(n-16).\\]\nSimplifying,\n\\[ C(n)=365+13n-208 =\\boxed{13n+157}. \\]",
-            "sourceBatch": "2026-10-06-math-batch465",
-            "sourceQuestionNumber": 307,
-            "choiceExplanations": {
-              "A": "The first 16 people cost\n\n\\[16(20)=320.\\]\nThe additional n-16 people cost 13(n-16). Including the fee,\n\n\\[C(n)=45+320+13(n-16).\\]\nSimplifying,\n\\[ C(n)=365+13n-208 =\\boxed{13n+157}. \\]",
-              "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "This choice does not satisfy the relationships or conditions given in the question.",
-              "D": "This choice does not satisfy the relationships or conditions given in the question."
-            },
-            "subtopic": "Equivalent Expressions",
-            "classificationVersion": "2026-10-07-v1"
-          }
-        },
-        {
           "requestId": "mock-2-math-m1-12",
           "targetDomain": "Advanced Math",
           "targetSubtopic": "Polynomial Functions",
@@ -3344,90 +3031,6 @@
               "3/8"
             ],
             "subtopic": "Polynomial Functions",
-            "classificationVersion": "2026-10-07-v1"
-          }
-        },
-        {
-          "requestId": "mock-2-math-m1-13",
-          "targetDomain": "Advanced Math",
-          "targetSubtopic": "Exponential Functions",
-          "targetDifficulty": "Medium",
-          "question": {
-            "id": "math-20261006-batch465-q173",
-            "groupId": "math-20261006-batch465-q173",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Advanced Math",
-            "skill": "Exponential Functions",
-            "difficulty": "Medium",
-            "passage": "",
-            "question": "A machine is worth \\(\\$48{,}000\\) when purchased. Its value decreases by \\(19\\%\\) every 3 years.\nIf V(t) is its value t years after purchase, which equation models the situation?",
-            "choices": {
-              "A": "\\(\\displaystyle V(t)=48{,}000(0.19)^{t/3}\\)",
-              "B": "\\(\\displaystyle V(t)=48{,}000(0.81)^{3t}\\)",
-              "C": "\\(\\displaystyle V(t)=48{,}000(0.81)^{t/3}\\)",
-              "D": "\\(\\displaystyle V(t)=48{,}000(1.19)^{t/3}\\)"
-            },
-            "correctAnswer": "C",
-            "explanation": "A \\(19\\%\\) decrease leaves\n\\[ 100\\%-19\\%=81\\% \\]\nof the previous value, so the decay factor is 0.81.\nSince the decrease occurs once every 3 years, t years contains t/3 decay periods:\n\\[ \\boxed{V(t)=48{,}000(0.81)^{t/3}}. \\]",
-            "sourceBatch": "2026-10-06-math-batch465",
-            "sourceQuestionNumber": 173,
-            "choiceExplanations": {
-              "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "A \\(19\\%\\) decrease leaves\n\\[ 100\\%-19\\%=81\\% \\]\nof the previous value, so the decay factor is 0.81.\nSince the decrease occurs once every 3 years, t years contains t/3 decay periods:\n\\[ \\boxed{V(t)=48{,}000(0.81)^{t/3}}. \\]",
-              "D": "This choice does not satisfy the relationships or conditions given in the question."
-            },
-            "subtopic": "Exponential Functions",
-            "classificationVersion": "2026-10-07-v1"
-          }
-        },
-        {
-          "requestId": "mock-2-math-m1-14",
-          "targetDomain": "Advanced Math",
-          "targetSubtopic": "Rational/Radical Equations",
-          "targetDifficulty": "Hard",
-          "question": {
-            "id": "math-20261006-batch465-q040",
-            "groupId": "math-20261006-batch465-q040",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Advanced Math",
-            "skill": "Rational/Radical Equations",
-            "difficulty": "Hard",
-            "passage": "",
-            "question": "The table shows three points on the same line, where \\(k\\) and \\(n\\) are constants. The slope of the line is \\(-\\frac32\\). What is the value of \\(k+n\\)?",
-            "choices": {},
-            "correctAnswer": "",
-            "explanation": "Using \\((4,7)\\) and \\((k,-5)\\),\n\\[\n\\frac{-5-7}{k-4}=-\\frac32.\n\\]\nThus\n\\[\n\\frac{-12}{k-4}=-\\frac32,\n\\]\nso \\(k-4=8\\) and \\(k=12\\). From \\(x=4\\) to \\(x=16\\), the change in \\(x\\) is 12, so the change in \\(y\\) is\n\\[\n-\\frac32(12)=-18.\n\\]\nHence \\(n=7-18=-11\\), and\n\\[\nk+n=12-11=\\boxed1.\n\\]",
-            "sourceBatch": "2026-10-06-math-batch465",
-            "sourceQuestionNumber": 40,
-            "answerType": "student-response",
-            "acceptedAnswers": [
-              "1"
-            ],
-            "table": {
-              "caption": "Three points on the same line",
-              "headers": [
-                "x",
-                "y"
-              ],
-              "rows": [
-                [
-                  "4",
-                  "7"
-                ],
-                [
-                  "k",
-                  "-5"
-                ],
-                [
-                  "16",
-                  "n"
-                ]
-              ]
-            },
-            "subtopic": "Rational/Radical Equations",
             "classificationVersion": "2026-10-07-v1"
           }
         },
@@ -3549,6 +3152,356 @@
           }
         },
         {
+          "requestId": "mock-2-math-m1-18",
+          "targetDomain": "Problem-Solving & Data Analysis",
+          "targetSubtopic": "Statistics",
+          "targetDifficulty": "Easy",
+          "question": {
+            "id": "math-20261006-new409-q007",
+            "groupId": "math-20261006-new409-q007",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Problem-Solving & Data Analysis",
+            "skill": "Statistics",
+            "difficulty": "Easy",
+            "passage": "The function\n\\[N(t)=240(0.82)^{t-3}\\]\nmodels the estimated number of nesting pairs of a bird species in a preserve, where \\(t\\) is the number of years after 2020.",
+            "question": "Which choice best interprets 240 in this context?",
+            "choices": {
+              "A": "The estimated number of nesting pairs in 2020",
+              "B": "The estimated number of nesting pairs in 2023",
+              "C": "The estimated decrease in nesting pairs each year",
+              "D": "The percent of nesting pairs remaining after three years"
+            },
+            "correctAnswer": "B",
+            "explanation": "The exponential factor equals 1 when\n\n\\[t-3=0,\\]\nso t=3. Since t=3 corresponds to 2023,\n\n\\[N(3)=240\\]\nThus 240 is the estimated number of nesting pairs in \\(\\boxed{2023}\\).",
+            "sourceBatch": "2026-10-06-new-paste409-audited",
+            "sourceQuestionNumber": 7,
+            "choiceExplanations": {
+              "A": "This choice does not satisfy the relationships or conditions given in the question.",
+              "B": "The exponential factor equals 1 when\n\n\\[t-3=0,\\]\nso t=3. Since t=3 corresponds to 2023,\n\n\\[N(3)=240\\]\nThus 240 is the estimated number of nesting pairs in \\(\\boxed{2023}\\).",
+              "C": "This choice does not satisfy the relationships or conditions given in the question.",
+              "D": "This choice does not satisfy the relationships or conditions given in the question."
+            },
+            "subtopic": "Statistics",
+            "classificationVersion": "2026-10-07-v1"
+          }
+        },
+        {
+          "requestId": "mock-2-math-m1-21",
+          "targetDomain": "Geometry & Trigonometry",
+          "targetSubtopic": "Circles",
+          "targetDifficulty": "Easy",
+          "question": {
+            "id": "math-20261006-new409-q123",
+            "groupId": "math-20261006-new409-q123",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Geometry & Trigonometry",
+            "skill": "Circles",
+            "difficulty": "Easy",
+            "passage": "A right circular cylinder has volume \\(300\\pi\\) cubic centimeters. The circumference of its circular base is \\(10\\pi\\) centimeters.",
+            "question": "What is the height of the cylinder, in centimeters?",
+            "choices": {
+              "A": "\\(8\\)",
+              "B": "\\(10\\)",
+              "C": "\\(12\\)",
+              "D": "\\(15\\)"
+            },
+            "correctAnswer": "C",
+            "explanation": "From \\(2\\pi r=10\\pi\\), the radius is \\(5\\). Then\n\\[300\\pi=\\pi(5)^2h=25\\pi h,\\]\nso \\(\\boxed{h=12}\\).",
+            "sourceBatch": "2026-10-06-new-paste409-audited",
+            "sourceQuestionNumber": 123,
+            "choiceExplanations": {
+              "A": "This choice does not satisfy the relationships or conditions given in the question.",
+              "B": "This choice does not satisfy the relationships or conditions given in the question.",
+              "C": "From \\(2\\pi r=10\\pi\\), the radius is \\(5\\). Then\n\\[300\\pi=\\pi(5)^2h=25\\pi h,\\]\nso \\(\\boxed{h=12}\\).",
+              "D": "This choice does not satisfy the relationships or conditions given in the question."
+            },
+            "subtopic": "Circles",
+            "classificationVersion": "2026-10-07-v1",
+            "diagram": {
+              "width": 420,
+              "height": 300,
+              "alt": "Right circular cylinder",
+              "ellipses": [
+                {
+                  "cx": 210,
+                  "cy": 75,
+                  "rx": 90,
+                  "ry": 28
+                },
+                {
+                  "cx": 210,
+                  "cy": 225,
+                  "rx": 90,
+                  "ry": 28
+                }
+              ],
+              "lines": [
+                {
+                  "x1": 120,
+                  "y1": 75,
+                  "x2": 120,
+                  "y2": 225,
+                  "dashed": false
+                },
+                {
+                  "x1": 300,
+                  "y1": 75,
+                  "x2": 300,
+                  "y2": 225,
+                  "dashed": false
+                },
+                {
+                  "x1": 210,
+                  "y1": 75,
+                  "x2": 300,
+                  "y2": 75,
+                  "dashed": false
+                }
+              ],
+              "labels": [
+                {
+                  "x": 245,
+                  "y": 72,
+                  "text": "C = 10π",
+                  "emphasis": false,
+                  "anchor": "middle"
+                },
+                {
+                  "x": 325,
+                  "y": 150,
+                  "text": "h ?",
+                  "emphasis": false,
+                  "anchor": "middle"
+                },
+                {
+                  "x": 210,
+                  "y": 270,
+                  "text": "V = 300π",
+                  "emphasis": false,
+                  "anchor": "middle"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "requestId": "mock-2-math-m1-01",
+          "targetDomain": "Algebra",
+          "targetSubtopic": "Linear Equations",
+          "targetDifficulty": "Medium",
+          "question": {
+            "id": "math-20261006-batch465-q073",
+            "groupId": "math-20261006-batch465-q073",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Algebra",
+            "skill": "Linear Equations",
+            "difficulty": "Medium",
+            "passage": "",
+            "question": "What value of x satisfies\n\n\\[4(2x-3)-3(x+5)=2(x+9)?\\]",
+            "choices": {},
+            "correctAnswer": "",
+            "explanation": "Expand:\n\n\\[8x-12-3x-15=2x+18.\\]\nSo\n\n\\[5x-27=2x+18.\\]\nThen\n\n\\[3x=45,\\]\ngiving\n\\[ \\boxed{x=15}. \\]",
+            "sourceBatch": "2026-10-06-math-batch465",
+            "sourceQuestionNumber": 73,
+            "answerType": "student-response",
+            "acceptedAnswers": [
+              "15"
+            ],
+            "subtopic": "Linear Equations",
+            "classificationVersion": "2026-10-07-v1"
+          }
+        },
+        {
+          "requestId": "mock-2-math-m1-04",
+          "targetDomain": "Algebra",
+          "targetSubtopic": "Linear Functions",
+          "targetDifficulty": "Medium",
+          "question": {
+            "id": "math-20261006-new409-q333",
+            "groupId": "math-20261006-new409-q333",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Algebra",
+            "skill": "Linear Functions",
+            "difficulty": "Medium",
+            "passage": "",
+            "question": "Which value is closest to the absolute difference between the y-coordinate of the data point with \\(x=6\\) and the y-value predicted by the line of best fit at \\(x=6\\)?",
+            "choices": {
+              "A": "1",
+              "B": "3",
+              "C": "4",
+              "D": "17"
+            },
+            "correctAnswer": "C",
+            "explanation": "At \\(x=6\\), the data point has \\(y\\approx13\\), while the line of best fit predicts about \\(17\\). Thus,\n\\[|13-17|=\\boxed4.\\]",
+            "sourceBatch": "2026-10-06-new-paste409-audited",
+            "sourceQuestionNumber": 333,
+            "choiceExplanations": {
+              "A": "This choice does not satisfy the relationships or conditions given in the question.",
+              "B": "This choice does not satisfy the relationships or conditions given in the question.",
+              "C": "At \\(x=6\\), the data point has \\(y\\approx13\\), while the line of best fit predicts about \\(17\\). Thus,\n\\[|13-17|=\\boxed4.\\]",
+              "D": "This choice does not satisfy the relationships or conditions given in the question."
+            },
+            "graph": {
+              "type": "xy",
+              "caption": "Scatterplot with line of best fit",
+              "xMin": 0,
+              "xMax": 10,
+              "yMin": 5,
+              "yMax": 25,
+              "xStep": 1,
+              "yStep": 2,
+              "xLabel": "x",
+              "yLabel": "y",
+              "series": [
+                {
+                  "points": [
+                    [
+                      2,
+                      9
+                    ],
+                    [
+                      4,
+                      14
+                    ],
+                    [
+                      6,
+                      13
+                    ],
+                    [
+                      8,
+                      22
+                    ]
+                  ],
+                  "connect": false,
+                  "showPoints": true
+                },
+                {
+                  "points": [
+                    [
+                      0,
+                      5
+                    ],
+                    [
+                      6,
+                      17
+                    ],
+                    [
+                      10,
+                      25
+                    ]
+                  ],
+                  "label": "Line of best fit",
+                  "showPoints": false
+                }
+              ]
+            },
+            "subtopic": "Linear Functions",
+            "classificationVersion": "2026-10-07-v1"
+          }
+        },
+        {
+          "requestId": "mock-2-math-m1-07",
+          "targetDomain": "Algebra",
+          "targetSubtopic": "Linear Inequalities",
+          "targetDifficulty": "Medium",
+          "question": {
+            "id": "math-20261006-batch465-q043",
+            "groupId": "math-20261006-batch465-q043",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Algebra",
+            "skill": "Linear Inequalities",
+            "difficulty": "Medium",
+            "passage": "",
+            "question": "A shipping company accepts rectangular boxes only if the perimeter of the base plus the height does not exceed 148 inches.\nA box has width x inches, length 3x-2 inches, and height 52 inches. Which inequality gives all possible values of x?",
+            "choices": {
+              "A": "\\(0<x\\le12.5\\)",
+              "B": "\\(\\frac23<x\\le12.5\\)",
+              "C": "\\(\\frac23\\le x<12\\)",
+              "D": "\\(2<x\\le25\\)"
+            },
+            "correctAnswer": "B",
+            "explanation": "The base perimeter is\n\\[2[x+(3x-2)]=8x-4.\\]\nApply the shipping restriction:\n\\[8x-4+52\\le148.\\]\nThus,\n\\[8x\\le100\\]\nand\n\\[x\\le12.5.\\]\nAlso, the length must be positive:\n\\[3x-2>0\\Rightarrow x>\\frac23.\\]\nTherefore,\n\\[\\boxed{\\frac23<x\\le12.5}.\\]",
+            "sourceBatch": "2026-10-06-math-batch465",
+            "sourceQuestionNumber": 43,
+            "choiceExplanations": {
+              "A": "This choice does not satisfy the relationships or conditions given in the question.",
+              "B": "The base perimeter is\n\n\\[2[x+(3x-2)]=8x-4.\\]\nApply the shipping restriction:\n\n\\[8x-4+52148.\\]\nThus,\n\n8x100\nand\n\nx12.5.\nAlso, the length must be positive:\n\n\\[3x-2>0x>23.\\]\nTherefore,\n\\[ \\boxed{\\frac23<x\\le12.5}. \\]",
+              "C": "This choice does not satisfy the relationships or conditions given in the question.",
+              "D": "This choice does not satisfy the relationships or conditions given in the question."
+            },
+            "subtopic": "Linear Inequalities",
+            "classificationVersion": "2026-10-07-v1"
+          }
+        },
+        {
+          "requestId": "mock-2-math-m1-10",
+          "targetDomain": "Advanced Math",
+          "targetSubtopic": "Quadratics",
+          "targetDifficulty": "Medium",
+          "question": {
+            "id": "math-20261006-batch465-q421",
+            "groupId": "math-20261006-batch465-q421",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Advanced Math",
+            "skill": "Quadratics",
+            "difficulty": "Medium",
+            "passage": "",
+            "question": "What is the positive solution to \\[\\frac{78}{x+5}=x-2?\\]",
+            "choices": {},
+            "correctAnswer": "",
+            "explanation": "\\[Multiply by x+5:\\]\n\n\\[78=(x-2)(x+5).\\]\nThus\n\n\\[78=x^{2}+3x-10,\\]\nso\n\n\\[x^{2}+3x-88=0.\\]\nFactoring gives\n\n\\[(x-8)(x+11)=0.\\]\nThe positive solution is\n\n8.",
+            "sourceBatch": "2026-10-06-math-batch465",
+            "sourceQuestionNumber": 421,
+            "answerType": "student-response",
+            "acceptedAnswers": [
+              "8"
+            ],
+            "subtopic": "Quadratics",
+            "classificationVersion": "2026-10-07-v1"
+          }
+        },
+        {
+          "requestId": "mock-2-math-m1-13",
+          "targetDomain": "Advanced Math",
+          "targetSubtopic": "Exponential Functions",
+          "targetDifficulty": "Medium",
+          "question": {
+            "id": "math-20261006-batch465-q173",
+            "groupId": "math-20261006-batch465-q173",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Advanced Math",
+            "skill": "Exponential Functions",
+            "difficulty": "Medium",
+            "passage": "",
+            "question": "A machine is worth \\(\\$48{,}000\\) when purchased. Its value decreases by \\(19\\%\\) every 3 years.\nIf V(t) is its value t years after purchase, which equation models the situation?",
+            "choices": {
+              "A": "\\(\\displaystyle V(t)=48{,}000(0.19)^{t/3}\\)",
+              "B": "\\(\\displaystyle V(t)=48{,}000(0.81)^{3t}\\)",
+              "C": "\\(\\displaystyle V(t)=48{,}000(0.81)^{t/3}\\)",
+              "D": "\\(\\displaystyle V(t)=48{,}000(1.19)^{t/3}\\)"
+            },
+            "correctAnswer": "C",
+            "explanation": "A \\(19\\%\\) decrease leaves\n\\[ 100\\%-19\\%=81\\% \\]\nof the previous value, so the decay factor is 0.81.\nSince the decrease occurs once every 3 years, t years contains t/3 decay periods:\n\\[ \\boxed{V(t)=48{,}000(0.81)^{t/3}}. \\]",
+            "sourceBatch": "2026-10-06-math-batch465",
+            "sourceQuestionNumber": 173,
+            "choiceExplanations": {
+              "A": "This choice does not satisfy the relationships or conditions given in the question.",
+              "B": "This choice does not satisfy the relationships or conditions given in the question.",
+              "C": "A \\(19\\%\\) decrease leaves\n\\[ 100\\%-19\\%=81\\% \\]\nof the previous value, so the decay factor is 0.81.\nSince the decrease occurs once every 3 years, t years contains t/3 decay periods:\n\\[ \\boxed{V(t)=48{,}000(0.81)^{t/3}}. \\]",
+              "D": "This choice does not satisfy the relationships or conditions given in the question."
+            },
+            "subtopic": "Exponential Functions",
+            "classificationVersion": "2026-10-07-v1"
+          }
+        },
+        {
           "requestId": "mock-2-math-m1-16",
           "targetDomain": "Advanced Math",
           "targetSubtopic": "Nonlinear Equations/Functions",
@@ -3581,6 +3534,354 @@
             },
             "desmosMethod": "Enter\n\n\\[y=x^{2}-3x+1\\]\nand\n\n\\[2y-2x=2.\\]\nSelect the two intersection points. Desmos shows\n\n\\[(0,1)and(4,5).\\]",
             "subtopic": "Nonlinear Equations/Functions",
+            "classificationVersion": "2026-10-07-v1"
+          }
+        },
+        {
+          "requestId": "mock-2-math-m1-19",
+          "targetDomain": "Problem-Solving & Data Analysis",
+          "targetSubtopic": "Probability",
+          "targetDifficulty": "Medium",
+          "question": {
+            "id": "math-20261006-new409-q331",
+            "groupId": "math-20261006-new409-q331",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Problem-Solving & Data Analysis",
+            "skill": "Probability",
+            "difficulty": "Medium",
+            "passage": "The table summarizes 72 devices offered for sale.",
+            "question": "what is the probability that it is refurbished and priced at most \\(\\$400\\)?",
+            "choices": {
+              "A": "\\(\\frac18\\)",
+              "B": "\\(\\frac14\\)",
+              "C": "\\(\\frac7{18}\\)",
+              "D": "\\(\\frac12\\)"
+            },
+            "correctAnswer": "B",
+            "explanation": "The missing refurbished count is\n\n\\[32-14=18\\]\nTherefore, the desired probability is\n\\[ \\frac{18}{72}=\\boxed{\\frac14}. \\]",
+            "sourceBatch": "2026-10-06-new-paste409-audited",
+            "sourceQuestionNumber": 331,
+            "choiceExplanations": {
+              "A": "This choice does not satisfy the relationships or conditions given in the question.",
+              "B": "The missing refurbished count is\n\n\\[32-14=18\\]\nTherefore, the desired probability is\n\\[ \\frac{18}{72}=\\boxed{\\frac14}. \\]",
+              "C": "This choice does not satisfy the relationships or conditions given in the question.",
+              "D": "This choice does not satisfy the relationships or conditions given in the question."
+            },
+            "table": {
+              "caption": "Devices offered for sale",
+              "headers": [
+                "Condition",
+                "Price at most $400",
+                "Price over $400",
+                "Total"
+              ],
+              "rows": [
+                [
+                  "New",
+                  "18",
+                  "22",
+                  "40"
+                ],
+                [
+                  "Refurbished",
+                  "?",
+                  "14",
+                  "32"
+                ],
+                [
+                  "Total",
+                  "36",
+                  "36",
+                  "72"
+                ]
+              ]
+            },
+            "subtopic": "Probability",
+            "classificationVersion": "2026-10-07-v1"
+          }
+        },
+        {
+          "requestId": "mock-2-math-m1-22",
+          "targetDomain": "Geometry & Trigonometry",
+          "targetSubtopic": "Trigonometry",
+          "targetDifficulty": "Medium",
+          "question": {
+            "id": "math-20261006-new409-q142",
+            "groupId": "math-20261006-new409-q142",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Geometry & Trigonometry",
+            "skill": "Trigonometry",
+            "difficulty": "Medium",
+            "passage": "In right triangle \\(JKL\\), \\(K\\) is the right angle, \\(JL=29\\), and \\(JK=20\\).",
+            "question": "What is \\(\\sin J\\)?",
+            "choices": {},
+            "correctAnswer": "",
+            "explanation": "The remaining leg is\n\\[KL=\\sqrt{29^2-20^2}=21.\\]\nFor angle \\(J\\), the opposite side is \\(KL\\) and the hypotenuse is \\(JL\\), so\n\\[\\boxed{\\sin J=\\frac{21}{29}}.\\]",
+            "sourceBatch": "2026-10-06-new-paste409-audited",
+            "sourceQuestionNumber": 142,
+            "answerType": "student-response",
+            "acceptedAnswers": [
+              "21/29"
+            ],
+            "subtopic": "Trigonometry",
+            "classificationVersion": "2026-10-07-v1",
+            "diagram": {
+              "width": 420,
+              "height": 285,
+              "alt": "Right triangle diagram",
+              "polygons": [
+                {
+                  "points": [
+                    [
+                      70,
+                      235
+                    ],
+                    [
+                      350,
+                      235
+                    ],
+                    [
+                      70,
+                      55
+                    ]
+                  ]
+                }
+              ],
+              "points": [
+                {
+                  "x": 70,
+                  "y": 235,
+                  "label": "K",
+                  "dx": -10,
+                  "dy": 18,
+                  "hideDot": false
+                },
+                {
+                  "x": 350,
+                  "y": 235,
+                  "label": "L",
+                  "dx": 8,
+                  "dy": 18,
+                  "hideDot": false
+                },
+                {
+                  "x": 70,
+                  "y": 55,
+                  "label": "J",
+                  "dx": -10,
+                  "dy": -8,
+                  "hideDot": false
+                }
+              ],
+              "labels": [
+                {
+                  "x": 210,
+                  "y": 138,
+                  "text": "JL = 29",
+                  "emphasis": false,
+                  "anchor": "middle"
+                },
+                {
+                  "x": 64,
+                  "y": 150,
+                  "text": "JK = 20",
+                  "emphasis": false,
+                  "anchor": "middle"
+                }
+              ],
+              "rightAngles": [
+                {
+                  "x": 70,
+                  "y": 235,
+                  "size": 16,
+                  "rotation": 0
+                }
+              ],
+              "ticks": []
+            }
+          }
+        },
+        {
+          "requestId": "mock-2-math-m1-02",
+          "targetDomain": "Algebra",
+          "targetSubtopic": "Linear Equations",
+          "targetDifficulty": "Hard",
+          "question": {
+            "id": "math-20261006-batch465-q013",
+            "groupId": "math-20261006-batch465-q013",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Algebra",
+            "skill": "Linear Equations",
+            "difficulty": "Hard",
+            "passage": "",
+            "question": "For a function g,\n\n\\[g(ax+3)=2x-5\\]\nfor all real x, where a is a positive constant. If g(11)=7, what is the value of a?",
+            "choices": {},
+            "correctAnswer": "",
+            "explanation": "For the output to equal 7,\n\n\\[2x-5=7,\\]\nso x=6. The corresponding input to g must therefore be 11:\n\n\\[6a+3=11.\\]\nThus,\n\n\\[6a=8\\]\nand\n\\[ \\boxed{a=\\frac43}. \\]",
+            "sourceBatch": "2026-10-06-math-batch465",
+            "sourceQuestionNumber": 13,
+            "answerType": "student-response",
+            "acceptedAnswers": [
+              "4/3"
+            ],
+            "subtopic": "Linear Equations",
+            "classificationVersion": "2026-10-07-v1"
+          }
+        },
+        {
+          "requestId": "mock-2-math-m1-05",
+          "targetDomain": "Algebra",
+          "targetSubtopic": "Systems of Linear Equations",
+          "targetDifficulty": "Hard",
+          "question": {
+            "id": "math-20261006-batch465-q278",
+            "groupId": "math-20261006-batch465-q278",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Algebra",
+            "skill": "Systems of Linear Equations",
+            "difficulty": "Hard",
+            "passage": "",
+            "question": "A building currently has annual electricity costs of \\(\\$3{,}950\\). A new energy system will cost \\(\\$21{,}600\\) to install, but the building will receive a \\(\\$3{,}000\\) rebate. After installation, annual electricity costs are expected to be \\(\\$1{,}760\\), and the system will require \\(\\$610\\) in annual maintenance.\nWhich inequality can be solved to find t, the number of years after installation when the accumulated savings exceed the net installation cost?",
+            "choices": {
+              "A": "\\((3950-1760-610)t>21600-3000\\)",
+              "B": "\\((3950-1760+610)t>21600-3000\\)",
+              "C": "\\((3950-1760-610)t<21600-3000\\)",
+              "D": "\\((3950-1760)t>21600+3000\\)"
+            },
+            "correctAnswer": "A",
+            "explanation": "The yearly savings are\n\n\\[3950-(1760+610)=1580.\\]\nThe net installation cost is\n\n\\[21600-3000=18600.\\]\nSavings exceed the cost when\n\\[ \\boxed{1580t>18600}, \\]\nwhich is choice A.",
+            "sourceBatch": "2026-10-06-math-batch465",
+            "sourceQuestionNumber": 278,
+            "choiceExplanations": {
+              "A": "The yearly savings are\n\n\\[3950-(1760+610)=1580.\\]\nThe net installation cost is\n\n\\[21600-3000=18600.\\]\nSavings exceed the cost when\n\\[ \\boxed{1580t>18600}, \\]\nwhich is choice A.",
+              "B": "This choice does not satisfy the relationships or conditions given in the question.",
+              "C": "This choice does not satisfy the relationships or conditions given in the question.",
+              "D": "This choice does not satisfy the relationships or conditions given in the question."
+            },
+            "subtopic": "Systems of Linear Equations",
+            "classificationVersion": "2026-10-07-v1"
+          }
+        },
+        {
+          "requestId": "mock-2-math-m1-08",
+          "targetDomain": "Algebra",
+          "targetSubtopic": "Other Algebra",
+          "targetDifficulty": "Hard",
+          "question": {
+            "id": "math-20261006-batch465-q439",
+            "groupId": "math-20261006-batch465-q439",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Algebra",
+            "skill": "Other Algebra",
+            "difficulty": "Hard",
+            "passage": "",
+            "question": "The formula \\[E=\\frac12mv^2\\] relates the kinetic energy \\(E\\), mass \\(m\\), and speed \\(v\\), where \\(v\\ne0\\). Which equation expresses \\(m\\) in terms of \\(E\\) and \\(v\\)?",
+            "choices": {
+              "A": "\\(\\displaystyle m=\\frac{2E}{v^2}\\)",
+              "B": "\\(\\displaystyle m=\\frac{E}{2v^2}\\)",
+              "C": "\\(m=2Ev^2\\)",
+              "D": "\\(\\displaystyle m=\\frac{v^2}{2E}\\)"
+            },
+            "correctAnswer": "A",
+            "explanation": "Multiply by 2:\n\\[2E=mv^2.\\]\nThen divide by \\(v^2\\):\n\\[\\boxed{m=\\frac{2E}{v^2}}.\\]",
+            "sourceBatch": "2026-10-06-math-batch465",
+            "sourceQuestionNumber": 439,
+            "choiceExplanations": {
+              "A": "Multiply by 2:\n\n\\[2E=mv2.\\]\n\\[Then divide by v^{2}:\\]\n\n\\[m=2Ev2.\\]",
+              "B": "This choice does not satisfy the relationships or conditions given in the question.",
+              "C": "This choice does not satisfy the relationships or conditions given in the question.",
+              "D": "This choice does not satisfy the relationships or conditions given in the question."
+            },
+            "subtopic": "Other Algebra",
+            "classificationVersion": "2026-10-07-v1"
+          }
+        },
+        {
+          "requestId": "mock-2-math-m1-11",
+          "targetDomain": "Advanced Math",
+          "targetSubtopic": "Equivalent Expressions",
+          "targetDifficulty": "Hard",
+          "question": {
+            "id": "math-20261006-batch465-q307",
+            "groupId": "math-20261006-batch465-q307",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Advanced Math",
+            "skill": "Equivalent Expressions",
+            "difficulty": "Hard",
+            "passage": "",
+            "question": "For groups of at least 16 people, a guide service charges a fixed booking fee of $45, $20 per person for the first 16 people, and $13 for each additional person. Which function gives the total charge \\(C(n)\\), in dollars, for a group of \\(n\\) people, where \\(n\\ge16\\)?",
+            "choices": {
+              "A": "\\(C(n)=13n+157\\)",
+              "B": "\\(C(n)=13n+365\\)",
+              "C": "\\(C(n)=20n+45\\)",
+              "D": "\\(C(n)=13n+253\\)"
+            },
+            "correctAnswer": "A",
+            "explanation": "The first 16 people cost\n\n\\[16(20)=320.\\]\nThe additional n-16 people cost 13(n-16). Including the fee,\n\n\\[C(n)=45+320+13(n-16).\\]\nSimplifying,\n\\[ C(n)=365+13n-208 =\\boxed{13n+157}. \\]",
+            "sourceBatch": "2026-10-06-math-batch465",
+            "sourceQuestionNumber": 307,
+            "choiceExplanations": {
+              "A": "The first 16 people cost\n\n\\[16(20)=320.\\]\nThe additional n-16 people cost 13(n-16). Including the fee,\n\n\\[C(n)=45+320+13(n-16).\\]\nSimplifying,\n\\[ C(n)=365+13n-208 =\\boxed{13n+157}. \\]",
+              "B": "This choice does not satisfy the relationships or conditions given in the question.",
+              "C": "This choice does not satisfy the relationships or conditions given in the question.",
+              "D": "This choice does not satisfy the relationships or conditions given in the question."
+            },
+            "subtopic": "Equivalent Expressions",
+            "classificationVersion": "2026-10-07-v1"
+          }
+        },
+        {
+          "requestId": "mock-2-math-m1-14",
+          "targetDomain": "Advanced Math",
+          "targetSubtopic": "Rational/Radical Equations",
+          "targetDifficulty": "Hard",
+          "question": {
+            "id": "math-20261006-batch465-q040",
+            "groupId": "math-20261006-batch465-q040",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Advanced Math",
+            "skill": "Rational/Radical Equations",
+            "difficulty": "Hard",
+            "passage": "",
+            "question": "The table shows three points on the same line, where \\(k\\) and \\(n\\) are constants. The slope of the line is \\(-\\frac32\\). What is the value of \\(k+n\\)?",
+            "choices": {},
+            "correctAnswer": "",
+            "explanation": "Using \\((4,7)\\) and \\((k,-5)\\),\n\\[\n\\frac{-5-7}{k-4}=-\\frac32.\n\\]\nThus\n\\[\n\\frac{-12}{k-4}=-\\frac32,\n\\]\nso \\(k-4=8\\) and \\(k=12\\). From \\(x=4\\) to \\(x=16\\), the change in \\(x\\) is 12, so the change in \\(y\\) is\n\\[\n-\\frac32(12)=-18.\n\\]\nHence \\(n=7-18=-11\\), and\n\\[\nk+n=12-11=\\boxed1.\n\\]",
+            "sourceBatch": "2026-10-06-math-batch465",
+            "sourceQuestionNumber": 40,
+            "answerType": "student-response",
+            "acceptedAnswers": [
+              "1"
+            ],
+            "table": {
+              "caption": "Three points on the same line",
+              "headers": [
+                "x",
+                "y"
+              ],
+              "rows": [
+                [
+                  "4",
+                  "7"
+                ],
+                [
+                  "k",
+                  "-5"
+                ],
+                [
+                  "16",
+                  "n"
+                ]
+              ]
+            },
+            "subtopic": "Rational/Radical Equations",
             "classificationVersion": "2026-10-07-v1"
           }
         },
@@ -3670,105 +3971,6 @@
               ]
             },
             "subtopic": "Ratio, Rates, Percentages",
-            "classificationVersion": "2026-10-07-v1"
-          }
-        },
-        {
-          "requestId": "mock-2-math-m1-18",
-          "targetDomain": "Problem-Solving & Data Analysis",
-          "targetSubtopic": "Statistics",
-          "targetDifficulty": "Easy",
-          "question": {
-            "id": "math-20261006-new409-q007",
-            "groupId": "math-20261006-new409-q007",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Problem-Solving & Data Analysis",
-            "skill": "Statistics",
-            "difficulty": "Easy",
-            "passage": "The function\n\\[N(t)=240(0.82)^{t-3}\\]\nmodels the estimated number of nesting pairs of a bird species in a preserve, where \\(t\\) is the number of years after 2020.",
-            "question": "Which choice best interprets 240 in this context?",
-            "choices": {
-              "A": "The estimated number of nesting pairs in 2020",
-              "B": "The estimated number of nesting pairs in 2023",
-              "C": "The estimated decrease in nesting pairs each year",
-              "D": "The percent of nesting pairs remaining after three years"
-            },
-            "correctAnswer": "B",
-            "explanation": "The exponential factor equals 1 when\n\n\\[t-3=0,\\]\nso t=3. Since t=3 corresponds to 2023,\n\n\\[N(3)=240\\]\nThus 240 is the estimated number of nesting pairs in \\(\\boxed{2023}\\).",
-            "sourceBatch": "2026-10-06-new-paste409-audited",
-            "sourceQuestionNumber": 7,
-            "choiceExplanations": {
-              "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "The exponential factor equals 1 when\n\n\\[t-3=0,\\]\nso t=3. Since t=3 corresponds to 2023,\n\n\\[N(3)=240\\]\nThus 240 is the estimated number of nesting pairs in \\(\\boxed{2023}\\).",
-              "C": "This choice does not satisfy the relationships or conditions given in the question.",
-              "D": "This choice does not satisfy the relationships or conditions given in the question."
-            },
-            "subtopic": "Statistics",
-            "classificationVersion": "2026-10-07-v1"
-          }
-        },
-        {
-          "requestId": "mock-2-math-m1-19",
-          "targetDomain": "Problem-Solving & Data Analysis",
-          "targetSubtopic": "Probability",
-          "targetDifficulty": "Medium",
-          "question": {
-            "id": "math-20261006-new409-q331",
-            "groupId": "math-20261006-new409-q331",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Problem-Solving & Data Analysis",
-            "skill": "Probability",
-            "difficulty": "Medium",
-            "passage": "The table summarizes 72 devices offered for sale.",
-            "question": "what is the probability that it is refurbished and priced at most \\(\\$400\\)?",
-            "choices": {
-              "A": "\\(\\frac18\\)",
-              "B": "\\(\\frac14\\)",
-              "C": "\\(\\frac7{18}\\)",
-              "D": "\\(\\frac12\\)"
-            },
-            "correctAnswer": "B",
-            "explanation": "The missing refurbished count is\n\n\\[32-14=18\\]\nTherefore, the desired probability is\n\\[ \\frac{18}{72}=\\boxed{\\frac14}. \\]",
-            "sourceBatch": "2026-10-06-new-paste409-audited",
-            "sourceQuestionNumber": 331,
-            "choiceExplanations": {
-              "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "The missing refurbished count is\n\n\\[32-14=18\\]\nTherefore, the desired probability is\n\\[ \\frac{18}{72}=\\boxed{\\frac14}. \\]",
-              "C": "This choice does not satisfy the relationships or conditions given in the question.",
-              "D": "This choice does not satisfy the relationships or conditions given in the question."
-            },
-            "table": {
-              "caption": "Devices offered for sale",
-              "headers": [
-                "Condition",
-                "Price at most $400",
-                "Price over $400",
-                "Total"
-              ],
-              "rows": [
-                [
-                  "New",
-                  "18",
-                  "22",
-                  "40"
-                ],
-                [
-                  "Refurbished",
-                  "?",
-                  "14",
-                  "32"
-                ],
-                [
-                  "Total",
-                  "36",
-                  "36",
-                  "72"
-                ]
-              ]
-            },
-            "subtopic": "Probability",
             "classificationVersion": "2026-10-07-v1"
           }
         },
@@ -3887,208 +4089,6 @@
                   "dashed": false
                 }
               ]
-            }
-          }
-        },
-        {
-          "requestId": "mock-2-math-m1-21",
-          "targetDomain": "Geometry & Trigonometry",
-          "targetSubtopic": "Circles",
-          "targetDifficulty": "Easy",
-          "question": {
-            "id": "math-20261006-new409-q123",
-            "groupId": "math-20261006-new409-q123",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Geometry & Trigonometry",
-            "skill": "Circles",
-            "difficulty": "Easy",
-            "passage": "A right circular cylinder has volume \\(300\\pi\\) cubic centimeters. The circumference of its circular base is \\(10\\pi\\) centimeters.",
-            "question": "What is the height of the cylinder, in centimeters?",
-            "choices": {
-              "A": "\\(8\\)",
-              "B": "\\(10\\)",
-              "C": "\\(12\\)",
-              "D": "\\(15\\)"
-            },
-            "correctAnswer": "C",
-            "explanation": "From \\(2\\pi r=10\\pi\\), the radius is \\(5\\). Then\n\\[300\\pi=\\pi(5)^2h=25\\pi h,\\]\nso \\(\\boxed{h=12}\\).",
-            "sourceBatch": "2026-10-06-new-paste409-audited",
-            "sourceQuestionNumber": 123,
-            "choiceExplanations": {
-              "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "From \\(2\\pi r=10\\pi\\), the radius is \\(5\\). Then\n\\[300\\pi=\\pi(5)^2h=25\\pi h,\\]\nso \\(\\boxed{h=12}\\).",
-              "D": "This choice does not satisfy the relationships or conditions given in the question."
-            },
-            "subtopic": "Circles",
-            "classificationVersion": "2026-10-07-v1",
-            "diagram": {
-              "width": 420,
-              "height": 300,
-              "alt": "Right circular cylinder",
-              "ellipses": [
-                {
-                  "cx": 210,
-                  "cy": 75,
-                  "rx": 90,
-                  "ry": 28
-                },
-                {
-                  "cx": 210,
-                  "cy": 225,
-                  "rx": 90,
-                  "ry": 28
-                }
-              ],
-              "lines": [
-                {
-                  "x1": 120,
-                  "y1": 75,
-                  "x2": 120,
-                  "y2": 225,
-                  "dashed": false
-                },
-                {
-                  "x1": 300,
-                  "y1": 75,
-                  "x2": 300,
-                  "y2": 225,
-                  "dashed": false
-                },
-                {
-                  "x1": 210,
-                  "y1": 75,
-                  "x2": 300,
-                  "y2": 75,
-                  "dashed": false
-                }
-              ],
-              "labels": [
-                {
-                  "x": 245,
-                  "y": 72,
-                  "text": "C = 10π",
-                  "emphasis": false,
-                  "anchor": "middle"
-                },
-                {
-                  "x": 325,
-                  "y": 150,
-                  "text": "h ?",
-                  "emphasis": false,
-                  "anchor": "middle"
-                },
-                {
-                  "x": 210,
-                  "y": 270,
-                  "text": "V = 300π",
-                  "emphasis": false,
-                  "anchor": "middle"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "requestId": "mock-2-math-m1-22",
-          "targetDomain": "Geometry & Trigonometry",
-          "targetSubtopic": "Trigonometry",
-          "targetDifficulty": "Medium",
-          "question": {
-            "id": "math-20261006-new409-q142",
-            "groupId": "math-20261006-new409-q142",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Geometry & Trigonometry",
-            "skill": "Trigonometry",
-            "difficulty": "Medium",
-            "passage": "In right triangle \\(JKL\\), \\(K\\) is the right angle, \\(JL=29\\), and \\(JK=20\\).",
-            "question": "What is \\(\\sin J\\)?",
-            "choices": {},
-            "correctAnswer": "",
-            "explanation": "The remaining leg is\n\\[KL=\\sqrt{29^2-20^2}=21.\\]\nFor angle \\(J\\), the opposite side is \\(KL\\) and the hypotenuse is \\(JL\\), so\n\\[\\boxed{\\sin J=\\frac{21}{29}}.\\]",
-            "sourceBatch": "2026-10-06-new-paste409-audited",
-            "sourceQuestionNumber": 142,
-            "answerType": "student-response",
-            "acceptedAnswers": [
-              "21/29"
-            ],
-            "subtopic": "Trigonometry",
-            "classificationVersion": "2026-10-07-v1",
-            "diagram": {
-              "width": 420,
-              "height": 285,
-              "alt": "Right triangle diagram",
-              "polygons": [
-                {
-                  "points": [
-                    [
-                      70,
-                      235
-                    ],
-                    [
-                      350,
-                      235
-                    ],
-                    [
-                      70,
-                      55
-                    ]
-                  ]
-                }
-              ],
-              "points": [
-                {
-                  "x": 70,
-                  "y": 235,
-                  "label": "K",
-                  "dx": -10,
-                  "dy": 18,
-                  "hideDot": false
-                },
-                {
-                  "x": 350,
-                  "y": 235,
-                  "label": "L",
-                  "dx": 8,
-                  "dy": 18,
-                  "hideDot": false
-                },
-                {
-                  "x": 70,
-                  "y": 55,
-                  "label": "J",
-                  "dx": -10,
-                  "dy": -8,
-                  "hideDot": false
-                }
-              ],
-              "labels": [
-                {
-                  "x": 210,
-                  "y": 138,
-                  "text": "JL = 29",
-                  "emphasis": false,
-                  "anchor": "middle"
-                },
-                {
-                  "x": 64,
-                  "y": 150,
-                  "text": "JK = 20",
-                  "emphasis": false,
-                  "anchor": "middle"
-                }
-              ],
-              "rightAngles": [
-                {
-                  "x": 70,
-                  "y": 235,
-                  "size": 16,
-                  "rotation": 0
-                }
-              ],
-              "ticks": []
             }
           }
         }
@@ -4264,42 +4264,6 @@
           }
         },
         {
-          "requestId": "mock-2-math-m2-05-shared",
-          "targetDomain": "Algebra",
-          "targetSubtopic": "Systems of Linear Equations",
-          "targetDifficulty": "Medium",
-          "question": {
-            "id": "math-20261006-batch465-q011",
-            "groupId": "math-20261006-batch465-q011",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Algebra",
-            "skill": "Systems of Linear Equations",
-            "difficulty": "Medium",
-            "passage": "",
-            "question": "A theater sells two kinds of group packages. Each type A package contains 3 tickets and costs $42. Each type B package contains 5 tickets and costs $65.\nA school purchases 67 tickets for a total of $898. If x is the number of type A packages and y is the number of type B packages, which system represents the situation?",
-            "choices": {
-              "A": "\\[ \\begin{cases} 3x+5y=67\\\\ 42x+65y=898 \\end{cases} \\]",
-              "B": "\\[ \\begin{cases} 3x+5y=898\\\\ 42x+65y=67 \\end{cases} \\]",
-              "C": "\\[ \\begin{cases} 5x+3y=67\\\\ 65x+42y=898 \\end{cases} \\]",
-              "D": "\\[ \\begin{cases} x+y=67\\\\ 42x+65y=898 \\end{cases} \\]"
-            },
-            "correctAnswer": "A",
-            "explanation": "The ticket-count equation is\n\n\\[3x+5y=67.\\]\nThe cost equation is\n\n\\[42x+65y=898.\\]\nTherefore, the required system is\n\\[ \\boxed{\\begin{cases} 3x+5y=67\\\\ 42x+65y=898 \\end{cases}}. \\]",
-            "sourceBatch": "2026-10-06-math-batch465",
-            "sourceQuestionNumber": 11,
-            "choiceExplanations": {
-              "A": "The ticket-count equation is\n\n\\[3x+5y=67.\\]\nThe cost equation is\n\n\\[42x+65y=898.\\]\nTherefore, the required system is\n\\[ \\boxed{\\begin{cases} 3x+5y=67\\\\ 42x+65y=898 \\end{cases}}. \\]",
-              "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "This choice does not satisfy the relationships or conditions given in the question.",
-              "D": "This choice does not satisfy the relationships or conditions given in the question."
-            },
-            "subtopic": "Systems of Linear Equations",
-            "classificationVersion": "2026-10-07-v1"
-          },
-          "sharedBetweenRoutes": true
-        },
-        {
           "requestId": "mock-2-math-m2low-06",
           "targetDomain": "Algebra",
           "targetSubtopic": "Systems of Linear Equations",
@@ -4386,78 +4350,6 @@
           }
         },
         {
-          "requestId": "mock-2-math-m2-07-shared",
-          "targetDomain": "Algebra",
-          "targetSubtopic": "Linear Inequalities",
-          "targetDifficulty": "Medium",
-          "question": {
-            "id": "math-20261006-batch465-q276",
-            "groupId": "math-20261006-batch465-q276",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Algebra",
-            "skill": "Linear Inequalities",
-            "difficulty": "Medium",
-            "passage": "",
-            "question": "A temperature sensor displays a reading r that is always \\(3^\\circ\\text{F}\\) lower than the actual temperature. During a manufacturing process, the actual temperature must be at least \\(68^\\circ\\text{F}\\) and no more than \\(74^\\circ\\text{F}\\).\nWhich inequality gives all possible values of r?",
-            "choices": {
-              "A": "\\(65\\le r\\le71\\)",
-              "B": "\\(68\\le r\\le74\\)",
-              "C": "\\(71\\le r\\le77\\)",
-              "D": "\\(65<r<71\\)"
-            },
-            "correctAnswer": "A",
-            "explanation": "The actual temperature is r+3. Therefore,\n\n\\[68r+374.\\]\nSubtracting 3 throughout gives\n\\[ \\boxed{65\\le r\\le71}. \\]",
-            "sourceBatch": "2026-10-06-math-batch465",
-            "sourceQuestionNumber": 276,
-            "choiceExplanations": {
-              "A": "The actual temperature is r+3. Therefore,\n\n\\[68r+374.\\]\nSubtracting 3 throughout gives\n\\[ \\boxed{65\\le r\\le71}. \\]",
-              "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "This choice does not satisfy the relationships or conditions given in the question.",
-              "D": "This choice does not satisfy the relationships or conditions given in the question."
-            },
-            "subtopic": "Linear Inequalities",
-            "classificationVersion": "2026-10-07-v1"
-          },
-          "sharedBetweenRoutes": true
-        },
-        {
-          "requestId": "mock-2-math-m2-08-shared",
-          "targetDomain": "Algebra",
-          "targetSubtopic": "Other Algebra",
-          "targetDifficulty": "Hard",
-          "question": {
-            "id": "math-20261006-batch465-q018",
-            "groupId": "math-20261006-batch465-q018",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Algebra",
-            "skill": "Other Algebra",
-            "difficulty": "Hard",
-            "passage": "",
-            "question": "A maker space charges a $18 monthly membership fee, $14 for each laser-cutting session, and $9 for each 3D-printing session. A member spends exactly $120 in one month.\nIf x is the number of laser-cutting sessions and y is the number of 3D-printing sessions, which equation represents the relationship between x and y?",
-            "choices": {
-              "A": "\\(14x+9y=120\\)",
-              "B": "\\(14x+9y+18=120\\)",
-              "C": "\\(18x+14y+9=120\\)",
-              "D": "\\(14x+9y=138\\)"
-            },
-            "correctAnswer": "B",
-            "explanation": "The variable charges are 14x and 9y, and the fixed membership fee contributes another $18. Since the total is $120,\n\\[ \\boxed{14x+9y+18=120}. \\]",
-            "sourceBatch": "2026-10-06-math-batch465",
-            "sourceQuestionNumber": 18,
-            "choiceExplanations": {
-              "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "The variable charges are 14x and 9y, and the fixed membership fee contributes another $18. Since the total is $120,\n\\[ \\boxed{14x+9y+18=120}. \\]",
-              "C": "This choice does not satisfy the relationships or conditions given in the question.",
-              "D": "This choice does not satisfy the relationships or conditions given in the question."
-            },
-            "subtopic": "Other Algebra",
-            "classificationVersion": "2026-10-07-v1"
-          },
-          "sharedBetweenRoutes": true
-        },
-        {
           "requestId": "mock-2-math-m2low-09",
           "targetDomain": "Advanced Math",
           "targetSubtopic": "Quadratics",
@@ -4528,42 +4420,6 @@
           }
         },
         {
-          "requestId": "mock-2-math-m2-11-shared",
-          "targetDomain": "Advanced Math",
-          "targetSubtopic": "Equivalent Expressions",
-          "targetDifficulty": "Medium",
-          "question": {
-            "id": "math-20261006-batch465-q460",
-            "groupId": "math-20261006-batch465-q460",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Advanced Math",
-            "skill": "Equivalent Expressions",
-            "difficulty": "Medium",
-            "passage": "",
-            "question": "Which of the following is equivalent to\n\n\\[(2x-3y)(x+4y)+5y(x-2y)?\\]",
-            "choices": {
-              "A": "\\(2x^2+10xy+22y^2\\)",
-              "B": "\\(2x^2+10xy-22y^2\\)",
-              "C": "\\(2x^2-10xy-22y^2\\)",
-              "D": "\\(2x^2+5xy-2y^2\\)"
-            },
-            "correctAnswer": "B",
-            "explanation": "Expand each product:\n\\[(2x-3y)(x+4y)=2x^2+5xy-12y^2\\]\nand\n\\[5y(x-2y)=5xy-10y^2.\\]\nAdding gives\n\\[\\boxed{2x^2+10xy-22y^2}.\\]",
-            "sourceBatch": "2026-10-06-math-batch465",
-            "sourceQuestionNumber": 460,
-            "choiceExplanations": {
-              "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "Expand each product:\n\n\\[(2x-3y)(x+4y)=2x2+5xy-12y2\\]\nand\n\n\\[5y(x-2y)=5xy-10y2.\\]\nAdding gives\n\n\\[2x2+10xy-22y2.\\]",
-              "C": "This choice does not satisfy the relationships or conditions given in the question.",
-              "D": "This choice does not satisfy the relationships or conditions given in the question."
-            },
-            "subtopic": "Equivalent Expressions",
-            "classificationVersion": "2026-10-07-v1"
-          },
-          "sharedBetweenRoutes": true
-        },
-        {
           "requestId": "mock-2-math-m2-12-shared",
           "targetDomain": "Advanced Math",
           "targetSubtopic": "Polynomial Functions",
@@ -4593,42 +4449,6 @@
           "sharedBetweenRoutes": true
         },
         {
-          "requestId": "mock-2-math-m2-13-shared",
-          "targetDomain": "Advanced Math",
-          "targetSubtopic": "Exponential Functions",
-          "targetDifficulty": "Medium",
-          "question": {
-            "id": "math-20261006-batch465-q370",
-            "groupId": "math-20261006-batch465-q370",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Advanced Math",
-            "skill": "Exponential Functions",
-            "difficulty": "Medium",
-            "passage": "",
-            "question": "The number \\(P\\) of active subscriptions to a service is modeled by\n\\[P=950(1.08)^{t-1},\\]\nwhere \\(t\\) is the number of years after the service launched. Which equation gives \\(P\\) in terms of \\(q\\), the number of months after the service launched?",
-            "choices": {
-              "A": "\\(P=950(1.08)^{12q-1}\\)",
-              "B": "\\(P=950(1.08)^{q/12-1}\\)",
-              "C": "\\(P=950\\left(\\frac{1.08}{12}\\right)^{q-1}\\)",
-              "D": "\\(P=\\frac{950(1.08)^{q-1}}{12}\\)"
-            },
-            "correctAnswer": "B",
-            "explanation": "Since 12 months equal 1 year,\n\\[t=\\frac q{12}.\\]\nSubstitute this for \\(t\\):\n\\[P=950(1.08)^{q/12-1}.\\]",
-            "sourceBatch": "2026-10-06-math-batch465",
-            "sourceQuestionNumber": 370,
-            "choiceExplanations": {
-              "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "Since 12 months equal 1 year,\n\n\\[t=q12.\\]\nSubstitute this for t:\n\n\\[P=950(1.08)q/12-1.\\]",
-              "C": "This choice does not satisfy the relationships or conditions given in the question.",
-              "D": "This choice does not satisfy the relationships or conditions given in the question."
-            },
-            "subtopic": "Exponential Functions",
-            "classificationVersion": "2026-10-07-v1"
-          },
-          "sharedBetweenRoutes": true
-        },
-        {
           "requestId": "mock-2-math-m2-14-shared",
           "targetDomain": "Advanced Math",
           "targetSubtopic": "Rational/Radical Equations",
@@ -4653,152 +4473,6 @@
               "1/24"
             ],
             "subtopic": "Rational/Radical Equations",
-            "classificationVersion": "2026-10-07-v1"
-          },
-          "sharedBetweenRoutes": true
-        },
-        {
-          "requestId": "mock-2-math-m2-15-shared",
-          "targetDomain": "Advanced Math",
-          "targetSubtopic": "Nonlinear Equations/Functions",
-          "targetDifficulty": "Medium",
-          "question": {
-            "id": "math-20261006-batch465-q392",
-            "groupId": "math-20261006-batch465-q392",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Advanced Math",
-            "skill": "Nonlinear Equations/Functions",
-            "difficulty": "Medium",
-            "passage": "",
-            "question": "In the xy-plane, the graphs\n\n\\[y=x^{2}-5x+3\\]\nand\n\n\\[y=2x+3\\]\nintersect at (0,3) and (a,2a+3). What is the value of a?",
-            "choices": {},
-            "correctAnswer": "",
-            "explanation": "At an intersection,\n\n\\[x^{2}-5x+3=2x+3.\\]\nThus,\n\n\\[x^{2}-7x=0\\]\n\n\\[x(x-7)=0.\\]\n\\[The two x-coordinates are 0 and 7. Therefore,\\]\n\n\\[a=7.\\]",
-            "sourceBatch": "2026-10-06-math-batch465",
-            "sourceQuestionNumber": 392,
-            "answerType": "student-response",
-            "acceptedAnswers": [
-              "7"
-            ],
-            "desmosMethod": "Enter\n\n\\[y=x^{2}-5x+3\\]\nand\n\n\\[y=2x+3.\\]\nThe intersections have x-coordinates 0 and 7, so the second intersection gives a=7.",
-            "subtopic": "Nonlinear Equations/Functions",
-            "classificationVersion": "2026-10-07-v1"
-          },
-          "sharedBetweenRoutes": true
-        },
-        {
-          "requestId": "mock-2-math-m2-16-shared",
-          "targetDomain": "Advanced Math",
-          "targetSubtopic": "Nonlinear Equations/Functions",
-          "targetDifficulty": "Hard",
-          "question": {
-            "id": "math-20261006-batch465-q164",
-            "groupId": "math-20261006-batch465-q164",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Advanced Math",
-            "skill": "Nonlinear Equations/Functions",
-            "difficulty": "Hard",
-            "passage": "",
-            "question": "The graph of a system of one linear equation and one quadratic equation is shown. Which system is represented by the graph?",
-            "choices": {
-              "A": "\\[ \\begin{cases} y=3x+2\\\\ y=2(x+1)^2-8 \\end{cases} \\]",
-              "B": "\\[ \\begin{cases} y=3x-2\\\\ y=2(x-1)^2-8 \\end{cases} \\]",
-              "C": "\\[ \\begin{cases} y=3x-2\\\\ y=2(x+1)^2-8 \\end{cases} \\]",
-              "D": "\\[ \\begin{cases} y=-3x-2\\\\ y=2(x+1)^2-8 \\end{cases} \\]"
-            },
-            "correctAnswer": "C",
-            "explanation": "The line rises 3 units for every 1 unit to the right and crosses the y-axis at -2, so its equation is\n\n\\[y=3x-2.\\]\nThe parabola has vertex\n\n\\[(-1,-8)\\]\nand is narrower than y=x^{2}, matching\n\n\\[y=2(x+1)^{2}-8.\\]\nThus, choice C matches both graphs.",
-            "sourceBatch": "2026-10-06-math-batch465",
-            "sourceQuestionNumber": 164,
-            "choiceExplanations": {
-              "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "The line rises 3 units for every 1 unit to the right and crosses the y-axis at -2, so its equation is\n\n\\[y=3x-2.\\]\nThe parabola has vertex\n\n\\[(-1,-8)\\]\nand is narrower than y=x^{2}, matching\n\n\\[y=2(x+1)^{2}-8.\\]\nThus, choice C matches both graphs.",
-              "D": "This choice does not satisfy the relationships or conditions given in the question."
-            },
-            "graph": {
-              "type": "xy",
-              "caption": "One linear and one quadratic equation",
-              "xMin": -4,
-              "xMax": 5,
-              "yMin": -10,
-              "yMax": 14,
-              "series": [
-                {
-                  "points": [
-                    [
-                      -4,
-                      -14
-                    ],
-                    [
-                      -2,
-                      -8
-                    ],
-                    [
-                      0,
-                      -2
-                    ],
-                    [
-                      2,
-                      4
-                    ],
-                    [
-                      4,
-                      10
-                    ],
-                    [
-                      5,
-                      13
-                    ]
-                  ],
-                  "showPoints": false,
-                  "label": "Linear"
-                },
-                {
-                  "points": [
-                    [
-                      -4,
-                      10
-                    ],
-                    [
-                      -3,
-                      0
-                    ],
-                    [
-                      -2,
-                      -6
-                    ],
-                    [
-                      -1,
-                      -8
-                    ],
-                    [
-                      0,
-                      -6
-                    ],
-                    [
-                      1,
-                      0
-                    ],
-                    [
-                      2,
-                      10
-                    ],
-                    [
-                      3,
-                      24
-                    ]
-                  ],
-                  "showPoints": false,
-                  "label": "Quadratic"
-                }
-              ],
-              "xLabel": "x",
-              "yLabel": "y"
-            },
-            "subtopic": "Nonlinear Equations/Functions",
             "classificationVersion": "2026-10-07-v1"
           },
           "sharedBetweenRoutes": true
@@ -4872,77 +4546,6 @@
             "subtopic": "Statistics",
             "classificationVersion": "2026-10-07-v1"
           }
-        },
-        {
-          "requestId": "mock-2-math-m2-19-shared",
-          "targetDomain": "Problem-Solving & Data Analysis",
-          "targetSubtopic": "Probability",
-          "targetDifficulty": "Medium",
-          "question": {
-            "id": "math-20261006-new409-q401",
-            "groupId": "math-20261006-new409-q401",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Problem-Solving & Data Analysis",
-            "skill": "Probability",
-            "difficulty": "Medium",
-            "passage": "A survey of 700 students produced the table below.",
-            "question": "what is the probability that the student uses a planner daily?",
-            "choices": {
-              "A": "\\(\\frac{193}{350}\\)",
-              "B": "\\(\\frac{157}{350}\\)",
-              "C": "\\(\\frac{21}{50}\\)",
-              "D": "\\(\\frac{386}{475}\\)"
-            },
-            "correctAnswer": "A",
-            "explanation": "There are 386 students who use a planner daily out of 700 students total.\n\n\\[P=386700=193350\\]",
-            "sourceBatch": "2026-10-06-new-paste409-audited",
-            "sourceQuestionNumber": 401,
-            "choiceExplanations": {
-              "A": "There are 386 students who use a planner daily out of 700 students total.\n\n\\[P=386700=193350\\]",
-              "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "This choice does not satisfy the relationships or conditions given in the question.",
-              "D": "This choice does not satisfy the relationships or conditions given in the question."
-            },
-            "table": {
-              "caption": "Student study schedules",
-              "headers": [
-                "Study schedule",
-                "Uses a planner daily",
-                "Does not use a planner daily",
-                "Total"
-              ],
-              "rows": [
-                [
-                  "Light",
-                  "84",
-                  "116",
-                  "200"
-                ],
-                [
-                  "Moderate",
-                  "133",
-                  "142",
-                  "275"
-                ],
-                [
-                  "Heavy",
-                  "169",
-                  "56",
-                  "225"
-                ],
-                [
-                  "Total",
-                  "386",
-                  "314",
-                  "700"
-                ]
-              ]
-            },
-            "subtopic": "Probability",
-            "classificationVersion": "2026-10-07-v1"
-          },
-          "sharedBetweenRoutes": true
         },
         {
           "requestId": "mock-2-math-m2low-20",
@@ -5083,6 +4686,251 @@
               ]
             }
           }
+        },
+        {
+          "requestId": "mock-2-math-m2-05-shared",
+          "targetDomain": "Algebra",
+          "targetSubtopic": "Systems of Linear Equations",
+          "targetDifficulty": "Medium",
+          "question": {
+            "id": "math-20261006-batch465-q011",
+            "groupId": "math-20261006-batch465-q011",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Algebra",
+            "skill": "Systems of Linear Equations",
+            "difficulty": "Medium",
+            "passage": "",
+            "question": "A theater sells two kinds of group packages. Each type A package contains 3 tickets and costs $42. Each type B package contains 5 tickets and costs $65.\nA school purchases 67 tickets for a total of $898. If x is the number of type A packages and y is the number of type B packages, which system represents the situation?",
+            "choices": {
+              "A": "\\[ \\begin{cases} 3x+5y=67\\\\ 42x+65y=898 \\end{cases} \\]",
+              "B": "\\[ \\begin{cases} 3x+5y=898\\\\ 42x+65y=67 \\end{cases} \\]",
+              "C": "\\[ \\begin{cases} 5x+3y=67\\\\ 65x+42y=898 \\end{cases} \\]",
+              "D": "\\[ \\begin{cases} x+y=67\\\\ 42x+65y=898 \\end{cases} \\]"
+            },
+            "correctAnswer": "A",
+            "explanation": "The ticket-count equation is\n\n\\[3x+5y=67.\\]\nThe cost equation is\n\n\\[42x+65y=898.\\]\nTherefore, the required system is\n\\[ \\boxed{\\begin{cases} 3x+5y=67\\\\ 42x+65y=898 \\end{cases}}. \\]",
+            "sourceBatch": "2026-10-06-math-batch465",
+            "sourceQuestionNumber": 11,
+            "choiceExplanations": {
+              "A": "The ticket-count equation is\n\n\\[3x+5y=67.\\]\nThe cost equation is\n\n\\[42x+65y=898.\\]\nTherefore, the required system is\n\\[ \\boxed{\\begin{cases} 3x+5y=67\\\\ 42x+65y=898 \\end{cases}}. \\]",
+              "B": "This choice does not satisfy the relationships or conditions given in the question.",
+              "C": "This choice does not satisfy the relationships or conditions given in the question.",
+              "D": "This choice does not satisfy the relationships or conditions given in the question."
+            },
+            "subtopic": "Systems of Linear Equations",
+            "classificationVersion": "2026-10-07-v1"
+          },
+          "sharedBetweenRoutes": true
+        },
+        {
+          "requestId": "mock-2-math-m2-07-shared",
+          "targetDomain": "Algebra",
+          "targetSubtopic": "Linear Inequalities",
+          "targetDifficulty": "Medium",
+          "question": {
+            "id": "math-20261006-batch465-q276",
+            "groupId": "math-20261006-batch465-q276",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Algebra",
+            "skill": "Linear Inequalities",
+            "difficulty": "Medium",
+            "passage": "",
+            "question": "A temperature sensor displays a reading r that is always \\(3^\\circ\\text{F}\\) lower than the actual temperature. During a manufacturing process, the actual temperature must be at least \\(68^\\circ\\text{F}\\) and no more than \\(74^\\circ\\text{F}\\).\nWhich inequality gives all possible values of r?",
+            "choices": {
+              "A": "\\(65\\le r\\le71\\)",
+              "B": "\\(68\\le r\\le74\\)",
+              "C": "\\(71\\le r\\le77\\)",
+              "D": "\\(65<r<71\\)"
+            },
+            "correctAnswer": "A",
+            "explanation": "The actual temperature is r+3. Therefore,\n\n\\[68r+374.\\]\nSubtracting 3 throughout gives\n\\[ \\boxed{65\\le r\\le71}. \\]",
+            "sourceBatch": "2026-10-06-math-batch465",
+            "sourceQuestionNumber": 276,
+            "choiceExplanations": {
+              "A": "The actual temperature is r+3. Therefore,\n\n\\[68r+374.\\]\nSubtracting 3 throughout gives\n\\[ \\boxed{65\\le r\\le71}. \\]",
+              "B": "This choice does not satisfy the relationships or conditions given in the question.",
+              "C": "This choice does not satisfy the relationships or conditions given in the question.",
+              "D": "This choice does not satisfy the relationships or conditions given in the question."
+            },
+            "subtopic": "Linear Inequalities",
+            "classificationVersion": "2026-10-07-v1"
+          },
+          "sharedBetweenRoutes": true
+        },
+        {
+          "requestId": "mock-2-math-m2-11-shared",
+          "targetDomain": "Advanced Math",
+          "targetSubtopic": "Equivalent Expressions",
+          "targetDifficulty": "Medium",
+          "question": {
+            "id": "math-20261006-batch465-q460",
+            "groupId": "math-20261006-batch465-q460",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Advanced Math",
+            "skill": "Equivalent Expressions",
+            "difficulty": "Medium",
+            "passage": "",
+            "question": "Which of the following is equivalent to\n\n\\[(2x-3y)(x+4y)+5y(x-2y)?\\]",
+            "choices": {
+              "A": "\\(2x^2+10xy+22y^2\\)",
+              "B": "\\(2x^2+10xy-22y^2\\)",
+              "C": "\\(2x^2-10xy-22y^2\\)",
+              "D": "\\(2x^2+5xy-2y^2\\)"
+            },
+            "correctAnswer": "B",
+            "explanation": "Expand each product:\n\\[(2x-3y)(x+4y)=2x^2+5xy-12y^2\\]\nand\n\\[5y(x-2y)=5xy-10y^2.\\]\nAdding gives\n\\[\\boxed{2x^2+10xy-22y^2}.\\]",
+            "sourceBatch": "2026-10-06-math-batch465",
+            "sourceQuestionNumber": 460,
+            "choiceExplanations": {
+              "A": "This choice does not satisfy the relationships or conditions given in the question.",
+              "B": "Expand each product:\n\n\\[(2x-3y)(x+4y)=2x2+5xy-12y2\\]\nand\n\n\\[5y(x-2y)=5xy-10y2.\\]\nAdding gives\n\n\\[2x2+10xy-22y2.\\]",
+              "C": "This choice does not satisfy the relationships or conditions given in the question.",
+              "D": "This choice does not satisfy the relationships or conditions given in the question."
+            },
+            "subtopic": "Equivalent Expressions",
+            "classificationVersion": "2026-10-07-v1"
+          },
+          "sharedBetweenRoutes": true
+        },
+        {
+          "requestId": "mock-2-math-m2-13-shared",
+          "targetDomain": "Advanced Math",
+          "targetSubtopic": "Exponential Functions",
+          "targetDifficulty": "Medium",
+          "question": {
+            "id": "math-20261006-batch465-q370",
+            "groupId": "math-20261006-batch465-q370",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Advanced Math",
+            "skill": "Exponential Functions",
+            "difficulty": "Medium",
+            "passage": "",
+            "question": "The number \\(P\\) of active subscriptions to a service is modeled by\n\\[P=950(1.08)^{t-1},\\]\nwhere \\(t\\) is the number of years after the service launched. Which equation gives \\(P\\) in terms of \\(q\\), the number of months after the service launched?",
+            "choices": {
+              "A": "\\(P=950(1.08)^{12q-1}\\)",
+              "B": "\\(P=950(1.08)^{q/12-1}\\)",
+              "C": "\\(P=950\\left(\\frac{1.08}{12}\\right)^{q-1}\\)",
+              "D": "\\(P=\\frac{950(1.08)^{q-1}}{12}\\)"
+            },
+            "correctAnswer": "B",
+            "explanation": "Since 12 months equal 1 year,\n\\[t=\\frac q{12}.\\]\nSubstitute this for \\(t\\):\n\\[P=950(1.08)^{q/12-1}.\\]",
+            "sourceBatch": "2026-10-06-math-batch465",
+            "sourceQuestionNumber": 370,
+            "choiceExplanations": {
+              "A": "This choice does not satisfy the relationships or conditions given in the question.",
+              "B": "Since 12 months equal 1 year,\n\n\\[t=q12.\\]\nSubstitute this for t:\n\n\\[P=950(1.08)q/12-1.\\]",
+              "C": "This choice does not satisfy the relationships or conditions given in the question.",
+              "D": "This choice does not satisfy the relationships or conditions given in the question."
+            },
+            "subtopic": "Exponential Functions",
+            "classificationVersion": "2026-10-07-v1"
+          },
+          "sharedBetweenRoutes": true
+        },
+        {
+          "requestId": "mock-2-math-m2-15-shared",
+          "targetDomain": "Advanced Math",
+          "targetSubtopic": "Nonlinear Equations/Functions",
+          "targetDifficulty": "Medium",
+          "question": {
+            "id": "math-20261006-batch465-q392",
+            "groupId": "math-20261006-batch465-q392",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Advanced Math",
+            "skill": "Nonlinear Equations/Functions",
+            "difficulty": "Medium",
+            "passage": "",
+            "question": "In the xy-plane, the graphs\n\n\\[y=x^{2}-5x+3\\]\nand\n\n\\[y=2x+3\\]\nintersect at (0,3) and (a,2a+3). What is the value of a?",
+            "choices": {},
+            "correctAnswer": "",
+            "explanation": "At an intersection,\n\n\\[x^{2}-5x+3=2x+3.\\]\nThus,\n\n\\[x^{2}-7x=0\\]\n\n\\[x(x-7)=0.\\]\n\\[The two x-coordinates are 0 and 7. Therefore,\\]\n\n\\[a=7.\\]",
+            "sourceBatch": "2026-10-06-math-batch465",
+            "sourceQuestionNumber": 392,
+            "answerType": "student-response",
+            "acceptedAnswers": [
+              "7"
+            ],
+            "desmosMethod": "Enter\n\n\\[y=x^{2}-5x+3\\]\nand\n\n\\[y=2x+3.\\]\nThe intersections have x-coordinates 0 and 7, so the second intersection gives a=7.",
+            "subtopic": "Nonlinear Equations/Functions",
+            "classificationVersion": "2026-10-07-v1"
+          },
+          "sharedBetweenRoutes": true
+        },
+        {
+          "requestId": "mock-2-math-m2-19-shared",
+          "targetDomain": "Problem-Solving & Data Analysis",
+          "targetSubtopic": "Probability",
+          "targetDifficulty": "Medium",
+          "question": {
+            "id": "math-20261006-new409-q401",
+            "groupId": "math-20261006-new409-q401",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Problem-Solving & Data Analysis",
+            "skill": "Probability",
+            "difficulty": "Medium",
+            "passage": "A survey of 700 students produced the table below.",
+            "question": "what is the probability that the student uses a planner daily?",
+            "choices": {
+              "A": "\\(\\frac{193}{350}\\)",
+              "B": "\\(\\frac{157}{350}\\)",
+              "C": "\\(\\frac{21}{50}\\)",
+              "D": "\\(\\frac{386}{475}\\)"
+            },
+            "correctAnswer": "A",
+            "explanation": "There are 386 students who use a planner daily out of 700 students total.\n\n\\[P=386700=193350\\]",
+            "sourceBatch": "2026-10-06-new-paste409-audited",
+            "sourceQuestionNumber": 401,
+            "choiceExplanations": {
+              "A": "There are 386 students who use a planner daily out of 700 students total.\n\n\\[P=386700=193350\\]",
+              "B": "This choice does not satisfy the relationships or conditions given in the question.",
+              "C": "This choice does not satisfy the relationships or conditions given in the question.",
+              "D": "This choice does not satisfy the relationships or conditions given in the question."
+            },
+            "table": {
+              "caption": "Student study schedules",
+              "headers": [
+                "Study schedule",
+                "Uses a planner daily",
+                "Does not use a planner daily",
+                "Total"
+              ],
+              "rows": [
+                [
+                  "Light",
+                  "84",
+                  "116",
+                  "200"
+                ],
+                [
+                  "Moderate",
+                  "133",
+                  "142",
+                  "275"
+                ],
+                [
+                  "Heavy",
+                  "169",
+                  "56",
+                  "225"
+                ],
+                [
+                  "Total",
+                  "386",
+                  "314",
+                  "700"
+                ]
+              ]
+            },
+            "subtopic": "Probability",
+            "classificationVersion": "2026-10-07-v1"
+          },
+          "sharedBetweenRoutes": true
         },
         {
           "requestId": "mock-2-math-m2-21-shared",
@@ -5340,9 +5188,721 @@
             }
           },
           "sharedBetweenRoutes": true
+        },
+        {
+          "requestId": "mock-2-math-m2-08-shared",
+          "targetDomain": "Algebra",
+          "targetSubtopic": "Other Algebra",
+          "targetDifficulty": "Hard",
+          "question": {
+            "id": "math-20261006-batch465-q018",
+            "groupId": "math-20261006-batch465-q018",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Algebra",
+            "skill": "Other Algebra",
+            "difficulty": "Hard",
+            "passage": "",
+            "question": "A maker space charges a $18 monthly membership fee, $14 for each laser-cutting session, and $9 for each 3D-printing session. A member spends exactly $120 in one month.\nIf x is the number of laser-cutting sessions and y is the number of 3D-printing sessions, which equation represents the relationship between x and y?",
+            "choices": {
+              "A": "\\(14x+9y=120\\)",
+              "B": "\\(14x+9y+18=120\\)",
+              "C": "\\(18x+14y+9=120\\)",
+              "D": "\\(14x+9y=138\\)"
+            },
+            "correctAnswer": "B",
+            "explanation": "The variable charges are 14x and 9y, and the fixed membership fee contributes another $18. Since the total is $120,\n\\[ \\boxed{14x+9y+18=120}. \\]",
+            "sourceBatch": "2026-10-06-math-batch465",
+            "sourceQuestionNumber": 18,
+            "choiceExplanations": {
+              "A": "This choice does not satisfy the relationships or conditions given in the question.",
+              "B": "The variable charges are 14x and 9y, and the fixed membership fee contributes another $18. Since the total is $120,\n\\[ \\boxed{14x+9y+18=120}. \\]",
+              "C": "This choice does not satisfy the relationships or conditions given in the question.",
+              "D": "This choice does not satisfy the relationships or conditions given in the question."
+            },
+            "subtopic": "Other Algebra",
+            "classificationVersion": "2026-10-07-v1"
+          },
+          "sharedBetweenRoutes": true
+        },
+        {
+          "requestId": "mock-2-math-m2-16-shared",
+          "targetDomain": "Advanced Math",
+          "targetSubtopic": "Nonlinear Equations/Functions",
+          "targetDifficulty": "Hard",
+          "question": {
+            "id": "math-20261006-batch465-q164",
+            "groupId": "math-20261006-batch465-q164",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Advanced Math",
+            "skill": "Nonlinear Equations/Functions",
+            "difficulty": "Hard",
+            "passage": "",
+            "question": "The graph of a system of one linear equation and one quadratic equation is shown. Which system is represented by the graph?",
+            "choices": {
+              "A": "\\[ \\begin{cases} y=3x+2\\\\ y=2(x+1)^2-8 \\end{cases} \\]",
+              "B": "\\[ \\begin{cases} y=3x-2\\\\ y=2(x-1)^2-8 \\end{cases} \\]",
+              "C": "\\[ \\begin{cases} y=3x-2\\\\ y=2(x+1)^2-8 \\end{cases} \\]",
+              "D": "\\[ \\begin{cases} y=-3x-2\\\\ y=2(x+1)^2-8 \\end{cases} \\]"
+            },
+            "correctAnswer": "C",
+            "explanation": "The line rises 3 units for every 1 unit to the right and crosses the y-axis at -2, so its equation is\n\n\\[y=3x-2.\\]\nThe parabola has vertex\n\n\\[(-1,-8)\\]\nand is narrower than y=x^{2}, matching\n\n\\[y=2(x+1)^{2}-8.\\]\nThus, choice C matches both graphs.",
+            "sourceBatch": "2026-10-06-math-batch465",
+            "sourceQuestionNumber": 164,
+            "choiceExplanations": {
+              "A": "This choice does not satisfy the relationships or conditions given in the question.",
+              "B": "This choice does not satisfy the relationships or conditions given in the question.",
+              "C": "The line rises 3 units for every 1 unit to the right and crosses the y-axis at -2, so its equation is\n\n\\[y=3x-2.\\]\nThe parabola has vertex\n\n\\[(-1,-8)\\]\nand is narrower than y=x^{2}, matching\n\n\\[y=2(x+1)^{2}-8.\\]\nThus, choice C matches both graphs.",
+              "D": "This choice does not satisfy the relationships or conditions given in the question."
+            },
+            "graph": {
+              "type": "xy",
+              "caption": "One linear and one quadratic equation",
+              "xMin": -4,
+              "xMax": 5,
+              "yMin": -10,
+              "yMax": 14,
+              "series": [
+                {
+                  "points": [
+                    [
+                      -4,
+                      -14
+                    ],
+                    [
+                      -2,
+                      -8
+                    ],
+                    [
+                      0,
+                      -2
+                    ],
+                    [
+                      2,
+                      4
+                    ],
+                    [
+                      4,
+                      10
+                    ],
+                    [
+                      5,
+                      13
+                    ]
+                  ],
+                  "showPoints": false,
+                  "label": "Linear"
+                },
+                {
+                  "points": [
+                    [
+                      -4,
+                      10
+                    ],
+                    [
+                      -3,
+                      0
+                    ],
+                    [
+                      -2,
+                      -6
+                    ],
+                    [
+                      -1,
+                      -8
+                    ],
+                    [
+                      0,
+                      -6
+                    ],
+                    [
+                      1,
+                      0
+                    ],
+                    [
+                      2,
+                      10
+                    ],
+                    [
+                      3,
+                      24
+                    ]
+                  ],
+                  "showPoints": false,
+                  "label": "Quadratic"
+                }
+              ],
+              "xLabel": "x",
+              "yLabel": "y"
+            },
+            "subtopic": "Nonlinear Equations/Functions",
+            "classificationVersion": "2026-10-07-v1"
+          },
+          "sharedBetweenRoutes": true
         }
       ],
       "module2High": [
+        {
+          "requestId": "mock-2-math-m2-12-shared",
+          "targetDomain": "Advanced Math",
+          "targetSubtopic": "Polynomial Functions",
+          "targetDifficulty": "Easy",
+          "question": {
+            "id": "math-20261006-batch465-q241",
+            "groupId": "math-20261006-batch465-q241",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Advanced Math",
+            "skill": "Polynomial Functions",
+            "difficulty": "Easy",
+            "passage": "",
+            "question": "The function\n\\[\nf(x)=2x^4-3x^2+5x+11\n\\]\npasses through the point \\((-2,b)\\). What is the value of \\(b\\)?",
+            "choices": {},
+            "correctAnswer": "",
+            "explanation": "Evaluate \\(f(-2)\\):\n\\[\nb=2(-2)^4-3(-2)^2+5(-2)+11.\n\\]\nThus\n\\[\nb=32-12-10+11=\\boxed{21}.\n\\]",
+            "sourceBatch": "2026-10-06-math-batch465",
+            "sourceQuestionNumber": 241,
+            "answerType": "student-response",
+            "acceptedAnswers": [
+              "21"
+            ],
+            "subtopic": "Polynomial Functions",
+            "classificationVersion": "2026-10-07-v1"
+          },
+          "sharedBetweenRoutes": true
+        },
+        {
+          "requestId": "mock-2-math-m2-14-shared",
+          "targetDomain": "Advanced Math",
+          "targetSubtopic": "Rational/Radical Equations",
+          "targetDifficulty": "Easy",
+          "question": {
+            "id": "math-20261006-new409-q275",
+            "groupId": "math-20261006-new409-q275",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Advanced Math",
+            "skill": "Rational/Radical Equations",
+            "difficulty": "Easy",
+            "passage": "Positive numbers \\(a\\), \\(b\\), and \\(c\\) satisfy\n\\[\\frac{3a}{2b}=6\\]\nand\n\\[\\frac{5b}{3c}=10.\\]",
+            "question": "What is the value of \\(\\frac ca\\)?",
+            "choices": {},
+            "correctAnswer": "",
+            "explanation": "From \\(\\frac{3a}{2b}=6\\), \\(a=4b\\), so \\(b=\\frac a4\\). From \\(\\frac{5b}{3c}=10\\), \\(c=\\frac b6\\). Therefore,\n\\[c=\\frac16\\left(\\frac a4\\right)=\\frac a{24},\\]\nso\n\\[\\boxed{\\frac ca=\\frac1{24}}.\\]",
+            "sourceBatch": "2026-10-06-new-paste409-audited",
+            "sourceQuestionNumber": 275,
+            "answerType": "student-response",
+            "acceptedAnswers": [
+              "1/24"
+            ],
+            "subtopic": "Rational/Radical Equations",
+            "classificationVersion": "2026-10-07-v1"
+          },
+          "sharedBetweenRoutes": true
+        },
+        {
+          "requestId": "mock-2-math-m2-05-shared",
+          "targetDomain": "Algebra",
+          "targetSubtopic": "Systems of Linear Equations",
+          "targetDifficulty": "Medium",
+          "question": {
+            "id": "math-20261006-batch465-q011",
+            "groupId": "math-20261006-batch465-q011",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Algebra",
+            "skill": "Systems of Linear Equations",
+            "difficulty": "Medium",
+            "passage": "",
+            "question": "A theater sells two kinds of group packages. Each type A package contains 3 tickets and costs $42. Each type B package contains 5 tickets and costs $65.\nA school purchases 67 tickets for a total of $898. If x is the number of type A packages and y is the number of type B packages, which system represents the situation?",
+            "choices": {
+              "A": "\\[ \\begin{cases} 3x+5y=67\\\\ 42x+65y=898 \\end{cases} \\]",
+              "B": "\\[ \\begin{cases} 3x+5y=898\\\\ 42x+65y=67 \\end{cases} \\]",
+              "C": "\\[ \\begin{cases} 5x+3y=67\\\\ 65x+42y=898 \\end{cases} \\]",
+              "D": "\\[ \\begin{cases} x+y=67\\\\ 42x+65y=898 \\end{cases} \\]"
+            },
+            "correctAnswer": "A",
+            "explanation": "The ticket-count equation is\n\n\\[3x+5y=67.\\]\nThe cost equation is\n\n\\[42x+65y=898.\\]\nTherefore, the required system is\n\\[ \\boxed{\\begin{cases} 3x+5y=67\\\\ 42x+65y=898 \\end{cases}}. \\]",
+            "sourceBatch": "2026-10-06-math-batch465",
+            "sourceQuestionNumber": 11,
+            "choiceExplanations": {
+              "A": "The ticket-count equation is\n\n\\[3x+5y=67.\\]\nThe cost equation is\n\n\\[42x+65y=898.\\]\nTherefore, the required system is\n\\[ \\boxed{\\begin{cases} 3x+5y=67\\\\ 42x+65y=898 \\end{cases}}. \\]",
+              "B": "This choice does not satisfy the relationships or conditions given in the question.",
+              "C": "This choice does not satisfy the relationships or conditions given in the question.",
+              "D": "This choice does not satisfy the relationships or conditions given in the question."
+            },
+            "subtopic": "Systems of Linear Equations",
+            "classificationVersion": "2026-10-07-v1"
+          },
+          "sharedBetweenRoutes": true
+        },
+        {
+          "requestId": "mock-2-math-m2-07-shared",
+          "targetDomain": "Algebra",
+          "targetSubtopic": "Linear Inequalities",
+          "targetDifficulty": "Medium",
+          "question": {
+            "id": "math-20261006-batch465-q276",
+            "groupId": "math-20261006-batch465-q276",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Algebra",
+            "skill": "Linear Inequalities",
+            "difficulty": "Medium",
+            "passage": "",
+            "question": "A temperature sensor displays a reading r that is always \\(3^\\circ\\text{F}\\) lower than the actual temperature. During a manufacturing process, the actual temperature must be at least \\(68^\\circ\\text{F}\\) and no more than \\(74^\\circ\\text{F}\\).\nWhich inequality gives all possible values of r?",
+            "choices": {
+              "A": "\\(65\\le r\\le71\\)",
+              "B": "\\(68\\le r\\le74\\)",
+              "C": "\\(71\\le r\\le77\\)",
+              "D": "\\(65<r<71\\)"
+            },
+            "correctAnswer": "A",
+            "explanation": "The actual temperature is r+3. Therefore,\n\n\\[68r+374.\\]\nSubtracting 3 throughout gives\n\\[ \\boxed{65\\le r\\le71}. \\]",
+            "sourceBatch": "2026-10-06-math-batch465",
+            "sourceQuestionNumber": 276,
+            "choiceExplanations": {
+              "A": "The actual temperature is r+3. Therefore,\n\n\\[68r+374.\\]\nSubtracting 3 throughout gives\n\\[ \\boxed{65\\le r\\le71}. \\]",
+              "B": "This choice does not satisfy the relationships or conditions given in the question.",
+              "C": "This choice does not satisfy the relationships or conditions given in the question.",
+              "D": "This choice does not satisfy the relationships or conditions given in the question."
+            },
+            "subtopic": "Linear Inequalities",
+            "classificationVersion": "2026-10-07-v1"
+          },
+          "sharedBetweenRoutes": true
+        },
+        {
+          "requestId": "mock-2-math-m2-11-shared",
+          "targetDomain": "Advanced Math",
+          "targetSubtopic": "Equivalent Expressions",
+          "targetDifficulty": "Medium",
+          "question": {
+            "id": "math-20261006-batch465-q460",
+            "groupId": "math-20261006-batch465-q460",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Advanced Math",
+            "skill": "Equivalent Expressions",
+            "difficulty": "Medium",
+            "passage": "",
+            "question": "Which of the following is equivalent to\n\n\\[(2x-3y)(x+4y)+5y(x-2y)?\\]",
+            "choices": {
+              "A": "\\(2x^2+10xy+22y^2\\)",
+              "B": "\\(2x^2+10xy-22y^2\\)",
+              "C": "\\(2x^2-10xy-22y^2\\)",
+              "D": "\\(2x^2+5xy-2y^2\\)"
+            },
+            "correctAnswer": "B",
+            "explanation": "Expand each product:\n\\[(2x-3y)(x+4y)=2x^2+5xy-12y^2\\]\nand\n\\[5y(x-2y)=5xy-10y^2.\\]\nAdding gives\n\\[\\boxed{2x^2+10xy-22y^2}.\\]",
+            "sourceBatch": "2026-10-06-math-batch465",
+            "sourceQuestionNumber": 460,
+            "choiceExplanations": {
+              "A": "This choice does not satisfy the relationships or conditions given in the question.",
+              "B": "Expand each product:\n\n\\[(2x-3y)(x+4y)=2x2+5xy-12y2\\]\nand\n\n\\[5y(x-2y)=5xy-10y2.\\]\nAdding gives\n\n\\[2x2+10xy-22y2.\\]",
+              "C": "This choice does not satisfy the relationships or conditions given in the question.",
+              "D": "This choice does not satisfy the relationships or conditions given in the question."
+            },
+            "subtopic": "Equivalent Expressions",
+            "classificationVersion": "2026-10-07-v1"
+          },
+          "sharedBetweenRoutes": true
+        },
+        {
+          "requestId": "mock-2-math-m2-13-shared",
+          "targetDomain": "Advanced Math",
+          "targetSubtopic": "Exponential Functions",
+          "targetDifficulty": "Medium",
+          "question": {
+            "id": "math-20261006-batch465-q370",
+            "groupId": "math-20261006-batch465-q370",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Advanced Math",
+            "skill": "Exponential Functions",
+            "difficulty": "Medium",
+            "passage": "",
+            "question": "The number \\(P\\) of active subscriptions to a service is modeled by\n\\[P=950(1.08)^{t-1},\\]\nwhere \\(t\\) is the number of years after the service launched. Which equation gives \\(P\\) in terms of \\(q\\), the number of months after the service launched?",
+            "choices": {
+              "A": "\\(P=950(1.08)^{12q-1}\\)",
+              "B": "\\(P=950(1.08)^{q/12-1}\\)",
+              "C": "\\(P=950\\left(\\frac{1.08}{12}\\right)^{q-1}\\)",
+              "D": "\\(P=\\frac{950(1.08)^{q-1}}{12}\\)"
+            },
+            "correctAnswer": "B",
+            "explanation": "Since 12 months equal 1 year,\n\\[t=\\frac q{12}.\\]\nSubstitute this for \\(t\\):\n\\[P=950(1.08)^{q/12-1}.\\]",
+            "sourceBatch": "2026-10-06-math-batch465",
+            "sourceQuestionNumber": 370,
+            "choiceExplanations": {
+              "A": "This choice does not satisfy the relationships or conditions given in the question.",
+              "B": "Since 12 months equal 1 year,\n\n\\[t=q12.\\]\nSubstitute this for t:\n\n\\[P=950(1.08)q/12-1.\\]",
+              "C": "This choice does not satisfy the relationships or conditions given in the question.",
+              "D": "This choice does not satisfy the relationships or conditions given in the question."
+            },
+            "subtopic": "Exponential Functions",
+            "classificationVersion": "2026-10-07-v1"
+          },
+          "sharedBetweenRoutes": true
+        },
+        {
+          "requestId": "mock-2-math-m2-15-shared",
+          "targetDomain": "Advanced Math",
+          "targetSubtopic": "Nonlinear Equations/Functions",
+          "targetDifficulty": "Medium",
+          "question": {
+            "id": "math-20261006-batch465-q392",
+            "groupId": "math-20261006-batch465-q392",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Advanced Math",
+            "skill": "Nonlinear Equations/Functions",
+            "difficulty": "Medium",
+            "passage": "",
+            "question": "In the xy-plane, the graphs\n\n\\[y=x^{2}-5x+3\\]\nand\n\n\\[y=2x+3\\]\nintersect at (0,3) and (a,2a+3). What is the value of a?",
+            "choices": {},
+            "correctAnswer": "",
+            "explanation": "At an intersection,\n\n\\[x^{2}-5x+3=2x+3.\\]\nThus,\n\n\\[x^{2}-7x=0\\]\n\n\\[x(x-7)=0.\\]\n\\[The two x-coordinates are 0 and 7. Therefore,\\]\n\n\\[a=7.\\]",
+            "sourceBatch": "2026-10-06-math-batch465",
+            "sourceQuestionNumber": 392,
+            "answerType": "student-response",
+            "acceptedAnswers": [
+              "7"
+            ],
+            "desmosMethod": "Enter\n\n\\[y=x^{2}-5x+3\\]\nand\n\n\\[y=2x+3.\\]\nThe intersections have x-coordinates 0 and 7, so the second intersection gives a=7.",
+            "subtopic": "Nonlinear Equations/Functions",
+            "classificationVersion": "2026-10-07-v1"
+          },
+          "sharedBetweenRoutes": true
+        },
+        {
+          "requestId": "mock-2-math-m2-19-shared",
+          "targetDomain": "Problem-Solving & Data Analysis",
+          "targetSubtopic": "Probability",
+          "targetDifficulty": "Medium",
+          "question": {
+            "id": "math-20261006-new409-q401",
+            "groupId": "math-20261006-new409-q401",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Problem-Solving & Data Analysis",
+            "skill": "Probability",
+            "difficulty": "Medium",
+            "passage": "A survey of 700 students produced the table below.",
+            "question": "what is the probability that the student uses a planner daily?",
+            "choices": {
+              "A": "\\(\\frac{193}{350}\\)",
+              "B": "\\(\\frac{157}{350}\\)",
+              "C": "\\(\\frac{21}{50}\\)",
+              "D": "\\(\\frac{386}{475}\\)"
+            },
+            "correctAnswer": "A",
+            "explanation": "There are 386 students who use a planner daily out of 700 students total.\n\n\\[P=386700=193350\\]",
+            "sourceBatch": "2026-10-06-new-paste409-audited",
+            "sourceQuestionNumber": 401,
+            "choiceExplanations": {
+              "A": "There are 386 students who use a planner daily out of 700 students total.\n\n\\[P=386700=193350\\]",
+              "B": "This choice does not satisfy the relationships or conditions given in the question.",
+              "C": "This choice does not satisfy the relationships or conditions given in the question.",
+              "D": "This choice does not satisfy the relationships or conditions given in the question."
+            },
+            "table": {
+              "caption": "Student study schedules",
+              "headers": [
+                "Study schedule",
+                "Uses a planner daily",
+                "Does not use a planner daily",
+                "Total"
+              ],
+              "rows": [
+                [
+                  "Light",
+                  "84",
+                  "116",
+                  "200"
+                ],
+                [
+                  "Moderate",
+                  "133",
+                  "142",
+                  "275"
+                ],
+                [
+                  "Heavy",
+                  "169",
+                  "56",
+                  "225"
+                ],
+                [
+                  "Total",
+                  "386",
+                  "314",
+                  "700"
+                ]
+              ]
+            },
+            "subtopic": "Probability",
+            "classificationVersion": "2026-10-07-v1"
+          },
+          "sharedBetweenRoutes": true
+        },
+        {
+          "requestId": "mock-2-math-m2-21-shared",
+          "targetDomain": "Geometry & Trigonometry",
+          "targetSubtopic": "Area and Volume",
+          "targetDifficulty": "Medium",
+          "question": {
+            "id": "math-20261006-new409-q036",
+            "groupId": "math-20261006-new409-q036",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Geometry & Trigonometry",
+            "skill": "Area and Volume",
+            "difficulty": "Medium",
+            "passage": "",
+            "question": "What is the area, in square units, of rectangle ABCD?",
+            "choices": {
+              "A": "49",
+              "B": "56",
+              "C": "63",
+              "D": "70"
+            },
+            "correctAnswer": "B",
+            "explanation": "The horizontal side length is\n\n\\[5-(-3)=8,\\]\nand the vertical side length is\n\n\\[9-2=7\\]\nTherefore,\n\\[ A=8(7)=\\boxed{56}. \\]",
+            "sourceBatch": "2026-10-06-new-paste409-audited",
+            "sourceQuestionNumber": 36,
+            "choiceExplanations": {
+              "A": "This choice does not satisfy the relationships or conditions given in the question.",
+              "B": "The horizontal side length is\n\n\\[5-(-3)=8,\\]\nand the vertical side length is\n\n\\[9-2=7\\]\nTherefore,\n\\[ A=8(7)=\\boxed{56}. \\]",
+              "C": "This choice does not satisfy the relationships or conditions given in the question.",
+              "D": "This choice does not satisfy the relationships or conditions given in the question."
+            },
+            "graph": {
+              "type": "xy",
+              "caption": "Rectangle ABCD in the coordinate plane",
+              "xMin": -5,
+              "xMax": 7,
+              "yMin": 0,
+              "yMax": 11,
+              "xStep": 1,
+              "yStep": 1,
+              "xLabel": "x",
+              "yLabel": "y",
+              "series": [
+                {
+                  "points": [
+                    [
+                      -3,
+                      9
+                    ],
+                    [
+                      5,
+                      9
+                    ]
+                  ],
+                  "showPoints": true
+                },
+                {
+                  "points": [
+                    [
+                      5,
+                      9
+                    ],
+                    [
+                      5,
+                      2
+                    ]
+                  ],
+                  "showPoints": true
+                },
+                {
+                  "points": [
+                    [
+                      5,
+                      2
+                    ],
+                    [
+                      -3,
+                      2
+                    ]
+                  ],
+                  "showPoints": true
+                },
+                {
+                  "points": [
+                    [
+                      -3,
+                      2
+                    ],
+                    [
+                      -3,
+                      9
+                    ]
+                  ],
+                  "showPoints": true
+                }
+              ]
+            },
+            "subtopic": "Area and Volume",
+            "classificationVersion": "2026-10-07-v1"
+          },
+          "sharedBetweenRoutes": true
+        },
+        {
+          "requestId": "mock-2-math-m2-22-shared",
+          "targetDomain": "Geometry & Trigonometry",
+          "targetSubtopic": "Trigonometry",
+          "targetDifficulty": "Medium",
+          "question": {
+            "id": "math-20261006-new409-q172",
+            "groupId": "math-20261006-new409-q172",
+            "status": "staged",
+            "section": "Math",
+            "domain": "Geometry & Trigonometry",
+            "skill": "Trigonometry",
+            "difficulty": "Medium",
+            "passage": "Right triangles \\(ABC\\) and \\(DEF\\) are similar, with \\(A\\leftrightarrow D\\), and \\(C\\) and \\(F\\) right angles. In triangle \\(ABC\\), \\(AB=26\\) and \\(BC=10\\).",
+            "question": "What is \\(\\cos D\\)?",
+            "choices": {
+              "A": "\\(\\frac5{13}\\)",
+              "B": "\\(\\frac{10}{13}\\)",
+              "C": "\\(\\frac{12}{13}\\)",
+              "D": "\\(\\frac{13}{12}\\)"
+            },
+            "correctAnswer": "C",
+            "explanation": "Since \\(AB\\) is the hypotenuse,\n\\[AC=\\sqrt{26^2-10^2}=24.\\]\nThus\n\\[\\cos A=\\frac{AC}{AB}=\\frac{24}{26}=\\frac{12}{13}.\\]\nBecause \\(A\\leftrightarrow D\\), \\(\\boxed{\\cos D=12/13}\\).",
+            "sourceBatch": "2026-10-06-new-paste409-audited",
+            "sourceQuestionNumber": 172,
+            "choiceExplanations": {
+              "A": "This choice does not satisfy the relationships or conditions given in the question.",
+              "B": "This choice does not satisfy the relationships or conditions given in the question.",
+              "C": "Since \\(AB\\) is the hypotenuse,\n\\[AC=\\sqrt{26^2-10^2}=24.\\]\nThus\n\\[\\cos A=\\frac{AC}{AB}=\\frac{24}{26}=\\frac{12}{13}.\\]\nBecause \\(A\\leftrightarrow D\\), \\(\\boxed{\\cos D=12/13}\\).",
+              "D": "This choice does not satisfy the relationships or conditions given in the question."
+            },
+            "subtopic": "Trigonometry",
+            "classificationVersion": "2026-10-07-v1",
+            "diagram": {
+              "width": 420,
+              "height": 280,
+              "alt": "Two right triangles",
+              "polygons": [
+                {
+                  "points": [
+                    [
+                      35,
+                      225
+                    ],
+                    [
+                      175,
+                      225
+                    ],
+                    [
+                      35,
+                      90
+                    ]
+                  ]
+                },
+                {
+                  "points": [
+                    [
+                      235,
+                      225
+                    ],
+                    [
+                      390,
+                      225
+                    ],
+                    [
+                      235,
+                      70
+                    ]
+                  ]
+                }
+              ],
+              "rightAngles": [
+                {
+                  "x": 35,
+                  "y": 225,
+                  "size": 14,
+                  "rotation": 0
+                },
+                {
+                  "x": 235,
+                  "y": 225,
+                  "size": 14,
+                  "rotation": 0
+                }
+              ],
+              "points": [
+                {
+                  "x": 35,
+                  "y": 225,
+                  "label": "A",
+                  "dx": -8,
+                  "dy": 18,
+                  "hideDot": false
+                },
+                {
+                  "x": 175,
+                  "y": 225,
+                  "label": "B",
+                  "dx": 8,
+                  "dy": 18,
+                  "hideDot": false
+                },
+                {
+                  "x": 35,
+                  "y": 90,
+                  "label": "C",
+                  "dx": -8,
+                  "dy": -8,
+                  "hideDot": false
+                },
+                {
+                  "x": 235,
+                  "y": 225,
+                  "label": "D",
+                  "dx": -8,
+                  "dy": 18,
+                  "hideDot": false
+                },
+                {
+                  "x": 390,
+                  "y": 225,
+                  "label": "E",
+                  "dx": 8,
+                  "dy": 18,
+                  "hideDot": false
+                },
+                {
+                  "x": 235,
+                  "y": 70,
+                  "label": "F",
+                  "dx": -8,
+                  "dy": -8,
+                  "hideDot": false
+                }
+              ],
+              "labels": [
+                {
+                  "x": 105,
+                  "y": 155,
+                  "text": "AB = 26",
+                  "emphasis": false,
+                  "anchor": "middle"
+                },
+                {
+                  "x": 95,
+                  "y": 240,
+                  "text": "BC = 10",
+                  "emphasis": false,
+                  "anchor": "middle"
+                }
+              ]
+            }
+          },
+          "sharedBetweenRoutes": true
+        },
         {
           "requestId": "mock-2-math-m2high-01",
           "targetDomain": "Algebra",
@@ -5501,42 +6061,6 @@
           }
         },
         {
-          "requestId": "mock-2-math-m2-05-shared",
-          "targetDomain": "Algebra",
-          "targetSubtopic": "Systems of Linear Equations",
-          "targetDifficulty": "Medium",
-          "question": {
-            "id": "math-20261006-batch465-q011",
-            "groupId": "math-20261006-batch465-q011",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Algebra",
-            "skill": "Systems of Linear Equations",
-            "difficulty": "Medium",
-            "passage": "",
-            "question": "A theater sells two kinds of group packages. Each type A package contains 3 tickets and costs $42. Each type B package contains 5 tickets and costs $65.\nA school purchases 67 tickets for a total of $898. If x is the number of type A packages and y is the number of type B packages, which system represents the situation?",
-            "choices": {
-              "A": "\\[ \\begin{cases} 3x+5y=67\\\\ 42x+65y=898 \\end{cases} \\]",
-              "B": "\\[ \\begin{cases} 3x+5y=898\\\\ 42x+65y=67 \\end{cases} \\]",
-              "C": "\\[ \\begin{cases} 5x+3y=67\\\\ 65x+42y=898 \\end{cases} \\]",
-              "D": "\\[ \\begin{cases} x+y=67\\\\ 42x+65y=898 \\end{cases} \\]"
-            },
-            "correctAnswer": "A",
-            "explanation": "The ticket-count equation is\n\n\\[3x+5y=67.\\]\nThe cost equation is\n\n\\[42x+65y=898.\\]\nTherefore, the required system is\n\\[ \\boxed{\\begin{cases} 3x+5y=67\\\\ 42x+65y=898 \\end{cases}}. \\]",
-            "sourceBatch": "2026-10-06-math-batch465",
-            "sourceQuestionNumber": 11,
-            "choiceExplanations": {
-              "A": "The ticket-count equation is\n\n\\[3x+5y=67.\\]\nThe cost equation is\n\n\\[42x+65y=898.\\]\nTherefore, the required system is\n\\[ \\boxed{\\begin{cases} 3x+5y=67\\\\ 42x+65y=898 \\end{cases}}. \\]",
-              "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "This choice does not satisfy the relationships or conditions given in the question.",
-              "D": "This choice does not satisfy the relationships or conditions given in the question."
-            },
-            "subtopic": "Systems of Linear Equations",
-            "classificationVersion": "2026-10-07-v1"
-          },
-          "sharedBetweenRoutes": true
-        },
-        {
           "requestId": "mock-2-math-m2high-06",
           "targetDomain": "Algebra",
           "targetSubtopic": "Systems of Linear Equations",
@@ -5563,42 +6087,6 @@
             "subtopic": "Systems of Linear Equations",
             "classificationVersion": "2026-10-07-v1"
           }
-        },
-        {
-          "requestId": "mock-2-math-m2-07-shared",
-          "targetDomain": "Algebra",
-          "targetSubtopic": "Linear Inequalities",
-          "targetDifficulty": "Medium",
-          "question": {
-            "id": "math-20261006-batch465-q276",
-            "groupId": "math-20261006-batch465-q276",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Algebra",
-            "skill": "Linear Inequalities",
-            "difficulty": "Medium",
-            "passage": "",
-            "question": "A temperature sensor displays a reading r that is always \\(3^\\circ\\text{F}\\) lower than the actual temperature. During a manufacturing process, the actual temperature must be at least \\(68^\\circ\\text{F}\\) and no more than \\(74^\\circ\\text{F}\\).\nWhich inequality gives all possible values of r?",
-            "choices": {
-              "A": "\\(65\\le r\\le71\\)",
-              "B": "\\(68\\le r\\le74\\)",
-              "C": "\\(71\\le r\\le77\\)",
-              "D": "\\(65<r<71\\)"
-            },
-            "correctAnswer": "A",
-            "explanation": "The actual temperature is r+3. Therefore,\n\n\\[68r+374.\\]\nSubtracting 3 throughout gives\n\\[ \\boxed{65\\le r\\le71}. \\]",
-            "sourceBatch": "2026-10-06-math-batch465",
-            "sourceQuestionNumber": 276,
-            "choiceExplanations": {
-              "A": "The actual temperature is r+3. Therefore,\n\n\\[68r+374.\\]\nSubtracting 3 throughout gives\n\\[ \\boxed{65\\le r\\le71}. \\]",
-              "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "This choice does not satisfy the relationships or conditions given in the question.",
-              "D": "This choice does not satisfy the relationships or conditions given in the question."
-            },
-            "subtopic": "Linear Inequalities",
-            "classificationVersion": "2026-10-07-v1"
-          },
-          "sharedBetweenRoutes": true
         },
         {
           "requestId": "mock-2-math-m2-08-shared",
@@ -5705,166 +6193,6 @@
             "subtopic": "Quadratics",
             "classificationVersion": "2026-10-07-v1"
           }
-        },
-        {
-          "requestId": "mock-2-math-m2-11-shared",
-          "targetDomain": "Advanced Math",
-          "targetSubtopic": "Equivalent Expressions",
-          "targetDifficulty": "Medium",
-          "question": {
-            "id": "math-20261006-batch465-q460",
-            "groupId": "math-20261006-batch465-q460",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Advanced Math",
-            "skill": "Equivalent Expressions",
-            "difficulty": "Medium",
-            "passage": "",
-            "question": "Which of the following is equivalent to\n\n\\[(2x-3y)(x+4y)+5y(x-2y)?\\]",
-            "choices": {
-              "A": "\\(2x^2+10xy+22y^2\\)",
-              "B": "\\(2x^2+10xy-22y^2\\)",
-              "C": "\\(2x^2-10xy-22y^2\\)",
-              "D": "\\(2x^2+5xy-2y^2\\)"
-            },
-            "correctAnswer": "B",
-            "explanation": "Expand each product:\n\\[(2x-3y)(x+4y)=2x^2+5xy-12y^2\\]\nand\n\\[5y(x-2y)=5xy-10y^2.\\]\nAdding gives\n\\[\\boxed{2x^2+10xy-22y^2}.\\]",
-            "sourceBatch": "2026-10-06-math-batch465",
-            "sourceQuestionNumber": 460,
-            "choiceExplanations": {
-              "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "Expand each product:\n\n\\[(2x-3y)(x+4y)=2x2+5xy-12y2\\]\nand\n\n\\[5y(x-2y)=5xy-10y2.\\]\nAdding gives\n\n\\[2x2+10xy-22y2.\\]",
-              "C": "This choice does not satisfy the relationships or conditions given in the question.",
-              "D": "This choice does not satisfy the relationships or conditions given in the question."
-            },
-            "subtopic": "Equivalent Expressions",
-            "classificationVersion": "2026-10-07-v1"
-          },
-          "sharedBetweenRoutes": true
-        },
-        {
-          "requestId": "mock-2-math-m2-12-shared",
-          "targetDomain": "Advanced Math",
-          "targetSubtopic": "Polynomial Functions",
-          "targetDifficulty": "Easy",
-          "question": {
-            "id": "math-20261006-batch465-q241",
-            "groupId": "math-20261006-batch465-q241",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Advanced Math",
-            "skill": "Polynomial Functions",
-            "difficulty": "Easy",
-            "passage": "",
-            "question": "The function\n\\[\nf(x)=2x^4-3x^2+5x+11\n\\]\npasses through the point \\((-2,b)\\). What is the value of \\(b\\)?",
-            "choices": {},
-            "correctAnswer": "",
-            "explanation": "Evaluate \\(f(-2)\\):\n\\[\nb=2(-2)^4-3(-2)^2+5(-2)+11.\n\\]\nThus\n\\[\nb=32-12-10+11=\\boxed{21}.\n\\]",
-            "sourceBatch": "2026-10-06-math-batch465",
-            "sourceQuestionNumber": 241,
-            "answerType": "student-response",
-            "acceptedAnswers": [
-              "21"
-            ],
-            "subtopic": "Polynomial Functions",
-            "classificationVersion": "2026-10-07-v1"
-          },
-          "sharedBetweenRoutes": true
-        },
-        {
-          "requestId": "mock-2-math-m2-13-shared",
-          "targetDomain": "Advanced Math",
-          "targetSubtopic": "Exponential Functions",
-          "targetDifficulty": "Medium",
-          "question": {
-            "id": "math-20261006-batch465-q370",
-            "groupId": "math-20261006-batch465-q370",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Advanced Math",
-            "skill": "Exponential Functions",
-            "difficulty": "Medium",
-            "passage": "",
-            "question": "The number \\(P\\) of active subscriptions to a service is modeled by\n\\[P=950(1.08)^{t-1},\\]\nwhere \\(t\\) is the number of years after the service launched. Which equation gives \\(P\\) in terms of \\(q\\), the number of months after the service launched?",
-            "choices": {
-              "A": "\\(P=950(1.08)^{12q-1}\\)",
-              "B": "\\(P=950(1.08)^{q/12-1}\\)",
-              "C": "\\(P=950\\left(\\frac{1.08}{12}\\right)^{q-1}\\)",
-              "D": "\\(P=\\frac{950(1.08)^{q-1}}{12}\\)"
-            },
-            "correctAnswer": "B",
-            "explanation": "Since 12 months equal 1 year,\n\\[t=\\frac q{12}.\\]\nSubstitute this for \\(t\\):\n\\[P=950(1.08)^{q/12-1}.\\]",
-            "sourceBatch": "2026-10-06-math-batch465",
-            "sourceQuestionNumber": 370,
-            "choiceExplanations": {
-              "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "Since 12 months equal 1 year,\n\n\\[t=q12.\\]\nSubstitute this for t:\n\n\\[P=950(1.08)q/12-1.\\]",
-              "C": "This choice does not satisfy the relationships or conditions given in the question.",
-              "D": "This choice does not satisfy the relationships or conditions given in the question."
-            },
-            "subtopic": "Exponential Functions",
-            "classificationVersion": "2026-10-07-v1"
-          },
-          "sharedBetweenRoutes": true
-        },
-        {
-          "requestId": "mock-2-math-m2-14-shared",
-          "targetDomain": "Advanced Math",
-          "targetSubtopic": "Rational/Radical Equations",
-          "targetDifficulty": "Easy",
-          "question": {
-            "id": "math-20261006-new409-q275",
-            "groupId": "math-20261006-new409-q275",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Advanced Math",
-            "skill": "Rational/Radical Equations",
-            "difficulty": "Easy",
-            "passage": "Positive numbers \\(a\\), \\(b\\), and \\(c\\) satisfy\n\\[\\frac{3a}{2b}=6\\]\nand\n\\[\\frac{5b}{3c}=10.\\]",
-            "question": "What is the value of \\(\\frac ca\\)?",
-            "choices": {},
-            "correctAnswer": "",
-            "explanation": "From \\(\\frac{3a}{2b}=6\\), \\(a=4b\\), so \\(b=\\frac a4\\). From \\(\\frac{5b}{3c}=10\\), \\(c=\\frac b6\\). Therefore,\n\\[c=\\frac16\\left(\\frac a4\\right)=\\frac a{24},\\]\nso\n\\[\\boxed{\\frac ca=\\frac1{24}}.\\]",
-            "sourceBatch": "2026-10-06-new-paste409-audited",
-            "sourceQuestionNumber": 275,
-            "answerType": "student-response",
-            "acceptedAnswers": [
-              "1/24"
-            ],
-            "subtopic": "Rational/Radical Equations",
-            "classificationVersion": "2026-10-07-v1"
-          },
-          "sharedBetweenRoutes": true
-        },
-        {
-          "requestId": "mock-2-math-m2-15-shared",
-          "targetDomain": "Advanced Math",
-          "targetSubtopic": "Nonlinear Equations/Functions",
-          "targetDifficulty": "Medium",
-          "question": {
-            "id": "math-20261006-batch465-q392",
-            "groupId": "math-20261006-batch465-q392",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Advanced Math",
-            "skill": "Nonlinear Equations/Functions",
-            "difficulty": "Medium",
-            "passage": "",
-            "question": "In the xy-plane, the graphs\n\n\\[y=x^{2}-5x+3\\]\nand\n\n\\[y=2x+3\\]\nintersect at (0,3) and (a,2a+3). What is the value of a?",
-            "choices": {},
-            "correctAnswer": "",
-            "explanation": "At an intersection,\n\n\\[x^{2}-5x+3=2x+3.\\]\nThus,\n\n\\[x^{2}-7x=0\\]\n\n\\[x(x-7)=0.\\]\n\\[The two x-coordinates are 0 and 7. Therefore,\\]\n\n\\[a=7.\\]",
-            "sourceBatch": "2026-10-06-math-batch465",
-            "sourceQuestionNumber": 392,
-            "answerType": "student-response",
-            "acceptedAnswers": [
-              "7"
-            ],
-            "desmosMethod": "Enter\n\n\\[y=x^{2}-5x+3\\]\nand\n\n\\[y=2x+3.\\]\nThe intersections have x-coordinates 0 and 7, so the second intersection gives a=7.",
-            "subtopic": "Nonlinear Equations/Functions",
-            "classificationVersion": "2026-10-07-v1"
-          },
-          "sharedBetweenRoutes": true
         },
         {
           "requestId": "mock-2-math-m2-16-shared",
@@ -6068,77 +6396,6 @@
           }
         },
         {
-          "requestId": "mock-2-math-m2-19-shared",
-          "targetDomain": "Problem-Solving & Data Analysis",
-          "targetSubtopic": "Probability",
-          "targetDifficulty": "Medium",
-          "question": {
-            "id": "math-20261006-new409-q401",
-            "groupId": "math-20261006-new409-q401",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Problem-Solving & Data Analysis",
-            "skill": "Probability",
-            "difficulty": "Medium",
-            "passage": "A survey of 700 students produced the table below.",
-            "question": "what is the probability that the student uses a planner daily?",
-            "choices": {
-              "A": "\\(\\frac{193}{350}\\)",
-              "B": "\\(\\frac{157}{350}\\)",
-              "C": "\\(\\frac{21}{50}\\)",
-              "D": "\\(\\frac{386}{475}\\)"
-            },
-            "correctAnswer": "A",
-            "explanation": "There are 386 students who use a planner daily out of 700 students total.\n\n\\[P=386700=193350\\]",
-            "sourceBatch": "2026-10-06-new-paste409-audited",
-            "sourceQuestionNumber": 401,
-            "choiceExplanations": {
-              "A": "There are 386 students who use a planner daily out of 700 students total.\n\n\\[P=386700=193350\\]",
-              "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "This choice does not satisfy the relationships or conditions given in the question.",
-              "D": "This choice does not satisfy the relationships or conditions given in the question."
-            },
-            "table": {
-              "caption": "Student study schedules",
-              "headers": [
-                "Study schedule",
-                "Uses a planner daily",
-                "Does not use a planner daily",
-                "Total"
-              ],
-              "rows": [
-                [
-                  "Light",
-                  "84",
-                  "116",
-                  "200"
-                ],
-                [
-                  "Moderate",
-                  "133",
-                  "142",
-                  "275"
-                ],
-                [
-                  "Heavy",
-                  "169",
-                  "56",
-                  "225"
-                ],
-                [
-                  "Total",
-                  "386",
-                  "314",
-                  "700"
-                ]
-              ]
-            },
-            "subtopic": "Probability",
-            "classificationVersion": "2026-10-07-v1"
-          },
-          "sharedBetweenRoutes": true
-        },
-        {
           "requestId": "mock-2-math-m2high-20",
           "targetDomain": "Geometry & Trigonometry",
           "targetSubtopic": "Lines, Angles, and Triangles",
@@ -6291,263 +6548,6 @@
               ]
             }
           }
-        },
-        {
-          "requestId": "mock-2-math-m2-21-shared",
-          "targetDomain": "Geometry & Trigonometry",
-          "targetSubtopic": "Area and Volume",
-          "targetDifficulty": "Medium",
-          "question": {
-            "id": "math-20261006-new409-q036",
-            "groupId": "math-20261006-new409-q036",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Geometry & Trigonometry",
-            "skill": "Area and Volume",
-            "difficulty": "Medium",
-            "passage": "",
-            "question": "What is the area, in square units, of rectangle ABCD?",
-            "choices": {
-              "A": "49",
-              "B": "56",
-              "C": "63",
-              "D": "70"
-            },
-            "correctAnswer": "B",
-            "explanation": "The horizontal side length is\n\n\\[5-(-3)=8,\\]\nand the vertical side length is\n\n\\[9-2=7\\]\nTherefore,\n\\[ A=8(7)=\\boxed{56}. \\]",
-            "sourceBatch": "2026-10-06-new-paste409-audited",
-            "sourceQuestionNumber": 36,
-            "choiceExplanations": {
-              "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "The horizontal side length is\n\n\\[5-(-3)=8,\\]\nand the vertical side length is\n\n\\[9-2=7\\]\nTherefore,\n\\[ A=8(7)=\\boxed{56}. \\]",
-              "C": "This choice does not satisfy the relationships or conditions given in the question.",
-              "D": "This choice does not satisfy the relationships or conditions given in the question."
-            },
-            "graph": {
-              "type": "xy",
-              "caption": "Rectangle ABCD in the coordinate plane",
-              "xMin": -5,
-              "xMax": 7,
-              "yMin": 0,
-              "yMax": 11,
-              "xStep": 1,
-              "yStep": 1,
-              "xLabel": "x",
-              "yLabel": "y",
-              "series": [
-                {
-                  "points": [
-                    [
-                      -3,
-                      9
-                    ],
-                    [
-                      5,
-                      9
-                    ]
-                  ],
-                  "showPoints": true
-                },
-                {
-                  "points": [
-                    [
-                      5,
-                      9
-                    ],
-                    [
-                      5,
-                      2
-                    ]
-                  ],
-                  "showPoints": true
-                },
-                {
-                  "points": [
-                    [
-                      5,
-                      2
-                    ],
-                    [
-                      -3,
-                      2
-                    ]
-                  ],
-                  "showPoints": true
-                },
-                {
-                  "points": [
-                    [
-                      -3,
-                      2
-                    ],
-                    [
-                      -3,
-                      9
-                    ]
-                  ],
-                  "showPoints": true
-                }
-              ]
-            },
-            "subtopic": "Area and Volume",
-            "classificationVersion": "2026-10-07-v1"
-          },
-          "sharedBetweenRoutes": true
-        },
-        {
-          "requestId": "mock-2-math-m2-22-shared",
-          "targetDomain": "Geometry & Trigonometry",
-          "targetSubtopic": "Trigonometry",
-          "targetDifficulty": "Medium",
-          "question": {
-            "id": "math-20261006-new409-q172",
-            "groupId": "math-20261006-new409-q172",
-            "status": "staged",
-            "section": "Math",
-            "domain": "Geometry & Trigonometry",
-            "skill": "Trigonometry",
-            "difficulty": "Medium",
-            "passage": "Right triangles \\(ABC\\) and \\(DEF\\) are similar, with \\(A\\leftrightarrow D\\), and \\(C\\) and \\(F\\) right angles. In triangle \\(ABC\\), \\(AB=26\\) and \\(BC=10\\).",
-            "question": "What is \\(\\cos D\\)?",
-            "choices": {
-              "A": "\\(\\frac5{13}\\)",
-              "B": "\\(\\frac{10}{13}\\)",
-              "C": "\\(\\frac{12}{13}\\)",
-              "D": "\\(\\frac{13}{12}\\)"
-            },
-            "correctAnswer": "C",
-            "explanation": "Since \\(AB\\) is the hypotenuse,\n\\[AC=\\sqrt{26^2-10^2}=24.\\]\nThus\n\\[\\cos A=\\frac{AC}{AB}=\\frac{24}{26}=\\frac{12}{13}.\\]\nBecause \\(A\\leftrightarrow D\\), \\(\\boxed{\\cos D=12/13}\\).",
-            "sourceBatch": "2026-10-06-new-paste409-audited",
-            "sourceQuestionNumber": 172,
-            "choiceExplanations": {
-              "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "Since \\(AB\\) is the hypotenuse,\n\\[AC=\\sqrt{26^2-10^2}=24.\\]\nThus\n\\[\\cos A=\\frac{AC}{AB}=\\frac{24}{26}=\\frac{12}{13}.\\]\nBecause \\(A\\leftrightarrow D\\), \\(\\boxed{\\cos D=12/13}\\).",
-              "D": "This choice does not satisfy the relationships or conditions given in the question."
-            },
-            "subtopic": "Trigonometry",
-            "classificationVersion": "2026-10-07-v1",
-            "diagram": {
-              "width": 420,
-              "height": 280,
-              "alt": "Two right triangles",
-              "polygons": [
-                {
-                  "points": [
-                    [
-                      35,
-                      225
-                    ],
-                    [
-                      175,
-                      225
-                    ],
-                    [
-                      35,
-                      90
-                    ]
-                  ]
-                },
-                {
-                  "points": [
-                    [
-                      235,
-                      225
-                    ],
-                    [
-                      390,
-                      225
-                    ],
-                    [
-                      235,
-                      70
-                    ]
-                  ]
-                }
-              ],
-              "rightAngles": [
-                {
-                  "x": 35,
-                  "y": 225,
-                  "size": 14,
-                  "rotation": 0
-                },
-                {
-                  "x": 235,
-                  "y": 225,
-                  "size": 14,
-                  "rotation": 0
-                }
-              ],
-              "points": [
-                {
-                  "x": 35,
-                  "y": 225,
-                  "label": "A",
-                  "dx": -8,
-                  "dy": 18,
-                  "hideDot": false
-                },
-                {
-                  "x": 175,
-                  "y": 225,
-                  "label": "B",
-                  "dx": 8,
-                  "dy": 18,
-                  "hideDot": false
-                },
-                {
-                  "x": 35,
-                  "y": 90,
-                  "label": "C",
-                  "dx": -8,
-                  "dy": -8,
-                  "hideDot": false
-                },
-                {
-                  "x": 235,
-                  "y": 225,
-                  "label": "D",
-                  "dx": -8,
-                  "dy": 18,
-                  "hideDot": false
-                },
-                {
-                  "x": 390,
-                  "y": 225,
-                  "label": "E",
-                  "dx": 8,
-                  "dy": 18,
-                  "hideDot": false
-                },
-                {
-                  "x": 235,
-                  "y": 70,
-                  "label": "F",
-                  "dx": -8,
-                  "dy": -8,
-                  "hideDot": false
-                }
-              ],
-              "labels": [
-                {
-                  "x": 105,
-                  "y": 155,
-                  "text": "AB = 26",
-                  "emphasis": false,
-                  "anchor": "middle"
-                },
-                {
-                  "x": 95,
-                  "y": 240,
-                  "text": "BC = 10",
-                  "emphasis": false,
-                  "anchor": "middle"
-                }
-              ]
-            }
-          },
-          "sharedBetweenRoutes": true
         }
       ]
     }
@@ -6558,6 +6558,6 @@
     "noReuseAcrossMockTests": true,
     "readingWritingModule2Shared": 15,
     "mathModule2Shared": 12,
-    "note": "Module 2 low/high routes share the maximum possible number of questions while preserving the requested difficulty totals."
+    "note": "Module 2 low/high routes share the maximum possible number of questions while preserving the requested difficulty totals. Math modules are ordered Easy, then Medium, then Hard."
   }
 }
