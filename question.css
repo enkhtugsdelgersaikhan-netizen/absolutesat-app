@@ -5259,3 +5259,22 @@ body.drill-results-active .results-review{
     .drill-performance-grid{grid-template-columns:1fr}
     .drill-performance-head{align-items:flex-start;flex-direction:column;gap:4px}
 }
+
+
+/* Math information should read as one continuous paragraph, not stacked source lines. */
+.question-passage-copy.question-math-information{
+    white-space:normal;
+    line-height:1.7;
+}
+.question-math-information mjx-container[display="true"]{
+    display:inline-block!important;
+    width:auto!important;
+    max-width:none!important;
+    margin:0 .18em!important;
+    padding:0!important;
+    overflow:visible!important;
+    vertical-align:baseline!important;
+}
+.question-math-information br{
+    display:none;
+}
