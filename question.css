@@ -3675,3 +3675,86 @@ html.lexlogica-dark-mode .desmos-frame{
     will-change:auto;
 }
 
+
+
+/* ============================================================
+   DARK MODE: NEON QUESTION BANK PEEKER
+   ============================================================ */
+
+/*
+ * The peeker sits inside an inverted top-level surface. Counter-invert
+ * each question tile so its explicitly dark/neon palette survives the
+ * page-wide literal inversion instead of becoming pale pastel.
+ */
+html.lexlogica-dark-mode .question-bank-peeker-item{
+    filter:invert(1);
+    background:#101519;
+    border-color:#2a353b;
+    color:#d8e4e8;
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.035),
+        0 0 0 1px rgba(0,0,0,.28);
+}
+
+html.lexlogica-dark-mode .question-bank-peeker-item.difficulty-easy{
+    background:#071a13;
+    border-color:#18e891;
+    color:#65ffba;
+    box-shadow:
+        inset 0 0 18px rgba(24,232,145,.08),
+        0 0 8px rgba(24,232,145,.22);
+}
+
+html.lexlogica-dark-mode .question-bank-peeker-item.difficulty-medium{
+    background:#1c1705;
+    border-color:#ffd84a;
+    color:#ffe77a;
+    box-shadow:
+        inset 0 0 18px rgba(255,216,74,.075),
+        0 0 8px rgba(255,216,74,.19);
+}
+
+html.lexlogica-dark-mode .question-bank-peeker-item.difficulty-hard{
+    background:#1d090d;
+    border-color:#ff4f68;
+    color:#ff8192;
+    box-shadow:
+        inset 0 0 18px rgba(255,79,104,.08),
+        0 0 8px rgba(255,79,104,.22);
+}
+
+html.lexlogica-dark-mode .question-bank-peeker-item.current{
+    border-color:#50f5ff;
+    color:#dfffff;
+    box-shadow:
+        0 0 0 2px #071012,
+        0 0 0 4px #50f5ff,
+        0 0 17px rgba(80,245,255,.5);
+}
+
+html.lexlogica-dark-mode .question-bank-peeker-status-dot{
+    border-color:#071012;
+    box-shadow:0 0 7px currentColor;
+}
+
+html.lexlogica-dark-mode .question-bank-peeker-status-dot.unanswered{
+    background:#647681;
+    color:#647681;
+}
+
+html.lexlogica-dark-mode .question-bank-peeker-status-dot.correct{
+    background:#2cff88;
+    color:#2cff88;
+}
+
+html.lexlogica-dark-mode .question-bank-peeker-status-dot.incorrect{
+    background:#ff4059;
+    color:#ff4059;
+}
+
+html.lexlogica-dark-mode .question-bank-peeker-review-icon{
+    border-color:#ffe14d;
+    background:#171505;
+    color:#ffe14d;
+    box-shadow:0 0 9px rgba(255,225,77,.42);
+}
