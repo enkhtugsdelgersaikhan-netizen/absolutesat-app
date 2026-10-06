@@ -392,6 +392,21 @@ function normalizeMathEscapes(value) {
             "}"
     );
 
+    /*
+     * Older renderer passes could also wrap a valid environment name
+     * in \\text{...}. Repair that shape defensively before MathJax
+     * sees it. This is intentionally limited to begin/end arguments.
+     */
+    source = source
+        .replace(
+            /\\begin\s*\{\s*\\text\s*\{\s*([A-Za-z*]+)\s*\}\s*\}/g,
+            "\\begin{$1}"
+        )
+        .replace(
+            /\\end\s*\{\s*\\text\s*\{\s*([A-Za-z*]+)\s*\}\s*\}/g,
+            "\\end{$1}"
+        );
+
     // Once a math segment is recognized, collapse a duplicated
     // backslash before TeX command names such as \\frac or \\sqrt.
     // This is intentionally limited to delimited math so prose and
@@ -5025,6 +5040,37 @@ function wrapMathProseRuns(
     }
 
     /*
+     * Never let prose repair touch TeX environment names.
+     *
+     * Previously, valid input such as
+     *   \\begin{cases} ... \\end{cases}
+     * could become
+     *   \\begin{\\text{cases}} ... \\end{\\text{cases}}
+     * which MathJax reports as an invalid environment.
+     *
+     * Protect every begin/end token first, repair prose around it,
+     * then restore the exact original TeX.
+     */
+    const environmentTokens = [];
+
+    const protectedSource =
+        source.replace(
+            /\\(?:begin|end)\s*\{\s*[A-Za-z*]+\s*\}/g,
+            match => {
+                const index =
+                    environmentTokens.push(
+                        match
+                    ) - 1;
+
+                return (
+                    "\uE020" +
+                    index +
+                    "\uE021"
+                );
+            }
+        );
+
+    /*
      * TeX math mode ignores ordinary spaces and italicizes bare
      * alphabetic words. Preserve actual math, but put English word
      * runs into \\text{...} so explanations such as
@@ -5035,32 +5081,44 @@ function wrapMathProseRuns(
      *
      * Single-letter variables stay mathematical.
      */
-    return source.replace(
-        /(^|[^\\A-Za-z])([A-Za-z]{2,}(?:[ '-]+[A-Za-z]{2,})*)([ \t]*)/g,
+    const repaired =
+        protectedSource.replace(
+            /(^|[^\\A-Za-z])([A-Za-z]{2,}(?:[ '-]+[A-Za-z]{2,})*)([ \t]*)/g,
+            (
+                match,
+                prefix,
+                phrase,
+                trailingSpace
+            ) => {
+                const normalizedPhrase =
+                    phrase.replace(
+                        /\s+/g,
+                        " "
+                    );
+
+                return (
+                    prefix +
+                    "\\text{" +
+                    normalizedPhrase +
+                    (
+                        trailingSpace
+                            ? " "
+                            : ""
+                    ) +
+                    "}"
+                );
+            }
+        );
+
+    return repaired.replace(
+        /\uE020(\d+)\uE021/g,
         (
             match,
-            prefix,
-            phrase,
-            trailingSpace
-        ) => {
-            const normalizedPhrase =
-                phrase.replace(
-                    /\s+/g,
-                    " "
-                );
-
-            return (
-                prefix +
-                "\\text{" +
-                normalizedPhrase +
-                (
-                    trailingSpace
-                        ? " "
-                        : ""
-                ) +
-                "}"
-            );
-        }
+            index
+        ) =>
+            environmentTokens[
+                Number(index)
+            ] || match
     );
 }
 
