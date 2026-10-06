@@ -3624,7 +3624,8 @@ html.lexlogica-dark-mode body{
 
 html.lexlogica-dark-mode body > .header,
 html.lexlogica-dark-mode body > .question-page,
-html.lexlogica-dark-mode body > .question-bank-peeker{
+html.lexlogica-dark-mode body > .question-bank-peeker,
+html.lexlogica-dark-mode body > .mock-gate-overlay{
     filter:invert(1) brightness(1.08);
 }
 
@@ -4710,5 +4711,171 @@ html.lexlogica-dark-mode .mock-review-bookmark{
 
     .mock-review-student-response{
         grid-template-columns:1fr;
+    }
+}
+
+
+/* ============================================================
+   MOCK SCORE GAUGES
+   ============================================================ */
+
+.mock-score-gauges{
+    width:min(900px,100%);
+    margin:8px auto 22px;
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    overflow:hidden;
+    border:1px solid #dfe6ea;
+    border-radius:16px;
+    background:#fff;
+}
+
+.mock-score-gauge-card{
+    min-width:0;
+    padding:22px 18px 18px;
+    text-align:center;
+    border-right:1px solid #dfe6ea;
+}
+
+.mock-score-gauge-card:last-child{
+    border-right:0;
+}
+
+.mock-score-gauge-card h2{
+    margin:0 0 4px;
+    color:#15283a;
+    font-size:15px;
+    font-weight:700;
+    line-height:1.25;
+}
+
+.mock-score-gauge-card > small{
+    display:block;
+    margin-top:0;
+    color:#7c8995;
+    font-size:9px;
+}
+
+.mock-score-gauge-card > small b{
+    color:#52626f;
+}
+
+.mock-score-gauge{
+    position:relative;
+    width:min(190px,100%);
+    margin:0 auto;
+    aspect-ratio:160 / 138;
+}
+
+.mock-score-gauge svg{
+    display:block;
+    width:100%;
+    height:100%;
+    overflow:visible;
+}
+
+.mock-score-gauge-track,
+.mock-score-gauge-progress{
+    fill:none;
+    stroke-width:14;
+    stroke-linecap:butt;
+}
+
+.mock-score-gauge-track{
+    stroke:#e8ecef;
+}
+
+.mock-score-gauge-progress{
+    stroke:#3243b5;
+    stroke-dasharray:100;
+    stroke-dashoffset:100;
+    transition:stroke-dashoffset .55s ease;
+}
+
+.mock-score-gauge-value{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-39%);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:1px;
+}
+
+.mock-score-gauge-value strong{
+    color:#16191d;
+    font-size:34px;
+    font-weight:700;
+    line-height:1;
+    letter-spacing:-.035em;
+    font-variant-numeric:tabular-nums;
+}
+
+.mock-score-gauge-value span{
+    color:#30363c;
+    font-size:9px;
+    font-weight:500;
+}
+
+.mock-score-gauge-min,
+.mock-score-gauge-max{
+    position:absolute;
+    bottom:4px;
+    color:#5f656b;
+    font-size:11px;
+    font-variant-numeric:tabular-nums;
+}
+
+.mock-score-gauge-min{
+    left:15%;
+}
+
+.mock-score-gauge-max{
+    right:10%;
+}
+
+body.mock-results-active .results-card > .score-circle{
+    display:none!important;
+}
+
+.mock-route-summary{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+.mock-route-summary > span{
+    padding:7px 10px;
+    border:1px solid #dfe7eb;
+    border-radius:999px;
+    background:#fafcfc;
+    color:#71808d;
+    font-size:9px;
+}
+
+.mock-route-summary strong{
+    color:#435766;
+    font-weight:700;
+}
+
+@media(max-width:760px){
+    .mock-score-gauges{
+        grid-template-columns:1fr;
+        width:min(430px,100%);
+    }
+
+    .mock-score-gauge-card{
+        border-right:0;
+        border-bottom:1px solid #dfe6ea;
+    }
+
+    .mock-score-gauge-card:last-child{
+        border-bottom:0;
+    }
+
+    .mock-score-gauge{
+        width:180px;
     }
 }
