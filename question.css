@@ -4947,3 +4947,61 @@ html.lexlogica-dark-mode .question-page .mock-review-choice-explanation::selecti
     background:rgba(0,32,155,.68);
     color:inherit;
 }
+
+
+/* ============================================================
+   PERSISTENT PER-QUESTION HIGHLIGHTER
+   ============================================================ */
+
+.persistent-text-highlight{
+    padding:0;
+    margin:0;
+    border-radius:2px;
+    background:rgba(255,222,77,.58);
+    color:inherit;
+    box-decoration-break:clone;
+    -webkit-box-decoration-break:clone;
+}
+
+.text-highlight-hint{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    min-height:32px;
+    padding:5px 8px;
+    border:1px solid #dfe5e8;
+    border-radius:8px;
+    background:#fafcfc;
+    color:#71808c;
+    font-size:9px;
+    font-weight:600;
+    line-height:1.15;
+    white-space:nowrap;
+    user-select:none;
+}
+
+.text-highlight-hint svg{
+    width:14px;
+    height:14px;
+    fill:none;
+    stroke:currentColor;
+    stroke-width:1.55;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+
+html.lexlogica-dark-mode .question-page .persistent-text-highlight{
+    background:rgba(0,32,155,.60);
+}
+
+@media(max-width:760px){
+    .text-highlight-hint span{
+        display:none;
+    }
+
+    .text-highlight-hint{
+        width:32px;
+        justify-content:center;
+        padding:5px;
+    }
+}
