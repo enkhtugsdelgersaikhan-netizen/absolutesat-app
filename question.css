@@ -2652,16 +2652,7 @@
 .choice-reason-text em,
 .answer-feedback-explanation em,
 .review-result-explanation em{
-    margin-left:.045em;
-    margin-right:.045em;
-}
-.question-passage em + em,
-.sat-answer-pane .question-text em + em,
-.sat-answer-pane .choice-text em + em,
-.choice-reason-text em + em,
-.answer-feedback-explanation em + em,
-.review-result-explanation em + em{
-    margin-left:.2em;
+    margin:0;
 }
 
 
@@ -4778,7 +4769,9 @@ html.lexlogica-dark-mode .mock-review-bookmark{
 .mock-score-gauge-progress{
     fill:none;
     stroke-width:14;
-    stroke-linecap:butt;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    shape-rendering:geometricPrecision;
 }
 
 .mock-score-gauge-track{
@@ -4787,9 +4780,6 @@ html.lexlogica-dark-mode .mock-review-bookmark{
 
 .mock-score-gauge-progress{
     stroke:#3243b5;
-    stroke-dasharray:100;
-    stroke-dashoffset:100;
-    transition:stroke-dashoffset .55s ease;
 }
 
 .mock-score-gauge-value{
@@ -4878,4 +4868,21 @@ body.mock-results-active .results-card > .score-circle{
     .mock-score-gauge{
         width:180px;
     }
+}
+
+
+/* ============================================================
+   DESMOS NATIVE THEME
+   ============================================================ */
+
+/*
+ * Desmos dark mode is loaded natively through its calculator URL.
+ * Never color-filter the cross-origin iframe: doing so reintroduces
+ * Chromium selection/repaint color glitches.
+ */
+html.lexlogica-dark-mode #desmos-frame,
+html:not(.lexlogica-dark-mode) #desmos-frame{
+    filter:none!important;
+    mix-blend-mode:normal!important;
+    opacity:1!important;
 }
