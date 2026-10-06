@@ -245,19 +245,45 @@ document.addEventListener("DOMContentLoaded", async () => {
             0,
             ...days.map(day => day.correct + day.incorrect)
         );
+
+        if (maxTotal === 0) {
+            els.sevenDay.className =
+                "seven-day-chart dashboard-chart-empty-state";
+
+            els.sevenDay.innerHTML =
+                '<strong>No questions answered in the last 7 days.</strong>' +
+                '<span>Your daily correct/incorrect bars will appear here after practice.</span>' +
+                '<div class="empty-day-strip">' +
+                    days.map((day, index) =>
+                        '<div' + (index === 6 ? ' class="is-today"' : '') + '>' +
+                            '<b>0</b>' +
+                            '<small>' +
+                                escapeHtml(
+                                    day.date.toLocaleDateString(
+                                        undefined,
+                                        { weekday: "short" }
+                                    )
+                                ) +
+                            '</small>' +
+                        '</div>'
+                    ).join("") +
+                '</div>';
+            return;
+        }
+
         const scaleMax = getNiceActivityMaximum(maxTotal);
         const scaleMid = Math.round(scaleMax / 2);
-        const maxHeight = 156;
+        const maxHeight = 132;
 
         const grid =
             '<div class="activity-scale" aria-hidden="true">' +
-                '<span style="bottom:186px">' + scaleMax + '</span>' +
-                '<span style="bottom:108px">' + scaleMid + '</span>' +
-                '<span style="bottom:30px">0</span>' +
+                '<span style="bottom:156px">' + scaleMax + '</span>' +
+                '<span style="bottom:90px">' + scaleMid + '</span>' +
+                '<span style="bottom:24px">0</span>' +
             '</div>' +
-            '<div class="activity-grid-line" style="bottom:186px"></div>' +
-            '<div class="activity-grid-line" style="bottom:108px"></div>' +
-            '<div class="activity-grid-line" style="bottom:30px"></div>';
+            '<div class="activity-grid-line" style="bottom:156px"></div>' +
+            '<div class="activity-grid-line" style="bottom:90px"></div>' +
+            '<div class="activity-grid-line" style="bottom:24px"></div>';
 
         const bars = days.map((day, index) => {
             const total = day.correct + day.incorrect;
@@ -285,7 +311,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             );
         }).join("");
 
-        els.sevenDay.classList.remove("dashboard-empty-chart");
+        els.sevenDay.className = "seven-day-chart";
         els.sevenDay.innerHTML =
             grid +
             '<div class="activity-bars">' +
@@ -386,14 +412,22 @@ document.addEventListener("DOMContentLoaded", async () => {
         const completed = tests.filter(test => test.scores);
 
         if (!completed.length) {
-            els.mockChart.classList.add("dashboard-empty-chart");
-            els.mockChart.textContent =
-                "Complete a mock test to add its Composite, R&W, and Math scores here.";
+            els.mockChart.className =
+                "mock-performance-chart dashboard-chart-empty-state mock-empty-state";
+
+            els.mockChart.innerHTML =
+                '<strong>No completed mock tests yet.</strong>' +
+                '<span>Composite, R&W, and Math scores from Mock Tests 1–8 will appear here.</span>' +
+                '<div class="mock-empty-slots">' +
+                    tests.map(test =>
+                        '<div><b>' + test.index + '</b><small>Mock</small></div>'
+                    ).join("") +
+                '</div>';
             return;
         }
 
         const width = 760;
-        const height = 245;
+        const height = 220;
         const left = 48;
         const right = 48;
         const top = 18;
@@ -463,7 +497,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             )
             .join("");
 
-        els.mockChart.classList.remove("dashboard-empty-chart");
+        els.mockChart.className = "mock-performance-chart";
         els.mockChart.innerHTML =
             '<svg viewBox="0 0 ' + width + ' ' + height +
                 '" role="img" aria-label="Mock test Composite, Reading and Writing, and Math score performance">' +
