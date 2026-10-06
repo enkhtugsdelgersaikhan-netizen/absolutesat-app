@@ -5013,3 +5013,115 @@ html.lexlogica-dark-mode .question-page .persistent-text-highlight{
         padding:5px;
     }
 }
+
+
+/* ============================================================
+   LEFT-SIDE HIGHLIGHTER CONTROLS
+   ============================================================ */
+
+.sat-passage-header{
+    justify-content:flex-start;
+}
+
+.highlight-tools-host{
+    flex:0 0 auto;
+}
+
+.reading-question-metadata-host{
+    margin-left:auto;
+}
+
+.text-highlight-tools{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+}
+
+.text-highlight-hint,
+.clear-highlights-button{
+    min-height:30px;
+}
+
+.clear-highlights-button{
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+    padding:5px 8px;
+    border:1px solid #dfe5e8;
+    border-radius:8px;
+    background:#fff;
+    color:#71808c;
+    font:600 9px/1.15 "Poppins",sans-serif;
+    white-space:nowrap;
+    cursor:pointer;
+}
+
+.clear-highlights-button svg{
+    width:14px;
+    height:14px;
+    fill:none;
+    stroke:currentColor;
+    stroke-width:1.55;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+
+.clear-highlights-button:hover{
+    border-color:#c9d4d9;
+    background:#f7f9fa;
+    color:#425866;
+}
+
+.math-question-context-header{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    gap:10px;
+    margin-bottom:12px;
+}
+
+body.math-question-active .math-question-context-header .math-question-context-label{
+    margin-bottom:0;
+}
+
+.math-highlight-tools-fallback{
+    display:flex;
+    justify-content:flex-start;
+    margin-bottom:14px;
+}
+
+html.lexlogica-dark-mode .question-page .clear-highlights-button{
+    background:#fff;
+    color:#71808c;
+}
+
+@media(max-width:760px){
+    .sat-passage-header{
+        flex-direction:row;
+        align-items:center;
+        flex-wrap:wrap;
+    }
+
+    .reading-question-metadata-host{
+        width:100%;
+        margin-left:0;
+    }
+
+    .text-highlight-tools{
+        gap:4px;
+    }
+
+    .clear-highlights-button span{
+        display:none;
+    }
+
+    .clear-highlights-button{
+        width:32px;
+        justify-content:center;
+        padding:5px;
+    }
+
+    .math-question-context-header{
+        flex-wrap:wrap;
+    }
+}
