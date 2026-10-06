@@ -16,7 +16,7 @@
     >
 
     <link rel="stylesheet" href="style.css?v=dark-2">
-    <link rel="stylesheet" href="question.css?v=72">
+    <link rel="stylesheet" href="question.css?v=73">
 <link rel="stylesheet" href="/responsive.css?v=1"></head>
 
 <body>
@@ -442,6 +442,30 @@
             </div>
 
 
+            <section id="drill-performance" class="drill-performance hidden" aria-label="Drill timing performance">
+                <div class="drill-performance-head">
+                    <span>Pace performance</span>
+                    <small id="drill-pace-note">Your pace compared with the target.</small>
+                </div>
+                <div class="drill-performance-grid">
+                    <div class="drill-performance-card">
+                        <span>Average time</span>
+                        <strong id="drill-average-time">0:00</strong>
+                        <small>per answered question</small>
+                    </div>
+                    <div class="drill-performance-card">
+                        <span>Target time</span>
+                        <strong id="drill-target-time">0:00</strong>
+                        <small>per question</small>
+                    </div>
+                    <div class="drill-performance-card">
+                        <span>On pace</span>
+                        <strong id="drill-on-pace">—</strong>
+                        <small>answered within target</small>
+                    </div>
+                </div>
+            </section>
+
             <div class="results-message" id="results-message"></div>
 
             <section
@@ -631,7 +655,7 @@ window.MathJax = {
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js?v=dark-3"></script>
-<script src="question.js?v=71"></script>
+<script src="question.js?v=72"></script>
 
 </body>
 </html>
