@@ -3692,6 +3692,27 @@ function showDrillResults(
     scoreNumber.textContent =
         results.percentage + "%";
 
+    const scoreCircleLabel =
+        document.querySelector(
+            ".score-circle span"
+        );
+
+    if (scoreCircleLabel) {
+        scoreCircleLabel.textContent =
+            "Accuracy";
+    }
+
+    const domainCaption =
+        mockDomainPerformance
+            ?.querySelector(
+                ".mock-domain-performance-head small"
+            );
+
+    if (domainCaption) {
+        domainCaption.textContent =
+            "First checked answers from this drill";
+    }
+
     correctCount.textContent =
         results.correct;
 
@@ -3877,6 +3898,14 @@ function finishDrill() {
     }
 
     saveCurrentDrillElapsed();
+
+    if (timerInterval) {
+        clearInterval(
+            timerInterval
+        );
+
+        timerInterval = null;
+    }
 
     const results =
         calculateDrillResults();
