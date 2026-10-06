@@ -778,12 +778,52 @@ async function loadQuestions() {
         const data =
             await response.json();
 
+        let reservedQuestionIds =
+            new Set();
+
+        try {
+            const reservationResponse =
+                await fetch(
+                    "/mock-test-reservations.json?v=1",
+                    {
+                        cache: "no-store"
+                    }
+                );
+
+            if (reservationResponse.ok) {
+                const reservationData =
+                    await reservationResponse.json();
+
+                reservedQuestionIds =
+                    new Set(
+                        (
+                            reservationData
+                                .allQuestionIds ||
+                            []
+                        ).map(
+                            id =>
+                                String(id)
+                        )
+                    );
+            }
+        } catch (reservationError) {
+            console.warn(
+                "Could not load mock-test reservations; showing the full bank:",
+                reservationError
+            );
+        }
+
         stagedQuestions =
             (data.questions || [])
                 .filter(
                     question =>
                         question.status ===
-                        "staged"
+                            "staged" &&
+                        !reservedQuestionIds.has(
+                            String(
+                                question.id
+                            )
+                        )
                 )
                 .map(
                     normalizeQuestion
