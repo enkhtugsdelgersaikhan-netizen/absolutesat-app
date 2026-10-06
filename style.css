@@ -5890,3 +5890,77 @@ select:hover,
     padding-left:18px;
     padding-right:18px;
 }
+
+
+/* ============================================================
+   LEXLOGICA LITERAL INVERT DARK MODE
+   ============================================================ */
+
+/*
+ * Dark mode intentionally inverts the rendered site instead of
+ * maintaining a parallel palette. hue-rotate(180deg) keeps the
+ * site's accent hues recognizable while light/dark values invert.
+ */
+html.lexlogica-dark-mode{
+    background:#000;
+    filter:invert(1) hue-rotate(180deg);
+}
+
+/*
+ * University photography and school marks are visual source assets,
+ * so counter-invert them once to preserve their original appearance.
+ */
+html.lexlogica-dark-mode .university-featured-media > img,
+html.lexlogica-dark-mode .university-card-image > img,
+html.lexlogica-dark-mode .university-mark-wrap,
+html.lexlogica-dark-mode .university-symbol-badge,
+html.lexlogica-dark-mode .university-logo-monogram{
+    filter:invert(1) hue-rotate(180deg)!important;
+}
+
+.theme-toggle-button{
+    position:relative;
+    z-index:3;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+    min-height:38px;
+    margin-left:8px;
+    padding:8px 11px;
+    border:1px solid #d8e2e6;
+    border-radius:9px;
+    background:#fff;
+    color:#506070;
+    font-family:'Poppins',sans-serif;
+    font-size:12px;
+    font-weight:600;
+    line-height:1;
+    cursor:pointer;
+    white-space:nowrap;
+    transition:border-color .16s ease,background .16s ease,transform .16s ease;
+}
+
+.theme-toggle-button:hover{
+    transform:translateY(-1px);
+    border-color:#adc8c3;
+    background:#f8fbfa;
+}
+
+.theme-toggle-symbol{
+    width:16px;
+    font-size:15px;
+    line-height:1;
+    text-align:center;
+}
+
+@media(max-width:950px){
+    .theme-toggle-button{
+        min-width:38px;
+        padding:8px;
+    }
+
+    .theme-toggle-label{
+        display:none;
+    }
+}
