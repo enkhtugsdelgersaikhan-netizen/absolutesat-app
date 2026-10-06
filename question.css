@@ -2659,3 +2659,10 @@
 .review-result-explanation em + em{
     margin-left:.2em;
 }
+
+
+/* Math questions use upright prose. MathJax still applies normal
+   mathematical italics to variables inside rendered equations. */
+body.math-question-active #question-app em {
+    font-style: normal;
+}
