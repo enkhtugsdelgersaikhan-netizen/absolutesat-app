@@ -22,9 +22,10 @@
 }
 .drill-focus-select:focus{border-color:#0f766e;box-shadow:0 0 0 3px rgba(15,118,110,.08)}
 .drill-choice-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
-.drill-choice{position:relative;display:block}
+.drill-choice{position:relative;display:block;width:100%;min-width:0}
 .drill-choice input{position:absolute;opacity:0;pointer-events:none}
 .drill-choice-card{
+  display:block;width:100%;box-sizing:border-box;min-width:0;
   min-height:88px;padding:14px;border:1px solid #dce6e4;border-radius:12px;background:#f9fbfb;cursor:pointer;transition:.16s ease
 }
 .drill-choice-card strong,.drill-choice-card span{display:block}
