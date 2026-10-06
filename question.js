@@ -4095,6 +4095,95 @@ function updateMockTopbar() {
 }
 
 
+function orderMockQuestionsLikeRealTest(
+    questionList,
+    sectionKey
+) {
+    const source =
+        Array.isArray(
+            questionList
+        )
+            ? questionList
+            : [];
+
+    const readingWritingOrder = [
+        "Craft and Structure",
+        "Information and Ideas",
+        "Standard English Conventions",
+        "Expression of Ideas"
+    ];
+
+    const mathDifficultyOrder = [
+        "Easy",
+        "Medium",
+        "Hard"
+    ];
+
+    const rank = value => {
+        const order =
+            sectionKey ===
+                "readingWriting"
+                ? readingWritingOrder
+                : mathDifficultyOrder;
+
+        const index =
+            order.indexOf(
+                value
+            );
+
+        return index >= 0
+            ? index
+            : order.length;
+    };
+
+    return source
+        .map(
+            (
+                question,
+                originalIndex
+            ) => ({
+                question,
+                originalIndex
+            })
+        )
+        .sort(
+            (
+                left,
+                right
+            ) => {
+                const leftValue =
+                    sectionKey ===
+                        "readingWriting"
+                        ? left.question
+                            ?.domain
+                        : left.question
+                            ?.difficulty;
+
+                const rightValue =
+                    sectionKey ===
+                        "readingWriting"
+                        ? right.question
+                            ?.domain
+                        : right.question
+                            ?.difficulty;
+
+                const rankDifference =
+                    rank(leftValue) -
+                    rank(rightValue);
+
+                return rankDifference !== 0
+                    ? rankDifference
+                    : left.originalIndex -
+                        right.originalIndex;
+            }
+        )
+        .map(
+            item =>
+                item.question
+        );
+}
+
+
 function loadMockStage(
     resetDeadline = false
 ) {
@@ -4126,9 +4215,18 @@ function loadMockStage(
     const entries =
         getMockStageEntries();
 
-    questions =
+    const normalizedEntries =
         normalizeMockEntries(
             entries
+        );
+
+    const stageInfo =
+        getMockStageInfo();
+
+    questions =
+        orderMockQuestionsLikeRealTest(
+            normalizedEntries,
+            stageInfo?.sectionKey
         );
 
     currentQuestionIndex =
