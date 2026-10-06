@@ -7461,6 +7461,18 @@ async function toggleReview() {
             ] === true
         );
 
+    if (mockTestMode) {
+        markedForReview[
+            question.id
+        ] =
+            nextMarked;
+
+        updateReviewButton();
+        updateQuestionNavigator();
+        saveMockState();
+        return;
+    }
+
     localReviewOverrides =
         getLocalReviewOverrides();
 
@@ -7478,11 +7490,6 @@ async function toggleReview() {
 
     updateReviewButton();
     updateQuestionNavigator();
-
-    if (mockTestMode) {
-        saveMockState();
-        return;
-    }
 
     if (!currentUser) {
         return;
