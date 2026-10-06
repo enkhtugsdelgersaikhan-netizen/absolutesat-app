@@ -16,7 +16,7 @@
     >
 
     <link rel="stylesheet" href="style.css?v=subjects-1">
-    <link rel="stylesheet" href="question.css?v=51">
+    <link rel="stylesheet" href="question.css?v=52">
 </head>
 
 <body>
@@ -71,11 +71,18 @@
 
             <div class="sat-question-pane sat-passage-pane">
 
-                <div
-                    id="question-context-label"
-                    class="sat-pane-label"
-                >
-                    PASSAGE
+                <div class="sat-passage-header">
+                    <div
+                        id="question-context-label"
+                        class="sat-pane-label"
+                    >
+                        PASSAGE
+                    </div>
+
+                    <div
+                        id="reading-question-metadata-host"
+                        class="reading-question-metadata-host"
+                    ></div>
                 </div>
 
                 <div
@@ -90,7 +97,7 @@
 
                 <div class="question-progress-row">
 
-                    <div class="question-progress-identity">
+                    <div id="question-progress-identity" class="question-progress-identity">
                         <span id="question-number">
                             Question 1
                         </span>
@@ -367,7 +374,7 @@ window.MathJax = {
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js?v=subjects-1"></script>
-<script src="question.js?v=49"></script>
+<script src="question.js?v=52"></script>
 
 </body>
 </html>
