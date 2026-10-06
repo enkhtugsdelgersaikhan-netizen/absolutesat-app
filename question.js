@@ -123,6 +123,46 @@ const questionDifficulty =
         "question-difficulty"
     );
 
+const questionBankPeeker =
+    document.getElementById(
+        "question-bank-peeker"
+    );
+
+const questionBankPeekerToggle =
+    document.getElementById(
+        "question-bank-peeker-toggle"
+    );
+
+const questionBankPeekerPanel =
+    document.getElementById(
+        "question-bank-peeker-panel"
+    );
+
+const questionBankPeekerClose =
+    document.getElementById(
+        "question-bank-peeker-close"
+    );
+
+const questionBankPeekerPosition =
+    document.getElementById(
+        "question-bank-peeker-position"
+    );
+
+const questionBankPeekerFilters =
+    document.getElementById(
+        "question-bank-peeker-filters"
+    );
+
+const questionBankPeekerList =
+    document.getElementById(
+        "question-bank-peeker-list"
+    );
+
+const questionBankPeekerOpen =
+    document.getElementById(
+        "question-bank-peeker-open"
+    );
+
 const questionText =
     document.getElementById(
         "question-text"
@@ -4873,6 +4913,64 @@ async function loadReviewStatesForQuestions(
     }
 }
 
+function wrapMathProseRuns(
+    body
+) {
+    const source =
+        String(
+            body || ""
+        );
+
+    if (
+        !source ||
+        /\\text\s*\{/.test(
+            source
+        )
+    ) {
+        return source;
+    }
+
+    /*
+     * TeX math mode ignores ordinary spaces and italicizes bare
+     * alphabetic words. Preserve actual math, but put English word
+     * runs into \\text{...} so explanations such as
+     *
+     *   so 2u=34 and u=17. Therefore,
+     *
+     * cannot collapse into "so2u...andu...Therefore".
+     *
+     * Single-letter variables stay mathematical.
+     */
+    return source.replace(
+        /(^|[^\\A-Za-z])([A-Za-z]{2,}(?:[ '-]+[A-Za-z]{2,})*)([ \t]*)/g,
+        (
+            match,
+            prefix,
+            phrase,
+            trailingSpace
+        ) => {
+            const normalizedPhrase =
+                phrase.replace(
+                    /\s+/g,
+                    " "
+                );
+
+            return (
+                prefix +
+                "\\text{" +
+                normalizedPhrase +
+                (
+                    trailingSpace
+                        ? " "
+                        : ""
+                ) +
+                "}"
+            );
+        }
+    );
+}
+
+
 function normalizeAccidentalDisplayProse(
     value
 ) {
@@ -4882,16 +4980,10 @@ function normalizeAccidentalDisplayProse(
         );
 
     /*
-     * Some imported Math questions incorrectly wrap ordinary prose
-     * in MathJax delimiters. TeX math mode discards normal spaces and
-     * italicizes letters, turning text such as
-     *
-     *     \\(The slope is undefined.\\)
-     *
-     * into something visually close to "Theslopeisundefined".
-     *
-     * Recover prose before MathJax sees it. This is deliberately
-     * conservative: real formulas stay in math mode.
+     * Imported Math content occasionally places ordinary prose inside
+     * MathJax delimiters. Pure prose is taken out of math mode. Mixed
+     * prose + equations stays mathematical, but English word runs are
+     * converted to \\text{...} so spacing and upright letters survive.
      */
 
     source = source.replace(
@@ -4900,38 +4992,92 @@ function normalizeAccidentalDisplayProse(
             match,
             body
         ) => {
-            const trimmed =
+            let trimmed =
                 String(body || "")
                     .trim();
 
-            if (
-                !trimmed ||
-                /[\\^_{}]/.test(
-                    trimmed
-                )
-            ) {
+            if (!trimmed) {
                 return match;
             }
 
+            /*
+             * A few imported explanations contain inline delimiters
+             * nested inside display math. They are redundant there and
+             * can make MathJax parse the sentence incorrectly.
+             */
+            trimmed =
+                trimmed.replace(
+                    /\\\(|\\\)/g,
+                    ""
+                );
+
+            if (
+                /\\text\s*\{/.test(
+                    trimmed
+                )
+            ) {
+                return (
+                    "\\[" +
+                    trimmed +
+                    "\\]"
+                );
+            }
+
+            const words =
+                trimmed.match(
+                    /\b[A-Za-z]{2,}\b/g
+                ) || [];
+
+            const lowerCaseWords =
+                words.filter(
+                    word =>
+                        /[a-z]/.test(
+                            word
+                        )
+                );
+
+            const hasStrongMathSyntax =
+                /[=<>^_{}]/.test(
+                    trimmed
+                ) ||
+                /\\[A-Za-z]+/.test(
+                    trimmed
+                );
+
             const startsLikeProse =
-                /^(?:what|which|how|if|is|in|and|intersect|one|the|at|for|from|since|using|then|thus|substitute|match|multiply|divide|add|subtract|let|rewrite|solve|first|because|therefore|when|set|so|only|each|now|this|that|both|line|statement|speed|area|volume|total)\b/i
+                /^(?:what|which|how|if|is|in|and|intersect|one|the|at|for|from|since|using|then|thus|substitute|match|multiply|divide|add|subtract|let|rewrite|solve|first|because|therefore|when|set|so|only|each|now|this|that|both|line|statement|speed|area|volume|total|subtracting|adding|after|before|given|from|use|by|we|since|hence|which)\b/i
                     .test(
                         trimmed
                     );
 
-            const wordCount =
-                (
-                    trimmed.match(
-                        /\b[A-Za-z]{2,}\b/g
-                    ) || []
-                ).length;
+            const plainProse =
+                !hasStrongMathSyntax &&
+                startsLikeProse &&
+                lowerCaseWords.length >=
+                    2;
+
+            if (plainProse) {
+                return trimmed;
+            }
+
+            if (
+                lowerCaseWords.length >
+                    0
+            ) {
+                return (
+                    "\\[" +
+                    wrapMathProseRuns(
+                        trimmed
+                    ) +
+                    "\\]"
+                );
+            }
 
             return (
-                startsLikeProse &&
-                wordCount >= 2
-            )
-                ? trimmed
-                : match;
+                "\\[" +
+                trimmed +
+                "\\]"
+            );
         }
     );
 
@@ -4949,9 +5095,6 @@ function normalizeAccidentalDisplayProse(
                 return match;
             }
 
-            /*
-             * Already-correct text commands should be left alone.
-             */
             if (
                 /\\text\s*\{/.test(
                     trimmed
@@ -5015,10 +5158,6 @@ function normalizeAccidentalDisplayProse(
                 lowerCaseWords.length >=
                     3;
 
-            /*
-             * If the entire segment is prose, remove math mode
-             * altogether. Numbers and punctuation remain untouched.
-             */
             if (
                 plainLanguageChoice ||
                 proseHeavyMixedChoice
@@ -5026,44 +5165,23 @@ function normalizeAccidentalDisplayProse(
                 return trimmed;
             }
 
-            /*
-             * Mixed expressions such as
-             *     x > 2 and y < -1
-             * should remain mathematical, but English connectors
-             * need explicit TeX text mode so their spaces survive.
-             */
-            const repaired =
-                trimmed
-                    .replace(
-                        /\s+(rather\s+than|for\s+every|for\s+each|such\s+that|at\s+most|at\s+least)\s+/gi,
-                        (
-                            token,
-                            phrase
-                        ) =>
-                            "\\text{ " +
-                            phrase +
-                            " }"
-                    )
-                    .replace(
-                        /\s+(and|or|nor|where|than|for|with|without)\s+/gi,
-                        (
-                            token,
-                            word
-                        ) =>
-                            "\\text{ " +
-                            word +
-                            " }"
-                    );
+            if (
+                lowerCaseWords.length >
+                    0
+            ) {
+                return (
+                    "\\(" +
+                    wrapMathProseRuns(
+                        trimmed
+                    ) +
+                    "\\)"
+                );
+            }
 
-            return (
-                "\\(" +
-                repaired +
-                "\\)"
-            );
+            return match;
         }
     );
 }
-
 
 function normalizeQuestionStemText(
     value
@@ -5867,6 +5985,404 @@ function updateQuestionNavigator() {
 
 
 /* ============================================================
+   QUESTION BANK PEEKER
+   ============================================================ */
+
+function getQuestionBankFilterState(
+    section
+) {
+    const key =
+        "absoluteprep-question-bank-filters:v2:" +
+        section;
+
+    try {
+        const stored =
+            JSON.parse(
+                localStorage.getItem(
+                    key
+                ) ||
+                "null"
+            );
+
+        return (
+            stored &&
+            typeof stored ===
+                "object"
+        )
+            ? stored
+            : {};
+    } catch {
+        return {};
+    }
+}
+
+
+function getQuestionBankPath(
+    question
+) {
+    return (
+        question?.section ===
+            "Math"
+            ? "/math-question-bank"
+            : "/reading-question-bank"
+    );
+}
+
+
+function summarizeQuestionBankFilters(
+    question
+) {
+    const state =
+        getQuestionBankFilterState(
+            question?.section ||
+            "Reading & Writing"
+        );
+
+    const labels = [];
+
+    if (
+        Array.isArray(
+            state.skill
+        )
+    ) {
+        labels.push(
+            ...state.skill
+        );
+    }
+
+    if (
+        Array.isArray(
+            state.difficulty
+        )
+    ) {
+        labels.push(
+            ...state.difficulty
+        );
+    }
+
+    if (
+        Array.isArray(
+            state.status
+        )
+    ) {
+        labels.push(
+            ...state.status
+        );
+    }
+
+    if (state.reviewOnly) {
+        labels.push(
+            "Marked for review"
+        );
+    }
+
+    if (
+        typeof state.search ===
+            "string" &&
+        state.search.trim()
+    ) {
+        labels.push(
+            'Search: "' +
+            state.search.trim() +
+            '"'
+        );
+    }
+
+    return labels;
+}
+
+
+async function goToQuestionBankPeekerIndex(
+    index
+) {
+    if (
+        mockTestMode ||
+        currentSet !== null ||
+        index < 0 ||
+        index >= questions.length ||
+        index ===
+            currentQuestionIndex
+    ) {
+        return;
+    }
+
+    currentQuestionIndex =
+        index;
+
+    resetQuestionForNavigation();
+
+    const question =
+        questions[
+            currentQuestionIndex
+        ];
+
+    saveQuestionBankNavigationState(
+        questions.map(
+            item =>
+                item.id
+        ),
+        question.id
+    );
+
+    updateQuestionUrl(
+        question.id
+    );
+
+    await loadQuestionReviewState(
+        question.id
+    );
+
+    renderCurrentQuestion();
+}
+
+
+function renderQuestionBankPeeker() {
+    if (!questionBankPeeker) {
+        return;
+    }
+
+    const question =
+        questions[
+            currentQuestionIndex
+        ];
+
+    const shouldShow =
+        Boolean(
+            question &&
+            !mockTestMode &&
+            currentSet ===
+                null
+        );
+
+    questionBankPeeker.classList.toggle(
+        "hidden",
+        !shouldShow
+    );
+
+    if (!shouldShow) {
+        return;
+    }
+
+    const bankPath =
+        getQuestionBankPath(
+            question
+        );
+
+    if (questionBankPeekerOpen) {
+        questionBankPeekerOpen.href =
+            bankPath;
+    }
+
+    if (questionBankPeekerPosition) {
+        questionBankPeekerPosition.textContent =
+            (
+                currentQuestionIndex +
+                1
+            ) +
+            "/" +
+            questions.length;
+    }
+
+    if (questionBankPeekerFilters) {
+        const filters =
+            summarizeQuestionBankFilters(
+                question
+            );
+
+        questionBankPeekerFilters.innerHTML =
+            filters.length
+                ? filters
+                    .slice(
+                        0,
+                        6
+                    )
+                    .map(
+                        label =>
+                            '<span>' +
+                            escapeHtml(
+                                label
+                            ) +
+                            '</span>'
+                    )
+                    .join(
+                        ""
+                    )
+                : '<span class="question-bank-peeker-filter-empty">All questions</span>';
+    }
+
+    if (!questionBankPeekerList) {
+        return;
+    }
+
+    const start =
+        Math.max(
+            0,
+            Math.min(
+                currentQuestionIndex -
+                    2,
+                Math.max(
+                    0,
+                    questions.length -
+                        5
+                )
+            )
+        );
+
+    const nearby =
+        questions.slice(
+            start,
+            start + 5
+        );
+
+    questionBankPeekerList.innerHTML =
+        "";
+
+    nearby.forEach(
+        (
+            item,
+            offset
+        ) => {
+            const index =
+                start +
+                offset;
+
+            const button =
+                document.createElement(
+                    "button"
+                );
+
+            button.type =
+                "button";
+
+            button.className =
+                "question-bank-peeker-item" +
+                (
+                    index ===
+                        currentQuestionIndex
+                        ? " current"
+                        : ""
+                );
+
+            const shortTopic =
+                item.topic ||
+                "SAT Practice";
+
+            button.innerHTML =
+                '<span class="question-bank-peeker-item-number">Q' +
+                (
+                    index +
+                    1
+                ) +
+                '</span>' +
+                '<span class="question-bank-peeker-item-copy">' +
+                    '<strong>' +
+                    escapeHtml(
+                        shortTopic
+                    ) +
+                    '</strong>' +
+                    '<small>' +
+                    escapeHtml(
+                        item.difficulty ||
+                        "Medium"
+                    ) +
+                    '</small>' +
+                '</span>';
+
+            button.addEventListener(
+                "click",
+                () => {
+                    goToQuestionBankPeekerIndex(
+                        index
+                    );
+                }
+            );
+
+            questionBankPeekerList
+                .appendChild(
+                    button
+                );
+        }
+    );
+}
+
+
+function setQuestionBankPeekerOpen(
+    open
+) {
+    if (
+        !questionBankPeekerPanel ||
+        !questionBankPeekerToggle
+    ) {
+        return;
+    }
+
+    questionBankPeekerPanel
+        .classList.toggle(
+            "hidden",
+            !open
+        );
+
+    questionBankPeekerToggle
+        .setAttribute(
+            "aria-expanded",
+            open
+                ? "true"
+                : "false"
+        );
+}
+
+
+questionBankPeekerToggle
+    ?.addEventListener(
+        "click",
+        () => {
+            const open =
+                questionBankPeekerPanel
+                    ?.classList.contains(
+                        "hidden"
+                    );
+
+            setQuestionBankPeekerOpen(
+                Boolean(
+                    open
+                )
+            );
+        }
+    );
+
+
+questionBankPeekerClose
+    ?.addEventListener(
+        "click",
+        () => {
+            setQuestionBankPeekerOpen(
+                false
+            );
+        }
+    );
+
+
+document.addEventListener(
+    "keydown",
+    event => {
+        if (
+            event.key ===
+                "Escape" &&
+            questionBankPeekerPanel &&
+            !questionBankPeekerPanel
+                .classList.contains(
+                    "hidden"
+                )
+        ) {
+            setQuestionBankPeekerOpen(
+                false
+            );
+        }
+    }
+);
+
+
+/* ============================================================
    RENDER CURRENT QUESTION
    ============================================================ */
 
@@ -6178,6 +6694,8 @@ function renderCurrentQuestion() {
         updateMockTopbar();
         saveMockState();
     }
+
+    renderQuestionBankPeeker();
 
     typesetQuestionMath();
 
@@ -8487,6 +9005,15 @@ async function saveAttempt(
 function showResults(
     results
 ) {
+
+    questionBankPeeker
+        ?.classList.add(
+            "hidden"
+        );
+
+    setQuestionBankPeekerOpen(
+        false
+    );
 
     questionApp.classList.add(
         "hidden"
