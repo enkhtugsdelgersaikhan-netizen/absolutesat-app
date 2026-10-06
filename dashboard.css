@@ -893,3 +893,35 @@
         min-height:0!important;
     }
 }
+
+
+/* Unified university-style dashboard surfaces */
+.dashboard-kpi,
+.dashboard-panel{
+    border:1px solid var(--ll-border,#dbe4e2)!important;
+    border-radius:14px!important;
+    background:#fff!important;
+    box-shadow:0 4px 14px rgba(15,23,42,.045)!important;
+}
+.dashboard-kpi:hover,
+.dashboard-panel:hover{
+    border-color:#cbdad6;
+}
+.priority-item,
+.dashboard-table-wrap,
+.dashboard-filter-group{
+    border-color:#dbe4e2!important;
+    box-shadow:0 2px 6px rgba(15,23,42,.028)!important;
+}
+.dashboard-filter-group button,
+.dashboard-reset,
+.dashboard-logout{
+    border-radius:9px!important;
+    box-shadow:0 2px 5px rgba(15,23,42,.03)!important;
+}
+.dashboard-filter-group button:hover,
+.dashboard-reset:hover,
+.dashboard-logout:hover{
+    transform:translateY(-1px);
+    box-shadow:0 4px 9px rgba(15,23,42,.045)!important;
+}
