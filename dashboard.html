@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=dark-2">
-    <link rel="stylesheet" href="dashboard.css?v=analytics-3">
+    <link rel="stylesheet" href="dashboard.css?v=analytics-4">
     <link rel="stylesheet" href="/responsive.css?v=1">
 </head>
 <body>
@@ -103,27 +103,16 @@
         </section>
 
         <div class="dashboard-insight-grid">
-            <section class="dashboard-panel">
+            <section class="dashboard-panel dashboard-priority-panel">
                 <div class="dashboard-panel-heading">
                     <div>
                         <div class="panel-eyebrow">NEXT BEST WORK</div>
                         <h2>What to practice next</h2>
                     </div>
+                    <small class="priority-method">Ranks only skills with enough evidence, using accuracy first and pace second.</small>
                 </div>
                 <div id="priority-list" class="priority-list">
                     <div class="dashboard-empty-state">Loading priorities…</div>
-                </div>
-            </section>
-
-            <section class="dashboard-panel">
-                <div class="dashboard-panel-heading">
-                    <div>
-                        <div class="panel-eyebrow">DIFFICULTY PROFILE</div>
-                        <h2>Where errors are happening</h2>
-                    </div>
-                </div>
-                <div id="difficulty-profile" class="difficulty-profile">
-                    <div class="dashboard-empty-state">Loading difficulty data…</div>
                 </div>
             </section>
 
@@ -146,7 +135,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js?v=dark-3"></script>
-<script src="dashboard.js?v=analytics-2"></script>
+<script src="dashboard.js?v=analytics-3"></script>
 <script src="/study.js"></script>
 </body>
 </html>
