@@ -6018,3 +6018,68 @@ html.lexlogica-dark-mode .university-logo-monogram{
     min-height:0;
   }
 }
+
+
+/* Structured SAT geometry diagrams */
+.question-diagram-wrap{
+    width:min(100%,520px);
+    margin:0 auto 16px;
+}
+.question-diagram{
+    display:block;
+    width:100%;
+    height:auto;
+    max-height:330px;
+    overflow:visible;
+}
+.question-diagram-line,
+.question-diagram-polygon,
+.question-diagram-circle,
+.question-diagram-right-angle,
+.question-diagram-tick{
+    fill:none;
+    stroke:currentColor;
+    stroke-width:2.25;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+.question-diagram-polygon{
+    fill:rgba(14,115,103,.025);
+}
+.question-diagram-polygon.question-diagram-shaded{
+    fill:rgba(14,115,103,.10);
+}
+.question-diagram-dashed{
+    stroke-dasharray:7 6;
+}
+.question-diagram-point{
+    fill:currentColor;
+}
+.question-diagram-point-label,
+.question-diagram-label{
+    fill:currentColor;
+    font-family:"Poppins",sans-serif;
+    font-size:14px;
+    font-weight:500;
+}
+.question-diagram-label-emphasis{
+    font-weight:700;
+}
+.question-diagram-caption{
+    margin-top:5px;
+    text-align:center;
+    font-size:8px;
+    line-height:1.4;
+    color:#71807d;
+}
+body.dark-mode .question-diagram-polygon{
+    fill:rgba(255,255,255,.025);
+}
+body.dark-mode .question-diagram-polygon.question-diagram-shaded{
+    fill:rgba(255,255,255,.08);
+}
+@media(max-width:700px){
+    .question-diagram-wrap{width:min(100%,440px)}
+    .question-diagram-point-label,
+    .question-diagram-label{font-size:13px}
+}
