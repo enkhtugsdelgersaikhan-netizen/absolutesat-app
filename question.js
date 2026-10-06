@@ -1022,7 +1022,7 @@ function renderInlineFormatting(
             }
         );
 
-    const escaped =
+    let escaped =
         escapeHtml(
             protectedSource
         )
@@ -1033,15 +1033,36 @@ function renderInlineFormatting(
             .replace(
                 /\*\*([^*]+)\*\*/g,
                 "<strong>$1</strong>"
-            )
-            .replace(
-                /\*([^*]+)\*/g,
-                "<em>$1</em>"
-            )
-            .replace(
-                /_([^_]+)_/g,
-                "<em>$1</em>"
             );
+
+    if (compactMathLayout) {
+        /*
+         * Math variables belong in TeX. Treat stray Markdown emphasis
+         * markers in imported Math questions as formatting artifacts
+         * instead of creating <em> nodes that can alter spacing/layout.
+         */
+        escaped =
+            escaped
+                .replace(
+                    /\*([^*]+)\*/g,
+                    "$1"
+                )
+                .replace(
+                    /_([^_]+)_/g,
+                    "$1"
+                );
+    } else {
+        escaped =
+            escaped
+                .replace(
+                    /\*([^*]+)\*/g,
+                    "<em>$1</em>"
+                )
+                .replace(
+                    /_([^_]+)_/g,
+                    "<em>$1</em>"
+                );
+    }
 
     return escaped.replace(
         /\uE000MATH(\d+)\uE001/g,
@@ -3857,6 +3878,89 @@ function roundSatScoreToNearestTen(
 }
 
 
+function getMockScoreGaugeArcPath(
+    progress
+) {
+    const clamped =
+        Math.max(
+            0,
+            Math.min(
+                1,
+                Number(progress) || 0
+            )
+        );
+
+    if (clamped <= 0) {
+        return "";
+    }
+
+    const centerX = 80;
+    const centerY = 72;
+    const radius = 56;
+    const startAngle = 225;
+    const sweepAngle =
+        270 * clamped;
+    const endAngle =
+        startAngle +
+        sweepAngle;
+
+    const pointAt =
+        angle => {
+            const radians =
+                angle *
+                Math.PI /
+                180;
+
+            return {
+                x:
+                    centerX +
+                    radius *
+                    Math.sin(
+                        radians
+                    ),
+                y:
+                    centerY -
+                    radius *
+                    Math.cos(
+                        radians
+                    )
+            };
+        };
+
+    const start =
+        pointAt(
+            startAngle
+        );
+
+    const end =
+        pointAt(
+            endAngle
+        );
+
+    const largeArcFlag =
+        sweepAngle > 180
+            ? 1
+            : 0;
+
+    return (
+        "M " +
+        start.x.toFixed(3) +
+        " " +
+        start.y.toFixed(3) +
+        " A " +
+        radius +
+        " " +
+        radius +
+        " 0 " +
+        largeArcFlag +
+        " 1 " +
+        end.x.toFixed(3) +
+        " " +
+        end.y.toFixed(3)
+    );
+}
+
+
 function updateMockScoreGauge(
     path,
     score,
@@ -3886,14 +3990,12 @@ function updateMockScoreGauge(
             )
         );
 
-    path.style.strokeDasharray =
-        "100";
-
-    path.style.strokeDashoffset =
-        String(
-            100 -
-            progress * 100
-        );
+    path.setAttribute(
+        "d",
+        getMockScoreGaugeArcPath(
+            progress
+        )
+    );
 }
 
 
@@ -5639,57 +5741,227 @@ function wrapMathProseRuns(
             body || ""
         );
 
-    if (
-        !source ||
-        /\\text\s*\{/.test(
-            source
-        )
-    ) {
+    if (!source) {
         return source;
     }
 
     /*
-     * Never let prose repair touch TeX environment names.
-     *
-     * Previously, valid input such as
-     *   \\begin{cases} ... \\end{cases}
-     * could become
-     *   \\begin{\\text{cases}} ... \\end{\\text{cases}}
-     * which MathJax reports as an invalid environment.
-     *
-     * Protect every begin/end token first, repair prose around it,
-     * then restore the exact original TeX.
+     * Protect TeX commands and balanced brace groups before examining
+     * bare words. This prevents prose repair from ever modifying:
+     *   \\frac{a}{b}, \\sqrt{x}, \\text{...}, \\begin{cases},
+     * subscripts/superscripts, or any other command argument.
      */
-    const environmentTokens = [];
+    const protectedTokens = [];
 
-    const protectedSource =
-        source.replace(
-            /\\(?:begin|end)\s*\{\s*[A-Za-z*]+\s*\}/g,
-            match => {
-                const index =
-                    environmentTokens.push(
-                        match
-                    ) - 1;
+    const stash =
+        token => {
+            const index =
+                protectedTokens.push(
+                    token
+                ) - 1;
 
-                return (
-                    "\uE020" +
-                    index +
-                    "\uE021"
-                );
+            return (
+                "\uE020" +
+                index +
+                "\uE021"
+            );
+        };
+
+    const readBalancedGroup =
+        (
+            text,
+            start
+        ) => {
+            if (
+                text[start] !==
+                "{"
+            ) {
+                return null;
             }
-        );
 
-    /*
-     * TeX math mode ignores ordinary spaces and italicizes bare
-     * alphabetic words. Preserve actual math, but put English word
-     * runs into \\text{...} so explanations such as
-     *
-     *   so 2u=34 and u=17. Therefore,
-     *
-     * cannot collapse into "so2u...andu...Therefore".
-     *
-     * Single-letter variables stay mathematical.
-     */
+            let depth = 0;
+
+            for (
+                let cursor = start;
+                cursor < text.length;
+                cursor += 1
+            ) {
+                if (
+                    text[cursor] ===
+                    "{"
+                ) {
+                    depth += 1;
+                } else if (
+                    text[cursor] ===
+                    "}"
+                ) {
+                    depth -= 1;
+
+                    if (depth === 0) {
+                        return cursor + 1;
+                    }
+                }
+            }
+
+            return null;
+        };
+
+    let protectedSource = "";
+    let cursor = 0;
+
+    while (
+        cursor < source.length
+    ) {
+        if (
+            source[cursor] ===
+                "\\" &&
+            /[A-Za-z]/.test(
+                source[
+                    cursor + 1
+                ] || ""
+            )
+        ) {
+            const start =
+                cursor;
+
+            cursor += 1;
+
+            while (
+                cursor <
+                    source.length &&
+                /[A-Za-z]/.test(
+                    source[cursor]
+                )
+            ) {
+                cursor += 1;
+            }
+
+            let end =
+                cursor;
+
+            /*
+             * Include any immediate balanced arguments belonging to the
+             * command. Multiple arguments are supported, e.g. frac.
+             */
+            while (
+                end <
+                    source.length
+            ) {
+                let next =
+                    end;
+
+                while (
+                    next <
+                        source.length &&
+                    /[ \t]/.test(
+                        source[next]
+                    )
+                ) {
+                    next += 1;
+                }
+
+                if (
+                    source[next] !==
+                    "{"
+                ) {
+                    break;
+                }
+
+                const groupEnd =
+                    readBalancedGroup(
+                        source,
+                        next
+                    );
+
+                if (!groupEnd) {
+                    break;
+                }
+
+                end =
+                    groupEnd;
+            }
+
+            protectedSource +=
+                stash(
+                    source.slice(
+                        start,
+                        end
+                    )
+                );
+
+            cursor =
+                end;
+
+            continue;
+        }
+
+        if (
+            source[cursor] ===
+                "{"
+        ) {
+            const groupEnd =
+                readBalancedGroup(
+                    source,
+                    cursor
+                );
+
+            if (groupEnd) {
+                protectedSource +=
+                    stash(
+                        source.slice(
+                            cursor,
+                            groupEnd
+                        )
+                    );
+
+                cursor =
+                    groupEnd;
+
+                continue;
+            }
+        }
+
+        protectedSource +=
+            source[cursor];
+
+        cursor += 1;
+    }
+
+    const commonProseWords =
+        /^(?:so|is|are|was|were|be|been|and|or|nor|the|a|an|to|of|in|on|at|by|for|from|with|if|then|thus|therefore|because|since|where|when|which|what|this|that|these|those|we|you|let|using|use|substitute|solve|simplify|rewrite|gives|equals|means|becomes|only|each|both|now|hence|approximately|exactly|value|values|line|lines|slope|intercept|point|points|area|volume|total|distance|rate|percent|probability|equation|system|answer)$/i;
+
+    const shouldWrapPhrase =
+        phrase => {
+            const normalized =
+                String(phrase || "")
+                    .trim();
+
+            if (!normalized) {
+                return false;
+            }
+
+            if (
+                /[ '-]/.test(
+                    normalized
+                )
+            ) {
+                return true;
+            }
+
+            return (
+                commonProseWords.test(
+                    normalized
+                ) ||
+                (
+                    normalized.length >=
+                        5 &&
+                    /[aeiou]/i.test(
+                        normalized
+                    )
+                )
+            );
+        };
+
     const repaired =
         protectedSource.replace(
             /(^|[^\\A-Za-z])([A-Za-z]{2,}(?:[ '-]+[A-Za-z]{2,})*)([ \t]*)/g,
@@ -5699,6 +5971,14 @@ function wrapMathProseRuns(
                 phrase,
                 trailingSpace
             ) => {
+                if (
+                    !shouldWrapPhrase(
+                        phrase
+                    )
+                ) {
+                    return match;
+                }
+
                 const normalizedPhrase =
                     phrase.replace(
                         /\s+/g,
@@ -5725,12 +6005,11 @@ function wrapMathProseRuns(
             match,
             index
         ) =>
-            environmentTokens[
+            protectedTokens[
                 Number(index)
             ] || match
     );
 }
-
 
 function normalizeAccidentalDisplayProse(
     value
@@ -11640,6 +11919,51 @@ function initializeDesmosPanel() {
     let pendingWidth = 0;
     let pendingHeight = 0;
 
+    const getDesmosTheme =
+        () =>
+            document.documentElement
+                .classList.contains(
+                    "lexlogica-dark-mode"
+                )
+                ? "dark"
+                : "light";
+
+    const getDesmosUrl =
+        theme =>
+            theme === "dark"
+                ? "https://www.desmos.com/calculator?invertedColors"
+                : "https://www.desmos.com/calculator";
+
+    const syncDesmosTheme =
+        () => {
+            const theme =
+                getDesmosTheme();
+
+            const desiredUrl =
+                getDesmosUrl(
+                    theme
+                );
+
+            if (
+                frame.dataset
+                    .desmosTheme ===
+                    theme &&
+                frame.getAttribute(
+                    "src"
+                )
+            ) {
+                return;
+            }
+
+            frame.dataset.desmosTheme =
+                theme;
+
+            frame.setAttribute(
+                "src",
+                desiredUrl
+            );
+        };
+
     const clampCardToViewport =
         () => {
             const rect =
@@ -11703,10 +12027,7 @@ function initializeDesmosPanel() {
                 return;
             }
 
-            if (!frame.src) {
-                frame.src =
-                    "https://www.desmos.com/calculator";
-            }
+            syncDesmosTheme();
 
             panel.classList.remove(
                 "hidden"
@@ -12152,6 +12473,30 @@ function initializeDesmosPanel() {
     close?.addEventListener(
         "click",
         closePanel
+    );
+
+    const desmosThemeObserver =
+        new MutationObserver(
+            () => {
+                if (
+                    !panel.classList
+                        .contains(
+                            "hidden"
+                        )
+                ) {
+                    syncDesmosTheme();
+                }
+            }
+        );
+
+    desmosThemeObserver.observe(
+        document.documentElement,
+        {
+            attributes: true,
+            attributeFilter: [
+                "class"
+            ]
+        }
     );
 
     window.addEventListener(
