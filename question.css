@@ -5278,3 +5278,59 @@ body.drill-results-active .results-review{
 .question-math-information br{
     display:none;
 }
+
+
+/* Systemic italic rendering fix.
+   Never synthesize slanted glyphs: real italic faces are loaded in question.html. */
+.question-passage,
+.question-text,
+.choice-text,
+.choice-reason-text,
+.answer-feedback-explanation,
+.student-response-explanation-text,
+.review-result-question,
+.review-result-answer,
+.review-result-explanation,
+.math-question-context-content{
+    font-synthesis:none!important;
+}
+
+.question-passage em,
+.question-text em,
+.choice-text em,
+.choice-reason-text em,
+.answer-feedback-explanation em,
+.student-response-explanation-text em,
+.review-result-question em,
+.review-result-answer em,
+.review-result-explanation em{
+    font-style:italic;
+    font-synthesis:none!important;
+    letter-spacing:normal;
+    word-spacing:normal;
+}
+
+body.math-question-active .question-passage em,
+body.math-question-active .question-text em,
+body.math-question-active .choice-text em,
+body.math-question-active .choice-reason-text em,
+body.math-question-active .answer-feedback-explanation em,
+body.math-question-active .student-response-explanation-text em,
+body.math-question-active .review-result-question em,
+body.math-question-active .review-result-answer em,
+body.math-question-active .review-result-explanation em{
+    font-style:normal!important;
+}
+
+/* Inline MathJax should never visually fuse with neighboring prose. */
+.question-passage mjx-container:not([display="true"]),
+.question-text mjx-container:not([display="true"]),
+.choice-text mjx-container:not([display="true"]),
+.choice-reason-text mjx-container:not([display="true"]),
+.answer-feedback-explanation mjx-container:not([display="true"]),
+.student-response-explanation-text mjx-container:not([display="true"]),
+.review-result-question mjx-container:not([display="true"]),
+.review-result-answer mjx-container:not([display="true"]),
+.review-result-explanation mjx-container:not([display="true"]){
+    margin-inline:.16em!important;
+}
