@@ -1,7 +1,7 @@
 {
-  "version": 2,
-  "generatedAt": "2026-10-06",
+  "version": 3,
+  "generatedAt": "2026-10-07",
   "tests": {},
   "allQuestionIds": [],
-  "note": "Question-bank hiding is currently disabled; mock questions remain visible in practice banks."
+  "note": "No questions are reserved for mock tests. All former Mock Test 1 questions remain available in the Reading & Writing and Math Question Banks. Twelve empty mock-test shells are ready to be populated later."
 }
