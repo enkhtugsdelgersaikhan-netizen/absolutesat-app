@@ -3203,3 +3203,45 @@ body.mock-test-active .question-metadata{
         max-width:280px;
     }
 }
+
+
+/* Reading & Writing Question Bank metadata lives on the passage side. */
+.sat-passage-header{
+    flex:0 0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    padding:18px 22px 12px;
+}
+
+.sat-passage-header .sat-pane-label{
+    padding:0;
+}
+
+.reading-question-metadata-host{
+    display:flex;
+    justify-content:flex-end;
+    min-width:0;
+}
+
+.reading-question-metadata-host .question-metadata{
+    justify-content:flex-end;
+}
+
+.sat-passage-header + .question-passage{
+    padding-top:4px;
+}
+
+@media(max-width:760px){
+    .sat-passage-header{
+        align-items:flex-start;
+        flex-direction:column;
+        gap:8px;
+    }
+
+    .reading-question-metadata-host,
+    .reading-question-metadata-host .question-metadata{
+        justify-content:flex-start;
+    }
+}
