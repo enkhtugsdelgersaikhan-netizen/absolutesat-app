@@ -5984,6 +5984,15 @@ function showMockFinalResults() {
     mockState.completed =
         true;
 
+    mockState.satScores = {
+        composite:
+            satScores.total,
+        readingWriting:
+            satScores.readingWriting,
+        math:
+            satScores.math
+    };
+
     saveMockState();
 
     window.scrollTo({
@@ -10583,7 +10592,7 @@ function recordPracticeAnalyticsEvent(
             Math.max(
                 0,
                 Math.min(
-                    3600,
+                    180,
                     Math.round(
                         Number(seconds) || 0
                     )
