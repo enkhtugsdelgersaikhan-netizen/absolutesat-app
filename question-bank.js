@@ -443,16 +443,22 @@ function saveLocalQuestionStatus(
                 localStorage.getItem(key) || "{}"
             );
 
-        stored[String(questionId)] = {
-            is_correct: Boolean(isCorrect),
-            updated_at:
-                new Date().toISOString()
-        };
+        const id =
+            String(questionId);
 
-        localStorage.setItem(
-            key,
-            JSON.stringify(stored)
-        );
+        if (!stored[id]) {
+            stored[id] = {
+                is_correct:
+                    Boolean(isCorrect),
+                created_at:
+                    new Date().toISOString()
+            };
+
+            localStorage.setItem(
+                key,
+                JSON.stringify(stored)
+            );
+        }
     } catch (error) {
         console.warn(
             "Could not save local question status:",
@@ -539,14 +545,14 @@ function getQuestionStatus(questionId) {
         return "unanswered";
     }
 
-    const latest =
+    const first =
         [...attempts].sort(
             (a, b) =>
-                new Date(b.created_at || 0) -
-                new Date(a.created_at || 0)
+                new Date(a.created_at || 0) -
+                new Date(b.created_at || 0)
         )[0];
 
-    return latest.is_correct
+    return first.is_correct
         ? "correct"
         : "incorrect";
 }
