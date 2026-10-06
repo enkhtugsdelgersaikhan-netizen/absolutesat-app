@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         mockChart: document.getElementById("mock-performance-chart"),
         subtopicBody: document.getElementById("subtopic-table-body"),
         priority: document.getElementById("priority-list"),
-        difficulty: document.getElementById("difficulty-profile"),
         note: document.getElementById("dashboard-data-note"),
         reset: document.getElementById("dashboard-reset"),
         logout: document.getElementById("dashboard-logout")
@@ -599,134 +598,132 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     function renderPriorities(rows) {
-        const practiced = rows.filter(row => row.answered >= 3);
+        const MIN_EVIDENCE = 4;
+        const eligible = rows.filter(row => row.answered >= MIN_EVIDENCE);
 
-        const ranked = practiced.map(row => {
-            const accuracyGap = Number.isFinite(row.accuracy)
-                ? Math.max(0, PREFERRED_ACCURACY - row.accuracy)
-                : 0;
-            const target = TARGET_SECONDS[row.section] || 83;
-            const paceGap = Number.isFinite(row.averageTime)
-                ? Math.max(0, row.averageTime - target) / target * 25
-                : 0;
-            const confidence = Math.min(1, row.answered / 10);
-            return {
-                row,
-                priority: (accuracyGap * 1.25 + paceGap) * (0.55 + 0.45 * confidence)
-            };
-        }).sort((a, b) => b.priority - a.priority);
-
-        const selections = ranked.filter(item => item.priority > 0.5).slice(0, 5);
-
-        if (selections.length < 5) {
-            const used = new Set(selections.map(item => item.row.section + "|" + item.row.subtopic));
-            rows
-                .filter(row => row.answered < 3)
-                .sort((a, b) => a.answered - b.answered || a.subtopic.localeCompare(b.subtopic))
-                .forEach(row => {
-                    if (selections.length >= 5) return;
-                    const key = row.section + "|" + row.subtopic;
-                    if (!used.has(key)) {
-                        selections.push({ row, priority: -1 });
-                        used.add(key);
-                    }
-                });
+        if (!eligible.length) {
+            els.priority.innerHTML =
+                '<div class="dashboard-empty-state priority-unlock">' +
+                    '<strong>Not enough evidence yet.</strong> ' +
+                    'Answer at least ' + MIN_EVIDENCE +
+                    ' questions in a few subtopics and this will identify the highest-return work instead of guessing.' +
+                '</div>';
+            return;
         }
 
+        const ranked = eligible.map(row => {
+            const accuracy =
+                Number.isFinite(row.accuracy)
+                    ? row.accuracy
+                    : 0;
+            const accuracyGap =
+                Math.max(0, PREFERRED_ACCURACY - accuracy);
+            const target =
+                TARGET_SECONDS[row.section] || 83;
+            const paceRatio =
+                Number.isFinite(row.averageTime) && row.averageTime > target
+                    ? (row.averageTime - target) / target
+                    : 0;
+
+            /*
+             * Accuracy drives most of the priority. Pace only becomes
+             * important when the student is meaningfully over target.
+             * Evidence weight prevents a tiny sample from outranking a
+             * persistent weakness.
+             */
+            const evidence =
+                Math.min(1, row.answered / 12);
+            const score =
+                (
+                    accuracyGap * 1.45 +
+                    Math.min(30, paceRatio * 30)
+                ) *
+                (0.65 + evidence * 0.35);
+
+            return {
+                row,
+                score,
+                accuracyGap,
+                paceRatio
+            };
+        }).sort((a, b) => b.score - a.score);
+
+        const selections = ranked
+            .filter(item => item.score > 1)
+            .slice(0, 3);
+
         if (!selections.length) {
-            els.priority.innerHTML =
-                '<div class="dashboard-empty-state">Practice a few questions across the bank to unlock targeted priorities.</div>';
+            const strongest = eligible
+                .slice()
+                .sort((a, b) => b.answered - a.answered)
+                .slice(0, 3);
+
+            els.priority.innerHTML = strongest.map((row, index) =>
+                '<div class="priority-item">' +
+                    '<div class="priority-rank">Maintain</div>' +
+                    '<strong>' + escapeHtml(row.subtopic) + ' · ' + escapeHtml(row.section) + '</strong>' +
+                    '<p>No major accuracy or pace problem is showing here. Keep it warm while expanding coverage elsewhere.</p>' +
+                    '<div class="priority-meta">' +
+                        '<span>' + row.answered + ' answered</span>' +
+                        (Number.isFinite(row.accuracy)
+                            ? '<span>' + Math.round(row.accuracy) + '% accuracy</span>'
+                            : '') +
+                    '</div>' +
+                '</div>'
+            ).join("");
             return;
         }
 
         els.priority.innerHTML = selections.map((item, index) => {
             const row = item.row;
+            const target = TARGET_SECONDS[row.section] || 83;
+            const lowAccuracy =
+                Number.isFinite(row.accuracy) &&
+                row.accuracy < PREFERRED_ACCURACY;
+            const slow =
+                Number.isFinite(row.averageTime) &&
+                row.averageTime > target * 1.1;
+
+            let label;
             let reason;
 
-            if (row.answered < 3) {
-                reason = "Not enough recent evidence yet; build coverage here.";
-            } else if (Number.isFinite(row.accuracy) && row.accuracy < 75) {
-                reason = "Accuracy is the main constraint in this subtopic.";
-            } else if (
-                Number.isFinite(row.averageTime) &&
-                row.averageTime > (TARGET_SECONDS[row.section] || 83) * 1.15
-            ) {
-                reason = "Accuracy is usable, but pace is costing too much time.";
+            if (lowAccuracy && item.accuracyGap >= item.paceRatio * 30) {
+                label = index === 0 ? "Highest return" : "Fix accuracy";
+                reason =
+                    "Accuracy is costing more than pace here; review the recurring error pattern before adding speed.";
+            } else if (slow) {
+                label = index === 0 ? "Highest return" : "Fix pace";
+                reason =
+                    "Accuracy is comparatively usable, but this skill is consuming too much test time.";
             } else {
-                reason = "This is one of the clearest remaining opportunities for improvement.";
+                label = index === 0 ? "Highest return" : "Stabilize";
+                reason =
+                    "This is the clearest combined accuracy-and-pace opportunity in your current data.";
             }
 
-            const meta = [];
-            meta.push(row.answered + " answered");
-            if (Number.isFinite(row.accuracy)) meta.push(Math.round(row.accuracy) + "% accuracy");
-            if (Number.isFinite(row.averageTime)) meta.push(Math.round(row.averageTime) + "s avg");
+            const meta = [
+                row.answered + " answered",
+                Number.isFinite(row.accuracy)
+                    ? Math.round(row.accuracy) + "% accuracy"
+                    : null,
+                Number.isFinite(row.averageTime)
+                    ? Math.round(row.averageTime) + "s avg"
+                    : null
+            ].filter(Boolean);
 
             return (
                 '<div class="priority-item">' +
-                    '<div class="priority-rank">' + (index + 1) + '</div>' +
-                    '<div>' +
-                        '<strong>' + escapeHtml(row.subtopic) + ' · ' + escapeHtml(row.section) + '</strong>' +
-                        '<p>' + escapeHtml(reason) + '</p>' +
-                        '<div class="priority-meta">' +
-                            meta.map(value => '<span>' + escapeHtml(value) + '</span>').join("") +
-                        '</div>' +
+                    '<div class="priority-rank">' + escapeHtml(label) + '</div>' +
+                    '<strong>' + escapeHtml(row.subtopic) + ' · ' + escapeHtml(row.section) + '</strong>' +
+                    '<p>' + escapeHtml(reason) + '</p>' +
+                    '<div class="priority-meta">' +
+                        meta.map(value => '<span>' + escapeHtml(value) + '</span>').join("") +
                     '</div>' +
                 '</div>'
             );
         }).join("");
     }
 
-    function renderDifficulty(attempts, metadata, timedHistory) {
-        const fallbackMeta = new Map(
-            timedHistory.map(row => [
-                String(row.question_id),
-                { difficulty: row.difficulty || "" }
-            ])
-        );
-
-        const buckets = {
-            Easy: { answered: 0, correct: 0 },
-            Medium: { answered: 0, correct: 0 },
-            Hard: { answered: 0, correct: 0 }
-        };
-
-        attempts.forEach(row => {
-            const meta =
-                metadata.map.get(String(row.question_id)) ||
-                fallbackMeta.get(String(row.question_id));
-            const difficulty = meta?.difficulty;
-
-            if (!buckets[difficulty]) return;
-
-            buckets[difficulty].answered += 1;
-            if (Boolean(row.is_correct)) buckets[difficulty].correct += 1;
-        });
-
-        const hasData = Object.values(buckets).some(bucket => bucket.answered > 0);
-
-        if (!hasData) {
-            els.difficulty.innerHTML =
-                '<div class="dashboard-empty-state">Difficulty analytics will appear after practice questions are answered.</div>';
-            return;
-        }
-
-        els.difficulty.innerHTML = Object.entries(buckets).map(([label, bucket]) => {
-            const accuracy = bucket.answered
-                ? bucket.correct / bucket.answered * 100
-                : null;
-            const rounded = Number.isFinite(accuracy) ? Math.round(accuracy) : 0;
-            return (
-                '<div class="difficulty-row">' +
-                    '<strong>' + label + '</strong>' +
-                    '<div class="difficulty-track"><div class="difficulty-fill" style="width:' +
-                        rounded + '%;background:' + accuracyColor(accuracy) + '"></div></div>' +
-                    '<div class="difficulty-value" style="color:' + accuracyColor(accuracy) + '">' +
-                        (Number.isFinite(accuracy) ? rounded + "%" : "—") + '</div>' +
-                    '<small>' + bucket.answered.toLocaleString() + ' answered</small>' +
-                '</div>'
-            );
-        }).join("");
-    }
 
     async function loadAnalytics() {
         const resetTime = getResetTime();
@@ -775,7 +772,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         );
         renderSubtopicTable();
         renderPriorities(currentSubtopicRows);
-        renderDifficulty(attempts, metadata, localHistory);
 
         if (metadataResult.status === "rejected") {
             els.note.hidden = false;
