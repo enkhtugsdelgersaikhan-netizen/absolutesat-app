@@ -3397,7 +3397,13 @@ function renderQuestionPassage(
 
     const copy =
         question.passage
-            ? '<div class="question-passage-copy">' +
+            ? '<div class="question-passage-copy' +
+                (
+                    question.section === "Math"
+                        ? ' question-math-information'
+                        : ''
+                ) +
+                '">' +
                 renderQuestionContent(
                     question,
                     question.passage
