@@ -3,6 +3,190 @@
    ============================================================ */
 
 
+
+/* ============================================================
+   SITE THEME
+   ============================================================ */
+
+const LEXLOGICA_THEME_KEY =
+    "lexlogica-theme";
+
+function getStoredLexLogicaTheme() {
+    try {
+        return localStorage.getItem(
+            LEXLOGICA_THEME_KEY
+        );
+    } catch {
+        return null;
+    }
+}
+
+function setStoredLexLogicaTheme(
+    value
+) {
+    try {
+        localStorage.setItem(
+            LEXLOGICA_THEME_KEY,
+            value
+        );
+    } catch {
+        /* Storage can be unavailable in privacy-restricted contexts. */
+    }
+}
+
+function updateLexLogicaThemeButton() {
+    const button =
+        document.getElementById(
+            "lexlogica-theme-toggle"
+        );
+
+    if (!button) {
+        return;
+    }
+
+    const isDark =
+        document.documentElement
+            .classList.contains(
+                "lexlogica-dark-mode"
+            );
+
+    button.setAttribute(
+        "aria-pressed",
+        isDark
+            ? "true"
+            : "false"
+    );
+
+    button.setAttribute(
+        "aria-label",
+        isDark
+            ? "Switch to light mode"
+            : "Switch to dark mode"
+    );
+
+    const symbol =
+        button.querySelector(
+            ".theme-toggle-symbol"
+        );
+
+    const label =
+        button.querySelector(
+            ".theme-toggle-label"
+        );
+
+    if (symbol) {
+        symbol.textContent =
+            isDark
+                ? "☀"
+                : "◐";
+    }
+
+    if (label) {
+        label.textContent =
+            isDark
+                ? "Light"
+                : "Dark";
+    }
+}
+
+function applyLexLogicaTheme(
+    mode
+) {
+    const isDark =
+        mode === "dark";
+
+    document.documentElement
+        .classList.toggle(
+            "lexlogica-dark-mode",
+            isDark
+        );
+
+    document.documentElement
+        .style.colorScheme =
+        isDark
+            ? "dark"
+            : "light";
+
+    updateLexLogicaThemeButton();
+}
+
+function initializeLexLogicaTheme() {
+    const stored =
+        getStoredLexLogicaTheme();
+
+    applyLexLogicaTheme(
+        stored === "dark"
+            ? "dark"
+            : "light"
+    );
+
+    const header =
+        document.querySelector(
+            ".header-container"
+        );
+
+    if (
+        !header ||
+        document.getElementById(
+            "lexlogica-theme-toggle"
+        )
+    ) {
+        updateLexLogicaThemeButton();
+        return;
+    }
+
+    const button =
+        document.createElement(
+            "button"
+        );
+
+    button.id =
+        "lexlogica-theme-toggle";
+
+    button.className =
+        "theme-toggle-button";
+
+    button.type =
+        "button";
+
+    button.innerHTML =
+        '<span class="theme-toggle-symbol" aria-hidden="true">◐</span>' +
+        '<span class="theme-toggle-label">Dark</span>';
+
+    const mobileMenu =
+        header.querySelector(
+            ".mobile-menu-button"
+        );
+
+    header.insertBefore(
+        button,
+        mobileMenu || null
+    );
+
+    button.addEventListener(
+        "click",
+        () => {
+            const nextMode =
+                document.documentElement
+                    .classList.contains(
+                        "lexlogica-dark-mode"
+                    )
+                    ? "light"
+                    : "dark";
+
+            setStoredLexLogicaTheme(
+                nextMode
+            );
+
+            applyLexLogicaTheme(
+                nextMode
+            );
+        }
+    );
+
+    updateLexLogicaThemeButton();
+}
+
 /* ============================================================
    SUPABASE
    ============================================================ */
@@ -245,11 +429,15 @@ if (
 
     document.addEventListener(
         "DOMContentLoaded",
-        initializeAbsolutePrepAuth
+        () => {
+            initializeLexLogicaTheme();
+            initializeAbsolutePrepAuth();
+        }
     );
 
 } else {
 
+    initializeLexLogicaTheme();
     initializeAbsolutePrepAuth();
 
 }
