@@ -3118,43 +3118,49 @@ body.mock-results-active .score-circle #score-number{
     min-height:25px;
     max-width:340px;
     padding:4px 9px;
-    border:1px solid #dce4ed;
-    border-radius:999px;
-    background:#f8fafc;
-    color:#5f6f82;
+    border:1px solid #dde5e2;
+    border-radius:9px;
+    background:#fbfcfb;
+    color:#53615f;
     font-size:11px;
     font-weight:600;
     line-height:1.2;
     white-space:normal;
+    box-shadow:none;
 }
 
+/*
+ * Match the calm university-position palette: muted color,
+ * soft borders, and nearly-neutral fills rather than bright chips.
+ */
 .question-meta-domain{
-    background:#f4f8f8;
-    border-color:#d6e7e5;
-    color:#3e6563;
+    background:#f7fbfa;
+    border-color:#d5e5df;
+    color:#416f62;
 }
 
 .question-meta-subtopic{
-    background:#f8fafc;
-    color:#526174;
+    background:#fafcfa;
+    border-color:#dce6e2;
+    color:#587368;
 }
 
 .question-meta-difficulty[data-difficulty="easy"]{
-    background:#f3faf6;
-    border-color:#d7eadf;
-    color:#49715a;
+    background:#f7fbf9;
+    border-color:#cfe2db;
+    color:#326958;
 }
 
 .question-meta-difficulty[data-difficulty="medium"]{
-    background:#fff9ee;
-    border-color:#eee1bf;
-    color:#846a2d;
+    background:#fcfbf6;
+    border-color:#e8e4d5;
+    color:#7b7047;
 }
 
 .question-meta-difficulty[data-difficulty="hard"]{
-    background:#fff4f4;
-    border-color:#efdada;
-    color:#8a5050;
+    background:#fcf8f7;
+    border-color:#ead8d6;
+    color:#8b4d4a;
 }
 
 /* Mock tests intentionally never expose domain/subtopic/difficulty. */
