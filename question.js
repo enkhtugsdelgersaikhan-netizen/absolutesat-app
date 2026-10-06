@@ -64,6 +64,11 @@ let mockState = null;
 let mockTimerInterval = null;
 let mockBreakInterval = null;
 
+let drillMode = false;
+let drillSession = null;
+const DRILL_SESSION_STORAGE_KEY =
+    "absoluteprep-drill-session";
+
 
 /* ============================================================
    DOM ELEMENTS
@@ -258,6 +263,11 @@ const submitButton =
 const timerElement =
     document.getElementById(
         "timer"
+    );
+
+const timerLabelElement =
+    document.querySelector(
+        ".timer-label"
     );
 
 const scoreNumber =
@@ -3320,6 +3330,163 @@ function getPracticeResetAt() {
 }
 
 
+function loadDrillSession() {
+    try {
+        const parsed =
+            JSON.parse(
+                sessionStorage.getItem(
+                    DRILL_SESSION_STORAGE_KEY
+                ) || "null"
+            );
+
+        if (
+            !parsed ||
+            !Array.isArray(parsed.questionIds) ||
+            parsed.questionIds.length === 0
+        ) {
+            return null;
+        }
+
+        return parsed;
+    } catch (error) {
+        console.warn(
+            "Could not read Drill session:",
+            error
+        );
+        return null;
+    }
+}
+
+
+function saveDrillSession() {
+    if (!drillMode || !drillSession) {
+        return;
+    }
+
+    try {
+        sessionStorage.setItem(
+            DRILL_SESSION_STORAGE_KEY,
+            JSON.stringify(drillSession)
+        );
+    } catch (error) {
+        console.warn(
+            "Could not save Drill session:",
+            error
+        );
+    }
+}
+
+
+function saveCurrentDrillElapsed() {
+    if (
+        !drillMode ||
+        !drillSession ||
+        !questions[currentQuestionIndex]
+    ) {
+        return;
+    }
+
+    if (
+        !drillSession.timeSpent ||
+        typeof drillSession.timeSpent !==
+            "object"
+    ) {
+        drillSession.timeSpent = {};
+    }
+
+    drillSession.timeSpent[
+        String(
+            questions[currentQuestionIndex].id
+        )
+    ] = elapsedSeconds;
+
+    saveDrillSession();
+}
+
+
+function getCurrentDrillElapsed() {
+    if (
+        !drillMode ||
+        !drillSession ||
+        !questions[currentQuestionIndex]
+    ) {
+        return 0;
+    }
+
+    const value =
+        Number(
+            drillSession.timeSpent?.[
+                String(
+                    questions[
+                        currentQuestionIndex
+                    ].id
+                )
+            ]
+        );
+
+    return Number.isFinite(value)
+        ? Math.max(0, value)
+        : 0;
+}
+
+
+function finishDrill() {
+    if (!drillMode || !drillSession) {
+        return;
+    }
+
+    saveCurrentDrillElapsed();
+
+    drillSession.completedAt =
+        new Date().toISOString();
+
+    if (currentUser) {
+        try {
+            const key =
+                "absoluteprep-drill-history:" +
+                currentUser.id;
+
+            const history =
+                JSON.parse(
+                    localStorage.getItem(key) ||
+                    "[]"
+                );
+
+            const nextHistory =
+                [
+                    ...(Array.isArray(history)
+                        ? history
+                        : []),
+                    drillSession
+                ].slice(-100);
+
+            localStorage.setItem(
+                key,
+                JSON.stringify(nextHistory)
+            );
+        } catch (error) {
+            console.warn(
+                "Could not save Drill history:",
+                error
+            );
+        }
+    }
+
+    sessionStorage.removeItem(
+        DRILL_SESSION_STORAGE_KEY
+    );
+
+    sessionStorage.removeItem(
+        "absoluteprep-question-bank-navigation"
+    );
+
+    window.location.href =
+        drillSession.section === "Math"
+            ? "/math-drill?complete=1"
+            : "/reading-drill?complete=1";
+}
+
+
 function getQuestionBankNavigationState() {
 
     try {
@@ -5430,6 +5597,33 @@ async function initialize() {
         const slug =
             params.get("set");
 
+        drillMode =
+            params.get("drill") === "1";
+
+        if (drillMode) {
+            drillSession =
+                loadDrillSession();
+
+            if (
+                !drillSession ||
+                !questionId ||
+                !drillSession.questionIds
+                    .map(String)
+                    .includes(
+                        String(questionId)
+                    )
+            ) {
+                showError(
+                    "This Drill session is no longer available. Start a new Drill from the subject page."
+                );
+                return;
+            }
+
+            document.body.classList.add(
+                "drill-mode"
+            );
+        }
+
 
         if (mockId) {
             await loadMockTest(
@@ -6607,10 +6801,14 @@ async function loadQuestionById(
             }
 
             setTitle.textContent =
-                "Question Bank";
+                drillMode
+                    ? "Drill"
+                    : "Question Bank";
 
             resultsSetTitle.textContent =
-                "Question Bank";
+                drillMode
+                    ? "Drill"
+                    : "Question Bank";
 
             renderQuestionNavigator();
             renderCurrentQuestion();
@@ -9671,6 +9869,18 @@ async function checkAnswer() {
         question.id
     ] = true;
 
+    if (drillMode) {
+        saveCurrentDrillElapsed();
+
+        if (timerInterval) {
+            clearInterval(
+                timerInterval
+            );
+
+            timerInterval = null;
+        }
+    }
+
 
     renderCurrentQuestion();
 
@@ -9935,12 +10145,27 @@ function goPrevious() {
 
     }
 
+    if (drillMode) {
+        saveCurrentDrillElapsed();
+    }
 
     currentQuestionIndex--;
 
     if (mockTestMode) {
         setMockCurrentIndex(
             currentQuestionIndex
+        );
+    } else if (drillMode) {
+        const question =
+            questions[currentQuestionIndex];
+
+        saveQuestionBankNavigationState(
+            questions.map(item => item.id),
+            question.id
+        );
+
+        updateQuestionUrl(
+            question.id
         );
     }
 
@@ -9961,17 +10186,34 @@ function goNext() {
         currentQuestionIndex >=
         questions.length - 1
     ) {
+        if (drillMode) {
+            finishDrill();
+        }
 
         return;
-
     }
 
+    if (drillMode) {
+        saveCurrentDrillElapsed();
+    }
 
     currentQuestionIndex++;
 
     if (mockTestMode) {
         setMockCurrentIndex(
             currentQuestionIndex
+        );
+    } else if (drillMode) {
+        const question =
+            questions[currentQuestionIndex];
+
+        saveQuestionBankNavigationState(
+            questions.map(item => item.id),
+            question.id
+        );
+
+        updateQuestionUrl(
+            question.id
         );
     }
 
@@ -10000,7 +10242,19 @@ function updateNavigationButtons() {
         questions.length - 1;
 
     nextButton.disabled =
-        atEnd;
+        atEnd && !drillMode;
+
+    const nextLabel =
+        nextButton.querySelector(
+            "span:first-child"
+        );
+
+    if (nextLabel) {
+        nextLabel.textContent =
+            drillMode && atEnd
+                ? "Finish Drill"
+                : "Next";
+    }
 
     if (
         mockTestMode &&
@@ -10053,10 +10307,25 @@ function resetQuestionTimer() {
     }
 
 
-    elapsedSeconds = 0;
+    elapsedSeconds =
+        drillMode
+            ? getCurrentDrillElapsed()
+            : 0;
 
     updateTimerDisplay();
 
+    const currentQuestion =
+        questions[currentQuestionIndex];
+
+    if (
+        drillMode &&
+        currentQuestion &&
+        checkedResults[
+            currentQuestion.id
+        ]
+    ) {
+        return;
+    }
 
     timerInterval =
         setInterval(
@@ -10070,6 +10339,13 @@ function resetQuestionTimer() {
 
 
                 elapsedSeconds++;
+
+                if (
+                    drillMode &&
+                    elapsedSeconds % 5 === 0
+                ) {
+                    saveCurrentDrillElapsed();
+                }
 
                 updateTimerDisplay();
 
@@ -10089,6 +10365,78 @@ function updateTimerDisplay() {
     if (mockTestMode) {
         updateMockTimerDisplay();
         return;
+    }
+
+    if (
+        drillMode &&
+        drillSession
+    ) {
+        const target =
+            Math.max(
+                1,
+                Number(
+                    drillSession.targetSeconds
+                ) || 1
+            );
+
+        const remaining =
+            target - elapsedSeconds;
+
+        const absolute =
+            Math.abs(remaining);
+
+        const minutes =
+            Math.floor(
+                absolute / 60
+            );
+
+        const seconds =
+            absolute % 60;
+
+        timerElement.textContent =
+            (remaining < 0 ? "+" : "") +
+            `${String(minutes).padStart(2,"0")}:${String(seconds).padStart(2,"0")}`;
+
+        timerElement.classList.remove(
+            "warning",
+            "danger"
+        );
+
+        if (remaining < 0) {
+            timerElement.classList.add(
+                "danger"
+            );
+        } else if (
+            remaining <=
+            Math.max(
+                10,
+                Math.round(
+                    target * 0.2
+                )
+            )
+        ) {
+            timerElement.classList.add(
+                "warning"
+            );
+        }
+
+        if (timerLabelElement) {
+            const mode =
+                String(
+                    drillSession.paceMode ||
+                    "average"
+                ).toUpperCase();
+
+            timerLabelElement.textContent =
+                mode + " PACE";
+        }
+
+        return;
+    }
+
+    if (timerLabelElement) {
+        timerLabelElement.textContent =
+            "TIME ON QUESTION";
     }
 
     const minutes =
