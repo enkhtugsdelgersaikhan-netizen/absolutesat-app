@@ -5334,3 +5334,77 @@ body.math-question-active .review-result-explanation em{
 .review-result-explanation mjx-container:not([display="true"]){
     margin-inline:.16em!important;
 }
+
+
+/* ============================================================
+   QUESTION UI DEPTH NORMALIZATION — light mode
+   Keep controls tactile but remove glossy / floating 3D treatment.
+   ============================================================ */
+html:not(.lexlogica-dark-mode) .sat-question-pane,
+html:not(.lexlogica-dark-mode) .question-card,
+html:not(.lexlogica-dark-mode) .results-card,
+html:not(.lexlogica-dark-mode) .mock-gate-card,
+html:not(.lexlogica-dark-mode) .drill-performance{
+    border-color:#dbe4e2!important;
+    border-radius:14px!important;
+    box-shadow:0 4px 14px rgba(15,23,42,.04)!important;
+}
+
+html:not(.lexlogica-dark-mode) .timer-container,
+html:not(.lexlogica-dark-mode) .question-nav-button,
+html:not(.lexlogica-dark-mode) .review-button,
+html:not(.lexlogica-dark-mode) .topbar-next-button,
+html:not(.lexlogica-dark-mode) .desmos-toggle-button,
+html:not(.lexlogica-dark-mode) .choice-strike-button,
+html:not(.lexlogica-dark-mode) .check-answer-button,
+html:not(.lexlogica-dark-mode) .next-question-button{
+    border-radius:9px!important;
+    box-shadow:0 2px 6px rgba(15,23,42,.035)!important;
+    transition:
+        transform .16s ease,
+        border-color .16s ease,
+        background-color .16s ease,
+        box-shadow .16s ease,
+        color .16s ease!important;
+}
+html:not(.lexlogica-dark-mode) .question-nav-button:hover:not(:disabled),
+html:not(.lexlogica-dark-mode) .review-button:hover,
+html:not(.lexlogica-dark-mode) .topbar-next-button:hover,
+html:not(.lexlogica-dark-mode) .desmos-toggle-button:hover,
+html:not(.lexlogica-dark-mode) .choice-strike-button:hover,
+html:not(.lexlogica-dark-mode) .next-question-button:hover{
+    transform:translateY(-1px)!important;
+    box-shadow:0 4px 10px rgba(15,23,42,.05)!important;
+}
+html:not(.lexlogica-dark-mode) .choice{
+    border-width:1px!important;
+    border-color:#d7e1df!important;
+    border-radius:10px!important;
+    box-shadow:0 2px 6px rgba(15,23,42,.025)!important;
+}
+html:not(.lexlogica-dark-mode) .choice:hover{
+    border-color:#9fc8bf!important;
+    box-shadow:0 4px 10px rgba(15,23,42,.04)!important;
+}
+html:not(.lexlogica-dark-mode) .choice-letter{
+    border-width:1px!important;
+    box-shadow:none!important;
+}
+html:not(.lexlogica-dark-mode) .question-bank-peeker-toggle{
+    border:1px solid #d6e1de!important;
+    background:#fff!important;
+    box-shadow:0 4px 12px rgba(15,23,42,.055)!important;
+    backdrop-filter:none!important;
+}
+html:not(.lexlogica-dark-mode) .question-bank-peeker-panel{
+    border-color:#dbe4e2!important;
+    box-shadow:0 9px 24px rgba(15,23,42,.08)!important;
+    backdrop-filter:none!important;
+}
+html:not(.lexlogica-dark-mode) .question-bank-peeker-review-icon{
+    box-shadow:0 1px 3px rgba(15,23,42,.06)!important;
+}
+html:not(.lexlogica-dark-mode) .desmos-panel-card{
+    border-color:#d5e0dd!important;
+    box-shadow:0 10px 28px rgba(15,23,42,.11)!important;
+}
