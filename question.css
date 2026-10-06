@@ -2769,3 +2769,28 @@ body.math-question-active .choice-reason-text,
 body.math-question-active .answer-feedback-explanation{
     font-family:"Noto Serif", Georgia, "Times New Roman", serif!important;
 }
+
+
+/* Compact imported Math prose around display equations.
+   Raw source line breaks should never create giant vertical gaps. */
+body.math-question-active .math-question-context-content,
+body.math-question-active .math-question-context-content .question-passage-copy,
+body.math-question-active .sat-answer-pane .question-text,
+body.math-question-active .sat-answer-pane .choice-text{
+    white-space:normal!important;
+}
+
+body.math-question-active .math-question-context-content mjx-container[display="true"],
+body.math-question-active .sat-answer-pane .question-text mjx-container[display="true"],
+body.math-question-active .sat-answer-pane .choice-text mjx-container[display="true"]{
+    display:block;
+    margin:.45em auto!important;
+    padding-top:0!important;
+    padding-bottom:0!important;
+}
+
+body.math-question-active .math-question-context-content br,
+body.math-question-active .sat-answer-pane .question-text br,
+body.math-question-active .sat-answer-pane .choice-text br{
+    line-height:1.15;
+}
