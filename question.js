@@ -3670,14 +3670,53 @@ function getMockAllRouteQuestions() {
             ? math?.module2Low
             : math?.module2High;
 
-    return normalizeMockEntries(
-        [
-            ...(rw?.module1 || []),
-            ...(rwSecond || []),
-            ...(math?.module1 || []),
-            ...(mathSecond || [])
-        ]
-    );
+    const prepareModule = (
+        entries,
+        sectionKey,
+        sectionLabel,
+        moduleLabel
+    ) =>
+        orderMockQuestionsLikeRealTest(
+            normalizeMockEntries(
+                entries || []
+            ),
+            sectionKey
+        ).map(
+            question => ({
+                ...question,
+                mock_review_section:
+                    sectionLabel,
+                mock_review_module:
+                    moduleLabel
+            })
+        );
+
+    return [
+        ...prepareModule(
+            rw?.module1,
+            "readingWriting",
+            "Reading & Writing",
+            "Module 1"
+        ),
+        ...prepareModule(
+            rwSecond,
+            "readingWriting",
+            "Reading & Writing",
+            "Module 2"
+        ),
+        ...prepareModule(
+            math?.module1,
+            "math",
+            "Math",
+            "Module 1"
+        ),
+        ...prepareModule(
+            mathSecond,
+            "math",
+            "Math",
+            "Module 2"
+        )
+    ];
 }
 
 
@@ -4694,6 +4733,15 @@ function showMockFinalResults() {
     document.body.classList.add(
         "mock-results-active"
     );
+
+    resultsReview?.classList.add(
+        "hidden"
+    );
+
+    if (reviewResultsButton) {
+        reviewResultsButton.textContent =
+            "Review Questions";
+    }
 
     const satScores =
         calculateMockSatScores(
@@ -9885,7 +9933,22 @@ function showResultsReview() {
             item.innerHTML = `
 
                 <div class="review-result-number">
-                    QUESTION ${index + 1}
+                    ${mockTestMode && question.mock_review_section
+                        ? escapeHtml(
+                            question.mock_review_section +
+                            " · " +
+                            question.mock_review_module +
+                            " · Question " +
+                            (
+                                index +
+                                1
+                            )
+                        )
+                        : "QUESTION " +
+                            (
+                                index +
+                                1
+                            )}
                 </div>
 
                 <div class="review-result-question">
@@ -9957,6 +10020,12 @@ function showResultsReview() {
 /* ============================================================
    GET CHOICE TEXT
    ============================================================ */
+
+reviewResultsButton?.addEventListener(
+    "click",
+    showResultsReview
+);
+
 
 function getChoiceText(
     question,
