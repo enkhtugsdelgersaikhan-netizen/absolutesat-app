@@ -4922,8 +4922,8 @@ html:not(.lexlogica-dark-mode) #desmos-frame{
 .mock-review-question-text::selection,
 .mock-review-choice-text::selection,
 .mock-review-choice-explanation::selection{
-    background:rgba(0,210,255,.68);
-    color:inherit;
+    background:rgba(0,196,232,.48);
+    color:#06232a;
 }
 
 /*
@@ -4944,8 +4944,9 @@ html.lexlogica-dark-mode .question-page .mock-review-context::selection,
 html.lexlogica-dark-mode .question-page .mock-review-question-text::selection,
 html.lexlogica-dark-mode .question-page .mock-review-choice-text::selection,
 html.lexlogica-dark-mode .question-page .mock-review-choice-explanation::selection{
-    background:rgba(0,75,255,.72);
-    color:inherit;
+    /* Visible after the page inversion: warm amber with near-black text. */
+    background:rgba(0,65,199,.52);
+    color:#ffffff;
 }
 
 
@@ -4954,11 +4955,19 @@ html.lexlogica-dark-mode .question-page .mock-review-choice-explanation::selecti
    ============================================================ */
 
 .persistent-text-highlight{
-    padding:0;
-    margin:0;
-    border-radius:2px;
-    background:rgba(0,210,255,.64);
-    color:#fff;
+    /*
+     * Light mode: vivid cyan, but dark ink rather than white.
+     * High opacity makes the mark read as a real annotation instead of a tint.
+     */
+    padding:0 .04em;
+    margin:0 -.04em;
+    border-radius:3px;
+    background:rgba(0,201,238,.88);
+    color:#06232a;
+    box-shadow:
+        inset 0 -1px 0 rgba(0,113,139,.16),
+        0 0 0 1px rgba(0,145,177,.08);
+    text-shadow:none;
     box-decoration-break:clone;
     -webkit-box-decoration-break:clone;
 }
@@ -4992,12 +5001,16 @@ html.lexlogica-dark-mode .question-page .mock-review-choice-explanation::selecti
 
 html.lexlogica-dark-mode .question-page .persistent-text-highlight{
     /*
-     * The Question page is literally inverted in dark mode.
-     * rgb(0,75,255) is authored here so the visible result after
-     * inversion is a bright yellow/orange highlight.
+     * The whole Question page is inverted in dark mode.
+     * These authored colors therefore render visibly as:
+     *   background -> warm amber (#ffbe38-ish)
+     *   text       -> near-black
      */
-    background:rgba(0,75,255,.68);
-    color:#fff;
+    background:rgba(0,65,199,.92);
+    color:#ffffff;
+    box-shadow:
+        inset 0 -1px 0 rgba(56,128,255,.18),
+        0 0 0 1px rgba(45,118,255,.10);
 }
 
 @media(max-width:760px){
