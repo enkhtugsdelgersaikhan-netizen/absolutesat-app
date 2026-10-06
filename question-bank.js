@@ -90,7 +90,7 @@ function escapeHtml(value) {
 
 
 const QUESTION_BANK_FILTER_STORAGE_KEY =
-    "absoluteprep-question-bank-filters:v2:" +
+    "absoluteprep-question-bank-filters:v3:" +
     activeSection;
 
 function saveQuestionBankFilters() {
@@ -759,8 +759,8 @@ async function loadQuestions() {
     try {
         const bankUrl =
             activeSection === "Math"
-                ? "/math-question-bank.json?v=2"
-                : "/question-bank.json?v=17";
+                ? "/math-question-bank.json?v=3"
+                : "/question-bank.json?v=18";
 
         const response =
             await fetch(
