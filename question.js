@@ -375,6 +375,23 @@ function normalizeMathEscapes(value) {
         "\\$1"
     );
 
+    /*
+     * Imported material sometimes uses \\begin{text}...\\end{text}.
+     * MathJax has a \\text{...} command, not a "text" environment,
+     * so the former surfaces as "Invalid environment 'text'".
+     * Convert that malformed environment before typesetting.
+     */
+    source = source.replace(
+        /\\begin\s*\{\s*text\s*\}([\s\S]*?)\\end\s*\{\s*text\s*\}/gi,
+        (
+            match,
+            body
+        ) =>
+            "\\text{" +
+            body +
+            "}"
+    );
+
     // Once a math segment is recognized, collapse a duplicated
     // backslash before TeX command names such as \\frac or \\sqrt.
     // This is intentionally limited to delimited math so prose and
@@ -6213,6 +6230,131 @@ async function goToQuestionBankPeekerIndex(
 }
 
 
+function getQuestionBankPeekerStatus(
+    question
+) {
+    if (!question) {
+        return "unanswered";
+    }
+
+    const questionId =
+        String(question.id);
+
+    if (
+        checkedResults[
+            question.id
+        ] === true
+    ) {
+        return "correct";
+    }
+
+    if (
+        Array.isArray(
+            wrongAttempts[
+                question.id
+            ]
+        ) &&
+        wrongAttempts[
+            question.id
+        ].length > 0
+    ) {
+        return "incorrect";
+    }
+
+    if (!currentUser) {
+        return "unanswered";
+    }
+
+    try {
+        const stored =
+            JSON.parse(
+                localStorage.getItem(
+                    "absoluteprep-question-status:" +
+                    currentUser.id
+                ) || "{}"
+            );
+
+        const state =
+            stored[
+                questionId
+            ];
+
+        if (!state) {
+            return "unanswered";
+        }
+
+        const resetAt =
+            getPracticeResetAt();
+
+        if (resetAt) {
+            const resetTime =
+                new Date(
+                    resetAt
+                ).getTime();
+
+            const statusTime =
+                new Date(
+                    state.updated_at ||
+                    state.created_at ||
+                    0
+                ).getTime();
+
+            if (
+                Number.isFinite(
+                    resetTime
+                ) &&
+                (
+                    !Number.isFinite(
+                        statusTime
+                    ) ||
+                    statusTime <=
+                        resetTime
+                )
+            ) {
+                return "unanswered";
+            }
+        }
+
+        return state.is_correct
+            ? "correct"
+            : "incorrect";
+    } catch {
+        return "unanswered";
+    }
+}
+
+
+function isQuestionBankPeekerReviewed(
+    question
+) {
+    if (!question) {
+        return false;
+    }
+
+    const key =
+        String(question.id);
+
+    if (
+        Object.prototype.hasOwnProperty.call(
+            localReviewOverrides,
+            key
+        )
+    ) {
+        return Boolean(
+            localReviewOverrides[
+                key
+            ]
+        );
+    }
+
+    return (
+        markedForReview[
+            question.id
+        ] === true
+    );
+}
+
+
 function renderQuestionBankPeeker() {
     if (!questionBankPeeker) {
         return;
@@ -6296,11 +6438,11 @@ function renderQuestionBankPeeker() {
             0,
             Math.min(
                 currentQuestionIndex -
-                    2,
+                    3,
                 Math.max(
                     0,
                     questions.length -
-                        5
+                        7
                 )
             )
         );
@@ -6308,7 +6450,7 @@ function renderQuestionBankPeeker() {
     const nearby =
         questions.slice(
             start,
-            start + 5
+            start + 7
         );
 
     questionBankPeekerList.innerHTML =
@@ -6340,30 +6482,83 @@ function renderQuestionBankPeeker() {
                         : ""
                 );
 
-            const shortTopic =
-                item.topic ||
-                "SAT Practice";
+            const difficulty =
+                String(
+                    item.difficulty ||
+                    "Medium"
+                ).toLowerCase();
+
+            const status =
+                getQuestionBankPeekerStatus(
+                    item
+                );
+
+            const reviewed =
+                isQuestionBankPeekerReviewed(
+                    item
+                );
+
+            button.classList.add(
+                "difficulty-" +
+                difficulty
+            );
+
+            button.setAttribute(
+                "aria-label",
+                "Question " +
+                (
+                    index +
+                    1
+                ) +
+                ", " +
+                (
+                    item.difficulty ||
+                    "Medium"
+                ) +
+                ", " +
+                (
+                    status === "correct"
+                        ? "solved correctly"
+                        : status === "incorrect"
+                            ? "solved incorrectly"
+                            : "unsolved"
+                ) +
+                (
+                    reviewed
+                        ? ", marked for review"
+                        : ""
+                )
+            );
+
+            if (
+                index ===
+                currentQuestionIndex
+            ) {
+                button.setAttribute(
+                    "aria-current",
+                    "true"
+                );
+            }
 
             button.innerHTML =
-                '<span class="question-bank-peeker-item-number">Q' +
+                '<span class="question-bank-peeker-item-number">' +
                 (
                     index +
                     1
                 ) +
                 '</span>' +
-                '<span class="question-bank-peeker-item-copy">' +
-                    '<strong>' +
-                    escapeHtml(
-                        shortTopic
-                    ) +
-                    '</strong>' +
-                    '<small>' +
-                    escapeHtml(
-                        item.difficulty ||
-                        "Medium"
-                    ) +
-                    '</small>' +
-                '</span>';
+                '<span class="question-bank-peeker-status-dot ' +
+                    status +
+                    '" aria-hidden="true"></span>' +
+                (
+                    reviewed
+                        ? '<span class="question-bank-peeker-review-icon" aria-hidden="true">' +
+                            '<svg viewBox="0 0 24 24">' +
+                                '<path d="M6 4.5A2.5 2.5 0 0 1 8.5 2h7A2.5 2.5 0 0 1 18 4.5V21l-6-3.8L6 21V4.5z"></path>' +
+                            '</svg>' +
+                        '</span>'
+                        : ""
+                );
 
             button.addEventListener(
                 "click",
