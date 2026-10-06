@@ -5457,10 +5457,32 @@ function orderMockQuestionsLikeRealTest(
                 ? readingWritingOrder
                 : mathDifficultyOrder;
 
-        const index =
-            order.indexOf(
+        const normalizeOrderValue =
+            item =>
+                String(item || "")
+                    .replace(
+                        /&/g,
+                        "and"
+                    )
+                    .replace(
+                        /\s+/g,
+                        " "
+                    )
+                    .trim();
+
+        const normalizedValue =
+            normalizeOrderValue(
                 value
             );
+
+        const index =
+            order
+                .map(
+                    normalizeOrderValue
+                )
+                .indexOf(
+                    normalizedValue
+                );
 
         return index >= 0
             ? index
