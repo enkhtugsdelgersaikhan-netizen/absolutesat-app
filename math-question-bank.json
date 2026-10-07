@@ -707,10 +707,146 @@
               }
             }
           }
+        },
+        {
+          "range": "161-200",
+          "reviewed": 40,
+          "retained": 36,
+          "excluded": [
+            {
+              "sourceQuestionNumber": 167,
+              "reason": "Near-reskin of existing corresponding-angle solve item math-20261006-new409-q191."
+            },
+            {
+              "sourceQuestionNumber": 168,
+              "reason": "Close reskin of existing rectangle area-plus-length-difference item math-20261006-new409-q107."
+            },
+            {
+              "sourceQuestionNumber": 183,
+              "reason": "Close reskin of existing one-step absolute-value solution items; it adds no new reasoning structure."
+            },
+            {
+              "sourceQuestionNumber": 200,
+              "reason": "Close reskin of existing shifted-time exponential population model math-20261006-batch465-q262."
+            }
+          ],
+          "repairs": {
+            "fractionExponentRadicalNotation": [
+              161,
+              162,
+              166,
+              171,
+              173,
+              174,
+              175,
+              176,
+              178,
+              179,
+              181,
+              184,
+              187,
+              188,
+              191,
+              194,
+              195,
+              197,
+              198,
+              199
+            ],
+            "graphDependent": [
+              169,
+              170,
+              172,
+              190
+            ],
+            "notes": [
+              "Recovered q162's 31/11 surface-area multiplier, q166's sine-addition expression, q174's answer 13/4, q176 as 27^(2c-1)=9^(5/4), q178 as f(x)=a^x+b, q188's radical indices, and q191 as h(x)=12/(x+2) from the supplied derivations.",
+              "Recovered q194 as a rational equation with restrictions x≠3 and x≠-2; this is uniquely determined by the source solution's cancellation steps.",
+              "For graph-dependent q169, q170, q172, and q190, rebuilt minimal graphs containing the source-specified intercept/value information required by the question."
+            ]
+          },
+          "visuals": {
+            "graphs": [
+              169,
+              170,
+              172,
+              190
+            ],
+            "diagrams": [
+              161,
+              162,
+              163,
+              164,
+              165
+            ],
+            "tables": [
+              196
+            ]
+          },
+          "difficultyCalibration": {
+            "approach": "Calibrated relative to each affected subtopic; this tranche adds exactly 12 Easy, 12 Medium, and 12 Hard questions.",
+            "addedBySubtopic": {
+              "Circles": {
+                "Easy": 1,
+                "Medium": 0,
+                "Hard": 1
+              },
+              "Area and Volume": {
+                "Easy": 0,
+                "Medium": 0,
+                "Hard": 1
+              },
+              "Lines, Angles, and Triangles": {
+                "Easy": 0,
+                "Medium": 2,
+                "Hard": 0
+              },
+              "Trigonometry": {
+                "Easy": 0,
+                "Medium": 1,
+                "Hard": 0
+              },
+              "Nonlinear Equations/Functions": {
+                "Easy": 1,
+                "Medium": 1,
+                "Hard": 2
+              },
+              "Quadratics": {
+                "Easy": 4,
+                "Medium": 2,
+                "Hard": 4
+              },
+              "Exponential Functions": {
+                "Easy": 2,
+                "Medium": 3,
+                "Hard": 2
+              },
+              "Equivalent Expressions": {
+                "Easy": 1,
+                "Medium": 0,
+                "Hard": 1
+              },
+              "Rational/Radical Equations": {
+                "Easy": 1,
+                "Medium": 2,
+                "Hard": 1
+              },
+              "Linear Equations": {
+                "Easy": 1,
+                "Medium": 0,
+                "Hard": 0
+              },
+              "Polynomial Functions": {
+                "Easy": 1,
+                "Medium": 1,
+                "Hard": 0
+              }
+            }
+          }
         }
       ],
-      "retainedSoFar": 134,
-      "reviewedSoFar": 160
+      "retainedSoFar": 170,
+      "reviewedSoFar": 200
     }
   },
   "questions": [
@@ -43898,6 +44034,1634 @@
             "showPoints": true
           }
         ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q161",
+      "groupId": "math-20261008-huge798-q161",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Circles",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A circle has center \\(C(h,k)\\). Point A on the circle has coordinates \\((h+6,k+8)\\). Point B also lies on the circle, and \\(m\\angle ACB=120^\\circ\\). What is the length of \\(AB\\)?",
+      "choices": {
+        "A": "10",
+        "B": "\\(10\\sqrt2\\)",
+        "C": "\\(10\\sqrt3\\)",
+        "D": "20"
+      },
+      "correctAnswer": "C",
+      "explanation": "The radius is \\(CA=\\sqrt{6^2+8^2}=10\\). Triangle ACB is isosceles with vertex angle \\(120^\\circ\\). Bisecting it creates two 30-60-90 triangles, so half of AB is \\(10\\sin60^\\circ=5\\sqrt3\\). Thus \\(AB=\\boxed{10\\sqrt3}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 161,
+      "subtopic": "Circles",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The radius is \\(CA=\\sqrt{6^2+8^2}=10\\). Triangle ACB is isosceles with vertex angle \\(120^\\circ\\). Bisecting it creates two 30-60-90 triangles, so half of AB is \\(10\\sin60^\\circ=5\\sqrt3\\). Thus \\(AB=\\boxed{10\\sqrt3}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Circle with central angle ACB equal to 120 degrees",
+        "ellipses": [
+          {
+            "cx": 210,
+            "cy": 150,
+            "rx": 110,
+            "ry": 110
+          }
+        ],
+        "lines": [
+          {
+            "x1": 210,
+            "y1": 150,
+            "x2": 115,
+            "y2": 95,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 150,
+            "x2": 305,
+            "y2": 95,
+            "dashed": false
+          },
+          {
+            "x1": 115,
+            "y1": 95,
+            "x2": 305,
+            "y2": 95,
+            "dashed": false
+          }
+        ],
+        "points": [
+          {
+            "x": 210,
+            "y": 150,
+            "label": "C",
+            "dx": -10,
+            "dy": 18
+          },
+          {
+            "x": 115,
+            "y": 95,
+            "label": "A",
+            "dx": -12,
+            "dy": -8
+          },
+          {
+            "x": 305,
+            "y": 95,
+            "label": "B",
+            "dx": 10,
+            "dy": -8
+          }
+        ],
+        "labels": [
+          {
+            "x": 210,
+            "y": 120,
+            "text": "120°",
+            "anchor": "middle"
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q162",
+      "groupId": "math-20261008-huge798-q162",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Area and Volume",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "Three identical right rectangular prisms each have height 60 centimeters and a square base with side length \\(x\\) centimeters. The surface area of each separate prism is \\(K\\) square centimeters. The three prisms are glued end-to-end along square bases to form one taller prism. The resulting prism has surface area \\(\\frac{31}{11}K\\). What is \\(x\\)?",
+      "choices": {
+        "A": "6",
+        "B": "10",
+        "C": "12",
+        "D": "15"
+      },
+      "correctAnswer": "C",
+      "explanation": "For one prism, \\(K=2x^2+4(60x)=2x^2+240x\\). After stacking, the height is 180, so the new surface area is \\(2x^2+720x\\). Thus \\(2x^2+720x=\\frac{31}{11}(2x^2+240x)\\). Simplifying gives \\(40x^2=480x\\). Since \\(x>0\\), \\(\\boxed{x=12}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 162,
+      "subtopic": "Area and Volume",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "For one prism, \\(K=2x^2+4(60x)=2x^2+240x\\). After stacking, the height is 180, so the new surface area is \\(2x^2+720x\\). Thus \\(2x^2+720x=\\frac{31}{11}(2x^2+240x)\\). Simplifying gives \\(40x^2=480x\\). Since \\(x>0\\), \\(\\boxed{x=12}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "diagram": {
+        "width": 440,
+        "height": 310,
+        "alt": "Three identical square-base prisms stacked end-to-end",
+        "lines": [
+          {
+            "x1": 160,
+            "y1": 35,
+            "x2": 280,
+            "y2": 35,
+            "dashed": false
+          },
+          {
+            "x1": 280,
+            "y1": 35,
+            "x2": 320,
+            "y2": 58,
+            "dashed": false
+          },
+          {
+            "x1": 320,
+            "y1": 58,
+            "x2": 200,
+            "y2": 58,
+            "dashed": false
+          },
+          {
+            "x1": 200,
+            "y1": 58,
+            "x2": 160,
+            "y2": 35,
+            "dashed": false
+          },
+          {
+            "x1": 160,
+            "y1": 35,
+            "x2": 160,
+            "y2": 265,
+            "dashed": false
+          },
+          {
+            "x1": 280,
+            "y1": 35,
+            "x2": 280,
+            "y2": 265,
+            "dashed": false
+          },
+          {
+            "x1": 320,
+            "y1": 58,
+            "x2": 320,
+            "y2": 288,
+            "dashed": false
+          },
+          {
+            "x1": 200,
+            "y1": 58,
+            "x2": 200,
+            "y2": 288,
+            "dashed": false
+          },
+          {
+            "x1": 160,
+            "y1": 112,
+            "x2": 280,
+            "y2": 112,
+            "dashed": true
+          },
+          {
+            "x1": 200,
+            "y1": 135,
+            "x2": 320,
+            "y2": 135,
+            "dashed": true
+          },
+          {
+            "x1": 160,
+            "y1": 189,
+            "x2": 280,
+            "y2": 189,
+            "dashed": true
+          },
+          {
+            "x1": 200,
+            "y1": 212,
+            "x2": 320,
+            "y2": 212,
+            "dashed": true
+          },
+          {
+            "x1": 160,
+            "y1": 265,
+            "x2": 280,
+            "y2": 265,
+            "dashed": false
+          },
+          {
+            "x1": 280,
+            "y1": 265,
+            "x2": 320,
+            "y2": 288,
+            "dashed": false
+          },
+          {
+            "x1": 320,
+            "y1": 288,
+            "x2": 200,
+            "y2": 288,
+            "dashed": false
+          },
+          {
+            "x1": 200,
+            "y1": 288,
+            "x2": 160,
+            "y2": 265,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 220,
+            "y": 23,
+            "text": "x",
+            "anchor": "middle"
+          },
+          {
+            "x": 340,
+            "y": 150,
+            "text": "3 × 60",
+            "anchor": "middle"
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q163",
+      "groupId": "math-20261008-huge798-q163",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Lines, Angles, and Triangles",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "Segments LQ and MP intersect at R, with L, R, Q collinear and M, R, P collinear. Segment LM is parallel to PQ. If \\(MP=36\\), \\(MR=15\\), and \\(LQ=72\\), what is the length of \\(RQ\\)?",
+      "choices": {
+        "A": "30",
+        "B": "36",
+        "C": "42",
+        "D": "48"
+      },
+      "correctAnswer": "C",
+      "explanation": "First, \\(RP=36-15=21\\). Triangles LMR and QPR are similar, so \\(LR:RQ=MR:RP=15:21=5:7\\). Since \\(LR+RQ=72\\), 12 ratio-parts total 72, so each part is 6. Hence \\(RQ=7(6)=\\boxed{42}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 163,
+      "subtopic": "Lines, Angles, and Triangles",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "First, \\(RP=36-15=21\\). Triangles LMR and QPR are similar, so \\(LR:RQ=MR:RP=15:21=5:7\\). Since \\(LR+RQ=72\\), 12 ratio-parts total 72, so each part is 6. Hence \\(RQ=7(6)=\\boxed{42}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "diagram": {
+        "width": 440,
+        "height": 300,
+        "alt": "Two similar triangles formed by intersecting transversals between parallel segments LM and PQ",
+        "lines": [
+          {
+            "x1": 85,
+            "y1": 55,
+            "x2": 85,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 55,
+            "x2": 350,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 85,
+            "y1": 55,
+            "x2": 350,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 85,
+            "y1": 245,
+            "x2": 350,
+            "y2": 55,
+            "dashed": false
+          }
+        ],
+        "points": [
+          {
+            "x": 85,
+            "y": 55,
+            "label": "L",
+            "dx": -12,
+            "dy": -8
+          },
+          {
+            "x": 85,
+            "y": 245,
+            "label": "M",
+            "dx": -12,
+            "dy": 18
+          },
+          {
+            "x": 217,
+            "y": 150,
+            "label": "R",
+            "dx": 8,
+            "dy": -8
+          },
+          {
+            "x": 350,
+            "y": 55,
+            "label": "P",
+            "dx": 10,
+            "dy": -8
+          },
+          {
+            "x": 350,
+            "y": 245,
+            "label": "Q",
+            "dx": 10,
+            "dy": 18
+          }
+        ],
+        "labels": [
+          {
+            "x": 146,
+            "y": 205,
+            "text": "MR=15",
+            "anchor": "middle"
+          },
+          {
+            "x": 290,
+            "y": 95,
+            "text": "RP=21",
+            "anchor": "middle"
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q164",
+      "groupId": "math-20261008-huge798-q164",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Circles",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "Points A, B, C, D occur in that order around a circle. Segments AC and BD are diameters, and the circumference of the circle is 180 units. The length of minor arc AB is 30 units greater than the length of minor arc BC. What is the length of minor arc CD?",
+      "choices": {
+        "A": "30",
+        "B": "45",
+        "C": "60",
+        "D": "90"
+      },
+      "correctAnswer": "C",
+      "explanation": "Opposite central angles formed by the two diameters are vertical, so arcs AB and CD are congruent, and arcs BC and DA are congruent. Let the arc lengths AB and BC be \\(a\\) and \\(b\\). Then \\(2a+2b=180\\), so \\(a+b=90\\), and \\(a-b=30\\). Therefore \\(a=60\\), so arc CD is also \\(\\boxed{60}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 164,
+      "subtopic": "Circles",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Opposite central angles formed by the two diameters are vertical, so arcs AB and CD are congruent, and arcs BC and DA are congruent. Let the arc lengths AB and BC be \\(a\\) and \\(b\\). Then \\(2a+2b=180\\), so \\(a+b=90\\), and \\(a-b=30\\). Therefore \\(a=60\\), so arc CD is also \\(\\boxed{60}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Circle with diameters AC and BD",
+        "ellipses": [
+          {
+            "cx": 210,
+            "cy": 150,
+            "rx": 115,
+            "ry": 115
+          }
+        ],
+        "lines": [
+          {
+            "x1": 128,
+            "y1": 69,
+            "x2": 292,
+            "y2": 231,
+            "dashed": false
+          },
+          {
+            "x1": 292,
+            "y1": 69,
+            "x2": 128,
+            "y2": 231,
+            "dashed": false
+          }
+        ],
+        "points": [
+          {
+            "x": 128,
+            "y": 69,
+            "label": "A",
+            "dx": -12,
+            "dy": -8
+          },
+          {
+            "x": 292,
+            "y": 69,
+            "label": "B",
+            "dx": 10,
+            "dy": -8
+          },
+          {
+            "x": 292,
+            "y": 231,
+            "label": "C",
+            "dx": 10,
+            "dy": 18
+          },
+          {
+            "x": 128,
+            "y": 231,
+            "label": "D",
+            "dx": -12,
+            "dy": 18
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q165",
+      "groupId": "math-20261008-huge798-q165",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Lines, Angles, and Triangles",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "In convex pentagon ABCDE, \\(AB\\parallel DE\\). The exterior angle formed by extending AB through B measures \\((2x+5)^\\circ\\). The interior angles at D and C measure \\((4x+115)^\\circ\\) and \\((3x+20)^\\circ\\), respectively. What is the measure, in degrees, of angle C?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The exterior angle at D is \\(180-(4x+115)=65-4x\\). Because \\(AB\\parallel DE\\), angle C equals the sum of the two exterior turns at B and D. Thus \\(3x+20=(2x+5)+(65-4x)\\), so \\(x=10\\). Therefore, \\(m\\angle C=3(10)+20=\\boxed{50^\\circ}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 165,
+      "subtopic": "Lines, Angles, and Triangles",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "50"
+      ],
+      "diagram": {
+        "width": 450,
+        "height": 315,
+        "alt": "Convex pentagon ABCDE with AB parallel to DE and an exterior ray through B",
+        "polygons": [
+          {
+            "points": [
+              [
+                75,
+                70
+              ],
+              [
+                315,
+                70
+              ],
+              [
+                380,
+                165
+              ],
+              [
+                290,
+                250
+              ],
+              [
+                105,
+                250
+              ]
+            ]
+          }
+        ],
+        "lines": [
+          {
+            "x1": 315,
+            "y1": 70,
+            "x2": 405,
+            "y2": 70,
+            "dashed": false
+          }
+        ],
+        "points": [
+          {
+            "x": 75,
+            "y": 70,
+            "label": "A",
+            "dx": -12,
+            "dy": -8
+          },
+          {
+            "x": 315,
+            "y": 70,
+            "label": "B",
+            "dx": 0,
+            "dy": -12
+          },
+          {
+            "x": 380,
+            "y": 165,
+            "label": "C",
+            "dx": 12,
+            "dy": 4
+          },
+          {
+            "x": 290,
+            "y": 250,
+            "label": "D",
+            "dx": 0,
+            "dy": 20
+          },
+          {
+            "x": 105,
+            "y": 250,
+            "label": "E",
+            "dx": -12,
+            "dy": 18
+          }
+        ],
+        "labels": [
+          {
+            "x": 350,
+            "y": 58,
+            "text": "2x+5°",
+            "anchor": "middle"
+          },
+          {
+            "x": 324,
+            "y": 220,
+            "text": "4x+115°",
+            "anchor": "middle"
+          },
+          {
+            "x": 350,
+            "y": 150,
+            "text": "3x+20°",
+            "anchor": "middle"
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q166",
+      "groupId": "math-20261008-huge798-q166",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Trigonometry",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "Angles \\(u\\) and \\(v\\) are acute and satisfy \\(2u+v=90^\\circ\\). Which expression is equivalent to \\(\\sin(2u)\\cos v+\\cos(2u)\\sin v\\)?",
+      "choices": {
+        "A": "0",
+        "B": "1",
+        "C": "\\(2u\\)",
+        "D": "\\(v\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "By the sine addition identity, \\(\\sin(2u)\\cos v+\\cos(2u)\\sin v=\\sin(2u+v)\\). Since \\(2u+v=90^\\circ\\), the expression equals \\(\\sin90^\\circ=\\boxed{1}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 166,
+      "subtopic": "Trigonometry",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "By the sine addition identity, \\(\\sin(2u)\\cos v+\\cos(2u)\\sin v=\\sin(2u+v)\\). Since \\(2u+v=90^\\circ\\), the expression equals \\(\\sin90^\\circ=\\boxed{1}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q169",
+      "groupId": "math-20261008-huge798-q169",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Nonlinear Equations/Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The graph of the nonlinear function \\(f\\) is shown. The function \\(g\\) is defined by \\(g(x)=f(x)-4\\). What is the y-intercept of the graph of \\(g\\)?",
+      "choices": {
+        "A": "\\((3,0)\\)",
+        "B": "\\((0,11)\\)",
+        "C": "\\((0,3)\\)",
+        "D": "\\((0,-3)\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "From the graph, \\(f(0)=7\\). Therefore \\(g(0)=f(0)-4=7-4=3\\), so the y-intercept is \\(\\boxed{(0,3)}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 169,
+      "subtopic": "Nonlinear Equations/Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "From the graph, \\(f(0)=7\\). Therefore \\(g(0)=f(0)-4=7-4=3\\), so the y-intercept is \\(\\boxed{(0,3)}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "xy",
+        "caption": "Graph of the nonlinear function f",
+        "xMin": -4,
+        "xMax": 4,
+        "yMin": 0,
+        "yMax": 12,
+        "xStep": 1,
+        "yStep": 1,
+        "xLabel": "x",
+        "yLabel": "f(x)",
+        "series": [
+          {
+            "label": "f",
+            "points": [
+              [
+                -3,
+                10
+              ],
+              [
+                -2,
+                7
+              ],
+              [
+                -1,
+                6
+              ],
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                10
+              ]
+            ],
+            "showPoints": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q170",
+      "groupId": "math-20261008-huge798-q170",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The graph of a parabola is shown. The parabola intersects the y-axis at the point \\((0,2g-1)\\). What is the value of \\(g\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "From the graph, the parabola crosses the y-axis at \\((0,9)\\). Thus \\(2g-1=9\\), so \\(2g=10\\) and \\(\\boxed{g=5}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 170,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "5"
+      ],
+      "graph": {
+        "type": "xy",
+        "caption": "Graph of a parabola",
+        "xMin": -2,
+        "xMax": 6,
+        "yMin": 0,
+        "yMax": 14,
+        "xStep": 1,
+        "yStep": 1,
+        "xLabel": "x",
+        "yLabel": "y",
+        "series": [
+          {
+            "label": "parabola",
+            "points": [
+              [
+                -1,
+                4
+              ],
+              [
+                0,
+                9
+              ],
+              [
+                1,
+                12
+              ],
+              [
+                2,
+                13
+              ],
+              [
+                3,
+                12
+              ],
+              [
+                4,
+                9
+              ],
+              [
+                5,
+                4
+              ]
+            ],
+            "showPoints": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q171",
+      "groupId": "math-20261008-huge798-q171",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "After a ball is dropped, the maximum height it reaches after each bounce is 60% of the maximum height after the preceding bounce. After the second bounce, the maximum height is 32.4 feet. If \\(h(n)\\) is the maximum height, in feet, after the ball has bounced \\(n\\) times, which equation defines \\(h\\)?",
+      "choices": {
+        "A": "\\(h(n)=32.4(0.60)^n\\)",
+        "B": "\\(h(n)=90(0.40)^n\\)",
+        "C": "\\(h(n)=54(0.60)^n\\)",
+        "D": "\\(h(n)=90(0.60)^n\\)"
+      },
+      "correctAnswer": "D",
+      "explanation": "Write \\(h(n)=a(0.60)^n\\). Since \\(h(2)=32.4\\), \\(32.4=a(0.60)^2=0.36a\\), so \\(a=90\\). Therefore \\(\\boxed{h(n)=90(0.60)^n}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 171,
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "Write \\(h(n)=a(0.60)^n\\). Since \\(h(2)=32.4\\), \\(32.4=a(0.60)^2=0.36a\\), so \\(a=90\\). Therefore \\(\\boxed{h(n)=90(0.60)^n}\\)."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q172",
+      "groupId": "math-20261008-huge798-q172",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Nonlinear Equations/Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The graph of the nonlinear function \\(p\\) is shown. The function \\(q\\) is defined by \\(q(x)=2p(x)+1\\). What is the y-intercept of the graph of \\(q\\)?",
+      "choices": {
+        "A": "\\((-11,0)\\)",
+        "B": "\\((0,-5)\\)",
+        "C": "\\((0,-11)\\)",
+        "D": "\\((0,-13)\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "The graph shows that \\(p(0)=-6\\). Therefore \\(q(0)=2(-6)+1=-11\\), so the y-intercept is \\(\\boxed{(0,-11)}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 172,
+      "subtopic": "Nonlinear Equations/Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The graph shows that \\(p(0)=-6\\). Therefore \\(q(0)=2(-6)+1=-11\\), so the y-intercept is \\(\\boxed{(0,-11)}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "xy",
+        "caption": "Graph of the nonlinear function p",
+        "xMin": -4,
+        "xMax": 4,
+        "yMin": -10,
+        "yMax": 2,
+        "xStep": 1,
+        "yStep": 1,
+        "xLabel": "x",
+        "yLabel": "p(x)",
+        "series": [
+          {
+            "label": "p",
+            "points": [
+              [
+                -3,
+                -1
+              ],
+              [
+                -2,
+                -4
+              ],
+              [
+                -1,
+                -6
+              ],
+              [
+                0,
+                -6
+              ],
+              [
+                1,
+                -4
+              ],
+              [
+                2,
+                -1
+              ]
+            ],
+            "showPoints": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q173",
+      "groupId": "math-20261008-huge798-q173",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Equivalent Expressions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "Which expression is equivalent to \\(3(2x^3-5x)-4x^3-(2x-7x^3)\\)?",
+      "choices": {
+        "A": "\\(17x^3-13x\\)",
+        "B": "\\(9x^3-17x\\)",
+        "C": "\\(-5x^3-17x\\)",
+        "D": "\\(5x^3-13x\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "Distribute and combine like terms: \\(3(2x^3-5x)-4x^3-(2x-7x^3)=6x^3-15x-4x^3-2x+7x^3=9x^3-17x\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 173,
+      "subtopic": "Equivalent Expressions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Distribute and combine like terms: \\(3(2x^3-5x)-4x^3-(2x-7x^3)=6x^3-15x-4x^3-2x+7x^3=9x^3-17x\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q174",
+      "groupId": "math-20261008-huge798-q174",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "What is the sum of the solutions to \\(3(x-2)(x+5)+4x=7(x-1)(x+1)-14\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Expanding and simplifying gives \\(4x^2-13x+9=0\\). For \\(Ax^2+Bx+C=0\\), the sum of the solutions is \\(-\\frac BA\\). Thus the sum is \\(\\boxed{\\frac{13}{4}}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 174,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "13/4",
+        "3.25"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q175",
+      "groupId": "math-20261008-huge798-q175",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "In a first trial, the height of an object \\(t\\) seconds after launch is modeled by \\(h(t)=-5(t-1)^2+16\\). In a second trial, the launch mechanism and all other conditions are unchanged, but the launch platform is 4 meters lower. Which equation could model the object's height \\(g(t)\\) in the second trial?",
+      "choices": {
+        "A": "\\(g(t)=-5(t-1)^2+20\\)",
+        "B": "\\(g(t)=-5(t-5)^2+16\\)",
+        "C": "\\(g(t)=-5(t-1)^2+12\\)",
+        "D": "\\(g(t)=-5(t+1)^2+12\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "Lowering the platform by 4 meters shifts every height down 4 units, so \\(g(t)=h(t)-4=-5(t-1)^2+12\\). Thus \\(\\boxed{C}\\) is correct.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 175,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Lowering the platform by 4 meters shifts every height down 4 units, so \\(g(t)=h(t)-4=-5(t-1)^2+12\\). Thus \\(\\boxed{C}\\) is correct.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q176",
+      "groupId": "math-20261008-huge798-q176",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "If \\(27^{2c-1}=9^{5/4}\\), what is the value of \\(c\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Rewrite both sides with base 3: \\(27^{2c-1}=3^{6c-3}\\) and \\(9^{5/4}=(3^2)^{5/4}=3^{5/2}\\). Therefore \\(6c-3=\\frac52\\), so \\(6c=\\frac{11}{2}\\) and \\(\\boxed{c=\\frac{11}{12}}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 176,
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "11/12",
+        "0.9166666667"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q177",
+      "groupId": "math-20261008-huge798-q177",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "In the system \\(2y+1=11\\) and \\(y=(x-4)^2+3x+k-20\\), \\(k\\) is a positive integer. If the system has no real solutions, what is the least possible value of \\(k\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The first equation gives \\(y=5\\). Substituting into the second and simplifying gives \\(x^2-5x+k-9=0\\). For no real solutions, the discriminant must be negative: \\(25-4(k-9)<0\\), so \\(61-4k<0\\), or \\(k>15.25\\). The least positive integer is \\(\\boxed{16}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 177,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "16"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q178",
+      "groupId": "math-20261008-huge798-q178",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The function \\(f\\) is defined by \\(f(x)=a^x+b\\), where \\(a\\) and \\(b\\) are constants and \\(a>0\\). The graph of \\(f\\) has y-intercept \\((0,-20)\\), and \\(f(1)+f(2)=0\\). What is the value of \\(a+b\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Since \\(f(0)=1+b=-20\\), \\(b=-21\\). Also, \\(f(1)+f(2)=a+b+a^2+b=0\\). Substituting \\(b=-21\\) gives \\(a^2+a-42=0=(a-6)(a+7)\\). Since \\(a>0\\), \\(a=6\\). Hence \\(a+b=6-21=\\boxed{-15}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 178,
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "-15"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q179",
+      "groupId": "math-20261008-huge798-q179",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The function \\(N(t)=48{,}000(8)^{t/900}\\) models a population \\(t\\) minutes after an observation begins. How many minutes does it take the population to become 4 times as large?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Since \\(8^{t/900}=2^{t/300}\\), an increase of 300 minutes doubles the population. Multiplying by 4 requires two doublings, so the time is \\(2(300)=\\boxed{600}\\) minutes.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 179,
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "600"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q180",
+      "groupId": "math-20261008-huge798-q180",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Nonlinear Equations/Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "What is the sum of the solutions to \\(2|3x-12|-7=41\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Solve \\(2|3x-12|=48\\), so \\(|3x-12|=24\\). Thus \\(3x-12=24\\) or \\(3x-12=-24\\), giving \\(x=12\\) and \\(x=-4\\). Their sum is \\(\\boxed{8}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 180,
+      "subtopic": "Nonlinear Equations/Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "8"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q181",
+      "groupId": "math-20261008-huge798-q181",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Rational/Radical Equations",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The equation \\(\\frac{3}{5b}=\\frac{2x-y}{4y}\\) relates the positive numbers \\(b\\), \\(x\\), and \\(y\\). Which equation correctly expresses \\(x\\) in terms of \\(b\\) and \\(y\\)?",
+      "choices": {
+        "A": "\\(x=\\frac{y(12+5b)}{10b}\\)",
+        "B": "\\(x=\\frac{y(12-5b)}{10b}\\)",
+        "C": "\\(x=\\frac{y(12+5b)}{20b}\\)",
+        "D": "\\(x=\\frac{2y(12+5b)}{5b}\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "Cross-multiply: \\(12y=5b(2x-y)\\). Then \\(12y=10bx-5by\\), so \\(10bx=y(12+5b)\\). Therefore, \\(\\boxed{x=\\frac{y(12+5b)}{10b}}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 181,
+      "subtopic": "Rational/Radical Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "Cross-multiply: \\(12y=5b(2x-y)\\). Then \\(12y=10bx-5by\\), so \\(10bx=y(12+5b)\\). Therefore, \\(\\boxed{x=\\frac{y(12+5b)}{10b}}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q182",
+      "groupId": "math-20261008-huge798-q182",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Nonlinear Equations/Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "Which of the following is a solution to \\((4x-3)(x+5)=(4x-3)(2x-1)\\)?",
+      "choices": {
+        "A": "-6",
+        "B": "5",
+        "C": "6",
+        "D": "\\(\\frac74\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "Move the right side to the left and factor: \\((4x-3)[(x+5)-(2x-1)]=(4x-3)(6-x)=0\\). Thus the solutions are \\(x=\\frac34\\) and \\(x=6\\). Of the choices, \\(\\boxed{6}\\) is listed.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 182,
+      "subtopic": "Nonlinear Equations/Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Move the right side to the left and factor: \\((4x-3)[(x+5)-(2x-1)]=(4x-3)(6-x)=0\\). Thus the solutions are \\(x=\\frac34\\) and \\(x=6\\). Of the choices, \\(\\boxed{6}\\) is listed.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q184",
+      "groupId": "math-20261008-huge798-q184",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The function \\(P(t)=420(1.20)^{4t/3}\\) models a population \\(t\\) years after an initial observation. According to the model, the population increases by \\(n\\%\\) every 18 months. What is \\(n\\)?",
+      "choices": {
+        "A": "20",
+        "B": "40",
+        "C": "44",
+        "D": "144"
+      },
+      "correctAnswer": "C",
+      "explanation": "Eighteen months is 1.5 years. Over 1.5 years, the exponent increases by \\(\\frac43(1.5)=2\\), so the population is multiplied by \\((1.20)^2=1.44\\). This is a \\(\\boxed{44\\%}\\) increase.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 184,
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Eighteen months is 1.5 years. Over 1.5 years, the exponent increases by \\(\\frac43(1.5)=2\\), so the population is multiplied by \\((1.20)^2=1.44\\). This is a \\(\\boxed{44\\%}\\) increase.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q185",
+      "groupId": "math-20261008-huge798-q185",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The equation \\(5(m-n)=2p+3m\\) relates \\(m\\), \\(n\\), and \\(p\\). Which equation correctly expresses \\(m\\) in terms of \\(n\\) and \\(p\\)?",
+      "choices": {
+        "A": "\\(m=\\frac{5n+2p}{2}\\)",
+        "B": "\\(m=\\frac{5n-2p}{2}\\)",
+        "C": "\\(m=5n+2p\\)",
+        "D": "\\(m=\\frac{2n+5p}{2}\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "Expand: \\(5m-5n=2p+3m\\). Thus \\(2m=5n+2p\\), so \\(\\boxed{m=\\frac{5n+2p}{2}}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 185,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "Expand: \\(5m-5n=2p+3m\\). Thus \\(2m=5n+2p\\), so \\(\\boxed{m=\\frac{5n+2p}{2}}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q186",
+      "groupId": "math-20261008-huge798-q186",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Polynomial Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The function \\(f\\) is defined by \\(f(x)=2x^3-3x+5\\). What is the value of \\(f(3)-f(1)\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "\\(f(3)=2(27)-9+5=50\\) and \\(f(1)=2-3+5=4\\). Therefore, \\(f(3)-f(1)=50-4=\\boxed{46}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 186,
+      "subtopic": "Polynomial Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "46"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q187",
+      "groupId": "math-20261008-huge798-q187",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The function is defined by \\(f(x)=-4x^2+28x-31\\). Which equivalent form displays the maximum value of \\(f\\) as a constant or coefficient?",
+      "choices": {
+        "A": "\\(f(x)=-(2x-7)^2+18\\)",
+        "B": "\\(f(x)=-4x(x-7)-31\\)",
+        "C": "\\(f(x)=-(2x-7)^2-18\\)",
+        "D": "\\(f(x)=-4(x-\\frac72)^2+31\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "Complete the square: \\(-4x^2+28x-31=-(2x-7)^2+18\\). Because the squared term is nonpositive, the maximum value is 18, displayed directly in choice A.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 187,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "Complete the square: \\(-4x^2+28x-31=-(2x-7)^2+18\\). Because the squared term is nonpositive, the maximum value is 18, displayed directly in choice A.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q188",
+      "groupId": "math-20261008-huge798-q188",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Equivalent Expressions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "For \\(a>0\\), which expression is equivalent to \\(a^{5/6}\\sqrt[4]{a}\\)?",
+      "choices": {
+        "A": "\\(\\sqrt[13]{a^{12}}\\)",
+        "B": "\\(\\sqrt[12]{a^{13}}\\)",
+        "C": "\\(\\sqrt[24]{a^{13}}\\)",
+        "D": "\\(\\sqrt[12]{a^7}\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "\\(\\sqrt[4]{a}=a^{1/4}\\), so \\(a^{5/6}a^{1/4}=a^{10/12+3/12}=a^{13/12}=\\boxed{\\sqrt[12]{a^{13}}}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 188,
+      "subtopic": "Equivalent Expressions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "\\(\\sqrt[4]{a}=a^{1/4}\\), so \\(a^{5/6}a^{1/4}=a^{10/12+3/12}=a^{13/12}=\\boxed{\\sqrt[12]{a^{13}}}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q189",
+      "groupId": "math-20261008-huge798-q189",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Polynomial Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The function \\(k\\) is defined by \\(k(x)=x^3+5x+5\\). If \\(m\\) is a positive integer and \\(k(m)=23\\), what is \\(m\\)?",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "correctAnswer": "B",
+      "explanation": "Evaluate \\(k(2)=2^3+5(2)+5=8+10+5=23\\). Therefore, \\(\\boxed{m=2}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 189,
+      "subtopic": "Polynomial Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Evaluate \\(k(2)=2^3+5(2)+5=8+10+5=23\\). Therefore, \\(\\boxed{m=2}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q190",
+      "groupId": "math-20261008-huge798-q190",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The graph shows the height \\(h\\), in meters, of an object above a landing pad \\(t\\) seconds after a tracking system begins recording. The tracking system begins recording 0.8 second after the object is launched. What is the best interpretation of the positive t-intercept of the graph?",
+      "choices": {
+        "A": "The object reaches its maximum height 4.5 seconds after launch.",
+        "B": "The object reaches the landing pad 3.7 seconds after launch.",
+        "C": "The object reaches the landing pad 4.5 seconds after launch.",
+        "D": "The object is 3.7 meters above the landing pad 0.8 second after launch."
+      },
+      "correctAnswer": "C",
+      "explanation": "The positive t-intercept is at \\(t=3.7\\), where \\(h=0\\), so the object reaches the pad 3.7 seconds after recording starts. Recording began 0.8 second after launch, so the total elapsed time is \\(3.7+0.8=\\boxed{4.5}\\) seconds.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 190,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The positive t-intercept is at \\(t=3.7\\), where \\(h=0\\), so the object reaches the pad 3.7 seconds after recording starts. Recording began 0.8 second after launch, so the total elapsed time is \\(3.7+0.8=\\boxed{4.5}\\) seconds.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "xy",
+        "caption": "Height above landing pad versus time after recording begins",
+        "xMin": 0,
+        "xMax": 4.2,
+        "yMin": 0,
+        "yMax": 6,
+        "xStep": 0.5,
+        "yStep": 1,
+        "xLabel": "t (seconds)",
+        "yLabel": "h (meters)",
+        "series": [
+          {
+            "label": "height",
+            "points": [
+              [
+                0,
+                3.7
+              ],
+              [
+                0.5,
+                4.8
+              ],
+              [
+                1,
+                5.4
+              ],
+              [
+                1.5,
+                5.5
+              ],
+              [
+                2,
+                5.1
+              ],
+              [
+                2.5,
+                4.2
+              ],
+              [
+                3,
+                2.8
+              ],
+              [
+                3.5,
+                0.9
+              ],
+              [
+                3.7,
+                0
+              ]
+            ],
+            "showPoints": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q191",
+      "groupId": "math-20261008-huge798-q191",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Rational/Radical Equations",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The function \\(h\\) is defined by \\(h(x)=\\frac{12}{x+2}\\). What is the value of \\(h(h(2))\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "First, \\(h(2)=\\frac{12}{4}=3\\). Then \\(h(h(2))=h(3)=\\frac{12}{5}=\\boxed{\\frac{12}{5}}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 191,
+      "subtopic": "Rational/Radical Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "12/5",
+        "2.4"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q192",
+      "groupId": "math-20261008-huge798-q192",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A solution \\((x,y)\\) satisfies \\(2y=4x+6\\) and \\(y=(x-4)^2+x+1\\). What is the greatest possible value of \\(x\\)?",
+      "choices": {
+        "A": "2",
+        "B": "7",
+        "C": "9",
+        "D": "14"
+      },
+      "correctAnswer": "B",
+      "explanation": "The first equation gives \\(y=2x+3\\). The second simplifies to \\(y=x^2-7x+17\\). Equating them gives \\(x^2-9x+14=0=(x-2)(x-7)\\). The greater value is \\(\\boxed{7}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 192,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The first equation gives \\(y=2x+3\\). The second simplifies to \\(y=x^2-7x+17\\). Equating them gives \\(x^2-9x+14=0=(x-2)(x-7)\\). The greater value is \\(\\boxed{7}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q193",
+      "groupId": "math-20261008-huge798-q193",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The function \\(R(t)=75{,}000(1.08)^t\\) models the predicted number of active subscriptions \\(t\\) years after a service launches. What is the best interpretation of \\(R(2.5)\\approx90{,}912\\)?",
+      "choices": {
+        "A": "About 2.5 months after launch, the predicted number of active subscriptions is 90,912.",
+        "B": "About 30 months after launch, the predicted number of active subscriptions has increased by 90,912.",
+        "C": "When there are about 90,912 subscriptions, that number is 2.5 times the initial number.",
+        "D": "About 30 months after launch, the predicted number of active subscriptions is 90,912."
+      },
+      "correctAnswer": "D",
+      "explanation": "The input 2.5 represents 2.5 years, or \\(2.5(12)=30\\) months. The output \\(R(2.5)\\) is the predicted number of subscriptions at that time, so \\(\\boxed{D}\\) is correct.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 193,
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "The input 2.5 represents 2.5 years, or \\(2.5(12)=30\\) months. The output \\(R(2.5)\\) is the predicted number of subscriptions at that time, so \\(\\boxed{D}\\) is correct."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q194",
+      "groupId": "math-20261008-huge798-q194",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Rational/Radical Equations",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "What is the solution to \\(\\frac{(x-3)(2x+1)}{(x-3)(x+2)}=\\frac{5}{x+2}\\)?",
+      "choices": {
+        "A": "-2",
+        "B": "2",
+        "C": "3",
+        "D": "\\(\\frac52\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "The original equation requires \\(x\\ne3\\) and \\(x\\ne-2\\). Cancel \\(x-3\\) to get \\(\\frac{2x+1}{x+2}=\\frac5{x+2}\\). Since \\(x\\ne-2\\), multiply by \\(x+2\\): \\(2x+1=5\\), so \\(\\boxed{x=2}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 194,
+      "subtopic": "Rational/Radical Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The original equation requires \\(x\\ne3\\) and \\(x\\ne-2\\). Cancel \\(x-3\\) to get \\(\\frac{2x+1}{x+2}=\\frac5{x+2}\\). Since \\(x\\ne-2\\), multiply by \\(x+2\\): \\(2x+1=5\\), so \\(\\boxed{x=2}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q195",
+      "groupId": "math-20261008-huge798-q195",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Rational/Radical Equations",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The positive variables \\(p\\), \\(q\\), \\(r\\), and \\(s\\) satisfy \\(\\frac3p=\\frac2q-\\frac1r+\\frac1s\\). Which expression is equivalent to \\(q\\)?",
+      "choices": {
+        "A": "\\(\\frac{2prs}{3rs+ps-pr}\\)",
+        "B": "\\(\\frac{prs}{3rs+ps-pr}\\)",
+        "C": "\\(\\frac{2prs}{3rs-ps+pr}\\)",
+        "D": "\\(\\frac{3rs+ps-pr}{2prs}\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "Rearrange: \\(\\frac2q=\\frac3p+\\frac1r-\\frac1s=\\frac{3rs+ps-pr}{prs}\\). Taking reciprocals and solving gives \\(\\boxed{q=\\frac{2prs}{3rs+ps-pr}}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 195,
+      "subtopic": "Rational/Radical Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "Rearrange: \\(\\frac2q=\\frac3p+\\frac1r-\\frac1s=\\frac{3rs+ps-pr}{prs}\\). Taking reciprocals and solving gives \\(\\boxed{q=\\frac{2prs}{3rs+ps-pr}}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q196",
+      "groupId": "math-20261008-huge798-q196",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "For a quadratic function \\(f\\), the table shows three values. Which equation defines \\(f\\)?",
+      "choices": {
+        "A": "\\(f(x)=2(x+2)(x-4)+5\\)",
+        "B": "\\(f(x)=(x+2)(x-4)+5\\)",
+        "C": "\\(f(x)=2(x-2)(x+4)+5\\)",
+        "D": "\\(f(x)=2(x+2)(x-4)-5\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "Since \\(f(-2)=f(4)=5\\), subtracting 5 gives a quadratic with zeros at -2 and 4: \\(f(x)-5=a(x+2)(x-4)\\). Using \\(f(6)=37\\), \\(32=a(8)(2)=16a\\), so \\(a=2\\). Thus \\(\\boxed{f(x)=2(x+2)(x-4)+5}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 196,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "Since \\(f(-2)=f(4)=5\\), subtracting 5 gives a quadratic with zeros at -2 and 4: \\(f(x)-5=a(x+2)(x-4)\\). Using \\(f(6)=37\\), \\(32=a(8)(2)=16a\\), so \\(a=2\\). Thus \\(\\boxed{f(x)=2(x+2)(x-4)+5}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "table": {
+        "caption": "Values of the quadratic function f",
+        "headers": [
+          "x",
+          "f(x)"
+        ],
+        "rows": [
+          [
+            "-2",
+            "5"
+          ],
+          [
+            "4",
+            "5"
+          ],
+          [
+            "6",
+            "37"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q197",
+      "groupId": "math-20261008-huge798-q197",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The functions \\(f\\) and \\(g\\) are defined for \\(-2\\le x\\le3\\). I. \\(f(x)=12\\left(\\frac32\\right)^{x-3}\\) II. \\(g(x)=18\\left(\\frac23\\right)^{x+1}\\). Which equations display, as a constant or coefficient, the maximum value of the function they define?",
+      "choices": {
+        "A": "I only",
+        "B": "II only",
+        "C": "I and II",
+        "D": "Neither I nor II"
+      },
+      "correctAnswer": "A",
+      "explanation": "Function f is increasing, so its maximum occurs at \\(x=3\\), where \\(f(3)=12\\), which is displayed as the coefficient. Function g is decreasing, so its maximum occurs at \\(x=-2\\), where \\(g(-2)=27\\), which is not displayed. Therefore, \\(\\boxed{I\\text{ only}}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 197,
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "Function f is increasing, so its maximum occurs at \\(x=3\\), where \\(f(3)=12\\), which is displayed as the coefficient. Function g is decreasing, so its maximum occurs at \\(x=-2\\), where \\(g(-2)=27\\), which is not displayed. Therefore, \\(\\boxed{I\\text{ only}}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q198",
+      "groupId": "math-20261008-huge798-q198",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The quadratic function \\(f(x)=ax^2+bx+c\\) has an x-intercept at \\((11,0)\\) and an axis of symmetry \\(x=3\\). If \\(a\\) is an integer greater than 1, which of the following could be the value of \\(a+b\\)?",
+      "choices": {
+        "A": "-5",
+        "B": "-12",
+        "C": "-15",
+        "D": "5"
+      },
+      "correctAnswer": "C",
+      "explanation": "The roots are symmetric about \\(x=3\\). If one root is 11, the other is \\(2(3)-11=-5\\), so the root sum is 6. For \\(ax^2+bx+c\\), \\(-\\frac ba=6\\), hence \\(b=-6a\\) and \\(a+b=-5a\\). Since \\(a\\) is an integer greater than 1, \\(-15\\) is possible when \\(a=3\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 198,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The roots are symmetric about \\(x=3\\). If one root is 11, the other is \\(2(3)-11=-5\\), so the root sum is 6. For \\(ax^2+bx+c\\), \\(-\\frac ba=6\\), hence \\(b=-6a\\) and \\(a+b=-5a\\). Since \\(a\\) is an integer greater than 1, \\(-15\\) is possible when \\(a=3\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q199",
+      "groupId": "math-20261008-huge798-q199",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "What is the positive solution to \\((k-3)^2-28=72\\)?",
+      "choices": {
+        "A": "7",
+        "B": "10",
+        "C": "13",
+        "D": "31"
+      },
+      "correctAnswer": "C",
+      "explanation": "\\((k-3)^2=100\\), so \\(k-3=\\pm10\\). Thus \\(k=13\\) or \\(k=-7\\). The positive solution is \\(\\boxed{13}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 199,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "\\((k-3)^2=100\\), so \\(k-3=\\pm10\\). Thus \\(k=13\\) or \\(k=-7\\). The positive solution is \\(\\boxed{13}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
       }
     }
   ],
