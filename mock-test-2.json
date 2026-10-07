@@ -2946,7 +2946,7 @@
           "requestId": "mock-2-math-m1-06",
           "targetDomain": "Algebra",
           "targetSubtopic": "Systems of Linear Equations",
-          "targetDifficulty": "Easy",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-batch465-q020",
             "groupId": "math-20261006-batch465-q020",
@@ -2954,7 +2954,7 @@
             "section": "Math",
             "domain": "Algebra",
             "skill": "Systems of Linear Equations",
-            "difficulty": "Easy",
+            "difficulty": "Medium",
             "passage": "",
             "question": "The solution to the system\n\\[ \\begin{cases} 4x+3y=31\\\\ 2x-5y=-17 \\end{cases} \\]\nis (x,y). What is the value of 3x-y?",
             "choices": {
@@ -2982,7 +2982,7 @@
           "requestId": "mock-2-math-m1-09",
           "targetDomain": "Advanced Math",
           "targetSubtopic": "Quadratics",
-          "targetDifficulty": "Easy",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-batch465-q389",
             "groupId": "math-20261006-batch465-q389",
@@ -2990,7 +2990,7 @@
             "section": "Math",
             "domain": "Advanced Math",
             "skill": "Quadratics",
-            "difficulty": "Easy",
+            "difficulty": "Medium",
             "passage": "",
             "question": "A positive number a satisfies\n\n\\[(a-2)(a+5)=18.\\]\nWhat is the value of a?",
             "choices": {},
@@ -3038,7 +3038,7 @@
           "requestId": "mock-2-math-m1-15",
           "targetDomain": "Advanced Math",
           "targetSubtopic": "Nonlinear Equations/Functions",
-          "targetDifficulty": "Easy",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-batch465-q077",
             "groupId": "math-20261006-batch465-q077",
@@ -3046,7 +3046,7 @@
             "section": "Math",
             "domain": "Advanced Math",
             "skill": "Nonlinear Equations/Functions",
-            "difficulty": "Easy",
+            "difficulty": "Medium",
             "passage": "",
             "question": "For which table are all listed ordered pairs solutions to\n\n\\[2y-3x\\le8?\\]",
             "choices": {
@@ -3190,7 +3190,7 @@
           "requestId": "mock-2-math-m1-21",
           "targetDomain": "Geometry & Trigonometry",
           "targetSubtopic": "Circles",
-          "targetDifficulty": "Easy",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-new409-q123",
             "groupId": "math-20261006-new409-q123",
@@ -3198,7 +3198,7 @@
             "section": "Math",
             "domain": "Geometry & Trigonometry",
             "skill": "Circles",
-            "difficulty": "Easy",
+            "difficulty": "Medium",
             "passage": "A right circular cylinder has volume \\(300\\pi\\) cubic centimeters. The circumference of its circular base is \\(10\\pi\\) centimeters.",
             "question": "What is the height of the cylinder, in centimeters?",
             "choices": {
@@ -3290,7 +3290,7 @@
           "requestId": "mock-2-math-m1-01",
           "targetDomain": "Algebra",
           "targetSubtopic": "Linear Equations",
-          "targetDifficulty": "Medium",
+          "targetDifficulty": "Easy",
           "question": {
             "id": "math-20261006-batch465-q073",
             "groupId": "math-20261006-batch465-q073",
@@ -3298,7 +3298,7 @@
             "section": "Math",
             "domain": "Algebra",
             "skill": "Linear Equations",
-            "difficulty": "Medium",
+            "difficulty": "Easy",
             "passage": "",
             "question": "What value of x satisfies\n\n\\[4(2x-3)-3(x+5)=2(x+9)?\\]",
             "choices": {},
@@ -3318,7 +3318,7 @@
           "requestId": "mock-2-math-m1-04",
           "targetDomain": "Algebra",
           "targetSubtopic": "Linear Functions",
-          "targetDifficulty": "Medium",
+          "targetDifficulty": "Easy",
           "question": {
             "id": "math-20261006-new409-q333",
             "groupId": "math-20261006-new409-q333",
@@ -3326,7 +3326,7 @@
             "section": "Math",
             "domain": "Algebra",
             "skill": "Linear Functions",
-            "difficulty": "Medium",
+            "difficulty": "Easy",
             "passage": "",
             "question": "Which value is closest to the absolute difference between the y-coordinate of the data point with \\(x=6\\) and the y-value predicted by the line of best fit at \\(x=6\\)?",
             "choices": {
@@ -3541,7 +3541,7 @@
           "requestId": "mock-2-math-m1-19",
           "targetDomain": "Problem-Solving & Data Analysis",
           "targetSubtopic": "Probability",
-          "targetDifficulty": "Medium",
+          "targetDifficulty": "Easy",
           "question": {
             "id": "math-20261006-new409-q331",
             "groupId": "math-20261006-new409-q331",
@@ -3549,7 +3549,7 @@
             "section": "Math",
             "domain": "Problem-Solving & Data Analysis",
             "skill": "Probability",
-            "difficulty": "Medium",
+            "difficulty": "Easy",
             "passage": "The table summarizes 72 devices offered for sale.",
             "question": "what is the probability that it is refurbished and priced at most \\(\\$400\\)?",
             "choices": {
@@ -3735,7 +3735,7 @@
           "requestId": "mock-2-math-m1-05",
           "targetDomain": "Algebra",
           "targetSubtopic": "Systems of Linear Equations",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-batch465-q278",
             "groupId": "math-20261006-batch465-q278",
@@ -3743,7 +3743,7 @@
             "section": "Math",
             "domain": "Algebra",
             "skill": "Systems of Linear Equations",
-            "difficulty": "Hard",
+            "difficulty": "Medium",
             "passage": "",
             "question": "A building currently has annual electricity costs of \\(\\$3{,}950\\). A new energy system will cost \\(\\$21{,}600\\) to install, but the building will receive a \\(\\$3{,}000\\) rebate. After installation, annual electricity costs are expected to be \\(\\$1{,}760\\), and the system will require \\(\\$610\\) in annual maintenance.\nWhich inequality can be solved to find t, the number of years after installation when the accumulated savings exceed the net installation cost?",
             "choices": {
@@ -3770,7 +3770,7 @@
           "requestId": "mock-2-math-m1-08",
           "targetDomain": "Algebra",
           "targetSubtopic": "Other Algebra",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Easy",
           "question": {
             "id": "math-20261006-batch465-q439",
             "groupId": "math-20261006-batch465-q439",
@@ -3778,7 +3778,7 @@
             "section": "Math",
             "domain": "Algebra",
             "skill": "Other Algebra",
-            "difficulty": "Hard",
+            "difficulty": "Easy",
             "passage": "",
             "question": "The formula \\[E=\\frac12mv^2\\] relates the kinetic energy \\(E\\), mass \\(m\\), and speed \\(v\\), where \\(v\\ne0\\). Which equation expresses \\(m\\) in terms of \\(E\\) and \\(v\\)?",
             "choices": {
@@ -3805,7 +3805,7 @@
           "requestId": "mock-2-math-m1-11",
           "targetDomain": "Advanced Math",
           "targetSubtopic": "Equivalent Expressions",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-batch465-q307",
             "groupId": "math-20261006-batch465-q307",
@@ -3813,7 +3813,7 @@
             "section": "Math",
             "domain": "Advanced Math",
             "skill": "Equivalent Expressions",
-            "difficulty": "Hard",
+            "difficulty": "Medium",
             "passage": "",
             "question": "For groups of at least 16 people, a guide service charges a fixed booking fee of $45, $20 per person for the first 16 people, and $13 for each additional person. Which function gives the total charge \\(C(n)\\), in dollars, for a group of \\(n\\) people, where \\(n\\ge16\\)?",
             "choices": {
@@ -3889,7 +3889,7 @@
           "requestId": "mock-2-math-m1-17",
           "targetDomain": "Problem-Solving & Data Analysis",
           "targetSubtopic": "Ratio, Rates, Percentages",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-new409-q245",
             "groupId": "math-20261006-new409-q245",
@@ -3897,7 +3897,7 @@
             "section": "Math",
             "domain": "Problem-Solving & Data Analysis",
             "skill": "Ratio, Rates, Percentages",
-            "difficulty": "Hard",
+            "difficulty": "Medium",
             "passage": "",
             "question": "The line of best fit passes approximately through \\((10,44)\\) and \\((50,20)\\). Which value is closest to the y-value predicted by the line of best fit when \\(x=35\\)?",
             "choices": {
@@ -3978,7 +3978,7 @@
           "requestId": "mock-2-math-m1-20",
           "targetDomain": "Geometry & Trigonometry",
           "targetSubtopic": "Lines, Angles, and Triangles",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-new409-q013",
             "groupId": "math-20261006-new409-q013",
@@ -3986,7 +3986,7 @@
             "section": "Math",
             "domain": "Geometry & Trigonometry",
             "skill": "Lines, Angles, and Triangles",
-            "difficulty": "Hard",
+            "difficulty": "Medium",
             "passage": "In triangle \\(ABC\\), \\(m\\angle B=35^\\circ\\). The exterior angle at \\(C\\) is \\(5^\\circ\\) greater than twice \\(m\\angle B\\).",
             "question": "What is the measure, in degrees, of the exterior angle at A?",
             "choices": {},
@@ -4168,7 +4168,7 @@
           "requestId": "mock-2-math-m2low-03",
           "targetDomain": "Algebra",
           "targetSubtopic": "Linear Functions",
-          "targetDifficulty": "Easy",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-batch465-q277",
             "groupId": "math-20261006-batch465-q277",
@@ -4176,7 +4176,7 @@
             "section": "Math",
             "domain": "Algebra",
             "skill": "Linear Functions",
-            "difficulty": "Easy",
+            "difficulty": "Medium",
             "passage": "",
             "question": "A line in the xy-plane has slope \\(-\\frac35\\) and passes through \\((10,-1)\\). Which equation represents the line?",
             "choices": {
@@ -4203,7 +4203,7 @@
           "requestId": "mock-2-math-m2low-04",
           "targetDomain": "Algebra",
           "targetSubtopic": "Linear Functions",
-          "targetDifficulty": "Easy",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-batch465-q058",
             "groupId": "math-20261006-batch465-q058",
@@ -4211,7 +4211,7 @@
             "section": "Math",
             "domain": "Algebra",
             "skill": "Linear Functions",
-            "difficulty": "Easy",
+            "difficulty": "Medium",
             "passage": "",
             "question": "The graph of a line is shown. Which equation represents the line?",
             "choices": {
@@ -4353,7 +4353,7 @@
           "requestId": "mock-2-math-m2low-09",
           "targetDomain": "Advanced Math",
           "targetSubtopic": "Quadratics",
-          "targetDifficulty": "Easy",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-batch465-q447",
             "groupId": "math-20261006-batch465-q447",
@@ -4361,7 +4361,7 @@
             "section": "Math",
             "domain": "Advanced Math",
             "skill": "Quadratics",
-            "difficulty": "Easy",
+            "difficulty": "Medium",
             "passage": "",
             "question": "If \\[\\frac{80}{y-2}=5(y-2),\\] what is the value of \\[2(y-2)^2?\\]",
             "choices": {
@@ -4452,7 +4452,7 @@
           "requestId": "mock-2-math-m2-14-shared",
           "targetDomain": "Advanced Math",
           "targetSubtopic": "Rational/Radical Equations",
-          "targetDifficulty": "Easy",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-new409-q275",
             "groupId": "math-20261006-new409-q275",
@@ -4460,7 +4460,7 @@
             "section": "Math",
             "domain": "Advanced Math",
             "skill": "Rational/Radical Equations",
-            "difficulty": "Easy",
+            "difficulty": "Medium",
             "passage": "Positive numbers \\(a\\), \\(b\\), and \\(c\\) satisfy\n\\[\\frac{3a}{2b}=6\\]\nand\n\\[\\frac{5b}{3c}=10.\\]",
             "question": "What is the value of \\(\\frac ca\\)?",
             "choices": {},
@@ -4691,7 +4691,7 @@
           "requestId": "mock-2-math-m2-05-shared",
           "targetDomain": "Algebra",
           "targetSubtopic": "Systems of Linear Equations",
-          "targetDifficulty": "Medium",
+          "targetDifficulty": "Easy",
           "question": {
             "id": "math-20261006-batch465-q011",
             "groupId": "math-20261006-batch465-q011",
@@ -4699,7 +4699,7 @@
             "section": "Math",
             "domain": "Algebra",
             "skill": "Systems of Linear Equations",
-            "difficulty": "Medium",
+            "difficulty": "Easy",
             "passage": "",
             "question": "A theater sells two kinds of group packages. Each type A package contains 3 tickets and costs $42. Each type B package contains 5 tickets and costs $65.\nA school purchases 67 tickets for a total of $898. If x is the number of type A packages and y is the number of type B packages, which system represents the situation?",
             "choices": {
@@ -4727,7 +4727,7 @@
           "requestId": "mock-2-math-m2-07-shared",
           "targetDomain": "Algebra",
           "targetSubtopic": "Linear Inequalities",
-          "targetDifficulty": "Medium",
+          "targetDifficulty": "Easy",
           "question": {
             "id": "math-20261006-batch465-q276",
             "groupId": "math-20261006-batch465-q276",
@@ -4735,7 +4735,7 @@
             "section": "Math",
             "domain": "Algebra",
             "skill": "Linear Inequalities",
-            "difficulty": "Medium",
+            "difficulty": "Easy",
             "passage": "",
             "question": "A temperature sensor displays a reading r that is always \\(3^\\circ\\text{F}\\) lower than the actual temperature. During a manufacturing process, the actual temperature must be at least \\(68^\\circ\\text{F}\\) and no more than \\(74^\\circ\\text{F}\\).\nWhich inequality gives all possible values of r?",
             "choices": {
@@ -4865,7 +4865,7 @@
           "requestId": "mock-2-math-m2-19-shared",
           "targetDomain": "Problem-Solving & Data Analysis",
           "targetSubtopic": "Probability",
-          "targetDifficulty": "Medium",
+          "targetDifficulty": "Easy",
           "question": {
             "id": "math-20261006-new409-q401",
             "groupId": "math-20261006-new409-q401",
@@ -4873,7 +4873,7 @@
             "section": "Math",
             "domain": "Problem-Solving & Data Analysis",
             "skill": "Probability",
-            "difficulty": "Medium",
+            "difficulty": "Easy",
             "passage": "A survey of 700 students produced the table below.",
             "question": "what is the probability that the student uses a planner daily?",
             "choices": {
@@ -4936,7 +4936,7 @@
           "requestId": "mock-2-math-m2-21-shared",
           "targetDomain": "Geometry & Trigonometry",
           "targetSubtopic": "Area and Volume",
-          "targetDifficulty": "Medium",
+          "targetDifficulty": "Easy",
           "question": {
             "id": "math-20261006-new409-q036",
             "groupId": "math-20261006-new409-q036",
@@ -4944,7 +4944,7 @@
             "section": "Math",
             "domain": "Geometry & Trigonometry",
             "skill": "Area and Volume",
-            "difficulty": "Medium",
+            "difficulty": "Easy",
             "passage": "",
             "question": "What is the area, in square units, of rectangle ABCD?",
             "choices": {
@@ -5193,7 +5193,7 @@
           "requestId": "mock-2-math-m2-08-shared",
           "targetDomain": "Algebra",
           "targetSubtopic": "Other Algebra",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Easy",
           "question": {
             "id": "math-20261006-batch465-q018",
             "groupId": "math-20261006-batch465-q018",
@@ -5201,7 +5201,7 @@
             "section": "Math",
             "domain": "Algebra",
             "skill": "Other Algebra",
-            "difficulty": "Hard",
+            "difficulty": "Easy",
             "passage": "",
             "question": "A maker space charges a $18 monthly membership fee, $14 for each laser-cutting session, and $9 for each 3D-printing session. A member spends exactly $120 in one month.\nIf x is the number of laser-cutting sessions and y is the number of 3D-printing sessions, which equation represents the relationship between x and y?",
             "choices": {
@@ -5229,7 +5229,7 @@
           "requestId": "mock-2-math-m2-16-shared",
           "targetDomain": "Advanced Math",
           "targetSubtopic": "Nonlinear Equations/Functions",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-batch465-q164",
             "groupId": "math-20261006-batch465-q164",
@@ -5237,7 +5237,7 @@
             "section": "Math",
             "domain": "Advanced Math",
             "skill": "Nonlinear Equations/Functions",
-            "difficulty": "Hard",
+            "difficulty": "Medium",
             "passage": "",
             "question": "The graph of a system of one linear equation and one quadratic equation is shown. Which system is represented by the graph?",
             "choices": {
@@ -5376,7 +5376,7 @@
           "requestId": "mock-2-math-m2-14-shared",
           "targetDomain": "Advanced Math",
           "targetSubtopic": "Rational/Radical Equations",
-          "targetDifficulty": "Easy",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-new409-q275",
             "groupId": "math-20261006-new409-q275",
@@ -5384,7 +5384,7 @@
             "section": "Math",
             "domain": "Advanced Math",
             "skill": "Rational/Radical Equations",
-            "difficulty": "Easy",
+            "difficulty": "Medium",
             "passage": "Positive numbers \\(a\\), \\(b\\), and \\(c\\) satisfy\n\\[\\frac{3a}{2b}=6\\]\nand\n\\[\\frac{5b}{3c}=10.\\]",
             "question": "What is the value of \\(\\frac ca\\)?",
             "choices": {},
@@ -5405,7 +5405,7 @@
           "requestId": "mock-2-math-m2-05-shared",
           "targetDomain": "Algebra",
           "targetSubtopic": "Systems of Linear Equations",
-          "targetDifficulty": "Medium",
+          "targetDifficulty": "Easy",
           "question": {
             "id": "math-20261006-batch465-q011",
             "groupId": "math-20261006-batch465-q011",
@@ -5413,7 +5413,7 @@
             "section": "Math",
             "domain": "Algebra",
             "skill": "Systems of Linear Equations",
-            "difficulty": "Medium",
+            "difficulty": "Easy",
             "passage": "",
             "question": "A theater sells two kinds of group packages. Each type A package contains 3 tickets and costs $42. Each type B package contains 5 tickets and costs $65.\nA school purchases 67 tickets for a total of $898. If x is the number of type A packages and y is the number of type B packages, which system represents the situation?",
             "choices": {
@@ -5441,7 +5441,7 @@
           "requestId": "mock-2-math-m2-07-shared",
           "targetDomain": "Algebra",
           "targetSubtopic": "Linear Inequalities",
-          "targetDifficulty": "Medium",
+          "targetDifficulty": "Easy",
           "question": {
             "id": "math-20261006-batch465-q276",
             "groupId": "math-20261006-batch465-q276",
@@ -5449,7 +5449,7 @@
             "section": "Math",
             "domain": "Algebra",
             "skill": "Linear Inequalities",
-            "difficulty": "Medium",
+            "difficulty": "Easy",
             "passage": "",
             "question": "A temperature sensor displays a reading r that is always \\(3^\\circ\\text{F}\\) lower than the actual temperature. During a manufacturing process, the actual temperature must be at least \\(68^\\circ\\text{F}\\) and no more than \\(74^\\circ\\text{F}\\).\nWhich inequality gives all possible values of r?",
             "choices": {
@@ -5579,7 +5579,7 @@
           "requestId": "mock-2-math-m2-19-shared",
           "targetDomain": "Problem-Solving & Data Analysis",
           "targetSubtopic": "Probability",
-          "targetDifficulty": "Medium",
+          "targetDifficulty": "Easy",
           "question": {
             "id": "math-20261006-new409-q401",
             "groupId": "math-20261006-new409-q401",
@@ -5587,7 +5587,7 @@
             "section": "Math",
             "domain": "Problem-Solving & Data Analysis",
             "skill": "Probability",
-            "difficulty": "Medium",
+            "difficulty": "Easy",
             "passage": "A survey of 700 students produced the table below.",
             "question": "what is the probability that the student uses a planner daily?",
             "choices": {
@@ -5650,7 +5650,7 @@
           "requestId": "mock-2-math-m2-21-shared",
           "targetDomain": "Geometry & Trigonometry",
           "targetSubtopic": "Area and Volume",
-          "targetDifficulty": "Medium",
+          "targetDifficulty": "Easy",
           "question": {
             "id": "math-20261006-new409-q036",
             "groupId": "math-20261006-new409-q036",
@@ -5658,7 +5658,7 @@
             "section": "Math",
             "domain": "Geometry & Trigonometry",
             "skill": "Area and Volume",
-            "difficulty": "Medium",
+            "difficulty": "Easy",
             "passage": "",
             "question": "What is the area, in square units, of rectangle ABCD?",
             "choices": {
@@ -5942,7 +5942,7 @@
           "requestId": "mock-2-math-m2high-02",
           "targetDomain": "Algebra",
           "targetSubtopic": "Linear Equations",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-batch465-q125",
             "groupId": "math-20261006-batch465-q125",
@@ -5950,7 +5950,7 @@
             "section": "Math",
             "domain": "Algebra",
             "skill": "Linear Equations",
-            "difficulty": "Hard",
+            "difficulty": "Medium",
             "passage": "",
             "question": "A metallurgist mixes x kilograms of alloy A with y kilograms of alloy B to make 50 kilograms of a new alloy. Alloy A is 92% copper, with the remainder nickel. Alloy B is 35% nickel. The resulting alloy is 20% nickel.\nWhich equation represents conservation of nickel in the mixture?",
             "choices": {
@@ -5977,7 +5977,7 @@
           "requestId": "mock-2-math-m2high-03",
           "targetDomain": "Algebra",
           "targetSubtopic": "Linear Functions",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-batch465-q196",
             "groupId": "math-20261006-batch465-q196",
@@ -5985,7 +5985,7 @@
             "section": "Math",
             "domain": "Algebra",
             "skill": "Linear Functions",
-            "difficulty": "Hard",
+            "difficulty": "Medium",
             "passage": "",
             "question": "A processing center models the number \\(R(d)\\) of unprocessed containers remaining \\(d\\) days after a project began by\n\\[R(d)=840-35(d-2),\\qquad d\\ge2.\\]\nWhat is the best interpretation of the x-intercept of the graph of \\(y=R(d)\\)?",
             "choices": {
@@ -6012,7 +6012,7 @@
           "requestId": "mock-2-math-m2high-04",
           "targetDomain": "Algebra",
           "targetSubtopic": "Linear Functions",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-batch465-q311",
             "groupId": "math-20261006-batch465-q311",
@@ -6020,7 +6020,7 @@
             "section": "Math",
             "domain": "Algebra",
             "skill": "Linear Functions",
-            "difficulty": "Hard",
+            "difficulty": "Medium",
             "passage": "",
             "question": "The table shows the value \\(V\\) of a quantity in two different years. Assume the relationship is linear. Let \\(V(t)\\) represent the value \\(t\\) years after 2014. Which function models the relationship?",
             "choices": {
@@ -6064,7 +6064,7 @@
           "requestId": "mock-2-math-m2high-06",
           "targetDomain": "Algebra",
           "targetSubtopic": "Systems of Linear Equations",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-batch465-q035",
             "groupId": "math-20261006-batch465-q035",
@@ -6072,7 +6072,7 @@
             "section": "Math",
             "domain": "Algebra",
             "skill": "Systems of Linear Equations",
-            "difficulty": "Hard",
+            "difficulty": "Medium",
             "passage": "",
             "question": "Consider the system\n\\[ \\begin{cases} 3x-2y=8\\\\ 6x-cy=5 \\end{cases} \\]\nwhere c is a constant. If the system has no solution, what is the value of c?",
             "choices": {},
@@ -6092,7 +6092,7 @@
           "requestId": "mock-2-math-m2-08-shared",
           "targetDomain": "Algebra",
           "targetSubtopic": "Other Algebra",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Easy",
           "question": {
             "id": "math-20261006-batch465-q018",
             "groupId": "math-20261006-batch465-q018",
@@ -6100,7 +6100,7 @@
             "section": "Math",
             "domain": "Algebra",
             "skill": "Other Algebra",
-            "difficulty": "Hard",
+            "difficulty": "Easy",
             "passage": "",
             "question": "A maker space charges a $18 monthly membership fee, $14 for each laser-cutting session, and $9 for each 3D-printing session. A member spends exactly $120 in one month.\nIf x is the number of laser-cutting sessions and y is the number of 3D-printing sessions, which equation represents the relationship between x and y?",
             "choices": {
@@ -6128,7 +6128,7 @@
           "requestId": "mock-2-math-m2high-09",
           "targetDomain": "Advanced Math",
           "targetSubtopic": "Quadratics",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-batch465-q158",
             "groupId": "math-20261006-batch465-q158",
@@ -6136,7 +6136,7 @@
             "section": "Math",
             "domain": "Advanced Math",
             "skill": "Quadratics",
-            "difficulty": "Hard",
+            "difficulty": "Medium",
             "passage": "",
             "question": "The kinetic energy \\(K\\), in joules, of an object with mass \\(m\\), in kilograms, and speed \\(v\\), in meters per second, is\n\\[\nK=\\frac12mv^2.\n\\]\nObject A has a mass of 6 kilograms and a speed of 8 meters per second. Object B has a mass of 24 kilograms and the same kinetic energy as object A. What is the speed of object B, in meters per second?",
             "choices": {
@@ -6198,7 +6198,7 @@
           "requestId": "mock-2-math-m2-16-shared",
           "targetDomain": "Advanced Math",
           "targetSubtopic": "Nonlinear Equations/Functions",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-batch465-q164",
             "groupId": "math-20261006-batch465-q164",
@@ -6206,7 +6206,7 @@
             "section": "Math",
             "domain": "Advanced Math",
             "skill": "Nonlinear Equations/Functions",
-            "difficulty": "Hard",
+            "difficulty": "Medium",
             "passage": "",
             "question": "The graph of a system of one linear equation and one quadratic equation is shown. Which system is represented by the graph?",
             "choices": {
@@ -6314,7 +6314,7 @@
           "requestId": "mock-2-math-m2high-17",
           "targetDomain": "Problem-Solving & Data Analysis",
           "targetSubtopic": "Ratio, Rates, Percentages",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-batch465-q316",
             "groupId": "math-20261006-batch465-q316",
@@ -6322,7 +6322,7 @@
             "section": "Math",
             "domain": "Problem-Solving & Data Analysis",
             "skill": "Ratio, Rates, Percentages",
-            "difficulty": "Hard",
+            "difficulty": "Medium",
             "passage": "",
             "question": "A battery begins a 30-minute calibration period at a charge level of \\(92\\%\\). The battery does not lose charge during calibration. After calibration, a sensor begins operating, and the battery loses 4 percentage points of charge every 25 minutes.\nHow many minutes after the calibration period begins will the battery first reach \\(64\\%\\)?",
             "choices": {
@@ -6399,7 +6399,7 @@
           "requestId": "mock-2-math-m2high-20",
           "targetDomain": "Geometry & Trigonometry",
           "targetSubtopic": "Lines, Angles, and Triangles",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-new409-q031",
             "groupId": "math-20261006-new409-q031",
@@ -6407,7 +6407,7 @@
             "section": "Math",
             "domain": "Geometry & Trigonometry",
             "skill": "Lines, Angles, and Triangles",
-            "difficulty": "Hard",
+            "difficulty": "Medium",
             "passage": "In triangles \\(ABC\\) and \\(DEF\\),\n\\[m\\angle A=m\\angle D=48^\\circ,\\qquad AB=10,\\qquad DE=15.\\]",
             "question": "Which additional information is sufficient to prove that triangle ABC is similar to triangle DEF?",
             "choices": {
@@ -6558,6 +6558,6 @@
     "noReuseAcrossMockTests": true,
     "readingWritingModule2Shared": 15,
     "mathModule2Shared": 12,
-    "note": "Module 2 low/high routes share the maximum possible number of questions while preserving the requested difficulty totals. Math modules are ordered Easy, then Medium, then Hard."
+    "note": "Math difficulty labels reflect the 2026-10-08 full-bank difficulty audit. Question selection, adaptive routing, and module order are unchanged."
   }
 }

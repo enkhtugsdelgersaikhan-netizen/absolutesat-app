@@ -2953,7 +2953,7 @@
           "requestId": "mock-1-math-m1-04",
           "targetDomain": "Algebra",
           "targetSubtopic": "Linear Functions",
-          "targetDifficulty": "Easy",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-batch465-q008",
             "groupId": "math-20261006-batch465-q008",
@@ -2961,7 +2961,7 @@
             "section": "Math",
             "domain": "Algebra",
             "skill": "Linear Functions",
-            "difficulty": "Easy",
+            "difficulty": "Medium",
             "passage": "",
             "question": "The function f is linear. If\n\n\\[f(-3)=5\\]\nand\n\n\\[f(5)=37,\\]\nwhich equation defines f?",
             "choices": {
@@ -3023,7 +3023,7 @@
           "requestId": "mock-1-math-m1-10",
           "targetDomain": "Advanced Math",
           "targetSubtopic": "Quadratics",
-          "targetDifficulty": "Easy",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-batch465-q417",
             "groupId": "math-20261006-batch465-q417",
@@ -3031,7 +3031,7 @@
             "section": "Math",
             "domain": "Advanced Math",
             "skill": "Quadratics",
-            "difficulty": "Easy",
+            "difficulty": "Medium",
             "passage": "",
             "question": "If (x,y) satisfies\n\n\\[y=x^{2}-4x+3\\]\nand\n\n\\[y=3x-7,\\]\nand x>3, what is the value of xy?",
             "choices": {
@@ -3164,7 +3164,7 @@
           "requestId": "mock-1-math-m1-02",
           "targetDomain": "Algebra",
           "targetSubtopic": "Linear Equations",
-          "targetDifficulty": "Medium",
+          "targetDifficulty": "Easy",
           "question": {
             "id": "math-20261006-batch465-q012",
             "groupId": "math-20261006-batch465-q012",
@@ -3172,7 +3172,7 @@
             "section": "Math",
             "domain": "Algebra",
             "skill": "Linear Equations",
-            "difficulty": "Medium",
+            "difficulty": "Easy",
             "passage": "",
             "question": "What value of p satisfies\n\n\\[3(2p-5)+4(p+1)=5(p+5)-7?\\]",
             "choices": {},
@@ -3429,7 +3429,7 @@
           "requestId": "mock-1-math-m1-22",
           "targetDomain": "Geometry & Trigonometry",
           "targetSubtopic": "Trigonometry",
-          "targetDifficulty": "Medium",
+          "targetDifficulty": "Hard",
           "question": {
             "id": "math-20261006-new409-q124",
             "groupId": "math-20261006-new409-q124",
@@ -3437,7 +3437,7 @@
             "section": "Math",
             "domain": "Geometry & Trigonometry",
             "skill": "Trigonometry",
-            "difficulty": "Medium",
+            "difficulty": "Hard",
             "passage": "A right triangle has area \\(210\\) square units and hypotenuse \\(29\\) units.",
             "question": "What is the sine of the smaller acute angle?",
             "choices": {},
@@ -3531,7 +3531,7 @@
           "requestId": "mock-1-math-m1-03",
           "targetDomain": "Algebra",
           "targetSubtopic": "Linear Functions",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-batch465-q029",
             "groupId": "math-20261006-batch465-q029",
@@ -3539,7 +3539,7 @@
             "section": "Math",
             "domain": "Algebra",
             "skill": "Linear Functions",
-            "difficulty": "Hard",
+            "difficulty": "Medium",
             "passage": "",
             "question": "The graph of\n\n\\[5x-4y=12\\]\nis translated 3 units to the right and 2 units down in the xy-plane. What is the x-coordinate of the x-intercept of the resulting graph?",
             "choices": {},
@@ -3587,7 +3587,7 @@
           "requestId": "mock-1-math-m1-09",
           "targetDomain": "Advanced Math",
           "targetSubtopic": "Quadratics",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Easy",
           "question": {
             "id": "math-20261006-batch465-q167",
             "groupId": "math-20261006-batch465-q167",
@@ -3595,7 +3595,7 @@
             "section": "Math",
             "domain": "Advanced Math",
             "skill": "Quadratics",
-            "difficulty": "Hard",
+            "difficulty": "Easy",
             "passage": "",
             "question": "A quadratic function \\(f\\) satisfies \\[f\\left(-\\frac{11}{2}\\right)=0\\] and \\[f\\left(\\frac92\\right)=0.\\] The vertex of its graph is \\((r,-20)\\). What is the value of \\(r\\)?",
             "choices": {},
@@ -3643,7 +3643,7 @@
           "requestId": "mock-1-math-m1-15",
           "targetDomain": "Advanced Math",
           "targetSubtopic": "Nonlinear Equations/Functions",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-batch465-q248",
             "groupId": "math-20261006-batch465-q248",
@@ -3651,7 +3651,7 @@
             "section": "Math",
             "domain": "Advanced Math",
             "skill": "Nonlinear Equations/Functions",
-            "difficulty": "Hard",
+            "difficulty": "Medium",
             "passage": "",
             "question": "In the xy-plane, the graphs\n\n\\[y=(x-3)^{2}+4\\]\nand\n\n\\[y=4x-12\\]\nintersect at exactly one point. What is the y-coordinate of that point?",
             "choices": {},
@@ -3671,7 +3671,7 @@
           "requestId": "mock-1-math-m1-18",
           "targetDomain": "Problem-Solving & Data Analysis",
           "targetSubtopic": "Statistics",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-new409-q281",
             "groupId": "math-20261006-new409-q281",
@@ -3679,7 +3679,7 @@
             "section": "Math",
             "domain": "Problem-Solving & Data Analysis",
             "skill": "Statistics",
-            "difficulty": "Hard",
+            "difficulty": "Medium",
             "passage": "Two random samples were selected from the same population, and their margins of error were calculated using the same method.",
             "question": "Which statement is the most appropriate explanation for the difference in the margins of error?",
             "choices": {
@@ -3726,7 +3726,7 @@
           "requestId": "mock-1-math-m1-21",
           "targetDomain": "Geometry & Trigonometry",
           "targetSubtopic": "Area and Volume",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Easy",
           "question": {
             "id": "math-20261006-batch465-q223",
             "groupId": "math-20261006-batch465-q223",
@@ -3734,7 +3734,7 @@
             "section": "Math",
             "domain": "Geometry & Trigonometry",
             "skill": "Area and Volume",
-            "difficulty": "Hard",
+            "difficulty": "Easy",
             "passage": "",
             "question": "The graph shows the reading \\(V\\), in liters, on a reservoir's volume meter \\(t\\) minutes after a pump was switched on. The relationship is linear. How many liters were added from \\(t=2\\) minutes to \\(t=8\\) minutes?",
             "choices": {},
@@ -3944,7 +3944,7 @@
           "requestId": "mock-1-math-m2low-06",
           "targetDomain": "Algebra",
           "targetSubtopic": "Systems of Linear Equations",
-          "targetDifficulty": "Easy",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-batch465-q121",
             "groupId": "math-20261006-batch465-q121",
@@ -3952,7 +3952,7 @@
             "section": "Math",
             "domain": "Algebra",
             "skill": "Systems of Linear Equations",
-            "difficulty": "Easy",
+            "difficulty": "Medium",
             "passage": "",
             "question": "The solution to the system\n\\[ \\begin{cases} y=2x-3\\\\ 3x+2y=29 \\end{cases} \\]\nis (x,y). What is the value of 4x?",
             "choices": {
@@ -4015,7 +4015,7 @@
           "requestId": "mock-1-math-m2low-09",
           "targetDomain": "Advanced Math",
           "targetSubtopic": "Quadratics",
-          "targetDifficulty": "Easy",
+          "targetDifficulty": "Hard",
           "question": {
             "id": "math-20261006-batch465-q233",
             "groupId": "math-20261006-batch465-q233",
@@ -4023,7 +4023,7 @@
             "section": "Math",
             "domain": "Advanced Math",
             "skill": "Quadratics",
-            "difficulty": "Easy",
+            "difficulty": "Hard",
             "passage": "",
             "question": "For positive integers \\(b\\) and \\(c\\), \\[\\frac{x^2-c}{x-b}\\] is equivalent to \\(x+b\\) for all \\(x\\ne b\\). If \\(b+c=20\\), what is the value of \\(c\\)?",
             "choices": {
@@ -4050,7 +4050,7 @@
           "requestId": "mock-1-math-m2low-10",
           "targetDomain": "Advanced Math",
           "targetSubtopic": "Quadratics",
-          "targetDifficulty": "Easy",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-batch465-q169",
             "groupId": "math-20261006-batch465-q169",
@@ -4058,7 +4058,7 @@
             "section": "Math",
             "domain": "Advanced Math",
             "skill": "Quadratics",
-            "difficulty": "Easy",
+            "difficulty": "Medium",
             "passage": "",
             "question": "The functions are defined by\n\\[f(x)=3x-4,\\]\n\\[g(x)=2x+5,\\]\nand\n\\[h(x)=x-7.\\]\nIf\n\\[f(x)g(x)+2h(x)=ax^2+bx+c,\\]\nwhat is the value of \\(b\\)?",
             "choices": {
@@ -4203,7 +4203,7 @@
           "requestId": "mock-1-math-m2low-17",
           "targetDomain": "Problem-Solving & Data Analysis",
           "targetSubtopic": "Ratio, Rates, Percentages",
-          "targetDifficulty": "Easy",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-new409-q086",
             "groupId": "math-20261006-new409-q086",
@@ -4211,7 +4211,7 @@
             "section": "Math",
             "domain": "Problem-Solving & Data Analysis",
             "skill": "Ratio, Rates, Percentages",
-            "difficulty": "Easy",
+            "difficulty": "Medium",
             "passage": "A restaurant receipt totals \\(\\$86.40\\) after an \\(8\\%\\) sales tax is added to the pre-tax subtotal. A customer plans to leave a tip equal to \\(18\\%\\) of the pre-tax subtotal.",
             "question": "What is the tip?",
             "choices": {
@@ -4238,7 +4238,7 @@
           "requestId": "mock-1-math-m2low-18",
           "targetDomain": "Problem-Solving & Data Analysis",
           "targetSubtopic": "Statistics",
-          "targetDifficulty": "Easy",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-new409-q335",
             "groupId": "math-20261006-new409-q335",
@@ -4246,7 +4246,7 @@
             "section": "Math",
             "domain": "Problem-Solving & Data Analysis",
             "skill": "Statistics",
-            "difficulty": "Easy",
+            "difficulty": "Medium",
             "passage": "A region has a total area of 82,000 square kilometers, of which 7,000 square kilometers is inland water. Population density is measured per square kilometer of land area.\nThe population density increased from 3.2 to 4.0 people per square kilometer while the land area remained unchanged. By",
             "question": "how many people did the population increase?",
             "choices": {
@@ -4273,7 +4273,7 @@
           "requestId": "mock-1-math-m2low-20",
           "targetDomain": "Geometry & Trigonometry",
           "targetSubtopic": "Lines, Angles, and Triangles",
-          "targetDifficulty": "Easy",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-new409-q156",
             "groupId": "math-20261006-new409-q156",
@@ -4281,7 +4281,7 @@
             "section": "Math",
             "domain": "Geometry & Trigonometry",
             "skill": "Lines, Angles, and Triangles",
-            "difficulty": "Easy",
+            "difficulty": "Medium",
             "passage": "A transversal intersects lines \\(m\\) and \\(n\\). Corresponding angles have measures \\((4x+6)^\\circ\\) and \\((7x-48)^\\circ\\).",
             "question": "Which additional information is sufficient to prove that \\(m\\parallel n\\)?",
             "choices": {
@@ -4447,7 +4447,7 @@
           "requestId": "mock-1-math-m2-11-shared",
           "targetDomain": "Advanced Math",
           "targetSubtopic": "Equivalent Expressions",
-          "targetDifficulty": "Medium",
+          "targetDifficulty": "Hard",
           "question": {
             "id": "math-20261006-batch465-q090",
             "groupId": "math-20261006-batch465-q090",
@@ -4455,7 +4455,7 @@
             "section": "Math",
             "domain": "Advanced Math",
             "skill": "Equivalent Expressions",
-            "difficulty": "Medium",
+            "difficulty": "Hard",
             "passage": "",
             "question": "A research drone carries only 18-kilogram sensor cases and 25-kilogram sampling cases. On each flight, it must carry at least 14 cases total, and the combined mass of the cases can be at most 301 kilograms.\nWhat is the greatest possible number of 25-kilogram sampling cases the drone can carry on one flight?",
             "choices": {
@@ -4896,7 +4896,7 @@
           "requestId": "mock-1-math-m2-14-shared",
           "targetDomain": "Advanced Math",
           "targetSubtopic": "Rational/Radical Equations",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Easy",
           "question": {
             "id": "math-20261006-batch465-q273",
             "groupId": "math-20261006-batch465-q273",
@@ -4904,7 +4904,7 @@
             "section": "Math",
             "domain": "Advanced Math",
             "skill": "Rational/Radical Equations",
-            "difficulty": "Hard",
+            "difficulty": "Easy",
             "passage": "",
             "question": "The expression \\[\\frac{30}{12x+42}\\] is equivalent to \\[\\frac5{2x+b},\\] where \\(b\\) is a constant. What is the value of \\(2b+1\\)?",
             "choices": {
@@ -5161,7 +5161,7 @@
           "requestId": "mock-1-math-m2-11-shared",
           "targetDomain": "Advanced Math",
           "targetSubtopic": "Equivalent Expressions",
-          "targetDifficulty": "Medium",
+          "targetDifficulty": "Hard",
           "question": {
             "id": "math-20261006-batch465-q090",
             "groupId": "math-20261006-batch465-q090",
@@ -5169,7 +5169,7 @@
             "section": "Math",
             "domain": "Advanced Math",
             "skill": "Equivalent Expressions",
-            "difficulty": "Medium",
+            "difficulty": "Hard",
             "passage": "",
             "question": "A research drone carries only 18-kilogram sensor cases and 25-kilogram sampling cases. On each flight, it must carry at least 14 cases total, and the combined mass of the cases can be at most 301 kilograms.\nWhat is the greatest possible number of 25-kilogram sampling cases the drone can carry on one flight?",
             "choices": {
@@ -5574,7 +5574,7 @@
           "requestId": "mock-1-math-m2high-01",
           "targetDomain": "Algebra",
           "targetSubtopic": "Linear Equations",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-batch465-q078",
             "groupId": "math-20261006-batch465-q078",
@@ -5582,7 +5582,7 @@
             "section": "Math",
             "domain": "Algebra",
             "skill": "Linear Equations",
-            "difficulty": "Hard",
+            "difficulty": "Medium",
             "passage": "",
             "question": "A venue sold 44 tickets. Standard tickets cost \\(\\$18\\) each, and premium tickets cost \\(\\$27\\) each. Total ticket revenue was \\(\\$963\\).\nHow many dollars of the revenue came from premium tickets?",
             "choices": {},
@@ -5603,7 +5603,7 @@
           "requestId": "mock-1-math-m2high-02",
           "targetDomain": "Algebra",
           "targetSubtopic": "Linear Equations",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-batch465-q302",
             "groupId": "math-20261006-batch465-q302",
@@ -5611,7 +5611,7 @@
             "section": "Math",
             "domain": "Algebra",
             "skill": "Linear Equations",
-            "difficulty": "Hard",
+            "difficulty": "Medium",
             "passage": "",
             "question": "A scientific instrument converts an actual measurement T to a displayed reading D according to\n\n\\[D=1.2(0.75T+5)-8.\\]\nIf the displayed reading is 34, what is the actual measurement T?",
             "choices": {},
@@ -5631,7 +5631,7 @@
           "requestId": "mock-1-math-m2high-03",
           "targetDomain": "Algebra",
           "targetSubtopic": "Linear Functions",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Easy",
           "question": {
             "id": "math-20261006-batch465-q406",
             "groupId": "math-20261006-batch465-q406",
@@ -5639,7 +5639,7 @@
             "section": "Math",
             "domain": "Algebra",
             "skill": "Linear Functions",
-            "difficulty": "Hard",
+            "difficulty": "Easy",
             "passage": "",
             "question": "The equation \\[y=-2(x-3)^2+50\\] models the number \\(y\\) of scheduled deliveries \\(x\\) months after the end of August 2026, where \\(x\\ge0\\). Which statement best interprets the y-intercept?",
             "choices": {
@@ -5666,7 +5666,7 @@
           "requestId": "mock-1-math-m2high-04",
           "targetDomain": "Algebra",
           "targetSubtopic": "Linear Functions",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-batch465-q280",
             "groupId": "math-20261006-batch465-q280",
@@ -5674,7 +5674,7 @@
             "section": "Math",
             "domain": "Algebra",
             "skill": "Linear Functions",
-            "difficulty": "Hard",
+            "difficulty": "Medium",
             "passage": "",
             "question": "The table gives three points on the graph of a linear relationship, where \\(k\\) is a constant. What is the slope of the line?",
             "choices": {
@@ -5722,7 +5722,7 @@
           "requestId": "mock-1-math-m2high-06",
           "targetDomain": "Algebra",
           "targetSubtopic": "Systems of Linear Equations",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-batch465-q056",
             "groupId": "math-20261006-batch465-q056",
@@ -5730,7 +5730,7 @@
             "section": "Math",
             "domain": "Algebra",
             "skill": "Systems of Linear Equations",
-            "difficulty": "Hard",
+            "difficulty": "Medium",
             "passage": "",
             "question": "One equation in a system is\n\n\\[6x-9y=12.\\]\nThe system has no solution. Which equation could be the second equation?",
             "choices": {
@@ -5785,7 +5785,7 @@
           "requestId": "mock-1-math-m2high-10",
           "targetDomain": "Advanced Math",
           "targetSubtopic": "Quadratics",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-batch465-q236",
             "groupId": "math-20261006-batch465-q236",
@@ -5793,7 +5793,7 @@
             "section": "Math",
             "domain": "Advanced Math",
             "skill": "Quadratics",
-            "difficulty": "Hard",
+            "difficulty": "Medium",
             "passage": "",
             "question": "The ordered pair (x,y) satisfies\n\n\\[y=(x-1)^{2}+2\\]\nand\n\n\\[y=5x-7.\\]\nWhat is one possible value of x?",
             "choices": {},
@@ -5850,7 +5850,7 @@
           "requestId": "mock-1-math-m2-14-shared",
           "targetDomain": "Advanced Math",
           "targetSubtopic": "Rational/Radical Equations",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Easy",
           "question": {
             "id": "math-20261006-batch465-q273",
             "groupId": "math-20261006-batch465-q273",
@@ -5858,7 +5858,7 @@
             "section": "Math",
             "domain": "Advanced Math",
             "skill": "Rational/Radical Equations",
-            "difficulty": "Hard",
+            "difficulty": "Easy",
             "passage": "",
             "question": "The expression \\[\\frac{30}{12x+42}\\] is equivalent to \\[\\frac5{2x+b},\\] where \\(b\\) is a constant. What is the value of \\(2b+1\\)?",
             "choices": {
@@ -5886,7 +5886,7 @@
           "requestId": "mock-1-math-m2high-17",
           "targetDomain": "Problem-Solving & Data Analysis",
           "targetSubtopic": "Ratio, Rates, Percentages",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-batch465-q222",
             "groupId": "math-20261006-batch465-q222",
@@ -5894,7 +5894,7 @@
             "section": "Math",
             "domain": "Problem-Solving & Data Analysis",
             "skill": "Ratio, Rates, Percentages",
-            "difficulty": "Hard",
+            "difficulty": "Medium",
             "passage": "",
             "question": "During a trip, Ravi hiked \\(r\\) miles at 4 miles per hour and kayaked \\(b\\) miles at 12 miles per hour. He traveled a total of 88 miles, and the time he spent kayaking was 1.5 times the time he spent hiking. How many miles did Ravi kayak?",
             "choices": {
@@ -5922,7 +5922,7 @@
           "requestId": "mock-1-math-m2high-18",
           "targetDomain": "Problem-Solving & Data Analysis",
           "targetSubtopic": "Statistics",
-          "targetDifficulty": "Hard",
+          "targetDifficulty": "Easy",
           "question": {
             "id": "math-20261006-new409-q250",
             "groupId": "math-20261006-new409-q250",
@@ -5930,7 +5930,7 @@
             "section": "Math",
             "domain": "Problem-Solving & Data Analysis",
             "skill": "Statistics",
-            "difficulty": "Hard",
+            "difficulty": "Easy",
             "passage": "",
             "question": "How many values in the data set are at least 4?",
             "choices": {},
@@ -6117,6 +6117,6 @@
     "noReuseAcrossMockTests": true,
     "readingWritingModule2Shared": 15,
     "mathModule2Shared": 12,
-    "note": "Module 2 low/high routes share the maximum possible number of questions while preserving the requested difficulty totals. Math modules are ordered Easy, then Medium, then Hard."
+    "note": "Math difficulty labels reflect the 2026-10-08 full-bank difficulty audit. Question selection, adaptive routing, and module order are unchanged."
   }
 }
