@@ -925,3 +925,170 @@
     transform:translateY(-1px);
     box-shadow:0 4px 9px rgba(15,23,42,.045)!important;
 }
+
+
+/* ============================================================
+   NESTED SKILL PERFORMANCE — QUESTION BANK HIERARCHY
+   ============================================================ */
+.dashboard-subtopic-panel{
+    margin-bottom:14px;
+}
+.dashboard-skill-groups{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+.dashboard-section-skill-group{
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+}
+.dashboard-section-skill-head{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    padding:0 2px;
+}
+.dashboard-section-skill-head small{
+    color:#8b9995;
+    font-size:7.5px;
+    line-height:1.35;
+}
+.dashboard-domain-skill-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    align-items:start;
+    gap:14px;
+}
+.dashboard-domain-skill-group{
+    overflow:hidden;
+    border:1px solid #cfe0dc;
+    border-radius:16px;
+    background:linear-gradient(180deg,#f9fcfb 0%,#f3f8f7 100%);
+    box-shadow:0 2px 7px rgba(15,23,42,.025);
+}
+.dashboard-domain-skill-head{
+    min-height:76px;
+    padding:14px 16px 13px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    border-bottom:1px solid #d8e7e3;
+    background:rgba(255,255,255,.38);
+}
+.dashboard-domain-skill-head>div{
+    min-width:0;
+}
+.dashboard-domain-skill-head span{
+    display:block;
+    margin-bottom:3px;
+    color:#0f766e;
+    font-size:8px;
+    font-weight:800;
+    letter-spacing:1.15px;
+}
+.dashboard-domain-skill-head strong{
+    display:block;
+    color:#173f39;
+    font-size:15px;
+    font-weight:650;
+    line-height:1.3;
+}
+.dashboard-domain-skill-head small{
+    flex:0 0 auto;
+    color:#7b8c87;
+    font-size:7.5px;
+    font-weight:700;
+    white-space:nowrap;
+}
+.dashboard-domain-subtopics{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:8px;
+    padding:13px 14px 14px;
+    background:rgba(255,255,255,.5);
+}
+.dashboard-subtopic-card{
+    min-width:0;
+    padding:11px 12px;
+    border:1px solid #d3e1de;
+    border-radius:10px;
+    background:rgba(255,255,255,.94);
+    box-shadow:0 1px 3px rgba(15,23,42,.025);
+}
+.dashboard-subtopic-card-head{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:10px;
+}
+.dashboard-subtopic-card-head strong{
+    min-width:0;
+    color:#294d46;
+    font-size:9.5px;
+    font-weight:700;
+    line-height:1.35;
+}
+.dashboard-subtopic-card-head>span{
+    flex:0 0 auto;
+    color:#8b9995;
+    font-size:6.8px;
+    font-weight:700;
+    white-space:nowrap;
+}
+.dashboard-subtopic-metrics{
+    display:flex;
+    flex-wrap:wrap;
+    gap:5px 10px;
+    margin-top:7px;
+}
+.dashboard-subtopic-metrics span{
+    color:#7a8a86;
+    font-size:7px;
+    font-weight:600;
+}
+.dashboard-subtopic-metrics b{
+    margin-left:3px;
+    font-size:7.5px;
+    font-weight:800;
+}
+.dashboard-subtopic-card p{
+    margin:8px 0 0;
+    padding-top:8px;
+    border-top:1px solid #edf2f0;
+    color:#74837f;
+    font-size:7.4px;
+    line-height:1.5;
+}
+.dashboard-account-panel-standalone{
+    width:min(100%,300px);
+    height:auto!important;
+    min-height:0!important;
+    margin-left:auto;
+    box-sizing:border-box;
+}
+@media(max-width:900px){
+    .dashboard-domain-skill-grid{
+        grid-template-columns:1fr;
+    }
+}
+@media(max-width:620px){
+    .dashboard-domain-subtopics{
+        grid-template-columns:1fr;
+        padding:11px 12px 12px;
+    }
+    .dashboard-domain-skill-head{
+        min-height:68px;
+        padding:12px 14px;
+    }
+    .dashboard-section-skill-head{
+        align-items:flex-start;
+        flex-direction:column;
+        gap:5px;
+    }
+    .dashboard-account-panel-standalone{
+        width:100%;
+    }
+}
