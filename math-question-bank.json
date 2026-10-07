@@ -762,7 +762,8 @@
             "notes": [
               "Recovered q162's 31/11 surface-area multiplier, q166's sine-addition expression, q174's answer 13/4, q176 as 27^(2c-1)=9^(5/4), q178 as f(x)=a^x+b, q188's radical indices, and q191 as h(x)=12/(x+2) from the supplied derivations.",
               "Recovered q194 as a rational equation with restrictions x≠3 and x≠-2; this is uniquely determined by the source solution's cancellation steps.",
-              "For graph-dependent q169, q170, q172, and q190, rebuilt minimal graphs containing the source-specified intercept/value information required by the question."
+              "For graph-dependent q169, q170, q172, and q190, rebuilt minimal graphs containing the source-specified intercept/value information required by the question.",
+              "Post-ingestion verification restored q173's missing outer bracket: 3(2x^3-5x)-[4x^3-(2x-7x^3)], matching the supplied classical solution and answer choices."
             ]
           },
           "visuals": {
@@ -44895,22 +44896,22 @@
       "skill": "Equivalent Expressions",
       "difficulty": "Easy",
       "passage": "",
-      "question": "Which expression is equivalent to \\(3(2x^3-5x)-4x^3-(2x-7x^3)\\)?",
+      "question": "Which expression is equivalent to \\(3(2x^3-5x)-\\left[4x^3-(2x-7x^3)\\right]\\)?",
       "choices": {
         "A": "\\(17x^3-13x\\)",
-        "B": "\\(9x^3-17x\\)",
+        "B": "\\(-5x^3-13x\\)",
         "C": "\\(-5x^3-17x\\)",
         "D": "\\(5x^3-13x\\)"
       },
       "correctAnswer": "B",
-      "explanation": "Distribute and combine like terms: \\(3(2x^3-5x)-4x^3-(2x-7x^3)=6x^3-15x-4x^3-2x+7x^3=9x^3-17x\\).",
+      "explanation": "First simplify the bracket: \\(4x^3-(2x-7x^3)=11x^3-2x\\). Then \\(3(2x^3-5x)-(11x^3-2x)=6x^3-15x-11x^3+2x=\\boxed{-5x^3-13x}\\).",
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 173,
       "subtopic": "Equivalent Expressions",
       "classificationVersion": "2026-10-08-v1",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
-        "B": "Distribute and combine like terms: \\(3(2x^3-5x)-4x^3-(2x-7x^3)=6x^3-15x-4x^3-2x+7x^3=9x^3-17x\\).",
+        "B": "First simplify the bracket: \\(4x^3-(2x-7x^3)=11x^3-2x\\). Then \\(3(2x^3-5x)-(11x^3-2x)=6x^3-15x-11x^3+2x=\\boxed{-5x^3-13x}\\).",
         "C": "This choice does not satisfy the relationships or conditions in the question.",
         "D": "This choice does not satisfy the relationships or conditions in the question."
       }
