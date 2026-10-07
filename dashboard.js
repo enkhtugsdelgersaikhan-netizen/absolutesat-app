@@ -711,6 +711,33 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 
+    function getSkillSeverityClass(row) {
+        if (!row || !row.answered) return "severity-neutral";
+
+        const target = TARGET_SECONDS[row.section] || 83;
+        const accuracyPenalty = Number.isFinite(row.accuracy)
+            ? Math.min(1, Math.max(0, (PREFERRED_ACCURACY - row.accuracy) / 45))
+            : 0;
+        const pacePenalty = Number.isFinite(row.averageTime)
+            ? Math.min(1, Math.max(0, (row.averageTime - target) / (target * 0.8)))
+            : 0;
+
+        /*
+         * Accuracy carries most of the visual severity. Pace can push a
+         * skill warmer/redder, but a slow-yet-accurate skill should not look
+         * as weak as a genuinely inaccurate one. Small samples are softened.
+         */
+        const evidence = Math.min(1, row.answered / 6);
+        const severity =
+            (accuracyPenalty * 0.78 + pacePenalty * 0.22) *
+            (0.6 + evidence * 0.4);
+
+        if (severity >= 0.58) return "severity-critical";
+        if (severity >= 0.34) return "severity-weak";
+        if (severity >= 0.14) return "severity-watch";
+        return "severity-strong";
+    }
+
     function getSkillPracticeDescription(row) {
         if (!row.answered) {
             return "No practice data yet. Answer a few questions here to establish an accuracy and pace baseline.";
@@ -783,7 +810,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                         const accuracy = Number.isFinite(row.accuracy) ? Math.round(row.accuracy) + "%" : "—";
                         const avgTime = Number.isFinite(row.averageTime) ? Math.round(row.averageTime) + "s" : "—";
                         return (
-                            '<article class="dashboard-subtopic-card">' +
+                            '<article class="dashboard-subtopic-card ' + getSkillSeverityClass(row) + '">' +
                                 '<div class="dashboard-subtopic-card-head">' +
                                     '<strong>' + escapeHtml(row.subtopic) + '</strong>' +
                                     '<span>' + row.answered.toLocaleString() + ' answered</span>' +
