@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=unified-ui-1">
-    <link rel="stylesheet" href="dashboard.css?v=unified-ui-1">
+    <link rel="stylesheet" href="dashboard.css?v=nested-skills-1">
     <link rel="stylesheet" href="/responsive.css?v=1">
 </head>
 <body>
@@ -73,61 +73,34 @@
         <section class="dashboard-panel dashboard-subtopic-panel">
             <div class="dashboard-panel-heading dashboard-table-heading">
                 <div>
-                    <div class="panel-eyebrow">SUBTOPIC PERFORMANCE</div>
-                    <h2>Accuracy and pace by skill</h2>
+                    <div class="panel-eyebrow">SKILL PERFORMANCE + NEXT WORK</div>
+                    <h2>Accuracy, pace, and what to practice next</h2>
                 </div>
-                <div class="dashboard-filter-group" role="group" aria-label="Filter subtopics by section">
+                <div class="dashboard-filter-group" role="group" aria-label="Filter skills by section">
                     <button type="button" class="is-active" data-subtopic-filter="all">All</button>
                     <button type="button" data-subtopic-filter="rw">R&amp;W</button>
                     <button type="button" data-subtopic-filter="math">Math</button>
                 </div>
             </div>
 
-            <div class="dashboard-table-wrap">
-                <table class="dashboard-subtopic-table">
-                    <thead>
-                        <tr>
-                            <th>Section</th>
-                            <th>Subtopic</th>
-                            <th class="is-number">Answered</th>
-                            <th class="is-number">Accuracy</th>
-                            <th class="is-number">Avg. time</th>
-                        </tr>
-                    </thead>
-                    <tbody id="subtopic-table-body">
-                        <tr><td colspan="5" class="dashboard-table-empty">Loading subtopic analytics…</td></tr>
-                    </tbody>
-                </table>
+            <div id="subtopic-skill-groups" class="dashboard-skill-groups">
+                <div class="dashboard-empty-state">Loading skill analytics…</div>
             </div>
+
             <p class="dashboard-benchmark-note">Color benchmark: 90%+ accuracy, about 71 seconds per R&amp;W question, and 95 seconds per Math question. Redder text means farther from the preferred benchmark. Average time uses first-attempt timing recorded from this analytics update onward.</p>
         </section>
 
-        <div class="dashboard-insight-grid">
-            <section class="dashboard-panel dashboard-priority-panel">
-                <div class="dashboard-panel-heading">
-                    <div>
-                        <div class="panel-eyebrow">NEXT BEST WORK</div>
-                        <h2>What to practice next</h2>
-                    </div>
-                    <small class="priority-method">Ranks only skills with enough evidence, using accuracy first and pace second.</small>
+        <section class="dashboard-panel dashboard-account-panel dashboard-account-panel-standalone">
+            <div class="dashboard-panel-heading">
+                <div>
+                    <div class="panel-eyebrow">ACCOUNT</div>
+                    <h2>Practice data</h2>
                 </div>
-                <div id="priority-list" class="priority-list">
-                    <div class="dashboard-empty-state">Loading priorities…</div>
-                </div>
-            </section>
-
-            <section class="dashboard-panel dashboard-account-panel">
-                <div class="dashboard-panel-heading">
-                    <div>
-                        <div class="panel-eyebrow">ACCOUNT</div>
-                        <h2>Practice data</h2>
-                    </div>
-                </div>
-                <p class="dashboard-muted">Resetting removes saved practice attempts, reviews, question-set results, timing history, and vocabulary progress.</p>
-                <button type="button" class="dashboard-reset" id="dashboard-reset">Reset all practice data</button>
-                <button type="button" class="dashboard-logout" id="dashboard-logout">Log out</button>
-            </section>
-        </div>
+            </div>
+            <p class="dashboard-muted">Resetting removes saved practice attempts, reviews, question-set results, timing history, and vocabulary progress.</p>
+            <button type="button" class="dashboard-reset" id="dashboard-reset">Reset all practice data</button>
+            <button type="button" class="dashboard-logout" id="dashboard-logout">Log out</button>
+        </section>
 
         <div id="dashboard-data-note" class="dashboard-data-note" hidden></div>
     </section>
@@ -135,7 +108,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js?v=dark-3"></script>
-<script src="dashboard.js?v=analytics-5"></script>
+<script src="dashboard.js?v=nested-skills-1"></script>
 <script src="/study.js"></script>
 </body>
 </html>
