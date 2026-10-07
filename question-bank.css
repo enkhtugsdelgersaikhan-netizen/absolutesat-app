@@ -1429,3 +1429,75 @@ html:not(.lexlogica-dark-mode) .domain-skill-group{
 html:not(.lexlogica-dark-mode) .subtopic-choice{
     box-shadow:0 2px 5px rgba(15,23,42,.025)!important;
 }
+
+
+/* ============================================================
+   QUESTION BANK ICONS: NEUTRAL TILE + DIFFICULTY EDGE
+   ============================================================ */
+
+/* Match mock-test symbols: difficulty is an accent, not the whole tile. */
+.question-icon{
+    position:relative;
+    overflow:hidden;
+}
+.question-icon::before{
+    content:"";
+    position:absolute;
+    top:5px;
+    bottom:5px;
+    left:3px;
+    width:4px;
+    border-radius:999px;
+    background:#99a5a2;
+    pointer-events:none;
+}
+
+/* Light mode: one neutral university-style tile for every difficulty. */
+html:not(.lexlogica-dark-mode) .question-icon.difficulty-easy,
+html:not(.lexlogica-dark-mode) .question-icon.difficulty-medium,
+html:not(.lexlogica-dark-mode) .question-icon.difficulty-hard{
+    background:#fbfcfb!important;
+    border-color:#dce4e2!important;
+    color:#53615f!important;
+    box-shadow:0 3px 8px rgba(15,23,42,.04)!important;
+}
+html:not(.lexlogica-dark-mode) .question-icon.difficulty-easy::before{
+    background:#5e9c88;
+}
+html:not(.lexlogica-dark-mode) .question-icon.difficulty-medium::before{
+    background:#b39b58;
+}
+html:not(.lexlogica-dark-mode) .question-icon.difficulty-hard::before{
+    background:#b76b66;
+}
+html:not(.lexlogica-dark-mode) .question-icon:hover{
+    background:#f7faf9!important;
+    border-color:#cbd8d4!important;
+    color:#53615f!important;
+    box-shadow:0 6px 12px rgba(15,23,42,.06)!important;
+}
+
+/* Dark mode: charcoal tile, muted difficulty edge, no neon fill/glow. */
+html.lexlogica-dark-mode .question-icon.difficulty-easy,
+html.lexlogica-dark-mode .question-icon.difficulty-medium,
+html.lexlogica-dark-mode .question-icon.difficulty-hard{
+    background:#151c1b!important;
+    border-color:#303d3a!important;
+    color:#aebdb9!important;
+    box-shadow:none!important;
+}
+html.lexlogica-dark-mode .question-icon.difficulty-easy::before{
+    background:#5f8f80;
+}
+html.lexlogica-dark-mode .question-icon.difficulty-medium::before{
+    background:#988f69;
+}
+html.lexlogica-dark-mode .question-icon.difficulty-hard::before{
+    background:#9b6662;
+}
+html.lexlogica-dark-mode .question-icon:hover{
+    background:#1b2422!important;
+    border-color:#43534f!important;
+    color:#c0ccc9!important;
+    box-shadow:0 2px 7px rgba(0,0,0,.16)!important;
+}
