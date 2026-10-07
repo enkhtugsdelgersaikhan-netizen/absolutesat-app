@@ -3670,78 +3670,78 @@ html.lexlogica-dark-mode .desmos-frame{
 
 
 /* ============================================================
-   DARK MODE: MUTED QUESTION BANK PEEKER
+   DARK MODE: QUIET QUESTION BANK PEEKER
    ============================================================ */
 
 /*
- * The page uses literal inversion in dark mode, so these tiles are
- * counter-inverted and receive a deliberate dark palette. Keep the
- * university SAT-label character, only a little brighter for contrast.
+ * Keep question symbols inside the same charcoal / desaturated teal
+ * language as the rest of dark mode. Difficulty colors are intentionally
+ * subtle; state and position remain readable without looking neon.
  */
 html.lexlogica-dark-mode .question-bank-peeker-item{
     filter:invert(1);
-    background:#141b1a;
-    border-color:#34443f;
-    color:#c8d3cf;
+    background:#151c1b;
+    border-color:#303d3a;
+    color:#aebdb9;
     box-shadow:none;
 }
 
 html.lexlogica-dark-mode .question-bank-peeker-item.difficulty-easy{
-    background:#13201c;
-    border-color:#477465;
-    color:#8fc0af;
+    background:#17201e;
+    border-color:#3b504a;
+    color:#78968d;
 }
 
 html.lexlogica-dark-mode .question-bank-peeker-item.difficulty-medium{
-    background:#211f17;
-    border-color:#71694b;
-    color:#c0b583;
+    background:#201f1a;
+    border-color:#514d3f;
+    color:#9a9278;
 }
 
 html.lexlogica-dark-mode .question-bank-peeker-item.difficulty-hard{
-    background:#251a1a;
-    border-color:#7a5552;
-    color:#ca8a86;
+    background:#211b1b;
+    border-color:#554443;
+    color:#a4807d;
 }
 
 html.lexlogica-dark-mode .question-bank-peeker-item:hover{
-    background:#19211f;
-    border-color:#52655f;
-    box-shadow:0 3px 9px rgba(0,0,0,.2);
+    background:#1b2422;
+    border-color:#43534f;
+    box-shadow:0 2px 7px rgba(0,0,0,.16);
 }
 
 html.lexlogica-dark-mode .question-bank-peeker-item.current{
-    border-color:#68a99a;
-    color:#dceae6;
+    border-color:#52776f;
+    color:#c7d5d1;
     box-shadow:
-        0 0 0 2px #101615,
-        0 0 0 3px #68a99a;
+        0 0 0 2px #111817,
+        0 0 0 3px #52776f;
 }
 
 html.lexlogica-dark-mode .question-bank-peeker-status-dot{
-    border-color:#141b1a;
+    border-color:#151c1b;
     box-shadow:none;
 }
 
 html.lexlogica-dark-mode .question-bank-peeker-status-dot.unanswered{
-    background:#839590;
-    color:#839590;
+    background:#687a75;
+    color:#687a75;
 }
 
 html.lexlogica-dark-mode .question-bank-peeker-status-dot.correct{
-    background:#72bca4;
-    color:#72bca4;
+    background:#5f8f80;
+    color:#5f8f80;
 }
 
 html.lexlogica-dark-mode .question-bank-peeker-status-dot.incorrect{
-    background:#d2827b;
-    color:#d2827b;
+    background:#9b6662;
+    color:#9b6662;
 }
 
 html.lexlogica-dark-mode .question-bank-peeker-review-icon{
-    border-color:#8d8258;
-    background:#211f17;
-    color:#c7b66d;
+    border-color:#625e4d;
+    background:#1d1d18;
+    color:#988f69;
     box-shadow:none;
 }
 
