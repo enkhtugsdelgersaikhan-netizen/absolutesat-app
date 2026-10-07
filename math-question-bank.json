@@ -1262,10 +1262,130 @@
               }
             }
           }
+        },
+        {
+          "range": "321-360",
+          "reviewed": 40,
+          "retained": 36,
+          "excluded": [
+            {
+              "sourceQuestionNumber": 329,
+              "reason": "Close reskin of existing combined-mean item math-20261006-new409-q075."
+            },
+            {
+              "sourceQuestionNumber": 345,
+              "reason": "Low-value positive-root quadratic reskin; this direct factor-and-select structure is already heavily represented, including math-20261008-huge798-q199."
+            },
+            {
+              "sourceQuestionNumber": 346,
+              "reason": "Close reskin of existing distribute-and-combine expression items, including math-20261006-batch465-q176."
+            },
+            {
+              "sourceQuestionNumber": 359,
+              "reason": "Close reskin of existing one-step absolute-value solve item math-20261006-batch465-q415."
+            }
+          ],
+          "repairs": {
+            "fractionRadicalNotation": [
+              321,
+              323,
+              332,
+              333,
+              334,
+              335,
+              344,
+              349,
+              360
+            ],
+            "graphDependent": [
+              322,
+              328,
+              336,
+              337,
+              339,
+              351,
+              354,
+              355,
+              357
+            ],
+            "recoveredSourceForms": [
+              344,
+              349
+            ],
+            "notes": [
+              "Recovered q344 as f(x)=12/(x-3) from the supplied algebra and fraction answer choices.",
+              "Recovered q349 as 12m/n = 3√(2p+5) from the supplied divide-by-3 and squaring steps.",
+              "For graph-dependent questions, only source-specified values or relationships needed to determine the keyed answer were reconstructed; irrelevant missing coordinates were not treated as source facts."
+            ]
+          },
+          "visuals": {
+            "graphs": [
+              322,
+              336,
+              337,
+              339,
+              351,
+              354,
+              355,
+              357
+            ],
+            "diagrams": [
+              328,
+              333
+            ],
+            "choiceTables": [
+              358
+            ]
+          },
+          "difficultyCalibration": {
+            "approach": "Assigned relative to each affected subtopic while counterbalancing the live bank's slight Medium overrepresentation.",
+            "addedBySubtopic": {
+              "Ratio, Rates, Percentages": {
+                "Easy": 5,
+                "Medium": 2,
+                "Hard": 5
+              },
+              "Statistics": {
+                "Easy": 4,
+                "Medium": 1,
+                "Hard": 3
+              },
+              "Probability": {
+                "Easy": 0,
+                "Medium": 1,
+                "Hard": 0
+              },
+              "Linear Functions": {
+                "Easy": 1,
+                "Medium": 1,
+                "Hard": 0
+              },
+              "Rational/Radical Equations": {
+                "Easy": 1,
+                "Medium": 1,
+                "Hard": 1
+              },
+              "Quadratics": {
+                "Easy": 1,
+                "Medium": 1,
+                "Hard": 2
+              },
+              "Nonlinear Equations/Functions": {
+                "Easy": 1,
+                "Medium": 2,
+                "Hard": 0
+              },
+              "Polynomial Functions": {
+                "Easy": 1,
+                "Medium": 1,
+                "Hard": 1
+              }
+            }
+          }
         }
       ],
-      "retainedSoFar": 261,
-      "reviewedSoFar": 320
+      "retainedSoFar": 297,
+      "reviewedSoFar": 360
     }
   },
   "questions": [
@@ -49300,6 +49420,1611 @@
             "60"
           ]
         ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q321",
+      "groupId": "math-20261008-huge798-q321",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "Objects A and B each travel at a constant speed, where \\(d>0\\) and \\(t>0\\). Object A travels \\(12d\\) meters in \\(5t\\) seconds. The speed of object B is \\(\\frac43\\) the speed of object A. Which expression represents the number of seconds object B takes to travel \\(40d\\) meters?",
+      "choices": {
+        "A": "\\(10t\\)",
+        "B": "\\(\\frac{25t}{2}\\)",
+        "C": "\\(15t\\)",
+        "D": "\\(\\frac{50t}{3}\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "Object A's speed is \\(\\frac{12d}{5t}\\). Object B's speed is \\(\\frac43\\cdot\\frac{12d}{5t}=\\frac{16d}{5t}\\). Thus the time for \\(40d\\) meters is \\(\\frac{40d}{16d/(5t)}=\\boxed{\\frac{25t}{2}}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 321,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Object A's speed is \\(\\frac{12d}{5t}\\). Object B's speed is \\(\\frac43\\cdot\\frac{12d}{5t}=\\frac{16d}{5t}\\). Thus the time for \\(40d\\) meters is \\(\\frac{40d}{16d/(5t)}=\\boxed{\\frac{25t}{2}}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q322",
+      "groupId": "math-20261008-huge798-q322",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The bar graph shows the numbers of items collected by three teams. How many more items did the North and South teams collect together than the East team collected?",
+      "choices": {
+        "A": "15",
+        "B": "20",
+        "C": "35",
+        "D": "75"
+      },
+      "correctAnswer": "B",
+      "explanation": "North and South collected \\(40+35=75\\) items together. East collected 55, so the difference is \\(75-55=\\boxed{20}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 322,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "North and South collected \\(40+35=75\\) items together. East collected 55, so the difference is \\(75-55=\\boxed{20}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "vertical-bar",
+        "caption": "Items collected by team",
+        "categories": [
+          "North",
+          "East",
+          "South"
+        ],
+        "series": [
+          {
+            "name": "Items",
+            "values": [
+              40,
+              55,
+              35
+            ]
+          }
+        ],
+        "max": 60,
+        "tickStep": 10
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q323",
+      "groupId": "math-20261008-huge798-q323",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Probability",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A number is selected at random from the data set \\(-9,-4,-1,0,2,5,8\\). The selected number is then multiplied by \\(-4\\). What is the probability that the resulting product is positive?",
+      "choices": {
+        "A": "\\(\\frac17\\)",
+        "B": "\\(\\frac37\\)",
+        "C": "\\(\\frac47\\)",
+        "D": "\\(\\frac34\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "The product is positive exactly when the selected number is negative. Three of the seven values are negative, so the probability is \\(\\boxed{\\frac37}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 323,
+      "subtopic": "Probability",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The product is positive exactly when the selected number is negative. Three of the seven values are negative, so the probability is \\(\\boxed{\\frac37}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q324",
+      "groupId": "math-20261008-huge798-q324",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A cable is initially 14 furlongs long. A section 660 feet long is removed from one end. How many feet of cable remain? Use \\(1\\) furlong \\(=220\\) yards and \\(1\\) yard \\(=3\\) feet.",
+      "choices": {
+        "A": "3,080",
+        "B": "7,260",
+        "C": "8,580",
+        "D": "9,240"
+      },
+      "correctAnswer": "C",
+      "explanation": "The original length is \\(14(220)(3)=9{,}240\\) feet. After removing 660 feet, \\(9{,}240-660=\\boxed{8{,}580}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 324,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The original length is \\(14(220)(3)=9{,}240\\) feet. After removing 660 feet, \\(9{,}240-660=\\boxed{8{,}580}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q325",
+      "groupId": "math-20261008-huge798-q325",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A rectangular panel measures 18 inches by 12 inches. A uniform pressure produces a total force of 3,888 pounds on one face of the panel. What is the pressure, in pounds per square inch?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The panel area is \\(18(12)=216\\) square inches. Since force equals pressure times area, the pressure is \\(3888/216=\\boxed{18}\\) pounds per square inch.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 325,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "18"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q326",
+      "groupId": "math-20261008-huge798-q326",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "Data set A consists of 12 integers, each between 40 and 60, inclusive. Data set B consists of all the values in data set A together with the additional value 90. Which of the following measures must be greater for data set B than for data set A? I. Mean II. Median III. Range",
+      "choices": {
+        "A": "I only",
+        "B": "II and III only",
+        "C": "I and III only",
+        "D": "I, II, and III"
+      },
+      "correctAnswer": "C",
+      "explanation": "Adding 90, which is larger than every value in A, must increase the mean and must increase the range. The median need not increase: if the 6th and 7th values of A are equal, the medians of A and B are equal. Therefore, only I and III must be greater.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 326,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Adding 90, which is larger than every value in A, must increase the mean and must increase the range. The median need not increase: if the 6th and 7th values of A are equal, the medians of A and B are equal. Therefore, only I and III must be greater.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q327",
+      "groupId": "math-20261008-huge798-q327",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "One random sample gives an estimated population mean of 42.6 with a margin of error of 1.8. A second random sample gives an estimated population mean of 44.0 with a margin of error of 1.2. Which value is plausible for the actual population mean according to both estimates?",
+      "choices": {
+        "A": "42.2",
+        "B": "42.7",
+        "C": "43.6",
+        "D": "44.8"
+      },
+      "correctAnswer": "C",
+      "explanation": "The first interval is \\([40.8,44.4]\\), and the second is \\([42.8,45.2]\\). Their overlap is \\([42.8,44.4]\\). Only \\(\\boxed{43.6}\\) lies in both intervals.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 327,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The first interval is \\([40.8,44.4]\\), and the second is \\([42.8,45.2]\\). Their overlap is \\([42.8,44.4]\\). Only \\(\\boxed{43.6}\\) lies in both intervals.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q328",
+      "groupId": "math-20261008-huge798-q328",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The box plot summarizes data set A. Data set B is formed by replacing every value \\(a\\) in data set A with \\(2.5a-4\\). What is the median of data set B?",
+      "choices": {
+        "A": "36",
+        "B": "41",
+        "C": "45",
+        "D": "49"
+      },
+      "correctAnswer": "B",
+      "explanation": "The box plot shows that the median of A is 18. Because \\(2.5a-4\\) is increasing, the median transforms the same way: \\(2.5(18)-4=\\boxed{41}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 328,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The box plot shows that the median of A is 18. Because \\(2.5a-4\\) is increasing, the median transforms the same way: \\(2.5(18)-4=\\boxed{41}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "diagram": {
+        "width": 440,
+        "height": 180,
+        "alt": "Box plot with median labeled 18",
+        "lines": [
+          {
+            "x1": 60,
+            "y1": 90,
+            "x2": 120,
+            "y2": 90,
+            "dashed": false
+          },
+          {
+            "x1": 320,
+            "y1": 90,
+            "x2": 380,
+            "y2": 90,
+            "dashed": false
+          },
+          {
+            "x1": 60,
+            "y1": 70,
+            "x2": 60,
+            "y2": 110,
+            "dashed": false
+          },
+          {
+            "x1": 380,
+            "y1": 70,
+            "x2": 380,
+            "y2": 110,
+            "dashed": false
+          },
+          {
+            "x1": 120,
+            "y1": 55,
+            "x2": 320,
+            "y2": 55,
+            "dashed": false
+          },
+          {
+            "x1": 320,
+            "y1": 55,
+            "x2": 320,
+            "y2": 125,
+            "dashed": false
+          },
+          {
+            "x1": 320,
+            "y1": 125,
+            "x2": 120,
+            "y2": 125,
+            "dashed": false
+          },
+          {
+            "x1": 120,
+            "y1": 125,
+            "x2": 120,
+            "y2": 55,
+            "dashed": false
+          },
+          {
+            "x1": 220,
+            "y1": 55,
+            "x2": 220,
+            "y2": 125,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 220,
+            "y": 145,
+            "text": "median = 18",
+            "anchor": "middle"
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q330",
+      "groupId": "math-20261008-huge798-q330",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A collection initially contains some number of objects. First, 30% of the objects are removed. Then 25% of the objects that remain are removed. After both removals, 315 objects remain. How many objects were removed altogether?",
+      "choices": {
+        "A": "180",
+        "B": "285",
+        "C": "315",
+        "D": "400"
+      },
+      "correctAnswer": "B",
+      "explanation": "After the two removals, \\(0.70(0.75)=0.525\\) of the original remains. If the original number is \\(N\\), then \\(0.525N=315\\), so \\(N=600\\). Thus \\(600-315=\\boxed{285}\\) objects were removed.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 330,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "After the two removals, \\(0.70(0.75)=0.525\\) of the original remains. If the original number is \\(N\\), then \\(0.525N=315\\), so \\(N=600\\). Thus \\(600-315=\\boxed{285}\\) objects were removed.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q331",
+      "groupId": "math-20261008-huge798-q331",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "After a quantity \\(x\\) is increased by 350%, 45 is subtracted from the result. The final value is 630. What is the value of \\(x\\)?",
+      "choices": {
+        "A": "130",
+        "B": "140",
+        "C": "150",
+        "D": "175"
+      },
+      "correctAnswer": "C",
+      "explanation": "Increasing by 350% gives \\(4.5x\\). Thus \\(4.5x-45=630\\), so \\(4.5x=675\\) and \\(\\boxed{x=150}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 331,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Increasing by 350% gives \\(4.5x\\). Thus \\(4.5x-45=630\\), so \\(4.5x=675\\) and \\(\\boxed{x=150}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q332",
+      "groupId": "math-20261008-huge798-q332",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "After a positive number is decreased by 20%, its value is 144. The original number is \\(p\\%\\) greater than 144. What is the value of \\(p\\)?",
+      "choices": {
+        "A": "20",
+        "B": "25",
+        "C": "36",
+        "D": "80"
+      },
+      "correctAnswer": "B",
+      "explanation": "Since 144 is 80% of the original, the original is \\(144/0.8=180\\). The increase from 144 to 180 is 36, and \\(36/144=0.25\\). Thus \\(\\boxed{p=25}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 332,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Since 144 is 80% of the original, the original is \\(144/0.8=180\\). The increase from 144 to 180 is 36, and \\(36/144=0.25\\). Thus \\(\\boxed{p=25}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q333",
+      "groupId": "math-20261008-huge798-q333",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "For a flat surface perpendicular to an electric field, electric flux is the product of field strength and surface area. A surface consists of two adjacent squares. The larger square has side length \\(\\frac32\\) times the side length of the smaller square. The electric-field strength over the larger square is 20% less than the field strength over the smaller square. The total electric flux through the two squares is 980 volt-meters. What is the electric flux, in volt-meters, through the larger square?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The area ratio is \\((\\frac32)^2=\\frac94\\). The larger square's field strength is \\(\\frac45\\) as large, so the flux ratio is \\(\\frac45\\cdot\\frac94:1=\\frac95:1=9:5\\). The larger square therefore receives \\(\\frac9{14}(980)=\\boxed{630}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 333,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "630"
+      ],
+      "diagram": {
+        "width": 440,
+        "height": 250,
+        "alt": "Two adjacent squares with side ratio 3 to 2 and different field strengths",
+        "polygons": [
+          {
+            "points": [
+              [
+                40,
+                70
+              ],
+              [
+                160,
+                70
+              ],
+              [
+                160,
+                190
+              ],
+              [
+                40,
+                190
+              ]
+            ]
+          },
+          {
+            "points": [
+              [
+                160,
+                25
+              ],
+              [
+                340,
+                25
+              ],
+              [
+                340,
+                205
+              ],
+              [
+                160,
+                205
+              ]
+            ]
+          }
+        ],
+        "labels": [
+          {
+            "x": 100,
+            "y": 215,
+            "text": "side = 2s",
+            "anchor": "middle"
+          },
+          {
+            "x": 250,
+            "y": 230,
+            "text": "side = 3s",
+            "anchor": "middle"
+          },
+          {
+            "x": 100,
+            "y": 130,
+            "text": "field E",
+            "anchor": "middle"
+          },
+          {
+            "x": 250,
+            "y": 120,
+            "text": "field 0.8E",
+            "anchor": "middle"
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q334",
+      "groupId": "math-20261008-huge798-q334",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "Pump A transfers \\(a\\) liters of water in \\(b\\) minutes, where \\(a,b>0\\). Pump B transfers water at \\(\\frac34\\) the rate of pump A. If both pumps operate simultaneously for \\(m\\) minutes, which expression gives the total number of liters transferred?",
+      "choices": {
+        "A": "\\(\\frac{7ab}{4m}\\)",
+        "B": "\\(\\frac{7am}{4b}\\)",
+        "C": "\\(\\frac{3am}{4b}\\)",
+        "D": "\\(\\frac{4am}{7b}\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "Pump A's rate is \\(a/b\\). Pump B's rate is \\(\\frac34(a/b)\\), so the combined rate is \\(\\frac{7a}{4b}\\). In \\(m\\) minutes the pumps transfer \\(\\boxed{\\frac{7am}{4b}}\\) liters.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 334,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Pump A's rate is \\(a/b\\). Pump B's rate is \\(\\frac34(a/b)\\), so the combined rate is \\(\\frac{7a}{4b}\\). In \\(m\\) minutes the pumps transfer \\(\\boxed{\\frac{7am}{4b}}\\) liters.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q335",
+      "groupId": "math-20261008-huge798-q335",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "An object moves at a constant speed. After 24 seconds, it has traveled \\(\\frac38\\) of a 640-meter route. How many additional seconds will the object need to complete the route?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "In 24 seconds the object travels \\(\\frac38(640)=240\\) meters, so its speed is 10 m/s. The remaining distance is 400 meters, requiring \\(400/10=\\boxed{40}\\) additional seconds.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 335,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "40"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q336",
+      "groupId": "math-20261008-huge798-q336",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The graph shows recorded temperatures at several times during an observation period. During which interval did the greatest increase in temperature occur?",
+      "choices": {
+        "A": "From day 0 to day 1",
+        "B": "From day 1 to day 4",
+        "C": "From day 3 to day 4",
+        "D": "From day 7 to day 9"
+      },
+      "correctAnswer": "D",
+      "explanation": "The increases are \\(64-58=6\\), \\(72-64=8\\), \\(72-61=11\\), and \\(83-69=14\\). The greatest increase is 14°F, from day 7 to day 9.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 336,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "The increases are \\(64-58=6\\), \\(72-64=8\\), \\(72-61=11\\), and \\(83-69=14\\). The greatest increase is 14°F, from day 7 to day 9."
+      },
+      "graph": {
+        "type": "line",
+        "caption": "Recorded temperatures",
+        "categories": [
+          "0",
+          "1",
+          "3",
+          "4",
+          "7",
+          "9"
+        ],
+        "series": [
+          {
+            "name": "Temperature (°F)",
+            "values": [
+              58,
+              64,
+              61,
+              72,
+              69,
+              83
+            ]
+          }
+        ],
+        "min": 50,
+        "max": 90,
+        "tickStep": 5
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q337",
+      "groupId": "math-20261008-huge798-q337",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A total of 212 students each voted for exactly one of five activities, A, B, C, D, or E. The graph shows the numbers who voted for activities A through D. How many students voted for activity E?",
+      "choices": {
+        "A": "32",
+        "B": "40",
+        "C": "42",
+        "D": "52"
+      },
+      "correctAnswer": "C",
+      "explanation": "The displayed categories total \\(35+45+40+50=170\\). Therefore, activity E received \\(212-170=\\boxed{42}\\) votes.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 337,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The displayed categories total \\(35+45+40+50=170\\). Therefore, activity E received \\(212-170=\\boxed{42}\\) votes.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "vertical-bar",
+        "caption": "Votes for activities A through D",
+        "categories": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "series": [
+          {
+            "name": "Students",
+            "values": [
+              35,
+              45,
+              40,
+              50
+            ]
+          }
+        ],
+        "max": 60,
+        "tickStep": 10
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q338",
+      "groupId": "math-20261008-huge798-q338",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "An account is charged a fixed fee of $18. After the fee is deducted, the amount remaining is 85% of the account's original balance. What was the original balance, in dollars?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Let the original balance be \\(x\\). Then \\(x-18=0.85x\\), so \\(0.15x=18\\) and \\(\\boxed{x=120}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 338,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "120"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q339",
+      "groupId": "math-20261008-huge798-q339",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The scatterplot shows a relationship between \\(x\\) and \\(y\\). Which equation is the most appropriate linear model for the data?",
+      "choices": {
+        "A": "\\(y=-2.4x+35\\)",
+        "B": "\\(y=-0.4x+35\\)",
+        "C": "\\(y=2.4x+10\\)",
+        "D": "\\(y=-2.4x-35\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "The data have a strong negative trend with a change of about -21 in y over an increase of about 9 in x, giving a slope near -2.3. Extrapolating the trend gives a y-intercept near 35, so \\(\\boxed{y=-2.4x+35}\\) is the best model.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 339,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The data have a strong negative trend with a change of about -21 in y over an increase of about 9 in x, giving a slope near -2.3. Extrapolating the trend gives a y-intercept near 35, so \\(\\boxed{y=-2.4x+35}\\) is the best model.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "xy",
+        "caption": "Scatterplot of x and y",
+        "xMin": 0,
+        "xMax": 11,
+        "yMin": 5,
+        "yMax": 38,
+        "xStep": 1,
+        "yStep": 5,
+        "xLabel": "x",
+        "yLabel": "y",
+        "series": [
+          {
+            "label": "data",
+            "points": [
+              [
+                1,
+                33
+              ],
+              [
+                2,
+                29
+              ],
+              [
+                4,
+                26
+              ],
+              [
+                5,
+                22
+              ],
+              [
+                7,
+                18
+              ],
+              [
+                8,
+                17
+              ],
+              [
+                10,
+                12
+              ]
+            ],
+            "showPoints": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q340",
+      "groupId": "math-20261008-huge798-q340",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The number of nesting birds in 2022 was 88% of the number in 2018. The number in 2026 was 1.25 times the number in 2022. The 2018 population was \\(p\\%\\) of the 2026 population. What is \\(p\\), to the nearest whole number?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Let the 2018 population be \\(N\\). Then the 2026 population is \\(1.25(0.88N)=1.10N\\). Thus the 2018 population is \\(N/(1.10N)\\approx0.9091\\), or about \\(\\boxed{91\\%}\\) of the 2026 population.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 340,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "91"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q341",
+      "groupId": "math-20261008-huge798-q341",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A quantity A is 25% greater than 144. A quantity B is 18 less than A. What is the value of B?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "\\(A=1.25(144)=180\\). Therefore, \\(B=180-18=\\boxed{162}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 341,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "162"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q342",
+      "groupId": "math-20261008-huge798-q342",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The table shows selected values of \\(f\\). Which description best fits \\(f\\)?",
+      "choices": {
+        "A": "Increasing exponential",
+        "B": "Decreasing linear",
+        "C": "Increasing linear",
+        "D": "Decreasing exponential"
+      },
+      "correctAnswer": "B",
+      "explanation": "The rates of change are \\((11-17)/(1-(-2))=-2\\), \\((3-11)/(5-1)=-2\\), and \\((-3-3)/(8-5)=-2\\). The constant negative rate means \\(f\\) is decreasing linear.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 342,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The rates of change are \\((11-17)/(1-(-2))=-2\\), \\((3-11)/(5-1)=-2\\), and \\((-3-3)/(8-5)=-2\\). The constant negative rate means \\(f\\) is decreasing linear.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "table": {
+        "caption": "Selected values of f",
+        "headers": [
+          "x",
+          "f(x)"
+        ],
+        "rows": [
+          [
+            "-2",
+            "17"
+          ],
+          [
+            "1",
+            "11"
+          ],
+          [
+            "5",
+            "3"
+          ],
+          [
+            "8",
+            "-3"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q343",
+      "groupId": "math-20261008-huge798-q343",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A company has 6,000 employees. In a random sample of 240 employees, 66 are not enrolled in a certain training program. Based on the sample, which is the best estimate of the number of all 6,000 employees who are enrolled in the program?",
+      "choices": {
+        "A": "1,650",
+        "B": "4,350",
+        "C": "4,950",
+        "D": "5,934"
+      },
+      "correctAnswer": "B",
+      "explanation": "Of the 240 sampled employees, \\(240-66=174\\) are enrolled. The estimated enrolled proportion is \\(174/240=0.725\\). Applying this to 6,000 gives \\(0.725(6000)=\\boxed{4350}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 343,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Of the 240 sampled employees, \\(240-66=174\\) are enrolled. The estimated enrolled proportion is \\(174/240=0.725\\). Applying this to 6,000 gives \\(0.725(6000)=\\boxed{4350}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q344",
+      "groupId": "math-20261008-huge798-q344",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Rational/Radical Equations",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The function \\(f\\) is defined by \\(f(x)=\\frac{12}{x-3}\\). If \\(f(r)=4\\), what is the value of \\(f(r+6)\\)?",
+      "choices": {
+        "A": "\\(\\frac34\\)",
+        "B": "\\(\\frac43\\)",
+        "C": "4",
+        "D": "\\(\\frac{12}{5}\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "From \\(12/(r-3)=4\\), we get \\(r-3=3\\), so \\(r=6\\). Then \\(f(r+6)=f(12)=12/(12-3)=\\boxed{\\frac43}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 344,
+      "subtopic": "Rational/Radical Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "From \\(12/(r-3)=4\\), we get \\(r-3=3\\), so \\(r=6\\). Then \\(f(r+6)=f(12)=12/(12-3)=\\boxed{\\frac43}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q347",
+      "groupId": "math-20261008-huge798-q347",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The function \\(T(x)=72-0.4x^2\\) models the temperature, in degrees Celsius, of a material, where \\(x\\) is the number of 5-minute intervals after 1:00 p.m. Which statement best interprets \\(T(3)=68.4\\)?",
+      "choices": {
+        "A": "At 1:15 p.m., the modeled temperature is 68.4°C.",
+        "B": "At 1:03 p.m., the modeled temperature is 68.4°C.",
+        "C": "During the first 15 minutes, the temperature decreases by 68.4°C.",
+        "D": "At 3:00 p.m., the modeled temperature is 68.4°C."
+      },
+      "correctAnswer": "A",
+      "explanation": "The input \\(x=3\\) represents \\(3(5)=15\\) minutes after 1:00 p.m., which is 1:15 p.m. The output is the modeled temperature then, so choice A is correct.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 347,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The input \\(x=3\\) represents \\(3(5)=15\\) minutes after 1:00 p.m., which is 1:15 p.m. The output is the modeled temperature then, so choice A is correct.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q348",
+      "groupId": "math-20261008-huge798-q348",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Nonlinear Equations/Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The function \\(f\\) is defined by \\(f(x)=|84-5x|\\). The possible values of \\(k\\) satisfy \\(f(k)=3k+4\\). What is the sum of all possible values of \\(k\\)?",
+      "choices": {
+        "A": "54",
+        "B": "34",
+        "C": "44",
+        "D": "10"
+      },
+      "correctAnswer": "A",
+      "explanation": "Solve \\(|84-5k|=3k+4\\). The first case gives \\(84-5k=3k+4\\), so \\(k=10\\). The second gives \\(84-5k=-(3k+4)\\), so \\(k=44\\). Their sum is \\(\\boxed{54}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 348,
+      "subtopic": "Nonlinear Equations/Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "Solve \\(|84-5k|=3k+4\\). The first case gives \\(84-5k=3k+4\\), so \\(k=10\\). The second gives \\(84-5k=-(3k+4)\\), so \\(k=44\\). Their sum is \\(\\boxed{54}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q349",
+      "groupId": "math-20261008-huge798-q349",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Rational/Radical Equations",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The equation \\(\\frac{12m}{n}=3\\sqrt{2p+5}\\) relates positive real numbers \\(m\\), \\(n\\), and \\(p\\). Which equation correctly expresses \\(p\\) in terms of \\(m\\) and \\(n\\)?",
+      "choices": {
+        "A": "\\(p=\\frac{16m^2}{n^2}-5\\)",
+        "B": "\\(p=\\frac{8m^2}{n^2}-\\frac52\\)",
+        "C": "\\(p=\\frac{4m^2}{n^2}+\\frac52\\)",
+        "D": "\\(p=\\frac{8m^2}{n^2}+\\frac52\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "Divide by 3: \\(\\frac{4m}{n}=\\sqrt{2p+5}\\). Squaring gives \\(\\frac{16m^2}{n^2}=2p+5\\). Therefore, \\(\\boxed{p=\\frac{8m^2}{n^2}-\\frac52}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 349,
+      "subtopic": "Rational/Radical Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Divide by 3: \\(\\frac{4m}{n}=\\sqrt{2p+5}\\). Squaring gives \\(\\frac{16m^2}{n^2}=2p+5\\). Therefore, \\(\\boxed{p=\\frac{8m^2}{n^2}-\\frac52}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q350",
+      "groupId": "math-20261008-huge798-q350",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "An object's height \\(h(t)\\), in feet, \\(t\\) seconds after it is dropped is modeled by \\(h(t)=-16t^2+b\\), where \\(b\\) is a constant. The model gives \\(h(3)=2{,}560\\). Approximately how many seconds after being dropped does the model predict that the object will hit the ground?",
+      "choices": {
+        "A": "10",
+        "B": "13",
+        "C": "16",
+        "D": "169"
+      },
+      "correctAnswer": "B",
+      "explanation": "Using \\(h(3)=2560\\), \\(2560=-16(9)+b\\), so \\(b=2704\\). At the ground, \\(0=-16t^2+2704\\), hence \\(t^2=169\\). Time is positive, so \\(\\boxed{t=13}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 350,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Using \\(h(3)=2560\\), \\(2560=-16(9)+b\\), so \\(b=2704\\). At the ground, \\(0=-16t^2+2704\\), hence \\(t^2=169\\). Time is positive, so \\(\\boxed{t=13}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q351",
+      "groupId": "math-20261008-huge798-q351",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Polynomial Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The graph of \\(y=g(x)\\) is shown. Suppose \\(g(x-12)=A(x-p)(x-q)^2(x-r)\\), where \\(A\\ne0\\) and \\(p,q,r\\) are constants. What is the value of \\(q\\)?",
+      "choices": {
+        "A": "9",
+        "B": "13",
+        "C": "16",
+        "D": "1"
+      },
+      "correctAnswer": "B",
+      "explanation": "The graph touches rather than crosses the x-axis at \\(x=1\\), so 1 is the zero of even multiplicity. For \\(g(x-12)\\), that zero occurs when \\(x-12=1\\), or \\(x=13\\). Thus \\(\\boxed{q=13}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 351,
+      "subtopic": "Polynomial Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The graph touches rather than crosses the x-axis at \\(x=1\\), so 1 is the zero of even multiplicity. For \\(g(x-12)\\), that zero occurs when \\(x-12=1\\), or \\(x=13\\). Thus \\(\\boxed{q=13}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "xy",
+        "caption": "Graph of y = g(x)",
+        "xMin": -4,
+        "xMax": 6,
+        "yMin": -8,
+        "yMax": 8,
+        "xStep": 1,
+        "yStep": 2,
+        "xLabel": "x",
+        "yLabel": "g(x)",
+        "series": [
+          {
+            "label": "g",
+            "points": [
+              [
+                -3.5,
+                4.303
+              ],
+              [
+                -3,
+                0
+              ],
+              [
+                -2.5,
+                -2.297
+              ],
+              [
+                -2,
+                -3.15
+              ],
+              [
+                -1.5,
+                -3.047
+              ],
+              [
+                -1,
+                -2.4
+              ],
+              [
+                -0.5,
+                -1.547
+              ],
+              [
+                0,
+                -0.75
+              ],
+              [
+                0.5,
+                -0.197
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1.5,
+                -0.197
+              ],
+              [
+                2,
+                -0.75
+              ],
+              [
+                2.5,
+                -1.547
+              ],
+              [
+                3,
+                -2.4
+              ],
+              [
+                3.5,
+                -3.047
+              ],
+              [
+                4,
+                -3.15
+              ],
+              [
+                4.5,
+                -2.297
+              ],
+              [
+                5,
+                0
+              ],
+              [
+                5.5,
+                4.303
+              ]
+            ],
+            "showPoints": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q352",
+      "groupId": "math-20261008-huge798-q352",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "In the equation \\(3x^2-30x+(c+12)=0\\), \\(c\\) is a constant. The equation has no real solutions whenever \\(c>n\\). What is the least possible value of \\(n\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "For no real solutions, the discriminant must be negative: \\((-30)^2-4(3)(c+12)<0\\). Thus \\(900-12c-144<0\\), so \\(756<12c\\), or \\(c>63\\). Therefore, \\(\\boxed{n=63}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 352,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "63"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q353",
+      "groupId": "math-20261008-huge798-q353",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Polynomial Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "Which expression has a factor of \\(2x+3b\\), where \\(b\\) is a positive integer constant?",
+      "choices": {
+        "A": "\\(6x^2+26x+21b\\)",
+        "B": "\\(6x^2+38x+21b\\)",
+        "C": "\\(6x^2+10x+21b\\)",
+        "D": "\\(6x^2+32x+21b\\)"
+      },
+      "correctAnswer": "D",
+      "explanation": "If \\(2x+3b\\) is a factor, the other factor must be \\(3x+7\\). Their product is \\(6x^2+(14+9b)x+21b\\). In choice D, \\(14+9b=32\\), giving \\(b=2\\), a positive integer.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 353,
+      "subtopic": "Polynomial Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "If \\(2x+3b\\) is a factor, the other factor must be \\(3x+7\\). Their product is \\(6x^2+(14+9b)x+21b\\). In choice D, \\(14+9b=32\\), giving \\(b=2\\), a positive integer."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q354",
+      "groupId": "math-20261008-huge798-q354",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Nonlinear Equations/Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The graph models the number of visitors, in hundreds, in a gallery \\(t\\) hours after noon. During which interval was the modeled number of visitors increasing for the entire interval?",
+      "choices": {
+        "A": "From 12:30 p.m. to 2:30 p.m.",
+        "B": "From 1:30 p.m. to 3:30 p.m.",
+        "C": "From 3:00 p.m. to 4:00 p.m.",
+        "D": "From 2:30 p.m. to 4:30 p.m."
+      },
+      "correctAnswer": "A",
+      "explanation": "The graph is increasing continuously from noon until 3:00 p.m. Only 12:30 p.m. to 2:30 p.m. lies entirely in that increasing portion.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 354,
+      "subtopic": "Nonlinear Equations/Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The graph is increasing continuously from noon until 3:00 p.m. Only 12:30 p.m. to 2:30 p.m. lies entirely in that increasing portion.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "xy",
+        "caption": "Gallery visitors after noon",
+        "xMin": 0,
+        "xMax": 5,
+        "yMin": 0,
+        "yMax": 10,
+        "xStep": 0.5,
+        "yStep": 1,
+        "xLabel": "t (hours after noon)",
+        "yLabel": "visitors (hundreds)",
+        "series": [
+          {
+            "label": "model",
+            "points": [
+              [
+                0,
+                2
+              ],
+              [
+                0.5,
+                3
+              ],
+              [
+                1,
+                4.2
+              ],
+              [
+                1.5,
+                5.3
+              ],
+              [
+                2,
+                6.2
+              ],
+              [
+                2.5,
+                7.1
+              ],
+              [
+                3,
+                7.6
+              ],
+              [
+                3.5,
+                7
+              ],
+              [
+                4,
+                6.2
+              ],
+              [
+                4.5,
+                6.5
+              ],
+              [
+                5,
+                6
+              ]
+            ],
+            "showPoints": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q355",
+      "groupId": "math-20261008-huge798-q355",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Nonlinear Equations/Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The graph of \\(y=f(x+2)\\) is shown. What is the value of \\(f(0)\\)?",
+      "choices": {
+        "A": "-2",
+        "B": "2",
+        "C": "4",
+        "D": "5"
+      },
+      "correctAnswer": "C",
+      "explanation": "To obtain \\(f(0)\\), set \\(x+2=0\\), so \\(x=-2\\). The graph shows a y-value of 4 at \\(x=-2\\). Therefore, \\(\\boxed{f(0)=4}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 355,
+      "subtopic": "Nonlinear Equations/Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "To obtain \\(f(0)\\), set \\(x+2=0\\), so \\(x=-2\\). The graph shows a y-value of 4 at \\(x=-2\\). Therefore, \\(\\boxed{f(0)=4}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "xy",
+        "caption": "Graph of y = f(x + 2)",
+        "xMin": -5,
+        "xMax": 3,
+        "yMin": -4,
+        "yMax": 6,
+        "xStep": 1,
+        "yStep": 1,
+        "xLabel": "x",
+        "yLabel": "y",
+        "series": [
+          {
+            "label": "y=f(x+2)",
+            "points": [
+              [
+                -4,
+                1
+              ],
+              [
+                -3,
+                3
+              ],
+              [
+                -2,
+                4
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                0,
+                -1
+              ],
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                0
+              ]
+            ],
+            "showPoints": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q356",
+      "groupId": "math-20261008-huge798-q356",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The functions \\(f\\) and \\(g\\) satisfy \\(g(x)=3x^2-14x+9\\) and \\(g(x)=f(x-2)\\). What is the value of \\(f(0)\\)?",
+      "choices": {
+        "A": "7",
+        "B": "-7",
+        "C": "9",
+        "D": "-5"
+      },
+      "correctAnswer": "B",
+      "explanation": "For \\(f(x-2)\\) to be \\(f(0)\\), set \\(x-2=0\\), so \\(x=2\\). Therefore, \\(f(0)=g(2)=3(2)^2-14(2)+9=12-28+9=\\boxed{-7}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 356,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "For \\(f(x-2)\\) to be \\(f(0)\\), set \\(x-2=0\\), so \\(x=2\\). Therefore, \\(f(0)=g(2)=3(2)^2-14(2)+9=12-28+9=\\boxed{-7}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q357",
+      "groupId": "math-20261008-huge798-q357",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The graph models the number of devices a company shipped. The horizontal axis gives the number of 2-year periods after the end of 2016, and the vertical axis gives the number of devices shipped, in hundreds. Which statement best interprets the y-intercept?",
+      "choices": {
+        "A": "At the end of 2016, the company shipped about 700 devices.",
+        "B": "At the end of 2018, the company shipped about 700 devices.",
+        "C": "During the first 2 years, the company shipped a total of about 700 devices.",
+        "D": "At the end of 2016, the company shipped about 7 devices."
+      },
+      "correctAnswer": "A",
+      "explanation": "The y-intercept occurs at horizontal coordinate 0, meaning zero 2-year periods after the end of 2016. The y-value is 7 hundreds, or \\(7(100)=700\\) devices. Therefore, choice A is correct.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 357,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The y-intercept occurs at horizontal coordinate 0, meaning zero 2-year periods after the end of 2016. The y-value is 7 hundreds, or \\(7(100)=700\\) devices. Therefore, choice A is correct.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "line",
+        "caption": "Devices shipped",
+        "categories": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "series": [
+          {
+            "name": "hundreds of devices",
+            "values": [
+              7,
+              8.5,
+              9.2,
+              8.8
+            ]
+          }
+        ],
+        "min": 0,
+        "max": 10,
+        "tickStep": 1
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q358",
+      "groupId": "math-20261008-huge798-q358",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Polynomial Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The function \\(f(x)=(x-7)(x+2)(x-5)\\) is given, and \\(g(x)=f(x+2)+4\\). Which table represents \\(g\\) for the indicated values of \\(x\\)?",
+      "choices": {
+        "A": "table A",
+        "B": "table B",
+        "C": "table C",
+        "D": "table D"
+      },
+      "correctAnswer": "A",
+      "explanation": "The zeros of \\(f\\) are -2, 5, and 7. For \\(x=-4,3,5\\), the inputs \\(x+2\\) are -2, 5, and 7, respectively, so \\(f(x+2)=0\\) each time. Therefore, \\(g(x)=4\\) for all three values.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 358,
+      "subtopic": "Polynomial Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The zeros of \\(f\\) are -2, 5, and 7. For \\(x=-4,3,5\\), the inputs \\(x+2\\) are -2, 5, and 7, respectively, so \\(f(x+2)=0\\) each time. Therefore, \\(g(x)=4\\) for all three values.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "choiceTables": {
+        "A": {
+          "headers": [
+            "x",
+            "g(x)"
+          ],
+          "rows": [
+            [
+              "-4",
+              "4"
+            ],
+            [
+              "3",
+              "4"
+            ],
+            [
+              "5",
+              "4"
+            ]
+          ]
+        },
+        "B": {
+          "headers": [
+            "x",
+            "g(x)"
+          ],
+          "rows": [
+            [
+              "-4",
+              "-4"
+            ],
+            [
+              "3",
+              "-4"
+            ],
+            [
+              "5",
+              "-4"
+            ]
+          ]
+        },
+        "C": {
+          "headers": [
+            "x",
+            "g(x)"
+          ],
+          "rows": [
+            [
+              "-4",
+              "0"
+            ],
+            [
+              "3",
+              "0"
+            ],
+            [
+              "5",
+              "0"
+            ]
+          ]
+        },
+        "D": {
+          "headers": [
+            "x",
+            "g(x)"
+          ],
+          "rows": [
+            [
+              "-4",
+              "4"
+            ],
+            [
+              "3",
+              "-4"
+            ],
+            [
+              "5",
+              "4"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q360",
+      "groupId": "math-20261008-huge798-q360",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Rational/Radical Equations",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "Which expression is equivalent to \\(\\frac{15p}{4q}-6pq+\\frac{p}{2q}\\), where \\(q>0\\)?",
+      "choices": {
+        "A": "\\(\\frac{p(17-24q^2)}{4q}\\)",
+        "B": "\\(\\frac{p(17-6q)}{4q}\\)",
+        "C": "\\(\\frac{p(17-24q)}{4q}\\)",
+        "D": "\\(\\frac{p(13-24q^2)}{4q}\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "Using common denominator \\(4q\\), the expression becomes \\(\\frac{15p-24pq^2+2p}{4q}=\\boxed{\\frac{p(17-24q^2)}{4q}}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 360,
+      "subtopic": "Rational/Radical Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "Using common denominator \\(4q\\), the expression becomes \\(\\frac{15p-24pq^2+2p}{4q}=\\boxed{\\frac{p(17-24q^2)}{4q}}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
       }
     }
   ],
