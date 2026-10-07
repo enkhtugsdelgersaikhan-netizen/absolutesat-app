@@ -97,18 +97,20 @@ document.addEventListener("DOMContentLoaded", async () => {
     const accuracyColor = value => {
         if (!Number.isFinite(value)) return "#8a9996";
         const gap = Math.max(0, PREFERRED_ACCURACY - value);
-        const ratio = Math.min(1, gap / 45);
-        const hue = Math.round(155 * (1 - ratio));
-        return "hsl(" + hue + " 55% 36%)";
+        if (gap >= 30) return "#8b4d4a";
+        if (gap >= 18) return "#8a6245";
+        if (gap >= 8) return "#7b7047";
+        return "#326958";
     };
 
     const paceColor = (seconds, section) => {
         if (!Number.isFinite(seconds)) return "#8a9996";
         const target = TARGET_SECONDS[section] || 83;
-        if (seconds <= target) return "hsl(155 55% 36%)";
-        const ratio = Math.min(1, (seconds - target) / (target * 0.8));
-        const hue = Math.round(155 * (1 - ratio));
-        return "hsl(" + hue + " 55% 36%)";
+        const over = (seconds - target) / target;
+        if (over >= 0.55) return "#8b4d4a";
+        if (over >= 0.3) return "#8a6245";
+        if (over >= 0.12) return "#7b7047";
+        return "#326958";
     };
 
     async function fetchBank(path) {
