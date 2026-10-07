@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=unified-ui-1">
-    <link rel="stylesheet" href="dashboard.css?v=nested-skills-1">
+    <link rel="stylesheet" href="dashboard.css?v=skill-severity-1">
     <link rel="stylesheet" href="/responsive.css?v=1">
 </head>
 <body>
@@ -17,11 +17,25 @@
 
 <main class="dashboard-page">
     <section class="dashboard-header">
-        <div>
+        <div class="dashboard-header-copy">
             <div class="page-eyebrow">PRACTICE ANALYTICS</div>
             <h1>Dashboard</h1>
             <p>See what you are practicing, how efficiently you are answering, and where the next points are most likely to come from.</p>
         </div>
+
+        <section class="dashboard-panel dashboard-account-panel dashboard-account-panel-top">
+            <div class="dashboard-panel-heading">
+                <div>
+                    <div class="panel-eyebrow">ACCOUNT</div>
+                    <h2>Practice data</h2>
+                </div>
+            </div>
+            <p class="dashboard-muted">Reset saved practice history or sign out of this account.</p>
+            <div class="dashboard-account-actions">
+                <button type="button" class="dashboard-reset" id="dashboard-reset">Reset practice data</button>
+                <button type="button" class="dashboard-logout" id="dashboard-logout">Log out</button>
+            </div>
+        </section>
     </section>
 
     <section class="dashboard-content" aria-live="polite">
@@ -90,25 +104,13 @@
             <p class="dashboard-benchmark-note">Color benchmark: 90%+ accuracy, about 71 seconds per R&amp;W question, and 95 seconds per Math question. Redder text means farther from the preferred benchmark. Average time uses first-attempt timing recorded from this analytics update onward.</p>
         </section>
 
-        <section class="dashboard-panel dashboard-account-panel dashboard-account-panel-standalone">
-            <div class="dashboard-panel-heading">
-                <div>
-                    <div class="panel-eyebrow">ACCOUNT</div>
-                    <h2>Practice data</h2>
-                </div>
-            </div>
-            <p class="dashboard-muted">Resetting removes saved practice attempts, reviews, question-set results, timing history, and vocabulary progress.</p>
-            <button type="button" class="dashboard-reset" id="dashboard-reset">Reset all practice data</button>
-            <button type="button" class="dashboard-logout" id="dashboard-logout">Log out</button>
-        </section>
-
         <div id="dashboard-data-note" class="dashboard-data-note" hidden></div>
     </section>
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js?v=dark-3"></script>
-<script src="dashboard.js?v=nested-skills-1"></script>
+<script src="dashboard.js?v=skill-severity-1"></script>
 <script src="/study.js"></script>
 </body>
 </html>
