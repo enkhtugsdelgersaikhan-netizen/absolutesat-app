@@ -3130,6 +3130,42 @@ function renderQuestionXYGraph(graph) {
                 : ""
         );
 
+    const regionMarkup =
+        Array.isArray(graph.regions)
+            ? graph.regions
+                .map(
+                    region => {
+                        const points =
+                            Array.isArray(region?.points)
+                                ? region.points
+                                    .filter(
+                                        point =>
+                                            Array.isArray(point) &&
+                                            Number.isFinite(Number(point[0])) &&
+                                            Number.isFinite(Number(point[1]))
+                                    )
+                                    .map(
+                                        point =>
+                                            xScale(Number(point[0])) +
+                                            "," +
+                                            yScale(Number(point[1]))
+                                    )
+                                : [];
+
+                        if (points.length < 3) {
+                            return "";
+                        }
+
+                        return (
+                            '<polygon class="question-xy-region" points="' +
+                            points.join(" ") +
+                            '"></polygon>'
+                        );
+                    }
+                )
+                .join("")
+            : "";
+
     const legendItems = [];
 
     const series =
@@ -3485,6 +3521,7 @@ function renderQuestionXYGraph(graph) {
                     grid +
                     axes +
                     '<g clip-path="url(#question-xy-clip)">' +
+                        regionMarkup +
                         series +
                     '</g>' +
                     legend +
