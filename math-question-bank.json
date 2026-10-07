@@ -1760,10 +1760,142 @@
               }
             }
           }
+        },
+        {
+          "range": "481-520",
+          "reviewed": 40,
+          "retained": 30,
+          "excluded": [
+            {
+              "sourceQuestionNumber": 485,
+              "reason": "Close reskin of existing combined-mean questions, including math-20261006-new409-q075."
+            },
+            {
+              "sourceQuestionNumber": 489,
+              "reason": "Close reskin of existing line-of-best-fit prediction item math-20261006-new409-q245/q391."
+            },
+            {
+              "sourceQuestionNumber": 491,
+              "reason": "Close reskin of existing line-of-best-fit slope item math-20261006-new409-q258."
+            },
+            {
+              "sourceQuestionNumber": 497,
+              "reason": "Close reskin of existing chained-percent comparison items math-20261006-new409-q284 and math-20261008-huge798-q318."
+            },
+            {
+              "sourceQuestionNumber": 504,
+              "reason": "Low-value congruent-triangle angle completion already represented by similar items such as math-20261008-huge798-q158."
+            },
+            {
+              "sourceQuestionNumber": 507,
+              "reason": "Close reskin of existing area-versus-linear-scale questions, including math-20261008-huge798-q106 and q134."
+            },
+            {
+              "sourceQuestionNumber": 509,
+              "reason": "Close reskin of existing rectangle perimeter/area dimension questions."
+            },
+            {
+              "sourceQuestionNumber": 510,
+              "reason": "Very low-value square perimeter-to-area item; equivalent structure is already heavily represented."
+            },
+            {
+              "sourceQuestionNumber": 515,
+              "reason": "Close reskin of existing parallel-line angle-equation questions; same-side/corresponding angle variants are already well represented."
+            },
+            {
+              "sourceQuestionNumber": 518,
+              "reason": "Near-exact reskin of existing vertical-angle then adjacent-supplement item math-20261006-new409-q190."
+            }
+          ],
+          "repairs": {
+            "fractionRadicalTrigNotation": [
+              486,
+              496,
+              502,
+              506,
+              508,
+              512,
+              517,
+              519
+            ],
+            "graphDependent": [
+              490,
+              499
+            ],
+            "notes": [
+              "Recovered q486's source phrase as 2/9 as many, not 29, from the supplied 2k-to-9k solution.",
+              "Recovered q506 as tan(P)=5/12 asking cos(X), q508 as tan(R)=3/4 asking sin(S), and q512 as tan(A)=5/12 from the supplied 5-12-13 derivations and keyed choices.",
+              "Recovered q517's radical choices as 9√2 and 18√2; q519's fractions as 18/11 and 9/2.",
+              "Recovered q502's accepted answer as 31/50 from the source's inclusion-exclusion calculation."
+            ]
+          },
+          "visuals": {
+            "graphs": [
+              490,
+              499
+            ],
+            "tables": [
+              492,
+              502
+            ],
+            "diagrams": [
+              503
+            ]
+          },
+          "difficultyCalibration": {
+            "approach": "Assigned relative to the affected subtopics with exactly 10 Easy / 10 Medium / 10 Hard additions.",
+            "addedBySubtopic": {
+              "Ratio, Rates, Percentages": {
+                "Easy": 5,
+                "Medium": 4,
+                "Hard": 2
+              },
+              "Statistics": {
+                "Easy": 0,
+                "Medium": 3,
+                "Hard": 1
+              },
+              "Linear Functions": {
+                "Easy": 1,
+                "Medium": 0,
+                "Hard": 0
+              },
+              "Exponential Functions": {
+                "Easy": 0,
+                "Medium": 1,
+                "Hard": 0
+              },
+              "Probability": {
+                "Easy": 0,
+                "Medium": 0,
+                "Hard": 1
+              },
+              "Lines, Angles, and Triangles": {
+                "Easy": 0,
+                "Medium": 0,
+                "Hard": 2
+              },
+              "Area and Volume": {
+                "Easy": 3,
+                "Medium": 0,
+                "Hard": 2
+              },
+              "Trigonometry": {
+                "Easy": 1,
+                "Medium": 1,
+                "Hard": 1
+              },
+              "Circles": {
+                "Easy": 0,
+                "Medium": 1,
+                "Hard": 1
+              }
+            }
+          }
         }
       ],
-      "retainedSoFar": 395,
-      "reviewedSoFar": 480
+      "retainedSoFar": 425,
+      "reviewedSoFar": 520
     }
   },
   "questions": [
@@ -55349,6 +55481,1087 @@
         "C": "This choice does not satisfy the relationships or conditions in the question.",
         "D": "This choice does not satisfy the relationships or conditions in the question."
       }
+    },
+    {
+      "id": "math-20261008-huge798-q481",
+      "groupId": "math-20261008-huge798-q481",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A wildlife preserve had a certain number of nesting birds at the beginning of a month. The number increased by 20% during the month. Before the final count was taken, 18 birds left the preserve. The final count was 102 birds. How many nesting birds were in the preserve at the beginning of the month?",
+      "choices": {
+        "A": "70",
+        "B": "83",
+        "C": "100",
+        "D": "120"
+      },
+      "correctAnswer": "C",
+      "explanation": "Let the original number be \\(x\\). After a 20% increase there are \\(1.2x\\) birds, and then 18 leave: \\(1.2x-18=102\\). Thus \\(1.2x=120\\), so \\(\\boxed{x=100}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 481,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Let the original number be \\(x\\). After a 20% increase there are \\(1.2x\\) birds, and then 18 leave: \\(1.2x-18=102\\). Thus \\(1.2x=120\\), so \\(\\boxed{x=100}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q482",
+      "groupId": "math-20261008-huge798-q482",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A random sample is used to estimate the proportion of a population having a certain characteristic. The resulting interval of plausible values for the population proportion is from 0.414 to 0.486. Which pair could represent the sample estimate and its associated margin of error?",
+      "choices": {
+        "A": "Estimate 0.450, margin of error 0.036",
+        "B": "Estimate 0.450, margin of error 0.072",
+        "C": "Estimate 0.486, margin of error 0.036",
+        "D": "Estimate 0.414, margin of error 0.072"
+      },
+      "correctAnswer": "A",
+      "explanation": "The estimate is the midpoint: \\((0.414+0.486)/2=0.450\\). The margin of error is \\(0.486-0.450=0.036\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 482,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The estimate is the midpoint: \\((0.414+0.486)/2=0.450\\). The margin of error is \\(0.486-0.450=0.036\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q483",
+      "groupId": "math-20261008-huge798-q483",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "In a random poll of 750 likely voters, 414 supported Candidate A and 336 supported Candidate B. If 18,500 people vote and the poll proportions accurately predict the election results, by how many votes would Candidate A be expected to win?",
+      "choices": {
+        "A": "78",
+        "B": "1,924",
+        "C": "8,288",
+        "D": "10,212"
+      },
+      "correctAnswer": "B",
+      "explanation": "Candidate A's sample margin is \\(414-336=78\\) voters out of 750. Applying that proportion to 18,500 voters gives \\(18500(78/750)=\\boxed{1924}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 483,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Candidate A's sample margin is \\(414-336=78\\) voters out of 750. Applying that proportion to 18,500 voters gives \\(18500(78/750)=\\boxed{1924}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q484",
+      "groupId": "math-20261008-huge798-q484",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "For \\(x>0\\), the function \\(f\\) is defined by \\(f(x)=140\\%\\text{ of }(12-x)\\). Which of the following best describes \\(f\\)?",
+      "choices": {
+        "A": "Increasing exponential",
+        "B": "Increasing linear",
+        "C": "Decreasing exponential",
+        "D": "Decreasing linear"
+      },
+      "correctAnswer": "D",
+      "explanation": "Since \\(140\\%=1.4\\), \\(f(x)=1.4(12-x)=16.8-1.4x\\). This is linear with negative slope, so it is decreasing linear.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 484,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "Since \\(140\\%=1.4\\), \\(f(x)=1.4(12-x)=16.8-1.4x\\). This is linear with negative slope, so it is decreasing linear."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q486",
+      "groupId": "math-20261008-huge798-q486",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "Before an increase, a collection contained \\(\\frac29\\) as many items as it contained after the increase. What was the percent increase in the number of items?",
+      "choices": {
+        "A": "250%",
+        "B": "350%",
+        "C": "450%",
+        "D": "650%"
+      },
+      "correctAnswer": "B",
+      "explanation": "Let the original amount be \\(2k\\) and the new amount be \\(9k\\). The increase is \\(7k\\). Relative to the original, \\(7k/(2k)=3.5=\\boxed{350\\%}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 486,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Let the original amount be \\(2k\\) and the new amount be \\(9k\\). The increase is \\(7k\\). Relative to the original, \\(7k/(2k)=3.5=\\boxed{350\\%}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q487",
+      "groupId": "math-20261008-huge798-q487",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A store's sale price for a jacket is 40% greater than the store's cost for the jacket. The sale price is also 30% less than the jacket's regular price. If the store's cost is $45, what is the regular price, in dollars?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The sale price is \\(45(1.40)=63\\). If \\(r\\) is the regular price, then \\(0.70r=63\\), so \\(\\boxed{r=90}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 487,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "90"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q488",
+      "groupId": "math-20261008-huge798-q488",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A greenhouse planted 480 seeds. Of these seeds, 15% failed to sprout. Of the seeds that did sprout, 25% were later transplanted. How many of the 480 seeds sprouted?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "If 15% failed to sprout, then 85% sprouted. Thus \\(0.85(480)=\\boxed{408}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 488,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "408"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q490",
+      "groupId": "math-20261008-huge798-q490",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The scatterplot shows the relationship between \\(x\\) and \\(y\\). Which equation is the most appropriate linear model for the data?",
+      "choices": {
+        "A": "\\(y=16.2-1.5x\\)",
+        "B": "\\(y=14.5-1.0x\\)",
+        "C": "\\(y=17.5-2.0x\\)",
+        "D": "\\(y=4.0+1.5x\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "The data decrease by roughly 11 units in \\(y\\) while \\(x\\) increases by 7, giving slope near -1.6. Extrapolating gives an intercept near 16, so \\(\\boxed{y=16.2-1.5x}\\) best matches the trend.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 490,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The data decrease by roughly 11 units in \\(y\\) while \\(x\\) increases by 7, giving slope near -1.6. Extrapolating gives an intercept near 16, so \\(\\boxed{y=16.2-1.5x}\\) best matches the trend.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "xy",
+        "caption": "Scatterplot of x and y",
+        "xMin": 0,
+        "xMax": 9,
+        "yMin": 3,
+        "yMax": 17,
+        "xStep": 1,
+        "yStep": 1,
+        "xLabel": "x",
+        "yLabel": "y",
+        "series": [
+          {
+            "label": "data",
+            "points": [
+              [
+                1,
+                15
+              ],
+              [
+                2,
+                13
+              ],
+              [
+                3,
+                12
+              ],
+              [
+                4,
+                10
+              ],
+              [
+                5,
+                9
+              ],
+              [
+                6,
+                7
+              ],
+              [
+                7,
+                6
+              ],
+              [
+                8,
+                4
+              ]
+            ],
+            "showPoints": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q492",
+      "groupId": "math-20261008-huge798-q492",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The table shows the recorded size of a population every 3 days. Which type of function best models the population as a function of \\(t\\)?",
+      "choices": {
+        "A": "Decreasing linear",
+        "B": "Increasing linear",
+        "C": "Decreasing exponential",
+        "D": "Increasing exponential"
+      },
+      "correctAnswer": "D",
+      "explanation": "Each population is 1.06 times the preceding population: \\(424/400=1.06\\) and \\(449.44/424=1.06\\). A constant multiplicative factor greater than 1 indicates increasing exponential growth.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 492,
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "Each population is 1.06 times the preceding population: \\(424/400=1.06\\) and \\(449.44/424=1.06\\). A constant multiplicative factor greater than 1 indicates increasing exponential growth."
+      },
+      "table": {
+        "caption": "Population recorded every 3 days",
+        "headers": [
+          "Days t",
+          "Population"
+        ],
+        "rows": [
+          [
+            "0",
+            "400"
+          ],
+          [
+            "3",
+            "424"
+          ],
+          [
+            "6",
+            "449.44"
+          ],
+          [
+            "9",
+            "476.4064"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q493",
+      "groupId": "math-20261008-huge798-q493",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A cable is 2,970 inches long and is cut into 3 equal pieces. How many yards long is each piece? Use 1 yard = 36 inches.",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Each piece is \\(2970/3=990\\) inches. Converting to yards gives \\(990/36=\\boxed{27.5}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 493,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "27.5",
+        "55/2"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q494",
+      "groupId": "math-20261008-huge798-q494",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A recipe requires 7 tablespoons of an ingredient for each batch. A container holds 252 teaspoons of the ingredient. If 3 teaspoons equal 1 tablespoon, how many complete batches can be made?",
+      "choices": {
+        "A": "7",
+        "B": "12",
+        "C": "28",
+        "D": "84"
+      },
+      "correctAnswer": "B",
+      "explanation": "The container holds \\(252/3=84\\) tablespoons. At 7 tablespoons per batch, it makes \\(84/7=\\boxed{12}\\) complete batches.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 494,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The container holds \\(252/3=84\\) tablespoons. At 7 tablespoons per batch, it makes \\(84/7=\\boxed{12}\\) complete batches.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q495",
+      "groupId": "math-20261008-huge798-q495",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "For a rectangle whose dimensions can vary, the ratio of its length to its width must remain \\(11:4\\). If the length is increased by 16.5 units, by how many units must the width increase to preserve the ratio?",
+      "choices": {
+        "A": "4.5",
+        "B": "6",
+        "C": "16.5",
+        "D": "45.375"
+      },
+      "correctAnswer": "B",
+      "explanation": "The changes must preserve the same ratio, so \\(16.5/w=11/4\\). Hence \\(w=16.5(4/11)=\\boxed{6}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 495,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The changes must preserve the same ratio, so \\(16.5/w=11/4\\). Hence \\(w=16.5(4/11)=\\boxed{6}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q496",
+      "groupId": "math-20261008-huge798-q496",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "For \\(m>0\\), the ratio of \\(a\\) to \\(b\\) equals the ratio of 18 to \\(c\\). If \\(a=12m\\) and \\(c=3m\\), which expression gives \\(b\\) in terms of \\(m\\)?",
+      "choices": {
+        "A": "\\(2m^2\\)",
+        "B": "\\(\\frac23m^2\\)",
+        "C": "\\(6m\\)",
+        "D": "\\(54m^2\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "The ratio statement gives \\(a/b=18/c\\). Substituting yields \\(12m/b=18/(3m)=6/m\\). Cross-multiplying gives \\(12m^2=6b\\), so \\(\\boxed{b=2m^2}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 496,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The ratio statement gives \\(a/b=18/c\\). Substituting yields \\(12m/b=18/(3m)=6/m\\). Cross-multiplying gives \\(12m^2=6b\\), so \\(\\boxed{b=2m^2}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q498",
+      "groupId": "math-20261008-huge798-q498",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The value of an investment increases by 25% during one year. During the following year, it decreases by \\(p\\%\\). At the end of the two years, its value is 10% greater than its original value. What is \\(p\\)?",
+      "choices": {
+        "A": "10",
+        "B": "12",
+        "C": "15",
+        "D": "20"
+      },
+      "correctAnswer": "B",
+      "explanation": "If the original value is \\(V\\), then \\(1.25V(1-p/100)=1.10V\\). Thus \\(1-p/100=0.88\\), giving \\(\\boxed{p=12}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 498,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "If the original value is \\(V\\), then \\(1.25V(1-p/100)=1.10V\\). Thus \\(1-p/100=0.88\\), giving \\(\\boxed{p=12}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q499",
+      "groupId": "math-20261008-huge798-q499",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The scatterplot shows the weights of several animals and the number of offspring each produced. Two animals produced exactly 7 offspring. What is the difference, in pounds, between the weights of those two animals?",
+      "choices": {
+        "A": "5",
+        "B": "10",
+        "C": "15",
+        "D": "20"
+      },
+      "correctAnswer": "B",
+      "explanation": "The two points with 7 offspring correspond to weights of 55 pounds and 65 pounds. Their difference is \\(65-55=\\boxed{10}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 499,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The two points with 7 offspring correspond to weights of 55 pounds and 65 pounds. Their difference is \\(65-55=\\boxed{10}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "xy",
+        "caption": "Animal weight and number of offspring",
+        "xMin": 35,
+        "xMax": 85,
+        "yMin": 4,
+        "yMax": 10,
+        "xStep": 5,
+        "yStep": 1,
+        "xLabel": "Weight (pounds)",
+        "yLabel": "Number of offspring",
+        "series": [
+          {
+            "label": "animals",
+            "points": [
+              [
+                40,
+                5
+              ],
+              [
+                45,
+                6
+              ],
+              [
+                55,
+                7
+              ],
+              [
+                60,
+                8
+              ],
+              [
+                65,
+                7
+              ],
+              [
+                75,
+                9
+              ],
+              [
+                80,
+                9
+              ]
+            ],
+            "showPoints": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q500",
+      "groupId": "math-20261008-huge798-q500",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A collectible's February price was $16.00. Its March price was 25% greater than its February price. In April, its price was $18.00. The April price was \\(p\\%\\) of the March price. What is \\(p\\)?",
+      "choices": {
+        "A": "80",
+        "B": "90",
+        "C": "112.5",
+        "D": "125"
+      },
+      "correctAnswer": "B",
+      "explanation": "The March price was \\(16(1.25)=20\\). The April price is \\(18/20=0.90\\), or \\(\\boxed{90\\%}\\), of the March price.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 500,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The March price was \\(16(1.25)=20\\). The April price is \\(18/20=0.90\\), or \\(\\boxed{90\\%}\\), of the March price.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q501",
+      "groupId": "math-20261008-huge798-q501",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A ribbon is 8.4 meters long. A 275-centimeter section is removed. What is the length of the remaining ribbon, in meters?",
+      "choices": {
+        "A": "5.65",
+        "B": "8.125",
+        "C": "56.5",
+        "D": "565"
+      },
+      "correctAnswer": "A",
+      "explanation": "275 centimeters is 2.75 meters. Thus the remaining length is \\(8.4-2.75=\\boxed{5.65}\\) meters.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 501,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "275 centimeters is 2.75 meters. Thus the remaining length is \\(8.4-2.75=\\boxed{5.65}\\) meters.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q502",
+      "groupId": "math-20261008-huge798-q502",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Probability",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The table shows the color and shape of 100 tiles. If one tile is selected at random, what is the probability that it is red or square? Express the answer as a decimal or fraction, not as a percent.",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "There are 30 red tiles and 50 square tiles, with 18 red squares counted in both groups. The favorable count is \\(30+50-18=62\\), so the probability is \\(62/100=\\boxed{31/50}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 502,
+      "subtopic": "Probability",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "31/50",
+        "0.62"
+      ],
+      "table": {
+        "caption": "Color and shape of 100 tiles",
+        "headers": [
+          "",
+          "Red",
+          "Blue",
+          "Yellow",
+          "Total"
+        ],
+        "rows": [
+          [
+            "Square",
+            "18",
+            "12",
+            "20",
+            "50"
+          ],
+          [
+            "Pentagon",
+            "12",
+            "16",
+            "22",
+            "50"
+          ],
+          [
+            "Total",
+            "30",
+            "28",
+            "42",
+            "100"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q503",
+      "groupId": "math-20261008-huge798-q503",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Lines, Angles, and Triangles",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "In the figure, D, C, and B are collinear; D, E, and A are collinear; and \\(AC=CD\\). The measure of \\(\\angle ACB\\) is \\(58^\\circ\\), and the measure of \\(\\angle EBC\\) is \\(37^\\circ\\). What is \\(m\\angle AEB\\), in degrees?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Because CB and CD are opposite rays, \\(m\\angle ACD=180-58=122^\\circ\\). Since \\(AC=CD\\), triangle ACD is isosceles, so each base angle is \\((180-122)/2=29^\\circ\\). Thus \\(m\\angle BDE=29^\\circ\\). In triangle BDE, \\(m\\angle DEB=180-29-37=114^\\circ\\). Since D, E, A are collinear, \\(m\\angle AEB=180-114=\\boxed{66^\\circ}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 503,
+      "subtopic": "Lines, Angles, and Triangles",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "66"
+      ],
+      "diagram": {
+        "width": 440,
+        "height": 300,
+        "alt": "Geometry figure with D, C, B collinear and D, E, A collinear",
+        "lines": [
+          {
+            "x1": 80,
+            "y1": 245,
+            "x2": 360,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 80,
+            "y1": 245,
+            "x2": 235,
+            "y2": 120,
+            "dashed": false
+          },
+          {
+            "x1": 235,
+            "y1": 120,
+            "x2": 330,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 235,
+            "y1": 120,
+            "x2": 310,
+            "y2": 45,
+            "dashed": false
+          },
+          {
+            "x1": 310,
+            "y1": 45,
+            "x2": 360,
+            "y2": 245,
+            "dashed": false
+          }
+        ],
+        "points": [
+          {
+            "x": 80,
+            "y": 245,
+            "label": "D",
+            "dx": -10,
+            "dy": 18
+          },
+          {
+            "x": 235,
+            "y": 120,
+            "label": "C",
+            "dx": -10,
+            "dy": -8
+          },
+          {
+            "x": 310,
+            "y": 45,
+            "label": "B",
+            "dx": 8,
+            "dy": -8
+          },
+          {
+            "x": 230,
+            "y": 245,
+            "label": "E",
+            "dx": 0,
+            "dy": 20
+          },
+          {
+            "x": 360,
+            "y": 245,
+            "label": "A",
+            "dx": 10,
+            "dy": 18
+          }
+        ],
+        "labels": [
+          {
+            "x": 260,
+            "y": 82,
+            "text": "58°",
+            "anchor": "middle"
+          },
+          {
+            "x": 323,
+            "y": 90,
+            "text": "37°",
+            "anchor": "middle"
+          }
+        ],
+        "ticks": [
+          {
+            "x": 155,
+            "y": 184,
+            "angle": -38,
+            "size": 10
+          },
+          {
+            "x": 294,
+            "y": 184,
+            "angle": 52,
+            "size": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q505",
+      "groupId": "math-20261008-huge798-q505",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Area and Volume",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "An open-top box has a square base with side length 18 inches and four vertical sides of height 11 inches. What is the exterior surface area, in square inches, of the box?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The base area is \\(18^2=324\\). The four side faces each have area \\(18(11)=198\\). Therefore, the exterior surface area is \\(324+4(198)=\\boxed{1116}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 505,
+      "subtopic": "Area and Volume",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "1116"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q506",
+      "groupId": "math-20261008-huge798-q506",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Trigonometry",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "Right triangle PQR is similar to right triangle XYZ, where Q and Y are right angles and P corresponds to X. If \\(\\tan P=\\frac5{12}\\), what is \\(\\cos X\\)?",
+      "choices": {
+        "A": "\\(\\frac5{13}\\)",
+        "B": "\\(\\frac{12}{13}\\)",
+        "C": "\\(\\frac5{12}\\)",
+        "D": "\\(\\frac{13}{12}\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "Since P corresponds to X, \\(X=P\\). A tangent ratio of \\(5/12\\) gives a 5-12-13 right triangle, so \\(\\cos X=\\cos P=\\boxed{12/13}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 506,
+      "subtopic": "Trigonometry",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Since P corresponds to X, \\(X=P\\). A tangent ratio of \\(5/12\\) gives a 5-12-13 right triangle, so \\(\\cos X=\\cos P=\\boxed{12/13}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q508",
+      "groupId": "math-20261008-huge798-q508",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Trigonometry",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "In right triangle RST, angles R and S are complementary. If \\(\\tan R=\\frac34\\), what is \\(\\sin S\\)?",
+      "choices": {
+        "A": "\\(\\frac35\\)",
+        "B": "\\(\\frac45\\)",
+        "C": "\\(\\frac34\\)",
+        "D": "\\(\\frac43\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "A tangent ratio of \\(3/4\\) corresponds to a 3-4-5 triangle. Since S is complementary to R, \\(\\sin S=\\cos R=\\boxed{4/5}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 508,
+      "subtopic": "Trigonometry",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "A tangent ratio of \\(3/4\\) corresponds to a 3-4-5 triangle. Since S is complementary to R, \\(\\sin S=\\cos R=\\boxed{4/5}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q511",
+      "groupId": "math-20261008-huge798-q511",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Area and Volume",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A right square prism has a base edge length of \\(s\\) units. Its height is twice the base edge length. If the volume of the prism is 3,456 cubic units, what is \\(s\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The volume is \\(s^2(2s)=2s^3\\). Thus \\(2s^3=3456\\), so \\(s^3=1728\\), giving \\(\\boxed{s=12}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 511,
+      "subtopic": "Area and Volume",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "12"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q512",
+      "groupId": "math-20261008-huge798-q512",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Trigonometry",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "In right triangle ABC, angle C is a right angle and \\(\\tan A=\\frac5{12}\\). The area of the triangle is 270 square units. What is the perimeter of triangle ABC?",
+      "choices": {
+        "A": "75",
+        "B": "84",
+        "C": "90",
+        "D": "105"
+      },
+      "correctAnswer": "C",
+      "explanation": "The legs are in ratio 5:12, so let them be \\(5k\\) and \\(12k\\). The area is \\(\\frac12(5k)(12k)=30k^2=270\\), so \\(k=3\\). The sides are 15, 36, and 39, giving perimeter \\(\\boxed{90}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 512,
+      "subtopic": "Trigonometry",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The legs are in ratio 5:12, so let them be \\(5k\\) and \\(12k\\). The area is \\(\\frac12(5k)(12k)=30k^2=270\\), so \\(k=3\\). The sides are 15, 36, and 39, giving perimeter \\(\\boxed{90}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q513",
+      "groupId": "math-20261008-huge798-q513",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Area and Volume",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "Square X has an area of 144 square centimeters. The perimeter of square Y is 175% of the perimeter of square X. What is the side length, in centimeters, of square Y?",
+      "choices": {
+        "A": "18",
+        "B": "21",
+        "C": "24",
+        "D": "84"
+      },
+      "correctAnswer": "B",
+      "explanation": "Square X has side length 12. For squares, perimeter and side length scale by the same factor. Thus square Y's side is \\(12(1.75)=\\boxed{21}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 513,
+      "subtopic": "Area and Volume",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Square X has side length 12. For squares, perimeter and side length scale by the same factor. Thus square Y's side is \\(12(1.75)=\\boxed{21}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q514",
+      "groupId": "math-20261008-huge798-q514",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Lines, Angles, and Triangles",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "Right triangles ABC and DEF are similar. Angles C and F are right angles, and angle A corresponds to angle D. The measures of two angles are \\(m\\angle B=2x+10\\) and \\(m\\angle D=4x+8\\). What is \\(m\\angle E\\)?",
+      "choices": {
+        "A": "22°",
+        "B": "34°",
+        "C": "56°",
+        "D": "68°"
+      },
+      "correctAnswer": "B",
+      "explanation": "Since A corresponds to D, \\(m\\angle A=4x+8\\). The two acute angles in ABC sum to 90°: \\((4x+8)+(2x+10)=90\\), so \\(x=12\\). Then \\(m\\angle B=34^\\circ\\). Because B corresponds to E, \\(\\boxed{m\\angle E=34^\\circ}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 514,
+      "subtopic": "Lines, Angles, and Triangles",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Since A corresponds to D, \\(m\\angle A=4x+8\\). The two acute angles in ABC sum to 90°: \\((4x+8)+(2x+10)=90\\), so \\(x=12\\). Then \\(m\\angle B=34^\\circ\\). Because B corresponds to E, \\(\\boxed{m\\angle E=34^\\circ}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q516",
+      "groupId": "math-20261008-huge798-q516",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Area and Volume",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A square has an area of 196 square inches. A border 2 inches wide is added around all four sides of the square, forming a larger square. What is the side length, in inches, of the larger square?",
+      "choices": {
+        "A": "16",
+        "B": "18",
+        "C": "20",
+        "D": "22"
+      },
+      "correctAnswer": "B",
+      "explanation": "The original side length is \\(\\sqrt{196}=14\\). A 2-inch border adds 2 inches at each end of a side, so the new side length is \\(14+4=\\boxed{18}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 516,
+      "subtopic": "Area and Volume",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The original side length is \\(\\sqrt{196}=14\\). A 2-inch border adds 2 inches at each end of a side, so the new side length is \\(14+4=\\boxed{18}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q517",
+      "groupId": "math-20261008-huge798-q517",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Circles",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A square is inscribed in a circle. The perimeter of the square is 72 inches. What is the radius, in inches, of the circle?",
+      "choices": {
+        "A": "9",
+        "B": "\\(9\\sqrt2\\)",
+        "C": "18",
+        "D": "\\(18\\sqrt2\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "Each side is \\(72/4=18\\). The square's diagonal is \\(18\\sqrt2\\), and this is the circle's diameter. Therefore, the radius is \\(\\boxed{9\\sqrt2}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 517,
+      "subtopic": "Circles",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Each side is \\(72/4=18\\). The square's diagonal is \\(18\\sqrt2\\), and this is the circle's diameter. Therefore, the radius is \\(\\boxed{9\\sqrt2}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q519",
+      "groupId": "math-20261008-huge798-q519",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Circles",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "Circle P has radius \\(2k\\), and circle Q has radius \\(k+18\\), where \\(k>0\\). The area of circle Q is 25 times the area of circle P. What is the value of \\(k\\)?",
+      "choices": {
+        "A": "\\(\\frac{18}{11}\\)",
+        "B": "2",
+        "C": "\\(\\frac92\\)",
+        "D": "18"
+      },
+      "correctAnswer": "B",
+      "explanation": "An area ratio of 25 corresponds to a radius ratio of 5. Thus \\(k+18=5(2k)=10k\\). Hence \\(18=9k\\), so \\(\\boxed{k=2}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 519,
+      "subtopic": "Circles",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "An area ratio of 25 corresponds to a radius ratio of 5. Thus \\(k+18=5(2k)=10k\\). Hence \\(18=9k\\), so \\(\\boxed{k=2}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q520",
+      "groupId": "math-20261008-huge798-q520",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Area and Volume",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A triangle has a height of \\(h\\) centimeters and a base that is 12 centimeters longer than its height. The area of the triangle is 270 square centimeters. What is \\(h\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The base is \\(h+12\\), so \\(\\frac12h(h+12)=270\\). This gives \\(h^2+12h-540=0=(h+30)(h-18)\\). A length is positive, so \\(\\boxed{h=18}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 520,
+      "subtopic": "Area and Volume",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "18"
+      ]
     }
   ],
   "classificationVersion": "2026-10-07-v1",
