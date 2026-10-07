@@ -2230,10 +2230,149 @@
               }
             }
           }
+        },
+        {
+          "range": "641-680",
+          "reviewed": 40,
+          "retained": 30,
+          "excluded": [
+            {
+              "sourceQuestionNumber": 641,
+              "reason": "Close reskin of existing polynomial combine-like-terms item math-20261006-batch465-q275."
+            },
+            {
+              "sourceQuestionNumber": 644,
+              "reason": "Low-value direct function-evaluation item; this structure is already heavily represented."
+            },
+            {
+              "sourceQuestionNumber": 648,
+              "reason": "Low-value solve-one-linear-equation-then-substitute item with no new reasoning structure."
+            },
+            {
+              "sourceQuestionNumber": 658,
+              "reason": "Low-value distribute-and-combine expression reskin already heavily represented."
+            },
+            {
+              "sourceQuestionNumber": 664,
+              "reason": "Very low-value like-term simplification reskin."
+            },
+            {
+              "sourceQuestionNumber": 668,
+              "reason": "Low-value variable-isolation item already heavily represented."
+            },
+            {
+              "sourceQuestionNumber": 671,
+              "reason": "Close reskin of existing right-rectangular-prism volume-function item math-20261006-batch465-q244."
+            },
+            {
+              "sourceQuestionNumber": 678,
+              "reason": "Close reskin of existing direct 2x2 system-solution items, including math-20261006-batch465-q092 and q293."
+            },
+            {
+              "sourceQuestionNumber": 679,
+              "reason": "Low-value one-step linear solve followed by expression evaluation."
+            },
+            {
+              "sourceQuestionNumber": 680,
+              "reason": "Low-value solve-a-parameter-then-evaluate-linear-function structure already heavily represented."
+            }
+          ],
+          "repairs": {
+            "fractionRadicalExponentNotation": [
+              642,
+              645,
+              650,
+              651,
+              653,
+              654,
+              656,
+              665,
+              666,
+              667,
+              669,
+              673
+            ],
+            "notes": [
+              "Recovered q642's second graph as y=(1/2)x+3 from the supplied algebra and Desmos line.",
+              "Recovered q650 as f(x)=a/(x-b), q651 as f(x)=24/x with f(k)=3/2 and fractional answer choices, and q654 as 5/r-2/p=1/q from the supplied derivations.",
+              "Recovered q653's radical quotient, q656's repeated x=p/2 factor, q665 as g(x)=sqrt(x+15)+7, q666 as f(x)=6/(x-1)-2, q667 as (1.72)^(t/3), q669's -1/7 solution, and q673's fractional probability choices.",
+              "Removed the stray export header token appended to q677's stem."
+            ]
+          },
+          "visuals": {
+            "tables": [
+              661
+            ],
+            "choiceTables": [
+              646
+            ],
+            "graphs": [],
+            "diagrams": []
+          },
+          "difficultyCalibration": {
+            "approach": "Exactly 10 Easy / 10 Medium / 10 Hard additions, preserving exact global balance.",
+            "addedBySubtopic": {
+              "Nonlinear Equations/Functions": {
+                "Easy": 0,
+                "Medium": 2,
+                "Hard": 1
+              },
+              "Quadratics": {
+                "Easy": 3,
+                "Medium": 2,
+                "Hard": 1
+              },
+              "Exponential Functions": {
+                "Easy": 1,
+                "Medium": 1,
+                "Hard": 2
+              },
+              "Polynomial Functions": {
+                "Easy": 0,
+                "Medium": 0,
+                "Hard": 3
+              },
+              "Rational/Radical Equations": {
+                "Easy": 1,
+                "Medium": 1,
+                "Hard": 3
+              },
+              "Equivalent Expressions": {
+                "Easy": 1,
+                "Medium": 1,
+                "Hard": 0
+              },
+              "Linear Functions": {
+                "Easy": 1,
+                "Medium": 0,
+                "Hard": 0
+              },
+              "Ratio, Rates, Percentages": {
+                "Easy": 1,
+                "Medium": 1,
+                "Hard": 0
+              },
+              "Probability": {
+                "Easy": 1,
+                "Medium": 0,
+                "Hard": 0
+              },
+              "Statistics": {
+                "Easy": 0,
+                "Medium": 2,
+                "Hard": 0
+              },
+              "Linear Equations": {
+                "Easy": 1,
+                "Medium": 0,
+                "Hard": 0
+              }
+            }
+          }
         }
       ],
-      "retainedSoFar": 516,
-      "reviewedSoFar": 640
+      "retainedSoFar": 546,
+      "reviewedSoFar": 680
     }
   },
   "questions": [
@@ -59856,6 +59995,940 @@
         "C": "Expand: \\(3y-2p=qy+q\\). Thus \\((3-q)y=2p+q\\), so \\(\\boxed{y=(2p+q)/(3-q)}\\).",
         "D": "This choice does not satisfy the relationships or conditions in the question."
       }
+    },
+    {
+      "id": "math-20261008-huge798-q642",
+      "groupId": "math-20261008-huge798-q642",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Nonlinear Equations/Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The graphs of \\(y=|x-1|\\) and \\(y=\\frac12x+3\\) intersect at two points. Which point is the rightmost intersection?",
+      "choices": {
+        "A": "\\(\\left(-\\frac43,\\frac73\\right)\\)",
+        "B": "\\((8,7)\\)",
+        "C": "\\((7,8)\\)",
+        "D": "\\((8,3)\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "For the right branch, \\(x\\ge1\\), so \\(|x-1|=x-1\\). Set \\(x-1=\\frac12x+3\\), which gives \\(x=8\\) and \\(y=7\\). Thus the rightmost intersection is \\(\\boxed{(8,7)}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 642,
+      "subtopic": "Nonlinear Equations/Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "For the right branch, \\(x\\ge1\\), so \\(|x-1|=x-1\\). Set \\(x-1=\\frac12x+3\\), which gives \\(x=8\\) and \\(y=7\\). Thus the rightmost intersection is \\(\\boxed{(8,7)}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q643",
+      "groupId": "math-20261008-huge798-q643",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A solution \\((k,y)\\) to the system \\(y=2x+1\\) and \\(y=x^2-7x+15\\) satisfies \\(k>4\\). What is the value of \\(k\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Set the two expressions for \\(y\\) equal: \\(2x+1=x^2-7x+15\\). Then \\(x^2-9x+14=0=(x-2)(x-7)\\). Since \\(k>4\\), \\(\\boxed{k=7}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 643,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "7"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q645",
+      "groupId": "math-20261008-huge798-q645",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Nonlinear Equations/Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "If \\(|2(3x-4)+5|=37\\), what is the positive value of \\(x-1\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Simplify to \\(|6x-3|=37\\). The solutions are \\(x=20/3\\) and \\(x=-17/3\\), so \\(x-1\\) is \\(17/3\\) or \\(-20/3\\). The positive value is \\(\\boxed{17/3}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 645,
+      "subtopic": "Nonlinear Equations/Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "17/3"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q646",
+      "groupId": "math-20261008-huge798-q646",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The function \\(h\\) is defined by \\(h(x)=x^2-4x+1\\). Which table gives the correct corresponding values?",
+      "choices": {
+        "A": "Table A",
+        "B": "Table B",
+        "C": "Table C",
+        "D": "Table D"
+      },
+      "correctAnswer": "A",
+      "explanation": "Substitution gives \\(h(-1)=6\\), \\(h(2)=-3\\), and \\(h(5)=6\\). Only table A contains all three values.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 646,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "Substitution gives \\(h(-1)=6\\), \\(h(2)=-3\\), and \\(h(5)=6\\). Only table A contains all three values.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "choiceTables": {
+        "A": {
+          "headers": [
+            "x",
+            "h(x)"
+          ],
+          "rows": [
+            [
+              "-1",
+              "6"
+            ],
+            [
+              "2",
+              "-3"
+            ],
+            [
+              "5",
+              "6"
+            ]
+          ]
+        },
+        "B": {
+          "headers": [
+            "x",
+            "h(x)"
+          ],
+          "rows": [
+            [
+              "-1",
+              "-2"
+            ],
+            [
+              "2",
+              "-3"
+            ],
+            [
+              "5",
+              "6"
+            ]
+          ]
+        },
+        "C": {
+          "headers": [
+            "x",
+            "h(x)"
+          ],
+          "rows": [
+            [
+              "-1",
+              "6"
+            ],
+            [
+              "2",
+              "3"
+            ],
+            [
+              "5",
+              "6"
+            ]
+          ]
+        },
+        "D": {
+          "headers": [
+            "x",
+            "h(x)"
+          ],
+          "rows": [
+            [
+              "-1",
+              "6"
+            ],
+            [
+              "2",
+              "-3"
+            ],
+            [
+              "5",
+              "4"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q647",
+      "groupId": "math-20261008-huge798-q647",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A microorganism population triples every 4 hours. After 12 hours, the population is 43,740. What was the population at the initial observation?",
+      "choices": {
+        "A": "4,860",
+        "B": "1,620",
+        "C": "14,580",
+        "D": "43,740"
+      },
+      "correctAnswer": "B",
+      "explanation": "Twelve hours contains three 4-hour periods, so the population has been multiplied by \\(3^3=27\\). Thus the initial population was \\(43{,}740/27=\\boxed{1{,}620}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 647,
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Twelve hours contains three 4-hour periods, so the population has been multiplied by \\(3^3=27\\). Thus the initial population was \\(43{,}740/27=\\boxed{1{,}620}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q649",
+      "groupId": "math-20261008-huge798-q649",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Polynomial Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "How many distinct real solutions does \\((x+4)(x-1)^2(x^2+4)(x^2-6x+9)(x^2+2x-3)=0\\) have?",
+      "choices": {
+        "A": "5",
+        "B": "3",
+        "C": "6",
+        "D": "4"
+      },
+      "correctAnswer": "D",
+      "explanation": "The real roots are \\(-4\\) and \\(1\\). Also, \\(x^2-6x+9=(x-3)^2\\) adds \\(3\\), while \\(x^2+2x-3=(x+3)(x-1)\\) adds \\(-3\\) and repeats \\(1\\). The factor \\(x^2+4\\) has no real roots. Thus there are \\(\\boxed{4}\\) distinct real roots.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 649,
+      "subtopic": "Polynomial Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "The real roots are \\(-4\\) and \\(1\\). Also, \\(x^2-6x+9=(x-3)^2\\) adds \\(3\\), while \\(x^2+2x-3=(x+3)(x-1)\\) adds \\(-3\\) and repeats \\(1\\). The factor \\(x^2+4\\) has no real roots. Thus there are \\(\\boxed{4}\\) distinct real roots."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q650",
+      "groupId": "math-20261008-huge798-q650",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Rational/Radical Equations",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A rational function has the form \\(f(x)=\\frac{a}{x-b}\\), where \\(a\\) and \\(b\\) are constants. Its graph passes through \\((1,6)\\) and \\((4,3)\\). If \\(g(x)=f(x+2)-3\\), which equation defines \\(g\\)?",
+      "choices": {
+        "A": "\\(g(x)=\\frac{18}{x+4}-3\\)",
+        "B": "\\(g(x)=\\frac{18}{x}-3\\)",
+        "C": "\\(g(x)=\\frac{18}{x+4}+3\\)",
+        "D": "\\(g(x)=\\frac{18}{x-4}-3\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "The two points give \\(a/(1-b)=6\\) and \\(a/(4-b)=3\\). Solving gives \\(b=-2\\) and \\(a=18\\), so \\(f(x)=18/(x+2)\\). Therefore \\(g(x)=f(x+2)-3=\\boxed{18/(x+4)-3}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 650,
+      "subtopic": "Rational/Radical Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The two points give \\(a/(1-b)=6\\) and \\(a/(4-b)=3\\). Solving gives \\(b=-2\\) and \\(a=18\\), so \\(f(x)=18/(x+2)\\). Therefore \\(g(x)=f(x+2)-3=\\boxed{18/(x+4)-3}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q651",
+      "groupId": "math-20261008-huge798-q651",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Rational/Radical Equations",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The function \\(f\\) is defined by \\(f(x)=\\frac{24}{x}\\). If \\(f(k)=\\frac32\\), what is the value of \\(f(k+4)\\)?",
+      "choices": {
+        "A": "\\(\\frac32\\)",
+        "B": "\\(\\frac45\\)",
+        "C": "\\(\\frac65\\)",
+        "D": "\\(\\frac56\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "From \\(24/k=3/2\\), \\(k=16\\). Then \\(f(k+4)=f(20)=24/20=\\boxed{6/5}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 651,
+      "subtopic": "Rational/Radical Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "From \\(24/k=3/2\\), \\(k=16\\). Then \\(f(k+4)=f(20)=24/20=\\boxed{6/5}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q652",
+      "groupId": "math-20261008-huge798-q652",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The function \\(f\\) is defined by \\(f(x)=2(x-7)(x+3)+5\\). For what value of \\(x\\) does \\(f(x)\\) reach its minimum?",
+      "choices": {
+        "A": "-5",
+        "B": "2",
+        "C": "-2",
+        "D": "5"
+      },
+      "correctAnswer": "B",
+      "explanation": "The zeros of the quadratic factor are \\(7\\) and \\(-3\\), so the axis of symmetry is halfway between them: \\((7+(-3))/2=\\boxed{2}\\). The leading coefficient is positive, so the minimum occurs there.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 652,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The zeros of the quadratic factor are \\(7\\) and \\(-3\\), so the axis of symmetry is halfway between them: \\((7+(-3))/2=\\boxed{2}\\). The leading coefficient is positive, so the minimum occurs there.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q653",
+      "groupId": "math-20261008-huge798-q653",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Equivalent Expressions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "For positive \\(a\\) and \\(b\\), which expression is equivalent to \\(\\frac{\\sqrt{144a^{10}b^6}}{3a^2b}\\)?",
+      "choices": {
+        "A": "\\(4a^3b^2\\)",
+        "B": "\\(12a^3b^2\\)",
+        "C": "\\(4a^5b^2\\)",
+        "D": "\\(4a^3b^3\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "Because \\(a,b>0\\), \\(\\sqrt{144a^{10}b^6}=12a^5b^3\\). Dividing by \\(3a^2b\\) gives \\(\\boxed{4a^3b^2}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 653,
+      "subtopic": "Equivalent Expressions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "Because \\(a,b>0\\), \\(\\sqrt{144a^{10}b^6}=12a^5b^3\\). Dividing by \\(3a^2b\\) gives \\(\\boxed{4a^3b^2}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q654",
+      "groupId": "math-20261008-huge798-q654",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Rational/Radical Equations",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The positive variables \\(p\\), \\(q\\), and \\(r\\) satisfy \\(\\frac5r-\\frac2p=\\frac1q\\). Which expression is equivalent to \\(r\\)?",
+      "choices": {
+        "A": "\\(\\frac{5pq}{2p+q}\\)",
+        "B": "\\(\\frac{5(p+2q)}{pq}\\)",
+        "C": "\\(\\frac{5pq}{p+2q}\\)",
+        "D": "\\(\\frac{pq}{5(p+2q)}\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "Move \\(2/p\\) to the right: \\(5/r=2/p+1/q=(2q+p)/(pq)\\). Solving for \\(r\\) gives \\(\\boxed{5pq/(p+2q)}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 654,
+      "subtopic": "Rational/Radical Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Move \\(2/p\\) to the right: \\(5/r=2/p+1/q=(2q+p)/(pq)\\). Solving for \\(r\\) gives \\(\\boxed{5pq/(p+2q)}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q655",
+      "groupId": "math-20261008-huge798-q655",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The function \\(T(n)\\) gives the predicted air temperature, in degrees Celsius, \\(n\\) 15-minute intervals after noon. Which statement best interprets \\(T(14)\\approx21.6\\)?",
+      "choices": {
+        "A": "At approximately 2:10 p.m., the predicted temperature is 21.6°C.",
+        "B": "At approximately 3:30 p.m., the predicted temperature is 21.6°C.",
+        "C": "At approximately 3:30 p.m., the predicted temperature is 14°C.",
+        "D": "Fourteen minutes after noon, the predicted temperature is 21.6°C."
+      },
+      "correctAnswer": "B",
+      "explanation": "Fourteen 15-minute intervals are \\(14\\cdot15=210\\) minutes, or 3.5 hours after noon. That is 3:30 p.m., and the output is the predicted temperature, \\(21.6^\\circ\\text{C}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 655,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Fourteen 15-minute intervals are \\(14\\cdot15=210\\) minutes, or 3.5 hours after noon. That is 3:30 p.m., and the output is the predicted temperature, \\(21.6^\\circ\\text{C}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q656",
+      "groupId": "math-20261008-huge798-q656",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Polynomial Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "In the equation \\(y=(x-p)(x+p)(2x-p)(x-\\frac p2)(x+q)^2\\), \\(p\\) and \\(q\\) are distinct positive constants. How many distinct x-intercepts does the graph have?",
+      "choices": {
+        "A": "3",
+        "B": "5",
+        "C": "4",
+        "D": "6"
+      },
+      "correctAnswer": "C",
+      "explanation": "The factors give roots \\(p,-p,p/2,p/2,-q\\). The factors \\(2x-p\\) and \\(x-p/2\\) repeat the same root. Because \\(p\\) and \\(q\\) are distinct positive constants, the four distinct roots are \\(p,-p,p/2,-q\\), so there are \\(\\boxed{4}\\) x-intercepts.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 656,
+      "subtopic": "Polynomial Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The factors give roots \\(p,-p,p/2,p/2,-q\\). The factors \\(2x-p\\) and \\(x-p/2\\) repeat the same root. Because \\(p\\) and \\(q\\) are distinct positive constants, the four distinct roots are \\(p,-p,p/2,-q\\), so there are \\(\\boxed{4}\\) x-intercepts.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q657",
+      "groupId": "math-20261008-huge798-q657",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Equivalent Expressions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The area \\(A\\), in square centimeters, of a rectangle is \\(A(w)=w^2+13w\\), where \\(w>0\\) is its width in centimeters. Which expression represents its length?",
+      "choices": {
+        "A": "\\(13w\\)",
+        "B": "\\(w+13\\)",
+        "C": "\\(w^2+13\\)",
+        "D": "\\(w+\\frac{13}{w}\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "Factor the area: \\(A(w)=w(w+13)\\). Since area equals width times length and the width is \\(w\\), the length is \\(\\boxed{w+13}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 657,
+      "subtopic": "Equivalent Expressions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Factor the area: \\(A(w)=w(w+13)\\). Since area equals width times length and the width is \\(w\\), the length is \\(\\boxed{w+13}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q659",
+      "groupId": "math-20261008-huge798-q659",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "For every increase of 3 in \\(x\\), the value of \\(q(x)\\) decreases by 36%. If \\(q(1)=75\\), which equation defines \\(q\\)?",
+      "choices": {
+        "A": "\\(q(x)=75(0.64)^{x-1}\\)",
+        "B": "\\(q(x)=75(0.36)^{(x-1)/3}\\)",
+        "C": "\\(q(x)=75(1.36)^{(x-1)/3}\\)",
+        "D": "\\(q(x)=75(0.64)^{(x-1)/3}\\)"
+      },
+      "correctAnswer": "D",
+      "explanation": "A 36% decrease leaves 64%, so the multiplier is 0.64 every 3 units of \\(x\\). The number of 3-unit intervals after \\(x=1\\) is \\((x-1)/3\\), giving \\(\\boxed{q(x)=75(0.64)^{(x-1)/3}}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 659,
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "A 36% decrease leaves 64%, so the multiplier is 0.64 every 3 units of \\(x\\). The number of 3-unit intervals after \\(x=1\\) is \\((x-1)/3\\), giving \\(\\boxed{q(x)=75(0.64)^{(x-1)/3}}\\)."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q660",
+      "groupId": "math-20261008-huge798-q660",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "In the xy-plane, the parabola \\(y=2x^2-12x+5\\) intersects the horizontal line \\(y=k\\) at exactly one point. What is the value of \\(k\\)?",
+      "choices": {
+        "A": "5",
+        "B": "-18",
+        "C": "-13",
+        "D": "3"
+      },
+      "correctAnswer": "C",
+      "explanation": "A horizontal line meets this upward-opening parabola exactly once at the vertex. The vertex occurs at \\(x=3\\), where \\(y=2(3)^2-12(3)+5=-13\\). Thus \\(\\boxed{k=-13}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 660,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "A horizontal line meets this upward-opening parabola exactly once at the vertex. The vertex occurs at \\(x=3\\), where \\(y=2(3)^2-12(3)+5=-13\\). Thus \\(\\boxed{k=-13}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q661",
+      "groupId": "math-20261008-huge798-q661",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "An exponential relationship between \\(x\\) and \\(y\\) includes the points shown. Which equation represents the relationship?",
+      "choices": {
+        "A": "\\(y=2(3)^x\\)",
+        "B": "\\(y=18(27)^{x-2}\\)",
+        "C": "\\(y=2(27)^x\\)",
+        "D": "\\(y=18(3)^x\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "From \\(x=2\\) to \\(x=5\\), \\(x\\) increases by 3 while \\(y\\) is multiplied by \\(486/18=27\\). The per-unit factor is \\(\\sqrt[3]{27}=3\\). Since \\(18=a(3)^2\\), \\(a=2\\), so \\(\\boxed{y=2(3)^x}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 661,
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "From \\(x=2\\) to \\(x=5\\), \\(x\\) increases by 3 while \\(y\\) is multiplied by \\(486/18=27\\). The per-unit factor is \\(\\sqrt[3]{27}=3\\). Since \\(18=a(3)^2\\), \\(a=2\\), so \\(\\boxed{y=2(3)^x}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "table": {
+        "caption": "Exponential relationship",
+        "headers": [
+          "x",
+          "y"
+        ],
+        "rows": [
+          [
+            "2",
+            "18"
+          ],
+          [
+            "5",
+            "486"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q662",
+      "groupId": "math-20261008-huge798-q662",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A quadratic function has x-intercepts at \\(-2\\) and \\(6\\), and its graph passes through \\((0,-12)\\). What is the vertex of the graph?",
+      "choices": {
+        "A": "\\((-2,0)\\)",
+        "B": "\\((2,-12)\\)",
+        "C": "\\((6,0)\\)",
+        "D": "\\((2,-16)\\)"
+      },
+      "correctAnswer": "D",
+      "explanation": "Write \\(f(x)=a(x+2)(x-6)\\). Using \\(f(0)=-12\\) gives \\(a=1\\). The axis of symmetry is midway between \\(-2\\) and \\(6\\), so \\(x=2\\), and \\(f(2)=(4)(-4)=-16\\). The vertex is \\(\\boxed{(2,-16)}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 662,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "Write \\(f(x)=a(x+2)(x-6)\\). Using \\(f(0)=-12\\) gives \\(a=1\\). The axis of symmetry is midway between \\(-2\\) and \\(6\\), so \\(x=2\\), and \\(f(2)=(4)(-4)=-16\\). The vertex is \\(\\boxed{(2,-16)}\\)."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q663",
+      "groupId": "math-20261008-huge798-q663",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "What is the positive solution to \\(3(x-2)^2+5=80\\)?",
+      "choices": {
+        "A": "3",
+        "B": "7",
+        "C": "5",
+        "D": "27"
+      },
+      "correctAnswer": "B",
+      "explanation": "Subtract 5 and divide by 3: \\((x-2)^2=25\\). Thus \\(x-2=\\pm5\\), so \\(x=7\\) or \\(x=-3\\). The positive solution is \\(\\boxed{7}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 663,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Subtract 5 and divide by 3: \\((x-2)^2=25\\). Thus \\(x-2=\\pm5\\), so \\(x=7\\) or \\(x=-3\\). The positive solution is \\(\\boxed{7}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q665",
+      "groupId": "math-20261008-huge798-q665",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Rational/Radical Equations",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The function \\(g\\) is defined by \\(g(x)=\\sqrt{x+15}+7\\). What is the value of \\(g(66)-g(10)\\)?",
+      "choices": {
+        "A": "16",
+        "B": "12",
+        "C": "4",
+        "D": "9"
+      },
+      "correctAnswer": "C",
+      "explanation": "\\(g(66)=\\sqrt{81}+7=16\\) and \\(g(10)=\\sqrt{25}+7=12\\). Therefore \\(g(66)-g(10)=\\boxed{4}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 665,
+      "subtopic": "Rational/Radical Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "\\(g(66)=\\sqrt{81}+7=16\\) and \\(g(10)=\\sqrt{25}+7=12\\). Therefore \\(g(66)-g(10)=\\boxed{4}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q666",
+      "groupId": "math-20261008-huge798-q666",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Rational/Radical Equations",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The function \\(f\\) is defined by \\(f(x)=\\frac6{x-1}-2\\). The graph of \\(f\\) is translated 3 units left and 5 units up to create \\(g\\). Which equation defines \\(g\\)?",
+      "choices": {
+        "A": "\\(g(x)=\\frac6{x+2}+3\\)",
+        "B": "\\(g(x)=\\frac6{x-4}+3\\)",
+        "C": "\\(g(x)=\\frac6{x+2}-7\\)",
+        "D": "\\(g(x)=\\frac6{x-4}-7\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "A shift 3 units left replaces \\(x\\) by \\(x+3\\): \\(f(x+3)=6/(x+2)-2\\). Shifting up 5 gives \\(\\boxed{g(x)=6/(x+2)+3}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 666,
+      "subtopic": "Rational/Radical Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "A shift 3 units left replaces \\(x\\) by \\(x+3\\): \\(f(x+3)=6/(x+2)-2\\). Shifting up 5 gives \\(\\boxed{g(x)=6/(x+2)+3}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q667",
+      "groupId": "math-20261008-huge798-q667",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The function \\(f(t)=(1.72)^{t/3}\\) can be written in the form \\(f(t)=\\left(1+\\frac{p}{100}\\right)^t\\). Which value is closest to \\(p\\)?",
+      "choices": {
+        "A": "72.0",
+        "B": "24.0",
+        "C": "19.8",
+        "D": "57.3"
+      },
+      "correctAnswer": "C",
+      "explanation": "Rewrite \\((1.72)^{t/3}=\\left((1.72)^{1/3}\\right)^t\\). Since \\((1.72)^{1/3}\\approx1.198\\), the per-unit growth rate is about 0.198, or \\(\\boxed{19.8\\%}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 667,
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Rewrite \\((1.72)^{t/3}=\\left((1.72)^{1/3}\\right)^t\\). Since \\((1.72)^{1/3}\\approx1.198\\), the per-unit growth rate is about 0.198, or \\(\\boxed{19.8\\%}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q669",
+      "groupId": "math-20261008-huge798-q669",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Nonlinear Equations/Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "What is the sum of all real solutions to \\(|4x-7|=3x+8\\)?",
+      "choices": {
+        "A": "\\(\\frac{106}{7}\\)",
+        "B": "14",
+        "C": "\\(\\frac{104}{7}\\)",
+        "D": "15"
+      },
+      "correctAnswer": "C",
+      "explanation": "Solve the two cases. \\(4x-7=3x+8\\) gives \\(x=15\\). Also, \\(4x-7=-(3x+8)\\) gives \\(7x=-1\\), so \\(x=-1/7\\). Their sum is \\(15-1/7=\\boxed{104/7}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 669,
+      "subtopic": "Nonlinear Equations/Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Solve the two cases. \\(4x-7=3x+8\\) gives \\(x=15\\). Also, \\(4x-7=-(3x+8)\\) gives \\(7x=-1\\), so \\(x=-1/7\\). Their sum is \\(15-1/7=\\boxed{104/7}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q670",
+      "groupId": "math-20261008-huge798-q670",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Polynomial Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The function \\(f(x)=(x+1)(x-4)^2(x^2-25)\\). If \\(f(9-w)=0\\), what is the sum of all possible values of \\(w\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The distinct zeros of \\(f\\) are \\(-1,4,5,-5\\). Thus \\(9-w\\) can equal those four values, giving \\(w=10,5,4,14\\). Their sum is \\(\\boxed{33}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 670,
+      "subtopic": "Polynomial Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "33"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q672",
+      "groupId": "math-20261008-huge798-q672",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving and Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A machine prints 45 labels every 75 seconds at a constant rate. How many labels does it print in 1 hour?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The rate is \\(45/75=0.6\\) label per second. In 3,600 seconds, the machine prints \\(0.6(3600)=\\boxed{2160}\\) labels.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 672,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "2160"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q673",
+      "groupId": "math-20261008-huge798-q673",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving and Data Analysis",
+      "skill": "Probability",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A fair 18-sided die is labeled with the integers 1 through 18. What is the probability that the result is a factor of 18 greater than 2?",
+      "choices": {
+        "A": "\\(\\frac19\\)",
+        "B": "\\(\\frac29\\)",
+        "C": "\\(\\frac49\\)",
+        "D": "\\(\\frac7{18}\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "The factors of 18 greater than 2 are 3, 6, 9, and 18. There are 4 favorable outcomes out of 18 equally likely outcomes, so the probability is \\(4/18=\\boxed{2/9}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 673,
+      "subtopic": "Probability",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The factors of 18 greater than 2 are 3, 6, 9, and 18. There are 4 favorable outcomes out of 18 equally likely outcomes, so the probability is \\(4/18=\\boxed{2/9}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q674",
+      "groupId": "math-20261008-huge798-q674",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving and Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A random sample of 90 employees is selected from a company with 1,260 employees. In the sample, 34 employees use public transportation to commute. Based on the sample, about how many of the company's employees would be expected to use public transportation?",
+      "choices": {
+        "A": "420",
+        "B": "34",
+        "C": "476",
+        "D": "756"
+      },
+      "correctAnswer": "C",
+      "explanation": "Use the sample proportion: \\(34/90\\). Multiplying by 1,260 gives \\((34/90)(1260)=34\\cdot14=\\boxed{476}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 674,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Use the sample proportion: \\(34/90\\). Multiplying by 1,260 gives \\((34/90)(1260)=34\\cdot14=\\boxed{476}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q675",
+      "groupId": "math-20261008-huge798-q675",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving and Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A positive quantity is decreased by 32% and then the result is increased by 15%. Compared with the original quantity, what is the overall percent decrease?",
+      "choices": {
+        "A": "15%",
+        "B": "47%",
+        "C": "32%",
+        "D": "21.8%"
+      },
+      "correctAnswer": "D",
+      "explanation": "A 32% decrease multiplies by 0.68, and a 15% increase multiplies by 1.15. The combined factor is \\(0.68(1.15)=0.782\\), so the final value is 78.2% of the original: an overall decrease of \\(\\boxed{21.8\\%}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 675,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "A 32% decrease multiplies by 0.68, and a 15% increase multiplies by 1.15. The combined factor is \\(0.68(1.15)=0.782\\), so the final value is 78.2% of the original: an overall decrease of \\(\\boxed{21.8\\%}\\)."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q676",
+      "groupId": "math-20261008-huge798-q676",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving and Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The data set is \\(7,12,5,k,9,15,6,10\\), where \\(k\\) is an integer. If the median of the data set is 8.5, which of the following could be the value of \\(k\\)?",
+      "choices": {
+        "A": "11",
+        "B": "4",
+        "C": "8",
+        "D": "14"
+      },
+      "correctAnswer": "C",
+      "explanation": "If \\(k=8\\), the ordered data are \\(5,6,7,8,9,10,12,15\\). The median is the average of the fourth and fifth values: \\((8+9)/2=8.5\\). Thus \\(\\boxed{k=8}\\) could work.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 676,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "If \\(k=8\\), the ordered data are \\(5,6,7,8,9,10,12,15\\). The median is the average of the fourth and fifth values: \\((8+9)/2=8.5\\). Thus \\(\\boxed{k=8}\\) could work.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q677",
+      "groupId": "math-20261008-huge798-q677",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A cable is cut into three pieces. Two pieces have equal length, and the third piece is 14 centimeters longer than either equal piece. The total length is 122 centimeters. What is the length, in centimeters, of each of the two equal pieces?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Let each equal piece have length \\(x\\). Then the third has length \\(x+14\\), so \\(2x+(x+14)=122\\). Thus \\(3x=108\\) and \\(\\boxed{x=36}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 677,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "36"
+      ]
     }
   ],
   "classificationVersion": "2026-10-07-v1",
