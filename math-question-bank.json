@@ -982,10 +982,149 @@
               }
             }
           }
+        },
+        {
+          "range": "241-280",
+          "reviewed": 40,
+          "retained": 27,
+          "excluded": [
+            {
+              "sourceQuestionNumber": 242,
+              "reason": "Close reskin of existing line–parabola intersection items, especially q192; the conditioned intersection changes the requested coordinate but not the core reasoning."
+            },
+            {
+              "sourceQuestionNumber": 244,
+              "reason": "Close reskin of existing quadratic minimum/vertex items such as math-20261006-batch465-q247 and q232."
+            },
+            {
+              "sourceQuestionNumber": 249,
+              "reason": "Low-value reskin of recent solve-for-a-variable linear rearrangement items q185 and q208."
+            },
+            {
+              "sourceQuestionNumber": 254,
+              "reason": "Close reskin of the existing rectangle area/dimension setup math-20261006-new409-q107; source q168 was already rejected for the same reason."
+            },
+            {
+              "sourceQuestionNumber": 256,
+              "reason": "Close interpretation reskin of q193: both ask for the contextual meaning of a supplied exponential model value."
+            },
+            {
+              "sourceQuestionNumber": 258,
+              "reason": "Excluded for source corruption: the pasted definition of g and the supplied numerical evaluation cannot be reconciled into a unique function, so reconstructing it would require guessing."
+            },
+            {
+              "sourceQuestionNumber": 259,
+              "reason": "Low-value reskin of existing no-real-solution quadratic/discriminant items, including newly retained q229."
+            },
+            {
+              "sourceQuestionNumber": 262,
+              "reason": "Near-duplicate GCF factoring structure of math-20261006-new409-q008 and newly retained q203."
+            },
+            {
+              "sourceQuestionNumber": 265,
+              "reason": "Close contextual-interpretation reskin of q193 using another exponential model value tied to a calendar year."
+            },
+            {
+              "sourceQuestionNumber": 268,
+              "reason": "Close reskin of existing exponential y-intercept/coefficient-display items such as math-20261006-batch465-q160 and q220."
+            },
+            {
+              "sourceQuestionNumber": 275,
+              "reason": "Near-duplicate polynomial combine-like-terms structure of math-20261006-batch465-q275."
+            },
+            {
+              "sourceQuestionNumber": 278,
+              "reason": "Near-duplicate polynomial combine-like-terms structure of math-20261006-batch465-q275 and q179."
+            },
+            {
+              "sourceQuestionNumber": 279,
+              "reason": "Close reskin of newly retained q225: both use the quadratic formula and encode one root with sqrt(k), then ask for k."
+            }
+          ],
+          "repairs": {
+            "fractionRadicalExponentNotation": [
+              241,
+              245,
+              246,
+              247,
+              250,
+              251,
+              252,
+              257,
+              260,
+              261,
+              264,
+              266,
+              268,
+              269,
+              270,
+              271,
+              272,
+              273,
+              279,
+              280
+            ],
+            "groupingRepairs": [
+              273
+            ],
+            "ambiguousSourceExcluded": [
+              258
+            ],
+            "notes": [
+              "Recovered q246 as 3√(2x+1)=15, q247 as f(x)=1/(3x+2), q251 as f(x)=-a^(x+1)+b, q260 as 48(1/2)^(x-1), and q271 as a√(x+9)+b from the supplied derivations.",
+              "Restored q273's missing outer bracket around 2x^4-(7x^2-3x)+6; this is required for the source solution's x^2 coefficient and answer key to be consistent.",
+              "Rejected q258 rather than inventing a formula because its pasted function and worked evaluation are internally inconsistent."
+            ]
+          },
+          "visuals": {
+            "graphs": [
+              267,
+              277
+            ],
+            "diagrams": [],
+            "tables": [
+              260
+            ]
+          },
+          "difficultyCalibration": {
+            "approach": "Calibrated relative to the current bank while keeping the retained tranche exactly balanced: 9 Easy, 9 Medium, and 9 Hard.",
+            "addedBySubtopic": {
+              "Quadratics": {
+                "Easy": 3,
+                "Medium": 5,
+                "Hard": 3
+              },
+              "Equivalent Expressions": {
+                "Easy": 2,
+                "Medium": 0,
+                "Hard": 2
+              },
+              "Rational/Radical Equations": {
+                "Easy": 1,
+                "Medium": 2,
+                "Hard": 2
+              },
+              "Exponential Functions": {
+                "Easy": 2,
+                "Medium": 1,
+                "Hard": 2
+              },
+              "Linear Equations": {
+                "Easy": 0,
+                "Medium": 1,
+                "Hard": 0
+              },
+              "Polynomial Functions": {
+                "Easy": 1,
+                "Medium": 0,
+                "Hard": 0
+              }
+            }
+          }
         }
       ],
-      "retainedSoFar": 203,
-      "reviewedSoFar": 240
+      "retainedSoFar": 230,
+      "reviewedSoFar": 280
     }
   },
   "questions": [
@@ -46963,6 +47102,874 @@
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "Take the ratio: \\(\\frac{P(6)}{P(2)}=3^{6r-2r}=3^{4r}\\). Since \\(16{,}200/5{,}400=3\\), \\(3^{4r}=3^1\\), so \\(4r=1\\) and \\(\\boxed{r=\\frac14}\\).",
         "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q241",
+      "groupId": "math-20261008-huge798-q241",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "What is the smallest solution to \\((2x-1)^2=5x+14\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Expand: \\(4x^2-4x+1=5x+14\\), so \\(4x^2-9x-13=0=(4x-13)(x+1)\\). The roots are \\(13/4\\) and \\(-1\\), so the smaller is \\(\\boxed{-1}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 241,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "-1"
+      ],
+      "desmosMethod": "Graph \\(y=(2x-1)^2\\) and \\(y=5x+14\\). Their x-coordinates of intersection are \\(-1\\) and \\(3.25\\)."
+    },
+    {
+      "id": "math-20261008-huge798-q243",
+      "groupId": "math-20261008-huge798-q243",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A quadratic function models the height of a projectile. The model estimates that the projectile was launched from a height of 5 meters, reaches a maximum height of 37 meters 4 seconds after launch, and is 24.5 meters high 1.5 seconds after launch. At what later time does the model predict that the projectile will again be 24.5 meters high?",
+      "choices": {
+        "A": "5.5 seconds",
+        "B": "6.5 seconds",
+        "C": "8 seconds",
+        "D": "9.5 seconds"
+      },
+      "correctAnswer": "B",
+      "explanation": "The quadratic is symmetric about \\(t=4\\). The time \\(1.5\\) is \\(2.5\\) seconds before the vertex, so the same height occurs \\(2.5\\) seconds after it: \\(4+2.5=\\boxed{6.5}\\) seconds.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 243,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The quadratic is symmetric about \\(t=4\\). The time \\(1.5\\) is \\(2.5\\) seconds before the vertex, so the same height occurs \\(2.5\\) seconds after it: \\(4+2.5=\\boxed{6.5}\\) seconds.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q245",
+      "groupId": "math-20261008-huge798-q245",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Equivalent Expressions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "Which expression is equivalent to \\((2d-3)(4d^2+d-5)\\)?",
+      "choices": {
+        "A": "\\(8d^3+14d^2-13d+15\\)",
+        "B": "\\(8d^3-10d^2-13d+15\\)",
+        "C": "\\(8d^3-10d^2-7d+15\\)",
+        "D": "\\(8d^3-14d^2+5d-15\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "Distribute: \\(8d^3+2d^2-10d-12d^2-3d+15\\). Combining like terms gives \\(\\boxed{8d^3-10d^2-13d+15}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 245,
+      "subtopic": "Equivalent Expressions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Distribute: \\(8d^3+2d^2-10d-12d^2-3d+15\\). Combining like terms gives \\(\\boxed{8d^3-10d^2-13d+15}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q246",
+      "groupId": "math-20261008-huge798-q246",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Rational/Radical Equations",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "If \\(3\\sqrt{2x+1}=15\\), what is the value of \\(4x-2\\)?",
+      "choices": {
+        "A": "22",
+        "B": "46",
+        "C": "48",
+        "D": "94"
+      },
+      "correctAnswer": "B",
+      "explanation": "Divide by 3 to get \\(\\sqrt{2x+1}=5\\). Squaring gives \\(2x+1=25\\), so \\(x=12\\). Therefore \\(4x-2=48-2=\\boxed{46}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 246,
+      "subtopic": "Rational/Radical Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Divide by 3 to get \\(\\sqrt{2x+1}=5\\). Squaring gives \\(2x+1=25\\), so \\(x=12\\). Therefore \\(4x-2=48-2=\\boxed{46}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q247",
+      "groupId": "math-20261008-huge798-q247",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Rational/Radical Equations",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The function \\(f\\) is defined by \\(f(x)=\\frac{1}{3x+2}\\). What is the value of \\(f(f(1))\\)?",
+      "choices": {
+        "A": "\\(\\frac15\\)",
+        "B": "\\(\\frac5{13}\\)",
+        "C": "\\(\\frac5{11}\\)",
+        "D": "\\(\\frac{13}{5}\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "First, \\(f(1)=1/(3+2)=1/5\\). Then \\(f(1/5)=1/(3/5+2)=1/(13/5)=\\boxed{5/13}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 247,
+      "subtopic": "Rational/Radical Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "First, \\(f(1)=1/(3+2)=1/5\\). Then \\(f(1/5)=1/(3/5+2)=1/(13/5)=\\boxed{5/13}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q248",
+      "groupId": "math-20261008-huge798-q248",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Equivalent Expressions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "If \\(a=3m-2n+4\\) and \\(b=5m+n-7\\), which expression is equivalent to \\(2a-b\\)?",
+      "choices": {
+        "A": "\\(m-5n+1\\)",
+        "B": "\\(11m-5n+1\\)",
+        "C": "\\(m-5n+15\\)",
+        "D": "\\(m-3n+15\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "Substitute and simplify: \\(2a-b=2(3m-2n+4)-(5m+n-7)=m-5n+15\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 248,
+      "subtopic": "Equivalent Expressions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Substitute and simplify: \\(2a-b=2(3m-2n+4)-(5m+n-7)=m-5n+15\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q250",
+      "groupId": "math-20261008-huge798-q250",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "In the equation \\(6(4x^2+2bx)+a(2x+b)=0\\), \\(a\\) and \\(b\\) are positive constants. The product of the solutions is \\(kab\\), where \\(k\\) is a constant. What is \\(k\\)?",
+      "choices": {
+        "A": "\\(\\frac1{24}\\)",
+        "B": "\\(\\frac1{12}\\)",
+        "C": "\\(\\frac16\\)",
+        "D": "24"
+      },
+      "correctAnswer": "A",
+      "explanation": "Since \\(6(4x^2+2bx)=12x(2x+b)\\), the equation factors as \\((2x+b)(12x+a)=0\\). The roots are \\(-b/2\\) and \\(-a/12\\), whose product is \\(ab/24\\). Thus \\(\\boxed{k=1/24}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 250,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "Since \\(6(4x^2+2bx)=12x(2x+b)\\), the equation factors as \\((2x+b)(12x+a)=0\\). The roots are \\(-b/2\\) and \\(-a/12\\), whose product is \\(ab/24\\). Thus \\(\\boxed{k=1/24}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q251",
+      "groupId": "math-20261008-huge798-q251",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The function \\(f\\) is defined by \\(f(x)=-a^{x+1}+b\\), where \\(a>0\\). The graph of \\(y=f(x)+4\\) has a y-intercept at \\((0,7)\\). If \\(ab=40\\), what is the value of \\(a\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "At \\(x=0\\), \\(-a+b+4=7\\), so \\(b=a+3\\). Since \\(ab=40\\), \\(a(a+3)=40\\), so \\(a^2+3a-40=0=(a+8)(a-5)\\). Because \\(a>0\\), \\(\\boxed{a=5}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 251,
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "5"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q252",
+      "groupId": "math-20261008-huge798-q252",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Rational/Radical Equations",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The equation \\(p=3+\\frac{k}{5j+4}\\) relates positive numbers \\(p,j,\\) and \\(k\\), where \\(p>3\\). Which equation correctly expresses \\(5j+4\\) in terms of \\(p\\) and \\(k\\)?",
+      "choices": {
+        "A": "\\(5j+4=\\frac{k}{p-3}\\)",
+        "B": "\\(5j+4=\\frac{p-3}{k}\\)",
+        "C": "\\(5j+4=\\frac{k}{p}-3\\)",
+        "D": "\\(5j+4=\\frac{k}{p+3}\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "Subtract 3: \\(p-3=k/(5j+4)\\). Multiply by \\(5j+4\\) and divide by \\(p-3\\): \\(\\boxed{5j+4=\\frac{k}{p-3}}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 252,
+      "subtopic": "Rational/Radical Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "Subtract 3: \\(p-3=k/(5j+4)\\). Multiply by \\(5j+4\\) and divide by \\(p-3\\): \\(\\boxed{5j+4=\\frac{k}{p-3}}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q253",
+      "groupId": "math-20261008-huge798-q253",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The function \\(g\\) is defined by \\(g(x)=(x-6)(t-2x)\\), where \\(t\\) is a constant. The graph of \\(y=g(x)\\) passes through \\((9,0)\\). What is the value of \\(g(0)\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Since \\(g(9)=0\\), \\((9-6)(t-18)=0\\), so \\(t=18\\). Then \\(g(0)=(0-6)(18) = \\boxed{-108}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 253,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "-108"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q255",
+      "groupId": "math-20261008-huge798-q255",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "If \\(2x^2-8x-10=0\\), what is the value of \\(3x^2-12x+4\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Divide the given equation by 2: \\(x^2-4x=5\\). Then \\(3x^2-12x+4=3(x^2-4x)+4=15+4=\\boxed{19}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 255,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "19"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q257",
+      "groupId": "math-20261008-huge798-q257",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "In the system \\(y+2k=3x+8\\) and \\(y-k=x^2-x-10\\), \\(k\\) is a constant. The system has exactly one distinct real solution. What is the value of \\(k\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Set \\(3x+8-2k=x^2-x-10+k\\), giving \\(x^2-4x+3k-18=0\\). Exactly one real solution requires discriminant 0: \\(16-4(3k-18)=0\\). Thus \\(88-12k=0\\), so \\(\\boxed{k=22/3}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 257,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "22/3"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q260",
+      "groupId": "math-20261008-huge798-q260",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The function \\(q\\) is defined by \\(q(x)=48\\left(\\frac12\\right)^{x-1}\\). Which row gives the correct corresponding values?",
+      "choices": {
+        "A": "\\(q(-1)=12,\\ q(1)=48,\\ q(3)=192\\)",
+        "B": "\\(q(-1)=192,\\ q(1)=48,\\ q(3)=12\\)",
+        "C": "\\(q(-1)=96,\\ q(1)=48,\\ q(3)=24\\)",
+        "D": "\\(q(-1)=192,\\ q(1)=96,\\ q(3)=48\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "\\(q(-1)=48(1/2)^{-2}=192\\), \\(q(1)=48(1/2)^0=48\\), and \\(q(3)=48(1/2)^2=12\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 260,
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "\\(q(-1)=48(1/2)^{-2}=192\\), \\(q(1)=48(1/2)^0=48\\), and \\(q(3)=48(1/2)^2=12\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q261",
+      "groupId": "math-20261008-huge798-q261",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The solutions to \\(2x^2+16x+22=0\\) are \\(r<s\\). The solutions to \\(3x^2+18x-33=0\\) are \\(t<u\\). The solutions to \\(x^2+14x+c=0\\) are \\(r+t\\) and \\(s+u\\), where \\(c\\) is a constant. What is \\(c\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The first roots are \\(-4\\pm\\sqrt5\\); the second are \\(-3\\pm2\\sqrt5\\). Therefore the new roots are \\(-7\\pm3\\sqrt5\\). Their product is \\(49-45=4\\), so \\(\\boxed{c=4}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 261,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "4"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q263",
+      "groupId": "math-20261008-huge798-q263",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "In the equation \\(kx(x-2)+9=4x\\), \\(k\\) is an integer constant. If the equation has no real solution, what is the least possible value of \\(k\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Rewrite as \\(kx^2-(2k+4)x+9=0\\). No real roots requires \\((2k+4)^2-36k<0\\), or \\(4(k-1)(k-4)<0\\). Thus \\(1<k<4\\), and the least integer is \\(\\boxed2\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 263,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "2"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q264",
+      "groupId": "math-20261008-huge798-q264",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "What is the sum of the solutions to \\(5x+15=10(x-7)(x+3)-2x-6\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Factor \\(x+3\\): \\(5(x+3)=(x+3)(10x-72)\\). Thus \\((x+3)(10x-77)=0\\), so the roots are \\(-3\\) and \\(77/10\\). Their sum is \\(\\boxed{47/10}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 264,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "47/10",
+        "4.7"
+      ],
+      "desmosMethod": "Graph both sides. The intersections have x-coordinates \\(-3\\) and \\(7.7\\), whose sum is \\(4.7\\)."
+    },
+    {
+      "id": "math-20261008-huge798-q266",
+      "groupId": "math-20261008-huge798-q266",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Equivalent Expressions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "Which expression is equivalent to \\((x^2-5)^2+(x-3)(x+3)-2(x^2-5)(x-1)\\)?",
+      "choices": {
+        "A": "\\(x^4-2x^3-9x^2+10x+16\\)",
+        "B": "\\(x^4-2x^3-7x^2+10x+6\\)",
+        "C": "\\(x^4+2x^3-7x^2-10x+6\\)",
+        "D": "\\(x^4-2x^3-7x^2-10x+6\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "Expand the three parts: \\((x^2-5)^2=x^4-10x^2+25\\), \\((x-3)(x+3)=x^2-9\\), and \\(-2(x^2-5)(x-1)=-2x^3+2x^2+10x-10\\). Combining gives \\(\\boxed{x^4-2x^3-7x^2+10x+6}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 266,
+      "subtopic": "Equivalent Expressions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Expand the three parts: \\((x^2-5)^2=x^4-10x^2+25\\), \\((x-3)(x+3)=x^2-9\\), and \\(-2(x^2-5)(x-1)=-2x^3+2x^2+10x-10\\). Combining gives \\(\\boxed{x^4-2x^3-7x^2+10x+6}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q267",
+      "groupId": "math-20261008-huge798-q267",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The graph shows an exponential model for the population \\(P(t)\\), in thousands, of a microorganism colony \\(t\\) hours after an observation began. The graph passes through \\((0,8)\\) and \\((2,18)\\). By what factor does the population increase from \\(t=0\\) to \\(t=1\\)?",
+      "choices": {
+        "A": "1.25",
+        "B": "2.25",
+        "C": "1.5",
+        "D": "10"
+      },
+      "correctAnswer": "C",
+      "explanation": "If the hourly factor is \\(r\\), then \\(8r^2=18\\). Thus \\(r^2=9/4\\), so \\(r=\\boxed{3/2=1.5}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 267,
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "If the hourly factor is \\(r\\), then \\(8r^2=18\\). Thus \\(r^2=9/4\\), so \\(r=\\boxed{3/2=1.5}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "xy",
+        "caption": "Exponential population model",
+        "xMin": 0,
+        "xMax": 4,
+        "yMin": 0,
+        "yMax": 45,
+        "xStep": 1,
+        "yStep": 5,
+        "xLabel": "t (hours)",
+        "yLabel": "P(t) (thousands)",
+        "series": [
+          {
+            "label": "P(t)",
+            "points": [
+              [
+                0,
+                8
+              ],
+              [
+                1,
+                12
+              ],
+              [
+                2,
+                18
+              ],
+              [
+                3,
+                27
+              ],
+              [
+                4,
+                40.5
+              ]
+            ],
+            "showPoints": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q269",
+      "groupId": "math-20261008-huge798-q269",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Rational/Radical Equations",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "For \\(x\\ne-3\\) and \\(x\\ne3\\), which expression is equivalent to \\(\\frac{3x+2}{x^2-9}+\\frac{x-4}{x^2+6x+9}\\)?",
+      "choices": {
+        "A": "\\(\\frac{4x^2+4x+18}{(x-3)(x+3)^2}\\)",
+        "B": "\\(\\frac{4x^2-4x+18}{(x-3)(x+3)^2}\\)",
+        "C": "\\(\\frac{4x^2+4x+18}{x^2-9}\\)",
+        "D": "\\(\\frac{4x^2+4x-6}{(x-3)(x+3)^2}\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "Factor the denominators: \\(x^2-9=(x-3)(x+3)\\) and \\(x^2+6x+9=(x+3)^2\\). The common denominator is \\((x-3)(x+3)^2\\). The numerator becomes \\((3x+2)(x+3)+(x-4)(x-3)=4x^2+4x+18\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 269,
+      "subtopic": "Rational/Radical Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "Factor the denominators: \\(x^2-9=(x-3)(x+3)\\) and \\(x^2+6x+9=(x+3)^2\\). The common denominator is \\((x-3)(x+3)^2\\). The numerator becomes \\((3x+2)(x+3)+(x-4)(x-3)=4x^2+4x+18\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q270",
+      "groupId": "math-20261008-huge798-q270",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The predicted number of bacteria in a culture \\(t\\) hours after an initial measurement is \\(N(t)=1600(2)^{(t-6)/3}\\). According to the model, how many bacteria were present at the time of the initial measurement?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The initial measurement is at \\(t=0\\). Thus \\(N(0)=1600(2)^{-2}=1600/4=\\boxed{400}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 270,
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "400"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q271",
+      "groupId": "math-20261008-huge798-q271",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Rational/Radical Equations",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The function \\(f(x)=a\\sqrt{x+9}+b\\) is defined for \\(x\\ge-9\\). Its graph passes through \\((-9,5)\\), and \\(f(7)<1\\). Which statement must be true?",
+      "choices": {
+        "A": "\\(a=-2\\)",
+        "B": "\\(a+b<4\\)",
+        "C": "\\(b<0\\)",
+        "D": "\\(a>b\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "Using \\((-9,5)\\), \\(b=5\\). Also \\(f(7)=4a+5<1\\), so \\(a<-1\\). Therefore \\(a+b=a+5<4\\), so choice B must be true.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 271,
+      "subtopic": "Rational/Radical Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Using \\((-9,5)\\), \\(b=5\\). Also \\(f(7)=4a+5<1\\), so \\(a<-1\\). Therefore \\(a+b=a+5<4\\), so choice B must be true.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q272",
+      "groupId": "math-20261008-huge798-q272",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "Which of the following is a solution to \\(\\frac{(2x-5)^2}{9}=16\\)?",
+      "choices": {
+        "A": "\\(\\frac72\\)",
+        "B": "\\(-\\frac{17}{2}\\)",
+        "C": "\\(\\frac{29}{2}\\)",
+        "D": "\\(\\frac{17}{2}\\)"
+      },
+      "correctAnswer": "D",
+      "explanation": "Multiply by 9: \\((2x-5)^2=144\\). Taking \\(2x-5=12\\) gives \\(x=17/2\\), which is choice D.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 272,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "Multiply by 9: \\((2x-5)^2=144\\). Taking \\(2x-5=12\\) gives \\(x=17/2\\), which is choice D."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q273",
+      "groupId": "math-20261008-huge798-q273",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Equivalent Expressions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The expression \\((4x^4-3x^2+5x)-\\left[2x^4-(7x^2-3x)+6\\right]-(x^4+5x^2-2x)\\) can be written as \\(x^4+ax^2+4x-6\\), where \\(a\\) is a constant. What is \\(a\\)?",
+      "choices": {
+        "A": "-5",
+        "B": "1",
+        "C": "-1",
+        "D": "5"
+      },
+      "correctAnswer": "C",
+      "explanation": "Distribute the outer subtraction signs. The \\(x^2\\)-coefficient is \\(-3+7-5=-1\\), while the other terms simplify to \\(x^4+4x-6\\). Thus \\(a=\\boxed{-1}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 273,
+      "subtopic": "Equivalent Expressions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Distribute the outer subtraction signs. The \\(x^2\\)-coefficient is \\(-3+7-5=-1\\), while the other terms simplify to \\(x^4+4x-6\\). Thus \\(a=\\boxed{-1}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q274",
+      "groupId": "math-20261008-huge798-q274",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The positive quantities \\(Q,R,\\) and \\(T\\) satisfy \\(Q=R(24-T)+3R\\). Which equation expresses \\(T\\) in terms of \\(Q\\) and \\(R\\)?",
+      "choices": {
+        "A": "\\(T=\\frac QR-27\\)",
+        "B": "\\(T=27-\\frac QR\\)",
+        "C": "\\(T=27-\\frac RQ\\)",
+        "D": "\\(T=24-\\frac{Q}{3R}\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "Combine terms: \\(Q=R(27-T)\\). Dividing by \\(R\\) gives \\(Q/R=27-T\\), so \\(\\boxed{T=27-Q/R}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 274,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Combine terms: \\(Q=R(27-T)\\). Dividing by \\(R\\) gives \\(Q/R=27-T\\), so \\(\\boxed{T=27-Q/R}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q276",
+      "groupId": "math-20261008-huge798-q276",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Polynomial Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "What is an x-coordinate of an x-intercept of \\(y=2(x+4)(x^2-9x+20)\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Factor \\(x^2-9x+20=(x-4)(x-5)\\). The x-intercepts satisfy \\((x+4)(x-4)(x-5)=0\\), so any of \\(\\boxed{-4,4,5}\\) is valid.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 276,
+      "subtopic": "Polynomial Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "-4",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q277",
+      "groupId": "math-20261008-huge798-q277",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The graph shows a system consisting of a linear equation and a quadratic equation. Which ordered pair is the solution to the system that has a positive x-coordinate?",
+      "choices": {
+        "A": "\\((-2,4)\\)",
+        "B": "\\((2,0)\\)",
+        "C": "\\((3,-1)\\)",
+        "D": "\\((1,-5)\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "The two graphs intersect at \\((-2,4)\\) and \\((3,-1)\\). The intersection with a positive x-coordinate is \\(\\boxed{(3,-1)}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 277,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The two graphs intersect at \\((-2,4)\\) and \\((3,-1)\\). The intersection with a positive x-coordinate is \\(\\boxed{(3,-1)}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "xy",
+        "caption": "Linear and quadratic system",
+        "xMin": -5,
+        "xMax": 6,
+        "yMin": -7,
+        "yMax": 10,
+        "xStep": 1,
+        "yStep": 1,
+        "xLabel": "x",
+        "yLabel": "y",
+        "series": [
+          {
+            "label": "linear",
+            "points": [
+              [
+                -5,
+                7
+              ],
+              [
+                -4,
+                6
+              ],
+              [
+                -3,
+                5
+              ],
+              [
+                -2,
+                4
+              ],
+              [
+                -1,
+                3
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                3,
+                -1
+              ],
+              [
+                4,
+                -2
+              ],
+              [
+                5,
+                -3
+              ],
+              [
+                6,
+                -4
+              ]
+            ],
+            "showPoints": false
+          },
+          {
+            "label": "quadratic",
+            "points": [
+              [
+                -3,
+                11
+              ],
+              [
+                -2,
+                4
+              ],
+              [
+                -1,
+                -1
+              ],
+              [
+                0,
+                -4
+              ],
+              [
+                1,
+                -5
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                3,
+                -1
+              ],
+              [
+                4,
+                4
+              ],
+              [
+                5,
+                11
+              ]
+            ],
+            "showPoints": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q280",
+      "groupId": "math-20261008-huge798-q280",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "An account grows exponentially. Its balance is $6,050 two years after it is opened and $8,052.55 five years after it is opened. If \\(A(t)\\) is the balance \\(t\\) years after the account is opened, which equation could define \\(A\\)?",
+      "choices": {
+        "A": "\\(A(t)=6{,}050(1.10)^t\\)",
+        "B": "\\(A(t)=5{,}000(1.10)^{t-2}\\)",
+        "C": "\\(A(t)=5{,}000(1.10)^t\\)",
+        "D": "\\(A(t)=6{,}050(1.331)^{t-2}\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "From year 2 to year 5, \\(8052.55/6050=1.331=(1.10)^3\\), so the annual factor is 1.10. The initial balance is \\(6050/(1.10)^2=5000\\). Thus \\(\\boxed{A(t)=5000(1.10)^t}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 280,
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "From year 2 to year 5, \\(8052.55/6050=1.331=(1.10)^3\\), so the annual factor is 1.10. The initial balance is \\(6050/(1.10)^2=5000\\). Thus \\(\\boxed{A(t)=5000(1.10)^t}\\).",
         "D": "This choice does not satisfy the relationships or conditions in the question."
       }
     }
