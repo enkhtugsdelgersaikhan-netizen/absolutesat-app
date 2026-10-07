@@ -1121,10 +1121,151 @@
               }
             }
           }
+        },
+        {
+          "range": "281-320",
+          "reviewed": 40,
+          "retained": 31,
+          "excluded": [
+            {
+              "sourceQuestionNumber": 281,
+              "reason": "Close reskin of retained q206: both provide an initial count, a fixed multiplicative growth factor over a fixed interval, and ask for the exponential model."
+            },
+            {
+              "sourceQuestionNumber": 289,
+              "reason": "Near-exact structural duplicate of math-20261006-batch465-q394: both ask for the sum of roots of a squared-binomial quadratic equation."
+            },
+            {
+              "sourceQuestionNumber": 291,
+              "reason": "Low-value discriminant reskin of existing exactly-one-real-solution quadratic items, including math-20261006-batch465-q260."
+            },
+            {
+              "sourceQuestionNumber": 296,
+              "reason": "Low-value positive-root reskin of existing solve-a-quadratic items such as math-20261006-batch465-q421 and retained q241."
+            },
+            {
+              "sourceQuestionNumber": 299,
+              "reason": "Close reskin of existing quadratic minimum/axis-of-symmetry questions; the root-midpoint computation adds no new reasoning structure."
+            },
+            {
+              "sourceQuestionNumber": 301,
+              "reason": "Close conceptual duplicate of retained q197: both ask which exponential equation visibly displays the maximum value over a restricted domain."
+            },
+            {
+              "sourceQuestionNumber": 302,
+              "reason": "Close rectangle area/dimension reskin of existing items already used to reject q168 and q254."
+            },
+            {
+              "sourceQuestionNumber": 303,
+              "reason": "Close vertex-form minimum reskin of existing quadratic-minimum questions."
+            },
+            {
+              "sourceQuestionNumber": 305,
+              "reason": "Close line-parabola tangency/discriminant reskin of retained q257 and q210."
+            }
+          ],
+          "repairs": {
+            "radicalExponentFractionNotation": [
+              282,
+              283,
+              285,
+              286,
+              288,
+              292,
+              295,
+              298,
+              300,
+              301,
+              306
+            ],
+            "graphDependent": [
+              287,
+              306,
+              311,
+              315,
+              316,
+              317
+            ],
+            "notes": [
+              "Recovered q283 as 5∛(8x^4)√(9x^2), q285 as 6(x-1/3)^2+5/6, q298 as 5√(x-4)+3, and q301's second function as 9-5[1-(0.6)^x] from the supplied derivations.",
+              "q301 was reconstructed for audit but excluded as a close conceptual duplicate of q197 rather than added.",
+              "Graph/table-dependent retained items were stored with structured visuals so the question can be solved from the deployed bank rather than from missing pasted artwork."
+            ]
+          },
+          "visuals": {
+            "graphs": [
+              287,
+              306,
+              311,
+              315,
+              316,
+              317
+            ],
+            "diagrams": [],
+            "tables": [
+              308,
+              320
+            ]
+          },
+          "difficultyCalibration": {
+            "approach": "Difficulty was calibrated relative to the live subtopic bank; no artificial global rebalance was used when it would mislabel the actual reasoning demand.",
+            "overall": {
+              "Easy": 8,
+              "Medium": 14,
+              "Hard": 9
+            },
+            "addedBySubtopic": {
+              "Quadratics": {
+                "Easy": 3,
+                "Medium": 2,
+                "Hard": 2
+              },
+              "Equivalent Expressions": {
+                "Easy": 0,
+                "Medium": 0,
+                "Hard": 1
+              },
+              "Polynomial Functions": {
+                "Easy": 0,
+                "Medium": 1,
+                "Hard": 2
+              },
+              "Statistics": {
+                "Easy": 1,
+                "Medium": 5,
+                "Hard": 1
+              },
+              "Nonlinear Equations/Functions": {
+                "Easy": 1,
+                "Medium": 0,
+                "Hard": 1
+              },
+              "Exponential Functions": {
+                "Easy": 1,
+                "Medium": 1,
+                "Hard": 2
+              },
+              "Rational/Radical Equations": {
+                "Easy": 0,
+                "Medium": 1,
+                "Hard": 0
+              },
+              "Ratio, Rates, Percentages": {
+                "Easy": 1,
+                "Medium": 4,
+                "Hard": 0
+              },
+              "Probability": {
+                "Easy": 1,
+                "Medium": 0,
+                "Hard": 0
+              }
+            }
+          }
         }
       ],
-      "retainedSoFar": 230,
-      "reviewedSoFar": 280
+      "retainedSoFar": 261,
+      "reviewedSoFar": 320
     }
   },
   "questions": [
@@ -47971,6 +48112,1194 @@
         "B": "This choice does not satisfy the relationships or conditions in the question.",
         "C": "From year 2 to year 5, \\(8052.55/6050=1.331=(1.10)^3\\), so the annual factor is 1.10. The initial balance is \\(6050/(1.10)^2=5000\\). Thus \\(\\boxed{A(t)=5000(1.10)^t}\\).",
         "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q282",
+      "groupId": "math-20261008-huge798-q282",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The graph of \\(3y=2(x-4)^2+7\\) has a y-intercept of \\((0,r)\\). What is the value of \\(r\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "At the y-intercept, \\(x=0\\). Then \\(3r=2(-4)^2+7=39\\), so \\(\\boxed{r=13}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 282,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "13"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q283",
+      "groupId": "math-20261008-huge798-q283",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Equivalent Expressions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "For \\(x>0\\), \\(5\\sqrt[3]{8x^4}\\sqrt{9x^2}=ax^b\\), where \\(a\\) and \\(b\\) are constants. What is \\(a+b\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Since \\(x>0\\), \\(\\sqrt[3]{8x^4}=2x^{4/3}\\) and \\(\\sqrt{9x^2}=3x\\). Thus the product is \\(30x^{7/3}\\), so \\(a=30\\), \\(b=7/3\\), and \\(a+b=\\boxed{97/3}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 283,
+      "subtopic": "Equivalent Expressions",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "97/3",
+        "32.3333333333"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q284",
+      "groupId": "math-20261008-huge798-q284",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Polynomial Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "For the polynomial function \\(p\\), the graph of \\(y=p(x)\\) passes through \\((-3,0)\\), \\((2,0)\\), and \\((5,4)\\). Which expression must be a factor of \\(p(x)\\)?",
+      "choices": {
+        "A": "\\((x-3)(x+2)\\)",
+        "B": "\\((x+3)(x+2)\\)",
+        "C": "\\((x+3)(x-2)\\)",
+        "D": "\\((x-5)(x-4)\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "The points \\((-3,0)\\) and \\((2,0)\\) show that \\(-3\\) and \\(2\\) are zeros. Therefore \\(x+3\\) and \\(x-2\\) are factors, so \\(\\boxed{(x+3)(x-2)}\\) must divide \\(p(x)\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 284,
+      "subtopic": "Polynomial Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The points \\((-3,0)\\) and \\((2,0)\\) show that \\(-3\\) and \\(2\\) are zeros. Therefore \\(x+3\\) and \\(x-2\\) are factors, so \\(\\boxed{(x+3)(x-2)}\\) must divide \\(p(x)\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q285",
+      "groupId": "math-20261008-huge798-q285",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The function \\(f\\) is defined by \\(f(x)=6\\left(x-\\frac13\\right)^2+\\frac56\\). What is the value of \\(f\\left(\\frac56\\right)\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "\\(\\frac56-\\frac13=\\frac12\\). Thus \\(f(5/6)=6(1/2)^2+5/6=3/2+5/6=\\boxed{7/3}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 285,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "7/3",
+        "2.3333333333"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q286",
+      "groupId": "math-20261008-huge798-q286",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "For positive constants \\(a\\) and \\(b\\), \\(18x^2-(5a+2b)x+ab=2x^2+(a-4b)x\\). The sum of the solutions can be written as \\(k(9a-3b)\\). What is \\(k\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Move all terms left: \\(16x^2-(6a-2b)x+ab=0\\). The sum of the roots is \\((6a-2b)/16=(3a-b)/8\\). Since \\(9a-3b=3(3a-b)\\), \\(3k(3a-b)=(3a-b)/8\\), so \\(\\boxed{k=1/24}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 286,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "1/24",
+        ".0416666667"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q287",
+      "groupId": "math-20261008-huge798-q287",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The graph shows the predicted value of a vehicle \\(t\\) years after purchase. Which of the following is closest to the predicted value of the vehicle 3.5 years after purchase?",
+      "choices": {
+        "A": "$13,100",
+        "B": "$19,480",
+        "C": "$15,980",
+        "D": "$23,760"
+      },
+      "correctAnswer": "C",
+      "explanation": "At \\(t=3.5\\), the curve is very close to $16,000. Of the choices, $15,980 is closest.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 287,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "At \\(t=3.5\\), the curve is very close to $16,000. Of the choices, $15,980 is closest.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "xy",
+        "caption": "Predicted vehicle value",
+        "xMin": 0,
+        "xMax": 6,
+        "yMin": 10000,
+        "yMax": 26000,
+        "xStep": 1,
+        "yStep": 2000,
+        "xLabel": "Years after purchase",
+        "yLabel": "Value ($)",
+        "series": [
+          {
+            "label": "value",
+            "points": [
+              [
+                0,
+                24000
+              ],
+              [
+                1,
+                21500
+              ],
+              [
+                2,
+                19000
+              ],
+              [
+                3,
+                16800
+              ],
+              [
+                3.5,
+                15980
+              ],
+              [
+                4,
+                15100
+              ],
+              [
+                5,
+                13500
+              ],
+              [
+                6,
+                12100
+              ]
+            ],
+            "showPoints": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q288",
+      "groupId": "math-20261008-huge798-q288",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Polynomial Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The function \\(f(x)=(2x-3)(x+4)(x-7)\\) is given, and \\(g(x)=f(2x+1)\\). The graph of \\(g\\) has x-intercepts with x-coordinates \\(a,b,\\) and \\(c\\). What is \\(a+b+c\\)?",
+      "choices": {
+        "A": "\\(-\\frac34\\)",
+        "B": "\\(\\frac32\\)",
+        "C": "\\(\\frac74\\)",
+        "D": "\\(\\frac34\\)"
+      },
+      "correctAnswer": "D",
+      "explanation": "The zeros of \\(f\\) are \\(3/2,-4,7\\). Set \\(2x+1\\) equal to each: \\(x=1/4,-5/2,3\\). Their sum is \\(1/4-5/2+3=\\boxed{3/4}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 288,
+      "subtopic": "Polynomial Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "The zeros of \\(f\\) are \\(3/2,-4,7\\). Set \\(2x+1\\) equal to each: \\(x=1/4,-5/2,3\\). Their sum is \\(1/4-5/2+3=\\boxed{3/4}\\)."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q290",
+      "groupId": "math-20261008-huge798-q290",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Nonlinear Equations/Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The function \\(g\\) is defined by \\(g(x)=|2x-5|-(x+1)\\). What is \\(g(-3)\\)?",
+      "choices": {
+        "A": "11",
+        "B": "15",
+        "C": "9",
+        "D": "13"
+      },
+      "correctAnswer": "D",
+      "explanation": "\\(g(-3)=|-6-5|-(-3+1)=11-(-2)=\\boxed{13}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 290,
+      "subtopic": "Nonlinear Equations/Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "\\(g(-3)=|-6-5|-(-3+1)=11-(-2)=\\boxed{13}\\)."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q292",
+      "groupId": "math-20261008-huge798-q292",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The exponential function \\(g\\) is defined by \\(g(x)=12a^{x/2}\\), where \\(a>0\\). If \\(g(6)=324\\), what is \\(g(10)\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "From \\(12a^3=324\\), \\(a^3=27\\), so \\(a=3\\). Then \\(g(10)=12(3)^5=12(243)=\\boxed{2916}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 292,
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "2916"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q293",
+      "groupId": "math-20261008-huge798-q293",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The height \\(h(t)\\), in meters, of an object \\(t\\) seconds after launch is modeled by \\(h(t)=-5(t-2)^2+45\\). According to the model, from what height was the object launched?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The launch occurs at \\(t=0\\): \\(h(0)=-5(-2)^2+45=-20+45=\\boxed{25}\\) meters.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 293,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "25"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q294",
+      "groupId": "math-20261008-huge798-q294",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The function \\(d(t)=-120(t^2-32t-585)\\) models the depth, in meters, of an underwater instrument \\(t\\) minutes after measurements begin, where \\(t>0\\). At the water's surface its depth is 0. How many minutes after measurements begin does it reach the surface?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Set \\(d(t)=0\\): \\(t^2-32t-585=0=(t-45)(t+13)\\). Since \\(t>0\\), \\(\\boxed{t=45}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 294,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "45"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q295",
+      "groupId": "math-20261008-huge798-q295",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Polynomial Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "Functions \\(f\\) and \\(g\\) are defined by \\(f(x)=x^2+cx-2\\) and \\(g(x)=4x-3\\), where \\(c\\) is a constant. If \\(f(x)g(x)=4x^3+9x^2-17x+6\\), what is \\(c\\)?",
+      "choices": {
+        "A": "-3",
+        "B": "6",
+        "C": "3",
+        "D": "4"
+      },
+      "correctAnswer": "C",
+      "explanation": "The \\(x^2\\)-coefficient in the product is \\(4c-3\\). Since the given product has \\(x^2\\)-coefficient 9, \\(4c-3=9\\), so \\(\\boxed{c=3}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 295,
+      "subtopic": "Polynomial Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The \\(x^2\\)-coefficient in the product is \\(4c-3\\). Since the given product has \\(x^2\\)-coefficient 9, \\(4c-3=9\\), so \\(\\boxed{c=3}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q297",
+      "groupId": "math-20261008-huge798-q297",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Nonlinear Equations/Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "For a positive constant \\(a\\), \\(f(x)=|2x-3a|+4\\). If \\(f(a)-f(4a)=-15\\), what is \\(a\\)?",
+      "choices": {
+        "A": "\\(\\frac54\\)",
+        "B": "\\(\\frac{15}{2}\\)",
+        "C": "15",
+        "D": "\\(\\frac{15}{4}\\)"
+      },
+      "correctAnswer": "D",
+      "explanation": "Since \\(a>0\\), \\(f(a)=|-a|+4=a+4\\) and \\(f(4a)=|5a|+4=5a+4\\). Thus \\(-4a=-15\\), so \\(\\boxed{a=15/4}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 297,
+      "subtopic": "Nonlinear Equations/Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "Since \\(a>0\\), \\(f(a)=|-a|+4=a+4\\) and \\(f(4a)=|5a|+4=5a+4\\). Thus \\(-4a=-15\\), so \\(\\boxed{a=15/4}\\)."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q298",
+      "groupId": "math-20261008-huge798-q298",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Rational/Radical Equations",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The function \\(f\\) is defined by \\(f(x)=5\\sqrt{x-4}+3\\). For what value of \\(x\\) does \\(f(x)=28\\)?",
+      "choices": {
+        "A": "9",
+        "B": "29",
+        "C": "25",
+        "D": "33"
+      },
+      "correctAnswer": "B",
+      "explanation": "Set \\(5\\sqrt{x-4}+3=28\\). Then \\(\\sqrt{x-4}=5\\), so \\(x-4=25\\) and \\(\\boxed{x=29}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 298,
+      "subtopic": "Rational/Radical Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Set \\(5\\sqrt{x-4}+3=28\\). Then \\(\\sqrt{x-4}=5\\), so \\(x-4=25\\) and \\(\\boxed{x=29}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q300",
+      "groupId": "math-20261008-huge798-q300",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The function \\(f\\) is defined by \\(f(x)=5(4)^x\\). If \\(g(x)=f(2x-1)\\), which equation defines \\(g\\)?",
+      "choices": {
+        "A": "\\(g(x)=\\frac54(16)^x\\)",
+        "B": "\\(g(x)=20(16)^x\\)",
+        "C": "\\(g(x)=\\frac54(8)^x\\)",
+        "D": "\\(g(x)=5(16)^{x-1}\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "\\(g(x)=5(4)^{2x-1}=5\\frac{(4^2)^x}{4}=\\boxed{\\frac54(16)^x}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 300,
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "\\(g(x)=5(4)^{2x-1}=5\\frac{(4^2)^x}{4}=\\boxed{\\frac54(16)^x}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q304",
+      "groupId": "math-20261008-huge798-q304",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The solution to the system \\(2(x-3)=x+5\\) and \\(y=x^2-6x+10\\) is \\((x,y)\\). What is \\(y\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "From \\(2x-6=x+5\\), \\(x=11\\). Then \\(y=11^2-6(11)+10=121-66+10=\\boxed{65}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 304,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "65"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q306",
+      "groupId": "math-20261008-huge798-q306",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A portion of the graph of an exponential function \\(f\\) is shown. The labeled points are \\((1,12)\\) and \\((3,3)\\). The y-intercept of the complete graph is \\((0,b)\\). What is \\(b\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "From \\(x=1\\) to \\(x=3\\), the output is multiplied by \\(3/12=1/4\\). Over two equal input steps, the per-step factor is \\(1/2\\). Moving one step backward from \\(x=1\\) doubles 12, so \\(\\boxed{b=24}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 306,
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "24"
+      ],
+      "graph": {
+        "type": "xy",
+        "caption": "Exponential function f",
+        "xMin": 0,
+        "xMax": 5,
+        "yMin": 0,
+        "yMax": 26,
+        "xStep": 1,
+        "yStep": 2,
+        "xLabel": "x",
+        "yLabel": "f(x)",
+        "series": [
+          {
+            "label": "f",
+            "points": [
+              [
+                0,
+                24
+              ],
+              [
+                1,
+                12
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                4,
+                1.5
+              ],
+              [
+                5,
+                0.75
+              ]
+            ],
+            "showPoints": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q307",
+      "groupId": "math-20261008-huge798-q307",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A quadratic function \\(d\\) models the depth, in meters, of a seal during a dive. The seal is at the water's surface 3 minutes and 15 minutes after tracking begins. Between those times, the seal reaches a maximum depth of 216 meters. According to the model, what is the seal's depth 6 minutes after tracking begins?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "With zeros at 3 and 15, write \\(d(t)=a(t-3)(t-15)\\). The vertex is at \\(t=9\\). Since \\(d(9)=216\\), \\(216=a(6)(-6)=-36a\\), so \\(a=-6\\). Then \\(d(6)=-6(3)(-9)=\\boxed{162}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 307,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "162"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q308",
+      "groupId": "math-20261008-huge798-q308",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A survey of 200 commuters recorded how often they use public transportation. How many commuters responded with neither \"Daily\" nor \"1-2 days per week\"?",
+      "choices": {
+        "A": "75",
+        "B": "107",
+        "C": "125",
+        "D": "143"
+      },
+      "correctAnswer": "C",
+      "explanation": "The excluded categories contain \\(18+57=75\\) commuters. Therefore \\(200-75=\\boxed{125}\\) responded with neither.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 308,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The excluded categories contain \\(18+57=75\\) commuters. Therefore \\(200-75=\\boxed{125}\\) responded with neither.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "table": {
+        "caption": "Public transportation use",
+        "headers": [
+          "Response",
+          "Frequency"
+        ],
+        "rows": [
+          [
+            "Daily",
+            "18"
+          ],
+          [
+            "3-5 days per week",
+            "42"
+          ],
+          [
+            "1-2 days per week",
+            "57"
+          ],
+          [
+            "2-3 times per month",
+            "36"
+          ],
+          [
+            "About once per month",
+            "27"
+          ],
+          [
+            "Never",
+            "20"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q309",
+      "groupId": "math-20261008-huge798-q309",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "Data set B is formed from data set A by adding 7 to every value in A and then multiplying every resulting value by 3. If the median and range of data set A are \\(m\\) and \\(r\\), respectively, which statement must be true?",
+      "choices": {
+        "A": "The median of B is \\(3m+21\\), and the range of B is \\(3r\\).",
+        "B": "The median of B is \\(3m+7\\), and the range of B is \\(3r\\).",
+        "C": "The median of B is \\(3m+21\\), and the range of B is \\(r+21\\).",
+        "D": "The median of B is \\(m+21\\), and the range of B is \\(3r\\)."
+      },
+      "correctAnswer": "A",
+      "explanation": "Adding 7 changes the median to \\(m+7\\) and leaves the range \\(r\\). Multiplying all values by 3 gives median \\(3(m+7)=3m+21\\) and range \\(3r\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 309,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "Adding 7 changes the median to \\(m+7\\) and leaves the range \\(r\\). Multiplying all values by 3 gives median \\(3(m+7)=3m+21\\) and range \\(3r\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q310",
+      "groupId": "math-20261008-huge798-q310",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "Data set X is \\(8,11,13,16,22\\). Data set Y contains every value in X, along with the additional values 4 and 26. Which statement correctly compares the means?",
+      "choices": {
+        "A": "The mean of Y exceeds the mean of X.",
+        "B": "The mean of X exceeds the mean of Y.",
+        "C": "The two means are equal.",
+        "D": "The means cannot be compared from the information given."
+      },
+      "correctAnswer": "A",
+      "explanation": "The mean of X is \\(70/5=14\\). The two added values have mean \\((4+26)/2=15\\), which is greater than 14, so adding them raises the overall mean. Thus the mean of Y is greater.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 310,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The mean of X is \\(70/5=14\\). The two added values have mean \\((4+26)/2=15\\), which is greater than 14, so adding them raises the overall mean. Thus the mean of Y is greater.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q311",
+      "groupId": "math-20261008-huge798-q311",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The scatterplot shows the mass of fruit produced by a tree during each growing season after transplantation. During season 3, the tree produced 29 pounds of fruit. In which growing season did the fruit mass first exceed twice the mass produced during season 3?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Twice 29 is 58. Season 5 is 52, which is not above 58, while season 6 is 61. Therefore the first season exceeding twice the season-3 mass is \\(\\boxed6\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 311,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "6"
+      ],
+      "graph": {
+        "type": "xy",
+        "caption": "Fruit mass by growing season",
+        "xMin": 1,
+        "xMax": 8,
+        "yMin": 0,
+        "yMax": 80,
+        "xStep": 1,
+        "yStep": 10,
+        "xLabel": "Growing season",
+        "yLabel": "Fruit mass (lb)",
+        "series": [
+          {
+            "label": "observed",
+            "points": [
+              [
+                1,
+                14
+              ],
+              [
+                2,
+                22
+              ],
+              [
+                3,
+                29
+              ],
+              [
+                4,
+                41
+              ],
+              [
+                5,
+                52
+              ],
+              [
+                6,
+                61
+              ],
+              [
+                7,
+                67
+              ],
+              [
+                8,
+                73
+              ]
+            ],
+            "showPoints": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q312",
+      "groupId": "math-20261008-huge798-q312",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A cube made from a certain material has a mass of 162 grams and a density of 0.75 gram per cubic centimeter. What is the length, in centimeters, of an edge of the cube?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Volume equals mass divided by density: \\(162/0.75=216\\) cubic centimeters. If the edge length is \\(s\\), then \\(s^3=216\\), so \\(\\boxed{s=6}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 312,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "6"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q313",
+      "groupId": "math-20261008-huge798-q313",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "Of 1,500 tickets sold for a concert, 64% were purchased online. Of the tickets purchased online, 15% were purchased with a student discount. How many of the online tickets were not purchased with a student discount?",
+      "choices": {
+        "A": "144",
+        "B": "816",
+        "C": "960",
+        "D": "1,275"
+      },
+      "correctAnswer": "B",
+      "explanation": "Online tickets: \\(0.64(1500)=960\\). Of these, 85% were not discounted, so \\(0.85(960)=\\boxed{816}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 313,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Online tickets: \\(0.64(1500)=960\\). Of these, 85% were not discounted, so \\(0.85(960)=\\boxed{816}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q314",
+      "groupId": "math-20261008-huge798-q314",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A research drone moves at a constant speed of 14 meters per second when it is flying. During a 3-minute-15-second observation period, the drone spends 15 seconds hovering in place. How many meters does the drone travel during the observation period?",
+      "choices": {
+        "A": "2,310",
+        "B": "2,520",
+        "C": "2,700",
+        "D": "2,730"
+      },
+      "correctAnswer": "B",
+      "explanation": "The observation lasts \\(3(60)+15=195\\) seconds. Subtract 15 seconds hovering to get 180 seconds moving. Distance \\(=14(180)=\\boxed{2520}\\) meters.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 314,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The observation lasts \\(3(60)+15=195\\) seconds. Subtract 15 seconds hovering to get 180 seconds moving. Distance \\(=14(180)=\\boxed{2520}\\) meters.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q315",
+      "groupId": "math-20261008-huge798-q315",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The scatterplot and its line of best fit are shown. Which of the following is closest to the slope of the line of best fit?",
+      "choices": {
+        "A": "0.4",
+        "B": "2.5",
+        "C": "3.0",
+        "D": "5.0"
+      },
+      "correctAnswer": "B",
+      "explanation": "Using two points on the line, approximately \\((2,8)\\) and \\((8,23)\\), the slope is \\((23-8)/(8-2)=15/6=\\boxed{2.5}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 315,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Using two points on the line, approximately \\((2,8)\\) and \\((8,23)\\), the slope is \\((23-8)/(8-2)=15/6=\\boxed{2.5}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "xy",
+        "caption": "Scatterplot with line of best fit",
+        "xMin": 0,
+        "xMax": 10,
+        "yMin": 0,
+        "yMax": 30,
+        "xStep": 1,
+        "yStep": 5,
+        "xLabel": "x",
+        "yLabel": "y",
+        "series": [
+          {
+            "label": "data",
+            "points": [
+              [
+                1,
+                6
+              ],
+              [
+                2,
+                9
+              ],
+              [
+                3,
+                10
+              ],
+              [
+                4,
+                13
+              ],
+              [
+                5,
+                16
+              ],
+              [
+                6,
+                17
+              ],
+              [
+                7,
+                21
+              ],
+              [
+                8,
+                22
+              ],
+              [
+                9,
+                26
+              ]
+            ],
+            "showPoints": true
+          },
+          {
+            "label": "best fit",
+            "points": [
+              [
+                2,
+                8
+              ],
+              [
+                8,
+                23
+              ]
+            ],
+            "showPoints": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q316",
+      "groupId": "math-20261008-huge798-q316",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The line graph shows the estimated population of an animal species over several years. A peak year is a year whose estimated population is greater than the estimates in both the immediately preceding and immediately following years. Which peak year had the greatest estimated population?",
+      "choices": {
+        "A": "2017",
+        "B": "2019",
+        "C": "2021",
+        "D": "2023"
+      },
+      "correctAnswer": "D",
+      "explanation": "The local peaks occur in 2017, 2019, 2021, and 2023. The highest of those peaks is 2023, at about 340.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 316,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "The local peaks occur in 2017, 2019, 2021, and 2023. The highest of those peaks is 2023, at about 340."
+      },
+      "graph": {
+        "type": "xy",
+        "caption": "Estimated animal population",
+        "xMin": 2016,
+        "xMax": 2024,
+        "yMin": 180,
+        "yMax": 360,
+        "xStep": 1,
+        "yStep": 20,
+        "xLabel": "Year",
+        "yLabel": "Estimated population",
+        "series": [
+          {
+            "label": "population",
+            "points": [
+              [
+                2016,
+                210
+              ],
+              [
+                2017,
+                260
+              ],
+              [
+                2018,
+                225
+              ],
+              [
+                2019,
+                290
+              ],
+              [
+                2020,
+                245
+              ],
+              [
+                2021,
+                315
+              ],
+              [
+                2022,
+                275
+              ],
+              [
+                2023,
+                340
+              ],
+              [
+                2024,
+                300
+              ]
+            ],
+            "showPoints": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q317",
+      "groupId": "math-20261008-huge798-q317",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The graph of \\(y=f(x)\\) is shown. Which description best fits \\(f\\)?",
+      "choices": {
+        "A": "Decreasing exponential",
+        "B": "Increasing linear",
+        "C": "Increasing exponential",
+        "D": "Decreasing linear"
+      },
+      "correctAnswer": "C",
+      "explanation": "As \\(x\\) increases, \\(f(x)\\) increases, and the rate of increase itself grows. That is characteristic of an increasing exponential function.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 317,
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "As \\(x\\) increases, \\(f(x)\\) increases, and the rate of increase itself grows. That is characteristic of an increasing exponential function.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "xy",
+        "caption": "Graph of f",
+        "xMin": -3,
+        "xMax": 4,
+        "yMin": 0,
+        "yMax": 20,
+        "xStep": 1,
+        "yStep": 2,
+        "xLabel": "x",
+        "yLabel": "f(x)",
+        "series": [
+          {
+            "label": "f",
+            "points": [
+              [
+                -3,
+                0.5
+              ],
+              [
+                -2,
+                1
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                8
+              ],
+              [
+                2,
+                16
+              ]
+            ],
+            "showPoints": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q318",
+      "groupId": "math-20261008-huge798-q318",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The positive number \\(p\\) is 35% less than the positive number \\(q\\). The number \\(r\\) is 20% greater than \\(p\\), and the number \\(s\\) is 25% less than \\(r\\). The number \\(s\\) is how many times \\(q\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "\\(p=0.65q\\), \\(r=1.20p\\), and \\(s=0.75r\\). Therefore \\(s=(0.75)(1.20)(0.65)q=\\boxed{0.585q}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 318,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "0.585",
+        ".585"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q319",
+      "groupId": "math-20261008-huge798-q319",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "An underwater camera is 39 fathoms below the ocean surface. The seafloor at that location is 288 feet below the surface. How many fathoms above the seafloor is the camera? \\(1\\) fathom \\(=6\\) feet.",
+      "choices": {
+        "A": "9",
+        "B": "39",
+        "C": "48",
+        "D": "54"
+      },
+      "correctAnswer": "A",
+      "explanation": "The camera is \\(39(6)=234\\) feet below the surface. It is \\(288-234=54\\) feet above the seafloor, which is \\(54/6=\\boxed9\\) fathoms.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 319,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The camera is \\(39(6)=234\\) feet below the surface. It is \\(288-234=54\\) feet above the seafloor, which is \\(54/6=\\boxed9\\) fathoms.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q320",
+      "groupId": "math-20261008-huge798-q320",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Probability",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A collection contains items of four types. One item is selected at random. What is the probability that the selected item is either type Q or type R?",
+      "choices": {
+        "A": "\\(\\frac15\\)",
+        "B": "\\(\\frac13\\)",
+        "C": "\\(\\frac{11}{30}\\)",
+        "D": "\\(\\frac7{10}\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "There are \\(54+36+30+60=180\\) items total, and \\(36+30=66\\) are type Q or R. The probability is \\(66/180=\\boxed{11/30}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 320,
+      "subtopic": "Probability",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "There are \\(54+36+30+60=180\\) items total, and \\(36+30=66\\) are type Q or R. The probability is \\(66/180=\\boxed{11/30}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "table": {
+        "caption": "Items by type",
+        "headers": [
+          "Type",
+          "Number of items"
+        ],
+        "rows": [
+          [
+            "P",
+            "54"
+          ],
+          [
+            "Q",
+            "36"
+          ],
+          [
+            "R",
+            "30"
+          ],
+          [
+            "S",
+            "60"
+          ]
+        ]
       }
     }
   ],
