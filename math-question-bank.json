@@ -1512,10 +1512,134 @@
               }
             }
           }
+        },
+        {
+          "range": "401-440",
+          "reviewed": 40,
+          "retained": 36,
+          "excluded": [
+            {
+              "sourceQuestionNumber": 403,
+              "reason": "Close reskin of existing ratio-with-total item math-20261006-new409-q376."
+            },
+            {
+              "sourceQuestionNumber": 412,
+              "reason": "Close reskin of existing line-of-best-fit slope item math-20261006-new409-q258."
+            },
+            {
+              "sourceQuestionNumber": 434,
+              "reason": "Close reskin of existing linear-equation solution-count items, including math-20261006-batch465-q070 and q192."
+            },
+            {
+              "sourceQuestionNumber": 435,
+              "reason": "Structural duplicate of already retained same-solution linear-equation item math-20261008-huge798-q066."
+            }
+          ],
+          "repairs": {
+            "fractionPercentUnitNotation": [
+              404,
+              408,
+              414,
+              415,
+              416,
+              418,
+              421,
+              422,
+              427,
+              428,
+              436,
+              440
+            ],
+            "graphDependent": [
+              402,
+              405,
+              407,
+              409,
+              411,
+              424,
+              426,
+              433,
+              436,
+              440
+            ],
+            "recoveredSourceForms": [
+              408,
+              416,
+              427,
+              436,
+              440
+            ],
+            "notes": [
+              "Recovered q408's yellow-tile quantity as 1/4, not 14, from the supplied 25% reasoning.",
+              "Recovered q416 answer choices as 1/6, 1/3, 2/3, and 2 from the supplied mean calculation.",
+              "Recovered q427 P(A)=2/5 and q436's -3/2 slope choices from the supplied algebra.",
+              "Recovered q440's answer choices as 1/2, 1, 3/2, and 2 from the supplied solution."
+            ]
+          },
+          "visuals": {
+            "graphs": [
+              402,
+              405,
+              407,
+              409,
+              411,
+              426,
+              433,
+              436,
+              440
+            ],
+            "diagrams": [
+              424
+            ],
+            "tables": [
+              414,
+              430
+            ]
+          },
+          "difficultyCalibration": {
+            "approach": "Assigned relative to each affected subtopic with an exact 12 Easy / 12 Medium / 12 Hard addition, preserving the live bank's global balance.",
+            "addedBySubtopic": {
+              "Exponential Functions": {
+                "Easy": 1,
+                "Medium": 1,
+                "Hard": 1
+              },
+              "Linear Equations": {
+                "Easy": 0,
+                "Medium": 2,
+                "Hard": 0
+              },
+              "Ratio, Rates, Percentages": {
+                "Easy": 5,
+                "Medium": 4,
+                "Hard": 4
+              },
+              "Statistics": {
+                "Easy": 3,
+                "Medium": 1,
+                "Hard": 3
+              },
+              "Probability": {
+                "Easy": 1,
+                "Medium": 1,
+                "Hard": 2
+              },
+              "Linear Functions": {
+                "Easy": 1,
+                "Medium": 2,
+                "Hard": 2
+              },
+              "Systems of Linear Equations": {
+                "Easy": 1,
+                "Medium": 1,
+                "Hard": 0
+              }
+            }
+          }
         }
       ],
-      "retainedSoFar": 330,
-      "reviewedSoFar": 400
+      "retainedSoFar": 366,
+      "reviewedSoFar": 440
     }
   },
   "questions": [
@@ -52479,6 +52603,1583 @@
         "B": "Since \\(q=0.75r\\), \\(q+r=1.75r\\). Thus \\(p=1.60(1.75r)=2.8r\\). Since \\(r=0.40s\\), \\(p=2.8(0.40s)=1.12s\\). Therefore, \\(p\\) is \\(\\boxed{112\\%}\\) of \\(s\\).",
         "C": "This choice does not satisfy the relationships or conditions in the question.",
         "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q401",
+      "groupId": "math-20261008-huge798-q401",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "An exponential model for a scatterplot has the form \\(y=a(b)^x\\), where \\(a\\) and \\(b\\) are positive constants. The model curve passes approximately through \\((1,90)\\) and \\((4,30)\\). Which value is closest to \\(b\\)?",
+      "choices": {
+        "A": "0.55",
+        "B": "0.69",
+        "C": "0.82",
+        "D": "1.44"
+      },
+      "correctAnswer": "B",
+      "explanation": "Using the two points, \\(90=ab\\) and \\(30=ab^4\\). Dividing gives \\(1/3=b^3\\), so \\(b=\\sqrt[3]{1/3}\\approx\\boxed{0.69}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 401,
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Using the two points, \\(90=ab\\) and \\(30=ab^4\\). Dividing gives \\(1/3=b^3\\), so \\(b=\\sqrt[3]{1/3}\\approx\\boxed{0.69}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q402",
+      "groupId": "math-20261008-huge798-q402",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The bar graph shows the number of students in four activities. Some students move from robotics to chess. What is the least number of students who must move so that chess and robotics have the same number of students?",
+      "choices": {
+        "A": "6",
+        "B": "12",
+        "C": "18",
+        "D": "24"
+      },
+      "correctAnswer": "B",
+      "explanation": "If \\(x\\) students move, chess has \\(24+x\\) and robotics has \\(48-x\\). Setting them equal gives \\(24+x=48-x\\), so \\(2x=24\\) and \\(\\boxed{x=12}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 402,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "If \\(x\\) students move, chess has \\(24+x\\) and robotics has \\(48-x\\). Setting them equal gives \\(24+x=48-x\\), so \\(2x=24\\) and \\(\\boxed{x=12}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "vertical-bar",
+        "caption": "Students by activity",
+        "categories": [
+          "Chess",
+          "Debate",
+          "Robotics",
+          "Art"
+        ],
+        "series": [
+          {
+            "name": "Students",
+            "values": [
+              24,
+              36,
+              48,
+              30
+            ]
+          }
+        ],
+        "max": 50,
+        "tickStep": 5
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q404",
+      "groupId": "math-20261008-huge798-q404",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A region has a population of 243,000 and a population density of 450 people per square kilometer. Use \\(1\\text{ km}^2\\approx0.386\\text{ mi}^2\\). What is the region's area, in square miles, to the nearest tenth?",
+      "choices": {
+        "A": "208.4",
+        "B": "540.0",
+        "C": "1,398.9",
+        "D": "173.7"
+      },
+      "correctAnswer": "A",
+      "explanation": "The area is \\(243000/450=540\\) square kilometers. Converting gives \\(540(0.386)=208.44\\), which rounds to \\(\\boxed{208.4}\\) square miles.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 404,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The area is \\(243000/450=540\\) square kilometers. Converting gives \\(540(0.386)=208.44\\), which rounds to \\(\\boxed{208.4}\\) square miles.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q405",
+      "groupId": "math-20261008-huge798-q405",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The line graph shows a percent recorded each year from 2018 through 2023. Between which two consecutive years did the percent have the greatest decrease?",
+      "choices": {
+        "A": "2018 to 2019",
+        "B": "2019 to 2020",
+        "C": "2020 to 2021",
+        "D": "2022 to 2023"
+      },
+      "correctAnswer": "C",
+      "explanation": "The consecutive changes are +1, -3, -4, +1, and -3 percentage points. The greatest decrease is 4 percentage points, from 2020 to 2021.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 405,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The consecutive changes are +1, -3, -4, +1, and -3 percentage points. The greatest decrease is 4 percentage points, from 2020 to 2021.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "line",
+        "caption": "Percent by year",
+        "categories": [
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023"
+        ],
+        "series": [
+          {
+            "name": "Percent",
+            "values": [
+              14,
+              15,
+              12,
+              8,
+              9,
+              6
+            ]
+          }
+        ],
+        "min": 5,
+        "max": 16,
+        "tickStep": 1
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q406",
+      "groupId": "math-20261008-huge798-q406",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A wildlife reserve consists of a 7.5-square-mile region and an adjacent 480-acre region. There are 2,310 deer in the entire reserve. If 640 acres = 1 square mile, what is the population density of deer in the reserve, in deer per square mile?",
+      "choices": {
+        "A": "240",
+        "B": "280",
+        "C": "308",
+        "D": "3,080"
+      },
+      "correctAnswer": "B",
+      "explanation": "The 480-acre region is \\(480/640=0.75\\) square mile, so the total area is 8.25 square miles. The density is \\(2310/8.25=\\boxed{280}\\) deer per square mile.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 406,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The 480-acre region is \\(480/640=0.75\\) square mile, so the total area is 8.25 square miles. The density is \\(2310/8.25=\\boxed{280}\\) deer per square mile.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q407",
+      "groupId": "math-20261008-huge798-q407",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A scatterplot contains points near \\((0,6),(1,9),(2,14),(3,22),(4,35),(5,56)\\). Which equation is the most appropriate model for the data?",
+      "choices": {
+        "A": "\\(y=10x+6\\)",
+        "B": "\\(y=6(1.55)^x\\)",
+        "C": "\\(y=6(0.65)^x\\)",
+        "D": "\\(y=x^2+6\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "The values increase at an increasing rate and have roughly similar successive ratios, which is characteristic of exponential growth. The model \\(\\boxed{y=6(1.55)^x}\\) closely matches the points.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 407,
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The values increase at an increasing rate and have roughly similar successive ratios, which is characteristic of exponential growth. The model \\(\\boxed{y=6(1.55)^x}\\) closely matches the points.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "xy",
+        "caption": "Scatterplot",
+        "xMin": 0,
+        "xMax": 5.5,
+        "yMin": 0,
+        "yMax": 60,
+        "xStep": 1,
+        "yStep": 10,
+        "xLabel": "x",
+        "yLabel": "y",
+        "series": [
+          {
+            "label": "data",
+            "points": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                9
+              ],
+              [
+                2,
+                14
+              ],
+              [
+                3,
+                22
+              ],
+              [
+                4,
+                35
+              ],
+              [
+                5,
+                56
+              ]
+            ],
+            "showPoints": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q408",
+      "groupId": "math-20261008-huge798-q408",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Probability",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A box contains 120 tiles. Of the tiles, 35% are blue and \\(\\frac14\\) are yellow. Every remaining tile is either red or green. If one tile is selected at random, what is the probability that it is neither blue nor yellow?",
+      "choices": {
+        "A": "\\(\\frac3{20}\\)",
+        "B": "\\(\\frac7{20}\\)",
+        "C": "\\(\\frac25\\)",
+        "D": "\\(\\frac35\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "Blue tiles make up 35% and yellow tiles 25%, so the remaining proportion is \\(100\\%-35\\%-25\\%=40\\%=\\boxed{\\frac25}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 408,
+      "subtopic": "Probability",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Blue tiles make up 35% and yellow tiles 25%, so the remaining proportion is \\(100\\%-35\\%-25\\%=40\\%=\\boxed{\\frac25}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q409",
+      "groupId": "math-20261008-huge798-q409",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A graph shows the distance traveled by a vehicle as a function of time. The graph passes through \\((30,18)\\) and \\((90,66)\\), where time is measured in minutes and distance is measured in miles. What is the average rate of change in distance from 30 minutes to 90 minutes, in miles per hour?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The distance changes by \\(66-18=48\\) miles during \\(90-30=60\\) minutes, which is 1 hour. Thus the average rate is \\(\\boxed{48}\\) miles per hour.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 409,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "48"
+      ],
+      "graph": {
+        "type": "xy",
+        "caption": "Distance traveled over time",
+        "xMin": 0,
+        "xMax": 100,
+        "yMin": 0,
+        "yMax": 75,
+        "xStep": 10,
+        "yStep": 10,
+        "xLabel": "time (minutes)",
+        "yLabel": "distance (miles)",
+        "series": [
+          {
+            "label": "distance",
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                30,
+                18
+              ],
+              [
+                60,
+                42
+              ],
+              [
+                90,
+                66
+              ]
+            ],
+            "showPoints": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q410",
+      "groupId": "math-20261008-huge798-q410",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The positive numbers \\(m,n,p,r\\) satisfy: \\(m\\) is 135% of \\(n\\); \\(m\\) is 54% of \\(p\\); and \\(n\\) is 80% of \\(r\\). If \\(p\\) is \\(q\\%\\) of \\(r\\), what is \\(q\\)?",
+      "choices": {
+        "A": "54",
+        "B": "108",
+        "C": "185",
+        "D": "200"
+      },
+      "correctAnswer": "D",
+      "explanation": "Since \\(n=0.80r\\), \\(m=1.35(0.80r)=1.08r\\). Also \\(m=0.54p\\), so \\(p=1.08r/0.54=2r\\). Thus \\(p\\) is \\(\\boxed{200\\%}\\) of \\(r\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 410,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "Since \\(n=0.80r\\), \\(m=1.35(0.80r)=1.08r\\). Also \\(m=0.54p\\), so \\(p=1.08r/0.54=2r\\). Thus \\(p\\) is \\(\\boxed{200\\%}\\) of \\(r\\)."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q411",
+      "groupId": "math-20261008-huge798-q411",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The graph of a function passes through \\((0,12)\\) and then decreases rapidly. As \\(x\\) increases, the graph approaches the horizontal line \\(y=3\\) from above but never becomes linear. Which description best fits the function?",
+      "choices": {
+        "A": "Decreasing exponential",
+        "B": "Increasing exponential",
+        "C": "Decreasing linear",
+        "D": "Increasing linear"
+      },
+      "correctAnswer": "A",
+      "explanation": "The function is decreasing, and its changing rate together with a horizontal asymptote indicates exponential rather than linear behavior. Thus it is a decreasing exponential.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 411,
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The function is decreasing, and its changing rate together with a horizontal asymptote indicates exponential rather than linear behavior. Thus it is a decreasing exponential.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "xy",
+        "caption": "A decreasing function approaching y = 3",
+        "xMin": 0,
+        "xMax": 6,
+        "yMin": 2,
+        "yMax": 13,
+        "xStep": 1,
+        "yStep": 1,
+        "xLabel": "x",
+        "yLabel": "y",
+        "series": [
+          {
+            "label": "function",
+            "points": [
+              [
+                0,
+                12
+              ],
+              [
+                1,
+                8
+              ],
+              [
+                2,
+                5.5
+              ],
+              [
+                3,
+                4.3
+              ],
+              [
+                4,
+                3.7
+              ],
+              [
+                5,
+                3.35
+              ],
+              [
+                6,
+                3.18
+              ]
+            ],
+            "showPoints": true
+          },
+          {
+            "label": "y=3",
+            "points": [
+              [
+                0,
+                3
+              ],
+              [
+                6,
+                3
+              ]
+            ],
+            "showPoints": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q413",
+      "groupId": "math-20261008-huge798-q413",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A line of best fit for data set E passes approximately through \\((2,14)\\) and \\((12,34)\\). Data set F is created by multiplying every y-coordinate in data set E by 1.8. Which equation could represent a line of best fit for data set F?",
+      "choices": {
+        "A": "\\(y=3.6x+18\\)",
+        "B": "\\(y=3.6x+10\\)",
+        "C": "\\(y=2x+18\\)",
+        "D": "\\(y=1.1x+5.6\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "For E, the slope is \\((34-14)/(12-2)=2\\), and using \\((2,14)\\) gives intercept 10. Multiplying every y-value by 1.8 multiplies both slope and intercept by 1.8, giving \\(\\boxed{y=3.6x+18}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 413,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "For E, the slope is \\((34-14)/(12-2)=2\\), and using \\((2,14)\\) gives intercept 10. Multiplying every y-value by 1.8 multiplies both slope and intercept by 1.8, giving \\(\\boxed{y=3.6x+18}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q414",
+      "groupId": "math-20261008-huge798-q414",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Probability",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The table summarizes how 130 students travel to school. If one student is selected at random, what is the probability that the student walks to school?",
+      "choices": {
+        "A": "\\(\\frac6{13}\\)",
+        "B": "\\(\\frac5{13}\\)",
+        "C": "\\(\\frac7{13}\\)",
+        "D": "\\(\\frac4{13}\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "There are 130 students total and 80 ride the bus, so \\(130-80=50\\) walk. The probability is \\(50/130=\\boxed{5/13}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 414,
+      "subtopic": "Probability",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "There are 130 students total and 80 ride the bus, so \\(130-80=50\\) walk. The probability is \\(50/130=\\boxed{5/13}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "table": {
+        "caption": "Transportation to school",
+        "headers": [
+          "Transportation",
+          "Grade 9",
+          "Grade 10",
+          "Total"
+        ],
+        "rows": [
+          [
+            "Bus",
+            "36",
+            "44",
+            "80"
+          ],
+          [
+            "Walk",
+            "24",
+            "26",
+            "50"
+          ],
+          [
+            "Total",
+            "60",
+            "70",
+            "130"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q415",
+      "groupId": "math-20261008-huge798-q415",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Probability",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "An orchard has 8 rows of trees. There are 2 more south rows than north rows. Each north row contains 8 ripe fruits and 4 unripe fruits. Each south row contains 5 ripe fruits and 7 unripe fruits. A fruit is selected at random from all the trees. What is the probability that it came from a south row, given that it is ripe?",
+      "choices": {
+        "A": "\\(\\frac38\\)",
+        "B": "\\(\\frac58\\)",
+        "C": "\\(\\frac{25}{49}\\)",
+        "D": "\\(\\frac{24}{49}\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "There are 3 north rows and 5 south rows. Ripe fruits total \\(3(8)=24\\) from north rows and \\(5(5)=25\\) from south rows. Given that the fruit is ripe, the probability it came from a south row is \\(\\boxed{25/49}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 415,
+      "subtopic": "Probability",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "There are 3 north rows and 5 south rows. Ripe fruits total \\(3(8)=24\\) from north rows and \\(5(5)=25\\) from south rows. Given that the fruit is ripe, the probability it came from a south row is \\(\\boxed{25/49}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q416",
+      "groupId": "math-20261008-huge798-q416",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "Five measurements are \\(12,15,15,18,20\\). A sixth measurement of 14 is added. By how much does the mean decrease?",
+      "choices": {
+        "A": "\\(\\frac16\\)",
+        "B": "\\(\\frac13\\)",
+        "C": "\\(\\frac23\\)",
+        "D": "2"
+      },
+      "correctAnswer": "B",
+      "explanation": "The original mean is \\(80/5=16\\). The new mean is \\(94/6=47/3\\). The decrease is \\(16-47/3=\\boxed{1/3}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 416,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The original mean is \\(80/5=16\\). The new mean is \\(94/6=47/3\\). The decrease is \\(16-47/3=\\boxed{1/3}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q417",
+      "groupId": "math-20261008-huge798-q417",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A tank is 40% full. After 18 liters of liquid are added, the tank is 70% full. What is the tank's total capacity, in liters?",
+      "choices": {
+        "A": "45",
+        "B": "60",
+        "C": "72",
+        "D": "105"
+      },
+      "correctAnswer": "B",
+      "explanation": "The added 18 liters represent \\(70\\%-40\\%=30\\%\\) of the tank's capacity. Thus \\(0.30C=18\\), so \\(\\boxed{C=60}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 417,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The added 18 liters represent \\(70\\%-40\\%=30\\%\\) of the tank's capacity. Thus \\(0.30C=18\\), so \\(\\boxed{C=60}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q418",
+      "groupId": "math-20261008-huge798-q418",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "An underwater camera rises from a depth of 42 fathoms to a depth of 18 fathoms. How many yards does the camera rise? Use 1 fathom = 6 feet and 3 feet = 1 yard.",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The change in depth is \\(42-18=24\\) fathoms. Converting gives \\(24(6)/3=\\boxed{48}\\) yards.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 418,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "48"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q419",
+      "groupId": "math-20261008-huge798-q419",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A metal block is a rectangular prism measuring 20 centimeters by 15 centimeters by 8 centimeters. The metal has a density of 7,500 kilograms per cubic meter. What is the mass of the block, in kilograms?",
+      "choices": {
+        "A": "1.8",
+        "B": "18",
+        "C": "180",
+        "D": "1,800"
+      },
+      "correctAnswer": "B",
+      "explanation": "The dimensions are 0.20 m, 0.15 m, and 0.08 m, so the volume is \\(0.20(0.15)(0.08)=0.0024\\text{ m}^3\\). Mass equals density times volume: \\(7500(0.0024)=\\boxed{18}\\) kg.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 419,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The dimensions are 0.20 m, 0.15 m, and 0.08 m, so the volume is \\(0.20(0.15)(0.08)=0.0024\\text{ m}^3\\). Mass equals density times volume: \\(7500(0.0024)=\\boxed{18}\\) kg.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q420",
+      "groupId": "math-20261008-huge798-q420",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The data values are \\(13,5,9,7,12,8,14,6\\). The value 14 was recorded incorrectly and should have been 10. What is the median of the corrected data set?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The corrected ordered values are \\(5,6,7,8,9,10,12,13\\). With 8 values, the median is \\((8+9)/2=\\boxed{8.5}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 420,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "8.5",
+        "17/2"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q421",
+      "groupId": "math-20261008-huge798-q421",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "At a research laboratory, the ratio of technicians to engineers is \\(5:8\\). There are \\(t\\) technicians and engineers altogether. Which expression represents the number of engineers?",
+      "choices": {
+        "A": "\\(\\frac{5t}{8}\\)",
+        "B": "\\(\\frac{8t}{5}\\)",
+        "C": "\\(\\frac{5t}{13}\\)",
+        "D": "\\(\\frac{8t}{13}\\)"
+      },
+      "correctAnswer": "D",
+      "explanation": "The ratio has \\(5+8=13\\) total parts, of which 8 are engineers. Therefore the number of engineers is \\(\\boxed{8t/13}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 421,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "The ratio has \\(5+8=13\\) total parts, of which 8 are engineers. Therefore the number of engineers is \\(\\boxed{8t/13}\\)."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q422",
+      "groupId": "math-20261008-huge798-q422",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "In a scale model, \\(\\frac38\\) inch represents 5 feet in the actual building. An actual hallway is \\(x\\) yards long. Which expression gives the hallway's length, in inches, in the model?",
+      "choices": {
+        "A": "\\(\\frac{9x}{40}\\)",
+        "B": "\\(\\frac{5x}{8}\\)",
+        "C": "\\(\\frac{8x}{15}\\)",
+        "D": "\\(\\frac{40x}{9}\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "The hallway is \\(3x\\) feet long. Using the scale, its model length is \\(3x\\cdot\\frac{3/8}{5}=\\boxed{9x/40}\\) inches.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 422,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The hallway is \\(3x\\) feet long. Using the scale, its model length is \\(3x\\cdot\\frac{3/8}{5}=\\boxed{9x/40}\\) inches.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q423",
+      "groupId": "math-20261008-huge798-q423",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A cable consists of one section that is 2.5 yards long and another section that is 54 inches long. What is the total length of the cable, in feet?",
+      "choices": {
+        "A": "10.5",
+        "B": "12",
+        "C": "12.5",
+        "D": "13.5"
+      },
+      "correctAnswer": "B",
+      "explanation": "Convert: \\(2.5\\) yards is 7.5 feet and 54 inches is 4.5 feet. The total is \\(7.5+4.5=\\boxed{12}\\) feet.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 423,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Convert: \\(2.5\\) yards is 7.5 feet and 54 inches is 4.5 feet. The total is \\(7.5+4.5=\\boxed{12}\\) feet.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q424",
+      "groupId": "math-20261008-huge798-q424",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The box plots have five-number summaries Class A: 4, 10, 16, 22, 28 and Class B: 7, 11, 14, 20, 25. Every value in Class A is increased by 3. Every value in Class B is multiplied by 2. What is the positive difference between the ranges of the transformed data sets?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Class A's range is \\(28-4=24\\), unchanged by adding 3. Class B's range is \\(25-7=18\\), which becomes 36 after multiplying by 2. The positive difference is \\(36-24=\\boxed{12}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 424,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "12"
+      ],
+      "diagram": {
+        "width": 460,
+        "height": 230,
+        "alt": "Two box plots for Classes A and B",
+        "lines": [
+          {
+            "x1": 45,
+            "y1": 70,
+            "x2": 115,
+            "y2": 70,
+            "dashed": false
+          },
+          {
+            "x1": 315,
+            "y1": 70,
+            "x2": 385,
+            "y2": 70,
+            "dashed": false
+          },
+          {
+            "x1": 45,
+            "y1": 55,
+            "x2": 45,
+            "y2": 85,
+            "dashed": false
+          },
+          {
+            "x1": 385,
+            "y1": 55,
+            "x2": 385,
+            "y2": 85,
+            "dashed": false
+          },
+          {
+            "x1": 115,
+            "y1": 45,
+            "x2": 315,
+            "y2": 45,
+            "dashed": false
+          },
+          {
+            "x1": 315,
+            "y1": 45,
+            "x2": 315,
+            "y2": 95,
+            "dashed": false
+          },
+          {
+            "x1": 315,
+            "y1": 95,
+            "x2": 115,
+            "y2": 95,
+            "dashed": false
+          },
+          {
+            "x1": 115,
+            "y1": 95,
+            "x2": 115,
+            "y2": 45,
+            "dashed": false
+          },
+          {
+            "x1": 215,
+            "y1": 45,
+            "x2": 215,
+            "y2": 95,
+            "dashed": false
+          },
+          {
+            "x1": 75,
+            "y1": 165,
+            "x2": 135,
+            "y2": 165,
+            "dashed": false
+          },
+          {
+            "x1": 285,
+            "y1": 165,
+            "x2": 345,
+            "y2": 165,
+            "dashed": false
+          },
+          {
+            "x1": 75,
+            "y1": 150,
+            "x2": 75,
+            "y2": 180,
+            "dashed": false
+          },
+          {
+            "x1": 345,
+            "y1": 150,
+            "x2": 345,
+            "y2": 180,
+            "dashed": false
+          },
+          {
+            "x1": 135,
+            "y1": 140,
+            "x2": 285,
+            "y2": 140,
+            "dashed": false
+          },
+          {
+            "x1": 285,
+            "y1": 140,
+            "x2": 285,
+            "y2": 190,
+            "dashed": false
+          },
+          {
+            "x1": 285,
+            "y1": 190,
+            "x2": 135,
+            "y2": 190,
+            "dashed": false
+          },
+          {
+            "x1": 135,
+            "y1": 190,
+            "x2": 135,
+            "y2": 140,
+            "dashed": false
+          },
+          {
+            "x1": 195,
+            "y1": 140,
+            "x2": 195,
+            "y2": 190,
+            "dashed": false
+          }
+        ],
+        "labels": [
+          {
+            "x": 20,
+            "y": 72,
+            "text": "A",
+            "anchor": "middle"
+          },
+          {
+            "x": 20,
+            "y": 167,
+            "text": "B",
+            "anchor": "middle"
+          },
+          {
+            "x": 215,
+            "y": 25,
+            "text": "4, 10, 16, 22, 28",
+            "anchor": "middle"
+          },
+          {
+            "x": 210,
+            "y": 215,
+            "text": "7, 11, 14, 20, 25",
+            "anchor": "middle"
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q425",
+      "groupId": "math-20261008-huge798-q425",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "This year, a greenhouse contains 87 plants, which is 45% more than it contained last year. How many plants did the greenhouse contain last year?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "If last year's number is \\(x\\), then \\(1.45x=87\\). Hence \\(x=87/1.45=\\boxed{60}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 425,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "60"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q426",
+      "groupId": "math-20261008-huge798-q426",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The dot plots represent data sets A and B. Which statements must be true? I. The median of data set A equals the median of data set B. II. The standard deviation of data set B is greater than the standard deviation of data set A.",
+      "choices": {
+        "A": "I only",
+        "B": "II only",
+        "C": "I and II",
+        "D": "Neither I nor II"
+      },
+      "correctAnswer": "C",
+      "explanation": "The data are A: \\(0,4,4,6,6,10\\) and B: \\(0,0,4,6,10,10\\). Both medians are 5. Both are centered at 5, but B places more values farther from 5, so B has the greater standard deviation. Thus both statements are true.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 426,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The data are A: \\(0,4,4,6,6,10\\) and B: \\(0,0,4,6,10,10\\). Both medians are 5. Both are centered at 5, but B places more values farther from 5, so B has the greater standard deviation. Thus both statements are true.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "vertical-bar",
+        "caption": "Dot-plot frequencies",
+        "categories": [
+          "0",
+          "2",
+          "4",
+          "6",
+          "8",
+          "10"
+        ],
+        "series": [
+          {
+            "name": "Data Set A",
+            "values": [
+              1,
+              0,
+              2,
+              2,
+              0,
+              1
+            ]
+          },
+          {
+            "name": "Data Set B",
+            "values": [
+              2,
+              0,
+              1,
+              1,
+              0,
+              2
+            ]
+          }
+        ],
+        "max": 2,
+        "tickStep": 1
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q427",
+      "groupId": "math-20261008-huge798-q427",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Probability",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "At a theater, 450 customers are in exactly one of theaters A, B, and C. If one customer is selected at random, \\(P(A)=\\frac25\\) and \\(P(B)=\\frac7{30}\\). How many customers are in theater C?",
+      "choices": {
+        "A": "105",
+        "B": "135",
+        "C": "150",
+        "D": "165"
+      },
+      "correctAnswer": "D",
+      "explanation": "The probability of C is \\(1-\\frac25-\\frac7{30}=1-\\frac{12}{30}-\\frac7{30}=\\frac{11}{30}\\). Thus the number in C is \\(450\\cdot\\frac{11}{30}=\\boxed{165}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 427,
+      "subtopic": "Probability",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "The probability of C is \\(1-\\frac25-\\frac7{30}=1-\\frac{12}{30}-\\frac7{30}=\\frac{11}{30}\\). Thus the number in C is \\(450\\cdot\\frac{11}{30}=\\boxed{165}\\)."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q428",
+      "groupId": "math-20261008-huge798-q428",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A vehicle's speed is increasing at a rate of 2.2 feet per second squared. What is this rate in miles per minute squared? Use 5,280 feet = 1 mile.",
+      "choices": {
+        "A": "0.0004",
+        "B": "0.04",
+        "C": "1.5",
+        "D": "15.0"
+      },
+      "correctAnswer": "C",
+      "explanation": "Because the time unit is squared, multiply by \\(60^2\\) when converting seconds squared to minutes squared: \\(2.2\\cdot3600/5280=\\boxed{1.5}\\) miles per minute squared.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 428,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Because the time unit is squared, multiply by \\(60^2\\) when converting seconds squared to minutes squared: \\(2.2\\cdot3600/5280=\\boxed{1.5}\\) miles per minute squared.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q429",
+      "groupId": "math-20261008-huge798-q429",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "What is 30% of the number that is 80% of 450?",
+      "choices": {
+        "A": "96",
+        "B": "108",
+        "C": "120",
+        "D": "135"
+      },
+      "correctAnswer": "B",
+      "explanation": "First, 80% of 450 is 360. Then 30% of 360 is \\(0.30(360)=\\boxed{108}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 429,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "First, 80% of 450 is 360. Then 30% of 360 is \\(0.30(360)=\\boxed{108}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q430",
+      "groupId": "math-20261008-huge798-q430",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The frequency table summarizes a data set. The value 9 is added to the data set. Which statement correctly compares the new data set with the original data set?",
+      "choices": {
+        "A": "The mean and median both increase.",
+        "B": "The mean increases, but the median stays the same.",
+        "C": "The mean decreases, but the median increases.",
+        "D": "The mean decreases, and the median stays the same."
+      },
+      "correctAnswer": "A",
+      "explanation": "The original set has 11 values with sum 66, so its mean and median are both 6. After adding 9, the mean is \\(75/12=6.25\\), and the median is \\((6+8)/2=7\\). Both increase.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 430,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The original set has 11 values with sum 66, so its mean and median are both 6. After adding 9, the mean is \\(75/12=6.25\\), and the median is \\((6+8)/2=7\\). Both increase.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "table": {
+        "caption": "Frequency table",
+        "headers": [
+          "Value",
+          "Frequency"
+        ],
+        "rows": [
+          [
+            "2",
+            "2"
+          ],
+          [
+            "4",
+            "3"
+          ],
+          [
+            "6",
+            "1"
+          ],
+          [
+            "8",
+            "3"
+          ],
+          [
+            "10",
+            "2"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q431",
+      "groupId": "math-20261008-huge798-q431",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The equation \\(2.5s+4p=96\\) describes a daily processing limit, where \\(s\\) is the number of standard inspections and \\(p\\) is the number of extended inspections completed. On a certain day, the number of extended inspections completed is 70% of 20. How many standard inspections can be completed that day?",
+      "choices": {
+        "A": "14",
+        "B": "16",
+        "C": "22",
+        "D": "40"
+      },
+      "correctAnswer": "B",
+      "explanation": "Since \\(p=0.70(20)=14\\), \\(2.5s+4(14)=96\\). Thus \\(2.5s=40\\), so \\(\\boxed{s=16}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 431,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Since \\(p=0.70(20)=14\\), \\(2.5s+4(14)=96\\). Thus \\(2.5s=40\\), so \\(\\boxed{s=16}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q432",
+      "groupId": "math-20261008-huge798-q432",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A fundraiser models its account balance, in dollars, by \\(B(w)=420+36(w-2)\\), where \\(w\\) is the number of weeks after the fundraiser began. What is the best interpretation of 36 in this context?",
+      "choices": {
+        "A": "At week 2, the account balance is $36.",
+        "B": "For each additional week, the account balance increases by $36.",
+        "C": "Before the fundraiser began, the account balance was $36.",
+        "D": "The account balance increases by $36 every 2 weeks."
+      },
+      "correctAnswer": "B",
+      "explanation": "The coefficient 36 is the rate of change: increasing \\(w\\) by 1 increases \\(B(w)\\) by $36. Thus the balance increases by $36 per week.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 432,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The coefficient 36 is the rate of change: increasing \\(w\\) by 1 increases \\(B(w)\\) by $36. Thus the balance increases by $36 per week.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q433",
+      "groupId": "math-20261008-huge798-q433",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Systems of Linear Equations",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The graph shows a system of two linear equations in the xy-plane. What is the solution \\((x,y)\\) to the system?",
+      "choices": {
+        "A": "\\((1.5,-2.5)\\)",
+        "B": "\\((2.5,-1.5)\\)",
+        "C": "\\((2.5,1.5)\\)",
+        "D": "\\((3.5,-2.5)\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "The solution is the intersection point of the two lines. From the graph, they intersect at \\(\\boxed{(2.5,-1.5)}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 433,
+      "subtopic": "Systems of Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The solution is the intersection point of the two lines. From the graph, they intersect at \\(\\boxed{(2.5,-1.5)}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "xy",
+        "caption": "System of two linear equations",
+        "xMin": -1,
+        "xMax": 6,
+        "yMin": -6,
+        "yMax": 5,
+        "xStep": 1,
+        "yStep": 1,
+        "xLabel": "x",
+        "yLabel": "y",
+        "series": [
+          {
+            "label": "line 1",
+            "points": [
+              [
+                0,
+                1
+              ],
+              [
+                2.5,
+                -1.5
+              ],
+              [
+                5,
+                -4
+              ]
+            ],
+            "showPoints": false
+          },
+          {
+            "label": "line 2",
+            "points": [
+              [
+                0,
+                -4
+              ],
+              [
+                2.5,
+                -1.5
+              ],
+              [
+                5,
+                1
+              ]
+            ],
+            "showPoints": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q436",
+      "groupId": "math-20261008-huge798-q436",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The graph of \\(y=2f(x)+5\\) is shown. Which equation defines the linear function \\(f\\)?",
+      "choices": {
+        "A": "\\(f(x)=-3x+4\\)",
+        "B": "\\(f(x)=-\\frac32x+9\\)",
+        "C": "\\(f(x)=-\\frac32x+4\\)",
+        "D": "\\(f(x)=-6x+21\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "The graphed line is \\(y=-3x+13\\). Since \\(2f(x)+5=-3x+13\\), \\(2f(x)=-3x+8\\), so \\(\\boxed{f(x)=-\\frac32x+4}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 436,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The graphed line is \\(y=-3x+13\\). Since \\(2f(x)+5=-3x+13\\), \\(2f(x)=-3x+8\\), so \\(\\boxed{f(x)=-\\frac32x+4}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "xy",
+        "caption": "Graph of y = 2f(x) + 5",
+        "xMin": -1,
+        "xMax": 5,
+        "yMin": -4,
+        "yMax": 16,
+        "xStep": 1,
+        "yStep": 2,
+        "xLabel": "x",
+        "yLabel": "y",
+        "series": [
+          {
+            "label": "y=2f(x)+5",
+            "points": [
+              [
+                0,
+                13
+              ],
+              [
+                1,
+                10
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                5,
+                -2
+              ]
+            ],
+            "showPoints": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q437",
+      "groupId": "math-20261008-huge798-q437",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Systems of Linear Equations",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A 72-meter cable is cut into two pieces of lengths \\(x\\) and \\(y\\) meters, where \\(x>y\\). If 4 meters were transferred from the longer piece to the shorter piece, the resulting longer piece would be twice the resulting shorter piece. What is the original value of \\(x\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The pieces satisfy \\(x+y=72\\) and \\(x-4=2(y+4)\\), so \\(x=2y+12\\). Substituting gives \\(3y+12=72\\), so \\(y=20\\) and \\(\\boxed{x=52}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 437,
+      "subtopic": "Systems of Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "52"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q438",
+      "groupId": "math-20261008-huge798-q438",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A reservoir initially contains 42 liters of water. Its amount of water decreases at a constant rate of 1.5 liters every 4 hours. How many hours will pass before the reservoir contains 75% of its initial amount?",
+      "choices": {
+        "A": "7",
+        "B": "14",
+        "C": "28",
+        "D": "42"
+      },
+      "correctAnswer": "C",
+      "explanation": "The target amount is \\(0.75(42)=31.5\\) liters, so 10.5 liters must be lost. That is \\(10.5/1.5=7\\) four-hour intervals, or \\(7(4)=\\boxed{28}\\) hours.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 438,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The target amount is \\(0.75(42)=31.5\\) liters, so 10.5 liters must be lost. That is \\(10.5/1.5=7\\) four-hour intervals, or \\(7(4)=\\boxed{28}\\) hours.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q439",
+      "groupId": "math-20261008-huge798-q439",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The function \\(P(t)=6(t-3)-42\\) gives a company's predicted net profit, in hundreds of dollars, \\(t\\) weeks after a product launch, where \\(0\\le t\\le15\\). What is the best interpretation of the t-intercept of the graph of \\(P\\)?",
+      "choices": {
+        "A": "At 10 weeks, the predicted net profit is $0.",
+        "B": "At 3 weeks, the predicted net profit is $0.",
+        "C": "The predicted net profit increases by $42 each week.",
+        "D": "Before the launch, the predicted net profit was $600."
+      },
+      "correctAnswer": "A",
+      "explanation": "At the t-intercept, \\(P(t)=0\\): \\(6(t-3)-42=0\\), so \\(t=10\\). Thus the model predicts net profit of $0 at week 10.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 439,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "At the t-intercept, \\(P(t)=0\\): \\(6(t-3)-42=0\\), so \\(t=10\\). Thus the model predicts net profit of $0 at week 10.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q440",
+      "groupId": "math-20261008-huge798-q440",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The point \\((2k-1,3)\\) lies on the line shown. What is the value of \\(k\\)?",
+      "choices": {
+        "A": "\\(\\frac12\\)",
+        "B": "1",
+        "C": "\\(\\frac32\\)",
+        "D": "2"
+      },
+      "correctAnswer": "C",
+      "explanation": "The line is \\(y=-x+5\\). When \\(y=3\\), \\(x=2\\). Thus \\(2k-1=2\\), so \\(2k=3\\) and \\(\\boxed{k=\\frac32}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 440,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The line is \\(y=-x+5\\). When \\(y=3\\), \\(x=2\\). Thus \\(2k-1=2\\), so \\(2k=3\\) and \\(\\boxed{k=\\frac32}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "xy",
+        "caption": "Line through (0,5) and (5,0)",
+        "xMin": -1,
+        "xMax": 6,
+        "yMin": -1,
+        "yMax": 6,
+        "xStep": 1,
+        "yStep": 1,
+        "xLabel": "x",
+        "yLabel": "y",
+        "series": [
+          {
+            "label": "line",
+            "points": [
+              [
+                0,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                5,
+                0
+              ]
+            ],
+            "showPoints": true
+          }
+        ]
       }
     }
   ],
