@@ -2109,10 +2109,131 @@
               }
             }
           }
+        },
+        {
+          "range": "601-640",
+          "reviewed": 40,
+          "retained": 30,
+          "excluded": [
+            {
+              "sourceQuestionNumber": 610,
+              "reason": "Export corruption is too ambiguous to reconstruct the original function with high confidence."
+            },
+            {
+              "sourceQuestionNumber": 614,
+              "reason": "Close reskin of routine polynomial expansion already heavily represented."
+            },
+            {
+              "sourceQuestionNumber": 619,
+              "reason": "Close reskin of discriminant-based real-solution-count items."
+            },
+            {
+              "sourceQuestionNumber": 621,
+              "reason": "Near-duplicate exponential-table identification within this tranche; q618/q620 provide stronger coverage."
+            },
+            {
+              "sourceQuestionNumber": 625,
+              "reason": "Close reskin of existing one-step absolute-value solve items."
+            },
+            {
+              "sourceQuestionNumber": 626,
+              "reason": "Close reskin of existing exponential-model date interpretation items."
+            },
+            {
+              "sourceQuestionNumber": 627,
+              "reason": "Low-value variable rearrangement already heavily represented."
+            },
+            {
+              "sourceQuestionNumber": 633,
+              "reason": "Close reskin of existing time-shifted exponential growth models."
+            },
+            {
+              "sourceQuestionNumber": 634,
+              "reason": "Near-duplicate polynomial GCF factoring pattern to q602."
+            },
+            {
+              "sourceQuestionNumber": 636,
+              "reason": "Very low-value graph y-intercept substitution item with no new reasoning structure."
+            }
+          ],
+          "repairs": {
+            "fractionExponentRadicalNotation": [
+              601,
+              605,
+              606,
+              607,
+              612,
+              620,
+              622,
+              629,
+              631,
+              638,
+              640
+            ],
+            "notes": [
+              "Recovered q605's relationship as g(x)=(f(x)-6)/3 from the supplied inversion f=3g+6.",
+              "Recovered q606's full rational expression and x≠5 restriction from its factor-and-cancel solution.",
+              "Recovered q607 as y=√(x+7)+5, q612's root as (5+√k)/2, q629 as √(k-x)=5-x, q631 as g(x)=√(4x+9), and q638 as 54(1/3)^(x-2).",
+              "q610 was excluded because its flattened source does not uniquely determine the original function despite the provided numerical step."
+            ]
+          },
+          "visuals": {
+            "tables": [
+              605,
+              618,
+              620
+            ],
+            "graphs": [
+              624
+            ],
+            "choiceTables": [
+              624
+            ]
+          },
+          "difficultyCalibration": {
+            "approach": "Exactly 10 Easy / 10 Medium / 10 Hard additions, preserving exact global balance.",
+            "addedBySubtopic": {
+              "Equivalent Expressions": {
+                "Easy": 2,
+                "Medium": 1,
+                "Hard": 0
+              },
+              "Quadratics": {
+                "Easy": 1,
+                "Medium": 5,
+                "Hard": 4
+              },
+              "Linear Functions": {
+                "Easy": 2,
+                "Medium": 2,
+                "Hard": 0
+              },
+              "Rational/Radical Equations": {
+                "Easy": 1,
+                "Medium": 1,
+                "Hard": 2
+              },
+              "Exponential Functions": {
+                "Easy": 4,
+                "Medium": 1,
+                "Hard": 1
+              },
+              "Polynomial Functions": {
+                "Easy": 0,
+                "Medium": 0,
+                "Hard": 2
+              },
+              "Nonlinear Equations/Functions": {
+                "Easy": 0,
+                "Medium": 0,
+                "Hard": 1
+              }
+            }
+          }
         }
       ],
-      "retainedSoFar": 486,
-      "reviewedSoFar": 600
+      "retainedSoFar": 516,
+      "reviewedSoFar": 640
     }
   },
   "questions": [
@@ -58702,6 +58823,1037 @@
         "A": "Multiply by \\(12c\\): \\(12ac=b-c\\). Add \\(c\\): \\(\\boxed{b=c(12a+1)}\\).",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
         "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q601",
+      "groupId": "math-20261008-huge798-q601",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Equivalent Expressions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "Which expression is equivalent to \\((p^3q^{-2})(p^{-1}q^5r^2)(q^{-1}r^{-3})\\), where \\(p,q,r>0\\)?",
+      "choices": {
+        "A": "\\(\\frac{p^2q^2}{r}\\)",
+        "B": "\\(p^2q^2r\\)",
+        "C": "\\(\\frac{p^4q^2}{r}\\)",
+        "D": "\\(\\frac{p^2q^4}{r}\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "Add exponents of like bases: \\(p^{3-1}=p^2\\), \\(q^{-2+5-1}=q^2\\), and \\(r^{2-3}=r^{-1}\\). Thus the expression is \\(\\boxed{p^2q^2/r}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 601,
+      "subtopic": "Equivalent Expressions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "Add exponents of like bases: \\(p^{3-1}=p^2\\), \\(q^{-2+5-1}=q^2\\), and \\(r^{2-3}=r^{-1}\\). Thus the expression is \\(\\boxed{p^2q^2/r}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q602",
+      "groupId": "math-20261008-huge798-q602",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Equivalent Expressions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "Which expression is equivalent to \\(18x^4y^2-30x^3y^3+12x^2y\\)?",
+      "choices": {
+        "A": "\\(6x^2y(3x^2y-5xy^2+2)\\)",
+        "B": "\\(6x^2y(3x^2y-5xy+2)\\)",
+        "C": "\\(3x^2y(6x^2y-10xy^2+2)\\)",
+        "D": "\\(6x^2y^2(3x^2-5xy+2)\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "The greatest common factor is \\(6x^2y\\). Factoring gives \\(\\boxed{6x^2y(3x^2y-5xy^2+2)}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 602,
+      "subtopic": "Equivalent Expressions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The greatest common factor is \\(6x^2y\\). Factoring gives \\(\\boxed{6x^2y(3x^2y-5xy^2+2)}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q603",
+      "groupId": "math-20261008-huge798-q603",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The product of two positive integers is 704. The larger integer is 4 less than three times the smaller integer. What is the smaller integer?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "If the smaller integer is \\(n\\), the larger is \\(3n-4\\). Then \\(n(3n-4)=704\\), so \\(3n^2-4n-704=0=(3n+44)(n-16)\\). The positive solution is \\(\\boxed{16}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 603,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "16"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q604",
+      "groupId": "math-20261008-huge798-q604",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A graph gives the predicted resale value \\(V\\), in dollars, of a machine \\(t\\) years after the beginning of 2024. The graph has y-intercept \\((0,18{,}500)\\). Which statement best interprets this intercept?",
+      "choices": {
+        "A": "The machine is predicted to lose $18,500 each year.",
+        "B": "The machine's predicted value at the beginning of 2024 is $18,500.",
+        "C": "The machine's predicted value at the end of 2024 is $18,500.",
+        "D": "The machine is predicted to reach $0 after 18,500 years."
+      },
+      "correctAnswer": "B",
+      "explanation": "At the y-intercept, \\(t=0\\), which is the beginning of 2024. The corresponding modeled value is $18,500.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 604,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "At the y-intercept, \\(t=0\\), which is the beginning of 2024. The corresponding modeled value is $18,500.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q605",
+      "groupId": "math-20261008-huge798-q605",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The table gives values of \\(x\\) and \\(g(x)\\), where \\(g(x)=\\frac{f(x)-6}{3}\\) and \\(f\\) is linear. What is the y-intercept of \\(y=f(x)\\)?",
+      "choices": {
+        "A": "\\((0,2)\\)",
+        "B": "\\((0,6)\\)",
+        "C": "\\((0,8)\\)",
+        "D": "\\((4,0)\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "Since \\(f(x)=3g(x)+6\\), the first two rows give points \\((-4,0)\\) and \\((2,12)\\) on \\(f\\). Their slope is 2. Using \\((-4,0)\\) gives \\(f(x)=2x+8\\), so the y-intercept is \\(\\boxed{(0,8)}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 605,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Since \\(f(x)=3g(x)+6\\), the first two rows give points \\((-4,0)\\) and \\((2,12)\\) on \\(f\\). Their slope is 2. Using \\((-4,0)\\) gives \\(f(x)=2x+8\\), so the y-intercept is \\(\\boxed{(0,8)}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "table": {
+        "caption": "Values of g",
+        "headers": [
+          "x",
+          "g(x)"
+        ],
+        "rows": [
+          [
+            "-4",
+            "-2"
+          ],
+          [
+            "2",
+            "2"
+          ],
+          [
+            "8",
+            "6"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q606",
+      "groupId": "math-20261008-huge798-q606",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Rational/Radical Equations",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "Which expression is equivalent to \\(\\frac{6x(x-5)-9(x-5)+3(x-5)^2}{3x-15}\\), where \\(x\\ne5\\)?",
+      "choices": {
+        "A": "\\(2x-3\\)",
+        "B": "\\(3x-5\\)",
+        "C": "\\(3x-8\\)",
+        "D": "\\(x-8\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "Factor \\(x-5\\) from the numerator. The remaining factor is \\(6x-9+3(x-5)=9x-24=3(3x-8)\\). Since the denominator is \\(3(x-5)\\), cancellation gives \\(\\boxed{3x-8}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 606,
+      "subtopic": "Rational/Radical Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Factor \\(x-5\\) from the numerator. The remaining factor is \\(6x-9+3(x-5)=9x-24=3(3x-8)\\). Since the denominator is \\(3(x-5)\\), cancellation gives \\(\\boxed{3x-8}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q607",
+      "groupId": "math-20261008-huge798-q607",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Rational/Radical Equations",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The graphs of \\(x^2=81\\), with \\(x>0\\), and \\(y=\\sqrt{x+7}+5\\) intersect at \\((x,y)\\). What is \\(y\\)?",
+      "choices": {
+        "A": "4",
+        "B": "9",
+        "C": "14",
+        "D": "16"
+      },
+      "correctAnswer": "B",
+      "explanation": "Since \\(x^2=81\\) and \\(x>0\\), \\(x=9\\). Then \\(y=\\sqrt{9+7}+5=4+5=\\boxed{9}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 607,
+      "subtopic": "Rational/Radical Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Since \\(x^2=81\\) and \\(x>0\\), \\(x=9\\). Then \\(y=\\sqrt{9+7}+5=4+5=\\boxed{9}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q608",
+      "groupId": "math-20261008-huge798-q608",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A parabola has vertex \\((1,-4)\\) and passes through \\((0,-2)\\). The graph is translated upward 6 units. Which equation defines the resulting graph?",
+      "choices": {
+        "A": "\\(y=2(x-1)^2+2\\)",
+        "B": "\\(y=2(x-1)^2-10\\)",
+        "C": "\\(y=2(x-7)^2-4\\)",
+        "D": "\\(y=(x-1)^2+2\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "Before translation, \\(y=a(x-1)^2-4\\). Using \\((0,-2)\\) gives \\(a=2\\). Shifting upward 6 gives \\(\\boxed{y=2(x-1)^2+2}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 608,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "Before translation, \\(y=a(x-1)^2-4\\). Using \\((0,-2)\\) gives \\(a=2\\). Shifting upward 6 gives \\(\\boxed{y=2(x-1)^2+2}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q609",
+      "groupId": "math-20261008-huge798-q609",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The function \\(f(x)=x^2-12x+50\\), and \\(h(x)=2f(x)-7\\). What is the minimum value of \\(h\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Complete the square: \\(f(x)=(x-6)^2+14\\), so the minimum of \\(f\\) is 14. Hence the minimum of \\(h\\) is \\(2(14)-7=\\boxed{21}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 609,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "21"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q611",
+      "groupId": "math-20261008-huge798-q611",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A graph shows a drone's altitude \\(y\\), measured in hundreds of meters, \\(x\\) minutes after launch. A marked point is \\((1.5,24)\\). Which statement correctly interprets this point?",
+      "choices": {
+        "A": "After 1.5 minutes, the drone is 24 meters high.",
+        "B": "After 24 minutes, the drone is 150 meters high.",
+        "C": "After 1.5 minutes, the drone is 2,400 meters high.",
+        "D": "After 150 minutes, the drone is 2,400 meters high."
+      },
+      "correctAnswer": "C",
+      "explanation": "The x-coordinate is 1.5 minutes. The y-coordinate is 24 hundreds of meters, or \\(24(100)=2400\\) meters.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 611,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The x-coordinate is 1.5 minutes. The y-coordinate is 24 hundreds of meters, or \\(24(100)=2400\\) meters.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q612",
+      "groupId": "math-20261008-huge798-q612",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "One solution to \\(2x^2-10x-3=0\\) can be written as \\(\\frac{5+\\sqrt{k}}2\\), where \\(k\\) is a constant. What is \\(k\\)?",
+      "choices": {
+        "A": "21",
+        "B": "25",
+        "C": "31",
+        "D": "35"
+      },
+      "correctAnswer": "C",
+      "explanation": "The quadratic formula gives \\(x=\\frac{10\\pm\\sqrt{124}}4=\\frac{5\\pm\\sqrt{31}}2\\). Thus \\(\\boxed{k=31}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 612,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The quadratic formula gives \\(x=\\frac{10\\pm\\sqrt{124}}4=\\frac{5\\pm\\sqrt{31}}2\\). Thus \\(\\boxed{k=31}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q613",
+      "groupId": "math-20261008-huge798-q613",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The equation \\(p(x)+2x=x^2+10\\) defines \\(p\\). What is the minimum value of \\(p\\)?",
+      "choices": {
+        "A": "8",
+        "B": "9",
+        "C": "10",
+        "D": "11"
+      },
+      "correctAnswer": "B",
+      "explanation": "Rearrange: \\(p(x)=x^2-2x+10=(x-1)^2+9\\). The minimum is \\(\\boxed{9}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 613,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Rearrange: \\(p(x)=x^2-2x+10=(x-1)^2+9\\). The minimum is \\(\\boxed{9}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q615",
+      "groupId": "math-20261008-huge798-q615",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A geometric sequence has fourth term 162. Each term after the first is 3 times the preceding term. If \\(a_n\\) is the nth term, which equation defines \\(a_n\\)?",
+      "choices": {
+        "A": "\\(a_n=6(3)^{n-1}\\)",
+        "B": "\\(a_n=6(3)^n\\)",
+        "C": "\\(a_n=162(3)^{n-1}\\)",
+        "D": "\\(a_n=2(3)^{n-1}\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "\\(a_4=a_1(3)^3=162\\), so \\(a_1=6\\). Therefore \\(\\boxed{a_n=6(3)^{n-1}}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 615,
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "\\(a_4=a_1(3)^3=162\\), so \\(a_1=6\\). Therefore \\(\\boxed{a_n=6(3)^{n-1}}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q616",
+      "groupId": "math-20261008-huge798-q616",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The function \\(f(x)=a(x-2)^2+b\\), where \\(a,b\\) are positive integers, has equivalent forms I. \\(g(x)=ax^2-4ax+(4a+b)\\) and II. \\(h(x)=a(x-1)(x-3)+(a+b)\\). Which equations display the y-coordinate of the y-intercept of \\(f\\) as a constant or coefficient?",
+      "choices": {
+        "A": "I only",
+        "B": "II only",
+        "C": "I and II",
+        "D": "Neither I nor II"
+      },
+      "correctAnswer": "A",
+      "explanation": "The y-intercept is \\(f(0)=4a+b\\). Form I displays \\(4a+b\\) as its constant term. Form II displays \\(a+b\\), not the y-intercept. Thus only I.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 616,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The y-intercept is \\(f(0)=4a+b\\). Form I displays \\(4a+b\\) as its constant term. Form II displays \\(a+b\\), not the y-intercept. Thus only I.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q617",
+      "groupId": "math-20261008-huge798-q617",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A model for projectile height is \\(h(t)=-5(2t-6)^2+120\\). Which statement correctly interprets the vertex?",
+      "choices": {
+        "A": "The projectile reaches a maximum height of 120 meters after 3 seconds.",
+        "B": "The projectile reaches a maximum height of 120 meters after 6 seconds.",
+        "C": "The projectile reaches a maximum height of 5 meters after 3 seconds.",
+        "D": "The projectile reaches a minimum height of 120 meters after 3 seconds."
+      },
+      "correctAnswer": "A",
+      "explanation": "The square is minimized when \\(2t-6=0\\), so \\(t=3\\). Then \\(h=120\\). Because the squared term has a negative coefficient, this is a maximum.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 617,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The square is minimized when \\(2t-6=0\\), so \\(t=3\\). Then \\(h=120\\). Because the squared term has a negative coefficient, this is a maximum.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q618",
+      "groupId": "math-20261008-huge798-q618",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The table shows an exponential relationship between \\(t\\) and \\(A(t)\\). Which equation defines \\(A(t)\\)?",
+      "choices": {
+        "A": "\\(A(t)=200(1.10)^t\\)",
+        "B": "\\(A(t)=242(1.10)^t\\)",
+        "C": "\\(A(t)=200(0.90)^t\\)",
+        "D": "\\(A(t)=242(1.10)^{t-1}\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "The common ratio is 1.10. Write \\(A(t)=a(1.10)^t\\). Using \\(A(2)=242\\) gives \\(242=1.21a\\), so \\(a=200\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 618,
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The common ratio is 1.10. Write \\(A(t)=a(1.10)^t\\). Using \\(A(2)=242\\) gives \\(242=1.21a\\), so \\(a=200\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "table": {
+        "caption": "Exponential relationship",
+        "headers": [
+          "t",
+          "A(t)"
+        ],
+        "rows": [
+          [
+            "2",
+            "242.00"
+          ],
+          [
+            "3",
+            "266.20"
+          ],
+          [
+            "4",
+            "292.82"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q620",
+      "groupId": "math-20261008-huge798-q620",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The table gives values of an exponential function \\(g\\). Which equation defines \\(g\\)?",
+      "choices": {
+        "A": "\\(g(x)=9(3)^x\\)",
+        "B": "\\(g(x)=9(\\frac13)^x\\)",
+        "C": "\\(g(x)=3(\\frac13)^x\\)",
+        "D": "\\(g(x)=(\\frac13)^x\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "Each increase of 1 in \\(x\\) divides the output by 3, so the base is \\(1/3\\). Since \\(g(1)=3\\), the coefficient is 9. Thus \\(\\boxed{g(x)=9(1/3)^x}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 620,
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Each increase of 1 in \\(x\\) divides the output by 3, so the base is \\(1/3\\). Since \\(g(1)=3\\), the coefficient is 9. Thus \\(\\boxed{g(x)=9(1/3)^x}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "table": {
+        "caption": "Values of g",
+        "headers": [
+          "x",
+          "g(x)"
+        ],
+        "rows": [
+          [
+            "-2",
+            "81"
+          ],
+          [
+            "-1",
+            "27"
+          ],
+          [
+            "1",
+            "3"
+          ],
+          [
+            "2",
+            "1"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q622",
+      "groupId": "math-20261008-huge798-q622",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The function \\(f(x)=(4x-10)(2x-14)\\) reaches its minimum at what value of \\(x\\)?",
+      "choices": {
+        "A": "\\(\\frac52\\)",
+        "B": "\\(\\frac{19}4\\)",
+        "C": "7",
+        "D": "\\(\\frac92\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "The zeros are \\(5/2\\) and 7. The axis of symmetry is halfway between them: \\(\\frac{(5/2)+7}{2}=\\boxed{19/4}\\). Since the leading coefficient is positive, the minimum occurs there.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 622,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The zeros are \\(5/2\\) and 7. The axis of symmetry is halfway between them: \\(\\frac{(5/2)+7}{2}=\\boxed{19/4}\\). Since the leading coefficient is positive, the minimum occurs there.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q623",
+      "groupId": "math-20261008-huge798-q623",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The function \\(P(t)=1200(8)^{t/15}\\) models a population \\(t\\) minutes after observation begins. How many minutes does it take the population to double?",
+      "choices": {
+        "A": "3",
+        "B": "5",
+        "C": "15",
+        "D": "45"
+      },
+      "correctAnswer": "B",
+      "explanation": "Since \\(8=2^3\\), \\(8^{t/15}=2^{t/5}\\). The population doubles when the exponent of 2 increases by 1, which takes \\(\\boxed{5}\\) minutes.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 623,
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Since \\(8=2^3\\), \\(8^{t/15}=2^{t/5}\\). The population doubles when the exponent of 2 increases by 1, which takes \\(\\boxed{5}\\) minutes.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q624",
+      "groupId": "math-20261008-huge798-q624",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The graph of \\(y=f(x)\\) has x-intercepts at \\(x=1\\) and \\(x=7\\) and vertex \\((4,-9)\\). Which table is consistent with the graph?",
+      "choices": {
+        "A": "Table A",
+        "B": "Table B",
+        "C": "Table C",
+        "D": "Table D"
+      },
+      "correctAnswer": "B",
+      "explanation": "The vertex gives \\(f(4)=-9\\). Symmetry about \\(x=4\\) gives equal outputs at 0 and 8, and the graph shows both are 7. Thus table B is consistent.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 624,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The vertex gives \\(f(4)=-9\\). Symmetry about \\(x=4\\) gives equal outputs at 0 and 8, and the graph shows both are 7. Thus table B is consistent.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "xy",
+        "caption": "Parabola with x-intercepts 1 and 7 and vertex (4,-9)",
+        "xMin": 0,
+        "xMax": 8,
+        "yMin": -10,
+        "yMax": 8,
+        "xStep": 1,
+        "yStep": 2,
+        "xLabel": "x",
+        "yLabel": "f(x)",
+        "series": [
+          {
+            "label": "f",
+            "points": [
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                4,
+                -9
+              ],
+              [
+                7,
+                0
+              ],
+              [
+                8,
+                7
+              ]
+            ],
+            "showPoints": true
+          }
+        ]
+      },
+      "choiceTables": {
+        "A": {
+          "headers": [
+            "x",
+            "f(x)"
+          ],
+          "rows": [
+            [
+              "0",
+              "-9"
+            ],
+            [
+              "4",
+              "0"
+            ],
+            [
+              "8",
+              "7"
+            ]
+          ]
+        },
+        "B": {
+          "headers": [
+            "x",
+            "f(x)"
+          ],
+          "rows": [
+            [
+              "0",
+              "7"
+            ],
+            [
+              "4",
+              "-9"
+            ],
+            [
+              "8",
+              "7"
+            ]
+          ]
+        },
+        "C": {
+          "headers": [
+            "x",
+            "f(x)"
+          ],
+          "rows": [
+            [
+              "0",
+              "7"
+            ],
+            [
+              "4",
+              "9"
+            ],
+            [
+              "8",
+              "7"
+            ]
+          ]
+        },
+        "D": {
+          "headers": [
+            "x",
+            "f(x)"
+          ],
+          "rows": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "4",
+              "-9"
+            ],
+            [
+              "8",
+              "0"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q628",
+      "groupId": "math-20261008-huge798-q628",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A subscription service has 2,500 customers at \\(m=0\\). For each 4-month period, the number of customers increases by 21%. Which equation gives the number \\(C\\) after \\(m\\) months?",
+      "choices": {
+        "A": "\\(C=2500(1.21)^m\\)",
+        "B": "\\(C=2500(1.21)^{m/4}\\)",
+        "C": "\\(C=2500(0.79)^{m/4}\\)",
+        "D": "\\(C=2500(1.0525)^m\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "Each 4-month period multiplies customers by 1.21. The number of such periods in \\(m\\) months is \\(m/4\\), so \\(\\boxed{C=2500(1.21)^{m/4}}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 628,
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Each 4-month period multiplies customers by 1.21. The number of such periods in \\(m\\) months is \\(m/4\\), so \\(\\boxed{C=2500(1.21)^{m/4}}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q629",
+      "groupId": "math-20261008-huge798-q629",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Rational/Radical Equations",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "In the equation \\(\\sqrt{k-x}=5-x\\), \\(k\\) is a constant. The equation has exactly one real solution. What is the minimum possible value of \\(4k\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The square root requires \\(x\\le5\\). Squaring gives \\(k=x+(5-x)^2=x^2-9x+25=(x-9/2)^2+19/4\\). The minimum is \\(k=19/4\\), which occurs within the domain and gives tangency, so \\(\\boxed{4k=19}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 629,
+      "subtopic": "Rational/Radical Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "19"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q630",
+      "groupId": "math-20261008-huge798-q630",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Polynomial Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The function \\(f(x)=(x-2)(x+4)(2x-1)\\) is shifted upward 9 units to create \\(g\\). Let \\(a\\) be the larger solution of \\(x^2-5x+6=0\\). If \\((a,b)\\) lies on \\(g\\), what is \\(b\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The quadratic factors as \\((x-2)(x-3)=0\\), so \\(a=3\\). Since \\(g(x)=f(x)+9\\), \\(b=f(3)+9=(1)(7)(5)+9=\\boxed{44}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 630,
+      "subtopic": "Polynomial Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "44"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q631",
+      "groupId": "math-20261008-huge798-q631",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Rational/Radical Equations",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The function \\(g(x)=\\sqrt{4x+9}\\). What is \\(g(10)-g(4)\\)?",
+      "choices": {
+        "A": "2",
+        "B": "5",
+        "C": "7",
+        "D": "12"
+      },
+      "correctAnswer": "A",
+      "explanation": "\\(g(10)=\\sqrt{49}=7\\) and \\(g(4)=\\sqrt{25}=5\\), so the difference is \\(\\boxed{2}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 631,
+      "subtopic": "Rational/Radical Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "\\(g(10)=\\sqrt{49}=7\\) and \\(g(4)=\\sqrt{25}=5\\), so the difference is \\(\\boxed{2}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q632",
+      "groupId": "math-20261008-huge798-q632",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A ball reaches a maximum height of 100 meters at \\(t=3\\) seconds and hits the ground at \\(t=8\\) seconds. Which equation gives its height \\(h\\)?",
+      "choices": {
+        "A": "\\(h=-4(t-3)^2+100\\)",
+        "B": "\\(h=-4(t-3)^2+64\\)",
+        "C": "\\(h=-25(t-3)^2+100\\)",
+        "D": "\\(h=-4(t-8)^2+100\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "Use vertex form \\(h=a(t-3)^2+100\\). Since \\(h(8)=0\\), \\(25a+100=0\\), so \\(a=-4\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 632,
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "Use vertex form \\(h=a(t-3)^2+100\\). Since \\(h(8)=0\\), \\(25a+100=0\\), so \\(a=-4\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q635",
+      "groupId": "math-20261008-huge798-q635",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Nonlinear Equations/Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The graph of \\(y=f(x)\\) has vertical asymptote \\(x=1\\) and passes through \\((3,5)\\). The function \\(g(x)=f(x+3)-4\\). Which description must be true of \\(g\\)?",
+      "choices": {
+        "A": "Asymptote x=4; passes through (6,1).",
+        "B": "Asymptote x=-2; passes through (0,9).",
+        "C": "Asymptote x=-2; passes through (0,1).",
+        "D": "Asymptote x=4; passes through (0,1)."
+      },
+      "correctAnswer": "C",
+      "explanation": "Replacing \\(x\\) by \\(x+3\\) shifts left 3: the asymptote becomes \\(x=-2\\), and \\((3,5)\\) becomes \\((0,5)\\). Subtracting 4 moves that point to \\((0,1)\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 635,
+      "subtopic": "Nonlinear Equations/Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Replacing \\(x\\) by \\(x+3\\) shifts left 3: the asymptote becomes \\(x=-2\\), and \\((3,5)\\) becomes \\((0,5)\\). Subtracting 4 moves that point to \\((0,1)\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q637",
+      "groupId": "math-20261008-huge798-q637",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Polynomial Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The polynomial \\(P(x,y)=75x^2-ny^2\\) has \\(5x-2y\\) as a factor, where \\(n>0\\). What is \\(n\\)?",
+      "choices": {
+        "A": "4",
+        "B": "30",
+        "C": "12",
+        "D": "75"
+      },
+      "correctAnswer": "C",
+      "explanation": "If \\(5x-2y=0\\), then \\(x=2y/5\\). Substituting into P gives \\(75(4y^2/25)-ny^2=(12-n)y^2\\). For the factor condition this must be 0, so \\(\\boxed{n=12}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 637,
+      "subtopic": "Polynomial Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "If \\(5x-2y=0\\), then \\(x=2y/5\\). Substituting into P gives \\(75(4y^2/25)-ny^2=(12-n)y^2\\). For the factor condition this must be 0, so \\(\\boxed{n=12}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q638",
+      "groupId": "math-20261008-huge798-q638",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The exponential function \\(f(x)=54(\\frac13)^{x-2}\\). If \\(k=f(-1)\\), which equivalent form of \\(f\\) displays \\(k\\) as its coefficient?",
+      "choices": {
+        "A": "\\(f(x)=1458(\\frac13)^{x+1}\\)",
+        "B": "\\(f(x)=1458(\\frac13)^{x-1}\\)",
+        "C": "\\(f(x)=54(\\frac13)^{x+1}\\)",
+        "D": "\\(f(x)=2(\\frac13)^{x+1}\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "\\(f(-1)=54(1/3)^{-3}=54(27)=1458\\). To display this as the coefficient, the exponent must be 0 at \\(x=-1\\), giving \\(\\boxed{1458(1/3)^{x+1}}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 638,
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "\\(f(-1)=54(1/3)^{-3}=54(27)=1458\\). To display this as the coefficient, the exponent must be 0 at \\(x=-1\\), giving \\(\\boxed{1458(1/3)^{x+1}}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q639",
+      "groupId": "math-20261008-huge798-q639",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Advanced Math",
+      "skill": "Equivalent Expressions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "Which expression is equivalent to \\(12x^2-300y^2\\)?",
+      "choices": {
+        "A": "\\(12(x-25y)(x+25y)\\)",
+        "B": "\\(12(x-5y)^2\\)",
+        "C": "\\((12x-5y)(x+5y)\\)",
+        "D": "\\(12(x-5y)(x+5y)\\)"
+      },
+      "correctAnswer": "D",
+      "explanation": "Factor 12: \\(12(x^2-25y^2)\\). Then use difference of squares: \\(x^2-(5y)^2=(x-5y)(x+5y)\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 639,
+      "subtopic": "Equivalent Expressions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "Factor 12: \\(12(x^2-25y^2)\\). Then use difference of squares: \\(x^2-(5y)^2=(x-5y)(x+5y)\\)."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q640",
+      "groupId": "math-20261008-huge798-q640",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The equation \\(3y-2p=q(y+1)\\) relates \\(p,q,y\\), where \\(q\\ne3\\). Which equation expresses \\(y\\) in terms of \\(p\\) and \\(q\\)?",
+      "choices": {
+        "A": "\\(y=\\frac{2p-q}{3+q}\\)",
+        "B": "\\(y=\\frac{q-2p}{3-q}\\)",
+        "C": "\\(y=\\frac{2p+q}{3-q}\\)",
+        "D": "\\(y=\\frac{2p+q}{3+q}\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "Expand: \\(3y-2p=qy+q\\). Thus \\((3-q)y=2p+q\\), so \\(\\boxed{y=(2p+q)/(3-q)}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 640,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Expand: \\(3y-2p=qy+q\\). Thus \\((3-q)y=2p+q\\), so \\(\\boxed{y=(2p+q)/(3-q)}\\).",
         "D": "This choice does not satisfy the relationships or conditions in the question."
       }
     }
