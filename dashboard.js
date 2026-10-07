@@ -15,6 +15,21 @@ document.addEventListener("DOMContentLoaded", async () => {
         "Math": 95
     };
 
+    const DASHBOARD_SKILL_TAXONOMY = {
+        "R&W": {
+            "Information & Ideas": ["Central Ideas & Details","Inferences","Textual Command of Evidence","Qualitative Command of Evidence"],
+            "Craft & Structure": ["Words in Context","Text Structure & Purpose","Cross-Text Connections"],
+            "Expression of Ideas": ["Rhetorical Synthesis","Transitions"],
+            "Standard English Conventions": ["Boundaries","Form, Structure & Sense"]
+        },
+        "Math": {
+            "Algebra": ["Linear Equations","Linear Functions","Systems of Linear Equations","Linear Inequalities","Other Algebra"],
+            "Advanced Math": ["Quadratics","Equivalent Expressions","Polynomial Functions","Exponential Functions","Rational/Radical Equations","Nonlinear Equations/Functions"],
+            "Problem-Solving & Data Analysis": ["Ratio, Rates, Percentages","Statistics","Probability"],
+            "Geometry & Trigonometry": ["Lines, Angles, and Triangles","Area and Volume","Circles","Trigonometry"]
+        }
+    };
+
     let activeSubtopicFilter = "all";
     let currentSubtopicRows = [];
 
@@ -23,7 +38,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         answered: document.getElementById("questions-answered"),
         sevenDay: document.getElementById("seven-day-chart"),
         mockChart: document.getElementById("mock-performance-chart"),
-        subtopicBody: document.getElementById("subtopic-table-body"),
+        subtopicBody: document.getElementById("subtopic-skill-groups"),
         priority: document.getElementById("priority-list"),
         note: document.getElementById("dashboard-data-note"),
         reset: document.getElementById("dashboard-reset"),
@@ -696,6 +711,30 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 
+    function getSkillPracticeDescription(row) {
+        if (!row.answered) {
+            return "No practice data yet. Answer a few questions here to establish an accuracy and pace baseline.";
+        }
+        if (row.answered < 4) {
+            return "Keep building evidence here before treating the current accuracy or pace as a reliable pattern.";
+        }
+
+        const target = TARGET_SECONDS[row.section] || 83;
+        const lowAccuracy = Number.isFinite(row.accuracy) && row.accuracy < PREFERRED_ACCURACY;
+        const slow = Number.isFinite(row.averageTime) && row.averageTime > target * 1.1;
+
+        if (lowAccuracy && slow) {
+            return "Prioritize accuracy first, then bring the setup time down once the method is consistent.";
+        }
+        if (lowAccuracy) {
+            return "Focus on the recurring error pattern here before pushing for more speed.";
+        }
+        if (slow) {
+            return "Accuracy is usable; work on recognizing the setup faster and reducing unnecessary steps.";
+        }
+        return "This skill is on track. Maintain it while directing more practice toward weaker areas.";
+    }
+
     function renderSubtopicTable() {
         const rows = currentSubtopicRows.filter(row => {
             if (activeSubtopicFilter === "rw") return row.section === "R&W";
@@ -704,31 +743,81 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
 
         if (!rows.length) {
-            els.subtopicBody.innerHTML =
-                '<tr><td colspan="5" class="dashboard-table-empty">No subtopics found.</td></tr>';
+            els.subtopicBody.innerHTML = '<div class="dashboard-empty-state">No skills found.</div>';
             return;
         }
 
-        els.subtopicBody.innerHTML = rows.map(row => {
-            const accuracy = Number.isFinite(row.accuracy)
-                ? Math.round(row.accuracy) + "%"
-                : "—";
-            const avgTime = Number.isFinite(row.averageTime)
-                ? Math.round(row.averageTime) + "s"
-                : "—";
+        const sectionOrder = ["R&W", "Math"];
+        const grouped = new Map();
 
-            return (
-                '<tr data-section="' + (row.section === "Math" ? "math" : "rw") + '">' +
-                    '<td><span class="subtopic-section-chip">' + escapeHtml(row.section) + '</span></td>' +
-                    '<td><span class="subtopic-name">' + escapeHtml(row.subtopic) + '</span></td>' +
-                    '<td class="is-number">' + row.answered.toLocaleString() + '</td>' +
-                    '<td class="is-number"><span class="performance-value" style="color:' +
-                        accuracyColor(row.accuracy) + '">' + accuracy + '</span></td>' +
-                    '<td class="is-number"><span class="performance-value" style="color:' +
-                        paceColor(row.averageTime, row.section) + '">' + avgTime + '</span></td>' +
-                '</tr>'
-            );
-        }).join("");
+        rows.forEach(row => {
+            const section = row.section || "R&W";
+            const domain = row.domain || "Other";
+            if (!grouped.has(section)) grouped.set(section, new Map());
+            if (!grouped.get(section).has(domain)) grouped.get(section).set(domain, []);
+            grouped.get(section).get(domain).push(row);
+        });
+
+        els.subtopicBody.innerHTML = sectionOrder
+            .filter(section => grouped.has(section))
+            .map(section => {
+                const taxonomy = DASHBOARD_SKILL_TAXONOMY[section] || {};
+                const domainOrder = Object.keys(taxonomy);
+                const domains = Array.from(grouped.get(section).entries())
+                    .sort(([a], [b]) => {
+                        const ai = domainOrder.indexOf(a);
+                        const bi = domainOrder.indexOf(b);
+                        return (ai < 0 ? 999 : ai) - (bi < 0 ? 999 : bi) || a.localeCompare(b);
+                    });
+
+                const domainMarkup = domains.map(([domain, domainRows]) => {
+                    const skillOrder = taxonomy[domain] || [];
+                    const sortedRows = domainRows.slice().sort((a, b) => {
+                        const ai = skillOrder.indexOf(a.subtopic);
+                        const bi = skillOrder.indexOf(b.subtopic);
+                        return (ai < 0 ? 999 : ai) - (bi < 0 ? 999 : bi) ||
+                            a.subtopic.localeCompare(b.subtopic);
+                    });
+
+                    const skillMarkup = sortedRows.map(row => {
+                        const accuracy = Number.isFinite(row.accuracy) ? Math.round(row.accuracy) + "%" : "—";
+                        const avgTime = Number.isFinite(row.averageTime) ? Math.round(row.averageTime) + "s" : "—";
+                        return (
+                            '<article class="dashboard-subtopic-card">' +
+                                '<div class="dashboard-subtopic-card-head">' +
+                                    '<strong>' + escapeHtml(row.subtopic) + '</strong>' +
+                                    '<span>' + row.answered.toLocaleString() + ' answered</span>' +
+                                '</div>' +
+                                '<div class="dashboard-subtopic-metrics">' +
+                                    '<span>Accuracy <b style="color:' + accuracyColor(row.accuracy) + '">' + accuracy + '</b></span>' +
+                                    '<span>Pace <b style="color:' + paceColor(row.averageTime, row.section) + '">' + avgTime + '</b></span>' +
+                                '</div>' +
+                                '<p>' + escapeHtml(getSkillPracticeDescription(row)) + '</p>' +
+                            '</article>'
+                        );
+                    }).join("");
+
+                    return (
+                        '<section class="dashboard-domain-skill-group">' +
+                            '<div class="dashboard-domain-skill-head">' +
+                                '<div><span>DOMAIN</span><strong>' + escapeHtml(domain) + '</strong></div>' +
+                                '<small>' + sortedRows.length + (sortedRows.length === 1 ? ' skill' : ' skills') + '</small>' +
+                            '</div>' +
+                            '<div class="dashboard-domain-subtopics">' + skillMarkup + '</div>' +
+                        '</section>'
+                    );
+                }).join("");
+
+                return (
+                    '<section class="dashboard-section-skill-group" data-section="' + (section === "Math" ? "math" : "rw") + '">' +
+                        '<div class="dashboard-section-skill-head">' +
+                            '<span class="subtopic-section-chip">' + escapeHtml(section) + '</span>' +
+                            '<small>Domains with nested skill performance</small>' +
+                        '</div>' +
+                        '<div class="dashboard-domain-skill-grid">' + domainMarkup + '</div>' +
+                    '</section>'
+                );
+            }).join("");
     }
 
     function renderPriorities(rows) {
@@ -909,7 +998,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             metadata
         );
         renderSubtopicTable();
-        renderPriorities(currentSubtopicRows);
 
         if (metadataResult.status === "rejected") {
             els.note.hidden = false;
