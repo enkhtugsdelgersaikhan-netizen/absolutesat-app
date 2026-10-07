@@ -1092,3 +1092,138 @@
         width:100%;
     }
 }
+
+
+/* ============================================================
+   DASHBOARD HEADER ACCOUNT + UNIVERSITY-STYLE SKILL SEVERITY
+   ============================================================ */
+.dashboard-header{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 300px;
+    align-items:start;
+    gap:24px;
+}
+.dashboard-header-copy{
+    min-width:0;
+}
+.dashboard-account-panel-top{
+    width:300px;
+    justify-self:end;
+    align-self:start;
+    padding:14px 15px!important;
+    border-radius:14px!important;
+}
+.dashboard-account-panel-top .dashboard-panel-heading{
+    margin-bottom:7px!important;
+}
+.dashboard-account-panel-top .dashboard-panel-heading h2{
+    font-size:14px!important;
+}
+.dashboard-account-panel-top .dashboard-muted{
+    margin:0 0 9px!important;
+    font-size:7.5px!important;
+    line-height:1.4!important;
+}
+.dashboard-account-actions{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 82px;
+    gap:7px;
+}
+.dashboard-account-panel-top .dashboard-reset,
+.dashboard-account-panel-top .dashboard-logout{
+    width:100%;
+    height:30px!important;
+    margin:0!important;
+    padding:0 9px;
+}
+.dashboard-account-panel-top .dashboard-reset{
+    border-color:#dcc1bc;
+    background:#fcf8f7;
+    color:#8b4d4a;
+}
+.dashboard-account-panel-top .dashboard-logout{
+    border-color:#d7e1de;
+    background:#f7faf9;
+    color:#587368;
+}
+
+/* No-data skills stay neutral. */
+.dashboard-subtopic-card.severity-neutral{
+    border-color:#d8e1df;
+    background:#fbfcfb;
+}
+.dashboard-subtopic-card.severity-neutral .dashboard-subtopic-card-head strong{
+    color:#53615f;
+}
+
+/* On-track: muted green, matching the university SAT label palette. */
+.dashboard-subtopic-card.severity-strong{
+    border-color:#cfe2db;
+    background:#f7fbf9;
+}
+.dashboard-subtopic-card.severity-strong .dashboard-subtopic-card-head strong{
+    color:#326958;
+}
+.dashboard-subtopic-card.severity-strong p{
+    border-top-color:#e2ece8;
+}
+
+/* Mild weakness: olive/amber rather than bright yellow. */
+.dashboard-subtopic-card.severity-watch{
+    border-color:#e8e4d5;
+    background:#fcfbf6;
+}
+.dashboard-subtopic-card.severity-watch .dashboard-subtopic-card-head strong{
+    color:#7b7047;
+}
+.dashboard-subtopic-card.severity-watch p{
+    border-top-color:#eeeadd;
+}
+
+/* Clear weakness: warm brown-red transition. */
+.dashboard-subtopic-card.severity-weak{
+    border-color:#eadfd4;
+    background:#fcfaf7;
+}
+.dashboard-subtopic-card.severity-weak .dashboard-subtopic-card-head strong{
+    color:#8a6245;
+}
+.dashboard-subtopic-card.severity-weak p{
+    border-top-color:#efe5dc;
+}
+
+/* Worst skills: muted university red, never neon. */
+.dashboard-subtopic-card.severity-critical{
+    border-color:#ead8d6;
+    background:#fcf8f7;
+}
+.dashboard-subtopic-card.severity-critical .dashboard-subtopic-card-head strong{
+    color:#8b4d4a;
+}
+.dashboard-subtopic-card.severity-critical p{
+    border-top-color:#efdfdd;
+}
+.dashboard-subtopic-card.severity-watch,
+.dashboard-subtopic-card.severity-weak,
+.dashboard-subtopic-card.severity-critical{
+    box-shadow:none;
+}
+
+@media(max-width:900px){
+    .dashboard-header{
+        grid-template-columns:1fr;
+        gap:14px;
+    }
+    .dashboard-account-panel-top{
+        width:min(100%,420px);
+        justify-self:start;
+    }
+}
+@media(max-width:520px){
+    .dashboard-account-panel-top{
+        width:100%;
+    }
+    .dashboard-account-actions{
+        grid-template-columns:1fr;
+    }
+}
