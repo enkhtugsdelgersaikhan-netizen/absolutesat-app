@@ -498,10 +498,117 @@
               }
             }
           }
+        },
+        {
+          "range": "81-120",
+          "reviewed": 40,
+          "retained": 37,
+          "excluded": [
+            {
+              "sourceQuestionNumber": 88,
+              "reason": "Close reskin of existing cylinder-height item math-20261006-new409-q123: both give base circumference and cylinder volume and ask for height."
+            },
+            {
+              "sourceQuestionNumber": 95,
+              "reason": "Close reskin of existing right-triangle area item math-20261006-new409-q228: both give a Pythagorean-triple hypotenuse and one leg and ask for area."
+            },
+            {
+              "sourceQuestionNumber": 119,
+              "reason": "Near-duplicate of source question 142 in the same incoming 798-question batch: the two items use the same 12-14-2√85 right triangle with the known leg roles swapped."
+            }
+          ],
+          "repairs": {
+            "piNotation": [
+              81,
+              82,
+              85,
+              104,
+              107,
+              118
+            ],
+            "fractionRadicalTrigNotation": [
+              83,
+              86,
+              87,
+              89,
+              92,
+              93,
+              94,
+              96,
+              100,
+              109,
+              111,
+              113,
+              115,
+              116,
+              117
+            ],
+            "exponentNotation": [
+              83,
+              85,
+              87,
+              97,
+              98,
+              101,
+              105,
+              106,
+              107,
+              108,
+              110,
+              112
+            ],
+            "notes": [
+              "Restored π, radicals, fraction bars, trig function names, degree symbols, and exponent markers only where the supplied solution uniquely determined the lost notation.",
+              "Rebuilt q100 and q115 answer choices with mathematically equivalent SAT-style distractors because the plain-text export had erased function labels."
+            ]
+          },
+          "visuals": {
+            "graphs": [
+              83
+            ],
+            "diagrams": [
+              85,
+              86,
+              90,
+              91,
+              113,
+              115
+            ]
+          },
+          "difficultyCalibration": {
+            "approach": "Calibrated relative to the existing subtopic bank while keeping each affected subtopic near an even Easy/Medium/Hard split.",
+            "addedBySubtopic": {
+              "Circles": {
+                "Easy": 4,
+                "Medium": 4,
+                "Hard": 3
+              },
+              "Area and Volume": {
+                "Easy": 2,
+                "Medium": 3,
+                "Hard": 2
+              },
+              "Lines, Angles, and Triangles": {
+                "Easy": 4,
+                "Medium": 3,
+                "Hard": 5
+              },
+              "Trigonometry": {
+                "Easy": 2,
+                "Medium": 2,
+                "Hard": 2
+              },
+              "Ratio, Rates, Percentages": {
+                "Easy": 0,
+                "Medium": 0,
+                "Hard": 1
+              }
+            }
+          }
         }
       ],
-      "retainedSoFar": 61,
-      "reviewedSoFar": 80
+      "retainedSoFar": 98,
+      "reviewedSoFar": 120
     }
   },
   "questions": [
@@ -40009,6 +40116,1813 @@
       "acceptedAnswers": [
         "40"
       ]
+    },
+    {
+      "id": "math-20261008-huge798-q081",
+      "groupId": "math-20261008-huge798-q081",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Circles",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A circle has circumference \\(30\\pi\\) meters. What is the area, in square meters, of the circle?",
+      "choices": {
+        "A": "\\(60\\pi\\)",
+        "B": "\\(900\\pi\\)",
+        "C": "\\(225\\pi\\)",
+        "D": "\\(30\\pi\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "From \\(2\\pi r=30\\pi\\), the radius is \\(r=15\\). Therefore the area is \\(\\pi r^2=\\pi(15)^2=\\boxed{225\\pi}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 81,
+      "subtopic": "Circles",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "From \\(2\\pi r=30\\pi\\), the radius is \\(r=15\\). Therefore the area is \\(\\pi r^2=\\pi(15)^2=\\boxed{225\\pi}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q082",
+      "groupId": "math-20261008-huge798-q082",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Circles",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "Circle P has circumference \\(20\\pi\\) centimeters. Circle Q has area \\(44\\pi\\) square centimeters. What is the sum of the areas, in square centimeters, of the two circles?",
+      "choices": {
+        "A": "\\(64\\pi\\)",
+        "B": "\\(120\\pi\\)",
+        "C": "\\(244\\pi\\)",
+        "D": "\\(144\\pi\\)"
+      },
+      "correctAnswer": "D",
+      "explanation": "For circle P, \\(2\\pi r=20\\pi\\), so \\(r=10\\) and its area is \\(100\\pi\\). Adding circle Q's area gives \\(100\\pi+44\\pi=\\boxed{144\\pi}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 82,
+      "subtopic": "Circles",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "For circle P, \\(2\\pi r=20\\pi\\), so \\(r=10\\) and its area is \\(100\\pi\\). Adding circle Q's area gives \\(100\\pi+44\\pi=\\boxed{144\\pi}\\)."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q083",
+      "groupId": "math-20261008-huge798-q083",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Circles",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The circle \\((x-2)^2+(y+1)^2=25\\) is tangent to line \\(t\\) at \\((5,3)\\). At which point does line \\(t\\) intersect the x-axis?",
+      "choices": {
+        "A": "\\((1,0)\\)",
+        "B": "\\((4,0)\\)",
+        "C": "\\((9,0)\\)",
+        "D": "\\((12,0)\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "The center is \\((2,-1)\\). The radius to \\((5,3)\\) has slope \\(\\frac{4}{3}\\), so the tangent has slope \\(-\\frac34\\). Thus \\(y-3=-\\frac34(x-5)\\). Setting \\(y=0\\) gives \\(x=9\\), so the intercept is \\(\\boxed{(9,0)}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 83,
+      "subtopic": "Circles",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The center is \\((2,-1)\\). The radius to \\((5,3)\\) has slope \\(\\frac{4}{3}\\), so the tangent has slope \\(-\\frac34\\). Thus \\(y-3=-\\frac34(x-5)\\). Setting \\(y=0\\) gives \\(x=9\\), so the intercept is \\(\\boxed{(9,0)}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "xy",
+        "caption": "Circle and tangent line t",
+        "xMin": -4,
+        "xMax": 11,
+        "yMin": -7,
+        "yMax": 10,
+        "xStep": 1,
+        "yStep": 1,
+        "xLabel": "x",
+        "yLabel": "y",
+        "series": [
+          {
+            "label": "circle",
+            "points": [
+              [
+                7,
+                -1
+              ],
+              [
+                6.957224306869052,
+                -0.34736903889974213
+              ],
+              [
+                6.8296291314453415,
+                0.2940952255126037
+              ],
+              [
+                6.619397662556434,
+                0.913417161825449
+              ],
+              [
+                6.330127018922194,
+                1.4999999999999996
+              ],
+              [
+                5.966766701456176,
+                2.043807145043603
+              ],
+              [
+                5.535533905932738,
+                2.5355339059327373
+              ],
+              [
+                5.043807145043603,
+                2.9667667014561756
+              ],
+              [
+                4.5,
+                3.3301270189221928
+              ],
+              [
+                3.913417161825449,
+                3.619397662556434
+              ],
+              [
+                3.2940952255126037,
+                3.8296291314453415
+              ],
+              [
+                2.6526309611002583,
+                3.957224306869052
+              ],
+              [
+                2.0000000000000004,
+                4
+              ],
+              [
+                1.3473690388997421,
+                3.957224306869052
+              ],
+              [
+                0.7059047744873967,
+                3.8296291314453415
+              ],
+              [
+                0.08658283817455237,
+                3.619397662556434
+              ],
+              [
+                -0.4999999999999991,
+                3.3301270189221936
+              ],
+              [
+                -1.043807145043603,
+                2.9667667014561756
+              ],
+              [
+                -1.5355339059327373,
+                2.5355339059327378
+              ],
+              [
+                -1.9667667014561752,
+                2.0438071450436044
+              ],
+              [
+                -2.3301270189221936,
+                1.4999999999999996
+              ],
+              [
+                -2.619397662556434,
+                0.9134171618254494
+              ],
+              [
+                -2.8296291314453406,
+                0.29409522551260503
+              ],
+              [
+                -2.957224306869052,
+                -0.34736903889974
+              ],
+              [
+                -3,
+                -0.9999999999999993
+              ],
+              [
+                -2.957224306869052,
+                -1.6526309611002588
+              ],
+              [
+                -2.8296291314453415,
+                -2.2940952255126037
+              ],
+              [
+                -2.619397662556434,
+                -2.913417161825448
+              ],
+              [
+                -2.3301270189221945,
+                -3.4999999999999987
+              ],
+              [
+                -1.9667667014561756,
+                -4.043807145043603
+              ],
+              [
+                -1.5355339059327395,
+                -4.535533905932736
+              ],
+              [
+                -1.0438071450436044,
+                -4.966766701456175
+              ],
+              [
+                -0.5000000000000022,
+                -5.330127018922192
+              ],
+              [
+                0.08658283817455237,
+                -5.619397662556434
+              ],
+              [
+                0.7059047744873967,
+                -5.8296291314453415
+              ],
+              [
+                1.347369038899742,
+                -5.957224306869052
+              ],
+              [
+                1.9999999999999991,
+                -6
+              ],
+              [
+                2.6526309611002565,
+                -5.957224306869053
+              ],
+              [
+                3.2940952255126015,
+                -5.829629131445342
+              ],
+              [
+                3.913417161825446,
+                -5.619397662556435
+              ],
+              [
+                4.5,
+                -5.330127018922193
+              ],
+              [
+                5.0438071450435995,
+                -4.966766701456178
+              ],
+              [
+                5.535533905932737,
+                -4.535533905932739
+              ],
+              [
+                5.966766701456175,
+                -4.043807145043605
+              ],
+              [
+                6.330127018922192,
+                -3.500000000000002
+              ],
+              [
+                6.619397662556434,
+                -2.913417161825448
+              ],
+              [
+                6.829629131445341,
+                -2.294095225512608
+              ],
+              [
+                6.957224306869052,
+                -1.6526309611002583
+              ],
+              [
+                7,
+                -1.0000000000000013
+              ]
+            ],
+            "showPoints": false
+          },
+          {
+            "label": "t",
+            "points": [
+              [
+                -3,
+                9
+              ],
+              [
+                5,
+                3
+              ],
+              [
+                9,
+                0
+              ],
+              [
+                11,
+                -1.5
+              ]
+            ],
+            "showPoints": false
+          },
+          {
+            "label": "point of tangency",
+            "points": [
+              [
+                5,
+                3
+              ]
+            ],
+            "showPoints": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q084",
+      "groupId": "math-20261008-huge798-q084",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Circles",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "Points A and B lie on a circle with center O. The circumference of the circle is \\(14\\pi\\) inches, and triangle AOB has a perimeter of 25 inches. What is the length, in inches, of \\(AB\\)?",
+      "choices": {
+        "A": "7",
+        "B": "11",
+        "C": "14",
+        "D": "18"
+      },
+      "correctAnswer": "B",
+      "explanation": "From \\(2\\pi r=14\\pi\\), the radius is 7, so \\(OA=OB=7\\). If \\(AB=x\\), then \\(7+7+x=25\\), giving \\(\\boxed{x=11}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 84,
+      "subtopic": "Circles",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "From \\(2\\pi r=14\\pi\\), the radius is 7, so \\(OA=OB=7\\). If \\(AB=x\\), then \\(7+7+x=25\\), giving \\(\\boxed{x=11}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q085",
+      "groupId": "math-20261008-huge798-q085",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Area and Volume",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A cube has a total surface area of 600 square centimeters. A sphere is inscribed in the cube so that it touches all six faces. What is the volume, in cubic centimeters, of the portion of the cube outside the sphere?",
+      "choices": {
+        "A": "\\(1000-\\frac{500\\pi}{3}\\)",
+        "B": "\\(1000-\\frac{125\\pi}{3}\\)",
+        "C": "\\(600-\\frac{500\\pi}{3}\\)",
+        "D": "\\(1000-500\\pi\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "If the cube edge is \\(s\\), then \\(6s^2=600\\), so \\(s=10\\). The sphere therefore has radius 5. The cube volume is 1000 and the sphere volume is \\(\\frac43\\pi(5)^3=\\frac{500\\pi}{3}\\). The requested volume is \\(\\boxed{1000-\\frac{500\\pi}{3}}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 85,
+      "subtopic": "Area and Volume",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "If the cube edge is \\(s\\), then \\(6s^2=600\\), so \\(s=10\\). The sphere therefore has radius 5. The cube volume is 1000 and the sphere volume is \\(\\frac43\\pi(5)^3=\\frac{500\\pi}{3}\\). The requested volume is \\(\\boxed{1000-\\frac{500\\pi}{3}}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "diagram": {
+        "width": 420,
+        "height": 310,
+        "alt": "Cube with an inscribed sphere",
+        "lines": [
+          {
+            "x1": 85,
+            "y1": 80,
+            "x2": 285,
+            "y2": 80,
+            "dashed": false
+          },
+          {
+            "x1": 285,
+            "y1": 80,
+            "x2": 350,
+            "y2": 45,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 45,
+            "x2": 150,
+            "y2": 45,
+            "dashed": false
+          },
+          {
+            "x1": 150,
+            "y1": 45,
+            "x2": 85,
+            "y2": 80,
+            "dashed": false
+          },
+          {
+            "x1": 85,
+            "y1": 80,
+            "x2": 85,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 285,
+            "y1": 80,
+            "x2": 285,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 45,
+            "x2": 350,
+            "y2": 210,
+            "dashed": false
+          },
+          {
+            "x1": 150,
+            "y1": 45,
+            "x2": 150,
+            "y2": 210,
+            "dashed": false
+          },
+          {
+            "x1": 85,
+            "y1": 245,
+            "x2": 285,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 285,
+            "y1": 245,
+            "x2": 350,
+            "y2": 210,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 210,
+            "x2": 150,
+            "y2": 210,
+            "dashed": false
+          },
+          {
+            "x1": 150,
+            "y1": 210,
+            "x2": 85,
+            "y2": 245,
+            "dashed": false
+          }
+        ],
+        "ellipses": [
+          {
+            "cx": 217,
+            "cy": 145,
+            "rx": 73,
+            "ry": 73
+          }
+        ],
+        "labels": [
+          {
+            "x": 215,
+            "y": 278,
+            "text": "surface area = 600",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q086",
+      "groupId": "math-20261008-huge798-q086",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Lines, Angles, and Triangles",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "In right triangle PQR, angle Q is a right angle, and QS is an altitude to hypotenuse PR. The length of PQ is 12, and the area of triangle PQR is 126. What is the value of \\(\\frac{QR}{QS}\\)?",
+      "choices": {
+        "A": "\\(\\frac{4}{\\sqrt{65}}\\)",
+        "B": "\\(\\frac{\\sqrt{65}}4\\)",
+        "C": "\\(\\frac74\\)",
+        "D": "\\(\\frac{3\\sqrt{65}}4\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "Using the two legs for area, \\(126=\\frac12(12)(QR)\\), so \\(QR=21\\). Then \\(PR=\\sqrt{12^2+21^2}=3\\sqrt{65}\\). Similar triangles formed by the altitude give \\(\\frac{QR}{QS}=\\frac{PR}{PQ}=\\frac{3\\sqrt{65}}{12}=\\boxed{\\frac{\\sqrt{65}}4}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 86,
+      "subtopic": "Lines, Angles, and Triangles",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Using the two legs for area, \\(126=\\frac12(12)(QR)\\), so \\(QR=21\\). Then \\(PR=\\sqrt{12^2+21^2}=3\\sqrt{65}\\). Similar triangles formed by the altitude give \\(\\frac{QR}{QS}=\\frac{PR}{PQ}=\\frac{3\\sqrt{65}}{12}=\\boxed{\\frac{\\sqrt{65}}4}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Right triangle PQR with altitude QS to hypotenuse PR",
+        "lines": [
+          {
+            "x1": 90,
+            "y1": 55,
+            "x2": 90,
+            "y2": 230,
+            "dashed": false
+          },
+          {
+            "x1": 90,
+            "y1": 230,
+            "x2": 350,
+            "y2": 230,
+            "dashed": false
+          },
+          {
+            "x1": 90,
+            "y1": 55,
+            "x2": 350,
+            "y2": 230,
+            "dashed": false
+          },
+          {
+            "x1": 90,
+            "y1": 230,
+            "x2": 170,
+            "y2": 109,
+            "dashed": false
+          }
+        ],
+        "points": [
+          {
+            "x": 90,
+            "y": 55,
+            "label": "P",
+            "dx": -12,
+            "dy": -8
+          },
+          {
+            "x": 90,
+            "y": 230,
+            "label": "Q",
+            "dx": -12,
+            "dy": 18
+          },
+          {
+            "x": 350,
+            "y": 230,
+            "label": "R",
+            "dx": 10,
+            "dy": 18
+          },
+          {
+            "x": 170,
+            "y": 109,
+            "label": "S",
+            "dx": 8,
+            "dy": -8
+          }
+        ],
+        "labels": [
+          {
+            "x": 68,
+            "y": 145,
+            "text": "12",
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 90,
+            "y": 230,
+            "size": 14,
+            "rotation": 0
+          },
+          {
+            "x": 170,
+            "y": 109,
+            "size": 12,
+            "rotation": -56
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q087",
+      "groupId": "math-20261008-huge798-q087",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Area and Volume",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A right circular cylinder has radius \\(r\\) and height \\(h\\). A second right circular cylinder has radius \\(kr\\) and height \\(2kh\\), where \\(k>0\\). The second cylinder has 54 times the volume of the first. What is the value of \\(k\\)?",
+      "choices": {
+        "A": "\\(\\frac32\\)",
+        "B": "3",
+        "C": "9",
+        "D": "27"
+      },
+      "correctAnswer": "B",
+      "explanation": "The volume ratio is \\(\\frac{\\pi(kr)^2(2kh)}{\\pi r^2h}=2k^3\\). Thus \\(2k^3=54\\), so \\(k^3=27\\) and \\(\\boxed{k=3}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 87,
+      "subtopic": "Area and Volume",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The volume ratio is \\(\\frac{\\pi(kr)^2(2kh)}{\\pi r^2h}=2k^3\\). Thus \\(2k^3=54\\), so \\(k^3=27\\) and \\(\\boxed{k=3}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q089",
+      "groupId": "math-20261008-huge798-q089",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Lines, Angles, and Triangles",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "Triangles ABC and DEF are similar. Angle A corresponds to angle F, and angle B corresponds to angle D. If \\(AB=18\\), \\(BC=24\\), and \\(FD=27\\), what is the length of \\(DE\\)?",
+      "choices": {
+        "A": "16",
+        "B": "30",
+        "C": "36",
+        "D": "40.5"
+      },
+      "correctAnswer": "C",
+      "explanation": "Because A corresponds to F and B to D, side AB corresponds to FD. The scale factor from ABC to DEF is \\(\\frac{27}{18}=\\frac32\\). Side BC corresponds to DE, so \\(DE=24\\cdot\\frac32=\\boxed{36}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 89,
+      "subtopic": "Lines, Angles, and Triangles",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Because A corresponds to F and B to D, side AB corresponds to FD. The scale factor from ABC to DEF is \\(\\frac{27}{18}=\\frac32\\). Side BC corresponds to DE, so \\(DE=24\\cdot\\frac32=\\boxed{36}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q090",
+      "groupId": "math-20261008-huge798-q090",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Lines, Angles, and Triangles",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "Lines AEB and CED intersect at E. In triangle BDE, \\(BD=BE\\) and \\(m\\angle DBE=46^\\circ\\). In triangle ACE, \\(AC=CE\\). Ray CF is opposite ray CE. What is \\(m\\angle ACF\\), in degrees?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Since \\(BD=BE\\), triangle BDE is isosceles, so its base angles are \\(\\frac{180-46}{2}=67^\\circ\\). Thus \\(\\angle BED=67^\\circ\\), and the vertical angle \\(\\angle AEC\\) is also \\(67^\\circ\\). Since \\(AC=CE\\), triangle ACE is isosceles, so \\(\\angle CAE=67^\\circ\\) and \\(\\angle ACE=46^\\circ\\). Ray CF is opposite CE, so \\(\\angle ACF=180-46=\\boxed{134^\\circ}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 90,
+      "subtopic": "Lines, Angles, and Triangles",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "134"
+      ],
+      "diagram": {
+        "width": 440,
+        "height": 300,
+        "alt": "Two intersecting isosceles triangles with an exterior ray at C",
+        "lines": [
+          {
+            "x1": 70,
+            "y1": 55,
+            "x2": 350,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 55,
+            "x2": 70,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 70,
+            "y1": 55,
+            "x2": 350,
+            "y2": 55,
+            "dashed": false
+          },
+          {
+            "x1": 70,
+            "y1": 245,
+            "x2": 350,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 55,
+            "x2": 410,
+            "y2": 18,
+            "dashed": false
+          }
+        ],
+        "points": [
+          {
+            "x": 70,
+            "y": 55,
+            "label": "A",
+            "dx": -10,
+            "dy": -8
+          },
+          {
+            "x": 210,
+            "y": 150,
+            "label": "E",
+            "dx": 8,
+            "dy": -8
+          },
+          {
+            "x": 350,
+            "y": 245,
+            "label": "B",
+            "dx": 10,
+            "dy": 18
+          },
+          {
+            "x": 350,
+            "y": 55,
+            "label": "C",
+            "dx": 8,
+            "dy": -8
+          },
+          {
+            "x": 70,
+            "y": 245,
+            "label": "D",
+            "dx": -10,
+            "dy": 18
+          },
+          {
+            "x": 410,
+            "y": 18,
+            "label": "F",
+            "dx": 8,
+            "dy": -6
+          }
+        ],
+        "labels": [
+          {
+            "x": 320,
+            "y": 220,
+            "text": "46°",
+            "anchor": "middle"
+          }
+        ],
+        "ticks": [
+          {
+            "x": 210,
+            "y": 55,
+            "angle": 0,
+            "size": 11
+          },
+          {
+            "x": 280,
+            "y": 102,
+            "angle": 34,
+            "size": 11
+          },
+          {
+            "x": 210,
+            "y": 245,
+            "angle": 0,
+            "size": 11
+          },
+          {
+            "x": 280,
+            "y": 198,
+            "angle": -34,
+            "size": 11
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q091",
+      "groupId": "math-20261008-huge798-q091",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Lines, Angles, and Triangles",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "Lines WZ and XY intersect at Q. The measure of angle W in triangle WQX equals the measure of angle Y in triangle YQZ. Also, \\(WQ=20\\), \\(YQ=30\\), and \\(WX+YZ=65\\). What is the length of \\(YZ\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The angles at Q are vertical, and \\(\\angle W=\\angle Y\\), so triangles WQX and YQZ are similar. The scale factor from WQX to YQZ is \\(\\frac{YQ}{WQ}=\\frac{30}{20}=\\frac32\\). Thus \\(YZ=\\frac32 WX\\). If \\(WX=x\\), then \\(x+\\frac32x=65\\), so \\(x=26\\) and \\(YZ=\\boxed{39}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 91,
+      "subtopic": "Lines, Angles, and Triangles",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "39"
+      ],
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Two triangles formed by intersecting lines WZ and XY",
+        "lines": [
+          {
+            "x1": 70,
+            "y1": 55,
+            "x2": 350,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 350,
+            "y1": 55,
+            "x2": 70,
+            "y2": 245,
+            "dashed": false
+          },
+          {
+            "x1": 70,
+            "y1": 55,
+            "x2": 350,
+            "y2": 55,
+            "dashed": false
+          },
+          {
+            "x1": 70,
+            "y1": 245,
+            "x2": 350,
+            "y2": 245,
+            "dashed": false
+          }
+        ],
+        "points": [
+          {
+            "x": 70,
+            "y": 55,
+            "label": "W",
+            "dx": -10,
+            "dy": -8
+          },
+          {
+            "x": 350,
+            "y": 55,
+            "label": "X",
+            "dx": 10,
+            "dy": -8
+          },
+          {
+            "x": 210,
+            "y": 150,
+            "label": "Q",
+            "dx": 8,
+            "dy": -8
+          },
+          {
+            "x": 70,
+            "y": 245,
+            "label": "Y",
+            "dx": -10,
+            "dy": 18
+          },
+          {
+            "x": 350,
+            "y": 245,
+            "label": "Z",
+            "dx": 10,
+            "dy": 18
+          }
+        ],
+        "labels": [
+          {
+            "x": 120,
+            "y": 105,
+            "text": "20",
+            "anchor": "middle"
+          },
+          {
+            "x": 120,
+            "y": 205,
+            "text": "30",
+            "anchor": "middle"
+          },
+          {
+            "x": 210,
+            "y": 278,
+            "text": "WX + YZ = 65",
+            "anchor": "middle"
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q092",
+      "groupId": "math-20261008-huge798-q092",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Lines, Angles, and Triangles",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "In triangles ABC and PQR, \\(\\angle A\\cong\\angle Q\\) and \\(\\angle C\\cong\\angle P\\). Which additional information is sufficient to guarantee that triangle ABC is congruent to triangle PQR?",
+      "choices": {
+        "A": "\\(AB=QR\\)",
+        "B": "\\(AB=PR\\)",
+        "C": "\\(\\angle B\\cong\\angle R\\)",
+        "D": "\\(BC=PQ\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "The two given angle pairs establish similarity with correspondence \\(A\\leftrightarrow Q\\), \\(C\\leftrightarrow P\\), and \\(B\\leftrightarrow R\\). Therefore AB corresponds to QR. If \\(AB=QR\\), the similarity scale factor is 1, so the triangles are congruent. Thus \\(\\boxed{A}\\) is sufficient.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 92,
+      "subtopic": "Lines, Angles, and Triangles",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The two given angle pairs establish similarity with correspondence \\(A\\leftrightarrow Q\\), \\(C\\leftrightarrow P\\), and \\(B\\leftrightarrow R\\). Therefore AB corresponds to QR. If \\(AB=QR\\), the similarity scale factor is 1, so the triangles are congruent. Thus \\(\\boxed{A}\\) is sufficient.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q093",
+      "groupId": "math-20261008-huge798-q093",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Trigonometry",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "In a right triangle, the hypotenuse has length 13, and the side opposite acute angle \\(\\theta\\) has length 5. What is \\(\\cos\\theta\\)?",
+      "choices": {
+        "A": "\\(\\frac5{13}\\)",
+        "B": "\\(\\frac{12}{13}\\)",
+        "C": "\\(\\frac5{12}\\)",
+        "D": "\\(\\frac{12}{5}\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "The adjacent leg is \\(\\sqrt{13^2-5^2}=12\\). Therefore \\(\\cos\\theta=\\frac{\\text{adjacent}}{\\text{hypotenuse}}=\\boxed{\\frac{12}{13}}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 93,
+      "subtopic": "Trigonometry",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The adjacent leg is \\(\\sqrt{13^2-5^2}=12\\). Therefore \\(\\cos\\theta=\\frac{\\text{adjacent}}{\\text{hypotenuse}}=\\boxed{\\frac{12}{13}}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q094",
+      "groupId": "math-20261008-huge798-q094",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Trigonometry",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "In right triangle ABC, angle C is a right angle, \\(AB=25\\), and \\(\\sin A=\\frac35\\). The area of triangle ABC can be written as \\(k\\tan A\\), where \\(k\\) is a constant. What is the value of \\(k\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Since \\(AB=25\\) and \\(\\sin A=\\frac{BC}{AB}=\\frac35\\), \\(BC=15\\). The other leg is \\(AC=20\\), so the area is \\(\\frac12(15)(20)=150\\). Also, \\(\\tan A=\\frac{15}{20}=\\frac34\\). Thus \\(150=k\\cdot\\frac34\\), giving \\(\\boxed{k=200}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 94,
+      "subtopic": "Trigonometry",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "200"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q096",
+      "groupId": "math-20261008-huge798-q096",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Trigonometry",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "In right triangle ABC, angle C is a right angle, \\(AB=17\\), and \\(AC=15\\). What is \\(\\sin A\\)?",
+      "choices": {
+        "A": "\\(\\frac8{17}\\)",
+        "B": "\\(\\frac{15}{17}\\)",
+        "C": "\\(\\frac8{15}\\)",
+        "D": "\\(\\frac{15}{8}\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "The missing leg is \\(BC=\\sqrt{17^2-15^2}=8\\). Relative to angle A, BC is opposite and AB is the hypotenuse, so \\(\\sin A=\\boxed{\\frac8{17}}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 96,
+      "subtopic": "Trigonometry",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The missing leg is \\(BC=\\sqrt{17^2-15^2}=8\\). Relative to angle A, BC is opposite and AB is the hypotenuse, so \\(\\sin A=\\boxed{\\frac8{17}}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q097",
+      "groupId": "math-20261008-huge798-q097",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Lines, Angles, and Triangles",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A right triangle has side lengths \\(x+2\\), 9, and \\(x+5\\), where \\(x>0\\). The side of length \\(x+5\\) is opposite the right angle. Which equation must \\(x\\) satisfy?",
+      "choices": {
+        "A": "\\((x+2)^2+9^2=(x+5)^2\\)",
+        "B": "\\((x+2)^2+(x+5)^2=9^2\\)",
+        "C": "\\(x+2+9=x+5\\)",
+        "D": "\\((x+5)^2-(x+2)^2=9\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "The side opposite the right angle is the hypotenuse. By the Pythagorean theorem, \\((x+2)^2+9^2=(x+5)^2\\), so \\(\\boxed{A}\\) is required.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 97,
+      "subtopic": "Lines, Angles, and Triangles",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The side opposite the right angle is the hypotenuse. By the Pythagorean theorem, \\((x+2)^2+9^2=(x+5)^2\\), so \\(\\boxed{A}\\) is required.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q098",
+      "groupId": "math-20261008-huge798-q098",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Circles",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The graph of \\(2x^2-12x+2y^2+20y=30\\) in the xy-plane is a circle. What is the radius of the circle?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Divide by 2: \\(x^2-6x+y^2+10y=15\\). Completing the squares gives \\((x-3)^2+(y+5)^2=49\\). Therefore the radius is \\(\\boxed{7}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 98,
+      "subtopic": "Circles",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "7"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q099",
+      "groupId": "math-20261008-huge798-q099",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Area and Volume",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A right square prism has a base perimeter of 40 units and a volume of 2,500 cubic units. What is the height of the prism?",
+      "choices": {
+        "A": "10",
+        "B": "20",
+        "C": "25",
+        "D": "40"
+      },
+      "correctAnswer": "C",
+      "explanation": "A square with perimeter 40 has side length 10, so its base area is 100. Since \\(2500=100h\\), the height is \\(\\boxed{25}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 99,
+      "subtopic": "Area and Volume",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "A square with perimeter 40 has side length 10, so its base area is 100. Since \\(2500=100h\\), the height is \\(\\boxed{25}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q100",
+      "groupId": "math-20261008-huge798-q100",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Trigonometry",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "In right triangle ABC, angle C is a right angle and \\(AB=2AC\\). What is \\(\\tan A\\)?",
+      "choices": {
+        "A": "\\(\\frac{\\sqrt3}{3}\\)",
+        "B": "\\(\\frac12\\)",
+        "C": "\\(\\sqrt3\\)",
+        "D": "2"
+      },
+      "correctAnswer": "C",
+      "explanation": "Because AB is the hypotenuse, \\(\\cos A=\\frac{AC}{AB}=\\frac12\\), so \\(A=60^\\circ\\). Therefore \\(\\tan A=\\tan60^\\circ=\\boxed{\\sqrt3}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 100,
+      "subtopic": "Trigonometry",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Because AB is the hypotenuse, \\(\\cos A=\\frac{AC}{AB}=\\frac12\\), so \\(A=60^\\circ\\). Therefore \\(\\tan A=\\tan60^\\circ=\\boxed{\\sqrt3}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q101",
+      "groupId": "math-20261008-huge798-q101",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Circles",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The circle \\((x-2)^2+(y+1)^2=169\\) contains the point \\((a,4)\\). Which of the following could be the value of \\(a\\)?",
+      "choices": {
+        "A": "14",
+        "B": "10",
+        "C": "-14",
+        "D": "18"
+      },
+      "correctAnswer": "A",
+      "explanation": "Substitute \\(y=4\\): \\((a-2)^2+25=169\\), so \\((a-2)^2=144\\). Hence \\(a=14\\) or \\(a=-10\\). Of the choices, \\(\\boxed{14}\\) is possible.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 101,
+      "subtopic": "Circles",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "Substitute \\(y=4\\): \\((a-2)^2+25=169\\), so \\((a-2)^2=144\\). Hence \\(a=14\\) or \\(a=-10\\). Of the choices, \\(\\boxed{14}\\) is possible.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q102",
+      "groupId": "math-20261008-huge798-q102",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Area and Volume",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "Right rectangular prisms A and B are similar. Their surface areas are 270 and 480 square units, respectively. The volume of prism B exceeds the volume of prism A by 740 cubic units. What is the sum of their volumes?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The surface-area ratio is \\(270:480=9:16\\), so the linear scale factor from A to B is \\(3:4\\). Thus \\(V_A:V_B=27:64\\). Let \\(V_B=v\\). Then \\(v-\\frac{27}{64}v=740\\), so \\(\\frac{37}{64}v=740\\), giving \\(V_B=1280\\) and \\(V_A=540\\). Their sum is \\(\\boxed{1820}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 102,
+      "subtopic": "Area and Volume",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "1820"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q103",
+      "groupId": "math-20261008-huge798-q103",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Area and Volume",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A rectangle has an area of 120 square meters and a perimeter of 46 meters. Its length is greater than its width. What is its width, in meters?",
+      "choices": {
+        "A": "6",
+        "B": "8",
+        "C": "10",
+        "D": "15"
+      },
+      "correctAnswer": "B",
+      "explanation": "If the dimensions are \\(l\\) and \\(w\\), then \\(l+w=23\\) and \\(lw=120\\). The factor pair of 120 that sums to 23 is 8 and 15. Since the width is smaller, \\(\\boxed{w=8}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 103,
+      "subtopic": "Area and Volume",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "If the dimensions are \\(l\\) and \\(w\\), then \\(l+w=23\\) and \\(lw=120\\). The factor pair of 120 that sums to 23 is 8 and 15. Since the width is smaller, \\(\\boxed{w=8}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q104",
+      "groupId": "math-20261008-huge798-q104",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Circles",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A great circle of a sphere has circumference \\(18\\pi\\) feet. What is the volume, in cubic feet, of the sphere?",
+      "choices": {
+        "A": "\\(243\\pi\\)",
+        "B": "\\(486\\pi\\)",
+        "C": "\\(972\\pi\\)",
+        "D": "\\(2916\\pi\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "A great circle has the sphere's radius. From \\(2\\pi r=18\\pi\\), \\(r=9\\). Therefore \\(V=\\frac43\\pi(9)^3=\\boxed{972\\pi}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 104,
+      "subtopic": "Circles",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "A great circle has the sphere's radius. From \\(2\\pi r=18\\pi\\), \\(r=9\\). Therefore \\(V=\\frac43\\pi(9)^3=\\boxed{972\\pi}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q105",
+      "groupId": "math-20261008-huge798-q105",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Circles",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A circle has a diameter with endpoints \\((-4,7)\\) and \\((8,-1)\\). Its equation can be written as \\((x-2)^2+(y-3)^2=k\\). What is the value of \\(k\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The midpoint of the diameter is \\((2,3)\\), matching the center in the equation. The radius squared is the squared distance from \\((2,3)\\) to either endpoint: \\((-4-2)^2+(7-3)^2=36+16=\\boxed{52}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 105,
+      "subtopic": "Circles",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "52"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q106",
+      "groupId": "math-20261008-huge798-q106",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Lines, Angles, and Triangles",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "Equilateral triangle T is obtained from equilateral triangle S by multiplying every side length by the positive scale factor \\(k\\). The area of triangle T is 69% greater than the area of triangle S. What is \\(k\\)?",
+      "choices": {
+        "A": "1.13",
+        "B": "1.30",
+        "C": "1.69",
+        "D": "0.69"
+      },
+      "correctAnswer": "B",
+      "explanation": "A 69% increase means the area scale factor is 1.69. Areas scale as the square of the linear scale factor, so \\(k^2=1.69\\). Since \\(k>0\\), \\(k=\\sqrt{1.69}=\\boxed{1.30}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 106,
+      "subtopic": "Lines, Angles, and Triangles",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "A 69% increase means the area scale factor is 1.69. Areas scale as the square of the linear scale factor, so \\(k^2=1.69\\). Since \\(k>0\\), \\(k=\\sqrt{1.69}=\\boxed{1.30}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q107",
+      "groupId": "math-20261008-huge798-q107",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Circles",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "Circle A has equation \\((x+1)^2+(y-6)^2=49\\). Circle B has the same center as circle A, and the area of circle B is \\(95\\pi\\) square units greater than the area of circle A. If circle B has equation \\((x+1)^2+(y-6)^2=k\\), what is the value of \\(k\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Circle A has \\(r^2=49\\), so its area is \\(49\\pi\\). Circle B has area \\((49+95)\\pi=144\\pi\\), so its radius squared is 144. Therefore \\(\\boxed{k=144}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 107,
+      "subtopic": "Circles",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "144"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q108",
+      "groupId": "math-20261008-huge798-q108",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Circles",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A circle has equation \\((x-2)^2+(y+5)^2=r^2\\), and the point \\((8,3)\\) lies on the circle. What is the diameter of the circle?",
+      "choices": {
+        "A": "10",
+        "B": "14",
+        "C": "20",
+        "D": "100"
+      },
+      "correctAnswer": "C",
+      "explanation": "The center is \\((2,-5)\\). The radius is the distance to \\((8,3)\\): \\(r=\\sqrt{6^2+8^2}=10\\). The diameter is \\(\\boxed{20}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 108,
+      "subtopic": "Circles",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The center is \\((2,-5)\\). The radius is the distance to \\((8,3)\\): \\(r=\\sqrt{6^2+8^2}=10\\). The diameter is \\(\\boxed{20}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q109",
+      "groupId": "math-20261008-huge798-q109",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Trigonometry",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "In right triangle ABC, angle C is a right angle, \\(AC=9\\), and \\(AB=15\\). What is \\(\\tan A\\)?",
+      "choices": {
+        "A": "\\(\\frac34\\)",
+        "B": "\\(\\frac43\\)",
+        "C": "\\(\\frac35\\)",
+        "D": "\\(\\frac45\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "The missing leg is \\(BC=\\sqrt{15^2-9^2}=12\\). Relative to angle A, BC is opposite and AC is adjacent, so \\(\\tan A=\\frac{12}{9}=\\boxed{\\frac43}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 109,
+      "subtopic": "Trigonometry",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The missing leg is \\(BC=\\sqrt{15^2-9^2}=12\\). Relative to angle A, BC is opposite and AC is adjacent, so \\(\\tan A=\\frac{12}{9}=\\boxed{\\frac43}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q110",
+      "groupId": "math-20261008-huge798-q110",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Circles",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A circle has center \\((-3a,2)\\) and radius \\(5a\\), where \\(a>0\\). Which equation represents the circle?",
+      "choices": {
+        "A": "\\((x-3a)^2+(y-2)^2=25a^2\\)",
+        "B": "\\((x+3a)^2+(y-2)^2=5a\\)",
+        "C": "\\((x+3a)^2+(y-2)^2=25a^2\\)",
+        "D": "\\((x+3a)^2+(y+2)^2=25a\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "A circle with center \\((h,k)\\) and radius \\(r\\) has equation \\((x-h)^2+(y-k)^2=r^2\\). Here \\(h=-3a\\), \\(k=2\\), and \\(r=5a\\), so the equation is \\(\\boxed{(x+3a)^2+(y-2)^2=25a^2}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 110,
+      "subtopic": "Circles",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "A circle with center \\((h,k)\\) and radius \\(r\\) has equation \\((x-h)^2+(y-k)^2=r^2\\). Here \\(h=-3a\\), \\(k=2\\), and \\(r=5a\\), so the equation is \\(\\boxed{(x+3a)^2+(y-2)^2=25a^2}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q111",
+      "groupId": "math-20261008-huge798-q111",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "On a scale drawing, 3 centimeters represents 8 meters. A region has an actual area of 1,536 square meters. What is its area, in square centimeters, on the scale drawing?",
+      "choices": {
+        "A": "72",
+        "B": "192",
+        "C": "216",
+        "D": "576"
+      },
+      "correctAnswer": "C",
+      "explanation": "The linear scale factor from actual lengths in meters to drawing lengths in centimeters is \\(\\frac38\\), so the area scale factor is \\((\\frac38)^2=\\frac9{64}\\). Thus the drawing area is \\(1536\\cdot\\frac9{64}=\\boxed{216}\\) square centimeters.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 111,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The linear scale factor from actual lengths in meters to drawing lengths in centimeters is \\(\\frac38\\), so the area scale factor is \\((\\frac38)^2=\\frac9{64}\\). Thus the drawing area is \\(1536\\cdot\\frac9{64}=\\boxed{216}\\) square centimeters.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q112",
+      "groupId": "math-20261008-huge798-q112",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Area and Volume",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A cube has a volume of 13,824 cubic units. Each edge of the cube is then increased by 25%. What is the total surface area, in square units, of the enlarged cube?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Since \\(24^3=13{,}824\\), the original edge length is 24. Increasing it by 25% gives \\(24(1.25)=30\\). The enlarged cube's surface area is \\(6(30^2)=\\boxed{5400}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 112,
+      "subtopic": "Area and Volume",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "5400"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q113",
+      "groupId": "math-20261008-huge798-q113",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Lines, Angles, and Triangles",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "In triangle ABC, points D and E lie on AB and AC, respectively, and \\(DE\\parallel BC\\). The area of triangle ADE is \\(\\frac49\\) the area of triangle ABC. If \\(BC=81\\), what is \\(DE\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Triangles ADE and ABC are similar. If their linear scale factor is \\(k\\), their area ratio is \\(k^2\\). Thus \\(k^2=\\frac49\\), so \\(k=\\frac23\\). Therefore \\(DE=\\frac23(81)=\\boxed{54}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 113,
+      "subtopic": "Lines, Angles, and Triangles",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "54"
+      ],
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Triangle ABC with segment DE parallel to base BC",
+        "polygons": [
+          {
+            "points": [
+              [
+                210,
+                45
+              ],
+              [
+                70,
+                245
+              ],
+              [
+                350,
+                245
+              ]
+            ]
+          }
+        ],
+        "lines": [
+          {
+            "x1": 117,
+            "y1": 178,
+            "x2": 303,
+            "y2": 178,
+            "dashed": false
+          }
+        ],
+        "points": [
+          {
+            "x": 210,
+            "y": 45,
+            "label": "A",
+            "dx": 0,
+            "dy": -10
+          },
+          {
+            "x": 70,
+            "y": 245,
+            "label": "B",
+            "dx": -10,
+            "dy": 18
+          },
+          {
+            "x": 350,
+            "y": 245,
+            "label": "C",
+            "dx": 10,
+            "dy": 18
+          },
+          {
+            "x": 117,
+            "y": 178,
+            "label": "D",
+            "dx": -10,
+            "dy": -8
+          },
+          {
+            "x": 303,
+            "y": 178,
+            "label": "E",
+            "dx": 10,
+            "dy": -8
+          }
+        ],
+        "labels": [
+          {
+            "x": 210,
+            "y": 270,
+            "text": "BC = 81",
+            "anchor": "middle"
+          },
+          {
+            "x": 210,
+            "y": 165,
+            "text": "DE ∥ BC",
+            "anchor": "middle"
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q114",
+      "groupId": "math-20261008-huge798-q114",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Lines, Angles, and Triangles",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A triangle has side lengths \\(x+2\\), \\(2x-1\\), and \\(3x-5\\). Its perimeter is 50. What is the length of its longest side?",
+      "choices": {
+        "A": "11",
+        "B": "17",
+        "C": "22",
+        "D": "27"
+      },
+      "correctAnswer": "C",
+      "explanation": "Set the side sum equal to 50: \\((x+2)+(2x-1)+(3x-5)=50\\). Then \\(6x-4=50\\), so \\(x=9\\). The side lengths are 11, 17, and 22, so the longest is \\(\\boxed{22}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 114,
+      "subtopic": "Lines, Angles, and Triangles",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Set the side sum equal to 50: \\((x+2)+(2x-1)+(3x-5)=50\\). Then \\(6x-4=50\\), so \\(x=9\\). The side lengths are 11, 17, and 22, so the longest is \\(\\boxed{22}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q115",
+      "groupId": "math-20261008-huge798-q115",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Trigonometry",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "In right triangle JKL, angle K is a right angle and \\(JK=24\\). Let \\(\\phi=90^\\circ-m\\angle J\\). Which expression represents the length of hypotenuse \\(JL\\)?",
+      "choices": {
+        "A": "\\(24\\sin\\phi\\)",
+        "B": "\\(\\frac{24}{\\sin\\phi}\\)",
+        "C": "\\(\\frac{24}{\\cos\\phi}\\)",
+        "D": "\\(24\\cos\\phi\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "The acute angles are complementary, so \\(\\phi=m\\angle L\\). Relative to angle L, JK is opposite and JL is the hypotenuse. Thus \\(\\sin\\phi=\\frac{24}{JL}\\), which gives \\(\\boxed{JL=\\frac{24}{\\sin\\phi}}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 115,
+      "subtopic": "Trigonometry",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The acute angles are complementary, so \\(\\phi=m\\angle L\\). Relative to angle L, JK is opposite and JL is the hypotenuse. Thus \\(\\sin\\phi=\\frac{24}{JL}\\), which gives \\(\\boxed{JL=\\frac{24}{\\sin\\phi}}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Right triangle JKL",
+        "lines": [
+          {
+            "x1": 85,
+            "y1": 55,
+            "x2": 85,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 85,
+            "y1": 225,
+            "x2": 345,
+            "y2": 225,
+            "dashed": false
+          },
+          {
+            "x1": 85,
+            "y1": 55,
+            "x2": 345,
+            "y2": 225,
+            "dashed": false
+          }
+        ],
+        "points": [
+          {
+            "x": 85,
+            "y": 55,
+            "label": "J",
+            "dx": -10,
+            "dy": -8
+          },
+          {
+            "x": 85,
+            "y": 225,
+            "label": "K",
+            "dx": -10,
+            "dy": 18
+          },
+          {
+            "x": 345,
+            "y": 225,
+            "label": "L",
+            "dx": 10,
+            "dy": 18
+          }
+        ],
+        "labels": [
+          {
+            "x": 62,
+            "y": 140,
+            "text": "24",
+            "anchor": "middle"
+          },
+          {
+            "x": 312,
+            "y": 208,
+            "text": "φ",
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 85,
+            "y": 225,
+            "size": 14,
+            "rotation": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q116",
+      "groupId": "math-20261008-huge798-q116",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Lines, Angles, and Triangles",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "Two similar triangles have perimeters whose sum is 176. The larger triangle's perimeter is 64 greater than the smaller triangle's perimeter. A side of the smaller triangle has length 14. What is the length of the corresponding side of the larger triangle?",
+      "choices": {
+        "A": "24",
+        "B": "28",
+        "C": "30",
+        "D": "36"
+      },
+      "correctAnswer": "C",
+      "explanation": "Let the larger and smaller perimeters be L and S. Then \\(L+S=176\\) and \\(L-S=64\\), so \\(L=120\\) and \\(S=56\\). The linear scale factor is \\(\\frac{120}{56}=\\frac{15}{7}\\). Therefore the corresponding side is \\(14\\cdot\\frac{15}{7}=\\boxed{30}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 116,
+      "subtopic": "Lines, Angles, and Triangles",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Let the larger and smaller perimeters be L and S. Then \\(L+S=176\\) and \\(L-S=64\\), so \\(L=120\\) and \\(S=56\\). The linear scale factor is \\(\\frac{120}{56}=\\frac{15}{7}\\). Therefore the corresponding side is \\(14\\cdot\\frac{15}{7}=\\boxed{30}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q117",
+      "groupId": "math-20261008-huge798-q117",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Lines, Angles, and Triangles",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "An equilateral triangle has area \\(225\\sqrt3\\) square units. Its height is \\(k\\sqrt3\\) units, where \\(k>0\\). What is the value of \\(k\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "An altitude of an equilateral triangle forms two 30-60-90 triangles. If the height is \\(k\\sqrt3\\), then half the side length is \\(k\\), so the side length is \\(2k\\). The area is \\(\\frac12(2k)(k\\sqrt3)=k^2\\sqrt3\\). Thus \\(k^2=225\\), and since \\(k>0\\), \\(\\boxed{k=15}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 117,
+      "subtopic": "Lines, Angles, and Triangles",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "15"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q118",
+      "groupId": "math-20261008-huge798-q118",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Area and Volume",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A right circular cone has radius 5 centimeters and slant height 13 centimeters. Its volume is \\(n\\pi\\) cubic centimeters. What is the value of \\(n\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The radius, height, and slant height form a right triangle, so \\(h=\\sqrt{13^2-5^2}=12\\). The cone volume is \\(\\frac13\\pi(5)^2(12)=100\\pi\\), so \\(\\boxed{n=100}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 118,
+      "subtopic": "Area and Volume",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "100"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q120",
+      "groupId": "math-20261008-huge798-q120",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Lines, Angles, and Triangles",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "Triangle ABC is similar to triangle FDE. The measures of corresponding angles C and E are \\(m\\angle C=5x-8\\) and \\(m\\angle E=3x+20\\). What is \\(m\\angle C\\)?",
+      "choices": {
+        "A": "42°",
+        "B": "54°",
+        "C": "62°",
+        "D": "76°"
+      },
+      "correctAnswer": "C",
+      "explanation": "Corresponding angles of similar triangles are congruent, so \\(5x-8=3x+20\\). Thus \\(x=14\\), and \\(m\\angle C=5(14)-8=\\boxed{62^\\circ}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 120,
+      "subtopic": "Lines, Angles, and Triangles",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Corresponding angles of similar triangles are congruent, so \\(5x-8=3x+20\\). Thus \\(x=14\\), and \\(m\\angle C=5(14)-8=\\boxed{62^\\circ}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
     }
   ],
   "classificationVersion": "2026-10-07-v1",
