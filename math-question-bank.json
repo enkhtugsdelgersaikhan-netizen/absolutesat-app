@@ -1636,10 +1636,134 @@
               }
             }
           }
+        },
+        {
+          "range": "441-480",
+          "reviewed": 40,
+          "retained": 29,
+          "excluded": [
+            {
+              "sourceQuestionNumber": 442,
+              "reason": "Close reskin of existing infinitely-many-solutions linear identity items."
+            },
+            {
+              "sourceQuestionNumber": 443,
+              "reason": "Low-value direct 2×2 system solve; the bank already contains many structurally equivalent items."
+            },
+            {
+              "sourceQuestionNumber": 444,
+              "reason": "Close reskin of existing parameter-for-infinitely-many-solutions items, including math-20261006-batch465-q185."
+            },
+            {
+              "sourceQuestionNumber": 448,
+              "reason": "Close reskin of existing ratio-with-difference items, including math-20261006-new409-q265."
+            },
+            {
+              "sourceQuestionNumber": 458,
+              "reason": "Low-value direct 2×2 system solve already heavily represented."
+            },
+            {
+              "sourceQuestionNumber": 459,
+              "reason": "Close reskin of existing no-solution parallel-lines system item math-20261006-batch465-q056."
+            },
+            {
+              "sourceQuestionNumber": 466,
+              "reason": "Close reskin of existing parallel-line slope items math-20261008-huge798-q040 and q079."
+            },
+            {
+              "sourceQuestionNumber": 470,
+              "reason": "Low-value one-step linear equation with no new structure."
+            },
+            {
+              "sourceQuestionNumber": 471,
+              "reason": "Close reskin of existing tiered rental-cost model math-20261006-batch465-q024."
+            },
+            {
+              "sourceQuestionNumber": 474,
+              "reason": "Close reskin of existing parallel-line through parameterized point item math-20261006-batch465-q049."
+            },
+            {
+              "sourceQuestionNumber": 475,
+              "reason": "Low-value one-step linear equation with no new reasoning structure."
+            }
+          ],
+          "repairs": {
+            "fractionInequalityNotation": [
+              441,
+              452,
+              454,
+              461,
+              464,
+              465,
+              473,
+              478
+            ],
+            "graphDependent": [
+              468,
+              469,
+              473,
+              477
+            ],
+            "notes": [
+              "Recovered q452 as f(x)=5-(2/3)(x-4), q465's coefficients as 2/3, 5/6, and 1/4, and q461's answer 13/8 from the supplied algebra.",
+              "Recovered q454's inequality direction from the phrase 'least permitted value' and the supplied solution.",
+              "Recovered q473 as a dashed boundary y=(2/3)x-1 with the region below shaded."
+            ]
+          },
+          "visuals": {
+            "graphs": [
+              469,
+              473,
+              477
+            ],
+            "choiceGraphs": [
+              468
+            ]
+          },
+          "difficultyCalibration": {
+            "approach": "Assigned relative to affected subtopics; 10 Easy / 9 Medium / 10 Hard keeps the live bank within one question of perfect global balance.",
+            "addedBySubtopic": {
+              "Linear Equations": {
+                "Easy": 4,
+                "Medium": 1,
+                "Hard": 3
+              },
+              "Linear Inequalities": {
+                "Easy": 1,
+                "Medium": 1,
+                "Hard": 1
+              },
+              "Systems of Linear Equations": {
+                "Easy": 1,
+                "Medium": 1,
+                "Hard": 2
+              },
+              "Ratio, Rates, Percentages": {
+                "Easy": 1,
+                "Medium": 1,
+                "Hard": 2
+              },
+              "Linear Functions": {
+                "Easy": 3,
+                "Medium": 3,
+                "Hard": 2
+              },
+              "Statistics": {
+                "Easy": 0,
+                "Medium": 1,
+                "Hard": 0
+              },
+              "Probability": {
+                "Easy": 0,
+                "Medium": 1,
+                "Hard": 0
+              }
+            }
+          }
         }
       ],
-      "retainedSoFar": 366,
-      "reviewedSoFar": 440
+      "retainedSoFar": 395,
+      "reviewedSoFar": 480
     }
   },
   "questions": [
@@ -54180,6 +54304,1050 @@
             "showPoints": true
           }
         ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q441",
+      "groupId": "math-20261008-huge798-q441",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "If \\(7-4(3-2x)=2+5(3-2x)\\), what is the value of \\(6-4x\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Let \\(u=3-2x\\). Then \\(7-4u=2+5u\\), so \\(u=5/9\\). Since \\(6-4x=2(3-2x)=2u\\), the requested value is \\(\\boxed{10/9}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 441,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "10/9",
+        "1.1111111111"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q445",
+      "groupId": "math-20261008-huge798-q445",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A freight elevator is rated for a maximum load of 4,800 pounds, but company policy requires the total load to be no more than 95% of that rating. A cart weighs 720 pounds, and each crate weighs 125 pounds. What is the maximum number of crates that can be placed on the cart?",
+      "choices": {
+        "A": "29",
+        "B": "30",
+        "C": "31",
+        "D": "32"
+      },
+      "correctAnswer": "B",
+      "explanation": "The policy limit is \\(0.95(4800)=4560\\). Thus \\(720+125n\\le4560\\), so \\(n\\le30.72\\). Since \\(n\\) is a whole number, the maximum is \\(\\boxed{30}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 445,
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The policy limit is \\(0.95(4800)=4560\\). Thus \\(720+125n\\le4560\\), so \\(n\\le30.72\\). Since \\(n\\) is a whole number, the maximum is \\(\\boxed{30}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q446",
+      "groupId": "math-20261008-huge798-q446",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Systems of Linear Equations",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The solution to the system \\(2(3x-1)-3(2y+5)=19\\) and \\(5(3x-1)+3(2y+5)=67\\) is \\((x,y)\\). What is the value of \\(14(3x-1)\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Let \\(A=3x-1\\) and \\(B=2y+5\\). Then \\(2A-3B=19\\) and \\(5A+3B=67\\). Adding gives \\(7A=86\\). Therefore \\(14A=2(86)=\\boxed{172}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 446,
+      "subtopic": "Systems of Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "172"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q447",
+      "groupId": "math-20261008-huge798-q447",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Systems of Linear Equations",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The solution to the system \\(4y=5x+11\\) and \\(-6y=7x-9\\) is \\((x,y)\\). What is the value of \\(58x\\)?",
+      "choices": {
+        "A": "-60",
+        "B": "-30",
+        "C": "15",
+        "D": "30"
+      },
+      "correctAnswer": "B",
+      "explanation": "Multiply the first equation by 3 and the second by 2: \\(12y=15x+33\\) and \\(-12y=14x-18\\). Adding gives \\(29x=-15\\). Thus \\(58x=\\boxed{-30}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 447,
+      "subtopic": "Systems of Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Multiply the first equation by 3 and the second by 2: \\(12y=15x+33\\) and \\(-12y=14x-18\\). Adding gives \\(29x=-15\\). Thus \\(58x=\\boxed{-30}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q449",
+      "groupId": "math-20261008-huge798-q449",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "At 9:20 a.m., a tank contained 1,260 liters of liquid. At 11:50 a.m., it contained 990 liters. What was the average decrease in the amount of liquid, in liters per hour, during this interval?",
+      "choices": {
+        "A": "90",
+        "B": "108",
+        "C": "120",
+        "D": "270"
+      },
+      "correctAnswer": "B",
+      "explanation": "The amount decreased by 270 liters over 2.5 hours. The average decrease was \\(270/2.5=\\boxed{108}\\) liters per hour.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 449,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The amount decreased by 270 liters over 2.5 hours. The average decrease was \\(270/2.5=\\boxed{108}\\) liters per hour.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q450",
+      "groupId": "math-20261008-huge798-q450",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The linear function \\(h\\) is defined by \\(h(x)=2a-5x+7\\), where \\(a\\) is a constant. If \\(h(3c-2)=c+11\\), which expression represents \\(a\\)?",
+      "choices": {
+        "A": "\\(16c-6\\)",
+        "B": "\\(7c+3\\)",
+        "C": "\\(8c-3\\)",
+        "D": "\\(8c+3\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "Substitute \\(3c-2\\): \\(2a-5(3c-2)+7=c+11\\). Thus \\(2a-15c+17=c+11\\), so \\(2a=16c-6\\) and \\(\\boxed{a=8c-3}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 450,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Substitute \\(3c-2\\): \\(2a-5(3c-2)+7=c+11\\). Thus \\(2a-15c+17=c+11\\), so \\(2a=16c-6\\) and \\(\\boxed{a=8c-3}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q451",
+      "groupId": "math-20261008-huge798-q451",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Systems of Linear Equations",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "Consider the system \\(4x-6y=10\\) and \\(3(3y-2x)=-15\\). For every real number \\(t\\), which point lies on the graph of both equations?",
+      "choices": {
+        "A": "\\((3t-1,2t+1)\\)",
+        "B": "\\((3t+1,2t-1)\\)",
+        "C": "\\((2t-1,3t+1)\\)",
+        "D": "\\((3t+1,1-2t)\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "Substituting \\((3t+1,2t-1)\\) into the first equation gives 10. For the second, \\(3(3(2t-1)-2(3t+1))=3(-5)=-15\\). Both equations hold for every real \\(t\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 451,
+      "subtopic": "Systems of Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Substituting \\((3t+1,2t-1)\\) into the first equation gives 10. For the second, \\(3(3(2t-1)-2(3t+1))=3(-5)=-15\\). Both equations hold for every real \\(t\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q452",
+      "groupId": "math-20261008-huge798-q452",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The function \\(f\\) is defined by \\(f(x)=5-\\frac23(x-4)\\). For what value of \\(x\\) does \\(f(x)=-7\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Set \\(5-\\frac23(x-4)=-7\\). Then \\(-\\frac23(x-4)=-12\\), so \\(x-4=18\\) and \\(\\boxed{x=22}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 452,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "22"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q453",
+      "groupId": "math-20261008-huge798-q453",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A $96 gift card is used to buy 2 movies for $18 each and to pay a $6 processing fee. The entire remaining balance is then used to rent movies for $4.50 each. How many movies can be rented?",
+      "choices": {
+        "A": "10",
+        "B": "12",
+        "C": "14",
+        "D": "20"
+      },
+      "correctAnswer": "B",
+      "explanation": "The remaining balance is \\(96-2(18)-6=54\\) dollars. At $4.50 per rental, \\(54/4.50=\\boxed{12}\\) movies can be rented.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 453,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The remaining balance is \\(96-2(18)-6=54\\) dollars. At $4.50 per rental, \\(54/4.50=\\boxed{12}\\) movies can be rented.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q454",
+      "groupId": "math-20261008-huge798-q454",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The least permitted value of \\(r\\) is 5 greater than three times the difference between \\(s\\) and 2. Which inequality gives the possible values of \\(r\\)?",
+      "choices": {
+        "A": "\\(r\\ge3s+3\\)",
+        "B": "\\(r\\le3s-1\\)",
+        "C": "\\(r\\ge3s-1\\)",
+        "D": "\\(r\\le3s+1\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "Three times the difference is \\(3(s-2)\\). Five greater is \\(3(s-2)+5=3s-1\\). Since this is the least permitted value, \\(\\boxed{r\\ge3s-1}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 454,
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Three times the difference is \\(3(s-2)\\). Five greater is \\(3(s-2)+5=3s-1\\). Since this is the least permitted value, \\(\\boxed{r\\ge3s-1}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q455",
+      "groupId": "math-20261008-huge798-q455",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "An irrigation system uses 3 gallons of water per minute while line A operates for \\(a\\) minutes and 5 gallons per minute while line B operates for \\(b\\) minutes. Afterward, 12 gallons are used for a rinse cycle. If 87 gallons are used in total, which equation represents the situation?",
+      "choices": {
+        "A": "\\(3a+5b=87\\)",
+        "B": "\\(3(a+5b)+12=87\\)",
+        "C": "\\(3a+5b+12=87\\)",
+        "D": "\\(5a+3b+12=87\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "Line A uses \\(3a\\) gallons, line B uses \\(5b\\), and the rinse uses 12. Therefore, \\(\\boxed{3a+5b+12=87}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 455,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Line A uses \\(3a\\) gallons, line B uses \\(5b\\), and the rinse uses 12. Therefore, \\(\\boxed{3a+5b+12=87}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q456",
+      "groupId": "math-20261008-huge798-q456",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The model \\(P(t)=1.8t+42\\) gives a city's predicted population, in thousands, \\(t\\) years after 2020, for \\(0\\le t\\le12\\). What population, in thousands, does the model predict for 2028?",
+      "choices": {
+        "A": "48.8",
+        "B": "56.4",
+        "C": "58.2",
+        "D": "78.0"
+      },
+      "correctAnswer": "B",
+      "explanation": "The year 2028 is 8 years after 2020. Thus \\(P(8)=1.8(8)+42=\\boxed{56.4}\\) thousand.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 456,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The year 2028 is 8 years after 2020. Thus \\(P(8)=1.8(8)+42=\\boxed{56.4}\\) thousand.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q457",
+      "groupId": "math-20261008-huge798-q457",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A warehouse begins with 3,600 shipping labels and uses 80 labels per day. The manager places a new order when exactly 5 unopened cartons remain, and each carton contains 240 labels. After how many days will the inventory reach the reorder level?",
+      "choices": {
+        "A": "15",
+        "B": "25",
+        "C": "30",
+        "D": "45"
+      },
+      "correctAnswer": "C",
+      "explanation": "The reorder level is \\(5(240)=1200\\) labels. Solve \\(3600-80d=1200\\): \\(80d=2400\\), so \\(\\boxed{d=30}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 457,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The reorder level is \\(5(240)=1200\\) labels. Solve \\(3600-80d=1200\\): \\(80d=2400\\), so \\(\\boxed{d=30}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q460",
+      "groupId": "math-20261008-huge798-q460",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A quiz awards 4 points for each correct answer and deducts 1 point for each incorrect answer. A student answers all 25 questions and earns 70 points. If \\(c\\) is the number of correct answers and \\(i\\) is the number of incorrect answers, which equation represents the student's score of 70 points?",
+      "choices": {
+        "A": "\\(c+i=25\\)",
+        "B": "\\(4c+i=70\\)",
+        "C": "\\(4c-i=70\\)",
+        "D": "\\(c-4i=70\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "Correct answers contribute \\(4c\\) points and incorrect answers deduct \\(i\\), so the score equation is \\(\\boxed{4c-i=70}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 460,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Correct answers contribute \\(4c\\) points and incorrect answers deduct \\(i\\), so the score equation is \\(\\boxed{4c-i=70}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q461",
+      "groupId": "math-20261008-huge798-q461",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "What is the y-coordinate of the y-intercept of the graph of \\(2(x-3)+5y=7-3(x+y)\\) in the xy-plane?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "At the y-intercept, \\(x=0\\): \\(-6+5y=7-3y\\). Thus \\(8y=13\\), so \\(\\boxed{y=13/8}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 461,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "13/8",
+        "1.625"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q462",
+      "groupId": "math-20261008-huge798-q462",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The function \\(f\\) is defined by \\(f(x)=2(3-x)+5x\\). What is the value of \\(f(-4)\\)?",
+      "choices": {
+        "A": "-26",
+        "B": "-6",
+        "C": "6",
+        "D": "18"
+      },
+      "correctAnswer": "B",
+      "explanation": "Substitute -4: \\(f(-4)=2(7)-20=14-20=\\boxed{-6}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 462,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Substitute -4: \\(f(-4)=2(7)-20=14-20=\\boxed{-6}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q463",
+      "groupId": "math-20261008-huge798-q463",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A triangular garden has two equal sides of length \\(x\\) meters and a third side of length \\(y\\) meters. A 3-meter-wide opening in the perimeter is left unfenced for a gate. The relationship \\(2x+y-3=41\\) describes the situation. What is the best interpretation of 41?",
+      "choices": {
+        "A": "The total perimeter of the garden, in meters",
+        "B": "The width of the gate, in meters",
+        "C": "The total length of fencing installed, in meters",
+        "D": "The length of either equal side, in meters"
+      },
+      "correctAnswer": "C",
+      "explanation": "The full perimeter is \\(2x+y\\). Subtracting the 3-meter opening gives the amount actually fenced, so 41 is the total length of fencing installed.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 463,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The full perimeter is \\(2x+y\\). Subtracting the 3-meter opening gives the amount actually fenced, so 41 is the total length of fencing installed.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q464",
+      "groupId": "math-20261008-huge798-q464",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The relationship between \\(x\\) and \\(y\\) is linear. For every increase of 4 in \\(x\\), \\(y\\) decreases by 6. When \\(x=6\\), \\(y=5\\). Which equation represents the relationship?",
+      "choices": {
+        "A": "\\(y=-\\frac23x+9\\)",
+        "B": "\\(y=-\\frac32x+14\\)",
+        "C": "\\(y=\\frac32x-4\\)",
+        "D": "\\(y=-\\frac32x+5\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "The slope is \\(-6/4=-3/2\\). Using \\((6,5)\\), \\(5=-\\frac32(6)+b=-9+b\\), so \\(b=14\\). Therefore \\(\\boxed{y=-\\frac32x+14}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 464,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The slope is \\(-6/4=-3/2\\). Using \\((6,5)\\), \\(5=-\\frac32(6)+b=-9+b\\), so \\(b=14\\). Therefore \\(\\boxed{y=-\\frac32x+14}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q465",
+      "groupId": "math-20261008-huge798-q465",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "What value of \\(x\\) satisfies \\(\\frac23(x+1)-\\frac56(x+1)+\\frac14(x+1)=7\\)?",
+      "choices": {
+        "A": "20",
+        "B": "27",
+        "C": "83",
+        "D": "85"
+      },
+      "correctAnswer": "C",
+      "explanation": "Factor \\(x+1\\). The coefficient is \\(\\frac23-\\frac56+\\frac14=\\frac{8-10+3}{12}=\\frac1{12}\\). Thus \\((x+1)/12=7\\), so \\(x+1=84\\) and \\(\\boxed{x=83}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 465,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Factor \\(x+1\\). The coefficient is \\(\\frac23-\\frac56+\\frac14=\\frac{8-10+3}{12}=\\frac1{12}\\). Thus \\((x+1)/12=7\\), so \\(x+1=84\\) and \\(\\boxed{x=83}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q467",
+      "groupId": "math-20261008-huge798-q467",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The equation \\(3p+2q=82\\) relates two positive quantities \\(p\\) and \\(q\\). If \\(p\\) is 40% of 20, what is the value of \\(q\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "First, \\(p=0.40(20)=8\\). Then \\(3(8)+2q=82\\), so \\(2q=58\\) and \\(\\boxed{q=29}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 467,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "29"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q468",
+      "groupId": "math-20261008-huge798-q468",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Systems of Linear Equations",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "Which graph represents the system \\(4x+5y=40\\) and \\(2x+y=14\\)?",
+      "choices": {
+        "A": "Graph A",
+        "B": "Graph B",
+        "C": "Graph C",
+        "D": "Graph D"
+      },
+      "correctAnswer": "B",
+      "explanation": "The first line has intercepts \\((10,0)\\) and \\((0,8)\\). The second has intercepts \\((7,0)\\) and \\((0,14)\\). Only graph B has both sets of intercepts.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 468,
+      "subtopic": "Systems of Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The first line has intercepts \\((10,0)\\) and \\((0,8)\\). The second has intercepts \\((7,0)\\) and \\((0,14)\\). Only graph B has both sets of intercepts.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "choiceGraphs": {
+        "A": {
+          "xMin": -1,
+          "xMax": 12,
+          "yMin": -1,
+          "yMax": 16,
+          "series": [
+            {
+              "points": [
+                [
+                  0,
+                  8
+                ],
+                [
+                  10,
+                  0
+                ]
+              ]
+            },
+            {
+              "points": [
+                [
+                  0,
+                  -2
+                ],
+                [
+                  7,
+                  12
+                ]
+              ]
+            }
+          ],
+          "ariaLabel": "Graph A"
+        },
+        "B": {
+          "xMin": -1,
+          "xMax": 12,
+          "yMin": -1,
+          "yMax": 16,
+          "series": [
+            {
+              "points": [
+                [
+                  0,
+                  8
+                ],
+                [
+                  10,
+                  0
+                ]
+              ]
+            },
+            {
+              "points": [
+                [
+                  0,
+                  14
+                ],
+                [
+                  7,
+                  0
+                ]
+              ]
+            }
+          ],
+          "ariaLabel": "Graph B: one line through (0,8) and (10,0), another through (0,14) and (7,0)"
+        },
+        "C": {
+          "xMin": -1,
+          "xMax": 12,
+          "yMin": -1,
+          "yMax": 16,
+          "series": [
+            {
+              "points": [
+                [
+                  0,
+                  10
+                ],
+                [
+                  8,
+                  0
+                ]
+              ]
+            },
+            {
+              "points": [
+                [
+                  0,
+                  14
+                ],
+                [
+                  7,
+                  0
+                ]
+              ]
+            }
+          ],
+          "ariaLabel": "Graph C"
+        },
+        "D": {
+          "xMin": -1,
+          "xMax": 12,
+          "yMin": -1,
+          "yMax": 16,
+          "series": [
+            {
+              "points": [
+                [
+                  0,
+                  8
+                ],
+                [
+                  10,
+                  0
+                ]
+              ]
+            },
+            {
+              "points": [
+                [
+                  0,
+                  10
+                ],
+                [
+                  12,
+                  0
+                ]
+              ]
+            }
+          ],
+          "ariaLabel": "Graph D"
+        }
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q469",
+      "groupId": "math-20261008-huge798-q469",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The graph shows a linear relationship between \\(x\\) and \\(y\\). Which equation could represent this relationship, where \\(k\\) is a positive constant?",
+      "choices": {
+        "A": "\\(kx+4y=16\\)",
+        "B": "\\(kx-4y=16\\)",
+        "C": "\\(4x+ky=16\\)",
+        "D": "\\(4x-ky=-16\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "The graph has y-intercept 4 and slope \\(-3/2\\), so its equation is \\(y=-\\frac32x+4\\). Multiplying by 4 gives \\(6x+4y=16\\), which has the form \\(kx+4y=16\\) with positive \\(k=6\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 469,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The graph has y-intercept 4 and slope \\(-3/2\\), so its equation is \\(y=-\\frac32x+4\\). Multiplying by 4 gives \\(6x+4y=16\\), which has the form \\(kx+4y=16\\) with positive \\(k=6\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "xy",
+        "caption": "Linear relationship",
+        "xMin": -1,
+        "xMax": 5,
+        "yMin": -3,
+        "yMax": 6,
+        "xStep": 1,
+        "yStep": 1,
+        "xLabel": "x",
+        "yLabel": "y",
+        "series": [
+          {
+            "label": "line",
+            "points": [
+              [
+                0,
+                4
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                4,
+                -2
+              ]
+            ],
+            "showPoints": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q472",
+      "groupId": "math-20261008-huge798-q472",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A shopper buys notebooks for $9 each and pens for $6 each. The shopper buys 4 pens and uses a $12 coupon on the entire purchase. If the final cost is $84, how many notebooks were purchased?",
+      "choices": {
+        "A": "6",
+        "B": "8",
+        "C": "10",
+        "D": "12"
+      },
+      "correctAnswer": "B",
+      "explanation": "If \\(n\\) is the number of notebooks, \\(9n+6(4)-12=84\\). Thus \\(9n+12=84\\), so \\(9n=72\\) and \\(\\boxed{n=8}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 472,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "If \\(n\\) is the number of notebooks, \\(9n+6(4)-12=84\\). Thus \\(9n+12=84\\), so \\(9n=72\\) and \\(\\boxed{n=8}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q473",
+      "groupId": "math-20261008-huge798-q473",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The shaded region represents the solutions to which inequality?",
+      "choices": {
+        "A": "\\(y>\\frac23x-1\\)",
+        "B": "\\(y<\\frac23x-1\\)",
+        "C": "\\(y<-\\frac23x-1\\)",
+        "D": "\\(y\\le\\frac23x-1\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "The dashed boundary passes through \\((0,-1)\\) and \\((3,1)\\), so its equation is \\(y=\\frac23x-1\\). The region below a dashed boundary represents \\(\\boxed{y<\\frac23x-1}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 473,
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The dashed boundary passes through \\((0,-1)\\) and \\((3,1)\\), so its equation is \\(y=\\frac23x-1\\). The region below a dashed boundary represents \\(\\boxed{y<\\frac23x-1}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "xy",
+        "caption": "Dashed boundary with region below shaded",
+        "xMin": -4,
+        "xMax": 6,
+        "yMin": -5,
+        "yMax": 5,
+        "xStep": 1,
+        "yStep": 1,
+        "xLabel": "x",
+        "yLabel": "y",
+        "regions": [
+          {
+            "points": [
+              [
+                -4,
+                -5
+              ],
+              [
+                -4,
+                -3.667
+              ],
+              [
+                6,
+                3
+              ],
+              [
+                6,
+                -5
+              ]
+            ]
+          }
+        ],
+        "series": [
+          {
+            "points": [
+              [
+                0,
+                -1
+              ],
+              [
+                3,
+                1
+              ]
+            ],
+            "showPoints": true,
+            "dashed": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q476",
+      "groupId": "math-20261008-huge798-q476",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A retailer sets the retail price of an item at 260% of its wholesale price. During clearance, the retail price is reduced by 35%. If the clearance price is $25.35, what was the wholesale price, in dollars?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "If the wholesale price is \\(w\\), the retail price is \\(2.60w\\), and the clearance price is \\(0.65(2.60w)=1.69w\\). Thus \\(1.69w=25.35\\), so \\(\\boxed{w=15}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 476,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "15"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q477",
+      "groupId": "math-20261008-huge798-q477",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The dot plot shows the measured widths, in millimeters, of 18 mineral samples. How many of the samples have a width of at least 15 millimeters?",
+      "choices": {
+        "A": "5",
+        "B": "6",
+        "C": "8",
+        "D": "11"
+      },
+      "correctAnswer": "B",
+      "explanation": "There are 3 samples at 15 mm, 2 at 16 mm, and 1 at 17 mm. Therefore, \\(3+2+1=\\boxed{6}\\) samples are at least 15 mm wide.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 477,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "There are 3 samples at 15 mm, 2 at 16 mm, and 1 at 17 mm. Therefore, \\(3+2+1=\\boxed{6}\\) samples are at least 15 mm wide.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "vertical-bar",
+        "caption": "Dot-plot frequencies of sample widths",
+        "categories": [
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17"
+        ],
+        "series": [
+          {
+            "name": "Frequency",
+            "values": [
+              3,
+              4,
+              5,
+              3,
+              2,
+              1
+            ]
+          }
+        ],
+        "max": 5,
+        "tickStep": 1
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q478",
+      "groupId": "math-20261008-huge798-q478",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Probability",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "One production run contains 180 components, 27 of which are defective. A second production run contains 120 components, 12 of which are defective. All 300 components are mixed together, and one component is selected at random. What is the probability that the selected component is defective?",
+      "choices": {
+        "A": "\\(\\frac18\\)",
+        "B": "\\(\\frac{13}{100}\\)",
+        "C": "\\(\\frac3{20}\\)",
+        "D": "\\(\\frac{39}{100}\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "There are \\(27+12=39\\) defective components out of 300 total. Thus the probability is \\(39/300=\\boxed{13/100}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 478,
+      "subtopic": "Probability",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "There are \\(27+12=39\\) defective components out of 300 total. Thus the probability is \\(39/300=\\boxed{13/100}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q479",
+      "groupId": "math-20261008-huge798-q479",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A rectangular patch of land increases in area by 540 square feet over a period of 2.25 hours. Which of the following is closest to its average rate of increase, in square meters per minute? Use 1 meter = 3.28 feet.",
+      "choices": {
+        "A": "0.0372",
+        "B": "0.372",
+        "C": "4.00",
+        "D": "22.3"
+      },
+      "correctAnswer": "B",
+      "explanation": "The rate is \\(540/135=4\\) square feet per minute. Since \\(1\\text{ m}^2=(3.28)^2\\text{ ft}^2\\), the rate is \\(4/(3.28)^2\\approx\\boxed{0.372}\\) square meter per minute.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 479,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The rate is \\(540/135=4\\) square feet per minute. Since \\(1\\text{ m}^2=(3.28)^2\\text{ ft}^2\\), the rate is \\(4/(3.28)^2\\approx\\boxed{0.372}\\) square meter per minute.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q480",
+      "groupId": "math-20261008-huge798-q480",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A drone travels 165 feet in 12 seconds at a constant speed. What is its speed, in yards per minute? Use 3 feet = 1 yard.",
+      "choices": {
+        "A": "55",
+        "B": "275",
+        "C": "825",
+        "D": "990"
+      },
+      "correctAnswer": "B",
+      "explanation": "165 feet is 55 yards. The drone travels 55 yards in 12 seconds, so in 60 seconds it travels \\(55(5)=\\boxed{275}\\) yards.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 480,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "165 feet is 55 yards. The drone travels 55 yards in 12 seconds, so in 60 seconds it travels \\(55(5)=\\boxed{275}\\) yards.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
       }
     }
   ],
