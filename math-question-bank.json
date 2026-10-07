@@ -1892,10 +1892,123 @@
               }
             }
           }
+        },
+        {
+          "range": "521-560",
+          "reviewed": 40,
+          "retained": 31,
+          "excluded": [
+            {
+              "sourceQuestionNumber": 525,
+              "reason": "Close reskin of existing rectangle perimeter-and-area dimension questions."
+            },
+            {
+              "sourceQuestionNumber": 527,
+              "reason": "Close reskin of existing congruent-triangle angle parameter questions."
+            },
+            {
+              "sourceQuestionNumber": 530,
+              "reason": "Low-value similar-right-triangle complementary-angle item; equivalent angle reasoning is already well represented."
+            },
+            {
+              "sourceQuestionNumber": 533,
+              "reason": "Near-reskin of existing right-triangle acute-angle equation item math-20261008-huge798-q129."
+            },
+            {
+              "sourceQuestionNumber": 538,
+              "reason": "Close reskin of existing rectangle perimeter/length-difference solve items."
+            },
+            {
+              "sourceQuestionNumber": 541,
+              "reason": "Close reskin of vertical-angle/linear-pair items already represented and previously deduplicated."
+            },
+            {
+              "sourceQuestionNumber": 543,
+              "reason": "Close reskin of existing chained-percent comparison items."
+            },
+            {
+              "sourceQuestionNumber": 545,
+              "reason": "Close reskin of the confidence-interval/margin-of-error item retained as q482."
+            },
+            {
+              "sourceQuestionNumber": 554,
+              "reason": "Close reskin of overlapping margin-of-error intervals already represented by q327/q482."
+            }
+          ],
+          "repairs": {
+            "piFractionRadicalTrigNotation": [
+              521,
+              524,
+              528,
+              531,
+              532,
+              534,
+              539,
+              542,
+              552
+            ],
+            "notes": [
+              "Recovered q524's side scale factor as 3/2, q528's radius multiplier as 3/5, and q532's missing π factors from the worked solutions.",
+              "Recovered q531 as cos K=a/b asking cos L, q534 as cos A, q539 as tan C, and q542 as sin(31π/6), each uniquely determined by the solution's named adjacent/opposite/hypotenuse calculation.",
+              "Recovered q552's answer choices as 1/4, 1/12, 1/6, and 1/18."
+            ]
+          },
+          "visuals": {
+            "tables": [
+              546,
+              547,
+              557,
+              558,
+              559
+            ],
+            "graphs": [
+              556
+            ]
+          },
+          "difficultyCalibration": {
+            "approach": "Exactly 10 Easy / 11 Medium / 10 Hard additions, bringing the live bank back to exact global difficulty balance.",
+            "addedBySubtopic": {
+              "Area and Volume": {
+                "Easy": 2,
+                "Medium": 2,
+                "Hard": 0
+              },
+              "Lines, Angles, and Triangles": {
+                "Easy": 1,
+                "Medium": 1,
+                "Hard": 4
+              },
+              "Circles": {
+                "Easy": 0,
+                "Medium": 0,
+                "Hard": 2
+              },
+              "Trigonometry": {
+                "Easy": 0,
+                "Medium": 4,
+                "Hard": 0
+              },
+              "Ratio, Rates, Percentages": {
+                "Easy": 4,
+                "Medium": 1,
+                "Hard": 0
+              },
+              "Statistics": {
+                "Easy": 2,
+                "Medium": 3,
+                "Hard": 4
+              },
+              "Probability": {
+                "Easy": 1,
+                "Medium": 0,
+                "Hard": 0
+              }
+            }
+          }
         }
       ],
-      "retainedSoFar": 425,
-      "reviewedSoFar": 520
+      "retainedSoFar": 456,
+      "reviewedSoFar": 560
     }
   },
   "questions": [
@@ -56562,6 +56675,1029 @@
       "acceptedAnswers": [
         "18"
       ]
+    },
+    {
+      "id": "math-20261008-huge798-q521",
+      "groupId": "math-20261008-huge798-q521",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Area and Volume",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A right circular cylinder has a base diameter of 18 centimeters. Its height is 4 centimeters greater than the radius of its base. What is the volume, in cubic centimeters, of the cylinder?",
+      "choices": {
+        "A": "\\(729\\pi\\)",
+        "B": "\\(1053\\pi\\)",
+        "C": "\\(1458\\pi\\)",
+        "D": "\\(4212\\pi\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "The radius is 9 and the height is 13. Thus \\(V=\\pi r^2h=\\pi(9)^2(13)=\\boxed{1053\\pi}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 521,
+      "subtopic": "Area and Volume",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The radius is 9 and the height is 13. Thus \\(V=\\pi r^2h=\\pi(9)^2(13)=\\boxed{1053\\pi}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q522",
+      "groupId": "math-20261008-huge798-q522",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Area and Volume",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "Three congruent squares are placed edge to edge in a single row to form a rectangle. The perimeter of the rectangle is 80 units. What is the perimeter, in units, of one of the squares?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "If each side is \\(s\\), the rectangle is \\(3s\\) by \\(s\\), so \\(2(3s+s)=80\\). Hence \\(s=10\\), and one square's perimeter is \\(\\boxed{40}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 522,
+      "subtopic": "Area and Volume",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "40"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q523",
+      "groupId": "math-20261008-huge798-q523",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Lines, Angles, and Triangles",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "In the xy-plane, segment AB, with endpoints \\(A(-3,2)\\) and \\(B(9,7)\\), is one leg of a right triangle. The other leg is 11 units longer than AB. What is the area, in square units, of the triangle?",
+      "choices": {
+        "A": "78",
+        "B": "144",
+        "C": "156",
+        "D": "312"
+      },
+      "correctAnswer": "C",
+      "explanation": "\\(AB=\\sqrt{12^2+5^2}=13\\). The other leg is 24, so the area is \\(\\frac12(13)(24)=\\boxed{156}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 523,
+      "subtopic": "Lines, Angles, and Triangles",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "\\(AB=\\sqrt{12^2+5^2}=13\\). The other leg is 24, so the area is \\(\\frac12(13)(24)=\\boxed{156}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q524",
+      "groupId": "math-20261008-huge798-q524",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Area and Volume",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The side length of square B is \\(\\frac32\\) times the side length of square A. The area of square B is 500 square units greater than the area of square A. What is the area, in square units, of square A?",
+      "choices": {
+        "A": "320",
+        "B": "400",
+        "C": "500",
+        "D": "900"
+      },
+      "correctAnswer": "B",
+      "explanation": "The area scale factor is \\((3/2)^2=9/4\\). If square A has area \\(A\\), then \\(\\frac94A-A=500\\), so \\(\\frac54A=500\\) and \\(\\boxed{A=400}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 524,
+      "subtopic": "Area and Volume",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The area scale factor is \\((3/2)^2=9/4\\). If square A has area \\(A\\), then \\(\\frac94A-A=500\\), so \\(\\frac54A=500\\) and \\(\\boxed{A=400}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q526",
+      "groupId": "math-20261008-huge798-q526",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Lines, Angles, and Triangles",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "Points A, C, E are collinear in that order, and points A, B, D are collinear in that order. Segments BC and DE are both perpendicular to AE. If \\(AB=13\\), \\(BC=12\\), and the area of triangle ADE is 270 square units, what is the length of CE?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Triangle ABC is right, so \\(AC=5\\), and its area is 30. Triangles ABC and ADE are similar. Their area ratio is 9, so the linear scale factor is 3. Thus \\(AE=15\\), and \\(CE=15-5=\\boxed{10}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 526,
+      "subtopic": "Lines, Angles, and Triangles",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "10"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q528",
+      "groupId": "math-20261008-huge798-q528",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Circles",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "Circle C is defined by \\((x-4)^2+(y+1)^2=25\\). Circle D is obtained by reflecting circle C across the y-axis, translating the result 6 units upward, and multiplying its radius by \\(\\frac35\\). Which equation defines circle D?",
+      "choices": {
+        "A": "\\((x+4)^2+(y+5)^2=9\\)",
+        "B": "\\((x-4)^2+(y-5)^2=9\\)",
+        "C": "\\((x+4)^2+(y-5)^2=9\\)",
+        "D": "\\((x+4)^2+(y-5)^2=15\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "Circle C has center \\((4,-1)\\) and radius 5. Reflection gives center \\((-4,-1)\\); translating up gives \\((-4,5)\\). The new radius is 3, so the equation is \\(\\boxed{(x+4)^2+(y-5)^2=9}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 528,
+      "subtopic": "Circles",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Circle C has center \\((4,-1)\\) and radius 5. Reflection gives center \\((-4,-1)\\); translating up gives \\((-4,5)\\). The new radius is 3, so the equation is \\(\\boxed{(x+4)^2+(y-5)^2=9}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q529",
+      "groupId": "math-20261008-huge798-q529",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Lines, Angles, and Triangles",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "In triangle ABC, \\(AB=AC\\). Which additional statement is sufficient to prove that triangle ABC is equilateral?",
+      "choices": {
+        "A": "\\(m\\angle A=2m\\angle B-60^\\circ\\)",
+        "B": "\\(m\\angle A=m\\angle B+30^\\circ\\)",
+        "C": "\\(m\\angle A=2m\\angle B-30^\\circ\\)",
+        "D": "\\(m\\angle A=3m\\angle B-60^\\circ\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "Since \\(AB=AC\\), let the equal base angles be \\(t\\). Then \\(m\\angle A=180-2t\\). Choice A gives \\(180-2t=2t-60\\), so \\(t=60\\), making all three angles 60°.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 529,
+      "subtopic": "Lines, Angles, and Triangles",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "Since \\(AB=AC\\), let the equal base angles be \\(t\\). Then \\(m\\angle A=180-2t\\). Choice A gives \\(180-2t=2t-60\\), so \\(t=60\\), making all three angles 60°.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q531",
+      "groupId": "math-20261008-huge798-q531",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Trigonometry",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "In right triangle JKL, angle J is a right angle and \\(\\cos K=\\frac ab\\), where positive integers \\(a,b\\) satisfy \\(a+b=100\\) and \\(b-a=4\\). What is \\(\\cos L\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Solving gives \\(a=48\\) and \\(b=52\\), so \\(\\cos K=48/52\\). The third side is \\(\\sqrt{52^2-48^2}=20\\). For angle L, the adjacent leg is 20 and the hypotenuse 52, so \\(\\cos L=20/52=\\boxed{5/13}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 531,
+      "subtopic": "Trigonometry",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "5/13",
+        "0.3846153846"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q532",
+      "groupId": "math-20261008-huge798-q532",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Area and Volume",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A right circular cylinder has volume \\(1764\\pi\\) cubic centimeters. The circumference of its circular base is \\(14\\pi\\) centimeters. What is the height, in centimeters, of the cylinder?",
+      "choices": {
+        "A": "18",
+        "B": "28",
+        "C": "36",
+        "D": "42"
+      },
+      "correctAnswer": "C",
+      "explanation": "From \\(2\\pi r=14\\pi\\), \\(r=7\\). The base area is \\(49\\pi\\). Since \\(1764\\pi=49\\pi h\\), \\(\\boxed{h=36}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 532,
+      "subtopic": "Area and Volume",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "From \\(2\\pi r=14\\pi\\), \\(r=7\\). The base area is \\(49\\pi\\). Since \\(1764\\pi=49\\pi h\\), \\(\\boxed{h=36}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q534",
+      "groupId": "math-20261008-huge798-q534",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Trigonometry",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "In right triangle ABC, \\(m\\angle C=90^\\circ\\), \\(AC=20\\), and \\(BC=21\\). What is \\(\\cos A\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The hypotenuse is \\(AB=\\sqrt{20^2+21^2}=29\\). Relative to angle A, the adjacent leg is AC=20, so \\(\\cos A=\\boxed{20/29}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 534,
+      "subtopic": "Trigonometry",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "20/29",
+        "0.6896551724"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q535",
+      "groupId": "math-20261008-huge798-q535",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Lines, Angles, and Triangles",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "In triangle ABC, an exterior angle at C measures \\((5x-8)^\\circ\\). The two nonadjacent interior angles measure \\((2x+8)^\\circ\\) and \\((x+16)^\\circ\\). What is the measure of interior angle C?",
+      "choices": {
+        "A": "64°",
+        "B": "72°",
+        "C": "108°",
+        "D": "116°"
+      },
+      "correctAnswer": "C",
+      "explanation": "The exterior-angle theorem gives \\(5x-8=(2x+8)+(x+16)\\), so \\(x=16\\). The exterior angle is 72°, so interior angle C is \\(180-72=\\boxed{108^\\circ}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 535,
+      "subtopic": "Lines, Angles, and Triangles",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The exterior-angle theorem gives \\(5x-8=(2x+8)+(x+16)\\), so \\(x=16\\). The exterior angle is 72°, so interior angle C is \\(180-72=\\boxed{108^\\circ}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q536",
+      "groupId": "math-20261008-huge798-q536",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Lines, Angles, and Triangles",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A right triangle has a hypotenuse of 26 units. One leg is 14 units longer than the other leg. What is the area, in square units, of the triangle?",
+      "choices": {
+        "A": "100",
+        "B": "120",
+        "C": "240",
+        "D": "312"
+      },
+      "correctAnswer": "B",
+      "explanation": "Let the shorter leg be \\(x\\). Then \\(x^2+(x+14)^2=26^2\\), giving \\(x=10\\). The other leg is 24, so the area is \\(\\frac12(10)(24)=\\boxed{120}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 536,
+      "subtopic": "Lines, Angles, and Triangles",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Let the shorter leg be \\(x\\). Then \\(x^2+(x+14)^2=26^2\\), giving \\(x=10\\). The other leg is 24, so the area is \\(\\frac12(10)(24)=\\boxed{120}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q537",
+      "groupId": "math-20261008-huge798-q537",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Lines, Angles, and Triangles",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A transversal intersects two parallel lines. At one intersection, two adjacent angles measure \\((3x+12)^\\circ\\) and \\((5x+8)^\\circ\\). At the other intersection, the angle corresponding to the obtuse one of these two angles measures \\((2y+18)^\\circ\\). What is \\(x+y\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The adjacent angles are supplementary, so \\(8x+20=180\\), giving \\(x=20\\). The obtuse angle is 108°, so \\(2y+18=108\\), giving \\(y=45\\). Thus \\(x+y=\\boxed{65}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 537,
+      "subtopic": "Lines, Angles, and Triangles",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "65"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q539",
+      "groupId": "math-20261008-huge798-q539",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Trigonometry",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "Triangle ABC is right at A. Point D lies on hypotenuse BC, and AD is perpendicular to BC. If \\(BD=5\\) and \\(DC=20\\), what is \\(\\tan C\\)?",
+      "choices": {
+        "A": "\\(\\frac14\\)",
+        "B": "\\(\\frac12\\)",
+        "C": "2",
+        "D": "4"
+      },
+      "correctAnswer": "B",
+      "explanation": "The altitude theorem gives \\(AD^2=BD\\cdot DC=100\\), so \\(AD=10\\). In right triangle ADC, \\(\\tan C=AD/DC=10/20=\\boxed{1/2}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 539,
+      "subtopic": "Trigonometry",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The altitude theorem gives \\(AD^2=BD\\cdot DC=100\\), so \\(AD=10\\). In right triangle ADC, \\(\\tan C=AD/DC=10/20=\\boxed{1/2}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q540",
+      "groupId": "math-20261008-huge798-q540",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Circles",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "In the xy-plane, the equation \\(x^2+y^2-8x+12y+4k=0\\) defines a circle with radius 10. What is the value of \\(k\\)?",
+      "choices": {
+        "A": "-12",
+        "B": "-38",
+        "C": "12",
+        "D": "38"
+      },
+      "correctAnswer": "A",
+      "explanation": "Completing the square gives \\((x-4)^2+(y+6)^2=52-4k\\). Since the radius is 10, \\(52-4k=100\\), so \\(\\boxed{k=-12}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 540,
+      "subtopic": "Circles",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "Completing the square gives \\((x-4)^2+(y+6)^2=52-4k\\). Since the radius is 10, \\(52-4k=100\\), so \\(\\boxed{k=-12}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q542",
+      "groupId": "math-20261008-huge798-q542",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Trigonometry",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "What is the value of \\(\\sin\\left(\\frac{31\\pi}{6}\\right)\\)?",
+      "choices": {
+        "A": "\\(-\\frac12\\)",
+        "B": "\\(\\frac12\\)",
+        "C": "\\(-\\frac{\\sqrt3}{2}\\)",
+        "D": "\\(\\frac{\\sqrt3}{2}\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "Subtract \\(4\\pi=24\\pi/6\\) to get the coterminal angle \\(7\\pi/6\\). Therefore \\(\\sin(31\\pi/6)=\\sin(7\\pi/6)=\\boxed{-1/2}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 542,
+      "subtopic": "Trigonometry",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "Subtract \\(4\\pi=24\\pi/6\\) to get the coterminal angle \\(7\\pi/6\\). Therefore \\(\\sin(31\\pi/6)=\\sin(7\\pi/6)=\\boxed{-1/2}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q544",
+      "groupId": "math-20261008-huge798-q544",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A mineral sample and its empty holder have a combined mass of 412 grams. The empty holder has a mass of 52 grams. When the sample is submerged, it displaces 45 cubic centimeters of water. What is the density of the mineral sample, in grams per cubic centimeter?",
+      "choices": {
+        "A": "9.16",
+        "B": "8",
+        "C": "0.125",
+        "D": "7.2"
+      },
+      "correctAnswer": "B",
+      "explanation": "The mineral's mass is \\(412-52=360\\) grams and its volume is 45 cm³. Its density is \\(360/45=\\boxed{8}\\) g/cm³.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 544,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The mineral's mass is \\(412-52=360\\) grams and its volume is 45 cm³. Its density is \\(360/45=\\boxed{8}\\) g/cm³.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q546",
+      "groupId": "math-20261008-huge798-q546",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The table summarizes 20 integer-valued measurements. Which of the following could be the median?",
+      "choices": {
+        "A": "12",
+        "B": "16",
+        "C": "17",
+        "D": "19"
+      },
+      "correctAnswer": "B",
+      "explanation": "The 10th value lies from 10 to 14 and the 11th from 15 to 19. Thus the median can range from 12.5 through 16.5. Only \\(\\boxed{16}\\) is possible.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 546,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The 10th value lies from 10 to 14 and the 11th from 15 to 19. Thus the median can range from 12.5 through 16.5. Only \\(\\boxed{16}\\) is possible.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "table": {
+        "caption": "Grouped measurements",
+        "headers": [
+          "Measurement",
+          "Frequency"
+        ],
+        "rows": [
+          [
+            "0 to 4",
+            "3"
+          ],
+          [
+            "5 to 9",
+            "5"
+          ],
+          [
+            "10 to 14",
+            "2"
+          ],
+          [
+            "15 to 19",
+            "6"
+          ],
+          [
+            "20 to 24",
+            "4"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q547",
+      "groupId": "math-20261008-huge798-q547",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "Two grouped frequency distributions summarize integer data. What is the smallest possible difference between the mean of data set A and the mean of data set B?",
+      "choices": {
+        "A": "16.5",
+        "B": "17.5",
+        "C": "18.5",
+        "D": "20"
+      },
+      "correctAnswer": "B",
+      "explanation": "Minimize A by taking each interval's smallest integer: its mean is 59. Maximize B by taking each interval's largest integer: its mean is 41.5. The smallest possible difference is \\(59-41.5=\\boxed{17.5}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 547,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Minimize A by taking each interval's smallest integer: its mean is 59. Maximize B by taking each interval's largest integer: its mean is 41.5. The smallest possible difference is \\(59-41.5=\\boxed{17.5}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "table": {
+        "caption": "Grouped frequencies",
+        "headers": [
+          "Interval",
+          "A frequency",
+          "B frequency"
+        ],
+        "rows": [
+          [
+            "20–<30",
+            "0",
+            "2"
+          ],
+          [
+            "30–<40",
+            "0",
+            "3"
+          ],
+          [
+            "40–<50",
+            "1",
+            "2"
+          ],
+          [
+            "50–<60",
+            "2",
+            "1"
+          ],
+          [
+            "60–<70",
+            "4",
+            "0"
+          ],
+          [
+            "70–<80",
+            "3",
+            "0"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q548",
+      "groupId": "math-20261008-huge798-q548",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A positive quantity \\(q\\) is increased by 28%. The resulting quantity is then decreased by 25%. Which expression represents the final quantity?",
+      "choices": {
+        "A": "\\(0.72q\\)",
+        "B": "\\(0.96q\\)",
+        "C": "\\(1.03q\\)",
+        "D": "\\(1.53q\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "The successive multipliers are 1.28 and 0.75. Their product is \\(1.28(0.75)=0.96\\), so the final quantity is \\(\\boxed{0.96q}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 548,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The successive multipliers are 1.28 and 0.75. Their product is \\(1.28(0.75)=0.96\\), so the final quantity is \\(\\boxed{0.96q}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q549",
+      "groupId": "math-20261008-huge798-q549",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A surveyor measures one portion of a boundary as 18 rods and another portion as 27.5 yards. If 1 rod equals 5.5 yards, what is the total length, in yards, of the two portions?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Convert the rods: \\(18(5.5)=99\\) yards. Then \\(99+27.5=\\boxed{126.5}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 549,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "126.5",
+        "253/2"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q550",
+      "groupId": "math-20261008-huge798-q550",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A scatterplot contains 12 data points and a line of best fit. Of the 12 points, 7 lie on or above the line of best fit, and 3 of those 7 lie exactly on the line. For how many data points is the actual y-value greater than the y-value predicted by the line?",
+      "choices": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "7"
+      },
+      "correctAnswer": "B",
+      "explanation": "Actual y-values greater than predicted correspond to points strictly above the line. Of the 7 points on or above the line, 3 are exactly on it, so \\(7-3=\\boxed{4}\\) are above.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 550,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Actual y-values greater than predicted correspond to points strictly above the line. Of the 7 points on or above the line, 3 are exactly on it, so \\(7-3=\\boxed{4}\\) are above.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q551",
+      "groupId": "math-20261008-huge798-q551",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The mean of 6 recorded measurements is 18. One measurement was recorded as 31 but should have been recorded as 13. What is the mean of the corrected measurements?",
+      "choices": {
+        "A": "15",
+        "B": "16",
+        "C": "18",
+        "D": "21"
+      },
+      "correctAnswer": "A",
+      "explanation": "The recorded total is \\(6(18)=108\\). Correcting 31 to 13 lowers the total by 18, giving 90. The corrected mean is \\(90/6=\\boxed{15}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 551,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The recorded total is \\(6(18)=108\\). Correcting 31 to 13 lowers the total by 18, giving 90. The corrected mean is \\(90/6=\\boxed{15}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q552",
+      "groupId": "math-20261008-huge798-q552",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Probability",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A collection contains 72 cards, 18 of which are blue. One-third of the blue cards also have a star. If one card is selected at random from the entire collection, what is the probability that it is both blue and has a star?",
+      "choices": {
+        "A": "\\(\\frac14\\)",
+        "B": "\\(\\frac1{12}\\)",
+        "C": "\\(\\frac16\\)",
+        "D": "\\(\\frac1{18}\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "One-third of 18 is 6, so 6 cards are both blue and starred. The probability is \\(6/72=\\boxed{1/12}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 552,
+      "subtopic": "Probability",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "One-third of 18 is 6, so 6 cards are both blue and starred. The probability is \\(6/72=\\boxed{1/12}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q553",
+      "groupId": "math-20261008-huge798-q553",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A city's projected population is 15% greater than its current population. A reference population is 8% less than the city's current population. If the projected population is \\(k\\) times the reference population, what is \\(k\\)?",
+      "choices": {
+        "A": "1.07",
+        "B": "1.23",
+        "C": "1.25",
+        "D": "1.27"
+      },
+      "correctAnswer": "C",
+      "explanation": "Let the current population be \\(P\\). The projected population is \\(1.15P\\) and the reference is \\(0.92P\\). Thus \\(k=1.15/0.92=\\boxed{1.25}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 553,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Let the current population be \\(P\\). The projected population is \\(1.15P\\) and the reference is \\(0.92P\\). Thus \\(k=1.15/0.92=\\boxed{1.25}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q555",
+      "groupId": "math-20261008-huge798-q555",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A machine processes 15 kilograms of material every 6 minutes at a constant rate. It has already processed 22.5 kilograms of a 60-kilogram batch. How many additional minutes are required to finish the batch?",
+      "choices": {
+        "A": "9",
+        "B": "15",
+        "C": "18",
+        "D": "24"
+      },
+      "correctAnswer": "B",
+      "explanation": "The rate is \\(15/6=2.5\\) kg/min. The remaining amount is \\(60-22.5=37.5\\) kg, requiring \\(37.5/2.5=\\boxed{15}\\) minutes.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 555,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The rate is \\(15/6=2.5\\) kg/min. The remaining amount is \\(60-22.5=37.5\\) kg, requiring \\(37.5/2.5=\\boxed{15}\\) minutes.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q556",
+      "groupId": "math-20261008-huge798-q556",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The line graph shows the probability of rain on five consecutive days. On which day was the probability exactly 20 percentage points less than on the preceding day?",
+      "choices": {
+        "A": "Monday",
+        "B": "Tuesday",
+        "C": "Wednesday",
+        "D": "Friday"
+      },
+      "correctAnswer": "C",
+      "explanation": "From Tuesday to Wednesday the probability falls from 65% to 45%, a decrease of exactly 20 percentage points.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 556,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "From Tuesday to Wednesday the probability falls from 65% to 45%, a decrease of exactly 20 percentage points.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "line",
+        "caption": "Probability of rain",
+        "categories": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "series": [
+          {
+            "name": "Probability (%)",
+            "values": [
+              40,
+              65,
+              45,
+              70,
+              60
+            ]
+          }
+        ],
+        "min": 30,
+        "max": 80,
+        "tickStep": 10
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q557",
+      "groupId": "math-20261008-huge798-q557",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The table gives average staffing levels for three store types. How much greater is the average number of employees at a market than at an express store?",
+      "choices": {
+        "A": "112",
+        "B": "150",
+        "C": "188",
+        "D": "246"
+      },
+      "correctAnswer": "B",
+      "explanation": "A market has \\(284-38=246\\) employees on average. The difference from an express store is \\(246-96=\\boxed{150}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 557,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "A market has \\(284-38=246\\) employees on average. The difference from an express store is \\(246-96=\\boxed{150}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "table": {
+        "caption": "Average staffing levels",
+        "headers": [
+          "Store type",
+          "Average employees"
+        ],
+        "rows": [
+          [
+            "Superstore",
+            "284"
+          ],
+          [
+            "Market",
+            "38 fewer than a superstore"
+          ],
+          [
+            "Express store",
+            "96"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q558",
+      "groupId": "math-20261008-huge798-q558",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The frequency table represents a data set. A value of 30 is added. Which measures are greater for the new data set than for the original data set? I. Median II. Mean III. Range",
+      "choices": {
+        "A": "I only",
+        "B": "II only",
+        "C": "II and III only",
+        "D": "I, II, and III"
+      },
+      "correctAnswer": "C",
+      "explanation": "The original median is 12, and after adding 30 the median remains 12. The original mean is 12, so adding 30 increases the mean. The range increases from 16 to 26. Therefore, only II and III increase.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 558,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The original median is 12, and after adding 30 the median remains 12. The original mean is 12, so adding 30 increases the mean. The range increases from 16 to 26. Therefore, only II and III increase.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "table": {
+        "caption": "Frequency table",
+        "headers": [
+          "Value",
+          "Frequency"
+        ],
+        "rows": [
+          [
+            "4",
+            "2"
+          ],
+          [
+            "8",
+            "3"
+          ],
+          [
+            "12",
+            "4"
+          ],
+          [
+            "16",
+            "3"
+          ],
+          [
+            "20",
+            "2"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q559",
+      "groupId": "math-20261008-huge798-q559",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The table shows frequencies in a data set containing exactly 11 values. What is the minimum value in the data set?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The frequencies total \\((n-3)+4+5+2=11\\), so \\(n=3\\). The frequency of 12 is therefore 0, so the smallest value that actually occurs is \\(\\boxed{16}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 559,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "16"
+      ],
+      "table": {
+        "caption": "Frequency table",
+        "headers": [
+          "Value",
+          "Frequency"
+        ],
+        "rows": [
+          [
+            "12",
+            "n-3"
+          ],
+          [
+            "16",
+            "4"
+          ],
+          [
+            "20",
+            "5"
+          ],
+          [
+            "24",
+            "2"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q560",
+      "groupId": "math-20261008-huge798-q560",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Statistics",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "Data set B is obtained from data set A by replacing every value \\(x\\) with \\(2x+5\\). Which statement correctly compares the standard deviations?",
+      "choices": {
+        "A": "The standard deviation of B is half that of A.",
+        "B": "The standard deviations are equal.",
+        "C": "The standard deviation of B is twice that of A.",
+        "D": "The standard deviation of B is four times that of A."
+      },
+      "correctAnswer": "C",
+      "explanation": "Adding 5 does not change spread. Multiplying every value by 2 doubles every distance from the mean, so the standard deviation doubles.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 560,
+      "subtopic": "Statistics",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Adding 5 does not change spread. Multiplying every value by 2 doubles every distance from the mean, so the standard deviation doubles.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
     }
   ],
   "classificationVersion": "2026-10-07-v1",
