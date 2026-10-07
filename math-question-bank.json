@@ -2475,10 +2475,124 @@
               }
             }
           }
+        },
+        {
+          "range": "721-753",
+          "reviewed": 33,
+          "retained": 24,
+          "excluded": [
+            {
+              "sourceQuestionNumber": 724,
+              "reason": "Low-value direct y-intercept substitution item already heavily represented."
+            },
+            {
+              "sourceQuestionNumber": 725,
+              "reason": "Close reskin of existing parallel-line coefficient item math-20261006-batch465-q332."
+            },
+            {
+              "sourceQuestionNumber": 728,
+              "reason": "Near-duplicate determine-a-linear-function-from-two conditions item, including newly retained q708."
+            },
+            {
+              "sourceQuestionNumber": 734,
+              "reason": "Direct 2x2 system solve/evaluate item already heavily represented."
+            },
+            {
+              "sourceQuestionNumber": 736,
+              "reason": "Low-value direct intersection of two linear equations already heavily represented."
+            },
+            {
+              "sourceQuestionNumber": 737,
+              "reason": "Direct system solve/evaluate reskin already heavily represented."
+            },
+            {
+              "sourceQuestionNumber": 740,
+              "reason": "Close reskin of existing same-solution equation item math-20261008-huge798-q066."
+            },
+            {
+              "sourceQuestionNumber": 751,
+              "reason": "Close reskin of existing no-solution parameter-system item math-20261006-batch465-q198 and retained q694."
+            },
+            {
+              "sourceQuestionNumber": 752,
+              "reason": "Direct 2x2 system-solution item already heavily represented."
+            }
+          ],
+          "repairs": {
+            "fractionPercentInequalityNotation": [
+              721,
+              726,
+              727,
+              731,
+              732,
+              741,
+              742,
+              743,
+              744,
+              746,
+              748,
+              750,
+              753
+            ],
+            "notes": [
+              "Recovered q726's savings fraction as 3/8 and q743's answer as 2/3 from the supplied derivations.",
+              "Recovered q731's compound inequality, q741/q742/q744 inequality bounds, and q746 as 2q+5≤19; the non-strict sign is required by the supplied greatest-integer reasoning and keyed answer 14.",
+              "Recovered q748's slope as -4/s and q750's slope as -2/3 from the supplied work.",
+              "Structured the source tables and rebuilt graph-dependent q733 and q750."
+            ]
+          },
+          "visuals": {
+            "graphs": [
+              733,
+              750
+            ],
+            "tables": [
+              723,
+              748
+            ],
+            "choiceTables": [
+              753
+            ],
+            "diagrams": []
+          },
+          "difficultyCalibration": {
+            "approach": "Exactly 8 Easy / 8 Medium / 8 Hard additions, preserving exact global balance for the final unique source segment.",
+            "addedBySubtopic": {
+              "Linear Functions": {
+                "Easy": 2,
+                "Medium": 3,
+                "Hard": 1
+              },
+              "Linear Equations": {
+                "Easy": 5,
+                "Medium": 1,
+                "Hard": 1
+              },
+              "Linear Inequalities": {
+                "Easy": 1,
+                "Medium": 1,
+                "Hard": 4
+              },
+              "Ratio, Rates, Percentages": {
+                "Easy": 0,
+                "Medium": 3,
+                "Hard": 2
+              }
+            }
+          }
+        },
+        {
+          "range": "754-798",
+          "reviewed": 45,
+          "retained": 0,
+          "overlapWith": "deduplicatedBatch20261007",
+          "reason": "These final 45 source questions are the same previously audited 45-question batch. They were intentionally not re-added; the 42 retained items already exist and the 3 earlier exclusions remain excluded."
         }
       ],
-      "retainedSoFar": 576,
-      "reviewedSoFar": 720
+      "retainedSoFar": 600,
+      "reviewedSoFar": 798,
+      "completed": true,
+      "completionNote": "All 798 source questions reviewed. Questions 754-798 overlap the previously audited 45-question batch and were not duplicated."
     }
   },
   "questions": [
@@ -62001,6 +62115,818 @@
         "B": "This choice does not satisfy the relationships or conditions in the question.",
         "C": "The slope is \\((-3-5)/(6-2)=-2\\). Using \\(y=-2x+b\\) and \\((2,5)\\) gives \\(5=-4+b\\), so \\(b=9\\). The y-intercept is \\(\\boxed{(0,9)}\\).",
         "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q721",
+      "groupId": "math-20261008-huge798-q721",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A sensor was activated at 1:30 p.m. For \\(0\\le t\\le10\\), the function \\(V(t)=420-18t\\) models the volume of water, in liters, where \\(t\\) is the number of hours after 2:00 p.m. Which statement best interprets the y-intercept of the graph of \\(V\\)?",
+      "choices": {
+        "A": "The reservoir loses 420 liters of water each hour.",
+        "B": "The reservoir contained 420 liters of water at 2:00 p.m.",
+        "C": "The reservoir contained 18 liters of water at 2:00 p.m.",
+        "D": "The reservoir reaches 420 liters 18 hours after 2:00 p.m."
+      },
+      "correctAnswer": "B",
+      "explanation": "The y-intercept occurs at \\(t=0\\). Since \\(t=0\\) corresponds to 2:00 p.m. and \\(V(0)=420\\), the reservoir contained \\(\\boxed{420}\\) liters at 2:00 p.m.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 721,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The y-intercept occurs at \\(t=0\\). Since \\(t=0\\) corresponds to 2:00 p.m. and \\(V(0)=420\\), the reservoir contained \\(\\boxed{420}\\) liters at 2:00 p.m.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q722",
+      "groupId": "math-20261008-huge798-q722",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A factory uses \\(a\\) regular production cycles and \\(b\\) extended production cycles during a shift. The equation \\(18a+27b+42=600\\) models the total minutes used, including 42 minutes for calibration. How many more minutes does each extended cycle use than each regular cycle?",
+      "choices": {
+        "A": "9",
+        "B": "18",
+        "C": "27",
+        "D": "42"
+      },
+      "correctAnswer": "A",
+      "explanation": "The coefficients show 18 minutes per regular cycle and 27 minutes per extended cycle. The difference is \\(27-18=\\boxed{9}\\) minutes.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 722,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The coefficients show 18 minutes per regular cycle and 27 minutes per extended cycle. The difference is \\(27-18=\\boxed{9}\\) minutes.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q723",
+      "groupId": "math-20261008-huge798-q723",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The table shows three points on the graph of a linear relationship. Which equation represents the relationship?",
+      "choices": {
+        "A": "\\(4x-y=-9\\)",
+        "B": "\\(4x+y=9\\)",
+        "C": "\\(x-4y=-6\\)",
+        "D": "\\(9x-y=4\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "The slope from \\((-2,1)\\) to \\((3,21)\\) is \\((21-1)/(3-(-2))=4\\). Using \\((-2,1)\\), the line is \\(y=4x+9\\), equivalent to \\(\\boxed{4x-y=-9}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 723,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The slope from \\((-2,1)\\) to \\((3,21)\\) is \\((21-1)/(3-(-2))=4\\). Using \\((-2,1)\\), the line is \\(y=4x+9\\), equivalent to \\(\\boxed{4x-y=-9}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "table": {
+        "caption": "Linear relationship",
+        "headers": [
+          "x",
+          "y"
+        ],
+        "rows": [
+          [
+            "-2",
+            "1"
+          ],
+          [
+            "3",
+            "21"
+          ],
+          [
+            "7",
+            "37"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q726",
+      "groupId": "math-20261008-huge798-q726",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving and Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "Each week, Elena earns $480. She first sets aside $96 for fixed expenses and saves \\(\\frac38\\) of the amount that remains. If she follows this plan for 7 weeks, how many dollars will she save?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "After fixed expenses, \\(480-96=384\\) dollars remain. She saves \\((3/8)(384)=144\\) dollars per week. Over 7 weeks she saves \\(7(144)=\\boxed{1008}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 726,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "1008"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q727",
+      "groupId": "math-20261008-huge798-q727",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving and Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "One liter of a coating covers 28 square meters for one coat. A project has \\(A\\) square meters of wall surface, but only 80% of that surface will be coated. If the selected area receives three coats, which equation gives the required amount \\(P\\), in liters, of coating?",
+      "choices": {
+        "A": "\\(P=\\frac{3A}{28}\\)",
+        "B": "\\(P=\\frac{A}{105}\\)",
+        "C": "\\(P=\\frac{3A}{35}\\)",
+        "D": "\\(P=\\frac{A}{35}\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "The coated area per coat is \\(0.8A\\), so three coats require \\(2.4A\\) square meters of coverage. Thus \\(P=2.4A/28=\\boxed{3A/35}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 727,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The coated area per coat is \\(0.8A\\), so three coats require \\(2.4A\\) square meters of coverage. Thus \\(P=2.4A/28=\\boxed{3A/35}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q729",
+      "groupId": "math-20261008-huge798-q729",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "An equipment rental costs $18 per day plus a one-time setup fee of $72. When the equipment is returned, the customer receives a one-time rebate of $30. Which equation gives the net cost \\(c\\), in dollars, for a rental lasting \\(d\\) days?",
+      "choices": {
+        "A": "\\(c=18d+102\\)",
+        "B": "\\(c=48d+72\\)",
+        "C": "\\(c=18d+42\\)",
+        "D": "\\(c=18(d+42)\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "The variable cost is \\(18d\\). The net fixed charge is \\(72-30=42\\), so \\(\\boxed{c=18d+42}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 729,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The variable cost is \\(18d\\). The net fixed charge is \\(72-30=42\\), so \\(\\boxed{c=18d+42}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q730",
+      "groupId": "math-20261008-huge798-q730",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A laboratory fills \\(x\\) small canisters with 2.4 liters each and \\(y\\) large canisters with 6.75 liters each. An additional 3 liters is kept in reserve. The equation \\(2.4x+6.75y+3=84\\) represents the total amount of liquid. Which quantity is represented by \\(84-2.4x-3\\)?",
+      "choices": {
+        "A": "The capacity, in liters, of one large canister",
+        "B": "The number of large canisters filled",
+        "C": "The total number of liters in the large canisters",
+        "D": "The total number of liters in the small canisters"
+      },
+      "correctAnswer": "C",
+      "explanation": "From the equation, \\(84-2.4x-3=6.75y\\). Since each of the \\(y\\) large canisters contains 6.75 liters, this is the total volume in the large canisters.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 730,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "From the equation, \\(84-2.4x-3=6.75y\\). Since each of the \\(y\\) large canisters contains 6.75 liters, this is the total volume in the large canisters.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q731",
+      "groupId": "math-20261008-huge798-q731",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A machine is designed to operate at a target pressure of 72 psi. An acceptable pressure can be at most 18 psi below the target and at most 7 psi above the target. Which inequality represents all acceptable pressures \\(p\\), in psi?",
+      "choices": {
+        "A": "\\(54\\le p\\le79\\)",
+        "B": "\\(65\\le p\\le90\\)",
+        "C": "\\(18\\le p\\le72\\)",
+        "D": "\\(72\\le p\\le79\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "The minimum acceptable pressure is \\(72-18=54\\), and the maximum is \\(72+7=79\\). Thus \\(\\boxed{54\\le p\\le79}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 731,
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The minimum acceptable pressure is \\(72-18=54\\), and the maximum is \\(72+7=79\\). Thus \\(\\boxed{54\\le p\\le79}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q732",
+      "groupId": "math-20261008-huge798-q732",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving and Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The function \\(C(n)=5.50+2.75n\\) gives the cost, in dollars, before a service charge for taking \\(n\\) rides at an amusement center. A service charge equal to 10% of \\(C(n)\\) is then added. If the final charge is $30.25, how many rides were taken?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Before the 10% service charge, the cost was \\(30.25/1.10=27.50\\). Thus \\(5.50+2.75n=27.50\\), so \\(2.75n=22\\) and \\(\\boxed{n=8}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 732,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "8"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q733",
+      "groupId": "math-20261008-huge798-q733",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A straight line represents all combinations of \\(x\\) and \\(y\\) that use an entire fixed budget. The line has intercepts \\((0,30)\\) and \\((12,0)\\). According to the graph, what is the value of \\(y\\) when \\(x=5\\)?",
+      "choices": {
+        "A": "12.5",
+        "B": "15",
+        "C": "17.5",
+        "D": "20"
+      },
+      "correctAnswer": "C",
+      "explanation": "The slope is \\((0-30)/(12-0)=-2.5\\), so the line is \\(y=-2.5x+30\\). At \\(x=5\\), \\(y=-12.5+30=\\boxed{17.5}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 733,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The slope is \\((0-30)/(12-0)=-2.5\\), so the line is \\(y=-2.5x+30\\). At \\(x=5\\), \\(y=-12.5+30=\\boxed{17.5}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "xy",
+        "caption": "Budget line with intercepts (0,30) and (12,0)",
+        "xMin": 0,
+        "xMax": 12,
+        "yMin": 0,
+        "yMax": 30,
+        "xStep": 2,
+        "yStep": 5,
+        "xLabel": "x",
+        "yLabel": "y",
+        "series": [
+          {
+            "points": [
+              [
+                0,
+                30
+              ],
+              [
+                12,
+                0
+              ]
+            ],
+            "showPoints": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q735",
+      "groupId": "math-20261008-huge798-q735",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "Five more than three times the difference between a number \\(n\\) and 4 is 26. Which equation represents this statement?",
+      "choices": {
+        "A": "\\(3n-(4+5)=26\\)",
+        "B": "\\(3(n-4)+5=26\\)",
+        "C": "\\(3(n+4)-5=26\\)",
+        "D": "\\(5(n-4)+3=26\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "The difference between \\(n\\) and 4 is \\(n-4\\). Three times that difference is \\(3(n-4)\\), and five more gives \\(\\boxed{3(n-4)+5=26}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 735,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The difference between \\(n\\) and 4 is \\(n-4\\). Three times that difference is \\(3(n-4)\\), and five more gives \\(\\boxed{3(n-4)+5=26}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q738",
+      "groupId": "math-20261008-huge798-q738",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving and Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "An 80-gram metal sample is 30% copper by mass. It was made by combining a 20%-copper alloy, a 50%-copper alloy, and 8 grams of a material containing no copper. What mass, in grams, of the copper in the finished sample came from the 50%-copper alloy?",
+      "choices": {
+        "A": "8",
+        "B": "16",
+        "C": "24",
+        "D": "32"
+      },
+      "correctAnswer": "B",
+      "explanation": "The two alloys total \\(80-8=72\\) grams, and the sample contains \\(0.30(80)=24\\) grams of copper. If \\(b\\) grams is the 50% alloy, \\(0.20(72-b)+0.50b=24\\), giving \\(b=32\\). Its copper contribution is \\(0.50(32)=\\boxed{16}\\) grams.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 738,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The two alloys total \\(80-8=72\\) grams, and the sample contains \\(0.30(80)=24\\) grams of copper. If \\(b\\) grams is the 50% alloy, \\(0.20(72-b)+0.50b=24\\), giving \\(b=32\\). Its copper contribution is \\(0.50(32)=\\boxed{16}\\) grams.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q739",
+      "groupId": "math-20261008-huge798-q739",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A conference issued 287 badges, each either an attendee badge or a staff badge. The number of attendee badges was 47 greater than the number of staff badges. How many staff badges were issued?",
+      "choices": {
+        "A": "47",
+        "B": "120",
+        "C": "167",
+        "D": "240"
+      },
+      "correctAnswer": "B",
+      "explanation": "Let \\(s\\) be the number of staff badges. Then attendee badges number \\(s+47\\), so \\(s+(s+47)=287\\). Thus \\(2s=240\\) and \\(\\boxed{s=120}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 739,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Let \\(s\\) be the number of staff badges. Then attendee badges number \\(s+47\\), so \\(s+(s+47)=287\\). Thus \\(2s=240\\) and \\(\\boxed{s=120}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q741",
+      "groupId": "math-20261008-huge798-q741",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A venue charges a fixed fee of $420 plus $18.50 per attendee. An 8% service fee is applied to the entire subtotal. If an event has a maximum budget of $1,250, what is the greatest possible number of attendees?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "If \\(n\\) is the number of attendees, \\(1.08(420+18.50n)\\le1250\\). Solving gives \\(n\\le39.85\\ldots\\), so the greatest whole-number value is \\(\\boxed{39}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 741,
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "39"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q742",
+      "groupId": "math-20261008-huge798-q742",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A cafeteria needs at least 90 dinner rolls. It already has 13 usable rolls, and additional rolls are sold only in packages of 14. What is the minimum number of packages the cafeteria must buy?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "If \\(p\\) packages are purchased, \\(13+14p\\ge90\\), so \\(14p\\ge77\\) and \\(p\\ge5.5\\). The least whole number is \\(\\boxed{6}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 742,
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "6"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q743",
+      "groupId": "math-20261008-huge798-q743",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "In the equation \\(a(2x-3)+5x=(7-a)x+b\\), \\(a\\) and \\(b\\) are constants and \\(b>0\\). The equation has no solution. What is the value of \\(a\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "For no solution, the coefficients of \\(x\\) must match while the constants differ. Thus \\(2a+5=7-a\\), so \\(3a=2\\) and \\(\\boxed{a=2/3}\\). Then the left constant is \\(-3a=-2\\), while \\(b>0\\), so the constants cannot match.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 743,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "2/3"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q744",
+      "groupId": "math-20261008-huge798-q744",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A school has $1,260 to spend on standard and premium notebooks. Standard notebooks cost $6 each and premium notebooks cost $14 each. The school must buy at least 120 notebooks in total and at least 20 standard notebooks. What is the greatest possible number of premium notebooks?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Let \\(s\\) and \\(p\\) be standard and premium counts. To maximize \\(p\\), use the minimum total \\(s+p=120\\), so \\(s=120-p\\). The budget gives \\(6(120-p)+14p\\le1260\\), hence \\(p\\le67.5\\). Therefore the greatest integer is \\(\\boxed{67}\\); then \\(s=53\\), which also meets the standard-notebook minimum.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 744,
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "67"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q745",
+      "groupId": "math-20261008-huge798-q745",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "What value of \\(x\\) satisfies \\(5(2x-3)-2(2x-3)=4(x+6)\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Factor the repeated expression: \\(3(2x-3)=4(x+6)\\). Then \\(6x-9=4x+24\\), so \\(2x=33\\) and \\(\\boxed{x=33/2}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 745,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "33/2",
+        "16.5"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q746",
+      "groupId": "math-20261008-huge798-q746",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A number \\(p\\) is at most 7 less than 3 times a number \\(q\\). The value of \\(q\\) is the greatest integer that satisfies \\(2q+5\\le19\\). What is the greatest possible value of \\(p\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "From \\(2q+5\\le19\\), \\(q\\le7\\), so the greatest integer value is \\(q=7\\). The first condition is \\(p\\le3q-7\\), giving \\(p\\le14\\). Thus the greatest possible value is \\(\\boxed{14}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 746,
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "14"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q747",
+      "groupId": "math-20261008-huge798-q747",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A supplier charges $0.07 for each bolt and $0.12 for each washer, plus a one-time shipping fee of $9. An order containing \\(b\\) bolts and \\(w\\) washers costs $63 in total. Which equation represents this situation?",
+      "choices": {
+        "A": "\\(7b+12w+9=63\\)",
+        "B": "\\(0.12b+0.07w+9=63\\)",
+        "C": "\\(0.07b+0.12w=63\\)",
+        "D": "\\(0.07b+0.12w+9=63\\)"
+      },
+      "correctAnswer": "D",
+      "explanation": "The bolts cost \\(0.07b\\), the washers cost \\(0.12w\\), and shipping adds 9, so \\(\\boxed{0.07b+0.12w+9=63}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 747,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "The bolts cost \\(0.07b\\), the washers cost \\(0.12w\\), and shipping adds 9, so \\(\\boxed{0.07b+0.12w+9=63}\\)."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q748",
+      "groupId": "math-20261008-huge798-q748",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The table shows three pairs in a linear relationship, where \\(s>0\\). Suppose \\(s=2r\\), where \\(r>0\\). Which equation represents the relationship in terms of \\(x\\), \\(y\\), and \\(r\\)?",
+      "choices": {
+        "A": "\\(2x+ry=21r\\)",
+        "B": "\\(4x+ry=21r\\)",
+        "C": "\\(2rx+y=21r\\)",
+        "D": "\\(2x+ry=21\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "Using \\((s,17)\\) and \\((4s,5)\\), the slope is \\((5-17)/(4s-s)=-4/s\\). This gives \\(4x+sy=21s\\). Since \\(s=2r\\), \\(4x+2ry=42r\\), so \\(\\boxed{2x+ry=21r}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 748,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "Using \\((s,17)\\) and \\((4s,5)\\), the slope is \\((5-17)/(4s-s)=-4/s\\). This gives \\(4x+sy=21s\\). Since \\(s=2r\\), \\(4x+2ry=42r\\), so \\(\\boxed{2x+ry=21r}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "table": {
+        "caption": "Linear relationship in terms of s",
+        "headers": [
+          "x",
+          "y"
+        ],
+        "rows": [
+          [
+            "-2s",
+            "29"
+          ],
+          [
+            "s",
+            "17"
+          ],
+          [
+            "4s",
+            "5"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q749",
+      "groupId": "math-20261008-huge798-q749",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving and Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "Twelve identical storage crates have the same original price. A $30 coupon is subtracted from the purchase subtotal, and then a 10% sales tax is applied to the discounted subtotal. The final charge is $165. What was the original price, in dollars, of one crate?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Let \\(p\\) be the original price per crate. Then \\(1.10(12p-30)=165\\). Dividing by 1.10 gives \\(12p-30=150\\), so \\(12p=180\\) and \\(\\boxed{p=15}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 749,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "15"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q750",
+      "groupId": "math-20261008-huge798-q750",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "On a coordinate graph, a line passes through the labeled points \\((12,28)\\) and \\((48,4)\\). Which equation represents the line?",
+      "choices": {
+        "A": "\\(2x+3y=108\\)",
+        "B": "\\(3x+2y=92\\)",
+        "C": "\\(2x-3y=-60\\)",
+        "D": "\\(3x+2y=152\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "The slope is \\((4-28)/(48-12)=-24/36=-2/3\\). Using \\((12,28)\\) gives \\(y=-\\frac23x+36\\), equivalent to \\(\\boxed{2x+3y=108}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 750,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The slope is \\((4-28)/(48-12)=-24/36=-2/3\\). Using \\((12,28)\\) gives \\(y=-\\frac23x+36\\), equivalent to \\(\\boxed{2x+3y=108}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "xy",
+        "caption": "Line through (12,28) and (48,4)",
+        "xMin": 0,
+        "xMax": 54,
+        "yMin": 0,
+        "yMax": 36,
+        "xStep": 6,
+        "yStep": 4,
+        "xLabel": "x",
+        "yLabel": "y",
+        "series": [
+          {
+            "points": [
+              [
+                12,
+                28
+              ],
+              [
+                48,
+                4
+              ]
+            ],
+            "showPoints": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q753",
+      "groupId": "math-20261008-huge798-q753",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "For which table are all corresponding values of \\(x\\) and \\(y\\) solutions to the system \\(y\\ge2x-5\\) and \\(x+y<9\\)?",
+      "choices": {
+        "A": "Table A",
+        "B": "Table B",
+        "C": "Table C",
+        "D": "Table D"
+      },
+      "correctAnswer": "A",
+      "explanation": "For table A, \\((2,0)\\), \\((3,2)\\), and \\((4,3)\\) each satisfy \\(y\\ge2x-5\\), and their sums \\(x+y\\) are 2, 5, and 7, all less than 9. Thus every pair in table A satisfies both inequalities.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 753,
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "For table A, \\((2,0)\\), \\((3,2)\\), and \\((4,3)\\) each satisfy \\(y\\ge2x-5\\), and their sums \\(x+y\\) are 2, 5, and 7, all less than 9. Thus every pair in table A satisfies both inequalities.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "choiceTables": {
+        "A": {
+          "headers": [
+            "x",
+            "y"
+          ],
+          "rows": [
+            [
+              "2",
+              "0"
+            ],
+            [
+              "3",
+              "2"
+            ],
+            [
+              "4",
+              "3"
+            ]
+          ]
+        },
+        "B": {
+          "headers": [
+            "x",
+            "y"
+          ],
+          "rows": [
+            [
+              "2",
+              "-2"
+            ],
+            [
+              "3",
+              "1"
+            ],
+            [
+              "4",
+              "3"
+            ]
+          ]
+        },
+        "C": {
+          "headers": [
+            "x",
+            "y"
+          ],
+          "rows": [
+            [
+              "3",
+              "2"
+            ],
+            [
+              "4",
+              "3"
+            ],
+            [
+              "5",
+              "4"
+            ]
+          ]
+        },
+        "D": {
+          "headers": [
+            "x",
+            "y"
+          ],
+          "rows": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "4",
+              "4"
+            ],
+            [
+              "5",
+              "5"
+            ]
+          ]
+        }
       }
     }
   ],
