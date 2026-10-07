@@ -2369,10 +2369,116 @@
               }
             }
           }
+        },
+        {
+          "range": "681-720",
+          "reviewed": 40,
+          "retained": 30,
+          "excluded": [
+            {
+              "sourceQuestionNumber": 681,
+              "reason": "Close reskin of existing linear-equation solution-count item math-20261006-batch465-q070."
+            },
+            {
+              "sourceQuestionNumber": 686,
+              "reason": "Close reskin of existing solve-a-system-then-evaluate item math-20261006-batch465-q211."
+            },
+            {
+              "sourceQuestionNumber": 691,
+              "reason": "Direct 2x2 system solve is already heavily represented in the live bank."
+            },
+            {
+              "sourceQuestionNumber": 692,
+              "reason": "Exact duplicate of math-20261006-batch465-q106."
+            },
+            {
+              "sourceQuestionNumber": 698,
+              "reason": "Close reskin of existing equivalent-equations/infinitely-many-solutions system items."
+            },
+            {
+              "sourceQuestionNumber": 699,
+              "reason": "Low-value direct system-intersection reskin already heavily represented."
+            },
+            {
+              "sourceQuestionNumber": 701,
+              "reason": "Close reskin of existing perpendicular-slope item math-20261006-batch465-q315."
+            },
+            {
+              "sourceQuestionNumber": 702,
+              "reason": "Close reskin of existing same-solution equation item math-20261008-huge798-q066."
+            },
+            {
+              "sourceQuestionNumber": 710,
+              "reason": "Near-duplicate inequality-table item to math-20261006-batch465-q077."
+            },
+            {
+              "sourceQuestionNumber": 716,
+              "reason": "Close reskin of existing direct 2x2 system-solution items including q092 and q293."
+            }
+          ],
+          "repairs": {
+            "fractionInequalityNotation": [
+              683,
+              684,
+              685,
+              696,
+              700,
+              703,
+              708,
+              714
+            ],
+            "notes": [
+              "Restored q683 as a dashed y=-(2/3)x+2 boundary with the region above shaded and rebuilt its graph.",
+              "Restored q696's solid y=(1/2)x+1 boundary with the region below shaded and rebuilt its graph.",
+              "Recovered q684 and q714 inequality symbols, q700 as V(t)=560-24t/8, q703's lower bound k≥-2, and q708's -3/2 slope from the supplied solutions.",
+              "Removed the stray export header token appended to q714."
+            ]
+          },
+          "visuals": {
+            "graphs": [
+              683,
+              696
+            ],
+            "tables": [
+              711
+            ],
+            "choiceTables": [],
+            "diagrams": []
+          },
+          "difficultyCalibration": {
+            "approach": "Exactly 10 Easy / 10 Medium / 10 Hard additions, preserving exact global balance while calibrating within Algebra subtopics.",
+            "addedBySubtopic": {
+              "Linear Equations": {
+                "Easy": 4,
+                "Medium": 0,
+                "Hard": 1
+              },
+              "Linear Inequalities": {
+                "Easy": 1,
+                "Medium": 2,
+                "Hard": 2
+              },
+              "Lines, Angles, and Triangles": {
+                "Easy": 0,
+                "Medium": 0,
+                "Hard": 1
+              },
+              "Linear Functions": {
+                "Easy": 5,
+                "Medium": 6,
+                "Hard": 4
+              },
+              "Systems of Linear Equations": {
+                "Easy": 0,
+                "Medium": 2,
+                "Hard": 2
+              }
+            }
+          }
         }
       ],
-      "retainedSoFar": 546,
-      "reviewedSoFar": 680
+      "retainedSoFar": 576,
+      "reviewedSoFar": 720
     }
   },
   "questions": [
@@ -60929,6 +61035,973 @@
       "acceptedAnswers": [
         "36"
       ]
+    },
+    {
+      "id": "math-20261008-huge798-q682",
+      "groupId": "math-20261008-huge798-q682",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A shipment contains \\(x\\) small cartons with 6 bottles each, \\(y\\) large cartons with 10 bottles each, and 8 loose bottles. The shipment contains 188 bottles in total. Which equation represents this situation?",
+      "choices": {
+        "A": "\\(3x+5y=98\\)",
+        "B": "\\(5x+3y=90\\)",
+        "C": "\\(6x+10y=188\\)",
+        "D": "\\(3x+5y=90\\)"
+      },
+      "correctAnswer": "D",
+      "explanation": "The total is \\(6x+10y+8=188\\). Subtract 8 and divide by 2 to get \\(\\boxed{3x+5y=90}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 682,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "The total is \\(6x+10y+8=188\\). Subtract 8 and divide by 2 to get \\(\\boxed{3x+5y=90}\\)."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q683",
+      "groupId": "math-20261008-huge798-q683",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The shaded region in the graph represents the solutions to an inequality. Which inequality represents the shaded region?",
+      "choices": {
+        "A": "\\(y<-\\frac23x+2\\)",
+        "B": "\\(y>\\frac23x+2\\)",
+        "C": "\\(y\\ge-\\frac23x+2\\)",
+        "D": "\\(y>-\\frac23x+2\\)"
+      },
+      "correctAnswer": "D",
+      "explanation": "The boundary passes through \\((0,2)\\) and \\((3,0)\\), so its slope is \\(-2/3\\) and its equation is \\(y=-\\frac23x+2\\). The boundary is dashed and the region above it is shaded, so \\(\\boxed{y>-\\frac23x+2}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 683,
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "The boundary passes through \\((0,2)\\) and \\((3,0)\\), so its slope is \\(-2/3\\) and its equation is \\(y=-\\frac23x+2\\). The boundary is dashed and the region above it is shaded, so \\(\\boxed{y>-\\frac23x+2}\\)."
+      },
+      "graph": {
+        "type": "xy",
+        "caption": "Dashed boundary with the region above shaded",
+        "xMin": -3,
+        "xMax": 6,
+        "yMin": -3,
+        "yMax": 6,
+        "xStep": 1,
+        "yStep": 1,
+        "xLabel": "x",
+        "yLabel": "y",
+        "regions": [
+          {
+            "points": [
+              [
+                -3,
+                4
+              ],
+              [
+                -3,
+                6
+              ],
+              [
+                6,
+                6
+              ],
+              [
+                6,
+                -2
+              ]
+            ]
+          }
+        ],
+        "series": [
+          {
+            "points": [
+              [
+                -3,
+                4
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                6,
+                -2
+              ]
+            ],
+            "showPoints": false,
+            "dashed": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q684",
+      "groupId": "math-20261008-huge798-q684",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "An archive must digitize at least 275 photographs. It has already digitized 167 photographs. Each additional scanning session produces exactly 24 digitized photographs. What is the minimum number of additional scanning sessions needed?",
+      "choices": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "108"
+      },
+      "correctAnswer": "B",
+      "explanation": "Let \\(s\\) be the number of additional sessions. Then \\(167+24s\\ge275\\), so \\(24s\\ge108\\) and \\(s\\ge4.5\\). Since \\(s\\) must be a whole number, the minimum is \\(\\boxed{5}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 684,
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Let \\(s\\) be the number of additional sessions. Then \\(167+24s\\ge275\\), so \\(24s\\ge108\\) and \\(s\\ge4.5\\). Since \\(s\\) must be a whole number, the minimum is \\(\\boxed{5}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q685",
+      "groupId": "math-20261008-huge798-q685",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry and Trigonometry",
+      "skill": "Lines, Angles, and Triangles",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A triangle has side lengths 9, 16, and \\(x\\), where \\(x\\) is an integer. How many possible values of \\(x\\) are there?",
+      "choices": {
+        "A": "16",
+        "B": "17",
+        "C": "18",
+        "D": "25"
+      },
+      "correctAnswer": "B",
+      "explanation": "The triangle inequality requires \\(|16-9|<x<16+9\\), so \\(7<x<25\\). The integer values are 8 through 24 inclusive, a total of \\(24-8+1=\\boxed{17}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 685,
+      "subtopic": "Lines, Angles, and Triangles",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The triangle inequality requires \\(|16-9|<x<16+9\\), so \\(7<x<25\\). The integer values are 8 through 24 inclusive, a total of \\(24-8+1=\\boxed{17}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q687",
+      "groupId": "math-20261008-huge798-q687",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The function \\(H(t)=52.4-1.8t\\) models a measurement, where \\(t\\) is the number of 5-day intervals after May 1. According to the model, what is the measurement 35 days after May 1?",
+      "choices": {
+        "A": "39.8",
+        "B": "45.2",
+        "C": "46.0",
+        "D": "50.6"
+      },
+      "correctAnswer": "A",
+      "explanation": "Thirty-five days is \\(35/5=7\\) five-day intervals. Thus \\(H(7)=52.4-1.8(7)=\\boxed{39.8}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 687,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "Thirty-five days is \\(35/5=7\\) five-day intervals. Thus \\(H(7)=52.4-1.8(7)=\\boxed{39.8}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q688",
+      "groupId": "math-20261008-huge798-q688",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The equation \\(15a+8b=210\\) relates \\(a\\) and \\(b\\). If \\(2a-3=9\\), what is the value of \\(b\\)?",
+      "choices": {
+        "A": "12",
+        "B": "15",
+        "C": "18",
+        "D": "30"
+      },
+      "correctAnswer": "B",
+      "explanation": "From \\(2a-3=9\\), \\(a=6\\). Substitute: \\(15(6)+8b=210\\), so \\(8b=120\\) and \\(\\boxed{b=15}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 688,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "From \\(2a-3=9\\), \\(a=6\\). Substitute: \\(15(6)+8b=210\\), so \\(8b=120\\) and \\(\\boxed{b=15}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q689",
+      "groupId": "math-20261008-huge798-q689",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "For the linear function \\(f\\), \\(f(a)=18\\) and \\(f(a+5)=18\\). Which equation defines \\(f\\)?",
+      "choices": {
+        "A": "\\(f(x)=x+18\\)",
+        "B": "\\(f(x)=5x+18\\)",
+        "C": "\\(f(x)=18\\)",
+        "D": "\\(f(x)=18x\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "The inputs \\(a\\) and \\(a+5\\) are distinct but have equal outputs. A linear function with equal outputs at two distinct inputs has slope 0, so \\(\\boxed{f(x)=18}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 689,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The inputs \\(a\\) and \\(a+5\\) are distinct but have equal outputs. A linear function with equal outputs at two distinct inputs has slope 0, so \\(\\boxed{f(x)=18}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q690",
+      "groupId": "math-20261008-huge798-q690",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A subscription requires a $42 activation fee. The first month has no monthly charge, and each month after the first costs $18. After how many months of service will the total amount charged be $150?",
+      "choices": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9"
+      },
+      "correctAnswer": "B",
+      "explanation": "If \\(m\\) is the number of months, there are \\(m-1\\) monthly charges. Thus \\(42+18(m-1)=150\\), so \\(m-1=6\\) and \\(\\boxed{m=7}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 690,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "If \\(m\\) is the number of months, there are \\(m-1\\) monthly charges. Thus \\(42+18(m-1)=150\\), so \\(m-1=6\\) and \\(\\boxed{m=7}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q693",
+      "groupId": "math-20261008-huge798-q693",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A linear model estimates a quantity to be 62 thousand in 2008 and 137 thousand in 2023. In what year does the model estimate the quantity to be 182 thousand?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "The rate is \\((137-62)/(2023-2008)=75/15=5\\) thousand per year. Increasing from 137 to 182 requires 45 thousand, or 9 years. Nine years after 2023 is \\(\\boxed{2032}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 693,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "2032"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q694",
+      "groupId": "math-20261008-huge798-q694",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Systems of Linear Equations",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "In the system \\(2x-3y=5\\) and \\((k+2)x-(k+5)y=17\\), \\(k\\) is a constant. If the system has no solution, what is the value of \\(k\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "For no solution, the variable coefficients must be proportional while the constants are not. Set \\((k+2)/2=(k+5)/3\\). Then \\(3(k+2)=2(k+5)\\), giving \\(\\boxed{k=4}\\). The second left side is then 3 times the first, but 17 is not 15, so the lines are distinct and parallel.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 694,
+      "subtopic": "Systems of Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "4"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q695",
+      "groupId": "math-20261008-huge798-q695",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A research group had 128 samples at the end of day 3. After that, exactly 14 additional samples were collected each day. How many samples did the group have at the end of day 11?",
+      "choices": {
+        "A": "226",
+        "B": "240",
+        "C": "254",
+        "D": "282"
+      },
+      "correctAnswer": "B",
+      "explanation": "From the end of day 3 to the end of day 11 there are 8 daily increases. Thus \\(128+8(14)=\\boxed{240}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 695,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "From the end of day 3 to the end of day 11 there are 8 daily increases. Thus \\(128+8(14)=\\boxed{240}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q696",
+      "groupId": "math-20261008-huge798-q696",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The shaded region in the graph represents the solutions to an inequality. Which ordered pair is a solution?",
+      "choices": {
+        "A": "\\((-2,1)\\)",
+        "B": "\\((2,2)\\)",
+        "C": "\\((4,4)\\)",
+        "D": "\\((0,2)\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "The solid boundary is \\(y=\\frac12x+1\\), and the region on or below it is shaded. For \\((2,2)\\), \\(2=\\frac12(2)+1\\), so the point lies on the included boundary and is a solution.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 696,
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The solid boundary is \\(y=\\frac12x+1\\), and the region on or below it is shaded. For \\((2,2)\\), \\(2=\\frac12(2)+1\\), so the point lies on the included boundary and is a solution.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "graph": {
+        "type": "xy",
+        "caption": "Solid boundary with the region below shaded",
+        "xMin": -4,
+        "xMax": 6,
+        "yMin": -3,
+        "yMax": 5,
+        "xStep": 1,
+        "yStep": 1,
+        "xLabel": "x",
+        "yLabel": "y",
+        "regions": [
+          {
+            "points": [
+              [
+                -4,
+                -3
+              ],
+              [
+                -4,
+                -1
+              ],
+              [
+                6,
+                4
+              ],
+              [
+                6,
+                -3
+              ]
+            ]
+          }
+        ],
+        "series": [
+          {
+            "points": [
+              [
+                -4,
+                -1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                6,
+                4
+              ]
+            ],
+            "showPoints": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q697",
+      "groupId": "math-20261008-huge798-q697",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The function \\(P(n)=6n+52\\) gives the perimeter, in centimeters, of a rectangle whose length is \\(3n\\) centimeters and whose width is fixed. What is the rectangle's width, in centimeters?",
+      "choices": {
+        "A": "13",
+        "B": "26",
+        "C": "52",
+        "D": "104"
+      },
+      "correctAnswer": "B",
+      "explanation": "If the fixed width is \\(w\\), then \\(P(n)=2(3n)+2w=6n+2w\\). Comparing with \\(6n+52\\) gives \\(2w=52\\), so \\(\\boxed{w=26}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 697,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "If the fixed width is \\(w\\), then \\(P(n)=2(3n)+2w=6n+2w\\). Comparing with \\(6n+52\\) gives \\(2w=52\\), so \\(\\boxed{w=26}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q700",
+      "groupId": "math-20261008-huge798-q700",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The function \\(V(t)=560-\\frac{24t}{8}\\) models the volume, in milliliters, of liquid remaining in a container \\(t\\) seconds after draining begins. According to the model, how many milliliters drain each second?",
+      "choices": {
+        "A": "3",
+        "B": "24",
+        "C": "70",
+        "D": "560"
+      },
+      "correctAnswer": "A",
+      "explanation": "Simplify \\(24t/8=3t\\), so \\(V(t)=560-3t\\). The remaining volume decreases by \\(\\boxed{3}\\) milliliters per second.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 700,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "Simplify \\(24t/8=3t\\), so \\(V(t)=560-3t\\). The remaining volume decreases by \\(\\boxed{3}\\) milliliters per second.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q703",
+      "groupId": "math-20261008-huge798-q703",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The point \\((k,5)\\) is a solution to the system \\(y>x-4\\) and \\(2x+y\\ge1\\). Which of the following could be the value of \\(k\\)?",
+      "choices": {
+        "A": "-3",
+        "B": "-2",
+        "C": "9",
+        "D": "10"
+      },
+      "correctAnswer": "B",
+      "explanation": "Substitute \\(y=5\\). The first inequality gives \\(k<9\\), and the second gives \\(2k+5\\ge1\\), so \\(k\\ge-2\\). Thus \\(-2\\le k<9\\), and only \\(\\boxed{-2}\\) is listed.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 703,
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Substitute \\(y=5\\). The first inequality gives \\(k<9\\), and the second gives \\(2k+5\\ge1\\), so \\(k\\ge-2\\). Thus \\(-2\\le k<9\\), and only \\(\\boxed{-2}\\) is listed.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q704",
+      "groupId": "math-20261008-huge798-q704",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The function \\(L(t)=5(t+3)+12\\) gives the estimated length, in centimeters, of a plant \\(t\\) months after it was purchased. What was the plant's estimated length when it was purchased?",
+      "choices": {
+        "A": "12 cm",
+        "B": "15 cm",
+        "C": "17 cm",
+        "D": "27 cm"
+      },
+      "correctAnswer": "D",
+      "explanation": "When the plant was purchased, \\(t=0\\). Thus \\(L(0)=5(3)+12=\\boxed{27}\\) centimeters.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 704,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "When the plant was purchased, \\(t=0\\). Thus \\(L(0)=5(3)+12=\\boxed{27}\\) centimeters."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q705",
+      "groupId": "math-20261008-huge798-q705",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A 42-sided polygon has sides of three different lengths. Exactly \\(n\\) sides have length 4 centimeters, \\(3n+2\\) sides have length 7 centimeters, and 8 sides have length 10 centimeters. Which equation must be true?",
+      "choices": {
+        "A": "\\(3n+10=42\\)",
+        "B": "\\(4n+10=42\\)",
+        "C": "\\(4n+2=42\\)",
+        "D": "\\(3n+8=42\\)"
+      },
+      "correctAnswer": "B",
+      "explanation": "The total number of sides is \\(n+(3n+2)+8=4n+10\\). Since there are 42 sides, \\(\\boxed{4n+10=42}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 705,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The total number of sides is \\(n+(3n+2)+8=4n+10\\). Since there are 42 sides, \\(\\boxed{4n+10=42}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q706",
+      "groupId": "math-20261008-huge798-q706",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Systems of Linear Equations",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "Amir has \\(a\\) tokens and Briana has \\(b\\) tokens. Amir has 7 more than twice as many tokens as Briana, and together they have 64 tokens. Which system represents this situation?",
+      "choices": {
+        "A": "\\(a=2b+7,\\ a-b=64\\)",
+        "B": "\\(b=2a+7,\\ a+b=64\\)",
+        "C": "\\(a=2b+7,\\ a+b=64\\)",
+        "D": "\\(a=2(b+7),\\ a+b=64\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "'7 more than twice as many' gives \\(a=2b+7\\), and 'together they have 64' gives \\(a+b=64\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 706,
+      "subtopic": "Systems of Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "'7 more than twice as many' gives \\(a=2b+7\\), and 'together they have 64' gives \\(a+b=64\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q707",
+      "groupId": "math-20261008-huge798-q707",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "For the linear function \\(g(x)=m(x-4)+73\\), \\(m\\) is a constant and \\(g(10)=31\\). What is the value of \\(g(-2)\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Use \\(g(10)=31\\): \\(31=6m+73\\), so \\(m=-7\\). Then \\(g(-2)=-7(-6)+73=\\boxed{115}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 707,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "115"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q708",
+      "groupId": "math-20261008-huge798-q708",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "For a linear function \\(h\\), \\(h(-2)+1=10\\) and \\(2h(6)=-6\\). Which equation defines \\(h\\)?",
+      "choices": {
+        "A": "\\(h(x)=-\\frac32x+6\\)",
+        "B": "\\(h(x)=-\\frac23x+6\\)",
+        "C": "\\(h(x)=-\\frac32x+9\\)",
+        "D": "\\(h(x)=\\frac32x+6\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "The conditions give \\(h(-2)=9\\) and \\(h(6)=-3\\). The slope is \\((-3-9)/(6-(-2))=-12/8=-3/2\\). Using \\((-2,9)\\) gives an intercept of 6, so \\(\\boxed{h(x)=-\\frac32x+6}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 708,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The conditions give \\(h(-2)=9\\) and \\(h(6)=-3\\). The slope is \\((-3-9)/(6-(-2))=-12/8=-3/2\\). Using \\((-2,9)\\) gives an intercept of 6, so \\(\\boxed{h(x)=-\\frac32x+6}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q709",
+      "groupId": "math-20261008-huge798-q709",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "What value of \\(x\\) satisfies \\(5(2x-3)=3(x+4)+22\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Expand: \\(10x-15=3x+34\\). Then \\(7x=49\\), so \\(\\boxed{x=7}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 709,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "7"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q711",
+      "groupId": "math-20261008-huge798-q711",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The table gives two values of \\(x\\) and the corresponding values of \\(f(x)+4\\), where \\(f\\) is linear. Which equation defines \\(f\\)?",
+      "choices": {
+        "A": "\\(f(x)=-5x+21\\)",
+        "B": "\\(f(x)=5x+21\\)",
+        "C": "\\(f(x)=-5x+31\\)",
+        "D": "\\(f(x)=-5x+11\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "The table gives \\(f(-2)=31\\) and \\(f(3)=6\\). The slope is \\((6-31)/(3-(-2))=-5\\). Using \\((3,6)\\) gives \\(b=21\\), so \\(\\boxed{f(x)=-5x+21}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 711,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The table gives \\(f(-2)=31\\) and \\(f(3)=6\\). The slope is \\((6-31)/(3-(-2))=-5\\). Using \\((3,6)\\) gives \\(b=21\\), so \\(\\boxed{f(x)=-5x+21}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      },
+      "table": {
+        "caption": "Values of x and f(x)+4",
+        "headers": [
+          "x",
+          "f(x)+4"
+        ],
+        "rows": [
+          [
+            "-2",
+            "35"
+          ],
+          [
+            "3",
+            "10"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q712",
+      "groupId": "math-20261008-huge798-q712",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "For a linear function \\(g\\), the y-value decreases by 6 whenever the x-value increases by 4. The graph also passes through \\((4,-1)\\). Which equation defines \\(g\\)?",
+      "choices": {
+        "A": "\\(g(x)=-\\frac32x+5\\)",
+        "B": "\\(g(x)=-\\frac32x-1\\)",
+        "C": "\\(g(x)=\\frac32x-7\\)",
+        "D": "\\(g(x)=-\\frac23x+\\frac53\\)"
+      },
+      "correctAnswer": "A",
+      "explanation": "The slope is \\(-6/4=-3/2\\). Write \\(g(x)=-\\frac32x+b\\). Using \\((4,-1)\\) gives \\(-1=-6+b\\), so \\(b=5\\) and \\(\\boxed{g(x)=-\\frac32x+5}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 712,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "The slope is \\(-6/4=-3/2\\). Write \\(g(x)=-\\frac32x+b\\). Using \\((4,-1)\\) gives \\(-1=-6+b\\), so \\(b=5\\) and \\(\\boxed{g(x)=-\\frac32x+5}\\).",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q713",
+      "groupId": "math-20261008-huge798-q713",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Systems of Linear Equations",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A wire 136 centimeters long is cut into two pieces. The longer piece has length \\(x\\) centimeters and the shorter piece has length \\(y\\) centimeters. The longer piece is 8 centimeters less than three times the shorter piece. What is the length of the longer piece?",
+      "choices": {
+        "A": "36",
+        "B": "92",
+        "C": "100",
+        "D": "108"
+      },
+      "correctAnswer": "C",
+      "explanation": "The relationships are \\(x+y=136\\) and \\(x=3y-8\\). Substitution gives \\(4y=144\\), so \\(y=36\\) and \\(x=3(36)-8=\\boxed{100}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 713,
+      "subtopic": "Systems of Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The relationships are \\(x+y=136\\) and \\(x=3y-8\\). Substitution gives \\(4y=144\\), so \\(y=36\\) and \\(x=3(36)-8=\\boxed{100}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q714",
+      "groupId": "math-20261008-huge798-q714",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A service elevator can carry at most 2,450 pounds. Equipment already in the elevator has a mass of 1,286 pounds, and a technician has a mass of 164 pounds. If each additional equipment case has a mass of 86 pounds, what is the greatest number of cases that can be loaded without exceeding the limit?",
+      "choices": {
+        "A": "10",
+        "B": "11",
+        "C": "12",
+        "D": "13"
+      },
+      "correctAnswer": "B",
+      "explanation": "Let \\(c\\) be the number of cases. Then \\(1286+164+86c\\le2450\\), so \\(86c\\le1000\\), or \\(c\\le11.62\\ldots\\). The greatest whole-number value is \\(\\boxed{11}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 714,
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "Let \\(c\\) be the number of cases. Then \\(1286+164+86c\\le2450\\), so \\(86c\\le1000\\), or \\(c\\le11.62\\ldots\\). The greatest whole-number value is \\(\\boxed{11}\\).",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q715",
+      "groupId": "math-20261008-huge798-q715",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "For the linear function \\(f(x)=ax+11\\), \\(a\\) is a constant. If \\(f(4)=3\\), what is the value of \\(f(-3)\\)?",
+      "choices": {
+        "A": "-17",
+        "B": "5",
+        "C": "17",
+        "D": "25"
+      },
+      "correctAnswer": "C",
+      "explanation": "Since \\(4a+11=3\\), \\(a=-2\\). Therefore \\(f(-3)=-2(-3)+11=\\boxed{17}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 715,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "Since \\(4a+11=3\\), \\(a=-2\\). Therefore \\(f(-3)=-2(-3)+11=\\boxed{17}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q717",
+      "groupId": "math-20261008-huge798-q717",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Systems of Linear Equations",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "Two devices have original prices \\(x\\) dollars and \\(y\\) dollars, with a combined original price of $180. The first is discounted by 15%, the second by 30%, and then a one-time $6 shipping fee is added, producing a final charge of $151.50. Which system represents this situation?",
+      "choices": {
+        "A": "\\(x+y=180,\\ 0.15x+0.30y=145.50\\)",
+        "B": "\\(x+y=180,\\ 0.85x+0.70y=151.50\\)",
+        "C": "\\(x+y=180,\\ 0.85x+0.70y=145.50\\)",
+        "D": "\\(x+y=174,\\ 0.85x+0.70y=151.50\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "The original prices satisfy \\(x+y=180\\). After discounts the devices cost \\(0.85x+0.70y\\). Removing the $6 shipping from $151.50 gives $145.50, so the second equation is \\(0.85x+0.70y=145.50\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 717,
+      "subtopic": "Systems of Linear Equations",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The original prices satisfy \\(x+y=180\\). After discounts the devices cost \\(0.85x+0.70y\\). Removing the $6 shipping from $151.50 gives $145.50, so the second equation is \\(0.85x+0.70y=145.50\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q718",
+      "groupId": "math-20261008-huge798-q718",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A line models the total number of components a machine has inspected after a given number of minutes. Two labeled points are \\((2,74)\\) and \\((7,209)\\). According to the model, how many components does the machine inspect per minute?",
+      "choices": {
+        "A": "20",
+        "B": "27",
+        "C": "37",
+        "D": "41.8"
+      },
+      "correctAnswer": "B",
+      "explanation": "The inspection rate is the slope: \\((209-74)/(7-2)=135/5=\\boxed{27}\\) components per minute.",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 718,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "The inspection rate is the slope: \\((209-74)/(7-2)=135/5=\\boxed{27}\\) components per minute.",
+        "C": "This choice does not satisfy the relationships or conditions in the question.",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
+    },
+    {
+      "id": "math-20261008-huge798-q719",
+      "groupId": "math-20261008-huge798-q719",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "For the linear function \\(g(x)=3x+b\\), \\(b\\) is a constant. If \\(g(5)=2g(1)+4\\), what is the value of \\(b\\)?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Since \\(g(5)=15+b\\) and \\(g(1)=3+b\\), \\(15+b=2(3+b)+4=10+2b\\). Thus \\(\\boxed{b=5}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 719,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "5"
+      ]
+    },
+    {
+      "id": "math-20261008-huge798-q720",
+      "groupId": "math-20261008-huge798-q720",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "In the xy-plane, the graph of a linear function passes through \\((2,5)\\) and \\((6,-3)\\). What is the y-intercept of the graph?",
+      "choices": {
+        "A": "\\((0,-9)\\)",
+        "B": "\\((9,0)\\)",
+        "C": "\\((0,9)\\)",
+        "D": "\\((-9,0)\\)"
+      },
+      "correctAnswer": "C",
+      "explanation": "The slope is \\((-3-5)/(6-2)=-2\\). Using \\(y=-2x+b\\) and \\((2,5)\\) gives \\(5=-4+b\\), so \\(b=9\\). The y-intercept is \\(\\boxed{(0,9)}\\).",
+      "sourceBatch": "2026-10-07-huge798-audited",
+      "sourceQuestionNumber": 720,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v1",
+      "choiceExplanations": {
+        "A": "This choice does not satisfy the relationships or conditions in the question.",
+        "B": "This choice does not satisfy the relationships or conditions in the question.",
+        "C": "The slope is \\((-3-5)/(6-2)=-2\\). Using \\(y=-2x+b\\) and \\((2,5)\\) gives \\(5=-4+b\\), so \\(b=9\\). The y-intercept is \\(\\boxed{(0,9)}\\).",
+        "D": "This choice does not satisfy the relationships or conditions in the question."
+      }
     }
   ],
   "classificationVersion": "2026-10-07-v1",
