@@ -17,7 +17,20 @@
 
     <link rel="stylesheet" href="style.css?v=unified-ui-1">
     <link rel="stylesheet" href="question.css?v=muted-question-icons-2">
-<link rel="stylesheet" href="/responsive.css?v=1"></head>
+<link rel="stylesheet" href="/responsive.css?v=1"><style data-question-icon-difficulty-edge>
+.question-bank-peeker-item::before{content:"";position:absolute;top:4px;bottom:4px;left:3px;width:3px;border-radius:999px;background:#99a5a2;pointer-events:none}
+.question-bank-peeker-item.difficulty-easy,.question-bank-peeker-item.difficulty-medium,.question-bank-peeker-item.difficulty-hard{background:#fbfcfb;border-color:#dde5e2;color:#53615f}
+.question-bank-peeker-item.difficulty-easy::before{background:#5e9c88}
+.question-bank-peeker-item.difficulty-medium::before{background:#b39b58}
+.question-bank-peeker-item.difficulty-hard::before{background:#b76b66}
+.question-bank-peeker-item.difficulty-easy:hover,.question-bank-peeker-item.difficulty-medium:hover,.question-bank-peeker-item.difficulty-hard:hover{background:#f7faf9;border-color:#cbd8d4;color:#53615f}
+html.lexlogica-dark-mode .question-bank-peeker-item.difficulty-easy,html.lexlogica-dark-mode .question-bank-peeker-item.difficulty-medium,html.lexlogica-dark-mode .question-bank-peeker-item.difficulty-hard{background:#151c1b;border-color:#303d3a;color:#aebdb9}
+html.lexlogica-dark-mode .question-bank-peeker-item.difficulty-easy::before{background:#5f8f80}
+html.lexlogica-dark-mode .question-bank-peeker-item.difficulty-medium::before{background:#988f69}
+html.lexlogica-dark-mode .question-bank-peeker-item.difficulty-hard::before{background:#9b6662}
+html.lexlogica-dark-mode .question-bank-peeker-item.difficulty-easy:hover,html.lexlogica-dark-mode .question-bank-peeker-item.difficulty-medium:hover,html.lexlogica-dark-mode .question-bank-peeker-item.difficulty-hard:hover{background:#1b2422;border-color:#43534f;color:#c0ccc9}
+</style>
+</head>
 
 <body>
 
