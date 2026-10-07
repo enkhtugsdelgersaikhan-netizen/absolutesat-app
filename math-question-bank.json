@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-10-06",
+  "generatedAt": "2026-10-08",
   "sourceBatch": "2026-10-06-math-batch465",
   "audit": {
     "sourceQuestions": 465,
@@ -36325,6 +36325,746 @@
       ],
       "subtopic": "Lines, Angles, and Triangles",
       "classificationVersion": "2026-10-07-v1"
+    },
+    {
+      "id": "math-20261007-dedup45-q001",
+      "groupId": "math-20261007-dedup45-q001",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A museum visitor buys one admission pass and 8 identical exhibit guides. A $7 coupon is applied to the entire purchase, and the visitor pays $91 after the coupon. The admission pass costs $28 before the coupon. What is the price, in dollars, of one exhibit guide before the coupon?",
+      "explanation": "Before the coupon, the purchase cost $98. Subtracting the $28 admission pass leaves $70 for 8 guides, so each guide costs \\(70/8=\\boxed{8.75}\\) dollars.",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 1,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "$7.00",
+        "B": "$8.75",
+        "C": "$9.63",
+        "D": "$11.38"
+      },
+      "correctAnswer": "B",
+      "answerType": "multiple-choice"
+    },
+    {
+      "id": "math-20261007-dedup45-q002",
+      "groupId": "math-20261007-dedup45-q002",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A temperature sensor displays values from \\(18^\\circ\\text{C}\\) through \\(31^\\circ\\text{C}\\), inclusive. Calibration shows that every displayed value is \\(4^\\circ\\text{C}\\) greater than the actual temperature. If \\(t\\) represents an actual temperature corresponding to one of these readings, which inequality describes all possible values of \\(t\\)?",
+      "explanation": "Subtract 4 from both endpoints of the inclusive displayed interval: \\(18-4\\le t\\le31-4\\). Therefore, \\(\\boxed{14\\le t\\le27}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 2,
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "\\(18\\le t\\le31\\)",
+        "B": "\\(14\\le t\\le27\\)",
+        "C": "\\(22\\le t\\le35\\)",
+        "D": "\\(14<t<27\\)"
+      },
+      "correctAnswer": "B",
+      "answerType": "multiple-choice"
+    },
+    {
+      "id": "math-20261007-dedup45-q003",
+      "groupId": "math-20261007-dedup45-q003",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A laptop has a list price of $684. A $36 store credit is applied to the purchase. The customer then pays $120 as a down payment and makes \\(p\\) equal monthly payments of $66. Which equation can be used to determine \\(p\\)?",
+      "explanation": "After the $36 credit, the amount that must be paid is \\(684-36=648\\). The down payment plus the monthly payments therefore satisfies \\(\\boxed{120+66p=648}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 3,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "\\(66p+120=684\\)",
+        "B": "\\(66p+84=684\\)",
+        "C": "\\(66p+120=648\\)",
+        "D": "\\(66p-120=648\\)"
+      },
+      "correctAnswer": "C",
+      "answerType": "multiple-choice"
+    },
+    {
+      "id": "math-20261007-dedup45-q004",
+      "groupId": "math-20261007-dedup45-q004",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The equation \\(6p+11q=181\\) relates two quantities \\(p\\) and \\(q\\). If \\(\\frac q2=5.5\\), what is the value of \\(p\\)?",
+      "explanation": "From \\(\\frac q2=5.5\\), \\(q=11\\). Substituting gives \\(6p+11(11)=181\\), so \\(6p=60\\) and \\(\\boxed{p=10}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 4,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {},
+      "correctAnswer": "10",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "10"
+      ]
+    },
+    {
+      "id": "math-20261007-dedup45-q005",
+      "groupId": "math-20261007-dedup45-q005",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The function \\(V(d)=b-0.24d\\) models the volume, in liters, of liquid remaining in a tank \\(d\\) days after an experiment begins. The model gives \\(V(15)=28.4\\). Which statement best interprets \\(b\\)?",
+      "explanation": "At the start, \\(d=0\\), so \\(V(0)=b\\). Thus, \\(b\\) represents the estimated initial volume of liquid.",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 5,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "The estimated volume of liquid after 15 days",
+        "B": "The estimated number of days until the tank is empty",
+        "C": "The estimated volume of liquid at the start of the experiment",
+        "D": "The estimated decrease in volume each day"
+      },
+      "correctAnswer": "C",
+      "answerType": "multiple-choice"
+    },
+    {
+      "id": "math-20261007-dedup45-q006",
+      "groupId": "math-20261007-dedup45-q006",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "An art club has $118 available for an order. A delivery charge of $14 is added to every order. Each canvas costs $6.50, and each brush set costs $4.25. If \\(x\\) is the number of canvases and \\(y\\) is the number of brush sets, which inequality represents the possible orders the club can afford?",
+      "explanation": "The $14 delivery charge leaves \\(118-14=104\\) dollars for canvases and brush sets. Therefore, \\(\\boxed{6.50x+4.25y\\le104}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 6,
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "\\(6.50x+4.25y<104\\)",
+        "B": "\\(6.50x+4.25y\\le104\\)",
+        "C": "\\(4.25x+6.50y\\le104\\)",
+        "D": "\\(6.50x+4.25y\\le132\\)"
+      },
+      "correctAnswer": "B",
+      "answerType": "multiple-choice"
+    },
+    {
+      "id": "math-20261007-dedup45-q007",
+      "groupId": "math-20261007-dedup45-q007",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Systems of Linear Equations",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "In the system below, \\(k\\) is a constant. \\[2(3x-2y)=5x+8\\] \\[(k-1)x+8y=3\\] If the system has no solution, what is the value of \\(k\\)?",
+      "explanation": "The first equation simplifies to \\(x-4y=8\\), so its slope is \\(\\frac14\\). The second equation has slope \\(-\\frac{k-1}{8}\\). For no solution, the lines must be distinct and parallel, so \\(-\\frac{k-1}{8}=\\frac14\\). This gives \\(\\boxed{k=-1}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 7,
+      "subtopic": "Systems of Linear Equations",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {},
+      "correctAnswer": "-1",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "-1"
+      ]
+    },
+    {
+      "id": "math-20261007-dedup45-q008",
+      "groupId": "math-20261007-dedup45-q008",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A kayak rental costs $18 plus $12 per hour. A $6 coupon is deducted from the total rental cost. If a customer wants to spend at most $72 and rents the kayak for \\(h\\) hours, which inequality represents this situation?",
+      "explanation": "The cost before the coupon is \\(18+12h\\). After subtracting the $6 coupon, the cost is \\(18+12h-6\\). Since the customer wants to spend at most $72, \\(\\boxed{18+12h-6\\le72}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 8,
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "\\(18+12h+6\\le72\\)",
+        "B": "\\(12h-6\\le72\\)",
+        "C": "\\(18+12h-6<72\\)",
+        "D": "\\(18+12h-6\\le72\\)"
+      },
+      "correctAnswer": "D",
+      "answerType": "multiple-choice"
+    },
+    {
+      "id": "math-20261007-dedup45-q009",
+      "groupId": "math-20261007-dedup45-q009",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A linear model \\(P(t)=a+bt\\) predicts the mass, in grams, of a culture \\(t\\) days after an experiment begins. The model predicts that the mass increases by 7 grams per day and that \\(P(8)=174\\). What is the value of \\(a\\)?",
+      "explanation": "The daily increase gives \\(b=7\\). Then \\(174=a+7(8)=a+56\\), so \\(\\boxed{a=118}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 9,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {},
+      "correctAnswer": "118",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "118"
+      ]
+    },
+    {
+      "id": "math-20261007-dedup45-q011",
+      "groupId": "math-20261007-dedup45-q011",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Systems of Linear Equations",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "At a café, a customer paid $15 after using a $2 coupon on an order of 2 wraps and 3 smoothies. Another customer paid $26 for 5 wraps and 2 smoothies, with no coupon. What is the price, in dollars, of one smoothie?",
+      "explanation": "Let \\(w\\) be the price of a wrap and \\(s\\) the price of a smoothie. The first order cost $17 before the coupon, so \\(2w+3s=17\\). The second gives \\(5w+2s=26\\). Eliminating \\(w\\) gives \\(11s=33\\), so \\(\\boxed{s=3}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 11,
+      "subtopic": "Systems of Linear Equations",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "$2",
+        "B": "$3",
+        "C": "$4",
+        "D": "$5"
+      },
+      "correctAnswer": "B",
+      "answerType": "multiple-choice",
+      "desmosMethod": "Graph \\(2x+3y=17\\) and \\(5x+2y=26\\). Their intersection has y-coordinate 3."
+    },
+    {
+      "id": "math-20261007-dedup45-q012",
+      "groupId": "math-20261007-dedup45-q012",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "In the equation \\[4(2x-3)+k=2(4x+5)-7,\\] \\(k\\) is a constant. If the equation has infinitely many solutions for \\(x\\), what is the value of \\(k\\)?",
+      "explanation": "Expanding gives \\(8x-12+k=8x+3\\). For the equation to be true for every \\(x\\), the constant terms must be equal: \\(-12+k=3\\). Therefore, \\(\\boxed{k=15}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 12,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {},
+      "correctAnswer": "15",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "15"
+      ]
+    },
+    {
+      "id": "math-20261007-dedup45-q013",
+      "groupId": "math-20261007-dedup45-q013",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The function \\(g\\) is defined by \\(g(x)=3-4(2x-1)\\). Which table gives three values of \\(x\\) and their corresponding values of \\(g(x)\\)?",
+      "explanation": "Simplify to \\(g(x)=7-8x\\). Then \\(g(-1)=15\\), \\(g(\\frac12)=3\\), and \\(g(2)=-9\\), which matches choice D.",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 13,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "D",
+      "answerType": "multiple-choice",
+      "choiceTables": {
+        "A": {
+          "headers": [
+            "x",
+            "g(x)"
+          ],
+          "rows": [
+            [
+              "-1",
+              "-1"
+            ],
+            [
+              "1/2",
+              "3"
+            ],
+            [
+              "2",
+              "15"
+            ]
+          ]
+        },
+        "B": {
+          "headers": [
+            "x",
+            "g(x)"
+          ],
+          "rows": [
+            [
+              "-1",
+              "7"
+            ],
+            [
+              "1/2",
+              "3"
+            ],
+            [
+              "2",
+              "-1"
+            ]
+          ]
+        },
+        "C": {
+          "headers": [
+            "x",
+            "g(x)"
+          ],
+          "rows": [
+            [
+              "-1",
+              "15"
+            ],
+            [
+              "1/2",
+              "5"
+            ],
+            [
+              "2",
+              "-9"
+            ]
+          ]
+        },
+        "D": {
+          "headers": [
+            "x",
+            "g(x)"
+          ],
+          "rows": [
+            [
+              "-1",
+              "15"
+            ],
+            [
+              "1/2",
+              "3"
+            ],
+            [
+              "2",
+              "-9"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "math-20261007-dedup45-q014",
+      "groupId": "math-20261007-dedup45-q014",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Systems of Linear Equations",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The solution to the system \\[y-3=5\\] \\[z=2y-7\\] is \\((y,z)\\). What is the value of \\(z\\)?",
+      "explanation": "The first equation gives \\(y=8\\). Then \\(z=2(8)-7=\\boxed{9}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 14,
+      "subtopic": "Systems of Linear Equations",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "5",
+        "B": "8",
+        "C": "9",
+        "D": "16"
+      },
+      "correctAnswer": "C",
+      "answerType": "multiple-choice"
+    },
+    {
+      "id": "math-20261007-dedup45-q015",
+      "groupId": "math-20261007-dedup45-q015",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A theater sold adult, student, and child tickets for one performance. If \\(a\\) adult tickets were sold, the number of student tickets sold was \\(3a\\), and the number of child tickets sold was 18 fewer than the number of student tickets. A total of 186 tickets were sold. Which equation represents this situation?",
+      "explanation": "The three ticket counts are \\(a\\), \\(3a\\), and \\(3a-18\\). Their sum is 186, so \\(\\boxed{a+3a+(3a-18)=186}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 15,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "\\(a+3a+18=186\\)",
+        "B": "\\(a+3a+(a-18)=186\\)",
+        "C": "\\(3a+(3a-18)=186\\)",
+        "D": "\\(a+3a+(3a-18)=186\\)"
+      },
+      "correctAnswer": "D",
+      "answerType": "multiple-choice"
+    },
+    {
+      "id": "math-20261007-dedup45-q016",
+      "groupId": "math-20261007-dedup45-q016",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Systems of Linear Equations",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The graph shows two linear equations. What is the solution to the system?",
+      "explanation": "The solution of a graphed system is the point where the two lines intersect. The graph shows the intersection at \\(\\boxed{(2,3)}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 16,
+      "subtopic": "Systems of Linear Equations",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "\\((1,4)\\)",
+        "B": "\\((2,3)\\)",
+        "C": "\\((3,2)\\)",
+        "D": "\\((4,1)\\)"
+      },
+      "correctAnswer": "B",
+      "answerType": "multiple-choice",
+      "graph": {
+        "type": "xy",
+        "caption": "Two linear equations",
+        "xMin": 0,
+        "xMax": 5,
+        "yMin": 0,
+        "yMax": 6,
+        "xStep": 1,
+        "yStep": 1,
+        "xLabel": "x",
+        "yLabel": "y",
+        "series": [
+          {
+            "label": "Line 1",
+            "points": [
+              [
+                0,
+                1
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                4,
+                5
+              ]
+            ],
+            "showPoints": false
+          },
+          {
+            "label": "Line 2",
+            "points": [
+              [
+                0,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                5,
+                0
+              ]
+            ],
+            "showPoints": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261007-dedup45-q017",
+      "groupId": "math-20261007-dedup45-q017",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A greenhouse contains 8 herb-growing sections and 15 vegetable-growing sections. During one week, the sections receive a total of 1,260 liters of irrigation water. The equation \\(8a+15b=1260\\) models the situation. Which statement best interprets \\(a\\)?",
+      "explanation": "Since there are 8 herb sections, \\(8a\\) represents the total water delivered to those sections. Therefore, \\(a\\) represents the amount of water delivered per herb section.",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 17,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "The total liters of water delivered to all 8 herb sections",
+        "B": "The average liters of water delivered to each herb section",
+        "C": "The number of herb sections receiving water",
+        "D": "The average liters of water delivered to each vegetable section"
+      },
+      "correctAnswer": "B",
+      "answerType": "multiple-choice"
+    },
+    {
+      "id": "math-20261007-dedup45-q018",
+      "groupId": "math-20261007-dedup45-q018",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The graph shows the solutions to a linear inequality. Which ordered pair is in the shaded region?",
+      "explanation": "The solid boundary line is \\(y=2x-1\\), and the region above the line is shaded. At \\(x=2\\), the boundary has \\(y=3\\), so \\((2,4)\\) lies in the shaded region.",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 18,
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "\\((2,2)\\)",
+        "B": "\\((0,-2)\\)",
+        "C": "\\((-1,-4)\\)",
+        "D": "\\((2,4)\\)"
+      },
+      "correctAnswer": "D",
+      "answerType": "multiple-choice",
+      "graph": {
+        "type": "xy",
+        "caption": "Shaded solution region",
+        "xMin": -1,
+        "xMax": 3,
+        "yMin": -3,
+        "yMax": 5,
+        "xStep": 1,
+        "yStep": 1,
+        "xLabel": "x",
+        "yLabel": "y",
+        "regions": [
+          {
+            "points": [
+              [
+                -1,
+                -3
+              ],
+              [
+                -1,
+                5
+              ],
+              [
+                3,
+                5
+              ]
+            ]
+          }
+        ],
+        "series": [
+          {
+            "points": [
+              [
+                -1,
+                -3
+              ],
+              [
+                0,
+                -1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                5
+              ]
+            ],
+            "showPoints": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261007-dedup45-q019",
+      "groupId": "math-20261007-dedup45-q019",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A chemist initially mixes some water with 17 milliliters of another liquid. The volumes add when mixed. Immediately afterward, 5 milliliters of the mixture is spilled, leaving 68 milliliters. How many milliliters of water were used initially?",
+      "explanation": "Let \\(w\\) be the initial volume of water. Then \\(w+17-5=68\\), so \\(w+12=68\\) and \\(\\boxed{w=56}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 19,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {},
+      "correctAnswer": "56",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "56"
+      ]
+    },
+    {
+      "id": "math-20261007-dedup45-q020",
+      "groupId": "math-20261007-dedup45-q020",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "If \\(\\frac{7x}{12}=21\\), what is the value of \\(\\frac6x\\)?",
+      "explanation": "From \\(\\frac{7x}{12}=21\\), \\(7x=252\\), so \\(x=36\\). Therefore, \\(\\frac6x=\\frac6{36}=\\boxed{\\frac16}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 20,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {},
+      "correctAnswer": "1/6",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "1/6"
+      ]
+    },
+    {
+      "id": "math-20261007-dedup45-q021",
+      "groupId": "math-20261007-dedup45-q021",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A laser cutter operates for 285 minutes during a production period. Before cutting any pieces, it requires 30 minutes for calibration. Each panel takes 4 minutes to cut, and each bracket takes 7 minutes. If \\(x\\) panels and \\(y\\) brackets are produced, which equation represents the situation?",
+      "explanation": "Calibration uses 30 minutes, the panels use \\(4x\\) minutes, and the brackets use \\(7y\\) minutes. Their total is 285, so \\(\\boxed{30+4x+7y=285}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 21,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "\\(4x+7y=285\\)",
+        "B": "\\(30+7x+4y=285\\)",
+        "C": "\\(30+4x+7y=285\\)",
+        "D": "\\(30+4x+7y=315\\)"
+      },
+      "correctAnswer": "C",
+      "answerType": "multiple-choice"
+    },
+    {
+      "id": "math-20261007-dedup45-q022",
+      "groupId": "math-20261007-dedup45-q022",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Geometry & Trigonometry",
+      "skill": "Lines, Angles, and Triangles",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "An isosceles triangle has a perimeter of 67 inches. Each of its two congruent sides is 5 inches longer than the third side. What is the length, in inches, of the third side?",
+      "explanation": "Let the third side have length \\(x\\). Each congruent side has length \\(x+5\\). Then \\(x+2(x+5)=67\\), so \\(3x=57\\) and \\(\\boxed{x=19}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 22,
+      "subtopic": "Lines, Angles, and Triangles",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {},
+      "correctAnswer": "19",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "19"
+      ],
+      "diagram": {
+        "width": 420,
+        "height": 285,
+        "alt": "Isosceles triangle with congruent sides x plus 5 and base x",
+        "polygons": [
+          {
+            "points": [
+              [
+                70,
+                230
+              ],
+              [
+                350,
+                230
+              ],
+              [
+                210,
+                50
+              ]
+            ]
+          }
+        ],
+        "labels": [
+          {
+            "x": 125,
+            "y": 135,
+            "text": "x + 5",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 295,
+            "y": 135,
+            "text": "x + 5",
+            "emphasis": false,
+            "anchor": "middle"
+          },
+          {
+            "x": 210,
+            "y": 255,
+            "text": "x",
+            "emphasis": false,
+            "anchor": "middle"
+          }
+        ],
+        "ticks": [
+          {
+            "x": 140,
+            "y": 140,
+            "angle": -38,
+            "size": 12
+          },
+          {
+            "x": 280,
+            "y": 140,
+            "angle": 38,
+            "size": 12
+          }
+        ]
+      }
     }
   ],
   "classificationVersion": "2026-10-07-v1",
