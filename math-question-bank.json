@@ -224,6 +224,99 @@
         13,
         22
       ]
+    },
+    "deduplicatedBatch20261007": {
+      "sourceQuestions": 45,
+      "retained": 42,
+      "excluded": [
+        {
+          "sourceQuestionNumber": 10,
+          "reason": "Close reskin of existing parallel-line equation question math-20261006-batch465-q001."
+        },
+        {
+          "sourceQuestionNumber": 23,
+          "reason": "Structural duplicate of existing solve-linear-then-evaluate questions, including math-20261006-batch465-q106."
+        },
+        {
+          "sourceQuestionNumber": 27,
+          "reason": "Structural duplicate of existing graph-reading question math-20261006-batch465-q287."
+        }
+      ],
+      "repairedSourceFormatting": {
+        "inequalitySymbols": [
+          2,
+          6,
+          8,
+          25,
+          29,
+          34,
+          37,
+          40,
+          45
+        ],
+        "recoveredFractions": [
+          20,
+          31
+        ],
+        "notes": [
+          "Recovered q20 as 7x/12=21 and 6/x from the supplied classical solution.",
+          "Recovered q31 as (3/5)x-(4/7)y=6 from the supplied answer table and solution logic.",
+          "Rebuilt duplicated-looking inequality choices where comparison symbols were lost in the paste."
+        ]
+      },
+      "visuals": {
+        "graphs": [
+          16,
+          18,
+          38
+        ],
+        "diagrams": [
+          22
+        ],
+        "tables": [
+          36,
+          41
+        ],
+        "choiceTables": [
+          13,
+          31
+        ]
+      },
+      "difficultyCalibration": {
+        "approach": "Relative within each affected subtopic while preserving the existing bank's near-even Easy/Medium/Hard distribution.",
+        "addedBySubtopic": {
+          "Linear Equations": {
+            "Easy": 3,
+            "Medium": 4,
+            "Hard": 2
+          },
+          "Linear Functions": {
+            "Easy": 3,
+            "Medium": 4,
+            "Hard": 3
+          },
+          "Systems of Linear Equations": {
+            "Easy": 3,
+            "Medium": 4,
+            "Hard": 2
+          },
+          "Linear Inequalities": {
+            "Easy": 4,
+            "Medium": 3,
+            "Hard": 3
+          },
+          "Ratio, Rates, Percentages": {
+            "Easy": 1,
+            "Medium": 1,
+            "Hard": 1
+          },
+          "Lines, Angles, and Triangles": {
+            "Easy": 0,
+            "Medium": 1,
+            "Hard": 0
+          }
+        }
+      }
     }
   },
   "questions": [
@@ -37065,6 +37158,667 @@
           }
         ]
       }
+    },
+    {
+      "id": "math-20261007-dedup45-q024",
+      "groupId": "math-20261007-dedup45-q024",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The function \\(f\\) is defined by \\(f(x)=4(2x-1)+3\\). For what value of \\(x\\) does \\(f(x)=35\\)?",
+      "explanation": "Set the function equal to 35: \\(4(2x-1)+3=35\\). This simplifies to \\(8x-1=35\\), so \\(8x=36\\) and \\(\\boxed{x=4.5}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 24,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {},
+      "correctAnswer": "4.5",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "4.5"
+      ]
+    },
+    {
+      "id": "math-20261007-dedup45-q025",
+      "groupId": "math-20261007-dedup45-q025",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A workshop must use strictly less than 90 kilowatt-hours of electricity during a certain period. Lighting and other fixed equipment use 12 kilowatt-hours. Machine A uses 4 kilowatt-hours per hour, and machine B uses 6 kilowatt-hours per hour. If machine A operates for \\(x\\) hours and machine B operates for \\(y\\) hours, which inequality represents the possible values of \\(x\\) and \\(y\\)?",
+      "explanation": "The total electricity use is \\(4x+6y+12\\). Because the workshop must use strictly less than 90 kilowatt-hours, \\(4x+6y+12<90\\), so \\(\\boxed{4x+6y<78}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 25,
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "\\(4x+6y\\le78\\)",
+        "B": "\\(4x+6y<90\\)",
+        "C": "\\(6x+4y<78\\)",
+        "D": "\\(4x+6y<78\\)"
+      },
+      "correctAnswer": "D",
+      "answerType": "multiple-choice"
+    },
+    {
+      "id": "math-20261007-dedup45-q026",
+      "groupId": "math-20261007-dedup45-q026",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Systems of Linear Equations",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The solution to the system \\[y=3-2x\\] \\[4x-3y=31\\] is \\((x,y)\\). What is the value of \\(x\\)?",
+      "explanation": "Substitute \\(y=3-2x\\) into the second equation: \\(4x-3(3-2x)=31\\). Then \\(10x-9=31\\), so \\(10x=40\\) and \\(\\boxed{x=4}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 26,
+      "subtopic": "Systems of Linear Equations",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {},
+      "correctAnswer": "4",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "4"
+      ]
+    },
+    {
+      "id": "math-20261007-dedup45-q028",
+      "groupId": "math-20261007-dedup45-q028",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Systems of Linear Equations",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "What is the solution to the system? \\[2x+y=17\\] \\[x-2y=-4\\]",
+      "explanation": "From the first equation, \\(y=17-2x\\). Substitute into the second: \\(x-2(17-2x)=-4\\), so \\(5x=30\\) and \\(x=6\\). Then \\(y=5\\), giving \\(\\boxed{(6,5)}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 28,
+      "subtopic": "Systems of Linear Equations",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "\\((5,6)\\)",
+        "B": "\\((6,5)\\)",
+        "C": "\\((7,3)\\)",
+        "D": "\\((4,9)\\)"
+      },
+      "correctAnswer": "B",
+      "answerType": "multiple-choice",
+      "desmosMethod": "Graph \\(2x+y=17\\) and \\(x-2y=-4\\). The lines intersect at \\((6,5)\\)."
+    },
+    {
+      "id": "math-20261007-dedup45-q029",
+      "groupId": "math-20261007-dedup45-q029",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "Which point is a solution to the system of inequalities? \\[2y>x-6\\] \\[3x+y\\le12\\]",
+      "explanation": "For \\((2,3)\\), the first inequality gives \\(6>-4\\), and the second gives \\(9\\le12\\). Both are true, so \\(\\boxed{(2,3)}\\) is a solution.",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 29,
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "\\((4,1)\\)",
+        "B": "\\((0,-3)\\)",
+        "C": "\\((6,0)\\)",
+        "D": "\\((2,3)\\)"
+      },
+      "correctAnswer": "D",
+      "answerType": "multiple-choice",
+      "desmosMethod": "Graph \\(2y>x-6\\) and \\(3x+y\\le12\\). Of the four choices, only \\((2,3)\\) lies in the overlap."
+    },
+    {
+      "id": "math-20261007-dedup45-q030",
+      "groupId": "math-20261007-dedup45-q030",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Systems of Linear Equations",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "At how many points do the graphs of the equations \\[6x-9y=12\\] and \\[4x-6y=11\\] intersect in the \\(xy\\)-plane?",
+      "explanation": "The x- and y-coefficients of the second equation are \\(\\frac23\\) of those in the first, but \\(11\\ne\\frac23(12)=8\\). The equations therefore represent distinct parallel lines, so they intersect at \\(\\boxed{0}\\) points.",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 30,
+      "subtopic": "Systems of Linear Equations",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "Exactly one",
+        "B": "Infinitely many",
+        "C": "Zero",
+        "D": "Exactly two"
+      },
+      "correctAnswer": "C",
+      "answerType": "multiple-choice",
+      "desmosMethod": "Graph both equations. The lines are parallel and do not intersect."
+    },
+    {
+      "id": "math-20261007-dedup45-q031",
+      "groupId": "math-20261007-dedup45-q031",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "Which table gives three values of \\(x\\) and the corresponding values of \\(y\\) that satisfy \\[\\frac35x-\\frac47y=6?\\]",
+      "explanation": "Multiplying the equation by 35 gives \\(21x-20y=210\\). For \\(x=5,10,15\\), the corresponding y-values are \\(-\\frac{21}{4},0,\\frac{21}{4}\\), respectively. These values appear in choice B.",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 31,
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "B",
+      "answerType": "multiple-choice",
+      "choiceTables": {
+        "A": {
+          "headers": [
+            "x",
+            "y"
+          ],
+          "rows": [
+            [
+              "5",
+              "21/4"
+            ],
+            [
+              "10",
+              "0"
+            ],
+            [
+              "15",
+              "-21/4"
+            ]
+          ]
+        },
+        "B": {
+          "headers": [
+            "x",
+            "y"
+          ],
+          "rows": [
+            [
+              "5",
+              "-21/4"
+            ],
+            [
+              "10",
+              "0"
+            ],
+            [
+              "15",
+              "21/4"
+            ]
+          ]
+        },
+        "C": {
+          "headers": [
+            "x",
+            "y"
+          ],
+          "rows": [
+            [
+              "5",
+              "-35/4"
+            ],
+            [
+              "10",
+              "0"
+            ],
+            [
+              "15",
+              "35/4"
+            ]
+          ]
+        },
+        "D": {
+          "headers": [
+            "x",
+            "y"
+          ],
+          "rows": [
+            [
+              "5",
+              "-21/4"
+            ],
+            [
+              "10",
+              "6"
+            ],
+            [
+              "15",
+              "21/4"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "math-20261007-dedup45-q032",
+      "groupId": "math-20261007-dedup45-q032",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A service normally charges a one-time setup fee of $40 plus $25 per month. Under a promotion, the customer's entire pre-discount charge is reduced by 20%. If \\(C\\) is the amount paid for \\(m\\) months, which equation defines \\(C\\)?",
+      "explanation": "The pre-discount charge is \\(25m+40\\). A 20% reduction means the customer pays 80% of that amount: \\(C=0.8(25m+40)=\\boxed{20m+32}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 32,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "\\(C=25m+32\\)",
+        "B": "\\(C=20m+40\\)",
+        "C": "\\(C=32m+20\\)",
+        "D": "\\(C=20m+32\\)"
+      },
+      "correctAnswer": "D",
+      "answerType": "multiple-choice"
+    },
+    {
+      "id": "math-20261007-dedup45-q033",
+      "groupId": "math-20261007-dedup45-q033",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "At the surface of the water, the pressure on a diver is 15.2 pounds per square inch. For each foot below the surface, the pressure increases by 0.43 pound per square inch. A diver descends 70 feet and then ascends 18 feet. What is the pressure, in pounds per square inch, at the diver's final depth?",
+      "explanation": "The final depth is \\(70-18=52\\) feet. The pressure is therefore \\(15.2+0.43(52)=15.2+22.36=\\boxed{37.56}\\) pounds per square inch.",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 33,
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "37.56",
+        "B": "45.30",
+        "C": "22.36",
+        "D": "52.00"
+      },
+      "correctAnswer": "A",
+      "answerType": "multiple-choice"
+    },
+    {
+      "id": "math-20261007-dedup45-q034",
+      "groupId": "math-20261007-dedup45-q034",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "An elevator has a posted maximum load of 3,000 pounds, but building rules permit it to carry at most 90% of that amount. An operator weighing 180 pounds and a 120-pound cart are already inside. Each small box weighs 35 pounds, and each large box weighs 50 pounds. If \\(x\\) small boxes and \\(y\\) large boxes are loaded, which inequality represents the possible combinations of boxes?",
+      "explanation": "The permitted load is \\(0.90(3000)=2700\\) pounds. The operator and cart use \\(180+120=300\\) pounds, leaving 2400 pounds for boxes. Thus, \\(\\boxed{35x+50y\\le2400}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 34,
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "\\(35x+50y\\le2700\\)",
+        "B": "\\(35x+50y\\le2400\\)",
+        "C": "\\(35x+50y+300\\le3000\\)",
+        "D": "\\(35x+50y<2400\\)"
+      },
+      "correctAnswer": "B",
+      "answerType": "multiple-choice"
+    },
+    {
+      "id": "math-20261007-dedup45-q035",
+      "groupId": "math-20261007-dedup45-q035",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The function \\(f\\) is defined by \\(f(x)=5(2x-7)-3x\\). What is the x-intercept of the graph of \\(y=f(x)\\)?",
+      "explanation": "At the x-intercept, \\(f(x)=0\\). Thus \\(5(2x-7)-3x=0\\), which simplifies to \\(7x-35=0\\). Therefore, \\(x=5\\), so the intercept is \\(\\boxed{(5,0)}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 35,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "\\((0,5)\\)",
+        "B": "\\((-5,0)\\)",
+        "C": "\\((7,0)\\)",
+        "D": "\\((5,0)\\)"
+      },
+      "correctAnswer": "D",
+      "answerType": "multiple-choice"
+    },
+    {
+      "id": "math-20261007-dedup45-q036",
+      "groupId": "math-20261007-dedup45-q036",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The table shows three values of \\(x\\) and their corresponding values of a linear function \\(f\\). The function is defined by \\[f(x)=m(2x-5)-7,\\] where \\(m\\) is a constant. What is the value of \\(m\\)?",
+      "explanation": "Using \\(x=6\\) and \\(f(6)=35\\), \\(35=m(12-5)-7=7m-7\\). Thus \\(42=7m\\), so \\(\\boxed{m=6}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 36,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {},
+      "correctAnswer": "6",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "6"
+      ],
+      "table": {
+        "caption": "Values of a linear function f",
+        "headers": [
+          "x",
+          "f(x)"
+        ],
+        "rows": [
+          [
+            "4",
+            "11"
+          ],
+          [
+            "6",
+            "35"
+          ],
+          [
+            "8",
+            "59"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "math-20261007-dedup45-q037",
+      "groupId": "math-20261007-dedup45-q037",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A pilot certification requires at least 120 hours of flight time. A trainee has already logged 73 hours and has 18 additional hours scheduled. What is the minimum number of additional unscheduled flight hours the trainee must complete to meet the requirement?",
+      "explanation": "After the scheduled hours, the trainee will have \\(73+18=91\\) hours. If \\(h\\) is the additional amount needed, then \\(91+h\\ge120\\), so \\(h\\ge29\\). The minimum is \\(\\boxed{29}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 37,
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "29",
+        "B": "47",
+        "C": "102",
+        "D": "120"
+      },
+      "correctAnswer": "A",
+      "answerType": "multiple-choice"
+    },
+    {
+      "id": "math-20261007-dedup45-q038",
+      "groupId": "math-20261007-dedup45-q038",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "The graph shown is the graph of \\(y=f(x)-12\\), where \\(f\\) is linear. The line passes through \\((-2,0)\\) and \\((0,-4)\\). Which equation defines \\(f\\)?",
+      "explanation": "The graphed line has slope \\(\\frac{-4-0}{0-(-2)}=-2\\) and y-intercept \\(-4\\). Thus \\(f(x)-12=-2x-4\\). Adding 12 gives \\(\\boxed{f(x)=-2x+8}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 38,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "\\(f(x)=-2x-16\\)",
+        "B": "\\(f(x)=2x+8\\)",
+        "C": "\\(f(x)=-2x+8\\)",
+        "D": "\\(f(x)=2x-16\\)"
+      },
+      "correctAnswer": "C",
+      "answerType": "multiple-choice",
+      "graph": {
+        "type": "xy",
+        "caption": "Graph of y = f(x) − 12",
+        "xMin": -3,
+        "xMax": 1,
+        "yMin": -6,
+        "yMax": 2,
+        "xStep": 1,
+        "yStep": 1,
+        "xLabel": "x",
+        "yLabel": "y",
+        "series": [
+          {
+            "points": [
+              [
+                -3,
+                2
+              ],
+              [
+                -2,
+                0
+              ],
+              [
+                0,
+                -4
+              ],
+              [
+                1,
+                -6
+              ]
+            ],
+            "showPoints": true,
+            "labelPoints": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "math-20261007-dedup45-q039",
+      "groupId": "math-20261007-dedup45-q039",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Systems of Linear Equations",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "The solution to the system \\[4u=3v\\] \\[5u=-2v\\] is \\((u,v)\\). What is the value of \\(u\\)?",
+      "explanation": "The equations give \\(u=\\frac34v\\) and \\(u=-\\frac25v\\). These can both be true only when \\(v=0\\), so \\(\\boxed{u=0}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 39,
+      "subtopic": "Systems of Linear Equations",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "-5",
+        "B": "-2",
+        "C": "0",
+        "D": "3"
+      },
+      "correctAnswer": "C",
+      "answerType": "multiple-choice"
+    },
+    {
+      "id": "math-20261007-dedup45-q040",
+      "groupId": "math-20261007-dedup45-q040",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A salesperson earns a base salary of \\(b\\) dollars. If annual sales are \\(s\\) dollars, where \\(s\\ge2b\\), the salesperson also earns a commission equal to 12% of the amount by which \\(s\\) exceeds \\(2b\\). The salesperson wants total earnings to be at least \\(1.6b\\) and at most \\(2.2b\\). Which inequality gives all possible values of \\(s\\)?",
+      "explanation": "Total earnings are \\(b+0.12(s-2b)\\). Therefore, \\(1.6b\\le b+0.12(s-2b)\\le2.2b\\). Simplifying gives \\(0.84b\\le0.12s\\le1.44b\\), and dividing by 0.12 yields \\(\\boxed{7b\\le s\\le12b}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 40,
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "\\(5b\\le s\\le10b\\)",
+        "B": "\\(7b\\le s\\le12b\\)",
+        "C": "\\(0.6b\\le s\\le1.2b\\)",
+        "D": "\\(9b\\le s\\le14b\\)"
+      },
+      "correctAnswer": "B",
+      "answerType": "multiple-choice"
+    },
+    {
+      "id": "math-20261007-dedup45-q041",
+      "groupId": "math-20261007-dedup45-q041",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "For the linear function \\(f\\), the table shows three values of \\(x\\) and \\(f(x)\\). If \\(h(x)=f(x)-23\\), which equation defines \\(h\\)?",
+      "explanation": "Using \\((-5,31)\\) and \\((1,7)\\), the slope of \\(f\\) is \\(-4\\). Since \\(f(1)=7\\), \\(f(x)=-4x+11\\). Therefore, \\(h(x)=f(x)-23=\\boxed{-4x-12}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 41,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "\\(h(x)=-4x+34\\)",
+        "B": "\\(h(x)=4x-12\\)",
+        "C": "\\(h(x)=-4x-12\\)",
+        "D": "\\(h(x)=-4x+11\\)"
+      },
+      "correctAnswer": "C",
+      "answerType": "multiple-choice",
+      "table": {
+        "caption": "Values of the linear function f",
+        "headers": [
+          "x",
+          "f(x)"
+        ],
+        "rows": [
+          [
+            "-5",
+            "31"
+          ],
+          [
+            "1",
+            "7"
+          ],
+          [
+            "4",
+            "-5"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "math-20261007-dedup45-q042",
+      "groupId": "math-20261007-dedup45-q042",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "What is the slope of the graph of \\[3(2x-y)+4y=18\\] in the \\(xy\\)-plane?",
+      "explanation": "Expand and combine like terms: \\(6x-3y+4y=18\\), so \\(6x+y=18\\). Solving for \\(y\\) gives \\(y=-6x+18\\), so the slope is \\(\\boxed{-6}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 42,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "-6",
+        "B": "\\(-\\frac16\\)",
+        "C": "\\(\\frac16\\)",
+        "D": "6"
+      },
+      "correctAnswer": "A",
+      "answerType": "multiple-choice"
+    },
+    {
+      "id": "math-20261007-dedup45-q043",
+      "groupId": "math-20261007-dedup45-q043",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Systems of Linear Equations",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A bus travels part of a trip on a highway at an average speed of 70 miles per hour and the rest on local roads at an average speed of 45 miles per hour. The bus travels 345 miles total. The entire trip takes 6 hours, including a 30-minute stop during which the bus does not move. If \\(x\\) is the number of hours spent driving on the highway and \\(y\\) is the number of hours spent driving on local roads, which system represents the situation?",
+      "explanation": "The distance equation is \\(70x+45y=345\\). Since 30 minutes is 0.5 hour, the actual driving time is \\(6-0.5=5.5\\) hours, so \\(x+y=5.5\\). Thus choice B is correct.",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 43,
+      "subtopic": "Systems of Linear Equations",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "\\(\\begin{cases}70x+45y=345\\\\x+y=6\\end{cases}\\)",
+        "B": "\\(\\begin{cases}70x+45y=345\\\\x+y=5.5\\end{cases}\\)",
+        "C": "\\(\\begin{cases}x+y=345\\\\70x+45y=5.5\\end{cases}\\)",
+        "D": "\\(\\begin{cases}70x+45y=6\\\\x+y=345\\end{cases}\\)"
+      },
+      "correctAnswer": "B",
+      "answerType": "multiple-choice"
+    },
+    {
+      "id": "math-20261007-dedup45-q044",
+      "groupId": "math-20261007-dedup45-q044",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "For a linear function \\(f\\), the graph passes through the y-axis at \\((0,7)\\). Whenever \\(x\\) increases by 4 units, the value of \\(f(x)\\) decreases by 6 units. Which equation defines \\(f\\)?",
+      "explanation": "The slope is \\(\\frac{-6}{4}=-\\frac32\\), and the y-intercept is 7. Therefore, \\(\\boxed{f(x)=-\\frac32x+7}\\).",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 44,
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "\\(f(x)=\\frac32x+7\\)",
+        "B": "\\(f(x)=-\\frac23x+7\\)",
+        "C": "\\(f(x)=-\\frac32x-7\\)",
+        "D": "\\(f(x)=-\\frac32x+7\\)"
+      },
+      "correctAnswer": "D",
+      "answerType": "multiple-choice"
+    },
+    {
+      "id": "math-20261007-dedup45-q045",
+      "groupId": "math-20261007-dedup45-q045",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A hiker's daily goal is to travel at least 32 kilometers. The hiker has already traveled 7 kilometers and plans to continue at an average speed of 5 kilometers per hour. What is the minimum number of additional hours the hiker must travel to meet the goal?",
+      "explanation": "If \\(h\\) is the additional time, then \\(7+5h\\ge32\\). Thus \\(5h\\ge25\\), so \\(h\\ge5\\). The minimum is \\(\\boxed{5}\\) hours.",
+      "sourceBatch": "2026-10-07-deduplicated-batch45",
+      "sourceQuestionNumber": 45,
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-v2",
+      "choices": {
+        "A": "4",
+        "B": "5",
+        "C": "6.4",
+        "D": "8"
+      },
+      "correctAnswer": "B",
+      "answerType": "multiple-choice"
     }
   ],
   "classificationVersion": "2026-10-07-v1",
