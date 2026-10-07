@@ -524,6 +524,218 @@ function escapeHtml(value) {
 }
 
 
+
+const MATH_SECTION_DOMAINS = new Set([
+    "algebra",
+    "advanced math",
+    "problem-solving & data analysis",
+    "problem solving & data analysis",
+    "problem-solving and data analysis",
+    "geometry & trigonometry",
+    "geometry and trigonometry"
+]);
+
+const MATH_TOPIC_HINT =
+    /\b(?:linear|quadratic|polynomial|exponential|rational|radical|nonlinear|algebra|inequalit|systems?\s+of\s+linear|ratio|rates?|percent|statistic|probability|geometry|trigonometry|circles?|area|volume|angles?|triangles?|functions?|equivalent\s+expressions?)\b/i;
+
+function inferQuestionSection(
+    question,
+    setHint = currentSet
+) {
+    const explicit =
+        String(
+            question?.section || ""
+        ).trim();
+
+    if (
+        /^(?:math|mathematics)$/i.test(
+            explicit
+        )
+    ) {
+        return "Math";
+    }
+
+    if (
+        /reading|writing/i.test(
+            explicit
+        )
+    ) {
+        return "Reading & Writing";
+    }
+
+    const id =
+        String(
+            question?.id || ""
+        );
+
+    if (
+        /^math[-_:]/i.test(
+            id
+        )
+    ) {
+        return "Math";
+    }
+
+    const domain =
+        String(
+            question?.domain || ""
+        )
+            .trim()
+            .toLowerCase()
+            .replace(
+                /[–—]/g,
+                "-"
+            );
+
+    if (
+        MATH_SECTION_DOMAINS.has(
+            domain
+        )
+    ) {
+        return "Math";
+    }
+
+    const setText =
+        [
+            setHint?.name,
+            setHint?.slug,
+            setHint?.section,
+            setHint?.title
+        ]
+            .filter(Boolean)
+            .join(" ");
+
+    if (
+        /\bmath(?:ematics)?\b/i.test(
+            setText
+        )
+    ) {
+        return "Math";
+    }
+
+    if (
+        /\breading\b|\bwriting\b/i.test(
+            setText
+        )
+    ) {
+        return "Reading & Writing";
+    }
+
+    const topic =
+        String(
+            question?.topic ||
+            question?.skill ||
+            ""
+        );
+
+    if (
+        MATH_TOPIC_HINT.test(
+            topic
+        )
+    ) {
+        return "Math";
+    }
+
+    return (
+        explicit ||
+        "Reading & Writing"
+    );
+}
+
+function isMathQuestionRecord(
+    question,
+    setHint = currentSet
+) {
+    return (
+        inferQuestionSection(
+            question,
+            setHint
+        ) === "Math"
+    );
+}
+
+function compactShortDisplayMathInProse(
+    value
+) {
+    const source =
+        String(
+            value === null ||
+            value === undefined
+                ? ""
+                : value
+        );
+
+    return source.replace(
+        /\\\[([\s\S]*?)\\\]/g,
+        (
+            match,
+            body,
+            offset,
+            full
+        ) => {
+            const cleaned =
+                String(body || "")
+                    .replace(
+                        /\s+/g,
+                        " "
+                    )
+                    .trim();
+
+            if (
+                !cleaned ||
+                cleaned.length > 110 ||
+                /\\begin\s*\{|\\end\s*\{|\\\\|\\(?:matrix|cases|aligned|array|substack|displaystyle)\b/i
+                    .test(body)
+            ) {
+                return match;
+            }
+
+            const before =
+                full
+                    .slice(
+                        0,
+                        offset
+                    )
+                    .replace(
+                        /\s+$/,
+                        ""
+                    );
+
+            const after =
+                full
+                    .slice(
+                        offset +
+                        match.length
+                    )
+                    .replace(
+                        /^\s+/,
+                        ""
+                    );
+
+            const proseBefore =
+                /[A-Za-z0-9,;:)]$/
+                    .test(before);
+
+            const proseAfter =
+                /^[A-Za-z0-9("'$]/
+                    .test(after);
+
+            if (
+                !proseBefore &&
+                !proseAfter
+            ) {
+                return match;
+            }
+
+            return (
+                "\\(" +
+                cleaned +
+                "\\)"
+            );
+        }
+    );
+}
+
 function normalizeCompactFractionArguments(
     value
 ) {
@@ -633,9 +845,29 @@ function normalizeMathEscapes(value) {
 function normalizeMathLayoutText(value) {
     const mathSegments = [];
 
+    const cleanedSource =
+        String(
+            value === null ||
+            value === undefined
+                ? ""
+                : value
+        )
+            .replace(
+                /\u00a0/g,
+                " "
+            )
+            .replace(
+                /[\u200B-\u200D\uFEFF]/g,
+                ""
+            )
+            .replace(
+                /<\/?(?:i|em)\b[^>]*>/gi,
+                ""
+            );
+
     const protectedSource =
         normalizeMathEscapes(
-            value
+            cleanedSource
         ).replace(
             /\\\(([\s\S]*?)\\\)|\\\[([\s\S]*?)\\\]/g,
             match => {
@@ -1132,12 +1364,39 @@ function renderInlineFormatting(
 
 function renderQuestionContent(
     question,
-    value
+    value,
+    compactInlineMath = false
 ) {
+    const isMath =
+        isMathQuestionRecord(
+            question
+        );
+
+    const matchesPrimaryContent =
+        value ===
+            question?.question_text ||
+        value ===
+            question?.choice_a ||
+        value ===
+            question?.choice_b ||
+        value ===
+            question?.choice_c ||
+        value ===
+            question?.choice_d;
+
     return renderInlineFormatting(
-        value,
-        question?.section ===
-            "Math"
+        (
+            isMath &&
+            (
+                compactInlineMath ||
+                matchesPrimaryContent
+            )
+        )
+            ? compactShortDisplayMathInProse(
+                value
+            )
+            : value,
+        isMath
     );
 }
 
@@ -3390,8 +3649,9 @@ function renderQuestionPassage(
                     )
                     : renderQuestionTable(
                         question.table,
-                        question.section ===
-                            "Math"
+                        isMathQuestionRecord(
+                            question
+                        )
                     )
             );
 
@@ -3399,7 +3659,7 @@ function renderQuestionPassage(
         question.passage
             ? '<div class="question-passage-copy' +
                 (
-                    question.section === "Math"
+                    isMathQuestionRecord(question)
                         ? ' question-math-information'
                         : ''
                 ) +
@@ -7109,8 +7369,10 @@ function splitMathQuestionContent(
         ).trim();
 
     if (
-        stagedQuestion.section !==
-        "Math"
+        !isMathQuestionRecord(
+            stagedQuestion,
+            null
+        )
     ) {
         return {
             passage:
@@ -7249,8 +7511,10 @@ function normalizeStagedQuestion(
             stagedQuestion.skill ||
             "SAT Practice",
         section:
-            stagedQuestion.section ||
-            "SAT",
+            inferQuestionSection(
+                stagedQuestion,
+                null
+            ),
         domain:
             stagedQuestion.domain ||
             "",
@@ -7569,6 +7833,18 @@ async function loadQuestionById(
 
         }
 
+        questions =
+            questions.map(
+                question => ({
+                    ...question,
+                    section:
+                        inferQuestionSection(
+                            question,
+                            currentSet
+                        )
+                })
+            );
+
         await loadQuestionReviewState(
             questionId
         );
@@ -7715,7 +7991,16 @@ async function loadQuestionSet(
 
 
     questions =
-        questionData;
+        questionData.map(
+            question => ({
+                ...question,
+                section:
+                    inferQuestionSection(
+                        question,
+                        currentSet
+                    )
+            })
+        );
 
     await loadReviewStatesForQuestions(
         questions
@@ -8093,8 +8378,9 @@ function getQuestionBankPath(
     question
 ) {
     return (
-        question?.section ===
-            "Math"
+        isMathQuestionRecord(
+            question
+        )
             ? "/math-question-bank"
             : "/reading-question-bank"
     );
@@ -8768,7 +9054,7 @@ function renderCurrentQuestion() {
         }`;
 
     const isMathQuestion =
-        question.section === "Math";
+        isMathQuestionRecord(question);
 
     window.lexLogicaHighlighter
         ?.setQuestion(
@@ -8941,7 +9227,8 @@ function renderCurrentQuestion() {
     questionText.innerHTML =
         renderQuestionContent(
             question,
-            question.question_text
+            question.question_text,
+            true
         );
 
     const hasContext =
@@ -10152,7 +10439,7 @@ function renderChoices(
             const shouldExplain =
                 (
                     attemptedWrong &&
-                    question.section !== "Math"
+                    !isMathQuestionRecord(question)
                 ) ||
                 (
                     checked &&
@@ -12087,8 +12374,7 @@ function renderMockReviewQuestion(
         ?.setQuestion(
             "review:" +
             question.id,
-            question.section !==
-                "Math"
+            !isMathQuestionRecord(question)
         );
 
     const context =

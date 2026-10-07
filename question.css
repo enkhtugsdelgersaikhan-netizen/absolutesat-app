@@ -5402,3 +5402,27 @@ html:not(.lexlogica-dark-mode) .desmos-panel-card{
     border-color:#d5e0dd!important;
     box-shadow:0 10px 28px rgba(15,23,42,.11)!important;
 }
+
+
+/* ============================================================
+   SYSTEMIC MATH TYPOGRAPHY NORMALIZATION
+   ============================================================ */
+body.math-question-active .question-text,
+body.math-question-active .choice-text,
+body.math-question-active .math-question-context-content{
+    white-space:normal!important;
+    word-break:normal!important;
+    overflow-wrap:normal!important;
+}
+
+body.math-question-active .question-text mjx-container:not([display="true"]),
+body.math-question-active .choice-text mjx-container:not([display="true"]),
+body.math-question-active .math-question-context-content mjx-container:not([display="true"]){
+    white-space:nowrap!important;
+}
+
+body.math-question-active .question-text em,
+body.math-question-active .choice-text em,
+body.math-question-active .math-question-context-content em{
+    font-style:normal!important;
+}
