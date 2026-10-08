@@ -231,7 +231,7 @@
       "question": "Which choice most effectively uses data from the table to complete the example?",
       "choices": {
         "A": "Jupiter, whose equatorial radius is 71,492 kilometers, with Saturn, whose equatorial radius is 60,268 kilometers.",
-        "B": "Saturn, with a mass of 95.16 Earth masses and a density of 0.69 g/cm³, with Earth, whose mass is 1.00 Earth mass and whose density is 5.51 g/cm³.",
+        "B": "Saturn (95.16 Earth masses; density 0.69 g/cm³) with Earth (1.00 Earth mass; density 5.51 g/cm³).",
         "C": "Neptune and Jupiter, whose masses differ substantially even though Jupiter also has the greater equatorial radius.",
         "D": "Earth, whose density is 5.51 g/cm³, with Neptune, whose equatorial radius is 24,764 kilometers."
       },
@@ -7663,7 +7663,7 @@
       "choices": {
         "A": "merchants regularly moved their residences between the North Wharf and South Market after arriving in Telesara.",
         "B": "the basalt-tempered jars are older than the mica-rich jars because volcanic clays were exploited earlier.",
-        "C": "goods arriving from the northern highlands tended to enter or circulate through the North Wharf, while goods associated with the southern volcanic coast tended to enter or circulate through the South Market.",
+        "C": "northern-highland goods tended to pass through North Wharf, while goods from the southern volcanic coast passed through South Market.",
         "D": "taken together, basalt-tempered jars necessarily outnumber mica-rich jars throughout the entire city."
       },
       "correctAnswer": "C",
@@ -8358,7 +8358,7 @@
       "passage": "While researching a topic, a student has taken the following notes:\n\n- Viking 1 was a NASA mission launched in August 1975.\n- Its lander successfully reached the surface of Mars in July 1976.\n- Viking 1 carried experiments designed in part to investigate the Martian environment.\n- Mars Pathfinder was a NASA mission launched in December 1996.\n- It successfully landed on Mars in July 1997.\n- Mars Pathfinder deployed the small rover Sojourner after landing.",
       "question": "The student wants to emphasize a similarity between Viking 1 and Mars Pathfinder. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "choices": {
-        "A": "Although launched more than twenty years apart, Viking 1 and Mars Pathfinder were both NASA missions that successfully delivered spacecraft to the surface of Mars.",
+        "A": "Despite launches over twenty years apart, both Viking 1 and Mars Pathfinder successfully delivered NASA spacecraft to Mars’s surface.",
         "B": "Viking 1 reached Mars in 1976 and carried experiments designed to investigate the planet’s environment.",
         "C": "Mars Pathfinder differed from Viking 1 in that Pathfinder deployed the rover Sojourner after landing.",
         "D": "Viking 1 was launched in 1975, whereas Mars Pathfinder was launched in 1996."
@@ -8526,7 +8526,7 @@
       },
       "question": "Which choice most effectively uses data from the graph to support the researchers’ recommendation?",
       "choices": {
-        "A": "The 10% compost treatment produced biomass approximately equal to or slightly greater than the control at day 35 and only slightly lower than the control at day 56, whereas the 25% and 40% treatments produced substantially less biomass at both measurements.",
+        "A": "The 10% treatment matched or slightly exceeded the control’s biomass at day 35 and fell only slightly below it at day 56; the 25% and 40% treatments yielded substantially less at both measurements.",
         "B": "Biomass in the 10% compost treatment changed little between day 35 and day 56, whereas biomass in the 25% and 40% treatments increased sharply.",
         "C": "The 10% compost treatment never produced more biomass than the control treatment at either measurement.",
         "D": "By day 56, biomass in the 40% compost treatment had approached that of the control closely enough that high compost proportions would not compromise growth."
@@ -10242,7 +10242,7 @@
         "A": "In 2019, Karen Uhlenbeck became a recipient of the Abel Prize.",
         "B": "The Norwegian Academy of Science and Letters presents the Abel Prize for exceptionally influential achievements in mathematics.",
         "C": "Karen Uhlenbeck is one of the mathematicians who have received the internationally recognized Abel Prize.",
-        "D": "Karen Uhlenbeck received the Abel Prize for pioneering work in areas including geometric partial differential equations and gauge theory and for the broad influence of that work across mathematics and mathematical physics."
+        "D": "Karen Uhlenbeck received the Abel Prize for pioneering work on geometric partial differential equations and gauge theory that influenced mathematics and mathematical physics."
       },
       "correctAnswer": "D",
       "explanation": "The correct answer is D. The student wants to explain why Uhlenbeck received the prize, so the answer must identify the mathematical contributions for which she was honored. Choice D does exactly that by citing her pioneering work and its wider influence.\nA identifies when she received the prize but not why. B states the general purpose of the Abel Prize without specifying Uhlenbeck’s accomplishments. C merely establishes that she was a recipient. Only D directly connects the award to the particular work for which she was recognized.",
@@ -32609,7 +32609,7 @@
         "A": "Verran and Delsen collaborated on an engineering project in 2015.",
         "B": "Engineers work with other specialists to turn their ideas into physical models.",
         "C": "*Flowdeck* is one example of Verran’s work on an engineering project.",
-        "D": "As *Flowdeck*’s prototype modeler, Verran used meshes and instrumented components to turn Delsen’s design ideas into a testable model."
+        "D": "For *Flowdeck*, prototype modeler Verran turned Delsen’s ideas into a testable model using meshes and instrumented components."
       },
       "correctAnswer": "D",
       "explanation": "D identifies Verran’s role, the work associated with that role, and its contribution to the named project. A establishes collaboration but does not explain his function. C identifies a project without explaining his contribution. B describes collaboration generally without connecting Verran to *Flowdeck*’s creation.",
@@ -37626,7 +37626,7 @@
       "question": "The student wants to provide a specific example of a fixed-view documentary. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "choices": {
         "A": "Ada Renn examines fixed-view documentaries in *Watching Ordinary Time*.",
-        "B": "*One Tide*, first aired in 2014, is a fixed-view documentary consisting of a nine-hour recording of tidal movement beneath Nerra Pier.",
+        "B": "First aired in 2014, *One Tide* is a fixed-view documentary recording nine hours of tidal movement beneath Nerra Pier.",
         "C": "According to Renn, uninterrupted observation can offer “attention without spectacle.”",
         "D": "Fixed-view documentaries present ordinary events without interruption or changes in camera position."
       },
@@ -38281,7 +38281,7 @@
       "question": "The student wants to present the study and its findings. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "choices": {
         "A": "The disputed age of the Alder Clock prompted researchers to analyze its fittings in 2020.",
-        "B": "A 2020 analysis found an alloy in the Alder Clock’s fittings that was not used in clockmaking until the 1880s, indicating that the clock was made in the nineteenth century.",
+        "B": "A 2020 analysis found an alloy in the Alder Clock’s fittings that entered clockmaking only in the 1880s, dating the clock to the nineteenth century.",
         "C": "Knowing that some alloys entered clockmaking in the 1880s, researchers examined the clock’s metal fittings.",
         "D": "Once considered a sixteenth-century object, the Alder Clock became the subject of a study in 2020."
       },
