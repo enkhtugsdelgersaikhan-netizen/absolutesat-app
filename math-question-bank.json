@@ -2601,8 +2601,8 @@
       "groupId": "math-20261006-batch465-q001",
       "status": "staged",
       "section": "Math",
-      "domain": "Geometry & Trigonometry",
-      "skill": "Lines, Angles, and Triangles",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
       "difficulty": "Easy",
       "passage": "",
       "question": "A line r is parallel to the line 8x-2y=10 and passes through (0,-6). Which equation represents line r?",
@@ -2622,8 +2622,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q002",
@@ -2738,8 +2738,8 @@
       "groupId": "math-20261006-batch465-q005",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Ratio, Rates, Percentages",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
       "difficulty": "Medium",
       "passage": "",
       "question": "A workshop charges according to the equation\n\n\\[C=18+7.5h,\\]\nwhere C is the total cost, in dollars, of using a machine for h hours. What does 7.5 represent?",
@@ -2759,16 +2759,16 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q006",
       "groupId": "math-20261006-batch465-q006",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Statistics",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
       "difficulty": "Medium",
       "passage": "",
       "question": "The function\n\n\\[B(t)=260-14t\\]\ngives the amount of solution, in grams, remaining in a container t minutes after a process begins. It is known that B(9)=134.\nWhich statement best interprets this equation?",
@@ -2788,8 +2788,8 @@
         "C": "B(t) represents the amount remaining after t minutes. Therefore, B(9)=134 means that after 9 minutes,\n\\[ \\boxed{134\\text{ grams remain}}. \\]",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Statistics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q007",
@@ -2876,8 +2876,8 @@
       "groupId": "math-20261006-batch465-q010",
       "status": "staged",
       "section": "Math",
-      "domain": "Geometry & Trigonometry",
-      "skill": "Lines, Angles, and Triangles",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
       "difficulty": "Easy",
       "passage": "",
       "question": "Line r passes through (3,-5) and (3,11). Line s is perpendicular to line r. What is the slope of line s?",
@@ -2897,8 +2897,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q011",
@@ -3007,8 +3007,8 @@
       "groupId": "math-20261006-batch465-q015",
       "status": "staged",
       "section": "Math",
-      "domain": "Geometry & Trigonometry",
-      "skill": "Area and Volume",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
       "difficulty": "Easy",
       "passage": "",
       "question": "The function\n\n\\[V(t)=560-24t\\]\ngives the estimated volume of water, in liters, in a tank t hours after a valve is opened at 6:00 a.m.\nWhich statement best interprets 560?",
@@ -3028,8 +3028,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q016",
@@ -3066,7 +3066,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Linear Equations",
+      "skill": "Linear Functions",
       "difficulty": "Medium",
       "passage": "",
       "question": "The function g is defined by\n\n\\[g(x)=(a-2)x+11,\\]\nwhere a is a constant. If g(4)=39, what is the value of a?",
@@ -3086,8 +3086,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q018",
@@ -3095,7 +3095,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Other Algebra",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Easy",
       "passage": "",
       "question": "A maker space charges a $18 monthly membership fee, $14 for each laser-cutting session, and $9 for each 3D-printing session. A member spends exactly $120 in one month.\nIf x is the number of laser-cutting sessions and y is the number of 3D-printing sessions, which equation represents the relationship between x and y?",
@@ -3115,8 +3115,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Other Algebra",
-      "classificationVersion": "2026-10-07-v1"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q019",
@@ -3255,7 +3255,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Linear Equations",
+      "skill": "Linear Functions",
       "difficulty": "Hard",
       "passage": "",
       "question": "A surveying instrument costs $540 to rent for the first 3 days and $125 for each additional day. If \\(n\\) is the total number of rental days, where \\(n\\) is an integer and \\(3\\le n\\le12\\), which equation gives the total rental cost \\(C\\)?",
@@ -3275,8 +3275,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q025",
@@ -3409,7 +3409,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Linear Equations",
+      "skill": "Linear Inequalities",
       "difficulty": "Medium",
       "passage": "",
       "question": "Which of the following ordered pairs satisfy\n\n\\[3(x-2)-2(y+1)\\le4?\\]\n\nI. \\((0,-2)\\)\n\nII. \\((4,1)\\)\n\nIII. \\((3,-2)\\)",
@@ -3429,8 +3429,8 @@
         "C": "For I:\n\n\\[3(-2)-2(-1)=-44.\\]\nFor II:\n\n\\[3(2)-2(2)=24.\\]\nFor III:\n\n\\[3(1)-2(-1)=5,\\]\nand 54 is false. Therefore,\n\\[ \\boxed{\\text{I and II only}}. \\]",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q031",
@@ -3467,8 +3467,8 @@
       "groupId": "math-20261006-batch465-q032",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Ratio, Rates, Percentages",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
       "difficulty": "Hard",
       "passage": "",
       "question": "A laboratory defines a performance index R by\n\n\\[R=0.8p+12,\\]\nwhere p is a machine's production rate. A machine is classified as high-output only if R>76.\nWhich interval consists entirely of production rates for high-output machines?",
@@ -3488,16 +3488,16 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q033",
       "groupId": "math-20261006-batch465-q033",
       "status": "staged",
       "section": "Math",
-      "domain": "Advanced Math",
-      "skill": "Nonlinear Equations/Functions",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
       "difficulty": "Medium",
       "passage": "",
       "question": "A line crosses the y-axis at (0,-6). Its x-intercept has a positive x-coordinate equal to twice the absolute value of its y-intercept.\nWhat is the slope of the line?",
@@ -3517,8 +3517,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Nonlinear Equations/Functions",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q034",
@@ -3576,8 +3576,8 @@
       "groupId": "math-20261006-batch465-q036",
       "status": "staged",
       "section": "Math",
-      "domain": "Advanced Math",
-      "skill": "Equivalent Expressions",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
       "difficulty": "Easy",
       "passage": "",
       "question": "If\n\n\\[2(4t-9)-3t=5+2(t-4),\\]\nwhat is the value of 5t?",
@@ -3590,8 +3590,8 @@
       "acceptedAnswers": [
         "25"
       ],
-      "subtopic": "Equivalent Expressions",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q037",
@@ -3628,7 +3628,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Systems of Linear Equations",
+      "skill": "Linear Inequalities",
       "difficulty": "Hard",
       "passage": "",
       "question": "A factory will assemble at most 120 sensors in one shift. At least two-thirds of the sensors assembled must be standard models. If \\(s\\) is the number of standard sensors and \\(p\\) is the number of premium sensors, which system of inequalities represents these restrictions?",
@@ -3648,8 +3648,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Systems of Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q039",
@@ -3954,7 +3954,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Other Algebra",
+      "skill": "Linear Functions",
       "difficulty": "Medium",
       "passage": "",
       "question": "The table shows three values of \\(x\\) and their corresponding values of \\(y\\). The relationship is linear. Which equation represents this relationship?",
@@ -3995,16 +3995,16 @@
           ]
         ]
       },
-      "subtopic": "Other Algebra",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q045",
       "groupId": "math-20261006-batch465-q045",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Ratio, Rates, Percentages",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
       "difficulty": "Medium",
       "passage": "",
       "question": "The table shows four points on a line in the xy-plane. Which equation represents the line?",
@@ -4049,8 +4049,8 @@
           ]
         ]
       },
-      "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q046",
@@ -4079,8 +4079,8 @@
       "groupId": "math-20261006-batch465-q047",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Ratio, Rates, Percentages",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
       "difficulty": "Hard",
       "passage": "",
       "question": "A drone's battery percentage C(t) is modeled by\n\n\\[C(t)=72-3.2(t-5),\\]\nwhere t is the number of 30-minute intervals after 8:15 a.m.\nWhat does the constant 72 represent?",
@@ -4100,8 +4100,8 @@
         "C": "The constant 72 is the function value when\n\n\\[t-5=0,\\]\nso t=5. Five 30-minute intervals equal 150 minutes, or 2 hours 30 minutes. Starting at 8:15 a.m. gives 10:45 a.m.\nThus, 72 is the battery percentage at \\(\\boxed{10{:}45\\text{ a.m.}}\\).",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q048",
@@ -4138,8 +4138,8 @@
       "groupId": "math-20261006-batch465-q049",
       "status": "staged",
       "section": "Math",
-      "domain": "Geometry & Trigonometry",
-      "skill": "Lines, Angles, and Triangles",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
       "difficulty": "Medium",
       "passage": "",
       "question": "Line \\(\\ell\\) passes through (2,-5) and is parallel to the line\n\n\\[3x-2y=14.\\]\nIf \\(\\ell\\) also passes through (8,k), what is k?",
@@ -4152,8 +4152,8 @@
       "acceptedAnswers": [
         "4"
       ],
-      "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q050",
@@ -4294,8 +4294,8 @@
       "groupId": "math-20261006-batch465-q054",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Ratio, Rates, Percentages",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
       "difficulty": "Hard",
       "passage": "",
       "question": "At an altitude of 600 meters, the boiling point of a certain liquid is approximately \\(98^\\circ\\text{C}\\). For every additional 250 meters of altitude, its boiling point decreases by \\(0.8^\\circ\\text{C}\\).\nWhich equation gives the boiling point B, in degrees Celsius, at an altitude of x meters?",
@@ -4315,8 +4315,8 @@
         "C": "The reference value 98 occurs at \\(x=600\\), not \\(x=0\\). The rate is\n\\[\n-\\frac{0.8}{250}\n\\]\ndegree Celsius per meter. Therefore,\n\\[\n\\boxed{B=98-\\frac{0.8}{250}(x-600)}.\n\\]",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q055",
@@ -4382,7 +4382,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Linear Equations",
+      "skill": "Systems of Linear Equations",
       "difficulty": "Medium",
       "passage": "",
       "question": "If (x,y) is the solution to\n\n\\[9x+2y=17\\]\n\n\\[5x-5y=2,\\]\nwhat is the value of 4x+7y?",
@@ -4402,8 +4402,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Systems of Linear Equations",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q058",
@@ -4468,8 +4468,8 @@
       "groupId": "math-20261006-batch465-q059",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Ratio, Rates, Percentages",
+      "domain": "Algebra",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Medium",
       "passage": "",
       "question": "A scientific shipment has total mass T kilograms. The instruments have mass I kilograms, the shipping crate has mass 18 kilograms, and the cooling materials have mass 7 kilograms.\nWhich equation represents the relationship between T and I?",
@@ -4489,16 +4489,16 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q060",
       "groupId": "math-20261006-batch465-q060",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Ratio, Rates, Percentages",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
       "difficulty": "Hard",
       "passage": "",
       "question": "A battery contains 12.5 kilowatt-hours of energy before charging begins. During each of 20 equal charging intervals, the battery gains more than 0.6 kilowatt-hour but no more than 0.9 kilowatt-hour.\nWhich inequality describes all possible amounts E, in kilowatt-hours, in the battery after the 20 intervals?",
@@ -4518,16 +4518,16 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q061",
       "groupId": "math-20261006-batch465-q061",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Statistics",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
       "difficulty": "Easy",
       "passage": "",
       "question": "For \\[f(x)=\\frac75-\\frac34(x-2),\\] what is \\(f(-2)-f(6)\\)?",
@@ -4547,8 +4547,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Statistics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q062",
@@ -4584,8 +4584,8 @@
       "groupId": "math-20261006-batch465-q064",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Statistics",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
       "difficulty": "Hard",
       "passage": "",
       "question": "A laboratory model uses \\[S=110-40r,\\] where \\(0.35\\le r\\le0.70\\). Which inequality gives all possible values of \\(S\\)?",
@@ -4605,8 +4605,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Statistics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q065",
@@ -4636,7 +4636,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Linear Equations",
+      "skill": "Linear Functions",
       "difficulty": "Hard",
       "passage": "",
       "question": "The plotted points represent combinations of bronze parts and silver parts that cost exactly \\(\\$66\\).\nThe price of each bronze part is constant, and the price of each silver part is constant. What is the price, in dollars, of one bronze part?",
@@ -4693,8 +4693,8 @@
           }
         ]
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q067",
@@ -4753,7 +4753,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Linear Equations",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Hard",
       "passage": "",
       "question": "A cargo vehicle carries x small containers weighing 3.5 kilograms each and y large containers weighing 8 kilograms each. The cargo satisfies\n\n\\[3.5x+8y=64.\\]\nWhat is the best interpretation of 64?",
@@ -4773,8 +4773,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q070",
@@ -4911,8 +4911,8 @@
       "groupId": "math-20261006-batch465-q074",
       "status": "staged",
       "section": "Math",
-      "domain": "Geometry & Trigonometry",
-      "skill": "Area and Volume",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
       "difficulty": "Medium",
       "passage": "",
       "question": "A reservoir contained 82 million cubic meters of water 4 years after 2010 and 61 million cubic meters 11 years after 2010. Assume the amount changed at a constant rate.\nWhich function V(t) models the volume, in millions of cubic meters, t years after 2010?",
@@ -4932,8 +4932,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q075",
@@ -5286,7 +5286,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Linear Equations",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Hard",
       "passage": "",
       "question": "A tank contains 64 liters of liquid distributed among x small containers that hold 3.5 liters each and y large containers that hold 8 liters each. The situation is modeled by\n\n\\[3.5x+8y=64.\\]\nWhat does 8y represent?",
@@ -5306,8 +5306,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q083",
@@ -5315,7 +5315,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Linear Equations",
+      "skill": "Linear Functions",
       "difficulty": "Hard",
       "passage": "",
       "question": "A manufacturer's total cost, in dollars, for producing n units is\n\n\\[C(n)=mn+620,\\]\nwhere m is constant. The cost to produce 180 units is \\(\\$1{,}340\\).\nWhat is the cost to produce 750 units?",
@@ -5328,8 +5328,8 @@
       "acceptedAnswers": [
         "3620"
       ],
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q084",
@@ -5337,7 +5337,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Linear Equations",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Medium",
       "passage": "",
       "question": "Material A is \\(35\\%\\) active ingredient by mass, and material B is \\(62\\%\\) active ingredient by mass. A mixture containing x kilograms of material A and y kilograms of material B contains 186 kilograms of active ingredient.\nWhich equation models this relationship?",
@@ -5357,16 +5357,16 @@
         "C": "Material A contributes 0.35x kilograms of active ingredient, and material B contributes 0.62y. Their total is 186, so\n\\[ \\boxed{0.35x+0.62y=186}. \\]",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q085",
       "groupId": "math-20261006-batch465-q085",
       "status": "staged",
       "section": "Math",
-      "domain": "Geometry & Trigonometry",
-      "skill": "Area and Volume",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
       "difficulty": "Medium",
       "passage": "",
       "question": "One liter of protective coating covers 240 square meters for one coat. A set of flat panels has total one-sided area A square meters. Both sides of every panel will receive 3 coats.\nWhich equation gives the total amount P, in liters, of coating required?",
@@ -5386,8 +5386,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "Both sides give area 2A. Three coats require coverage of\n\n\\[3(2A)=6A.\\]\nAt 240 square meters per liter,\n\\[ P=\\frac{6A}{240}=\\boxed{\\frac{A}{40}}. \\]"
       },
-      "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q086",
@@ -5815,8 +5815,8 @@
       "groupId": "math-20261006-batch465-q097",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Ratio, Rates, Percentages",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
       "difficulty": "Hard",
       "passage": "",
       "question": "A storage tank is being drained at a constant rate. One hour after draining begins, 28,400 liters remain. Four hours after draining begins, 23,600 liters remain.\nAt this rate, after how many total hours of draining will 12,400 liters remain?",
@@ -5836,8 +5836,8 @@
         "C": "From hour 1 to hour 4, the amount decreases by\n\n\\[28,400-23,600=4,800\\]\nliters over 3 hours, or 1,600 liters per hour. One hour before 28,400 liters remained, the tank had\n\n\\[28,400+1,600=30,000\\]\nliters. Solve\n\n\\[30,000-1,600t=12,400,\\]\n\\[which gives t=11.\\]",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q098",
@@ -6050,8 +6050,8 @@
       "groupId": "math-20261006-batch465-q104",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Ratio, Rates, Percentages",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
       "difficulty": "Medium",
       "passage": "",
       "question": "According to a calibration model, a sensor's corrected reading c is given by\n\n\\[c=1.7+2.4h,\\]\nwhere h is the sensor's uncorrected reading. If the corrected reading is 13.7, what is the value of h?",
@@ -6064,8 +6064,8 @@
       "acceptedAnswers": [
         "5"
       ],
-      "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q105",
@@ -6176,8 +6176,8 @@
       "groupId": "math-20261006-batch465-q107",
       "status": "staged",
       "section": "Math",
-      "domain": "Geometry & Trigonometry",
-      "skill": "Lines, Angles, and Triangles",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
       "difficulty": "Medium",
       "passage": "",
       "question": "Line q is defined by\n\n\\[4(2x-y)=3x+5y-7.\\]\nLine r is perpendicular to line q in the xy-plane. What is the slope of line r?",
@@ -6190,8 +6190,8 @@
       "acceptedAnswers": [
         "-9/5"
       ],
-      "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q108",
@@ -6199,7 +6199,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Linear Equations",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Medium",
       "passage": "",
       "question": "The graph models combinations of 3-meter fence panels and 2-meter fence panels that make a 36-meter fence. The x-coordinate is the number of 3-meter panels, and the y-coordinate is the number of 2-meter panels. Which statement best interprets the marked point \\(P=(6,9)\\)?",
@@ -6249,8 +6249,8 @@
         "yLabel": "2-meter panels",
         "labelPoints": true
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q109",
@@ -6258,7 +6258,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Linear Equations",
+      "skill": "Linear Inequalities",
       "difficulty": "Easy",
       "passage": "",
       "question": "A student can bicycle to a testing center in 22 minutes. Taking a shuttle requires a 4-minute walk to the stop, a wait of w minutes, and a 9-minute ride.\nFor which values of w is bicycling faster than taking the shuttle?",
@@ -6278,8 +6278,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q110",
@@ -6287,7 +6287,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Linear Equations",
+      "skill": "Linear Functions",
       "difficulty": "Easy",
       "passage": "",
       "question": "The function \\(f\\) is defined by \\[f(x)=\\frac{3x+5}{4}.\\] What is the value of \\(f(2f(1))\\)?",
@@ -6307,8 +6307,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q111",
@@ -6424,7 +6424,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Linear Equations",
+      "skill": "Linear Functions",
       "difficulty": "Medium",
       "passage": "",
       "question": "A machine has R(t) components remaining to be inspected t minutes after inspection begins, where\n\n\\[R(t)=180-12t.\\]\nWhich statement best interprets the t-intercept of the graph of R?",
@@ -6444,8 +6444,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q116",
@@ -6453,7 +6453,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Linear Inequalities",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Easy",
       "passage": "",
       "question": "Three times the number y is 14 less than twice the number x.\nWhich equation represents the relationship between x and y?",
@@ -6473,16 +6473,16 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Linear Inequalities",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q117",
       "groupId": "math-20261006-batch465-q117",
       "status": "staged",
       "section": "Math",
-      "domain": "Geometry & Trigonometry",
-      "skill": "Area and Volume",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
       "difficulty": "Hard",
       "passage": "",
       "question": "The equation\n\n\\[0.14x+0.38y=0.29(x+y)\\]\nmodels mixing x gallons of one solution with y gallons of another solution. If x=54, what is the total volume, in gallons, of the mixture?",
@@ -6495,8 +6495,8 @@
       "acceptedAnswers": [
         "144"
       ],
-      "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q118",
@@ -6504,7 +6504,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Linear Equations",
+      "skill": "Linear Functions",
       "difficulty": "Hard",
       "passage": "",
       "question": "A company reduces the trade-in payment for a computer by $140 for each full year since the computer was released. A computer released 2 years ago currently has a trade-in payment of $620.\nWhich equation gives the payment p, in dollars, for a computer released t years ago?",
@@ -6524,16 +6524,16 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q119",
       "groupId": "math-20261006-batch465-q119",
       "status": "staged",
       "section": "Math",
-      "domain": "Advanced Math",
-      "skill": "Polynomial Functions",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
       "difficulty": "Hard",
       "passage": "",
       "question": "In the equation\n\n\\[r(2x-5)+3=8x-17,\\]\nr is a positive integer. If the equation has exactly one solution for x, which of the following CANNOT be the value of r?",
@@ -6553,16 +6553,16 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Polynomial Functions",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q120",
       "groupId": "math-20261006-batch465-q120",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Statistics",
+      "domain": "Algebra",
+      "skill": "Systems of Linear Equations",
       "difficulty": "Hard",
       "passage": "",
       "question": "At how many points do the graphs of\n\n\\[4(y-2)=6x+1\\]\nand\n\n\\[3y-5x=7\\]\nintersect in the xy-plane?",
@@ -6583,8 +6583,8 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "desmosMethod": "Enter\n\n\\[4(y-2)=6x+1\\]\nand\n\n\\[3y-5x=7.\\]\nThe graph shows exactly one intersection point.",
-      "subtopic": "Statistics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Systems of Linear Equations",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q121",
@@ -6620,8 +6620,8 @@
       "groupId": "math-20261006-batch465-q122",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Statistics",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
       "difficulty": "Hard",
       "passage": "",
       "question": "A laboratory has x samples in one collection and y samples in another. In the first collection, 20% of the samples are unusable. In the second collection, 65% of the samples are usable.\nTogether, the two collections contain at least 450 usable samples.\nWhich inequality represents this situation?",
@@ -6641,8 +6641,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Statistics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q123",
@@ -6650,7 +6650,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Linear Equations",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Easy",
       "passage": "",
       "question": "Which table gives three values of x and their corresponding values of y for the equation\n\n\\[3x+2y=18?\\]",
@@ -6752,8 +6752,8 @@
           ]
         }
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q124",
@@ -6761,7 +6761,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Linear Equations",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Hard",
       "passage": "",
       "question": "A supplier's invoice is modeled by\n\n\\[36x+27y=702,\\]\nwhere x is the number of packs of filters purchased and each pack contains exactly 3 filters, while y is the number of individual valves purchased. The coefficients represent the cost, in dollars, of one pack of filters and one valve, respectively.\nHow many dollars more does one valve cost than one filter?",
@@ -6774,8 +6774,8 @@
       "acceptedAnswers": [
         "15"
       ],
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q125",
@@ -6812,7 +6812,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Linear Equations",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Easy",
       "passage": "",
       "question": "The equation\n\n\\[5a+3b=47\\]\nrelates a and b. If a=4, what is the value of 2b-1?",
@@ -6832,8 +6832,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q127",
@@ -6870,7 +6870,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Linear Equations",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Medium",
       "passage": "",
       "question": "A software company calculates monthly profit P by subtracting its fixed monthly costs from its sales revenue. For a certain month,\n\n\\[P+6,800=24n,\\]\nwhere n is the number of licenses sold.\nWhich statement best interprets 24n in this context?",
@@ -6890,8 +6890,8 @@
         "C": "Since\n\nprofit=revenue-fixedcost,\nadding the fixed cost to profit gives revenue. Thus\n\n\\[P+6,800=24n\\]\nshows that 24n is the monthly sales revenue.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q129",
@@ -6927,8 +6927,8 @@
       "groupId": "math-20261006-batch465-q130",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Statistics",
+      "domain": "Algebra",
+      "skill": "Systems of Linear Equations",
       "difficulty": "Hard",
       "passage": "",
       "question": "One equation in a system is\n\n\\[6(x+2m)=3(y-4m),\\]\nwhere m is a positive constant. The system has no solution.\nWhich equation could be the second equation?",
@@ -6948,8 +6948,8 @@
         "C": "Simplify the given equation:\n\n\\[6x+12m=3y-12m\\]\n\n\\[6x-3y=-24m\\]\n\n\\[2x-y=-8m.\\]\nFor no solution, the second line must be parallel but distinct. Choice C has the same x- and y-coefficients but a different constant because m>0.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Statistics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Systems of Linear Equations",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q131",
@@ -6986,7 +6986,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Linear Equations",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Hard",
       "passage": "",
       "question": "A technician spends 3 minutes on each type A test and 2 minutes on each type B test. In one work session, the technician completes a type A tests and b type B tests, where\n\n\\[3a+2b=180.\\]\nWhat does the number 180 represent in this context?",
@@ -7006,8 +7006,8 @@
         "C": "The term 3a is the time spent on type A tests, and 2b is the time spent on type B tests. Their sum is therefore the total time, so 180 represents 180 total minutes.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q133",
@@ -7072,8 +7072,8 @@
       "groupId": "math-20261006-batch465-q135",
       "status": "staged",
       "section": "Math",
-      "domain": "Geometry & Trigonometry",
-      "skill": "Circles",
+      "domain": "Algebra",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Easy",
       "passage": "",
       "question": "The equation\n\n\\[4(2b+g)=1,040\\]\nrelates the numbers b and g. If b=73, what is the value of g?",
@@ -7086,16 +7086,16 @@
       "acceptedAnswers": [
         "114"
       ],
-      "subtopic": "Circles",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q137",
       "groupId": "math-20261006-batch465-q137",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Statistics",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
       "difficulty": "Hard",
       "passage": "",
       "question": "Two positive integers have a product of 492. The larger integer is 5 greater than three times the smaller integer. What is the smaller integer?",
@@ -7115,8 +7115,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Statistics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q138",
@@ -7174,8 +7174,8 @@
       "groupId": "math-20261006-batch465-q140",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Statistics",
+      "domain": "Advanced Math",
+      "skill": "Rational/Radical Equations",
       "difficulty": "Hard",
       "passage": "",
       "question": "In the equation \\[\\frac{5}{12p^2}+\\frac{3q}{2r}=\\frac{7}{8p^2},\\] \\(p,q,r\\) are positive numbers. Which expression is equivalent to \\(p\\)?",
@@ -7195,8 +7195,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Statistics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Rational/Radical Equations",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q141",
@@ -7261,8 +7261,8 @@
       "groupId": "math-20261006-batch465-q144",
       "status": "staged",
       "section": "Math",
-      "domain": "Algebra",
-      "skill": "Linear Equations",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
       "difficulty": "Hard",
       "passage": "",
       "question": "How many distinct real solutions does the equation\n\n\\[2(x-3)^{2}+4=(x-3)^{2}-1\\]\nhave?",
@@ -7282,8 +7282,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "Subtract (x-3)^{2} and 4 from both sides:\n\n\\[(x-3)^{2}=-5.\\]\nA square of a real number cannot be negative. Therefore, the equation has\n\\[ \\boxed{0} \\]\nreal solutions."
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q145",
@@ -7377,8 +7377,8 @@
       "groupId": "math-20261006-batch465-q149",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Statistics",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
       "difficulty": "Medium",
       "passage": "",
       "question": "The function is defined by\n\n\\[f(x)=75(0.8)x/2.\\]\nFor any positive integer n, f(n+6) is \\(p\\%\\) less than f(n). What is the value of p?",
@@ -7398,8 +7398,8 @@
         "C": "Compute the ratio:\n\n\\[f(n+6)f(n)=(0.8)(n+6)/2-n/2=(0.8)^{3}=0.512.\\]\n\\[So f(n+6) is \\(51.2\\%\\) of f(n), meaning it is\\]\n\\[ 100-51.2=48.8\\% \\]\nless.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Statistics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q150",
@@ -7436,7 +7436,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Geometry & Trigonometry",
-      "skill": "Lines, Angles, and Triangles",
+      "skill": "Area and Volume",
       "difficulty": "Medium",
       "passage": "",
       "question": "A triangle has an area of 161 square centimeters. Its base is 5 centimeters less than twice its height. What is the height, in centimeters, of the triangle?",
@@ -7456,16 +7456,16 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Area and Volume",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q152",
       "groupId": "math-20261006-batch465-q152",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Statistics",
+      "domain": "Advanced Math",
+      "skill": "Nonlinear Equations/Functions",
       "difficulty": "Hard",
       "passage": "",
       "question": "The two solutions to the system\n\\[y=x^2-4x+1\\]\nand\n\\[y=2x-5\\]\nare \\((x_1,y_1)\\) and \\((x_2,y_2)\\). What is \\(y_1+y_2\\)?",
@@ -7485,8 +7485,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Statistics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Nonlinear Equations/Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q153",
@@ -7522,8 +7522,8 @@
       "groupId": "math-20261006-batch465-q154",
       "status": "staged",
       "section": "Math",
-      "domain": "Algebra",
-      "skill": "Linear Equations",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
       "difficulty": "Hard",
       "passage": "",
       "question": "The function \\[h(t)=-16(t-1)^2+c\\] models an object's height, in feet, \\(t\\) seconds after it is released. At \\(t=0\\), the object is 9 feet above the floor. How many seconds after being released does the model predict the object first reaches the floor?",
@@ -7537,8 +7537,8 @@
         "9/4"
       ],
       "desmosMethod": "After finding c=25, enter\n\n\\[y=-16(x-1)^{2}+25\\]\nand\n\n\\[y=0.\\]\nThe positive x-coordinate of an intersection is 2.25=94.",
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q155",
@@ -7662,7 +7662,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Other Algebra",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Medium",
       "passage": "",
       "question": "The equation\n\n\\[7p-3q=2p+5r\\]\nrelates the variables p, q, and r. Which equation correctly expresses p in terms of q and r?",
@@ -7682,8 +7682,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Other Algebra",
-      "classificationVersion": "2026-10-07-v1"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q160",
@@ -7750,7 +7750,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Advanced Math",
-      "skill": "Equivalent Expressions",
+      "skill": "Polynomial Functions",
       "difficulty": "Hard",
       "passage": "",
       "question": "Selected values of a polynomial \\(p\\) are shown. The polynomial \\(q\\) is defined by \\(q(x)=p(x-3)\\). Which expression must be a factor of \\(q(x)\\)?",
@@ -7799,16 +7799,16 @@
           ]
         ]
       },
-      "subtopic": "Equivalent Expressions",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Polynomial Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q163",
       "groupId": "math-20261006-batch465-q163",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Ratio, Rates, Percentages",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
       "difficulty": "Medium",
       "passage": "",
       "question": "A function C models the concentration of a dissolved mineral, in milligrams per liter, at a depth of d meters below the surface of a lake.\nThe equation\n\n\\[C(18)=C(0)-7.6\\]\nis true.\nWhich statement best interprets this equation?",
@@ -7828,8 +7828,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q164",
@@ -7945,8 +7945,8 @@
       "groupId": "math-20261006-batch465-q165",
       "status": "staged",
       "section": "Math",
-      "domain": "Advanced Math",
-      "skill": "Equivalent Expressions",
+      "domain": "Algebra",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Hard",
       "passage": "",
       "question": "The speed v of a wave is modeled by\n\n\\[v=320+0.8(2T-5),\\]\nwhere T is temperature. Which expression gives T in terms of v?",
@@ -7966,8 +7966,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Equivalent Expressions",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q166",
@@ -8083,8 +8083,8 @@
       "groupId": "math-20261006-batch465-q172",
       "status": "staged",
       "section": "Math",
-      "domain": "Geometry & Trigonometry",
-      "skill": "Lines, Angles, and Triangles",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
       "difficulty": "Hard",
       "passage": "",
       "question": "The airflow through a ventilation system is modeled by \\[A(\\theta)=-0.18(\\theta-31)^2+940,\\] where \\(A(\\theta)\\) is airflow and \\(\\theta\\) is the fan angle, in degrees. For mechanical reasons, the fan can only be set to angles satisfying \\(18\\le\\theta\\le28\\). Which angle gives the greatest airflow?",
@@ -8104,8 +8104,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q173",
@@ -8532,8 +8532,8 @@
       "groupId": "math-20261006-batch465-q187",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Statistics",
+      "domain": "Algebra",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Hard",
       "passage": "",
       "question": "A transportation company uses 8-seat shuttle carts and 13-seat shuttle carts. If s is the number of 8-seat carts and l is the number of 13-seat carts, the equation\n\n\\[8s+13l=503\\]\nrepresents a particular arrangement of carts.\nThe ordered pair (19,27) is a solution to the equation. What is the best interpretation of this solution?",
@@ -8553,8 +8553,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Statistics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q188",
@@ -8721,8 +8721,8 @@
       "groupId": "math-20261006-batch465-q194",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Ratio, Rates, Percentages",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
       "difficulty": "Medium",
       "passage": "",
       "question": "The graph shows the percent charge \\(y\\) of a battery \\(x\\) hours after charging began. The relationship is linear. At what rate does the battery's charge increase for each 30 minutes?",
@@ -8768,8 +8768,8 @@
         "yLabel": "Charge (%)",
         "labelPoints": true
       },
-      "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q195",
@@ -8882,8 +8882,8 @@
       "groupId": "math-20261006-batch465-q198",
       "status": "staged",
       "section": "Math",
-      "domain": "Geometry & Trigonometry",
-      "skill": "Lines, Angles, and Triangles",
+      "domain": "Algebra",
+      "skill": "Systems of Linear Equations",
       "difficulty": "Hard",
       "passage": "",
       "question": "Consider the system\n\n\\[4x-6y=10\\]\n\n\\[3(k-1)x+12=9y+2x,\\]\nwhere k is a constant. If the system has no solution, what is the value of k?",
@@ -8896,8 +8896,8 @@
       "acceptedAnswers": [
         "11/3"
       ],
-      "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Systems of Linear Equations",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q199",
@@ -8933,8 +8933,8 @@
       "groupId": "math-20261006-batch465-q200",
       "status": "staged",
       "section": "Math",
-      "domain": "Geometry & Trigonometry",
-      "skill": "Lines, Angles, and Triangles",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
       "difficulty": "Medium",
       "passage": "",
       "question": "Line k is parallel to the line\n\n\\[4x+5y=20\\]\nand has y-intercept (0,12). What is the x-coordinate of the x-intercept of line k?",
@@ -8947,8 +8947,8 @@
       "acceptedAnswers": [
         "15"
       ],
-      "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q201",
@@ -9319,8 +9319,8 @@
       "groupId": "math-20261006-batch465-q213",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Statistics",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
       "difficulty": "Medium",
       "passage": "",
       "question": "The graph shows the monthly cost \\(y\\), in dollars, for a device-management service when \\(x\\) devices are enrolled. What is the best interpretation of the slope of the graph?",
@@ -9369,8 +9369,8 @@
         "xLabel": "Devices",
         "yLabel": "Monthly cost ($)"
       },
-      "subtopic": "Statistics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q214",
@@ -9428,8 +9428,8 @@
       "groupId": "math-20261006-batch465-q216",
       "status": "staged",
       "section": "Math",
-      "domain": "Geometry & Trigonometry",
-      "skill": "Lines, Angles, and Triangles",
+      "domain": "Algebra",
+      "skill": "Systems of Linear Equations",
       "difficulty": "Hard",
       "passage": "",
       "question": "One equation in a system is\n\n\\[6x-4y=9.\\]\nWhich equation could be the second equation if the system has exactly one solution?",
@@ -9450,8 +9450,8 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "desmosMethod": "Enter\n\\[6x - 4y = 9\\]\nand then enter each choice one at a time. Only\n\\[5x - 4y = 7\\]\nproduces a second line with a different slope and therefore exactly one intersection.",
-      "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Systems of Linear Equations",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q217",
@@ -9613,8 +9613,8 @@
       "groupId": "math-20261006-batch465-q221",
       "status": "staged",
       "section": "Math",
-      "domain": "Algebra",
-      "skill": "Linear Equations",
+      "domain": "Problem-Solving & Data Analysis",
+      "skill": "Ratio, Rates, Percentages",
       "difficulty": "Medium",
       "passage": "",
       "question": "A warehouse received 468 packages. Exactly \\(\\frac5{12}\\) of the packages were marked for express delivery, and every remaining package was marked for standard delivery. How many packages were marked for standard delivery?",
@@ -9634,8 +9634,8 @@
         "C": "The express packages total\n\n\\[468512=195.\\]\nTherefore, the number of standard packages is\n\n\\[468-195=273.\\]",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Ratio, Rates, Percentages",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q222",
@@ -9779,8 +9779,8 @@
       "groupId": "math-20261006-batch465-q226",
       "status": "staged",
       "section": "Math",
-      "domain": "Algebra",
-      "skill": "Linear Equations",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
       "difficulty": "Hard",
       "passage": "",
       "question": "The equation\n\n\\[(2x-11)^{2}=(x-2)^{2}\\]\nhas two distinct real solutions. What is the sum of the solutions?",
@@ -9793,8 +9793,8 @@
       "acceptedAnswers": [
         "40/3"
       ],
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q227",
@@ -10086,7 +10086,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Other Algebra",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Easy",
       "passage": "",
       "question": "The quantities \\(v\\) and \\(p\\) satisfy \\[v=\\frac53(p-4).\\] Which equation expresses \\(p\\) in terms of \\(v\\)?",
@@ -10106,8 +10106,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Other Algebra",
-      "classificationVersion": "2026-10-07-v1"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q239",
@@ -10144,7 +10144,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Advanced Math",
-      "skill": "Quadratics",
+      "skill": "Equivalent Expressions",
       "difficulty": "Medium",
       "passage": "",
       "question": "If\n\\[u^2=p+q\\]\nand\n\\[v^2=p-r,\\]\nwhich expression is equal to\n\\[(2u^2-v^2-p)^2?\\]",
@@ -10164,8 +10164,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Equivalent Expressions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q241",
@@ -10223,8 +10223,8 @@
       "groupId": "math-20261006-batch465-q243",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Statistics",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
       "difficulty": "Hard",
       "passage": "",
       "question": "At t=6 hours, a sample has mass 240 milligrams. Its mass then follows an exponential model in which it decreases by \\(18\\%\\) every 3 hours. Which equation could model the mass M, in milligrams, t hours after observation began?",
@@ -10244,8 +10244,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "An \\(18\\%\\) decrease means each 3-hour period multiplies the mass by\n\n\\[1-0.18=0.82.\\]\nSince 240 mg is the amount specifically at t=6, the number of 3-hour periods after that time is\n\n\\[t-63.\\]\nTherefore,\n\n\\[M=240(0.82)(t-6)/3.\\]"
       },
-      "subtopic": "Statistics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q244",
@@ -10681,7 +10681,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Other Algebra",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Hard",
       "passage": "",
       "question": "The equation\n\n\\[7a-3b=2c\\]\nrelates a, b, and c. Which equation expresses b in terms of a and c?",
@@ -10701,16 +10701,16 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Other Algebra",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q258",
       "groupId": "math-20261006-batch465-q258",
       "status": "staged",
       "section": "Math",
-      "domain": "Algebra",
-      "skill": "Linear Functions",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
       "difficulty": "Easy",
       "passage": "",
       "question": "The function\n\n\\[f(x)=(2x-3)(x+5)\\]\nis graphed in the xy-plane. What is the greater x-coordinate of an x-intercept of the graph?",
@@ -10723,16 +10723,16 @@
       "acceptedAnswers": [
         "3/2"
       ],
-      "subtopic": "Linear Functions",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q259",
       "groupId": "math-20261006-batch465-q259",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Statistics",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
       "difficulty": "Medium",
       "passage": "",
       "question": "At 2:00 p.m., a cell culture contains 54 thousand cells. Under an exponential model, the number of cells triples every 4 hours. Which equation gives the number N, in thousands, t hours after noon?",
@@ -10752,8 +10752,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Statistics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q260",
@@ -10789,8 +10789,8 @@
       "groupId": "math-20261006-batch465-q261",
       "status": "staged",
       "section": "Math",
-      "domain": "Algebra",
-      "skill": "Linear Inequalities",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
       "difficulty": "Easy",
       "passage": "",
       "question": "The function f gives the product of a number that is 2 less than x and a number that is 7 greater than x. Which equation defines f?",
@@ -10810,8 +10810,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Linear Inequalities",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q262",
@@ -10848,7 +10848,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Advanced Math",
-      "skill": "Quadratics",
+      "skill": "Equivalent Expressions",
       "difficulty": "Medium",
       "passage": "",
       "question": "The expression\n\\[\n0.56x^2+0.88x+1.20\n\\]\nis equivalent to\n\\[\na(7x^2+11x+15),\n\\]\nwhere \\(a>0\\). What is the value of \\(\\frac1a\\)?",
@@ -10861,8 +10861,8 @@
       "acceptedAnswers": [
         "12.5"
       ],
-      "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Equivalent Expressions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q264",
@@ -10899,7 +10899,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Advanced Math",
-      "skill": "Quadratics",
+      "skill": "Equivalent Expressions",
       "difficulty": "Medium",
       "passage": "",
       "question": "The expression\n\\[\n4(x^2+px+5)-6x(p-2)\n\\]\nis equivalent to\n\\[\n4x^2-40x+20.\n\\]\nWhat is the value of \\(p\\)?",
@@ -10919,8 +10919,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Equivalent Expressions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q266",
@@ -10957,8 +10957,8 @@
       "groupId": "math-20261006-batch465-q267",
       "status": "staged",
       "section": "Math",
-      "domain": "Advanced Math",
-      "skill": "Quadratics",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
       "difficulty": "Easy",
       "passage": "",
       "question": "Which of the following is a solution to\n\n\\[(x+4)(x-1)=(x-3)(x+2)+18?\\]",
@@ -10978,8 +10978,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q269",
@@ -11037,8 +11037,8 @@
       "groupId": "math-20261006-batch465-q271",
       "status": "staged",
       "section": "Math",
-      "domain": "Advanced Math",
-      "skill": "Quadratics",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
       "difficulty": "Medium",
       "passage": "",
       "question": "What is the solution set of\n\n\\[3x+4+2=x?\\]",
@@ -11058,8 +11058,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q272",
@@ -11190,8 +11190,8 @@
       "groupId": "math-20261006-batch465-q274",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Ratio, Rates, Percentages",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
       "difficulty": "Hard",
       "passage": "",
       "question": "A positive quantity is modeled by \\[Q=Q_0(c-2)^t,\\] where \\(Q_0>0\\), \\(t\\ge0\\), and \\(c\\) is a constant. If the quantity decreases by a fixed positive percentage each time \\(t\\) increases by 1, which of the following must be true?",
@@ -11211,8 +11211,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q275",
@@ -11408,7 +11408,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Geometry & Trigonometry",
-      "skill": "Lines, Angles, and Triangles",
+      "skill": "Area and Volume",
       "difficulty": "Easy",
       "passage": "",
       "question": "A rectangle has width w centimeters. Its length is 3 centimeters less than twice its width.\nWhich expression gives the rectangle's perimeter, in centimeters?",
@@ -11428,8 +11428,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Area and Volume",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q282",
@@ -11437,7 +11437,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Linear Equations",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Medium",
       "passage": "",
       "question": "A warehouse contains \\(r\\) large containers and \\(s\\) small containers. The quantities satisfy\n\n\\[2r+s=480.\\]\nIf \\(r=135\\), what is the value of \\(s\\)?",
@@ -11457,16 +11457,16 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q283",
       "groupId": "math-20261006-batch465-q283",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Ratio, Rates, Percentages",
+      "domain": "Algebra",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Hard",
       "passage": "",
       "question": "A shipment contains 14 type A crates and 9 type B crates. Each type A crate has x kilograms of contents plus 2 kilograms of packaging. Each type B crate has y kilograms of contents plus 3 kilograms of packaging. The shipment's total mass is modeled by\n\n\\[14(x+2)+9(y+3)=413.\\]\nWhich statement best interprets x?",
@@ -11486,8 +11486,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q284",
@@ -11523,8 +11523,8 @@
       "groupId": "math-20261006-batch465-q285",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Statistics",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
       "difficulty": "Medium",
       "passage": "",
       "question": "The graph shows the amount of data stored by a monitoring system after \\(t\\) hours. What is the best interpretation of the slope of the graph?",
@@ -11570,8 +11570,8 @@
         "yLabel": "Data stored (GB)",
         "labelPoints": true
       },
-      "subtopic": "Statistics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q286",
@@ -11579,7 +11579,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Linear Equations",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Hard",
       "passage": "",
       "question": "In 2018, a library owned 240 items in a certain collection. Of these, x were digital and y were printed, so x+y=240.\nBy 2024, the number of digital items had increased by \\(35\\%\\), the number of printed items had decreased by \\(10\\%\\), and the total number of items had increased by \\(8\\%\\).\nWhich equation represents this information?",
@@ -11599,8 +11599,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q287",
@@ -11822,8 +11822,8 @@
       "groupId": "math-20261006-batch465-q294",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Statistics",
+      "domain": "Algebra",
+      "skill": "Linear Equations",
       "difficulty": "Hard",
       "passage": "",
       "question": "A researcher prepares 12 experimental plots. Of these, x receive treatment A, and the remaining plots receive treatment B.\nTreatment A requires 7 grams of catalyst per plot, treatment B requires 11 grams per plot, and every plot additionally receives 2 grams of stabilizer.\nWhich expression represents the total number of grams of catalyst and stabilizer required?",
@@ -11843,8 +11843,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Statistics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Equations",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q295",
@@ -11931,8 +11931,8 @@
       "groupId": "math-20261006-batch465-q298",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Ratio, Rates, Percentages",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
       "difficulty": "Hard",
       "passage": "",
       "question": "A kayak rental costs \\(\\$42\\) per hour plus a one-time \\(\\$35\\) equipment fee. A coupon reduces the final charge by \\(\\$18\\). A customer wants to spend no more than \\(\\$310\\).\nIf kayaks can be rented only for a whole number of hours, what is the maximum number of hours the customer can rent one?",
@@ -11945,8 +11945,8 @@
       "acceptedAnswers": [
         "6"
       ],
-      "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q299",
@@ -12158,8 +12158,8 @@
       "groupId": "math-20261006-batch465-q306",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Statistics",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
       "difficulty": "Medium",
       "passage": "",
       "question": "A shipping company's annual number of international packages is modeled by R(t), where R(t) is measured in thousands of packages and t is the number of years after 2014.\nWhich statement best interprets\n\n\\[R(12)=3.8?\\]",
@@ -12179,8 +12179,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Statistics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q307",
@@ -12217,7 +12217,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Linear Equations",
+      "skill": "Linear Functions",
       "difficulty": "Easy",
       "passage": "",
       "question": "The function g is defined by\n\n\\[g(x)=3(2x-5)-4(x+1).\\]\nWhat is g(12)?",
@@ -12230,8 +12230,8 @@
       "acceptedAnswers": [
         "5"
       ],
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q309",
@@ -12394,8 +12394,8 @@
       "groupId": "math-20261006-batch465-q315",
       "status": "staged",
       "section": "Math",
-      "domain": "Geometry & Trigonometry",
-      "skill": "Lines, Angles, and Triangles",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
       "difficulty": "Medium",
       "passage": "",
       "question": "Line m is defined by\n\n\\[3(y-2)=8x+6.\\]\nLine n is perpendicular to line m. What is the slope of line n?",
@@ -12415,8 +12415,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "Rewrite the equation:\n\n\\[3y-6=8x+6\\]\n\n\\[3y=8x+12\\]\n\n\\[y=83x+4.\\]\nThe slope of m is 83. A perpendicular line has the negative reciprocal slope:\n\\[ \\boxed{-\\frac38}. \\]"
       },
-      "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q316",
@@ -12452,8 +12452,8 @@
       "groupId": "math-20261006-batch465-q317",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Ratio, Rates, Percentages",
+      "domain": "Algebra",
+      "skill": "Systems of Linear Equations",
       "difficulty": "Hard",
       "passage": "",
       "question": "In the system\n\\[ \\begin{cases} 4x+ky=18\\\\ 10x-15y=45, \\end{cases} \\]\nk is a constant. If the system has infinitely many solutions, what is k?",
@@ -12473,8 +12473,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Systems of Linear Equations",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q318",
@@ -12557,7 +12557,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Linear Equations",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Medium",
       "passage": "",
       "question": "The graph models combinations of standard kits, \\(x\\), and premium kits, \\(y\\), that use exactly the available amount of a certain material. Which equation could represent the relationship?",
@@ -12607,8 +12607,8 @@
         "xLabel": "Standard kits",
         "yLabel": "Premium kits"
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q322",
@@ -12702,8 +12702,8 @@
       "groupId": "math-20261006-batch465-q325",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Ratio, Rates, Percentages",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
       "difficulty": "Hard",
       "passage": "",
       "question": "A plant nursery had 18.4 meters of irrigation tubing installed when a renovation began. Four weeks later, 23.2 meters had been installed. The amount of installed tubing increased at a constant rate during those four weeks.\nWhich function L gives the total number of meters of tubing installed t weeks after the renovation began?",
@@ -12723,8 +12723,8 @@
         "C": "The rate of change is\n\n\\[23.2-18.44=1.2\\]\nmeters per week. Since the initial amount is 18.4,\n\n\\[L(t)=18.4+1.2t.\\]",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q327",
@@ -12761,7 +12761,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Linear Equations",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Medium",
       "passage": "",
       "question": "The equation\n\n\\[0.45x+1.35y=18.9\\]\nmodels the total mass, in kilograms, of x small bags and y large bags of a product.\nHow many grams more product is in each large bag than in each small bag?",
@@ -12774,8 +12774,8 @@
       "acceptedAnswers": [
         "900"
       ],
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q329",
@@ -12840,8 +12840,8 @@
       "groupId": "math-20261006-batch465-q331",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Ratio, Rates, Percentages",
+      "domain": "Algebra",
+      "skill": "Systems of Linear Equations",
       "difficulty": "Hard",
       "passage": "",
       "question": "A shipping company compares two carriers for the same shipment. If the shipment contains x crates of type A and y crates of type B, its cost would be modeled by\n\n\\[8x+5y=67\\]\nfor Carrier 1 and\n\n\\[5x+9y=83\\]\nfor Carrier 2.\nHow many crates are in the shipment altogether?",
@@ -12862,16 +12862,16 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "desmosMethod": "Enter\n\\[8x+5y=67\\]\n\\[5x+9y=83\\]\nThe lines intersect at (4,7). Add the coordinates representing the two crate counts:\n\n\\[4+7=11.\\]",
-      "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Systems of Linear Equations",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q332",
       "groupId": "math-20261006-batch465-q332",
       "status": "staged",
       "section": "Math",
-      "domain": "Geometry & Trigonometry",
-      "skill": "Lines, Angles, and Triangles",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
       "difficulty": "Medium",
       "passage": "",
       "question": "Line r is defined by\n\n\\[5x-2y=11.\\]\nLine s is parallel to line r and has equation\n\n\\[15x+ky=7,\\]\nwhere k is a constant. What is k?",
@@ -12891,8 +12891,8 @@
         "C": "For line r,\n\n\\[5x-2y=11\\]\ngives\n\n\\[y=52x-112,\\]\nso its slope is 52.\nFor line s,\n\n\\[15x+ky=7\\]\nhas slope\n\n\\[-15k.\\]\nParallel lines have equal slopes:\n\n\\[-15k=52.\\]\n\\[Thus 5k=-30, so\\]\n\n\\[k=-6.\\]",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q333",
@@ -13137,8 +13137,8 @@
       "groupId": "math-20261006-batch465-q340",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Ratio, Rates, Percentages",
+      "domain": "Algebra",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Hard",
       "passage": "",
       "question": "A consultant works \\(a\\) hours on project A at $18 per hour and \\(b\\) hours on project B at $27 per hour. The graph represents all possible combinations of \\(a\\) and \\(b\\) for one week, and the marked point is \\((6,4)\\). What is the value of the total weekly earnings \\(s\\)?",
@@ -13188,8 +13188,8 @@
         "yLabel": "Project B hours",
         "labelPoints": true
       },
-      "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q341",
@@ -13218,8 +13218,8 @@
       "groupId": "math-20261006-batch465-q342",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Ratio, Rates, Percentages",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
       "difficulty": "Hard",
       "passage": "",
       "question": "A sensor recorded temperatures \\(t\\) satisfying\n\\[14\\le t\\le38.\\]\nAfter calibration, every displayed temperature \\(d\\) is 6 degrees lower than the original recorded value. Which inequality gives all possible values of \\(d\\)?",
@@ -13239,16 +13239,16 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q343",
       "groupId": "math-20261006-batch465-q343",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Ratio, Rates, Percentages",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
       "difficulty": "Hard",
       "passage": "",
       "question": "The equation\n\n\\[C=84-7m\\]\nmodels the amount C, in grams, of a dissolved substance remaining after m five-minute intervals of filtration.\nIf the equation is graphed in the mC-plane, what does the m-coordinate of the graph's m-intercept represent?",
@@ -13268,16 +13268,16 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q344",
       "groupId": "math-20261006-batch465-q344",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Ratio, Rates, Percentages",
+      "domain": "Algebra",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Medium",
       "passage": "",
       "question": "A shipment contains x small containers weighing 4 pounds each and y large containers weighing 7 pounds each. The shipping crate itself weighs 2 pounds, and the entire packed crate weighs 86 pounds.\nWhich equation represents this situation?",
@@ -13297,8 +13297,8 @@
         "C": "The small containers contribute 4x pounds and the large containers contribute 7y pounds. Including the 2-pound crate gives\n\n\\[4x+7y+2.\\]\nSince the total is 86,\n\n\\[4x+7y+2=86.\\]",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q345",
@@ -13306,7 +13306,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Geometry & Trigonometry",
-      "skill": "Lines, Angles, and Triangles",
+      "skill": "Area and Volume",
       "difficulty": "Medium",
       "passage": "",
       "question": "Figure A and figure B are regular polygons. The equation \\[4x+7y=96\\] gives the sum of their perimeters, in centimeters, where \\(x\\) is the number of sides of figure A and \\(y\\) is the number of sides of figure B. What is the ratio \\[\\frac{\\text{length of one side of figure B}}{\\text{length of one side of figure A}}?\\]",
@@ -13326,8 +13326,8 @@
         "C": "Since 4x is the perimeter of figure A, each side of A is 4 cm long. Likewise, each side of B is 7 cm long.\nThus the requested ratio is\n\n74.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Area and Volume",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q346",
@@ -13364,7 +13364,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Systems of Linear Equations",
+      "skill": "Linear Inequalities",
       "difficulty": "Hard",
       "passage": "",
       "question": "A science program orders x field notebooks and y specimen cases. It must order at least 30 items total. Each notebook costs \\(\\$6\\), each specimen case costs \\(\\$4\\), and the entire order has a fixed \\(\\$12\\) shipping charge. The total cost cannot exceed \\(\\$180\\).\nWhich system of inequalities models the situation?",
@@ -13384,8 +13384,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Systems of Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q349",
@@ -13444,7 +13444,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Linear Equations",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Easy",
       "passage": "",
       "question": "Which table gives values that satisfy\n\n\\[y=-12x+17?\\]",
@@ -13546,8 +13546,8 @@
           ]
         }
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q352",
@@ -13576,8 +13576,8 @@
       "groupId": "math-20261006-batch465-q353",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Ratio, Rates, Percentages",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
       "difficulty": "Hard",
       "passage": "",
       "question": "A survey vehicle first travels 18 miles to reach a test route. It then travels for 6 hours at an average speed between 42 and 47 miles per hour, inclusive.\nIf d is the vehicle's total distance, in miles, from its starting point after the 6 hours on the test route, which inequality represents all possible values of d?",
@@ -13597,8 +13597,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Inequalities",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q354",
@@ -13914,7 +13914,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Linear Equations",
+      "skill": "Linear Functions",
       "difficulty": "Medium",
       "passage": "",
       "question": "A materials test models the thickness T, in micrometers, of a coating after p groups of 100 processing cycles by\n\n\\[T=14+1.8p.\\]\nWhat is the best interpretation of 1.8 in this context?",
@@ -13934,8 +13934,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q362",
@@ -14031,7 +14031,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Linear Equations",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Medium",
       "passage": "",
       "question": "The equation\n\n\\[F=3.40d+8.75s+12\\]\ngives the total charge F, in dollars, for ordering d drinks and s sandwiches from a café. The \\(\\$12\\) charge is a fixed delivery fee.\nWhat does 8.75 represent?",
@@ -14051,8 +14051,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q365",
@@ -14110,8 +14110,8 @@
       "groupId": "math-20261006-batch465-q367",
       "status": "staged",
       "section": "Math",
-      "domain": "Geometry & Trigonometry",
-      "skill": "Lines, Angles, and Triangles",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
       "difficulty": "Medium",
       "passage": "",
       "question": "Line k is defined by\n\n\\[4x-3y=12.\\]\nLine j is perpendicular to line k and passes through (6,-2).\nWhich equation defines line j?",
@@ -14131,8 +14131,8 @@
         "C": "Rewrite line k:\n\n\\[-3y=-4x+12\\]\n\n\\[y=43x-4.\\]\nIts slope is 43, so a perpendicular line has slope\n\n\\[-34.\\]\n\\[Using (6,-2),\\]\n\n\\[y+2=-34(x-6).\\]\nSimplifying gives\n\n\\[y=-34x+52.\\]\nMultiply by 4:\n\n\\[4y=-3x+10,\\]\nso\n\n\\[3x+4y=10.\\]",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q368",
@@ -14168,8 +14168,8 @@
       "groupId": "math-20261006-batch465-q369",
       "status": "staged",
       "section": "Math",
-      "domain": "Algebra",
-      "skill": "Linear Equations",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
       "difficulty": "Medium",
       "passage": "",
       "question": "For a function f, f(-1)=250. For every increase of 2 in x, the value of f(x) decreases by \\(40\\%\\). What is f(5)?",
@@ -14182,8 +14182,8 @@
       "acceptedAnswers": [
         "54"
       ],
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q370",
@@ -14219,8 +14219,8 @@
       "groupId": "math-20261006-batch465-q371",
       "status": "staged",
       "section": "Math",
-      "domain": "Algebra",
-      "skill": "Linear Equations",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
       "difficulty": "Hard",
       "passage": "",
       "question": "Let x be the number of years after the beginning of 2022. At x=2, a program has 5,400 participants. Beginning then, the number of participants is predicted to decrease by \\(4\\%\\) each year. Which function models the predicted number P(x)?",
@@ -14240,8 +14240,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q372",
@@ -14271,7 +14271,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Advanced Math",
-      "skill": "Quadratics",
+      "skill": "Equivalent Expressions",
       "difficulty": "Medium",
       "passage": "",
       "question": "The expression\n\\[\n(2x-3)(x+5)+(x-1)(x+4)\n\\]\nis equivalent to \\(ax^2+bx+c\\), where \\(a\\), \\(b\\), and \\(c\\) are constants. What is the value of \\(b\\)?",
@@ -14284,8 +14284,8 @@
       "acceptedAnswers": [
         "10"
       ],
-      "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Equivalent Expressions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q374",
@@ -14321,8 +14321,8 @@
       "groupId": "math-20261006-batch465-q375",
       "status": "staged",
       "section": "Math",
-      "domain": "Advanced Math",
-      "skill": "Rational/Radical Equations",
+      "domain": "Algebra",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Medium",
       "passage": "",
       "question": "The variables \\(P,W,C,t\\) satisfy \\[P=\\frac{W-C}{t},\\] where \\(t\\ne0\\). Which expression gives \\(W\\) in terms of \\(P,C,t\\)?",
@@ -14342,16 +14342,16 @@
         "C": "Multiply by t:\n\n\\[Pt=W-C.\\]\nThen add C:\n\n\\[W=Pt+C.\\]",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Rational/Radical Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q376",
       "groupId": "math-20261006-batch465-q376",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Statistics",
+      "domain": "Advanced Math",
+      "skill": "Nonlinear Equations/Functions",
       "difficulty": "Hard",
       "passage": "",
       "question": "If (x,y) satisfies\n\n\\[x+y=19\\]\nand\n\n\\[xy=4x+4y+12,\\]\nwhat is one possible value of x?",
@@ -14365,16 +14365,16 @@
         "8",
         "11"
       ],
-      "subtopic": "Statistics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Nonlinear Equations/Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q377",
       "groupId": "math-20261006-batch465-q377",
       "status": "staged",
       "section": "Math",
-      "domain": "Algebra",
-      "skill": "Linear Inequalities",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
       "difficulty": "Medium",
       "passage": "",
       "question": "A ball is dropped from a height of 256 feet. After each contact with the ground, its next maximum height is \\(25\\%\\) less than the height from which it fell on the preceding descent. What is the ball's maximum height, in feet, between its fourth and fifth contacts with the ground?",
@@ -14387,16 +14387,16 @@
       "acceptedAnswers": [
         "81"
       ],
-      "subtopic": "Linear Inequalities",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q378",
       "groupId": "math-20261006-batch465-q378",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Statistics",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
       "difficulty": "Medium",
       "passage": "",
       "question": "The function\n\n\\[R(q)=1.8(1.06)q\\]\nmodels a company's predicted monthly recurring revenue, in millions of dollars, q quarters after a service launches. The model gives R(6)^{2}.55. Which statement best interprets this result?",
@@ -14416,8 +14416,8 @@
         "C": "Six quarters equal\n\n\\[63=18\\]\nmonths. Since R(q) gives the revenue itself, R(6)^{2}.55 means the predicted revenue 18 months after launch is about $2.55 million.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Statistics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q379",
@@ -14425,7 +14425,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Linear Equations",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Hard",
       "passage": "",
       "question": "The formula \\[S=\\frac35T+8-\\frac2{15}(100-H)\\] relates the quantities \\(S,T,H\\). Which expression gives \\(H\\) in terms of \\(S\\) and \\(T\\)?",
@@ -14445,8 +14445,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q380",
@@ -14657,8 +14657,8 @@
       "groupId": "math-20261006-batch465-q385",
       "status": "staged",
       "section": "Math",
-      "domain": "Algebra",
-      "skill": "Systems of Linear Equations",
+      "domain": "Advanced Math",
+      "skill": "Nonlinear Equations/Functions",
       "difficulty": "Medium",
       "passage": "",
       "question": "A solution (x,y) to the system\n\n\\[x^{2}=10x+y-4\\]\n\n\\[y=-10x+68\\]\nhas a value of xy equal to which of the following?",
@@ -14679,8 +14679,8 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "desmosMethod": "Enter\n\n\\[y=x^{2}-10x+4\\]\nand\n\n\\[y=-10x+68.\\]\nOne intersection is (8,-12). Its coordinate product is\n\n\\[8(-12)=-96.\\]",
-      "subtopic": "Systems of Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Nonlinear Equations/Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q386",
@@ -14717,7 +14717,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Advanced Math",
-      "skill": "Exponential Functions",
+      "skill": "Equivalent Expressions",
       "difficulty": "Easy",
       "passage": "",
       "question": "For \\(w>0\\), which expression is equivalent to\n\\[w^{5/6}?\\]",
@@ -14737,8 +14737,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Exponential Functions",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Equivalent Expressions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q388",
@@ -15151,8 +15151,8 @@
       "groupId": "math-20261006-batch465-q391",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Statistics",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
       "difficulty": "Hard",
       "passage": "",
       "question": "A quantity P is modeled by\n\n\\[P=abt/3,\\]\nwhere t is measured in months and a and b are positive constants. The quantity increases by \\(21\\%\\) whenever t increases by 6 months. What is the value of b?",
@@ -15172,8 +15172,8 @@
         "C": "A 6-month increase raises the exponent t/3 by\n\n\\[63=2.\\]\nSo the output is multiplied by b^{2}. A \\(21\\%\\) increase means a multiplier of 1.21:\n\n\\[b^{2}=1.21.\\]\n\\[Since b>0,\\]\n\n\\[b=1.10.\\]",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Statistics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q392",
@@ -15254,8 +15254,8 @@
       "groupId": "math-20261006-batch465-q395",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Statistics",
+      "domain": "Advanced Math",
+      "skill": "Exponential Functions",
       "difficulty": "Hard",
       "passage": "",
       "question": "The function\n\n\\[A(d)=240(0.81)d/2\\]\nmodels a quantity at depth d, where d is measured in units of 50 meters. Which statement is predicted by the model?",
@@ -15275,8 +15275,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Statistics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q396",
@@ -15364,7 +15364,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Linear Equations",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Hard",
       "passage": "",
       "question": "A fee F, in dollars, is determined from a value V, in dollars, by\n\n\\[F=0.025(V-18,000)+120.\\]\nWhich expression gives V in terms of F?",
@@ -15384,8 +15384,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q400",
@@ -15523,8 +15523,8 @@
       "groupId": "math-20261006-batch465-q404",
       "status": "staged",
       "section": "Math",
-      "domain": "Geometry & Trigonometry",
-      "skill": "Lines, Angles, and Triangles",
+      "domain": "Advanced Math",
+      "skill": "Equivalent Expressions",
       "difficulty": "Easy",
       "passage": "",
       "question": "The area of a rectangle is represented by\n\\[\n3x^2+19x+20\n\\]\nsquare units. Its width is \\(3x+4\\) units. Which expression represents its length?",
@@ -15544,8 +15544,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Equivalent Expressions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q405",
@@ -15612,7 +15612,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Advanced Math",
-      "skill": "Quadratics",
+      "skill": "Equivalent Expressions",
       "difficulty": "Medium",
       "passage": "",
       "question": "For \\(x\\ne\\frac13\\),\n\\[\n\\frac{6x^2+7x-3}{3x-1}=ax+d,\n\\]\nwhere \\(a\\) and \\(d\\) are constants. What is the value of \\(a+d\\)?",
@@ -15632,8 +15632,8 @@
         "C": "Factor the numerator:\n\\[\n6x^2+7x-3=(3x-1)(2x+3).\n\\]\nThus, for \\(x\\ne\\frac13\\),\n\\[\n\\frac{6x^2+7x-3}{3x-1}=2x+3.\n\\]\nSo \\(a=2\\), \\(d=3\\), and\n\\[\n\\boxed{a+d=5}.\n\\]",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Equivalent Expressions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q408",
@@ -15727,8 +15727,8 @@
       "groupId": "math-20261006-batch465-q411",
       "status": "staged",
       "section": "Math",
-      "domain": "Algebra",
-      "skill": "Linear Equations",
+      "domain": "Advanced Math",
+      "skill": "Equivalent Expressions",
       "difficulty": "Hard",
       "passage": "",
       "question": "The expression\n\\[\n(1800+24y^2)-6(3y^2-70)+2(5y^2-130)\n\\]\ncan be written as \\(ay^2+b\\), where \\(a\\) and \\(b\\) are constants. What is the value of \\(a+b\\)?",
@@ -15741,8 +15741,8 @@
       "acceptedAnswers": [
         "1976"
       ],
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Equivalent Expressions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q412",
@@ -15821,8 +15821,8 @@
       "groupId": "math-20261006-batch465-q414",
       "status": "staged",
       "section": "Math",
-      "domain": "Advanced Math",
-      "skill": "Quadratics",
+      "domain": "Algebra",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Medium",
       "passage": "",
       "question": "The quantities \\(v,L,T,T_0,m\\) satisfy \\[v^2=\\frac{L(T-T_0)}{m}.\\] Which expression gives \\(T\\) in terms of the other variables?",
@@ -15842,16 +15842,16 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q415",
       "groupId": "math-20261006-batch465-q415",
       "status": "staged",
       "section": "Math",
-      "domain": "Algebra",
-      "skill": "Linear Equations",
+      "domain": "Advanced Math",
+      "skill": "Nonlinear Equations/Functions",
       "difficulty": "Easy",
       "passage": "",
       "question": "What is one possible solution to\n\n\\[3|2x+1|-5=16?\\]",
@@ -15865,8 +15865,8 @@
         "3",
         "-4"
       ],
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Nonlinear Equations/Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q416",
@@ -15961,8 +15961,8 @@
       "groupId": "math-20261006-batch465-q419",
       "status": "staged",
       "section": "Math",
-      "domain": "Algebra",
-      "skill": "Linear Equations",
+      "domain": "Advanced Math",
+      "skill": "Rational/Radical Equations",
       "difficulty": "Easy",
       "passage": "",
       "question": "What is the solution to the equation \\[\\frac5{2x-3}+6=\\frac13+6?\\]",
@@ -15982,8 +15982,8 @@
         "C": "Subtract 6 from both sides:\n\n\\[52x-3=13.\\]\nCross-multiplying gives\n\n\\[15=2x-3,\\]\n\\[so 2x=18 and\\]\n\n\\[x=9.\\]",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Rational/Radical Equations",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q420",
@@ -16246,7 +16246,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Advanced Math",
-      "skill": "Quadratics",
+      "skill": "Rational/Radical Equations",
       "difficulty": "Hard",
       "passage": "",
       "question": "Which value of \\(x\\) satisfies \\[\\frac{2x+1}{x-2}-\\frac3{x+2}=\\frac{20}{x^2-4}?\\]",
@@ -16267,8 +16267,8 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "desmosMethod": "Enter\n\n\\[y=2x+1x-2-3x+2\\]\nand\n\n\\[y=20x2-4.\\]\nThe only actual intersection occurs at x=-3. The value x=2 is excluded because both sides are undefined there.",
-      "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Rational/Radical Equations",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q430",
@@ -16436,8 +16436,8 @@
       "groupId": "math-20261006-batch465-q437",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Statistics",
+      "domain": "Advanced Math",
+      "skill": "Equivalent Expressions",
       "difficulty": "Medium",
       "passage": "",
       "question": "If \\(u\\) and \\(v\\) are positive, which of the following is equivalent to\n\\[\\sqrt{(u+v)^3}\\,\\sqrt[4]{(u+v)^2}?\\]",
@@ -16457,8 +16457,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Statistics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Equivalent Expressions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q438",
@@ -16495,7 +16495,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Other Algebra",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Easy",
       "passage": "",
       "question": "The formula \\[E=\\frac12mv^2\\] relates the kinetic energy \\(E\\), mass \\(m\\), and speed \\(v\\), where \\(v\\ne0\\). Which equation expresses \\(m\\) in terms of \\(E\\) and \\(v\\)?",
@@ -16515,8 +16515,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Other Algebra",
-      "classificationVersion": "2026-10-07-v1"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q440",
@@ -16553,7 +16553,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Advanced Math",
-      "skill": "Quadratics",
+      "skill": "Polynomial Functions",
       "difficulty": "Hard",
       "passage": "",
       "question": "In the equation\n\\[\n\\frac15(2x-k)(x^2-12x+35)=0,\n\\]\n\\(k\\) is a positive constant. The sum of the solutions is 23. What is the value of \\(k\\)?",
@@ -16566,8 +16566,8 @@
       "acceptedAnswers": [
         "22"
       ],
-      "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Polynomial Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q443",
@@ -16575,7 +16575,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Advanced Math",
-      "skill": "Quadratics",
+      "skill": "Polynomial Functions",
       "difficulty": "Medium",
       "passage": "",
       "question": "The function \\(g\\) is defined by \\[g(x)=(x^2-9)(2x+1).\\] Which of the following is NOT an x-intercept of the graph of \\(y=g(x)\\)?",
@@ -16595,16 +16595,16 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Polynomial Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q444",
       "groupId": "math-20261006-batch465-q444",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Statistics",
+      "domain": "Advanced Math",
+      "skill": "Polynomial Functions",
       "difficulty": "Medium",
       "passage": "",
       "question": "The function \\(f\\) is defined by\n\\[f(x)=4x^4-3.\\]\nThe graph of \\(y=g(x)\\) is obtained by shifting the graph of \\(y=f(x)\\) upward 7 units. Which equation defines \\(g\\)?",
@@ -16624,8 +16624,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Statistics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Polynomial Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q445",
@@ -16749,7 +16749,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Other Algebra",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Easy",
       "passage": "",
       "question": "The positive variables m, n, and p satisfy\n\n\\[m-18=3np.\\]\nWhich equation expresses n in terms of m and p?",
@@ -16769,8 +16769,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "Multiply both sides by p:\n\n\\[p(m-18)=3n.\\]\nDivide by 3:\n\n\\[n=p(m-18)^{3}.\\]"
       },
-      "subtopic": "Other Algebra",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q450",
@@ -16806,8 +16806,8 @@
       "groupId": "math-20261006-batch465-q451",
       "status": "staged",
       "section": "Math",
-      "domain": "Algebra",
-      "skill": "Linear Equations",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
       "difficulty": "Easy",
       "passage": "",
       "question": "The height h, in meters, of an object t seconds after launch is modeled by\n\n\\[h(t)=-5(t-1)^{2}+20.\\]\nWhat was the height of the object at the instant it was launched?",
@@ -16827,16 +16827,16 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q452",
       "groupId": "math-20261006-batch465-q452",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Ratio, Rates, Percentages",
+      "domain": "Advanced Math",
+      "skill": "Equivalent Expressions",
       "difficulty": "Hard",
       "passage": "",
       "question": "For positive values of \\(u\\) and \\(v\\), consider\n\\[\\frac{\\sqrt[3]{u^{20}v^{11}}}{4u^4\\sqrt[6]{v^2}}.\\]\nWhich of the following are equivalent to the expression?\n\nI. \\(\\displaystyle \\frac{u^2v^3\\sqrt[3]{u^2v}}{4}\\)\n\nII. \\(\\displaystyle \\frac{\\sqrt[3]{u^8v^{10}}}{4}\\)",
@@ -16856,8 +16856,8 @@
         "C": "Rewrite using rational exponents:\n\n\\[u20/3v11/34u4v1/3=u8/3v10/34.\\]\nStatement I is\n\n\\[u^{2}+2/3v3+1/34=u8/3v10/34.\\]\nStatement II is also\n\n\\[u8/3v10/34.\\]\nTherefore, both are equivalent.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Equivalent Expressions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q453",
@@ -16893,8 +16893,8 @@
       "groupId": "math-20261006-batch465-q454",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving & Data Analysis",
-      "skill": "Statistics",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
       "difficulty": "Hard",
       "passage": "",
       "question": "The function \\[h(t)=-16t^2+24t+10\\] models the height of a projectile \\(t\\) seconds after launch, where \\(t\\ge0\\). The graph of \\(y=h(t)\\) has one negative and one positive t-intercept. Which feature of the graph gives the elapsed time from launch until the projectile reaches the ground?",
@@ -16914,8 +16914,8 @@
         "C": "The projectile reaches the ground when its height is 0, so\n\n\\[h(t)=0.\\]\nThose times correspond to the t-intercepts. Because elapsed time must satisfy t0, the physically meaningful value is the positive t-intercept.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Statistics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q455",
@@ -17025,7 +17025,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Geometry & Trigonometry",
-      "skill": "Lines, Angles, and Triangles",
+      "skill": "Area and Volume",
       "difficulty": "Hard",
       "passage": "",
       "question": "The area of a triangle is\n\\[\n3x^2-30\n\\]\nsquare centimeters. Its base is \\(3x+18\\) centimeters and its height is \\(2x-8\\) centimeters, where \\(x>4\\). What is the value of \\(x\\)?",
@@ -17038,8 +17038,8 @@
       "acceptedAnswers": [
         "7"
       ],
-      "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Area and Volume",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q459",
@@ -17047,7 +17047,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Advanced Math",
-      "skill": "Quadratics",
+      "skill": "Exponential Functions",
       "difficulty": "Hard",
       "passage": "",
       "question": "\\[The functions g and h are defined for x^{2}.\\]\n\n\\[I.g(x)=54(1.2)x-2\\]\n\n\\[II.h(x)=45(1.2)x-1\\]\nWhich equation displays, as a constant or coefficient, the minimum value of the function it defines?",
@@ -17067,8 +17067,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Exponential Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q460",
@@ -17134,7 +17134,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Advanced Math",
-      "skill": "Polynomial Functions",
+      "skill": "Quadratics",
       "difficulty": "Medium",
       "passage": "",
       "question": "The function\n\n\\[f(x)=2(x-1)^{2}-6\\]\nis defined only for x^{3}. What is the minimum value of f?",
@@ -17155,8 +17155,8 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "desmosMethod": "Enter\n\n\\[y=2(x-1)^{2}-6{x^{3}}.\\]\nThe leftmost and lowest point of the restricted graph is (3,2), so the minimum value is 2.",
-      "subtopic": "Polynomial Functions",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q463",
@@ -17192,8 +17192,8 @@
       "groupId": "math-20261006-batch465-q464",
       "status": "staged",
       "section": "Math",
-      "domain": "Algebra",
-      "skill": "Linear Equations",
+      "domain": "Advanced Math",
+      "skill": "Quadratics",
       "difficulty": "Hard",
       "passage": "",
       "question": "The function q is defined by\n\n\\[q(x)=(x-d)^{2}+1922d+1,\\]\nwhere d is a positive constant. If q(d)=9, what is q(18)?",
@@ -17213,8 +17213,8 @@
         "C": "\\[First use q(d)=9:\\]\n\n\\[1922d+1=9.\\]\nSo\n\n\\[96d=8,\\]\nwhich gives\n\n\\[d=12.\\]\nThen\n\n\\[q(18)=(18-12)^{2}+19224+1=36+19224+1=22824+1=9.5+1=10.5.\\]",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Quadratics",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-batch465-q465",
@@ -17222,7 +17222,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Algebra",
-      "skill": "Other Algebra",
+      "skill": "Linear equations in 2 variables",
       "difficulty": "Medium",
       "passage": "",
       "question": "The equation\n\n\\[4p=3q+2r-q\\]\nrelates p, q, and r. Which equation correctly expresses q in terms of p and r?",
@@ -17242,8 +17242,8 @@
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Other Algebra",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "subtopic": "Linear equations in 2 variables",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel"
     },
     {
       "id": "math-20261006-new409-q001",
@@ -18585,7 +18585,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Geometry & Trigonometry",
-      "skill": "Circles",
+      "skill": "Area and Volume",
       "difficulty": "Easy",
       "passage": "The circumference of the circular base of a right circular cylinder is \\(14\\pi\\) centimeters. The height of the cylinder is 3 centimeters greater than the radius of its base.",
       "question": "What is the volume of the cylinder?",
@@ -18605,8 +18605,8 @@
         "C": "From \\(2\\pi r=14\\pi\\), the radius is \\(7\\). The height is \\(10\\). Therefore,\n\\[V=\\pi(7)^2(10)=\\boxed{490\\pi}.\\]",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Circles",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3",
+      "subtopic": "Area and Volume",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel",
       "diagram": {
         "width": 420,
         "height": 300,
@@ -29429,7 +29429,7 @@
       "status": "staged",
       "section": "Math",
       "domain": "Geometry & Trigonometry",
-      "skill": "Circles",
+      "skill": "Area and Volume",
       "difficulty": "Easy",
       "passage": "A right circular cylinder has height \\(18\\) centimeters. Its diameter is one-third of its height.",
       "question": "What is the volume of the cylinder?",
@@ -29449,8 +29449,8 @@
         "C": "The diameter is \\(18/3=6\\), so the radius is \\(3\\). Therefore,\n\\[V=\\pi(3)^2(18)=\\boxed{162\\pi}.\\]",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
-      "subtopic": "Circles",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3",
+      "subtopic": "Area and Volume",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel",
       "diagram": {
         "width": 420,
         "height": 300,
@@ -41064,8 +41064,8 @@
       "groupId": "math-20261008-huge798-q040",
       "status": "staged",
       "section": "Math",
-      "domain": "Geometry & Trigonometry",
-      "skill": "Lines, Angles, and Triangles",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
       "difficulty": "Easy",
       "passage": "",
       "question": "Line \\(r\\) is defined by \\(5x-8y=24\\). Line \\(s\\) is parallel to line \\(r\\). What is the slope of line \\(s\\)?",
@@ -41074,8 +41074,8 @@
       "explanation": "Rewrite as \\(-8y=-5x+24\\), or \\(y=\\frac58x-3\\). Thus line \\(r\\) has slope \\(\\frac58\\), and a parallel line has the same slope. The answer is \\(\\boxed{\\frac58}\\).",
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 40,
-      "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3",
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel",
       "answerType": "student-response",
       "acceptedAnswers": [
         "5/8"
@@ -41562,8 +41562,8 @@
       "groupId": "math-20261008-huge798-q059",
       "status": "staged",
       "section": "Math",
-      "domain": "Geometry & Trigonometry",
-      "skill": "Lines, Angles, and Triangles",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
       "difficulty": "Hard",
       "passage": "",
       "question": "Line \\(\\ell\\) is defined by \\(4x+7y=18\\). Line \\(p\\) is perpendicular to \\(\\ell\\) and passes through \\((3,-2)\\). What is the x-coordinate of the x-intercept of line \\(p\\)?",
@@ -41572,8 +41572,8 @@
       "explanation": "Line \\(\\ell\\) has slope \\(-\\frac47\\), so a perpendicular line has slope \\(\\frac74\\). Thus \\(y+2=\\frac74(x-3)\\). At the x-intercept, \\(y=0\\): \\(2=\\frac74(x-3)\\). Hence \\(8=7x-21\\), so \\(\\boxed{x=\\frac{29}{7}}\\).",
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 59,
-      "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3",
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel",
       "answerType": "student-response",
       "acceptedAnswers": [
         "29/7"
@@ -42055,8 +42055,8 @@
       "groupId": "math-20261008-huge798-q079",
       "status": "staged",
       "section": "Math",
-      "domain": "Geometry & Trigonometry",
-      "skill": "Lines, Angles, and Triangles",
+      "domain": "Algebra",
+      "skill": "Linear Functions",
       "difficulty": "Medium",
       "passage": "",
       "question": "Line \\(m\\) is defined by \\(\\frac{x}{6}-\\frac{y}{4}=1\\). Line \\(n\\) is parallel to line \\(m\\). What is the slope of line \\(n\\)?",
@@ -42070,8 +42070,8 @@
       "explanation": "Multiply by 12: \\(2x-3y=12\\). Then \\(y=\\frac23x-4\\), so line \\(m\\) has slope \\(\\frac23\\). A parallel line has the same slope, so the answer is \\(\\boxed{\\frac23}\\).",
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 79,
-      "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3",
+      "subtopic": "Linear Functions",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -60995,7 +60995,7 @@
       "groupId": "math-20261008-huge798-q672",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving and Data Analysis",
+      "domain": "Problem-Solving & Data Analysis",
       "skill": "Ratio, Rates, Percentages",
       "difficulty": "Easy",
       "passage": "",
@@ -61006,7 +61006,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 672,
       "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel",
       "answerType": "student-response",
       "acceptedAnswers": [
         "2160"
@@ -61017,7 +61017,7 @@
       "groupId": "math-20261008-huge798-q673",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving and Data Analysis",
+      "domain": "Problem-Solving & Data Analysis",
       "skill": "Probability",
       "difficulty": "Medium",
       "passage": "",
@@ -61033,7 +61033,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 673,
       "subtopic": "Probability",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "The factors of 18 greater than 2 are 3, 6, 9, and 18. There are 4 favorable outcomes out of 18 equally likely outcomes, so the probability is \\(4/18=\\boxed{2/9}\\).",
@@ -61046,7 +61046,7 @@
       "groupId": "math-20261008-huge798-q674",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving and Data Analysis",
+      "domain": "Problem-Solving & Data Analysis",
       "skill": "Statistics",
       "difficulty": "Easy",
       "passage": "",
@@ -61062,7 +61062,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 674,
       "subtopic": "Statistics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -61075,7 +61075,7 @@
       "groupId": "math-20261008-huge798-q675",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving and Data Analysis",
+      "domain": "Problem-Solving & Data Analysis",
       "skill": "Ratio, Rates, Percentages",
       "difficulty": "Medium",
       "passage": "",
@@ -61091,7 +61091,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 675,
       "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -61104,7 +61104,7 @@
       "groupId": "math-20261008-huge798-q676",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving and Data Analysis",
+      "domain": "Problem-Solving & Data Analysis",
       "skill": "Statistics",
       "difficulty": "Hard",
       "passage": "",
@@ -61120,7 +61120,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 676,
       "subtopic": "Statistics",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -61300,7 +61300,7 @@
       "groupId": "math-20261008-huge798-q685",
       "status": "staged",
       "section": "Math",
-      "domain": "Geometry and Trigonometry",
+      "domain": "Geometry & Trigonometry",
       "skill": "Lines, Angles, and Triangles",
       "difficulty": "Medium",
       "passage": "",
@@ -61316,7 +61316,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 685,
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "The triangle inequality requires \\(|16-9|<x<16+9\\), so \\(7<x<25\\). The integer values are 8 through 24 inclusive, a total of \\(24-8+1=\\boxed{17}\\).",
@@ -62230,7 +62230,7 @@
       "groupId": "math-20261008-huge798-q726",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving and Data Analysis",
+      "domain": "Problem-Solving & Data Analysis",
       "skill": "Ratio, Rates, Percentages",
       "difficulty": "Medium",
       "passage": "",
@@ -62241,7 +62241,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 726,
       "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel",
       "answerType": "student-response",
       "acceptedAnswers": [
         "1008"
@@ -62252,7 +62252,7 @@
       "groupId": "math-20261008-huge798-q727",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving and Data Analysis",
+      "domain": "Problem-Solving & Data Analysis",
       "skill": "Ratio, Rates, Percentages",
       "difficulty": "Hard",
       "passage": "",
@@ -62268,7 +62268,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 727,
       "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -62368,7 +62368,7 @@
       "groupId": "math-20261008-huge798-q732",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving and Data Analysis",
+      "domain": "Problem-Solving & Data Analysis",
       "skill": "Ratio, Rates, Percentages",
       "difficulty": "Hard",
       "passage": "",
@@ -62379,7 +62379,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 732,
       "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel",
       "answerType": "student-response",
       "acceptedAnswers": [
         "8"
@@ -62475,7 +62475,7 @@
       "groupId": "math-20261008-huge798-q738",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving and Data Analysis",
+      "domain": "Problem-Solving & Data Analysis",
       "skill": "Ratio, Rates, Percentages",
       "difficulty": "Hard",
       "passage": "",
@@ -62491,7 +62491,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 738,
       "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "The two alloys total \\(80-8=72\\) grams, and the sample contains \\(0.30(80)=24\\) grams of copper. If \\(b\\) grams is the 50% alloy, \\(0.20(72-b)+0.50b=24\\), giving \\(b=32\\). Its copper contribution is \\(0.50(32)=\\boxed{16}\\) grams.",
@@ -62745,7 +62745,7 @@
       "groupId": "math-20261008-huge798-q749",
       "status": "staged",
       "section": "Math",
-      "domain": "Problem-Solving and Data Analysis",
+      "domain": "Problem-Solving & Data Analysis",
       "skill": "Ratio, Rates, Percentages",
       "difficulty": "Medium",
       "passage": "",
@@ -62756,7 +62756,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 749,
       "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3",
+      "classificationVersion": "2026-10-08-math-blueprint-relabel",
       "answerType": "student-response",
       "acceptedAnswers": [
         "15"
@@ -68710,5 +68710,14 @@
         "subtopic": "Linear Functions"
       }
     ]
+  },
+  "subtopicAudit": {
+    "version": "2026-10-08-math-blueprint-relabel",
+    "scheme": "User-provided Math mock module blueprint (8 Algebra, 8 Advanced Math, 3 PSDA, 3 Geometry/Trigonometry)",
+    "examined": 1491,
+    "corrected": 159,
+    "changedSkill": 148,
+    "oldOtherAlgebraCount": 8,
+    "notes": "Difficulty labels unchanged. Mock-reserved content preserves category quota except rename from Other Algebra to Linear equations in 2 variables. Reading & Writing untouched."
   }
 }
