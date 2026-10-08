@@ -1,0 +1,24 @@
+name: Reading and Writing answer-length audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - question-bank.json
+      - rw-length-bias-audit.mjs
+      - .github/workflows/rw-answer-length.yml
+  pull_request:
+    paths:
+      - question-bank.json
+      - rw-length-bias-audit.mjs
+      - .github/workflows/rw-answer-length.yml
+
+jobs:
+  length-bias:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node rw-length-bias-audit.mjs --strict
