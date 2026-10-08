@@ -1338,12 +1338,12 @@ function renderInlineFormatting(
         escaped =
             escaped
                 .replace(
-                    /\*([^*]+)\*/g,
+                    /\*([^*\n]+)\*/g,
                     "<em>$1</em>"
                 )
                 .replace(
-                    /_([^_]+)_/g,
-                    "<em>$1</em>"
+                    /(^|[^\p{L}\p{N}\\])_([^_\n]+)_(?=$|[^\p{L}\p{N}])/gu,
+                    "$1<em>$2</em>"
                 );
     }
 
