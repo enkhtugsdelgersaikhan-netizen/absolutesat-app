@@ -53,7 +53,7 @@ const SAT_FILTER_TAXONOMY = {
             "Linear Functions",
             "Systems of Linear Equations",
             "Linear Inequalities",
-            "Other Algebra"
+            "Linear equations in 2 variables"
         ],
         "Advanced Math": [
             "Quadratics",
