@@ -1,15 +1,15 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-07",
+  "generatedAt": "2026-10-08",
   "tests": [
     {
       "id": "mock-test-1",
       "title": "SAT Mock Test 1",
       "subtitle": "Full adaptive practice",
-      "description": "Full adaptive Digital SAT-style practice test.",
-      "available": true,
-      "populated": true,
-      "questionsPerRoute": 98,
+      "description": "Adaptive test shell. Its questions have been returned to the question banks and will be reassigned later.",
+      "available": false,
+      "populated": false,
+      "questionsPerRoute": 0,
       "plannedQuestionsPerRoute": 98,
       "testingMinutes": 134,
       "breakMinutes": 10,
@@ -17,14 +17,14 @@
         {
           "label": "Reading & Writing",
           "module": "Module 1",
-          "questions": 27,
+          "questions": 0,
           "plannedQuestions": 27,
           "minutes": 32
         },
         {
           "label": "Reading & Writing",
           "module": "Module 2",
-          "questions": 27,
+          "questions": 0,
           "plannedQuestions": 27,
           "minutes": 32,
           "adaptive": true
@@ -32,14 +32,14 @@
         {
           "label": "Math",
           "module": "Module 1",
-          "questions": 22,
+          "questions": 0,
           "plannedQuestions": 22,
           "minutes": 35
         },
         {
           "label": "Math",
           "module": "Module 2",
-          "questions": 22,
+          "questions": 0,
           "plannedQuestions": 22,
           "minutes": 35,
           "adaptive": true
@@ -50,10 +50,10 @@
       "id": "mock-test-2",
       "title": "SAT Mock Test 2",
       "subtitle": "Full adaptive practice",
-      "description": "Full adaptive Digital SAT-style practice test.",
-      "available": true,
-      "populated": true,
-      "questionsPerRoute": 98,
+      "description": "Adaptive test shell. Its questions have been returned to the question banks and will be reassigned later.",
+      "available": false,
+      "populated": false,
+      "questionsPerRoute": 0,
       "plannedQuestionsPerRoute": 98,
       "testingMinutes": 134,
       "breakMinutes": 10,
@@ -61,14 +61,14 @@
         {
           "label": "Reading & Writing",
           "module": "Module 1",
-          "questions": 27,
+          "questions": 0,
           "plannedQuestions": 27,
           "minutes": 32
         },
         {
           "label": "Reading & Writing",
           "module": "Module 2",
-          "questions": 27,
+          "questions": 0,
           "plannedQuestions": 27,
           "minutes": 32,
           "adaptive": true
@@ -76,14 +76,14 @@
         {
           "label": "Math",
           "module": "Module 1",
-          "questions": 22,
+          "questions": 0,
           "plannedQuestions": 22,
           "minutes": 35
         },
         {
           "label": "Math",
           "module": "Module 2",
-          "questions": 22,
+          "questions": 0,
           "plannedQuestions": 22,
           "minutes": 35,
           "adaptive": true
