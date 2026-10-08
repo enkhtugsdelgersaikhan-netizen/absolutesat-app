@@ -99,9 +99,9 @@ if (process.argv.includes("--strict")) {
     }
   }
   if (failures.length) {
-    console.error("Answer-length regression detected:\\n" + failures.join("\\n"));
+    console.error("Answer-length regression detected:\n" + failures.join("\n"));
     process.exitCode = 1;
   } else {
-    console.log("PASS: overall and qualifying skill-level length-bias checks");
+    if (!process.argv.includes("--json")) console.log("PASS: overall and qualifying skill-level length-bias checks");
   }
 }
