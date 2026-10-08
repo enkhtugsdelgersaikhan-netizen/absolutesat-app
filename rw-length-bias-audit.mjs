@@ -13,7 +13,7 @@ const strip = (input) => String(input ?? "")
 const countWords = value => (strip(value).match(/[\p{L}\p{N}]+(?:['’\-][\p{L}\p{N}]+)*/gu) ?? []).length;
 const countChars = value => strip(value).length;
 const measures = { words: countWords, characters: countChars };
-const empty = () => ({ total: 0, uniqueLongest: 0, longestCorrect: 0, uniqueShortest: 0, shortestCorrect: 0, longestTies: 0, shortestTies: 0 });
+const empty = () => ({ total: 0, uniqueLongest: 0, longestCorrect: 0, uniqueShortest: 0, shortestCorrect: 0, longestTies: 0, shortestTies: 0, severeLongest: 0, severeLongestCorrect: 0 });
 const summarize = v => ({
   ...v,
   longestGuessAccuracy: v.uniqueLongest ? +(100 * v.longestCorrect / v.uniqueLongest).toFixed(1) : null,
@@ -29,6 +29,8 @@ for (const question of bank.questions) {
   for (const [unit, measure] of Object.entries(measures)) {
     const sizes = options.map(measure);
     const max = Math.max(...sizes), min = Math.min(...sizes);
+    const nextLongest = [...sizes].sort((a, b) => b - a)[1];
+    const severeGap = max - nextLongest >= (unit === "words" ? 7 : 40);
     const winners = sizes.map((size, i) => size === max ? letters[i] : null).filter(Boolean);
     const losers = sizes.map((size, i) => size === min ? letters[i] : null).filter(Boolean);
     const skill = question.subtopic || question.skill || "Unclassified";
@@ -40,6 +42,10 @@ for (const question of bank.questions) {
       if (winners.length === 1) {
         s.uniqueLongest++;
         if (winners[0] === question.correctAnswer) s.longestCorrect++;
+        if (severeGap) {
+          s.severeLongest++;
+          if (winners[0] === question.correctAnswer) s.severeLongestCorrect++;
+        }
       } else s.longestTies++;
       if (losers.length === 1) {
         s.uniqueShortest++;
@@ -47,7 +53,7 @@ for (const question of bank.questions) {
       } else s.shortestTies++;
     }
     if (winners.length === 1 && winners[0] === question.correctAnswer) {
-      group.flagged.push({ id: question.id, skill, difficulty: diff, longestLength: max, nextLongest: [...sizes].sort((a, b) => b - a)[1], choiceLengths: Object.fromEntries(letters.map((letter, i) => [letter, sizes[i]])), correctAnswer: question.correctAnswer });
+      group.flagged.push({ id: question.id, skill, difficulty: diff, longestLength: max, nextLongest, lengthGap: max - nextLongest, choiceLengths: Object.fromEntries(letters.map((letter, i) => [letter, sizes[i]])), correctAnswer: question.correctAnswer });
     }
   }
 }
@@ -64,15 +70,38 @@ if (process.argv.includes("--json")) {
 } else {
   for (const [unit, group] of Object.entries(data)) {
     const s = group.all;
-    console.log(`\n${unit}: ${s.total} questions; unique longest ${s.uniqueLongest}; longest-choice correct ${s.longestCorrect} (${s.longestGuessAccuracy}%); unique shortest ${s.uniqueShortest}; shortest-choice correct ${s.shortestCorrect} (${s.shortestGuessAccuracy}%)`);
+    console.log(`\n${unit}: ${s.total} questions; unique longest ${s.uniqueLongest}; longest-choice correct ${s.longestCorrect} (${s.longestGuessAccuracy}%); unique shortest ${s.uniqueShortest}; shortest-choice correct ${s.shortestCorrect} (${s.shortestGuessAccuracy}%); severe-longest ${s.severeLongest}, severe-correct ${s.severeLongestCorrect}`);
     for (const [skill, v] of Object.entries(group.bySkill).sort((a,b)=>b[1].total-a[1].total)) {
-      console.log(`  ${skill}: n=${v.total}, unique-longest=${v.uniqueLongest}, correct-longest=${v.longestCorrect}, longest-guess=${v.longestGuessAccuracy ?? "n/a"}%`);
+      console.log(`  ${skill}: n=${v.total}, unique-longest=${v.uniqueLongest}, correct-longest=${v.longestCorrect}, longest-guess=${v.longestGuessAccuracy ?? "n/a"}%, severe-correct=${v.severeLongestCorrect}`);
     }
     if (process.argv.includes("--details")) {
       for (const q of group.flagged) console.log(`  FLAG ${q.id} [${q.skill}] ${q.correctAnswer}: ${JSON.stringify(q.choiceLengths)}`);
     }
   }
 }
-if (process.argv.includes("--strict") && Object.values(data).some(g => g.all.uniqueLongest >= 40 && Math.abs(g.all.longestCorrect / g.all.uniqueLongest - .25) > .10)) {
-  process.exitCode = 1;
+// Aggregate-only tests can hide answer-length cues within reading subtopics.
+// For word counts, short grammar/convention options are not comparable to
+// analytical answers, so avoid penalizing them for natural one-word changes.
+if (process.argv.includes("--strict")) {
+  const exemptFromSkillGate = new Set(["Boundaries", "Form, Structure & Sense"]);
+  const failures = [];
+  for (const [unit, group] of Object.entries(data)) {
+    const all = group.all;
+    if (all.uniqueLongest >= 40 && Math.abs(all.longestCorrect / all.uniqueLongest - .25) > .10) {
+      failures.push(`${unit}: overall longest-answer accuracy ${all.longestGuessAccuracy}% exceeds the 25% ± 10-point range`);
+    }
+    for (const [skill, row] of Object.entries(group.bySkill)) {
+      if (exemptFromSkillGate.has(skill) || row.uniqueLongest < 40) continue;
+      const tolerance = unit === "words" ? .125 : .15;
+      if (Math.abs(row.longestCorrect / row.uniqueLongest - .25) > tolerance) {
+        failures.push(`${unit}: ${skill} longest-answer accuracy ${row.longestGuessAccuracy}% out of range (n=${row.uniqueLongest})`);
+      }
+    }
+  }
+  if (failures.length) {
+    console.error("Answer-length regression detected:\\n" + failures.join("\\n"));
+    process.exitCode = 1;
+  } else {
+    console.log("PASS: overall and qualifying skill-level length-bias checks");
+  }
 }
