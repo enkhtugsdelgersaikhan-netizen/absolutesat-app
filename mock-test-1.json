@@ -3226,7 +3226,7 @@
         {
           "requestId": "mock-1-math-m1-08",
           "targetDomain": "Algebra",
-          "targetSubtopic": "Other Algebra",
+          "targetSubtopic": "Linear equations in 2 variables",
           "targetDifficulty": "Medium",
           "question": {
             "id": "math-20261006-batch465-q159",
@@ -3234,7 +3234,7 @@
             "status": "staged",
             "section": "Math",
             "domain": "Algebra",
-            "skill": "Other Algebra",
+            "skill": "Linear equations in 2 variables",
             "difficulty": "Medium",
             "passage": "",
             "question": "The equation\n\n\\[7p-3q=2p+5r\\]\nrelates the variables p, q, and r. Which equation correctly expresses p in terms of q and r?",
@@ -3254,8 +3254,8 @@
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
-            "subtopic": "Other Algebra",
-            "classificationVersion": "2026-10-07-v1"
+            "subtopic": "Linear equations in 2 variables",
+            "classificationVersion": "2026-10-08-math-blueprint-relabel"
           }
         },
         {
@@ -3978,7 +3978,7 @@
         {
           "requestId": "mock-1-math-m2-08-shared",
           "targetDomain": "Algebra",
-          "targetSubtopic": "Other Algebra",
+          "targetSubtopic": "Linear equations in 2 variables",
           "targetDifficulty": "Easy",
           "question": {
             "id": "math-20261006-batch465-q238",
@@ -3986,7 +3986,7 @@
             "status": "staged",
             "section": "Math",
             "domain": "Algebra",
-            "skill": "Other Algebra",
+            "skill": "Linear equations in 2 variables",
             "difficulty": "Easy",
             "passage": "",
             "question": "The quantities \\(v\\) and \\(p\\) satisfy \\[v=\\frac53(p-4).\\] Which equation expresses \\(p\\) in terms of \\(v\\)?",
@@ -4006,8 +4006,8 @@
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
-            "subtopic": "Other Algebra",
-            "classificationVersion": "2026-10-07-v1"
+            "subtopic": "Linear equations in 2 variables",
+            "classificationVersion": "2026-10-08-math-blueprint-relabel"
           },
           "sharedBetweenRoutes": true
         },
@@ -4933,7 +4933,7 @@
         {
           "requestId": "mock-1-math-m2-08-shared",
           "targetDomain": "Algebra",
-          "targetSubtopic": "Other Algebra",
+          "targetSubtopic": "Linear equations in 2 variables",
           "targetDifficulty": "Easy",
           "question": {
             "id": "math-20261006-batch465-q238",
@@ -4941,7 +4941,7 @@
             "status": "staged",
             "section": "Math",
             "domain": "Algebra",
-            "skill": "Other Algebra",
+            "skill": "Linear equations in 2 variables",
             "difficulty": "Easy",
             "passage": "",
             "question": "The quantities \\(v\\) and \\(p\\) satisfy \\[v=\\frac53(p-4).\\] Which equation expresses \\(p\\) in terms of \\(v\\)?",
@@ -4961,8 +4961,8 @@
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
-            "subtopic": "Other Algebra",
-            "classificationVersion": "2026-10-07-v1"
+            "subtopic": "Linear equations in 2 variables",
+            "classificationVersion": "2026-10-08-math-blueprint-relabel"
           },
           "sharedBetweenRoutes": true
         },
