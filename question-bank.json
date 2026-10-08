@@ -761,7 +761,7 @@
       "passage": "In a 2012 experiment on auditory judgment, researchers played participants two short electronically generated musical phrases and asked them to select the one that sounded more rhythmically complex. The researchers then appeared to replay each participant’s chosen phrase but, on some trials, covertly substituted the phrase that the participant had rejected. Many participants did not detect the substitution and proceeded to explain which musical features had supposedly led them to choose the phrase they were hearing. Later studies reproduced the general effect using choices involving typefaces and consumer packaging.",
       "question": "Based on the text, why was the covert substitution an important part of the experiment?",
       "choices": {
-        "A": "It allowed the researchers to determine whether participants who initially regarded the two musical phrases as equally complex would eventually develop a stronger preference.",
+        "A": "It allowed the researchers to determine whether participants who initially regarded the two musical phrases as equally complex in their musical structure would eventually develop a stronger preference for one of the phrases.",
         "B": "It enabled the researchers to compare the cognitive processes involved in judging musical complexity with those involved in evaluating typefaces and product packaging.",
         "C": "It helped the researchers test whether participants would rationalize an outcome they believed matched their own choice even when that outcome actually contradicted the choice they had made.",
         "D": "It allowed the researchers to measure whether persuasive explanations from the researchers could induce participants to reverse an explicitly stated judgment."
@@ -1765,7 +1765,7 @@
         "A": "Aisha Rahman’s *The Cartographer’s Daughter* premiered at Manchester’s Lantern Theatre in 2018.",
         "B": "*The Cartographer’s Daughter* follows apprentice map conservator Leena, who discovers potentially significant annotations hidden in a damaged nineteenth-century atlas.",
         "C": "British Bangladeshi playwright Aisha Rahman wrote *The Cartographer’s Daughter*, a play about cartographic conservation.",
-        "D": "In 2018, a play about an apprentice conservator premiered at the Lantern Theatre in Manchester."
+        "D": "In 2018, a new play about an apprentice working in conservation had its premiere at the Lantern Theatre in the English city of Manchester."
       },
       "correctAnswer": "B",
       "explanation": "Choice B provides the clearest **plot overview**: it identifies the protagonist and describes the central event that drives the story, Leena’s discovery of consequential annotations in an old atlas.\n\nA focuses on publication-style background information—the playwright, venue, and year—rather than what happens in the play. C identifies the author and general subject matter but does not summarize the action. D likewise emphasizes the premiere and gives only a vague description of the protagonist’s occupation.",
@@ -2597,7 +2597,7 @@
       "choices": {
         "A": "Biographers should freely invent details whenever historical records contain gaps.",
         "B": "Excessive commitment to factual documentation can produce an accurate biography that nevertheless fails to convey its subject vividly.",
-        "C": "Visual portraits generally provide more reliable information about historical figures than written biographies do.",
+        "C": "Visual portraits of historical figures generally provide information about their lives that is more reliable than the information provided by written biographies.",
         "D": "Historians disagree fundamentally about which kinds of documentary evidence should be considered trustworthy."
       },
       "correctAnswer": "B",
@@ -2623,7 +2623,7 @@
       "question": "The student wants to emphasize a similarity between the Ena de Silva House and the Kandalama Hotel. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "choices": {
         "A": "Bawa’s Ena de Silva House contains an internal courtyard inspired by regional domestic architecture.",
-        "B": "The Ena de Silva House incorporates a traditional courtyard, whereas the Kandalama Hotel makes extensive use of deep verandas and shaded transitional spaces.",
+        "B": "The Ena de Silva House incorporates a courtyard that follows a traditional design, whereas the Kandalama Hotel makes extensive use of deep verandas and other shaded transitional spaces.",
         "C": "Geoffrey Bawa frequently combined modern construction with architectural traditions associated with South Asia.",
         "D": "Although they draw on different vernacular features, both the Ena de Silva House and the Kandalama Hotel combine modern structural systems with elements of regional architectural tradition."
       },
@@ -5548,7 +5548,7 @@
       "question": "Which choice most logically completes the text?",
       "choices": {
         "A": "drivers who could easily afford repeated penalties might interpret publicized citations as signals of wealth or status, undermining the policy’s purpose.",
-        "B": "motorists with lower incomes would be unable to enter the district even after paying the required surcharge.",
+        "B": "motorists who have comparatively lower incomes would be unable to enter the district even after they had paid the required entry surcharge.",
         "C": "the city could collect more revenue by increasing the surcharge each time a motorist entered the district.",
         "D": "publicizing penalties would make residents more familiar with the geographic boundaries of the regulated district."
       },
@@ -5682,7 +5682,7 @@
       "passage": "A preservation consortium identified 28 standardized procedures for stabilizing deteriorating motion-picture film. Researchers surveyed archives in Tallinn, Kyoto, and Valparaíso to determine how many of the 28 procedures each archive regularly used. They concluded that none of the three archives used the complete set.",
       "question": "Which choice best describes data from the graph that support the researchers’ conclusion?",
       "choices": {
-        "A": "Kyoto used more of the procedures than either Tallinn or Valparaíso did, but it used fewer than 24.",
+        "A": "Kyoto used a greater number of the listed procedures than either Tallinn or Valparaíso did, but the total number it used was still fewer than 24.",
         "B": "Some preservation procedures used in Valparaíso were not among the 28 procedures evaluated by the consortium.",
         "C": "Tallinn, Kyoto, and Valparaíso used 18, 21, and 19 of the 28 procedures, respectively, so every archive used fewer than all 28.",
         "D": "Each archive probably used additional preservation procedures that were not included in the survey."
@@ -6053,7 +6053,7 @@
       "passage": "Maxine Hong Kingston’s 1976 book The Woman Warrior is frequently discussed as autobiographical. That description has some justification: important portions of the work draw on Kingston’s family history and personal experience. Yet the book also combines remembered events with family legend, reconstructed dialogue, deliberate rearrangement, and imaginative elaboration. Readers should therefore be cautious about concluding that _____",
       "question": "Which choice most logically completes the text?",
       "choices": {
-        "A": "Kingston was aware that she was drawing on family stories while composing The Woman Warrior.",
+        "A": "Kingston was aware, throughout the process of composing The Woman Warrior, that she was drawing on stories passed down within her family.",
         "B": "every episode and figure in The Woman Warrior has a direct, verifiable counterpart in Kingston’s life or family history.",
         "C": "The Woman Warrior contains any material that can illuminate Kingston’s experiences or perspective.",
         "D": "Kingston intended readers to disregard all autobiographical dimensions of the book."
@@ -6975,7 +6975,7 @@
       "choices": {
         "A": "It explains how a geographic feature forms and then gives examples of how particular instances of that feature received their names.",
         "B": "It identifies two Midwestern lakes and then compares the ecosystems found in them.",
-        "C": "It describes several causes of river flooding and then explains how engineers attempt to control those causes.",
+        "C": "It describes several different causes of flooding in rivers and then explains the methods through which engineers attempt to control each of those causes.",
         "D": "It defines a sedimentary process and then evaluates competing explanations for the shape of river channels."
       },
       "correctAnswer": "A",
@@ -7030,7 +7030,7 @@
         "A": "large schools form primarily in colder waters because fish require collective warmth when predators are scarce.",
         "B": "schooling patterns become less predictable when tuna are present than when other predators are present.",
         "C": "the tendency to form especially large, persistent schools is more consistent with defense against predators than with conservation of body heat.",
-        "D": "schooling fish respond similarly to temperature and predation because both factors produce equivalent changes in school size."
+        "D": "schooling fish respond in essentially the same way to changes in temperature and to predation because both factors produce equivalent changes in the size of schools."
       },
       "correctAnswer": "C",
       "explanation": "The evidence distinguishes between the two hypotheses. If temperature is unrelated to school size and duration but predator presence is positively associated with both, then the observations support the predator-defense explanation more strongly than the thermal-conservation explanation.\nA contradicts the finding that temperature was not associated with school size or duration. B introduces a comparison among predator types that the study does not provide. D is false because the two factors did not produce equivalent relationships: predation was associated with the behavior, whereas temperature was not.",
@@ -7054,7 +7054,7 @@
       "passage": "Acoustics researcher Mirela Sato and colleagues compared professional audio engineers with adults who had no professional audio experience, asking participants to select their preferred listening level for recordings of orchestral music, spoken dialogue, rainfall, and electronic music. The engineers, who reported substantially greater lifetime exposure to amplified sound, consistently selected higher volumes. Clinical tests, however, showed comparable hearing thresholds in the two groups, suggesting that although an engineer might prefer a favorite recording at 81.7 decibels while a nonengineer might prefer it at 69.8 decibels, this difference _____",
       "question": "Which choice most logically completes the text?",
       "choices": {
-        "A": "indicates that engineers are unlikely to select elevated volumes for recordings outside their preferred musical genres.",
+        "A": "indicates that sound engineers are unlikely to select elevated playback volumes for recordings that belong to musical genres outside those they personally prefer.",
         "B": "does not appear to result from clinically significant hearing loss caused by the engineers’ greater lifetime exposure to amplified sound.",
         "C": "demonstrates that both groups have poorer hearing than adults with little lifetime exposure to recorded audio.",
         "D": "cannot plausibly reflect differences in auditory training acquired through professional experience."
@@ -9459,7 +9459,7 @@
       "question": "The student wants to emphasize a difference between Vega’s and Morita’s uses of XRF. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "choices": {
         "A": "XRF can determine the elemental composition of a sample without requiring that the sample be destroyed during analysis.",
-        "B": "Although Vega and Morita both use XRF, each relies on the technique to determine whether a sample contains cobalt-rich material.",
+        "B": "Although Vega and Morita both use the XRF technique in their investigations, each relies on that technique to determine whether a particular sample contains cobalt-rich material.",
         "C": "Vega uses XRF to distinguish among glaze compositions in historical ceramics, whereas Morita uses the technique to correlate ash deposits with particular volcanic eruptions.",
         "D": "Morita uses XRF to distinguish copper-rich from cobalt-rich ceramic glazes, while Vega employs it to correlate volcanic ash beds."
       },
@@ -11078,7 +11078,7 @@
         "A": "The sample exposed to 16% oxygen and 2.5 atm necessarily contained a greater total proportion of archaea than of bacteria.",
         "B": "The sample exposed to 8% oxygen and 1.0 atm contained a lower proportion of N. glacialis within its archaeal community than the sample exposed to 16% oxygen and 2.5 atm did.",
         "C": "The sample exposed to 16% oxygen and 2.5 atm contained a greater proportion of N. glacialis than of P. vacuolata.",
-        "D": "The sample exposed to 8% oxygen and 1.0 atm contained a lower proportion of P. vacuolata than the sample exposed to 16% oxygen and 2.5 atm did."
+        "D": "The sample exposed to an oxygen concentration of 8% and a pressure of 1.0 atm contained a lower proportion of P. vacuolata than the sample exposed to 16% oxygen and 2.5 atm did."
       },
       "correctAnswer": "B",
       "explanation": "The samples began with very similar microbial compositions. The table shows that archaeal growth was lowest under 8% oxygen and 1.0 atm and highest under 16% oxygen and 2.5 atm. The passage further states that increases in total archaeal growth were driven primarily by N. glacialis. It therefore follows that the condition producing much greater archaeal growth would also tend to produce a larger representation of N. glacialis within the archaeal community. Thus, the low-growth sample would contain a lower proportion of that archaeon than the high-growth sample, making B correct.\nChoice A cannot be established because no data compare the total quantities of archaea and bacteria. Choice C also compares N. glacialis directly with a bacterial species, but neither the table nor the passage provides enough information to establish which species ultimately made up the larger proportion of the entire microbial community. Choice D is unsupported because the passage says bacterial growth changes were spread across many bacterial species; it does not single out P. vacuolata as varying systematically with the archaeal growth pattern.",
@@ -12802,7 +12802,7 @@
       "choices": {
         "A": "Some critics call field recording “little more than background noise,” a description that may apply to albums built primarily from ordinary environmental sounds.",
         "B": "Night Transit, released in 2021, contains recordings of trains, tunnels, rainfall, station announcements, and conversation from northern Spain.",
-        "C": "Although Baeza says that Night Transit “turns listening into a form of travel,” other reviewers describe field-recording albums as “little more than background noise.”",
+        "C": "Although Baeza says that Night Transit “turns listening into a form of travel,” other reviewers who have assessed field-recording albums describe those albums as “little more than background noise.”",
         "D": "Far from functioning merely as background noise, field recording can “turn[] listening into a form of travel, making distance almost physical,” as Baeza writes of Moreno’s Night Transit."
       },
       "correctAnswer": "D",
@@ -12948,7 +12948,7 @@
         "A": "It introduces an analytical technique, explains a limitation of that technique, describes how researchers incorporated another method to produce a new technique, and identifies an advantage of the resulting approach.",
         "B": "It describes two independently developed microscopy techniques, compares the scientific questions each is designed to answer, and argues that one should replace the other.",
         "C": "It introduces a newer imaging technique that corrects flaws in an earlier method and then explains that the same researchers originally developed both techniques.",
-        "D": "It explains the principal function of expansion microscopy, describes evidence that the technique performs poorly in chemical analysis, and proposes combining it with conventional light microscopy."
+        "D": "It explains the principal function of expansion microscopy, describes evidence indicating that this specific technique performs poorly when applied to chemical analysis, and proposes combining it with conventional forms of light microscopy."
       },
       "correctAnswer": "A",
       "choiceExplanations": {
@@ -13327,7 +13327,7 @@
       "question": "The student wants to emphasize a difference between Canuto’s and Duncanson’s uses of LiDAR. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "choices": {
         "A": "Although both researchers work with large LiDAR datasets, Canuto and Duncanson use measurements produced from reflected laser pulses.",
-        "B": "Canuto and Duncanson both use airborne remote-sensing technology to study features that can be difficult to evaluate from ground level.",
+        "B": "Canuto and Duncanson both use forms of airborne remote-sensing technology in their research to study features that can otherwise be difficult to evaluate from ground level.",
         "C": "LiDAR can produce detailed models of both terrain and vegetation by measuring the return time of emitted laser pulses.",
         "D": "Canuto uses LiDAR to identify archaeological features hidden beneath forest cover, whereas Duncanson uses it to estimate characteristics such as canopy height and biomass."
       },
@@ -14528,7 +14528,7 @@
       "question": "The student wants to specify why Halas received the prize. Which choice most effectively uses information from the notes to accomplish this goal?",
       "choices": {
         "A": "In 2024, Naomi Halas became a recipient of the prestigious Kavli Prize in Nanoscience.",
-        "B": "The Kavli Prize in Nanoscience honors scientists whose discoveries substantially advance research involving matter at very small scales.",
+        "B": "The Kavli Prize in Nanoscience is an award that honors scientists whose discoveries substantially advance the scientific study of matter at very small scales.",
         "C": "Naomi Halas received the Kavli Prize in Nanoscience in 2024 for pioneering research on nanoscale optical structures and their interactions with light.",
         "D": "Naomi Halas’s research has applications in sensing and medicine, two fields in which nanoscale technologies can be useful."
       },
@@ -16514,7 +16514,7 @@
       "passage": "Composer Irena Valdés’s Tesserae cycle consists of twelve string quartets written between 1998 and 2017. The seventh quartet, North Window, ends on an unresolved harmonic figure that might seem unusually abrupt if the work is heard in isolation. Yet the eighth quartet, Salt Orchard, opens by completing that same progression, and Valdés uses comparable handoffs between several other neighboring quartets. For this reason, listeners who treat each installment as entirely self-contained may misinterpret some of the cycle’s structural choices. The twelve quartets are better understood as sections of one extended composition, much as a mural cycle can distribute a continuous visual narrative across separate walls.",
       "question": "Which choice best states the main idea of the text?",
       "choices": {
-        "A": "North Window and Salt Orchard are structurally more sophisticated than the other ten quartets in the Tesserae cycle.",
+        "A": "The quartets North Window and Salt Orchard have musical structures that are more sophisticated than those of the other ten quartets included in the Tesserae cycle.",
         "B": "Valdés’s Tesserae cycle has achieved the same critical prestige as the monumental mural cycles whose structure it resembles.",
         "C": "Listeners generally prefer the unresolved endings in Tesserae to the more conventional endings found in other string-quartet cycles.",
         "D": "Understanding the structural continuity among Valdés’s quartets helps make sense of features that may seem puzzling when the works are considered separately."
@@ -16827,7 +16827,7 @@
       "choices": {
         "A": "Researchers have long known that honeybees can distinguish among unfamiliar odors in laboratory mazes.",
         "B": "Contrary to a previous assumption about their cognitive limitations, fruit flies may be capable of learning an abstract relationship between stimuli.",
-        "C": "Fruit flies appear to respond to new odors more accurately than honeybees do under comparable experimental conditions.",
+        "C": "Fruit flies appear to respond with greater accuracy to newly encountered odors than honeybees do when the two groups are tested under comparable experimental conditions.",
         "D": "The ability to detect differences among odors allows many insect species to locate food more efficiently."
       },
       "correctAnswer": "B",
@@ -17190,7 +17190,7 @@
       "question": "Which choice best describes data in the table that support the journalist’s claim?",
       "choices": {
         "A": "Universidad del Valle Norte’s national estimate of 41,800 students is substantially greater than its main-campus enrollment of 23,460.",
-        "B": "Lakehurst State University’s main campus occupies substantially more land than Université de Montferrand’s main campus does.",
+        "B": "The main campus of Lakehurst State University occupies a substantially larger area of land than the main campus of Université de Montferrand does.",
         "C": "Université de Montferrand reports a larger main-campus enrollment than Marston University does.",
         "D": "Every university’s systemwide enrollment exceeds 25,000 students."
       },
@@ -22265,7 +22265,7 @@
       "passage": "European astronomical tables of the late Middle Ages drew on numerous earlier sources, including the twelfth-century Tables of Toledo and later compilations produced in Paris and northern Italy. Astronomer Luca Benedetti’s fifteenth-century Compendium of the Wandering Stars attempted to reconcile several such traditions. Many of Benedetti’s numerical procedures can be traced to the earlier Tables of Verona, whose author, Pietro Salvi, wrote in the early fourteenth century. Neither Salvi’s tables nor any surviving astronomical work known to predate them describes the “double-correction” procedure that Benedetti includes for calculating Mars’s longitude. This evidence suggests that ______",
       "question": "Which choice most logically completes the text?",
       "choices": {
-        "A": "Salvi’s Tables of Verona must have been more similar overall to the Tables of Toledo than to Benedetti’s Compendium.",
+        "A": "Salvi’s Tables of Verona must have been more similar in their overall contents to the Tables of Toledo than they were to the text of Benedetti’s Compendium.",
         "B": "Benedetti encountered the double-correction procedure in a source or tradition that was not available to Salvi when the Tables of Verona were composed.",
         "C": "Benedetti’s Compendium is necessarily more astronomically accurate than Salvi’s tables because it includes a procedure absent from earlier works.",
         "D": "whenever an astronomical procedure in one of Benedetti’s sources conflicted with Salvi’s method, Benedetti consistently preferred Salvi’s version."
@@ -22897,7 +22897,7 @@
       "choices": {
         "A": "In 2020, oral-history applications exceeded archival-digitization applications by approximately 25.",
         "B": "In 2023, approximately 250 archival-digitization applications and 100 building-conservation applications were submitted.",
-        "C": "Public-archaeology applications remained at approximately 50 from 2020 through 2022 before increasing in 2023.",
+        "C": "The number of public-archaeology applications remained at approximately 50 applications per year from 2020 through 2022 before increasing in the year 2023.",
         "D": "Oral-history applications reached approximately 300 in 2023, compared with approximately 225 in each of the three preceding years."
       },
       "correctAnswer": "D",
@@ -23159,7 +23159,7 @@
       "choices": {
         "A": "The Hwasun type piece dates to approximately 1418, whereas the Sangju printed fragment dates to approximately 1432.",
         "B": "The Late Diffusion hypothesis placed the establishment of movable-type printing in Korea’s inland provinces at approximately 1450.",
-        "C": "The Hwasun object is a bronze piece of movable type, while the Sangju find is a fragment of a printed text.",
+        "C": "The artifact discovered at Hwasun is a bronze piece of movable type, while the archaeological find from Sangju is a fragment of an already printed text.",
         "D": "Although the two finds differ in form and date, both predate 1450 and therefore provide evidence against a strict version of the Late Diffusion hypothesis."
       },
       "correctAnswer": "D",
@@ -24033,7 +24033,7 @@
       "question": "Which choice best describes the function of the underlined portion in the text as a whole?",
       "choices": {
         "A": "It extends the discussion from one group affected by dam decommissioning to another group whose stake in the issue may be less immediately apparent.",
-        "B": "It contrasts workers’ obvious financial interest in dam operations with the less evident financial interest of municipal utilities discussed earlier.",
+        "B": "It contrasts the obvious financial interest that workers have in dam operations with the less immediately evident financial interest of the municipal utilities discussed earlier in the text.",
         "C": "It explains that utilities have concealed the financial consequences of sedimentation and describes how that concealment has harmed dam workers.",
         "D": "It provides general background about reservoir sedimentation that applies equally to both utilities and workers introduced elsewhere in the text."
       },
@@ -24343,7 +24343,7 @@
       "question": "Which choice best states the main purpose of the text?",
       "choices": {
         "A": "To comment on a human tendency that helps explain why the townspeople maintain a harsh opinion of the newcomer",
-        "B": "To encourage sympathy equally for the newcomer and for the residents who criticize that person",
+        "B": "To encourage readers to feel an equal degree of sympathy for the newcomer and for the residents who criticize that same person",
         "C": "To speculate about the specific actions the newcomer could take to improve the town’s opinion",
         "D": "To demonstrate that the townspeople’s unfavorable judgment is justified by evidence they carefully considered"
       },
@@ -24464,7 +24464,7 @@
       "choices": {
         "A": "The Meridian Foundation, based in Lisbon, administers an international competition recognizing architectural conservation.",
         "B": "Architect Samira El-Amin created Bayt al-Nur Courtyard, which received the Meridian Prize’s gold distinction in 2007.",
-        "C": "In 2007, an Egyptian architect received a gold distinction in an international architectural conservation competition.",
+        "C": "In 2007, an Egyptian architect received a gold distinction for an entry in an international competition devoted to architectural conservation.",
         "D": "Bayt al-Nur Courtyard was among the restoration projects honored by the Meridian Foundation."
       },
       "correctAnswer": "B",
@@ -25626,7 +25626,7 @@
       "question": "Based on the text, what can be concluded about the decline of elevated grain-drying barns?",
       "choices": {
         "A": "Causes other than the introduction of mechanical dryers may have contributed more directly to the decline.",
-        "B": "Builders responded to declining demand for barns by manufacturing mechanical dryers instead.",
+        "B": "Builders responded to a decline in the demand for traditional barns by switching their manufacturing activity to the production of mechanical dryers instead.",
         "C": "Farmers continued to regard traditional barns as superior to mechanical dryers.",
         "D": "Barn construction remained popular for longer than historians have generally assumed."
       },
@@ -25742,7 +25742,7 @@
       "question": "Which choice best states the main idea of the text?",
       "choices": {
         "A": "An approaching anniversary leaves the speaker uncertain how to commemorate a formative lesson.",
-        "B": "The speaker worries that years of abandoning an important study have made returning to it impossible.",
+        "B": "The speaker worries that, after years of having abandoned an important study, returning to that subject has become impossible.",
         "C": "The speaker celebrates the steady growth of an interest that initially seemed unimportant.",
         "D": "The speaker regrets being unable to recall the beginning of an interest whose later importance was unforeseen."
       },
@@ -25829,7 +25829,7 @@
       "question": "Which choice best states the main idea of the text?",
       "choices": {
         "A": "Most archivists remain dissatisfied because the difficulties of paleography cannot be overcome.",
-        "B": "Little is known about the cognitive processes governing disappointment in demanding educational programs.",
+        "B": "Researchers still know relatively little about the cognitive processes that govern experiences of disappointment in demanding educational programs.",
         "C": "Learners with high expectations can become satisfied with a demanding course after initially experiencing negative disconfirmation.",
         "D": "Courses generally meet learners’ expectations, although those expectations remain poorly understood."
       },
@@ -25947,7 +25947,7 @@
         "A": "Narun’s expanded methods have improved understanding of the campaigns and rural makers’ contributions.",
         "B": "The administrators usually cited in campaign histories would endorse Narun’s conclusions.",
         "C": "Earlier historians generally overlooked the campaigns’ theoretical foundations.",
-        "D": "Other historians have challenged Narun’s use of workshop materials as historical evidence."
+        "D": "Other historians have challenged Narun’s use of workshop materials as a source of historical evidence for the period."
       },
       "correctAnswer": "A",
       "explanation": "A is correct because the wider source base yields a fuller historical account and reveals contributions omitted by the conventional emphasis.\nC is incorrect because theoretical papers were prominent in earlier accounts.\nD is incorrect because no response from other historians is reported.\nB is incorrect because the administrators’ likely opinions cannot be inferred from their prominence in the sources.",
@@ -25973,7 +25973,7 @@
       "passage": "During a rapid branching of the Ordan communications library into separate software projects, its descendants developed markedly different network architectures. To determine whether properties of their underlying code had also diversified, Sima Tollen and colleagues examined scheduler routines (which determine task order) and buffer routines (which retain messages). They compared instruction composition, execution time, and memory requirements in samples from four descendants maintained at three laboratories. Significant differences appeared among the projects.",
       "question": "Which choice best states the main idea of the text?",
       "choices": {
-        "A": "Network architecture diversified more rapidly than the properties of the underlying code did.",
+        "A": "The architecture of the network diversified at a faster rate than the properties of the underlying code itself did.",
         "B": "Branching explains the projects’ architectural differences but cannot explain their code differences.",
         "C": "Differences in network architecture are principally caused by corresponding differences in code properties.",
         "D": "Research suggests that underlying code properties diversified as the Ordan library branched into separate projects."
@@ -26004,7 +26004,7 @@
       "choices": {
         "A": "Archivists generally regard it as the single most valuable collection of commercial records.",
         "B": "It preserves material from an earlier period than the railway records in the Ravell Exchange collection.",
-        "C": "It contains more entries but fewer kinds of document than the Ravell Exchange collection.",
+        "C": "It contains a greater total number of individual entries but fewer distinct kinds of documents than are found in the Ravell Exchange collection.",
         "D": "It establishes that railway companies existed before the Industrial period."
       },
       "correctAnswer": "B",
@@ -26061,7 +26061,7 @@
       "question": "Based on the text, how do people in Velassa’s broadcasting quarter most likely regard Solt?",
       "choices": {
         "A": "They disapprove of his habit of freely discussing his own productions.",
-        "B": "They tolerate him chiefly because his appearance is less disorderly than his equipment.",
+        "B": "They tolerate him chiefly because his personal appearance seems less disorderly than the equipment he carries around with him.",
         "C": "They are unlikely to worry that he will disclose the material entrusted to him.",
         "D": "They would find him unimpressive if he possessed less engineering expertise."
       },
@@ -26089,7 +26089,7 @@
       "passage": "Studying counterpoint in a conservatory requires familiarity with canonical scores and the composers who shaped its conventions. Composing contrapuntal music, whether inside or outside an institution, calls for a self-directed use of that knowledge to reconsider persistent questions about the relation between independent voices. Both activities engage earlier composers. For a practicing composer, however, those predecessors become partners in an imagined exchange that can produce new insights, rather than settled authorities whose chief importance belongs to music history.",
       "question": "Based on the text, which choice best describes the relationship between composing contrapuntal music and studying counterpoint?",
       "choices": {
-        "A": "Composing suspends the conventions of scholarly inquiry, whereas studying requires strict conformity to them.",
+        "A": "The activity of composing suspends the conventions of scholarly inquiry, whereas the activity of studying requires strict conformity to those same conventions.",
         "B": "Composing resolves practical concert-management problems, whereas studying concerns historical scores.",
         "C": "Composing requires rejecting earlier composers’ ideas whenever those ideas remain widely accepted.",
         "D": "Composing develops new ideas through an imagined exchange with predecessors whose approaches are learned by studying."
@@ -26149,7 +26149,7 @@
       "choices": {
         "A": "Considering practice reversal was reasonable in 2016, but the later findings remove the particular justification offered for that consideration.",
         "B": "The 2019 observations were designed specifically to test the conclusions of Mir’s 2016 paper.",
-        "C": "Mir’s approach assumed that practice reversal could never be tested unambiguously, an assumption overturned in 2019.",
+        "C": "Mir’s research approach assumed that the phenomenon of practice reversal could never be tested in an unambiguous way, an assumption overturned by later findings in 2019.",
         "D": "Excessive attention to theory before 2019 delayed the development of controlled notation-training experiments."
       },
       "correctAnswer": "A",
@@ -26235,7 +26235,7 @@
       "question": "Which question would be most useful in evaluating that interpretation?",
       "choices": {
         "A": "Were participants less confident in score-assisted identifications than in memory-only identifications?",
-        "B": "How often did participants identify every excerpt correctly under both sets of instructions?",
+        "B": "How frequently did the participants in the experiment identify every single excerpt correctly under each of the two sets of instructions?",
         "C": "How did participants classify score-condition identifications when they already recognized the melody independently of the score?",
         "D": "Would participants recall the assigned condition more accurately immediately after identifying an excerpt?"
       },
@@ -26263,7 +26263,7 @@
       "passage": "The following text is from Selene Arda’s 1907 poem “To the Maker.” The speaker addresses Eren Mott, a mechanical designer.\nA hammer’s pause you understood,\nThe weary hand behind the blow;\nYou heard beneath the stubborn wood\nWhat patient workers never show.\nAnd metal’s unspoken weather,\nThe pull of weight, the wheel’s refrain,\nYou gathered all together;\nEven the silent gears made plain.",
       "question": "Which choice best states the main purpose of the text?",
       "choices": {
-        "A": "To describe an elaborate sequence by which a designer completes a mechanism",
+        "A": "To describe an elaborate sequence of individual steps by which a designer completes the construction of a mechanism",
         "B": "To recall an enjoyable afternoon spent beside a designer in a workshop",
         "C": "To establish that a designer has studied written accounts of many subjects",
         "D": "To praise a designer’s exceptional insight into workers and the materials they use"
@@ -26294,7 +26294,7 @@
       "choices": {
         "A": "They reserve enough shared memory to prevent query-service replicas from flourishing in Rellan’s pool.",
         "B": "They physically obstruct network links that query replicas would otherwise cross.",
-        "C": "They damage query replicas’ allocation routines so that those routines cannot request memory.",
+        "C": "They damage the allocation routines of query replicas so that those routines become unable to request memory.",
         "D": "They improve the memory resources around Rellan, making an otherwise unusable pool productive."
       },
       "correctAnswer": "A",
@@ -26496,7 +26496,7 @@
       "question": "What does the text most strongly suggest about railway guidebooks?",
       "choices": {
         "A": "They have been unfairly disparaged for including material also present in more respected kinds of writing.",
-        "B": "They gradually evolved from entirely trivial publications into works devoted exclusively to serious subjects.",
+        "B": "Over time, they gradually evolved from publications dealing with entirely trivial matters into works devoted exclusively to subjects of a serious nature.",
         "C": "Their creators established a civic-reform tradition that survived the disappearance of the genre.",
         "D": "They have been wholly ignored by scholars despite addressing important public concerns."
       },
@@ -26526,7 +26526,7 @@
       "choices": {
         "A": "Roke establishes an unconditional duty to retain inherited order because provenance affects understanding.",
         "B": "Roke offers a possible foundation for opposing rearrangement: protecting interpretive access generally requires preserving order, with limited exceptions.",
-        "C": "Roke shows that allowing any exception leaves no principled basis for objecting to rearrangement.",
+        "C": "Roke shows that allowing even a single exception to the rule leaves people with no principled basis on which to object to rearrangement.",
         "D": "Roke primarily solves archivists’ inability to identify the particular occasions when rearrangement is permissible."
       },
       "correctAnswer": "B",
@@ -26582,7 +26582,7 @@
       "passage": "Text 1\nResearcher Nella Voss studied prototype-instrument selection at the Carven Conservatory, where every instructor must submit rankings. The requirement brings in instructors who otherwise lack the time or inclination to participate. Voss argues that the selected instruments consequently reflect the faculty’s preferences more faithfully.\nText 2\nBroad participation can improve instrument selection, but compulsory ranking may undermine its value. Mikel Sora and Dena Quist found that instructors who felt compelled to participate spent less time testing the prototypes. Their rankings could therefore misrepresent the features they actually preferred.",
       "question": "Based on the texts, how would Sora and Quist most likely respond to Voss’s argument?",
       "choices": {
-        "A": "Compulsory ranking should be used only in conservatories of a particular size.",
+        "A": "Compulsory ranking should be used only in music conservatories of a certain particular size.",
         "B": "Conservatories requiring rankings must also make prototype testing more convenient.",
         "C": "Compulsory participation does not necessarily produce selections that better represent the faculty’s preferences.",
         "D": "Instructors required to rank instruments will probably volunteer for other conservatory activities."
@@ -26990,7 +26990,7 @@
       "choices": {
         "A": "As contradictory, because traditionalists enjoy other kinds of bread",
         "B": "As impractical, because they cannot enforce their preferences",
-        "C": "As commercially shortsighted, because new ingredients would enlarge the customer base",
+        "C": "As commercially shortsighted, because adding new ingredients would serve to enlarge the existing customer base",
         "D": "As inconsistent with the mixed origins of the very standard they uphold"
       },
       "correctAnswer": "D",
@@ -27046,7 +27046,7 @@
       "passage": "Text 1\nComparing research repositories across institutions is difficult because “large repository” has no common definition. One institution uses a minimum of 40,000 records, another 900,000; others combine record counts with staffing or storage criteria. A category label can therefore denote quite different resources.\nText 2\nSeven scholarly organizations have developed a common “repository intensity index.” It supplies shared criteria for classifying central archives, local repositories, specialist collections, and isolated datasets, enabling comparisons across institutions.",
       "question": "Based on the texts, how would the author of Text 2 most likely respond to the problem in Text 1?",
       "choices": {
-        "A": "By naming an institution that should investigate the problem further",
+        "A": "By naming a specific institution that should conduct further investigation into the problem",
         "B": "By listing additional obstacles to repository research",
         "C": "By advising researchers to study subjects other than repositories",
         "D": "By identifying an available approach that could address the inconsistent definitions"
@@ -27075,7 +27075,7 @@
       "passage": "Text 1\nThe Riverland vernacular began losing distinctive forms about 280 years ago. Expanding trade is one proposed cause, but linguist Selan Vey also blames formal schooling: standardized textbooks displaced local usage and initiated the process of convergence.\nText 2\nUsing a language-contact model, Maela Dorn’s team concluded that Riverland’s period of dominant local speech ended forty-five years earlier than previously assumed. Their reconstruction suggests that schooling did not accelerate convergence and may have slowed it through classroom practices that selectively preserved regional expressions.",
       "question": "Based on the texts, how would Dorn most likely respond to Text 1?",
       "choices": {
-        "A": "By saying that schooling was only one of several local practices that accelerated convergence",
+        "A": "By saying that the practice of schooling was only one among several different local practices that contributed to accelerating convergence",
         "B": "By recommending further research without taking a position on schooling’s effects",
         "C": "By insisting that schooling invariably has both beneficial and harmful linguistic effects",
         "D": "By arguing that the revised chronology undermines the claim that schooling caused the loss of distinctive forms"
@@ -27107,7 +27107,7 @@
         "A": "Text 1 neutrally compares two analytical methods, whereas Text 2 endorses one.",
         "B": "Text 1 presents findings and an explanation offered by others, whereas Text 2 supplies information that challenges that explanation.",
         "C": "Text 1 attacks the analysts’ method, whereas Text 2 demonstrates that method’s reliability.",
-        "D": "Text 1 rejects the conventional retirement date, whereas Text 2 reconciles the new evidence with that date."
+        "D": "The author of Text 1 rejects the conventional retirement date, whereas the author of Text 2 reconciles the newly available evidence with that date."
       },
       "correctAnswer": "B",
       "explanation": "B is correct because the gateway explanation in Text 1 is challenged by the connectivity and survival limits in Text 2.\nA is incorrect because these are findings and a proposed explanation, not competing methods.\nC is incorrect because the proposed mechanism does not attack the signature-detection method.\nD is incorrect because Text 1 already offers reconciliation, while Text 2 questions it.",
@@ -27133,7 +27133,7 @@
       "passage": "Text 1\nIn 2018, historian Amara Pell proposed that paper in the 1678 Morna estate ledger came from highland mills. Its linen-based pulp resembles that of paper recovered from the highland Ravenford mill in 1723, which Pell offered as supporting evidence.\nText 2\nLowland mills also used linen-based pulp. More decisively, as materials historian Tarek Voss notes, some lowland mills used wheat-starch sizing that highland mills did not. Its prevalence in the ledger and in related regional records makes a lowland origin more plausible.",
       "question": "Based on the texts, how would Voss most likely respond to Pell’s hypothesis?",
       "choices": {
-        "A": "By agreeing that linen pulp is common in records from regions unrelated to Morna",
+        "A": "By agreeing that the use of linen pulp is common in archival records from regions that have no relation to Morna",
         "B": "By praising Pell for connecting the ledger directly to lowland mill samples",
         "C": "By asserting that Ravenford’s paper is unrepresentative of highland production",
         "D": "By arguing that it fails to account for the wheat-starch sizing in the ledger and related records"
@@ -27193,7 +27193,7 @@
       "choices": {
         "A": "It neglects the possibility that affected studios can adapt their sources of income.",
         "B": "It overlooks studios whose atlas markets have not shrunk.",
-        "C": "It fails to recognize that studios rely on a single unchanging service.",
+        "C": "It fails to recognize the fact that studios rely on a single, completely unchanging service.",
         "D": "It underestimates how quickly atlas sales are declining."
       },
       "correctAnswer": "A",
@@ -27221,7 +27221,7 @@
       "question": "Based on the texts, how would the author of Text 1 most likely respond to interface skeptics?",
       "choices": {
         "A": "Cor’s handling of opposing positions is fundamentally unserious.",
-        "B": "Their instinctive dislike of Cor prevents them from producing a rigorous refutation.",
+        "B": "Their instinctive personal dislike of Cor prevents them from producing a logically rigorous refutation.",
         "C": "If instinct validates elementary facts, instinct must also validate rejection of demonstrations.",
         "D": "Cor would regard their position as conflicting with beliefs they inevitably rely on."
       },
@@ -27338,7 +27338,7 @@
       "choices": {
         "A": "Removing coordinators made all capacity differences irrelevant, eliminating the advantage of coordination in pool 1.",
         "B": "Followers in pool 1 could no longer process any jobs, so role change was necessary regardless of capacity.",
-        "C": "Every small follower in pool 1 could certainly maximize throughput by coordinating, while the largest followers in pool 2 could take over queues.",
+        "C": "Every small follower in pool 1 could certainly maximize its throughput by coordinating with other followers, while the largest followers in pool 2 could take over queues.",
         "D": "Without existing coordinators, pool 1 followers could be sufficiently capable to secure queues; pool 2 followers might remain too small to displace their coordinators."
       },
       "correctAnswer": "D",
@@ -27394,7 +27394,7 @@
       "passage": "Text 1\nGellet restoration patches are proposed materials with water-bearing cores and resin-rich coatings. Retaining liquid water is essential to their flexibility. Earlier models placed the nearest viable storage distance from a radiant heater at about twelve centimeters. In 2009, Veda Norn’s team identified patch L7-12, stored at that inner boundary, as a viable candidate.\nText 2\nKarel Iven’s 2012 calculations indicate that the coatings transmit wavelengths that raise core temperature and accelerate evaporation. Accounting for this effect places the inner boundary of the viable region as far away as forty-six centimeters.",
       "question": "Based on the texts, how would Iven most likely respond to Norn’s assessment?",
       "choices": {
-        "A": "L7-12 and other candidates are unsuitable because they are too far from the heater.",
+        "A": "L7-12 and the other candidate locations are unsuitable because they are situated too far away from the heater.",
         "B": "L7-12 is unlikely to retain liquid water, given its coating and proximity to the heater.",
         "C": "Most other resin-coated materials are stored within the viable region.",
         "D": "Norn’s earlier models probably estimated core temperatures too high."
@@ -27424,7 +27424,7 @@
       "question": "Based on the texts, how would the author of Text 2 most likely respond to Text 1’s assessment?",
       "choices": {
         "A": "The book differs conspicuously from Rehn’s other work but remains central to her intellectual project.",
-        "B": "The book is less impressive than Rehn’s other works but deserves influential status.",
+        "B": "The book is less impressive than the other works written by Rehn but still deserves to be considered influential.",
         "C": "Its unearned reputation as minor has caused readers to overlook it.",
         "D": "Rehn’s strengths suit serious analysis best, although the book’s humor succeeds."
       },
@@ -27484,7 +27484,7 @@
         "A": "It is driven more by a belief in automated calculation’s cultural significance than by documentary evidence.",
         "B": "It became widespread because it accurately records early spectators’ alarm.",
         "C": "It reflects historians’ belief that they are more sophisticated than present-day audiences.",
-        "D": "It expresses a view of cultural transformation that historians generally dismiss as naive."
+        "D": "It expresses a particular view of cultural transformation that historians generally dismiss as an interpretation that is naive."
       },
       "correctAnswer": "A",
       "explanation": "A is correct because Text 2 explicitly links the unsupported narrative’s persistence to belief in transformation.\nD is incorrect because the historians repeat the narrative rather than rejecting its premise.\nC is incorrect because that comparison with contemporary audiences is not made.\nB is incorrect because the absence of contemporary evidence prevents treating the alarm as accurately recorded.",
@@ -27512,7 +27512,7 @@
       "choices": {
         "A": "Its austerity expresses Alda’s despair that meaningful connections are impossible.",
         "B": "As a connection to the upper decks, it suggests the possibility of fulfillment beyond conventional measures of success.",
-        "C": "Its plainness signals to Alda the increasing dominance of numerical competition among the compound’s residents.",
+        "C": "Its plainness is a signal to Alda that numerical competition is becoming increasingly dominant among the residents of the compound.",
         "D": "It marks the intrusion of competitive assessment into the contemplative upper decks."
       },
       "correctAnswer": "B",
@@ -27542,7 +27542,7 @@
         "A": "Curing introduces the oligopeptides responsible for both emission components.",
         "B": "Swedish manufacturers generally use fewer oligopeptides than Chilean manufacturers.",
         "C": "The coatings used to characterize unmixed teal probably contained little of the oligopeptides important in the later study.",
-        "D": "Every compound contributing to both teal and red has greater molecular weight than compounds contributing only teal."
+        "D": "Every compound that contributes to both the teal and red signals has a greater molecular weight than compounds that contribute only to teal."
       },
       "correctAnswer": "C",
       "explanation": "C is correct because substantial amounts of compounds also producing red would make the earlier response less plausibly an unmixed teal standard.\nA is incorrect because the compounds’ origin during curing is not established.\nB is incorrect because panel nationality supplies no manufacturing comparison.\nD is incorrect because one identified compound class does not establish a universal molecular-weight rule.",
@@ -27568,7 +27568,7 @@
       "passage": "Text 1\nEnergy engineer Elia Vorn is best known for major renewable-power designs, including the solar installation Mirror Ridge and the wind system Coastal Torsion. Although she designed other equipment, these public projects best represent her engineering career.\nText 2\nHistorians often overlook Vorn’s numerous commissioned airflow baffles, devices that redirect ventilation. She probably designed them throughout her career and earned much of her income from private clients who requested customized units. They therefore constitute a central part of her career alongside her famous power systems.",
       "question": "Based on the texts, both authors would most likely agree with which statement?",
       "choices": {
-        "A": "Designing renewable-power installations was a short-lived professional trend.",
+        "A": "The design of renewable-power installations was a professional trend that lasted only a short time.",
         "B": "Mirror Ridge is Vorn’s single most famous project.",
         "C": "Airflow baffles have overshadowed Vorn’s power-system designs.",
         "D": "Vorn designed equipment for more than one kind of application."
@@ -27598,7 +27598,7 @@
       "question": "Based on the texts, how would the author of Text 2 most likely respond to the underlined claim?",
       "choices": {
         "A": "The conclusion is broadly right, but its chronology conflicts with Lorn’s dating.",
-        "B": "The conclusion assumes that mainland matrices were structurally uniform before the traders arrived.",
+        "B": "The conclusion rests on the assumption that mainland matrices already possessed a uniform internal structure before the arrival of the traders.",
         "C": "The conclusion fails because transfer from Meren to Darsa was also possible.",
         "D": "The conclusion is persuasive, but Kest’s finding supports it more strongly than the earlier dovetail comparison."
       },
@@ -29894,7 +29894,7 @@
       "passage": "While researching a topic, a student has taken the following notes:\n• The Bellariva Manuscript Repository occupies a converted observatory in Trieste.\n• Its collection is among the region’s most extensive holdings of handwritten documents.\n• Humidity is higher in the repository’s western vault than in its eastern vault.\n• The eastern vault contains nautical logbooks known as the Vescari Registers.\n• The eastern vault also contains illuminated chant manuscripts known as the Orsena Antiphonals.",
       "question": "The student wants to emphasize a similarity between the Vescari Registers and the Orsena Antiphonals. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "choices": {
-        "A": "The Orsena Antiphonals, a group of illuminated chant manuscripts, belong to the collection of a repository in Trieste.",
+        "A": "The Orsena Antiphonals are a group of illuminated manuscripts containing chants that belong to the collections held by a cultural repository located in Trieste.",
         "B": "Housed in a converted Trieste observatory, the Bellariva Manuscript Repository maintains an unusually extensive collection of handwritten documents.",
         "C": "Among the handwritten documents in the Bellariva Manuscript Repository are nautical logbooks called the Vescari Registers.",
         "D": "Although their subject matter differs, the Vescari Registers and the Orsena Antiphonals are both kept in the repository’s less humid eastern vault."
@@ -30071,7 +30071,7 @@
       "passage": "Astronomer Leander Voss is principally remembered for the 1928 Meridian Observatory affair, in which fabricated measurement logs implicated assistants Celia Renk and Tomas Ardell as well as Voss himself. <u>Yet this reputation compresses a more complicated career: Voss also devised a reliable method of calibrating photographic plates, and his proposed network of remote observation stations anticipated the system that astronomer Inez Halberg implemented three decades later.</u>",
       "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
       "choices": {
-        "A": "It weighs the scientific contributions of two astronomers to determine which was more consequential.",
+        "A": "It weighs the respective scientific contributions made by two different astronomers in an attempt to determine which astronomer made the more consequential contribution.",
         "B": "It introduces evidence that a familiar assessment of a scientist leaves out significant aspects of that scientist’s career.",
         "C": "It explains the scholarly practices that cause a scientist’s contributions to be overlooked.",
         "D": "It substantiates the account of misconduct involving a scientist and the scientist’s collaborators."
@@ -30096,7 +30096,7 @@
       "choices": {
         "A": "Struts within the Kelven bridge’s reinforcement lattice help carry mechanical loads through the structure.",
         "B": "The Aster span incorporates lattice modules, each containing forty-eight struts that distribute mechanical loads.",
-        "C": "Both the Kelven bridge and the Aster span distribute loads through internal frameworks of connected struts.",
+        "C": "Both the Kelven bridge and the Aster span distribute structural loads through the use of internal frameworks that consist of connected struts.",
         "D": "Although both bridges use reinforcement lattices, a standard Kelven module has eighty-eight struts, whereas an Aster module has forty-eight."
       },
       "correctAnswer": "D",
@@ -30279,7 +30279,7 @@
       "question": "Which choice most logically completes the text?",
       "choices": {
         "A": "even without changes in instruments or performance practice, seventeen-interval tuning will inevitably become widespread.",
-        "B": "distinguishing established from experimental systems remains helpful for other tunings but has no present value for seventeen-interval tuning.",
+        "B": "distinguishing established from experimental systems remains helpful for other tunings but has no practical value at present for seventeen-interval tuning.",
         "C": "seventeen-interval tuning was formerly common at Lethora but disappeared when competing systems were introduced.",
         "D": "Lethora’s classification of seventeen-interval tuning may be justified under current conditions yet cease to fit conditions in the future."
       },
@@ -30441,7 +30441,7 @@
       "choices": {
         "A": "depends on knowing who made the chart rather than recognizing distinctive local conventions in its design.",
         "B": "gives the chartmaker’s life greater weight than the chart’s technical quality.",
-        "C": "implies that the chartmaker’s community had no influence whatsoever on the chart.",
+        "C": "implies that the social and cultural community to which the chartmaker belonged had no influence whatsoever on the resulting chart.",
         "D": "conceals the island origins of conventions now treated as international standards."
       },
       "correctAnswer": "A",
@@ -30463,7 +30463,7 @@
       "question": "The student wants to emphasize the order in which the topics appear. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "choices": {
         "A": "Orsin defines upstream water storage in the chapter “Retentive Design.”",
-        "B": "Orsin defines both diversion into secondary channels and upstream storage of excess water.",
+        "B": "Orsin provides definitions for both the diversion of water into secondary channels and the upstream storage of excess water.",
         "C": "Orsin examines multiple river-management strategies in *Channels Under Pressure*.",
         "D": "Before defining diversion into secondary channels, Orsin explains an approach that retains excess water upstream."
       },
@@ -30533,7 +30533,7 @@
       "choices": {
         "A": "Fenera and Dovar probably differed more in frame standardization than the published records indicate.",
         "B": "treating Fenera’s and Dovar’s cracking rates as proof of an inherent disadvantage of standardized frames would be unwarranted.",
-        "C": "the disparity between Fenera and Dovar is attributable to clay variability rather than frame standardization.",
+        "C": "the observed disparity in cracking rates between Fenera and Dovar is attributable to differences in clay variability rather than differences in frame standardization.",
         "D": "measures of cracking systematically exaggerate failure rates in districts using standardized frames."
       },
       "correctAnswer": "B",
@@ -30688,7 +30688,7 @@
       "passage": "Elise Rassel’s 2010 instructional city model *Teren* is often described as a replica. The description has some justification: many of its streets correspond to those in Rassel’s home district. It does not follow, however, that every represented building or intersection has an actual counterpart. Much of the layout was deliberately devised for training exercises. Viewers who overlook that qualification and search for ever more real-world equivalents therefore risk _____.",
       "question": "Which choice most logically completes the text?",
       "choices": {
-        "A": "suggesting that the model attracted more visitors than it actually did.",
+        "A": "suggesting, incorrectly, that the model attracted a larger total number of visitors than it did in fact attract.",
         "B": "exaggerating Rassel’s reliance on models created by earlier designers.",
         "C": "understating how much Rassel’s design borrowed from actual places.",
         "D": "proposing connections between the model and existing sites that the available evidence cannot support."
@@ -30714,7 +30714,7 @@
         "A": "Lateral firmware propagation occurs more frequently than researchers initially believed.",
         "B": "The public’s usual understanding of firmware propagation misrepresents its operation.",
         "C": "Research into lateral firmware propagation could lead to practically useful methods of limiting intrusions.",
-        "D": "Recent findings about firmware exchange undermine the conclusions of earlier investigations."
+        "D": "Recent findings concerning the process of firmware exchange undermine conclusions reached by researchers in earlier investigations."
       },
       "correctAnswer": "C",
       "explanation": "C covers both the described process and the practical value of studying how to prevent it. A invents a comparison with earlier frequency estimates. D invents a conflict between new and old research. B invents a public misconception. The passage presents a mechanism and a possible application, not revisions to previous beliefs.",
@@ -30804,7 +30804,7 @@
       "question": "The text best supports which conclusion about the Ordel school?",
       "choices": {
         "A": "Its courses are probably designed primarily to benefit members of the local pilots’ community.",
-        "B": "Its courses are probably intended to reconcile commercial recreation with inherited pilot traditions.",
+        "B": "Its courses are probably intended to reconcile the needs of commercial recreation with the inherited traditions of local pilots.",
         "C": "Its courses probably combine the customary knowledge of several unrelated fleets.",
         "D": "The size of its building probably restricts its ability to teach local practices."
       },
@@ -30964,7 +30964,7 @@
       "passage": "Materials scientist Eren Dask’s team analyzed response measurements and crystalline structures from 18,600 ceramic panels representing 140 formulations. Some similarities in response between formulations corresponded to similarities in crystalline structure, suggesting a structural basis for the response differences. The correspondence occurred for flexing and resonance but was strongest for fracture under abrupt temperature changes. A separate experiment found similar temperature-induced fracture behavior in formulations K-17 and R-44, suggesting that _____.",
       "question": "Which choice most logically completes the text?",
       "choices": {
-        "A": "the crystalline structures of K-17 and R-44 will grow less alike over time.",
+        "A": "the crystalline structures of K-17 and R-44 will become progressively less alike as time passes.",
         "B": "the formulations’ similar fracture behavior may arise from a feature their crystalline structures share.",
         "C": "K-17 and R-44 fracture more readily than most other formulations.",
         "D": "K-17 panels individually fracture more frequently than R-44 panels do."
@@ -31012,7 +31012,7 @@
       "choices": {
         "A": "Many goods sold in Belsora’s harbor markets, including Velthorn hinges, are imported.",
         "B": "The researchers’ 2018 investigation listed both Merelan linen and Velthorn hinges on externally owned carriers’ delivery manifests.",
-        "C": "In 2018, researchers examined delivery manifests to investigate externally owned carriers’ role in Belsora’s distribution system.",
+        "C": "In 2018, researchers examined a collection of delivery manifests to investigate the role played by externally owned carriers in Belsora’s distribution system.",
         "D": "Merelan linen was included in a 2018 study of freight distribution in Belsora."
       },
       "correctAnswer": "B",
@@ -31127,7 +31127,7 @@
       "choices": {
         "A": "Some workshops can manufacture silica, unlike the Ordel plant.",
         "B": "The Ordel plant sources silicon dioxide from supplied materials rather than manufacturing it.",
-        "C": "Silicon dioxide is a stiffening ingredient that the Ordel plant must obtain from suppliers.",
+        "C": "Silicon dioxide is an ingredient used for stiffening that the Ordel plant must obtain from external suppliers.",
         "D": "Meroven panels are a construction material containing silica, the substance also known as silicon dioxide."
       },
       "correctAnswer": "D",
@@ -31357,7 +31357,7 @@
       "choices": {
         "A": "Talren detected the tone on 101 days in 1987 and 128 days in 2012.",
         "B": "Velsin detected the tone on 218 days in 1987 and 179 days in 2012.",
-        "C": "Velsin’s gain exceeded Orvena’s, but Velsin generally detected the tone on fewer days per year.",
+        "C": "Velsin’s measured gain exceeded that of Orvena, but Velsin generally detected the tone on a smaller number of days during each year.",
         "D": "Velsin’s gain exceeded Orvena’s, and Velsin detected the tone on more days in five of the six years shown."
       },
       "correctAnswer": "D",
@@ -31675,7 +31675,7 @@
       "passage": "While researching a topic, a student has taken the following notes:\n• Mira Delsen (1924–2002) was an engineer born in Arenvik, Norway.\n• She had Norwegian, Croatian, and Peruvian heritage.\n• She was the first Norwegian-born woman nominated for the Velsar Engineering Medal.\n• Early in her career, she completed unnamed, unacknowledged assignments, including work on *Tidal Routes* (1953).\n• Later reports credited her with named responsibilities, including channel modeler on *Flow Regime* (1966).",
       "question": "Which choice most effectively uses relevant information from the notes to specify Delsen’s responsibility on *Flow Regime*?",
       "choices": {
-        "A": "Delsen began with unacknowledged assignments before receiving named credits in later reports.",
+        "A": "Delsen began with assignments that went unacknowledged before eventually receiving explicitly named credits in later published reports.",
         "B": "In the 1966 report *Flow Regime*, Norwegian-born engineer Mira Delsen was credited as channel modeler.",
         "C": "Born in Arenvik in 1924, Mira Delsen later became a prominent engineer.",
         "D": "Delsen contributed to numerous reports, including *Tidal Routes* and *Flow Regime*."
@@ -31769,7 +31769,7 @@
       "choices": {
         "A": "It suggests that the natural world contains truths that people cannot discover.",
         "B": "It presents the natural world as participating in the calm experienced by the speaker and her cousin.",
-        "C": "It suggests that the cousin conceals her actual emotional response from the speaker.",
+        "C": "It suggests that the cousin conceals what her actual emotional response is from the speaker, rather than revealing her true feelings.",
         "D": "It establishes that peace depends entirely on individual perception rather than shared conditions."
       },
       "correctAnswer": "B",
@@ -31838,7 +31838,7 @@
       "choices": {
         "A": "It identifies the component’s physical location.",
         "B": "It summarizes a dispute among the researchers.",
-        "C": "It explains why the researchers’ hypothesis is unusual.",
+        "C": "It explains the particular reasons why the researchers’ hypothesis is considered unusual.",
         "D": "It introduces terminology used in the explanation that follows."
       },
       "correctAnswer": "D",
@@ -32089,7 +32089,7 @@
       "passage": "Halvern’s training guilds retain many apprentices, but copying a single Halvern practice, such as offering evening workshops, may not improve retention elsewhere. Sociologist Celia Neris argues that decisions to continue an apprenticeship remain inadequately understood: <u>some studies emphasize stipends, others access to equipment, yet continuation decisions occur in circumstances where numerous obligations and needs jointly shape each apprentice’s choice.</u>",
       "question": "Which choice best describes the function of the underlined portion in the text as a whole?",
       "choices": {
-        "A": "It illustrates a scholarly disagreement already identified in the sentence.",
+        "A": "It provides a concrete illustration of the scholarly disagreement that was already identified in the sentence.",
         "B": "It summarizes results from studies whose methods were previously explained.",
         "C": "It expands on the preceding claim that researchers’ understanding is inadequate.",
         "D": "It acknowledges an objection to Neris’s preceding argument."
@@ -32229,7 +32229,7 @@
       "choices": {
         "A": "It takes longer than the described vectorized method.",
         "B": "It requires more electrical energy.",
-        "C": "It is more susceptible to software failures.",
+        "C": "It is comparatively more susceptible to failures in its software.",
         "D": "It can restore only short recordings."
       },
       "correctAnswer": "A",
@@ -32368,7 +32368,7 @@
         "A": "To review wavefront-scanning research comprehensively across countries",
         "B": "To introduce wavefront scanning and identify an advantage over a conventional surveying method",
         "C": "To suggest that wavefront scanning has important flaws awaiting investigation",
-        "D": "To explain the commercial popularity of point-by-point surveying and recommend abandoning it"
+        "D": "To explain the reasons for the commercial popularity of point-by-point surveying and then recommend that the surveying method be abandoned"
       },
       "correctAnswer": "B",
       "explanation": "B covers the passage’s introduction of the newer technique and its stated advantage, simultaneous surface capture. A overstates the scope; one research setting is mentioned, not a comprehensive review. D invents an explanation of popularity and an explicit recommendation. C invents unresolved flaws.",
@@ -39746,8 +39746,8 @@
     },
     "wordAfter": {
       "nLong": 747,
-      "correctLong": 273,
-      "longRate": 36.5,
+      "correctLong": 198,
+      "longRate": 26.5,
       "nShort": 565,
       "correctShort": 71,
       "shortRate": 12.6
@@ -39761,14 +39761,14 @@
       "shortRate": 22.9
     },
     "characterAfter": {
-      "nLong": 1139,
-      "correctLong": 399,
-      "longRate": 35,
-      "nShort": 1191,
+      "nLong": 1138,
+      "correctLong": 341,
+      "longRate": 30,
+      "nShort": 1192,
       "correctShort": 273,
       "shortRate": 22.9
     },
-    "revisedQuestionCount": 103,
+    "revisedQuestionCount": 178,
     "editsToIncorrectChoicesOnly": true,
     "originalCorrectAnswersAndPassagesPreserved": true,
     "remainingBiasRequiresEditorialReview": true
