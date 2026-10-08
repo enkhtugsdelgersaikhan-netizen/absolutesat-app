@@ -4868,7 +4868,11 @@ function getMockAllRouteQuestions() {
             sectionKey
         ).map(
             question => ({
-                ...question,
+                ...window.MockChoiceBalance.apply(
+                    question,
+                    sectionKey,
+                    mockState.choiceOrders
+                ),
                 mock_review_section:
                     sectionLabel,
                 mock_review_module:
@@ -5879,6 +5883,12 @@ function loadMockStage(
         orderMockQuestionsLikeRealTest(
             normalizedEntries,
             stageInfo?.sectionKey
+        ).map(question =>
+            window.MockChoiceBalance.apply(
+                question,
+                stageInfo?.sectionKey,
+                mockState.choiceOrders
+            )
         );
 
     currentQuestionIndex =
@@ -6436,6 +6446,13 @@ async function loadMockTest(
                     new Date()
                         .toISOString()
             };
+
+    // Persist the randomized layout once: navigation, adaptive route
+    // selection, reloads and answer reviews all use the same letters.
+    if (!mockState.choiceOrders) {
+        mockState.choiceOrders =
+            window.MockChoiceBalance.plan(mockManifest);
+    }
 
     answers =
         mockState.answers ||
