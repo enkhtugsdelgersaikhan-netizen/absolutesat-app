@@ -3256,7 +3256,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear Equations",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "A surveying instrument costs $540 to rent for the first 3 days and $125 for each additional day. If \\(n\\) is the total number of rental days, where \\(n\\) is an integer and \\(3\\le n\\le12\\), which equation gives the total rental cost \\(C\\)?",
       "choices": {
@@ -3276,7 +3276,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q025",
@@ -3410,7 +3410,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear Equations",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "Which of the following ordered pairs satisfy\n\n\\[3(x-2)-2(y+1)\\le4?\\]\n\nI. \\((0,-2)\\)\n\nII. \\((4,1)\\)\n\nIII. \\((3,-2)\\)",
       "choices": {
@@ -3430,7 +3430,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q031",
@@ -3469,7 +3469,7 @@
       "section": "Math",
       "domain": "Problem-Solving & Data Analysis",
       "skill": "Ratio, Rates, Percentages",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "A laboratory defines a performance index R by\n\n\\[R=0.8p+12,\\]\nwhere p is a machine's production rate. A machine is classified as high-output only if R>76.\nWhich interval consists entirely of production rates for high-output machines?",
       "choices": {
@@ -3489,7 +3489,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q033",
@@ -4213,7 +4213,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Systems of Linear Equations",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "The system \\[\\frac23x-\\frac12y=5\\] \\[ax-6y=c\\] has infinitely many solutions. What is \\(a+c\\)?",
       "choices": {
@@ -4233,7 +4233,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Systems of Linear Equations",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q053",
@@ -4383,7 +4383,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear Equations",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "If (x,y) is the solution to\n\n\\[9x+2y=17\\]\n\n\\[5x-5y=2,\\]\nwhat is the value of 4x+7y?",
       "choices": {
@@ -4403,7 +4403,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q058",
@@ -4528,7 +4528,7 @@
       "section": "Math",
       "domain": "Problem-Solving & Data Analysis",
       "skill": "Statistics",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "For \\[f(x)=\\frac75-\\frac34(x-2),\\] what is \\(f(-2)-f(6)\\)?",
       "choices": {
@@ -4548,7 +4548,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Statistics",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q062",
@@ -4586,7 +4586,7 @@
       "section": "Math",
       "domain": "Problem-Solving & Data Analysis",
       "skill": "Statistics",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "A laboratory model uses \\[S=110-40r,\\] where \\(0.35\\le r\\le0.70\\). Which inequality gives all possible values of \\(S\\)?",
       "choices": {
@@ -4606,7 +4606,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Statistics",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q065",
@@ -4992,7 +4992,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear Functions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "The graph of a linear function f contains the points (-4,11) and (6,-4). Which equation defines f?",
       "choices": {
@@ -5012,7 +5012,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Linear Functions",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q077",
@@ -5316,7 +5316,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear Equations",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "A manufacturer's total cost, in dollars, for producing n units is\n\n\\[C(n)=mn+620,\\]\nwhere m is constant. The cost to produce 180 units is \\(\\$1{,}340\\).\nWhat is the cost to produce 750 units?",
       "choices": {},
@@ -5329,7 +5329,7 @@
         "3620"
       ],
       "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q084",
@@ -5616,7 +5616,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear Functions",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "The table gives two points on a line in the xy-plane, where \\(c\\) is a constant. The y-intercept of the line is \\((c-4,d)\\). What is the value of \\(d\\)?",
       "choices": {},
@@ -5646,7 +5646,7 @@
         ]
       },
       "subtopic": "Linear Functions",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q092",
@@ -5795,7 +5795,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Systems of Linear Equations",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "In the system below, p is a constant.\n\\[ \\begin{cases} 2(x+3y)-5=7x\\\\[2mm] 5x-\\dfrac p2y=8.5 \\end{cases} \\]\nIf the system has no solution, what is the value of p?",
       "choices": {},
@@ -5808,7 +5808,7 @@
         "12"
       ],
       "subtopic": "Systems of Linear Equations",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q097",
@@ -5846,7 +5846,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear Functions",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "For line \\(m\\), the table gives three points. Line \\(n\\) is obtained by translating line \\(m\\) 4 units to the right and 2 units down. What is the x-intercept of line \\(n\\)?",
       "choices": {
@@ -5887,7 +5887,7 @@
         ]
       },
       "subtopic": "Linear Functions",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q099",
@@ -6178,7 +6178,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Lines, Angles, and Triangles",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "Line q is defined by\n\n\\[4(2x-y)=3x+5y-7.\\]\nLine r is perpendicular to line q in the xy-plane. What is the slope of line r?",
       "choices": {},
@@ -6191,7 +6191,7 @@
         "-9/5"
       ],
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q108",
@@ -6317,7 +6317,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Systems of Linear Equations",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "In the system below, k is a constant.\n\\[ \\begin{cases} y+4=\\dfrac35(x-10)\\\\[2mm] 2y-k=\\dfrac65x+8 \\end{cases} \\]\nThe system has infinitely many solutions. What is the value of k?",
       "choices": {
@@ -6337,7 +6337,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Systems of Linear Equations",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q112",
@@ -7096,7 +7096,7 @@
       "section": "Math",
       "domain": "Problem-Solving & Data Analysis",
       "skill": "Statistics",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "Two positive integers have a product of 492. The larger integer is 5 greater than three times the smaller integer. What is the smaller integer?",
       "choices": {
@@ -7116,7 +7116,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Statistics",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q138",
@@ -7176,7 +7176,7 @@
       "section": "Math",
       "domain": "Problem-Solving & Data Analysis",
       "skill": "Statistics",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "In the equation \\[\\frac{5}{12p^2}+\\frac{3q}{2r}=\\frac{7}{8p^2},\\] \\(p,q,r\\) are positive numbers. Which expression is equivalent to \\(p\\)?",
       "choices": {
@@ -7196,7 +7196,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Statistics",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q141",
@@ -7205,7 +7205,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear Functions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "The function g is defined by\n\n\\[g(x)=f(2x-3)+4.\\]\nIn the xy-plane, the y-coordinate of the y-intercept of the graph of g is c. Which expression must equal c?",
       "choices": {
@@ -7225,7 +7225,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Linear Functions",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q143",
@@ -7495,7 +7495,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Quadratics",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "For some constant \\(k\\),\n\\[(4x+3)(x-2)+kx\\]\nis equivalent to\n\\[4x^2+7x-6.\\]\nWhat is the value of \\(k\\)?",
       "choices": {
@@ -7515,7 +7515,7 @@
         "D": "Expand:\n\n\\[(4x+3)(x-2)=4x2-5x-6.\\]\nIncluding kx,\n\n\\[4x2+(k-5)x-6.\\]\n\\[For this to equal 4x2+7x-6,\\]\n\n\\[k-5=7.\\]\nTherefore,\n\\[ \\boxed{k=12}. \\]"
       },
       "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q154",
@@ -7751,7 +7751,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent Expressions",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "Selected values of a polynomial \\(p\\) are shown. The polynomial \\(q\\) is defined by \\(q(x)=p(x-3)\\). Which expression must be a factor of \\(q(x)\\)?",
       "choices": {
@@ -7800,7 +7800,7 @@
         ]
       },
       "subtopic": "Equivalent Expressions",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q163",
@@ -7947,7 +7947,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent Expressions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "The speed v of a wave is modeled by\n\n\\[v=320+0.8(2T-5),\\]\nwhere T is temperature. Which expression gives T in terms of v?",
       "choices": {
@@ -7967,7 +7967,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Equivalent Expressions",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q166",
@@ -8085,7 +8085,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Lines, Angles, and Triangles",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "The airflow through a ventilation system is modeled by \\[A(\\theta)=-0.18(\\theta-31)^2+940,\\] where \\(A(\\theta)\\) is airflow and \\(\\theta\\) is the fan angle, in degrees. For mechanical reasons, the fan can only be set to angles satisfying \\(18\\le\\theta\\le28\\). Which angle gives the greatest airflow?",
       "choices": {
@@ -8105,7 +8105,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q173",
@@ -8425,7 +8425,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear Functions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "Line r has slope -35 and passes through (10,-2). Which equation defines line r?",
       "choices": {
@@ -8445,7 +8445,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Linear Functions",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q184",
@@ -8592,7 +8592,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear Inequalities",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "An unlimited transit pass costs \\(\\$132\\). Without the pass, an individual trip has a fare of \\(\\$3.20\\), \\(\\$4.60\\), or \\(\\$5.40\\), depending on distance, and each individual trip also has a \\(\\$0.60\\) booking fee.\nWhat is the minimum number of trips in a month for which the unlimited pass could cost less than buying individual trips?",
       "choices": {},
@@ -8605,7 +8605,7 @@
         "23"
       ],
       "subtopic": "Linear Inequalities",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q190",
@@ -8884,7 +8884,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Lines, Angles, and Triangles",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "Consider the system\n\n\\[4x-6y=10\\]\n\n\\[3(k-1)x+12=9y+2x,\\]\nwhere k is a constant. If the system has no solution, what is the value of k?",
       "choices": {},
@@ -8897,7 +8897,7 @@
         "11/3"
       ],
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q199",
@@ -8906,7 +8906,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear Functions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "The linear function h satisfies\n\n\\[h(-2)=11\\]\nand\n\n\\[h(4)=-1.\\]\nWhich equation defines h?",
       "choices": {
@@ -8926,7 +8926,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Linear Functions",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q200",
@@ -9111,7 +9111,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear Equations",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "In the equation\n\n\\[4[(k-1)x+3]-3(x-2)=(2k+5)x+20,\\]\nk is a constant. If the equation has no solution, what is the value of k?",
       "choices": {},
@@ -9124,7 +9124,7 @@
         "6"
       ],
       "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q206",
@@ -9183,7 +9183,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear Equations",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "A museum charges a regular price of \\(p\\) dollars for each audio-tour rental. Under a promotion, the first rental is free, the second and third rentals are each 25% off, and all additional rentals cost the regular price. Which function gives the total cost \\(C(n)\\), in dollars, for \\(n\\ge3\\) rentals?",
       "choices": {
@@ -9203,7 +9203,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q208",
@@ -10058,7 +10058,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent Expressions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "For positive \\(x\\) and \\(y\\), which expression is equivalent to\n\\[\n\\sqrt[3]{\\frac{125x^{12}}{y^6}}?\n\\]",
       "choices": {
@@ -10078,7 +10078,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Equivalent Expressions",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q238",
@@ -10116,7 +10116,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Exponential Functions",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "The function \\[h(x)=a^x+b,\\] where \\(a\\) and \\(b\\) are positive constants, passes through \\((1,10)\\) and \\((2,16)\\). What is \\(ab\\)?",
       "choices": {
@@ -10136,7 +10136,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Exponential Functions",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q240",
@@ -10145,7 +10145,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Quadratics",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "If\n\\[u^2=p+q\\]\nand\n\\[v^2=p-r,\\]\nwhich expression is equal to\n\\[(2u^2-v^2-p)^2?\\]",
       "choices": {
@@ -10165,7 +10165,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q241",
@@ -10535,7 +10535,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Quadratics",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "A quadratic function f has vertex (-2,5) and passes through (1,32). What is the value of\n\n\\[f(2)-f(-1)?\\]",
       "choices": {
@@ -10555,7 +10555,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q251",
@@ -10631,7 +10631,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Quadratics",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "In the equation\n\n\\[x^{2}+(t-2)x+9=0,\\]\nt is a constant. If the equation has no real solutions, which of the following could be the value of t?",
       "choices": {
@@ -10651,7 +10651,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q256",
@@ -10682,7 +10682,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Other Algebra",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "",
       "question": "The equation\n\n\\[7a-3b=2c\\]\nrelates a, b, and c. Which equation expresses b in terms of a and c?",
       "choices": {
@@ -10702,7 +10702,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Other Algebra",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q258",
@@ -10929,7 +10929,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Quadratics",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "The function \\(f\\) is defined by\n\\[\nf(x)=20x-2x^2.\n\\]\nThe function \\(g\\) is defined by\n\\[\ng(x)=3f(x+4)-7.\n\\]\nWhat is the maximum value of \\(g\\)?",
       "choices": {
@@ -10950,7 +10950,7 @@
       },
       "desmosMethod": "Enter\n\\[\ng(x)=3\\left(20(x+4)-2(x+4)^2\\right)-7.\n\\]\nThe vertex has y-coordinate \\(143\\), so the maximum value is \\(143\\).",
       "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q267",
@@ -11192,7 +11192,7 @@
       "section": "Math",
       "domain": "Problem-Solving & Data Analysis",
       "skill": "Ratio, Rates, Percentages",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "A positive quantity is modeled by \\[Q=Q_0(c-2)^t,\\] where \\(Q_0>0\\), \\(t\\ge0\\), and \\(c\\) is a constant. If the quantity decreases by a fixed positive percentage each time \\(t\\) increases by 1, which of the following must be true?",
       "choices": {
@@ -11212,7 +11212,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q275",
@@ -11779,7 +11779,7 @@
       "section": "Math",
       "domain": "Problem-Solving & Data Analysis",
       "skill": "Ratio, Rates, Percentages",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "A tank originally contains 4 liters of a \\(12\\%\\) saline solution. Before another solution is added, 0.5 liter spills from the tank. The spilled liquid has the same \\(12\\%\\) concentration as the solution remaining.\nHow many liters of a \\(36\\%\\) saline solution must then be added so that the resulting mixture is \\(21\\%\\) saline?",
       "choices": {},
@@ -11792,7 +11792,7 @@
         "2.1"
       ],
       "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q293",
@@ -13198,7 +13198,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Systems of Linear Equations",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "In the system below, k is a constant. The graphs of the equations intersect at (6,p), where p is a constant.\n\\[ \\begin{aligned} (k-2)x+3y&=69\\\\ 2(k-2)x-y&=5 \\end{aligned} \\]\nWhat is the value of k?",
       "choices": {},
@@ -13211,7 +13211,7 @@
         "4"
       ],
       "subtopic": "Systems of Linear Equations",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q342",
@@ -15153,7 +15153,7 @@
       "section": "Math",
       "domain": "Problem-Solving & Data Analysis",
       "skill": "Statistics",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "A quantity P is modeled by\n\n\\[P=abt/3,\\]\nwhere t is measured in months and a and b are positive constants. The quantity increases by \\(21\\%\\) whenever t increases by 6 months. What is the value of b?",
       "choices": {
@@ -15173,7 +15173,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Statistics",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q392",
@@ -15314,7 +15314,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent Expressions",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "One linear factor of\n\\[\n6x^3+102x^2+432x\n\\]\ncan be written as \\(2x+b\\), where \\(b\\) is a positive integer. What is the smallest possible value of \\(b\\)?",
       "choices": {},
@@ -15327,7 +15327,7 @@
         "16"
       ],
       "subtopic": "Equivalent Expressions",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q398",
@@ -15336,7 +15336,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Exponential Functions",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "The function \\[h(x)=a^x+b,\\] where \\(a\\) and \\(b\\) are positive constants, passes through \\((0,8)\\) and \\(\\left(-3,\\frac{449}{64}\\right)\\). What is the value of \\(ab\\)?",
       "choices": {
@@ -15356,7 +15356,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Exponential Functions",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q399",
@@ -15642,7 +15642,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent Expressions",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "For \\(x\\ne2\\), which expression is equivalent to\n\\[\\frac{x^3-2x^2+5x-7}{x-2}?\\]",
       "choices": {
@@ -15662,7 +15662,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Equivalent Expressions",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q409",
@@ -16043,7 +16043,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent Expressions",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "Which of the following is equivalent to\n\\[(1+q)(1-q+q^2-q^3+q^4-q^5+q^6)?\\]",
       "choices": {
@@ -16063,7 +16063,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Equivalent Expressions",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q423",
@@ -16247,7 +16247,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Quadratics",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "Which value of \\(x\\) satisfies \\[\\frac{2x+1}{x-2}-\\frac3{x+2}=\\frac{20}{x^2-4}?\\]",
       "choices": {
@@ -16268,7 +16268,7 @@
       },
       "desmosMethod": "Enter\n\n\\[y=2x+1x-2-3x+2\\]\nand\n\n\\[y=20x2-4.\\]\nThe only actual intersection occurs at x=-3. The value x=2 is excluded because both sides are undefined there.",
       "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q430",
@@ -16380,7 +16380,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Equivalent Expressions",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "For \\(x>\\frac52\\), which of the following is equivalent to \\[\\sqrt[6]{4x^2-20x+25}?\\]",
       "choices": {
@@ -16400,7 +16400,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Equivalent Expressions",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q436",
@@ -16409,7 +16409,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Quadratics",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "In the equation\n\\[3x^2+(k-5)x+12=0,\\]\n\\(k\\) is a constant. For which of the following values of \\(k\\) does the equation have more than one real solution?",
       "choices": {
@@ -16429,7 +16429,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q437",
@@ -16554,7 +16554,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Quadratics",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "In the equation\n\\[\n\\frac15(2x-k)(x^2-12x+35)=0,\n\\]\n\\(k\\) is a positive constant. The sum of the solutions is 23. What is the value of \\(k\\)?",
       "choices": {},
@@ -16567,7 +16567,7 @@
         "22"
       ],
       "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-batch465-q443",
@@ -17252,7 +17252,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Polynomial Functions",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "\\[\\sqrt{2x+9}=x-3\\]",
       "question": "What value of \\(x\\) satisfies the equation?",
       "choices": {},
@@ -17265,7 +17265,7 @@
         "8"
       ],
       "subtopic": "Polynomial Functions",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-new409-q002",
@@ -17499,7 +17499,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Quadratics",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "A rectangle has a diagonal of length 26 units. Its longer side is 14 units longer than its shorter side.",
       "question": "What is the area of the rectangle, in square units?",
       "choices": {},
@@ -17512,7 +17512,7 @@
         "240"
       ],
       "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-new409-q011",
@@ -18673,7 +18673,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Area and Volume",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "Rectangles A and B are similar. Rectangle A has area 320 square units and perimeter 72 units. Rectangle B has area 720 square units.",
       "question": "How much greater is the perimeter of rectangle B than the perimeter of rectangle A?",
       "choices": {
@@ -18693,7 +18693,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-07-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "diagram": {
         "width": 420,
         "height": 280,
@@ -26263,7 +26263,7 @@
       "section": "Math",
       "domain": "Problem-Solving & Data Analysis",
       "skill": "Ratio, Rates, Percentages",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "A square map is enlarged so that its printed area becomes \\(96\\%\\) greater than its original printed area. On the original map, 1 inch represents 14 miles.\nOn the enlarged map, approximately",
       "question": "how many actual miles does 1 inch represent?",
       "choices": {
@@ -26283,7 +26283,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-new409-q351",
@@ -28913,7 +28913,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Trigonometry",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "For acute angles \\(Q\\) and \\(R\\),\n\\[\\sin(Q+6^\\circ)=\\cos(R-4^\\circ).\\]\nAlso,\n\\[Q=5x+9^\\circ,\\qquad R=3x+15^\\circ.\\]",
       "question": "What is the value of \\(x\\)?",
       "choices": {
@@ -28933,7 +28933,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Trigonometry",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-new409-q030",
@@ -29741,7 +29741,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Area and Volume",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "A right rectangular pyramid has a rectangular base whose length is three times its width. The diagonal of the base is \\(6\\sqrt{10}\\) centimeters, and the height is \\(14\\) centimeters.",
       "question": "What is the volume, in cubic centimeters, of the pyramid?",
       "choices": {},
@@ -29754,7 +29754,7 @@
         "504"
       ],
       "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-new409-q095",
@@ -29994,7 +29994,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Area and Volume",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "A rectangle has perimeter \\(62\\) units and diagonal \\(25\\) units.",
       "question": "What is the length of the rectangle's longer side?",
       "choices": {},
@@ -30007,7 +30007,7 @@
         "24"
       ],
       "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-07-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "diagram": {
         "width": 420,
         "height": 285,
@@ -32358,7 +32358,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Area and Volume",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "A right rectangular prism has edge lengths \\(4\\), \\(7\\), and \\(h\\). Its space diagonal is \\(\\sqrt{114}\\).",
       "question": "What is the surface area of the prism?",
       "choices": {
@@ -32378,7 +32378,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-07-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "diagram": {
         "width": 420,
         "height": 300,
@@ -33636,7 +33636,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Circles",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "Points \\(A\\) and \\(B\\) lie on the unit circle centered at \\(O=(0,0)\\). Point \\(A\\) is\n\\[\\left(\\frac{\\sqrt3}{2},\\frac12\\right),\\]\nand point \\(B\\) is\n\\[\\left(-\\frac{\\sqrt3}{2},b\\right),\\qquad b<0.\\]",
       "question": "Which could be a positive measure, in radians, of \\(\\angle AOB\\)?",
       "choices": {
@@ -33656,7 +33656,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Circles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-new409-q141",
@@ -34302,7 +34302,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Trigonometry",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "In right triangle \\(ABC\\), \\(C=90^\\circ\\), \\(AB=37\\), and \\(AC=12\\). Point \\(D\\) lies on \\(BC\\), point \\(E\\) lies on \\(AB\\), and \\(DE\\parallel AC\\). Let \\(\\theta=\\angle DEB\\).",
       "question": "What is \\(\\tan\\theta\\)?",
       "choices": {
@@ -34322,7 +34322,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Trigonometry",
-      "classificationVersion": "2026-10-07-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "diagram": {
         "width": 420,
         "height": 285,
@@ -34527,7 +34527,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Area and Volume",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "A regular hexagon is divided by segments from its center to its vertices into six congruent equilateral triangles. Four are shaded. The hexagon's perimeter is \\(42\\) cm.",
       "question": "What is the total shaded area, in square centimeters?",
       "choices": {
@@ -34547,7 +34547,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-new409-q151",
@@ -35140,7 +35140,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Trigonometry",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "Right triangle \\(ABC\\) has legs \\(AB=8\\) and \\(AC=15\\). Altitude \\(AD\\) is drawn to hypotenuse \\(BC\\).",
       "question": "What is \\(BD\\)?",
       "choices": {
@@ -35160,7 +35160,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Trigonometry",
-      "classificationVersion": "2026-10-07-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "diagram": {
         "width": 420,
         "height": 285,
@@ -35737,7 +35737,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Circles",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "A circle has center \\((2,-3)\\) and radius \\(10\\). A line is tangent at point \\(P\\), whose x-coordinate is \\(8\\) and whose y-coordinate is greater than \\(-3\\).",
       "question": "What is the slope of the tangent line?",
       "choices": {
@@ -35757,7 +35757,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Circles",
-      "classificationVersion": "2026-10-07-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "diagram": {
         "width": 420,
         "height": 290,
@@ -36389,7 +36389,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Trigonometry",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "In right triangle \\(ABC\\), \\(A=90^\\circ\\). Point \\(D\\) lies on \\(AB\\), point \\(E\\) lies on \\(BC\\), and \\(DE\\parallel AC\\). Also,\n\\[\\tan B=\\frac5{12},\\qquad BC=26,\\qquad AD=6.\\]",
       "question": "What is \\(DE\\)?",
       "choices": {},
@@ -36403,7 +36403,7 @@
         "7.5"
       ],
       "subtopic": "Trigonometry",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-new409-q174",
@@ -37367,7 +37367,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Lines, Angles, and Triangles",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "For triangles \\(ABC\\) and \\(DEF\\),\n\\[m\\angle B=m\\angle E=38^\\circ,\\qquad AB=12,\\qquad DE=18.\\]\nConsider:\n\nI. \\(m\\angle A=m\\angle D\\)\n\nII. \\(m\\angle C=m\\angle F\\)\n\nIII. \\(\\frac{AC}{DF}=\\frac23\\)",
       "question": "Which statements are individually sufficient to prove the triangles similar?",
       "choices": {
@@ -37387,7 +37387,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-new409-q208",
@@ -38166,7 +38166,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Area and Volume",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "Triangle \\(ABC\\) is right at \\(C\\). Point \\(D\\) lies on \\(AC\\), point \\(E\\) lies on \\(BC\\), and \\(DE\\parallel AB\\). Also,\n\\[AD=30,\\qquad CD=12,\\]\nand the area of triangle \\(ABC\\) is \\(756\\) square units.",
       "question": "What is the length of \\(BE\\)?",
       "choices": {},
@@ -38179,7 +38179,7 @@
         "180/7"
       ],
       "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-new409-q227",
@@ -38246,7 +38246,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Area and Volume",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "A right square pyramid has total surface area \\(384\\) square inches. The combined area of its four lateral faces is \\(\\frac58\\) of the total surface area.",
       "question": "What is the height of the pyramid?",
       "choices": {
@@ -38266,7 +38266,7 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-new409-q230",
@@ -38614,7 +38614,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Circles",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "A circle with center \\(O\\) has circumference \\(14\\pi\\) cm. From point \\(P\\) outside the circle, \\(PA\\) and \\(PB\\) are tangent at \\(A\\) and \\(B\\). Also, \\(OP=25\\) cm.",
       "question": "What is the area, in square centimeters, of quadrilateral \\(OAPB\\)?",
       "choices": {},
@@ -38627,7 +38627,7 @@
         "168"
       ],
       "subtopic": "Circles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-new409-q323",
@@ -38658,7 +38658,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Circles",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "Circle A is represented by\n\\[x^2+y^2-6x+8y+m=0.\\]\nCircle B has the same center, and its diameter is \\(\\frac53\\) times circle A's diameter. The point \\((9,4)\\) lies on circle B.",
       "question": "What is the value of \\(m\\)?",
       "choices": {},
@@ -38671,7 +38671,7 @@
         "-11"
       ],
       "subtopic": "Circles",
-      "classificationVersion": "2026-10-07-v1"
+      "classificationVersion": "2026-10-08-independent-v2"
     },
     {
       "id": "math-20261006-new409-q325",
@@ -38844,14 +38844,14 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Systems of Linear Equations",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "In the system below, \\(k\\) is a constant. \\[2(3x-2y)=5x+8\\] \\[(k-1)x+8y=3\\] If the system has no solution, what is the value of \\(k\\)?",
       "explanation": "The first equation simplifies to \\(x-4y=8\\), so its slope is \\(\\frac14\\). The second equation has slope \\(-\\frac{k-1}{8}\\). For no solution, the lines must be distinct and parallel, so \\(-\\frac{k-1}{8}=\\frac14\\). This gives \\(\\boxed{k=-1}\\).",
       "sourceBatch": "2026-10-07-deduplicated-batch45",
       "sourceQuestionNumber": 7,
       "subtopic": "Systems of Linear Equations",
-      "classificationVersion": "2026-10-08-v2",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choices": {},
       "correctAnswer": "-1",
       "answerType": "student-response",
@@ -39938,14 +39938,14 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear Inequalities",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "A salesperson earns a base salary of \\(b\\) dollars. If annual sales are \\(s\\) dollars, where \\(s\\ge2b\\), the salesperson also earns a commission equal to 12% of the amount by which \\(s\\) exceeds \\(2b\\). The salesperson wants total earnings to be at least \\(1.6b\\) and at most \\(2.2b\\). Which inequality gives all possible values of \\(s\\)?",
       "explanation": "Total earnings are \\(b+0.12(s-2b)\\). Therefore, \\(1.6b\\le b+0.12(s-2b)\\le2.2b\\). Simplifying gives \\(0.84b\\le0.12s\\le1.44b\\), and dividing by 0.12 yields \\(\\boxed{7b\\le s\\le12b}\\).",
       "sourceBatch": "2026-10-07-deduplicated-batch45",
       "sourceQuestionNumber": 40,
       "subtopic": "Linear Inequalities",
-      "classificationVersion": "2026-10-08-v2",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choices": {
         "A": "\\(5b\\le s\\le10b\\)",
         "B": "\\(7b\\le s\\le12b\\)",
@@ -40746,7 +40746,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear Inequalities",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "Five consecutive odd integers are arranged from least to greatest. The least integer is \\(n\\). Three times the fifth integer is no more than 28 greater than the sum of the first and fourth integers. Which inequality represents this condition?",
       "choices": {
@@ -40760,7 +40760,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 29,
       "subtopic": "Linear Inequalities",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "The five integers are \\(n,n+2,n+4,n+6,n+8\\). Three times the fifth is \\(3(n+8)\\), while 28 greater than the sum of the first and fourth is \\(n+(n+6)+28\\). Thus \\(\\boxed{3(n+8)\\le n+(n+6)+28}\\).",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -41325,7 +41325,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Systems of Linear Equations",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "The solution (x,y) to the system below satisfies both equations.\n\\[ \\begin{cases} 2(2x-y)+3(x+y)=23\\\\ 3(2x-y)-2(x+y)=2 \\end{cases} \\]\nWhat is the value of 5x-4y?",
       "choices": {},
@@ -41334,7 +41334,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 51,
       "subtopic": "Systems of Linear Equations",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "answerType": "student-response",
       "acceptedAnswers": [
         "7"
@@ -42166,7 +42166,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Circles",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "The circle \\((x-2)^2+(y+1)^2=25\\) is tangent to line \\(t\\) at \\((5,3)\\). At which point does line \\(t\\) intersect the x-axis?",
       "choices": {
@@ -42180,7 +42180,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 83,
       "subtopic": "Circles",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -42783,7 +42783,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Lines, Angles, and Triangles",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "Lines AEB and CED intersect at E. In triangle BDE, \\(BD=BE\\) and \\(m\\angle DBE=46^\\circ\\). In triangle ACE, \\(AC=CE\\). Ray CF is opposite ray CE. What is \\(m\\angle ACF\\), in degrees?",
       "choices": {},
@@ -42792,7 +42792,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 90,
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "answerType": "student-response",
       "acceptedAnswers": [
         "134"
@@ -43039,7 +43039,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Lines, Angles, and Triangles",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "In triangles ABC and PQR, \\(\\angle A\\cong\\angle Q\\) and \\(\\angle C\\cong\\angle P\\). Which additional information is sufficient to guarantee that triangle ABC is congruent to triangle PQR?",
       "choices": {
@@ -43053,7 +43053,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 92,
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "The two given angle pairs establish similarity with correspondence \\(A\\leftrightarrow Q\\), \\(C\\leftrightarrow P\\), and \\(B\\leftrightarrow R\\). Therefore AB corresponds to QR. If \\(AB=QR\\), the similarity scale factor is 1, so the triangles are congruent. Thus \\(\\boxed{A}\\) is sufficient.",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -43526,7 +43526,7 @@
       "section": "Math",
       "domain": "Problem-Solving & Data Analysis",
       "skill": "Ratio, Rates, Percentages",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "On a scale drawing, 3 centimeters represents 8 meters. A region has an actual area of 1,536 square meters. What is its area, in square centimeters, on the scale drawing?",
       "choices": {
@@ -43540,7 +43540,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 111,
       "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -43577,7 +43577,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Lines, Angles, and Triangles",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "In triangle ABC, points D and E lie on AB and AC, respectively, and \\(DE\\parallel BC\\). The area of triangle ADE is \\(\\frac49\\) the area of triangle ABC. If \\(BC=81\\), what is \\(DE\\)?",
       "choices": {},
@@ -43586,7 +43586,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 113,
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "answerType": "student-response",
       "acceptedAnswers": [
         "54"
@@ -43937,7 +43937,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Lines, Angles, and Triangles",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "Two parallel lines are cut by a transversal. A pair of same-side interior angles have measures \\((2x+10)^\\circ\\) and \\((3y-5)^\\circ\\). If \\(y>25\\), which of the following must be true?",
       "choices": {
@@ -43951,7 +43951,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 122,
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "Same-side interior angles are supplementary: \\((2x+10)+(3y-5)=180\\), so \\(2x=175-3y\\). Since \\(y>25\\), \\(3y>75\\), so \\(2x<100\\) and therefore \\(\\boxed{x<50}\\).",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -44017,7 +44017,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Area and Volume",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "A right rectangular prism has a base area of \\(84t\\) square centimeters, where \\(t>0\\). One side of the base has length \\(7t\\) centimeters, and the height of the prism is \\((3t+2)\\) centimeters. Which expression represents the surface area, in square centimeters, of the prism?",
       "choices": {
@@ -44031,7 +44031,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 126,
       "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "The other base dimension is \\(\\frac{84t}{7t}=12\\). The surface area is \\(2(84t)+2(7t)(3t+2)+2(12)(3t+2)\\), which simplifies to \\(\\boxed{42t^2+268t+48}\\).",
@@ -44580,7 +44580,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Circles",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "An equilateral triangle is inscribed in a circle whose circumference is \\(12\\pi\\sqrt3\\) units. The area of the triangle is \\(k\\sqrt3\\) square units. What is the value of \\(k\\)?",
       "choices": {},
@@ -44589,7 +44589,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 138,
       "subtopic": "Circles",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "answerType": "student-response",
       "acceptedAnswers": [
         "81"
@@ -45167,7 +45167,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Lines, Angles, and Triangles",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "Lines AD and BC intersect at E, where E lies between B and C. Segments AB and DC are drawn, and \\(\\angle BAE\\cong\\angle CDE\\). If \\(AE=45\\), \\(DE=30\\), and \\(CE=22\\), what is the length of BC?",
       "choices": {
@@ -45181,7 +45181,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 155,
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -45288,7 +45288,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Circles",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "A circle has center G and circumference \\(30\\pi\\) millimeters. From an external point H, segments HM and HN are tangent to the circle at M and N. If \\(GH=39\\) millimeters, what is the perimeter, in millimeters, of quadrilateral GMHN?",
       "choices": {
@@ -45302,7 +45302,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 156,
       "subtopic": "Circles",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "The radius is \\(\\frac{30\\pi}{2\\pi}=15\\). A radius to a point of tangency is perpendicular to the tangent, so in right triangle GMH, \\(HM=\\sqrt{39^2-15^2}=36\\). The two tangent segments are equal. Therefore the quadrilateral perimeter is \\(15+36+36+15=\\boxed{102}\\).",
@@ -45448,7 +45448,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Area and Volume",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "A right circular cone has volume \\(2{,}800\\pi\\) cubic centimeters and base circumference \\(40\\pi\\) centimeters. What is its slant height, in centimeters?",
       "choices": {
@@ -45462,7 +45462,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 159,
       "subtopic": "Area and Volume",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "From \\(2\\pi r=40\\pi\\), the radius is 20. Using \\(2800\\pi=\\frac13\\pi(20)^2h\\) gives \\(h=21\\). The radius, height, and slant height form a right triangle, so \\(s=\\sqrt{20^2+21^2}=\\sqrt{841}=\\boxed{29}\\).",
@@ -45789,7 +45789,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Circles",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "A circle has center \\(C(h,k)\\). Point A on the circle has coordinates \\((h+6,k+8)\\). Point B also lies on the circle, and \\(m\\angle ACB=120^\\circ\\). What is the length of \\(AB\\)?",
       "choices": {
@@ -45803,7 +45803,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 161,
       "subtopic": "Circles",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -46743,7 +46743,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Quadratics",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "In the system \\(2y+1=11\\) and \\(y=(x-4)^2+3x+k-20\\), \\(k\\) is a positive integer. If the system has no real solutions, what is the least possible value of \\(k\\)?",
       "choices": {},
@@ -46752,7 +46752,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 177,
       "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "answerType": "student-response",
       "acceptedAnswers": [
         "16"
@@ -46765,7 +46765,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Exponential Functions",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "The function \\(f\\) is defined by \\(f(x)=a^x+b\\), where \\(a\\) and \\(b\\) are constants and \\(a>0\\). The graph of \\(f\\) has y-intercept \\((0,-20)\\), and \\(f(1)+f(2)=0\\). What is the value of \\(a+b\\)?",
       "choices": {},
@@ -46774,7 +46774,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 178,
       "subtopic": "Exponential Functions",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "answerType": "student-response",
       "acceptedAnswers": [
         "-15"
@@ -46831,7 +46831,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Rational/Radical Equations",
-      "difficulty": "Hard",
+      "difficulty": "Easy",
       "passage": "",
       "question": "The equation \\(\\frac{3}{5b}=\\frac{2x-y}{4y}\\) relates the positive numbers \\(b\\), \\(x\\), and \\(y\\). Which equation correctly expresses \\(x\\) in terms of \\(b\\) and \\(y\\)?",
       "choices": {
@@ -46845,7 +46845,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 181,
       "subtopic": "Rational/Radical Equations",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "Cross-multiply: \\(12y=5b(2x-y)\\). Then \\(12y=10bx-5by\\), so \\(10bx=y(12+5b)\\). Therefore, \\(\\boxed{x=\\frac{y(12+5b)}{10b}}\\).",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -47251,7 +47251,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Rational/Radical Equations",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "The positive variables \\(p\\), \\(q\\), \\(r\\), and \\(s\\) satisfy \\(\\frac3p=\\frac2q-\\frac1r+\\frac1s\\). Which expression is equivalent to \\(q\\)?",
       "choices": {
@@ -47265,7 +47265,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 195,
       "subtopic": "Rational/Radical Equations",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "Rearrange: \\(\\frac2q=\\frac3p+\\frac1r-\\frac1s=\\frac{3rs+ps-pr}{prs}\\). Taking reciprocals and solving gives \\(\\boxed{q=\\frac{2prs}{3rs+ps-pr}}\\).",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -47359,7 +47359,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Quadratics",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "The quadratic function \\(f(x)=ax^2+bx+c\\) has an x-intercept at \\((11,0)\\) and an axis of symmetry \\(x=3\\). If \\(a\\) is an integer greater than 1, which of the following could be the value of \\(a+b\\)?",
       "choices": {
@@ -47373,7 +47373,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 198,
       "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -47635,7 +47635,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Quadratics",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "In the system \\(3y=6x+a\\) and \\(y=2(x+1)^2-5x+4\\), \\(a\\) is a constant. The graphs intersect at exactly one point \\((x,y)\\). What is the value of \\(x\\)?",
       "choices": {
@@ -47649,7 +47649,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 210,
       "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "The first equation is \\(y=2x+\\frac a3\\), and the second is \\(y=2x^2-x+6\\). Equating them gives \\(2x^2-3x+6-\\frac a3=0\\). Exactly one intersection means a repeated root, whose value is \\(-\\frac{B}{2A}=\\frac{3}{4}\\). Thus \\(\\boxed{x=\\frac34}\\).",
@@ -48327,7 +48327,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Quadratics",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "The graph of \\(y=3x^2+bx+c\\) is shown, where \\(b\\) and \\(c\\) are constants. What is the value of \\(bc\\)?",
       "choices": {},
@@ -48336,7 +48336,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 234,
       "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "answerType": "student-response",
       "acceptedAnswers": [
         "-84"
@@ -48464,7 +48464,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Rational/Radical Equations",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "The function \\(h\\) is defined by \\(h(x)=\\frac{x^2+3x-a}{x^2+3x-b}\\), where \\(a\\) and \\(b\\) are constants. The graph of \\(y=h(x)\\) passes through \\((1,7)\\), and \\(h(3)=0\\). What is the value of \\(b\\)?",
       "choices": {
@@ -48478,7 +48478,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 237,
       "subtopic": "Rational/Radical Equations",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "Since \\(h(3)=0\\), the numerator is zero: \\(9+9-a=0\\), so \\(a=18\\). Using \\(h(1)=7\\), \\(7=\\frac{1+3-18}{1+3-b}=\\frac{-14}{4-b}\\). Thus \\(28-7b=-14\\), giving \\(\\boxed{b=6}\\).",
@@ -48522,7 +48522,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Exponential Functions",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "A tournament begins with 729 entries. At each stage, the remaining entries are divided into groups of 3. Exactly one entry from each group advances, and the other two are eliminated. Let \\(E(r)\\) be the number of entries eliminated during stage \\(r\\), where \\(1\\le r\\le6\\). Which equation gives \\(E(r)\\)?",
       "choices": {
@@ -48536,7 +48536,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 239,
       "subtopic": "Exponential Functions",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "At stage 1, \\(\\frac23(729)=486\\) entries are eliminated. Each later stage has one-third as many entries, so eliminations are also multiplied by \\(\\frac13\\). Thus \\(E(r)=486(\\frac13)^{r-1}=\\boxed{1458(\\frac13)^r}\\).",
@@ -48551,7 +48551,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Exponential Functions",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "The function \\(P(t)=C(3)^{rt}\\) models a quantity \\(P\\), where \\(C\\) and \\(r\\) are constants and \\(t\\) is measured in hours. If \\(P(2)=5{,}400\\) and \\(P(6)=16{,}200\\), what is the value of \\(r\\)?",
       "choices": {
@@ -48565,7 +48565,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 240,
       "subtopic": "Exponential Functions",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "Take the ratio: \\(\\frac{P(6)}{P(2)}=3^{6r-2r}=3^{4r}\\). Since \\(16{,}200/5{,}400=3\\), \\(3^{4r}=3^1\\), so \\(4r=1\\) and \\(\\boxed{r=\\frac14}\\).",
@@ -48748,7 +48748,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Quadratics",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "In the equation \\(6(4x^2+2bx)+a(2x+b)=0\\), \\(a\\) and \\(b\\) are positive constants. The product of the solutions is \\(kab\\), where \\(k\\) is a constant. What is \\(k\\)?",
       "choices": {
@@ -48762,7 +48762,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 250,
       "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "Since \\(6(4x^2+2bx)=12x(2x+b)\\), the equation factors as \\((2x+b)(12x+a)=0\\). The roots are \\(-b/2\\) and \\(-a/12\\), whose product is \\(ab/24\\). Thus \\(\\boxed{k=1/24}\\).",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -48777,7 +48777,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Exponential Functions",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "The function \\(f\\) is defined by \\(f(x)=-a^{x+1}+b\\), where \\(a>0\\). The graph of \\(y=f(x)+4\\) has a y-intercept at \\((0,7)\\). If \\(ab=40\\), what is the value of \\(a\\)?",
       "choices": {},
@@ -48786,7 +48786,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 251,
       "subtopic": "Exponential Functions",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "answerType": "student-response",
       "acceptedAnswers": [
         "5"
@@ -48872,7 +48872,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Quadratics",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "In the system \\(y+2k=3x+8\\) and \\(y-k=x^2-x-10\\), \\(k\\) is a constant. The system has exactly one distinct real solution. What is the value of \\(k\\)?",
       "choices": {},
@@ -48881,7 +48881,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 257,
       "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "answerType": "student-response",
       "acceptedAnswers": [
         "22/3"
@@ -49089,7 +49089,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Rational/Radical Equations",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "For \\(x\\ne-3\\) and \\(x\\ne3\\), which expression is equivalent to \\(\\frac{3x+2}{x^2-9}+\\frac{x-4}{x^2+6x+9}\\)?",
       "choices": {
@@ -49103,7 +49103,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 269,
       "subtopic": "Rational/Radical Equations",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "Factor the denominators: \\(x^2-9=(x-3)(x+3)\\) and \\(x^2+6x+9=(x+3)^2\\). The common denominator is \\((x-3)(x+3)^2\\). The numerator becomes \\((3x+2)(x+3)+(x-4)(x-3)=4x^2+4x+18\\).",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -49140,7 +49140,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Rational/Radical Equations",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "The function \\(f(x)=a\\sqrt{x+9}+b\\) is defined for \\(x\\ge-9\\). Its graph passes through \\((-9,5)\\), and \\(f(7)<1\\). Which statement must be true?",
       "choices": {
@@ -49154,7 +49154,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 271,
       "subtopic": "Rational/Radical Equations",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "Using \\((-9,5)\\), \\(b=5\\). Also \\(f(7)=4a+5<1\\), so \\(a<-1\\). Therefore \\(a+b=a+5<4\\), so choice B must be true.",
@@ -49419,7 +49419,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Exponential Functions",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "An account grows exponentially. Its balance is $6,050 two years after it is opened and $8,052.55 five years after it is opened. If \\(A(t)\\) is the balance \\(t\\) years after the account is opened, which equation could define \\(A\\)?",
       "choices": {
@@ -49433,7 +49433,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 280,
       "subtopic": "Exponential Functions",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -49545,7 +49545,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Quadratics",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "For positive constants \\(a\\) and \\(b\\), \\(18x^2-(5a+2b)x+ab=2x^2+(a-4b)x\\). The sum of the solutions can be written as \\(k(9a-3b)\\). What is \\(k\\)?",
       "choices": {},
@@ -49554,7 +49554,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 286,
       "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "answerType": "student-response",
       "acceptedAnswers": [
         "1/24",
@@ -49649,7 +49649,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Polynomial Functions",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "The function \\(f(x)=(2x-3)(x+4)(x-7)\\) is given, and \\(g(x)=f(2x+1)\\). The graph of \\(g\\) has x-intercepts with x-coordinates \\(a,b,\\) and \\(c\\). What is \\(a+b+c\\)?",
       "choices": {
@@ -49663,7 +49663,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 288,
       "subtopic": "Polynomial Functions",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -49977,7 +49977,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Quadratics",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "A quadratic function \\(d\\) models the depth, in meters, of a seal during a dive. The seal is at the water's surface 3 minutes and 15 minutes after tracking begins. Between those times, the seal reaches a maximum depth of 216 meters. According to the model, what is the seal's depth 6 minutes after tracking begins?",
       "choices": {},
@@ -49986,7 +49986,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 307,
       "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "answerType": "student-response",
       "acceptedAnswers": [
         "162"
@@ -51047,7 +51047,7 @@
       "section": "Math",
       "domain": "Problem-Solving & Data Analysis",
       "skill": "Ratio, Rates, Percentages",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "For a flat surface perpendicular to an electric field, electric flux is the product of field strength and surface area. A surface consists of two adjacent squares. The larger square has side length \\(\\frac32\\) times the side length of the smaller square. The electric-field strength over the larger square is 20% less than the field strength over the smaller square. The total electric flux through the two squares is 980 volt-meters. What is the electric flux, in volt-meters, through the larger square?",
       "choices": {},
@@ -51056,7 +51056,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 333,
       "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "answerType": "student-response",
       "acceptedAnswers": [
         "630"
@@ -51142,7 +51142,7 @@
       "section": "Math",
       "domain": "Problem-Solving & Data Analysis",
       "skill": "Ratio, Rates, Percentages",
-      "difficulty": "Hard",
+      "difficulty": "Easy",
       "passage": "",
       "question": "Pump A transfers \\(a\\) liters of water in \\(b\\) minutes, where \\(a,b>0\\). Pump B transfers water at \\(\\frac34\\) the rate of pump A. If both pumps operate simultaneously for \\(m\\) minutes, which expression gives the total number of liters transferred?",
       "choices": {
@@ -51156,7 +51156,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 334,
       "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "Pump A's rate is \\(a/b\\). Pump B's rate is \\(\\frac34(a/b)\\), so the combined rate is \\(\\frac{7a}{4b}\\). In \\(m\\) minutes the pumps transfer \\(\\boxed{\\frac{7am}{4b}}\\) liters.",
@@ -51401,7 +51401,7 @@
       "section": "Math",
       "domain": "Problem-Solving & Data Analysis",
       "skill": "Ratio, Rates, Percentages",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "The number of nesting birds in 2022 was 88% of the number in 2018. The number in 2026 was 1.25 times the number in 2022. The 2018 population was \\(p\\%\\) of the 2026 population. What is \\(p\\), to the nearest whole number?",
       "choices": {},
@@ -51410,7 +51410,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 340,
       "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "answerType": "student-response",
       "acceptedAnswers": [
         "91"
@@ -51615,7 +51615,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Rational/Radical Equations",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "The equation \\(\\frac{12m}{n}=3\\sqrt{2p+5}\\) relates positive real numbers \\(m\\), \\(n\\), and \\(p\\). Which equation correctly expresses \\(p\\) in terms of \\(m\\) and \\(n\\)?",
       "choices": {
@@ -51629,7 +51629,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 349,
       "subtopic": "Rational/Radical Equations",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "Divide by 3: \\(\\frac{4m}{n}=\\sqrt{2p+5}\\). Squaring gives \\(\\frac{16m^2}{n^2}=2p+5\\). Therefore, \\(\\boxed{p=\\frac{8m^2}{n^2}-\\frac52}\\).",
@@ -51798,7 +51798,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Quadratics",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "In the equation \\(3x^2-30x+(c+12)=0\\), \\(c\\) is a constant. The equation has no real solutions whenever \\(c>n\\). What is the least possible value of \\(n\\)?",
       "choices": {},
@@ -51807,7 +51807,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 352,
       "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "answerType": "student-response",
       "acceptedAnswers": [
         "63"
@@ -51820,7 +51820,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Polynomial Functions",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "Which expression has a factor of \\(2x+3b\\), where \\(b\\) is a positive integer constant?",
       "choices": {
@@ -51834,7 +51834,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 353,
       "subtopic": "Polynomial Functions",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -52653,7 +52653,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Exponential Functions",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "Positive real numbers \\(a\\) and \\(b\\), with \\(a>1\\), satisfy \\(\\sqrt[4]{a^3}=b^{2/5}\\). If \\(b=a^{5n-1}\\), where \\(n\\) is a constant, what is the value of \\(n\\)?",
       "choices": {},
@@ -52662,7 +52662,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 377,
       "subtopic": "Exponential Functions",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "answerType": "student-response",
       "acceptedAnswers": [
         "23/40",
@@ -52890,7 +52890,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Rational/Radical Equations",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "In the equation \\(\\frac{2x^2}{\\sqrt{x^2-a^2}}=\\frac{2a^2}{\\sqrt{x^2-a^2}}+6\\sqrt2\\), \\(a\\) is a positive constant. Which of the following is one solution?",
       "choices": {
@@ -52904,7 +52904,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 384,
       "subtopic": "Rational/Radical Equations",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -53112,7 +53112,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Quadratics",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "In the xy-plane, a parabola has vertex \\((4,-8)\\) and has two distinct x-intercepts, one of which is \\((2,0)\\). Its equation is \\(y=ax^2+bx+c\\). What is the value of \\(a+b+c\\)?",
       "choices": {
@@ -53126,7 +53126,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 388,
       "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "Write \\(y=a(x-4)^2-8\\). Using \\((2,0)\\) gives \\(0=4a-8\\), so \\(a=2\\). The quantity \\(a+b+c\\) equals the quadratic's value at \\(x=1\\): \\(2(1-4)^2-8=\\boxed{10}\\).",
@@ -53565,7 +53565,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Exponential Functions",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "An exponential model for a scatterplot has the form \\(y=a(b)^x\\), where \\(a\\) and \\(b\\) are positive constants. The model curve passes approximately through \\((1,90)\\) and \\((4,30)\\). Which value is closest to \\(b\\)?",
       "choices": {
@@ -53579,7 +53579,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 401,
       "subtopic": "Exponential Functions",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "Using the two points, \\(90=ab\\) and \\(30=ab^4\\). Dividing gives \\(1/3=b^3\\), so \\(b=\\sqrt[3]{1/3}\\approx\\boxed{0.69}\\).",
@@ -54041,7 +54041,7 @@
       "section": "Math",
       "domain": "Problem-Solving & Data Analysis",
       "skill": "Statistics",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "A line of best fit for data set E passes approximately through \\((2,14)\\) and \\((12,34)\\). Data set F is created by multiplying every y-coordinate in data set E by 1.8. Which equation could represent a line of best fit for data set F?",
       "choices": {
@@ -54055,7 +54055,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 413,
       "subtopic": "Statistics",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "For E, the slope is \\((34-14)/(12-2)=2\\), and using \\((2,14)\\) gives intercept 10. Multiplying every y-value by 1.8 multiplies both slope and intercept by 1.8, giving \\(\\boxed{y=3.6x+18}\\).",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -54318,7 +54318,7 @@
       "section": "Math",
       "domain": "Problem-Solving & Data Analysis",
       "skill": "Ratio, Rates, Percentages",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "In a scale model, \\(\\frac38\\) inch represents 5 feet in the actual building. An actual hallway is \\(x\\) yards long. Which expression gives the hallway's length, in inches, in the model?",
       "choices": {
@@ -54332,7 +54332,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 422,
       "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "The hallway is \\(3x\\) feet long. Using the scale, its model length is \\(3x\\cdot\\frac{3/8}{5}=\\boxed{9x/40}\\) inches.",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -54675,7 +54675,7 @@
       "section": "Math",
       "domain": "Problem-Solving & Data Analysis",
       "skill": "Ratio, Rates, Percentages",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "A vehicle's speed is increasing at a rate of 2.2 feet per second squared. What is this rate in miles per minute squared? Use 5,280 feet = 1 mile.",
       "choices": {
@@ -54689,7 +54689,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 428,
       "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -55303,7 +55303,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Systems of Linear Equations",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "Consider the system \\(4x-6y=10\\) and \\(3(3y-2x)=-15\\). For every real number \\(t\\), which point lies on the graph of both equations?",
       "choices": {
@@ -55317,7 +55317,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 451,
       "subtopic": "Systems of Linear Equations",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "Substituting \\((3t+1,2t-1)\\) into the first equation gives 10. For the second, \\(3(3(2t-1)-2(3t+1))=3(-5)=-15\\). Both equations hold for every real \\(t\\).",
@@ -56128,7 +56128,7 @@
       "section": "Math",
       "domain": "Problem-Solving & Data Analysis",
       "skill": "Ratio, Rates, Percentages",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "A rectangular patch of land increases in area by 540 square feet over a period of 2.25 hours. Which of the following is closest to its average rate of increase, in square meters per minute? Use 1 meter = 3.28 feet.",
       "choices": {
@@ -56142,7 +56142,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 479,
       "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "The rate is \\(540/135=4\\) square feet per minute. Since \\(1\\text{ m}^2=(3.28)^2\\text{ ft}^2\\), the rate is \\(4/(3.28)^2\\approx\\boxed{0.372}\\) square meter per minute.",
@@ -57071,7 +57071,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Trigonometry",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "In right triangle ABC, angle C is a right angle and \\(\\tan A=\\frac5{12}\\). The area of the triangle is 270 square units. What is the perimeter of triangle ABC?",
       "choices": {
@@ -57085,7 +57085,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 512,
       "subtopic": "Trigonometry",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -57376,7 +57376,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Lines, Angles, and Triangles",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "Points A, C, E are collinear in that order, and points A, B, D are collinear in that order. Segments BC and DE are both perpendicular to AE. If \\(AB=13\\), \\(BC=12\\), and the area of triangle ADE is 270 square units, what is the length of CE?",
       "choices": {},
@@ -57385,7 +57385,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 526,
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "answerType": "student-response",
       "acceptedAnswers": [
         "10"
@@ -57398,7 +57398,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Circles",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "Circle C is defined by \\((x-4)^2+(y+1)^2=25\\). Circle D is obtained by reflecting circle C across the y-axis, translating the result 6 units upward, and multiplying its radius by \\(\\frac35\\). Which equation defines circle D?",
       "choices": {
@@ -57412,7 +57412,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 528,
       "subtopic": "Circles",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -57456,7 +57456,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Trigonometry",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "In right triangle JKL, angle J is a right angle and \\(\\cos K=\\frac ab\\), where positive integers \\(a,b\\) satisfy \\(a+b=100\\) and \\(b-a=4\\). What is \\(\\cos L\\)?",
       "choices": {},
@@ -57465,7 +57465,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 531,
       "subtopic": "Trigonometry",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "answerType": "student-response",
       "acceptedAnswers": [
         "5/13",
@@ -57611,7 +57611,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Trigonometry",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "Triangle ABC is right at A. Point D lies on hypotenuse BC, and AD is perpendicular to BC. If \\(BD=5\\) and \\(DC=20\\), what is \\(\\tan C\\)?",
       "choices": {
@@ -57625,7 +57625,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 539,
       "subtopic": "Trigonometry",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "The altitude theorem gives \\(AD^2=BD\\cdot DC=100\\), so \\(AD=10\\). In right triangle ADC, \\(\\tan C=AD/DC=10/20=\\boxed{1/2}\\).",
@@ -57640,7 +57640,7 @@
       "section": "Math",
       "domain": "Geometry & Trigonometry",
       "skill": "Circles",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "In the xy-plane, the equation \\(x^2+y^2-8x+12y+4k=0\\) defines a circle with radius 10. What is the value of \\(k\\)?",
       "choices": {
@@ -57654,7 +57654,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 540,
       "subtopic": "Circles",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "Completing the square gives \\((x-4)^2+(y+6)^2=52-4k\\). Since the radius is 10, \\(52-4k=100\\), so \\(\\boxed{k=-12}\\).",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -57727,7 +57727,7 @@
       "section": "Math",
       "domain": "Problem-Solving & Data Analysis",
       "skill": "Statistics",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "The table summarizes 20 integer-valued measurements. Which of the following could be the median?",
       "choices": {
@@ -57741,7 +57741,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 546,
       "subtopic": "Statistics",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "The 10th value lies from 10 to 14 and the 11th from 15 to 19. Thus the median can range from 12.5 through 16.5. Only \\(\\boxed{16}\\) is possible.",
@@ -58421,7 +58421,7 @@
       "section": "Math",
       "domain": "Problem-Solving & Data Analysis",
       "skill": "Ratio, Rates, Percentages",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "The mass of sample A is 180% of the mass of sample B. The mass of sample A is also 0.45% of the mass of sample C. The mass of sample C is \\(p\\%\\) greater than the mass of sample B. What is \\(p\\)?",
       "choices": {},
@@ -58430,7 +58430,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 566,
       "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "answerType": "student-response",
       "acceptedAnswers": [
         "39900"
@@ -58887,7 +58887,7 @@
       "section": "Math",
       "domain": "Problem-Solving & Data Analysis",
       "skill": "Ratio, Rates, Percentages",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "A marine reserve has an area of 32.5 square nautical miles. Of this area, 85% is open to research vessels. If 1 nautical mile equals 1.852 kilometers, what is the area open to research vessels, in square kilometers, to the nearest tenth?",
       "choices": {},
@@ -58896,7 +58896,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 583,
       "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "answerType": "student-response",
       "acceptedAnswers": [
         "94.8"
@@ -59351,7 +59351,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Rational/Radical Equations",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "Which expression is equivalent to \\(\\frac{6x(x-5)-9(x-5)+3(x-5)^2}{3x-15}\\), where \\(x\\ne5\\)?",
       "choices": {
@@ -59365,7 +59365,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 606,
       "subtopic": "Rational/Radical Equations",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -59576,7 +59576,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Quadratics",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "The function \\(f(x)=a(x-2)^2+b\\), where \\(a,b\\) are positive integers, has equivalent forms I. \\(g(x)=ax^2-4ax+(4a+b)\\) and II. \\(h(x)=a(x-1)(x-3)+(a+b)\\). Which equations display the y-coordinate of the y-intercept of \\(f\\) as a constant or coefficient?",
       "choices": {
@@ -59590,7 +59590,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 616,
       "subtopic": "Quadratics",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "The y-intercept is \\(f(0)=4a+b\\). Form I displays \\(4a+b\\) as its constant term. Form II displays \\(a+b\\), not the y-intercept. Thus only I.",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -60078,7 +60078,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Nonlinear Equations/Functions",
-      "difficulty": "Hard",
+      "difficulty": "Easy",
       "passage": "",
       "question": "The graph of \\(y=f(x)\\) has vertical asymptote \\(x=1\\) and passes through \\((3,5)\\). The function \\(g(x)=f(x+3)-4\\). Which description must be true of \\(g\\)?",
       "choices": {
@@ -60092,7 +60092,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 635,
       "subtopic": "Nonlinear Equations/Functions",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -60107,7 +60107,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Polynomial Functions",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "The polynomial \\(P(x,y)=75x^2-ny^2\\) has \\(5x-2y\\) as a factor, where \\(n>0\\). What is \\(n\\)?",
       "choices": {
@@ -60121,7 +60121,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 637,
       "subtopic": "Polynomial Functions",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -60436,7 +60436,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Polynomial Functions",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "How many distinct real solutions does \\((x+4)(x-1)^2(x^2+4)(x^2-6x+9)(x^2+2x-3)=0\\) have?",
       "choices": {
@@ -60450,7 +60450,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 649,
       "subtopic": "Polynomial Functions",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -60581,7 +60581,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Rational/Radical Equations",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "The positive variables \\(p\\), \\(q\\), and \\(r\\) satisfy \\(\\frac5r-\\frac2p=\\frac1q\\). Which expression is equivalent to \\(r\\)?",
       "choices": {
@@ -60595,7 +60595,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 654,
       "subtopic": "Rational/Radical Equations",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -60639,7 +60639,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Polynomial Functions",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "In the equation \\(y=(x-p)(x+p)(2x-p)(x-\\frac p2)(x+q)^2\\), \\(p\\) and \\(q\\) are distinct positive constants. How many distinct x-intercepts does the graph have?",
       "choices": {
@@ -60653,7 +60653,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 656,
       "subtopic": "Polynomial Functions",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -60917,7 +60917,7 @@
       "section": "Math",
       "domain": "Advanced Math",
       "skill": "Exponential Functions",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "The function \\(f(t)=(1.72)^{t/3}\\) can be written in the form \\(f(t)=\\left(1+\\frac{p}{100}\\right)^t\\). Which value is closest to \\(p\\)?",
       "choices": {
@@ -60931,7 +60931,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 667,
       "subtopic": "Exponential Functions",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -61302,7 +61302,7 @@
       "section": "Math",
       "domain": "Geometry and Trigonometry",
       "skill": "Lines, Angles, and Triangles",
-      "difficulty": "Hard",
+      "difficulty": "Easy",
       "passage": "",
       "question": "A triangle has side lengths 9, 16, and \\(x\\), where \\(x\\) is an integer. How many possible values of \\(x\\) are there?",
       "choices": {
@@ -61316,7 +61316,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 685,
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "The triangle inequality requires \\(|16-9|<x<16+9\\), so \\(7<x<25\\). The integer values are 8 through 24 inclusive, a total of \\(24-8+1=\\boxed{17}\\).",
@@ -61469,7 +61469,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Systems of Linear Equations",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "In the system \\(2x-3y=5\\) and \\((k+2)x-(k+5)y=17\\), \\(k\\) is a constant. If the system has no solution, what is the value of \\(k\\)?",
       "choices": {},
@@ -61478,7 +61478,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 694,
       "subtopic": "Systems of Linear Equations",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "answerType": "student-response",
       "acceptedAnswers": [
         "4"
@@ -62477,7 +62477,7 @@
       "section": "Math",
       "domain": "Problem-Solving and Data Analysis",
       "skill": "Ratio, Rates, Percentages",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "An 80-gram metal sample is 30% copper by mass. It was made by combining a 20%-copper alloy, a 50%-copper alloy, and 8 grams of a material containing no copper. What mass, in grams, of the copper in the finished sample came from the 50%-copper alloy?",
       "choices": {
@@ -62491,7 +62491,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 738,
       "subtopic": "Ratio, Rates, Percentages",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
         "B": "The two alloys total \\(80-8=72\\) grams, and the sample contains \\(0.30(80)=24\\) grams of copper. If \\(b\\) grams is the 50% alloy, \\(0.20(72-b)+0.50b=24\\), giving \\(b=32\\). Its copper contribution is \\(0.50(32)=\\boxed{16}\\) grams.",
@@ -62579,7 +62579,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear Equations",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "In the equation \\(a(2x-3)+5x=(7-a)x+b\\), \\(a\\) and \\(b\\) are constants and \\(b>0\\). The equation has no solution. What is the value of \\(a\\)?",
       "choices": {},
@@ -62588,7 +62588,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 743,
       "subtopic": "Linear Equations",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "answerType": "student-response",
       "acceptedAnswers": [
         "2/3"
@@ -62697,7 +62697,7 @@
       "section": "Math",
       "domain": "Algebra",
       "skill": "Linear Functions",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "",
       "question": "The table shows three pairs in a linear relationship, where \\(s>0\\). Suppose \\(s=2r\\), where \\(r>0\\). Which equation represents the relationship in terms of \\(x\\), \\(y\\), and \\(r\\)?",
       "choices": {
@@ -62711,7 +62711,7 @@
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 748,
       "subtopic": "Linear Functions",
-      "classificationVersion": "2026-10-08-v1",
+      "classificationVersion": "2026-10-08-independent-v2",
       "choiceExplanations": {
         "A": "Using \\((s,17)\\) and \\((4s,5)\\), the slope is \\((5-17)/(4s-s)=-4/s\\). This gives \\(4x+sy=21s\\). Since \\(s=2r\\), \\(4x+2ry=42r\\), so \\(\\boxed{2x+ry=21r}\\).",
         "B": "This choice does not satisfy the relationships or conditions in the question.",
@@ -62930,6 +62930,841 @@
       }
     }
   ],
-  "classificationVersion": "2026-10-07-v1",
-  "classificationNote": "Canonical SAT subtopics; difficulty recalibrated within each subtopic into balanced relative bands."
+  "classificationVersion": "2026-10-08-independent-v2-partial",
+  "classificationNote": "SAT-style absolute difficulty. No equal-thirds, 30/40/30, or per-subtopic target quotas. The October 8 independent review corrected high-confidence mislabels among all 172 visible Hard items and a sample of Medium items; remaining labels require continued individual review. Existing items and mock-test reservations preserved.",
+  "difficultyReview": {
+    "date": "2026-10-08",
+    "methodology": "Editorial review of required reasoning, novelty of mathematical setup, number of independent concepts, and potential under timed Digital SAT conditions. Formulaic multi-step items were not automatically called Hard. No target percentages imposed.",
+    "scope": "1383 visible Math bank questions (1491 total minus 108 mock-reserved). All 172 original visible Hard items screened; additional Medium candidates spot-reviewed. Partial review, not a claim of full individual calibration.",
+    "changedTotal": 137,
+    "changesByType": {
+      "Hard to Medium": 117,
+      "Hard to Easy": 4,
+      "Medium to Easy": 16
+    },
+    "changes": [
+      {
+        "id": "math-20261006-batch465-q024",
+        "from": "Medium",
+        "to": "Easy",
+        "subtopic": "Linear Equations"
+      },
+      {
+        "id": "math-20261006-batch465-q030",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Linear Equations"
+      },
+      {
+        "id": "math-20261006-batch465-q032",
+        "from": "Medium",
+        "to": "Easy",
+        "subtopic": "Ratio, Rates, Percentages"
+      },
+      {
+        "id": "math-20261006-batch465-q052",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Systems of Linear Equations"
+      },
+      {
+        "id": "math-20261006-batch465-q057",
+        "from": "Medium",
+        "to": "Easy",
+        "subtopic": "Linear Equations"
+      },
+      {
+        "id": "math-20261006-batch465-q061",
+        "from": "Medium",
+        "to": "Easy",
+        "subtopic": "Statistics"
+      },
+      {
+        "id": "math-20261006-batch465-q064",
+        "from": "Medium",
+        "to": "Easy",
+        "subtopic": "Statistics"
+      },
+      {
+        "id": "math-20261006-batch465-q076",
+        "from": "Medium",
+        "to": "Easy",
+        "subtopic": "Linear Functions"
+      },
+      {
+        "id": "math-20261006-batch465-q083",
+        "from": "Medium",
+        "to": "Easy",
+        "subtopic": "Linear Equations"
+      },
+      {
+        "id": "math-20261006-batch465-q091",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Linear Functions"
+      },
+      {
+        "id": "math-20261006-batch465-q096",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Systems of Linear Equations"
+      },
+      {
+        "id": "math-20261006-batch465-q098",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Linear Functions"
+      },
+      {
+        "id": "math-20261006-batch465-q107",
+        "from": "Medium",
+        "to": "Easy",
+        "subtopic": "Lines, Angles, and Triangles"
+      },
+      {
+        "id": "math-20261006-batch465-q111",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Systems of Linear Equations"
+      },
+      {
+        "id": "math-20261006-batch465-q137",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Statistics"
+      },
+      {
+        "id": "math-20261006-batch465-q140",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Statistics"
+      },
+      {
+        "id": "math-20261006-batch465-q141",
+        "from": "Medium",
+        "to": "Easy",
+        "subtopic": "Linear Functions"
+      },
+      {
+        "id": "math-20261006-batch465-q153",
+        "from": "Medium",
+        "to": "Easy",
+        "subtopic": "Quadratics"
+      },
+      {
+        "id": "math-20261006-batch465-q162",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Equivalent Expressions"
+      },
+      {
+        "id": "math-20261006-batch465-q165",
+        "from": "Medium",
+        "to": "Easy",
+        "subtopic": "Equivalent Expressions"
+      },
+      {
+        "id": "math-20261006-batch465-q172",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Lines, Angles, and Triangles"
+      },
+      {
+        "id": "math-20261006-batch465-q183",
+        "from": "Medium",
+        "to": "Easy",
+        "subtopic": "Linear Functions"
+      },
+      {
+        "id": "math-20261006-batch465-q189",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Linear Inequalities"
+      },
+      {
+        "id": "math-20261006-batch465-q198",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Lines, Angles, and Triangles"
+      },
+      {
+        "id": "math-20261006-batch465-q199",
+        "from": "Medium",
+        "to": "Easy",
+        "subtopic": "Linear Functions"
+      },
+      {
+        "id": "math-20261006-batch465-q205",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Linear Equations"
+      },
+      {
+        "id": "math-20261006-batch465-q207",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Linear Equations"
+      },
+      {
+        "id": "math-20261006-batch465-q237",
+        "from": "Medium",
+        "to": "Easy",
+        "subtopic": "Equivalent Expressions"
+      },
+      {
+        "id": "math-20261006-batch465-q239",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Exponential Functions"
+      },
+      {
+        "id": "math-20261006-batch465-q240",
+        "from": "Medium",
+        "to": "Easy",
+        "subtopic": "Quadratics"
+      },
+      {
+        "id": "math-20261006-batch465-q250",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Quadratics"
+      },
+      {
+        "id": "math-20261006-batch465-q255",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Quadratics"
+      },
+      {
+        "id": "math-20261006-batch465-q257",
+        "from": "Medium",
+        "to": "Easy",
+        "subtopic": "Other Algebra"
+      },
+      {
+        "id": "math-20261006-batch465-q266",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Quadratics"
+      },
+      {
+        "id": "math-20261006-batch465-q274",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Ratio, Rates, Percentages"
+      },
+      {
+        "id": "math-20261006-batch465-q292",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Ratio, Rates, Percentages"
+      },
+      {
+        "id": "math-20261006-batch465-q341",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Systems of Linear Equations"
+      },
+      {
+        "id": "math-20261006-batch465-q391",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Statistics"
+      },
+      {
+        "id": "math-20261006-batch465-q397",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Equivalent Expressions"
+      },
+      {
+        "id": "math-20261006-batch465-q398",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Exponential Functions"
+      },
+      {
+        "id": "math-20261006-batch465-q408",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Equivalent Expressions"
+      },
+      {
+        "id": "math-20261006-batch465-q422",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Equivalent Expressions"
+      },
+      {
+        "id": "math-20261006-batch465-q429",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Quadratics"
+      },
+      {
+        "id": "math-20261006-batch465-q434",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Equivalent Expressions"
+      },
+      {
+        "id": "math-20261006-batch465-q436",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Quadratics"
+      },
+      {
+        "id": "math-20261006-batch465-q441",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Quadratics"
+      },
+      {
+        "id": "math-20261006-new409-q001",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Polynomial Functions"
+      },
+      {
+        "id": "math-20261006-new409-q010",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Quadratics"
+      },
+      {
+        "id": "math-20261006-new409-q025",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Area and Volume"
+      },
+      {
+        "id": "math-20261006-new409-q350",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Ratio, Rates, Percentages"
+      },
+      {
+        "id": "math-20261006-new409-q028",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Trigonometry"
+      },
+      {
+        "id": "math-20261006-new409-q094",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Area and Volume"
+      },
+      {
+        "id": "math-20261006-new409-q099",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Area and Volume"
+      },
+      {
+        "id": "math-20261006-new409-q125",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Area and Volume"
+      },
+      {
+        "id": "math-20261006-new409-q140",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Circles"
+      },
+      {
+        "id": "math-20261006-new409-q148",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Trigonometry"
+      },
+      {
+        "id": "math-20261006-new409-q150",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Area and Volume"
+      },
+      {
+        "id": "math-20261006-new409-q160",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Trigonometry"
+      },
+      {
+        "id": "math-20261006-new409-q167",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Circles"
+      },
+      {
+        "id": "math-20261006-new409-q173",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Trigonometry"
+      },
+      {
+        "id": "math-20261006-new409-q207",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Lines, Angles, and Triangles"
+      },
+      {
+        "id": "math-20261006-new409-q226",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Area and Volume"
+      },
+      {
+        "id": "math-20261006-new409-q229",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Area and Volume"
+      },
+      {
+        "id": "math-20261006-new409-q322",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Circles"
+      },
+      {
+        "id": "math-20261006-new409-q324",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Circles"
+      },
+      {
+        "id": "math-20261007-dedup45-q007",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Systems of Linear Equations"
+      },
+      {
+        "id": "math-20261007-dedup45-q040",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Linear Inequalities"
+      },
+      {
+        "id": "math-20261008-huge798-q029",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Linear Inequalities"
+      },
+      {
+        "id": "math-20261008-huge798-q051",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Systems of Linear Equations"
+      },
+      {
+        "id": "math-20261008-huge798-q083",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Circles"
+      },
+      {
+        "id": "math-20261008-huge798-q090",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Lines, Angles, and Triangles"
+      },
+      {
+        "id": "math-20261008-huge798-q092",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Lines, Angles, and Triangles"
+      },
+      {
+        "id": "math-20261008-huge798-q111",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Ratio, Rates, Percentages"
+      },
+      {
+        "id": "math-20261008-huge798-q113",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Lines, Angles, and Triangles"
+      },
+      {
+        "id": "math-20261008-huge798-q122",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Lines, Angles, and Triangles"
+      },
+      {
+        "id": "math-20261008-huge798-q126",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Area and Volume"
+      },
+      {
+        "id": "math-20261008-huge798-q138",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Circles"
+      },
+      {
+        "id": "math-20261008-huge798-q155",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Lines, Angles, and Triangles"
+      },
+      {
+        "id": "math-20261008-huge798-q156",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Circles"
+      },
+      {
+        "id": "math-20261008-huge798-q159",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Area and Volume"
+      },
+      {
+        "id": "math-20261008-huge798-q161",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Circles"
+      },
+      {
+        "id": "math-20261008-huge798-q177",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Quadratics"
+      },
+      {
+        "id": "math-20261008-huge798-q178",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Exponential Functions"
+      },
+      {
+        "id": "math-20261008-huge798-q181",
+        "from": "Hard",
+        "to": "Easy",
+        "subtopic": "Rational/Radical Equations"
+      },
+      {
+        "id": "math-20261008-huge798-q195",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Rational/Radical Equations"
+      },
+      {
+        "id": "math-20261008-huge798-q198",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Quadratics"
+      },
+      {
+        "id": "math-20261008-huge798-q210",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Quadratics"
+      },
+      {
+        "id": "math-20261008-huge798-q234",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Quadratics"
+      },
+      {
+        "id": "math-20261008-huge798-q237",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Rational/Radical Equations"
+      },
+      {
+        "id": "math-20261008-huge798-q239",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Exponential Functions"
+      },
+      {
+        "id": "math-20261008-huge798-q240",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Exponential Functions"
+      },
+      {
+        "id": "math-20261008-huge798-q250",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Quadratics"
+      },
+      {
+        "id": "math-20261008-huge798-q251",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Exponential Functions"
+      },
+      {
+        "id": "math-20261008-huge798-q257",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Quadratics"
+      },
+      {
+        "id": "math-20261008-huge798-q269",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Rational/Radical Equations"
+      },
+      {
+        "id": "math-20261008-huge798-q271",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Rational/Radical Equations"
+      },
+      {
+        "id": "math-20261008-huge798-q280",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Exponential Functions"
+      },
+      {
+        "id": "math-20261008-huge798-q286",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Quadratics"
+      },
+      {
+        "id": "math-20261008-huge798-q288",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Polynomial Functions"
+      },
+      {
+        "id": "math-20261008-huge798-q307",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Quadratics"
+      },
+      {
+        "id": "math-20261008-huge798-q333",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Ratio, Rates, Percentages"
+      },
+      {
+        "id": "math-20261008-huge798-q334",
+        "from": "Hard",
+        "to": "Easy",
+        "subtopic": "Ratio, Rates, Percentages"
+      },
+      {
+        "id": "math-20261008-huge798-q340",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Ratio, Rates, Percentages"
+      },
+      {
+        "id": "math-20261008-huge798-q349",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Rational/Radical Equations"
+      },
+      {
+        "id": "math-20261008-huge798-q352",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Quadratics"
+      },
+      {
+        "id": "math-20261008-huge798-q353",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Polynomial Functions"
+      },
+      {
+        "id": "math-20261008-huge798-q377",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Exponential Functions"
+      },
+      {
+        "id": "math-20261008-huge798-q384",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Rational/Radical Equations"
+      },
+      {
+        "id": "math-20261008-huge798-q388",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Quadratics"
+      },
+      {
+        "id": "math-20261008-huge798-q401",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Exponential Functions"
+      },
+      {
+        "id": "math-20261008-huge798-q413",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Statistics"
+      },
+      {
+        "id": "math-20261008-huge798-q422",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Ratio, Rates, Percentages"
+      },
+      {
+        "id": "math-20261008-huge798-q428",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Ratio, Rates, Percentages"
+      },
+      {
+        "id": "math-20261008-huge798-q451",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Systems of Linear Equations"
+      },
+      {
+        "id": "math-20261008-huge798-q479",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Ratio, Rates, Percentages"
+      },
+      {
+        "id": "math-20261008-huge798-q512",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Trigonometry"
+      },
+      {
+        "id": "math-20261008-huge798-q526",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Lines, Angles, and Triangles"
+      },
+      {
+        "id": "math-20261008-huge798-q528",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Circles"
+      },
+      {
+        "id": "math-20261008-huge798-q531",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Trigonometry"
+      },
+      {
+        "id": "math-20261008-huge798-q539",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Trigonometry"
+      },
+      {
+        "id": "math-20261008-huge798-q540",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Circles"
+      },
+      {
+        "id": "math-20261008-huge798-q546",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Statistics"
+      },
+      {
+        "id": "math-20261008-huge798-q566",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Ratio, Rates, Percentages"
+      },
+      {
+        "id": "math-20261008-huge798-q583",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Ratio, Rates, Percentages"
+      },
+      {
+        "id": "math-20261008-huge798-q606",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Rational/Radical Equations"
+      },
+      {
+        "id": "math-20261008-huge798-q616",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Quadratics"
+      },
+      {
+        "id": "math-20261008-huge798-q635",
+        "from": "Hard",
+        "to": "Easy",
+        "subtopic": "Nonlinear Equations/Functions"
+      },
+      {
+        "id": "math-20261008-huge798-q637",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Polynomial Functions"
+      },
+      {
+        "id": "math-20261008-huge798-q649",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Polynomial Functions"
+      },
+      {
+        "id": "math-20261008-huge798-q654",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Rational/Radical Equations"
+      },
+      {
+        "id": "math-20261008-huge798-q656",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Polynomial Functions"
+      },
+      {
+        "id": "math-20261008-huge798-q667",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Exponential Functions"
+      },
+      {
+        "id": "math-20261008-huge798-q685",
+        "from": "Hard",
+        "to": "Easy",
+        "subtopic": "Lines, Angles, and Triangles"
+      },
+      {
+        "id": "math-20261008-huge798-q694",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Systems of Linear Equations"
+      },
+      {
+        "id": "math-20261008-huge798-q738",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Ratio, Rates, Percentages"
+      },
+      {
+        "id": "math-20261008-huge798-q743",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Linear Equations"
+      },
+      {
+        "id": "math-20261008-huge798-q748",
+        "from": "Hard",
+        "to": "Medium",
+        "subtopic": "Linear Functions"
+      }
+    ]
+  }
 }
