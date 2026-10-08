@@ -423,7 +423,7 @@
       "question": "The student wants to emphasize a difference between the periods in which Jeanne Baret and Ynes Mexia conducted their botanical fieldwork. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "choices": {
         "A": "Both Jeanne Baret and Ynes Mexia contributed to the documentation of plant species through extensive field collecting.",
-        "B": "Ynes Mexia began major botanical expeditions in 1925 and continued her collecting work during the following decade.",
+        "B": "Ynes Mexia began conducting major botanical expeditions in 1925 and continued her collecting work throughout the following decade of her career.",
         "C": "Jeanne Baret collected botanical specimens while participating in a circumnavigation from 1766 to 1769.",
         "D": "Jeanne Baret’s major field collecting occurred more than a century before Ynes Mexia began her expeditions in 1925."
       },
@@ -883,7 +883,7 @@
       "choices": {
         "A": "The wreck of *Endurance*, which had sunk in the Weddell Sea in 1915, was located in 2022.",
         "B": "Searchers located HMS *Erebus*, another historically significant polar expedition ship, in 2014.",
-        "C": "Both *Endurance* and HMS *Erebus* were the subjects of long-running searches before their wrecks were found.",
+        "C": "Both *Endurance* and HMS *Erebus* were the subjects of extensive searches lasting many years before their respective wrecks were finally found.",
         "D": "*Endurance* sank during Ernest Shackleton’s Imperial Trans-Antarctic Expedition."
       },
       "correctAnswer": "A",
@@ -1195,7 +1195,7 @@
       "choices": {
         "A": "riders with unlimited passes would likely travel to a wider variety of destinations than otherwise similar riders paying separately for each trip.",
         "B": "transit agencies that replace individual fares with unlimited passes would necessarily collect more total revenue.",
-        "C": "riders who pay for individual trips would be more likely than pass holders to travel during peak commuting hours.",
+        "C": "riders who pay for individual trips would be more likely than pass holders to travel over the course of peak commuting hours.",
         "D": "unlimited-pass holders would generally take longer individual trips because distance rather than frequency determines the cost of each journey."
       },
       "correctAnswer": "A",
@@ -1523,7 +1523,7 @@
       "question": "Which choice most logically completes the text?",
       "choices": {
         "A": "the original-language sources used in the *Handbook of Mediterranean Inscriptions* contain fewer words than their translated versions.",
-        "B": "the *Encyclopedia of Polar Navigation* was necessarily more expensive to print than the *Handbook of Mediterranean Inscriptions*.",
+        "B": "the *Encyclopedia of Polar Navigation* was necessarily more expensive for a publisher to print than the *Handbook of Mediterranean Inscriptions*.",
         "C": "the *Encyclopedia of Polar Navigation* contains, on average, more words per page than the *Handbook of Mediterranean Inscriptions*.",
         "D": "readers would need approximately the same amount of time to finish both works."
       },
@@ -1667,7 +1667,7 @@
       "question": "Which choice most logically completes the text?",
       "choices": {
         "A": "awareness of one’s own hindsight bias may not prevent that bias from influencing judgments about what another person should have known.",
-        "B": "hindsight bias occurs only when people are asked to remember their own earlier judgments rather than predict another person’s judgment.",
+        "B": "hindsight bias occurs only when people are asked to remember their own earlier judgments rather than attempt to predict what judgment another person would make.",
         "C": "participants who receive an explanation of hindsight bias generally become more accurate at remembering when they first acquired information.",
         "D": "people usually assume that others are less capable than they themselves are of identifying ambiguous information."
       },
@@ -2872,7 +2872,7 @@
         "A": "Researchers at the Colonial Forestry Research Unit disagreed over whether forestry research should remain focused on commercially valuable timber.",
         "B": "After Malaya’s 1957 independence, Hamzah reorganized the institute around interdisciplinary, locally directed research, aligning the change with a wider postwar movement to reshape colonial scientific institutions.",
         "C": "Hamzah’s early-1960s reforms added soil science and watershed ecology to a research program that had previously emphasized timber species.",
-        "D": "The Colonial Forestry Research Unit was established before Malaya became independent and included researchers with differing ideas about the proper scope of forestry science."
+        "D": "The Colonial Forestry Research Unit was established before Malaya became independent and included researchers with differing ideas with regard to the proper scope of forestry science."
       },
       "correctAnswer": "B",
       "explanation": "The goal is not simply to describe **what** Hamzah changed but to place the reorganization within a **larger historical setting**. B does this by connecting the early-1960s reform to Malaya’s 1957 independence and to the broader postwar restructuring of colonial scientific institutions.\n\nA explains an internal intellectual disagreement but not the broader historical context. C accurately summarizes part of the reform but omits independence and the wider decolonizing movement. D supplies background chronology but does not connect Hamzah’s reorganization to the broader historical trend.",
@@ -3090,7 +3090,7 @@
       "question": "Based on the texts, how would the author of Text 2 most likely respond to the claim in Text 1 about the different prevalence of women’s annotations?",
       "choices": {
         "A": "By arguing that the regional difference may partly result from differences in how easily the annotations survive and can be detected.",
-        "B": "By agreeing that the regional difference is genuine but arguing that women in England generally read different genres of manuscripts.",
+        "B": "By agreeing that the regional difference is genuine but arguing that women in England generally read different genres of manuscripts from those read by women elsewhere.",
         "C": "By suggesting that Italian manuscript collections have been studied less extensively than English ones.",
         "D": "By claiming that signed annotations are unreliable evidence of whether women participated in manuscript culture at all."
       },
@@ -3562,7 +3562,7 @@
         "A": "south-facing slopes are common.",
         "B": "host plants occur at very low densities.",
         "C": "*E. montana* is already present.",
-        "D": "average summer temperatures remain relatively high."
+        "D": "average temperatures during the summer months remain relatively high across the region."
       },
       "correctAnswer": "B",
       "explanation": "The feature associated with **both species** is high host-plant density: each was found predominantly where more than thirty host-plant stems occurred per square meter. It therefore follows that neither species is strongly drawn to sites where host plants are sparse.\n\nA cannot apply to both species because only *E. montana* showed a preference for south-facing slopes. C concerns the presence of one butterfly species rather than a habitat feature both species prefer. D introduces temperature, which the study as described did not identify as a shared factor.",
@@ -4193,7 +4193,7 @@
         "A": "declining aridity after 7,500 years ago was responsible for increasing recharge of the regional groundwater system.",
         "B": "the rising groundwater table was probably not caused primarily by increased precipitation within the immediate Lake Qamar basin.",
         "C": "drought-tolerant shrubs could survive only because the groundwater table approached the land surface.",
-        "D": "changes in the regional groundwater table had no connection to hydrological conditions outside the Lake Qamar basin."
+        "D": "changes in the regional groundwater table were entirely unrelated to hydrological conditions in areas outside the Lake Qamar basin."
       },
       "correctAnswer": "B",
       "explanation": "The vegetation evidence points toward **less local precipitation**, while geological evidence simultaneously indicates a **rising groundwater table**. Because the groundwater increased even as local conditions became drier, the most reasonable inference is that the rise was not primarily caused by increased precipitation in the immediate basin; recharge from elsewhere is a plausible alternative.\n\nA directly contradicts the pollen evidence, which indicates increasing rather than declining aridity. C is unsupported because the passage does not explain why the shrubs survived or how close groundwater was to their roots. D is too strong and runs against the implication that an external hydrological source may help explain the groundwater increase.",
@@ -4246,7 +4246,7 @@
       "choices": {
         "A": "developed increasing resistance to environmental damage as its satellites aged.",
         "B": "declined gradually because minor defects eventually made most satellites unusable.",
-        "C": "reached approximately the same size as satellite networks that were maintained through entirely different systems.",
+        "C": "reached approximately the same overall size as satellite networks that were maintained through entirely different systems of operation.",
         "D": "did not fail because catastrophic hardware faults became too prevalent for the network to remain operational."
       },
       "correctAnswer": "D",
@@ -4448,7 +4448,7 @@
       "choices": {
         "A": "In the 1932 film *Shanghai Express*, Anna May Wong played Hui Fei, one of the principal passengers aboard the train.",
         "B": "Anna May Wong became internationally recognized after beginning her career with several small or uncredited film roles.",
-        "C": "Chinese American actress Anna May Wong appeared in numerous films during a career that began with relatively minor roles.",
+        "C": "Chinese American actress Anna May Wong appeared in numerous films throughout her lengthy career, which had begun with relatively minor roles.",
         "D": "*Shanghai Express*, directed by Josef von Sternberg, featured Anna May Wong in its cast in 1932."
       },
       "correctAnswer": "A",
@@ -6135,7 +6135,7 @@
       "question": "The student wants to compare robots with strongly curved shells with robots that have nearly flat shells. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "choices": {
         "A": "Like desert tortoises, robots with strongly curved shells can perform the rock-over maneuver, whereas robots with nearly flat shells cannot.",
-        "B": "Robots with nearly flat shells differ from desert tortoises, which can perform a self-righting movement called the rock-over maneuver.",
+        "B": "Robots with nearly flat shells differ from desert tortoises, which are able to perform a self-righting movement called the rock-over maneuver.",
         "C": "One difference among the robots is that those with strongly curved shells were modeled on animals capable of self-righting.",
         "D": "In the 2025 study, robots with nearly flat shells and desert tortoises were both tested for self-righting behavior."
       },
@@ -6251,7 +6251,7 @@
       "question": "Which choice best describes the function of the underlined portion in the text as a whole?",
       "choices": {
         "A": "It introduces a concept that helps explain the structural and argumentative choices described later in the text.",
-        "B": "It presents a claim attributed to Carson that the remainder of the text attempts to disprove.",
+        "B": "It presents a claim attributed to Carson that the remainder of the text attempts to demonstrate is incorrect.",
         "C": "It identifies a metaphor that Carson uses only in the opening section of Silent Spring.",
         "D": "It states Carson’s intended policy recommendation, which the remainder of the text evaluates for effectiveness."
       },
@@ -6541,7 +6541,7 @@
       },
       "question": "Which choice most effectively uses data from the table to complete the statement?",
       "choices": {
-        "A": "Cyprus, because its desalination electricity requirement rises from 0.2 to 0.9 kWh per capita.",
+        "A": "Cyprus, because its desalination electricity requirement rises from 0.2 to 0.9 kWh per capita over the same period.",
         "B": "Oman, because the share of renewable capacity required increases from 21% to 47%.",
         "C": "Jordan, because its projected electricity requirement more than doubles by 2050.",
         "D": "Morocco, because the share of renewable capacity required falls from 74% in 2025 to 69% in 2050."
@@ -7118,7 +7118,7 @@
       "choices": {
         "A": "TuneGo Mini sold approximately 17.9 million units, whereas the DataKey 100 sold only about 1.7 million.",
         "B": "PocketScript sold approximately 4.3 million units, whereas LinguaPro sold approximately 2.9 million.",
-        "C": "TuneGo Mini sold approximately 2.9 million units, whereas the DataKey 100 sold approximately 1.7 million.",
+        "C": "TuneGo Mini sold approximately 2.9 million units in total, whereas the DataKey 100 sold approximately 1.7 million units overall.",
         "D": "PocketScript sold approximately 17.9 million units, whereas LinguaPro sold approximately 4.3 million."
       },
       "correctAnswer": "A",
@@ -7445,7 +7445,7 @@
       "passage": "While researching a topic, a student has taken the following notes:\n\n- The BLUE COAST project examined several kinds of blue-carbon ecosystems.\n- Blue-carbon ecosystems are coastal or marine habitats that capture and store substantial amounts of carbon.\n- Seagrass meadows are one type of blue-carbon ecosystem included in the project.\n- Seagrass meadows are underwater beds dominated by flowering marine plants.\n- They can provide nursery habitat for fish and reduce coastal erosion.",
       "question": "The student wants to provide a specific example of a type of blue-carbon ecosystem. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "choices": {
-        "A": "The BLUE COAST project examined coastal and marine habitats capable of storing substantial amounts of carbon.",
+        "A": "The BLUE COAST project examined several different types of coastal and marine habitats capable of storing substantial amounts of carbon.",
         "B": "Blue-carbon ecosystems can benefit coastal regions by storing carbon and reducing environmental damage.",
         "C": "Seagrass meadows provide nursery habitat for fish and can reduce coastal erosion.",
         "D": "One type of blue-carbon ecosystem is a seagrass meadow, an underwater bed dominated by flowering marine plants."
@@ -7769,7 +7769,7 @@
       "passage": "Botanists have documented numerous species of the orchid genus Dendrobium throughout the highlands of eastern New Guinea, including several species confined to single mountain systems. None has yet been formally recorded from the remote Arova Plateau, even though satellite data indicate that the plateau contains extensive humid montane forest similar to habitats occupied by Dendrobium elsewhere. Because steep escarpments and the absence of permanent roads have left much of the Arova Plateau botanically unsurveyed, this information suggests that _____",
       "question": "Which choice most logically completes the text?",
       "choices": {
-        "A": "humid montane forest on the Arova Plateau is probably unsuitable for most Dendrobium species despite appearing similar to occupied habitats elsewhere.",
+        "A": "humid montane forest on the Arova Plateau is probably unsuitable for most Dendrobium species in spite of appearing similar to occupied habitats elsewhere.",
         "B": "any Dendrobium species eventually found on the Arova Plateau will probably also occur on several neighboring mountain systems.",
         "C": "the apparent absence of Dendrobium from the Arova Plateau may result from insufficient botanical exploration rather than from the genus’s true absence there.",
         "D": "botanical surveys elsewhere in eastern New Guinea have probably overestimated the number of Dendrobium species in the region."
@@ -8555,7 +8555,7 @@
       "choices": {
         "A": "The monitored koalas consume approximately 750 grams of eucalyptus foliage each day.",
         "B": "Koalas at Warranga Wildlife Centre are herbivorous marsupials.",
-        "C": "The monitored koalas eat approximately 750 different eucalyptus leaves each day.",
+        "C": "The koalas monitored during the study eat approximately 750 different eucalyptus leaves each day.",
         "D": "Each monitored adult koala weighs approximately 750 grams."
       },
       "correctAnswer": "A",
@@ -8741,7 +8741,7 @@
       "question": "Which choice most logically completes the text?",
       "choices": {
         "A": "settlements farther from major deer habitats generally contained fewer antler combs than settlements located near forested uplands.",
-        "B": "one coastal town yielded a higher proportion of antler combs than a nearby town despite the two settlements’ similar populations.",
+        "B": "one of the coastal towns surveyed yielded a higher proportion of antler combs than a nearby town despite the two settlements’ similar populations.",
         "C": "substantially more well-dated coastal sites from after 1150 CE are represented in the dataset than well-dated sites from the preceding period.",
         "D": "fewer antler combs dating to before 1150 CE have been recovered outside the Adriatic region than within it."
       },
@@ -8891,7 +8891,7 @@
         "A": "It allowed students with limited financial resources to obtain an education partly through their labor.",
         "B": "It served primarily to determine which students were suited to particular occupations.",
         "C": "It gave working students administrative authority over the institution’s shops and fields.",
-        "D": "It established a disciplinary system intended to separate diligent students from less diligent ones."
+        "D": "It established a formal disciplinary system intended to distinguish the more diligent students from their less diligent peers."
       },
       "correctAnswer": "A",
       "explanation": "The correct answer is A. The passage explains that students who could not afford full-time study worked during the day and studied at night; most importantly, “labor supplied what his purse could not.” This strongly suggests that the arrangement made education accessible to students with limited money.\nB is incorrect because although students worked in shops and fields, the passage never indicates that the work was used to evaluate their suitability for particular careers. C is incorrect because performing labor is not the same as exercising administrative authority. D is incorrect because the passage emphasizes access to education rather than discipline or the sorting of students according to diligence.",
@@ -9433,7 +9433,7 @@
       "choices": {
         "A": "Nereid Mk II completed approximately 23,400 dives, whereas Pelican-6 completed approximately 5,200.",
         "B": "Bathyscope One completed approximately 23,400 dives, whereas Argo Dawn completed only approximately 1,900.",
-        "C": "Bathyscope One completed approximately 5,200 dives, whereas Argo Dawn completed approximately 3,100.",
+        "C": "Bathyscope One completed approximately 5,200 dives in total, whereas Argo Dawn completed approximately 3,100 dives.",
         "D": "Nereid Mk II completed approximately 5,200 dives, whereas Pelican-6 completed approximately 3,100."
       },
       "correctAnswer": "B",
@@ -9929,7 +9929,7 @@
         "A": "the ceramic film produced a lower short-circuit rate than the oxide layer and was also associated with greater retained capacity.",
         "B": "the polymer-brush and fluoropolymer coatings produced the two lowest short-circuit percentages, yet they were associated with the highest and lowest retained capacities, respectively.",
         "C": "the oxide layer produced the greatest short-circuit percentage, whereas the polymer-brush coating produced the greatest retained capacity.",
-        "D": "the polymer-brush coating was associated with 94% retained capacity and only 3% short-circuited cells, outperforming the ceramic film on both measures."
+        "D": "the polymer-brush coating was associated with 94% retained capacity and only 3% short-circuited cells, outperforming the ceramic film on both of the measures."
       },
       "correctAnswer": "B",
       "explanation": "B is correct. If more effective suppression of short circuits predictably produced greater retained capacity, the treatments with the lowest short-circuit rates should also tend to have the highest retained capacities. Instead, the two most effective coatings by short-circuit rate produce opposite extremes in capacity: the polymer brush has the highest retained capacity at 94%, while the nearly equally effective fluoropolymer film has the lowest at 56%. That contrast directly supports the conclusion that no predictable relationship exists.\nA describes results consistent with a relationship in which better short-circuit suppression corresponds with greater capacity, so it does not support the claim of unpredictability. C compares two different extreme values but does not show why short-circuit effectiveness fails to predict capacity as clearly as B does. D also presents a result consistent with a positive relationship between the two measures rather than evidence against such a relationship.",
@@ -10972,7 +10972,7 @@
         "A": "observations were gathered from approximately 550 solar observatories.",
         "B": "more than 650 research articles were published that cited HelioNet data.",
         "C": "approximately 550 research articles were published that cited the HelioNet Spectral Archive.",
-        "D": "more than 550 spectrographs were installed to collect data for HelioNet."
+        "D": "more than 550 individual spectrographs were installed to collect observational data for HelioNet."
       },
       "correctAnswer": "C",
       "explanation": "The graph measures the number of research articles citing the HelioNet Spectral Archive, and the 2026 bar is slightly above 500 and near 550. Thus, C accurately describes the graph.\nChoice A confuses the number of citing articles with the number of observatories; the graph provides no information about how many observatories contributed data. Choice B overstates the value: the 2026 bar is well below 650. Choice D similarly mistakes the graph’s dependent variable for the number of instruments installed. Only C both identifies what is being measured and gives a value consistent with the 2026 bar.",
@@ -11609,7 +11609,7 @@
       "question": "Which choice best states the main purpose of the text?",
       "choices": {
         "A": "To explain a theory accounting for why most bat species fly at identical altitudes regardless of habitat",
-        "B": "To describe a flight pattern that explains why certain bats use less energy than all other nocturnal mammals",
+        "B": "To describe a particular flight pattern that explains why certain species of bats use less energy during flight than all other nocturnal mammals",
         "C": "To identify a behavioral similarity among several bat species that makes protecting them unusually difficult",
         "D": "To present a finding about the movement behavior of certain species that could inform efforts to protect those species"
       },
@@ -12017,7 +12017,7 @@
         "A": "They describe differing characteristics of earlier and later pottery that together support the claim that production became less centralized and more locally varied over time.",
         "B": "They provide evidence from two periods that supports the claim that ceramic production remained concentrated near the Koru Valley’s administrative center.",
         "C": "They distinguish pottery from separate geographical regions in order to suggest that different communities simultaneously adopted incompatible manufacturing traditions.",
-        "D": "They identify contrasting features of pottery assemblages that together suggest that the overall amount of ceramic production declined steadily during the period discussed."
+        "D": "They identify contrasting features of pottery assemblages that together suggest that the overall amount of ceramic production declined steadily over the course of the period discussed."
       },
       "correctAnswer": "A",
       "choiceExplanations": {
@@ -12714,7 +12714,7 @@
       "question": "What does the text most strongly suggest about the function of the harbor household?",
       "choices": {
         "A": "It ensured that domestic and supervisory responsibilities could be shared among many members.",
-        "B": "It established a formal hierarchy for deciding which workers controlled the lighthouse.",
+        "B": "It established a formal hierarchy of authority for deciding which individual workers were responsible for controlling the lighthouse.",
         "C": "It primarily preserved specialized technical knowledge about lighthouse operation.",
         "D": "It organized workers according to the particular maintenance duties they performed."
       },
@@ -12888,7 +12888,7 @@
       "question": "Based on the texts, how would the author of Text 2 most likely respond to the underlined claim in Text 1?",
       "choices": {
         "A": "By suggesting that a substantial number of visitors to the region may not know that the cliffs have received UNESCO designation",
-        "B": "By arguing that the cliffs’ fossil record was sufficiently important to justify UNESCO recognition regardless of its effect on tourism",
+        "B": "By arguing that the cliffs’ fossil record was sufficiently important in scientific terms to justify UNESCO recognition regardless of any possible effect on local tourism",
         "C": "By emphasizing that UNESCO recognition can benefit scientific research even when it produces no measurable increase in tourism",
         "D": "By claiming that museum curators and paleontologists were primarily responsible for the cliffs’ inclusion on the World Heritage List"
       },
@@ -13568,7 +13568,7 @@
       "question": "What does the text most strongly suggest about Julian after Lena’s departure?",
       "choices": {
         "A": "Julian’s restrained and slowly developing temperament contributes to his feelings for Lena becoming more intense after she leaves.",
-        "B": "Julian initially finds Lena’s departure difficult but eventually accepts that his attachment to her was largely temporary.",
+        "B": "At first, Julian finds Lena’s departure difficult, but eventually he comes to accept that his attachment to her was only temporary.",
         "C": "Because Julian’s attachment depends heavily on habitual contact, Lena’s absence gradually weakens his feelings for her.",
         "D": "Julian increasingly admires Lena’s virtues because he is deliberately attempting, without success, to forget her."
       },
@@ -13654,7 +13654,7 @@
       "passage": "Membrane filters that accumulate bacterial biofilms rapidly can lose permeability long before their structural materials degrade. Engineers therefore seek measurable surface properties that might predict how readily bacteria will attach. <u>Although several earlier studies reported that nanoscale surface roughness was strongly associated with bacterial adhesion, materials chemist Linh Nguyen and colleagues found no such relationship among the twelve polymer membranes they tested.</u> Nguyen’s team instead proposes that differences in electrostatic surface charge may help explain why certain membranes accumulated substantially less biofilm than others.",
       "question": "Which choice best describes the function of the underlined portion in the text as a whole?",
       "choices": {
-        "A": "It attributes the disagreement among studies about membrane performance to differences in the bacterial species used at different research sites.",
+        "A": "It attributes the disagreement among the various studies about membrane performance to differences between the bacterial species used at separate research sites.",
         "B": "It summarizes contradictory conclusions that Nguyen’s study was specifically designed to reconcile through a new measurement of surface roughness.",
         "C": "It acknowledges a previously proposed relationship that Nguyen’s results did not reproduce, thereby helping motivate consideration of a different surface property.",
         "D": "It suggests that Nguyen’s later hypothesis about electrostatic charge has received little support from researchers outside her laboratory."
@@ -14064,7 +14064,7 @@
       "question": "Which choice most logically completes the text?",
       "choices": {
         "A": "the uncertified packages likely exploit a deceptive strategy in which products lacking certification reduce scrutiny by imitating an authenticity cue associated with certified goods.",
-        "B": "certified and uncertified saffron producers likely participate in a cooperative signaling system in which both groups benefit from displaying nearly identical seals.",
+        "B": "certified and uncertified saffron producers likely participate in a cooperative signaling system in which both of the groups benefit from displaying nearly identical seals.",
         "C": "microscopic authentication seals are probably used more widely on fraudulent agricultural products than previous customs investigations have suggested.",
         "D": "automated authentication is probably ineffective because customs scanners can readily distinguish registered seals from visually similar imitations."
       },
@@ -14267,7 +14267,7 @@
       "question": "The student wants to describe what members of the team wear. Which choice most effectively uses information from the notes to accomplish this goal?",
       "choices": {
         "A": "Members of the Alatau Mounted Archery Corps wear charcoal-gray riding coats trimmed in copper and paired with ivory sashes.",
-        "B": "Based in Bishkek, the Alatau Mounted Archery Corps is a university team whose members participate in formal demonstrations.",
+        "B": "The Alatau Mounted Archery Corps, based in Bishkek, is a university-affiliated team whose members participate in formal demonstrations of mounted archery.",
         "C": "The Alatau Mounted Archery Corps performs equestrian-archery routines at intercollegiate exhibitions.",
         "D": "The university’s Alatau Mounted Archery Corps uses coordinated attire when its members perform mounted routines."
       },
@@ -16282,7 +16282,7 @@
       "passage": "Text 1\nIn a 2019 essay, marine ecologist Laila Esparza argues that field sketching is among the most accessible forms of natural-history documentation. Unlike laboratory techniques that demand specialized instruments or uninterrupted workdays, observational drawing can be practiced with little more than a notebook and pencil. Esparza writes that useful records have been made “on ferry decks, during lunch breaks, and beneath the weak lamps of overnight trains.” In her view, scientifically valuable observations need not depend on a person’s ability to pursue fieldwork as a full-time occupation.\nText 2\nHistorian of science Malik Narang argued in 2023 that contemporary biological illustration has become increasingly professionalized. Although anyone may theoretically submit work to specialist journals and field guides, successful contributors often undergo years of anatomical training and sustained drawing practice. They may also need prolonged access to museum specimens or research collections, commitments difficult to maintain alongside unrelated full-time employment. Narang therefore contends that financial security indirectly influences who can develop into a professional biological illustrator.",
       "question": "Based on the texts, how would Esparza (Text 1) most likely respond to Narang’s argument in Text 2?",
       "choices": {
-        "A": "By arguing that illustrators whose work appears in specialist publications are generally able to support themselves entirely through biological illustration",
+        "A": "By arguing that illustrators whose work appears in specialist publications are generally able to support themselves financially through their work in biological illustration alone",
         "B": "By asserting that people typically maintain unrelated full-time employment principally to finance the anatomical training required for biological illustration",
         "C": "By suggesting that people employed in more lucrative scientific specialties are unlikely to produce worthwhile biological illustrations",
         "D": "By pointing out that valuable observational work can be produced under circumstances other than the sustained professional conditions emphasized by Narang"
@@ -16601,7 +16601,7 @@
       "passage": "Several pharmaceutical firms operate manufacturing plants in Valmera, collectively producing medicines for both domestic use and export. When the activity of these firms is considered as a single industry, its approximate annual output in 2023 _____",
       "question": "Which choice uses data from the table to most effectively complete the comparison?",
       "choices": {
-        "A": "exceeded the output of cloud infrastructure services while equaling that of marine engineering and repair.",
+        "A": "exceeded the recorded output of cloud infrastructure services while equaling the recorded output of marine engineering and repair.",
         "B": "was greater than the output of both cloud infrastructure services and marine engineering and repair.",
         "C": "exceeded the output of marine engineering and repair but remained below that of cloud infrastructure services.",
         "D": "was lower than the output of either of the other two industries listed."
@@ -16683,7 +16683,7 @@
         "A": "To examine a common human impulse that can make populated places especially attractive when isolation begins to feel unsettling",
         "B": "To criticize city residents for pretending to value solitude while depending excessively on public entertainment",
         "C": "To argue that people who spend substantial time alone eventually become incapable of appreciating peaceful surroundings",
-        "D": "To illustrate that most people prefer reading rooms during the day but cafés and commercial streets after dark"
+        "D": "To illustrate that most people prefer spending their time in reading rooms during the day but in cafés and commercial streets after dark"
       },
       "correctAnswer": "A",
       "choiceExplanations": {
@@ -18838,7 +18838,7 @@
       "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
       "choices": {
         "A": "It identifies a characteristic shared by fragile kinetic sculptures but absent from sculptures that visitors can activate.",
-        "B": "It presents a principle about kinetic art that both the museum and the author rely on to justify video-only display.",
+        "B": "It presents a principle about kinetic art that both the museum and the author rely on when attempting to justify exclusively video-based display.",
         "C": "It introduces a consideration that partly challenges the museum’s claim that a video can adequately substitute for encountering the sculpture itself.",
         "D": "It describes a misconception about kinetic sculpture that explains why museums generally refuse to preserve such works."
       },
@@ -19884,7 +19884,7 @@
       "passage": "Ecologist Marta Ibáñez and colleagues analyzed environmental DNA recovered from lake-sediment cores to reconstruct fish communities that existed before intensive twentieth-century stocking programs. This sedimentary DNA can provide information about populations that disappeared before systematic biological surveys began. However, such material remains difficult to use because DNA molecules degrade over time, and existing extraction methods cannot always recover fragments in sufficient condition for reliable identification.",
       "question": "Information in the text best supports which statement about sedimentary DNA?",
       "choices": {
-        "A": "It is underused primarily because scientists disagree about whether DNA can persist in lake sediments.",
+        "A": "It is underused by researchers primarily because scientists disagree about whether DNA can persist for long periods in lake sediments.",
         "B": "It can provide evidence about biological communities for which other direct genomic records may be unavailable.",
         "C": "It generally degrades much more rapidly than DNA preserved in all other natural environments.",
         "D": "Its most successful applications have involved reconstructing fish communities altered by modern stocking programs."
@@ -20915,7 +20915,7 @@
         "A": "Both Aster Vale and Pelion Arc are experimental satellites designed by aerospace engineer Leila Ocampo.",
         "B": "Although both spacecraft test low-cost navigation hardware, Aster Vale uses cold-gas thrusters, whereas Pelion Arc uses Hall-effect thrusters.",
         "C": "Ocampo’s Pelion Arc, launched in 2024, is one of several experimental satellites she has designed.",
-        "D": "Aster Vale was launched two years before Pelion Arc, and both spacecraft were intended for low-Earth orbit."
+        "D": "Aster Vale was launched two years before Pelion Arc, and both of the spacecraft were intended to operate in low-Earth orbit."
       },
       "correctAnswer": "B",
       "explanation": "B most effectively emphasizes a substantive difference between the two satellites: they employ different kinds of attitude-control thrusters. The contrast is explicit and directly supported by the notes. A emphasizes similarities rather than a difference. C discusses only Pelion Arc. D does identify a difference in launch dates, but it combines that difference with a similarity and is less focused on contrasting a defining technical characteristic of the two spacecraft than B is.",
@@ -21305,7 +21305,7 @@
         "A": "To explain why comparing rates of participation in mathematics workshops across schools is inherently unreliable",
         "B": "To describe how collaborative problem-solving sessions affect participation in any school that adopts them",
         "C": "To discuss the difficulty of identifying a consistently effective way to increase participation in optional academic programs",
-        "D": "To argue that students would make better decisions about attending workshops if schools provided more information"
+        "D": "To argue that students would make better decisions about whether or not to attend academic workshops if their schools provided them with more information"
       },
       "correctAnswer": "C",
       "explanation": "C is correct. The passage begins with one apparently successful intervention but immediately warns against treating that intervention as universally effective. It then identifies several other factors that may influence participation and concludes that students’ decisions depend on multiple interacting conditions. The central purpose, therefore, is to explain why finding a single reliably effective strategy for increasing participation is difficult. A is incorrect because the passage is not primarily about the methodological difficulty of comparing participation rates between schools. B is incorrect because the author explicitly cautions against assuming that collaborative problem-solving will have the same effect everywhere. D is incorrect because the passage does not propose improving students’ decision-making or providing them with more information.",
@@ -21334,7 +21334,7 @@
       "choices": {
         "A": "above pharmaceutical manufacturing but below precision engineering and warehousing and logistics",
         "B": "below pharmaceutical manufacturing but above both precision engineering and warehousing and logistics",
-        "C": "below all three of the other sectors shown in the table",
+        "C": "below the figures reported for each of the other three sectors shown in the table",
         "D": "above all three of the other sectors shown in the table"
       },
       "correctAnswer": "B",
@@ -22977,7 +22977,7 @@
       "passage": "While researching a topic, a student has taken the following notes:\nSamira Nasser is a sculptor known for large-scale installations that alter how viewers move through gallery spaces.\nNasser completed Tidal Register in 2011.\nTidal Register consists of hundreds of slender brass rods suspended from the ceiling throughout a gallery.\nNasser completed Fault Garden in 2019.\nFault Garden is a floor-based installation made primarily from crushed basalt.\nBoth works occupy most of the rooms in which they are installed.",
       "question": "The student wants to emphasize a difference between Tidal Register and Fault Garden. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "choices": {
-        "A": "Both Tidal Register and Fault Garden are large installations by Samira Nasser that occupy most of their respective gallery spaces.",
+        "A": "Both Tidal Register and Fault Garden are large-scale installations created by Samira Nasser that occupy most of the available space in their respective galleries.",
         "B": "Created eight years apart, Tidal Register and Fault Garden demonstrate Nasser’s continuing interest in large-scale installation art.",
         "C": "Whereas Tidal Register is composed of suspended brass rods, Fault Garden is constructed primarily from crushed basalt arranged across the floor.",
         "D": "Samira Nasser, who completed Tidal Register in 2011, later created the gallery-filling installation Fault Garden."
@@ -23645,7 +23645,7 @@
         "A": "It presents specific examples supporting the earlier claim that the adaptation does not reproduce its source exactly.",
         "B": "It challenges the later assertion that Kurosawa substantially reinterpreted Shakespeare’s play.",
         "C": "It explains why Shakespeare’s original version became less successful than Kurosawa’s adaptation.",
-        "D": "It shows that Kurosawa’s principal objective was to preserve the theatrical conventions of the source material."
+        "D": "It shows that Kurosawa’s principal objective when adapting the work was to preserve the theatrical conventions of the original source material."
       },
       "correctAnswer": "A",
       "explanation": "A is correct. The passage first claims that Throne of Blood does not reproduce Macbeth scene by scene. The underlined sentence then supplies concrete evidence for that claim: episodes are removed, others are transformed, and verbal material is replaced with visual techniques. B is incorrect because the details support, rather than challenge, the later characterization of the film as a reinterpretation. C is incorrect because the passage never compares the relative success of Shakespeare’s play and Kurosawa’s film. D is incorrect because the underlined sentence emphasizes departures from the source, not an effort to preserve its theatrical conventions.",
@@ -24402,7 +24402,7 @@
       "passage": "Salt producers along the medieval Adriatic coast constructed shallow evaporation ponds in which seawater could be concentrated by sunlight and wind. In especially dry summers, some saltworks produced substantially more salt than nearby communities required for immediate use. Because dry salt could be stored for long periods in covered warehouses, merchants _____",
       "question": "Which choice most logically completes the text?",
       "choices": {
-        "A": "harvested salt only during the wettest weeks of each year.",
+        "A": "harvested salt only over the course of the wettest weeks of each year.",
         "B": "abandoned evaporation ponds once local demand had been satisfied.",
         "C": "delayed beginning salt production until regional demand exceeded available supplies.",
         "D": "could reserve surplus salt for sale or use at a later time."
@@ -26817,7 +26817,7 @@
         "A": "By asserting that other robots possess complex humanlike emotions",
         "B": "By observing that any positive state associated with genuine play would probably be rudimentary",
         "C": "By noting that people sometimes play without enjoying themselves",
-        "D": "By insisting that the robots were experiencing stress rather than a positive state"
+        "D": "By insisting that the robots were experiencing stress as opposed to a positive state"
       },
       "correctAnswer": "B",
       "explanation": "B is correct because Text 2 allows play and a positive state conditionally while qualifying the state’s likely complexity.\nD is incorrect because earlier negative-state findings do not establish stress in this trial.\nA is incorrect because no such claim about other robots is made.\nC is incorrect because human enjoyment does not address the stated limit on these controllers.",
@@ -26932,7 +26932,7 @@
       "choices": {
         "A": "Rolls with many interruptions probably document the same historical engine.",
         "B": "Engine sequences are more realistic than the rolls’ rain and train sequences.",
-        "C": "Damage during restoration has made the rolls incapable of illuminating industrial culture.",
+        "C": "Damage over the course of restoration has made the rolls incapable of illuminating industrial culture.",
         "D": "Interruptions need not represent specific faults in the actual machines that inspired the compositions."
       },
       "correctAnswer": "D",
@@ -30396,7 +30396,7 @@
         "A": "Rendell can process a greater quantity of grain in a day than Varena can.",
         "B": "Rendell’s grain consumption has reduced the amount of grain available to Varena.",
         "C": "Varena is less likely than Rendell to process grain using rotating sieves.",
-        "D": "Both mills can process as much as 124,800 kilograms in a day."
+        "D": "Both of the mills can process as much as 124,800 kilograms in a day."
       },
       "correctAnswer": "A",
       "explanation": "A follows from the common 24-percent capacity limit: Varena’s maximum is 2,040 kilograms, while Rendell’s is 124,800 kilograms. D applies Rendell’s maximum to Varena despite their different capacities. C invents a difference in operating method; both belong to the category described. B invents competition for a limited supply, which the text never discusses.",
@@ -31652,7 +31652,7 @@
       "passage": "The following text is from Phyra Halden’s 1939 play *The Review Desk*. Sevra, Lenis, and Rell have just submitted proposals to a research committee.\nSEVRA: Good morning, Lenis; good morning, Rell. Surely you have nothing to grumble about today. Everyone says the committee has been generous.\nLENIS: (Speaking more loudly.) Generous? The grants were scattered in every direction except mine. We asked for little and received less. Whenever I offer my time, it is worth nothing; whenever I require assistance, the price doubles. If misfortune goes looking for an address, it finds mine, <u>like gulls descending on an unguarded picnic.</u>",
       "question": "Which choice best describes the function of the underlined portion in the text as a whole?",
       "choices": {
-        "A": "It recounts an incident Lenis actually observed during the committee meeting.",
+        "A": "It recounts an incident Lenis actually observed over the course of the committee meeting.",
         "B": "It identifies an event that Sevra considers improbable.",
         "C": "It supplies a counterexample to Lenis’s characterization of the committee.",
         "D": "It evokes a vivid comparison that reinforces Lenis’s claim about his recurrent bad fortune."
@@ -33580,7 +33580,7 @@
       "choices": {
         "A": "He wants the gathering to end so he can prepare the room for his own work.",
         "B": "He finds the visitors' conversation tedious and hopes to persuade them to leave.",
-        "C": "He needs Miren's assistance elsewhere in the house but cannot obtain it during the gathering.",
+        "C": "He needs Miren's assistance elsewhere in the house but cannot obtain it over the course of the gathering.",
         "D": "He wants the visitors to endorse his plans for establishing a new instrument workshop."
       },
       "correctAnswer": "A",
@@ -38350,7 +38350,7 @@
       "question": "The student wants to specify when Vale published the theory. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "choices": {
         "A": "In 1294, Jorin Vale published the theory that underground channels supplied several lakes in Elera.",
-        "B": "A scholar of Elera’s water systems, Vale published a theory about the lakes.",
+        "B": "A scholar of Elera’s water systems, Vale published a theory with regard to the lakes.",
         "C": "Jorin Vale studied water movement in the Elera lake district.",
         "D": "Vale’s theory proposed an underground connection among apparently isolated lakes."
       },
@@ -39089,7 +39089,7 @@
         "A": "The regular-interval group declined from eight to two responses, whereas the equally exposed irregular-interval group declined only to about six and a half.",
         "B": "The irregular-interval group declined from eight to about six and a half responses, showing that alert responses disappeared regardless of timing.",
         "C": "The regular-interval group averaged fewer responses in the fourth session, demonstrating that the groups differed before training began.",
-        "D": "Both groups averaged eight alert responses in the first session, indicating that predictability could have had no effect in later sessions."
+        "D": "Both of the groups averaged eight alert responses in the first session, indicating that predictability could have had no effect in later sessions."
       },
       "correctAnswer": "A",
       "explanation": "A is correct because the response decreases much more under regular timing even though exposure count and total session duration are matched. That difference is consistent with a contribution of predictability to habituation. D incorrectly assumes that equal initial responses prevent the groups from responding differently as training proceeds. B turns a modest decline into complete disappearance; approximately 6.5 responses remain. C reports a final difference but wrongly uses it to infer a difference before training.",
@@ -39731,5 +39731,46 @@
     "answerExplanationReferenceChecks": "Every standalone original choice label remapped against the exact shuffled answer text; nonchoice category labels protected."
   },
   "classificationVersion": "2026-10-08-skill-relative-v4",
-  "classificationNote": "Difficulty calibrated relatively within each SAT Reading & Writing subtopic, to approximately 30% Easy, 40% Medium, 30% Hard. Not official College Board difficulty classification."
+  "classificationNote": "Difficulty calibrated relatively within each SAT Reading & Writing subtopic, to approximately 30% Easy, 40% Medium, 30% Hard. Not official College Board difficulty classification.",
+  "lengthBiasAudit": {
+    "date": "2026-10-08",
+    "scope": "Reading & Writing question bank",
+    "method": "Unique longest/shortest choice by displayed text word or character count; ties excluded",
+    "wordBefore": {
+      "nLong": 763,
+      "correctLong": 376,
+      "longRate": 49.3,
+      "nShort": 565,
+      "correctShort": 71,
+      "shortRate": 12.6
+    },
+    "wordAfter": {
+      "nLong": 754,
+      "correctLong": 327,
+      "longRate": 43.4,
+      "nShort": 565,
+      "correctShort": 71,
+      "shortRate": 12.6
+    },
+    "characterBefore": {
+      "nLong": 1137,
+      "correctLong": 451,
+      "longRate": 39.7,
+      "nShort": 1190,
+      "correctShort": 272,
+      "shortRate": 22.9
+    },
+    "characterAfter": {
+      "nLong": 1139,
+      "correctLong": 433,
+      "longRate": 38,
+      "nShort": 1191,
+      "correctShort": 273,
+      "shortRate": 22.9
+    },
+    "revisedQuestionCount": 49,
+    "editsToIncorrectChoicesOnly": true,
+    "originalCorrectAnswersAndPassagesPreserved": true,
+    "remainingBiasRequiresEditorialReview": true
+  }
 }
