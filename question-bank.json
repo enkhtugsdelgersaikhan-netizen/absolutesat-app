@@ -544,7 +544,7 @@
       "choices": {
         "A": "“Following the expansion of Alpine tourism after the Second World War, governments invested heavily in avalanche forecasting networks, snowpack monitoring, and controlled explosive release systems.”",
         "B": "“By the early eighteenth century, communities near Andermatt were constructing stone deflection walls and maintaining protective forest belts, measures based on principles of flow diversion and energy dissipation that remain important in avalanche engineering today.”",
-        "C": "“Remote-triggering systems developed near the end of the twentieth century allow explosives to be deployed above unstable snowfields without requiring workers to enter the most dangerous terrain.”",
+        "C": "“Remote-triggering systems developed near the end of the twentieth century allow teams to deploy explosives above unstable snowfields from a distance, without requiring the workers themselves to enter the most dangerous terrain during avalanche-control operations.”",
         "D": "“Modern avalanche infrastructure is economically significant because roads, railways, ski areas, and mountain settlements often depend on reliable protection from destructive snow movement.”"
       },
       "correctAnswer": "B",
@@ -1099,7 +1099,7 @@
       "choices": {
         "A": "“Rail passengers consistently rate frequency and reliability among the most important characteristics of a satisfactory transit system.”",
         "B": "“As metropolitan populations become denser and private vehicle ownership becomes less practical in many urban cores, the proportion of residents relying on public transportation for routine trips is projected to rise substantially.”",
-        "C": "“The energy consumption of an electric train depends partly on vehicle mass, acceleration patterns, passenger load, and the efficiency of regenerative braking.”",
+        "C": "“The total amount of energy consumed by an electric train depends partly on the mass of the vehicle, its patterns of acceleration, the number of passengers it carries, and the efficiency of its regenerative braking system.”",
         "D": "“Transit agencies frequently redesign station entrances after observing pedestrian congestion during major sporting and cultural events.”"
       },
       "correctAnswer": "B",
@@ -3090,7 +3090,7 @@
       "question": "Based on the texts, how would the author of Text 2 most likely respond to the claim in Text 1 about the different prevalence of women’s annotations?",
       "choices": {
         "A": "By arguing that the regional difference may partly result from differences in how easily the annotations survive and can be detected.",
-        "B": "By agreeing that the regional difference is genuine but arguing that women in England generally read different genres of manuscripts from those read by women elsewhere.",
+        "B": "By agreeing that the regional difference is genuine but arguing that women in England generally read different genres of manuscripts.",
         "C": "By suggesting that Italian manuscript collections have been studied less extensively than English ones.",
         "D": "By claiming that signed annotations are unreliable evidence of whether women participated in manuscript culture at all."
       },
@@ -3227,7 +3227,7 @@
       "passage": "A media-studies student is researching a ten-part livestream series that followed the restoration of a badly damaged seventeenth-century astronomical clock. The first nine installments emphasized uncertainty: conservators repeatedly uncovered hidden damage, revised their estimates, and debated whether the original mechanism could ever function again. The student claims that viewers ultimately preferred resolution and closure to prolonged uncertainty.",
       "question": "Which finding, if true, would most directly support the student’s claim?",
       "choices": {
-        "A": "The restoration team used more specialized imaging equipment in episode 6 than in any earlier installment.",
+        "A": "The restoration team used a substantially larger assortment of specialized imaging equipment during episode 6 than it had used in any of the earlier installments.",
         "B": "The final episode, in which the restored clock was successfully restarted and its mechanism explained, attracted more viewers than any previous installment.",
         "C": "Professional horologists rated episode 3 as the most technically informative part of the series.",
         "D": "Several viewers reported that they began watching the series because they were interested in seventeenth-century astronomy."
@@ -3308,7 +3308,7 @@
       "passage": "Histories of personal computing sometimes present the commercial release of the first single-chip microprocessor as though it were the defining technological development of 1971. Such an interpretation, however, can obscure the broader pace of innovation in computing at the time: <u>the microprocessor was only one of several consequential advances introduced in 1971, making that year unusually significant for the field.</u>",
       "question": "Which statement, if true, would most strongly support the claim in the underlined portion?",
       "choices": {
-        "A": "By 1971, semiconductor manufacturers had begun reducing the prices of some integrated circuits as production techniques became more efficient.",
+        "A": "By the beginning of 1971, semiconductor manufacturers had begun reducing the prices they charged for some integrated circuits as the techniques used to produce those circuits became more efficient.",
         "B": "In 1971, engineer Ray Tomlinson implemented a system for sending messages between computers on ARPANET, introducing the use of the @ symbol in networked email addresses.",
         "C": "Several computer manufacturers continued selling machines designed during the late 1960s throughout 1971.",
         "D": "In 1972, researchers demonstrated an experimental graphical interface incorporating several features that later became common on personal computers."
@@ -3779,7 +3779,7 @@
       "choices": {
         "A": "By arguing that Mies’s architecture should be evaluated according to engineering standards rather than aesthetic ones",
         "B": "By maintaining that the restraint criticized in Text 1 may be a deliberate choice that helps advance the architecture’s larger aims",
-        "C": "By agreeing that the interiors are defective while arguing that Mies compensates for these interior defects through the unusually expressive exteriors of his buildings",
+        "C": "By agreeing that the interiors are defective while arguing that Mies compensates for them through unusually expressive exteriors",
         "D": "By claiming that only Mies’s residential buildings display the sparseness criticized in Text 1"
       },
       "correctAnswer": "B",
@@ -3888,7 +3888,7 @@
         "A": "Across successive production phases, isotope ratios from the coastal mints shifted progressively closer to 17.91, while ratios from the capital remained relatively stable and closer to 18.74.",
         "B": "Isotope ratios from the capital decreased sharply over time, while those from the coastal mints remained nearly unchanged.",
         "C": "Throughout the study, coins from the capital consistently had lower isotope ratios than coins from either coastal mint.",
-        "D": "By the final production phase, coins from the capital and the coastal mints all had nearly identical isotope ratios."
+        "D": "By the time the kingdom reached its final phase of coin production, coins manufactured at both the capital mint and the coastal mints all had lead-isotope ratios that were nearly identical."
       },
       "correctAnswer": "A",
       "explanation": "Belos copper has the **lower isotope ratio, 17.91**. If coastal-mint coins progressively shift toward that value, the proportion of Belos copper in those coins is plausibly increasing. At the same time, stable ratios at the capital would support the conclusion that its source mixture remained relatively unchanged. A therefore matches both components of the researchers’ conclusion.\n\nB reverses the expected pattern by making the capital change while the coastal mints remain stable. C does not show the required change over time and also places the capital closer to the lower-ratio source. D would suggest convergence among all locations rather than a stable capital supply alongside increasing coastal reliance on Belos copper.",
@@ -4581,7 +4581,7 @@
       "passage": "Steelhead trout living above and below Washington’s Harlow Falls Dam are now genetically distinct. Because the dam, completed in 1956, prevents most adult fish from moving between the two stretches of river, biologists long attributed the genetic division to the barrier. After analyzing preserved scales collected from the river between 1908 and 1932, however, population geneticist Maren Ishikawa and her colleagues rejected that explanation.",
       "question": "Which finding, if true, would most directly explain why Ishikawa and her colleagues rejected the common explanation?",
       "choices": {
-        "A": "Trout from a neighboring river occasionally entered both stretches of the Harlow River during unusually wet years.",
+        "A": "During years with unusually heavy rainfall, trout originating in a neighboring river occasionally entered both stretches of the Harlow River at different times.",
         "B": "Preserved scales were available from both the upstream and downstream portions of the river beginning in 1908.",
         "C": "Two genetically distinct trout lineages entered the Harlow River from different tributaries after the dam was completed.",
         "D": "The genetic division found in modern trout closely matched the division already present in specimens collected several decades before the dam was built."
@@ -5037,7 +5037,7 @@
       "question": "Which statement, if true, would best account for Okafor and colleagues’ explanation?",
       "choices": {
         "A": "Different copper alloys can react differently to chlorides even when kept at the same relative humidity.",
-        "B": "Conservation laboratories use several distinct instruments to measure humidity, some of which require more frequent calibration than others.",
+        "B": "Conservation laboratories use several different kinds of measurement instruments to record ambient humidity, and some of those instruments require more frequent calibration than the others.",
         "C": "Moisture absorbed and released by porous storage materials can cause humidity directly beside an artifact to differ substantially from room-level measurements.",
         "D": "Copper objects recovered from marine environments often contain more chloride contamination than objects recovered from dry archaeological sites."
       },
@@ -5758,7 +5758,7 @@
       "passage": "Genetic studies suggest that some grape varieties cultivated in the western Mediterranean descend from vines introduced from the eastern Mediterranean many centuries ago. The Sardinian cultivar Nieddu Lungo carries chloroplast haplotype C17, which is rare among western European cultivars but common among several traditional Levantine varieties. <u>The presence of C17 in Nieddu Lungo therefore provides further evidence that the cultivar preserves ancestry from an ancient east-to-west introduction of grapevines.</u>",
       "question": "Which finding, if true, would most directly undermine the underlined claim?",
       "choices": {
-        "A": "Chloroplast haplotype C17 has been identified in ancient grape seeds recovered from eastern Mediterranean archaeological sites dating several centuries before Nieddu Lungo was documented.",
+        "A": "Researchers have identified chloroplast haplotype C17 in ancient grape seeds that were recovered from archaeological sites in the eastern Mediterranean and dated to several centuries before Nieddu Lungo was documented.",
         "B": "Several Levantine grape cultivars carrying C17 were imported to Sardinia in the late nineteenth century, and genetic evidence indicates that Nieddu Lungo may have hybridized with those recently introduced vines.",
         "C": "Nieddu Lungo also possesses several nuclear alleles found in western Mediterranean grape cultivars lacking haplotype C17.",
         "D": "Some archaeological grape seeds recovered from Sardinia contain haplotypes other than C17."
@@ -7717,7 +7717,7 @@
       "choices": {
         "A": "The coating also improves establishment rates in Posidonia australis and several other seagrass species when tested in coastal regions outside the North Atlantic.",
         "B": "The metabolites in the coating remain chemically stable for several months across a broad range of storage temperatures.",
-        "C": "North Atlantic meadows containing higher natural concentrations of the relevant bacterial metabolites also tend to contain denser stands of Zostera marina.",
+        "C": "Seagrass meadows in the North Atlantic that contain relatively high natural concentrations of the relevant bacterial metabolites also tend to contain especially dense stands of the species Zostera marina.",
         "D": "In damaged North Atlantic meadows, coated Zostera marina seeds establish almost as successfully as they do in nearby undamaged meadows."
       },
       "correctAnswer": "A",
@@ -9077,7 +9077,7 @@
       "passage": "Text 1\nAt several Late Neolithic settlements along the western Adriatic, archaeologists have uncovered dense accumulations of freshwater mussel shells beside fire-altered sediment. Because shellfish were an accessible source of protein and because some shells bear traces of heating, researchers have often interpreted these deposits as kitchen refuse left after communal meals.\nText 2\nSelim Arora and colleagues examined shells from three comparable settlements using microscopy and mineral analysis. Many specimens showed prolonged surface weathering before exposure to temperatures far above those normally used to cook shellfish. The team argues that the shells had often been collected, stored, and later calcined to manufacture lime for plaster rather than immediately discarded after meals.",
       "question": "Based on the texts, how would Arora and colleagues (Text 2) most likely respond to the interpretation presented in Text 1?",
       "choices": {
-        "A": "By asserting that shell deposits are more likely to occur at ceremonial sites than at sites used for domestic activities because the freshwater mussels found there had primarily symbolic value",
+        "A": "By asserting that shell deposits are more likely to occur at ceremonial sites than at domestic sites because freshwater mussels had primarily symbolic value",
         "B": "By conceding that the function of shell deposits probably differed according to the particular mussel species represented at each settlement",
         "C": "By arguing that previous researchers have exaggerated how extensively lime production altered archaeological shell deposits",
         "D": "By pointing out that identifying the deposits as food refuse relies on an incomplete understanding of what happened to many of the shells before they were burned"
@@ -9370,7 +9370,7 @@
       "question": "Which finding, if true, would best support the botanist’s hypothesis?",
       "choices": {
         "A": "Taro populations in Vanuatu average fewer haplotypes than those in Tonga, even though Vanuatu is closer to New Guinea than Tonga is.",
-        "B": "Taro populations in Fiji average somewhat more haplotypes than those in Samoa, although the two island groups are at roughly comparable distances from New Guinea.",
+        "B": "Cultivated taro populations growing on the islands of Fiji average somewhat more chloroplast haplotypes than comparable taro populations growing in Samoa, although the two island groups lie at roughly comparable distances from New Guinea.",
         "C": "Taro populations on Rapa Nui average more haplotypes than those in Samoa, even though Rapa Nui is substantially farther from New Guinea.",
         "D": "Taro populations in the Solomon Islands average more haplotypes than those in Tahiti, and the Solomon Islands are substantially closer to New Guinea than Tahiti is."
       },
@@ -12916,7 +12916,7 @@
       "passage": "The rapid movement of pastoral populations across parts of Eurasia roughly five millennia ago coincided with major changes in material culture and ancestry. Some archaeologists have proposed a mounted-mobility hypothesis, according to which extensive horseback riding allowed herding communities to travel farther, maintain wider social networks, and expand more rapidly than earlier populations could. Because horse bones occur at several settlements associated with these communities, proponents of the hypothesis argue that riding was a principal cause of the dispersal.",
       "question": "Which finding, if true, would most directly challenge the assertion that horseback riding was a principal cause of the dispersal?",
       "choices": {
-        "A": "Horse remains dating to the period of the dispersal are found hundreds of kilometers west of the communities’ earliest known settlements.",
+        "A": "Archaeologists have identified horse remains that date to the period of the dispersal at sites located hundreds of kilometers west of the communities’ earliest known settlements.",
         "B": "Reconstructed words in languages associated with the populations distinguish wild horses from animals kept within managed herds.",
         "C": "Several later languages spoken by descendants of the populations borrowed their words for saddles and reins from neighboring language families.",
         "D": "The earliest unambiguous skeletal and equipment evidence of habitual horseback riding in the populations’ homeland dates several centuries after the large-scale dispersal had already begun."
@@ -14181,7 +14181,7 @@
       "choices": {
         "A": "Across bridges exposed to comparable quantities of deicing salt, chloride concentrations in runoff show no reliable relationship to chloride concentrations measured in concrete cores from the same bridges.",
         "B": "Runoff samples contain measurable sodium as well as chloride, whereas concrete cores can also reveal compounds unrelated to deicing salt.",
-        "C": "Runoff chloride concentrations are consistently about four times higher than concentrations measured in concrete cores, but increases and decreases in the two measurements closely track one another.",
+        "C": "Runoff chloride concentrations are consistently about four times higher than the corresponding concentrations measured in samples taken from concrete cores, but increases and decreases in the two measurements closely track one another over time.",
         "D": "Runoff can be collected repeatedly from bridge surfaces without drilling into the deck or interrupting traffic for extended periods."
       },
       "correctAnswer": "A",
@@ -14238,7 +14238,7 @@
       "question": "Which finding, if true, would best support the researchers’ claim?",
       "choices": {
         "A": "A crescent-shaped notch appears by itself on tablets associated with several different commodities, including salt, wool, and rye.",
-        "B": "Some tablets contain sequences of four or five symbols, but the researchers have been unable to determine whether the longer sequences follow consistent organizational rules.",
+        "B": "Some of the wooden tablets contain longer sequences consisting of four or five symbols, but the researchers have so far been unable to determine whether these longer symbol sequences follow consistent organizational rules.",
         "C": "Long vertical notches occur more frequently on tablets from major ports than on tablets recovered from smaller inland markets.",
         "D": "Tablets bearing a triangle followed by a double notch consistently record deferred payments, whereas tablets containing the same two symbols in the reverse order consistently record completed exchanges."
       },
@@ -14729,7 +14729,7 @@
         "A": "“I cannot ask you, reader, to trust a theory learned beside a warm hearth; I speak after eleven seasons of crossing that ice myself.”",
         "B": "“The first winter darkness descended before our stores had been carried beyond the inlet.”",
         "C": "“At noon the ridge appeared blue, though by evening the same snow had taken on a color almost violet.”",
-        "D": "“Perhaps those who have never heard sea ice fracture at night may imagine the sound more musical than it is.”"
+        "D": "“Perhaps those who have never stood outside in the cold to hear sea ice fracture during the night may imagine the resulting sound to be more musical than it really is.”"
       },
       "correctAnswer": "A",
       "choiceExplanations": {
@@ -14930,7 +14930,7 @@
       "question": "Which quotation from The Salt Road most effectively illustrates the claim?",
       "choices": {
         "A": "“Across the plain, Selvara lifted white and gold against the violet hills, its terraces flashing in the late sun like tiers of polished shell.”",
-        "B": "“When the travelers entered Selvara, bronze bells sounded above the market while shopkeepers drew back their striped awnings.”",
+        "B": "“When the travelers entered the busy streets of Selvara, bronze bells sounded above the crowded market while shopkeepers drew back the striped awnings hanging over their stalls.”",
         "C": "“For three hours the road coiled between ocher ridges, each bend revealing another empty reach of stone.”",
         "D": "“Beyond the northern gate, the mountains darkened beneath a storm that had already hidden their highest summits.”"
       },
@@ -14990,7 +14990,7 @@
         "A": "Model W changed course after most warning tones, whereas Model N usually continued moving at the same speed.",
         "B": "Neither Model N nor Model W changed its behavior when warning tones were played without a forklift present.",
         "C": "Model N consistently slowed or changed course when forklift warning tones sounded, whereas Model W showed little or no change in movement.",
-        "D": "Several other robots designed for narrow aisles did not react to the warning tones, although Model N occasionally did."
+        "D": "Several additional robots that had been specifically designed to navigate through narrow aisles did not react to the standardized warning tones, although Model N occasionally did react to those sounds."
       },
       "correctAnswer": "C",
       "choiceExplanations": {
@@ -16224,7 +16224,7 @@
       "passage": "Researchers have proposed that unusually slow, evenly spaced musical pulses may reduce physiological arousal in shelter dogs even when the animals have never previously heard a particular composition. In a study, dogs listened on separate occasions to a slow instrumental adagio and to a rapid orchestral march. The researchers monitored heart rate, treating a lower rate during otherwise comparable conditions as evidence of reduced arousal. They concluded that the slow-tempo music had indeed produced a calming effect.",
       "question": "Which finding, if true, would most directly support the researchers’ claim?",
       "choices": {
-        "A": "The dogs’ heart rates fluctuated more irregularly during the adagio than during the march.",
+        "A": "The heart rates recorded for the dogs fluctuated in a more irregular pattern while the adagio was playing than they did while the march was playing.",
         "B": "The dogs’ average heart rates were substantially lower while the adagio was playing than while the march was playing.",
         "C": "Shelter employees reported that they personally preferred the adagio to the march.",
         "D": "Both recordings contained string instruments as well as percussion instruments."
@@ -16254,7 +16254,7 @@
       "question": "Which finding, if true, would most directly support the second research team’s hypothesis?",
       "choices": {
         "A": "Some intermediate-eared bats collided with obstacles more frequently than other intermediate-eared bats did.",
-        "B": "In the same type of tunnel, narrow-eared bats collided with slightly more than half of the obstacles presented to them.",
+        "B": "In the same type of experimental tunnel, narrow-eared bats collided with slightly more than half of all the obstacles that the researchers presented to those bats.",
         "C": "In a noisy flight tunnel containing large flat obstacles, narrow-eared bats collided with the obstacles significantly more often than intermediate-eared bats did.",
         "D": "Intermediate-eared bats successfully avoided more than half of the obstacles in a noisy flight tunnel."
       },
@@ -16282,7 +16282,7 @@
       "passage": "Text 1\nIn a 2019 essay, marine ecologist Laila Esparza argues that field sketching is among the most accessible forms of natural-history documentation. Unlike laboratory techniques that demand specialized instruments or uninterrupted workdays, observational drawing can be practiced with little more than a notebook and pencil. Esparza writes that useful records have been made “on ferry decks, during lunch breaks, and beneath the weak lamps of overnight trains.” In her view, scientifically valuable observations need not depend on a person’s ability to pursue fieldwork as a full-time occupation.\nText 2\nHistorian of science Malik Narang argued in 2023 that contemporary biological illustration has become increasingly professionalized. Although anyone may theoretically submit work to specialist journals and field guides, successful contributors often undergo years of anatomical training and sustained drawing practice. They may also need prolonged access to museum specimens or research collections, commitments difficult to maintain alongside unrelated full-time employment. Narang therefore contends that financial security indirectly influences who can develop into a professional biological illustrator.",
       "question": "Based on the texts, how would Esparza (Text 1) most likely respond to Narang’s argument in Text 2?",
       "choices": {
-        "A": "By arguing that illustrators whose work appears in specialist publications are generally able to support themselves financially through their work in biological illustration alone",
+        "A": "By arguing that illustrators whose work appears in specialist publications are generally able to support themselves entirely through biological illustration",
         "B": "By asserting that people typically maintain unrelated full-time employment principally to finance the anatomical training required for biological illustration",
         "C": "By suggesting that people employed in more lucrative scientific specialties are unlikely to produce worthwhile biological illustrations",
         "D": "By pointing out that valuable observational work can be produced under circumstances other than the sustained professional conditions emphasized by Narang"
@@ -16428,7 +16428,7 @@
       "question": "Which choice best describes data from the graph that support the student’s claim?",
       "choices": {
         "A": "Although Red Mesa recorded fewer heat-alert days than Port Aurelia in every year shown, the totals for both places increased substantially from 2006 to 2021.",
-        "B": "In 2012, Port Aurelia recorded fewer than 30 heat-alert days, whereas Cedar Vale recorded fewer than 10.",
+        "B": "In the year 2012, the city of Port Aurelia recorded fewer than 30 days that exceeded the heat-alert threshold, whereas Cedar Vale recorded fewer than 10 such days during that same year.",
         "C": "In 2006, at least one of the municipalities recorded fewer than 10 days above the heat-alert threshold.",
         "D": "Port Aurelia recorded fewer than 25 heat-alert days in 2009, while Northbridge recorded fewer than 20."
       },
@@ -19027,7 +19027,7 @@
       "passage": "A research article on translating ancient drama argues that historical accuracy in language is not always a translator’s only priority. Although some translators preserve archaic syntax and vocabulary, others deliberately introduce contemporary expressions when doing so helps an audience recognize distinctions in status, humor, or emotional tone. The article notes that such modernization is sometimes a calculated interpretive choice rather than an accidental departure from the source’s historical setting.",
       "question": "Which quotation from an interview with a translator would most effectively support the article’s claim?",
       "choices": {
-        "A": "“I try to reproduce every grammatical feature that can be carried into English, even when the resulting phrasing sounds unfamiliar to modern audiences.”",
+        "A": "“I try to reproduce every grammatical feature of the original that can be carried over into English, even when the phrasing that results sounds unfamiliar to people accustomed to modern forms of expression.”",
         "B": "“When I first began translating classical plays, I sometimes used present-day expressions without realizing how historically specific those expressions were.”",
         "C": "“Translations should never contain language that readers could identify with a period later than that of the original work.”",
         "D": "“Sometimes I retain an archaic construction, but if a modern idiom makes a character’s arrogance or social position immediately legible, I may deliberately use it.”"
@@ -19329,7 +19329,7 @@
       "choices": {
         "A": "Aircraft can collect microwave measurements over substantially larger areas in a single day than field teams can sample using soil cores.",
         "B": "Several nonsaline soils produce microwave reflectance values similar to those of saline soils when vegetation density and recent rainfall differ, and the resulting variation has no stable relationship to measured salinity.",
-        "C": "Saline soils contain several dissolved ions in addition to sodium and chloride, whereas standard laboratory analyses can identify the individual ions present.",
+        "C": "Saline soils contain several different kinds of dissolved ions in addition to sodium and chloride, whereas standard analyses conducted in laboratories can identify each of the individual types of ions that are present.",
         "D": "Repeated airborne measurements of the same exposed saline field under similar moisture conditions produce nearly identical reflectance values."
       },
       "correctAnswer": "B",
@@ -19766,7 +19766,7 @@
       "choices": {
         "A": "“Although Lift Every Voice and Sing was among Savage’s most widely discussed works, contemporary critics disagreed sharply about its symbolism.”",
         "B": "“After completing Lift Every Voice and Sing, Savage abandoned the compact portrait format that had dominated much of her earlier sculpture and increasingly pursued large, multi-figure compositions.”",
-        "C": "“Of Savage’s surviving works, few display her command of modeled facial expression as fully as Lift Every Voice and Sing does.”",
+        "C": "“Among the works by Savage that have survived, very few demonstrate her mastery of modeled facial expressions as fully as the sculpture known as Lift Every Voice and Sing does.”",
         "D": "“The sculpture demonstrates Savage’s engagement with themes that were also important to many artists associated with the Harlem Renaissance.”"
       },
       "correctAnswer": "B",
@@ -19797,7 +19797,7 @@
         "A": "“The factory whistles broke across the roofs each morning, thin and metallic, while carts rattled steadily below my window.”",
         "B": "“Some evenings I imagined the harbor wind had crossed the bay carrying reeds from my childhood marsh, scattering their green breath through these alleys of brick.”",
         "C": "“Our street had only three young sycamores, each confined within a square of iron beside the pavement.”",
-        "D": "“I had once known the names of nearly every bird along the inlet, though in Baltimore I rarely heard anything above the machinery.”"
+        "D": "“I had once known the names of nearly every bird that came to the inlet in those days, though in the streets of Baltimore I could rarely hear anything above the unceasing noise of the machinery.”"
       },
       "correctAnswer": "B",
       "explanation": "Choice B figuratively joins the narrator’s rural childhood landscape and his urban Baltimore surroundings: the harbor wind is imagined carrying the marsh’s reeds and “green breath” into brick alleys. The imagery therefore creates a direct imaginative connection between the two environments. Choice A vividly describes the industrial city but does not connect it with the narrator’s rural past. Choice C likewise depicts the city alone. Choice D contrasts the two settings, but it does so literally rather than using figurative language to merge or connect them. B most precisely fulfills both elements of the claim.",
@@ -19946,7 +19946,7 @@
       "choices": {
         "A": "Participants who had used their familiar notation system for the greatest number of years showed the largest difference in neural activity between that familiar system and the recently learned meaningful system.",
         "B": "Participants of all experience levels showed stronger neural responses to meaningful notation than to randomly rearranged symbols.",
-        "C": "Older participants showed the greatest similarity between neural responses to the recently learned notation and to the rearranged symbols.",
+        "C": "Participants who had begun learning the second musical notation at older ages showed the greatest degree of similarity between their neural responses to the recently learned notation and to the rearranged symbols.",
         "D": "The difference in neural activity between familiar notation and rearranged symbols increased with participants’ age."
       },
       "correctAnswer": "A",
@@ -20036,7 +20036,7 @@
       "choices": {
         "A": "They would argue that palatial workshops manufactured different kinds of glass objects from those produced in coastal settlements.",
         "B": "They would suggest that the apparent dominance of palatial glass production may have been shaped by archaeologists’ choices about which sites to excavate.",
-        "C": "They would maintain that the location of glass production shifted from palatial centers to coastal settlements only after the end of the Late Bronze Age.",
+        "C": "They would maintain that glass production shifted from palatial centers to coastal settlements only after the Late Bronze Age ended.",
         "D": "They would contend that access to raw materials, rather than elite administration, explains why glassworking occurred primarily at palatial sites."
       },
       "correctAnswer": "B",
@@ -26582,7 +26582,7 @@
       "passage": "Text 1\nResearcher Nella Voss studied prototype-instrument selection at the Carven Conservatory, where every instructor must submit rankings. The requirement brings in instructors who otherwise lack the time or inclination to participate. Voss argues that the selected instruments consequently reflect the faculty’s preferences more faithfully.\nText 2\nBroad participation can improve instrument selection, but compulsory ranking may undermine its value. Mikel Sora and Dena Quist found that instructors who felt compelled to participate spent less time testing the prototypes. Their rankings could therefore misrepresent the features they actually preferred.",
       "question": "Based on the texts, how would Sora and Quist most likely respond to Voss’s argument?",
       "choices": {
-        "A": "Compulsory ranking should be used only in music conservatories of a certain particular size.",
+        "A": "Compulsory ranking should be used only in conservatories of a particular size.",
         "B": "Conservatories requiring rankings must also make prototype testing more convenient.",
         "C": "Compulsory participation does not necessarily produce selections that better represent the faculty’s preferences.",
         "D": "Instructors required to rank instruments will probably volunteer for other conservatory activities."
@@ -26932,7 +26932,7 @@
       "choices": {
         "A": "Rolls with many interruptions probably document the same historical engine.",
         "B": "Engine sequences are more realistic than the rolls’ rain and train sequences.",
-        "C": "Damage over the course of restoration has made the rolls incapable of illuminating industrial culture.",
+        "C": "Damage during restoration has made the rolls incapable of illuminating industrial culture.",
         "D": "Interruptions need not represent specific faults in the actual machines that inspired the compositions."
       },
       "correctAnswer": "D",
@@ -26990,7 +26990,7 @@
       "choices": {
         "A": "As contradictory, because traditionalists enjoy other kinds of bread",
         "B": "As impractical, because they cannot enforce their preferences",
-        "C": "As commercially shortsighted, because adding new ingredients would serve to enlarge the existing customer base",
+        "C": "As commercially shortsighted, because new ingredients would enlarge the customer base",
         "D": "As inconsistent with the mixed origins of the very standard they uphold"
       },
       "correctAnswer": "D",
@@ -27193,7 +27193,7 @@
       "choices": {
         "A": "It neglects the possibility that affected studios can adapt their sources of income.",
         "B": "It overlooks studios whose atlas markets have not shrunk.",
-        "C": "It fails to recognize the fact that studios rely on a single, completely unchanging service.",
+        "C": "It fails to recognize that studios rely on a single unchanging service.",
         "D": "It underestimates how quickly atlas sales are declining."
       },
       "correctAnswer": "A",
@@ -27484,7 +27484,7 @@
         "A": "It is driven more by a belief in automated calculation’s cultural significance than by documentary evidence.",
         "B": "It became widespread because it accurately records early spectators’ alarm.",
         "C": "It reflects historians’ belief that they are more sophisticated than present-day audiences.",
-        "D": "It expresses a particular view of cultural transformation that historians generally dismiss as an interpretation that is naive."
+        "D": "It expresses a view of cultural transformation that historians generally dismiss as naive."
       },
       "correctAnswer": "A",
       "explanation": "A is correct because Text 2 explicitly links the unsupported narrative’s persistence to belief in transformation.\nD is incorrect because the historians repeat the narrative rather than rejecting its premise.\nC is incorrect because that comparison with contemporary audiences is not made.\nB is incorrect because the absence of contemporary evidence prevents treating the alarm as accurately recorded.",
@@ -29871,7 +29871,7 @@
       "passage": "Elena Marwick’s 1941 autobiographical narrative *Beneath the Footlights* recounts her work repairing theatrical lighting. Marwick heightens suspense by foregrounding an involuntary bodily reaction to an approaching disturbance, writing _____.",
       "question": "Which quotation from *Beneath the Footlights* most effectively supports this claim?",
       "choices": {
-        "A": "“After inspecting the switchboard, the electrician instructed our manager to keep the remaining crew at the theater. He would take three assistants to the harbor warehouse, where the replacement lamps had been stored.”",
+        "A": "“After carefully inspecting the switchboard, the electrician instructed our manager to keep the remaining members of the crew at the theater. Meanwhile, he would take three of his assistants to the harbor warehouse, where the replacement lamps had been stored.”",
         "B": "“Something scraped along the unlit catwalk. My fingers stiffened around the wrench; crouching beneath the rail, I felt each breath catch. The scraping stopped directly overhead. Would my teeth betray me, knocking together in that awful silence?”",
         "C": "“When the orchestra finally began, delight passed from row to row. Even the ushers, ordinarily so solemn, hummed along; from behind the curtain I could hear the audience laughing.”",
         "D": "“A fortnight before the opening, our electrician returned from Trieste. The manager sent two apprentices to meet him, and presently a message arrived: every technician was to assemble in the rehearsal room.”"
@@ -32562,7 +32562,7 @@
       "choices": {
         "A": "“I rarely consult dictionaries, though I sometimes look up unfamiliar terms while reading for pleasure.”",
         "B": "“I have just acquired my first reference program and hope to explore it with friends soon.”",
-        "C": "“My reference program is temporarily unavailable, so I’m using a colleague’s printed dictionary until the software is repaired.”",
+        "C": "“My reference program is temporarily unavailable because the software is undergoing repairs, so I am using a printed dictionary lent to me by one of my colleagues in the meantime.”",
         "D": "“I consult dictionaries for my translation assignments every day. I enjoy the annotated cards, but I use the indexed search because it reaches the needed entries faster.”"
       },
       "correctAnswer": "D",
@@ -33188,7 +33188,7 @@
       "question": "Which quotation from a history of statistics would most effectively support the student's claim?",
       "choices": {
         "A": "“No other publication presents Dain's analytical capabilities and theoretical commitments as distinctly as *Recursive Estimation* does.”",
-        "B": "“Debate about *Recursive Estimation* has persisted since its publication, with specialists offering sharply divergent interpretations of its implications.”",
+        "B": "“Debate about *Recursive Estimation* has persisted among statisticians since the work was first published, and specialists continue to offer sharply divergent interpretations of what its arguments and findings imply.”",
         "C": "“Dain drew on the work of contemporary statisticians while anticipating later developments, as *Recursive Estimation* amply demonstrates.”",
         "D": "“The methods in Dain's publications preceding *Recursive Estimation* constitute an earlier research approach that she did not subsequently resume.”"
       },
@@ -34987,7 +34987,7 @@
       "passage": "Some archival databases incorporate identification codes imported from unrelated record systems. Codes first developed for restricted research collections in the 1980s were adopted by commercial genealogy services in the 1990s and now appear in municipal public-record portals. A student studying information policy argues that the migration of these codes into public databases could have serious adverse consequences over time.",
       "question": "Which quotation from a researcher would best support the student's argument?",
       "choices": {
-        "A": "“Some publicly accessible collections have roughly equal numbers of imported and locally generated codes, while others contain more imported codes.”",
+        "A": "“Some publicly accessible research collections contain approximately equal numbers of codes imported from outside sources and codes generated locally, while other collections contain a larger number of imported codes than locally generated codes.”",
         "B": "“Imported codes have been observed in public collections, but studies of their effects remain insufficient.”",
         "C": "“Public databases using imported codes may be more numerous than the databases that researchers have identified so far.”",
         "D": "“As codes spread through linked collections, they can enable readers to connect anonymized records to named individuals, exposing those individuals to identity fraud.”"
@@ -36346,7 +36346,7 @@
       "passage": "Founded in 1974 as an educational arm of the Coastal Toolmakers Guild, the Open Compass Collective became an influential model for later public-engineering workshops. A historian argues that its early demonstrations drew strongly on the audience-guided physical comedy of traveling puzzle fairs popular around the northern Adriatic in the 1930s and 1940s.",
       "question": "Which quotation from the historian's article would best illustrate this claim?",
       "choices": {
-        "A": "“The collective used current references, humorous explanations, and improvised-looking equipment, an approach reflecting both limited funds and its message about accessible technical knowledge.”",
+        "A": "“The collective made frequent use of contemporary references, explanations that relied on humor, and equipment that appeared improvised, an approach reflecting both its limited financial resources and its intended message about making technical knowledge accessible.”",
         "B": "“Led by founder Mara Vesk, the largely untrained presenters carried a few models into harbor workshops and offered brief, entertaining demonstrations.”",
         "C": "“The presenters discovered humor in ordinary mechanical failures, turning amusement into a means of criticizing waste while engaging the public.”",
         "D": "“Demonstrators performed short comic trials with oversized levers and wildly swinging models; visitors' delighted shouts or impatient objections repeatedly caused the presenters to improvise new maneuvers.”"
@@ -39745,9 +39745,9 @@
       "shortRate": 12.6
     },
     "wordAfter": {
-      "nLong": 747,
-      "correctLong": 198,
-      "longRate": 26.5,
+      "nLong": 744,
+      "correctLong": 179,
+      "longRate": 24.1,
       "nShort": 565,
       "correctShort": 71,
       "shortRate": 12.6
@@ -39761,16 +39761,18 @@
       "shortRate": 22.9
     },
     "characterAfter": {
-      "nLong": 1138,
-      "correctLong": 341,
-      "longRate": 30,
+      "nLong": 1137,
+      "correctLong": 323,
+      "longRate": 28.4,
       "nShort": 1192,
       "correctShort": 273,
       "shortRate": 22.9
     },
-    "revisedQuestionCount": 178,
+    "revisedQuestionCount": 197,
     "editsToIncorrectChoicesOnly": true,
     "originalCorrectAnswersAndPassagesPreserved": true,
-    "remainingBiasRequiresEditorialReview": true
+    "remainingBiasRequiresEditorialReview": true,
+    "textualEvidenceEdits": 29,
+    "crossTextRestorations": 10
   }
 }
