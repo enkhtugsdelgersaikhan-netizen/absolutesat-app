@@ -3769,7 +3769,7 @@
         {
           "requestId": "mock-2-math-m1-08",
           "targetDomain": "Algebra",
-          "targetSubtopic": "Other Algebra",
+          "targetSubtopic": "Linear equations in 2 variables",
           "targetDifficulty": "Easy",
           "question": {
             "id": "math-20261006-batch465-q439",
@@ -3777,7 +3777,7 @@
             "status": "staged",
             "section": "Math",
             "domain": "Algebra",
-            "skill": "Other Algebra",
+            "skill": "Linear equations in 2 variables",
             "difficulty": "Easy",
             "passage": "",
             "question": "The formula \\[E=\\frac12mv^2\\] relates the kinetic energy \\(E\\), mass \\(m\\), and speed \\(v\\), where \\(v\\ne0\\). Which equation expresses \\(m\\) in terms of \\(E\\) and \\(v\\)?",
@@ -3797,8 +3797,8 @@
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
-            "subtopic": "Other Algebra",
-            "classificationVersion": "2026-10-07-v1"
+            "subtopic": "Linear equations in 2 variables",
+            "classificationVersion": "2026-10-08-math-blueprint-relabel"
           }
         },
         {
@@ -5192,7 +5192,7 @@
         {
           "requestId": "mock-2-math-m2-08-shared",
           "targetDomain": "Algebra",
-          "targetSubtopic": "Other Algebra",
+          "targetSubtopic": "Linear equations in 2 variables",
           "targetDifficulty": "Easy",
           "question": {
             "id": "math-20261006-batch465-q018",
@@ -5200,7 +5200,7 @@
             "status": "staged",
             "section": "Math",
             "domain": "Algebra",
-            "skill": "Other Algebra",
+            "skill": "Linear equations in 2 variables",
             "difficulty": "Easy",
             "passage": "",
             "question": "A maker space charges a $18 monthly membership fee, $14 for each laser-cutting session, and $9 for each 3D-printing session. A member spends exactly $120 in one month.\nIf x is the number of laser-cutting sessions and y is the number of 3D-printing sessions, which equation represents the relationship between x and y?",
@@ -5220,8 +5220,8 @@
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
-            "subtopic": "Other Algebra",
-            "classificationVersion": "2026-10-07-v1"
+            "subtopic": "Linear equations in 2 variables",
+            "classificationVersion": "2026-10-08-math-blueprint-relabel"
           },
           "sharedBetweenRoutes": true
         },
@@ -6091,7 +6091,7 @@
         {
           "requestId": "mock-2-math-m2-08-shared",
           "targetDomain": "Algebra",
-          "targetSubtopic": "Other Algebra",
+          "targetSubtopic": "Linear equations in 2 variables",
           "targetDifficulty": "Easy",
           "question": {
             "id": "math-20261006-batch465-q018",
@@ -6099,7 +6099,7 @@
             "status": "staged",
             "section": "Math",
             "domain": "Algebra",
-            "skill": "Other Algebra",
+            "skill": "Linear equations in 2 variables",
             "difficulty": "Easy",
             "passage": "",
             "question": "A maker space charges a $18 monthly membership fee, $14 for each laser-cutting session, and $9 for each 3D-printing session. A member spends exactly $120 in one month.\nIf x is the number of laser-cutting sessions and y is the number of 3D-printing sessions, which equation represents the relationship between x and y?",
@@ -6119,8 +6119,8 @@
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
-            "subtopic": "Other Algebra",
-            "classificationVersion": "2026-10-07-v1"
+            "subtopic": "Linear equations in 2 variables",
+            "classificationVersion": "2026-10-08-math-blueprint-relabel"
           },
           "sharedBetweenRoutes": true
         },
