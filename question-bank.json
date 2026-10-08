@@ -1765,7 +1765,7 @@
         "A": "Aisha Rahman’s *The Cartographer’s Daughter* premiered at Manchester’s Lantern Theatre in 2018.",
         "B": "*The Cartographer’s Daughter* follows apprentice map conservator Leena, who discovers potentially significant annotations hidden in a damaged nineteenth-century atlas.",
         "C": "British Bangladeshi playwright Aisha Rahman wrote *The Cartographer’s Daughter*, a play about cartographic conservation.",
-        "D": "In 2018, a new play about an apprentice working in conservation had its premiere at the Lantern Theatre in the English city of Manchester."
+        "D": "A play about a conservation apprentice premiered in Manchester in 2018."
       },
       "correctAnswer": "B",
       "explanation": "Choice B provides the clearest **plot overview**: it identifies the protagonist and describes the central event that drives the story, Leena’s discovery of consequential annotations in an old atlas.\n\nA focuses on publication-style background information—the playwright, venue, and year—rather than what happens in the play. C identifies the author and general subject matter but does not summarize the action. D likewise emphasizes the premiere and gives only a vague description of the protagonist’s occupation.",
@@ -4271,7 +4271,7 @@
       "passage": "While researching a topic, a student has taken the following notes:\n\n- Voyager 2 is a NASA spacecraft launched in 1977.\n- It completed the first spacecraft flyby of Uranus on January 24, 1986.\n- During the flyby, Voyager 2 collected data on Uranus’s atmosphere, rings, and moons.\n- New Horizons is a NASA spacecraft launched in 2006.\n- It completed the first spacecraft flyby of Pluto on July 14, 2015.\n- New Horizons collected detailed images and compositional data during the encounter.",
       "question": "The student wants to emphasize the different years in which the two historic flybys occurred. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "choices": {
-        "A": "Voyager 2 became the first spacecraft to fly past Uranus in 1986; twenty-nine years later, New Horizons completed the first spacecraft flyby of Pluto in 2015.",
+        "A": "Voyager 2 first flew by Uranus in 1986; New Horizons first flew by Pluto in 2015.",
         "B": "Voyager 2 studied Uranus’s atmosphere, rings, and moons, whereas New Horizons collected images and compositional data at Pluto.",
         "C": "Voyager 2 and New Horizons each completed the first spacecraft flyby of a distant world.",
         "D": "NASA launched Voyager 2 in 1977 and New Horizons in 2006."
@@ -5091,7 +5091,7 @@
       "question": "The student wants to emphasize a similarity between the item found at Vezda and the items found at Rovina. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "choices": {
         "A": "The devotional fragment at Vezda dates to about 1420, whereas the playing cards from Rovina date to about 1430.",
-        "B": "Although the Vezda devotional fragment is older than the Rovina playing cards, both finds predate the traditionally accepted introduction of movable-type printing to the region around 1450.",
+        "B": "Both the Vezda fragment and Rovina playing cards predate movable-type printing’s traditionally accepted arrival around 1450.",
         "C": "Printed devotional material was recovered at Vezda; in addition, printed playing cards dating to about 1430 were found at Rovina.",
         "D": "According to the traditional account, movable-type printing did not reach the Lower Danube region until approximately 1450."
       },
@@ -5145,7 +5145,7 @@
       "question": "The student wants to emphasize a difference between the Celsius and Fahrenheit scales. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "choices": {
         "A": "Celsius and Fahrenheit are both scales used to express measurements of temperature.",
-        "B": "Under standard atmospheric pressure, water freezes at 0°C but at 32°F, so the two scales assign different numerical values to the same physical temperature.",
+        "B": "At standard pressure, water freezes at 0°C on Celsius but at 32°F on Fahrenheit.",
         "C": "Water freezes at 0°C and boils at 100°C when atmospheric pressure is standard.",
         "D": "The Fahrenheit scale assigns 32°F to the freezing point of water and 212°F to its boiling point."
       },
@@ -5252,7 +5252,7 @@
       "choices": {
         "A": "Kepler was designed to search for exoplanets, whereas Spitzer observed the universe primarily in infrared wavelengths.",
         "B": "Kepler’s scientific operations ended in 2018, while Spitzer’s ended two years later.",
-        "C": "Although they used different observing techniques, both Kepler and Spitzer were NASA space telescopes whose missions lasted well beyond their originally planned primary periods.",
+        "C": "Despite different observing techniques, Kepler and Spitzer both outlasted their planned primary missions.",
         "D": "NASA ended Kepler’s scientific operations before it ended those of the Spitzer Space Telescope."
       },
       "correctAnswer": "C",
@@ -5733,7 +5733,7 @@
       "choices": {
         "A": "Several compositions elsewhere in the Codex Lyrica contain melodic figures also found in compositions 37 and 38, suggesting that the copyist drew on a limited repertory of musical conventions.",
         "B": "Composition 38 begins with a rhythmic pattern frequently used to open independent pieces in the manuscript, although neither composition 37 nor composition 38 includes a written title.",
-        "C": "Composition 38 forms a musically coherent piece when performed alone or immediately after composition 37, whereas composition 37 ends on an unresolved harmonic progression that reaches a convincing resolution only when the opening measures of composition 38 follow it.",
+        "C": "Composition 37 ends unresolved but reaches harmonic closure when composition 38 begins, suggesting the cross divides a continuous piece.",
         "D": "The cross-shaped sign occurs after numerous compositions whose final measures contain melodic cadences similar to the cadence at the end of composition 37."
       },
       "correctAnswer": "C",
@@ -6595,7 +6595,7 @@
       "passage": "While researching a topic, a student has taken the following notes:\n\n- Fairy shrimp are small crustaceans that inhabit temporary freshwater pools.\n- Their eggs can survive long periods after a pool dries.\n- The eggs hatch only after the basin fills again with water.\n- Many fairy shrimp populations therefore occur in seasonal pools that repeatedly alternate between wet and dry conditions.",
       "question": "The student wants to explain why fairy shrimp commonly live in seasonal pools. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "choices": {
-        "A": "Fairy shrimp commonly inhabit seasonal pools because their drought-resistant eggs remain dormant when the pools dry and hatch after water returns.",
+        "A": "Fairy shrimp thrive in seasonal pools: their eggs survive drought and hatch when water returns.",
         "B": "Fairy shrimp are small freshwater crustaceans whose populations can be found in temporary pools.",
         "C": "Seasonal pools undergo repeated periods of flooding and drying throughout the year.",
         "D": "Fairy shrimp eggs can remain dormant considerably longer than the adult crustaceans can survive."
@@ -7030,7 +7030,7 @@
         "A": "large schools form primarily in colder waters because fish require collective warmth when predators are scarce.",
         "B": "schooling patterns become less predictable when tuna are present than when other predators are present.",
         "C": "the tendency to form especially large, persistent schools is more consistent with defense against predators than with conservation of body heat.",
-        "D": "schooling fish respond in essentially the same way to changes in temperature and to predation because both factors produce equivalent changes in the size of schools."
+        "D": "Fish respond similarly to cold and to predators, both of which enlarge schools."
       },
       "correctAnswer": "C",
       "explanation": "The evidence distinguishes between the two hypotheses. If temperature is unrelated to school size and duration but predator presence is positively associated with both, then the observations support the predator-defense explanation more strongly than the thermal-conservation explanation.\nA contradicts the finding that temperature was not associated with school size or duration. B introduces a comparison among predator types that the study does not provide. D is false because the two factors did not produce equivalent relationships: predation was associated with the behavior, whereas temperature was not.",
@@ -8526,7 +8526,7 @@
       },
       "question": "Which choice most effectively uses data from the graph to support the researchers’ recommendation?",
       "choices": {
-        "A": "The 10% treatment matched or slightly exceeded the control’s biomass at day 35 and fell only slightly below it at day 56; the 25% and 40% treatments yielded substantially less at both measurements.",
+        "A": "The 10% compost treatment nearly matched the control’s biomass at both measurements, while larger compost shares substantially reduced biomass.",
         "B": "Biomass in the 10% compost treatment changed little between day 35 and day 56, whereas biomass in the 25% and 40% treatments increased sharply.",
         "C": "The 10% compost treatment never produced more biomass than the control treatment at either measurement.",
         "D": "By day 56, biomass in the 40% compost treatment had approached that of the control closely enough that high compost proportions would not compromise growth."
@@ -9180,7 +9180,7 @@
       "passage": "A student has taken these notes:\n\n- Paper conservators use tools such as microscopes, humidification chambers, and specialized adhesives.\n- They stabilize fragile documents and other works on paper so that those objects can be safely handled, studied, or displayed.\n- The seventeenth-century Katsura Navigation Charts underwent conservation treatment in 2021.\n- Ren Ito served as the project's lead paper conservator.",
       "question": "Which choice most effectively uses information from the notes to explain what paper conservators do?",
       "choices": {
-        "A": "Paper conservators use specialized equipment and techniques to stabilize fragile works on paper so that the objects can be handled, studied, or exhibited more safely.",
+        "A": "Paper conservators stabilize fragile works on paper using specialized tools so they can be safely handled, studied, or displayed.",
         "B": "Ren Ito led the conservation of the Katsura Navigation Charts in 2021.",
         "C": "The Katsura Navigation Charts, a seventeenth-century work, required conservation treatment in 2021.",
         "D": "Specialists who work with historical artifacts may participate in projects involving objects such as maps and charts."
@@ -9623,7 +9623,7 @@
       "passage": "While researching a topic, a student has taken the following notes:\n\n- The Luminara Municipal Observatory in Porto Alegre opened in 1899 during Brazil’s early republican modernization.\n- That period was marked by substantial municipal investment in sanitation, education, and public scientific institutions.\n- The Kōbe Marine Observatory opened in Japan in 1920 during the Taishō era.\n- Urban reforms during the Taishō era likewise expanded municipal investment in scientific and civic infrastructure.\n- The Luminara Observatory primarily conducted astronomical observations.\n- The Kōbe Marine Observatory focused on meteorological and maritime measurements.",
       "question": "The student wants to emphasize a historical similarity between the circumstances in which the two observatories were established. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "choices": {
-        "A": "Although the Luminara Observatory studied astronomy and the Kōbe Marine Observatory emphasized maritime measurements, both institutions were established during periods of expanding municipal investment in scientific and civic infrastructure.",
+        "A": "Both Luminara and Kōbe observatories opened during periods of expanding municipal investment in scientific and civic infrastructure.",
         "B": "The Luminara Observatory opened in 1899, whereas the Kōbe Marine Observatory was established more than two decades later, in 1920.",
         "C": "Established during the same political era, the Luminara and Kōbe observatories both specialized primarily in astronomical observation.",
         "D": "The Luminara Observatory was established during Brazil’s early republican modernization, while the Kōbe Marine Observatory was founded during Japan’s Taishō era."
@@ -9651,7 +9651,7 @@
       "question": "Which finding, if true, would most directly challenge the assertion about the radius valley presented in the text?",
       "choices": {
         "A": "Spectroscopic observations indicate that many planets above the radius valley retain atmospheres containing substantial quantities of hydrogen and helium.",
-        "B": "Surveys of planetary systems only 8–12 million years old, substantially younger than the interval models require for extensive photoevaporative stripping, reveal a radius valley already about as pronounced as that in systems hundreds of millions of years old.",
+        "B": "A pronounced radius valley appears in systems only 8–12 million years old, before models predict extensive photoevaporative stripping.",
         "C": "Measurements of young Sun-like stars show that their X-ray and ultraviolet luminosities are substantially greater than those of otherwise similar older stars.",
         "D": "Models of close-orbiting planets indicate that rocky planetary cores can remain intact even after much of an overlying hydrogen-helium atmosphere has been removed."
       },
@@ -11956,7 +11956,7 @@
       "passage": "While researching a topic, a student has taken the following notes:\nJohn James Audubon’s The Birds of America was published in installments between 1827 and 1838.\nThe completed work contains 435 hand-colored plates depicting birds.\nThe plates were printed on sheets measuring approximately 39 by 26 inches.\nThis unusually large page size is known as “double-elephant folio.”\nThe large format allowed Audubon to portray many species at or near life size.",
       "question": "The student wants to describe the physical format of The Birds of America. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "choices": {
-        "A": "Audubon selected an unusually large page size so that many of the birds in The Birds of America could be shown at or near life size.",
+        "A": "Audubon chose oversize pages to portray many birds near life size.",
         "B": "Nineteenth-century natural-history publications were commonly produced on double-elephant folio sheets large enough to accommodate life-size illustrations.",
         "C": "Published in installments from 1827 through 1838, The Birds of America eventually included hundreds of hand-colored depictions of birds.",
         "D": "The Birds of America contains 435 hand-colored plates printed on approximately 39-by-26-inch sheets in a format known as double-elephant folio."
@@ -12714,7 +12714,7 @@
       "question": "What does the text most strongly suggest about the function of the harbor household?",
       "choices": {
         "A": "It ensured that domestic and supervisory responsibilities could be shared among many members.",
-        "B": "It established a formal hierarchy of authority for deciding which individual workers were responsible for controlling the lighthouse.",
+        "B": "It established a formal lighthouse hierarchy for assigning responsibility.",
         "C": "It primarily preserved specialized technical knowledge about lighthouse operation.",
         "D": "It organized workers according to the particular maintenance duties they performed."
       },
@@ -14557,7 +14557,7 @@
       "question": "Taken together, information in the text and table best supports which statement about the communities at the conclusion of the experiment?",
       "choices": {
         "A": "The community exposed to 18°C and 14 hours of light per day contained a greater proportion of bacteria than algae.",
-        "B": "The community exposed to 24°C and 16 hours of light per day contained a greater proportion of T. marina than the community exposed to 18°C and 14 hours of light per day did.",
+        "B": "*T. marina* had a greater share at 24°C with 16 hours of light than at 18°C with 14 hours of light.",
         "C": "The community exposed to 24°C and 8 hours of light per day contained a lower proportion of T. marina than of every other algal species combined.",
         "D": "The community exposed to 24°C and 16 hours of light per day contained the greatest proportion of bacteria among the three communities."
       },
@@ -17028,7 +17028,7 @@
       "passage": "While researching a topic, a student has taken the following notes:\nMagnesium is an essential mineral involved in normal nerve and muscle function.\nAlmonds contain magnesium.\nApples contain magnesium.\nThere are approximately 270 milligrams (mg) of magnesium in 100 grams (g) of almonds.\nThere are approximately 5 mg of magnesium in 100 g of apples.\nHumans must obtain magnesium through dietary sources.",
       "question": "The student wants to make and support the claim that almonds are a better source of magnesium than apples. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "choices": {
-        "A": "Almonds are a better source of magnesium than apples: 100 g of almonds contains about 270 mg of magnesium, compared with about 5 mg in 100 g of apples.",
+        "A": "Almonds provide about 270 mg of magnesium per 100 g, compared with about 5 mg for apples.",
         "B": "Humans must obtain magnesium from foods, and both almonds and apples contain the mineral.",
         "C": "Magnesium, which is involved in normal nerve and muscle function, occurs in approximately 270 mg quantities in some foods.",
         "D": "Almonds contain magnesium, an essential mineral, whereas apples are also among the foods from which people can obtain magnesium."
@@ -17547,7 +17547,7 @@
       "passage": "While researching a topic, a student has taken the following notes:\nPhotographer Mireya Solano is known for large-format photographs of abandoned industrial interiors.\nHer photograph After the Last Shift (46 × 68 in) depicts a former textile mill shortly before sunrise.\nA rusted loom occupies the extreme lower-left portion of the image.\nA broken clerestory window appears near the upper-right edge of the frame.\nPale morning light enters through the window and crosses the otherwise shadowed machinery.\nSolano frequently uses strong diagonal compositions to direct viewers’ attention across an image.",
       "question": "The student wants to emphasize the locations of the two prominent objects in After the Last Shift. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "choices": {
-        "A": "In After the Last Shift, a rusted loom appears at the extreme lower left of the photograph, while a broken clerestory window occupies a position near the upper-right edge.",
+        "A": "*After the Last Shift* places a rusted loom at the lower left and a broken clerestory window near the upper right.",
         "B": "Measuring 46 by 68 inches, After the Last Shift is a large-format photograph of an abandoned textile mill shortly before sunrise.",
         "C": "Solano uses light entering through a broken clerestory window to create a strong diagonal across the machinery in After the Last Shift.",
         "D": "Like many of Solano’s photographs, After the Last Shift depicts an industrial interior whose abandoned machinery remains visually prominent."
@@ -17790,7 +17790,7 @@
         "A": "Hannah Höch and Romare Bearden both created major collage works during the twentieth century.",
         "B": "Höch’s Cut with the Kitchen Knife and Bearden’s The Block demonstrate that photographic material can be incorporated into collage.",
         "C": "Collage artists may use photographs, printed text, fabric, painted paper, and many other materials in a single composition.",
-        "D": "Although both works are collages, Cut with the Kitchen Knife relies heavily on mass-media photographs and printed images, whereas The Block combines photographic fragments with painted and colored papers."
+        "D": "Höch emphasizes mass-media photographs and printed images, while Bearden combines photographic fragments with painted and colored papers."
       },
       "correctAnswer": "D",
       "explanation": "it explicitly compares the materials used in the two works and identifies a meaningful difference: Höch’s piece depends heavily on mass-media photographs and printed imagery, while Bearden’s combines photographic fragments with painted and colored papers.",
@@ -19975,7 +19975,7 @@
       "question": "The student wants to contrast total solar eclipses with annular solar eclipses. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "choices": {
         "A": "Both total and annular solar eclipses occur when the Moon passes between Earth and the Sun.",
-        "B": "During a total solar eclipse, the Sun’s corona can become visible around the Moon, whereas during an annular eclipse, a bright ring of the Sun’s surface remains visible.",
+        "B": "Total eclipses can reveal the Sun’s corona; annular eclipses leave a bright ring of the Sun’s surface visible.",
         "C": "A solar eclipse occurs when the Moon blocks at least some sunlight from reaching observers on Earth.",
         "D": "Total solar eclipses and annular solar eclipses are both types of astronomical events involving the apparent position of the Moon."
       },
@@ -20530,7 +20530,7 @@
       "question": "Which choice best describes data from the table that support Persad and her colleagues’ conclusion?",
       "choices": {
         "A": "If deliveries are already moderately clustered, overtime labor rises 7.9%, whereas it rises only 1.1% if deliveries are currently evenly distributed.",
-        "B": "If deliveries are already moderately clustered, the three measures increase by less than 1.2% each; if deliveries are currently evenly distributed, the increases range from 7.9% to 10.6%.",
+        "B": "From an already clustered baseline, all three measures rose less than 1.2%; from an even baseline, they rose 7.9%–10.6%.",
         "C": "If deliveries are currently evenly distributed, pallets entering storage increase 10.6%, while automated sorting volume decreases 8.7%.",
         "D": "The increase in automated sorting volume is similar under the two baseline patterns, but the change in overtime labor differs substantially."
       },
@@ -20674,7 +20674,7 @@
       "choices": {
         "A": "Game critic Mira Chen describes walking simulators as games that make “attention itself part of the challenge.”",
         "B": "Walking simulators generally emphasize exploration and observation rather than combat.",
-        "C": "One example of a walking simulator is Eastshade, a 2019 game in which players explore an island as a traveling painter and create landscape paintings rather than fight enemies.",
+        "C": "*Eastshade* is a 2019 walking simulator in which players explore an island, painting landscapes rather than fighting enemies.",
         "D": "Released in 2019, Eastshade was developed by Eastshade Studios, while some critics have written about the larger walking-simulator genre."
       },
       "correctAnswer": "C",
@@ -21153,7 +21153,7 @@
       "question": "The student wants to emphasize the locations of the figures in Weather Archive. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "choices": {
         "A": "Dlamini’s Weather Archive spans approximately 9 meters and uses mirrored surfaces covered by moving images of clouds.",
-        "B": "Three human figures appear in Weather Archive: one near the lower center, one along the upper left edge, and one near the upper right corner.",
+        "B": "*Weather Archive* places three figures at the lower center, upper-left edge, and upper-right corner.",
         "C": "Like many of Dlamini’s large installations, Weather Archive combines projected imagery with reflective materials.",
         "D": "Weather Archive contains three projected figures against a mirrored background across which cloud imagery moves slowly."
       },
@@ -21890,7 +21890,7 @@
       "passage": "While researching a topic, a student has taken the following notes:\nLaguna Escondida lies in northern Patagonia and covers approximately 74 square kilometers.\nThe lake occupies a basin formed by glacial erosion.\nLake Ruunaa lies in eastern Finland and covers approximately 11 square kilometers.\nLake Ruunaa also occupies a basin formed primarily by glacial erosion.\nGlacial lakes form in depressions excavated or modified by moving ice.\nSuch lakes occur in many regions that were covered by large glaciers during the Pleistocene.",
       "question": "The student wants to emphasize a similarity between Laguna Escondida and Lake Ruunaa. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "choices": {
-        "A": "Although they differ substantially in size and are located on different continents, Laguna Escondida and Lake Ruunaa both occupy basins created primarily by glacial erosion.",
+        "A": "Both Laguna Escondida and Lake Ruunaa occupy basins formed primarily by glacial erosion.",
         "B": "Laguna Escondida covers about 74 square kilometers, whereas Lake Ruunaa covers only about 11 square kilometers.",
         "C": "Glacial lakes occur in numerous regions that were covered by extensive Pleistocene ice sheets.",
         "D": "Laguna Escondida is located in Patagonia, while Lake Ruunaa is situated in eastern Finland."
@@ -25626,7 +25626,7 @@
       "question": "Based on the text, what can be concluded about the decline of elevated grain-drying barns?",
       "choices": {
         "A": "Causes other than the introduction of mechanical dryers may have contributed more directly to the decline.",
-        "B": "Builders responded to a decline in the demand for traditional barns by switching their manufacturing activity to the production of mechanical dryers instead.",
+        "B": "Builders responded to declining demand for grain-drying barns by producing mechanical dryers.",
         "C": "Farmers continued to regard traditional barns as superior to mechanical dryers.",
         "D": "Barn construction remained popular for longer than historians have generally assumed."
       },
@@ -26496,7 +26496,7 @@
       "question": "What does the text most strongly suggest about railway guidebooks?",
       "choices": {
         "A": "They have been unfairly disparaged for including material also present in more respected kinds of writing.",
-        "B": "Over time, they gradually evolved from publications dealing with entirely trivial matters into works devoted exclusively to subjects of a serious nature.",
+        "B": "They evolved from trivial guides into publications dealing only with serious subjects.",
         "C": "Their creators established a civic-reform tradition that survived the disappearance of the genre.",
         "D": "They have been wholly ignored by scholars despite addressing important public concerns."
       },
@@ -30120,7 +30120,7 @@
         "A": "Velten and Orsen use pulse-based encoding in distinct ways, illustrating the medium’s versatility for authentication.",
         "B": "Used to encode phrases, geometric patterns, and industrial signals, electrical pulses have supported numerous applications.",
         "C": "Both designs postdate pulse-based encoding’s principal period of use in industrial signaling, although Cipherpath appeared earlier.",
-        "D": "Cipherpath encodes a phrase, whereas Arcmesh encodes a geometric pattern; the two designs thus represent different kinds of information using the same medium."
+        "D": "Cipherpath records a phrase as electrical pulses, while Arcmesh records a geometric pattern using pulses."
       },
       "correctAnswer": "D",
       "explanation": "D specifies the relevant contrast: linguistic information in Cipherpath and a nonlinguistic pattern in Arcmesh. C chiefly establishes a shared historical relationship to industrial signaling; its incidental chronology does not foreground how the designs differ. B surveys applications rather than focusing the comparison on the two designs. A asserts that the uses differ but does not identify the difference documented in the notes.",
@@ -30189,7 +30189,7 @@
         "A": "Varn’s boundary-reservation theory differs from the plate-abrasion theory proposed by Deren.",
         "B": "Repeated contact between engraving tools could erase lines, according to Deren, producing bands between densely engraved regions.",
         "C": "Both Deren and Varn offer accounts of the narrow blank bands found on certain early copperplate charts.",
-        "D": "Deren attributes the bands to lines being erased through tool contact, whereas Varn attributes them to engravers deliberately leaving space when adjacent regions became crowded."
+        "D": "Deren blames tool abrasion for the blank bands; Varn argues that engravers deliberately left them."
       },
       "correctAnswer": "D",
       "explanation": "D compares the proposed mechanisms, distinguishing accidental removal of lines from deliberate avoidance of adjacent engraving. C identifies the theories’ common explanatory target without comparing causes. A states that the theories differ but leaves that difference unspecified. B explains Deren’s mechanism alone and therefore does not provide the requested comparison with Varn’s.",
@@ -31632,7 +31632,7 @@
         "A": "All guides in *Bearings at Low Water* are sequences of annotated route diagrams.",
         "B": "“Nine Transects (at Bellara Marsh)” consists of nine annotated route diagrams arranged in sequence.",
         "C": "Orsen selected the guide’s format because it helps “retain orientation and scale.”",
-        "D": "“Nine Transects (at Bellara Marsh)” appears in a handbook that “preserves local observations and records the disappearance of familiar shorelines.”"
+        "D": "The guide appears in a handbook about changing shorelines."
       },
       "correctAnswer": "B",
       "explanation": "B directly describes the guide’s constituent units and their arrangement. C gives the author’s reason for selecting the format without identifying the format. D identifies the book and its stated purpose. A generalizes a fact about one guide to every guide in the handbook, which the notes do not support.",
@@ -33074,7 +33074,7 @@
       "choices": {
         "A": "Although most sensors cannot operate there, heavily shielded sensors can operate within interference pockets.",
         "B": "Interference pockets are confined volumes near the floor of a laboratory.",
-        "C": "Most sensors cannot operate reliably in interference pockets because their noise levels are four to nine times those of the surrounding hall.",
+        "C": "The pockets’ four-to-ninefold noise levels make them unsuitable for most sensors.",
         "D": "Detected in 2020, the Ravena interference pockets are unsuitable for most electronic sensors."
       },
       "correctAnswer": "C",
@@ -38281,7 +38281,7 @@
       "question": "The student wants to present the study and its findings. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "choices": {
         "A": "The disputed age of the Alder Clock prompted researchers to analyze its fittings in 2020.",
-        "B": "A 2020 analysis found an alloy in the Alder Clock’s fittings that entered clockmaking only in the 1880s, dating the clock to the nineteenth century.",
+        "B": "A 2020 study found post-1880s alloy in the Alder Clock, dating it to the nineteenth century.",
         "C": "Knowing that some alloys entered clockmaking in the 1880s, researchers examined the clock’s metal fittings.",
         "D": "Once considered a sixteenth-century object, the Alder Clock became the subject of a study in 2020."
       },
