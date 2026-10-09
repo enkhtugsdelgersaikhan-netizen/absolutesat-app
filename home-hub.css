@@ -1,0 +1,207 @@
+/* Consistent homepage navigation: two equal clickable options, one detail view. */
+.home-hub-detail[hidden]{display:none!important}
+.home-why-disclosure{
+  width:min(1440px,calc(100% - 40px));
+  margin:22px auto 16px;
+  border:1px solid #d5e5df;
+  border-radius:16px;
+  background:#fff;
+  overflow:hidden;
+  box-shadow:0 3px 12px rgba(17,43,35,.035);
+}
+.home-why-disclosure>summary{
+  display:flex;align-items:center;gap:13px;
+  padding:16px 20px;cursor:pointer;list-style:none;
+  color:#204a40;
+  transition:background .18s ease;
+}
+.home-why-disclosure>summary::-webkit-details-marker{display:none}
+.home-why-disclosure>summary:hover{background:#f4faf7}
+.home-why-summary-icon{
+  flex:0 0 38px;height:38px;display:grid;place-items:center;
+  border:1px solid #cbe3db;border-radius:10px;
+  background:#edf8f4;color:#0d7464;font-weight:800;font-size:16px;
+}
+.home-why-summary-copy{display:grid;gap:4px;flex:1;min-width:0}
+.home-why-summary-copy strong{font-size:15px;font-weight:750}
+.home-why-summary-copy small{font-size:11px;font-weight:450;color:#71867e;line-height:1.5}
+.home-why-summary-arrow{font-size:21px;font-weight:600;color:#148171;transition:transform .2s}
+.home-why-disclosure[open] .home-why-summary-arrow{transform:rotate(180deg)}
+.home-why-disclosure[open]>summary{border-bottom:1px solid #e3ece8}
+.home-why-disclosure>.features-section{
+  margin:0;
+  padding:26px 18px 28px!important;
+  border:0!important;
+  border-radius:0;
+}
+.home-why-disclosure .features-heading{margin-bottom:18px!important}
+.home-why-disclosure .features-heading h2{font-size:clamp(24px,2.5vw,30px)!important}
+.home-why-disclosure .features-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.home-why-disclosure .feature-card{min-height:150px!important}
+.home-why-disclosure>summary:focus-visible,
+.home-hub-choice:focus-visible{
+  outline:3px solid #dca960;outline-offset:-3px;
+}
+.home-hub-choices{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;margin:0 0 14px;
+}
+.home-hub-choice{
+  width:100%;min-width:0;min-height:125px;
+  display:flex;align-items:center;gap:16px;
+  padding:21px 23px;text-align:left;
+  border:1px solid #d7e5e0;border-radius:16px;
+  background:#fff;color:#173b36;
+  box-shadow:0 3px 12px rgba(18,44,33,.035);
+  font-family:Poppins,sans-serif;
+  cursor:pointer;
+  transition:background-color .2s,border-color .2s,box-shadow .2s,transform .2s;
+}
+.home-hub-choice:hover{
+  background:#f8fcfa;border-color:#9fcab9;transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(18,44,33,.065);
+}
+.home-hub-choice.is-selected{
+  border-color:#69b19b;background:#f0f9f5;
+  box-shadow:inset 0 0 0 1px #b8ddcf;
+}
+.home-hub-choice-icon{
+  flex:0 0 47px;height:47px;
+  display:grid;place-items:center;
+  background:#ebf7f2;color:#0e7868;border:1px solid #d0e6dc;
+  border-radius:12px;font-size:24px;font-weight:700;
+}
+.home-hub-choice-text{
+  flex:1;min-width:0;display:grid;gap:7px;
+}
+.home-hub-choice-text strong{
+  font-size:18px;line-height:1.25;font-weight:750;letter-spacing:-.35px;
+}
+.home-hub-choice-text small{font-size:11px;line-height:1.6;color:#6e837b}
+.home-hub-choice-action{
+  white-space:nowrap;align-self:center;
+  font-size:11px;font-weight:800;color:#0e7465;
+}
+.home-hub-choice-action>span{font-size:15px;margin-left:4px}
+.home-hub-choice.is-selected .home-hub-choice-action{color:#386c5d}
+#study-guide.home-hub-detail{
+  margin:0 0 16px;padding:16px 0 22px;
+  scroll-margin-top:110px;
+}
+#home-progress.home-hub-detail{
+  margin:0 0 17px;padding:18px;
+  background:#fff;border:1px solid #dce8e5;border-radius:16px;
+  scroll-margin-top:110px;
+}
+#home-progress.home-hub-detail .home-disclosure-content{padding:0}
+#home-progress.home-hub-detail .dashboard-subtopic-panel{margin-bottom:0}
+#home-progress.home-hub-detail .dashboard-chart-grid{margin-bottom:14px}
+.home-score-range-details{
+  border-top:1px solid #e2ece7;
+  padding-top:13px;
+}
+.home-score-range-details>.sat-score-guide-columns{margin-top:0}
+@media(max-width:990px){
+  .home-why-disclosure .features-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .home-hub-choice{min-height:135px;padding:17px;gap:12px}
+  .home-hub-choice-icon{flex-basis:39px;height:39px;font-size:21px}
+  .home-hub-choice-text strong{font-size:15px}
+}
+@media(max-width:680px){
+  .home-why-disclosure{width:calc(100% - 24px);margin:12px auto}
+  .home-why-disclosure>summary{padding:12px 14px;gap:10px}
+  .home-why-summary-icon{flex-basis:31px;height:31px}
+  .home-why-summary-copy strong{font-size:13px}
+  .home-why-summary-copy small{font-size:10px}
+  .home-why-disclosure .features-grid{grid-template-columns:1fr}
+  .home-hub-choices{grid-template-columns:1fr;gap:10px}
+  .home-hub-choice{min-height:96px;padding:15px 17px}
+  #home-progress.home-hub-detail{padding:12px}
+  #study-guide.home-hub-detail{scroll-margin-top:80px}
+}
+@media(prefers-reduced-motion:reduce){
+  .home-why-disclosure>summary,.home-hub-choice,.home-why-summary-arrow{transition:none}
+}
+/* Homepage now uses the SAME page-wide inversion as other LexLogica pages.
+   Compensating pre-inverse semantic hues keeps red as weak and green as strong
+   after the shared invert(1) brightness(1.08) filter is applied. */
+html.lexlogica-home-inverted.lexlogica-dark-mode .sg-priority-item.sg-severity-critical{
+  --sg-urgency:#2a6b70;--sg-urgency-border:#7db0b4;
+}
+html.lexlogica-home-inverted.lexlogica-dark-mode .sg-priority-item.sg-severity-high{
+  --sg-urgency:#386283;--sg-urgency-border:#8a9baf;
+}
+html.lexlogica-home-inverted.lexlogica-dark-mode .sg-priority-item.sg-severity-moderate{
+  --sg-urgency:#384c88;--sg-urgency-border:#8a92af;
+}
+html.lexlogica-home-inverted.lexlogica-dark-mode .sg-priority-item.sg-severity-mild{
+  --sg-urgency:#6a495e;--sg-urgency-border:#a1879b;
+}
+html.lexlogica-home-inverted.lexlogica-dark-mode .sg-priority-item.sg-severity-strong{
+  --sg-urgency:#883d5f;--sg-urgency-border:#b78eab;
+}
+html.lexlogica-home-inverted.lexlogica-dark-mode .sg-priority-item.sg-severity-unassessed{
+  --sg-urgency:#5e4e56;--sg-urgency-border:#ad9a9d;
+}
+html.lexlogica-home-inverted.lexlogica-dark-mode .sg-priority-item.is-complete .sg-domain-check{
+  background:#883d5f!important;color:#000!important;
+}
+html.lexlogica-home-inverted.lexlogica-dark-mode :is(
+  .dashboard-subtopic-card.severity-critical .dashboard-subtopic-card-head strong,
+  .dashboard-subtopic-metrics b[style*="#8b4d4a"],
+  .university-position-label.below-lower,
+  .university-impact-verdict.negative,
+  .university-impact-card.negative .university-impact-main strong,
+  .sat-impact-result.is-negative>strong,
+  .sat-impact-result.is-error>strong
+){color:#2a6b70!important}
+html.lexlogica-home-inverted.lexlogica-dark-mode :is(
+  .dashboard-subtopic-card.severity-weak .dashboard-subtopic-card-head strong,
+  .dashboard-subtopic-metrics b[style*="#8a6245"],
+  .university-position-label.at-lower
+){color:#386283!important}
+html.lexlogica-home-inverted.lexlogica-dark-mode :is(
+  .dashboard-subtopic-card.severity-watch .dashboard-subtopic-card-head strong,
+  .dashboard-subtopic-metrics b[style*="#7b7047"],
+  .university-position-label.lower-to-median,
+  .sat-score-all-ranges .sat-score-scale-row:nth-child(6) span
+){color:#384c88!important}
+html.lexlogica-home-inverted.lexlogica-dark-mode :is(
+  .university-position-label.median-to-upper
+){color:#6a495e!important}
+html.lexlogica-home-inverted.lexlogica-dark-mode :is(
+  .dashboard-subtopic-card.severity-strong .dashboard-subtopic-card-head strong,
+  .dashboard-subtopic-metrics b[style*="#326958"],
+  .university-position-label.at-upper,
+  .university-impact-verdict.positive,
+  .university-impact-card.positive .university-impact-main strong,
+  .sat-impact-result.is-positive>strong
+){color:#883d5f!important}
+html.lexlogica-home-inverted.lexlogica-dark-mode .sat-score-all-ranges .sat-score-scale-row:nth-child(7) span{
+  color:#2a6b70!important;
+}
+html.lexlogica-home-inverted.lexlogica-dark-mode .dashboard-subtopic-metrics b[style*="#8a9996"]{
+  color:#5e4e56!important;
+}
+html.lexlogica-home-inverted.lexlogica-dark-mode :is(
+  .activity-segment.correct,.dashboard-legend .is-correct
+){background:#bf5475!important}
+html.lexlogica-home-inverted.lexlogica-dark-mode :is(
+  .activity-segment.incorrect,.dashboard-legend .is-incorrect
+){background:#34878c!important}
+/* Colored dots, not just text, must also retain their better/worse meaning. */
+html.lexlogica-home-inverted.lexlogica-dark-mode .university-position-label.below-lower .university-position-dot{
+  background:#2a6b70!important;
+}
+html.lexlogica-home-inverted.lexlogica-dark-mode .university-position-label.at-lower .university-position-dot{
+  background:#386283!important;
+}
+html.lexlogica-home-inverted.lexlogica-dark-mode .university-position-label.lower-to-median .university-position-dot{
+  background:#384c88!important;
+}
+html.lexlogica-home-inverted.lexlogica-dark-mode .university-position-label.median-to-upper .university-position-dot{
+  background:#6a495e!important;
+}
+html.lexlogica-home-inverted.lexlogica-dark-mode .university-position-label.at-upper .university-position-dot{
+  background:#883d5f!important;
+}
