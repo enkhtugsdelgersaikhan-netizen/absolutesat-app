@@ -219,14 +219,12 @@
       ?row.missed+" missed of "+row.total+" · "+rate
       :"No questions in this mock";
     const dist=mixForAccuracy(row);
-    const section=showSection
-      ?'<span class="sg-domain-section">'+(row.section==="math"?"Math":"R&W")+'</span>'
-      :"";
+    const section=showSection?(row.section==="math"?"Math · ":"R&W · "):"";
     return '<div class="sg-priority-item sg-severity-'+domainSeverity(row)+(done?' is-complete':'')+'">'+
       '<span class="sg-domain-check" aria-hidden="true">'+(done?'✓':row.rank)+'</span>'+
       '<div class="sg-domain-copy"><span class="sg-priority-name">'+escapeHtml(row.domain)+'</span>'+
-      '<span class="sg-priority-meta">'+count+' · target '+dist.join('/')+' easy/medium/hard</span></div>'+
-      section+'<span class="sg-domain-status">'+(done?'Completed':'')+'</span>'+
+      '<span class="sg-priority-meta">'+section+count+' · target '+dist.join('/')+' easy/medium/hard</span></div>'+
+      '<span class="sg-domain-status">'+(done?'Completed':'')+'</span>'+
       '<button type="button" class="sg-priority-link" data-domain-practice="'+
       escapeHtml(key)+'">Practice</button></div>';
   }
@@ -452,10 +450,10 @@
       return '<div class="sg-priority-item sg-severity-'+domainSeverity(example)+'">'+
         '<span class="sg-domain-check" aria-hidden="true">'+example.rank+'</span>'+
         '<div class="sg-domain-copy"><span class="sg-priority-name">'+escapeHtml(example.name)+'</span>'+
-        '<span class="sg-priority-meta">Example: '+example.missed+' of '+example.total+
+        '<span class="sg-priority-meta">Example · '+(example.section==="math"?"Math":"R&W")+
+        ' · '+example.missed+' of '+example.total+
         ' missed · '+Math.round(example.accuracy*100)+'% correct · '+
         dist.join('/')+' easy/medium/hard</span></div>'+
-        '<span class="sg-domain-section">'+(example.section==="math"?"Math":"R&W")+'</span>'+
         '<a class="sg-priority-link" href="'+escapeHtml(signIn)+'">Practice</a></div>';
     }).join("");
     $("sg-practice-message").textContent=
