@@ -57,6 +57,10 @@ function rightVertex(t,names){
  for(const m of t.matchAll(/(?:is\s+right\s+at|right\s+at|right\s+angle\s+at)\s+([A-Z])\b/gi)){
    if(names.includes(m[1]))return m[1];
  }
+ for(const m of t.matchAll(/\b([A-Z])\s+and\s+([A-Z])\s+(?:are\s+)?right angles\b/g)){
+   if(names.includes(m[1]))return m[1];
+   if(names.includes(m[2]))return m[2];
+ }
  const joined=names.join("");
  const patterns=[
  new RegExp("(?:right (?:at|angle at)|\\b"+joined+"\\b is right at)\\s*\\\\?\\(?"+names[0]+"\\b","i"),
@@ -85,7 +89,7 @@ function newTriangle(q,forcedNames=null){
  else if(new RegExp(names[0]+names[1]+"\\s*=\\s*"+names[0]+names[2]).test(t)||
    /isosceles|equilateral/.test(t.toLowerCase()))
    coords=[[205,60],[91,243],[319,243]];
- else coords=[[105,248],[322,248],[205,66]];
+ else coords=[[105,248],[322,248],[184,69]];
  d.polygons.push(poly(coords));
  const offsets=coords.map(([x,y])=>[x<115?-12:x>310?10:0,y<95?-12:18]);
  const namedTriangle=/\\btriangles?\\s+[A-Z]{3}\\b/.test(t);
@@ -154,9 +158,22 @@ function newTransversal(q){
  const d=base("Two lines intersected by a transversal schematic");
  const pair=(t.match(/lines?\s+\\?\(?([a-zℓ])\\?\)?\s+and\s+\\?\(?([a-zℓ])\b/i)||[]).slice(1,3);
  const names=pair.length===2?pair:["m","n"];
- d.lines.push(line([52,92],[363,92]),line([52,216],[363,216]),line([112,35],[298,273]));
+ const unproved=/(?:prove|sufficient|which additional information|would establish)/i.test(t);
+ d.lines.push(line([52,92],[363,92]),
+   unproved?line([52,223],[363,210]):line([52,216],[363,216]),
+   line([112,35],[298,273]));
  d.labels.push(label(41,86,names[0]),label(41,211,names[1]));
  if(/\\btransversal\\s+t\\b/i.test(t))d.labels.push(label(312,273,"t"));
+ const expressions=[...t.matchAll(/\b\d+\s*x\s*[+-]\s*\d+\b/g)]
+    .map(m=>m[0].replace(/\s+/g,""));
+ if(expressions.length>=2){
+  const kind=/alternate interior/i.test(t)?"alternate":
+    /same-side interior/i.test(t)?"same-side":"corresponding";
+  const yUpper=kind==="corresponding"?75:122;
+  const posLower=kind==="alternate"?[223,193]:[284,195];
+  d.labels.push(label(186,yUpper,expressions[0]+"°"),
+    label(...posLower,expressions[1]+"°"));
+ }
  if(/parallel/i.test(t)&&!/(?:prove|sufficient|which additional information|would establish)/i.test(t))
    d.alt="Parallel lines "+names.join(" and ")+" with a transversal";
  return d;
@@ -168,10 +185,11 @@ function newTwinTriangles(q){
  if(!m)return null;
  const a=m[1].split(""),b=m[2].split("");
  const d=base("Two triangles "+m[1]+" and "+m[2]+" schematic");
- const coords=[[[64,244],[174,244],[64,89]],[[238,244],[367,244],[238,63]]];
+ const coords=[[[64,244],[174,244],[108,89]],[[238,244],[367,244],[283,63]]];
  for(let k=0;k<2;k++){
    const names=k?b:a, p=coords[k];
    const right=rightVertex(t,names);
+   if(right===names[0])p[2]=[p[0][0],p[2][1]];
    if(right===names[1])p[2]=[p[1][0],p[2][1]];
    if(right===names[2]){p[0]=[p[0][0],p[2][1]];p[2]=[p[1][0],p[2][1]];}
    d.polygons.push(poly(p));
@@ -267,7 +285,7 @@ function newParallelSixPoint(q){
  const A=[205,52],B=[78,253],C=[332,253],t=0.4;
  const D=A.map((v,i)=>round(v*(1-t)+B[i]*t));
  const E=A.map((v,i)=>round(v*(1-t)+C[i]*t));
- const F=B.map((v,i)=>round(v*(1-t)+C[i]*t));
+ const F=B.map((v,i)=>round(v*t+C[i]*(1-t)));
  d.polygons.push(poly([A,B,C]));d.lines.push(line(D,E),line(D,F));
  for(const [name,v,dx,dy] of [["A",A,0,-12],["B",B,-12,17],["C",C,12,17],
     ["D",D,-13,-5],["E",E,13,-5],["F",F,0,18]])d.points.push(point(...v,name,dx,dy));
@@ -277,7 +295,7 @@ function newParallelSixPoint(q){
 }
 function newExtendedIsosceles(q){
  const d=base("Isosceles right triangle ABC with BC extended to D");
- const A=[151,93],B=[151,231],C=[286,93],D=[374,3];
+ const A=[145,95],B=[145,225],C=[275,95],D=[342,28];
  d.polygons.push(poly([A,B,C]));
  d.lines.push(line(C,D));
  for(const [n,p,dx,dy] of [["A",A,-12,-10],["B",B,-12,16],
