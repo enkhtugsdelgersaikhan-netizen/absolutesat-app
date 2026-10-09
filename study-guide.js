@@ -199,6 +199,15 @@
     if (row.accuracy<.85) return [2,5,3];
     return [1,4,5];
   }
+  function domainSeverity(row) {
+    if (!row.total) return "unassessed";
+    const missedShare = row.missed / row.total;
+    if (missedShare >= .75) return "critical";
+    if (missedShare >= .55) return "high";
+    if (missedShare >= .35) return "moderate";
+    if (missedShare >= .15) return "mild";
+    return "strong";
+  }
   function renderPriorities(section,id) {
     const finished=completedDomains();
     $(id).innerHTML=priorities[section].map(row=>{
@@ -209,18 +218,21 @@
         ?row.missed+" missed of "+row.total+" · "+rate
         :"No questions in this mock";
       const dist=mixForAccuracy(row);
-      return '<div class="sg-priority-item'+(done?' is-complete':'')+'">'+
+      return '<div class="sg-priority-item sg-severity-'+domainSeverity(row)+(done?' is-complete':'')+'">'+
         '<span class="sg-domain-check" aria-hidden="true">'+(done?'✓':row.rank)+'</span>'+
         '<div class="sg-domain-copy"><span class="sg-priority-name">'+escapeHtml(row.domain)+'</span>'+
         '<span class="sg-priority-meta">'+count+' · target '+dist.join('/')+' easy/medium/hard</span></div>'+
         '<span class="sg-domain-status">'+(done?'Completed':'')+'</span>'+
         '<button type="button" class="sg-priority-link" data-domain-practice="'+
-        escapeHtml(key)+'">'+(done?'Practice again →':'Practice 10 →')+'</button></div>';
+        escapeHtml(key)+'">Practice</button></div>';
     }).join("");
   }
   function nextMock() {
-    const n=[1,2,3,4,5,6,7,8].find(i=>i>latest.n&&!scores.some(x=>x.n===i))
-      ||[1,2,3,4,5,6,7,8].find(i=>!scores.some(x=>x.n===i));
+    // Recommend the numbered successor even if that test has an existing
+    // completion: never jump over Mock 2 just because its result was saved
+    // before a more recent retake of Mock 1. Opening an existing test preserves
+    // its result; it does not silently reset the student's attempt.
+    const n=latest.n<8?latest.n+1:null;
     $("sg-review-test-link").href="/question?mock=mock-test-"+latest.n;
     $("sg-review-test-link").textContent="Review Mock "+latest.n+" →";
     $("sg-next-test-link").href=n?"/question?mock=mock-test-"+n:"/mock-tests";

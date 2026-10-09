@@ -182,3 +182,72 @@ html.lexlogica-dark-mode .sg-domain-check{background:#36534b;color:#c0e9dc}
     .sg-priority-link{grid-column:2/4;justify-self:stretch;min-height:39px}
     .sg-priority-col{padding:16px}
 }
+
+/* Study guide urgency uses the same restrained severity colors as the
+   university SAT position labels. Color reflects missed share on the
+   latest completed mock; ranking still also considers SAT domain weight. */
+.sg-priority-item.sg-severity-unassessed{
+    --sg-urgency:#82918b;
+    --sg-urgency-border:#d8e1df;
+    --sg-urgency-bg:#fbfcfb;
+}
+.sg-priority-item.sg-severity-strong{
+    --sg-urgency:#326958;
+    --sg-urgency-border:#cfe2db;
+    --sg-urgency-bg:#f7fbf9;
+}
+.sg-priority-item.sg-severity-mild{
+    --sg-urgency:#587368;
+    --sg-urgency-border:#d7e1de;
+    --sg-urgency-bg:#f7faf9;
+}
+.sg-priority-item.sg-severity-moderate{
+    --sg-urgency:#7b7047;
+    --sg-urgency-border:#e8e4d5;
+    --sg-urgency-bg:#fcfbf6;
+}
+.sg-priority-item.sg-severity-high{
+    --sg-urgency:#8a6245;
+    --sg-urgency-border:#eadfd4;
+    --sg-urgency-bg:#fcfaf7;
+}
+.sg-priority-item.sg-severity-critical{
+    --sg-urgency:#8b4d4a;
+    --sg-urgency-border:#ead8d6;
+    --sg-urgency-bg:#fcf8f7;
+}
+.sg-priority-item[class*="sg-severity-"]{
+    padding:12px 10px;
+    margin:3px 0;
+    border:1px solid var(--sg-urgency-border);
+    border-left:3px solid var(--sg-urgency);
+    border-radius:10px;
+    background:var(--sg-urgency-bg);
+}
+.sg-priority-item[class*="sg-severity-"] .sg-priority-name{
+    color:var(--sg-urgency);
+}
+.sg-priority-item[class*="sg-severity-"] .sg-domain-check{
+    color:var(--sg-urgency);
+    background:var(--sg-urgency-bg);
+    box-shadow:inset 0 0 0 1px var(--sg-urgency-border);
+}
+.sg-priority-item[class*="sg-severity-"].is-complete .sg-domain-check{
+    color:#fff;
+    background:#326958;
+    box-shadow:none;
+}
+.sg-priority-item[class*="sg-severity-"] .sg-priority-link{
+    color:#166d61;
+    border-color:#c5dbd5;
+    background:#fff;
+}
+.sg-priority-item[class*="sg-severity-"] .sg-priority-link:hover{
+    background:#edf6f3;
+}
+html.lexlogica-dark-mode .sg-priority-item[class*="sg-severity-"]{
+    background:#1d302b;
+    border-top-color:#36514b;
+    border-right-color:#36514b;
+    border-bottom-color:#36514b;
+}
