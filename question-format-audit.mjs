@@ -73,7 +73,7 @@ function check(value, location) {
     warnings.push("possible-soft-wrap-manual-review");
   for (const name of warnings) {
     count(report.warnings, name);
-    if (name !== "possible-soft-wrap-manual-review") {
+    if (true) {
       // Detailed diagnostics for the few structural problems; no question
       // content is altered until its exact meaning is reviewed.
       console.error("FORMAT TARGET " + location + " [" + name + "]: " +
