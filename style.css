@@ -6446,3 +6446,74 @@ body.dark-mode .question-diagram-polygon.question-diagram-shaded{
     .home-features-compact .feature-card{min-height:0!important;padding:18px!important}
     .home-features-compact .features-grid{gap:10px!important}
 }
+
+/* Compact benefits and optional score/catalog drill-down: major navigation
+   and university lookup remain directly accessible without long lists. */
+.home-feature-more{
+    max-width:1440px;margin:11px auto 0;
+    border:1px solid #dce8e5;border-radius:12px;background:#fff;
+}
+.home-feature-more>summary{
+    padding:12px 16px;cursor:pointer;list-style:none;
+    display:flex;justify-content:center;align-items:center;gap:8px;
+    color:#0d7366;font-size:11px;font-weight:750;
+}
+.home-feature-more>summary::-webkit-details-marker{display:none}
+.home-feature-more>summary span{font-size:16px}
+.home-feature-more[open]>summary span{transform:rotate(180deg)}
+.home-feature-more[open]>summary{border-bottom:1px solid #e7efec}
+.home-feature-more>.features-grid{padding:12px}
+.home-score-range-details{border-top:1px solid #e2ece7;margin-top:8px}
+.home-score-range-details>summary{
+    cursor:pointer;list-style:none;color:#0e7367;
+    font-size:12px;font-weight:750;display:flex;
+    align-items:center;justify-content:space-between;gap:12px;
+    padding:15px 8px;
+}
+.home-score-range-details>summary::-webkit-details-marker{display:none}
+.home-score-range-details>summary span{font-size:10px;font-weight:500;color:#8a9a93}
+.home-score-range-details[open]>summary{border-bottom:1px solid #e8f0ec;margin-bottom:15px}
+.home-score-range-details .sat-score-guide-columns{margin-top:0}
+.university-browse-details{
+    border:1px solid #dbe6e2;background:#fff;border-radius:15px;
+    margin:22px 0 10px;overflow:hidden;
+}
+.university-browse-details>summary{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+    cursor:pointer;list-style:none;padding:18px 22px;
+    color:#173b36;font-size:15px;font-weight:750;
+}
+.university-browse-details>summary::-webkit-details-marker{display:none}
+.university-browse-details>summary span{
+    margin-left:auto;color:#6f817d;font-size:11px;font-weight:500;
+}
+.university-browse-details>summary::after{
+    content:"⌄";font-size:20px;color:#0e7367;
+}
+.university-browse-details[open]>summary::after{content:"⌃"}
+.university-browse-details[open]>summary{background:#f7fbf9;border-bottom:1px solid #e2ece7}
+.university-browse-details .university-catalog-heading{margin:14px 20px}
+.university-browse-details .university-catalog-grid{margin:0 18px}
+.university-browse-details .university-data-note{margin:14px 20px 20px}
+.home-feature-more>summary:focus-visible,
+.home-score-range-details>summary:focus-visible,
+.university-browse-details>summary:focus-visible{
+    outline:3px solid #deac54;outline-offset:-3px;border-radius:9px;
+}
+html.lexlogica-dark-mode .home-feature-more,
+html.lexlogica-dark-mode .university-browse-details{
+    background:#1a2926;border-color:#36534b;
+}
+html.lexlogica-dark-mode .home-feature-more[open]>summary,
+html.lexlogica-dark-mode .university-browse-details[open]>summary{
+    background:#22352f;border-color:#36534b;
+}
+html.lexlogica-dark-mode .university-browse-details>summary{color:#dcebe5}
+@media(max-width:640px){
+    .home-score-range-details>summary span,
+    .university-browse-details>summary span{display:none}
+    .university-browse-details>summary{padding:14px;font-size:13px}
+    .university-browse-details .university-catalog-heading{margin:10px 14px}
+    .university-browse-details .university-catalog-grid{margin:0 12px}
+    .university-browse-details .university-data-note{margin:14px}
+}
