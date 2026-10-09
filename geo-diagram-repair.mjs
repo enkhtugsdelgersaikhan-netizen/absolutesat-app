@@ -22,7 +22,7 @@ const notes={total:0,existing:0,added:0,replaced:0,repaired:0,unchanged:0,
 const note=(id,kind,detail)=>{if(notes.issues.length<250)notes.issues.push({id,kind,detail})};
 // Strip presentation-only MathJax delimiters before matching vertex names.
 // SAT content often writes names as \\(ABC\\), not plain ABC.
-const geometryPlain=t=>String(t||"").replace(/\\\\[()[\\]]/g,"").replace(/\\\\parallel/g,"parallel");
+const geometryPlain=t=>String(t||"").replace(/\\\(/g,"").replace(/\\\)/g,"").replace(/\\\[/g,"").replace(/\\\]/g,"").replace(/\\parallel/g,"parallel");
 const base=(alt="Geometry schematic",caption="Schematic; not to scale.")=>({
  width:420,height:300,alt,caption,lines:[],polygons:[],ellipses:[],
  circles:[],points:[],labels:[],rightAngles:[],ticks:[]
