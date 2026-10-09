@@ -5,6 +5,11 @@ on:
     branches: [main]
     paths:
       - geo-visual-browser-audit.mjs
+      - math-question-bank.json
+      - geo-diagram-repair.mjs
+      - question.js
+      - question.css
+      - style.css
       - .github/workflows/geo-visual-browser-audit.yml
 permissions:
   contents: read
