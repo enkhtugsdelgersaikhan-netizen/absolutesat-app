@@ -34,7 +34,7 @@ function newCircle(q){
  const center=[205,152],r=104;
  d.circles.push({cx:center[0],cy:center[1],r});
  const centerName=(t.match(/(?:center|cent(?:ered|re))\s+(?:at\s+)?([A-Z])\b/)||[])[1]||"O";
- const named=/\b(?:points?|arc|chord|diameter|segment)\s+([A-Z])\s+and\s+([A-Z])\b/.exec(t);
+ const named=/\b(?:[Pp]oints?|[Aa]rc|[Cc]hord|[Dd]iameter|[Ss]egment)\s+([A-Z])\s+and\s+([A-Z])\b/.exec(t);
  const pair=named?[named[1],named[2]]:(t.match(/(?:arc|chord|diameter|triangle)\s+([A-Z])([A-Z])\b/)||[]).slice(1,3);
  const names=pair.length===2?pair:[];
  const isDiameter=new RegExp("(?:diameter|diameters).{0,30}(?:"+names.join("")+"|"+names.slice().reverse().join("")+")").test(t);
@@ -180,9 +180,13 @@ function newTransversal(q){
 }
 function newTwinTriangles(q){
  const t=(q.passage||"")+" "+(q.question||"");
- const m=/\btriangles\s+([A-Z]{3})\s+and\s+([A-Z]{3})/.exec(t)||
+ let m=/\btriangles\s+([A-Z]{3})\s+and\s+([A-Z]{3})/.exec(t)||
     /\btriangle\s+([A-Z]{3}).{0,100}\btriangle\s+([A-Z]{3})/.exec(t);
- if(!m)return null;
+ if(!m||m[1]===m[2]){
+  const names=[...new Set([...t.matchAll(/\\btriangles?\\s+([A-Z]{3})\\b/g)].map(x=>x[1]))];
+  if(names.length<2)return null;
+  m=[null,names[0],names[1]];
+ }
  const a=m[1].split(""),b=m[2].split("");
  const d=base("Two triangles "+m[1]+" and "+m[2]+" schematic");
  const coords=[[[64,244],[174,244],[108,89]],[[238,244],[367,244],[283,63]]];
@@ -304,8 +308,37 @@ function newExtendedIsosceles(q){
  return d;
 }
 
+
+function newRightAltitudeToHypotenuse(q){
+ const d=base("Right triangle ABC, right at B, with altitude BD to hypotenuse AC");
+ const A=[105,105],B=[105,240],C=[285,240],D=[169.8,153.6];
+ d.polygons.push(poly([A,B,C]));d.lines.push(line(B,D));
+ for(const [n,p,dx,dy] of [["A",A,-14,-9],["B",B,-12,18],
+  ["C",C,12,18],["D",D,8,-12]])d.points.push(point(...p,n,dx,dy));
+ d.rightAngles.push({x:B[0],y:B[1],size:13,rotation:0});
+ d.labels.push(label(155,200,"BD = 12"),label(238,142,"AC = 25"));
+ return d;
+}
+function newCrossedIsosceles(q){
+ const d=base("Intersecting lines and two isosceles triangles with exterior ray CF");
+ const A=[138,89],E=[210,149],B=[300,224],D=[291,107],C=[103,204],F=[39,237];
+ d.lines.push(line(A,B),line(C,D),line(B,D),line(A,C),line(C,F));
+ for(const [name,p,dx,dy] of [["A",A,-13,-9],["E",E,10,-13],
+  ["B",B,10,18],["C",C,0,19],["D",D,12,-10],["F",F,-10,19]])
+    d.points.push(point(...p,name,dx,dy));
+ // Mark equal sides BD=BE and AC=CE with distinct tick styles.
+ d.ticks.push({x:295.5,y:165.5,angle:5,size:10},
+  {x:255,y:186.5,angle:35,size:10},
+  {x:120.5,y:146.5,angle:17,size:15},
+  {x:156.5,y:176.5,angle:-27,size:15});
+ d.labels.push(label(313,209,"46°"));
+ return d;
+}
+
 function geometryDiagram(q){
  const t=(q.passage||"")+" "+(q.question||"");
+ if(q.id==="math-20261006-new409-q319")return newRightAltitudeToHypotenuse(q);
+ if(q.id==="math-20261008-huge798-q090")return newCrossedIsosceles(q);
  if(q.id==="math-20261006-new409-q019")return newEqualCircleSquare(q);
  if(q.id==="math-20261008-huge798-q136")return newInscribedRectangle(q);
  if(q.id==="math-20261006-new409-q102"||q.id==="math-20261006-new409-q039")return newCircleArcRays(q);
@@ -411,8 +444,8 @@ function repair(q){
   }
   else if(hasMisnamedTriangle(d,q)){replacement=geometryDiagram(q);reason="wrong triangle vertex labels"}
   else if(hasWrongCircleGeometry(d,q)){replacement=geometryDiagram(q);reason="diameter endpoints not opposite"}
-  else if(/math-20261006-new409-q(019|023|039|096|102|105|109|130|133|152|156|165)$/.test(id) ||
-     /math-20261008-huge798-q(136|156|164)$/.test(id)){
+  else if(/math-20261006-new409-q(019|023|039|096|102|105|109|130|133|152|156|165|319)$/.test(id) ||
+     /math-20261008-huge798-q(090|136|156|164)$/.test(id)){
     replacement=geometryDiagram(q);reason="verified wrong labels or misleading geometry"}
   if(replacement&&isDrawingValid(replacement,q)){
    q.diagram=cleanDiagram(replacement);notes.replaced++;note(id,"replaced",reason);return;
