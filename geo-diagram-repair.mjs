@@ -1,0 +1,318 @@
+// Geometry & Trigonometry visual repair pass.
+// Usage: node geo-diagram-repair.mjs [--fix] [--strict] [--details]
+// Diagrams are schematics, never evidence for an unstated numerical result.
+// Keep mock-test copies of the same question in sync with the main bank.
+import {readFileSync,writeFileSync} from "node:fs";
+const read=name=>JSON.parse(readFileSync(name,"utf8"));
+const write=(name,j)=>writeFileSync(name,JSON.stringify(j,null,2)+"\n");
+const bankName="math-question-bank.json";
+const mockNames=Array.from({length:8},(_,i)=>"mock-test-"+(i+1)+".json");
+const isGeo=q=>/geometry\s*(?:&|and)\s*trigonometry/i.test(q?.domain||"");
+const fix=process.argv.includes("--fix");
+const strict=process.argv.includes("--strict");
+const details=process.argv.includes("--details");
+const clamp=(v,l,h)=>Math.min(h,Math.max(l,v));
+const round=x=>Math.round(x*100)/100;
+const line=(a,b,dashed=false)=>({x1:a[0],y1:a[1],x2:b[0],y2:b[1],dashed});
+const label=(x,y,text,anchor="middle")=>({x,y,text:String(text),anchor});
+const point=(x,y,name,dx=9,dy=-9)=>({x,y,label:name,dx,dy});
+const poly=points=>({points});
+const notes={total:0,existing:0,added:0,replaced:0,repaired:0,unchanged:0,
+  graphs:0,withoutVisual:0,mockCopies:0,issues:[],invalid:[],bySkill:{}};
+const note=(id,kind,detail)=>{if(notes.issues.length<250)notes.issues.push({id,kind,detail})};
+const base=(alt="Geometry schematic",caption="Schematic; not to scale.")=>({
+ width:420,height:300,alt,caption,lines:[],polygons:[],ellipses:[],
+ circles:[],points:[],labels:[],rightAngles:[],ticks:[]
+});
+function pointOnCircle(cx,cy,r,degrees){
+ const rad=degrees*Math.PI/180;
+ return [round(cx+r*Math.cos(rad)),round(cy-r*Math.sin(rad))];
+}
+function newCircle(q){
+ const t=(q.passage||"")+" "+(q.question||"");
+ const d=base("Circle geometry diagram");
+ const center=[205,152],r=104;
+ d.circles.push({cx:center[0],cy:center[1],r});
+ const centerName=(t.match(/(?:center|cent(?:ered|re))\s+(?:at\s+)?([A-Z])\b/)||[])[1]||"O";
+ const named=/\b(?:points?|arc|chord|diameter|segment)\s+([A-Z])\s+and\s+([A-Z])\b/.exec(t);
+ const pair=named?[named[1],named[2]]:(t.match(/(?:arc|chord|diameter|triangle)\s+([A-Z])([A-Z])\b/)||[]).slice(1,3);
+ const names=pair.length===2?pair:["A","B"];
+ const isDiameter=new RegExp("(?:diameter|diameters).{0,30}(?:"+names.join("")+"|"+names.slice().reverse().join("")+")").test(t);
+ const first=pointOnCircle(...center,r,145),second=pointOnCircle(...center,r,isDiameter?325:25);
+ d.points.push(point(...first,names[0],-12,-11),point(...second,names[1],10,15));
+ if(/\b(?:center|cent(?:ered|re))\s+(?:at\s+)?[A-Z]\b/.test(t)||/\bcentral angle\b|triangle O[A-Z]{2}/i.test(t)){
+   d.points.push(point(...center,centerName,-14,16));
+   d.lines.push(line(center,first),line(center,second));
+ }
+ if(/\bchord\b|\binscribed\b|\btriangle\s+[A-Z]{3}\b/.test(t))d.lines.push(line(first,second));
+ if(/\bdiameter\b/.test(t))d.lines.push(line(first,second));
+ return d;
+}
+function triangleNames(t){
+ const match=/(?:triangles?|triangle\s+)(?:\\\()?([A-Z]{3})\b/i.exec(t);
+ if(match)return match[1].toUpperCase().split("");
+ return ["A","B","C"];
+}
+function rightVertex(t,names){
+ const joined=names.join("");
+ const patterns=[
+ new RegExp("(?:right (?:at|angle at)|\\b"+joined+"\\b is right at)\\s*\\\\?\\(?"+names[0]+"\\b","i"),
+ /angle\s+([A-Z])\s+is a right angle/i,
+ /angle\s+([A-Z])\s+is right/i,
+ /([A-Z])\s*=\s*90\\s*(?:\^?\\{?\\circ|°)/i,
+ /\bat\s+([A-Z])\s*(?:is\s+)?(?:a\s+)?right angle/i,
+ /\b([A-Z])\s+is\s+the\s+right\s+angle\b/i
+ ];
+ for(const p of patterns){const m=p.exec(t);if(m){const c=m[1]||names[0];if(names.includes(c))return c}}
+ const m=/\bright\s+triangle\s+[A-Z]{3}\s*,?\s*(?:angle\s+)?([A-Z])\s+(?:is\s+)?(?:a\s+)?right/i.exec(t);
+ if(m&&names.includes(m[1]))return m[1];
+ const h=t.match(/(?:hypotenuse|hyp\.?)\s+([A-Z])([A-Z])/i);
+ if(h){return names.find(n=>!h[0].includes(n))||null}
+ return null;
+}
+function newTriangle(q,forcedNames=null){
+ const t=(q.passage||"")+" "+(q.question||"");
+ const names=forcedNames||triangleNames(t);
+ const d=base("Triangle "+names.join("")+" schematic");
+ const right=rightVertex(t,names);
+ let coords;
+ if(right===names[0])coords=[[92,246],[330,246],[92,70]];
+ else if(right===names[1])coords=[[92,246],[330,246],[330,70]];
+ else if(right===names[2])coords=[[108,65],[325,242],[108,242]];
+ else if(new RegExp(names[0]+names[1]+"\\s*=\\s*"+names[0]+names[2]).test(t)||
+   /isosceles|equilateral/.test(t.toLowerCase()))
+   coords=[[205,60],[91,243],[319,243]];
+ else coords=[[105,248],[322,248],[205,66]];
+ d.polygons.push(poly(coords));
+ const offsets=coords.map(([x,y])=>[x<115?-12:x>310?10:0,y<95?-12:18]);
+ for(let i=0;i<3;i++)d.points.push(point(...coords[i],names[i],...offsets[i]));
+ if(right){
+   const i=names.indexOf(right),v=coords[i],a=coords[(i+1)%3],b=coords[(i+2)%3];
+   const ua=[a[0]-v[0],a[1]-v[1]], ub=[b[0]-v[0],b[1]-v[1]];
+   const na=Math.hypot(...ua),nb=Math.hypot(...ub);
+   if(Math.abs(ua[0]*ub[0]+ua[1]*ub[1])<.005*na*nb){
+     const m=[round(v[0]+ua[0]/na*14),round(v[1]+ua[1]/na*14)];
+     const n=[round(v[0]+ub[0]/nb*14),round(v[1]+ub[1]/nb*14)];
+     const corner=[round(m[0]+ub[0]/nb*14),round(m[1]+ub[1]/nb*14)];
+     d.lines.push({...line(m,corner),rightMark:true},{...line(corner,n),rightMark:true});
+   }
+ }
+ if(/equilateral|isosceles|two congruent sides|two equal sides/i.test(t)){
+   if(!right)d.ticks.push({x:round((coords[0][0]+coords[1][0])/2),y:round((coords[0][1]+coords[1][1])/2),angle:32,size:10},
+     {x:round((coords[0][0]+coords[2][0])/2),y:round((coords[0][1]+coords[2][1])/2),angle:-32,size:10});
+ }
+ // Only display lengths explicitly given in the question, never solved values.
+ const pat=/\b([A-Z]{2})\s*=\s*(\\\([^\)]{1,28}\\\)|\\frac\{[^}]+\}\{[^}]+\}|\d+(?:\.\d+)?(?:\\sqrt\{?\d+\}?)?)/g;
+ let match;let drawn=0;
+ while((match=pat.exec(t))&&drawn<4){
+   const [u,v]=match[1].split("");let i=names.indexOf(u),j=names.indexOf(v);
+   if(i<0||j<0||i===j)continue;
+   const mid=[(coords[i][0]+coords[j][0])/2,(coords[i][1]+coords[j][1])/2];
+   let dy=mid[1]<130?-12:mid[1]>215?23:-7;
+   d.labels.push(label(clamp(mid[0]+(mid[0]<200?-12:12),38,380),clamp(mid[1]+dy,24,275),match[1]+" = "+match[2]));
+   drawn++;
+ }
+ const between= new RegExp("point\\s+([A-Z])\\s+lies\\s+on\\s+"+names[0]+names[1],"i").exec(t);
+ if(between){ const [x,y]=coords[0].map((v,i)=>round(v*.55+coords[1][i]*.45));d.points.push(point(x,y,between[1],-14,-12));}
+ return d;
+}
+function newRectangle(q,kind="rectangle"){
+ const d=base(kind==="square"?"Square schematic":"Rectangle schematic");
+ d.polygons.push(poly([[95,88],[325,88],[325,235],[95,235]]));
+ return d;
+}
+function newCylinder(q){
+ const d=base("Right circular cylinder schematic");
+ d.ellipses.push({cx:205,cy:90,rx:104,ry:32},{cx:205,cy:226,rx:104,ry:32});
+ d.lines.push(line([101,90],[101,226]),line([309,90],[309,226]));
+ return d;
+}
+function newCone(q){
+ const d=base("Right circular cone schematic");
+ d.ellipses.push({cx:210,cy:238,rx:100,ry:30});
+ d.lines.push(line([210,52],[110,238]),line([210,52],[310,238]));
+ return d;
+}
+function newPrism(q){
+ const t=(q.passage||"")+" "+(q.question||"");
+ const cube=/\bcubes?\b/i.test(t);
+ const d=base(cube?"Cube schematic":"Rectangular prism schematic");
+ const a=[92,123],b=[269,123],c=[269,247],e=[92,247],off=[48,-40];
+ const move=p=>[p[0]+off[0],p[1]+off[1]];
+ const front=[a,b,c,e];
+ for(let i=0;i<4;i++){d.lines.push(line(front[i],front[(i+1)%4]));d.lines.push(line(front[i],move(front[i])))}
+ const back=front.map(move);
+ for(let i=0;i<4;i++)d.lines.push(line(back[i],back[(i+1)%4]));
+ return d;
+}
+function newTransversal(q){
+ const t=(q.passage||"")+" "+(q.question||"");
+ const d=base("Two lines intersected by a transversal schematic");
+ const pair=(t.match(/lines?\s+\\?\(?([a-zℓ])\\?\)?\s+and\s+\\?\(?([a-zℓ])\b/i)||[]).slice(1,3);
+ const names=pair.length===2?pair:["m","n"];
+ d.lines.push(line([52,92],[363,92]),line([52,216],[363,216]),line([112,35],[298,273]));
+ d.labels.push(label(41,86,names[0]),label(41,211,names[1]),label(312,273,"t"));
+ if(/parallel/i.test(t)&&!/(?:prove|sufficient|which additional information|would establish)/i.test(t))
+   d.alt="Parallel lines "+names.join(" and ")+" with a transversal";
+ return d;
+}
+function newParallelTriangle(q){
+ const t=(q.passage||"")+" "+(q.question||"");
+ const names=triangleNames(t);const d=newTriangle(q,names);
+ if(names.join("")!=="ABC")return d;
+ const [a,b,c]=[[205,65],[92,246],[318,246]];
+ d.polygons=[poly([a,b,c])];d.points=[point(...a,"A",0,-12),point(...b,"B",-12,17),point(...c,"C",11,17)];
+ const D=[160,138],E=[251,138];
+ d.lines.push(line(D,E));
+ d.points.push(point(...D,"D",-14,-9),point(...E,"E",8,-8));
+ d.alt="Triangle ABC with D on AB, E on AC, and DE parallel to BC";
+ return d;
+}
+function newCircleTangent(q){
+ const t=(q.passage||"")+" "+(q.question||"");
+ const match=/from an external point\s+([A-Z]),?\s+segments?\s+([A-Z])([A-Z])\s+and\s+([A-Z])([A-Z])\s+are tangent/i.exec(t);
+ if(!match)return null;
+ const ext=match[1],p=match[3],s=match[5],cen=(t.match(/center\s+([A-Z])/)||[])[1]||"O";
+ const d=base("Two tangents from point "+ext+" to a circle");
+ const C=[171,155],H=[356,155],r=78,angle=Math.acos(r/185);
+ const pts=[C[0]+r*Math.cos(angle),C[1]-r*Math.sin(angle)];
+ const pts2=[C[0]+r*Math.cos(angle),C[1]+r*Math.sin(angle)];
+ d.circles.push({cx:C[0],cy:C[1],r});
+ d.lines.push(line(H,pts),line(H,pts2),line(C,pts),line(C,pts2),line(C,H,true));
+ d.points.push(point(...C,cen,-12,18),point(...H,ext,9,-7),point(...pts,p,0,-12),point(...pts2,s,0,19));
+ return d;
+}
+function geometryDiagram(q){
+ const t=(q.passage||"")+" "+(q.question||"");
+ const lower=t.toLowerCase();
+ const skill=(q.skill||"").toLowerCase();
+ if(q.graph||q.table)return null;
+ if(/^(?:what is|which expression).*?(?:sin|cos|tan|radians)/i.test(t.trim())&&!/\btriangle\b|circle\b/.test(lower))return null;
+ if(/\b(?:arc|circle|radius|diameter|chord|tangent|semicircle)\b/i.test(t)){
+   if(/\b(?:cylinder|cone|hemisphere)\b/i.test(t)){}
+   else if(/(?:^|\s)(?:equation|system)\b.*\b(?:circle|x\^2|y\^2)/is.test(t)&&
+     !/\btangent\b|diameter endpoints|arc|sector|inscribed/i.test(t))return null;
+   else if(/\b(?:tangent|tangents)\b/i.test(t)){return newCircleTangent(q)||newCircle(q)}
+   else if(/\binscribed\s+(?:in\s+a\s+circle|rectangle|triangle)\b/i.test(t))return newCircle(q);
+   else if(/\bcircle\b|\barc\b/.test(t))return newCircle(q);
+ }
+ if(/\b(?:two parallel lines|transversal)\b/i.test(t))return newTransversal(q);
+ if(/\b(?:right circular )?cylinder\b/i.test(t))return newCylinder(q);
+ if(/\bcone\b/i.test(t))return newCone(q);
+ if(/\b(?:right rectangular )?pyramid\b/i.test(t))return newPrism(q);
+ if(/\b(?:cube|prism)\b/i.test(t))return newPrism(q);
+ if(/\b(?:rectangle|rectangular|rectangles)\b/i.test(t))return newRectangle(q);
+ if(/\bsquare\b|\bsquares\b/i.test(t))return newRectangle(q,"square");
+ if(/\btriangle\b|\btriangles\b/i.test(t)){
+   if(/points?\s+D\s+lies\s+on\s+(?:\\\()?AB/i.test(t)&&
+      /points?\s+E\s+lies\s+on\s+(?:\\\()?AC/i.test(t)&&/DE.*parallel|DE\\parallel/i.test(t))return newParallelTriangle(q);
+   return newTriangle(q);
+ }
+ if(/\b(?:quadrilateral|pentagon|polygon)\b/i.test(t))return null; // do not invent sides or angles
+ if(/\b(?:mast|tree|tower).{0,100}\bshadow\b/i.test(t))return newTriangle(q,["A","B","C"]);
+ return null;
+}
+function isDrawingValid(d,q){
+ if(!d||typeof d!=="object")return false;
+ const w=Number(d.width)||420,h=Number(d.height)||300;
+ if(!Number.isFinite(w)||!Number.isFinite(h)||w<240||w>2000||h<180||h>1400)return false;
+ let count=0;
+ const coord=(v)=>Number.isFinite(+v)&&+v>=-5&&+v<=Math.max(w,h)+5;
+ for(const x of d.lines||[]){count++;if(![x.x1,x.y1,x.x2,x.y2].every(coord))return false}
+ for(const x of d.circles||[]){count++;if(![x.cx,x.cy,x.r].every(coord)||x.r<=0||x.cx-x.r<0||x.cx+x.r>w||x.cy-x.r<0||x.cy+x.r>h)return false}
+ for(const x of d.ellipses||[]){count++;if(![x.cx,x.cy,x.rx,x.ry].every(coord)||x.rx<=0||x.ry<=0||x.cx-x.rx<0||x.cx+x.rx>w||x.cy-x.ry<0||x.cy+x.ry>h)return false}
+ for(const x of d.polygons||[]){count++;if(!Array.isArray(x.points)||x.points.length<3||x.points.some(p=>!Array.isArray(p)||p.length!==2||!p.every(coord)))return false}
+ for(const x of [...(d.points||[]),...(d.labels||[])])if(!coord(x.x)||!coord(x.y))return false;
+ return count>0;
+}
+function hasMisnamedTriangle(d,q){
+ const t=(q.passage||"")+" "+(q.question||"");
+ const m=/\btriangles?\s+([A-Z]{3})\b/.exec(t);
+ if(!m||!d.points?.length)return false;
+ const set=new Set(d.points.filter(p=>p.label&&/^[A-Z]$/.test(p.label)).map(p=>p.label));
+ return m[1].split("").some(n=>!set.has(n)) && set.size>=3;
+}
+function hasWrongCircleGeometry(d,q){
+ const t=(q.passage||"")+" "+(q.question||"");
+ if(!/\bdiameters?\b/i.test(t)||!d.points||(!d.circles?.length&&!d.ellipses?.length))return false;
+ const names=[...(t.matchAll(/\b([A-Z]{2})\s+(?:are|is)\s+diameters?\b/g))].flatMap(m=>m[1].split(""));
+ const m=/segments?\s+([A-Z]{2})\s+and\s+([A-Z]{2})\s+are diameters/i.exec(t);
+ const pairs=m?[[...m[1]],[...m[2]]]:[];
+ if(!pairs.length)return false;
+ const ring=(d.circles||[])[0]||(d.ellipses||[])[0];
+ const cx=ring.cx,cy=ring.cy;
+ for(const [a,b] of pairs){
+  const p=d.points.find(p=>p.label===a),v=d.points.find(p=>p.label===b);
+  if(!p||!v||Math.hypot((p.x+v.x)/2-cx,(p.y+v.y)/2-cy)>5)return true;
+ }
+ return false;
+}
+function cleanDiagram(original){
+ const d=structuredClone(original);const w=Number(d.width)||420,h=Number(d.height)||300;
+ // Keep existing user-facing measurements. Move offscreen annotations into view.
+ for(const obj of [...(d.labels||[]),...(d.points||[])]){
+  if(typeof obj.x==="number")obj.x=clamp(obj.x,16,w-16);
+  if(typeof obj.y==="number")obj.y=clamp(obj.y,16,h-16);
+  if(typeof obj.dx==="number")obj.dx=clamp(obj.dx,-24,24);
+  if(typeof obj.dy==="number")obj.dy=clamp(obj.dy,-24,24);
+ }
+ d.alt=d.alt||"Geometry schematic";
+ d.caption=d.caption||"Schematic; not to scale.";
+ return d;
+}
+function repair(q){
+ const id=q.id;
+ let d=q.diagram;
+ if(q.graph){notes.graphs++;return}
+ if(d)notes.existing++;
+ let replacement=null,reason="";
+ if(d){
+  if(!isDrawingValid(d,q)){replacement=geometryDiagram(q);reason="out-of-range or empty geometry"}
+  else if(hasMisnamedTriangle(d,q)){replacement=geometryDiagram(q);reason="wrong triangle vertex labels"}
+  else if(hasWrongCircleGeometry(d,q)){replacement=geometryDiagram(q);reason="diameter endpoints not opposite"}
+  else if(/math-20261006-new409-q(023|105|130|156|152|165|133)$/.test(id)){
+    replacement=geometryDiagram(q);reason="verified wrong labels or misleading geometry"}
+  if(replacement&&isDrawingValid(replacement,q)){
+   q.diagram=cleanDiagram(replacement);notes.replaced++;note(id,"replaced",reason);return;
+  }
+  const cleaned=cleanDiagram(d);
+  if(JSON.stringify(cleaned)!==JSON.stringify(d)){q.diagram=cleaned;notes.repaired++;return}
+  notes.unchanged++;return;
+ }
+ const generated=geometryDiagram(q);
+ if(generated&&isDrawingValid(generated,q)){q.diagram=cleanDiagram(generated);notes.added++;note(id,"added",q.skill);return}
+ notes.withoutVisual++;
+}
+const data=read(bankName);
+const ids=new Map();
+for(const q of data.questions){
+ if(!isGeo(q))continue;
+ notes.total++;
+ const k=q.skill||"Unclassified";notes.bySkill[k]=(notes.bySkill[k]||0)+1;
+ repair(q);
+ ids.set(q.id,q.diagram||null);
+ if(q.diagram&&!isDrawingValid(q.diagram,q))notes.invalid.push(q.id);
+}
+if(fix)write(bankName,data);
+for(const file of mockNames){
+ const mock=read(file);let changed=0;
+ for(const section of Object.values(mock.sections||{})){
+  for(const entries of Object.values(section||{})){
+   if(!Array.isArray(entries))continue;
+   for(const entry of entries){
+    const q=entry?.question;if(!q||!ids.has(q.id))continue;
+    const diagram=ids.get(q.id);
+    if(JSON.stringify(q.diagram||null)!==JSON.stringify(diagram)){
+     if(diagram)q.diagram=structuredClone(diagram);else delete q.diagram;
+     changed++;notes.mockCopies++;
+    }
+   }
+  }
+ }
+ if(changed&&fix)write(file,mock);
+}
+const count=Object.fromEntries(Object.entries(notes).filter(([k])=>k!=="issues"&&k!=="invalid"));
+console.log("GEOMETRY_REPAIR_SUMMARY "+JSON.stringify(count));
+console.log("GEOMETRY_REPAIR_INVALID "+JSON.stringify(notes.invalid));
+if(details)for(const issue of notes.issues)console.log("GEOMETRY_REPAIR_DETAIL "+JSON.stringify(issue));
+if(strict&&(notes.invalid.length||notes.total!==311)){console.error("Geometry diagram validation failed");process.exitCode=1}
