@@ -1,6 +1,6 @@
 {
-  "version": 4,
-  "generatedAt": "2026-10-09",
+  "version": 5,
+  "generatedAt": "2026-10-10",
   "tests": [
     {
       "id": "mock-test-1",
@@ -182,10 +182,10 @@
       "id": "mock-test-5",
       "title": "SAT Mock Test 5",
       "subtitle": "Full adaptive practice",
-      "description": "Adaptive test shell. Questions will be populated later.",
-      "available": false,
-      "populated": false,
-      "questionsPerRoute": 0,
+      "description": "Full adaptive practice · 98 questions per completed route",
+      "available": true,
+      "populated": true,
+      "questionsPerRoute": 98,
       "plannedQuestionsPerRoute": 98,
       "testingMinutes": 134,
       "breakMinutes": 10,
@@ -193,14 +193,14 @@
         {
           "label": "Reading & Writing",
           "module": "Module 1",
-          "questions": 0,
+          "questions": 27,
           "plannedQuestions": 27,
           "minutes": 32
         },
         {
           "label": "Reading & Writing",
           "module": "Module 2",
-          "questions": 0,
+          "questions": 27,
           "plannedQuestions": 27,
           "minutes": 32,
           "adaptive": true
@@ -208,14 +208,14 @@
         {
           "label": "Math",
           "module": "Module 1",
-          "questions": 0,
+          "questions": 22,
           "plannedQuestions": 22,
           "minutes": 35
         },
         {
           "label": "Math",
           "module": "Module 2",
-          "questions": 0,
+          "questions": 22,
           "plannedQuestions": 22,
           "minutes": 35,
           "adaptive": true
@@ -226,10 +226,10 @@
       "id": "mock-test-6",
       "title": "SAT Mock Test 6",
       "subtitle": "Full adaptive practice",
-      "description": "Adaptive test shell. Questions will be populated later.",
-      "available": false,
-      "populated": false,
-      "questionsPerRoute": 0,
+      "description": "Full adaptive practice · 98 questions per completed route",
+      "available": true,
+      "populated": true,
+      "questionsPerRoute": 98,
       "plannedQuestionsPerRoute": 98,
       "testingMinutes": 134,
       "breakMinutes": 10,
@@ -237,14 +237,14 @@
         {
           "label": "Reading & Writing",
           "module": "Module 1",
-          "questions": 0,
+          "questions": 27,
           "plannedQuestions": 27,
           "minutes": 32
         },
         {
           "label": "Reading & Writing",
           "module": "Module 2",
-          "questions": 0,
+          "questions": 27,
           "plannedQuestions": 27,
           "minutes": 32,
           "adaptive": true
@@ -252,14 +252,14 @@
         {
           "label": "Math",
           "module": "Module 1",
-          "questions": 0,
+          "questions": 22,
           "plannedQuestions": 22,
           "minutes": 35
         },
         {
           "label": "Math",
           "module": "Module 2",
-          "questions": 0,
+          "questions": 22,
           "plannedQuestions": 22,
           "minutes": 35,
           "adaptive": true
@@ -270,10 +270,10 @@
       "id": "mock-test-7",
       "title": "SAT Mock Test 7",
       "subtitle": "Full adaptive practice",
-      "description": "Adaptive test shell. Questions will be populated later.",
-      "available": false,
-      "populated": false,
-      "questionsPerRoute": 0,
+      "description": "Full adaptive practice · 98 questions per completed route",
+      "available": true,
+      "populated": true,
+      "questionsPerRoute": 98,
       "plannedQuestionsPerRoute": 98,
       "testingMinutes": 134,
       "breakMinutes": 10,
@@ -281,14 +281,14 @@
         {
           "label": "Reading & Writing",
           "module": "Module 1",
-          "questions": 0,
+          "questions": 27,
           "plannedQuestions": 27,
           "minutes": 32
         },
         {
           "label": "Reading & Writing",
           "module": "Module 2",
-          "questions": 0,
+          "questions": 27,
           "plannedQuestions": 27,
           "minutes": 32,
           "adaptive": true
@@ -296,14 +296,14 @@
         {
           "label": "Math",
           "module": "Module 1",
-          "questions": 0,
+          "questions": 22,
           "plannedQuestions": 22,
           "minutes": 35
         },
         {
           "label": "Math",
           "module": "Module 2",
-          "questions": 0,
+          "questions": 22,
           "plannedQuestions": 22,
           "minutes": 35,
           "adaptive": true
@@ -314,10 +314,10 @@
       "id": "mock-test-8",
       "title": "SAT Mock Test 8",
       "subtitle": "Full adaptive practice",
-      "description": "Adaptive test shell. Questions will be populated later.",
-      "available": false,
-      "populated": false,
-      "questionsPerRoute": 0,
+      "description": "Full adaptive practice · 98 questions per completed route",
+      "available": true,
+      "populated": true,
+      "questionsPerRoute": 98,
       "plannedQuestionsPerRoute": 98,
       "testingMinutes": 134,
       "breakMinutes": 10,
@@ -325,14 +325,14 @@
         {
           "label": "Reading & Writing",
           "module": "Module 1",
-          "questions": 0,
+          "questions": 27,
           "plannedQuestions": 27,
           "minutes": 32
         },
         {
           "label": "Reading & Writing",
           "module": "Module 2",
-          "questions": 0,
+          "questions": 27,
           "plannedQuestions": 27,
           "minutes": 32,
           "adaptive": true
@@ -340,14 +340,14 @@
         {
           "label": "Math",
           "module": "Module 1",
-          "questions": 0,
+          "questions": 22,
           "plannedQuestions": 22,
           "minutes": 35
         },
         {
           "label": "Math",
           "module": "Module 2",
-          "questions": 0,
+          "questions": 22,
           "plannedQuestions": 22,
           "minutes": 35,
           "adaptive": true
