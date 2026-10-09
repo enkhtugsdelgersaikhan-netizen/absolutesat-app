@@ -65,7 +65,13 @@ function check(value, location) {
     warnings.push("single-newline-manual-review");
   for (const name of warnings) {
     count(report.warnings, name);
-    if (report.examples.length < 120)
+    if (name !== "single-newline-manual-review") {
+      // Detailed diagnostics for the few structural problems; no question
+      // content is altered until its exact meaning is reviewed.
+      console.error("FORMAT TARGET " + location + " [" + name + "]: " +
+        s.slice(0, 1200).replace(/\n/g, "\\n"));
+    }
+    if (report.examples.length < 120 && name !== "single-newline-manual-review")
       report.examples.push({ location, issue: name,
         excerpt: s.slice(0, 150).replace(/\n/g, "\\n") });
   }
