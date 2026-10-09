@@ -623,6 +623,61 @@ function loadState(){
 let itemState=loadState();
 function saveState(){localStorage.setItem(STATE_KEY,JSON.stringify(itemState));}
 
+
+/* A ten-card recall session launched from the homepage. Returning users can
+   resume the same chosen IDs; a new session starts after completing all ten. */
+const guidedTenMode=new URLSearchParams(window.location.search).get("study")==="10";
+const guidedTenKey="lexlogica-guided-formulas:v1";
+let guidedTenSession=null;
+function setupGuidedTen(){
+    if(!guidedTenMode)return;
+    document.body.classList.add("guided-flashcards");
+    const eligible=shuffle(formulas.filter(item=>
+        !getState(item).solved||getState(item).review
+    ));
+    const chosen=eligible.slice(0,10);
+    if(chosen.length<10){
+        const seen=new Set(chosen.map(item=>String(item.id)));
+        chosen.push(...shuffle(formulas.filter(item=>!seen.has(String(item.id)))).slice(0,10-chosen.length));
+    }
+    const allIds=new Set(formulas.map(item=>String(item.id)));
+    let saved=null;
+    try {saved=JSON.parse(localStorage.getItem(guidedTenKey)||"null");}catch(_){}
+    if(saved&&Array.isArray(saved.ids)&&saved.ids.length===10&&
+       new Set(saved.ids).size===10&&saved.ids.every(id=>allIds.has(id))&&
+       Array.isArray(saved.done)&&saved.done.length<10&&
+       saved.done.every(id=>saved.ids.includes(id))) {
+        guidedTenSession=saved;
+    } else {
+        guidedTenSession={ids:chosen.map(item=>String(item.id)),done:[]};
+        try{localStorage.setItem(guidedTenKey,JSON.stringify(guidedTenSession));}catch(_){}
+    }
+    const header=document.querySelector(".vocab-header");
+    if(header){
+        header.insertAdjacentHTML("beforeend",
+          '<div class="guided-flashcard-banner"><strong id="guided-flashcard-progress">0 of 10 cards reviewed</strong>'+
+          '<a href="/#study-guide">← Back to study plan</a></div>');
+    }
+}
+function markGuidedTen(id){
+    if(!guidedTenSession)return;
+    id=String(id);
+    if(!guidedTenSession.ids.includes(id)||guidedTenSession.done.includes(id))return;
+    guidedTenSession.done.push(id);
+    try{localStorage.setItem(guidedTenKey,JSON.stringify(guidedTenSession));}catch(_){}
+}
+function updateGuidedTen(){
+    if(!guidedTenSession)return;
+    const progress=document.getElementById("guided-flashcard-progress");
+    const done=guidedTenSession.done.length;
+    if(progress)progress.textContent=done===10
+        ?"10 of 10 reviewed — session complete"
+        :done+" of 10 cards reviewed";
+    if(done===10)empty.textContent=
+      "Session complete. Your learning and review statuses are saved. Return to the study plan for another set.";
+}
+setupGuidedTen();
+
 let currentStatusFilter="all";
 let filtered=[];
 let index=0;
@@ -641,6 +696,7 @@ function searchableText(item){
         .join(" ").replace(/\\\\[a-zA-Z]+/g," ").replace(/[{}^_]/g," ").toLowerCase();
 }
 function matches(item,excludeId=""){
+    if(guidedTenSession&&(!guidedTenSession.ids.includes(item.id)||guidedTenSession.done.includes(item.id)))return false;
     if(excludeId&&item.id===excludeId)return false;
     const query=search.value.trim().toLowerCase();
     const selected=category.value;
@@ -702,6 +758,7 @@ function typeset(nodes,attempt=0){
 }
 function render(){
     resetCardUI();
+    updateGuidedTen();
     if(!filtered.length){
         card.classList.add("hidden");
         empty.classList.remove("hidden");
@@ -760,6 +817,7 @@ knownButton.addEventListener("click",()=>{
     const item=filtered[index];
     itemState[item.id].solved=true;
     saveState();
+    markGuidedTen(item.id);
     card.classList.remove("vocab-solved-flash");void card.offsetWidth;card.classList.add("vocab-solved-flash");
     window.setTimeout(()=>rebuildList(item.id),160);
 });
@@ -768,6 +826,7 @@ learningButton.addEventListener("click",()=>{
     const item=filtered[index];
     itemState[item.id].solved=false;
     saveState();
+    markGuidedTen(item.id);
     card.classList.remove("vocab-learning-flash");void card.offsetWidth;card.classList.add("vocab-learning-flash");
     window.setTimeout(()=>rebuildList(item.id),160);
 });
@@ -778,6 +837,12 @@ statusButtons.forEach(button=>button.addEventListener("click",()=>setStatusFilte
 function initialize(){
     setupFormulaDomainPicker();
     statusButtons.forEach(button=>button.classList.toggle("active",button.dataset.status==="all"));
+    if(guidedTenMode){
+        currentStatusFilter="all";
+        search.value="";
+        category.value="all";
+    }
     rebuildList();
 }
+
 initialize();
