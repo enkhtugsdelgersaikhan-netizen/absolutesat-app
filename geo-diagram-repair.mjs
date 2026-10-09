@@ -789,7 +789,7 @@ function correctVisualLabelCollisions(d,q){
  };
  if(id==="math-20261006-new409-q096"){
   const p=(d.points||[]).find(x=>x.label==="F");if(p){p.dy=-14;p.dx=0}
-  move("BC = 25",340,278);
+  move("BC = 25",205,280);
  }
  if(id==="math-20261006-new409-q110"){move("minor arc 100",210,82)}
  if(id==="math-20261006-new409-q119"){move("3w+12",136,127)}
@@ -840,7 +840,6 @@ for(const q of data.questions){
  notes.total++;
  const k=q.skill||"Unclassified";notes.bySkill[k]=(notes.bySkill[k]||0)+1;
  repair(q);
- if(["math-20261006-new409-q177","math-20261006-new409-q183","math-20261006-new409-q234","math-20261008-huge798-q090"].includes(q.id))console.log("DIAGRAM_INSPECTION "+JSON.stringify({id:q.id,points:q.diagram?.points,labels:q.diagram?.labels,alt:q.diagram?.alt,lines:q.diagram?.lines?.length}));
  ids.set(q.id,q.diagram||null);
  if(q.diagram&&!isDrawingValid(q.diagram,q))notes.invalid.push(q.id);
 }
