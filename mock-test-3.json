@@ -4947,31 +4947,103 @@
             "diagram": {
               "width": 420,
               "height": 300,
-              "alt": "Triangle ABC schematic",
+              "alt": "Two triangles ABC and DEF schematic",
               "caption": "Schematic; not to scale.",
               "lines": [],
               "polygons": [
                 {
                   "points": [
                     [
-                      105,
-                      248
+                      64,
+                      89
                     ],
                     [
-                      322,
-                      248
+                      174,
+                      244
                     ],
                     [
-                      184,
-                      69
+                      174,
+                      89
+                    ]
+                  ]
+                },
+                {
+                  "points": [
+                    [
+                      238,
+                      63
+                    ],
+                    [
+                      367,
+                      244
+                    ],
+                    [
+                      367,
+                      63
                     ]
                   ]
                 }
               ],
               "ellipses": [],
               "circles": [],
-              "points": [],
-              "labels": [],
+              "points": [
+                {
+                  "x": 64,
+                  "y": 89,
+                  "label": "A",
+                  "dx": -11,
+                  "dy": 17
+                },
+                {
+                  "x": 174,
+                  "y": 244,
+                  "label": "B",
+                  "dx": 9,
+                  "dy": 17
+                },
+                {
+                  "x": 174,
+                  "y": 89,
+                  "label": "C",
+                  "dx": -11,
+                  "dy": -13
+                },
+                {
+                  "x": 238,
+                  "y": 63,
+                  "label": "D",
+                  "dx": -11,
+                  "dy": 17
+                },
+                {
+                  "x": 367,
+                  "y": 244,
+                  "label": "E",
+                  "dx": 9,
+                  "dy": 17
+                },
+                {
+                  "x": 367,
+                  "y": 63,
+                  "label": "F",
+                  "dx": -11,
+                  "dy": -13
+                }
+              ],
+              "labels": [
+                {
+                  "x": 119,
+                  "y": 281,
+                  "text": "Right angle at C",
+                  "anchor": "middle"
+                },
+                {
+                  "x": 292,
+                  "y": 281,
+                  "text": "Right angle at F",
+                  "anchor": "middle"
+                }
+              ],
               "rightAngles": [],
               "ticks": []
             }
@@ -5560,31 +5632,103 @@
             "diagram": {
               "width": 420,
               "height": 300,
-              "alt": "Triangle ABC schematic",
+              "alt": "Two triangles ABC and DEF schematic",
               "caption": "Schematic; not to scale.",
               "lines": [],
               "polygons": [
                 {
                   "points": [
                     [
-                      105,
-                      248
+                      64,
+                      89
                     ],
                     [
-                      322,
-                      248
+                      174,
+                      244
                     ],
                     [
-                      184,
-                      69
+                      174,
+                      89
+                    ]
+                  ]
+                },
+                {
+                  "points": [
+                    [
+                      238,
+                      63
+                    ],
+                    [
+                      367,
+                      244
+                    ],
+                    [
+                      367,
+                      63
                     ]
                   ]
                 }
               ],
               "ellipses": [],
               "circles": [],
-              "points": [],
-              "labels": [],
+              "points": [
+                {
+                  "x": 64,
+                  "y": 89,
+                  "label": "A",
+                  "dx": -11,
+                  "dy": 17
+                },
+                {
+                  "x": 174,
+                  "y": 244,
+                  "label": "B",
+                  "dx": 9,
+                  "dy": 17
+                },
+                {
+                  "x": 174,
+                  "y": 89,
+                  "label": "C",
+                  "dx": -11,
+                  "dy": -13
+                },
+                {
+                  "x": 238,
+                  "y": 63,
+                  "label": "D",
+                  "dx": -11,
+                  "dy": 17
+                },
+                {
+                  "x": 367,
+                  "y": 244,
+                  "label": "E",
+                  "dx": 9,
+                  "dy": 17
+                },
+                {
+                  "x": 367,
+                  "y": 63,
+                  "label": "F",
+                  "dx": -11,
+                  "dy": -13
+                }
+              ],
+              "labels": [
+                {
+                  "x": 119,
+                  "y": 281,
+                  "text": "Right angle at C",
+                  "anchor": "middle"
+                },
+                {
+                  "x": 292,
+                  "y": 281,
+                  "text": "Right angle at F",
+                  "anchor": "middle"
+                }
+              ],
               "rightAngles": [],
               "ticks": []
             }
@@ -5944,44 +6088,119 @@
             "diagram": {
               "width": 420,
               "height": 300,
-              "alt": "Triangle DCE schematic",
+              "alt": "Isosceles triangle ABC and adjacent triangle DCE, with DE extended to F",
               "caption": "Schematic; not to scale.",
-              "lines": [],
-              "polygons": [
+              "lines": [
                 {
-                  "points": [
-                    [
-                      205,
-                      60
-                    ],
-                    [
-                      91,
-                      243
-                    ],
-                    [
-                      319,
-                      243
-                    ]
-                  ]
+                  "x1": 55,
+                  "y1": 169,
+                  "x2": 368.5,
+                  "y2": 169,
+                  "dashed": false
+                },
+                {
+                  "x1": 165,
+                  "y1": 89,
+                  "x2": 315.45,
+                  "y2": 198.39,
+                  "dashed": false
+                },
+                {
+                  "x1": 55,
+                  "y1": 169,
+                  "x2": 165,
+                  "y2": 89,
+                  "dashed": false
+                },
+                {
+                  "x1": 368.5,
+                  "y1": 169,
+                  "x2": 315.45,
+                  "y2": 198.39,
+                  "dashed": false
+                },
+                {
+                  "x1": 315.45,
+                  "y1": 198.39,
+                  "x2": 288.93,
+                  "y2": 213.08,
+                  "dashed": false
                 }
               ],
+              "polygons": [],
               "ellipses": [],
               "circles": [],
-              "points": [],
-              "labels": [],
+              "points": [
+                {
+                  "x": 55,
+                  "y": 169,
+                  "label": "A",
+                  "dx": -12,
+                  "dy": 16
+                },
+                {
+                  "x": 165,
+                  "y": 89,
+                  "label": "B",
+                  "dx": 0,
+                  "dy": -12
+                },
+                {
+                  "x": 275,
+                  "y": 169,
+                  "label": "C",
+                  "dx": 8,
+                  "dy": -12
+                },
+                {
+                  "x": 368.5,
+                  "y": 169,
+                  "label": "D",
+                  "dx": 10,
+                  "dy": -10
+                },
+                {
+                  "x": 315.45,
+                  "y": 198.39,
+                  "label": "E",
+                  "dx": 12,
+                  "dy": 9
+                },
+                {
+                  "x": 288.93,
+                  "y": 213.08,
+                  "label": "F",
+                  "dx": -6,
+                  "dy": 20
+                }
+              ],
+              "labels": [
+                {
+                  "x": 164,
+                  "y": 123,
+                  "text": "108°",
+                  "anchor": "middle"
+                },
+                {
+                  "x": 344,
+                  "y": 186,
+                  "text": "29°",
+                  "anchor": "middle"
+                }
+              ],
               "rightAngles": [],
               "ticks": [
                 {
-                  "x": 148,
-                  "y": 151.5,
-                  "angle": 32,
-                  "size": 10
+                  "x": 110,
+                  "y": 129,
+                  "angle": 35,
+                  "size": 11
                 },
                 {
-                  "x": 262,
-                  "y": 151.5,
-                  "angle": -32,
-                  "size": 10
+                  "x": 220,
+                  "y": 129,
+                  "angle": -35,
+                  "size": 11
                 }
               ]
             }
