@@ -7,6 +7,7 @@ on:
       - math-question-bank.json
       - 'mock-test-*.json'
       - question-format-audit.mjs
+      - question-render-regression.mjs
       - .github/workflows/question-format.yml
   workflow_dispatch:
 permissions:
@@ -29,6 +30,8 @@ jobs:
           node --check question-format-audit.mjs
           node -e "for (const f of ['question-bank.json','math-question-bank.json',...Array.from({length:8},(_,i)=>'mock-test-'+(i+1)+'.json')]) JSON.parse(require('fs').readFileSync(f,'utf8'))"
           git diff --check
+      - name: Test question formatting regressions
+        run: node question-render-regression.mjs
       - name: Commit safe data normalizations to main
         run: |
           if ! git diff --quiet; then
