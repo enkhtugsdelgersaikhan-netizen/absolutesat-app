@@ -24,4 +24,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node rw-length-bias-audit.mjs --strict --severe-details
+      - run: node --check question-bank.js && node --check question.js && node --check study-guide.js
+      - run: node rw-length-bias-audit.mjs --strict
