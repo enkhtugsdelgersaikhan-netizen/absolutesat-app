@@ -136,7 +136,7 @@ for (const file of files) {
     report.scanned++;
     const id = String(question.id || file + ":" + i);
     unique.add(id);
-    if (["rw-20261005-new104-q059","rw-20261005-new89-q086","math-20261006-new409-q356","math-20261006-batch465-q216"].includes(id)) {
+    if (["rw-20261005-new104-q059","rw-20261005-new89-q086","math-20261006-new409-q356","math-20261006-batch465-q216","math-20261006-batch465-q297","math-20261006-new409-q334","math-20261008-huge798-q077","math-20261006-new409-q048"].includes(id)) {
       console.error("INSPECT-QUESTION " + file + " / " + id + ": " + JSON.stringify(question).slice(0, 8500));
     }
     for (const field of textFields) {
