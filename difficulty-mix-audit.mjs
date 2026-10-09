@@ -3,9 +3,10 @@
 import fs from "node:fs";
 const load = file => JSON.parse(fs.readFileSync(new URL(file,import.meta.url),"utf8"));
 const reserved = new Set(load("./mock-test-reservations.json").allQuestionIds.map(String));
+const octoberBatch = load("./question-batch-20261010-reviewed.json").questions;
 const sources = [
- ["Math",[...load("./math-question-bank.json").questions,...load("./math-question-bank-20261010-reviewed.json").questions]],
- ["Reading & Writing",load("./question-bank.json").questions]
+ ["Math",[...load("./math-question-bank.json").questions,...load("./math-question-bank-20261010-reviewed.json").questions,...octoberBatch.filter(q=>q.section==="Math")]],
+ ["Reading & Writing",[...load("./question-bank.json").questions,...octoberBatch.filter(q=>q.section==="Reading & Writing")]]
 ];
 const allIds=new Set();
 let failed=0;
