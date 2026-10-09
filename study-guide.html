@@ -3,95 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Personalized Study Guide | LexLogica</title>
-  <link rel="icon" type="image/png" href="/Favicon.png?v=b2788e22">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css?v=unified-ui-1">
-  <link rel="stylesheet" href="/study-guide.css?v=mock-order-severity-2">
-  <link rel="stylesheet" href="/responsive.css?v=1">
-  <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
-  <script defer src="/_vercel/insights/script.js"></script>
+  <meta name="robots" content="noindex">
+  <title>Study Guide moved to homepage | LexLogica</title>
+  <link rel="canonical" href="/">
+  <meta http-equiv="refresh" content="0;url=/#study-guide">
+  <script>window.location.replace("/#study-guide");</script>
 </head>
 <body>
-<header class="header"><div class="header-container">
-  <a href="/" class="logo-link" aria-label="LexLogica home"><img src="/Logo.png" alt="LexLogica" class="logo"></a>
-  <nav class="navigation" aria-label="Main navigation">
-    <a href="/mathematics" class="nav-button">Mathematics</a>
-    <a href="/mock-tests" class="nav-button">Mock Tests</a>
-    <a href="/reading-writing" class="nav-button">Reading and Writing</a>
-  </nav>
-  <button type="button" class="dashboard-button site-dashboard site-logout" hidden aria-hidden="true">Log out</button>
-  <div class="auth-buttons"><a href="/login" class="login-button">Login</a></div>
-  <button class="mobile-menu-button" aria-label="Open navigation" aria-expanded="false" type="button">☰</button>
-</div></header>
-<main class="study-guide-page">
-  <div class="study-guide-wrap">
-    <div class="study-guide-intro">
-      <div class="study-guide-eyebrow">YOUR PERSONAL STUDY ROUTE</div>
-      <h1>From your first score to your goal.</h1>
-      <p>Your latest completed mock determines what to practice next. Work through 10-question domain assignments, review your mistakes, and update your priorities after every mock.</p>
-      <a href="/" class="study-guide-back">← Back to homepage</a>
-    </div>
-    <div id="study-guide-loading" class="study-guide-loading" role="status">Loading your mock-test history…</div>
-    <section id="study-guide-empty" class="study-guide-empty" hidden>
-      <span class="study-guide-eyebrow">FIRST STEP</span>
-      <h2>Take Mock Test 1 to get started.</h2>
-      <p>Your most recently completed mock becomes your diagnostic. Start with Mock Test 1, then update your priorities by taking more mocks.</p>
-      <a class="sg-primary" href="/question?mock=mock-test-1">Start Mock Test 1 →</a>
-    </section>
-    <section id="study-guide-results" hidden>
-      <section class="sg-score-panel" aria-label="Starting score and score goal">
-        <div class="sg-score-header">
-          <div><div class="study-guide-eyebrow">YOUR SCORE JOURNEY</div><h2>Latest mock and your goal</h2></div>
-          <span class="sg-score-source" id="sg-score-source">Based on your latest completed mock</span>
-        </div>
-        <div class="sg-score-grid">
-          <div class="sg-score-tile"><span>Latest mock score</span><strong id="sg-start-score">—</strong><small id="sg-start-sections">R&amp;W — · Math —</small></div>
-          <div class="sg-score-tile"><span>Distance to goal</span><strong id="sg-current-score">—</strong><small id="sg-current-note">Set a goal to compare</small></div>
-          <form class="sg-score-tile sg-goal-tile" id="sg-goal-form">
-            <label for="sg-goal-input">Your goal score</label>
-            <div class="sg-goal-entry"><input id="sg-goal-input" type="number" min="400" max="1600" step="10" inputmode="numeric" placeholder="e.g. 1450" required><button type="submit">Save</button></div>
-            <small>400–1600, in 10-point increments</small>
-          </form>
-        </div>
-        <div id="sg-goal-message" class="sg-goal-message" role="status"></div>
-        <div id="sg-progress-wrap" class="sg-progress-wrap" hidden>
-          <div class="sg-progress-label"><span id="sg-progress-description"></span><strong id="sg-gap"></strong></div>
-          <div class="sg-progress-track" role="progressbar" aria-label="Progress toward goal" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="sg-progress-track"><div id="sg-progress-fill"></div></div>
-        </div>
-        <p class="sg-score-caveat">LexLogica mock scores are practice estimates, not official, equated College Board SAT scores. Domain priorities update with your latest completed mock.</p>
-      </section>
-      <div id="sg-plan-content" hidden>
-        <section class="sg-section">
-          <div class="sg-section-heading"><div><span class="study-guide-eyebrow">LATEST MOCK DIAGNOSTIC</span><h2>Start with these domains</h2></div><p id="sg-diagnostic-note">Ranked by urgency on your latest completed mock, weighted by domain importance. Each Practice set has 10 fresh questions, adjusted to your accuracy.</p></div>
-          <div class="sg-priority-grid">
-            <article class="sg-priority-col"><div class="sg-priority-head"><span>01</span><h3>Reading &amp; Writing</h3></div><div id="sg-rw-priorities"></div></article>
-            <article class="sg-priority-col"><div class="sg-priority-head"><span>02</span><h3>Mathematics</h3></div><div id="sg-math-priorities"></div></article>
-          </div>
-          <p id="sg-practice-message" class="sg-practice-message" role="status" aria-live="polite"></p>
-        </section>
-        <div class="sg-workflow" aria-label="Study cycle">
-          <div><strong>Review → Practice → Retest</strong><p>Review mistakes from your latest mock, finish each domain’s 10-question assignment, then use the next mock to recalculate priorities.</p></div>
-          <div class="sg-workflow-actions">
-            <a id="sg-review-test-link" href="/mock-tests" class="sg-workflow-link">Review latest mock →</a>
-            <a id="sg-next-test-link" href="/mock-tests" class="sg-primary">Next mock →</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="sg-research">
-      <span class="study-guide-eyebrow">RESEARCH BEHIND THE PLAN</span>
-      <p>College Board research associates full-length digital practice with higher SAT performance (2025). Earlier Official SAT Practice research identifies skill progression, full-length tests, and personalized skill recommendations as useful practice behaviors (2020). Both analyses are observational: they do not predict an individual score gain or prove that practice alone caused the reported differences.</p>
-      <div class="sg-source-links"><a target="_blank" rel="noopener noreferrer" href="https://research.collegeboard.org/media/pdf/DigitalSATPracticeTests_052025.pdf">Digital practice study, 2025 ↗</a><a target="_blank" rel="noopener noreferrer" href="https://research.collegeboard.org/media/pdf/osp-technical-report.pdf">Official SAT Practice study, 2020 ↗</a></div>
-      <small>Your study goal and checklist are saved on this device for your signed-in account. They do not currently sync between devices.</small>
-    </section>
-  </div>
-</main>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="/auth.js?v=home-logout-1"></script>
-<script src="/study-guide.js?v=mock-order-severity-2"></script>
-<script src="/study.js"></script>
+  <p>Your personalized study guide is now on the <a href="/#study-guide">LexLogica homepage</a>.</p>
 </body>
 </html>
