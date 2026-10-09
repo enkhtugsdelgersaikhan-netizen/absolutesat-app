@@ -2172,7 +2172,7 @@
     margin:0!important;
 }
 .sat-answer-pane .choice-text{
-    display:flex!important;
+    display:block!important;
     flex:1 1 auto!important;
     min-width:0!important;
     min-height:30px!important;
@@ -5435,4 +5435,33 @@ body.math-question-active .math-question-context-content em{
 }
 html.lexlogica-dark-mode .question-xy-region{
     fill:rgba(174,189,185,.12);
+}
+
+/* Question-bank typography: preserve a single prose line box when an answer
+   contains mixed normal text, italic spans, and MathJax containers. A flex
+   text wrapper converts each span into a separate flex item and causes the
+   fragment wrapping seen in R&W choices. The outer .choice remains flex. */
+#question-app .sat-answer-pane .choice-text{
+    display:block!important;
+    flex:1 1 auto!important;
+    min-width:0!important;
+    white-space:normal!important;
+    word-break:normal!important;
+    overflow-wrap:break-word!important;
+}
+#question-app .sat-answer-pane .choice-text em,
+#question-app .sat-answer-pane .choice-text strong,
+#question-app .sat-answer-pane .choice-text u{
+    display:inline!important;
+}
+#question-app .sat-answer-pane .choice-text mjx-container:not([display="true"]){
+    display:inline-block!important;
+    max-width:100%;
+    vertical-align:middle;
+}
+#question-app .question-passage-copy,
+#question-app .sat-answer-pane .question-text,
+#question-app .choice-reason-text,
+#question-app .answer-feedback-explanation{
+    overflow-wrap:break-word;
 }
