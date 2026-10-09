@@ -25829,7 +25829,77 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Circles",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "classificationVersion": "2026-10-08-relative-30-40-30-v3",
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Circle with diameter endpoints at (−7, 4) and (5, −2)",
+        "caption": "Schematic; not to scale.",
+        "lines": [
+          {
+            "x1": 36,
+            "y1": 171,
+            "x2": 389,
+            "y2": 171,
+            "dashed": false
+          },
+          {
+            "x1": 192,
+            "y1": 22,
+            "x2": 192,
+            "y2": 278,
+            "dashed": false
+          },
+          {
+            "x1": 115,
+            "y1": 127,
+            "x2": 247,
+            "y2": 193,
+            "dashed": false
+          }
+        ],
+        "polygons": [],
+        "ellipses": [],
+        "circles": [
+          {
+            "cx": 181,
+            "cy": 160,
+            "r": 73.79
+          }
+        ],
+        "points": [
+          {
+            "x": 115,
+            "y": 127,
+            "label": "",
+            "dx": 0,
+            "dy": 0
+          },
+          {
+            "x": 247,
+            "y": 193,
+            "label": "",
+            "dx": 0,
+            "dy": 0
+          }
+        ],
+        "labels": [
+          {
+            "x": 110,
+            "y": 113,
+            "text": "(−7, 4)",
+            "anchor": "middle"
+          },
+          {
+            "x": 257,
+            "y": 213,
+            "text": "(5, −2)",
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [],
+        "ticks": []
+      }
     },
     {
       "id": "math-20261006-new409-q326",
@@ -30856,7 +30926,69 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Trigonometry",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "classificationVersion": "2026-10-08-relative-30-40-30-v3",
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Ladder against a vertical wall; ground and wall are perpendicular",
+        "caption": "Schematic; not to scale.",
+        "lines": [
+          {
+            "x1": 119,
+            "y1": 251,
+            "x2": 119,
+            "y2": 58,
+            "dashed": false
+          },
+          {
+            "x1": 119,
+            "y1": 251,
+            "x2": 330,
+            "y2": 251,
+            "dashed": false
+          },
+          {
+            "x1": 119,
+            "y1": 58,
+            "x2": 330,
+            "y2": 251,
+            "dashed": false
+          }
+        ],
+        "polygons": [],
+        "ellipses": [],
+        "circles": [],
+        "points": [],
+        "labels": [
+          {
+            "x": 87,
+            "y": 153,
+            "text": "h",
+            "anchor": "middle"
+          },
+          {
+            "x": 222,
+            "y": 273,
+            "text": "7 ft",
+            "anchor": "middle"
+          },
+          {
+            "x": 244,
+            "y": 125,
+            "text": "h + 1",
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [
+          {
+            "x": 119,
+            "y": 251,
+            "size": 15,
+            "rotation": 0
+          }
+        ],
+        "ticks": []
+      }
     },
     {
       "id": "math-20261006-new409-q099",
@@ -38386,7 +38518,49 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "classificationVersion": "2026-10-08-relative-30-40-30-v3",
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Two intersecting lines form equal vertical and supplementary adjacent angles",
+        "caption": "Schematic; not to scale.",
+        "lines": [
+          {
+            "x1": 80,
+            "y1": 72,
+            "x2": 340,
+            "y2": 240,
+            "dashed": false
+          },
+          {
+            "x1": 331,
+            "y1": 62,
+            "x2": 89,
+            "y2": 250,
+            "dashed": false
+          }
+        ],
+        "polygons": [],
+        "ellipses": [],
+        "circles": [],
+        "points": [],
+        "labels": [
+          {
+            "x": 151,
+            "y": 129,
+            "text": "5x+7°",
+            "anchor": "middle"
+          },
+          {
+            "x": 264,
+            "y": 179,
+            "text": "3x+31°",
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [],
+        "ticks": []
+      }
     },
     {
       "id": "math-20261006-new409-q191",
@@ -39409,7 +39583,91 @@
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Lines, Angles, and Triangles",
-      "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+      "classificationVersion": "2026-10-08-relative-30-40-30-v3",
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Three lines meeting at P with adjacent angles 2z, 60, and z",
+        "caption": "Schematic; not to scale.",
+        "lines": [
+          {
+            "x1": 210,
+            "y1": 174,
+            "x2": 86,
+            "y2": 174,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 174,
+            "x2": 188.47,
+            "y2": 51.88,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 174,
+            "x2": 304.99,
+            "y2": 94.29,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 174,
+            "x2": 334,
+            "y2": 174,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 174,
+            "x2": 231.53,
+            "y2": 296.12,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 174,
+            "x2": 115.01,
+            "y2": 253.71,
+            "dashed": false
+          }
+        ],
+        "polygons": [],
+        "ellipses": [],
+        "circles": [],
+        "points": [
+          {
+            "x": 210,
+            "y": 174,
+            "label": "P",
+            "dx": 9,
+            "dy": 18
+          }
+        ],
+        "labels": [
+          {
+            "x": 146,
+            "y": 130,
+            "text": "2z°",
+            "anchor": "middle"
+          },
+          {
+            "x": 232,
+            "y": 97,
+            "text": "60°",
+            "anchor": "middle"
+          },
+          {
+            "x": 295,
+            "y": 144,
+            "text": "z°",
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [],
+        "ticks": []
+      }
     },
     {
       "id": "math-20261006-new409-q209",
@@ -48630,6 +48888,48 @@
         "B": "This choice does not satisfy the relationships or conditions in the question.",
         "C": "This choice does not satisfy the relationships or conditions in the question.",
         "D": "Let the acute angle be \\(a=7x-11\\). The obtuse angle is \\(180-a\\). The possible sums of two angles are \\(2a=14x-22\\), \\(a+(180-a)=180\\), and \\(2(180-a)=382-14x\\). Therefore, \\(\\boxed{371-7x}\\) cannot be such a sum."
+      },
+      "diagram": {
+        "width": 420,
+        "height": 300,
+        "alt": "Two intersecting lines form equal vertical and supplementary adjacent angles",
+        "caption": "Schematic; not to scale.",
+        "lines": [
+          {
+            "x1": 80,
+            "y1": 72,
+            "x2": 340,
+            "y2": 240,
+            "dashed": false
+          },
+          {
+            "x1": 331,
+            "y1": 62,
+            "x2": 89,
+            "y2": 250,
+            "dashed": false
+          }
+        ],
+        "polygons": [],
+        "ellipses": [],
+        "circles": [],
+        "points": [],
+        "labels": [
+          {
+            "x": 151,
+            "y": 129,
+            "text": "7x-11°",
+            "anchor": "middle"
+          },
+          {
+            "x": 264,
+            "y": 179,
+            "text": "7x-11°",
+            "anchor": "middle"
+          }
+        ],
+        "rightAngles": [],
+        "ticks": []
       }
     },
     {
