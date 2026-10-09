@@ -6500,15 +6500,15 @@ body.dark-mode .question-diagram-polygon.question-diagram-shaded{
 .university-browse-details>summary:focus-visible{
     outline:3px solid #deac54;outline-offset:-3px;border-radius:9px;
 }
-html.lexlogica-dark-mode .home-feature-more,
-html.lexlogica-dark-mode .university-browse-details{
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .home-feature-more,
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .university-browse-details{
     background:#1a2926;border-color:#36534b;
 }
-html.lexlogica-dark-mode .home-feature-more[open]>summary,
-html.lexlogica-dark-mode .university-browse-details[open]>summary{
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .home-feature-more[open]>summary,
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .university-browse-details[open]>summary{
     background:#22352f;border-color:#36534b;
 }
-html.lexlogica-dark-mode .university-browse-details>summary{color:#dcebe5}
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .university-browse-details>summary{color:#dcebe5}
 @media(max-width:640px){
     .home-score-range-details>summary span,
     .university-browse-details>summary span{display:none}

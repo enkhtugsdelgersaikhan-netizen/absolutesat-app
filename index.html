@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="lexlogica-home-native">
+<html lang="en" class="lexlogica-home-inverted">
 
 <head>
 
@@ -33,14 +33,14 @@
 
     <link
         rel="stylesheet"
-        href="style.css?v=streamlined-home-1"
+        href="style.css?v=two-panel-home-1"
     >
 
 <link rel="stylesheet" href="/dashboard.css?v=home-analytics-1">
-<link rel="stylesheet" href="/study-guide.css?v=streamlined-home-1">
-<link rel="stylesheet" href="/home-dashboard.css?v=streamlined-home-1">
+<link rel="stylesheet" href="/study-guide.css?v=two-panel-home-1">
+<link rel="stylesheet" href="/home-dashboard.css?v=two-panel-home-1">
 <link rel="stylesheet" href="/responsive.css?v=1">
-<link rel="stylesheet" href="/home-native-dark.css?v=1">
+<link rel="stylesheet" href="/home-hub.css?v=1">
     <!-- Vercel Web Analytics -->
     <script>
       window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -67,6 +67,99 @@
 
     <main>
 
+        <details class="home-why-disclosure" id="why-lexlogica">
+          <summary><span class="home-why-summary-icon" aria-hidden="true">?</span><span class="home-why-summary-copy"><strong>Why LexLogica?</strong><small>Free SAT practice, adaptive mocks, and useful feedback in one place</small></span><span class="home-why-summary-arrow" aria-hidden="true">⌄</span></summary>
+          <section class="features-section home-features-compact" aria-labelledby="why-absolute-prep">
+            <div class="features-container">
+              <div class="features-heading">
+                <p class="section-kicker">WHY LEXLOGICA?</p>
+                <h2 id="why-absolute-prep">SAT practice, all in one place.</h2>
+                <p>An independent platform built around realistic practice, useful feedback, and no paywall.</p>
+              </div>
+              <div class="features-grid">
+                <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M4 5h16v14H4z"></path>
+                                <path d="M8 9h8M8 13h5"></path>
+                                <circle cx="17" cy="15" r="1"></circle>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Everything in one place</h3>
+                            <p>Question banks, mock tests, fluency work, vocabulary, progress analytics, and targeted practice together.</p>
+                        </div>
+                    </article>
+                <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="7" cy="12" r="2.5"></circle>
+                                <circle cx="17" cy="7" r="2.5"></circle>
+                                <circle cx="17" cy="17" r="2.5"></circle>
+                                <path d="M9.5 11l5-3M9.5 13l5 3"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Adaptive, non-linear mock tests</h3>
+                            <p>Module 2 changes with Module 1 performance, matching the adaptive structure of the Digital SAT.</p>
+                        </div>
+                    </article>
+                <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M7 10V8a5 5 0 0 1 10 0v2"></path>
+                                <rect x="5" y="10" width="14" height="10" rx="2"></rect>
+                                <path d="M12 14v3"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Completely free</h3>
+                            <p>The full practice platform is free—no premium question bank, locked analytics, or paid mock tests.</p>
+                        </div>
+                    </article>
+                <article class="feature-card feature-card-disclaimer">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 3l8 4v5c0 4.7-3.2 7.7-8 9-4.8-1.3-8-4.3-8-9V7z"></path>
+                                <path d="M9 12l2 2 4-4"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Independent practice platform</h3>
+                            <p>Independent from College Board, with practice built specifically for Digital SAT preparation.</p>
+                        </div>
+                    </article>
+                <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M4 18h4l3-5 3 2 3-7 3 2"></path>
+                                <path d="M4 5v13h16"></path>
+                                <circle cx="11" cy="13" r="1.3"></circle>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Error analysis and review</h3>
+                            <p>See where accuracy and pace break down, then revisit the subtopics that need work in the Question Bank.</p>
+                        </div>
+                    </article>
+                <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M5 5h14v14H5z"></path>
+                                <path d="M8 9h8M8 12h5M8 15h8"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Authentic SAT-style questions</h3>
+                            <p>Original questions built to match Digital SAT structure, skills, reasoning, and presentation.</p>
+                        </div>
+                    </article>
+              </div>
+            </div>
+          </section>
+        </details>
+
+
         <!-- Public homepage overview; signed-in students see their own private analytics. -->
         <section id="home-dashboard" class="dashboard-page home-dashboard" aria-labelledby="home-dashboard-title">
             <div class="dashboard-header">
@@ -89,10 +182,21 @@
                 <small>Total saved practice answers</small>
             </article>
         </div>
+        <div class="home-hub-choices" role="group" aria-label="Your learning tools">
+          <button type="button" class="home-hub-choice" data-home-panel="study-guide" aria-controls="study-guide" aria-expanded="false">
+            <span class="home-hub-choice-icon" aria-hidden="true">✎</span>
+            <span class="home-hub-choice-text"><strong>Your study guide</strong><small>Latest mock, three priorities, vocabulary and formula practice</small></span>
+            <span class="home-hub-choice-action">Open <span aria-hidden="true">↗</span></span>
+          </button>
+          <button type="button" class="home-hub-choice" data-home-panel="home-progress" aria-controls="home-progress" aria-expanded="false">
+            <span class="home-hub-choice-icon" aria-hidden="true">↗</span>
+            <span class="home-hub-choice-text"><strong>Your progress &amp; analytics</strong><small>Mock score trends, activity, skill accuracy and pacing</small></span>
+            <span class="home-hub-choice-action">Open <span aria-hidden="true">↗</span></span>
+          </button>
+        </div>
 
-        
         <!-- Public study-guide overview; private score and diagnostics load only for the signed-in account. -->
-        <section id="study-guide" class="study-guide-page homepage-study-guide" aria-labelledby="home-study-guide-title">
+        <section id="study-guide" class="study-guide-page homepage-study-guide home-hub-detail" aria-labelledby="home-study-guide-title" hidden>
           <div class="study-guide-wrap">
             <div class="study-guide-intro">
               <span class="study-guide-eyebrow">PERSONALIZED PREPARATION</span>
@@ -166,25 +270,12 @@
         </div>
       </div>
     </section>
-            <details class="sg-research sg-research-compact">
-              <summary>Research behind the plan</summary>
-              <p>College Board studies associate full-length practice with stronger SAT results and identify skill progression and personalized practice as useful behaviors. These observational findings do not guarantee individual score gains.</p>
-              <div class="sg-source-links">
-                <a target="_blank" rel="noopener noreferrer" href="https://research.collegeboard.org/media/pdf/DigitalSATPracticeTests_052025.pdf">Digital practice study, 2025 ↗</a>
-                <a target="_blank" rel="noopener noreferrer" href="https://research.collegeboard.org/media/pdf/osp-technical-report.pdf">Official SAT Practice study, 2020 ↗</a>
-              </div>
-              <small>Study goals and domain completions are saved on this device for your signed-in account.</small>
-            </details>
+
           </div>
         </section>
 
 
-        <details class="home-disclosure home-progress-details" id="home-progress">
-            <summary class="home-disclosure-summary">
-                <span class="home-disclosure-icon" aria-hidden="true">↗</span>
-                <span class="home-disclosure-title"><span class="page-eyebrow">PROGRESS AND ANALYTICS</span><strong>Your progress and analytics</strong><small>Mock score trends, recent activity, and detailed skill performance</small></span>
-                <span class="home-disclosure-toggle" aria-hidden="true">View details <span>⌄</span></span>
-            </summary>
+        <section class="home-disclosure home-progress-details home-hub-detail" id="home-progress" aria-label="Your progress and analytics" hidden>
             <div class="home-disclosure-content">
                 <div id="home-progress-example" class="home-progress-example" hidden>
                     <strong>EXAMPLE PREVIEW — your own results will appear here</strong>
@@ -245,7 +336,7 @@
 
         <div id="dashboard-data-note" class="dashboard-data-note" hidden></div>
             </div>
-        </details>
+        </section>
     </section>
             <section class="dashboard-account-settings" aria-label="Practice data settings" hidden>
                 <details class="dashboard-settings-disclosure">
@@ -267,107 +358,12 @@
         </section>
 
 
-        <section class="features-section home-features-compact" aria-labelledby="why-absolute-prep">
-            <div class="features-container">
-                <div class="features-heading">
-                    <p class="section-kicker">WHY LEXLOGICA?</p>
-                    <h2 id="why-absolute-prep">SAT practice, all in one place.</h2>
-                    <p>An independent platform built around realistic practice, useful feedback, and no paywall.</p>
-                </div>
-
-                <div class="features-grid">
-<article class="feature-card">
-                        <div class="feature-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M4 5h16v14H4z"></path>
-                                <path d="M8 9h8M8 13h5"></path>
-                                <circle cx="17" cy="15" r="1"></circle>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3>Everything in one place</h3>
-                            <p>Question banks, mock tests, fluency work, vocabulary, progress analytics, and targeted practice together.</p>
-                        </div>
-                    </article>
-<article class="feature-card">
-                        <div class="feature-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24">
-                                <circle cx="7" cy="12" r="2.5"></circle>
-                                <circle cx="17" cy="7" r="2.5"></circle>
-                                <circle cx="17" cy="17" r="2.5"></circle>
-                                <path d="M9.5 11l5-3M9.5 13l5 3"></path>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3>Adaptive, non-linear mock tests</h3>
-                            <p>Module 2 changes with Module 1 performance, matching the adaptive structure of the Digital SAT.</p>
-                        </div>
-                    </article>
-<article class="feature-card">
-                        <div class="feature-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M7 10V8a5 5 0 0 1 10 0v2"></path>
-                                <rect x="5" y="10" width="14" height="10" rx="2"></rect>
-                                <path d="M12 14v3"></path>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3>Completely free</h3>
-                            <p>The full practice platform is free—no premium question bank, locked analytics, or paid mock tests.</p>
-                        </div>
-                    </article>
-</div>
-<details class="home-feature-more"><summary>Explore three more reasons to choose LexLogica <span aria-hidden="true">⌄</span></summary>
-<div class="features-grid">
-<article class="feature-card feature-card-disclaimer">
-                        <div class="feature-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M12 3l8 4v5c0 4.7-3.2 7.7-8 9-4.8-1.3-8-4.3-8-9V7z"></path>
-                                <path d="M9 12l2 2 4-4"></path>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3>Independent practice platform</h3>
-                            <p>Independent from College Board, with practice built specifically for Digital SAT preparation.</p>
-                        </div>
-                    </article>
-<article class="feature-card">
-                        <div class="feature-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M4 18h4l3-5 3 2 3-7 3 2"></path>
-                                <path d="M4 5v13h16"></path>
-                                <circle cx="11" cy="13" r="1.3"></circle>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3>Error analysis and review</h3>
-                            <p>See where accuracy and pace break down, then revisit the subtopics that need work in the Question Bank.</p>
-                        </div>
-                    </article>
-<article class="feature-card">
-                        <div class="feature-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M5 5h14v14H5z"></path>
-                                <path d="M8 9h8M8 12h5M8 15h8"></path>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3>Authentic SAT-style questions</h3>
-                            <p>Original questions built to match Digital SAT structure, skills, reasoning, and presentation.</p>
-                        </div>
-                    </article>
-</div>
-</details>
-            </div>
-        </section>
-
         <section class="university-sat-section" aria-labelledby="sat-score-guide-title">
             <div class="university-sat-container">
 <div class="sat-guide-row">
                     <section class="sat-score-guide" aria-labelledby="sat-score-guide-title">
     <div class="sat-score-guide-head"><span>SCORE GUIDE</span><h4 id="sat-score-guide-title">What SAT scores mean</h4></div>
-    <details class="home-score-range-details">
-<summary>View full SAT score-range guide <span>Composite · Reading &amp; Writing · Math</span></summary>
+    <div class="home-score-range-details">
 <div class="sat-score-guide-columns">
         <div class="sat-score-guide-scale composite" data-guide="composite">
             <div class="sat-score-scale-head"><strong>Composite</strong></div>
@@ -403,7 +399,7 @@
     
     
 
-</details>
+</div>
 </section>
                     <aside class="sat-guide-score-panel">
                         <div class="sat-context-profile sat-context-profile-inline sat-guide-score-saver">
@@ -500,9 +496,10 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js?v=home-logout-1"></script>
-<script src="/dashboard.js?v=streamlined-home-1"></script>
+<script src="/dashboard.js?v=two-panel-home-1"></script>
 <script src="/study-guide.js?v=streamlined-home-fluency-1"></script>
 <script src="/home-fluency.js?v=1"></script>
+<script src="/home-hub.js?v=1"></script>
 <script src="/university-top100.js?v=top100-1"></script>
 <script src="/university-catalog.js?v=assets-hires-1"></script>
 <script>
