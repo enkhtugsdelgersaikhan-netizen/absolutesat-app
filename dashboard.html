@@ -1,124 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | LexLogica</title>
-    <link rel="icon" type="image/png" href="/Favicon.png?v=b2788e22">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=unified-ui-1">
-    <link rel="stylesheet" href="dashboard.css?v=study-guide-1">
-    <link rel="stylesheet" href="/responsive.css?v=1">
-
-    <!-- Vercel Web Analytics -->
-    <script>
-      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/insights/script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="0; url=/">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="/">
+  <title>Practice analytics moved to the homepage | LexLogica</title>
+  <script>window.location.replace("/");</script>
 </head>
 <body>
-<header class="header"><div class="header-container"><a href="/" class="logo-link" aria-label="LexLogica home"><img src="/Logo.png" alt="LexLogica" class="logo"></a><nav class="navigation" aria-label="Main navigation"><a href="/mathematics" class="nav-button">Mathematics</a><a href="/mock-tests" class="nav-button">Mock Tests</a><a href="/reading-writing" class="nav-button">Reading and Writing</a></nav><a href="/dashboard" class="dashboard-button site-dashboard" hidden aria-hidden="true">Dashboard</a><div class="auth-buttons"><a href="/login" class="login-button">Login</a></div><button class="mobile-menu-button" aria-label="Open navigation" aria-expanded="false" type="button">☰</button></div></header>
-
-<main class="dashboard-page">
-    <section class="dashboard-header">
-        <div class="dashboard-header-copy">
-            <div class="page-eyebrow">PRACTICE ANALYTICS</div>
-            <h1>Dashboard</h1>
-            <p>See what you are practicing, how efficiently you are answering, and where the next points are most likely to come from.</p>
-        </div>
-
-        <section class="dashboard-panel dashboard-account-panel dashboard-account-panel-top">
-            <div class="dashboard-panel-heading">
-                <div>
-                    <div class="panel-eyebrow">ACCOUNT</div>
-                    <h2>Practice data</h2>
-                </div>
-            </div>
-            <p class="dashboard-muted">Reset saved practice history or sign out of this account.</p>
-            <div class="dashboard-account-actions">
-                <button type="button" class="dashboard-reset" id="dashboard-reset">Reset practice data</button>
-                <button type="button" class="dashboard-logout" id="dashboard-logout">Log out</button>
-            </div>
-        </section>
-    </section>
-
-    <section class="dashboard-content" aria-live="polite">
-        <div class="dashboard-kpis">
-            <article class="dashboard-kpi">
-                <span>Practice streak</span>
-                <strong id="streak">—</strong>
-                <small>Consecutive practice days</small>
-            </article>
-            <article class="dashboard-kpi">
-                <span>Questions answered</span>
-                <strong id="questions-answered">—</strong>
-                <small>Total saved practice answers</small>
-            </article>
-        </div>
-
-        <section class="dashboard-panel dashboard-study-guide-card"><div><span class="panel-eyebrow">PERSONALIZED PREPARATION</span><h2>From your first mock to your target SAT score</h2><p>Build a focused study route using your Mock Test 1 baseline, weaknesses, and a goal you choose.</p></div><a href="/study-guide" class="dashboard-guide-link">Open study guide →</a></section>
-
-        <div class="dashboard-chart-grid">
-            <section class="dashboard-panel dashboard-activity-panel">
-                <div class="dashboard-panel-heading">
-                    <div>
-                        <div class="panel-eyebrow">LAST 7 DAYS</div>
-                        <h2>Questions answered</h2>
-                    </div>
-                    <div class="dashboard-legend" aria-label="Chart legend">
-                        <span><i class="is-correct"></i>Correct</span>
-                        <span><i class="is-incorrect"></i>Incorrect</span>
-                    </div>
-                </div>
-                <div id="seven-day-chart" class="seven-day-chart dashboard-empty-chart">Loading practice history…</div>
-            </section>
-
-            <section class="dashboard-panel dashboard-trend-panel">
-                <div class="dashboard-panel-heading">
-                    <div>
-                        <div class="panel-eyebrow">MOCK TESTS</div>
-                        <h2>Mock test performance</h2>
-                        <p>Composite, Reading &amp; Writing, and Math across Mock Tests 1–8</p>
-                    </div>
-                    <div class="dashboard-legend dashboard-mock-legend" aria-label="Mock score chart legend">
-                        <span><i class="is-composite"></i>Composite</span>
-                        <span><i class="is-rw"></i>R&amp;W</span>
-                        <span><i class="is-math"></i>Math</span>
-                    </div>
-                </div>
-                <div id="mock-performance-chart" class="mock-performance-chart dashboard-empty-chart">Complete mock tests to build your score history.</div>
-            </section>
-        </div>
-
-        <section class="dashboard-panel dashboard-subtopic-panel">
-            <div class="dashboard-panel-heading dashboard-table-heading">
-                <div>
-                    <div class="panel-eyebrow">SKILL PERFORMANCE + NEXT WORK</div>
-                    <h2>Accuracy, pace, and what to practice next</h2>
-                </div>
-                <div class="dashboard-filter-group" role="group" aria-label="Filter skills by section">
-                    <button type="button" class="is-active" data-subtopic-filter="all">All</button>
-                    <button type="button" data-subtopic-filter="rw">R&amp;W</button>
-                    <button type="button" data-subtopic-filter="math">Math</button>
-                </div>
-            </div>
-
-            <div id="subtopic-skill-groups" class="dashboard-skill-groups">
-                <div class="dashboard-empty-state">Loading skill analytics…</div>
-            </div>
-
-            <p class="dashboard-benchmark-note">Color benchmark: 90%+ accuracy, about 71 seconds per R&amp;W question, and 95 seconds per Math question. Redder text means farther from the preferred benchmark. Average time uses first-attempt timing recorded from this analytics update onward.</p>
-        </section>
-
-        <div id="dashboard-data-note" class="dashboard-data-note" hidden></div>
-    </section>
-</main>
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="auth.js?v=dark-3"></script>
-<script src="dashboard.js?v=skill-severity-1"></script>
-<script src="/study.js"></script>
+  <p>Your practice analytics are now on the <a href="/">LexLogica homepage</a>.</p>
 </body>
 </html>
