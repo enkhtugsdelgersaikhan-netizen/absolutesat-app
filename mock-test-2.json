@@ -3415,7 +3415,7 @@
             "diagram": {
               "width": 420,
               "height": 300,
-              "alt": "Triangle HAS schematic",
+              "alt": "Triangle ABC schematic",
               "caption": "Schematic; not to scale.",
               "lines": [],
               "polygons": [
@@ -3442,21 +3442,21 @@
                 {
                   "x": 105,
                   "y": 248,
-                  "label": "H",
+                  "label": "A",
                   "dx": -12,
                   "dy": 18
                 },
                 {
                   "x": 322,
                   "y": 248,
-                  "label": "A",
+                  "label": "B",
                   "dx": 10,
                   "dy": 18
                 },
                 {
                   "x": 205,
                   "y": 66,
-                  "label": "S",
+                  "label": "C",
                   "dx": 0,
                   "dy": -12
                 }
@@ -3836,62 +3836,37 @@
             "diagram": {
               "width": 420,
               "height": 300,
-              "alt": "Circle with diameters AC and BD",
-              "ellipses": [
+              "alt": "Circle geometry diagram",
+              "caption": "Schematic; not to scale.",
+              "lines": [],
+              "polygons": [],
+              "ellipses": [],
+              "circles": [
                 {
-                  "cx": 210,
-                  "cy": 150,
-                  "rx": 115,
-                  "ry": 115
-                }
-              ],
-              "lines": [
-                {
-                  "x1": 128,
-                  "y1": 69,
-                  "x2": 292,
-                  "y2": 231,
-                  "dashed": false
-                },
-                {
-                  "x1": 292,
-                  "y1": 69,
-                  "x2": 128,
-                  "y2": 231,
-                  "dashed": false
+                  "cx": 205,
+                  "cy": 152,
+                  "r": 104
                 }
               ],
               "points": [
                 {
-                  "x": 128,
-                  "y": 69,
+                  "x": 119.81,
+                  "y": 92.35,
                   "label": "A",
                   "dx": -12,
-                  "dy": -8
+                  "dy": -11
                 },
                 {
-                  "x": 292,
-                  "y": 69,
+                  "x": 299.26,
+                  "y": 108.05,
                   "label": "B",
                   "dx": 10,
-                  "dy": -8
-                },
-                {
-                  "x": 292,
-                  "y": 231,
-                  "label": "C",
-                  "dx": 10,
-                  "dy": 18
-                },
-                {
-                  "x": 128,
-                  "y": 231,
-                  "label": "D",
-                  "dx": -12,
-                  "dy": 18
+                  "dy": 15
                 }
               ],
-              "caption": "Schematic; not to scale."
+              "labels": [],
+              "rightAngles": [],
+              "ticks": []
             }
           }
         }

@@ -3449,7 +3449,7 @@
             "diagram": {
               "width": 420,
               "height": 300,
-              "alt": "Triangle HAS schematic",
+              "alt": "Triangle ABC schematic",
               "caption": "Schematic; not to scale.",
               "lines": [],
               "polygons": [
@@ -3476,21 +3476,21 @@
                 {
                   "x": 205,
                   "y": 60,
-                  "label": "H",
+                  "label": "A",
                   "dx": 0,
                   "dy": -12
                 },
                 {
                   "x": 91,
                   "y": 243,
-                  "label": "A",
+                  "label": "B",
                   "dx": -12,
                   "dy": 18
                 },
                 {
                   "x": 319,
                   "y": 243,
-                  "label": "S",
+                  "label": "C",
                   "dx": 10,
                   "dy": 18
                 }
@@ -4303,7 +4303,7 @@
             "diagram": {
               "width": 420,
               "height": 300,
-              "alt": "Triangle HAS schematic",
+              "alt": "Triangle ABC schematic",
               "caption": "Schematic; not to scale.",
               "lines": [],
               "polygons": [
@@ -4330,21 +4330,21 @@
                 {
                   "x": 105,
                   "y": 248,
-                  "label": "H",
+                  "label": "A",
                   "dx": -12,
                   "dy": 18
                 },
                 {
                   "x": 322,
                   "y": 248,
-                  "label": "A",
+                  "label": "B",
                   "dx": 10,
                   "dy": 18
                 },
                 {
                   "x": 205,
                   "y": 66,
-                  "label": "S",
+                  "label": "C",
                   "dx": 0,
                   "dy": -12
                 }
@@ -6019,7 +6019,7 @@
             "diagram": {
               "width": 420,
               "height": 300,
-              "alt": "Triangle ABC schematic",
+              "alt": "Triangle DCE schematic",
               "caption": "Schematic; not to scale.",
               "lines": [],
               "polygons": [
@@ -6046,21 +6046,21 @@
                 {
                   "x": 205,
                   "y": 60,
-                  "label": "A",
+                  "label": "D",
                   "dx": 0,
                   "dy": -12
                 },
                 {
                   "x": 91,
                   "y": 243,
-                  "label": "B",
+                  "label": "C",
                   "dx": -12,
                   "dy": 18
                 },
                 {
                   "x": 319,
                   "y": 243,
-                  "label": "C",
+                  "label": "E",
                   "dx": 10,
                   "dy": 18
                 }

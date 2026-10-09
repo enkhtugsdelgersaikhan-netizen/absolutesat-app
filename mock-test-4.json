@@ -4841,23 +4841,39 @@
             "diagram": {
               "width": 420,
               "height": 300,
-              "alt": "Triangle JKL schematic",
+              "alt": "Two triangles JKL and JKL schematic",
               "caption": "Schematic; not to scale.",
               "lines": [],
               "polygons": [
                 {
                   "points": [
                     [
-                      105,
-                      248
+                      64,
+                      244
                     ],
                     [
-                      322,
-                      248
+                      174,
+                      244
                     ],
                     [
-                      205,
-                      66
+                      64,
+                      89
+                    ]
+                  ]
+                },
+                {
+                  "points": [
+                    [
+                      238,
+                      244
+                    ],
+                    [
+                      367,
+                      244
+                    ],
+                    [
+                      238,
+                      63
                     ]
                   ]
                 }
@@ -4866,47 +4882,49 @@
               "circles": [],
               "points": [
                 {
-                  "x": 105,
-                  "y": 248,
+                  "x": 64,
+                  "y": 244,
                   "label": "J",
-                  "dx": -12,
-                  "dy": 18
+                  "dx": -11,
+                  "dy": 17
                 },
                 {
-                  "x": 322,
-                  "y": 248,
+                  "x": 174,
+                  "y": 244,
                   "label": "K",
-                  "dx": 10,
-                  "dy": 18
+                  "dx": 9,
+                  "dy": 17
                 },
                 {
-                  "x": 205,
-                  "y": 66,
+                  "x": 64,
+                  "y": 89,
                   "label": "L",
-                  "dx": 0,
-                  "dy": -12
-                }
-              ],
-              "labels": [
-                {
-                  "x": 225.5,
-                  "y": 271,
-                  "text": "JK = 17",
-                  "anchor": "middle"
+                  "dx": -11,
+                  "dy": -13
                 },
                 {
-                  "x": 143,
-                  "y": 150,
-                  "text": "JL = 15",
-                  "anchor": "middle"
+                  "x": 238,
+                  "y": 244,
+                  "label": "J",
+                  "dx": -11,
+                  "dy": 17
                 },
                 {
-                  "x": 275.5,
-                  "y": 150,
-                  "text": "KL = 8",
-                  "anchor": "middle"
+                  "x": 367,
+                  "y": 244,
+                  "label": "K",
+                  "dx": 9,
+                  "dy": 17
+                },
+                {
+                  "x": 238,
+                  "y": 63,
+                  "label": "L",
+                  "dx": -11,
+                  "dy": -13
                 }
               ],
+              "labels": [],
               "rightAngles": [],
               "ticks": []
             }
@@ -5533,23 +5551,39 @@
             "diagram": {
               "width": 420,
               "height": 300,
-              "alt": "Triangle JKL schematic",
+              "alt": "Two triangles JKL and JKL schematic",
               "caption": "Schematic; not to scale.",
               "lines": [],
               "polygons": [
                 {
                   "points": [
                     [
-                      105,
-                      248
+                      64,
+                      244
                     ],
                     [
-                      322,
-                      248
+                      174,
+                      244
                     ],
                     [
-                      205,
-                      66
+                      64,
+                      89
+                    ]
+                  ]
+                },
+                {
+                  "points": [
+                    [
+                      238,
+                      244
+                    ],
+                    [
+                      367,
+                      244
+                    ],
+                    [
+                      238,
+                      63
                     ]
                   ]
                 }
@@ -5558,47 +5592,49 @@
               "circles": [],
               "points": [
                 {
-                  "x": 105,
-                  "y": 248,
+                  "x": 64,
+                  "y": 244,
                   "label": "J",
-                  "dx": -12,
-                  "dy": 18
+                  "dx": -11,
+                  "dy": 17
                 },
                 {
-                  "x": 322,
-                  "y": 248,
+                  "x": 174,
+                  "y": 244,
                   "label": "K",
-                  "dx": 10,
-                  "dy": 18
+                  "dx": 9,
+                  "dy": 17
                 },
                 {
-                  "x": 205,
-                  "y": 66,
+                  "x": 64,
+                  "y": 89,
                   "label": "L",
-                  "dx": 0,
-                  "dy": -12
-                }
-              ],
-              "labels": [
-                {
-                  "x": 225.5,
-                  "y": 271,
-                  "text": "JK = 17",
-                  "anchor": "middle"
+                  "dx": -11,
+                  "dy": -13
                 },
                 {
-                  "x": 143,
-                  "y": 150,
-                  "text": "JL = 15",
-                  "anchor": "middle"
+                  "x": 238,
+                  "y": 244,
+                  "label": "J",
+                  "dx": -11,
+                  "dy": 17
                 },
                 {
-                  "x": 275.5,
-                  "y": 150,
-                  "text": "KL = 8",
-                  "anchor": "middle"
+                  "x": 367,
+                  "y": 244,
+                  "label": "K",
+                  "dx": 9,
+                  "dy": 17
+                },
+                {
+                  "x": 238,
+                  "y": 63,
+                  "label": "L",
+                  "dx": -11,
+                  "dy": -13
                 }
               ],
+              "labels": [],
               "rightAngles": [],
               "ticks": []
             }
@@ -5920,7 +5956,7 @@
             "diagram": {
               "width": 420,
               "height": 300,
-              "alt": "Triangle HAS schematic",
+              "alt": "Triangle ABC schematic",
               "caption": "Schematic; not to scale.",
               "lines": [],
               "polygons": [
@@ -5947,21 +5983,21 @@
                 {
                   "x": 105,
                   "y": 248,
-                  "label": "H",
+                  "label": "A",
                   "dx": -12,
                   "dy": 18
                 },
                 {
                   "x": 322,
                   "y": 248,
-                  "label": "A",
+                  "label": "B",
                   "dx": 10,
                   "dy": 18
                 },
                 {
                   "x": 205,
                   "y": 66,
-                  "label": "S",
+                  "label": "C",
                   "dx": 0,
                   "dy": -12
                 }
@@ -6020,22 +6056,7 @@
                   "r": 104
                 }
               ],
-              "points": [
-                {
-                  "x": 119.81,
-                  "y": 92.35,
-                  "label": "A",
-                  "dx": -12,
-                  "dy": -11
-                },
-                {
-                  "x": 299.26,
-                  "y": 108.05,
-                  "label": "B",
-                  "dx": 10,
-                  "dy": 15
-                }
-              ],
+              "points": [],
               "labels": [],
               "rightAngles": [],
               "ticks": []
