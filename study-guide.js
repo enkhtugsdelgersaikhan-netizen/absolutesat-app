@@ -193,15 +193,27 @@
   }
   function completedDomains() { return read(completionKey(),{}); }
   function mixForAccuracy(row) {
-    // Smoothly adjust difficulty from fundamentals to challenge rather
-    // than putting all scores under 40% into the same 6/3/1 bucket.
-    // A 10-question set has whole-number limits; nearby percentages may
-    // still round to the same distribution.
+    // Quadratic interpolation: 0% -> 10 easy, 100% -> 10 hard.
+    // Medium peaks at 50%. Use largest remainder rounding to preserve
+    // exactly 10 questions without ever returning negative counts.
     if (!row.total) return [3,4,3];
     const accuracy=Math.max(0,Math.min(1,Number(row.accuracy)||0));
-    const easy=Math.max(1,Math.min(8,Math.round(8-7*accuracy)));
-    const hard=Math.max(0,Math.min(6,Math.round(6*accuracy*accuracy)));
-    return [easy,10-easy-hard,hard];
+    const exact=[
+      10*(1-accuracy)*(1-accuracy),
+      20*accuracy*(1-accuracy),
+      10*accuracy*accuracy
+    ];
+    const counts=exact.map(Math.floor);
+    let remaining=10-counts.reduce((a,b)=>a+b,0);
+    const order=[0,1,2].sort((a,b)=>
+      (exact[b]-Math.floor(exact[b]))-(exact[a]-Math.floor(exact[a]))||a-b
+    );
+    for (const index of order) {
+      if (!remaining) break;
+      counts[index]++;
+      remaining--;
+    }
+    return counts;
   }
   function domainSeverity(row) {
     if (!row.total) return "unassessed";
