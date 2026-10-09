@@ -823,8 +823,32 @@ async function loadQuestions() {
         const data =
             await response.json();
 
+        let bankQuestions =
+            data.questions || [];
+
+        if (activeSection === "Math") {
+            try {
+                const supplementResponse =
+                    await fetch(
+                        "/math-question-bank-20261010-reviewed.json?v=1",
+                        { cache: "no-store" }
+                    );
+
+                if (supplementResponse.ok) {
+                    const supplement =
+                        await supplementResponse.json();
+                    bankQuestions =
+                        bankQuestions.concat(supplement.questions || []);
+                } else {
+                    console.warn("Supplemental Math questions unavailable.");
+                }
+            } catch (supplementError) {
+                console.warn("Could not load supplemental Math questions:", supplementError);
+            }
+        }
+
         stagedQuestions =
-            (data.questions || [])
+            (bankQuestions || [])
                 .filter(
                     question =>
                         question.status ===
