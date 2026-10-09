@@ -3590,42 +3590,70 @@
             "diagram": {
               "width": 420,
               "height": 300,
-              "alt": "Square schematic",
+              "alt": "Triangle ABC schematic",
               "caption": "Schematic; not to scale.",
-              "lines": [],
+              "lines": [
+                {
+                  "x1": 108,
+                  "y1": 228,
+                  "x2": 122,
+                  "y2": 228,
+                  "dashed": false,
+                  "rightMark": true
+                },
+                {
+                  "x1": 122,
+                  "y1": 228,
+                  "x2": 122,
+                  "y2": 242,
+                  "dashed": false,
+                  "rightMark": true
+                }
+              ],
               "polygons": [
                 {
                   "points": [
                     [
-                      137,
-                      80
+                      108,
+                      65
                     ],
                     [
-                      283,
-                      80
+                      325,
+                      242
                     ],
                     [
-                      283,
-                      226
-                    ],
-                    [
-                      137,
-                      226
+                      108,
+                      242
                     ]
                   ]
                 }
               ],
               "ellipses": [],
               "circles": [],
-              "points": [],
-              "labels": [
+              "points": [
                 {
-                  "x": 208,
-                  "y": 66,
-                  "text": "side",
-                  "anchor": "middle"
+                  "x": 108,
+                  "y": 65,
+                  "label": "A",
+                  "dx": -12,
+                  "dy": -12
+                },
+                {
+                  "x": 325,
+                  "y": 242,
+                  "label": "B",
+                  "dx": 10,
+                  "dy": 18
+                },
+                {
+                  "x": 108,
+                  "y": 242,
+                  "label": "C",
+                  "dx": -12,
+                  "dy": 18
                 }
               ],
+              "labels": [],
               "rightAngles": [],
               "ticks": []
             }

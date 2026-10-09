@@ -3451,21 +3451,38 @@
               "height": 300,
               "alt": "Triangle ABC schematic",
               "caption": "Schematic; not to scale.",
-              "lines": [],
+              "lines": [
+                {
+                  "x1": 108,
+                  "y1": 228,
+                  "x2": 122,
+                  "y2": 228,
+                  "dashed": false,
+                  "rightMark": true
+                },
+                {
+                  "x1": 122,
+                  "y1": 228,
+                  "x2": 122,
+                  "y2": 242,
+                  "dashed": false,
+                  "rightMark": true
+                }
+              ],
               "polygons": [
                 {
                   "points": [
                     [
-                      205,
-                      60
+                      108,
+                      68
                     ],
                     [
-                      91,
-                      243
+                      282,
+                      242
                     ],
                     [
-                      319,
-                      243
+                      108,
+                      242
                     ]
                   ]
                 }
@@ -3475,20 +3492,7 @@
               "points": [],
               "labels": [],
               "rightAngles": [],
-              "ticks": [
-                {
-                  "x": 148,
-                  "y": 151.5,
-                  "angle": 32,
-                  "size": 10
-                },
-                {
-                  "x": 262,
-                  "y": 151.5,
-                  "angle": -32,
-                  "size": 10
-                }
-              ]
+              "ticks": []
             }
           }
         },
@@ -3528,27 +3532,43 @@
             "diagram": {
               "width": 420,
               "height": 300,
-              "alt": "Rectangle schematic",
+              "alt": "Isosceles right triangle and rectangular comparison",
               "caption": "Schematic; not to scale.",
               "lines": [],
               "polygons": [
                 {
                   "points": [
                     [
-                      95,
-                      88
+                      75,
+                      99
                     ],
                     [
-                      325,
-                      88
+                      75,
+                      239
                     ],
                     [
-                      325,
-                      235
+                      215,
+                      239
+                    ]
+                  ]
+                },
+                {
+                  "points": [
+                    [
+                      273,
+                      120
                     ],
                     [
-                      95,
-                      235
+                      389,
+                      120
+                    ],
+                    [
+                      389,
+                      232
+                    ],
+                    [
+                      273,
+                      232
                     ]
                   ]
                 }
@@ -3558,15 +3578,15 @@
               "points": [],
               "labels": [
                 {
-                  "x": 210,
-                  "y": 70,
-                  "text": "length",
+                  "x": 131,
+                  "y": 262,
+                  "text": "Triangle",
                   "anchor": "middle"
                 },
                 {
-                  "x": 74,
-                  "y": 166,
-                  "text": "width",
+                  "x": 330,
+                  "y": 258,
+                  "text": "Rectangle",
                   "anchor": "middle"
                 }
               ],
@@ -6242,91 +6262,112 @@
             "diagram": {
               "width": 420,
               "height": 300,
-              "alt": "Cube schematic",
+              "alt": "Three congruent cubes attached face-to-face in a row",
               "caption": "Schematic; not to scale.",
               "lines": [
                 {
-                  "x1": 118,
-                  "y1": 104,
-                  "x2": 260,
-                  "y2": 104,
+                  "x1": 49,
+                  "y1": 137,
+                  "x2": 154,
+                  "y2": 137,
                   "dashed": false
                 },
                 {
-                  "x1": 118,
-                  "y1": 104,
-                  "x2": 173,
-                  "y2": 55,
-                  "dashed": false
-                },
-                {
-                  "x1": 260,
-                  "y1": 104,
-                  "x2": 260,
+                  "x1": 49,
+                  "y1": 137,
+                  "x2": 49,
                   "y2": 246,
                   "dashed": false
                 },
                 {
-                  "x1": 260,
-                  "y1": 104,
-                  "x2": 315,
-                  "y2": 55,
-                  "dashed": false
-                },
-                {
-                  "x1": 260,
+                  "x1": 49,
                   "y1": 246,
-                  "x2": 118,
+                  "x2": 154,
                   "y2": 246,
                   "dashed": false
                 },
                 {
-                  "x1": 260,
+                  "x1": 154,
+                  "y1": 137,
+                  "x2": 259,
+                  "y2": 137,
+                  "dashed": false
+                },
+                {
+                  "x1": 154,
+                  "y1": 137,
+                  "x2": 154,
+                  "y2": 246,
+                  "dashed": false
+                },
+                {
+                  "x1": 154,
                   "y1": 246,
-                  "x2": 315,
-                  "y2": 197,
+                  "x2": 259,
+                  "y2": 246,
                   "dashed": false
                 },
                 {
-                  "x1": 118,
+                  "x1": 259,
+                  "y1": 137,
+                  "x2": 364,
+                  "y2": 137,
+                  "dashed": false
+                },
+                {
+                  "x1": 259,
+                  "y1": 137,
+                  "x2": 259,
+                  "y2": 246,
+                  "dashed": false
+                },
+                {
+                  "x1": 259,
                   "y1": 246,
-                  "x2": 118,
-                  "y2": 104,
+                  "x2": 364,
+                  "y2": 246,
                   "dashed": false
                 },
                 {
-                  "x1": 118,
+                  "x1": 364,
+                  "y1": 137,
+                  "x2": 364,
+                  "y2": 246,
+                  "dashed": false
+                },
+                {
+                  "x1": 49,
+                  "y1": 137,
+                  "x2": 84,
+                  "y2": 101,
+                  "dashed": false
+                },
+                {
+                  "x1": 364,
+                  "y1": 137,
+                  "x2": 399,
+                  "y2": 101,
+                  "dashed": false
+                },
+                {
+                  "x1": 84,
+                  "y1": 101,
+                  "x2": 399,
+                  "y2": 101,
+                  "dashed": false
+                },
+                {
+                  "x1": 364,
                   "y1": 246,
-                  "x2": 173,
-                  "y2": 197,
+                  "x2": 399,
+                  "y2": 210,
                   "dashed": false
                 },
                 {
-                  "x1": 173,
-                  "y1": 55,
-                  "x2": 315,
-                  "y2": 55,
-                  "dashed": false
-                },
-                {
-                  "x1": 315,
-                  "y1": 55,
-                  "x2": 315,
-                  "y2": 197,
-                  "dashed": false
-                },
-                {
-                  "x1": 315,
-                  "y1": 197,
-                  "x2": 173,
-                  "y2": 197,
-                  "dashed": false
-                },
-                {
-                  "x1": 173,
-                  "y1": 197,
-                  "x2": 173,
-                  "y2": 55,
+                  "x1": 399,
+                  "y1": 101,
+                  "x2": 399,
+                  "y2": 210,
                   "dashed": false
                 }
               ],
@@ -6334,20 +6375,7 @@
               "ellipses": [],
               "circles": [],
               "points": [],
-              "labels": [
-                {
-                  "x": 183,
-                  "y": 271,
-                  "text": "length",
-                  "anchor": "middle"
-                },
-                {
-                  "x": 83,
-                  "y": 176,
-                  "text": "height",
-                  "anchor": "middle"
-                }
-              ],
+              "labels": [],
               "rightAngles": [],
               "ticks": []
             }
