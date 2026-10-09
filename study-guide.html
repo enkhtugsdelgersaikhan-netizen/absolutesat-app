@@ -22,7 +22,7 @@
     <a href="/mock-tests" class="nav-button">Mock Tests</a>
     <a href="/reading-writing" class="nav-button">Reading and Writing</a>
   </nav>
-  <a href="/dashboard" class="dashboard-button site-dashboard" hidden aria-hidden="true">Dashboard</a>
+  <button type="button" class="dashboard-button site-dashboard site-logout" hidden aria-hidden="true">Log out</button>
   <div class="auth-buttons"><a href="/login" class="login-button">Login</a></div>
   <button class="mobile-menu-button" aria-label="Open navigation" aria-expanded="false" type="button">☰</button>
 </div></header>
@@ -32,7 +32,7 @@
       <div class="study-guide-eyebrow">YOUR PERSONAL STUDY ROUTE</div>
       <h1>From your first score to your goal.</h1>
       <p>A focused SAT plan built from your first LexLogica mock test. Identify the skills to improve, practice with purpose, and use later mocks to measure progress.</p>
-      <a href="/dashboard" class="study-guide-back">← Back to dashboard</a>
+      <a href="/" class="study-guide-back">← Back to homepage</a>
     </div>
     <div id="study-guide-loading" class="study-guide-loading" role="status">Loading your mock-test history…</div>
     <section id="study-guide-empty" class="study-guide-empty" hidden>
@@ -91,7 +91,7 @@
   </div>
 </main>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="/auth.js?v=dark-3"></script>
+<script src="/auth.js?v=home-logout-1"></script>
 <script src="/study-guide.js?v=1"></script>
 <script src="/study.js"></script>
 </body>
