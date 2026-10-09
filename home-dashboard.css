@@ -126,3 +126,39 @@ html.lexlogica-dark-mode .dashboard-reset-confirmation{
     border-color:#784b43;
 }
 html.lexlogica-dark-mode .dashboard-reset-confirmation label{color:#f5d1ca}
+
+/* Guest visitors see the complete public homepage layout. Private charts
+   stay empty until an authenticated account supplies actual practice data. */
+.home-dashboard.is-guest .dashboard-account-settings[hidden]{display:none!important}
+.home-dashboard.is-guest .dashboard-kpi>strong{
+    color:#718b84;
+}
+.home-dashboard.is-guest .dashboard-empty-chart .dashboard-empty-state,
+.home-dashboard.is-guest .dashboard-skill-groups .dashboard-empty-state{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:96px;
+    padding:18px;
+    color:#789088;
+    background:#f8fbfa;
+    border:1px dashed #d8e8e2;
+    border-radius:11px;
+    text-align:center;
+    font-size:12px;
+    line-height:1.65;
+}
+.home-dashboard.is-guest .dashboard-filter-group button:disabled{
+    opacity:.48;
+    cursor:not-allowed;
+}
+.home-dashboard.is-guest .sg-goal-entry input:disabled,
+.home-dashboard.is-guest .sg-goal-entry button:disabled{
+    opacity:.64;
+    cursor:not-allowed;
+}
+.home-dashboard.is-guest .sg-priority-item .sg-priority-link{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+}

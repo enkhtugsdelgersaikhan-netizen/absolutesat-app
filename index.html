@@ -33,12 +33,12 @@
 
     <link
         rel="stylesheet"
-        href="style.css?v=unified-ui-1"
+        href="style.css?v=public-home-theme-1"
     >
 
 <link rel="stylesheet" href="/dashboard.css?v=home-analytics-1">
-<link rel="stylesheet" href="/study-guide.css?v=embedded-accuracy-1">
-<link rel="stylesheet" href="/home-dashboard.css?v=1">
+<link rel="stylesheet" href="/study-guide.css?v=public-home-theme-1">
+<link rel="stylesheet" href="/home-dashboard.css?v=public-home-theme-1">
 <link rel="stylesheet" href="/responsive.css?v=1">
     <!-- Vercel Web Analytics -->
     <script>
@@ -66,13 +66,13 @@
 
     <main>
 
-        <!-- Personal analytics only appear after a verified sign-in. -->
-        <section id="home-dashboard" class="dashboard-page home-dashboard" aria-labelledby="home-dashboard-title" hidden>
+        <!-- Public homepage overview; signed-in students see their own private analytics. -->
+        <section id="home-dashboard" class="dashboard-page home-dashboard" aria-labelledby="home-dashboard-title">
             <div class="dashboard-header">
                 <div class="dashboard-header-copy">
                     <div class="page-eyebrow">YOUR PRACTICE</div>
-                    <h2 id="home-dashboard-title">Welcome back.</h2>
-                    <p>Pick up where you left off, follow your study plan, and keep an eye on your progress.</p>
+                    <h2 id="home-dashboard-title">Welcome to LexLogica.</h2>
+                    <p id="home-dashboard-intro">Explore your SAT study tools. Sign in to track your own progress and unlock personalized recommendations.</p>
                 </div>
             </div>
             <section class="dashboard-content" aria-live="polite">
@@ -90,7 +90,7 @@
         </div>
 
         
-        <!-- Embedded personal study guide: stays inside the signed-in analytics container. -->
+        <!-- Public study-guide overview; private score and diagnostics load only for the signed-in account. -->
         <section id="study-guide" class="study-guide-page homepage-study-guide" aria-labelledby="home-study-guide-title">
           <div class="study-guide-wrap">
             <div class="study-guide-intro">
@@ -212,7 +212,7 @@
 
         <div id="dashboard-data-note" class="dashboard-data-note" hidden></div>
     </section>
-            <section class="dashboard-account-settings" aria-label="Practice data settings">
+            <section class="dashboard-account-settings" aria-label="Practice data settings" hidden>
                 <details class="dashboard-settings-disclosure">
                     <summary>Practice data settings</summary>
                     <div class="dashboard-settings-inner">
@@ -459,8 +459,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js?v=home-logout-1"></script>
-<script src="/dashboard.js?v=embedded-study-guide-1"></script>
-<script src="/study-guide.js?v=embedded-accuracy-1"></script>
+<script src="/dashboard.js?v=public-home-theme-1"></script>
+<script src="/study-guide.js?v=public-home-theme-1"></script>
 <script src="/university-top100.js?v=top100-1"></script>
 <script src="/university-catalog.js?v=assets-hires-1"></script>
 <script>

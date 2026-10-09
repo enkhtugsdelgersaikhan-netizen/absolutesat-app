@@ -2,12 +2,67 @@ document.addEventListener("DOMContentLoaded", async () => {
     const dashboardRoot = document.getElementById("home-dashboard");
     if (!dashboardRoot) return;
 
-    const { data, error: sessionError } = await absolutePrepSupabase.auth.getSession();
+    function showGuestOverview() {
+        dashboardRoot.hidden = false;
+        dashboardRoot.classList.add("is-guest");
+        const title = document.getElementById("home-dashboard-title");
+        const intro = document.getElementById("home-dashboard-intro");
+        const eyebrow = dashboardRoot.querySelector(".dashboard-header .page-eyebrow");
+        if (eyebrow) eyebrow.textContent = "YOUR SAT PREPARATION";
+        if (title) title.textContent = "Welcome to LexLogica.";
+        if (intro) intro.textContent =
+            "Explore the full homepage. Sign in to track your SAT preparation, see your statistics, and personalize your study guide.";
+        const streak = document.getElementById("streak");
+        const answered = document.getElementById("questions-answered");
+        if (streak) streak.textContent = "—";
+        if (answered) answered.textContent = "—";
+        document.querySelectorAll(".dashboard-kpi").forEach(card => {
+            const note = card.querySelector("small");
+            if (note) note.textContent = "Sign in to track your progress";
+        });
+        const seven = document.getElementById("seven-day-chart");
+        const mocks = document.getElementById("mock-performance-chart");
+        const skills = document.getElementById("subtopic-skill-groups");
+        if (seven) seven.innerHTML =
+            '<div class="dashboard-empty-state">Your daily practice activity will appear here after you sign in.</div>';
+        if (mocks) mocks.innerHTML =
+            '<div class="dashboard-empty-state">Your mock-test score history will appear here after you sign in.</div>';
+        if (skills) skills.innerHTML =
+            '<div class="dashboard-empty-state">Your domain and subtopic analysis will appear here after you complete practice.</div>';
+        document.querySelectorAll("[data-subtopic-filter]").forEach(button => {
+            button.disabled = true;
+            button.setAttribute("aria-label", "Sign in to filter your skill analytics");
+        });
+        const settings = dashboardRoot.querySelector(".dashboard-account-settings");
+        if (settings) settings.hidden = true;
+    }
+
+    let data = null;
+    let sessionError = null;
+    try {
+        const result = await absolutePrepSupabase.auth.getSession();
+        data = result.data;
+        sessionError = result.error;
+    } catch (error) {
+        sessionError = error;
+        console.warn("Homepage account check unavailable:", error);
+    }
     if (sessionError || !data?.session ||
-        !isAbsolutePrepGoogleSession(data.session)) return;
+        !isAbsolutePrepGoogleSession(data.session)) {
+        showGuestOverview();
+        return;
+    }
 
     const user = data.session.user;
     dashboardRoot.hidden = false;
+    dashboardRoot.classList.remove("is-guest");
+    const settingsPanel = dashboardRoot.querySelector(".dashboard-account-settings");
+    if (settingsPanel) settingsPanel.hidden = false;
+    const title = document.getElementById("home-dashboard-title");
+    const intro = document.getElementById("home-dashboard-intro");
+    if (title) title.textContent = "Welcome back.";
+    if (intro) intro.textContent =
+        "Pick up where you left off, follow your study plan, and keep an eye on your progress.";
     // Legacy study-guide links now point to the embedded section. Wait until
     // authentication reveals the container before scrolling to the anchor.
     if (window.location.hash === "#study-guide") {

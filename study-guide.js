@@ -193,14 +193,14 @@
   }
   function completedDomains() { return read(completionKey(),{}); }
   function mixForAccuracy(row) {
-    // Smoothly adjust difficulty from fundamentals to challenge rather
-    // than putting all scores under 40% into the same 6/3/1 bucket.
-    // A 10-question set has whole-number limits; nearby percentages may
-    // still round to the same distribution.
+    // Smooth, monotonic endpoints: 0% -> 10/0/0; 100% -> 0/0/10.
+    // Easy decreases, hard increases, and medium fills the remaining
+    // slots. Rounding each endpoint independently prevents a higher
+    // accuracy from accidentally receiving fewer hard questions.
     if (!row.total) return [3,4,3];
     const accuracy=Math.max(0,Math.min(1,Number(row.accuracy)||0));
-    const easy=Math.max(1,Math.min(8,Math.round(8-7*accuracy)));
-    const hard=Math.max(0,Math.min(6,Math.round(6*accuracy*accuracy)));
+    const easy=Math.round(10*(1-accuracy)*(1-accuracy));
+    const hard=Math.round(10*accuracy*accuracy);
     return [easy,10-easy-hard,hard];
   }
   function domainSeverity(row) {
@@ -379,16 +379,63 @@
     }
   }
 
+  function showGuestGuide() {
+    // Public preview contains taxonomy only, never a previous user's
+    // stored goals, mock results, rankings, or answer history.
+    $("study-guide-loading").hidden=true;
+    $("study-guide-empty").hidden=true;
+    $("study-guide-results").hidden=false;
+    $("sg-plan-content").hidden=false;
+    $("sg-start-score").textContent="—";
+    $("sg-start-sections").textContent="Take a mock to establish your baseline";
+    $("sg-current-score").textContent="—";
+    $("sg-current-note").textContent="Choose your goal after signing in";
+    $("sg-score-source").textContent="No mock results yet";
+    $("sg-progress-wrap").hidden=true;
+    $("sg-goal-message").textContent=
+      "Your personal scores and recommendations appear here after you sign in and complete a mock test.";
+    const input=$("sg-goal-input");
+    input.value="";
+    input.disabled=true;
+    const goalButton=$("sg-goal-form").querySelector("button");
+    if (goalButton) {
+      goalButton.disabled=true;
+      goalButton.textContent="Sign in first";
+    }
+    $("sg-diagnostic-note").textContent=
+      "All eight SAT domains are shown below. Sign in and take a mock to rank them by your own performance.";
+    const signIn="/login?redirect="+encodeURIComponent("/#study-guide");
+    for (const section of ["readingWriting","math"]) {
+      const id=section==="math"?"sg-math-priorities":"sg-rw-priorities";
+      $(id).innerHTML=DOMAINS[section].map(row=>
+        '<div class="sg-priority-item sg-severity-unassessed">'+
+        '<span class="sg-domain-check" aria-hidden="true">—</span>'+
+        '<div class="sg-domain-copy"><span class="sg-priority-name">'+escapeHtml(row.name)+
+        '</span><span class="sg-priority-meta">Not assessed · take a mock for personalized targets</span></div>'+
+        '<span class="sg-domain-status"></span>'+
+        '<a class="sg-priority-link" href="'+escapeHtml(signIn)+'">Practice</a></div>'
+      ).join("");
+    }
+    $("sg-practice-message").textContent=
+      "Sign in to unlock diagnostic-based practice and saved progress.";
+    $("sg-review-test-link").href="/mock-tests";
+    $("sg-review-test-link").textContent="Explore mock tests →";
+    $("sg-next-test-link").href=signIn;
+    $("sg-next-test-link").textContent="Get started →";
+  }
+
   async function init() {
     if (!$("study-guide-loading")) return;
     try {
-      if (typeof absolutePrepSupabase==="undefined") throw new Error("Authentication unavailable");
+      if (typeof absolutePrepSupabase==="undefined") { showGuestGuide(); return; }
       const {data,error}=await absolutePrepSupabase.auth.getSession();
-      // The guide lives inside the signed-in dashboard on the public
-      // homepage. A guest must not be redirected away from the homepage.
+      // Guests see every homepage section but never another student's data.
       if (error||!data?.session||
           (typeof isAbsolutePrepGoogleSession==="function"&&
-           !isAbsolutePrepGoogleSession(data.session))) return;
+           !isAbsolutePrepGoogleSession(data.session))) {
+        showGuestGuide();
+        return;
+      }
       userId=data.session.user.id;
       latest=getLatestMock();
       $("study-guide-loading").hidden=true;
@@ -441,9 +488,8 @@
         ));
       }
     } catch (error) {
-      console.error("Study guide error:",error);
-      $("study-guide-loading").hidden=false;
-      $("study-guide-loading").textContent="The study guide couldn't be loaded. Refresh and try again.";
+      console.warn("Study guide initialization unavailable:",error);
+      showGuestGuide();
     }
   }
   document.addEventListener("DOMContentLoaded",init);
