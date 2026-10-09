@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - question-bank.json
+      - question-batch-20261010-reviewed.json
       - math-question-bank.json
       - 'mock-test-*.json'
       - question-format-audit.mjs
