@@ -33,12 +33,12 @@
 
     <link
         rel="stylesheet"
-        href="style.css?v=public-home-theme-1"
+        href="style.css?v=streamlined-home-1"
     >
 
 <link rel="stylesheet" href="/dashboard.css?v=home-analytics-1">
-<link rel="stylesheet" href="/study-guide.css?v=public-home-theme-1">
-<link rel="stylesheet" href="/home-dashboard.css?v=public-home-theme-1">
+<link rel="stylesheet" href="/study-guide.css?v=streamlined-home-1">
+<link rel="stylesheet" href="/home-dashboard.css?v=streamlined-home-1">
 <link rel="stylesheet" href="/responsive.css?v=1">
     <!-- Vercel Web Analytics -->
     <script>
@@ -95,9 +95,10 @@
           <div class="study-guide-wrap">
             <div class="study-guide-intro">
               <span class="study-guide-eyebrow">PERSONALIZED PREPARATION</span>
-              <h2 id="home-study-guide-title">Your study guide</h2>
-              <p>Use your latest completed mock to identify urgent domains, practice 10 fresh questions, and track progress toward your goal.</p>
+              <h2 id="home-study-guide-title">Your next steps</h2>
+              <p>See what matters most, practice your weak domains, and track progress toward your SAT goal.</p>
             </div>
+            <p id="sg-example-label" class="sg-example-label" hidden>EXAMPLE PREVIEW · Illustrative scores and priorities, not personal results</p>
             <div id="study-guide-loading" class="study-guide-loading" role="status">Loading your mock-test history…</div>
     <section id="study-guide-empty" class="study-guide-empty" hidden>
       <span class="study-guide-eyebrow">FIRST STEP</span>
@@ -129,11 +130,15 @@
       </section>
       <div id="sg-plan-content" hidden>
         <section class="sg-section">
-          <div class="sg-section-heading"><div><span class="study-guide-eyebrow">LATEST MOCK DIAGNOSTIC</span><h2>Start with these domains</h2></div><p id="sg-diagnostic-note">Ranked by urgency on your latest completed mock, weighted by domain importance. Each Practice set has 10 fresh questions, adjusted to your accuracy.</p></div>
+          <div class="sg-section-heading"><div><span class="study-guide-eyebrow">LATEST MOCK DIAGNOSTIC</span><h2>Focus on these three domains</h2></div><p id="sg-diagnostic-note">Ranked by urgency on your latest completed mock, weighted by domain importance. Each Practice set has 10 fresh questions, adjusted to your accuracy.</p></div>
+          <div id="sg-top-priorities" class="sg-top-priorities" aria-live="polite"></div>
+          <details class="sg-more-domains" id="sg-all-domains">
+            <summary>View all 8 domains <span>Reading &amp; Writing and Mathematics</span></summary>
           <div class="sg-priority-grid">
             <article class="sg-priority-col"><div class="sg-priority-head"><span>01</span><h3>Reading &amp; Writing</h3></div><div id="sg-rw-priorities"></div></article>
             <article class="sg-priority-col"><div class="sg-priority-head"><span>02</span><h3>Mathematics</h3></div><div id="sg-math-priorities"></div></article>
           </div>
+          </details>
           <p id="sg-practice-message" class="sg-practice-message" role="status" aria-live="polite"></p>
         </section>
         <div class="sg-workflow" aria-label="Study cycle">
@@ -158,6 +163,18 @@
         </section>
 
 
+        <details class="home-disclosure home-progress-details" id="home-progress">
+            <summary class="home-disclosure-summary">
+                <span class="home-disclosure-icon" aria-hidden="true">↗</span>
+                <span class="home-disclosure-title"><span class="page-eyebrow">PROGRESS AND ANALYTICS</span><strong>Your progress and analytics</strong><small>Mock score trends, recent activity, and detailed skill performance</small></span>
+                <span class="home-disclosure-toggle" aria-hidden="true">View details <span>⌄</span></span>
+            </summary>
+            <div class="home-disclosure-content">
+                <div id="home-progress-example" class="home-progress-example" hidden>
+                    <strong>EXAMPLE PREVIEW — your own results will appear here</strong>
+                    <span>5-day streak · 240 questions answered · Mock 1: 1180 → Mock 2: 1250</span>
+                    <p>After you practice, you'll see real activity, score trends, accuracy, and pacing by skill.</p>
+                </div>
         <div class="dashboard-chart-grid">
             <section class="dashboard-panel dashboard-activity-panel">
                 <div class="dashboard-panel-heading">
@@ -211,6 +228,8 @@
         </section>
 
         <div id="dashboard-data-note" class="dashboard-data-note" hidden></div>
+            </div>
+        </details>
     </section>
             <section class="dashboard-account-settings" aria-label="Practice data settings" hidden>
                 <details class="dashboard-settings-disclosure">
@@ -241,20 +260,7 @@
                 </div>
 
                 <div class="features-grid">
-                    <article class="feature-card feature-card-disclaimer">
-                        <div class="feature-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M12 3l8 4v5c0 4.7-3.2 7.7-8 9-4.8-1.3-8-4.3-8-9V7z"></path>
-                                <path d="M9 12l2 2 4-4"></path>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3>Independent practice platform</h3>
-                            <p>Independent from College Board, with practice built specifically for Digital SAT preparation.</p>
-                        </div>
-                    </article>
-
-                    <article class="feature-card">
+<article class="feature-card">
                         <div class="feature-icon" aria-hidden="true">
                             <svg viewBox="0 0 24 24">
                                 <path d="M4 5h16v14H4z"></path>
@@ -267,8 +273,7 @@
                             <p>Question banks, mock tests, fluency work, vocabulary, progress analytics, and targeted practice together.</p>
                         </div>
                     </article>
-
-                    <article class="feature-card">
+<article class="feature-card">
                         <div class="feature-icon" aria-hidden="true">
                             <svg viewBox="0 0 24 24">
                                 <circle cx="7" cy="12" r="2.5"></circle>
@@ -282,35 +287,7 @@
                             <p>Module 2 changes with Module 1 performance, matching the adaptive structure of the Digital SAT.</p>
                         </div>
                     </article>
-
-                    <article class="feature-card">
-                        <div class="feature-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M4 18h4l3-5 3 2 3-7 3 2"></path>
-                                <path d="M4 5v13h16"></path>
-                                <circle cx="11" cy="13" r="1.3"></circle>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3>Error analysis and review</h3>
-                            <p>See where accuracy and pace break down, then revisit the subtopics that need work in the Question Bank.</p>
-                        </div>
-                    </article>
-
-                    <article class="feature-card">
-                        <div class="feature-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M5 5h14v14H5z"></path>
-                                <path d="M8 9h8M8 12h5M8 15h8"></path>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3>Authentic SAT-style questions</h3>
-                            <p>Original questions built to match Digital SAT structure, skills, reasoning, and presentation.</p>
-                        </div>
-                    </article>
-
-                    <article class="feature-card">
+<article class="feature-card">
                         <div class="feature-icon" aria-hidden="true">
                             <svg viewBox="0 0 24 24">
                                 <path d="M7 10V8a5 5 0 0 1 10 0v2"></path>
@@ -323,7 +300,48 @@
                             <p>The full practice platform is free—no premium question bank, locked analytics, or paid mock tests.</p>
                         </div>
                     </article>
-                </div>
+</div>
+<details class="home-feature-more"><summary>Explore three more reasons to choose LexLogica <span aria-hidden="true">⌄</span></summary>
+<div class="features-grid">
+<article class="feature-card feature-card-disclaimer">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 3l8 4v5c0 4.7-3.2 7.7-8 9-4.8-1.3-8-4.3-8-9V7z"></path>
+                                <path d="M9 12l2 2 4-4"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Independent practice platform</h3>
+                            <p>Independent from College Board, with practice built specifically for Digital SAT preparation.</p>
+                        </div>
+                    </article>
+<article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M4 18h4l3-5 3 2 3-7 3 2"></path>
+                                <path d="M4 5v13h16"></path>
+                                <circle cx="11" cy="13" r="1.3"></circle>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Error analysis and review</h3>
+                            <p>See where accuracy and pace break down, then revisit the subtopics that need work in the Question Bank.</p>
+                        </div>
+                    </article>
+<article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M5 5h14v14H5z"></path>
+                                <path d="M8 9h8M8 12h5M8 15h8"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Authentic SAT-style questions</h3>
+                            <p>Original questions built to match Digital SAT structure, skills, reasoning, and presentation.</p>
+                        </div>
+                    </article>
+</div>
+</details>
             </div>
         </section>
 
@@ -332,7 +350,9 @@
 <div class="sat-guide-row">
                     <section class="sat-score-guide" aria-labelledby="sat-score-guide-title">
     <div class="sat-score-guide-head"><span>SCORE GUIDE</span><h4 id="sat-score-guide-title">What SAT scores mean</h4></div>
-    <div class="sat-score-guide-columns">
+    <details class="home-score-range-details">
+<summary>View full SAT score-range guide <span>Composite · Reading &amp; Writing · Math</span></summary>
+<div class="sat-score-guide-columns">
         <div class="sat-score-guide-scale composite" data-guide="composite">
             <div class="sat-score-scale-head"><strong>Composite</strong></div>
             <div class="sat-score-scale-row" data-min="1560" data-max="1600"><b>1560–1600</b><span><strong>Elite.</strong> SAT is effectively never going to be the problem in admissions.</span></div>
@@ -366,6 +386,8 @@
     </div>
     
     
+
+</details>
 </section>
                     <aside class="sat-guide-score-panel">
                         <div class="sat-context-profile sat-context-profile-inline sat-guide-score-saver">
@@ -402,7 +424,9 @@
 
                 <div id="university-featured" class="university-featured" aria-live="polite"></div>
 
-                <div class="university-catalog-heading">
+                <details class="university-browse-details" id="university-browse">
+                  <summary>Browse the full university catalog <span>Explore school SAT ranges</span></summary>
+                  <div class="university-catalog-heading">
                     <div>
                         <h3>Browse U.S. colleges and universities</h3>
                         <p>Well-known U.S. colleges and universities, with Composite, Reading &amp; Writing, and Math SAT context.</p>
@@ -412,6 +436,7 @@
                 <div id="university-catalog-grid" class="university-catalog-grid"></div>
 
                 <p class="university-data-note"><strong>About the data:</strong> SAT values prefer the latest usable Common Data Set; when a school does not currently report testing, LexLogica uses the latest available IPEDS testing fields or derives missing values from the reported section/composite range. Every displayed SAT score is normalized to a <strong>10-point increment</strong>—no values ending in 5. A derived median is the rounded midpoint of the lower and upper quartiles when no true median is published. Test-optional and test-free policies can make historical or submitter-only ranges unrepresentative of the full entering class.</p>
+                </details>
             </div>
         </section>
 
@@ -459,8 +484,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js?v=home-logout-1"></script>
-<script src="/dashboard.js?v=public-home-theme-1"></script>
-<script src="/study-guide.js?v=public-home-theme-1"></script>
+<script src="/dashboard.js?v=streamlined-home-1"></script>
+<script src="/study-guide.js?v=streamlined-home-1"></script>
 <script src="/university-top100.js?v=top100-1"></script>
 <script src="/university-catalog.js?v=assets-hires-1"></script>
 <script>
