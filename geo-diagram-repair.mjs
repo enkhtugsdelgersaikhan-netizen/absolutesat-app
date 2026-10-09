@@ -53,7 +53,7 @@ function newCircle(q){
 }
 function triangleNames(t){
  t=geometryPlain(t);
- const match=/\btriangles?\s+(?:\\\()?([A-Z]{3})\b/.exec(t);
+ const match=/\b[Tt]riangles?\s+([A-Z]{3})\b/.exec(t);
  if(match)return match[1].toUpperCase().split("");
  return ["A","B","C"];
 }
@@ -97,7 +97,7 @@ function newTriangle(q,forcedNames=null){
  else coords=[[105,248],[322,248],[184,69]];
  d.polygons.push(poly(coords));
  const offsets=coords.map(([x,y])=>[x<115?-12:x>310?10:0,y<95?-12:18]);
- const namedTriangle=/\\btriangles?\\s+[A-Z]{3}\\b/.test(t);
+ const namedTriangle=/\b[Tt]riangles?\s+[A-Z]{3}\b/.test(geometryPlain(t));
  if(namedTriangle)for(let i=0;i<3;i++)d.points.push(point(...coords[i],names[i],...offsets[i]));
  if(right){
    const i=names.indexOf(right),v=coords[i],a=coords[(i+1)%3],b=coords[(i+2)%3];
@@ -200,10 +200,10 @@ function newTransversal(q){
 }
 function newTwinTriangles(q){
  const t=geometryPlain((q.passage||"")+" "+(q.question||""));
- let m=/\btriangles\s+([A-Z]{3})\s+and\s+([A-Z]{3})/.exec(t)||
-    /\btriangle\s+([A-Z]{3}).{0,100}\btriangle\s+([A-Z]{3})/.exec(t);
+ let m=/\b[Tt]riangles\s+([A-Z]{3})\s+and\s+([A-Z]{3})/.exec(t)||
+    /\b[Tt]riangle\s+([A-Z]{3}).{0,100}\b[Tt]riangle\s+([A-Z]{3})/.exec(t);
  if(!m||m[1]===m[2]){
-  const names=[...new Set([...t.matchAll(/\\btriangles?\\s+([A-Z]{3})\\b/g)].map(x=>x[1]))];
+  const names=[...new Set([...t.matchAll(/\b[Tt]riangles?\s+([A-Z]{3})\b/g)].map(x=>x[1]))];
   if(names.length<2)return null;
   m=[null,names[0],names[1]];
  }
@@ -387,8 +387,8 @@ function newThreeLineAngles(q){
 }
 function newSimilarQuads(q){
  const t=geometryPlain((q.passage||"")+" "+(q.question||""));
- const matches=[...t.matchAll(/\bquadrilateral\s+([A-Z]{4})\b/g)].map(m=>m[1]);
- const similar=t.match(/\bsimilar\s+to\s+(?:quadrilateral\s+)?([A-Z]{4})\b/);
+ const matches=[...t.matchAll(/\b[Qq]uadrilateral\s+([A-Z]{4})\b/g)].map(m=>m[1]);
+ const similar=t.match(/\bsimilar\s+to\s+(?:[Qq]uadrilateral\s+)?([A-Z]{4})\b/);
  if(similar&&!matches.includes(similar[1]))matches.push(similar[1]);
  if(matches.length<2)return null;
  const d=base("Two similar quadrilaterals, "+matches[0]+" and "+matches[1]);
@@ -418,6 +418,16 @@ function newDiameterCoordinate(q){
  return d;
 }
 
+function newSharedCIntersection(q){
+ const d=base("Triangles ABC and DCE sharing vertical angles at C");
+ const A=[86,60],C=[208,149],E=[330,238];
+ const B=[328,60],D=[88,238];
+ d.lines.push(line(A,E),line(B,D),line(A,B),line(D,E));
+ for(const [name,p,dx,dy] of [["A",A,-12,-10],["B",B,12,-10],
+    ["C",C,9,-9],["D",D,-12,18],["E",E,12,18]])d.points.push(point(...p,name,dx,dy));
+ return d;
+}
+
 function geometryDiagram(q){
  const t=(q.passage||"")+" "+(q.question||"");
  if(["math-20261006-new409-q194","math-20261008-huge798-q128"].includes(q.id))return newSimilarQuads(q);
@@ -426,6 +436,7 @@ function geometryDiagram(q){
  if(["math-20261006-new409-q190","math-20261008-huge798-q130"].includes(q.id))return newIntersectingAngles(q);
  if(["math-20261006-new409-q194","math-20261008-huge798-q128"].includes(q.id))return newSimilarQuads(q);
  if(q.id==="math-20261006-new409-q321")return newDiameterCoordinate(q);
+ if(q.id==="math-20261006-new409-q234")return newSharedCIntersection(q);
  if(q.id==="math-20261006-new409-q319")return newRightAltitudeToHypotenuse(q);
  if(q.id==="math-20261008-huge798-q090")return newCrossedIsosceles(q);
  if(q.id==="math-20261006-new409-q019")return newEqualCircleSquare(q);
@@ -480,7 +491,7 @@ function isDrawingValid(d,q){
 }
 function hasMisnamedTriangle(d,q){
  const t=geometryPlain((q.passage||"")+" "+(q.question||""));
- const m=/\btriangles?\s+([A-Z]{3})\b/.exec(t);
+ const m=/\b[Tt]riangles?\s+([A-Z]{3})\b/.exec(t);
  if(!m||!d.points?.length)return false;
  const set=new Set(d.points.filter(p=>p.label&&/^[A-Z]$/.test(p.label)).map(p=>p.label));
  return m[1].split("").some(n=>!set.has(n)) && set.size>=3;
@@ -561,7 +572,7 @@ function repair(q){
   }
   else if(hasMisnamedTriangle(d,q)){replacement=geometryDiagram(q);reason="wrong triangle vertex labels"}
   else if(hasWrongCircleGeometry(d,q)){replacement=geometryDiagram(q);reason="diameter endpoints not opposite"}
-  else if(/math-20261006-new409-q(019|023|039|096|102|105|109|130|133|152|156|165|319)$/.test(id) ||
+  else if(/math-20261006-new409-q(019|023|039|096|102|105|109|130|133|152|156|165|234|319)$/.test(id) ||
      /math-20261008-huge798-q(090|136|156|164)$/.test(id)){
     replacement=geometryDiagram(q);reason="verified wrong labels or misleading geometry"}
   if(replacement&&isDrawingValid(replacement,q)){
