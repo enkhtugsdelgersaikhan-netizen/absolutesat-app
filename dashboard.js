@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             const note = card.querySelector("small");
             if (note) note.textContent = "Sign in to track your progress";
         });
+        const example=document.getElementById("home-progress-example");
+        if (example) example.hidden=false;
         const seven = document.getElementById("seven-day-chart");
         const mocks = document.getElementById("mock-performance-chart");
         const skills = document.getElementById("subtopic-skill-groups");
@@ -56,6 +58,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     const user = data.session.user;
     dashboardRoot.hidden = false;
     dashboardRoot.classList.remove("is-guest");
+    const example=document.getElementById("home-progress-example");
+    if (example) example.hidden=true;
     const settingsPanel = dashboardRoot.querySelector(".dashboard-account-settings");
     if (settingsPanel) settingsPanel.hidden = false;
     const title = document.getElementById("home-dashboard-title");
