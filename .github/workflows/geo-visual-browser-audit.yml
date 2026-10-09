@@ -19,6 +19,8 @@ jobs:
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -26,8 +28,12 @@ jobs:
         run: |
           npm install --no-save playwright
           npx playwright install chromium --with-deps
+      - name: Prepare exact latest geometry diagrams for rendering
+        run: |
+          node geo-diagram-repair.mjs --fix
+          node geo-diagram-semantic-check.mjs --strict
       - name: Render all geometry diagrams in Chromium
-        run: node geo-visual-browser-audit.mjs
+        run: node geo-visual-browser-audit.mjs --strict
       - name: Upload screenshots and report
         if: always()
         uses: actions/upload-artifact@v4
