@@ -8,6 +8,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const user = data.session.user;
     dashboardRoot.hidden = false;
+    // Legacy study-guide links now point to the embedded section. Wait until
+    // authentication reveals the container before scrolling to the anchor.
+    if (window.location.hash === "#study-guide") {
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+            document.getElementById("study-guide")?.scrollIntoView({block:"start"});
+        }));
+    }
     const HISTORY_KEY = "absoluteprep-practice-history:" + user.id;
     const RESET_KEY = "absoluteprep-practice-reset:" + user.id;
     const PREFERRED_ACCURACY = 90;
