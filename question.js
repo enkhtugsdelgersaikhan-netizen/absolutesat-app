@@ -786,10 +786,18 @@ function normalizeMathEscapes(value) {
     // been escaped twice (for example \\\\( ... \\\\) or
     // \\\\[ ... \\\\]). MathJax only recognizes the normal
     // single-backslash delimiters, so repair those conservatively.
-    source = source.replace(
-        /\\\\([()\[\]])/g,
-        "\\$1"
-    );
+    // Only unwrap genuinely PAIRED doubled delimiters. In a cases,
+    // aligned, or matrix environment, \\[2mm] is a valid TeX row
+    // break with spacing, NOT a nested display-math delimiter.
+    source = source
+        .replace(
+            /\\\\\(([\s\S]*?)\\\\\)/g,
+            (_match, body) => "\\(" + body + "\\)"
+        )
+        .replace(
+            /\\\\\[([\s\S]*?)\\\\\]/g,
+            (_match, body) => "\\[" + body + "\\]"
+        );
 
     /*
      * Imported material sometimes uses \\begin{text}...\\end{text}.
