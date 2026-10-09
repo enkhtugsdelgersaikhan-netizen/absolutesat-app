@@ -415,6 +415,7 @@ function newDiameterCoordinate(q){
 
 function geometryDiagram(q){
  const t=(q.passage||"")+" "+(q.question||"");
+ if(["math-20261006-new409-q194","math-20261008-huge798-q128"].includes(q.id))return newSimilarQuads(q);
  if(q.id==="math-20261006-new409-q098")return newLadder(q);
  if(q.id==="math-20261006-new409-q208")return newThreeLineAngles(q);
  if(["math-20261006-new409-q190","math-20261008-huge798-q130"].includes(q.id))return newIntersectingAngles(q);
