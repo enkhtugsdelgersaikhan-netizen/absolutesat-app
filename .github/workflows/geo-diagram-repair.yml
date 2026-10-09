@@ -4,9 +4,14 @@ on:
     branches: [main]
     paths:
       - geo-diagram-repair.mjs
+      - math-question-bank.json
+      - 'mock-test-*.json'
       - geo-diagram-semantic-check.mjs
       - .github/workflows/geo-diagram-repair.yml
   workflow_dispatch:
+concurrency:
+  group: sat-question-data-main
+  cancel-in-progress: false
 permissions:
   contents: write
 jobs:
