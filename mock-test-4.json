@@ -4880,39 +4880,39 @@
             "diagram": {
               "width": 420,
               "height": 300,
-              "alt": "Two triangles JKL and MNP schematic",
+              "alt": "Similar right triangles JKL and MNP; right angles L and M",
               "caption": "Schematic; not to scale.",
               "lines": [],
               "polygons": [
                 {
                   "points": [
                     [
-                      64,
-                      244
+                      91,
+                      79
                     ],
                     [
-                      174,
-                      244
+                      91,
+                      229
                     ],
                     [
-                      108,
-                      89
+                      171,
+                      229
                     ]
                   ]
                 },
                 {
                   "points": [
                     [
-                      238,
-                      244
-                    ],
-                    [
-                      367,
-                      244
-                    ],
-                    [
-                      283,
+                      262,
                       63
+                    ],
+                    [
+                      262,
+                      228
+                    ],
+                    [
+                      350,
+                      228
                     ]
                   ]
                 }
@@ -4921,50 +4921,82 @@
               "circles": [],
               "points": [
                 {
-                  "x": 64,
-                  "y": 244,
+                  "x": 91,
+                  "y": 79,
                   "label": "J",
-                  "dx": -11,
-                  "dy": 17
+                  "dx": -10,
+                  "dy": -10
                 },
                 {
-                  "x": 174,
-                  "y": 244,
+                  "x": 171,
+                  "y": 229,
                   "label": "K",
                   "dx": 9,
                   "dy": 17
                 },
                 {
-                  "x": 108,
-                  "y": 89,
+                  "x": 91,
+                  "y": 229,
                   "label": "L",
-                  "dx": -11,
-                  "dy": -13
+                  "dx": -10,
+                  "dy": 17
                 },
                 {
-                  "x": 238,
-                  "y": 244,
+                  "x": 262,
+                  "y": 228,
                   "label": "M",
-                  "dx": -11,
+                  "dx": -13,
                   "dy": 17
                 },
                 {
-                  "x": 367,
-                  "y": 244,
-                  "label": "N",
-                  "dx": 9,
-                  "dy": 17
-                },
-                {
-                  "x": 283,
+                  "x": 262,
                   "y": 63,
+                  "label": "N",
+                  "dx": -10,
+                  "dy": -11
+                },
+                {
+                  "x": 350,
+                  "y": 228,
                   "label": "P",
-                  "dx": -11,
-                  "dy": -13
+                  "dx": 10,
+                  "dy": 17
                 }
               ],
-              "labels": [],
-              "rightAngles": [],
+              "labels": [
+                {
+                  "x": 128,
+                  "y": 138,
+                  "text": "17",
+                  "anchor": "middle"
+                },
+                {
+                  "x": 72,
+                  "y": 160,
+                  "text": "15",
+                  "anchor": "middle"
+                },
+                {
+                  "x": 131,
+                  "y": 251,
+                  "text": "8",
+                  "anchor": "middle"
+                }
+              ],
+              "rightAngles": [
+                {
+                  "x": 91,
+                  "y": 229,
+                  "size": 13,
+                  "rotation": 0
+                },
+                {
+                  "x": 262,
+                  "y": 228,
+                  "size": 13,
+                  "rotation": 0
+                }
+              ],
               "ticks": []
             }
           }
@@ -5590,39 +5622,39 @@
             "diagram": {
               "width": 420,
               "height": 300,
-              "alt": "Two triangles JKL and MNP schematic",
+              "alt": "Similar right triangles JKL and MNP; right angles L and M",
               "caption": "Schematic; not to scale.",
               "lines": [],
               "polygons": [
                 {
                   "points": [
                     [
-                      64,
-                      244
+                      91,
+                      79
                     ],
                     [
-                      174,
-                      244
+                      91,
+                      229
                     ],
                     [
-                      108,
-                      89
+                      171,
+                      229
                     ]
                   ]
                 },
                 {
                   "points": [
                     [
-                      238,
-                      244
-                    ],
-                    [
-                      367,
-                      244
-                    ],
-                    [
-                      283,
+                      262,
                       63
+                    ],
+                    [
+                      262,
+                      228
+                    ],
+                    [
+                      350,
+                      228
                     ]
                   ]
                 }
@@ -5631,50 +5663,82 @@
               "circles": [],
               "points": [
                 {
-                  "x": 64,
-                  "y": 244,
+                  "x": 91,
+                  "y": 79,
                   "label": "J",
-                  "dx": -11,
-                  "dy": 17
+                  "dx": -10,
+                  "dy": -10
                 },
                 {
-                  "x": 174,
-                  "y": 244,
+                  "x": 171,
+                  "y": 229,
                   "label": "K",
                   "dx": 9,
                   "dy": 17
                 },
                 {
-                  "x": 108,
-                  "y": 89,
+                  "x": 91,
+                  "y": 229,
                   "label": "L",
-                  "dx": -11,
-                  "dy": -13
+                  "dx": -10,
+                  "dy": 17
                 },
                 {
-                  "x": 238,
-                  "y": 244,
+                  "x": 262,
+                  "y": 228,
                   "label": "M",
-                  "dx": -11,
+                  "dx": -13,
                   "dy": 17
                 },
                 {
-                  "x": 367,
-                  "y": 244,
-                  "label": "N",
-                  "dx": 9,
-                  "dy": 17
-                },
-                {
-                  "x": 283,
+                  "x": 262,
                   "y": 63,
+                  "label": "N",
+                  "dx": -10,
+                  "dy": -11
+                },
+                {
+                  "x": 350,
+                  "y": 228,
                   "label": "P",
-                  "dx": -11,
-                  "dy": -13
+                  "dx": 10,
+                  "dy": 17
                 }
               ],
-              "labels": [],
-              "rightAngles": [],
+              "labels": [
+                {
+                  "x": 128,
+                  "y": 138,
+                  "text": "17",
+                  "anchor": "middle"
+                },
+                {
+                  "x": 72,
+                  "y": 160,
+                  "text": "15",
+                  "anchor": "middle"
+                },
+                {
+                  "x": 131,
+                  "y": 251,
+                  "text": "8",
+                  "anchor": "middle"
+                }
+              ],
+              "rightAngles": [
+                {
+                  "x": 91,
+                  "y": 229,
+                  "size": 13,
+                  "rotation": 0
+                },
+                {
+                  "x": 262,
+                  "y": 228,
+                  "size": 13,
+                  "rotation": 0
+                }
+              ],
               "ticks": []
             }
           }
