@@ -440,8 +440,156 @@ function newConnectedIsoscelesTriangles(q){
  return d;
 }
 
+
+// Geometry constructors chosen by *shapes actually stated*, never by units
+// such as "square centimeters" or "cubic centimeters".
+function visualHexagon(q){
+ const d=base("Regular hexagon split into six congruent equilateral triangles");
+ const C=[207,156],r=104;
+ const p=Array.from({length:6},(_,i)=>pointOnCircle(...C,r,60*i));
+ d.polygons.push(poly(p));
+ for(const v of p)d.lines.push(line(C,v));
+ d.points.push({x:C[0],y:C[1],hideDot:true});
+ d.polygons.push({points:[C,p[0],p[1]],shaded:true});
+ d.polygons.push({points:[C,p[2],p[3]],shaded:true});
+ d.polygons.push({points:[C,p[4],p[5]],shaded:true});
+ d.polygons.push({points:[C,p[5],p[0]],shaded:true});
+ d.labels.push(label(209,279,"4 shaded of 6"));
+ return d;
+}
+function visualAnnulus(q){
+ const d=base("Circular region with smaller concentric circle removed");
+ d.circles.push({cx:210,cy:148,r:104},{cx:210,cy:148,r:36});
+ d.lines.push(line([210,148],[314,148]),line([210,148],[246,148]));
+ d.labels.push(label(265,138,"outer radius"),label(211,190,"inner radius"));
+ return d;
+}
+function visualTwoCircles(q){
+ const t=(q.passage||"")+" "+(q.question||"");
+ const d=base("Two circles for comparison");
+ if(/concentric|same center/i.test(t)){
+  d.circles.push({cx:210,cy:147,r:105},{cx:210,cy:147,r:63});
+  d.labels.push(label(174,151,"A"),label(307,180,"B"));
+ }else{
+  d.circles.push({cx:132,cy:148,r:66},{cx:297,cy:148,r:82});
+  d.labels.push(label(132,147,"P"),label(298,149,"Q"));
+ }
+ return d;
+}
+function visualTriangleSquare(q){
+ const d=base("Triangle and square comparison");
+ d.polygons.push(poly([[62,241],[197,241],[122,77]]));
+ d.polygons.push(poly([[268,109],[386,109],[386,227],[268,227]]));
+ d.labels.push(label(129,265,"Triangle"),label(326,258,"Square"));
+ return d;
+}
+function visualTwoSquares(q){
+ const d=base("Comparison of squares with distinct side lengths");
+ d.polygons.push(poly([[65,150],[157,150],[157,242],[65,242]]));
+ d.polygons.push(poly([[221,72],[390,72],[390,241],[221,241]]));
+ d.labels.push(label(111,269,"Square A"),label(303,269,"Square B"));
+ return d;
+}
+function visualTrapezoids(q){
+ const d=base("Two similar trapezoids");
+ d.polygons.push(poly([[52,232],[166,232],[147,148],[79,148]]));
+ d.polygons.push(poly([[224,240],[392,240],[356,105],[262,105]]));
+ d.labels.push(label(112,263,"Smaller"),label(302,263,"Larger"));
+ return d;
+}
+function visualTriangularPrism(q){
+ const d=base("Triangular prism with congruent parallel triangular ends");
+ const A=[95,225],B=[205,225],C=[145,65],offset=[116,14];
+ const P=[A,B,C],Q=P.map(v=>[v[0]+offset[0],v[1]+offset[1]]);
+ d.polygons.push(poly(P));d.polygons.push(poly(Q));
+ for(let i=0;i<3;i++)d.lines.push(line(P[i],Q[i]));
+ d.labels.push(label(252,250,"prism length"));
+ return d;
+}
+function visualTwoCubes(q){
+ const d=base("Three congruent cubes attached face-to-face in a row");
+ const bottom=246,top=137,start=49,side=105;
+ for(let i=0;i<3;i++){
+  const x=start+i*side;
+  d.lines.push(line([x,top],[x+side,top]),line([x,top],[x,bottom]));
+  d.lines.push(line([x,bottom],[x+side,bottom]));
+ }
+ d.lines.push(line([start+3*side,top],[start+3*side,bottom]));
+ d.lines.push(line([start,top],[start+35,top-36]),line([start+3*side,top],[start+3*side+35,top-36]));
+ d.lines.push(line([start+35,top-36],[start+3*side+35,top-36]));
+ d.lines.push(line([start+3*side,bottom],[start+3*side+35,bottom-36]));
+ d.lines.push(line([start+3*side+35,top-36],[start+3*side+35,bottom-36]));
+ return d;
+}
+function visualRightTriangle(q){
+ const d=newTriangle(q);
+ const t=((q.passage||"")+" "+(q.question||""));
+ if(!/\b[Tt]riangle\s+[A-Z]{3}\b/.test(geometryPlain(t))){
+  d.points=[];d.alt="Right triangle with two perpendicular legs";
+ }
+ return d;
+}
+function visualRightTriangleSimilarity(q){
+ const d=base("Two similar right triangles with legs and hypotenuses");
+ const first=[[69,244],[182,244],[69,94]],second=[[247,244],[392,244],[247,54]];
+ for(const pts of [first,second])d.polygons.push(poly(pts));
+ d.labels.push(label(126,267,"Smaller"),label(320,268,"Larger"));
+ return d;
+}
+function visualTriangleAndRectangle(q){
+ const d=base("Isosceles right triangle and rectangular comparison");
+ const triangle=[[75,99],[75,239],[215,239]];
+ d.polygons.push(poly(triangle));
+ d.polygons.push(poly([[273,120],[389,120],[389,232],[273,232]]));
+ d.labels.push(label(131,262,"Triangle"),label(330,258,"Rectangle"));
+ return d;
+}
+function visualAltitudeParallel(q){
+ const d=base("Right triangle ABC with D on BC and DE parallel to AC");
+ const A=[89,71],B=[352,245],C=[89,245],D=[229,245],E=[229,164];
+ d.polygons.push(poly([A,B,C]));
+ d.lines.push(line(D,E));
+ for(const [n,p,dx,dy] of [["A",A,-12,-9],["B",B,12,17],["C",C,-13,17],
+  ["D",D,0,18],["E",E,8,-8]])d.points.push(point(...p,n,dx,dy));
+ d.labels.push(label(245,206,"DE ∥ AC"));
+ return d;
+}
+
 function geometryDiagram(q){
  const t=(q.passage||"")+" "+(q.question||"");
+ const bare=geometryPlain(t).replace(/\bsquare\s+(?:cm|m|mm|ft|in|yards?|kilometers?|centimeters?|meters?|millimeters?|inches|feet|units)\b/gi,"");
+ const id=q.id||"";
+ if(id==="math-20261006-new409-q150")return visualHexagon(q);
+ if(id==="math-20261008-huge798-q146")return visualAnnulus(q);
+ if(["math-20261008-huge798-q082","math-20261008-huge798-q519",
+  "math-20261006-new409-q222","math-20261006-new409-q324"].includes(id))return visualTwoCircles(q);
+ if(["math-20261008-huge798-q517"].includes(id))return newInscribedRectangle(q);
+ if(["math-20261006-new409-q018","math-20261006-new409-q187"].includes(id))return visualTriangleSquare(q);
+ if(["math-20261006-new409-q045","math-20261008-huge798-q524"].includes(id))return visualTwoSquares(q);
+ if(["math-20261006-new409-q116","math-20261006-new409-q323"].includes(id))return visualTrapezoids(q);
+ if(id==="math-20261008-huge798-q154")return visualTriangularPrism(q);
+ if(["math-20261006-new409-q326","math-20261008-huge798-q522"].includes(id))return visualTwoCubes(q);
+ if(id==="math-20261006-new409-q041")return visualRightTriangle(q);
+ if(["math-20261008-huge798-q148","math-20261008-huge798-q508"].includes(id))return visualRightTriangle(q);
+ if(id==="math-20261006-new409-q193")return visualTriangleAndRectangle(q);
+ if(id==="math-20261006-new409-q148")return visualAltitudeParallel(q);
+ if(id==="math-20261006-new409-q314")return newCylinder(q);
+ if(id==="math-20261008-huge798-q093")return visualRightTriangle(q);
+ if(id==="math-20261008-huge798-q106")return visualTwoSquares(q);
+ if(id==="math-20261008-huge798-q162")return newPrism(q);
+ if(id==="math-20261008-huge798-q523")return visualRightTriangle(q);
+ if(/(?:cylindrical|cylinder)\b/i.test(bare))return newCylinder(q);
+ if(/\bhexagon\b/i.test(bare))return visualHexagon(q);
+ if(/\btriangular prism\b/i.test(bare))return visualTriangularPrism(q);
+ if(/\btrapezoids?\b/i.test(bare))return visualTrapezoids(q);
+ if(/\b[Tt]riangles?\b/.test(bare)&&!/^\s*(?:What is|Which expression).*radians?\b/.test(bare)){
+   if(/\b[Tt]riangles?\b/.test(bare)&&/\b(squares?|rectangles?)\b/i.test(bare))return visualTriangleSquare(q);
+   const twins=newTwinTriangles(q);if(twins)return twins;
+   if(/points?\s+D\s+lies\s+on\s+(?:\\\()?AB/i.test(t)&&
+      /points?\s+E\s+lies\s+on\s+(?:\\\()?AC/i.test(t)&&/DE.*parallel|DE\\parallel/i.test(t))return newParallelTriangle(q);
+   return newTriangle(q);
+ }
+
  if(["math-20261006-new409-q194","math-20261008-huge798-q128"].includes(q.id))return newSimilarQuads(q);
  if(q.id==="math-20261006-new409-q098")return newLadder(q);
  if(q.id==="math-20261006-new409-q208")return newThreeLineAngles(q);
@@ -568,7 +716,7 @@ function annotateGenericDimensions(d,q){
 
 function isAutoGenerated(d){
  if(!d||typeof d.alt!=="string")return false;
- return /^(?:Circle geometry diagram|Triangle [A-Z]{3} schematic|Two triangles [A-Z]{3} and [A-Z]{3} schematic|Right circular cylinder schematic|Right circular cone schematic|Right rectangular pyramid with a perpendicular height|Ladder against a vertical wall; ground and wall are perpendicular|Three lines meeting at P with adjacent angles 2z, 60, and z|Two intersecting lines form equal vertical and supplementary adjacent angles|Two similar quadrilaterals, [A-Z]{4} and [A-Z]{4}|Circle with diameter endpoints at \(−7, 4\) and \(5, −2\)|Cube schematic|Rectangular prism schematic|Rectangle schematic|Square schematic|Two lines intersected by a transversal schematic|Parallel lines .+ with a transversal)$/.test(d.alt);
+ return /^(?:Regular hexagon split into six congruent equilateral triangles|Circular region with smaller concentric circle removed|Two circles for comparison|Triangle and square comparison|Comparison of squares with distinct side lengths|Two similar trapezoids|Triangular prism with congruent parallel triangular ends|Three congruent cubes attached face-to-face in a row|Right triangle with two perpendicular legs|Two similar right triangles with legs and hypotenuses|Isosceles right triangle and rectangular comparison|Right triangle ABC with D on BC and DE parallel to AC|Circle geometry diagram|Triangle [A-Z]{3} schematic|Two triangles [A-Z]{3} and [A-Z]{3} schematic|Right circular cylinder schematic|Right circular cone schematic|Right rectangular pyramid with a perpendicular height|Ladder against a vertical wall; ground and wall are perpendicular|Three lines meeting at P with adjacent angles 2z, 60, and z|Two intersecting lines form equal vertical and supplementary adjacent angles|Two similar quadrilaterals, [A-Z]{4} and [A-Z]{4}|Circle with diameter endpoints at \(−7, 4\) and \(5, −2\)|Cube schematic|Rectangular prism schematic|Rectangle schematic|Square schematic|Two lines intersected by a transversal schematic|Parallel lines .+ with a transversal)$/.test(d.alt);
 }
 function repair(q){
  const id=q.id;
