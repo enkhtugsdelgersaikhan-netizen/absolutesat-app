@@ -38,6 +38,16 @@ for (const question of bank.questions) {
     const skill = question.subtopic || question.skill || "Unclassified";
     const diff = question.difficulty || "Unclassified";
     const group = data[unit];
+    if (process.argv.includes("--severe-details") && severeGap &&
+        winners.length === 1 && winners[0] === question.correctAnswer) {
+      console.log("SEVERE_BIAS " + JSON.stringify({
+        unit, id: question.id, skill: question.subtopic || question.skill,
+        difficulty: question.difficulty, correct: question.correctAnswer,
+        lengths: sizes, question: question.question,
+        choices: question.choices,
+        explanation: String(question.explanation || "").slice(0, 500)
+      }));
+    }
     const stats = [group.all, group.bySkill[skill] ??= empty(), group.byDifficulty[diff] ??= empty()];
     for (const s of stats) {
       s.total++;
