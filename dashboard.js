@@ -1094,6 +1094,12 @@ document.addEventListener("DOMContentLoaded", async () => {
                 localStorage.removeItem("lexlogica-study-baseline:v1:" + user.id);
                 localStorage.removeItem("lexlogica-study-goal:v1:" + user.id);
                 localStorage.removeItem("lexlogica-study-checks:v1:" + user.id);
+                localStorage.removeItem("lexlogica-study-guided-session:v1:" + user.id);
+                for (const key of Object.keys(localStorage)) {
+                    if (key.startsWith("lexlogica-study-domain-completions:v2:" + user.id + ":")) {
+                        localStorage.removeItem(key);
+                    }
+                }
                 for (let number = 1; number <= 8; number += 1) {
                     localStorage.removeItem("lexlogica-mock-state:" + user.id + ":mock-test-" + number);
                 }
