@@ -5297,12 +5297,12 @@
         "D": "The total number of containers"
       },
       "correctAnswer": "B",
-      "explanation": "Each large container holds 8 liters, and there are y large containers. Therefore,\n\n8y\nis the \\(\\boxed{\\text{total number of liters in the large containers}}\\).",
+      "explanation": "The expression \\(8y\\) represents the \\(\\boxed{\\text{total number of liters in the large containers}}\\), since there are \\(y\\) large containers holding 8 liters each.",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 82,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "Each large container holds 8 liters, and there are y large containers. Therefore,\n\n8y\nis the \\(\\boxed{\\text{total number of liters in the large containers}}\\).",
+        "B": "The expression \\(8y\\) represents the \\(\\boxed{\\text{total number of liters in the large containers}}\\), since there are \\(y\\) large containers holding 8 liters each.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
@@ -6881,13 +6881,13 @@
         "D": "It is the cost to the company of producing each license."
       },
       "correctAnswer": "C",
-      "explanation": "Since\n\nprofit=revenue-fixedcost,\nadding the fixed cost to profit gives revenue. Thus\n\n\\[P+6,800=24n\\]\nshows that 24n is the monthly sales revenue.",
+      "explanation": "Because profit equals revenue minus fixed cost, \\(P=24n-6{,}800\\). Adding the fixed cost to both sides gives \\[P+6{,}800=24n.\\] Thus \\(24n\\) is the monthly sales revenue.",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 128,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
-        "C": "Since\n\nprofit=revenue-fixedcost,\nadding the fixed cost to profit gives revenue. Thus\n\n\\[P+6,800=24n\\]\nshows that 24n is the monthly sales revenue.",
+        "C": "Because profit equals revenue minus fixed cost, \\(P=24n-6{,}800\\). Adding the fixed cost to both sides gives \\[P+6{,}800=24n.\\] Thus \\(24n\\) is the monthly sales revenue.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "subtopic": "Linear equations in 2 variables",
@@ -9440,13 +9440,13 @@
         "D": "\\(12x-8y=21\\)"
       },
       "correctAnswer": "C",
-      "explanation": "The first line has slope\n\n\\[64=32.\\]\nChoice C has slope\n\n54,\nwhich is different. Two nonparallel lines intersect exactly once, so the system has exactly one solution.",
+      "explanation": "The first line has slope \\(\\frac{6}{4}=\\frac{3}{2}\\). Choice C has slope \\(\\frac{5}{4}\\), which is different. Two nonparallel lines intersect exactly once, so the system has exactly one solution.",
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 216,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
-        "C": "The first line has slope\n\n\\[64=32.\\]\nChoice C has slope\n\n54,\nwhich is different. Two nonparallel lines intersect exactly once, so the system has exactly one solution.",
+        "C": "The first line has slope \\(\\frac{6}{4}=\\frac{3}{2}\\). Choice C has slope \\(\\frac{5}{4}\\), which is different. Two nonparallel lines intersect exactly once, so the system has exactly one solution.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
       "desmosMethod": "Enter\n\\[6x - 4y = 9\\]\nand then enter each choice one at a time. Only\n\\[5x - 4y = 7\\]\nproduces a second line with a different slope and therefore exactly one intersection.",
@@ -11918,7 +11918,7 @@
       "sourceBatch": "2026-10-06-math-batch465",
       "sourceQuestionNumber": 297,
       "choiceExplanations": {
-        "A": "\\[Substitute a=11 and b=8:\\]\n\n\\[3(11)+5(8)=33+40=73.\\]\nSince\n\n7378,\nthe pair represents a feasible combination.",
+        "A": "Substitute \\(a=11\\) and \\(b=8\\):\n\\[3(11)+5(8)=33+40=73.\\]\nSince\n\\[73\\le78,\\]\nthe pair represents a feasible combination.",
         "B": "This choice does not satisfy the relationships or conditions given in the question.",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -19842,12 +19842,12 @@
         "D": "\\(\\displaystyle \\frac{r}{1440md}\\)"
       },
       "correctAnswer": "B",
-      "explanation": "The pump transfers\n\nrm\nliters per minute. Since one day has 24(60)=1440 minutes, d days has 1440d minutes. Therefore,\n\n\\[rm(1440d)=1440rdm\\]",
+      "explanation": "The pump transfers \\(\\frac{r}{m}\\) liters per minute. Since one day has \\(24(60)=1440\\) minutes, \\(d\\) days have \\(1440d\\) minutes. Therefore, \\[\\frac{r}{m}(1440d)=\\frac{1440rd}{m}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 48,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "The pump transfers\n\nrm\nliters per minute. Since one day has 24(60)=1440 minutes, d days has 1440d minutes. Therefore,\n\n\\[rm(1440d)=1440rdm\\]",
+        "B": "The pump transfers \\(\\frac{r}{m}\\) liters per minute. Since one day has \\(24(60)=1440\\) minutes, \\(d\\) days have \\(1440d\\) minutes. Therefore, \\[\\frac{r}{m}(1440d)=\\frac{1440rd}{m}.\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
@@ -25510,8 +25510,8 @@
       "domain": "Problem-Solving & Data Analysis",
       "skill": "Ratio, Rates, Percentages",
       "difficulty": "Hard",
-      "passage": "For a certain emergency signal, the ratio of the distance from the source, in kilometers, to the signal's travel-time delay, in seconds, is approximately 2:7.\nA receiver records a total delay of 42 seconds, but 7 seconds of this delay is caused by the receiver's processing system. Approximately",
-      "question": "how far, in kilometers, is the receiver from the source?",
+      "passage": "For a certain emergency signal, the ratio of the distance from the source, in kilometers, to the signal's travel-time delay, in seconds, is approximately 2:7.\nA receiver records a total delay of 42 seconds, but 7 seconds of this delay is caused by the receiver's processing system.",
+      "question": "Approximately how far, in kilometers, is the receiver from the source?",
       "choices": {
         "A": "8",
         "B": "10",
@@ -25519,12 +25519,12 @@
         "D": "14"
       },
       "correctAnswer": "B",
-      "explanation": "The actual travel-time delay is\n\n\\[42-7=35seconds\\]\nUsing the ratio\n\n2km7s,\nthe distance is\n\\[ 35\\left(\\frac27\\right)=\\boxed{10}. \\]",
+      "explanation": "The actual travel-time delay is \\(42-7=35\\) seconds. The signal travels 2 kilometers in 7 seconds, so the distance is \\[35\\left(\\frac{2}{7}\\right)=\\boxed{10}\\text{ km}.\\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 334,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "The actual travel-time delay is\n\n\\[42-7=35seconds\\]\nUsing the ratio\n\n2km7s,\nthe distance is\n\\[ 35\\left(\\frac27\\right)=\\boxed{10}. \\]",
+        "B": "The actual travel-time delay is \\(42-7=35\\) seconds. The signal travels 2 kilometers in 7 seconds, so the distance is \\[35\\left(\\frac{2}{7}\\right)=\\boxed{10}\\text{ km}.\\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
@@ -26463,12 +26463,12 @@
         "D": "78"
       },
       "correctAnswer": "B",
-      "explanation": "The sum of data set A is\n\n144,\nso its mean is\n\n\\[1446=24\\]\nTherefore,\n\n\\[14+21+31+x4=24\\]\n\n\\[66+x=96,\\]\nso\n\\[ \\boxed{x=30}. \\]",
+      "explanation": "The sum of data set A is\n\n144,\nso its mean is\n\n\\[\\frac{144}{6}=24\\]\nTherefore,\n\n\\[\\frac{14+21+31+x}{4}=24\\]\n\n\\[66+x=96,\\]\nso\n\\[ \\boxed{x=30}. \\]",
       "sourceBatch": "2026-10-06-new-paste409-audited",
       "sourceQuestionNumber": 356,
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions given in the question.",
-        "B": "The sum of data set A is\n\n144,\nso its mean is\n\n\\[1446=24\\]\nTherefore,\n\n\\[14+21+31+x4=24\\]\n\n\\[66+x=96,\\]\nso\n\\[ \\boxed{x=30}. \\]",
+        "B": "The sum of data set A is\n\n144,\nso its mean is\n\n\\[\\frac{144}{6}=24\\]\nTherefore,\n\n\\[\\frac{14+21+31+x}{4}=24\\]\n\n\\[66+x=96,\\]\nso\n\\[ \\boxed{x=30}. \\]",
         "C": "This choice does not satisfy the relationships or conditions given in the question.",
         "D": "This choice does not satisfy the relationships or conditions given in the question."
       },
@@ -41977,14 +41977,14 @@
         "D": "(4,0)"
       },
       "correctAnswer": "B",
-      "explanation": "The slope is\n\n4-84-0=-1.\nSince the line passes through (0,8),\n\nf(x)=-x+8.\nAt the x-intercept,\n\n0=-x+8,\nso x=8.\nThus the intercept is\n\n(8,0).",
+      "explanation": "The slope is \\(\\frac{4-8}{4-0}=-1\\). Since the line passes through \\((0,8)\\), \\(f(x)=-x+8\\). At the x-intercept, \\(0=-x+8\\), so \\(x=8\\). Thus the intercept is \\((8,0)\\).",
       "sourceBatch": "2026-10-07-huge798-audited",
       "sourceQuestionNumber": 77,
       "subtopic": "Linear Functions",
       "classificationVersion": "2026-10-08-relative-30-40-30-v3",
       "choiceExplanations": {
         "A": "This choice does not satisfy the relationships or conditions in the question.",
-        "B": "The slope is\n\n4-84-0=-1.\nSince the line passes through (0,8),\n\nf(x)=-x+8.\nAt the x-intercept,\n\n0=-x+8,\nso x=8.\nThus the intercept is\n\n(8,0).",
+        "B": "The slope is \\(\\frac{4-8}{4-0}=-1\\). Since the line passes through \\((0,8)\\), \\(f(x)=-x+8\\). At the x-intercept, \\(0=-x+8\\), so \\(x=8\\). Thus the intercept is \\((8,0)\\).",
         "C": "This choice does not satisfy the relationships or conditions in the question.",
         "D": "This choice does not satisfy the relationships or conditions in the question."
       },

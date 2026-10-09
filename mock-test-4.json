@@ -4315,12 +4315,12 @@
               "D": "78"
             },
             "correctAnswer": "B",
-            "explanation": "The sum of data set A is\n\n144,\nso its mean is\n\n\\[1446=24\\]\nTherefore,\n\n\\[14+21+31+x4=24\\]\n\n\\[66+x=96,\\]\nso\n\\[ \\boxed{x=30}. \\]",
+            "explanation": "The sum of data set A is\n\n144,\nso its mean is\n\n\\[\\frac{144}{6}=24\\]\nTherefore,\n\n\\[\\frac{14+21+31+x}{4}=24\\]\n\n\\[66+x=96,\\]\nso\n\\[ \\boxed{x=30}. \\]",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 356,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "The sum of data set A is\n\n144,\nso its mean is\n\n\\[1446=24\\]\nTherefore,\n\n\\[14+21+31+x4=24\\]\n\n\\[66+x=96,\\]\nso\n\\[ \\boxed{x=30}. \\]",
+              "B": "The sum of data set A is\n\n144,\nso its mean is\n\n\\[\\frac{144}{6}=24\\]\nTherefore,\n\n\\[\\frac{14+21+31+x}{4}=24\\]\n\n\\[66+x=96,\\]\nso\n\\[ \\boxed{x=30}. \\]",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },

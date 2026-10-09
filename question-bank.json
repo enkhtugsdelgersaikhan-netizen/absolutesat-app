@@ -13103,7 +13103,7 @@
       "domain": "Information & Ideas",
       "skill": "Inferences",
       "difficulty": "Easy",
-      "passage": "Selected Geothermal Power Stations\nStation\nRegion\nPlant type\nGenerating units\nAverage annual generation (GWh)\nGeothermal field\nArroyo Blanco\nNevada\nbinary cycle\n3\n1,460\nSilver Basin\nHrafntindur\nSouthern Iceland\nflash steam\n5\n3,870\nKaldá Field\nMount Kestrel\nNorth Island, New Zealand\nbinary cycle\n2\n2,240\nRaukawa Field\nSan Aurelio\nTuscany, Italy\nflash steam\n4\n3,110\nValdoro Field",
+      "passage": "",
       "question": "A comparative report examined electricity production at the four geothermal stations shown in the table. Of the stations listed, the one with the greatest average annual generation was located in _____",
       "choices": {
         "A": "Southern Iceland.",
@@ -17393,7 +17393,7 @@
       "domain": "Information & Ideas",
       "skill": "Qualitative Command of Evidence",
       "difficulty": "Medium",
-      "passage": "Leena Patel and colleagues\nbur oak\n755\n596\nHenrik Dahl and colleagues\neastern hemlock\n218\n463\n\nLeena Patel and colleagues found that prescribed burning—deliberately setting controlled, low-intensity fires—was associated with greater seedling density in bur oak. But studies involving other tree species have sometimes found the opposite association. For example, ____.",
+      "passage": "Leena Patel and colleagues found that prescribed burning—deliberately setting controlled, low-intensity fires—was associated with greater seedling density in bur oak. But studies involving other tree species have sometimes found the opposite association. For example, ____.",
       "question": "Which choice most effectively uses data from the table to complete the assertion?",
       "choices": {
         "A": "Henrik Dahl and colleagues recorded 218 eastern-hemlock seedlings per hectare with burning but 463 without burning.",
