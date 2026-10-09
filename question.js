@@ -1313,6 +1313,12 @@ function renderInlineFormatting(
                 /&lt;u&gt;([\s\S]*?)&lt;\/u&gt;/g,
                 "<u>$1</u>"
             )
+            // Imported literary texts sometimes use literal <i>/<em> tags.
+            // Admit only these formatting tags after escaping the source.
+            .replace(
+                /&lt;(?:i|em)&gt;([\s\S]*?)&lt;\/(?:i|em)&gt;/gi,
+                "<em>$1</em>"
+            )
             .replace(
                 /\*\*([^*]+)\*\*/g,
                 "<strong>$1</strong>"
@@ -1327,12 +1333,12 @@ function renderInlineFormatting(
         escaped =
             escaped
                 .replace(
-                    /\*([^*]+)\*/g,
-                    "$1"
+                    /(^|[^\\p{L}\\p{N}])\\*([A-Za-z][^*\\n]*?)\\*(?=$|[^\\p{L}\\p{N}])/gu,
+                    "$1$2"
                 )
                 .replace(
-                    /_([^_]+)_/g,
-                    "$1"
+                    /(^|[^\\p{L}\\p{N}])_([A-Za-z][^_\\n]*?)_(?=$|[^\\p{L}\\p{N}])/gu,
+                    "$1$2"
                 );
     } else {
         escaped =
