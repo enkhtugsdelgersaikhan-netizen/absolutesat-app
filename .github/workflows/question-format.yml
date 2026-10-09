@@ -1,0 +1,40 @@
+name: Question formatting audit and safe repair
+on:
+  push:
+    branches: [main]
+    paths:
+      - question-bank.json
+      - math-question-bank.json
+      - 'mock-test-*.json'
+      - question-format-audit.mjs
+      - .github/workflows/question-format.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  audit-format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Apply conservative fixes across all questions
+        run: node question-format-audit.mjs --fix
+      - name: Validate JSON and changed lines
+        run: |
+          node -e "for (const f of ['question-bank.json','math-question-bank.json',...Array.from({length:8},(_,i)=>'mock-test-'+(i+1)+'.json')]) JSON.parse(require('fs').readFileSync(f,'utf8'))"
+          git diff --check
+      - name: Commit safe data normalizations to main
+        run: |
+          if ! git diff --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add question-bank.json math-question-bank.json mock-test-*.json
+            git commit -m "Normalize safe question formatting artifacts [skip ci]"
+            git push origin HEAD:main
+          fi
+      - name: Final whole-bank audit
+        run: node question-format-audit.mjs --strict
