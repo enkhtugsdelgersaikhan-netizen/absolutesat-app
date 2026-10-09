@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css?v=unified-ui-1">
-<link rel="stylesheet" href="/vocab.css?v=controls-3">
-<link rel="stylesheet" href="/math-fluency.css?v=controls-3">
+<link rel="stylesheet" href="/vocab.css?v=controls-4">
+<link rel="stylesheet" href="/math-fluency.css?v=controls-4">
 <script>
 window.MathJax={
   tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},
@@ -39,13 +39,23 @@ window.MathJax={
 <section class="vocab-content">
 <div class="vocab-toolbar">
 <label class="vocab-search-wrap"><span>Search</span><input id="formula-search" type="search" placeholder="Search a topic, symbol, or formula..." autocomplete="off"></label>
-<label class="vocab-search-wrap"><span>Domain</span><select id="formula-category">
+<div class="vocab-search-wrap vocab-category-wrap">
+<span id="formula-category-label-text">Domain</span>
+<select id="formula-category" aria-label="Domain">
 <option value="all">All Domains</option>
 <option value="Algebra">Algebra</option>
 <option value="Advanced Math">Advanced Math</option>
 <option value="Problem-Solving and Data Analysis">Problem-Solving & Data Analysis</option>
 <option value="Geometry and Trigonometry">Geometry & Trigonometry</option>
-</select></label>
+</select>
+<div class="vocab-category-picker" id="formula-category-picker">
+<button type="button" id="formula-category-trigger" class="vocab-category-trigger" aria-haspopup="listbox" aria-controls="formula-category-menu" aria-expanded="false">
+<span class="vocab-category-selected"><span id="formula-category-trigger-icon" class="vocab-category-symbol" aria-hidden="true"></span><span id="formula-category-trigger-text">All Domains</span></span>
+<svg class="vocab-category-chevron" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+<div id="formula-category-menu" class="vocab-category-menu" role="listbox" aria-label="Domain" aria-hidden="true"></div>
+</div>
+</div>
 <div class="vocab-status-filter">
 <span>Status</span>
 <div class="vocab-status-buttons" role="group" aria-label="Formula status filter">
@@ -123,7 +133,7 @@ window.MathJax={
 <script src="/supabase-config.js"></script>
 <script src="/auth-guard.js"></script>
 <script src="/auth.js?v=dark-3"></script>
-<script src="/math-fluency.js?v=7"></script>
+<script src="/math-fluency.js?v=8"></script>
 <script>
 const menuButton=document.querySelector(".mobile-menu-button"),navigation=document.querySelector(".navigation");
 if(menuButton&&navigation){menuButton.addEventListener("click",()=>{const isOpen=navigation.classList.toggle("mobile-open");menuButton.setAttribute("aria-expanded",isOpen?"true":"false");});}
