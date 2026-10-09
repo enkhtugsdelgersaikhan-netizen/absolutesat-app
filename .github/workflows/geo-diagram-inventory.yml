@@ -1,0 +1,20 @@
+name: Geometry diagram inventory
+on:
+  push:
+    branches: [main]
+    paths:
+      - geo-diagram-inventory.mjs
+      - .github/workflows/geo-diagram-inventory.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Inventory all Geometry and Trigonometry diagrams
+        run: node geo-diagram-inventory.mjs
