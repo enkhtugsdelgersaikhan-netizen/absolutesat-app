@@ -43,11 +43,15 @@ function check(value, location) {
     if (next !== s) { count(report.safeFixes, name); s = next; }
   }
   const warnings = [];
-  if (countMatches(s, /\\\(/g) !== countMatches(s, /\\\)/g))
+  // Inside TeX, \\[2mm] (and similar lengths) is an ordinary
+  // row break, not a second math delimiter. Keep the actual content.
+  const delimitersOnly = s.replace(
+    /\\\\\[\s*\d+(?:\.\d+)?\s*(?:mm|em|ex|pt|cm|px)\s*\]/gi, "");
+  if (countMatches(delimitersOnly, /\\\(/g) !== countMatches(delimitersOnly, /\\\)/g))
     warnings.push("unbalanced-inline-math-delimiters");
-  if (countMatches(s, /\\\[/g) !== countMatches(s, /\\\]/g))
+  if (countMatches(delimitersOnly, /\\\[/g) !== countMatches(delimitersOnly, /\\\]/g))
     warnings.push("unbalanced-display-math-delimiters");
-  if (/\\\\[()[\]]/.test(s))
+  if (/\\\\[()[\]]/.test(delimitersOnly))
     warnings.push("doubled-math-escape-review");
   for (const tag of ["i", "em", "u", "strong", "sup", "sub"]) {
     const opening = countMatches(s, new RegExp("<" + tag + "(?:\\s[^>]*)?>", "gi"));
@@ -56,22 +60,26 @@ function check(value, location) {
   }
   if (/\\(?:begin|end)\s*\{\s*text\s*\}/i.test(s))
     warnings.push("unpaired-invalid-tex-text-environment");
-  if (/<(?:br|p|div|span)\b/i.test(s))
+  if (/<(?:br|p|div|span)(?:\s[^<>]*?)?\/?>/i.test(s))
     warnings.push("raw-html-layout-review");
   // Explicit line breaks are retained: they can distinguish prose,
   // poetry, paired texts, and tables. Report only, don't reflow.
-  if (/\S[^\n]*\n(?!\n)\S/.test(s) &&
+  // Look only for a lowercase sentence continuing across a hard
+  // break. Ordinary paragraphs, explanations, headings, and paired
+  // text breaks are not formatting defects.
+  if (/[\p{Ll},;:]\n[\p{Ll}]/u.test(s) &&
+      !/\b(?:poem|poetry|verse|stanza)\b/i.test(s) &&
       !/^(?:Text\s+[12]|Student\s+notes?:|[-•])/im.test(s))
-    warnings.push("single-newline-manual-review");
+    warnings.push("possible-soft-wrap-manual-review");
   for (const name of warnings) {
     count(report.warnings, name);
-    if (name !== "single-newline-manual-review") {
+    if (name !== "possible-soft-wrap-manual-review") {
       // Detailed diagnostics for the few structural problems; no question
       // content is altered until its exact meaning is reviewed.
       console.error("FORMAT TARGET " + location + " [" + name + "]: " +
         s.slice(0, 1200).replace(/\n/g, "\\n"));
     }
-    if (report.examples.length < 120 && name !== "single-newline-manual-review")
+    if (report.examples.length < 120 && name !== "possible-soft-wrap-manual-review")
       report.examples.push({ location, issue: name,
         excerpt: s.slice(0, 150).replace(/\n/g, "\\n") });
   }
