@@ -251,3 +251,82 @@ html.lexlogica-dark-mode .sg-priority-item[class*="sg-severity-"]{
     border-right-color:#36514b;
     border-bottom-color:#36514b;
 }
+
+/* Embedded study guide sits immediately beneath signed-in KPI cards. */
+.home-dashboard .homepage-study-guide.study-guide-page{
+    min-height:0;
+    margin:0 0 16px;
+    padding:4px 0 18px;
+    background:transparent;
+    color:#173b36;
+    scroll-margin-top:110px;
+}
+.home-dashboard .homepage-study-guide .study-guide-wrap{
+    max-width:100%;
+    margin:0;
+}
+.home-dashboard .homepage-study-guide .study-guide-intro{
+    margin:0 0 16px;
+}
+.home-dashboard .homepage-study-guide .study-guide-intro h2{
+    margin:5px 0 6px;
+    max-width:100%;
+    font-size:clamp(24px,2.5vw,32px);
+    line-height:1.2;
+    color:#173b36;
+    letter-spacing:-.7px;
+}
+.home-dashboard .homepage-study-guide .study-guide-intro p{
+    margin:0;
+    max-width:900px;
+    font-size:12px;
+    line-height:1.65;
+}
+.home-dashboard .homepage-study-guide .sg-research-compact{
+    margin-top:14px;
+    padding:0;
+    border-radius:12px;
+    background:#fff;
+}
+.home-dashboard .homepage-study-guide .sg-research-compact summary{
+    padding:13px 17px;
+    cursor:pointer;
+    color:#587368;
+    font-size:11px;
+    font-weight:700;
+}
+.home-dashboard .homepage-study-guide .sg-research-compact[open]{
+    padding:0 17px 17px;
+}
+.home-dashboard .homepage-study-guide .sg-research-compact[open] summary{
+    margin:0 -17px 8px;
+    padding:13px 17px;
+    border-bottom:1px solid #edf3f0;
+}
+.home-dashboard .homepage-study-guide .sg-research-compact p{
+    margin:5px 0;
+    font-size:11px;
+    line-height:1.6;
+}
+.home-dashboard .homepage-study-guide .sg-research-compact small{
+    font-size:10px;
+    line-height:1.6;
+}
+html.lexlogica-dark-mode .home-dashboard .homepage-study-guide.study-guide-page{
+    background:transparent;
+}
+html.lexlogica-dark-mode .home-dashboard .homepage-study-guide .study-guide-intro h2{
+    color:#daeae5;
+}
+html.lexlogica-dark-mode .home-dashboard .homepage-study-guide .sg-research-compact{
+    background:#1a2926;
+}
+@media(max-width:760px){
+    .home-dashboard .homepage-study-guide.study-guide-page{
+        padding:2px 0 15px;
+        scroll-margin-top:90px;
+    }
+    .home-dashboard .homepage-study-guide .study-guide-intro{
+        margin-bottom:13px;
+    }
+}

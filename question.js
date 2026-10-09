@@ -4634,7 +4634,7 @@ async function goToNextQuestion() {
         if (!current || !guided.answeredIds.map(String).includes(String(current.id))) return;
         if (currentQuestionIndex >= questions.length - 1) {
             if (new Set(guided.answeredIds.map(String)).size === 10) {
-                window.location.assign("/study-guide");
+                window.location.assign("/#study-guide");
             }
             return;
         }
@@ -9353,7 +9353,7 @@ function renderCurrentQuestion() {
 
     if (backToBank) {
         backToBank.href = getGuidedPracticeSession()
-            ? "/study-guide"
+            ? "/#study-guide"
             : isMathQuestion ? "/math-question-bank" : "/reading-question-bank";
     }
 
