@@ -1,0 +1,421 @@
+/* Unified SAT score editor and contextual benchmark explorer.
+   All styling remains native to the site's existing light/dark treatment. */
+.sat-guide-row.sat-score-workspace{
+  display:block!important;
+  grid-template-columns:none!important;
+  width:min(100%,1160px)!important;
+  max-width:1160px!important;
+  margin:16px auto 24px!important;
+}
+.sat-guide-row.sat-score-workspace>.sat-score-experience{
+  width:100%;
+  margin:0;
+  padding:23px 26px;
+  background:#fff;
+  border:1px solid #d7e6e0;
+  border-radius:18px;
+  box-shadow:0 6px 18px rgba(26,60,48,.035);
+}
+.sat-score-experience-heading{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:16px;
+  margin:0 0 19px;
+}
+.sat-score-eyebrow{
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.12em;
+  color:#0d7568;
+}
+.sat-score-experience-heading h2{
+  margin:5px 0 7px;
+  font-size:clamp(24px,2.4vw,32px);
+  font-weight:760;
+  line-height:1.25;
+  color:#193e35;
+  letter-spacing:-.7px;
+}
+.sat-score-experience-heading p{
+  margin:0;
+  max-width:740px;
+  font-size:12px;
+  line-height:1.65;
+  color:#6b8178;
+}
+.sat-score-personal-cards{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:13px;
+}
+.sat-score-experience .sat-score-summary-card{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  min-height:176px;
+  padding:19px 20px 18px;
+  border:1px solid #dbe8e4;
+  border-radius:14px;
+  background:#f6faf8;
+  box-sizing:border-box;
+}
+.sat-score-experience .sat-score-summary-card:before{
+  content:"";
+  position:absolute;
+  left:20px;
+  right:20px;
+  top:0;
+  height:3px;
+  background:#bedbd0;
+  border-radius:0 0 3px 3px;
+}
+.sat-score-experience .sat-score-summary-card.has-score:before{
+  background:#168473;
+}
+.sat-score-experience .sat-score-summary-card>span:first-child{
+  font-size:11px;
+  font-weight:700;
+  color:#5e7770;
+}
+.sat-score-experience .sat-score-summary-card>strong{
+  font-size:clamp(30px,3.2vw,42px);
+  font-weight:800;
+  letter-spacing:-1.2px;
+  color:#0c7568;
+  line-height:1.2;
+  margin:8px 0 7px;
+  font-variant-numeric:tabular-nums;
+}
+.sat-score-experience .sat-score-card-band{
+  display:inline-block;
+  padding:4px 9px;
+  font-size:10px;
+  font-weight:800;
+  line-height:1.45;
+  background:#e3f4ed;
+  border:1px solid #cce4d9;
+  border-radius:8px;
+  color:#1d6557;
+}
+.sat-score-experience .sat-score-summary-card p{
+  margin:9px 0 0!important;
+  color:#627a72!important;
+  font-size:10px!important;
+  font-weight:450!important;
+  line-height:1.6;
+}
+.sat-score-experience .sat-score-editor{
+  margin-top:15px;
+  padding:18px 20px;
+  background:#fbfdfc;
+  border:1px solid #dce8e4;
+  border-radius:13px;
+}
+.sat-score-editor-heading{
+  margin-bottom:10px;
+}
+.sat-score-editor-heading strong{
+  display:block;
+  font-size:14px;
+  font-weight:750;
+  color:#24463c;
+}
+.sat-score-editor-heading p{
+  margin:4px 0 0;
+  font-size:10px;
+  line-height:1.5;
+  color:#6f867d;
+}
+.sat-score-experience #sat-profile-form{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;
+  gap:11px!important;
+  align-items:end;
+}
+.sat-score-experience #sat-profile-form>label{
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  min-width:0;
+  gap:5px;
+  font-size:10px;
+  color:#3e6356;
+  font-weight:700;
+}
+.sat-score-experience #sat-profile-form>label>span{
+  font-size:10px!important;
+  color:#47695d;
+  font-weight:750;
+}
+.sat-score-experience #sat-profile-form input{
+  display:block;
+  width:100%;
+  min-width:0;
+  box-sizing:border-box;
+  height:42px!important;
+  padding:7px 12px!important;
+  border:1px solid #b8d3c8;
+  border-radius:9px;
+  background:#fff;
+  color:#183c33;
+  font:600 15px Poppins,sans-serif!important;
+}
+.sat-score-experience #sat-profile-form>label>small{
+  color:#81978e;
+  font-size:9px!important;
+}
+.sat-score-experience #sat-profile-form .sat-context-profile-actions{
+  display:flex!important;
+  gap:8px!important;
+  padding:0!important;
+  margin:0 0 17px!important;
+  align-items:center;
+}
+.sat-score-experience #sat-profile-form .sat-context-profile-actions button{
+  height:42px!important;
+  min-width:100px;
+  padding:8px 13px!important;
+  font:700 10px Poppins,sans-serif;
+  border-radius:9px;
+  cursor:pointer;
+  white-space:nowrap;
+}
+.sat-score-experience #sat-profile-save{
+  border:1px solid #0d796b;
+  background:#0d796b;
+  color:#fff;
+}
+.sat-score-experience #sat-profile-clear{
+  border:1px solid #cddfd5;
+  background:#fff;
+  color:#547166;
+}
+.sat-score-experience #sat-profile-form .sat-context-profile-status{
+  grid-column:1/-1;
+  min-height:0;
+  font-size:10px;
+  line-height:1.6;
+}
+.sat-score-experience #sat-profile-form .sat-context-profile-status:empty{
+  display:none;
+}
+.sat-score-explorer{
+  margin-top:22px;
+}
+.sat-score-explorer-header h3{
+  margin:0 0 3px;
+  font-size:16px;
+  font-weight:750;
+  color:#24473d;
+}
+.sat-score-explorer-header p{
+  margin:0 0 12px;
+  font-size:10px;
+  color:#71877d;
+}
+.sat-score-tabs{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:7px;
+  padding:5px;
+  margin:0 0 11px;
+  background:#f1f7f4;
+  border:1px solid #dceae3;
+  border-radius:11px;
+}
+.sat-score-tab{
+  min-width:0;
+  padding:11px 14px;
+  border:1px solid transparent;
+  border-radius:8px;
+  background:transparent;
+  color:#61796d;
+  font:700 11px Poppins,sans-serif;
+  cursor:pointer;
+  transition:background .18s,border-color .18s,color .18s;
+}
+.sat-score-tab:hover{
+  background:#e7f3ec;
+  color:#176b5c;
+}
+.sat-score-tab.is-active{
+  color:#0e6e60;
+  background:#fff;
+  border-color:#c5ded2;
+  box-shadow:0 2px 7px rgba(14,75,54,.055);
+}
+.sat-score-tab:focus-visible{
+  outline:3px solid #dcae57;
+  outline-offset:0;
+}
+.sat-score-experience .sat-score-guide-columns{
+  display:block!important;
+  grid-template-columns:none!important;
+  width:100%;
+  margin:0;
+}
+.sat-score-experience .sat-score-guide-scale{
+  display:flex;
+  flex-direction:column;
+  background:#fff;
+  border:1px solid #dce9e3;
+  border-radius:12px;
+  box-shadow:none;
+}
+.sat-score-experience .sat-score-guide-scale[hidden]{
+  display:none!important;
+}
+.sat-score-experience .sat-score-scale-head{
+  padding:14px 17px;
+  background:#edf6f1;
+  border-color:#dce9e3;
+}
+.sat-score-experience .sat-score-scale-head strong{
+  font-size:13px;
+  color:#215448;
+}
+.sat-score-experience .sat-score-scale-head small{
+  font-size:10px;
+  color:#7b9084;
+}
+.sat-score-experience .sat-score-scale-row{
+  display:grid;
+  flex:none;
+  grid-template-columns:115px minmax(0,1fr);
+  column-gap:22px;
+  align-items:start;
+  padding:13px 17px;
+  border-color:#edf1ef;
+  background:#fff;
+}
+.sat-score-experience .sat-score-scale-row:nth-child(even){background:#fafcfb}
+.sat-score-experience .sat-score-scale-row>b{
+  grid-row:auto;
+  color:#0c786a;
+  font-size:11px;
+  line-height:1.6;
+  white-space:nowrap;
+  font-weight:800;
+}
+.sat-score-experience .sat-score-scale-row>span{
+  color:#526e61;
+  font-size:11px;
+  font-weight:450;
+  line-height:1.6;
+}
+.sat-score-experience .sat-score-scale-row>span strong{
+  font-weight:750;
+  color:#244a3e;
+}
+.sat-score-experience .sat-score-scale-row.retake{
+  background:#fdf9f7;
+}
+.sat-score-experience .sat-score-scale-row.is-user-range{
+  background:#ebf7f1!important;
+  box-shadow:inset 0 0 0 1.5px rgba(18,121,97,.52);
+}
+.sat-score-experience .sat-score-explorer-caveat{
+  margin:11px 3px 0;
+  font-size:10px;
+  line-height:1.65;
+  color:#71847b;
+}
+.sat-score-experience .sat-quartile-inline{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:8px 17px;
+  margin:20px 0 0;
+  padding:17px 3px 0;
+  border-top:1px solid #e1ebe6;
+}
+.sat-score-experience .sat-quartile-inline>span{
+  grid-column:1/-1;
+  margin:0;
+  font-size:9px;
+  letter-spacing:.1em;
+}
+.sat-score-experience .sat-quartile-inline>div{
+  display:block;
+  padding:10px 12px;
+  background:#f6faf8;
+  border:1px solid #e0ebe5;
+  border-radius:9px;
+}
+.sat-score-experience .sat-quartile-inline>div strong{
+  display:block;
+  margin-bottom:4px;
+  font-size:10px;
+}
+.sat-score-experience .sat-quartile-inline>div p{
+  font-size:9px;
+  line-height:1.5;
+}
+.sat-score-experience .sat-quartile-brief-note{
+  grid-column:1/-1;
+  margin:0;
+  font-size:9px;
+}
+@media(max-width:950px){
+  .sat-score-experience #sat-profile-form{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .sat-score-experience #sat-profile-form .sat-context-profile-actions{
+    grid-column:1/-1;
+    justify-content:flex-start;
+    margin:0!important;
+  }
+  .sat-score-personal-cards{gap:9px}
+  .sat-score-experience .sat-score-summary-card{
+    padding:16px 14px;
+  }
+}
+@media(max-width:670px){
+  .sat-guide-row.sat-score-workspace>.sat-score-experience{
+    padding:18px 15px;
+  }
+  .sat-score-personal-cards{
+    grid-template-columns:1fr;
+    gap:9px;
+  }
+  .sat-score-experience .sat-score-summary-card{
+    min-height:0;
+    padding:14px 16px;
+  }
+  .sat-score-experience .sat-score-summary-card>strong{
+    font-size:32px;
+    margin:4px 0 5px;
+  }
+  .sat-score-experience .sat-score-summary-card p{
+    margin-top:5px!important;
+  }
+  .sat-score-experience #sat-profile-form{
+    grid-template-columns:1fr;
+  }
+  .sat-score-experience #sat-profile-form .sat-context-profile-actions{
+    grid-column:1;
+    flex-wrap:wrap;
+  }
+  .sat-score-experience #sat-profile-form .sat-context-profile-actions button{
+    flex:1;
+  }
+  .sat-score-experience .sat-score-tab{
+    padding:10px 5px;
+    font-size:9px;
+  }
+  .sat-score-experience .sat-score-scale-row{
+    grid-template-columns:1fr;
+    row-gap:4px;
+    padding:12px 13px;
+  }
+  .sat-score-experience .sat-quartile-inline{
+    grid-template-columns:1fr;
+  }
+  .sat-score-experience .sat-quartile-inline>div{
+    padding:9px 11px;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .sat-score-experience .sat-score-tab{transition:none}
+}

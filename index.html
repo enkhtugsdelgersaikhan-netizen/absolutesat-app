@@ -41,6 +41,7 @@
 <link rel="stylesheet" href="/home-dashboard.css?v=two-panel-home-1">
 <link rel="stylesheet" href="/responsive.css?v=1">
 <link rel="stylesheet" href="/home-hub.css?v=1">
+<link rel="stylesheet" href="/sat-score-experience.css?v=1">
     <!-- Vercel Web Analytics -->
     <script>
       window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -360,70 +361,91 @@
 
         <section class="university-sat-section" aria-labelledby="sat-score-guide-title">
             <div class="university-sat-container">
-<div class="sat-guide-row">
-                    <section class="sat-score-guide" aria-labelledby="sat-score-guide-title">
-    <div class="sat-score-guide-head"><span>SCORE GUIDE</span><h4 id="sat-score-guide-title">What SAT scores mean</h4></div>
-    <div class="home-score-range-details">
-<div class="sat-score-guide-columns">
-        <div class="sat-score-guide-scale composite" data-guide="composite">
-            <div class="sat-score-scale-head"><strong>Composite</strong></div>
-            <div class="sat-score-scale-row" data-min="1560" data-max="1600"><b>1560–1600</b><span><strong>Elite.</strong> SAT is effectively never going to be the problem in admissions.</span></div>
-            <div class="sat-score-scale-row" data-min="1500" data-max="1550"><b>1500–1550</b><span><strong>Near elite.</strong> Enough for essentially every school; more mainly helps offset weaker academics or unusually score-heavy programs.</span></div>
-            <div class="sat-score-scale-row" data-min="1450" data-max="1490"><b>1450–1490</b><span><strong>Highly competitive.</strong> Strong for most selective schools, though still below typical scores at some of the most selective.</span></div>
-            <div class="sat-score-scale-row" data-min="1400" data-max="1440"><b>1400–1440</b><span><strong>Competitive.</strong> Strong at many selective schools, but can become a relative weakness at the top end.</span></div>
-            <div class="sat-score-scale-row" data-min="1300" data-max="1390"><b>1300–1390</b><span><strong>School-dependent.</strong> Helpful at many universities, but often below the submitted-score range at highly selective schools.</span></div>
-            <div class="sat-score-scale-row" data-min="1200" data-max="1290"><b>1200–1290</b><span><strong>Limited at highly selective schools.</strong> Useful at many colleges, but usually not an admissions strength at the most selective ones.</span></div>
-            <div class="sat-score-scale-row retake" data-max="1190"><b>400–1190</b><span><strong>Usually not a selective-school strength.</strong> Its value depends heavily on the school’s own score range.</span></div>
-        </div>
-        <div class="sat-score-guide-scale reading" data-guide="reading">
-            <div class="sat-score-scale-head"><strong>Reading &amp; Writing</strong></div>
-            <div class="sat-score-scale-row" data-min="760" data-max="800"><b>760–800</b><span><strong>Elite.</strong> Among the strongest section scores; systematic weakness is unlikely.</span></div>
-            <div class="sat-score-scale-row" data-min="740" data-max="750"><b>740–750</b><span><strong>Near elite.</strong> Exceptional performance with only very small weaknesses remaining.</span></div>
-            <div class="sat-score-scale-row" data-min="720" data-max="730"><b>720–730</b><span><strong>Very high.</strong> Very strong performance; remaining weaknesses are limited.</span></div>
-            <div class="sat-score-scale-row" data-min="690" data-max="710"><b>690–710</b><span><strong>Strong.</strong> A few recurring weaknesses can still meaningfully affect the section.</span></div>
-            <div class="sat-score-scale-row" data-min="630" data-max="680"><b>630–680</b><span><strong>Above average.</strong> Good command, but several recurring weaknesses remain.</span></div>
-            <div class="sat-score-scale-row" data-min="560" data-max="620"><b>560–620</b><span><strong>Mid-range.</strong> Performance is mixed across multiple skills.</span></div>
-            <div class="sat-score-scale-row retake" data-max="550"><b>200–550</b><span><strong>Developing.</strong> Broad weaknesses are still limiting the section.</span></div>
-        </div>
-        <div class="sat-score-guide-scale math" data-guide="math">
-            <div class="sat-score-scale-head"><strong>Math</strong></div>
-            <div class="sat-score-scale-row" data-min="790" data-max="800"><b>790–800</b><span><strong>Elite.</strong> Among the strongest section scores; systematic weakness is unlikely.</span></div>
-            <div class="sat-score-scale-row" data-min="770" data-max="780"><b>770–780</b><span><strong>Near elite.</strong> Exceptional performance with only very small weaknesses remaining.</span></div>
-            <div class="sat-score-scale-row" data-min="740" data-max="760"><b>740–760</b><span><strong>Very high.</strong> Very strong performance; remaining weaknesses are limited.</span></div>
-            <div class="sat-score-scale-row" data-min="690" data-max="730"><b>690–730</b><span><strong>Strong.</strong> A few recurring weaknesses can still meaningfully affect the section.</span></div>
-            <div class="sat-score-scale-row" data-min="630" data-max="680"><b>630–680</b><span><strong>Above average.</strong> Good command, but several recurring weaknesses remain.</span></div>
-            <div class="sat-score-scale-row" data-min="540" data-max="620"><b>540–620</b><span><strong>Mid-range.</strong> Performance is mixed across multiple skills.</span></div>
-            <div class="sat-score-scale-row retake" data-max="530"><b>200–530</b><span><strong>Developing.</strong> Broad weaknesses are still limiting the section.</span></div>
-        </div>
-    </div>
-    
-    
+<div class="sat-guide-row sat-score-workspace">
+  <section class="sat-score-guide sat-score-experience" aria-labelledby="sat-score-guide-title">
+    <header class="sat-score-experience-heading">
+      <div><span class="sat-score-eyebrow">YOUR SAT · SCORE CONTEXT</span><h2 id="sat-score-guide-title">What your SAT score means</h2>
+        <p>See your score ranges, then compare them with the lower quartile, median, and upper quartile at the universities you care about.</p></div>
+    </header>
 
+    <div id="sat-score-personal-summary" class="sat-score-personal-cards" aria-live="polite">
+      <article class="sat-score-summary-card" data-score-card="composite">
+        <span>Composite</span><strong id="sat-total-preview">—</strong>
+        <span class="sat-score-card-band" id="sat-band-composite">Set your score</span>
+        <p id="sat-context-composite">Enter both section scores to see your composite score context.</p>
+      </article>
+      <article class="sat-score-summary-card" data-score-card="reading">
+        <span>Reading &amp; Writing</span><strong id="sat-score-reading-preview">—</strong>
+        <span class="sat-score-card-band" id="sat-band-reading">Set your score</span>
+        <p id="sat-context-reading">Your Reading &amp; Writing score range appears here.</p>
+      </article>
+      <article class="sat-score-summary-card" data-score-card="math">
+        <span>Math</span><strong id="sat-score-math-preview">—</strong>
+        <span class="sat-score-card-band" id="sat-band-math">Set your score</span>
+        <p id="sat-context-math">Your Math score range appears here.</p>
+      </article>
+    </div>
+
+    <div class="sat-score-editor">
+      <div class="sat-score-editor-heading"><div><strong>Set your score</strong><p>Enter your most recent SAT section scores to personalize the cards and university comparisons.</p></div></div>
+      <form id="sat-profile-form" class="sat-context-profile-form" novalidate>
+        <label for="sat-reading-writing"><span>Reading &amp; Writing</span><input id="sat-reading-writing" type="number" min="200" max="800" step="10" inputmode="numeric" placeholder="e.g. 740"><small>200–800</small></label>
+        <label for="sat-math"><span>Math</span><input id="sat-math" type="number" min="200" max="800" step="10" inputmode="numeric" placeholder="e.g. 760"><small>200–800</small></label>
+        <div class="sat-context-profile-actions"><button id="sat-profile-save" type="submit">Save SAT scores</button><button id="sat-profile-clear" type="button">Clear</button></div>
+        <span id="sat-profile-status" class="sat-context-profile-status" role="status" aria-live="polite"></span>
+      </form>
+    </div>
+
+    <div class="sat-score-explorer">
+      <div class="sat-score-explorer-header"><h3>Explore score ranges</h3><p>Select a section to explore its benchmarks.</p></div>
+      <div class="sat-score-tabs" role="tablist" aria-label="SAT score ranges">
+        <button id="sat-range-tab-composite" class="sat-score-tab is-active" role="tab" type="button" data-score-tab="composite" aria-controls="sat-range-panel-composite" aria-selected="true" tabindex="0">Composite</button>
+        <button id="sat-range-tab-reading" class="sat-score-tab" role="tab" type="button" data-score-tab="reading" aria-controls="sat-range-panel-reading" aria-selected="false" tabindex="-1">Reading &amp; Writing</button>
+        <button id="sat-range-tab-math" class="sat-score-tab" role="tab" type="button" data-score-tab="math" aria-controls="sat-range-panel-math" aria-selected="false" tabindex="-1">Math</button>
+      </div>
+      <div class="sat-score-guide-columns home-score-range-details">
+                    <div class="sat-score-guide-scale composite" data-guide="composite" id="sat-range-panel-composite" role="tabpanel" aria-labelledby="sat-range-tab-composite">
+              <div class="sat-score-scale-head"><strong>Composite score</strong><small>Benchmark ranges, not admission thresholds</small></div>
+              <div class="sat-score-scale-row" data-min="1560" data-max="1600"><b>1560–1600</b><span><strong>Very high range.</strong> At or above the submitted-score range at many selective schools. Admission still depends on the full application.</span></div>
+              <div class="sat-score-scale-row" data-min="1500" data-max="1550"><b>1500–1550</b><span><strong>High range.</strong> Competitive at many selective schools. Compare this score with each school's median and upper quartile.</span></div>
+              <div class="sat-score-scale-row" data-min="1450" data-max="1490"><b>1450–1490</b><span><strong>Strong range.</strong> Strong relative to many colleges, though some highly selective universities report higher medians.</span></div>
+              <div class="sat-score-scale-row" data-min="1400" data-max="1440"><b>1400–1440</b><span><strong>Competitive range.</strong> Competitive at numerous universities; context matters more than a universal label.</span></div>
+              <div class="sat-score-scale-row" data-min="1300" data-max="1390"><b>1300–1390</b><span><strong>School-dependent range.</strong> Above some universities' typical ranges and below others. Compare with your target list.</span></div>
+              <div class="sat-score-scale-row" data-min="1200" data-max="1290"><b>1200–1290</b><span><strong>Developing range.</strong> Can be competitive at many colleges, but may fall below the typical range at selective targets.</span></div>
+              <div class="sat-score-scale-row retake" data-min="400" data-max="1190"><b>400–1190</b><span><strong>More room to improve.</strong> Consider targeted practice and a retake if your target universities report higher score ranges.</span></div>
+            </div>
+                    <div class="sat-score-guide-scale reading" data-guide="reading" id="sat-range-panel-reading" role="tabpanel" aria-labelledby="sat-range-tab-reading" hidden>
+              <div class="sat-score-scale-head"><strong>Reading &amp; Writing score</strong><small>Benchmark ranges, not admission thresholds</small></div>
+              <div class="sat-score-scale-row" data-min="760" data-max="800"><b>760–800</b><span><strong>Very high range.</strong> A strong Reading &amp; Writing result. Compare against each university's submitted-score range.</span></div>
+              <div class="sat-score-scale-row" data-min="740" data-max="750"><b>740–750</b><span><strong>High range.</strong> A high section score; further gains may matter most for unusually high-score targets.</span></div>
+              <div class="sat-score-scale-row" data-min="720" data-max="730"><b>720–730</b><span><strong>Strong range.</strong> A strong result at many schools, though some report higher section medians.</span></div>
+              <div class="sat-score-scale-row" data-min="690" data-max="710"><b>690–710</b><span><strong>Competitive range.</strong> Useful at many universities. Your target schools determine how much improvement helps.</span></div>
+              <div class="sat-score-scale-row" data-min="630" data-max="680"><b>630–680</b><span><strong>School-dependent range.</strong> Within or above the range at some schools, and below it at others.</span></div>
+              <div class="sat-score-scale-row" data-min="560" data-max="620"><b>560–620</b><span><strong>Developing range.</strong> Consider building accuracy across Reading &amp; Writing skills, based on your practice results.</span></div>
+              <div class="sat-score-scale-row retake" data-min="200" data-max="550"><b>200–550</b><span><strong>Foundation-building range.</strong> Broad practice and a retake may help if your target schools report higher typical scores.</span></div>
+            </div>
+                    <div class="sat-score-guide-scale math" data-guide="math" id="sat-range-panel-math" role="tabpanel" aria-labelledby="sat-range-tab-math" hidden>
+              <div class="sat-score-scale-head"><strong>Math score</strong><small>Benchmark ranges, not admission thresholds</small></div>
+              <div class="sat-score-scale-row" data-min="790" data-max="800"><b>790–800</b><span><strong>Very high range.</strong> Near the top of the Math score scale. Compare it with your target schools' reported ranges.</span></div>
+              <div class="sat-score-scale-row" data-min="770" data-max="780"><b>770–780</b><span><strong>High range.</strong> A high Math result; additional gains may matter chiefly at high-scoring programs.</span></div>
+              <div class="sat-score-scale-row" data-min="740" data-max="760"><b>740–760</b><span><strong>Strong range.</strong> Strong at many universities, though some selective programs report higher medians.</span></div>
+              <div class="sat-score-scale-row" data-min="690" data-max="730"><b>690–730</b><span><strong>Competitive range.</strong> Competitive at numerous colleges. Consider your intended schools and programs.</span></div>
+              <div class="sat-score-scale-row" data-min="630" data-max="680"><b>630–680</b><span><strong>School-dependent range.</strong> This score can sit above or below a school's median depending on the institution.</span></div>
+              <div class="sat-score-scale-row" data-min="540" data-max="620"><b>540–620</b><span><strong>Developing range.</strong> Targeted Math practice may help, especially if your preferred schools report higher ranges.</span></div>
+              <div class="sat-score-scale-row retake" data-min="200" data-max="530"><b>200–530</b><span><strong>Foundation-building range.</strong> Build foundational skills and retest if your target programs expect higher Math scores.</span></div>
+            </div>
+      </div>
+      <p class="sat-score-explorer-caveat">These are general score bands, not admissions guarantees or official national percentiles. Compare each result with the score distribution of the students who submitted SAT scores at your target schools.</p>
+    </div>
+    <div class="sat-quartile-brief sat-quartile-inline">
+      <span>UNDERSTANDING UNIVERSITY SCORE QUARTILES</span>
+      <div><strong>Lower quartile</strong><p>25% of submitting students scored at or below this level.</p></div>
+      <div><strong>Median</strong><p>Half of submitters scored below, and half above, this level.</p></div>
+      <div><strong>Upper quartile</strong><p>75% of submitters scored at or below this level.</p></div>
+      <p class="sat-quartile-brief-note">Quartiles describe students who submitted scores, not admission cutoffs.</p>
+    </div>
+  </section>
 </div>
-</section>
-                    <aside class="sat-guide-score-panel">
-                        <div class="sat-context-profile sat-context-profile-inline sat-guide-score-saver">
-                            <div class="sat-context-profile-head">
-                                <div><span>YOUR SAT</span><h3>Set your score</h3></div>
-                                <div class="sat-context-total"><small>Composite</small><strong id="sat-total-preview">—</strong></div>
-                            </div>
-                            <p>Enter your latest section scores to personalize every university comparison below.</p>
-                            <form id="sat-profile-form" class="sat-context-profile-form" novalidate>
-                                <label for="sat-reading-writing"><span>Reading &amp; Writing</span><input id="sat-reading-writing" type="number" min="200" max="800" step="10" inputmode="numeric" placeholder="750"><small>200–800</small></label>
-                                <label for="sat-math"><span>Math</span><input id="sat-math" type="number" min="200" max="800" step="10" inputmode="numeric" placeholder="780"><small>200–800</small></label>
-                                <div class="sat-context-profile-actions"><button id="sat-profile-save" type="submit">Save SAT scores</button><button id="sat-profile-clear" type="button">Clear</button></div>
-                                <span id="sat-profile-status" class="sat-context-profile-status" role="status" aria-live="polite"></span>
-                            </form>
-                        </div>
-                        <div class="sat-quartile-brief">
-                            <span>QUARTILES, SIMPLY</span>
-                            <div><strong>Lower quartile</strong><p>25% of submitting students scored at or below this point.</p></div>
-                            <div><strong>Median</strong><p>The midpoint: half scored below it and half above it.</p></div>
-                            <div><strong>Upper quartile</strong><p>75% scored at or below this point; 25% scored above it.</p></div>
-                            <p class="sat-quartile-brief-note">These describe enrolled students who submitted SAT scores, not admission cutoffs.</p>
-                        </div>
-                    </aside>
-                </div>
 
                 <div class="university-search-shell">
                     <label for="university-search">Search the university catalog</label>
@@ -501,49 +523,8 @@
 <script src="/home-fluency.js?v=1"></script>
 <script src="/home-hub.js?v=1"></script>
 <script src="/university-top100.js?v=top100-1"></script>
-<script src="/university-catalog.js?v=assets-hires-1"></script>
-<script>
-(function () {
-    const guide = document.querySelector(".sat-guide-row > .sat-score-guide");
-    const panel = document.querySelector(".sat-guide-row > .sat-guide-score-panel");
-    if (!guide || !panel) return;
+<script src="/university-catalog.js?v=sat-score-experience-1"></script>
 
-    let syncing = false;
-
-    function syncSatGuideHeight() {
-        if (syncing) return;
-        syncing = true;
-
-        panel.classList.remove("sat-guide-score-panel-tight");
-        panel.style.height = "";
-
-        if (window.innerWidth <= 1050) {
-            syncing = false;
-            return;
-        }
-
-        const target = Math.ceil(guide.getBoundingClientRect().height);
-        panel.classList.add("sat-guide-score-panel-tight");
-        panel.style.height = target + "px";
-
-        if (panel.scrollHeight > target + 2) {
-            panel.style.height = "";
-        }
-
-        syncing = false;
-    }
-
-    window.addEventListener("resize", syncSatGuideHeight);
-    window.addEventListener("load", syncSatGuideHeight);
-
-    if ("ResizeObserver" in window) {
-        const observer = new ResizeObserver(syncSatGuideHeight);
-        observer.observe(guide);
-    }
-
-    requestAnimationFrame(syncSatGuideHeight);
-})();
-</script>
 
 </body>
 </html>
