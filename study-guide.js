@@ -212,24 +212,45 @@
     if (missedShare >= .15) return "mild";
     return "strong";
   }
+  function renderPriorityRow(row,done,showSection=false) {
+    const key=row.section+"::"+row.domain;
+    const rate=row.total?Math.round(100*row.accuracy)+"% correct":"Not assessed";
+    const count=row.total
+      ?row.missed+" missed of "+row.total+" · "+rate
+      :"No questions in this mock";
+    const dist=mixForAccuracy(row);
+    const section=showSection
+      ?'<span class="sg-domain-section">'+(row.section==="math"?"Math":"R&W")+'</span>'
+      :"";
+    return '<div class="sg-priority-item sg-severity-'+domainSeverity(row)+(done?' is-complete':'')+'">'+
+      '<span class="sg-domain-check" aria-hidden="true">'+(done?'✓':row.rank)+'</span>'+
+      '<div class="sg-domain-copy"><span class="sg-priority-name">'+escapeHtml(row.domain)+'</span>'+
+      '<span class="sg-priority-meta">'+count+' · target '+dist.join('/')+' easy/medium/hard</span></div>'+
+      section+'<span class="sg-domain-status">'+(done?'Completed':'')+'</span>'+
+      '<button type="button" class="sg-priority-link" data-domain-practice="'+
+      escapeHtml(key)+'">Practice</button></div>';
+  }
   function renderPriorities(section,id) {
     const finished=completedDomains();
-    $(id).innerHTML=priorities[section].map(row=>{
-      const key=section+"::"+row.domain;
-      const done=Boolean(finished[key]?.completedAt);
-      const rate=row.total?Math.round(100*row.accuracy)+"% correct":"Not assessed";
-      const count=row.total
-        ?row.missed+" missed of "+row.total+" · "+rate
-        :"No questions in this mock";
-      const dist=mixForAccuracy(row);
-      return '<div class="sg-priority-item sg-severity-'+domainSeverity(row)+(done?' is-complete':'')+'">'+
-        '<span class="sg-domain-check" aria-hidden="true">'+(done?'✓':row.rank)+'</span>'+
-        '<div class="sg-domain-copy"><span class="sg-priority-name">'+escapeHtml(row.domain)+'</span>'+
-        '<span class="sg-priority-meta">'+count+' · target '+dist.join('/')+' easy/medium/hard</span></div>'+
-        '<span class="sg-domain-status">'+(done?'Completed':'')+'</span>'+
-        '<button type="button" class="sg-priority-link" data-domain-practice="'+
-        escapeHtml(key)+'">Practice</button></div>';
-    }).join("");
+    $(id).innerHTML=priorities[section].map(row=>
+      renderPriorityRow(row,Boolean(finished[row.section+"::"+row.domain]?.completedAt))
+    ).join("");
+  }
+  function renderTopPriorities() {
+    const finished=completedDomains();
+    const ranked=[...priorities.readingWriting,...priorities.math]
+      .sort((a,b)=>a.rank-b.rank);
+    const remaining=ranked.filter(row=>
+      !finished[row.section+"::"+row.domain]?.completedAt
+    );
+    const selected=(remaining.length?remaining:ranked).slice(0,3);
+    $("sg-top-priorities").innerHTML=selected.map(row=>
+      renderPriorityRow(row,Boolean(finished[row.section+"::"+row.domain]?.completedAt),true)
+    ).join("");
+    if (!remaining.length) {
+      $("sg-diagnostic-note").textContent=
+        "All 8 domain practice sets are complete for this mock. You can practice again or retest to refresh your priorities.";
+    }
   }
   function nextMock() {
     // Recommend the numbered successor even if that test has an existing
@@ -246,6 +267,7 @@
     $("sg-plan-content").hidden=false;
     renderPriorities("readingWriting","sg-rw-priorities");
     renderPriorities("math","sg-math-priorities");
+    renderTopPriorities();
     $("sg-diagnostic-note").textContent="Latest: Mock Test "+latest.n+
       ". Ranked by error rate and SAT domain weight. Practice selects 10 unused questions; difficulty targets change with accuracy and may be adjusted if the bank lacks questions at a level.";
     nextMock();
@@ -386,16 +408,20 @@
     $("study-guide-empty").hidden=true;
     $("study-guide-results").hidden=false;
     $("sg-plan-content").hidden=false;
-    $("sg-start-score").textContent="—";
-    $("sg-start-sections").textContent="Take a mock to establish your baseline";
-    $("sg-current-score").textContent="—";
-    $("sg-current-note").textContent="Choose your goal after signing in";
-    $("sg-score-source").textContent="No mock results yet";
+    // Clearly labeled example values give visitors a useful preview,
+    // never a previous student's actual account or locally stored data.
+    const exampleLabel=$("sg-example-label");
+    if (exampleLabel) exampleLabel.hidden=false;
+    $("sg-start-score").textContent="1200";
+    $("sg-start-sections").textContent="Example: R&W 590 · Math 610";
+    $("sg-current-score").textContent="300";
+    $("sg-current-note").textContent="example points to a 1500 goal";
+    $("sg-score-source").textContent="Illustrative example — not your score";
     $("sg-progress-wrap").hidden=true;
     $("sg-goal-message").textContent=
-      "Your personal scores and recommendations appear here after you sign in and complete a mock test.";
+      "Illustrative 1200 → 1500 plan. Sign in and complete a mock for your own score and priorities.";
     const input=$("sg-goal-input");
-    input.value="";
+    input.value="1500";
     input.disabled=true;
     const goalButton=$("sg-goal-form").querySelector("button");
     if (goalButton) {
@@ -403,7 +429,7 @@
       goalButton.textContent="Sign in first";
     }
     $("sg-diagnostic-note").textContent=
-      "All eight SAT domains are shown below. Sign in and take a mock to rank them by your own performance.";
+      "Illustrative weak-domain ranking. Your real priorities and question difficulty will come from your latest completed mock.";
     const signIn="/login?redirect="+encodeURIComponent("/#study-guide");
     for (const section of ["readingWriting","math"]) {
       const id=section==="math"?"sg-math-priorities":"sg-rw-priorities";
@@ -416,6 +442,22 @@
         '<a class="sg-priority-link" href="'+escapeHtml(signIn)+'">Practice</a></div>'
       ).join("");
     }
+    const examples=[
+      {name:"Advanced Math",section:"math",missed:8,total:10,accuracy:.2,rank:1,severity:"critical"},
+      {name:"Algebra",section:"math",missed:6,total:10,accuracy:.4,rank:2,severity:"moderate"},
+      {name:"Craft & Structure",section:"readingWriting",missed:5,total:10,accuracy:.5,rank:3,severity:"moderate"}
+    ];
+    $("sg-top-priorities").innerHTML=examples.map(example=>{
+      const dist=mixForAccuracy(example);
+      return '<div class="sg-priority-item sg-severity-'+domainSeverity(example)+'">'+
+        '<span class="sg-domain-check" aria-hidden="true">'+example.rank+'</span>'+
+        '<div class="sg-domain-copy"><span class="sg-priority-name">'+escapeHtml(example.name)+'</span>'+
+        '<span class="sg-priority-meta">Example: '+example.missed+' of '+example.total+
+        ' missed · '+Math.round(example.accuracy*100)+'% correct · '+
+        dist.join('/')+' easy/medium/hard</span></div>'+
+        '<span class="sg-domain-section">'+(example.section==="math"?"Math":"R&W")+'</span>'+
+        '<a class="sg-priority-link" href="'+escapeHtml(signIn)+'">Practice</a></div>';
+    }).join("");
     $("sg-practice-message").textContent=
       "Sign in to unlock diagnostic-based practice and saved progress.";
     $("sg-review-test-link").href="/mock-tests";
