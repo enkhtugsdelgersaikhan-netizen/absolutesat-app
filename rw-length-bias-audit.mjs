@@ -4,6 +4,15 @@ import { readFileSync } from "node:fs";
 const bank = JSON.parse(readFileSync(new URL("./question-bank.json", import.meta.url), "utf8"));
 const reviewedBatch = JSON.parse(readFileSync(new URL("./question-batch-20261010-reviewed.json", import.meta.url), "utf8"));
 bank.questions.push(...reviewedBatch.questions.filter(q => q.section === "Reading & Writing"));
+const lengthRepairs = JSON.parse(readFileSync(new URL("./rw-answer-length-repairs-20261010.json", import.meta.url), "utf8")).choices;
+for (const q of bank.questions) {
+  const replacement = lengthRepairs[q.id];
+  if (!replacement) continue;
+  if (!q.choices?.[q.correctAnswer]) throw Error("Invalid choice-length repair at "+q.id);
+  q.choices[q.correctAnswer] = replacement;
+}
+const unusedRepairs = Object.keys(lengthRepairs).filter(id => !bank.questions.some(q=>q.id===id));
+if (unusedRepairs.length) throw Error("Unknown choice-length repair IDs: "+unusedRepairs.join(", "));
 const letters = ["A", "B", "C", "D"];
 const strip = (input) => String(input ?? "")
   .replace(/<[^>]*>/g, " ")
@@ -101,6 +110,10 @@ if (process.argv.includes("--strict")) {
     const all = group.all;
     if (all.uniqueLongest >= 40 && Math.abs(all.longestCorrect / all.uniqueLongest - .25) > .10) {
       failures.push(`${unit}: overall longest-answer accuracy ${all.longestGuessAccuracy}% exceeds the 25% ± 10-point range`);
+    }
+    if (all.severeLongest >= 25 &&
+        Math.abs(all.severeLongestCorrect / all.severeLongest - .25) > .15) {
+      failures.push(`${unit}: severe longest-answer accuracy ${(100*all.severeLongestCorrect/all.severeLongest).toFixed(1)}% out of 25% ± 15 points`);
     }
     for (const [skill, row] of Object.entries(group.bySkill)) {
       if (exemptFromSkillGate.has(skill) || row.uniqueLongest < 40) continue;
