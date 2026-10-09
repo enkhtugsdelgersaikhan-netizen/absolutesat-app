@@ -1819,15 +1819,15 @@ main > * {
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
 
-/* Subject hub polish: three centered study paths */
+/* Subject hub polish: two centered study paths */
 .subject-hub .study-heading{text-align:center;max-width:780px;margin:0 auto}
 .subject-hub .study-intro{margin-left:auto;margin-right:auto}
-.study-grid-three{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1080px;margin:38px auto}
-.study-grid-three .study-card{min-height:330px;padding:30px;box-shadow:0 10px 28px rgba(15,23,42,.045);position:relative;overflow:hidden}
-.study-grid-three .study-card::before{content:"";position:absolute;inset:0 0 auto;height:4px;background:#0e7367;opacity:0;transition:opacity .2s ease}
-.study-grid-three .study-card:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(15,23,42,.08)}
-.study-grid-three .study-card:hover::before{opacity:1}
-.study-grid-three .study-card h2{font-size:23px;letter-spacing:-.4px}
+.study-grid-two{grid-template-columns:repeat(2,minmax(0,1fr));max-width:880px;margin:38px auto}
+.study-grid-two .study-card{min-height:280px;padding:30px;box-shadow:0 10px 28px rgba(15,23,42,.045);position:relative;overflow:hidden}
+.study-grid-two .study-card::before{content:"";position:absolute;inset:0 0 auto;height:4px;background:#0e7367;opacity:0;transition:opacity .2s ease}
+.study-grid-two .study-card:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(15,23,42,.08)}
+.study-grid-two .study-card:hover::before{opacity:1}
+.study-grid-two .study-card h2{font-size:23px;letter-spacing:-.4px}
 .inline-math,.display-math,.formula-line{font-family:"Cambria Math","STIX Two Math","Times New Roman",serif}
 .inline-math{font-weight:600;white-space:nowrap}
 .formula-line{font-size:21px;line-height:1.85;letter-spacing:.01em;background:#f0fdfa;border:1px solid #ccfbf1}
@@ -1842,7 +1842,7 @@ main > * {
 .fluency-options button{font:500 14px Poppins,sans-serif;text-align:left;padding:14px 16px;border:1px solid #d5dfdd;border-radius:10px;background:#fff;color:#233b38;cursor:pointer;transition:.18s ease}
 .fluency-options button:hover{border-color:#0e7367;background:#f0fdfa}.fluency-options button.correct{border-color:#0e7367;background:#dff6ef;color:#0b5e55}.fluency-options button.wrong{border-color:#c46b6b;background:#fff5f5;color:#8b3434}
 .fluency-feedback{min-height:24px;margin-top:14px;color:#526174;font-size:14px}
-@media(max-width:950px){.study-grid-three{grid-template-columns:1fr;max-width:680px}.study-grid-three .study-card{min-height:0}.topic-preview-grid{grid-template-columns:1fr}}
+@media(max-width:950px){.study-grid-two{grid-template-columns:1fr;max-width:680px}.study-grid-two .study-card{min-height:0}.topic-preview-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.fluency-card{padding:20px}.fluency-options{grid-template-columns:1fr}.display-math{font-size:28px;padding:18px 10px}}
 
 

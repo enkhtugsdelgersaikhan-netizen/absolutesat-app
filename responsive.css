@@ -25,7 +25,6 @@ table{max-width:100%}
 
 .study-page{width:min(1120px,calc(100% - 40px))!important;max-width:1120px!important;margin-left:auto!important;margin-right:auto!important;padding:var(--lex-section) 0 80px!important}
 .study-grid,.study-grid-two{grid-template-columns:repeat(2,minmax(0,1fr))!important}
-.study-grid-three{grid-template-columns:repeat(3,minmax(0,1fr))!important}
 .study-card{min-width:0!important;padding:clamp(24px,2.4vw,32px)!important}
 .resources-page{width:min(var(--lex-content),calc(100% - 40px))!important;max-width:var(--lex-content)!important;margin-left:auto!important;margin-right:auto!important}
 .resources-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
@@ -71,7 +70,6 @@ table{max-width:100%}
 .skill-picker-options{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 .question-list{grid-template-columns:repeat(14,minmax(0,1fr))!important}
 .sat-guide-row,.sat-context-workspace,.dashboard-grid{grid-template-columns:1fr!important}
-.study-grid-three{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 }
 @media(max-width:950px){
 .header-container,.question-bank-header,.question-bank-content,.dashboard-header,.dashboard-content,.features-container,.university-sat-container,.study-page,.resources-page,.vocab-page,.mock-page{width:calc(100% - 32px)!important;max-width:none!important}
@@ -91,7 +89,7 @@ table{max-width:100%}
 .hero{padding:48px 12px!important}
 .hero h1{font-size:clamp(38px,12vw,52px)!important;letter-spacing:-1.5px!important}
 .hero p{font-size:16px!important;line-height:1.65!important}
-.features-grid,.study-grid,.study-grid-two,.study-grid-three,.resources-grid,.university-catalog-grid,.skill-picker-options,.filters-row,.question-bank-utility-filters,.vocab-toolbar,.mock-hero-stats{grid-template-columns:1fr!important}
+.features-grid,.study-grid,.study-grid-two,.resources-grid,.university-catalog-grid,.skill-picker-options,.filters-row,.question-bank-utility-filters,.vocab-toolbar,.mock-hero-stats{grid-template-columns:1fr!important}
 .study-card{padding:24px!important}
 .question-bank-header,.dashboard-header{padding-top:40px!important;padding-bottom:28px!important}
 .question-bank-header h1,.dashboard-header h1{font-size:34px!important}

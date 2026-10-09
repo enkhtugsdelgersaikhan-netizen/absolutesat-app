@@ -1,4 +1,16 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/math-drill",
+      "destination": "/math-question-bank",
+      "permanent": true
+    },
+    {
+      "source": "/reading-drill",
+      "destination": "/reading-question-bank",
+      "permanent": true
+    }
+  ]
 }
