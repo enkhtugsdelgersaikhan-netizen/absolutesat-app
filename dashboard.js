@@ -1155,6 +1155,8 @@ document.addEventListener("DOMContentLoaded", async () => {
                 localStorage.removeItem("absoluteprep_vocab_state");
                 localStorage.removeItem("absoluteprep_vocab_learned");
                 localStorage.removeItem("lexlogica_formula_fluency_state_v1");
+                localStorage.removeItem("lexlogica-guided-vocab:v1");
+                localStorage.removeItem("lexlogica-guided-formulas:v1");
                 localStorage.removeItem("absoluteprep-drill-history:" + user.id);
                 localStorage.removeItem("absoluteprep-drill-session");
                 localStorage.removeItem("lexlogica-study-baseline:v1:" + user.id);
