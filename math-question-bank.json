@@ -18223,29 +18223,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -18882,29 +18860,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 205,
-            "y": 60,
-            "label": "A",
-            "dx": 0,
-            "dy": -12
-          },
-          {
-            "x": 91,
-            "y": 243,
-            "label": "B",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 319,
-            "y": 243,
-            "label": "C",
-            "dx": 10,
-            "dy": 18
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": [
@@ -19830,53 +19786,75 @@
       "diagram": {
         "width": 420,
         "height": 300,
-        "alt": "Triangle ABC schematic",
+        "alt": "Two vertical objects casting shadows at the same sun angle",
         "caption": "Schematic; not to scale.",
-        "lines": [],
-        "polygons": [
+        "lines": [
           {
-            "points": [
-              [
-                105,
-                248
-              ],
-              [
-                322,
-                248
-              ],
-              [
-                205,
-                66
-              ]
-            ]
+            "x1": 45,
+            "y1": 249,
+            "x2": 379,
+            "y2": 249,
+            "dashed": false
+          },
+          {
+            "x1": 83,
+            "y1": 249,
+            "x2": 83,
+            "y2": 104,
+            "dashed": false
+          },
+          {
+            "x1": 83,
+            "y1": 104,
+            "x2": 192,
+            "y2": 249,
+            "dashed": false
+          },
+          {
+            "x1": 251,
+            "y1": 249,
+            "x2": 251,
+            "y2": 80,
+            "dashed": false
+          },
+          {
+            "x1": 251,
+            "y1": 80,
+            "x2": 379,
+            "y2": 249,
+            "dashed": false
           }
         ],
+        "polygons": [],
         "ellipses": [],
         "circles": [],
-        "points": [
+        "points": [],
+        "labels": [
           {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
+            "x": 78,
+            "y": 179,
+            "text": "Object 1",
+            "anchor": "end"
           },
           {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
+            "x": 253,
+            "y": 178,
+            "text": "Object 2",
+            "anchor": "start"
           },
           {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
+            "x": 141,
+            "y": 267,
+            "text": "Shadow 1",
+            "anchor": "middle"
+          },
+          {
+            "x": 317,
+            "y": 267,
+            "text": "Shadow 2",
+            "anchor": "middle"
           }
         ],
-        "labels": [],
         "rightAngles": [],
         "ticks": []
       }
@@ -29520,20 +29498,60 @@
       "diagram": {
         "width": 420,
         "height": 300,
-        "alt": "Circle geometry diagram",
+        "alt": "Circle and square with equal areas",
         "caption": "Schematic; not to scale.",
         "lines": [],
-        "polygons": [],
+        "polygons": [
+          {
+            "points": [
+              [
+                262,
+                96
+              ],
+              [
+                379,
+                96
+              ],
+              [
+                379,
+                213
+              ],
+              [
+                262,
+                213
+              ]
+            ]
+          }
+        ],
         "ellipses": [],
         "circles": [
           {
-            "cx": 205,
-            "cy": 152,
-            "r": 104
+            "cx": 120,
+            "cy": 154,
+            "r": 66
           }
         ],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 120,
+            "y": 258,
+            "text": "Circle",
+            "anchor": "middle"
+          },
+          {
+            "x": 320,
+            "y": 258,
+            "text": "Square",
+            "anchor": "middle"
+          },
+          {
+            "x": 210,
+            "y": 37,
+            "text": "Equal areas",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -29897,89 +29915,87 @@
       "classificationVersion": "2026-10-08-relative-30-40-30-v3",
       "diagram": {
         "width": 420,
-        "height": 290,
-        "alt": "Circle diagram",
+        "height": 300,
+        "alt": "Circle with radii and marked central angles",
+        "caption": "Schematic; not to scale.",
+        "lines": [
+          {
+            "x1": 210,
+            "y1": 156,
+            "x2": 318,
+            "y2": 156,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 156,
+            "x2": 286.37,
+            "y2": 79.63,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 156,
+            "x2": 133.63,
+            "y2": 79.63,
+            "dashed": false
+          }
+        ],
+        "polygons": [],
+        "ellipses": [],
         "circles": [
           {
             "cx": 210,
-            "cy": 145,
-            "r": 100
+            "cy": 156,
+            "r": 108
           }
         ],
         "points": [
           {
             "x": 210,
-            "y": 145,
+            "y": 156,
             "label": "O",
-            "dx": 8,
-            "dy": -8,
-            "hideDot": false
+            "dx": -13,
+            "dy": 17
           },
           {
-            "x": 123.39745962155612,
-            "y": 95,
+            "x": 318,
+            "y": 156,
             "label": "A",
-            "dx": 8,
-            "dy": -8,
-            "hideDot": false
+            "dx": 11,
+            "dy": 19
           },
           {
-            "x": 244.20201433256688,
-            "y": 51.03073792140917,
+            "x": 286.37,
+            "y": 79.63,
             "label": "B",
-            "dx": 8,
-            "dy": -8,
-            "hideDot": false
+            "dx": 11,
+            "dy": -12
           },
           {
-            "x": 303.9692620785909,
-            "y": 179.20201433256688,
+            "x": 133.63,
+            "y": 79.63,
             "label": "C",
-            "dx": 8,
-            "dy": -8,
-            "hideDot": false
-          }
-        ],
-        "lines": [
-          {
-            "x1": 210,
-            "y1": 145,
-            "x2": 123.39745962155612,
-            "y2": 95,
-            "dashed": false
-          },
-          {
-            "x1": 210,
-            "y1": 145,
-            "x2": 244.20201433256688,
-            "y2": 51.03073792140917,
-            "dashed": false
-          },
-          {
-            "x1": 210,
-            "y1": 145,
-            "x2": 303.9692620785909,
-            "y2": 179.20201433256688,
-            "dashed": false
+            "dx": -15,
+            "dy": -12
           }
         ],
         "labels": [
           {
-            "x": 170,
-            "y": 82,
+            "x": 259,
+            "y": 120,
             "text": "45°",
-            "emphasis": false,
             "anchor": "middle"
           },
           {
-            "x": 245,
-            "y": 105,
+            "x": 170,
+            "y": 101,
             "text": "135°",
-            "emphasis": false,
             "anchor": "middle"
           }
         ],
-        "caption": "Schematic; not to scale."
+        "rightAngles": [],
+        "ticks": []
       }
     },
     {
@@ -30705,23 +30721,38 @@
       "diagram": {
         "width": 420,
         "height": 300,
-        "alt": "Triangle ABC schematic",
+        "alt": "Triangle ABC with DE parallel BC and DF parallel AC",
         "caption": "Schematic; not to scale.",
-        "lines": [],
+        "lines": [
+          {
+            "x1": 154.2,
+            "y1": 132.4,
+            "x2": 255.8,
+            "y2": 132.4,
+            "dashed": false
+          },
+          {
+            "x1": 154.2,
+            "y1": 132.4,
+            "x2": 179.6,
+            "y2": 253,
+            "dashed": false
+          }
+        ],
         "polygons": [
           {
             "points": [
               [
-                105,
-                248
-              ],
-              [
-                322,
-                248
-              ],
-              [
                 205,
-                66
+                52
+              ],
+              [
+                78,
+                253
+              ],
+              [
+                332,
+                253
               ]
             ]
           }
@@ -30730,31 +30761,64 @@
         "circles": [],
         "points": [
           {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
             "x": 205,
-            "y": 66,
-            "label": "C",
+            "y": 52,
+            "label": "A",
             "dx": 0,
             "dy": -12
+          },
+          {
+            "x": 78,
+            "y": 253,
+            "label": "B",
+            "dx": -12,
+            "dy": 17
+          },
+          {
+            "x": 332,
+            "y": 253,
+            "label": "C",
+            "dx": 12,
+            "dy": 17
+          },
+          {
+            "x": 154.2,
+            "y": 132.4,
+            "label": "D",
+            "dx": -13,
+            "dy": -5
+          },
+          {
+            "x": 255.8,
+            "y": 132.4,
+            "label": "E",
+            "dx": 13,
+            "dy": -5
+          },
+          {
+            "x": 179.6,
+            "y": 253,
+            "label": "F",
+            "dx": 0,
+            "dy": 18
           }
         ],
         "labels": [
           {
-            "x": 275.5,
-            "y": 150,
+            "x": 119,
+            "y": 112,
+            "text": "AD = 8",
+            "anchor": "middle"
+          },
+          {
+            "x": 92,
+            "y": 204,
+            "text": "DB = 12",
+            "anchor": "middle"
+          },
+          {
+            "x": 214,
+            "y": 277,
             "text": "BC = 25",
             "anchor": "middle"
           }
@@ -31175,104 +31239,101 @@
       "classificationVersion": "2026-10-08-relative-30-40-30-v3",
       "diagram": {
         "width": 420,
-        "height": 290,
-        "alt": "Circle diagram",
+        "height": 300,
+        "alt": "Circle with radii and marked central angles",
+        "caption": "Schematic; not to scale.",
+        "lines": [
+          {
+            "x1": 210,
+            "y1": 156,
+            "x2": 102,
+            "y2": 156,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 156,
+            "x2": 116.47,
+            "y2": 102,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 156,
+            "x2": 286.37,
+            "y2": 79.63,
+            "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 156,
+            "x2": 318,
+            "y2": 156,
+            "dashed": false
+          }
+        ],
+        "polygons": [],
+        "ellipses": [],
         "circles": [
           {
             "cx": 210,
-            "cy": 145,
-            "r": 100
+            "cy": 156,
+            "r": 108
           }
         ],
         "points": [
           {
             "x": 210,
-            "y": 145,
+            "y": 156,
             "label": "O",
-            "dx": 8,
-            "dy": -8,
-            "hideDot": false
+            "dx": -13,
+            "dy": 17
           },
           {
-            "x": 123.39745962155612,
-            "y": 95,
+            "x": 102,
+            "y": 156,
             "label": "A",
-            "dx": 8,
-            "dy": -8,
-            "hideDot": false
+            "dx": -15,
+            "dy": 19
           },
           {
-            "x": 244.20201433256688,
-            "y": 51.03073792140917,
-            "label": "B",
-            "dx": 8,
-            "dy": -8,
-            "hideDot": false
-          },
-          {
-            "x": 303.9692620785909,
-            "y": 179.20201433256688,
+            "x": 116.47,
+            "y": 102,
             "label": "C",
-            "dx": 8,
-            "dy": -8,
-            "hideDot": false
+            "dx": -15,
+            "dy": -12
           },
           {
-            "x": 175.79798566743312,
-            "y": 238.96926207859084,
+            "x": 286.37,
+            "y": 79.63,
             "label": "D",
-            "dx": 8,
-            "dy": -8,
-            "hideDot": false
-          }
-        ],
-        "lines": [
-          {
-            "x1": 210,
-            "y1": 145,
-            "x2": 123.39745962155612,
-            "y2": 95,
-            "dashed": false
+            "dx": 11,
+            "dy": -12
           },
           {
-            "x1": 210,
-            "y1": 145,
-            "x2": 244.20201433256688,
-            "y2": 51.03073792140917,
-            "dashed": false
-          },
-          {
-            "x1": 210,
-            "y1": 145,
-            "x2": 303.9692620785909,
-            "y2": 179.20201433256688,
-            "dashed": false
-          },
-          {
-            "x1": 210,
-            "y1": 145,
-            "x2": 175.79798566743312,
-            "y2": 238.96926207859084,
-            "dashed": false
+            "x": 318,
+            "y": 156,
+            "label": "B",
+            "dx": 11,
+            "dy": 19
           }
         ],
         "labels": [
           {
-            "x": 135,
-            "y": 105,
+            "x": 120,
+            "y": 118,
             "text": "π/6",
-            "emphasis": false,
             "anchor": "middle"
           },
           {
-            "x": 285,
-            "y": 180,
+            "x": 297,
+            "y": 123,
             "text": "45°",
-            "emphasis": false,
             "anchor": "middle"
           }
         ],
-        "caption": "Schematic; not to scale."
+        "rightAngles": [],
+        "ticks": []
       }
     },
     {
@@ -31597,12 +31658,6 @@
             "x": 41,
             "y": 211,
             "text": "s",
-            "anchor": "middle"
-          },
-          {
-            "x": 312,
-            "y": 273,
-            "text": "t",
             "anchor": "middle"
           }
         ],
@@ -31990,94 +32045,78 @@
       "classificationVersion": "2026-10-08-relative-30-40-30-v3",
       "diagram": {
         "width": 420,
-        "height": 285,
-        "alt": "Triangle diagram",
+        "height": 300,
+        "alt": "Isosceles right triangle ABC with BC extended to D",
+        "caption": "Schematic; not to scale.",
+        "lines": [
+          {
+            "x1": 286,
+            "y1": 93,
+            "x2": 374,
+            "y2": 3,
+            "dashed": false
+          }
+        ],
         "polygons": [
           {
             "points": [
               [
-                70,
-                235
+                151,
+                93
               ],
               [
-                350,
-                235
+                151,
+                231
               ],
               [
-                205,
-                48
+                286,
+                93
               ]
             ]
           }
         ],
+        "ellipses": [],
+        "circles": [],
         "points": [
           {
-            "x": 70,
-            "y": 235,
+            "x": 151,
+            "y": 93,
             "label": "A",
-            "dx": -10,
-            "dy": 18,
-            "hideDot": false
+            "dx": -12,
+            "dy": -10
           },
           {
-            "x": 350,
-            "y": 235,
+            "x": 151,
+            "y": 231,
             "label": "B",
-            "dx": 8,
-            "dy": 18,
-            "hideDot": false
+            "dx": -12,
+            "dy": 16
           },
           {
-            "x": 205,
-            "y": 48,
+            "x": 286,
+            "y": 93,
             "label": "C",
-            "dx": 0,
-            "dy": -10,
-            "hideDot": false
-          }
-        ],
-        "labels": [
-          {
-            "x": 205,
-            "y": 78,
-            "text": "A = 90°",
-            "emphasis": false,
-            "anchor": "middle"
+            "dx": 10,
+            "dy": 16
           },
           {
-            "x": 315,
-            "y": 218,
-            "text": "C",
-            "emphasis": false,
-            "anchor": "middle"
-          },
-          {
-            "x": 365,
-            "y": 218,
-            "text": "D",
-            "emphasis": false,
-            "anchor": "middle"
+            "x": 374,
+            "y": 16,
+            "label": "D",
+            "dx": 10,
+            "dy": 14
           }
         ],
-        "rightAngles": [],
-        "ticks": [],
-        "lines": [
+        "labels": [],
+        "rightAngles": [
           {
-            "x1": 70,
-            "y1": 235,
-            "x2": 25,
-            "y2": 235,
-            "dashed": false
-          },
-          {
-            "x1": 350,
-            "y1": 235,
-            "x2": 395,
-            "y2": 235,
-            "dashed": false
+            "x": 151,
+            "y": 93,
+            "size": 14,
+            "rotation": 90
           }
         ],
-        "caption": "Schematic; not to scale."
+        "ticks": []
       }
     },
     {
@@ -32349,29 +32388,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [
           {
             "x": 275.5,
@@ -32438,29 +32455,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -33984,12 +33979,6 @@
             "y": 211,
             "text": "n",
             "anchor": "middle"
-          },
-          {
-            "x": 312,
-            "y": 273,
-            "text": "t",
-            "anchor": "middle"
           }
         ],
         "rightAngles": [],
@@ -34160,23 +34149,38 @@
       "diagram": {
         "width": 420,
         "height": 300,
-        "alt": "Triangle ABC schematic",
+        "alt": "Triangle ABC with altitude AD and EF parallel to BC",
         "caption": "Schematic; not to scale.",
-        "lines": [],
+        "lines": [
+          {
+            "x1": 205,
+            "y1": 53,
+            "x2": 205,
+            "y2": 254,
+            "dashed": false
+          },
+          {
+            "x1": 164.7,
+            "y1": 120,
+            "x2": 245.3,
+            "y2": 120,
+            "dashed": false
+          }
+        ],
         "polygons": [
           {
             "points": [
               [
                 205,
-                60
+                53
               ],
               [
-                91,
-                243
+                84,
+                254
               ],
               [
-                319,
-                243
+                326,
+                254
               ]
             ]
           }
@@ -34186,42 +34190,70 @@
         "points": [
           {
             "x": 205,
-            "y": 60,
+            "y": 53,
             "label": "A",
             "dx": 0,
             "dy": -12
           },
           {
-            "x": 91,
-            "y": 243,
+            "x": 84,
+            "y": 254,
             "label": "B",
             "dx": -12,
+            "dy": 15
+          },
+          {
+            "x": 326,
+            "y": 254,
+            "label": "C",
+            "dx": 12,
+            "dy": 15
+          },
+          {
+            "x": 205,
+            "y": 254,
+            "label": "D",
+            "dx": 0,
             "dy": 18
           },
           {
-            "x": 319,
-            "y": 243,
-            "label": "C",
-            "dx": 10,
-            "dy": 18
+            "x": 164.7,
+            "y": 120,
+            "label": "E",
+            "dx": -13,
+            "dy": -6
+          },
+          {
+            "x": 245.3,
+            "y": 120,
+            "label": "F",
+            "dx": 13,
+            "dy": -6
           }
         ],
-        "labels": [],
-        "rightAngles": [],
-        "ticks": [
+        "labels": [
           {
-            "x": 148,
-            "y": 151.5,
-            "angle": 32,
-            "size": 10
+            "x": 205,
+            "y": 103,
+            "text": "EF ∥ BC",
+            "anchor": "middle"
           },
           {
-            "x": 262,
-            "y": 151.5,
-            "angle": -32,
-            "size": 10
+            "x": 220,
+            "y": 190,
+            "text": "AD ⟂ BC",
+            "anchor": "middle"
           }
-        ]
+        ],
+        "rightAngles": [
+          {
+            "x": 205,
+            "y": 254,
+            "size": 13,
+            "rotation": 0
+          }
+        ],
+        "ticks": []
       }
     },
     {
@@ -35633,29 +35665,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "X",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "Y",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "Z",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -36022,12 +36032,6 @@
             "x": 41,
             "y": 211,
             "text": "n",
-            "anchor": "middle"
-          },
-          {
-            "x": 312,
-            "y": 273,
-            "text": "t",
             "anchor": "middle"
           }
         ],
@@ -36406,29 +36410,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -36598,29 +36580,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -37413,29 +37373,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [
           {
             "x": 275.5,
@@ -37520,12 +37458,6 @@
             "y": 211,
             "text": "n",
             "anchor": "middle"
-          },
-          {
-            "x": 312,
-            "y": 273,
-            "text": "t",
-            "anchor": "middle"
           }
         ],
         "rightAngles": [],
@@ -37585,53 +37517,75 @@
       "diagram": {
         "width": 420,
         "height": 300,
-        "alt": "Triangle ABC schematic",
+        "alt": "Two vertical objects casting shadows at the same sun angle",
         "caption": "Schematic; not to scale.",
-        "lines": [],
-        "polygons": [
+        "lines": [
           {
-            "points": [
-              [
-                105,
-                248
-              ],
-              [
-                322,
-                248
-              ],
-              [
-                205,
-                66
-              ]
-            ]
+            "x1": 45,
+            "y1": 249,
+            "x2": 379,
+            "y2": 249,
+            "dashed": false
+          },
+          {
+            "x1": 83,
+            "y1": 249,
+            "x2": 83,
+            "y2": 104,
+            "dashed": false
+          },
+          {
+            "x1": 83,
+            "y1": 104,
+            "x2": 192,
+            "y2": 249,
+            "dashed": false
+          },
+          {
+            "x1": 251,
+            "y1": 249,
+            "x2": 251,
+            "y2": 80,
+            "dashed": false
+          },
+          {
+            "x1": 251,
+            "y1": 80,
+            "x2": 379,
+            "y2": 249,
+            "dashed": false
           }
         ],
+        "polygons": [],
         "ellipses": [],
         "circles": [],
-        "points": [
+        "points": [],
+        "labels": [
           {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
+            "x": 78,
+            "y": 179,
+            "text": "Object 1",
+            "anchor": "end"
           },
           {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
+            "x": 253,
+            "y": 178,
+            "text": "Object 2",
+            "anchor": "start"
           },
           {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
+            "x": 141,
+            "y": 267,
+            "text": "Shadow 1",
+            "anchor": "middle"
+          },
+          {
+            "x": 317,
+            "y": 267,
+            "text": "Shadow 2",
+            "anchor": "middle"
           }
         ],
-        "labels": [],
         "rightAngles": [],
         "ticks": []
       }
@@ -37690,29 +37644,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -37836,29 +37768,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -37996,29 +37906,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 205,
-            "y": 60,
-            "label": "A",
-            "dx": 0,
-            "dy": -12
-          },
-          {
-            "x": 91,
-            "y": 243,
-            "label": "B",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 319,
-            "y": 243,
-            "label": "C",
-            "dx": 10,
-            "dy": 18
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": [
@@ -38091,29 +37979,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 205,
-            "y": 60,
-            "label": "D",
-            "dx": 0,
-            "dy": -12
-          },
-          {
-            "x": 91,
-            "y": 243,
-            "label": "C",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 319,
-            "y": 243,
-            "label": "E",
-            "dx": 10,
-            "dy": 18
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": [
@@ -38250,29 +38116,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [
           {
             "x": 225.5,
@@ -38600,12 +38444,6 @@
             "y": 211,
             "text": "n",
             "anchor": "middle"
-          },
-          {
-            "x": 312,
-            "y": 273,
-            "text": "t",
-            "anchor": "middle"
           }
         ],
         "rightAngles": [],
@@ -38666,29 +38504,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -38841,29 +38657,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [
           {
             "x": 225.5,
@@ -38936,29 +38730,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [
           {
             "x": 225.5,
@@ -39031,29 +38803,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 205,
-            "y": 60,
-            "label": "A",
-            "dx": 0,
-            "dy": -12
-          },
-          {
-            "x": 91,
-            "y": 243,
-            "label": "B",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 319,
-            "y": 243,
-            "label": "C",
-            "dx": 10,
-            "dy": 18
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": [
@@ -39496,29 +39246,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -39620,29 +39348,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [
           {
             "x": 225.5,
@@ -39820,12 +39526,6 @@
             "y": 211,
             "text": "n",
             "anchor": "middle"
-          },
-          {
-            "x": 312,
-            "y": 273,
-            "text": "t",
-            "anchor": "middle"
           }
         ],
         "rightAngles": [],
@@ -39886,29 +39586,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -40040,29 +39718,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -40115,29 +39771,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [
           {
             "x": 225.5,
@@ -40402,29 +40036,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 205,
-            "y": 60,
-            "label": "A",
-            "dx": 0,
-            "dy": -12
-          },
-          {
-            "x": 91,
-            "y": 243,
-            "label": "B",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 319,
-            "y": 243,
-            "label": "C",
-            "dx": 10,
-            "dy": 18
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": [
@@ -40490,29 +40102,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -41123,29 +40713,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -41333,29 +40901,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 205,
-            "y": 60,
-            "label": "A",
-            "dx": 0,
-            "dy": -12
-          },
-          {
-            "x": 91,
-            "y": 243,
-            "label": "B",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 319,
-            "y": 243,
-            "label": "C",
-            "dx": 10,
-            "dy": 18
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": [
@@ -41658,29 +41204,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -41804,29 +41328,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -41886,29 +41388,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -42110,29 +41590,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -46394,29 +45852,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [
           {
             "x": 225.5,
@@ -46883,29 +46319,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 92,
-            "y": 246,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 330,
-            "y": 246,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 92,
-            "y": 70,
-            "label": "C",
-            "dx": -12,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -46943,14 +46357,14 @@
             "points": [
               [
                 64,
-                244
+                89
               ],
               [
                 174,
                 244
               ],
               [
-                64,
+                174,
                 89
               ]
             ]
@@ -46959,14 +46373,14 @@
             "points": [
               [
                 238,
-                244
+                63
               ],
               [
                 367,
                 244
               ],
               [
-                238,
+                367,
                 63
               ]
             ]
@@ -46977,7 +46391,7 @@
         "points": [
           {
             "x": 64,
-            "y": 244,
+            "y": 89,
             "label": "A",
             "dx": -11,
             "dy": 17
@@ -46990,7 +46404,7 @@
             "dy": 17
           },
           {
-            "x": 64,
+            "x": 174,
             "y": 89,
             "label": "C",
             "dx": -11,
@@ -46998,7 +46412,7 @@
           },
           {
             "x": 238,
-            "y": 244,
+            "y": 63,
             "label": "A",
             "dx": -11,
             "dy": 17
@@ -47011,7 +46425,7 @@
             "dy": 17
           },
           {
-            "x": 238,
+            "x": 367,
             "y": 63,
             "label": "C",
             "dx": -11,
@@ -47107,29 +46521,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 108,
-            "y": 65,
-            "label": "A",
-            "dx": -12,
-            "dy": -12
-          },
-          {
-            "x": 325,
-            "y": 242,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 108,
-            "y": 242,
-            "label": "C",
-            "dx": -12,
-            "dy": 18
-          }
-        ],
+        "points": [],
         "labels": [
           {
             "x": 228.5,
@@ -47202,29 +46594,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -47471,29 +46841,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 108,
-            "y": 65,
-            "label": "A",
-            "dx": -12,
-            "dy": -12
-          },
-          {
-            "x": 325,
-            "y": 242,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 108,
-            "y": 242,
-            "label": "C",
-            "dx": -12,
-            "dy": 18
-          }
-        ],
+        "points": [],
         "labels": [
           {
             "x": 228.5,
@@ -47893,29 +47241,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 205,
-            "y": 60,
-            "label": "A",
-            "dx": 0,
-            "dy": -12
-          },
-          {
-            "x": 91,
-            "y": 243,
-            "label": "B",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 319,
-            "y": 243,
-            "label": "C",
-            "dx": 10,
-            "dy": 18
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": [
@@ -48056,29 +47382,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 108,
-            "y": 65,
-            "label": "A",
-            "dx": -12,
-            "dy": -12
-          },
-          {
-            "x": 325,
-            "y": 242,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 108,
-            "y": 242,
-            "label": "C",
-            "dx": -12,
-            "dy": 18
-          }
-        ],
+        "points": [],
         "labels": [
           {
             "x": 96,
@@ -48436,29 +47740,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -48621,29 +47903,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -48818,29 +48078,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "F",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "D",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "E",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -48983,12 +48221,6 @@
             "y": 211,
             "text": "n",
             "anchor": "middle"
-          },
-          {
-            "x": 312,
-            "y": 273,
-            "text": "t",
-            "anchor": "middle"
           }
         ],
         "rightAngles": [],
@@ -49042,29 +48274,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "J",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "K",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "L",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -49124,29 +48334,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -49427,29 +48615,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -49609,29 +48775,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 205,
-            "y": 60,
-            "label": "A",
-            "dx": 0,
-            "dy": -12
-          },
-          {
-            "x": 91,
-            "y": 243,
-            "label": "B",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 319,
-            "y": 243,
-            "label": "C",
-            "dx": 10,
-            "dy": 18
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": [
@@ -49927,55 +49071,51 @@
       "diagram": {
         "width": 420,
         "height": 300,
-        "alt": "Rectangle inscribed in a circle with a diagonal drawn",
-        "ellipses": [
+        "alt": "Rectangle inscribed in a circle; diagonal is a diameter",
+        "caption": "Schematic; not to scale.",
+        "lines": [
           {
-            "cx": 210,
-            "cy": 150,
-            "rx": 120,
-            "ry": 120
+            "x1": 121,
+            "y1": 89,
+            "x2": 297,
+            "y2": 221,
+            "dashed": false
           }
         ],
         "polygons": [
           {
             "points": [
               [
-                125,
-                85
+                121,
+                89
               ],
               [
-                310,
-                85
+                297,
+                89
               ],
               [
-                310,
-                215
+                297,
+                221
               ],
               [
-                125,
-                215
+                121,
+                221
               ]
             ]
           }
         ],
-        "lines": [
+        "ellipses": [],
+        "circles": [
           {
-            "x1": 125,
-            "y1": 85,
-            "x2": 310,
-            "y2": 215,
-            "dashed": false
+            "cx": 209,
+            "cy": 155,
+            "r": 110
           }
         ],
-        "labels": [
-          {
-            "x": 220,
-            "y": 143,
-            "text": "diagonal",
-            "anchor": "middle"
-          }
-        ],
-        "caption": "Schematic; not to scale."
+        "points": [],
+        "labels": [],
+        "rightAngles": [],
+        "ticks": []
       }
     },
     {
@@ -50032,29 +49172,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -50366,29 +49484,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -50617,29 +49713,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 205,
-            "y": 60,
-            "label": "A",
-            "dx": 0,
-            "dy": -12
-          },
-          {
-            "x": 91,
-            "y": 243,
-            "label": "B",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 319,
-            "y": 243,
-            "label": "C",
-            "dx": 10,
-            "dy": 18
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": [
@@ -50769,29 +49843,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -51504,29 +50556,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -63265,29 +62295,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "R",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "S",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "T",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -64414,29 +63422,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 92,
-            "y": 246,
-            "label": "J",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 330,
-            "y": 246,
-            "label": "K",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 92,
-            "y": 70,
-            "label": "L",
-            "dx": -12,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -64561,29 +63547,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [
           {
             "x": 143,
@@ -64656,29 +63620,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -64813,12 +63755,6 @@
             "y": 211,
             "text": "n",
             "anchor": "middle"
-          },
-          {
-            "x": 312,
-            "y": 273,
-            "text": "t",
-            "anchor": "middle"
           }
         ],
         "rightAngles": [],
@@ -64896,29 +63832,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 92,
-            "y": 246,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 330,
-            "y": 246,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 92,
-            "y": 70,
-            "label": "C",
-            "dx": -12,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []
@@ -68640,29 +67554,7 @@
         ],
         "ellipses": [],
         "circles": [],
-        "points": [
-          {
-            "x": 105,
-            "y": 248,
-            "label": "A",
-            "dx": -12,
-            "dy": 18
-          },
-          {
-            "x": 322,
-            "y": 248,
-            "label": "B",
-            "dx": 10,
-            "dy": 18
-          },
-          {
-            "x": 205,
-            "y": 66,
-            "label": "C",
-            "dx": 0,
-            "dy": -12
-          }
-        ],
+        "points": [],
         "labels": [],
         "rightAngles": [],
         "ticks": []

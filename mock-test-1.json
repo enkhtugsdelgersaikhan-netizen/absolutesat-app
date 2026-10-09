@@ -3535,12 +3535,6 @@
                   "y": 211,
                   "text": "n",
                   "anchor": "middle"
-                },
-                {
-                  "x": 312,
-                  "y": 273,
-                  "text": "t",
-                  "anchor": "middle"
                 }
               ],
               "rightAngles": [],
@@ -4461,29 +4455,7 @@
               ],
               "ellipses": [],
               "circles": [],
-              "points": [
-                {
-                  "x": 205,
-                  "y": 60,
-                  "label": "A",
-                  "dx": 0,
-                  "dy": -12
-                },
-                {
-                  "x": 91,
-                  "y": 243,
-                  "label": "B",
-                  "dx": -12,
-                  "dy": 18
-                },
-                {
-                  "x": 319,
-                  "y": 243,
-                  "label": "C",
-                  "dx": 10,
-                  "dy": 18
-                }
-              ],
+              "points": [],
               "labels": [],
               "rightAngles": [],
               "ticks": [

@@ -3472,29 +3472,7 @@
               ],
               "ellipses": [],
               "circles": [],
-              "points": [
-                {
-                  "x": 205,
-                  "y": 60,
-                  "label": "A",
-                  "dx": 0,
-                  "dy": -12
-                },
-                {
-                  "x": 91,
-                  "y": 243,
-                  "label": "B",
-                  "dx": -12,
-                  "dy": 18
-                },
-                {
-                  "x": 319,
-                  "y": 243,
-                  "label": "C",
-                  "dx": 10,
-                  "dy": 18
-                }
-              ],
+              "points": [],
               "labels": [],
               "rightAngles": [],
               "ticks": [
@@ -4326,29 +4304,7 @@
               ],
               "ellipses": [],
               "circles": [],
-              "points": [
-                {
-                  "x": 105,
-                  "y": 248,
-                  "label": "A",
-                  "dx": -12,
-                  "dy": 18
-                },
-                {
-                  "x": 322,
-                  "y": 248,
-                  "label": "B",
-                  "dx": 10,
-                  "dy": 18
-                },
-                {
-                  "x": 205,
-                  "y": 66,
-                  "label": "C",
-                  "dx": 0,
-                  "dy": -12
-                }
-              ],
+              "points": [],
               "labels": [],
               "rightAngles": [],
               "ticks": []
@@ -5001,29 +4957,7 @@
               ],
               "ellipses": [],
               "circles": [],
-              "points": [
-                {
-                  "x": 105,
-                  "y": 248,
-                  "label": "A",
-                  "dx": -12,
-                  "dy": 18
-                },
-                {
-                  "x": 322,
-                  "y": 248,
-                  "label": "B",
-                  "dx": 10,
-                  "dy": 18
-                },
-                {
-                  "x": 205,
-                  "y": 66,
-                  "label": "C",
-                  "dx": 0,
-                  "dy": -12
-                }
-              ],
+              "points": [],
               "labels": [],
               "rightAngles": [],
               "ticks": []
@@ -5636,29 +5570,7 @@
               ],
               "ellipses": [],
               "circles": [],
-              "points": [
-                {
-                  "x": 105,
-                  "y": 248,
-                  "label": "A",
-                  "dx": -12,
-                  "dy": 18
-                },
-                {
-                  "x": 322,
-                  "y": 248,
-                  "label": "B",
-                  "dx": 10,
-                  "dy": 18
-                },
-                {
-                  "x": 205,
-                  "y": 66,
-                  "label": "C",
-                  "dx": 0,
-                  "dy": -12
-                }
-              ],
+              "points": [],
               "labels": [],
               "rightAngles": [],
               "ticks": []
@@ -6042,29 +5954,7 @@
               ],
               "ellipses": [],
               "circles": [],
-              "points": [
-                {
-                  "x": 205,
-                  "y": 60,
-                  "label": "D",
-                  "dx": 0,
-                  "dy": -12
-                },
-                {
-                  "x": 91,
-                  "y": 243,
-                  "label": "C",
-                  "dx": -12,
-                  "dy": 18
-                },
-                {
-                  "x": 319,
-                  "y": 243,
-                  "label": "E",
-                  "dx": 10,
-                  "dy": 18
-                }
-              ],
+              "points": [],
               "labels": [],
               "rightAngles": [],
               "ticks": [
