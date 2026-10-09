@@ -59,7 +59,7 @@ function triangleNames(t){
 }
 function rightVertex(t,names){
  t=geometryPlain(t);
- for(const m of t.matchAll(/\\angle\\s+([A-Z])\\s*=\\s*90/g))if(names.includes(m[1]))return m[1];
+ for(const m of t.matchAll(/\\angle\s+([A-Z])\s*=\s*90/g))if(names.includes(m[1]))return m[1];
  for(const m of t.matchAll(/(?:is\s+right\s+at|right\s+at|right\s+angle\s+at)\s+([A-Z])\b/gi)){
    if(names.includes(m[1]))return m[1];
  }
