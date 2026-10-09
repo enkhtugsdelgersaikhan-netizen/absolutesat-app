@@ -265,6 +265,12 @@
         questions=questions.concat(extra.questions||[]);
       }
     }
+    const reviewed=await fetch("/question-batch-20261010-reviewed.json?v=1",{cache:"no-store"});
+    if (reviewed.ok) {
+      const supplement=await reviewed.json();
+      const desiredSection=section==="math"?"Math":"Reading & Writing";
+      questions=questions.concat((supplement.questions||[]).filter(q=>q.section===desiredSection));
+    }
     bankCache[section]=questions;
     return questions;
   }

@@ -857,6 +857,25 @@ async function loadQuestions() {
             }
         }
 
+        try {
+            const batchResponse = await fetch(
+                "/question-batch-20261010-reviewed.json?v=1",
+                { cache: "no-store" }
+            );
+            if (batchResponse.ok) {
+                const batch = await batchResponse.json();
+                bankQuestions = bankQuestions.concat(
+                    (batch.questions || []).filter(
+                        question => question.section === activeSection
+                    )
+                );
+            } else {
+                console.warn("October 10 audited question batch unavailable.");
+            }
+        } catch (batchError) {
+            console.warn("Could not load audited question batch:", batchError);
+        }
+
         stagedQuestions =
             (bankQuestions || [])
                 .filter(

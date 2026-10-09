@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - question-bank.json
+      - question-batch-20261010-reviewed.json
       - rw-length-bias-audit.mjs
       - .github/workflows/rw-answer-length.yml
   pull_request:

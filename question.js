@@ -7838,6 +7838,27 @@ async function loadQuestionById(
             }
         }
 
+        try {
+            const batchResponse = await fetch(
+                "/question-batch-20261010-reviewed.json?v=1",
+                { cache: "no-store" }
+            );
+            if (batchResponse.ok) {
+                const batch = await batchResponse.json();
+                stagedQuestions = stagedQuestions.concat(
+                    (batch.questions || []).filter(question =>
+                        String(question.id).startsWith(
+                            String(questionId).startsWith("math-") ? "math-" : "rw-"
+                        )
+                    )
+                );
+            } else {
+                console.warn("October 10 audited question batch unavailable.");
+            }
+        } catch (batchError) {
+            console.warn("Could not load audited question batch:", batchError);
+        }
+
         const stagedQuestion =
             stagedQuestions.find(
                 question =>
