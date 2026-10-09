@@ -56,6 +56,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     const user = data.session.user;
     dashboardRoot.hidden = false;
     dashboardRoot.classList.remove("is-guest");
+    const settingsPanel = dashboardRoot.querySelector(".dashboard-account-settings");
+    if (settingsPanel) settingsPanel.hidden = false;
     const title = document.getElementById("home-dashboard-title");
     const intro = document.getElementById("home-dashboard-intro");
     if (title) title.textContent = "Welcome back.";
