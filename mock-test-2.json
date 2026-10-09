@@ -2270,8 +2270,8 @@
             "skill": "Inferences",
             "subtopic": "Inferences",
             "difficulty": "Hard",
-            "passage": "**Text 1**\nOnly a few letters in the surviving correspondence of the Valnera Engineering School describe women attending its public lectures between 1912 and 1920. Most letters mentioning lecture attendance were written by men. This imbalance suggests that women rarely participated in the school’s public scientific culture during that period.\n**Text 2**\nCorrespondence at Valnera was preserved unevenly. A later archive policy retained almost all letters from professional engineers, who were predominantly men, but discarded many letters from other attendees. Attendance lists recovered from a separate municipal collection identify women at numerous public lectures. Counts drawn solely from the school’s surviving letters therefore require caution.",
-            "question": "Based on the texts, how would the author of Text 2 most likely respond to the inference in Text 1?",
+            "passage": "**Text 1**\nOnly a few letters in the surviving correspondence of the Valnera Engineering School describe women attending its public lectures between 1912 and 1920. Most letters mentioning lecture attendance were written by men. This imbalance suggests that women rarely participated in the school’s public scientific culture during that period.\n**Text 2**\nCorrespondence at Valnera was preserved unevenly. A later archive policy retained almost all letters from professional engineers, who were predominantly men, but discarded many letters from other attendees. Attendance lists recovered from a separate municipal collection identify women at numerous public lectures. Counts drawn solely from the school’s surviving letters therefore require caution.",
+            "question": "Based on the texts, how would the author of Text 2 most likely respond to the inference in Text 1?",
             "choices": {
               "A": "By arguing that the surviving correspondence may reflect selective preservation more strongly than the original pattern of participation",
               "B": "By claiming that the municipal attendance lists establish that women outnumbered men at every lecture",
@@ -2279,7 +2279,7 @@
               "D": "By accepting that women rarely attended while maintaining that their contributions were more scientifically important than men’s"
             },
             "correctAnswer": "A",
-            "explanation": "A is correct because Text 2 identifies a preservation policy that favored letters from a predominantly male professional group and cites independent evidence of women’s attendance. Those points challenge treating the correspondence count as a representative attendance count. D accepts the inference that Text 2 calls into question and adds an unsupported comparison of scientific importance. B exaggerates what the lists establish: they show participation at numerous lectures, not a female majority at every lecture. C changes the issue to the lectures’ influence, which neither text evaluates.",
+            "explanation": "A is correct because Text 2 identifies a preservation policy that favored letters from a predominantly male professional group and cites independent evidence of women’s attendance. Those points challenge treating the correspondence count as a representative attendance count. D accepts the inference that Text 2 calls into question and adds an unsupported comparison of scientific importance. B exaggerates what the lists establish: they show participation at numerous lectures, not a female majority at every lecture. C changes the issue to the lectures’ influence, which neither text evaluates.",
             "sourceBatch": "2026-10-08-live398",
             "sourceQuestionNumber": 369,
             "classificationVersion": "2026-10-08-skill-relative-v4"

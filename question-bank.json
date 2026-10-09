@@ -38806,8 +38806,8 @@
       "skill": "Inferences",
       "subtopic": "Inferences",
       "difficulty": "Hard",
-      "passage": "**Text 1**\nOnly a few letters in the surviving correspondence of the Valnera Engineering School describe women attending its public lectures between 1912 and 1920. Most letters mentioning lecture attendance were written by men. This imbalance suggests that women rarely participated in the school’s public scientific culture during that period.\n**Text 2**\nCorrespondence at Valnera was preserved unevenly. A later archive policy retained almost all letters from professional engineers, who were predominantly men, but discarded many letters from other attendees. Attendance lists recovered from a separate municipal collection identify women at numerous public lectures. Counts drawn solely from the school’s surviving letters therefore require caution.",
-      "question": "Based on the texts, how would the author of Text 2 most likely respond to the inference in Text 1?",
+      "passage": "**Text 1**\nOnly a few letters in the surviving correspondence of the Valnera Engineering School describe women attending its public lectures between 1912 and 1920. Most letters mentioning lecture attendance were written by men. This imbalance suggests that women rarely participated in the school’s public scientific culture during that period.\n**Text 2**\nCorrespondence at Valnera was preserved unevenly. A later archive policy retained almost all letters from professional engineers, who were predominantly men, but discarded many letters from other attendees. Attendance lists recovered from a separate municipal collection identify women at numerous public lectures. Counts drawn solely from the school’s surviving letters therefore require caution.",
+      "question": "Based on the texts, how would the author of Text 2 most likely respond to the inference in Text 1?",
       "choices": {
         "A": "By arguing that the surviving correspondence may reflect selective preservation more strongly than the original pattern of participation",
         "B": "By claiming that the municipal attendance lists establish that women outnumbered men at every lecture",
@@ -38815,7 +38815,7 @@
         "D": "By accepting that women rarely attended while maintaining that their contributions were more scientifically important than men’s"
       },
       "correctAnswer": "A",
-      "explanation": "A is correct because Text 2 identifies a preservation policy that favored letters from a predominantly male professional group and cites independent evidence of women’s attendance. Those points challenge treating the correspondence count as a representative attendance count. D accepts the inference that Text 2 calls into question and adds an unsupported comparison of scientific importance. B exaggerates what the lists establish: they show participation at numerous lectures, not a female majority at every lecture. C changes the issue to the lectures’ influence, which neither text evaluates.",
+      "explanation": "A is correct because Text 2 identifies a preservation policy that favored letters from a predominantly male professional group and cites independent evidence of women’s attendance. Those points challenge treating the correspondence count as a representative attendance count. D accepts the inference that Text 2 calls into question and adds an unsupported comparison of scientific importance. B exaggerates what the lists establish: they show participation at numerous lectures, not a female majority at every lecture. C changes the issue to the lectures’ influence, which neither text evaluates.",
       "sourceBatch": "2026-10-08-live398",
       "sourceQuestionNumber": 369,
       "classificationVersion": "2026-10-08-skill-relative-v4"
@@ -39037,8 +39037,8 @@
       "skill": "Inferences",
       "subtopic": "Inferences",
       "difficulty": "Hard",
-      "passage": "**Text 1**\nTrees in central Malvera open their buds earlier than trees of the same species in the surrounding countryside. Because urban air is warmer, the city’s elevated temperature can account for this difference without requiring another explanation.\n**Text 2**\nUrban warmth can advance bud opening, but nighttime illumination may also matter. Researchers compared equally warm city streets where lamps were either left on or switched off overnight. Buds opened later on the unlit streets. The difference persisted even after the researchers accounted for small temperature variations among the streets.",
-      "question": "Based on the texts, how would the author of Text 2 most likely respond to the explanation in Text 1?",
+      "passage": "**Text 1**\nTrees in central Malvera open their buds earlier than trees of the same species in the surrounding countryside. Because urban air is warmer, the city’s elevated temperature can account for this difference without requiring another explanation.\n**Text 2**\nUrban warmth can advance bud opening, but nighttime illumination may also matter. Researchers compared equally warm city streets where lamps were either left on or switched off overnight. Buds opened later on the unlit streets. The difference persisted even after the researchers accounted for small temperature variations among the streets.",
+      "question": "Based on the texts, how would the author of Text 2 most likely respond to the explanation in Text 1?",
       "choices": {
         "A": "By rejecting the explanation because the urban and rural trees must have been different species",
         "B": "By acknowledging that warmth can contribute while arguing that it does not fully explain the urban pattern",
@@ -39046,7 +39046,7 @@
         "D": "By arguing that the lighting comparison confirms that temperature alone determines when city trees open their buds"
       },
       "correctAnswer": "B",
-      "explanation": "B is correct because Text 2 explicitly accepts an effect of warmth but reports a lighting-related difference among similarly warm streets. That evidence challenges the sufficiency, rather than the existence, of temperature’s effect. A invents a species difference, while Text 1 specifies the same species. C overstates the finding and contradicts Text 2’s acknowledgment that warmth can matter. D reverses the implication of the comparison: a remaining difference associated with lighting counts against a temperature-only explanation.",
+      "explanation": "B is correct because Text 2 explicitly accepts an effect of warmth but reports a lighting-related difference among similarly warm streets. That evidence challenges the sufficiency, rather than the existence, of temperature’s effect. A invents a species difference, while Text 1 specifies the same species. C overstates the finding and contradicts Text 2’s acknowledgment that warmth can matter. D reverses the implication of the comparison: a remaining difference associated with lighting counts against a temperature-only explanation.",
       "sourceBatch": "2026-10-08-live398",
       "sourceQuestionNumber": 378,
       "classificationVersion": "2026-10-08-skill-relative-v4"
@@ -39489,8 +39489,8 @@
       "skill": "Inferences",
       "subtopic": "Inferences",
       "difficulty": "Hard",
-      "passage": "**Text 1**\nSeveral early botanical catalogs surround each illustration with the same ornamental frame. Because a repeated frame conveys no information specific to the plant inside it, these borders should be understood as purely decorative additions, with no practical role in the catalogs.\n**Text 2**\nA visual element need not distinguish one plant from another to assist a reader. In tests using reproductions of the catalogs, readers located the associated descriptive passages more quickly when the familiar frames remained visible than when the frames were removed. The borders evidently helped readers orient themselves on the page.",
-      "question": "Based on the texts, how would the author of Text 2 most likely respond to the argument in Text 1?",
+      "passage": "**Text 1**\nSeveral early botanical catalogs surround each illustration with the same ornamental frame. Because a repeated frame conveys no information specific to the plant inside it, these borders should be understood as purely decorative additions, with no practical role in the catalogs.\n**Text 2**\nA visual element need not distinguish one plant from another to assist a reader. In tests using reproductions of the catalogs, readers located the associated descriptive passages more quickly when the familiar frames remained visible than when the frames were removed. The borders evidently helped readers orient themselves on the page.",
+      "question": "Based on the texts, how would the author of Text 2 most likely respond to the argument in Text 1?",
       "choices": {
         "A": "By disputing the assumption that a visual feature must convey plant-specific information to perform a practical function",
         "B": "By denying that any of the catalogs used the same frame around more than one illustration",
@@ -39498,7 +39498,7 @@
         "D": "By claiming that every ornamental border necessarily improves the accuracy of plant identification"
       },
       "correctAnswer": "A",
-      "explanation": "A is correct because Text 2 supplies a practical function—helping readers locate associated information—that does not require a frame to identify a particular plant. This directly challenges the premise connecting lack of plant-specific information with purely decorative status. C repeats the premise Text 2 rejects. D extends the finding to every border and to identification accuracy, neither of which the tests establish. B contradicts the shared premise that the catalogs contain repeated frames rather than addressing what those frames do.",
+      "explanation": "A is correct because Text 2 supplies a practical function—helping readers locate associated information—that does not require a frame to identify a particular plant. This directly challenges the premise connecting lack of plant-specific information with purely decorative status. C repeats the premise Text 2 rejects. D extends the finding to every border and to identification accuracy, neither of which the tests establish. B contradicts the shared premise that the catalogs contain repeated frames rather than addressing what those frames do.",
       "sourceBatch": "2026-10-08-live398",
       "sourceQuestionNumber": 395,
       "classificationVersion": "2026-10-08-skill-relative-v4"
