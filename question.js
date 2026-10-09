@@ -7721,9 +7721,30 @@ async function loadQuestionById(
         const stagedData =
             await response.json();
 
-        const stagedQuestions =
+        let stagedQuestions =
             stagedData.questions ||
             [];
+
+        if (String(questionId).startsWith("math-")) {
+            try {
+                const supplementResponse =
+                    await fetch(
+                        "/math-question-bank-20261010-reviewed.json?v=1",
+                        { cache: "no-store" }
+                    );
+
+                if (supplementResponse.ok) {
+                    const supplement =
+                        await supplementResponse.json();
+                    stagedQuestions =
+                        stagedQuestions.concat(supplement.questions || []);
+                } else {
+                    console.warn("Supplemental Math questions unavailable.");
+                }
+            } catch (supplementError) {
+                console.warn("Could not load supplemental Math questions:", supplementError);
+            }
+        }
 
         const stagedQuestion =
             stagedQuestions.find(
