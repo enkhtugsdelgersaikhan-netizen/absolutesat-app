@@ -878,49 +878,81 @@
   const profileStatus = document.getElementById("sat-profile-status");
   let profileUser = null;
 
+  // All three range panels stay in the DOM for university comparisons,
+  // but the explorer reveals just the section selected by the student.
+  const scoreTabs = Array.from(document.querySelectorAll("[data-score-tab]"));
+  const guideNames = ["composite", "reading", "math"];
+  const selectScoreTab = (guide, moveFocus = false) => {
+    if (!guideNames.includes(guide)) return;
+    scoreTabs.forEach((tab) => {
+      const active = tab.dataset.scoreTab === guide;
+      tab.classList.toggle("is-active", active);
+      tab.setAttribute("aria-selected", String(active));
+      tab.tabIndex = active ? 0 : -1;
+      if (active && moveFocus) tab.focus();
+    });
+    guideNames.forEach((name) => {
+      const panel = document.getElementById("sat-range-panel-" + name);
+      if (panel) panel.hidden = name !== guide;
+    });
+  };
+  scoreTabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => selectScoreTab(tab.dataset.scoreTab));
+    tab.addEventListener("keydown", (event) => {
+      if (!["ArrowRight", "ArrowLeft", "Home", "End"].includes(event.key)) return;
+      event.preventDefault();
+      const next = event.key === "Home" ? 0 : event.key === "End" ? scoreTabs.length - 1
+        : (index + (event.key === "ArrowRight" ? 1 : -1) + scoreTabs.length) % scoreTabs.length;
+      selectScoreTab(scoreTabs[next].dataset.scoreTab, true);
+    });
+  });
+
   const highlightGuideScore = (guide, score) => {
     const scale = document.querySelector('.sat-score-guide-scale[data-guide="' + guide + '"]');
-    if (!scale) return;
-    scale.querySelectorAll(".sat-score-scale-row").forEach((row) => {
+    if (!scale) return null;
+    let selected = null;
+    let selectedIndex = -1;
+    scale.querySelectorAll(".sat-score-scale-row").forEach((row, index) => {
       const min = row.dataset.min === undefined ? -Infinity : Number(row.dataset.min);
       const max = row.dataset.max === undefined ? Infinity : Number(row.dataset.max);
-      row.classList.toggle("is-user-range", Number.isFinite(score) && score >= min && score <= max);
+      const active = Number.isFinite(score) && score >= min && score <= max;
+      row.classList.toggle("is-user-range", active);
+      if (active) { selected = row; selectedIndex = index; }
     });
+    return {row: selected, index: selectedIndex};
   };
 
   const updateGuideHighlights = (reading, math) => {
     const validReading = validSectionScore(reading);
     const validMath = validSectionScore(math);
     const composite = validReading && validMath ? reading + math : NaN;
-    highlightGuideScore("reading", validReading ? reading : NaN);
-    highlightGuideScore("math", validMath ? math : NaN);
-    highlightGuideScore("composite", composite);
-
-    const summary = document.getElementById("sat-score-personal-summary");
-    if (!summary) return;
-    if (!validReading || !validMath) {
-      summary.innerHTML = '<p class="sat-score-summary-empty">Set your R&amp;W and Math scores to see the ranges that apply to you.</p>';
-      return;
+    const values = {
+      composite,
+      reading: validReading ? reading : NaN,
+      math: validMath ? math : NaN
+    };
+    for (const guide of guideNames) {
+      const score = values[guide];
+      const match = highlightGuideScore(guide, score);
+      const card = document.querySelector('.sat-score-summary-card[data-score-card="' + guide + '"]');
+      if (!card) continue;
+      const value = card.querySelector("strong[id]");
+      const band = document.getElementById("sat-band-" + guide);
+      const description = document.getElementById("sat-context-" + guide);
+      const chosen = match?.row;
+      const heading = chosen?.querySelector("span strong")?.textContent?.trim() || "";
+      const detail = chosen?.querySelector("span")?.textContent?.trim() || "";
+      const missing = guide === "composite" ?
+        "Enter both section scores to see your composite score context." :
+        "Enter your " + (guide === "reading" ? "Reading & Writing" : "Math") + " score to see its context.";
+      if (value) value.textContent = Number.isFinite(score) ? String(score) : "—";
+      if (band) band.textContent = chosen ? heading.replace(/\\.$/, "") : "Set your score";
+      if (description) description.textContent = chosen
+        ? detail.slice(heading.length).trim()
+        : missing;
+      card.dataset.tier = chosen ? String(match.index) : "";
+      card.classList.toggle("has-score", Boolean(chosen));
     }
-
-    const cards = [
-      ["Composite", "composite", composite],
-      ["Reading &amp; Writing", "reading", reading],
-      ["Math", "math", math]
-    ].map(([label, guide, score]) => {
-      const scale = document.querySelector('.sat-score-guide-scale[data-guide="' + guide + '"]');
-      const row = scale && Array.from(scale.querySelectorAll(".sat-score-scale-row")).find((item) => {
-        const min = item.dataset.min === undefined ? -Infinity : Number(item.dataset.min);
-        const max = item.dataset.max === undefined ? Infinity : Number(item.dataset.max);
-        return score >= min && score <= max;
-      });
-      if (!row) return "";
-      const meaning = row.querySelector("span")?.textContent || "";
-      const share = row.querySelector("em")?.textContent || "";
-      const advice = row.querySelector("i")?.textContent || "";
-      return '<article class="sat-score-summary-card"><div class="sat-score-summary-top"><span>' + label + '</span><strong>' + score + '</strong></div><h5>' + meaning + '</h5><p>' + share + '</p><small>' + advice + '</small></article>';
-    }).join("");
-    summary.innerHTML = cards;
   };
 
   const updateProfilePreview = () => {
