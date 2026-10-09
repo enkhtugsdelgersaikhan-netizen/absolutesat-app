@@ -54,7 +54,7 @@ function triangleNames(t){
  return ["A","B","C"];
 }
 function rightVertex(t,names){
- for(const m of t.matchAll(/(?:is\\s+right\\s+at|right\\s+at|right\\s+angle\\s+at)\\s+([A-Z])\\b/gi)){
+ for(const m of t.matchAll(/(?:is\s+right\s+at|right\s+at|right\s+angle\s+at)\s+([A-Z])\b/gi)){
    if(names.includes(m[1]))return m[1];
  }
  const joined=names.join("");
