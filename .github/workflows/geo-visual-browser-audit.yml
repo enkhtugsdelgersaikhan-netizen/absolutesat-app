@@ -1,0 +1,32 @@
+name: Geometry browser visual audit
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - geo-visual-browser-audit.mjs
+      - .github/workflows/geo-visual-browser-audit.yml
+permissions:
+  contents: read
+jobs:
+  render-diagrams:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Chromium screenshot tooling
+        run: |
+          npm install --no-save playwright
+          npx playwright install chromium --with-deps
+      - name: Render all geometry diagrams in Chromium
+        run: node geo-visual-browser-audit.mjs
+      - name: Upload screenshots and report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: geometry-browser-contact-sheets
+          path: geometry-visual-audit/
+          retention-days: 5
