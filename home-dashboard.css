@@ -9,7 +9,7 @@
     background:#f4f9f7;
     border-bottom:1px solid #dce9e5;
 }
-.home-dashboard .dashboard-header{padding:34px 0 20px}
+.home-dashboard .dashboard-header{display:block;padding:34px 0 20px}
 .home-dashboard .dashboard-header h2{
     margin:5px 0 0;
     color:#173b36;
