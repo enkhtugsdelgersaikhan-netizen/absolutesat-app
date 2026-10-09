@@ -1333,11 +1333,11 @@ function renderInlineFormatting(
         escaped =
             escaped
                 .replace(
-                    /(^|[^\\p{L}\\p{N}])\\*([A-Za-z][^*\\n]*?)\\*(?=$|[^\\p{L}\\p{N}])/gu,
+                    /(^|[^\p{L}\p{N}])\*([A-Za-z][^*\n]*?)\*(?=$|[^\p{L}\p{N}])/gu,
                     "$1$2"
                 )
                 .replace(
-                    /(^|[^\\p{L}\\p{N}])_([A-Za-z][^_\\n]*?)_(?=$|[^\\p{L}\\p{N}])/gu,
+                    /(^|[^\p{L}\p{N}])_([A-Za-z][^_\n]*?)_(?=$|[^\p{L}\p{N}])/gu,
                     "$1$2"
                 );
     } else {
