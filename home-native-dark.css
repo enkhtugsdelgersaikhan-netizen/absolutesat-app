@@ -1,0 +1,265 @@
+/* Native homepage dark mode — never invert pixels or semantic status colors.
+   Other pages retain the legacy theme behavior until they are migrated. */
+html.lexlogica-dark-mode.lexlogica-home-native{
+  filter:none!important;
+  color-scheme:dark;
+  background:#101a18;
+  --ll-surface:#1b2a26;
+  --ll-surface-soft:#20322d;
+  --ll-border:#345048;
+  --ll-border-strong:#48665a;
+  --ll-border-hover:#70a997;
+  --ll-text:#e5f2eb;
+  --ll-muted:#adc1b7;
+  --ll-accent:#82d7be;
+  --ll-shadow:0 5px 15px rgba(0,0,0,.13);
+  --ll-shadow-hover:0 8px 22px rgba(0,0,0,.19);
+}
+html.lexlogica-dark-mode.lexlogica-home-native body{
+  background:#101a18;color:#e5f2eb;
+}
+html.lexlogica-dark-mode.lexlogica-home-native
+:is(.university-featured-media>img,.university-card-image>img,
+.university-mark-wrap,.university-symbol-badge,.university-logo-monogram){
+  filter:none!important; /* Images, logos and badges must keep true colors. */
+}
+html.lexlogica-dark-mode.lexlogica-home-native :is(.header,.header-container){
+  background:#15231f!important;border-color:#365148!important;
+}
+html.lexlogica-dark-mode.lexlogica-home-native :is(.nav-button,.site-dashboard,.theme-toggle-button,.login-button){
+  background:#203630!important;color:#d7efe5!important;border-color:#42695c!important;
+}
+html.lexlogica-dark-mode.lexlogica-home-native :is(.nav-button,.site-dashboard,.theme-toggle-button,.login-button):hover{
+  background:#2a473d!important;color:#f1fff8!important;
+}
+html.lexlogica-dark-mode.lexlogica-home-native .navigation.mobile-open{
+  background:#162921!important;border-color:#365148!important;
+}
+html.lexlogica-dark-mode.lexlogica-home-native .home-dashboard.dashboard-page{
+  background:#101d19!important;border-color:#324b42;
+}
+html.lexlogica-dark-mode.lexlogica-home-native :is(
+  .dashboard-kpi,.dashboard-panel,.dashboard-settings-disclosure,
+  .home-disclosure,.study-guide-loading,.study-guide-empty,
+  .sg-score-panel,.sg-priority-col,.sg-research,.sg-workflow,
+  .sg-more-domains,.sg-fluency-card,.features-section,
+  .feature-card,.home-feature-more,.sat-score-guide,
+  .sat-guide-score-panel,.university-browse-details
+){
+  background:#1b2c27!important;
+  border-color:#36534a!important;
+  box-shadow:none!important;
+}
+html.lexlogica-dark-mode.lexlogica-home-native :is(
+  .sg-score-tile,.sg-goal-tile,.sg-domain-check,
+  .sg-fluency-icon,.home-disclosure-icon,.feature-icon,
+  .dashboard-subtopic-card,.dashboard-domain-skill-group,
+  .dashboard-domain-subtopics,.dashboard-section-skill-group,
+  .dashboard-domain-skill-head,.dashboard-section-skill-head,
+  .dashboard-empty-state,.dashboard-chart-empty-state,
+  .sg-fluency-practice,.sat-guide-score-panel .sat-context-profile,
+  .sat-quartile-brief
+){
+  background:#23372f!important;
+  border-color:#3b5a4e!important;
+  box-shadow:none!important;
+}
+html.lexlogica-dark-mode.lexlogica-home-native :is(
+  .home-dashboard .dashboard-header h2,.home-dashboard .dashboard-header p,
+  .dashboard-panel-heading h2,.dashboard-subtopic-card-head strong,
+  .dashboard-domain-skill-head strong,.dashboard-section-skill-head strong,
+  .dashboard-kpi>strong,.sg-score-header h2,.sg-section-heading h2,
+  .sg-priority-head h3,.study-guide-intro h2,.sg-workflow strong,
+  .sg-fluency-copy h3,.sg-fluency-heading strong,
+  .home-disclosure-title strong,.features-heading h2,.feature-card h3,
+  .sat-score-guide-head h4,.sat-context-profile-head h3,
+  .university-catalog-heading h3
+){color:#e9f4ef!important}
+html.lexlogica-dark-mode.lexlogica-home-native :is(
+  .dashboard-kpi>span,.dashboard-kpi>small,.dashboard-legend,.dashboard-panel-heading p,
+  .dashboard-subtopic-card p,.dashboard-subtopic-metrics,
+  .sg-priority-meta,.sg-fluency-copy p,.sg-fluency-copy small,
+  .sg-fluency-heading span,.sg-score-source,.sg-goal-message,
+  .sg-score-caveat,.sg-section-heading p,.sg-workflow p,
+  .sg-research p,.sg-research small,.home-disclosure-title small,
+  .features-heading>p:last-child,.feature-card p,.sat-score-summary-empty,
+  .university-data-note,.university-catalog-heading p
+){color:#a9c0b5!important}
+html.lexlogica-dark-mode.lexlogica-home-native :is(
+  .dashboard-kpi,.dashboard-domain-skill-group,.dashboard-subtopic-card,
+  .sg-fluency-card,.sg-fluency-practice,.home-disclosure,
+  .sg-score-tile,.sg-score-panel,.sg-priority-col,
+  .sg-workflow,.sg-more-domains,.feature-card
+){border-color:#3b594e!important}
+html.lexlogica-dark-mode.lexlogica-home-native :is(
+  .sg-priority-link,.sg-workflow-link,.home-disclosure-toggle,
+  .sg-more-domains>summary,.sg-research summary,
+  .home-feature-more>summary,.home-score-range-details>summary,
+  .university-browse-details>summary
+){color:#8bd5bd!important}
+html.lexlogica-dark-mode.lexlogica-home-native :is(
+  .sg-priority-link,.sg-workflow-link,.sg-goal-entry input,
+  .sg-goal-entry button,.sg-fluency-card .sg-priority-link,
+  .dashboard-filter-group button,.dashboard-reset,.dashboard-reset-cancel,
+  .home-disclosure-summary,.sg-more-domains>summary
+){background:#233c33!important;border-color:#4a705e!important}
+html.lexlogica-dark-mode.lexlogica-home-native :is(
+  .sg-goal-entry input,#university-search,.sat-context-profile input,
+  .sat-impact-input-grid input,.university-search-row input
+){background:#172a23!important;color:#eaf5ef!important;border-color:#517264!important}
+html.lexlogica-dark-mode.lexlogica-home-native :is(
+  .sg-goal-entry input,.university-search-row input,.sat-context-profile input
+)::placeholder{color:#8fa89d!important}
+html.lexlogica-dark-mode.lexlogica-home-native :is(
+  .sg-primary,.sg-goal-entry button,.dashboard-filter-group .is-active,
+  .sat-context-profile-actions button:first-child
+){background:#216f5b!important;color:#f0fff7!important;border-color:#31846d!important}
+html.lexlogica-dark-mode.lexlogica-home-native :is(
+  .home-disclosure-summary:hover,.sg-more-domains>summary:hover,
+  .feature-card:hover,.university-browse-details>summary:hover
+){background:#284238!important}
+html.lexlogica-dark-mode.lexlogica-home-native :is(
+  .sg-more-domains[open]>summary,.home-disclosure[open] .home-disclosure-summary,
+  .home-feature-more[open]>summary,.university-browse-details[open]>summary
+){background:#23382f!important;border-color:#38564a!important}
+html.lexlogica-dark-mode.lexlogica-home-native :is(
+  .sg-fluency-card .sg-priority-link,.sg-priority-link,.sg-workflow-link
+):hover{background:#2b4d40!important}
+html.lexlogica-dark-mode.lexlogica-home-native :is(
+  .dashboard-empty-chart .dashboard-empty-state,.home-progress-example,
+  .dashboard-empty-chart,.mock-empty-slots>div,.empty-day-strip>div,
+  .seven-day-chart .activity-day,.dashboard-skill-groups .dashboard-empty-state
+){background:#20332b!important;border-color:#3d5b4e!important;color:#bfd4ca!important}
+html.lexlogica-dark-mode.lexlogica-home-native :is(
+  .mock-axis-label,.mock-axis-title,.mock-x-label,.dashboard-chart-grid .empty-day-strip small
+){fill:#b9cfc4!important;color:#b9cfc4!important}
+html.lexlogica-dark-mode.lexlogica-home-native .mock-grid{stroke:#38544a!important}
+/* Keep activity correctness and mock-series categories semantically stable. */
+html.lexlogica-dark-mode.lexlogica-home-native .activity-segment.correct,
+html.lexlogica-dark-mode.lexlogica-home-native .dashboard-legend .is-correct{background:#45b995!important}
+html.lexlogica-dark-mode.lexlogica-home-native .activity-segment.incorrect,
+html.lexlogica-dark-mode.lexlogica-home-native .dashboard-legend .is-incorrect{background:#db827c!important}
+
+/* Shared university score interpretation and search surfaces. */
+html.lexlogica-dark-mode.lexlogica-home-native .university-sat-section{
+  background:linear-gradient(180deg,#14221d,#101a17)!important;
+  border-color:#324c42!important;
+}
+html.lexlogica-dark-mode.lexlogica-home-native :is(
+  .sat-guide-score-panel,.sat-score-guide,.sat-score-guide-scale,
+  .sat-score-scale-row,.sat-context-profile,.sat-guide-explainer,
+  .sat-impact-panel,.sat-impact-calculator,.sat-impact-result,
+  .sat-quartile-brief,.sat-quartile-brief>div,
+  .university-search-row,.university-search-results,
+  .university-featured,.university-featured-content,
+  .university-card,.university-card-body,.university-card-scores,
+  .university-browse-details,.university-impact-card,
+  .university-score-band,.university-impact-component,
+  .sat-strength-card,.sat-impact-explainer,
+  .sat-score-all-ranges,.sat-score-summary
+){
+  background:#1d2e28!important;border-color:#375448!important;
+  box-shadow:none!important;
+}
+html.lexlogica-dark-mode.lexlogica-home-native :is(
+  .sat-score-guide h4,.sat-score-scale-head strong,
+  .sat-context-profile h3,.sat-impact-heading h3,
+  .university-featured-school h3,.university-card h4,
+  .university-card-scores strong,.university-score-band-values strong,
+  .university-impact-main strong,.university-catalog-heading h3,
+  .university-search-option strong,.sat-quartile-brief strong,
+  .sat-context-total strong,.sat-score-scale-row b
+){color:#e2f0e9!important}
+html.lexlogica-dark-mode.lexlogica-home-native :is(
+  .sat-score-scale-row span,.sat-score-guide p,
+  .sat-context-profile p,.sat-context-profile label,.sat-context-profile small,
+  .sat-impact-intro,.sat-impact-result p,.sat-impact-explainer p,
+  .university-featured-school p,.university-card-place,
+  .university-card-scores span,.university-score-band-values span,
+  .sat-quartile-brief p,.sat-quartile-brief-note,
+  .university-search-option span,.university-featured-meta,
+  .university-data-note,.university-browse-details summary span
+){color:#afc4b9!important}
+html.lexlogica-dark-mode.lexlogica-home-native .university-search-option:hover,
+html.lexlogica-dark-mode.lexlogica-home-native .university-search-option:focus{
+  background:#2b4338!important;
+}
+html.lexlogica-dark-mode.lexlogica-home-native .university-featured-media{
+  background:#1c2d27!important;
+}
+html.lexlogica-dark-mode.lexlogica-home-native :is(
+  .university-featured-media img,.university-card-image img,
+  .university-featured-logo,.university-card-logo,
+  .university-search-option img
+){filter:none!important}
+html.lexlogica-dark-mode.lexlogica-home-native :is(
+  .university-featured-logo,.university-card-logo,.university-search-option img
+){background:#f5faf8!important;border-color:#d3e1dc!important}
+/* Preserve score meaning: bad=red, moderate=amber, good=green, in both themes. */
+html.lexlogica-dark-mode.lexlogica-home-native .sg-priority-item[class*="sg-severity-"]{
+  background:#23362e!important;border-color:var(--sg-urgency-border)!important;
+  border-left-color:var(--sg-urgency)!important;
+}
+html.lexlogica-dark-mode.lexlogica-home-native .sg-priority-item.sg-severity-critical{
+  --sg-urgency:#e6a09a;--sg-urgency-border:#8c5551;
+}
+html.lexlogica-dark-mode.lexlogica-home-native .sg-priority-item.sg-severity-high{
+  --sg-urgency:#d7aa86;--sg-urgency-border:#7e634d;
+}
+html.lexlogica-dark-mode.lexlogica-home-native .sg-priority-item.sg-severity-moderate{
+  --sg-urgency:#d7c181;--sg-urgency-border:#827748;
+}
+html.lexlogica-dark-mode.lexlogica-home-native .sg-priority-item.sg-severity-mild{
+  --sg-urgency:#a1c5ae;--sg-urgency-border:#4f725c;
+}
+html.lexlogica-dark-mode.lexlogica-home-native .sg-priority-item.sg-severity-strong{
+  --sg-urgency:#80d1ad;--sg-urgency-border:#397a61;
+}
+html.lexlogica-dark-mode.lexlogica-home-native .sg-priority-item.sg-severity-unassessed{
+  --sg-urgency:#afc0b8;--sg-urgency-border:#486158;
+}
+html.lexlogica-dark-mode.lexlogica-home-native .sg-priority-item .sg-priority-name,
+html.lexlogica-dark-mode.lexlogica-home-native .sg-priority-item .sg-domain-check{
+  color:var(--sg-urgency)!important;
+}
+html.lexlogica-dark-mode.lexlogica-home-native .sg-priority-item .sg-domain-check{
+  background:#273c33!important;border-color:var(--sg-urgency-border)!important;
+}
+html.lexlogica-dark-mode.lexlogica-home-native .sg-priority-item.is-complete .sg-domain-check{
+  background:#267c62!important;color:#fff!important;
+}
+html.lexlogica-dark-mode.lexlogica-home-native .dashboard-subtopic-card.severity-critical{
+  background:#342b2a!important;border-color:#82524e!important;
+}
+html.lexlogica-dark-mode.lexlogica-home-native .dashboard-subtopic-card.severity-critical .dashboard-subtopic-card-head strong{color:#e6a09a!important}
+html.lexlogica-dark-mode.lexlogica-home-native .dashboard-subtopic-card.severity-weak{
+  background:#352f29!important;border-color:#77604e!important;
+}
+html.lexlogica-dark-mode.lexlogica-home-native .dashboard-subtopic-card.severity-weak .dashboard-subtopic-card-head strong{color:#d7aa86!important}
+html.lexlogica-dark-mode.lexlogica-home-native .dashboard-subtopic-card.severity-watch{
+  background:#323226!important;border-color:#76724a!important;
+}
+html.lexlogica-dark-mode.lexlogica-home-native .dashboard-subtopic-card.severity-watch .dashboard-subtopic-card-head strong{color:#d7c181!important}
+html.lexlogica-dark-mode.lexlogica-home-native .dashboard-subtopic-card.severity-strong{
+  background:#213b30!important;border-color:#3a765f!important;
+}
+html.lexlogica-dark-mode.lexlogica-home-native .dashboard-subtopic-card.severity-strong .dashboard-subtopic-card-head strong{color:#80d1ad!important}
+html.lexlogica-dark-mode.lexlogica-home-native .university-position-label.below-lower,
+html.lexlogica-dark-mode.lexlogica-home-native .university-impact-verdict.negative,
+html.lexlogica-dark-mode.lexlogica-home-native .university-impact-card.negative .university-impact-main strong,
+html.lexlogica-dark-mode.lexlogica-home-native .sat-impact-result.is-negative>strong,
+html.lexlogica-dark-mode.lexlogica-home-native .sat-impact-result.is-error>strong{
+  color:#e6a09a!important;border-color:#82524e!important;
+}
+html.lexlogica-dark-mode.lexlogica-home-native .university-position-label.at-lower{color:#d7aa86!important;border-color:#84654b!important}
+html.lexlogica-dark-mode.lexlogica-home-native .university-position-label.lower-to-median{color:#d7c181!important;border-color:#877c51!important}
+html.lexlogica-dark-mode.lexlogica-home-native .university-position-label.median-to-upper{color:#9bd1b7!important;border-color:#4e8069!important}
+html.lexlogica-dark-mode.lexlogica-home-native .university-position-label.at-upper,
+html.lexlogica-dark-mode.lexlogica-home-native .university-impact-verdict.positive,
+html.lexlogica-dark-mode.lexlogica-home-native .university-impact-card.positive .university-impact-main strong,
+html.lexlogica-dark-mode.lexlogica-home-native .sat-impact-result.is-positive>strong{
+  color:#80d1ad!important;border-color:#3a765f!important;
+}
+/* Preserve significance in the colored score-range descriptions too. */
+html.lexlogica-dark-mode.lexlogica-home-native .sat-score-all-ranges .sat-score-scale-row:nth-child(6) span{color:#d7c181!important}
+html.lexlogica-dark-mode.lexlogica-home-native .sat-score-all-ranges .sat-score-scale-row:nth-child(7) span{color:#e6a09a!important}
