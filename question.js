@@ -7859,6 +7859,26 @@ async function loadQuestionById(
             console.warn("Could not load audited question batch:", batchError);
         }
 
+        if (!String(questionId).startsWith("math-")) {
+            try {
+                const repairResponse = await fetch(
+                    "/rw-answer-length-repairs-20261010.json?v=1",
+                    { cache: "no-store" }
+                );
+                if (repairResponse.ok) {
+                    const fixes = (await repairResponse.json()).choices || {};
+                    stagedQuestions.forEach(question => {
+                        const replacement = fixes[question.id];
+                        if (replacement && question.choices?.[question.correctAnswer]) {
+                            question.choices[question.correctAnswer] = replacement;
+                        }
+                    });
+                }
+            } catch (error) {
+                console.warn("Could not apply reviewed choice-length repairs:", error);
+            }
+        }
+
         const stagedQuestion =
             stagedQuestions.find(
                 question =>

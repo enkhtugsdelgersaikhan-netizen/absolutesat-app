@@ -291,6 +291,19 @@
       const desiredSection=section==="math"?"Math":"Reading & Writing";
       questions=questions.concat((supplement.questions||[]).filter(q=>q.section===desiredSection));
     }
+    if (section==="readingWriting") {
+      try {
+        const repairResponse=await fetch("/rw-answer-length-repairs-20261010.json?v=1",{cache:"no-store"});
+        if (repairResponse.ok) {
+          const fixes=(await repairResponse.json()).choices||{};
+          questions.forEach(q=>{
+            if (fixes[q.id]&&q.choices?.[q.correctAnswer]) q.choices[q.correctAnswer]=fixes[q.id];
+          });
+        }
+      } catch (error) {
+        console.warn("Could not load answer-length revisions:",error);
+      }
+    }
     bankCache[section]=questions;
     return questions;
   }
