@@ -108,24 +108,24 @@
 }
 
 /* Avoid a white flash for users who prefer the site's dark theme. */
-html.lexlogica-dark-mode .home-dashboard.dashboard-page{
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .home-dashboard.dashboard-page{
     background:#101b1a;
     border-bottom-color:#2a403b;
 }
-html.lexlogica-dark-mode .home-dashboard .dashboard-header h2{color:#d9eee7}
-html.lexlogica-dark-mode .home-dashboard .dashboard-header p{color:#a8bdb6}
-html.lexlogica-dark-mode .dashboard-settings-disclosure{
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .home-dashboard .dashboard-header h2{color:#d9eee7}
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .home-dashboard .dashboard-header p{color:#a8bdb6}
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .dashboard-settings-disclosure{
     background:#1a2926;
     color:#d1e4dc;
     border-color:#39524a;
 }
-html.lexlogica-dark-mode .dashboard-settings-inner{border-color:#39524a}
-html.lexlogica-dark-mode .dashboard-settings-inner p{color:#aebfb9}
-html.lexlogica-dark-mode .dashboard-reset-confirmation{
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .dashboard-settings-inner{border-color:#39524a}
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .dashboard-settings-inner p{color:#aebfb9}
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .dashboard-reset-confirmation{
     background:#382422;
     border-color:#784b43;
 }
-html.lexlogica-dark-mode .dashboard-reset-confirmation label{color:#f5d1ca}
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .dashboard-reset-confirmation label{color:#f5d1ca}
 
 /* Guest visitors see the complete public homepage layout. Private charts
    stay empty until an authenticated account supplies actual practice data. */
@@ -211,15 +211,15 @@ html.lexlogica-dark-mode .dashboard-reset-confirmation label{color:#f5d1ca}
 .home-disclosure summary:focus-visible{
     outline:3px solid #deac54;outline-offset:-3px;border-radius:10px;
 }
-html.lexlogica-dark-mode .home-dashboard .home-disclosure{
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .home-dashboard .home-disclosure{
     background:#1a2926;border-color:#36534b;
 }
-html.lexlogica-dark-mode .home-disclosure-summary:hover{background:#253c35}
-html.lexlogica-dark-mode .home-disclosure-title strong{color:#dcebe5}
-html.lexlogica-dark-mode .home-disclosure-title small{color:#a8c0b6}
-html.lexlogica-dark-mode .home-disclosure[open] .home-disclosure-summary{border-color:#36534b}
-html.lexlogica-dark-mode .home-progress-example{background:#233831;border-color:#36534b}
-html.lexlogica-dark-mode .home-progress-example>span{color:#dbede5}
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .home-disclosure-summary:hover{background:#253c35}
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .home-disclosure-title strong{color:#dcebe5}
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .home-disclosure-title small{color:#a8c0b6}
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .home-disclosure[open] .home-disclosure-summary{border-color:#36534b}
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .home-progress-example{background:#233831;border-color:#36534b}
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .home-progress-example>span{color:#dbede5}
 @media(max-width:640px){
     .home-disclosure-summary{padding:14px;gap:9px}
     .home-disclosure-icon{width:32px;height:32px}
