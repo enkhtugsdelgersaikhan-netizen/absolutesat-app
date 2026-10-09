@@ -367,6 +367,23 @@ function ensureHeaderLogoutButton() {
     return button;
 }
 
+function syncMobileAuthLink(authenticated) {
+    const navigation = document.querySelector(".navigation");
+    if (!navigation) return;
+    let link = navigation.querySelector(".nav-auth-link");
+    if (authenticated) {
+        if (link) link.remove();
+        return;
+    }
+    if (!link) {
+        link = document.createElement("a");
+        link.href = "/login";
+        link.className = "nav-button nav-auth-link";
+        link.textContent = "Get started";
+        navigation.appendChild(link);
+    }
+}
+
 async function updateAbsolutePrepHeader(session) {
 
     const authButtons =
@@ -432,6 +449,7 @@ async function updateAbsolutePrepHeader(session) {
 
     if (session) {
 
+        syncMobileAuthLink(true);
         authButtons.classList.add("logged-in");
         if (dashboardButton) { dashboardButton.hidden = false; dashboardButton.classList.add("is-authenticated"); dashboardButton.removeAttribute("aria-hidden"); }
 
@@ -446,6 +464,7 @@ async function updateAbsolutePrepHeader(session) {
        LOGGED OUT
     ======================================================== */
 
+    syncMobileAuthLink(false);
     authButtons.classList.remove("logged-in");
     if (dashboardButton) { dashboardButton.hidden = true; dashboardButton.classList.remove("is-authenticated"); dashboardButton.setAttribute("aria-hidden","true"); }
 
