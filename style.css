@@ -6517,3 +6517,19 @@ html.lexlogica-dark-mode .university-browse-details>summary{color:#dcebe5}
     .university-browse-details .university-catalog-grid{margin:0 12px}
     .university-browse-details .university-data-note{margin:14px}
 }
+
+/* Semantic feedback should keep its actual meaning on legacy inverted pages.
+   Counter-invert only discrete correct/incorrect elements (not their full
+   parent sections); the homepage now uses its native palette instead. */
+html.lexlogica-dark-mode:not(.lexlogica-home-native) :is(
+    .choice.correct-answer,.choice.incorrect-answer,
+    .answer-feedback.correct,.answer-feedback.incorrect,
+    .student-response-input.correct-answer,.student-response-input.incorrect-answer,
+    .mock-review-detail-status.correct,.mock-review-detail-status.incorrect,
+    .mock-review-choice.correct .mock-review-choice-row,
+    .mock-review-choice.selected:not(.correct) .mock-review-choice-row,
+    .choice-reason-correct,.choice-reason-wrong,
+    .question-status-dot.correct,.question-status-dot.incorrect,
+    .question-bank-peeker-status-dot.correct,.question-bank-peeker-status-dot.incorrect,
+    .vocab-status-chip.solved,.vocab-status-chip.unsolved
+){filter:invert(1)!important}

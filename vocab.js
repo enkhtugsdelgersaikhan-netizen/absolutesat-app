@@ -794,6 +794,61 @@ function saveState(){
     localStorage.setItem(STATE_KEY,JSON.stringify(wordState));
 }
 
+
+/* A ten-card recall session launched from the homepage. Returning users can
+   resume the same chosen IDs; a new session starts after completing all ten. */
+const guidedTenMode=new URLSearchParams(window.location.search).get("study")==="10";
+const guidedTenKey="lexlogica-guided-vocab:v1";
+let guidedTenSession=null;
+function setupGuidedTen(){
+    if(!guidedTenMode)return;
+    document.body.classList.add("guided-flashcards");
+    const eligible=shuffle(words.filter(item=>
+        !getWordState(item).solved||getWordState(item).review
+    ));
+    const chosen=eligible.slice(0,10);
+    if(chosen.length<10){
+        const seen=new Set(chosen.map(item=>String(item[0])));
+        chosen.push(...shuffle(words.filter(item=>!seen.has(String(item[0])))).slice(0,10-chosen.length));
+    }
+    const allIds=new Set(words.map(item=>String(item[0])));
+    let saved=null;
+    try {saved=JSON.parse(localStorage.getItem(guidedTenKey)||"null");}catch(_){}
+    if(saved&&Array.isArray(saved.ids)&&saved.ids.length===10&&
+       new Set(saved.ids).size===10&&saved.ids.every(id=>allIds.has(id))&&
+       Array.isArray(saved.done)&&saved.done.length<10&&
+       saved.done.every(id=>saved.ids.includes(id))) {
+        guidedTenSession=saved;
+    } else {
+        guidedTenSession={ids:chosen.map(item=>String(item[0])),done:[]};
+        try{localStorage.setItem(guidedTenKey,JSON.stringify(guidedTenSession));}catch(_){}
+    }
+    const header=document.querySelector(".vocab-header");
+    if(header){
+        header.insertAdjacentHTML("beforeend",
+          '<div class="guided-flashcard-banner"><strong id="guided-flashcard-progress">0 of 10 cards reviewed</strong>'+
+          '<a href="/#study-guide">← Back to study plan</a></div>');
+    }
+}
+function markGuidedTen(id){
+    if(!guidedTenSession)return;
+    id=String(id);
+    if(!guidedTenSession.ids.includes(id)||guidedTenSession.done.includes(id))return;
+    guidedTenSession.done.push(id);
+    try{localStorage.setItem(guidedTenKey,JSON.stringify(guidedTenSession));}catch(_){}
+}
+function updateGuidedTen(){
+    if(!guidedTenSession)return;
+    const progress=document.getElementById("guided-flashcard-progress");
+    const done=guidedTenSession.done.length;
+    if(progress)progress.textContent=done===10
+        ?"10 of 10 reviewed — session complete"
+        :done+" of 10 cards reviewed";
+    if(done===10)empty.textContent=
+      "Session complete. Your learning and review statuses are saved. Return to the study plan for another set.";
+}
+setupGuidedTen();
+
 let currentStatusFilter="all";
 let filtered=[];
 let index=0;
@@ -815,6 +870,7 @@ function getWordState(word){
 
 function matchesCurrentFilter(word,excludeWord=""){
     const name=word[0];
+    if(guidedTenSession&&(!guidedTenSession.ids.includes(name)||guidedTenSession.done.includes(name)))return false;
 
     if(excludeWord&&name===excludeWord){
         return false;
@@ -929,6 +985,7 @@ function updateProgress(){
 
 function render(){
     resetCardUI();
+    updateGuidedTen();
 
     if(!filtered.length){
         card.classList.add("hidden");
@@ -1007,6 +1064,7 @@ knownButton.addEventListener("click",()=>{
     const word=filtered[index];
     wordState[word[0]].solved=true;
     saveState();
+    markGuidedTen(word[0]);
 
     card.classList.remove("vocab-solved-flash");
     void card.offsetWidth;
@@ -1023,6 +1081,7 @@ learningButton.addEventListener("click",()=>{
     const word=filtered[index];
     wordState[word[0]].solved=false;
     saveState();
+    markGuidedTen(word[0]);
 
     card.classList.remove("vocab-learning-flash");
     void card.offsetWidth;
@@ -1057,6 +1116,11 @@ function initialize(){
         );
     });
 
+    if(guidedTenMode){
+        currentStatusFilter="all";
+        search.value="";
+        category.value="all";
+    }
     rebuildList();
 }
 
