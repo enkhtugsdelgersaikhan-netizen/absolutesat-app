@@ -1,0 +1,2487 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-10",
+  "audit": {
+    "sourceCount": 96,
+    "acceptedCount": 95,
+    "held": [
+      {
+        "source": 10,
+        "reason": "The referenced shaded graph is missing; recreating it without the original cannot verify an exactly matching display."
+      }
+    ],
+    "sectionCounts": {
+      "Math": 21,
+      "Reading & Writing": 74
+    },
+    "difficultyBySkill": {
+      "Cross-Text Connections": {
+        "Easy": 8,
+        "Medium": 11,
+        "Hard": 8
+      },
+      "Linear Inequalities": {
+        "Easy": 6,
+        "Medium": 9,
+        "Hard": 6
+      },
+      "Text Structure & Purpose": {
+        "Easy": 14,
+        "Medium": 19,
+        "Hard": 14
+      }
+    },
+    "underlinesRestored": 27,
+    "choiceTablesRestored": 3,
+    "correctAnswerPositions": {
+      "C": 26,
+      "D": 23,
+      "B": 21,
+      "A": 22
+    },
+    "readingWritingLengthBias": {
+      "words": {
+        "uniqueLongest": 51,
+        "longestCorrect": 10,
+        "longestGuessAccuracy": 19.61
+      },
+      "characters": {
+        "uniqueLongest": 69,
+        "longestCorrect": 16,
+        "longestGuessAccuracy": 23.19
+      }
+    },
+    "qualification": "Difficulty tags are editorial, not statistically calibrated against student performance; source attributions are user-supplied and not independently verified."
+  },
+  "questions": [
+    {
+      "id": "math-20261010-user96-q001",
+      "groupId": "math-20261010-user96-q001",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "subtopic": "Linear Inequalities",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "For which ordered pair (a, b) is the point (a − 1, b + 2) a solution to the following system of inequalities?\n3x − 2y > 7\ny ≥ −x + 4",
+      "choices": {
+        "A": "(1, 2)",
+        "B": "(4, −3)",
+        "C": "(6, 0)",
+        "D": "(4, −1)"
+      },
+      "correctAnswer": "C",
+      "explanation": "The pair (6, 0) gives (x, y) = (5, 2). Then 3(5) − 2(2) = 11 > 7, and 2 ≥ −5 + 4 = −1. Thus the transformed point satisfies both inequalities.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 1,
+      "classificationVersion": "2026-10-10-editorial-audit",
+      "desmosMethod": "Enter 3x−2y>7 and y≥−x+4. Plot the transformed candidate points (0,4), (3,−1), (5,2), and (3,1). Only (5,2) lies in both shaded regions; (3,1) lies on the excluded boundary of the strict inequality."
+    },
+    {
+      "id": "math-20261010-user96-q002",
+      "groupId": "math-20261010-user96-q002",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "subtopic": "Linear Inequalities",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A resin cures properly only when its actual temperature is between 62°C and 68°C, inclusive. A sensor consistently reports a temperature 4°C higher than the actual temperature. Which reported temperature could indicate that the resin is curing properly?",
+      "choices": {
+        "A": "63°C",
+        "B": "65°C",
+        "C": "73°C",
+        "D": "70°C"
+      },
+      "correctAnswer": "D",
+      "explanation": "Subtract the sensor's 4°C overstatement. A report of 70°C corresponds to an actual temperature of 66°C, which is within the inclusive interval [62, 68].",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 2,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "math-20261010-user96-q003",
+      "groupId": "math-20261010-user96-q003",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "subtopic": "Linear Inequalities",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "Each row in an answer-choice table gives x and z, where y = z + 2. Which option contains only rows that produce solutions to 3y + 2x > 11?",
+      "choices": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "B",
+      "explanation": "Substitute y = z + 2 to obtain 3z + 2x > 5. For option B, each row gives 3z + 2x = 7: 3(3) + 2(−1), 3(1) + 2(2), and 3(−1) + 2(5). All three exceed 5.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 3,
+      "classificationVersion": "2026-10-10-editorial-audit",
+      "choiceTables": {
+        "A": {
+          "headers": [
+            "x",
+            "z"
+          ],
+          "rows": [
+            [
+              "−1",
+              "3"
+            ],
+            [
+              "2",
+              "0"
+            ],
+            [
+              "5",
+              "−1"
+            ]
+          ]
+        },
+        "B": {
+          "headers": [
+            "x",
+            "z"
+          ],
+          "rows": [
+            [
+              "−1",
+              "3"
+            ],
+            [
+              "2",
+              "1"
+            ],
+            [
+              "5",
+              "−1"
+            ]
+          ]
+        },
+        "C": {
+          "headers": [
+            "x",
+            "z"
+          ],
+          "rows": [
+            [
+              "−1",
+              "3"
+            ],
+            [
+              "2",
+              "1"
+            ],
+            [
+              "5",
+              "−2"
+            ]
+          ]
+        },
+        "D": {
+          "headers": [
+            "x",
+            "z"
+          ],
+          "rows": [
+            [
+              "−1",
+              "2"
+            ],
+            [
+              "2",
+              "1"
+            ],
+            [
+              "5",
+              "−1"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "math-20261010-user96-q004",
+      "groupId": "math-20261010-user96-q004",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "subtopic": "Linear Inequalities",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A repair studio charges $68 for an inspection that includes the first hour of labor. Each additional hour costs $24. A 15% tax applies to the entire charge. A customer authorizes at most $230, including tax. If x ≥ 1 is the total number of labor hours, which inequality represents the customer's limit?",
+      "choices": {
+        "A": "1.15(68 + 24x) ≤ 230",
+        "B": "68 + 1.15[24(x − 1)] ≤ 230",
+        "C": "1.15[68 + 24(x − 1)] ≤ 230",
+        "D": "1.15[68 + 24(x − 1)] ≥ 230"
+      },
+      "correctAnswer": "C",
+      "explanation": "Only x − 1 hours incur the additional labor charge. The pretax total is 68 + 24(x − 1). Multiplying the entire total by 1.15 includes the tax, and 'at most' requires ≤ 230.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 4,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "math-20261010-user96-q005",
+      "groupId": "math-20261010-user96-q005",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "subtopic": "Linear Inequalities",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A drone can carry at most 42 kg of cargo, excluding components that are part of the drone itself. Each sensor pod has a mass of 3 kg, and each battery pack has a mass of 2 kg. Exactly one battery pack is part of the drone; all other battery packs count as cargo. Each row below lists x sensor pods and y total battery packs aboard. Which option contains only allowable loads?",
+      "choices": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "D",
+      "explanation": "The cargo mass is 3x + 2(y − 1). Option D gives cargo masses of 38, 42, and 42 kg. All meet the inclusive 42 kg limit.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 5,
+      "classificationVersion": "2026-10-10-editorial-audit",
+      "choiceTables": {
+        "A": {
+          "headers": [
+            "x",
+            "y"
+          ],
+          "rows": [
+            [
+              "4",
+              "14"
+            ],
+            [
+              "8",
+              "11"
+            ],
+            [
+              "10",
+              "7"
+            ]
+          ]
+        },
+        "B": {
+          "headers": [
+            "x",
+            "y"
+          ],
+          "rows": [
+            [
+              "4",
+              "17"
+            ],
+            [
+              "8",
+              "10"
+            ],
+            [
+              "10",
+              "7"
+            ]
+          ]
+        },
+        "C": {
+          "headers": [
+            "x",
+            "y"
+          ],
+          "rows": [
+            [
+              "4",
+              "14"
+            ],
+            [
+              "8",
+              "10"
+            ],
+            [
+              "10",
+              "8"
+            ]
+          ]
+        },
+        "D": {
+          "headers": [
+            "x",
+            "y"
+          ],
+          "rows": [
+            [
+              "4",
+              "14"
+            ],
+            [
+              "8",
+              "10"
+            ],
+            [
+              "10",
+              "7"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "math-20261010-user96-q006",
+      "groupId": "math-20261010-user96-q006",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "subtopic": "Linear Inequalities",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "Three consecutive odd integers are written in increasing order, with n as the first integer. Twice the sum of the last two integers is no more than 9 greater than three times the first integer. Which inequality is equivalent to this condition?",
+      "choices": {
+        "A": "n ≥ −3",
+        "B": "n ≤ −3",
+        "C": "n ≤ 3",
+        "D": "n ≥ 3"
+      },
+      "correctAnswer": "B",
+      "explanation": "The last two integers are n + 2 and n + 4. Therefore 2[(n + 2) + (n + 4)] ≤ 3n + 9. Simplifying gives 4n + 12 ≤ 3n + 9, or n ≤ −3, with n restricted to odd integers.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 6,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "math-20261010-user96-q007",
+      "groupId": "math-20261010-user96-q007",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "subtopic": "Linear Inequalities",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A mobile observatory has a maximum loaded mass of 10,000 kg. Its platform has a mass of 1,600 kg, and required ballast has a mass equal to one fifth of the maximum loaded mass. The remaining load consists of 90 kg instrument cases and 140 kg power units. If x and y are the respective numbers of these items, which inequality describes an allowable load?",
+      "choices": {
+        "A": "90x + 140y ≤ 6,400",
+        "B": "140x + 90y ≤ 6,400",
+        "C": "90x + 140y ≤ 8,400",
+        "D": "90x + 140y ≥ 6,400"
+      },
+      "correctAnswer": "A",
+      "explanation": "The ballast has a mass of 10,000/5 = 2,000 kg. After subtracting the platform and ballast, 10,000 − 1,600 − 2,000 = 6,400 kg remain for the cases and power units. Their combined mass is 90x + 140y.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 7,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "math-20261010-user96-q008",
+      "groupId": "math-20261010-user96-q008",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "subtopic": "Linear Inequalities",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "A cart can carry at most 90 kg of printed materials. Each folio weighs 0.6 kg, and each map bundle weighs 1.5 kg. Of f folios printed, 12 remain in the workshop; all m map bundles are loaded. The cart must carry at least four times as many folios as map bundles. For integers f ≥ 12 and m ≥ 0, which system represents these requirements?",
+      "choices": {
+        "A": "0.6f + 1.5m ≤ 90; f ≥ 4m",
+        "B": "0.6(f − 12) + 1.5m ≤ 90; m ≥ 4(f − 12)",
+        "C": "0.6(f + 12) + 1.5m ≤ 90; f − 12 ≥ 4m",
+        "D": "0.6(f − 12) + 1.5m ≤ 90; f − 12 ≥ 4m"
+      },
+      "correctAnswer": "D",
+      "explanation": "The cart carries f − 12 folios and m map bundles. Apply these loaded counts both to the mass limit and to the requirement that the number of loaded folios be at least 4m.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 8,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "math-20261010-user96-q009",
+      "groupId": "math-20261010-user96-q009",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "subtopic": "Linear Inequalities",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "During a shipping trial, the lightest load weighed 96 pounds and the heaviest weighed 160 pounds. A vehicle's capacity is 200 pounds. If u is the unused capacity for any load recorded during the trial, which inequality must hold?",
+      "choices": {
+        "A": "96 ≤ u ≤ 160",
+        "B": "40 ≤ u ≤ 104",
+        "C": "104 ≤ u ≤ 160",
+        "D": "40 ≤ u ≤ 200"
+      },
+      "correctAnswer": "B",
+      "explanation": "Unused capacity is u = 200 − L, where 96 ≤ L ≤ 160. The heaviest load leaves the least capacity, 200 − 160 = 40; the lightest leaves the most, 200 − 96 = 104.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 9,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "math-20261010-user96-q011",
+      "groupId": "math-20261010-user96-q011",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "subtopic": "Linear Inequalities",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A real number p satisfies p ≥ 4 − 3q, where q = 2r − 1. When r = 4, what is the least possible value of p?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "First find q = 2(4) − 1 = 7. Then p ≥ 4 − 3(7) = −17. Equality is permitted, so the least possible value is −17.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 11,
+      "classificationVersion": "2026-10-10-editorial-audit",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "-17"
+      ]
+    },
+    {
+      "id": "math-20261010-user96-q012",
+      "groupId": "math-20261010-user96-q012",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "subtopic": "Linear Inequalities",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A laboratory transports only 10-liter shallow tanks and 25-liter tall tanks. A delivery must contain at least 18 tanks, and their total volume may not exceed 330 liters. What is the greatest number of tall tanks that a delivery can contain?",
+      "choices": {
+        "A": "12",
+        "B": "10",
+        "C": "9",
+        "D": "13"
+      },
+      "correctAnswer": "B",
+      "explanation": "Eighteen shallow tanks would occupy 180 liters. Replacing a shallow tank with a tall one adds 15 liters, so at most (330 − 180)/15 = 10 replacements are possible. Ten tall and eight shallow tanks occupy exactly 330 liters. Eleven tall tanks would require at least seven shallow tanks, occupying 345 liters; hence 10 is the maximum.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 12,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "math-20261010-user96-q013",
+      "groupId": "math-20261010-user96-q013",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "subtopic": "Linear Inequalities",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "The greatest permitted value of z is 6 less than two thirds of m. If m = 3t + 12, which inequality describes all permitted values of z in terms of t?",
+      "choices": {
+        "A": "z ≥ 2t + 2",
+        "B": "z ≤ 2t − 6",
+        "C": "z ≤ 2t + 2",
+        "D": "z ≤ 2t + 8"
+      },
+      "correctAnswer": "C",
+      "explanation": "A greatest permitted value is an inclusive upper bound: z ≤ (2/3)m − 6. Substituting m = 3t + 12 gives z ≤ 2t + 8 − 6 = 2t + 2.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 13,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "math-20261010-user96-q014",
+      "groupId": "math-20261010-user96-q014",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "subtopic": "Linear Inequalities",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "Consider the system y < 2x − 3 and x < 6. Each answer-choice table lists x and s, where s = x + y. Which option contains only rows that correspond to solutions of the system?",
+      "choices": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "C",
+      "explanation": "Since y = s − x, the first inequality becomes s < 3x − 3. For option C, the comparisons are 2 < 3, 8 < 9, and 11 < 12. Its x-values, 2, 4, and 5, are also all less than 6.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 14,
+      "classificationVersion": "2026-10-10-editorial-audit",
+      "choiceTables": {
+        "A": {
+          "headers": [
+            "x",
+            "s"
+          ],
+          "rows": [
+            [
+              "2",
+              "2"
+            ],
+            [
+              "4",
+              "9"
+            ],
+            [
+              "5",
+              "11"
+            ]
+          ]
+        },
+        "B": {
+          "headers": [
+            "x",
+            "s"
+          ],
+          "rows": [
+            [
+              "2",
+              "2"
+            ],
+            [
+              "4",
+              "8"
+            ],
+            [
+              "6",
+              "11"
+            ]
+          ]
+        },
+        "C": {
+          "headers": [
+            "x",
+            "s"
+          ],
+          "rows": [
+            [
+              "2",
+              "2"
+            ],
+            [
+              "4",
+              "8"
+            ],
+            [
+              "5",
+              "11"
+            ]
+          ]
+        },
+        "D": {
+          "headers": [
+            "x",
+            "s"
+          ],
+          "rows": [
+            [
+              "2",
+              "3"
+            ],
+            [
+              "4",
+              "8"
+            ],
+            [
+              "5",
+              "11"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "math-20261010-user96-q015",
+      "groupId": "math-20261010-user96-q015",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "subtopic": "Linear Inequalities",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "An archivist digitized 58, 71, and 65 records during the first three weeks of a project. In week 4, the archivist will digitize n records; in week 5, the plan is to digitize 12 more records than in week 4. Which inequality represents a five-week average of at least 70 records per week?",
+      "choices": {
+        "A": "(n + 194)/5 ≥ 70",
+        "B": "(2n + 194)/5 ≥ 70",
+        "C": "(2n + 206)/5 ≤ 70",
+        "D": "(2n + 206)/5 ≥ 70"
+      },
+      "correctAnswer": "D",
+      "explanation": "The first three weeks contribute 194 records, and the last two contribute n + (n + 12). The total is 2n + 206. Divide by 5 weeks and use ≥ because the required average is at least 70.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 15,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "math-20261010-user96-q016",
+      "groupId": "math-20261010-user96-q016",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "subtopic": "Linear Inequalities",
+      "difficulty": "Easy",
+      "passage": "",
+      "question": "A point (p, q) is defined by p + q = −4 and p − q = 10. Which system of inequalities does the point satisfy?",
+      "choices": {
+        "A": "p < 0; q < 0",
+        "B": "p < 0; q > 0",
+        "C": "p > 0; q < 0",
+        "D": "p > 0; q > 0"
+      },
+      "correctAnswer": "C",
+      "explanation": "Add the equations to get 2p = 6, so p = 3. Then q = −4 − 3 = −7. The point therefore has a positive first coordinate and a negative second coordinate.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 16,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "math-20261010-user96-q017",
+      "groupId": "math-20261010-user96-q017",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "subtopic": "Linear Inequalities",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A composite is classified as fully vitrified if and only if its density exceeds 2.4 grams per cubic centimeter. A report gives density d in kilograms per cubic meter; 1 gram per cubic centimeter equals 1,000 kilograms per cubic meter. Which reported interval guarantees that every possible density in the interval is fully vitrified?",
+      "choices": {
+        "A": "2,200 < d < 2,400",
+        "B": "2,400 ≤ d < 2,650",
+        "C": "2,450 < d < 2,650",
+        "D": "2,300 < d < 2,600"
+      },
+      "correctAnswer": "C",
+      "explanation": "The classification requires d > 2,400 kg/m³. Every value strictly between 2,450 and 2,650 exceeds that threshold, so the entire interval meets the requirement.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 17,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "math-20261010-user96-q018",
+      "groupId": "math-20261010-user96-q018",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "subtopic": "Linear Inequalities",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "An archive holds x sketches and y photographs. It donates 8 sketches and then receives 11 photographs. After both changes, the total must be at most 72 items. Which inequality represents this condition in terms of the original counts x and y?",
+      "choices": {
+        "A": "x + y ≤ 69",
+        "B": "x + y ≤ 75",
+        "C": "x + y ≥ 69",
+        "D": "x + y ≤ 91"
+      },
+      "correctAnswer": "A",
+      "explanation": "After the changes, the archive holds (x − 8) + (y + 11) = x + y + 3 items. The condition x + y + 3 ≤ 72 simplifies to x + y ≤ 69.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 18,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "math-20261010-user96-q019",
+      "groupId": "math-20261010-user96-q019",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "subtopic": "Linear Inequalities",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "Which point (x, y) has the property that both the point itself and its reflection across the x-axis satisfy y > 4 − (3/2)x?",
+      "choices": {
+        "A": "(2, 1)",
+        "B": "(4, 3)",
+        "C": "(6, 4)",
+        "D": "(0, 2)"
+      },
+      "correctAnswer": "C",
+      "explanation": "Reflecting (6, 4) across the x-axis gives (6, −4). At x = 6, the right-hand side is 4 − (3/2)(6) = −5. Both 4 and −4 are strictly greater than −5, so both points satisfy the inequality.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 19,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "math-20261010-user96-q020",
+      "groupId": "math-20261010-user96-q020",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "subtopic": "Linear Inequalities",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A sound technician earns $22 per hour for the first 10 hours of a project and $34 per hour thereafter. A $40 equipment charge is deducted from the total earnings. The technician saves 60% of the remaining amount. What is the least whole number of hours at the higher rate needed to save at least $372?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "Let h be the hours at the higher rate. The savings are 0.60[220 + 34h − 40]. Requiring at least 372 gives 180 + 34h ≥ 620, so h ≥ 440/34 ≈ 12.94. Round up to 13 whole hours; 12 hours would be insufficient.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 20,
+      "classificationVersion": "2026-10-10-editorial-audit",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "13"
+      ]
+    },
+    {
+      "id": "math-20261010-user96-q021",
+      "groupId": "math-20261010-user96-q021",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "subtopic": "Linear Inequalities",
+      "difficulty": "Hard",
+      "passage": "",
+      "question": "Two pigment concentrates contain 24% and 38% dry solids by mass, respectively. A filtration step removes exactly one quarter of the dry solids from the combined concentrates. The retained dry solids may have a mass of at most 9 kg. If x and y are the masses, in kilograms, of the two concentrates, which inequality represents this condition?",
+      "choices": {
+        "A": "0.24x + 0.38y ≤ 9",
+        "B": "0.75(0.24x + 0.38y) ≥ 9",
+        "C": "(0.24x + 0.38y)/0.75 ≤ 9",
+        "D": "0.75(0.24x + 0.38y) ≤ 9"
+      },
+      "correctAnswer": "D",
+      "explanation": "Before filtration, the dry solids have a mass of 0.24x + 0.38y kg. Removing one quarter leaves three quarters, or 0.75, of that mass. 'At most 9 kg' gives the stated inequality.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 21,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "math-20261010-user96-q022",
+      "groupId": "math-20261010-user96-q022",
+      "status": "staged",
+      "section": "Math",
+      "domain": "Algebra",
+      "skill": "Linear Inequalities",
+      "subtopic": "Linear Inequalities",
+      "difficulty": "Medium",
+      "passage": "",
+      "question": "A research balloon can carry a total load of at most 126 kg. Fixed avionics weigh 18 kg. Each sample canister weighs 7.5 kg and must be packed in its own 2.5 kg protective case. What is the greatest number of canisters the balloon can carry?",
+      "choices": {},
+      "correctAnswer": "",
+      "explanation": "After the avionics, 126 − 18 = 108 kg remain. Each packed canister weighs 7.5 + 2.5 = 10 kg, so the number n must satisfy 10n ≤ 108. Since n is a whole number, its maximum is 10.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 22,
+      "classificationVersion": "2026-10-10-editorial-audit",
+      "answerType": "student-response",
+      "acceptedAnswers": [
+        "10"
+      ]
+    },
+    {
+      "id": "rw-20261010-user96-q023",
+      "groupId": "rw-20261010-user96-q023",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Hard",
+      "passage": "<u>Ecologists Nerea Valcárcel and Jacek Orlov examined a seemingly straightforward expectation in a 2021 study: reopening channels between isolated marsh pools should restore their former diversity of fish.</u> Once routes become passable, fish ought to recolonize suitable pools, producing richer communities. The researchers found, however, that access alone was an unreliable predictor. Newly connected pools sometimes lost species after sediment disturbed their breeding grounds; conversely, pools with few incoming fish supported unexpectedly diverse communities when submerged vegetation offered a variety of refuges.",
+      "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+      "choices": {
+        "A": "It outlines the procedures by which the researchers distinguished recolonization from other ecological processes.",
+        "B": "It identifies a prediction that the researchers investigated and the reasoning motivating that prediction.",
+        "C": "It contrasts the researchers' eventual conclusions with results reported by earlier investigators.",
+        "D": "It places the study within a sequence of investigations that progressively refined the same prediction."
+      },
+      "correctAnswer": "B",
+      "explanation": "B is correct because the sentence names the study's focus and states the intuitively plausible relationship it examines: renewed access should restore fish diversity. A mistakes the expectation for a procedural account; no sampling or measurement method is given there. C describes a comparison with earlier findings that never occurs. D likewise invents a history of successive investigations. The later qualifications do not turn the opening sentence itself into a report of results.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 23,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q024",
+      "groupId": "rw-20261010-user96-q024",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Medium",
+      "passage": "Built in Qorlan in 1993, the Meridian wind tunnel initially helped a technical college test small agricultural aircraft. Its enclosed testing chamber acquired the nickname “the cork room.” <u>The facility remains operational, although the materials that distinguish its chamber also demand persistent maintenance.</u> Steel supports and a conventional motor surround the airflow passage, but its interior is lined with thick, overlapping sheets of cork that suppress vibrations. Technicians periodically replace sections loosened by moisture so that the lining cannot disturb measurements. A roof leak once forced the tunnel to close while several entire panels were removed.",
+      "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+      "choices": {
+        "A": "It introduces the tunnel's unusual construction, setting up the maintenance details that follow.",
+        "B": "It explains why the college originally chose to study agricultural aircraft rather than other vehicles.",
+        "C": "It identifies a benefit that the wind tunnel brought to the college during its first year.",
+        "D": "It questions the effectiveness of the tunnel by criticizing the judgment of its original designers."
+      },
+      "correctAnswer": "A",
+      "explanation": "A is correct: the sentence connects continued operation with maintenance required by unusual materials, preparing for the account of cork lining, moisture damage, and replacement. B concerns the original research purpose, which the sentence does not explain. C mistakes ongoing upkeep for an initial institutional benefit. D overstates the passage's stance; reporting repair needs does not amount to condemning the designers or declaring the tunnel ineffective.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 24,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q025",
+      "groupId": "rw-20261010-user96-q025",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Cross-Text Connections",
+      "subtopic": "Cross-Text Connections",
+      "difficulty": "Easy",
+      "passage": "Text 1\nIn Cuts and Crowns, orchard specialist Ružena Talić argues that careless pruning depresses “seasonal yield,” rather than merely spoiling a tree's appearance. Her 2018 survey attributes nearly one eighth of preventable crop losses to badly placed cuts. Removing the wrong branch can interrupt the movement of water and expose valuable fruiting wood to infection. Talić therefore treats precision, particularly in cuts near a tree's main limbs, as fundamental to an orchard's success.\n\nText 2\nFor horticulturist Dario Ansen, avoiding “maintenance fatigue” is one route to improving fruit production. Ansen regards pruning as a way to “renew productive wood,” but cautions that even beautifully executed cuts can be costly when performed too frequently. Repeated interventions consume the tree's stored resources, and an immaculately shaped orchard may consequently produce less fruit than one maintained more sparingly.",
+      "question": "Based on the texts, how would Ansen most likely respond to Talić's discussion of “seasonal yield”?",
+      "choices": {
+        "A": "By arguing that Talić overlooks every connection between pruning and fruit production",
+        "B": "By agreeing that precise pruning warrants study without qualifying its value for fruit production",
+        "C": "By noting that even skillful pruning can sometimes reduce fruit production.",
+        "D": "By maintaining that pruning precision matters chiefly for the oldest trees in an orchard"
+      },
+      "correctAnswer": "C",
+      "explanation": "C follows Ansen's distinction between the quality and frequency of pruning: accurate cuts can still harm yield if made too often. A contradicts Text 1, which explicitly connects pruning to production. B omits Ansen's central qualification and makes his agreement unconditional. D invents an age-based restriction; neither text confines the issue to old trees. Ansen would broaden Talić's account by identifying a different way pruning can reduce yield.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 25,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q026",
+      "groupId": "rw-20261010-user96-q026",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Hard",
+      "passage": "Liora Senvik's atlas of coastal currents, The Moving Shore, scarcely circulated when it appeared in 1967. Reviewers considered its simplified diagrams unsuitable for professional navigators, and it remained obscure for almost two decades. An educational licensing agreement governing reproduction then lapsed in 1986, creating the opening through which the atlas found a second audience. <u>Instructors at small maritime schools began duplicating its diagrams without paying the fees that had previously made classroom use expensive.</u> By the time a new licensing arrangement was negotiated in 2002, generations of trainees had learned current patterns from Senvik's once-neglected pages.",
+      "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+      "choices": {
+        "A": "It suggests that the atlas's subject matter explains the renewed licensing agreement mentioned later.",
+        "B": "It identifies a factor responsible for reviewers' unfavorable initial assessments of the atlas.",
+        "C": "It compares the distinct legal risks faced by instructors and professional navigators.",
+        "D": "It illustrates how instructors made use of the preceding change in circumstances."
+      },
+      "correctAnswer": "D",
+      "explanation": "D is correct because the lapsed agreement enables inexpensive duplication, and the underlined sentence describes instructors using that opportunity. A confuses the atlas's contents with the licensing circumstances. B moves a later development backward in time and mistakes reproduction costs for reviewers' objections. C introduces a comparison of legal risks absent from the passage. The sentence's role is to connect an enabling change to the actions that helped revive the atlas.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 26,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q027",
+      "groupId": "rw-20261010-user96-q027",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Easy",
+      "passage": "The following text is adapted from Celina Garnet's 1937 short story “The Fifth Proof.” Aster is a self-taught cartographer who regularly submits a theory to a geographical society.\n\nAster would admit that her account of underground rivers lacked certain refinements; nevertheless, she regarded it as the modest companion that “The General Theory of Waters” had awaited for a century. Each spring, therefore, the society's committee received another version of her paper. To unsettle those readers who had acquired the habit of rejecting “The Hidden Basin,” she shifted a diagram from the beginning to the end, exchanged the order of two examples, and bestowed a fresh title upon the same argument. The argument itself she left untouched, since it was, in her judgment, the one part that needed no improvement.",
+      "question": "Which choice best states the main purpose of the text?",
+      "choices": {
+        "A": "To account for the committee's objections to Aster's theory despite its acknowledged strengths",
+        "B": "To describe the repeated actions that Aster's confidence in her theory leads her to take",
+        "C": "To highlight the unusual features that have made Aster's paper widely recognized",
+        "D": "To illustrate a compromise gradually reached between Aster and the society's committee"
+      },
+      "correctAnswer": "B",
+      "explanation": "B is correct because the passage connects Aster's high estimation of her theory to repeated submissions and cosmetic revisions designed to evade rejection. A is unsupported: the committee's actual objections are never explained. C assumes recognition and emphasizes technical features, although the text centers on Aster's behavior. D invents mutual accommodation; only Aster changes anything, and she refuses to revise the argument. Her small concession about refinements does not negate her fundamental confidence.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 27,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q028",
+      "groupId": "rw-20261010-user96-q028",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Easy",
+      "passage": "When hydrologist Maëlle Veyrat assembled the 1996 Atlas of Buried Water, she sought more than a record of the reservoirs already familiar to engineering firms. Her aim was to bring into technical discussion the water-management knowledge of communities whose practices seldom appeared in official surveys. Seasonal wells maintained by upland pastoralists and seepage channels used by valley farmers became sources for the atlas's diagrams, while practitioners helped interpret observations that instruments alone could not explain. Among Veyrat's collaborators was well keeper Idris Aoulen, whose recollections of drought-year springs prompted the team to revise several maps.",
+      "question": "Which choice best describes the overall purpose of the text?",
+      "choices": {
+        "A": "To recount the obstacles that prevented Veyrat from completing her atlas as originally planned",
+        "B": "To establish that Veyrat's atlas influenced engineering more strongly than her later research did",
+        "C": "To explain the aims and methods that shaped Veyrat's atlas project",
+        "D": "To describe the promotional strategy through which Veyrat and Aoulen secured recognition for the atlas"
+      },
+      "correctAnswer": "C",
+      "explanation": "C captures both parts of the account: Veyrat wanted neglected practical knowledge represented, and she consulted communities and incorporated their observations to achieve that aim. A turns revisions into evidence of thwarted plans, which the text does not suggest. B requires a comparison with later research that is absent. D mistakes collaboration in producing the atlas for publicity. The final example illustrates the project's approach, rather than its reception.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 28,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q029",
+      "groupId": "rw-20261010-user96-q029",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Cross-Text Connections",
+      "subtopic": "Cross-Text Connections",
+      "difficulty": "Easy",
+      "passage": "Text 1\nBefore 2007, engineer Juno Varen was associated with routing systems for cargo terminals. Her subsequent design for a coral nursery therefore looked like a professional detour. Yet the nursery's channels drew on the same concern with bottlenecks and uneven distribution that had shaped her terminal projects. Later ventilation designs for hospitals made that continuity easier to recognize, although their outward forms differed markedly.\n\nText 2\nJudging Varen's nursery solely by the field in which she first became known obscures the habits that made her suitable for the commission. Her earlier cargo networks adjusted flows when a local passage became congested; the nursery likewise redirected water when individual channels accumulated debris. The hospital systems that followed applied related adjustments to air. Different materials and purposes need not imply unrelated design principles.",
+      "question": "Based on the texts, both authors would most likely agree about the answer to which question?",
+      "choices": {
+        "A": "Does Varen's nursery design have substantial connections to her other projects?",
+        "B": "Were Varen's cargo-terminal designs more commercially successful than her other designs?",
+        "C": "Could another engineer have designed the same nursery with equally effective results?",
+        "D": "Would Varen necessarily excel in every branch of engineering she attempted?"
+      },
+      "correctAnswer": "A",
+      "explanation": "Both texts answer A affirmatively, identifying continuity across projects despite changes in field and appearance. Text 1 emphasizes distribution problems; Text 2 illustrates adaptive responses to congestion. B concerns commercial success, which neither addresses. C asks about an unexamined alternative designer. D generalizes beyond the demonstrated projects to every possible field. Their shared claim is continuity, not universal versatility.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 29,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q030",
+      "groupId": "rw-20261010-user96-q030",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Hard",
+      "passage": "Nineteenth-century weather observers are often pictured as solitary enthusiasts attending obsessively to their instruments. Some did keep notebooks whose exacting entries leave little room for anything beyond pressure, wind, and rain. <u>That common activity, however, should not be mistaken for a common social or educational background.</u> Harbor workers sometimes recorded weather between shifts with little formal instruction. Other observers held university appointments and inherited estates large enough to support private instrument towers.",
+      "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+      "choices": {
+        "A": "It casts doubt on the trustworthiness of a particular observer's surviving account.",
+        "B": "It dismisses an explanation for the growing popularity of weather observation.",
+        "C": "It supports a conclusion that most observers underwent similar training.",
+        "D": "It advances a qualification that the subsequent examples develop."
+      },
+      "correctAnswer": "D",
+      "explanation": "D is correct because the sentence warns against inferring shared background from shared activity, and the contrasting examples of harbor workers and university-based estate owners substantiate that warning. A introduces a reliability issue absent from the text. B confuses a stereotype with a causal explanation of popularity. C reverses the qualification: the examples emphasize differences in training and circumstances, rather than a common preparation.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 30,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q031",
+      "groupId": "rw-20261010-user96-q031",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Easy",
+      "passage": "Across four decades of laboratory work, Irena Volsek extracted unexpectedly large insights from deliberately small apparatuses. She favored enclosed microcosms: miniature environments in which selected conditions could be controlled while others remained observable. For Root Window, completed in 1988, transparent chambers allowed her to track individual roots as they crossed layers of contrasting soil. Her 1994 Salt Passage experiment used dye and a hand-built imaging rig to make tiny changes in groundwater movement visible. Modest containers and inexpensive components thus supported investigations whose results informed debates far beyond the laboratory bench.",
+      "question": "Which choice best describes the overall structure of the text?",
+      "choices": {
+        "A": "It identifies restrictions imposed by a scientific method, then shows how one researcher abandoned that method.",
+        "B": "It offers a general assessment of a researcher's work, then supports it with descriptions of inventive projects.",
+        "C": "It praises a researcher, then concedes that the influence of her experiments has diminished.",
+        "D": "It lists a researcher's inspirations, then explains why she replaced her usual experimental techniques."
+      },
+      "correctAnswer": "B",
+      "explanation": "B follows the organization: the opening assesses Volsek's ability to obtain substantial insights from small apparatuses, and the microcosm description and two projects substantiate that assessment. A invents abandonment; all examples fit the stated approach. C introduces declining influence without support. D treats project descriptions as sources of inspiration and invents a change in method. The closing sentence reinforces, rather than reverses, the opening assessment.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 31,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q032",
+      "groupId": "rw-20261010-user96-q032",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Hard",
+      "passage": "The following text is adapted from Lenna Othmar's 1926 novella The Night Signal. The narrator, a marine technician, is monitoring two offshore stations, Vela and Oren.\n\nWith Vela's readings steady beside me, I left a report unfinished and listened to the wind worrying the shed door. Eventually I took the lantern down the passage toward Oren's receiver. I had imagined a dozen small betrayals of its motor, any one of which might announce a failure before the dial acknowledged it. <u>A disturbance did finally reach me, though it had none of the mechanical character I had rehearsed.</u> From behind the receiver came a young sailor's laughing call: “If you mean to stand there all night, at least come in!” How unexpectedly a voice could warm that iron room!",
+      "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+      "choices": {
+        "A": "It anticipates an occurrence that the next sentence presents in more concrete detail.",
+        "B": "It resolves the narrator's uncertainty about whether to complete the unfinished report.",
+        "C": "It returns to an explicit comparison between the narrator's emotions and the weather.",
+        "D": "It indicates the narrator's realization that attempts to protect the equipment have damaged it."
+      },
+      "correctAnswer": "A",
+      "explanation": "A is correct because the unspecified, unexpectedly nonmechanical disturbance becomes the sailor's laughing call in the next sentence. B attaches the sentence to the report, although it concerns what the narrator hears. C invents an explicit emotional-weather comparison; the wind supplies atmosphere without establishing that comparison. D adds damage and a realization of responsibility absent from the excerpt. The sentence creates a brief expectation that the following detail fulfills.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 32,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q033",
+      "groupId": "rw-20261010-user96-q033",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Hard",
+      "passage": "The following text is from Nalin Eren's 1942 poem “Bankside Argument.” The Embankment and the River speak as characters.\n\nEMBANKMENT: <u>No sure defense but boundaries of stone;\nLet mountain torrents batter where they will,\nEach guarded field shall keep its harvest grown,\nAnd every wandering channel shall be still.</u>\nRIVER: But thirsty roots beyond your ramparts lie;\nYour sheltered fields may watch their orchards die.\nEMBANKMENT: Though scattered branches wither in the heat,\nHold fast the wall beneath the village street;\nA measured bank makes every flood retreat.",
+      "question": "Which choice best states the function of the underlined portion in the poem as a whole?",
+      "choices": {
+        "A": "It condenses a claim that the Embankment subsequently abandons.",
+        "B": "It reveals why the River eventually accepts the Embankment's reasoning.",
+        "C": "It demonstrates that the Embankment is unaware of the River's existing prejudices.",
+        "D": "It expresses a preference that the River's response challenges."
+      },
+      "correctAnswer": "D",
+      "explanation": "D is correct because the Embankment values containment by stone walls, while the River challenges that preference by pointing to thirsty roots and dying orchards outside those walls. A is contradicted by the Embankment's continued defense of the wall. B invents the River's acceptance, which is not shown. C assumes preexisting prejudices and ignorance rather than interpreting the actual disagreement. The opening claim establishes the opposed priorities voiced in the exchange.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 33,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q034",
+      "groupId": "rw-20261010-user96-q034",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Easy",
+      "passage": "The following text is adapted from Marek Velun's 1929 memoir Timetables After Dark. Velun recalls his early employment as a railway signal operator.\n\nFor seven years the junction occupied the whole bright interval of my youth. I remember those seasons not as a procession of trains but as a succession of decisions: swift ones, reconsidered ones, plans made confidently at noon and taken apart before midnight. Exhilaration and doubt kept exchanging places.\n\nA signal operator lives twice. One life belongs to the crowded room, where every movement must appear assured; the other belongs to the small uncertainty he carries behind that assurance. Under the foreman's watchful gaze, even an honest hesitation learns to disguise itself.",
+      "question": "Which choice best describes the structure of the text as a whole?",
+      "choices": {
+        "A": "The narrator criticizes professional expectations, then shows how individuals can overcome them.",
+        "B": "The narrator details his duties, then argues that his view of those duties differs from other operators' views.",
+        "C": "The narrator recalls a period of his own working life, then generalizes about people in that profession.",
+        "D": "The narrator recounts a single incident, then connects it to broader principles governing transportation policy."
+      },
+      "correctAnswer": "C",
+      "explanation": "C identifies the movement from Velun's seven years at the junction to general statements about a signal operator's public assurance and private uncertainty. A adds a solution that the text never offers. B invents a comparison with other operators' opinions; the second paragraph presents its account as general. D mistakes a retrospective description of several years for one incident and substitutes policy for the passage's concern with professional experience.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 34,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q035",
+      "groupId": "rw-20261010-user96-q035",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Medium",
+      "passage": "Encrypting transmissions can protect a remote sensor's location, but the accompanying drain on its battery is considerable. Engineers Amani Belkas and Luka Sten tested 26 prototype boards, measuring electrical current at a fixed voltage while the boards encoded identical packets. The team used the measurements to estimate the “privacy overhead” of transmitting those packets securely. <u>This overhead was substantial: encryption alone required nearly as much energy as sensing, storing readings, and maintaining the device's clock together.</u> A secure design therefore had to accommodate more than the ordinary power demands of collecting data.",
+      "question": "Which choice best states the function of the underlined sentence in the text as a whole?",
+      "choices": {
+        "A": "It conveys the magnitude of the additional energy demand associated with encryption.",
+        "B": "It specifies the circumstances in which the devices most often need to conceal their locations.",
+        "C": "It explains why encryption ultimately provides no useful protection to the devices.",
+        "D": "It describes the effects of an intervention that reduced the devices' energy consumption."
+      },
+      "correctAnswer": "A",
+      "explanation": "A is correct because the sentence makes the energy cost concrete by comparing encryption with three other functions combined. B concerns circumstances of use, not the measured magnitude. C converts a cost into a verdict of uselessness, although the opening acknowledges encryption's protective benefit. D invents a successful energy-reduction intervention. The comparison establishes how demanding secure transmission is without deciding whether its benefit outweighs that demand.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 35,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q036",
+      "groupId": "rw-20261010-user96-q036",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Easy",
+      "passage": "The following text is from Adelia Morcant's 1913 poem “First Water.” The speaker watches a newly repaired public fountain begin to flow.\n\nAt last the bronze mouth loosened into silver,\nAnd coolness climbed the stone in trembling threads;\nThe empty basin answered with a murmur,\nSoft circles widening where the water spreads.\nA lattice of reflected light went sailing\nAcross the window glass above the square;\nThe weary pump gave way to liquid music,\nAnd freshness seemed to gather in the air.",
+      "question": "Which choice best states the main purpose of the text?",
+      "choices": {
+        "A": "To explain how a fountain's operation improves the health of nearby plants",
+        "B": "To argue that the fountain's earlier silence was both more alarming and more invigorating than its operation",
+        "C": "To evoke the pleasing impressions accompanying the fountain's return to operation",
+        "D": "To describe the practical ways in which flowing water stimulates the local economy"
+      },
+      "correctAnswer": "C",
+      "explanation": "C fits the poem's emphasis on coolness, murmuring water, reflected light, music, and freshness as the repaired fountain begins flowing. A introduces plant health, which is not discussed. B attributes a comparative judgment to the earlier silence that the poem does not make. D substitutes economic effects for sensory impressions. The technical repair is context; the poem's work is to render the welcome experience of renewed flow.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 36,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q037",
+      "groupId": "rw-20261010-user96-q037",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Easy",
+      "passage": "The following text is from Orenna Voss's 1906 poem “Market Silk.”\n\nI sold the kiln's dry wood to buy\nA sleeve of silk for market day;\nWhen orders came, the hearth lay cold,\nMy bowls were only clay.\nI set the empty stall in place\nAnd watched the paying buyers go;\nThe potters smiled across the lane:\nFine silk cannot make fire glow.",
+      "question": "Which choice best describes the overall structure of the poem?",
+      "choices": {
+        "A": "It shows the consequences of a speaker's poorly judged decision.",
+        "B": "It follows an act of defiance against an established rule to its outcome.",
+        "C": "It contrasts the competing viewpoints of two separate communities.",
+        "D": "It traces a transformation confined to a single physical setting."
+      },
+      "correctAnswer": "A",
+      "explanation": "A is correct because the speaker trades fuel for silk and later cannot fire the bowls needed for paying customers. The empty stall and other potters' reaction expose the consequence of that choice. B invents a rule or authority the speaker defied. C mistakes nearby potters' response for a developed comparison between communities. D neglects both the change in location and, more significantly, the decision-and-consequence organization.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 37,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q038",
+      "groupId": "rw-20261010-user96-q038",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Hard",
+      "passage": "Bioluminescent algae, organisms that emit light when disturbed, have inspired striking experiments in illumination. In her 2022 survey, design reporter Mirela Dask identified “six outstanding living lamps,” including vessels whose contents flashed when a visitor turned a handle. <u>Such demonstrations, however, do not establish a dependable source of everyday illumination.</u> Attempts to light paths at a coastal research station with the algae encountered fluctuating brightness and strict temperature requirements. What makes an exhibition memorable can therefore complicate the routine task of keeping a passage visibly and consistently lit.",
+      "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+      "choices": {
+        "A": "It provides another specific instance of the innovation described immediately before it.",
+        "B": "It summarizes the author's personal experience as evidence for an earlier claim.",
+        "C": "It redirects the discussion from notable demonstrations to limitations on practical use.",
+        "D": "It introduces a claim that the subsequent account promptly rejects."
+      },
+      "correctAnswer": "C",
+      "explanation": "C is correct because the sentence shifts from impressive exhibition lamps to the question of dependable lighting, which the station's difficulties then illustrate. A confuses a qualification with another example. B invents autobiographical evidence; the author reports projects without claiming participation. D reverses the relation between the sentence and what follows: the fluctuating brightness and temperature requirements support, rather than reject, its caution.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 38,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q039",
+      "groupId": "rw-20261010-user96-q039",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Cross-Text Connections",
+      "subtopic": "Cross-Text Connections",
+      "difficulty": "Hard",
+      "passage": "Text 1\nHistorian Niko Ravel's account of surveyed farmland follows parcel boundaries across several settings. His discussion begins with ninth-century irrigation registers in Mereth, turns to the rectangular plots recorded by Talven's city councils in the 1400s, and then examines the numbered estates administered by trading companies in the 1700s. Each setting contributed a different practice to the boundaries familiar today.\n\nText 2\nIn From Furrow to Number, Ansel Peko treats parcel boundaries as both historical developments and expressions of nineteenth-century commercial ideals. A numbered plot may promise its cultivator an identifiable place, Peko argues, while actually encouraging distant owners to regard different landscapes as interchangeable assets. Recent forms of cooperative land management partly soften that tendency by treating adjoining plots as an ecological whole rather than isolated entries in an owner's ledger.",
+      "question": "How does Ravel's approach in Text 1 differ from Peko's approach in Text 2?",
+      "choices": {
+        "A": "Ravel traces developments without overtly evaluating them, whereas Peko combines historical explanation with criticism.",
+        "B": "Ravel compares cultural ideas about individuality, whereas Peko primarily exposes weaknesses in prior research.",
+        "C": "Ravel shows different societies independently reaching identical solutions, whereas Peko locates all developments in one society.",
+        "D": "Ravel makes one era responsible for the scale of farms, whereas Peko describes their uncontrolled expansion until recently."
+      },
+      "correctAnswer": "A",
+      "explanation": "A captures the difference in stance: Ravel recounts developments in several settings, while Peko links modern boundaries to a commercial mentality he critiques. B invents both a comparison of individuality and a review of previous research. C overstates the first text's practices as identical and the second text's explanation as a single-society origin. D introduces farm size and expansion, although both passages concern the organization and meaning of boundaries.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 39,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q040",
+      "groupId": "rw-20261010-user96-q040",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Easy",
+      "passage": "The following text is from Sabela Dorne's 1909 poem “Ledger Light.”\n\nThese columns once were doors through which I dreamed;\nThe narrow figures opened into years.\nNow years have taught what every promise cost,\nAnd fresh ink cannot wash away arrears.\nThough morning makes the paper bright again,\nMy eye returns to bargains made in vain,\nTo all that counting could not save from pain.",
+      "question": "Which choice best describes the overall structure of the poem?",
+      "choices": {
+        "A": "The speaker portrays a community whose fortunes have steadily declined.",
+        "B": "The speaker parallels departure from a familiar place with eventual fulfillment.",
+        "C": "The speaker weighs recent events to determine whether they were ultimately disappointing.",
+        "D": "The speaker explains how accumulated experience gives rise to somber reflection."
+      },
+      "correctAnswer": "D",
+      "explanation": "D is correct because the speaker contrasts the ledger's former promise with lessons learned over years, then shows those lessons drawing attention back to futile bargains and pain. A extends an individual reflection to an entire community without support. B adds departure and fulfillment, neither of which occurs. C confines the poem to recent events and a still-open evaluation; the speaker instead presents an established perspective shaped by accumulated experience.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 40,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q041",
+      "groupId": "rw-20261010-user96-q041",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Easy",
+      "passage": "Early subscription weather bulletins faced a difficulty their promoters had not anticipated. Gathering readings was not the obstacle: in 1874, forecasters Toma Virell and Asha Deren already combined observations from 46 stations into regularly printed regional summaries. The problem was persuading potential subscribers that a fresh forecast was worth buying repeatedly. Not until the 1890s, when growers increasingly planned harvest crews around predicted rainfall and freight offices began using forecasts to schedule exposed loads, did recurring subscriptions become attractive. The bulletins then supported a viable business rather than an impressive service with few paying users.",
+      "question": "Which choice best describes the overall structure of the text?",
+      "choices": {
+        "A": "It outlines a procedure, then surveys disagreements that improved the procedure.",
+        "B": "It identifies a difficulty, then explains how later developments overcame it.",
+        "C": "It praises an innovation, then admits that the innovation still has no practical application.",
+        "D": "It introduces two innovators, then recounts an event that placed them in conflict."
+      },
+      "correctAnswer": "B",
+      "explanation": "B matches the progression from weak demand to practical habits that made repeated subscriptions worthwhile. The successful compilation of observations rules out data gathering as the primary obstacle. A invents disagreements and procedural refinement. C ignores the successful applications and viable business at the end. D mistakes two cooperating forecasters for opposing figures. The problem was adoption, and the later examples show how adoption grew.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 41,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q042",
+      "groupId": "rw-20261010-user96-q042",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Cross-Text Connections",
+      "subtopic": "Cross-Text Connections",
+      "difficulty": "Hard",
+      "passage": "Text 1\nThe rise of unscripted performance at the Saltane dance laboratories in the 1920s owed much to an earlier movement in the philosophy of perception. From the 1870s, its theorists argued that an observer should actively test experience rather than accept established descriptions of it. Artists brought that emphasis on independent judgment into rehearsals, encouraging performers to choose movements in response to what they themselves perceived.\n\nText 2\nPhysical-culture clubs helped shape the unscripted performances that emerged at Saltane in the 1920s. Beginning around 1900, instructors in these voluntary associations encouraged members to attend to their own bodily responses instead of repeating inherited drills without question. That habit of personal assessment gradually entered theatrical practice, where fixed sequences began to give way to movements selected by the individual performer.",
+      "question": "Which choice best describes a difference in how the authors explain the ideas underlying Saltane's unscripted performances?",
+      "choices": {
+        "A": "Text 1 doubts that physical-culture clubs mattered, whereas Text 2 treats those clubs as decisive.",
+        "B": "Text 1 claims independent judgment diminished, whereas Text 2 says it flourished.",
+        "C": "Text 1 emphasizes a philosophical movement, whereas Text 2 emphasizes practices promoted by physical-culture clubs.",
+        "D": "Text 1 explains the performances' origins, whereas Text 2 shows that philosophy directly caused the clubs to form."
+      },
+      "correctAnswer": "C",
+      "explanation": "C is correct because the accounts trace independent choice to different influences: a philosophy of perception and voluntary physical-culture practices. A mistakes Text 1's silence about the clubs for skepticism. B reverses Text 1's emphasis on increasing independent judgment. D invents a causal link from philosophy to the clubs that Text 2 never asserts. The texts differ in explanatory emphasis without explicitly denying the influence described by the other.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 42,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q043",
+      "groupId": "rw-20261010-user96-q043",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Cross-Text Connections",
+      "subtopic": "Cross-Text Connections",
+      "difficulty": "Hard",
+      "passage": "Text 1\nIn her 1982 essay “Learning Under Open Skies,” meteorologist Irina Taves argued that indoor simulations lose the “situated attention” produced by encountering weather directly. What this account neglects is the educational need to rehearse dangerous conditions without exposing novices to them. A simulated squall can be explicitly labeled as a simulation and still teach a useful sequence of judgments; its usefulness need not depend on passing for a storm outdoors.\n\nText 2\nTraining researcher Cato Merin welcomes simulated weather in his 2017 article “The Safe Storm.” Rejecting the assumption that physical presence is the only route to understanding, he calls simulation <u>“a new, and perhaps more precise, access to dangerous weather.”</u> Adjustable wind and visibility allow trainees to repeat choices whose causes would be difficult to isolate during a real squall, producing understanding rather than merely an imitation of exposure.",
+      "question": "How would the author of Text 1 most likely regard the underlined statement in Text 2?",
+      "choices": {
+        "A": "As a reason to abandon the preservation of opportunities for direct outdoor observation",
+        "B": "As an exception to the author's claim that technology has little value in specialized training",
+        "C": "As a misreading of an account that shaped trainees' responses in an earlier period",
+        "D": "As an understandable response to an account that insufficiently addresses practical educational needs"
+      },
+      "correctAnswer": "D",
+      "explanation": "D is correct because Text 1 already criticizes Taves's framework for overlooking the educational value of safe simulation. Merin's endorsement answers that practical limitation. A goes further than either author by rejecting direct observation itself. B invents Text 1's general opposition to technology. C introduces an earlier period and a misreading that Text 1 does not allege. Agreement about simulations' usefulness need not entail agreement that they replace every value of outdoor experience.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 43,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q044",
+      "groupId": "rw-20261010-user96-q044",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Cross-Text Connections",
+      "subtopic": "Cross-Text Connections",
+      "difficulty": "Easy",
+      "passage": "Text 1\nTemporary research ponds are sometimes excavated for a single field season and then filled in. Their short lives can conceal enduring local benefits. Small watershed associations use these ponds to train volunteers, reuse neglected plots, and test methods that can later be applied to permanent wetlands. Even after a pond disappears, a district may retain a trained group and a practical reason to establish another.\n\nText 2\n<u>No local watershed association gains substantially from a temporary research pond.</u> Almost all meaningful advantages accrue to well-funded national laboratories. Although these ponds can publicize a research program, coordinating permits and maintaining equipment is too demanding for smaller groups. Their apparent informality should not distract from the resources needed to run them.",
+      "question": "How would the author of Text 1 most likely respond to the underlined claim in Text 2?",
+      "choices": {
+        "A": "By pointing out that some temporary ponds remain in use for many years",
+        "B": "By identifying benefits that temporary ponds offer local watershed associations.",
+        "C": "By explaining that national laboratories never use temporary ponds",
+        "D": "By conceding that the ponds' presence is chiefly detrimental to local associations"
+      },
+      "correctAnswer": "B",
+      "explanation": "B directly opposes the universal denial in Text 2 with Text 1's concrete benefits: training, reused land, and transferable methods. A contradicts the short duration acknowledged in Text 1 and confuses enduring benefits with enduring ponds. C invents a restriction on national laboratories. D reverses Text 1's favorable account. The disagreement concerns who benefits, not whether a temporary pond becomes permanent.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 44,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q045",
+      "groupId": "rw-20261010-user96-q045",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Easy",
+      "passage": "The following text is adapted from Nessa Aker's “The Last Receiver,” a story in the 1949 collection Signal Rooms.\n\nVesna kept the whole coastal station running for Dr. Raulen. It occupied the lowest of three narrow towers, huddled together like folded maps against the rock; a metal stair zigzagged down to its blue door. Inside, the rooms were scarcely wider than the tables they held.\n\nYet the little station was never empty. Dr. Raulen, two visiting observers, rolls of damp chart paper, and a procession of dripping boots crowded its passages. Above every instrument's clicking rose Vesna's voice, assigning, objecting, calling for towels, and reminding everyone which observations had still not been made.",
+      "question": "Which choice best describes the main purpose of the text?",
+      "choices": {
+        "A": "To depict a particular place and establish a character's role within it",
+        "B": "To expose common misunderstandings about a location and its occupants",
+        "C": "To reveal the merits of a character's approach to a scientific question",
+        "D": "To show that two characters have essentially the same disposition"
+      },
+      "correctAnswer": "A",
+      "explanation": "A accounts for both the description of the compact station and Vesna's organizing presence. B invents misconceptions that the passage never mentions. C mistakes practical management for a developed position on a scientific problem. D assumes a personality comparison, whereas Dr. Raulen receives little characterization. The crowded rooms and Vesna's commands jointly show the setting and her role in keeping its activities coordinated.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 45,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q046",
+      "groupId": "rw-20261010-user96-q046",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Hard",
+      "passage": "The following text is adapted from Pavel Orn's 1916 novel Soundings at Noon. Soren, a surveyor, has been discussing an expedition with Commander Vesk.\n\nThe chart shed was agreeably cool. Canvas hung loosely beneath its beams, and beyond the open door the pier lay in a pale, wavering shade. Soren had found a comfortable perch on a coil of rope; with the map case balanced across his knees, he saw little reason to move. <u>Still, he shut the case and followed Vesk's brisk summons into the wheelhouse, where afternoon light struck the glass.</u> Above the commander's desk, folded signal flags occupied shallow shelves, their colored edges arranged in a diminishing pattern like the striped covers on the cases downstairs.",
+      "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+      "choices": {
+        "A": "It confirms an attention to shape and color that directly motivates the description in the next sentence.",
+        "B": "It distinguishes the two characters by comparing their responses to the same outdoor view.",
+        "C": "It foreshadows a conflict that the subsequent details begin to resolve.",
+        "D": "It develops the preceding description by suggesting Soren's temporary deference to Vesk."
+      },
+      "correctAnswer": "D",
+      "explanation": "D is correct because Soren abandons a place he prefers and responds to Vesk's brisk summons, implying that the commander's lead overrides his immediate inclination. A treats the sentence as evidence of visual attentiveness, although its action centers on following a summons. B invents parallel reactions to a view. C adds a future conflict and resolution not indicated by the flags. The word 'Still' makes the departure meaningful against the preceding comfort.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 46,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q047",
+      "groupId": "rw-20261010-user96-q047",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Cross-Text Connections",
+      "subtopic": "Cross-Text Connections",
+      "difficulty": "Easy",
+      "passage": "Text 1\nDuring the 1970s, navigator Selka Draen translated two unconventional schools of route instruction for mountain rescue teams in Veyra. Rolf Aven's manuals grounded each decision in explicit coordinate calculations; Belen Miro's guides instead emphasized immediately perceived changes in slope, footing, and balance. Draen's adaptations made both available to teams trained on more conventional written directions.\n\nText 2\nDraen eventually devised “pulse guidance,” a route-training exercise that dispensed with written instructions. Rescuers responded to changes in vibration and brief tones while moving through a practice course, an approach recalling Miro's emphasis on immediate sensory judgments. Draen hoped that the exercise would allow teams whose members spoke different languages to develop a shared response to hazardous ground.",
+      "question": "What would the author of Text 1 most likely say about the “pulse guidance” exercise described in Text 2?",
+      "choices": {
+        "A": "It extends an interest already evident in Draen's work adapting other navigators' approaches.",
+        "B": "It was suitable mainly for rescuers who had previously studied Miro's original guides.",
+        "C": "It proves that Draen rejected Aven's work after becoming dissatisfied with it.",
+        "D": "It reveals little about the terrain or rescue practices of Veyra."
+      },
+      "correctAnswer": "A",
+      "explanation": "A follows the connection between Draen's earlier adaptation of Miro's sensory approach and her later exercise based on vibration, tones, and immediate responses. B turns an intellectual connection into an unsupported prerequisite. C infers dissatisfaction and rejection from the development of one compatible approach. D makes an irrelevant, unsupported judgment about local content. The exercise can extend one interest without demonstrating that she abandoned every other interest.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 47,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q048",
+      "groupId": "rw-20261010-user96-q048",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Easy",
+      "passage": "The following text is adapted from Mira Abele's 1934 travel memoir Along the Survey Coast. Abele was known for her work cataloging maritime collections.\n\nThere are harbors in which I have scarcely put down my case before someone arrives with an object to be identified. For a long time I marveled at the ingenuity with which collectors discovered my movements, and still more at the questions waiting wherever I stopped. Their inquiries could be kindly meant and yet leave me awkwardly placed. If a disputed object lay under an agreement that prevented me from discussing it, I could almost count on that very object becoming the subject of the first conversation. Even the interval between two departures seemed long enough for a new inquiry to find me.",
+      "question": "Which choice best states the main purpose of the text?",
+      "choices": {
+        "A": "To condemn particular collectors who repeatedly ignored Abele's refusals",
+        "B": "To criticize collectors for mistreating Abele and other catalogers",
+        "C": "To outline Abele's recurring experiences with collectors' inquiries",
+        "D": "To enumerate the precise questions collectors asked Abele"
+      },
+      "correctAnswer": "C",
+      "explanation": "C fits the recurring encounters, surprise, and awkward questions described across different harbors. A is too strong and too specific: no collector is singled out or shown ignoring a refusal. B adds mistreatment of other catalogers and overlooks the acknowledgment of kindly intentions. D requires a list of actual questions, whereas Abele describes their general character and tendency. The account conveys experience without becoming a targeted denunciation.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 48,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q049",
+      "groupId": "rw-20261010-user96-q049",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Cross-Text Connections",
+      "subtopic": "Cross-Text Connections",
+      "difficulty": "Easy",
+      "passage": "Text 1\nTextile cooperatives such as Arkov and Sevig have adapted familiar workwear forms in coastal Norway for more than a decade. Their jackets and aprons use conventional cuts but display patterns drawn from local navigation charts, harbor tools, and regional weaving traditions. A Sevig apron, for example, turns the markings of a fishing-net gauge into a repeated border. Comparable uses of local imagery have appeared elsewhere in northern Europe.\n\nText 2\nSwedish designer Torun Melve noticed that commercial bakers' aprons rarely reflected the traditions of her island community. Her 2021 collection Tide Measure retains the practical form associated with European kitchen work but incorporates the island's woven bands and boat-building marks. The garments replace the familiar metropolitan imagery of culinary uniforms with motifs recognizable to wearers in Melve's home region.",
+      "question": "Why would the author of Text 1 most likely find Tide Measure significant?",
+      "choices": {
+        "A": "It indicates how workwear can be replaced by an entirely new category of garment.",
+        "B": "It demonstrates that individual designers consistently surpass cooperatives in originality.",
+        "C": "It reveals a method for combining electronic navigation devices with clothing.",
+        "D": "It exemplifies the use of established garment forms for regional expression beyond Norway."
+      },
+      "correctAnswer": "D",
+      "explanation": "D is correct because Melve's Swedish aprons combine a familiar garment type with local traditions, extending the pattern Text 1 describes in Norway. A incorrectly treats practical aprons as a new garment category. B invents a ranking of individuals and cooperatives. C mistakes imagery derived from navigation and boat building for embedded electronic devices. The collection's significance is geographical and thematic continuity, not a demonstrated superiority or a technical merger.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 49,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q050",
+      "groupId": "rw-20261010-user96-q050",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Cross-Text Connections",
+      "subtopic": "Cross-Text Connections",
+      "difficulty": "Medium",
+      "passage": "Text 1\nThe Glass Grove, a 2019 installation by the Lethen workshop, derives much of its visual force from preserved ferns. Fronds from this single botanical collection recur throughout its rooms: in the entrance hall, for example, green arches resemble a canopy still unfolding. The preserved foliage is so integral to the installation that <u>some visitors assume, incorrectly, that plants are growing within its chambers.</u>\n\nText 2\nDespite its abundance of greenery, The Glass Grove is not a living garden. That classification would require living plants maintained in conditions that permit growth. The workshop's ferns have instead been treated and fixed into permanent forms. They provide a “green backdrop” for visitors moving through rooms in which no plant continues to grow.",
+      "question": "How would the author of Text 2 most likely respond to the underlined portion of Text 1?",
+      "choices": {
+        "A": "By questioning whether The Glass Grove deserves its reputation as a notable installation",
+        "B": "By noting that the installation's greenery is preserved rather than growing.",
+        "C": "By observing that several other botanical collections supplied The Glass Grove's foliage",
+        "D": "By explaining that both plant growth and visitors' movement contribute to The Glass Grove"
+      },
+      "correctAnswer": "B",
+      "explanation": "B corresponds to Text 2's explicit distinction between fixed preserved ferns and living plants. It directly rejects the visitors' mistaken assumption while leaving the foliage's visual importance intact. A concerns reputation, which Text 2 does not evaluate. C contradicts the single-collection description without support. D attributes growth to the installation even though Text 2 denies it. Visual resemblance and actual biological activity remain separate.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 50,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q051",
+      "groupId": "rw-20261010-user96-q051",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Hard",
+      "passage": "Ecologist Marta Cenal's “broken lattice” proposal began as a thought experiment: imagine replacing evenly spaced young trees with clusters separated by irregular gaps. Could a less orderly plantation recover better after storms? <u>Cenal maintained that varied neighborhoods would keep a single pattern of damage from spreading uniformly through the stand.</u> Her reasoning initially depended more on a conceptual model than on measurements. In a 2018 study, however, Eren Falco's team compared 1,800 planting plots across six trials and found that arrangements with varied neighborhoods generally retained more viable trees after simulated storm damage.",
+      "question": "Which choice best states the function of the underlined sentence in the text as a whole?",
+      "choices": {
+        "A": "It identifies a proposition that the later experimental results largely support.",
+        "B": "It explains the sequence through which Cenal originally developed her conceptual model.",
+        "C": "It defines the phrase “broken lattice” by specifying every feature of the proposed arrangement.",
+        "D": "It raises a doubt about the accuracy of Cenal's account of storm damage."
+      },
+      "correctAnswer": "A",
+      "explanation": "A is correct because the sentence states the proposed protective effect of varied neighborhoods, and the later trials supply evidence consistent with that effect. B requires a developmental sequence that the sentence does not give. C overstates its defining role: it explains an expected consequence, not every feature of the arrangement. D reverses the sentence's stance, which asserts Cenal's proposition rather than questioning it. The later acknowledgment of a conceptual starting point does not make this sentence a criticism.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 51,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q052",
+      "groupId": "rw-20261010-user96-q052",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Cross-Text Connections",
+      "subtopic": "Cross-Text Connections",
+      "difficulty": "Hard",
+      "passage": "Text 1\nBiophysicist Elya Ressling and colleagues investigated <u>what might appear to be a narrow problem: how a pinecone's scales open when surrounding air becomes dry.</u> Their explanation centered on anisotropic swelling, the unequal expansion of material in different directions. Fiber layers in a scale change length at different rates as moisture changes, making the scale bend without a muscle or external motor.\n\nText 2\nRessling's work on anisotropic swelling has implications well beyond the opening of pinecones. Layered materials that bend predictably as humidity changes could guide self-adjusting ventilation panels and protective packaging. The same research also offers a way to understand other plant structures whose fibers orient differently from layer to layer. A botanical example may thus furnish a general design principle rather than merely explain one species' behavior.",
+      "question": "How would the author of Text 2 most likely respond to the characterization of Ressling's work in the underlined sentence of Text 1?",
+      "choices": {
+        "A": "By questioning whether changes in moisture explain every aspect of a pinecone's performance",
+        "B": "By cautioning that the role of anisotropic swelling in design remains too poorly understood to discuss",
+        "C": "By agreeing that the problem is narrow because moisture commonly interferes with movement",
+        "D": "By challenging the implication of narrow applicability in view of the work's wider explanatory and design uses"
+      },
+      "correctAnswer": "D",
+      "explanation": "D follows Text 2's emphasis on ventilation, packaging, and other plant structures: the research has a scope broader than its immediate example. A asks for completeness that Text 2 does not challenge. B substitutes skepticism for the positive applications described. C supplies an unsupported general claim about moisture and misses the distinction between a specific starting problem and broad applicability. The author would qualify the characterization, rather than dispute the proposed mechanism.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 52,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q053",
+      "groupId": "rw-20261010-user96-q053",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Easy",
+      "passage": "Municipal seed libraries have changed from collections managed chiefly around storage to services organized around their borrowers, according to researcher Maia Ordek. Her 2022 study links that shift to two pressures: the spread of phone-based catalogs and several seasons of drought that altered residents' planting needs. Technology made remote browsing possible, while the environmental disruption forced libraries to reconsider which seeds and instructions users required. Ordek's examples include Polish libraries offering appointment-based seed exchanges and searchable records of locally successful varieties, features intended to keep the collections useful as conditions and habits changed.",
+      "question": "Which choice best describes the overall purpose of the text?",
+      "choices": {
+        "A": "To advocate cooperation as the best remedy for every problem facing seed libraries",
+        "B": "To survey how plant breeders have used digital tools to increase their profits",
+        "C": "To outline research on how seed libraries have adapted to changed circumstances",
+        "D": "To criticize libraries that resisted environmental and technological change"
+      },
+      "correctAnswer": "C",
+      "explanation": "C encompasses the study, the two pressures it identifies, and the adaptations illustrated. A turns a descriptive account into an argument for a universal remedy. B changes the subject from libraries and borrowers to breeders and profits. D imposes criticism that the text does not direct at resistant institutions. The examples explain a documented change in service organization rather than rank institutions or prescribe a comprehensive solution.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 53,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q054",
+      "groupId": "rw-20261010-user96-q054",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Cross-Text Connections",
+      "subtopic": "Cross-Text Connections",
+      "difficulty": "Easy",
+      "passage": "Text 1\nIn Cities of Motion, published in 1958, planner Sen Ravano proposed that a successful transport network balances “concentration,” which brings travelers together, and “dispersion,” which moves them toward separate destinations. He blamed poorly functioning networks on excessive concentration. The framework is intriguing but of little practical use to today's transport analysts, whose work turns on particular intersections and routes rather than two sweeping tendencies.\n\nText 2\nRavano's contrast between concentration and dispersion is admittedly too broad for some local design decisions. It can nevertheless help commentators reviewing an entire regional network. Such reviewers must make overall judgments, and Ravano's terms provide a way to describe a system that channels everyone through a few crowded centers or scatters connections so widely that transfers become impractical.",
+      "question": "Which choice best describes the relationship between the two texts?",
+      "choices": {
+        "A": "Text 2 challenges the accuracy of the historical events recounted in Text 1.",
+        "B": "Text 2 identifies a useful exception to the limitation emphasized in Text 1.",
+        "C": "Text 2 provides a biography of a planner whose work Text 1 discusses.",
+        "D": "Text 2 criticizes a specific transport network that Text 1 endorses."
+      },
+      "correctAnswer": "B",
+      "explanation": "B is correct because Text 2 concedes the framework's limits for local decisions but identifies regional reviewers as an audience for whom its breadth is useful. A invents a dispute about historical accuracy. C mistakes an application of Ravano's ideas for biographical information. D invents an endorsed network and criticism of that network. The second text limits the reach of the first text's negative assessment without rejecting the acknowledged problem of breadth.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 54,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q055",
+      "groupId": "rw-20261010-user96-q055",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Hard",
+      "passage": "The following text is adapted from Anouk Velk's memoir Between the Orchard Walls, covering her life from 1824 to 1847. The Dutch text was translated by Toma Cazar in 1911.\n\n<u>My mother first instructed me in grafting trees and laying out nursery beds</u>; although I was still young enough to find a spade and a muddy ditch sufficient amusement, I felt a dislike for the ordered work and performed it only because she required it. She herself raised varieties of pear whose branches seemed made to carry their fruit, roses of extraordinary endurance, and delicate seedlings that survived weather more established plants could not withstand. Nor did her abilities end at the orchard fence: she calculated drainage gradients and prepared the records on which the village's waterworks depended.",
+      "question": "Which choice best states the function of the underlined portion in the text as a whole?",
+      "choices": {
+        "A": "It emphasizes the narrator's strong aversion to organized horticultural work.",
+        "B": "It demonstrates the mother's patience in responding to the narrator.",
+        "C": "It identifies the mother's role in the narrator's early practical instruction.",
+        "D": "It details the mother's abilities across horticulture and water management."
+      },
+      "correctAnswer": "C",
+      "explanation": "C is correct because the underlined clause states who provided the narrator's first instruction and what that instruction concerned. A describes the later clause about dislike, not the underlined portion. B infers patience that the excerpt never demonstrates. D shifts to the mother's wider abilities, developed in the subsequent sentences. Although all those ideas concern the mother or her work, the specific underlined clause establishes her instructional role.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 55,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q056",
+      "groupId": "rw-20261010-user96-q056",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Cross-Text Connections",
+      "subtopic": "Cross-Text Connections",
+      "difficulty": "Hard",
+      "passage": "Text 1\n<u>Station? Vessel? Something between the two?</u> The Kestrel Array, installed on Lake Neral in 1978 by engineer Iona Clere, joins instrument racks to a linked platform of steel floats. Not easily accommodated by a single familiar category, the array nevertheless requires the maintenance given to conventional research equipment. During a 2020 refurbishment, it was removed from the lake and stored on land.\n\nText 2\nAttempting to classify Clere's array does not diminish its unusual combination of functions. It may not be a vessel in the usual sense, but it certainly is not a fixed shore station. A recent decision to tow it from the sheltered inlet to the center of Lake Neral underscores the importance of portability and structural durability, qualities that bring it closer to floating research platforms than to land-based towers.",
+      "question": "How would the author of Text 2 most likely respond to the underlined characterization in Text 1?",
+      "choices": {
+        "A": "By arguing that the array resembles a fixed station more strongly than it resembles a floating platform",
+        "B": "By acknowledging that comparisons with vessels have received less attention than comparisons with shore stations",
+        "C": "By attributing the classification debate to the array's central position on the lake",
+        "D": "By noting that the array's portability at least excludes classification as a fixed shore station"
+      },
+      "correctAnswer": "D",
+      "explanation": "D follows Text 2's limited but definite categorization: towing the array makes 'fixed shore station' inappropriate, even if its best label remains debatable. A reverses that reasoning. B invents a comparison of how much attention classifications have received. C turns a later location into an unsupported explanation of the debate. Text 2 need not settle every classification question to establish that one category is ruled out.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 56,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q057",
+      "groupId": "rw-20261010-user96-q057",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Cross-Text Connections",
+      "subtopic": "Cross-Text Connections",
+      "difficulty": "Hard",
+      "passage": "Text 1\nEconomists Delia Marr and Enzo Tarek report that sellers in a regional craft market use “selective comparison” when adjusting prices. Rather than surveying every stall, a seller typically watches two to four nearby competitors. When prices shift from a scattered range toward a common level, each seller still responds to this small reference group, not to a complete view of the market.\n\nText 2\nThrough “influence mapping,” researchers Ines Varel and Oskar Neri traced which competitors' price changes preceded a seller's own adjustments. They found that the small reference group was not chosen simply by proximity. Sellers mainly followed nearby competitors whose prices changed frequently, largely ignoring neighboring stalls that left prices unchanged for long intervals. The rate of adjustment was therefore important to selective comparison.",
+      "question": "How would the author of Text 2 most likely respond to Text 1's account of “selective comparison”?",
+      "choices": {
+        "A": "By emphasizing the role of competitors' relative rates of price adjustment in determining which ones sellers follow",
+        "B": "By claiming that influence mapping documents a long succession of increasingly precise definitions of selective comparison",
+        "C": "By suggesting that convergence toward a common price is more dependent on selective comparison than price dispersion is",
+        "D": "By asserting that selective comparison follows different principles in different craft trades"
+      },
+      "correctAnswer": "A",
+      "explanation": "A identifies the additional criterion Text 2 supplies: sellers preferentially follow competitors who adjust prices more frequently. B adds an unreported history of definitions. C compares movement patterns that Text 2 does not rank. D extrapolates to differences between trades without evidence. Text 2 refines the account of which nearby competitors matter; it neither denies the small reference group nor establishes the other proposed comparisons.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 57,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q058",
+      "groupId": "rw-20261010-user96-q058",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Medium",
+      "passage": "Otilia Rhen's Kevar Station Archive, assembled in 2015, contains 3,400 glass plates recording astronomical observations made during different expeditions. Each plate bears a small colored mark identifying its observing station and a silver inscription naming the expedition that produced it. The marks can be followed across drawers to trace changes in equipment and collaboration. Taken together, the archive invites researchers to consider how shared instruments, traveling observers, and changing standards shaped the production of astronomical knowledge.",
+      "question": "Which choice best describes the structure of the text as a whole?",
+      "choices": {
+        "A": "It establishes the archive's importance, then responds to objections to Rhen's choices.",
+        "B": "It describes a collection's features, then the larger inquiry they serve.",
+        "C": "It profiles Rhen's career, then traces the influence of several colleagues on one project.",
+        "D": "It singles out several plates, then argues that they matter more than the archive's other contents."
+      },
+      "correctAnswer": "B",
+      "explanation": "B matches the progression from plates, marks, inscriptions, and drawers to the broader question of how astronomical knowledge developed. A invents objections and a response. C assumes a career profile and influences that the passage never supplies. D mistakes examples of features for a ranking of particular plates. The last sentence interprets the collection's purpose after the preceding sentences describe how it is organized.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 58,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q059",
+      "groupId": "rw-20261010-user96-q059",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Cross-Text Connections",
+      "subtopic": "Cross-Text Connections",
+      "difficulty": "Medium",
+      "passage": "Text 1\nEducation writer Reva Marn argues that introductory laboratory assignments became more intellectually intricate in the early 2000s. Her book Unfinished Experiments focuses on tasks whose outcomes could not be determined by applying a single formula. A mechanics assignment might require students to weigh conflicting measurements, while a chemistry exercise could make two apparently sound explanations compete for the same result. The resulting uncertainty became part of what students had to analyze.\n\nText 2\nFor curriculum historian Oskar Pel, the richer assignments of that period grew from decisions that initially appeared risky. Department heads let instructors develop investigations spanning several weeks within familiar introductory subjects. Established course topics remained, but the added freedom allowed interacting variables and provisional conclusions to replace the predetermined results of shorter exercises.",
+      "question": "What would Pel most likely say about the “more intellectually intricate” assignments discussed in Text 1?",
+      "choices": {
+        "A": "Their complexity can be traced in part to decisions by department heads and instructors.",
+        "B": "They were essentially equivalent to exercises used in less ambitious courses.",
+        "C": "Their appearance unexpectedly alarmed the department heads who authorized them.",
+        "D": "They provoked sharply divided opinions among the students who completed them."
+      },
+      "correctAnswer": "A",
+      "explanation": "A follows Pel's account of institutional permission and instructors' freedom leading to interacting variables and less predetermined conclusions. B discounts the complexity both passages identify. C invents alarm and surprise among authorizing department heads; initial risk does not establish either response. D introduces students' opinions, which neither text reports. Pel supplies a causal explanation for the development Marn describes.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 59,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q060",
+      "groupId": "rw-20261010-user96-q060",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Hard",
+      "passage": "<u>Erasure-resistant codes, which keep messages recoverable after some encoded portions are lost, offer one means of protecting wireless data.</u> In a 2012 investigation, engineers Mirka Zar and Oren Letanel tested one such code while transmitting images through an intermittently interrupted link. A packet-loss rate of 14% did not prevent reconstruction of the images. The team also found that added parity blocks allowed missing information to be identified and recovered without requesting each lost packet separately.",
+      "question": "Which choice best states the function of the underlined sentence in the text as a whole?",
+      "choices": {
+        "A": "It distinguishes the tested code from the more familiar codes with which the engineers compared it.",
+        "B": "It formulates the specific hypothesis that determined every stage of the engineers' investigation.",
+        "C": "It defines a general property that prepares the reader for one of the study's later findings.",
+        "D": "It establishes that the investigation was unprecedented by explaining the codes' defining features."
+      },
+      "correctAnswer": "C",
+      "explanation": "C is correct because recoverability despite lost portions anticipates the finding that images could be reconstructed despite packet loss. A invents comparison codes. B overstates a general definition as the project's specific governing hypothesis. D adds a claim of unprecedented research that the text never makes. The opening's role is explanatory preparation: it makes a later result intelligible without reporting the study's methods or asserting its novelty.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 60,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q061",
+      "groupId": "rw-20261010-user96-q061",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Easy",
+      "passage": "Tide Ledger, launched in 2022, combines contemporary monitoring with the history of coastal work. Oceanographer Lio Ravel and cartographer Senna Vesk created the project aboard a restored survey boat in Narven Harbor. Automatic current sensors supply a live record, while annotated charts draw on the handwritten tide logs of earlier net makers. Visitors can compare the two kinds of observations at a series of stations along the deck. One purpose of the project is to recognize workers whose careful records contributed to knowledge of the coast without becoming part of formal oceanographic archives.",
+      "question": "Which choice best states the main purpose of the text?",
+      "choices": {
+        "A": "To explain why Ravel joined a project initially designed by Vesk alone",
+        "B": "To argue that Tide Ledger's combination of materials makes it difficult to interpret",
+        "C": "To contrast Tide Ledger with an earlier project by Vesk",
+        "D": "To describe several features and aims of Tide Ledger"
+      },
+      "correctAnswer": "D",
+      "explanation": "D covers the collaborators, restored boat, sensors, charts, visitors' activity, and commemorative aim. A invents both an initial solo project and a reason for joining it. B attributes interpretive difficulty absent from the text. C requires an earlier project and a comparison, neither of which appears. Although recognizing earlier workers is one stated purpose, the text as a whole surveys multiple aspects rather than focusing solely on one collaborator's motive.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 61,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q062",
+      "groupId": "rw-20261010-user96-q062",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Medium",
+      "passage": "Municipal programs that train retired machinists to maintain public bicycles have received widespread support, according to social researchers Vela Oren and Naim Certe. In their 2016 poll of residents in Liedam, 83% supported using experienced local tradespeople to service the bicycle network. Responses to a separate question revealed comparably strong approval for recruiting additional retired workers as repair mentors. The results thus indicated enthusiasm for both the service model and its expansion through further recruitment.",
+      "question": "Which choice best states the main purpose of the text?",
+      "choices": {
+        "A": "To summarize public opinions about the merits of conducting social research",
+        "B": "To indicate substantial public approval of particular municipal initiatives",
+        "C": "To question whether an existing municipal program remains active",
+        "D": "To demonstrate the practical results achieved by repair programs"
+      },
+      "correctAnswer": "B",
+      "explanation": "B is correct because the text reports strong approval of maintenance programs and further recruitment. A confuses opinions measured by research with opinions about research itself. C invents uncertainty about the program's status. D mistakes favorable responses for evidence of operational outcomes: no repair totals, costs, or service improvements are given. The passage's evidence supports a claim about approval, not proven effectiveness.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 62,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q063",
+      "groupId": "rw-20261010-user96-q063",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Medium",
+      "passage": "The following text is adapted from Daina Lero's 1974 play Terms of Silence. Neris, a junior laboratory assistant, is speaking about the eminent analyst Dr. Valen.\n\nNERIS: Is it a small thing that he brings his difficult samples to my bench, when there are experts enough upstairs? He asks what I have noticed, waits for the answer, and uses my name when he repeats it. Yesterday, before the whole room, he said he would not complete the report until I had checked the readings. One could scarcely suppose such confidence from a man so exacting; yet he displays it so openly that I find myself looking down at the instruments to hide my face.",
+      "question": "Which choice best describes the main purpose of the text?",
+      "choices": {
+        "A": "To reveal the speaker's discomfort at having another person nearby",
+        "B": "To suggest the speaker's desire to receive still greater public recognition",
+        "C": "To illustrate the speaker's desperation to secure a more prestigious position",
+        "D": "To emphasize the considerable regard another person shows for the speaker"
+      },
+      "correctAnswer": "D",
+      "explanation": "D is correct because Neris repeatedly describes Valen seeking her judgment, crediting her, and trusting her to check a report. The embarrassment accompanies that evident regard. A mistakes the embarrassment for discomfort with Valen's presence generally. B adds a desire for more recognition that she does not express. C invents a career ambition and desperation. The speech centers on respect already received, not a plan to acquire status.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 63,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q064",
+      "groupId": "rw-20261010-user96-q064",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Cross-Text Connections",
+      "subtopic": "Cross-Text Connections",
+      "difficulty": "Medium",
+      "passage": "Text 1\nResource economist Lucan Vey sees “energy accounting” as fundamental to understanding contemporary craft production. Even work described as handmade depends on energy moving through supply chains, workshops, and tools. Vey argues that tracing those flows is not an optional supplement to studying craft: it reveals conditions inherent in how the work becomes possible.\n\nText 2\nAn energy-based account can be useful without capturing what matters most in a craft workshop. Consider a cabinetmaker teaching apprentices to judge a joint by touch. Lighting the room and drying the timber certainly consume energy, but the most meaningful exchange occurs when an experienced hand guides an uncertain one. Measuring the electricity used would not by itself describe that learning.",
+      "question": "How would Vey most likely respond to the workshop example in Text 2?",
+      "choices": {
+        "A": "By emphasizing that aspects of the example itself demonstrate craft production's dependence on energy flows",
+        "B": "By agreeing that hand-guided instruction is invariably more valuable than all other parts of production",
+        "C": "By rejecting Text 2's claim that a craft workshop can be operated without any energy use",
+        "D": "By questioning whether knowledge of workshop resource use leads apprentices to become engaged in craft"
+      },
+      "correctAnswer": "A",
+      "explanation": "A is supported by Text 2's acknowledgment of lighting and timber drying, which illustrates Vey's contention even if it does not describe the learning itself. B adds a value ranking Vey never gives. C misrepresents Text 2, which explicitly acknowledges energy use. D changes the issue to apprentices' engagement, an unexamined relationship. Vey can point to inherent energy conditions without claiming that an energy measure exhausts the significance of every human interaction.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 64,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q065",
+      "groupId": "rw-20261010-user96-q065",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Cross-Text Connections",
+      "subtopic": "Cross-Text Connections",
+      "difficulty": "Easy",
+      "passage": "Text 1\nWeighted sounding lines, portable tools used to measure water depth, appeared along widely separated coasts long before modern electronic instruments. Fishing communities in Portugal relied on them, as did navigators in Senegal. A 1704 account by court chronicler Nerem Val described their use aboard visiting vessels, even though Val himself worked in an inland administrative center. The tool thus reached observers as well as sailors outside any single maritime community.\n\nText 2\nNames translated as “sounding line” and “bottom finder” can refer to the same basic arrangement: a weighted cord lowered until it reaches the seabed. Different coastal communities used local names and markings, but the instrument's association with navigation and fishing is consistent. Its history belongs to several seafaring regions rather than exclusively to the coast most often linked with it.",
+      "question": "Based on the texts, both authors would most likely agree with which statement?",
+      "choices": {
+        "A": "Sounding lines became substantially more accurate as they spread from Portugal to Senegal.",
+        "B": "Portable depth-measuring lines were known and used in more than one coastal region.",
+        "C": "Nerem Val played a central role in inventing and popularizing sounding lines.",
+        "D": "Despite their maritime associations, sounding lines have become permanent land-based instruments in some modern cultures."
+      },
+      "correctAnswer": "B",
+      "explanation": "B is supported by Text 1's named regional uses and Text 2's account of several seafaring communities. A adds an unreported progression in accuracy. C turns an observer and chronicler into an inventor and promoter. D invents a modern transformation into land-based instruments. Differences in naming do not obscure the shared point that knowledge and use of the tool crossed regional boundaries.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 65,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q066",
+      "groupId": "rw-20261010-user96-q066",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Medium",
+      "passage": "The following text is from Kosta Velra's 1904 novel The Clockmaker's Notebook. A twelve-year-old apprentice narrates this opening to the second part of his account.\n\nIf the first pages seemed tedious, I can only say that you would have understood none of our trouble without knowing what each wheel was meant to do. Lists are poor company in a story, though they may be necessary at its door. What interests me is the moment a mechanism refuses its assigned task; things that work exactly as expected scarcely seem to have happened at all. Accordingly, I shall pass over the weeks when every clock kept time and begin where the quiet stopped.",
+      "question": "Which choice best describes the main purpose of the text?",
+      "choices": {
+        "A": "To apologize for the narrator's preference for one kind of book over another",
+        "B": "To identify several books that influenced the narrator's taste",
+        "C": "To relate decisions about the narrator's own account to principles the narrator expresses",
+        "D": "To recall a decisive episode in the narrator's formal schooling"
+      },
+      "correctAnswer": "C",
+      "explanation": "C is correct because the narrator explains both including preliminary information and omitting uneventful weeks through stated ideas about what makes a story intelligible and interesting. A reduces the passage to an apology about taste, missing its explanation of actual writing choices. B invents named influences. D mistakes reflection on narrative organization for a remembered school episode. The apprentice's preference matters because it governs how this account is arranged.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 66,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q067",
+      "groupId": "rw-20261010-user96-q067",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Easy",
+      "passage": "The following text is adapted from Sera Almir's 1878 poem “North in Brass,” translated from Italian by Nadia Coen in 1924. Kerval is a mountain pass mentioned in the poem.\n\nNeedle of mine,\nSmall, steady light,\nWealth without coin,\nKeeper of right.\nWhen maps grow pale\nAnd markers fail,\nYou keep your bearing,\nMy silence sharing.\nFrom Kerval's broken stair\nThrough roads that lead nowhere,\nYour patient point remains\nAbove my doubts and pains.",
+      "question": "Which choice best describes the main purpose of the poem?",
+      "choices": {
+        "A": "To express the value the speaker places on a dependable guiding instrument",
+        "B": "To convey the speaker's confusion after a single extraordinary occurrence",
+        "C": "To emphasize the uncertainty of the instrument's directional readings",
+        "D": "To suggest that the speaker wishes to erase memories of a difficult journey"
+      },
+      "correctAnswer": "A",
+      "explanation": "A fits the descriptions of the needle as wealth, a keeper of direction, and a steady presence when other guides fail. B invents a specific extraordinary event; the poem describes recurring conditions. C reverses the needle's steadiness and persistent bearing. D adds a wish to forget, whereas the speaker values what continues to offer support. The doubts belong to the traveler, not to the instrument's ability to guide.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 67,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q068",
+      "groupId": "rw-20261010-user96-q068",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Medium",
+      "passage": "The following text is from Elian Sore's 1927 short story “Glass at Closing.” The narrator is walking alone through an old glassworks late in the afternoon.\n\nNothing in the long hall seemed quite level: the rails curved gently toward the furnaces, and the windows rose by unequal steps beneath the roof. Far beyond the nearest racks, the cold mouths of two furnaces could just be seen, framed by girders whose shadows crossed the floor. A soft band of sunlight lay over the hanging sheets of glass, turning their rough edges briefly gold. From a half-open ventilator came a mild current of air and the faint, irregular tapping of a loose pane.",
+      "question": "Which choice best describes the main purpose of the text?",
+      "choices": {
+        "A": "To celebrate the unpretentious lives of the workers who use the glassworks",
+        "B": "To argue that difficult movement through a building deepens appreciation of its beauty",
+        "C": "To convey impressions of a particular industrial setting at a particular time",
+        "D": "To show how the same hall appears fundamentally different at morning and evening"
+      },
+      "correctAnswer": "C",
+      "explanation": "C accounts for the spatial features, shadows, sunlight, airflow, and sound observed during one afternoon visit. A invents a depiction of workers' lives; no workers appear. B adds both travel difficulty and a causal claim about appreciation. D requires two observed times, whereas the excerpt describes one. The setting's irregular surfaces contribute to an impression, not to a developed argument or comparison.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 68,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q069",
+      "groupId": "rw-20261010-user96-q069",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Cross-Text Connections",
+      "subtopic": "Cross-Text Connections",
+      "difficulty": "Hard",
+      "passage": "Text 1\nRian Tever's proposed footbridge over the Sarel Canal drew criticism for an element unrelated to its elegant arches: both approaches ended in steep stairways. Local residents petitioned for access that would accommodate wheelchairs and cargo bicycles. Public discussions emphasized that a bridge advertised as connecting neighborhoods would exclude some of their residents in routine use. The controversy ultimately led the municipality to withdraw the proposal.\n\nText 2\nTever's canal bridge drew on the precisely curved structural designs of twentieth-century engineer Ivara Soran. Its paired arches were intended to produce a balanced outline with few visible supports. Though the project was later discontinued, civic chair Nadia Morven called its geometry “inventive and exceptionally assured” when the design was unveiled in 2018.",
+      "question": "How would the author of Text 1 most likely respond to Morven's assessment in Text 2?",
+      "choices": {
+        "A": "By arguing that the design's departure from earlier engineering styles caused its rejection",
+        "B": "By explaining that a practical access feature undermined the project despite its admired geometry",
+        "C": "By asserting that a small revision would certainly have preserved every feature of the original design",
+        "D": "By describing the steep approaches as simultaneously controversial and geometrically revolutionary"
+      },
+      "correctAnswer": "B",
+      "explanation": "B follows Text 1's distinction between admired arches and inaccessible approaches. The design could receive aesthetic praise while failing a practical requirement. A conflicts with Text 2's stated continuity with earlier designs. C assumes the feasibility and scope of a revision that neither text establishes. D transfers praise of the geometry to the stairways without support. The author would identify the reason praise did not secure the project's acceptance.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 69,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q070",
+      "groupId": "rw-20261010-user96-q070",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Cross-Text Connections",
+      "subtopic": "Cross-Text Connections",
+      "difficulty": "Medium",
+      "passage": "Text 1\nExperienced members of scientific review panels do not need anonymity merely to escape dismissal; their reputations already command attention. A study of 27 panels instead suggests that anonymous first-round notes improve their analytical work. With names removed, senior reviewers can explore uncertain interpretations without having every tentative suggestion treated as an authoritative verdict. The study associates that separation of statement and status with more candid evaluation.\n\nText 2\nAnonymous notes can benefit senior reviewers' deliberations, but that is not their only use. Junior participants lack the established standing that protects senior colleagues from being ignored. Keeping names off initial comments can prevent a useful observation from being discounted simply because its author is new. The same procedure can therefore aid participants at different stages for different reasons.",
+      "question": "How would the author of Text 2 most likely respond to the findings discussed in Text 1?",
+      "choices": {
+        "A": "By disputing that anonymous notes can improve senior reviewers' analytical work",
+        "B": "By insisting that reviewers in different scientific disciplines obtain sharply different benefits from anonymity",
+        "C": "By faulting the study for drawing conclusions from too few review panels",
+        "D": "By noting that anonymity can usefully serve both junior and senior reviewers"
+      },
+      "correctAnswer": "D",
+      "explanation": "D is correct because Text 2 accepts the benefit to senior reviewers and adds a protective benefit for junior participants. A contradicts its opening acknowledgment. B introduces a comparison between scientific disciplines absent from the text. C invents a methodological objection to the sample. The second author broadens the account of beneficiaries rather than rejecting the reported effect or assessing the research design.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 70,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q071",
+      "groupId": "rw-20261010-user96-q071",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Easy",
+      "passage": "The following text is adapted from Calix Nordan's 1912 novel The Blue Cabinet. Rima is a junior map restorer newly assigned to a survey station; the superintendent manages the station.\n\nTo escape the anxious thoughts that had followed her there, Rima began inventing coastlines on a spare slate in the copying room. Whenever the superintendent left on his rounds, she slipped inside and let islands grow beneath the chalk. One afternoon she was explaining an elaborate inlet to the gardener when an unexpectedly early footstep sounded outside. The superintendent noticed the light through the glass door and called to ask who was using the room. Rima had already put the chalk aside and hurried into the passage.",
+      "question": "Which choice best describes the structure of the text as a whole?",
+      "choices": {
+        "A": "A character adopts a diverting activity, and that activity is interrupted on a particular occasion.",
+        "B": "A character acquires an absorbing new passion, then permanently abandons it after recognizing that it disturbs others.",
+        "C": "A character first explores her surroundings enthusiastically, then withdraws into growing isolation.",
+        "D": "A character encounters a crisis, then devises a successful remedy for it."
+      },
+      "correctAnswer": "A",
+      "explanation": "A matches the new diversion and the specific interruption caused by the superintendent's early return. B adds permanence, a passion, and recognition of others' discomfort, none of which is established. C mistakes relief from anxiety for enthusiastic exploration and overlooks the gardener's participation. D treats the ending as a solved predicament, although Rima's departure leaves its outcome unknown. The excerpt shows interruption, not a completed resolution.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 71,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q072",
+      "groupId": "rw-20261010-user96-q072",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Medium",
+      "passage": "The following text is adapted from Harriet Dain's 1910 poem “The Final Key.” The speaker encounters a locksmith beside a city canal.\n\nShe drew her sleeve across her face\nAnd turned as if to leave the place;\nA small brass key lay in her palm,\nYet nothing in her bearing spoke of calm.\n“What loss,” I asked, “has brought you here?”\nShe held the key and answered through a tear:\n“This opened doors I kept for years;\nThe others went with debts and fears.\nToday they closed the last for me;\nThis is the final workshop key.”",
+      "question": "Which choice best describes the overall structure of the poem?",
+      "choices": {
+        "A": "The speaker asks a direct question, then expresses regret for having asked it.",
+        "B": "The speaker finds a new acquaintance, then seeks comfort in being alone.",
+        "C": "The speaker begins an exchange, then abruptly ends it before receiving an answer.",
+        "D": "The speaker observes distress, then learns the specific circumstance responsible for it."
+      },
+      "correctAnswer": "D",
+      "explanation": "D is correct because the locksmith's gesture and tear first reveal distress, and her answer identifies the closure of her last workshop as its cause. A invents regret on the speaker's part. B adds a turn to solitude rather than an exchange. C contradicts the poem's completed answer. The key initially appears as an unexplained object and then becomes evidence of the loss she describes.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 72,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q073",
+      "groupId": "rw-20261010-user96-q073",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Cross-Text Connections",
+      "subtopic": "Cross-Text Connections",
+      "difficulty": "Medium",
+      "passage": "Text 1\nPublic benches once offered neighborhoods a visible way to distinguish themselves. Locally made seats varied in carved patterns, wood, and ironwork, making their surroundings recognizable. Current procurement favors repeated concrete forms and a narrow palette of finishes. With those standardized objects, community-specific expression through street furniture is no longer possible.\n\nText 2\nStreet furniture still provides opportunities for a neighborhood to express its character. Residents can add mosaics to approved bench panels or surround repeated planters with locally designed tile borders. They can also choose alternatives to the standard forms: several districts have restored older cast-iron seat designs for just this reason. A shared manufactured base need not prevent a distinctive public appearance.",
+      "question": "Which choice best describes a difference in how the authors portray street furniture?",
+      "choices": {
+        "A": "Text 1 predicts declining use of public benches, whereas Text 2 predicts increasing use.",
+        "B": "Text 1 analyzes benches and planters, whereas Text 2 ignores both kinds of object.",
+        "C": "Text 1 denies that street furniture can still express local identity, whereas Text 2 maintains that it can.",
+        "D": "Text 1 lists historically influential designs, whereas Text 2 rejects any association between street furniture and public expression."
+      },
+      "correctAnswer": "C",
+      "explanation": "C captures the direct disagreement between the first text's claim of impossibility and the second text's examples of customization and alternative designs. A invents opposing popularity forecasts. B is contradicted by Text 2's explicit benches and planters. D misstates Text 2's central defense of public expression. The dispute concerns expressive possibilities despite standardization, not how many people use the objects.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 73,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q074",
+      "groupId": "rw-20261010-user96-q074",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Hard",
+      "passage": "The following text is from Maro Selwyn's 1938 novel The South Window.\n\nI had begun to ask Letha whether the final proof should go into the cabinet, but the question lost its shape before I could finish. Her face made every ordinary instruction seem absurd. <u>Her lips had the pale color of primer, the shutter lever clicked against the table in her unsteady hand, and her eyes looked past my shoulder toward the dark square of the workshop window.</u> It seemed that the whole room had spoken a language she alone understood, and that none of its words permitted her to move.",
+      "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+      "choices": {
+        "A": "It repeats an uncertainty that the narrator had explicitly voiced in the preceding statements.",
+        "B": "It supplies details that explain the narrator's interrupted question and reaction.",
+        "C": "It signals that the descriptions in the following sentence should be considered unreliable.",
+        "D": "It introduces an exaggeration that the next sentence proceeds to test."
+      },
+      "correctAnswer": "B",
+      "explanation": "B is correct because the pallor, unsteady hand, and fixed gaze explain why the narrator cannot continue an ordinary question. A invents an explicitly voiced uncertainty; the earlier statements describe interruption and reaction. C mistakes heightened description for a warning about reliability. D invents a test of an exaggeration; the following metaphor develops the impression of paralysis. The sentence provides the visible basis for the response already narrated.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 74,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q075",
+      "groupId": "rw-20261010-user96-q075",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Medium",
+      "passage": "The following text is adapted from Ivo Cerane's 1921 poem “Before the New Engine.”\n\nI could not name the hands that made it breathe,\nNor tell what balance taught the brass to sing;\nA pulse seemed hidden in each turning ring,\nAnd motion flowered in the gears beneath.\nAmong the gathered watchers, wordless, still,\nI stood before that patient, living will.",
+      "question": "Which choice best states the main purpose of the poem?",
+      "choices": {
+        "A": "To explain the particular mechanical operation performed by an engine",
+        "B": "To show the speaker changing from indifference to admiration",
+        "C": "To justify admiration for an engine that other observers dismiss",
+        "D": "To convey the powerful impression an engine makes on the speaker"
+      },
+      "correctAnswer": "D",
+      "explanation": "D fits the animated descriptions of breathing brass, hidden pulse, flowering motion, and the speaker's wordless response. A requires a functional explanation that the poem does not supply; the speaker admits not knowing how the balance works. B invents initial indifference. C invents other observers' dismissal, although they are gathered around the engine. The poem records the force of an encounter rather than explaining mechanics or defending a disputed judgment.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 75,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q076",
+      "groupId": "rw-20261010-user96-q076",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Cross-Text Connections",
+      "subtopic": "Cross-Text Connections",
+      "difficulty": "Medium",
+      "passage": "Text 1\nIn a 2023 study, ornithologists Alina Verc and Tomas Rell examined how migratory birds selected stopover sites. Seeking fuller evidence on a sparsely measured question, the team compared food availability, vegetation cover, and predator activity across 42 locations. <u>The relative importance of these factors changed with the expected stay: available food best predicted brief stopover choices, while dense cover mattered more during longer stays.</u>\n\nText 2\nStudies of animal behavior may overturn expectations or give solid support to an intuitively plausible account. Verc and Rell's stopover study belongs to the latter group. That birds needing a quick refueling stop favor food, while birds remaining longer need shelter, is not astonishing. The study's breadth and careful comparisons nonetheless turn a reasonable expectation into an empirically grounded finding.",
+      "question": "How would the author of Text 2 most likely respond to the underlined statement in Text 1?",
+      "choices": {
+        "A": "By treating the conclusions as valuable even though their central pattern is unsurprising",
+        "B": "By praising the results while questioning the rigor with which the team obtained them",
+        "C": "By describing ways birds resist the behavior the researchers reported",
+        "D": "By arguing that a study intended to confirm everyday assumptions necessarily produces startling findings"
+      },
+      "correctAnswer": "A",
+      "explanation": "A is correct because Text 2 explicitly distinguishes an unsurprising pattern from the value of careful empirical support. B reverses its approval of the study's rigor. C invents counterexamples or resistance that Text 2 never discusses. D contradicts the statement that the findings are not astonishing and adds a rule about research intentions. The author would qualify any suggestion of novelty without dismissing the conclusions' evidentiary importance.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 76,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q077",
+      "groupId": "rw-20261010-user96-q077",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Cross-Text Connections",
+      "subtopic": "Cross-Text Connections",
+      "difficulty": "Medium",
+      "passage": "Text 1\n<u>The Vernic canal boom, spanning roughly 1560 to 1780, joined water management with skills more often associated with other trades.</u> Modern accounts tend to emphasize excavation and masonry, yet precision gear-cutting techniques developed by clockmakers helped shape the sluice machinery at Halden Locks in 1772. The project demonstrates how canal builders drew on an unexpectedly different technical tradition.\n\nText 2\nCalling Vernic canal engineering “clockwork-like” is most appropriate to the later part of the boom. From the 1680s onward, closely fitted gear trains regulated increasingly elaborate gates; the machinery at Halden Locks is a notable example. Earlier works, especially those built before 1650, depended chiefly on levers, wedges, and laborers' direct handling of gates. Precision gearing was thus characteristic of a phase, not uniformly of the whole period.",
+      "question": "How would the author of Text 2 most likely regard the underlined characterization in Text 1?",
+      "choices": {
+        "A": "As a misunderstanding of the distinctive machinery installed at Halden Locks",
+        "B": "As an unsuccessful attempt to extend clockmaking's influence beyond excavation and masonry",
+        "C": "As an apt illustration of a trend associated with a particular phase of the canal boom",
+        "D": "As an error about how clockmaking techniques shaped the earliest Vernic canals"
+      },
+      "correctAnswer": "C",
+      "explanation": "C follows Text 2's acceptance of Halden Locks as an example of later precision gearing. The author would contextualize the example in a particular phase. A invents disagreement about the machinery itself. B misstates the relationship among the trades and ignores Text 2's endorsement of the example. D locates the 1772 project in the earliest phase, contrary to the chronology. Qualifying a broad period label does not require rejecting a valid later example.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 77,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q078",
+      "groupId": "rw-20261010-user96-q078",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Hard",
+      "passage": "The following text is adapted from Nerra Talon's 1947 novel Margins of Air.\n\n<u>For the next three flying seasons, Ceryn watched the ground below with an attention that needed no prompting.</u> Roads, field boundaries, the changes in color beside a stream: all entered her mind before she thought to select among them. Her memory was less a notebook she kept than a drawer that filled itself whenever the aircraft banked. Years later, when she had to judge an unfamiliar landing ground at a glance, she would draw on that unplanned accumulation with a precision that surprised those who had mistaken her quiet watching for idleness.",
+      "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+      "choices": {
+        "A": "It identifies the remembered observations that eventually proved most important to Ceryn.",
+        "B": "It characterizes Ceryn's habitual mental activity during a particular period.",
+        "C": "It explains the cause of Ceryn's fascination with other people aboard the aircraft.",
+        "D": "It depicts Ceryn as excessively absorbed in examining her own emotions."
+      },
+      "correctAnswer": "B",
+      "explanation": "B is correct because the sentence specifies a period and Ceryn's spontaneous attentiveness during it. Later sentences elaborate how those impressions accumulate and become useful. A mistakes the broad habit for a selection of particular memories. C supplies a cause and a focus on other passengers that the sentence does not contain. D shifts attention from the external landscape to Ceryn's emotions. The sentence establishes the mental pattern developed throughout the excerpt.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 78,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q079",
+      "groupId": "rw-20261010-user96-q079",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Medium",
+      "passage": "Historian Esmé Tralen investigates overlooked domestic labor by combining household accounts, interviews, and spatial records in different proportions. For her 2014 Harbor Hours project, she spent a month following the paths through which meals and laundry reached seasonal dockworkers, documenting tasks absent from payrolls. A later project, The Uncounted Day, approached similar questions through a different arrangement of evidence. Published in 2021, it placed family time-use notebooks beside official employment registers, with blank columns marking work the registers never recorded. The juxtaposition encouraged readers to reconsider what an apparently complete employment history leaves invisible.",
+      "question": "Which choice best describes the overall structure of the text?",
+      "choices": {
+        "A": "It praises one researcher, then introduces a second whose work has become more influential.",
+        "B": "It describes one project, then identifies the experiences that inspired it.",
+        "C": "It begins favorably, then turns to criticism of the same researcher's later work.",
+        "D": "It states a general account of a researcher's approach, then illustrates that account with particular projects."
+      },
+      "correctAnswer": "D",
+      "explanation": "D matches the opening statement about Tralen's combined methods and the two projects showing different uses of those methods. A invents a second researcher. B reduces two examples to one project and substitutes origins for descriptions. C mistakes a change in evidence for a change to unfavorable assessment. The text develops its initial characterization through examples rather than redirecting its judgment.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 79,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q080",
+      "groupId": "rw-20261010-user96-q080",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Cross-Text Connections",
+      "subtopic": "Cross-Text Connections",
+      "difficulty": "Hard",
+      "passage": "Text 1\nMira Deren's 2019 novel The Unfinished House confronts the practical and emotional aftermath of a coastal flood, but it includes one fantastic device: certain walls repair themselves overnight. These “renewing rooms” are both unsettling and hopeful. They connect the family's struggles through a series of unexpected transformations, allowing Deren to juxtapose material restoration with a humane account of relationships that cannot be repaired so automatically.\n\nText 2\nThe “renewing rooms” weaken rather than enrich The Unfinished House. A novel about recovering from a flood ought to confront the cost, delay, and possible failure involved in rebuilding. By restoring walls overnight, Deren sidesteps those constraints in an otherwise grounded narrative. The family's emotions remain, but the practical ordeal central to the novel's circumstances becomes less fully represented.",
+      "question": "Which choice best describes a difference between the authors' assessments of the “renewing rooms”?",
+      "choices": {
+        "A": "Text 2 is substantially less favorable toward the device than Text 1 is.",
+        "B": "Text 2 finds the device more difficult to explain than Text 1 does.",
+        "C": "Text 1 treats the device as peripheral, whereas Text 2 considers it central.",
+        "D": "Text 1 regards the device as realistic, whereas Text 2 regards it as imaginary."
+      },
+      "correctAnswer": "A",
+      "explanation": "A is correct because Text 1 praises the device's imaginative and humane possibilities, whereas Text 2 argues that it removes important constraints from the subject. B invents difficulty explaining the device. C understates its integral role in Text 1's account. D ignores Text 1's explicit identification of it as fantastic. Both recognize the device's nature and importance; they differ over whether it strengthens the novel's treatment of its topic.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 80,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q081",
+      "groupId": "rw-20261010-user96-q081",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Medium",
+      "passage": "Marine chemist Narek Yilan's concern with the boundary between fresh and salt water culminated in the 1976 monograph The Salt Boundary, a work valued for its synthesis of estuarine processes. That synthesis followed several attempts Yilan never published. Earlier in the decade, he prepared an extended set of notes on how small changes in salinity could reshape plankton communities, then destroyed the draft rather than circulate it. A lecture sequence on the same problem likewise remained unpublished and has not survived. These abandoned accounts suggest that the subject occupied him well before it reached its definitive published form.",
+      "question": "Which choice best describes the purpose of the text?",
+      "choices": {
+        "A": "To suggest that Yilan found his publications after The Salt Boundary unsatisfactory",
+        "B": "To contrast The Salt Boundary with earlier projects mainly in terms of their ambition",
+        "C": "To identify connections between The Salt Boundary and several earlier unpublished efforts",
+        "D": "To trace changes in Yilan's methods during the actual composition of The Salt Boundary"
+      },
+      "correctAnswer": "C",
+      "explanation": "C is correct because the monograph and abandoned notes and lectures share Yilan's concern with fresh-salt boundaries and related plankton changes. A refers to later publications not discussed. B makes comparative ambition central, although the text emphasizes a sustained subject. D confines the chronology to composition of the final monograph and invents methodological change. The earlier efforts explain the depth of the preoccupation, rather than establish a before-and-after method.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 81,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q082",
+      "groupId": "rw-20261010-user96-q082",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Medium",
+      "passage": "In 2011, surveyors in Argentina's Valle de Lura found that groundwater at widely separated wells was becoming saline. Geochemical tests traced the change to an unusually extensive underground brine reservoir, a feature whose size attracted attention beyond the original water survey. Researchers subsequently began mapping isotope signatures in samples from the reservoir and surrounding aquifers. <u>Such a map could explain how brine reaches distant wells and identify places where barriers might reduce further mixing with usable groundwater.</u>",
+      "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+      "choices": {
+        "A": "It shows that the original surveyors have personally continued every phase of the investigation.",
+        "B": "It describes potential explanatory and practical implications of the isotope-mapping research.",
+        "C": "It demonstrates how many new questions have already been answered about the reservoir.",
+        "D": "It offers a conclusion that contradicts the earlier explanation for salinity in the wells."
+      },
+      "correctAnswer": "B",
+      "explanation": "B is correct because the sentence identifies two possible benefits: explaining the brine's spread and locating opportunities to limit mixing. A invents continuity of personnel. C changes potential outcomes into completed answers and claims a quantity of results the text does not give. D falsely creates a contradiction; tracing the reservoir's routes develops the earlier explanation. The conditional 'could' marks implications rather than achieved findings.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 82,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q083",
+      "groupId": "rw-20261010-user96-q083",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Medium",
+      "passage": "A colored stripe through a crowded terminal is more than decoration. Such markings, variously called “floor trails” and “wayfinding bands,” have been assigned different roles over the past seventy years. Some designers see them chiefly as reassurance: a visible route reduces uncertainty in an unfamiliar building. For industrial organizer Olya Sar, however, the same idea served efficiency. Her company, Strand Systems, introduced patterned routes in 1946, and she promoted them as a way to coordinate movements between work areas. A sequence of colored junctions could, she claimed, keep separate crews from interrupting one another's tasks.",
+      "question": "Which choice best describes the purpose of the text?",
+      "choices": {
+        "A": "To defend one use of floor markings after cataloging several alternatives",
+        "B": "To investigate Sar's personality through controversies surrounding her company",
+        "C": "To describe floor markings and identify roles that different people attribute to them",
+        "D": "To recount the origin of floor markings and refute objections to them"
+      },
+      "correctAnswer": "C",
+      "explanation": "C captures the description and the two attributed functions: reassurance and coordinated efficiency. A incorrectly gives the author a final advocacy position; Sar's claim is reported rather than endorsed as the sole proper use. B invents a personality analysis and controversies. D adds criticism and rebuttal not present in the text. The historical detail supports the account of one attributed role without making the whole passage an origin story.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 83,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q084",
+      "groupId": "rw-20261010-user96-q084",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Cross-Text Connections",
+      "subtopic": "Cross-Text Connections",
+      "difficulty": "Medium",
+      "passage": "Text 1\nA single thin bamboo ribbon cannot support a substantial shelf, but woven assemblies of such ribbons point toward surprisingly strong structures. Researchers at Pelvar Materials Lab have built small demonstration racks whose interlocking strips distribute loads across many points. The individual components remain light and flexible; joined in sufficient numbers, they hold objects far heavier than one ribbon could carry.\n\nText 2\nThe promise of thin structural strips lies largely in assemblies rather than isolated components. Layered or woven groups can fulfill building tasks while remaining more adaptable than one rigid beam. They can also distribute the consequences of damage: when one strip breaks, surrounding strips continue carrying part of its load. Strength and resilience therefore need not depend on making every component large.",
+      "question": "Based on the texts, both authors would most likely agree with which statement?",
+      "choices": {
+        "A": "Combining many small components can enable a load-bearing task that one component could not accomplish alone.",
+        "B": "Current ribbon designs were originally intended as miniature versions of large rigid beams.",
+        "C": "Using renewable bamboo directly eliminates every source of fragility in a large structure.",
+        "D": "Tasks performed by ribbon assemblies are currently completed most efficiently through continuous manual supervision."
+      },
+      "correctAnswer": "A",
+      "explanation": "A is supported by Text 1's heavier loads and Text 2's building tasks completed by assemblies. B invents the original design intention. C assigns resilience directly to renewability and makes an absolute claim; Text 2 attributes it to distributing loads across components. D introduces an efficiency comparison and supervision requirement absent from both texts. Their shared point concerns collective capacity, even though each text emphasizes a different advantage.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 84,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q085",
+      "groupId": "rw-20261010-user96-q085",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Hard",
+      "passage": "The following text is from Orel Merin's 1908 novel The Third Workshop.\n\nFew apprentices lingered after work, and fewer still returned for an unrequired lesson. Director Savel had made even capable visitors dislike his company; their accomplishments served him chiefly as occasions to explain how far they remained beneath his own. They could obtain instruction elsewhere without paying for it in humiliation. <u>His partner, Edda, achieved much the same solitude by inspiring apprehension rather than resentment.</u> Exacting and impatient, she could turn an innocent question into an examination whose outcome no visitor wished to risk.",
+      "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+      "choices": {
+        "A": "It conveys the repellent physical features of the workshop setting.",
+        "B": "It explains the origins of Savel's habit of regarding visitors as inferior.",
+        "C": "It introduces another character whose effect on visitors is comparable to Savel's.",
+        "D": "It contrasts Savel's character with the traits of visitors who dislike him."
+      },
+      "correctAnswer": "C",
+      "explanation": "C is correct because Edda, like Savel, discourages company, though her visitors feel apprehension rather than resentment. The sentence establishes a parallel outcome and introduces her subsequent characterization. A shifts from people to physical surroundings. B invents an account of how Savel developed his attitude. D misidentifies Edda as one of the visitors instead of his partner. The difference in emotional response does not erase the comparison in social effect.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 85,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q086",
+      "groupId": "rw-20261010-user96-q086",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Medium",
+      "passage": "The following text is from Malika Dorn's 1928 novel The Borrowed Compass.\n\nAzra and I shared lodgings at the survey academy, and much of what I learned there came from conversations outside our classes. <u>For all her delight in practical jokes, she was a careful student, with an absorbing private interest in acoustics.</u> She would explain why a tuning fork answered differently beside a hollow tube, or why a low note lingered in one room and vanished in another. By the end of that winter, I recognized problems of resonance and reflection that our formal exercises had scarcely touched.",
+      "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+      "choices": {
+        "A": "It develops a previously described disagreement between Azra and the narrator.",
+        "B": "It identifies characteristics of Azra that the following account further illustrates.",
+        "C": "It suggests a source of interpersonal tension subsequently revealed in the excerpt.",
+        "D": "It gives more information about the formal curriculum outlined in the preceding sentence."
+      },
+      "correctAnswer": "B",
+      "explanation": "B is correct because Azra's seriousness and interest in acoustics are illustrated by the explanations she gives and the knowledge the narrator gains. A and C invent conflict; the relationship is presented as intellectually useful. D mistakes learning outside classes for an outline of the formal curriculum. The qualification about jokes contrasts aspects of Azra herself, not her relationship with the narrator.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 86,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q087",
+      "groupId": "rw-20261010-user96-q087",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Medium",
+      "passage": "Turning a detailed technical handbook into a software interface can raise fears that the original author's judgment will be lost. That concern is misplaced in the case of Alina Ferex's 2011 Relland Handbook, which became an inspection interface in 2018. Ferex co-led the interface's design, making her own treatment of uncertain measurements part of its operation. The handbook's careful distinction between a questionable reading and a confirmed defect consequently survived in the controls and prompts users encountered. The change of format did not require abandoning the distinctions central to Ferex's work.",
+      "question": "Which choice best states the main purpose of the text?",
+      "choices": {
+        "A": "To argue that the interface retained the central judgments of Ferex's original handbook",
+        "B": "To speculate about what motivated Ferex to write the original handbook",
+        "C": "To describe the style and full content of the Relland Handbook",
+        "D": "To demonstrate that most conversions of technical writing into software are fundamentally flawed"
+      },
+      "correctAnswer": "A",
+      "explanation": "A follows the stated concern, the account of Ferex's involvement, and the example of a distinction preserved in the interface. B asks about a motive the text does not explore. C reduces the passage to a content description, overlooking its argument about faithful conversion. D generalizes a problem to most conversions despite the successful case the passage presents. The handbook detail functions as evidence of retained judgment.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 87,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q088",
+      "groupId": "rw-20261010-user96-q088",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Medium",
+      "passage": "The following text is adapted from Mara Sefar's 1919 short story “Sounding Duty.” The narrator is an apprentice surveyor.\n\nCaptain Halver examined the fresh chart sheets one by one, his satisfaction becoming more visible with each page. “These will make them listen to us,” he said. “You must not soften the dangerous reaches.”\n\nLater he summoned me to his cabin, and I went with a fear I could neither account for nor dismiss.\n\n“You will take charge of the next sounding,” he said. “You came from Fen District; surely you know its channels and its people better than anyone here.”\n\n<u>“I believe I do,” I answered, while my fingers shook against the chart case.</u>",
+      "question": "Which choice best describes the function of the underlined portion?",
+      "choices": {
+        "A": "It illustrates the narrator's usual response to Halver's routine inspection of charts.",
+        "B": "It explains why the task Halver assigns will be technically difficult to complete.",
+        "C": "It reveals the narrator's eager wish to please Halver through a difficult assignment.",
+        "D": "It makes the narrator's emotional state evident in the response to Halver's directions."
+      },
+      "correctAnswer": "D",
+      "explanation": "D is correct because the spoken assent is accompanied by shaking fingers, making the narrator's fear visible in the response to the assignment. A ignores the specific directive and the unusual fear described before it. B supplies a technical reason for difficulty that the sentence does not contain. C mistakes anxious compliance for demonstrated eagerness to please. The words and physical detail reveal emotion without establishing its full cause.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 88,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q089",
+      "groupId": "rw-20261010-user96-q089",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Cross-Text Connections",
+      "subtopic": "Cross-Text Connections",
+      "difficulty": "Medium",
+      "passage": "Text 1\nConservation brushes have become remarkably specialized for reaching surfaces that ordinary painting brushes cannot treat. In the Ravelin restoration archive, worn tools show narrow tips developed for deep grooves and flattened bundles suited to broad but fragile finishes. Researchers studying the archive relate those variations to the increasing range of surfaces conservators needed to handle.\n\nText 2\nIn her 2016 article “The Shapes of Conservation,” tool historian Elira Sen notes that the variety of conservation brushes includes more than 430 documented designs. Despite this diversity, many share a division within the bristle bundle: outer fibers carry liquid to the surface, while a stiffer inner core maintains the bundle's shape. Sen finds the many specialized forms more striking than any one shared structural feature.",
+      "question": "Based on the texts, both authors would most likely agree with which statement?",
+      "choices": {
+        "A": "Their bristle arrangement supports both liquid delivery and retention of the bundle's shape.",
+        "B": "Different designs emerged as conservators adapted their tools to particular kinds of surface.",
+        "C": "Conservation brushes are noteworthy for the extent of their specialization.",
+        "D": "Many conservation brushes share an internal division despite differences in their external forms."
+      },
+      "correctAnswer": "C",
+      "explanation": "C is supported by Text 1's surface-specific forms and Text 2's explicit emphasis on many specialized designs. A and D describe the bristle organization discussed only in Text 2; Text 1 supplies no account of internal structure. B captures the surface-based explanation offered only in Text 1; Text 2 does not explain how those designs arose. The question requires support in both accounts, rather than a statement established in just one.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 89,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q090",
+      "groupId": "rw-20261010-user96-q090",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Hard",
+      "passage": "<u>A central disagreement among reservoir engineers after the 1960s concerned Arven Dale's “single-outlet” model and Nara Bels's “distributed-flow” model.</u> For Dale, one principal outlet largely determined the drainage behavior of an entire reservoir system; changes at that outlet could transform conditions elsewhere. Bels instead emphasized a network of smaller passages. Within her model, several alternative routes could perform similar functions, so assigning a uniquely decisive role to one outlet overlooked the system's capacity to redistribute flow.",
+      "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+      "choices": {
+        "A": "It explains how interchangeability is central to Bels's model but not to Dale's.",
+        "B": "It surveys the specific events that caused the two models to be proposed.",
+        "C": "It introduces models that both make one exceptional outlet decisive.",
+        "D": "It presents opposing accounts that the subsequent sentences explain more fully."
+      },
+      "correctAnswer": "D",
+      "explanation": "D is correct because the opening identifies a disagreement and names its two models, which the following sentences unpack. A describes one important contrast developed later, not the information supplied in the underlined sentence. B invents an account of formative events. C contradicts the opposition: only Dale assigns a uniquely decisive role to one outlet. The opening frames the comparison without itself detailing either mechanism.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 90,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q091",
+      "groupId": "rw-20261010-user96-q091",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Medium",
+      "passage": "Early signal stations on the Gareth Vale railway used colored arms and lanterns to communicate with approaching crews. <u>An operator raised an arm against a pale backing board by day, while a lantern displayed a colored shape through the same opening after dark.</u> Plain though that arrangement appears, the stations conveyed a considerable range of instructions. Arm contours made positions distinguishable at a distance, and additional devices, including patterned flashes, shaded panes, and short bell sequences, helped separate an urgent stop from a caution or permission to proceed slowly.",
+      "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+      "choices": {
+        "A": "It identifies an innovation that first made complex instructions compatible with simple equipment.",
+        "B": "It visually describes an arrangement whose communicative range the text subsequently analyzes.",
+        "C": "It lists the physical traits responsible for the popularity of a railway's signals.",
+        "D": "It explains why the traditional signal arrangement resisted later modification."
+      },
+      "correctAnswer": "B",
+      "explanation": "B is correct because the sentence describes what approaching crews would see, before later sentences discuss how that apparently plain arrangement supports varied instructions. A makes a historical claim about a first innovation and a causal explanation that the sentence does not provide. C adds popularity and confuses the initial visual setup with the later account of distinguishing features. D invents resistance to change. Description prepares for analysis of versatility rather than itself establishing its causes.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 91,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q092",
+      "groupId": "rw-20261010-user96-q092",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Cross-Text Connections",
+      "subtopic": "Cross-Text Connections",
+      "difficulty": "Medium",
+      "passage": "Text 1\nCan perceived delivery reliability be measured? Assigning numbers to customers' confidence seems difficult, but some rating methods have proved useful. The Delivery Predictability Scale has allowed researchers to compare confidence among small groups of recipients. Such self-reports may be less dependable if extended from a limited study to an entire urban distribution network.\n\nText 2\nAnalyst Kira Rann's research suggests that valued predictability can be estimated in monetary terms. Avoiding reliance on confidence ratings alone, her team combined observed purchasing decisions with a statistical model. Customers were willing to pay an additional $5.80 for a delivery window narrowed from two hours to ninety minutes, according to Rann's 2021 article “The Price of a Time Window.” The finding supplies a quantitative estimate of how much a reduction in uncertainty mattered to those customers.",
+      "question": "Based on the texts, both authors would most likely agree with which statement?",
+      "choices": {
+        "A": "Researchers have achieved some success in quantifying aspects of valued delivery predictability.",
+        "B": "Monetary models are consistently superior to rating scales for evaluating delivery services.",
+        "C": "Rann's model fails to account adequately for the subjective responses of customers.",
+        "D": "Statistical models can determine all benefits of predictable deliveries for an entire society."
+      },
+      "correctAnswer": "A",
+      "explanation": "A is the modest common ground: Text 1 identifies useful ratings in small studies, and Text 2 reports a monetary estimate from observed choices. B requires a general ranking that neither author establishes. C attributes a failure to Rann that neither text identifies. D expands a limited customer finding into all societal benefits. The first author's concern about scale does not negate the acknowledged success of bounded quantitative research.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 92,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q093",
+      "groupId": "rw-20261010-user96-q093",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Cross-Text Connections",
+      "subtopic": "Cross-Text Connections",
+      "difficulty": "Easy",
+      "passage": "Text 1\nVisitors to the Taren Sound Archive encounter several regional forms of speech, including the Rellin language. One listening station lets visitors hear a short exchange and then record their own attempt at a phrase. Alongside films and annotated transcripts, such activities encourage care for the linguistic traditions preserved in the collection.\n\nText 2\nRellin's long decline in everyday use has recently stabilized. Raising awareness of the language is worthwhile, but its continued use owes more to coordinated teaching than to public displays alone. The partnership behind a 2022 revitalization program brought family groups, local schools, and language educators together to create regular opportunities to speak Rellin. Those efforts provided continuity that occasional encounters at an archive could not ensure by themselves.",
+      "question": "Based on the texts, both authors would most likely agree with which statement?",
+      "choices": {
+        "A": "Every regional language represented in the archive has begun to flourish.",
+        "B": "Educational activities such as those offered by the Taren Sound Archive have value.",
+        "C": "Rellin can be presented in an archive only because its number of speakers has increased substantially.",
+        "D": "Educating more archive visitors would necessarily produce additional teaching partnerships."
+      },
+      "correctAnswer": "B",
+      "explanation": "B is supported by Text 1's favorable account of engagement and Text 2's explicit acknowledgment that awareness is worthwhile. A generalizes one language's stabilization to every regional language. C invents both a substantial increase and a condition for archival presentation. D assigns a guaranteed causal effect to education that neither passage establishes. The second author can value awareness while assigning greater responsibility for continued use to coordinated teaching.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 93,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q094",
+      "groupId": "rw-20261010-user96-q094",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Medium",
+      "passage": "The following text is adapted from Nerise Avon's 1895 poem “Beyond the Lanterns.” The “you” addressed by the speaker is a bell buoy in the harbor.\n\nYou lift upon the swell,\nA red rim briefly showing;\nAbove the water's dull farewell\nYour little fire is glowing,\nThen sinks where darker currents dwell.\nThe low white mist draws near\nAnd folds your painted turning;\nNo edge remains to make you clear,\nNo color keeps its burning,\nBut still your measured bell I hear.",
+      "question": "Which choice best describes the overall structure of the poem?",
+      "choices": {
+        "A": "The speaker addresses the buoy, then turns to address the poem's reader.",
+        "B": "The speaker compares the buoy with the harbor, then contrasts its movement with human customs.",
+        "C": "The speaker admires the buoy, then reveals growing intimidation.",
+        "D": "The speaker describes the buoy's visible movement, then notes its sound when it is obscured."
+      },
+      "correctAnswer": "D",
+      "explanation": "D follows the progression from lifting, shining, and sinking to mist hiding the buoy while its bell remains audible. A invents a change in addressee. B adds a comparison with human customs that never appears. C interprets darkening and mist as the speaker's intimidation without evidence. The change concerns the mode of perception, from seeing movement and color to hearing the continuing bell.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 94,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q095",
+      "groupId": "rw-20261010-user96-q095",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Cross-Text Connections",
+      "subtopic": "Cross-Text Connections",
+      "difficulty": "Medium",
+      "passage": "Text 1\nComputer researchers have observed growing instability in the Athen municipal archives as incoming files become larger and more numerous. Technology reporter Sena Lark notes that “incoming data volume is growing at twice the rate anticipated in the original capacity plan.” High-resolution images now make up more of each upload than short text files do, placing heavier demands on storage operations and increasing brief service failures.\n\nText 2\nResearcher Pek Orne told the Haven Technical Review that “we now see bursts of failed writes after unusually large uploads.” He also describes a change in scheduling: processes once initiated in planned batches are increasingly “upload-led,” starting as soon as live submissions arrive. Similar pressures in archives outside Athen suggest that rising input loads are linked to the disruption rather than being a purely local peculiarity.",
+      "question": "How would the researchers cited in Text 1 most likely respond to Orne's remarks about unusually large uploads in Text 2?",
+      "choices": {
+        "A": "By agreeing that increased incoming data loads are causing difficulties in the archives",
+        "B": "By asserting that some consequences of larger uploads have chiefly been beneficial",
+        "C": "By criticizing Orne for ignoring all changes in how archive processes are scheduled",
+        "D": "By insisting that storage failures pose a greater threat than the uploads that precede them"
+      },
+      "correctAnswer": "A",
+      "explanation": "A is supported by both accounts linking larger incoming loads with disruption. B introduces benefits that Text 1 does not describe. C contradicts Text 2's discussion of changing schedules. D imposes a ranking between a problem and its proposed cause that neither account makes. The authors' shared concern is the effect of increased input, even though Text 2 adds a scheduling change and broader comparisons.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 95,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    },
+    {
+      "id": "rw-20261010-user96-q096",
+      "groupId": "rw-20261010-user96-q096",
+      "status": "staged",
+      "section": "Reading & Writing",
+      "domain": "Craft & Structure",
+      "skill": "Text Structure & Purpose",
+      "subtopic": "Text Structure & Purpose",
+      "difficulty": "Medium",
+      "passage": "The following text is adapted from Teren Alda's 1956 drama The Unnumbered Bench. An “Associate” is a laboratory worker on a limited temporary contract; the “Director” heads the institute.\n\nFIRST ASSOCIATE: Fourteen months I have spent preparing those crystal plates, and each usable reading cost me an evening when the others had gone home. This new series I reserved for my own study of heat passing through the coatings. Then our Director came down to the bench, examined the numbered trays, and instructed the clerk to enter the entire series beneath his name. He remained there until the last page had been filed. If even the observations we make disappear into another person's name, by what work are associates to establish a place for themselves?",
+      "question": "Which choice best states the main purpose of the text?",
+      "choices": {
+        "A": "To evoke the speaker's peaceful contentment with laboratory work",
+        "B": "To establish that the Director's behavior is unusual for people in his position",
+        "C": "To communicate the speaker's sense of having been treated unjustly",
+        "D": "To explain the speaker's customary duties within the institute"
+      },
+      "correctAnswer": "C",
+      "explanation": "C is correct because the speaker contrasts prolonged personal effort and an intended study with the Director's appropriation of credit, then questions how associates can advance under such conditions. A contradicts the complaint. B requires a comparison with typical directors that the speech does not provide. D makes background duties the central purpose, overlooking the grievance and rhetorical question. The details of work establish the basis of the perceived injustice.",
+      "sourceBatch": "2026-10-10-user-96-questions",
+      "sourceQuestionNumber": 96,
+      "classificationVersion": "2026-10-10-editorial-audit"
+    }
+  ]
+}
