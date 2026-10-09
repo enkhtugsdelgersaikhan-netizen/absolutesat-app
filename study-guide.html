@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css?v=unified-ui-1">
-  <link rel="stylesheet" href="/study-guide.css?v=1">
+  <link rel="stylesheet" href="/study-guide.css?v=latest-domains-1">
   <link rel="stylesheet" href="/responsive.css?v=1">
   <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
   <script defer src="/_vercel/insights/script.js"></script>
@@ -31,25 +31,25 @@
     <div class="study-guide-intro">
       <div class="study-guide-eyebrow">YOUR PERSONAL STUDY ROUTE</div>
       <h1>From your first score to your goal.</h1>
-      <p>A focused SAT plan built from your first LexLogica mock test. Identify the skills to improve, practice with purpose, and use later mocks to measure progress.</p>
+      <p>Your latest completed mock determines what to practice next. Work through 10-question domain assignments, review your mistakes, and update your priorities after every mock.</p>
       <a href="/" class="study-guide-back">← Back to homepage</a>
     </div>
     <div id="study-guide-loading" class="study-guide-loading" role="status">Loading your mock-test history…</div>
     <section id="study-guide-empty" class="study-guide-empty" hidden>
       <span class="study-guide-eyebrow">FIRST STEP</span>
       <h2>Take Mock Test 1 to get started.</h2>
-      <p>Your first completed Mock Test 1 becomes your starting point. This guide will use the results to highlight which skills deserve your attention and track you toward a goal you choose.</p>
+      <p>Your most recently completed mock becomes your diagnostic. Start with Mock Test 1, then update your priorities by taking more mocks.</p>
       <a class="sg-primary" href="/question?mock=mock-test-1">Start Mock Test 1 →</a>
     </section>
     <section id="study-guide-results" hidden>
       <section class="sg-score-panel" aria-label="Starting score and score goal">
         <div class="sg-score-header">
-          <div><div class="study-guide-eyebrow">YOUR SCORE JOURNEY</div><h2>Starting point and destination</h2></div>
-          <span class="sg-score-source">Starting score: first completion of Mock Test 1</span>
+          <div><div class="study-guide-eyebrow">YOUR SCORE JOURNEY</div><h2>Latest mock and your goal</h2></div>
+          <span class="sg-score-source" id="sg-score-source">Based on your latest completed mock</span>
         </div>
         <div class="sg-score-grid">
-          <div class="sg-score-tile"><span>Starting score</span><strong id="sg-start-score">—</strong><small id="sg-start-sections">R&amp;W — · Math —</small></div>
-          <div class="sg-score-tile"><span>Most recent mock</span><strong id="sg-current-score">—</strong><small id="sg-current-note">Your progress</small></div>
+          <div class="sg-score-tile"><span>Latest mock score</span><strong id="sg-start-score">—</strong><small id="sg-start-sections">R&amp;W — · Math —</small></div>
+          <div class="sg-score-tile"><span>Distance to goal</span><strong id="sg-current-score">—</strong><small id="sg-current-note">Set a goal to compare</small></div>
           <form class="sg-score-tile sg-goal-tile" id="sg-goal-form">
             <label for="sg-goal-input">Your goal score</label>
             <div class="sg-goal-entry"><input id="sg-goal-input" type="number" min="400" max="1600" step="10" inputmode="numeric" placeholder="e.g. 1450" required><button type="submit">Save</button></div>
@@ -61,25 +61,24 @@
           <div class="sg-progress-label"><span id="sg-progress-description"></span><strong id="sg-gap"></strong></div>
           <div class="sg-progress-track" role="progressbar" aria-label="Progress toward goal" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="sg-progress-track"><div id="sg-progress-fill"></div></div>
         </div>
-        <p class="sg-score-caveat">LexLogica currently estimates SAT section scores from raw mock accuracy. These are not official, equated College Board SAT scores, so use them primarily for tracking your practice progress.</p>
+        <p class="sg-score-caveat">LexLogica mock scores are practice estimates, not official, equated College Board SAT scores. Domain priorities update with your latest completed mock.</p>
       </section>
       <div id="sg-plan-content" hidden>
         <section class="sg-section">
-          <div class="sg-section-heading"><div><span class="study-guide-eyebrow">YOUR DIAGNOSTIC</span><h2>Start with these skills</h2></div><p>Ranked by missed and unanswered items on your first mock. Each skill has a small sample, so confirm weaknesses with more practice.</p></div>
+          <div class="sg-section-heading"><div><span class="study-guide-eyebrow">LATEST MOCK DIAGNOSTIC</span><h2>Start with these domains</h2></div><p id="sg-diagnostic-note">Ranked by urgency on your latest completed mock, weighted by domain importance. Each Practice set has 10 fresh questions, adjusted to your accuracy.</p></div>
           <div class="sg-priority-grid">
             <article class="sg-priority-col"><div class="sg-priority-head"><span>01</span><h3>Reading &amp; Writing</h3></div><div id="sg-rw-priorities"></div></article>
             <article class="sg-priority-col"><div class="sg-priority-head"><span>02</span><h3>Mathematics</h3></div><div id="sg-math-priorities"></div></article>
           </div>
+          <p id="sg-practice-message" class="sg-practice-message" role="status" aria-live="polite"></p>
         </section>
-        <section class="sg-section sg-work-panel">
-          <div class="sg-section-heading"><div><span class="study-guide-eyebrow">THIS WEEK'S WORK</span><h2>Your study checklist</h2></div><button id="sg-reset-checklist" class="sg-reset-checks" type="button">Reset weekly checklist</button></div>
-          <div id="sg-weekly-plan" class="sg-weekly-plan"></div>
-          <p class="sg-weekly-note">Repeat this cycle: review errors → focused practice → check mastery → full-length test. A larger goal gap may require multiple cycles; there is no reliable formula promising points gained per hour.</p>
-        </section>
-        <section class="sg-retest">
-          <div><span class="study-guide-eyebrow">MEASURE YOUR PROGRESS</span><h2>A full mock is a checkpoint, not the whole study plan.</h2><p>After one or two weeks of targeted work, take another full-length mock under test-like conditions and review the questions you missed. Keep Mock Test 1 as your original baseline.</p></div>
-          <a class="sg-primary" id="sg-next-test-link" href="/mock-tests">Choose your next mock →</a>
-        </section>
+        <div class="sg-workflow" aria-label="Study cycle">
+          <div><strong>Review → Practice → Retest</strong><p>Review mistakes from your latest mock, finish each domain’s 10-question assignment, then use the next mock to recalculate priorities.</p></div>
+          <div class="sg-workflow-actions">
+            <a id="sg-review-test-link" href="/mock-tests" class="sg-workflow-link">Review latest mock →</a>
+            <a id="sg-next-test-link" href="/mock-tests" class="sg-primary">Next mock →</a>
+          </div>
+        </div>
       </div>
     </section>
     <section class="sg-research">
@@ -92,7 +91,7 @@
 </main>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="/auth.js?v=home-logout-1"></script>
-<script src="/study-guide.js?v=1"></script>
+<script src="/study-guide.js?v=latest-domains-1"></script>
 <script src="/study.js"></script>
 </body>
 </html>

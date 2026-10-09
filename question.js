@@ -4407,7 +4407,76 @@ function finishDrill() {
 }
 
 
+/* ============================================================
+   PERSONALIZED DOMAIN PRACTICE (10 unique questions)
+   ============================================================ */
+function getGuidedPracticeSession() {
+    if (!currentUser || mockTestMode ||
+        new URLSearchParams(window.location.search).get("guide") !== "1") {
+        return null;
+    }
+    try {
+        const saved = JSON.parse(localStorage.getItem(
+            "lexlogica-study-guided-session:v1:" + currentUser.id
+        ) || "null");
+        if (!saved || saved.userId !== currentUser.id ||
+            !Array.isArray(saved.questionIds) || saved.questionIds.length !== 10 ||
+            new Set(saved.questionIds.map(String)).size !== 10 ||
+            !Array.isArray(saved.answeredIds) ||
+            typeof saved.completionKey !== "string" ||
+            !saved.completionKey.startsWith(
+                "lexlogica-study-domain-completions:v2:" + currentUser.id + ":"
+            )) return null;
+        return saved;
+    } catch (error) {
+        console.warn("Guided practice session unavailable:", error);
+        return null;
+    }
+}
+
+function recordGuidedPracticeAnswer(questionId) {
+    const guided = getGuidedPracticeSession();
+    if (!guided || !guided.questionIds.map(String).includes(String(questionId))) return;
+    if (!guided.answeredIds.map(String).includes(String(questionId))) {
+        guided.answeredIds.push(String(questionId));
+        try {
+            localStorage.setItem(
+                "lexlogica-study-guided-session:v1:" + currentUser.id,
+                JSON.stringify(guided)
+            );
+        } catch (error) {
+            console.warn("Guided practice progress could not be saved:", error);
+            return;
+        }
+    }
+
+    if (guided.answeredIds.length === 10) {
+        try {
+            const results = JSON.parse(
+                localStorage.getItem(guided.completionKey) || "{}"
+            );
+            results[guided.section + "::" + guided.domain] = {
+                completedAt: new Date().toISOString(),
+                questionIds: guided.questionIds
+            };
+            localStorage.setItem(guided.completionKey,JSON.stringify(results));
+        } catch (error) {
+            console.warn("Could not check off completed domain practice:", error);
+        }
+    }
+    updateNextQuestionButton();
+}
+
 function getQuestionBankNavigationState() {
+
+    const guided = getGuidedPracticeSession();
+    if (guided) {
+        return {
+            userId: guided.userId,
+            questionIds: guided.questionIds,
+            currentQuestionId: new URLSearchParams(window.location.search).get("id")
+        };
+    }
 
     try {
         const raw =
@@ -4538,38 +4607,38 @@ function resetQuestionForNavigation() {
 
 function updateNextQuestionButton() {
 
-    if (!nextQuestionButton) {
+    if (!nextQuestionButton) return;
+
+    const question = questions[currentQuestionIndex];
+    const guided = getGuidedPracticeSession();
+    if (guided && question && guided.questionIds.map(String).includes(String(question.id))) {
+        const answered = guided.answeredIds.map(String).includes(String(question.id));
+        const isLast = currentQuestionIndex === questions.length - 1;
+        nextQuestionButton.classList.toggle("hidden", !answered);
+        nextQuestionButton.textContent = isLast
+            ? "Finish practice →"
+            : "Next question →";
         return;
     }
 
-    const question =
-        questions[
-            currentQuestionIndex
-        ];
-
-    const isChecked =
-        Boolean(
-            question &&
-            checkedResults[
-                question.id
-            ]
-        );
-
-    const hasNext =
-        currentQuestionIndex <
-        questions.length - 1;
-
-    nextQuestionButton.classList.toggle(
-        "hidden",
-        !(
-            isChecked &&
-            hasNext
-        )
-    );
+    const checked = Boolean(question && checkedResults[question.id]);
+    const hasNext = currentQuestionIndex < questions.length - 1;
+    nextQuestionButton.classList.toggle("hidden", !(checked && hasNext));
 }
 
-
 async function goToNextQuestion() {
+
+    const guided = getGuidedPracticeSession();
+    if (guided) {
+        const current = questions[currentQuestionIndex];
+        if (!current || !guided.answeredIds.map(String).includes(String(current.id))) return;
+        if (currentQuestionIndex >= questions.length - 1) {
+            if (new Set(guided.answeredIds.map(String)).size === 10) {
+                window.location.assign("/study-guide");
+            }
+            return;
+        }
+    }
 
     if (
         currentQuestionIndex >=
@@ -9160,10 +9229,15 @@ function renderCurrentQuestion() {
 
     }
 
-    questionNumber.textContent =
-        `Question ${
-            currentQuestionIndex + 1
-        }`;
+    const guidedQuestionSession = getGuidedPracticeSession();
+    if (guidedQuestionSession && !mockTestMode) {
+        const domainTitle = "Domain Practice · " + guidedQuestionSession.domain;
+        if (setTitle) setTitle.textContent = domainTitle;
+        if (resultsSetTitle) resultsSetTitle.textContent = domainTitle;
+    }
+    questionNumber.textContent = guidedQuestionSession
+        ? "Question " + (currentQuestionIndex + 1) + " of 10"
+        : "Question " + (currentQuestionIndex + 1);
 
     const isMathQuestion =
         isMathQuestionRecord(question);
@@ -9278,10 +9352,9 @@ function renderCurrentQuestion() {
         );
 
     if (backToBank) {
-        backToBank.href =
-            isMathQuestion
-                ? "/math-question-bank"
-                : "/reading-question-bank";
+        backToBank.href = getGuidedPracticeSession()
+            ? "/study-guide"
+            : isMathQuestion ? "/math-question-bank" : "/reading-question-bank";
     }
 
     const mathNav =
@@ -10951,6 +11024,7 @@ async function checkAnswer() {
             question.id,
             false
         );
+        if (isFirstPracticeAttempt) recordGuidedPracticeAnswer(question.id);
 
         return;
     }
@@ -10980,6 +11054,7 @@ async function checkAnswer() {
         question.id,
         true
     );
+    if (isFirstPracticeAttempt) recordGuidedPracticeAnswer(question.id);
 
 }
 
