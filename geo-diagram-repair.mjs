@@ -59,6 +59,7 @@ function triangleNames(t){
 }
 function rightVertex(t,names){
  t=geometryPlain(t);
+ for(const m of t.matchAll(/\\angle\\s+([A-Z])\\s*=\\s*90/g))if(names.includes(m[1]))return m[1];
  for(const m of t.matchAll(/(?:is\s+right\s+at|right\s+at|right\s+angle\s+at)\s+([A-Z])\b/gi)){
    if(names.includes(m[1]))return m[1];
  }
@@ -428,6 +429,17 @@ function newSharedCIntersection(q){
  return d;
 }
 
+function newConnectedIsoscelesTriangles(q){
+ const d=base("Isosceles triangle ABC and adjacent triangle DCE, with DE extended to F");
+ const A=[55,169],B=[165,89],C=[275,169],D=[368.5,169],E=[315.45,198.39],F=[288.93,213.08];
+ d.lines.push(line(A,D),line(B,E),line(A,B),line(D,E),line(E,F));
+ for(const [name,p,dx,dy] of [["A",A,-12,16],["B",B,0,-12],["C",C,8,-12],
+  ["D",D,10,-10],["E",E,12,9],["F",F,-6,20]])d.points.push(point(...p,name,dx,dy));
+ d.labels.push(label(164,123,"108°"),label(344,186,"29°"));
+ d.ticks.push({x:110,y:129,angle:35,size:11},{x:220,y:129,angle:-35,size:11});
+ return d;
+}
+
 function geometryDiagram(q){
  const t=(q.passage||"")+" "+(q.question||"");
  if(["math-20261006-new409-q194","math-20261008-huge798-q128"].includes(q.id))return newSimilarQuads(q);
@@ -436,6 +448,8 @@ function geometryDiagram(q){
  if(["math-20261006-new409-q190","math-20261008-huge798-q130"].includes(q.id))return newIntersectingAngles(q);
  if(["math-20261006-new409-q194","math-20261008-huge798-q128"].includes(q.id))return newSimilarQuads(q);
  if(q.id==="math-20261006-new409-q321")return newDiameterCoordinate(q);
+ if(q.id==="math-20261006-new409-q183")return newConnectedIsoscelesTriangles(q);
+ if(q.id==="math-20261006-new409-q177")return newSharedCIntersection(q);
  if(q.id==="math-20261006-new409-q234")return newSharedCIntersection(q);
  if(q.id==="math-20261006-new409-q319")return newRightAltitudeToHypotenuse(q);
  if(q.id==="math-20261008-huge798-q090")return newCrossedIsosceles(q);
@@ -572,7 +586,7 @@ function repair(q){
   }
   else if(hasMisnamedTriangle(d,q)){replacement=geometryDiagram(q);reason="wrong triangle vertex labels"}
   else if(hasWrongCircleGeometry(d,q)){replacement=geometryDiagram(q);reason="diameter endpoints not opposite"}
-  else if(/math-20261006-new409-q(019|023|039|096|102|105|109|130|133|152|156|165|234|319)$/.test(id) ||
+  else if(/math-20261006-new409-q(019|023|039|096|102|105|109|130|133|152|156|165|177|183|234|319)$/.test(id) ||
      /math-20261008-huge798-q(090|136|156|164)$/.test(id)){
     replacement=geometryDiagram(q);reason="verified wrong labels or misleading geometry"}
   if(replacement&&isDrawingValid(replacement,q)){
