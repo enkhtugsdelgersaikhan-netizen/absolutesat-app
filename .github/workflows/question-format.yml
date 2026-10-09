@@ -23,8 +23,10 @@ jobs:
           node-version: '22'
       - name: Apply conservative fixes across all questions
         run: node question-format-audit.mjs --fix
-      - name: Validate JSON and changed lines
+      - name: Validate JSON, renderer syntax, and changed lines
         run: |
+          node --check question.js
+          node --check question-format-audit.mjs
           node -e "for (const f of ['question-bank.json','math-question-bank.json',...Array.from({length:8},(_,i)=>'mock-test-'+(i+1)+'.json')]) JSON.parse(require('fs').readFileSync(f,'utf8'))"
           git diff --check
       - name: Commit safe data normalizations to main
