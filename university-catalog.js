@@ -946,7 +946,7 @@
         "Enter both section scores to see your composite score context." :
         "Enter your " + (guide === "reading" ? "Reading & Writing" : "Math") + " score to see its context.";
       if (value) value.textContent = Number.isFinite(score) ? String(score) : "—";
-      if (band) band.textContent = chosen ? heading.replace(/\\.$/, "") : "Set your score";
+      if (band) band.textContent = chosen ? heading.replace(/[.]$/, "") : "Set your score";
       if (description) description.textContent = chosen
         ? detail.slice(heading.length).trim()
         : missing;
