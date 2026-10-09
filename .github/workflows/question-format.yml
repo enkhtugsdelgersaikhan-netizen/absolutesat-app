@@ -10,6 +10,9 @@ on:
       - question-render-regression.mjs
       - .github/workflows/question-format.yml
   workflow_dispatch:
+concurrency:
+  group: sat-question-data-main
+  cancel-in-progress: false
 permissions:
   contents: write
 jobs:
