@@ -536,6 +536,7 @@ meaningEl=document.getElementById("vocab-meaning"),
 exampleEl=document.getElementById("vocab-example"),
 definition=document.getElementById("vocab-definition"),
 reveal=document.getElementById("reveal-button"),
+preActions=document.querySelector(".vocab-pre-actions"),
 reviewButton=document.getElementById("review-button"),
 learningButton=document.getElementById("learning-button"),
 knownButton=document.getElementById("known-button"),
@@ -756,10 +757,12 @@ function findMatchingWords(excludeWord=""){
 
 function resetCardUI(){
     definition.classList.add("hidden");
-    // Keep the answer controls visible so the saved Solved/Unsolved state
-    // is visible immediately when the word loads.
-    actions.classList.remove("hidden");
+    // On a new flashcard, show only Reveal Definition; the status chip
+    // already communicates the saved learning/known state.
+    actions.classList.add("hidden");
+    preActions.classList.remove("hidden");
     reveal.classList.remove("hidden");
+    reveal.setAttribute("aria-expanded","false");
     card.classList.remove("vocab-solved-flash","vocab-learning-flash");
     reviewButton.textContent="☆ Mark for Review";
     reviewButton.classList.remove("active");
@@ -865,8 +868,9 @@ function setStatusFilter(status){
 
 reveal.addEventListener("click",()=>{
     definition.classList.remove("hidden");
+    preActions.classList.add("hidden");
     actions.classList.remove("hidden");
-    reveal.classList.add("hidden");
+    reveal.setAttribute("aria-expanded","true");
 });
 
 reviewButton.addEventListener("click",()=>{

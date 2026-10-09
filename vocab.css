@@ -247,3 +247,51 @@
     transform:translateY(-1px)!important;
     box-shadow:0 4px 10px rgba(15,23,42,.05)!important;
 }
+
+
+/* Vocabulary flashcard controls: one clear action before revealing, then two
+   equal-sized progress choices, with Review consistently underneath. */
+.vocab-card .vocab-study-controls{
+    width:min(100%,580px);
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    margin:auto auto 0;
+    padding-top:28px;
+}
+.vocab-card .vocab-pre-actions,
+.vocab-card .vocab-actions,
+.vocab-card .vocab-review-row{
+    margin-top:0;
+    width:100%;
+}
+.vocab-card .vocab-pre-actions{
+    max-width:380px;
+    margin-left:auto;
+    margin-right:auto;
+    display:grid;
+    grid-template-columns:minmax(0,1fr);
+}
+.vocab-card .vocab-actions{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:12px;
+}
+.vocab-card .vocab-review-row{
+    max-width:380px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.vocab-card .vocab-study-controls button{
+    box-sizing:border-box;
+    width:100%;
+    min-width:0;
+    min-height:54px;
+    padding:12px 16px;
+    line-height:1.3;
+    white-space:normal;
+}
+@media(max-width:650px){
+    .vocab-card .vocab-study-controls{gap:12px;padding-top:22px}
+    .vocab-card .vocab-actions{grid-template-columns:1fr}
+}

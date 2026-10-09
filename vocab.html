@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css?v=unified-ui-1">
-<link rel="stylesheet" href="vocab.css?v=unified-ui-1">
+<link rel="stylesheet" href="vocab.css?v=controls-2">
 <link rel="stylesheet" href="/responsive.css?v=1">
     <!-- Vercel Web Analytics -->
     <script>
@@ -63,8 +63,9 @@
 <p id="vocab-meaning"></p>
 <div class="vocab-example"><strong>Example</strong><p id="vocab-example"></p></div>
 </div>
+<div class="vocab-study-controls">
 <div class="vocab-pre-actions">
-<button id="reveal-button" class="vocab-primary">Reveal Definition</button>
+<button id="reveal-button" class="vocab-primary" type="button" aria-controls="vocab-definition" aria-expanded="false">Reveal Definition</button>
 </div>
 <div class="vocab-actions hidden" id="vocab-actions">
 <button id="learning-button" class="vocab-secondary vocab-answer-button" type="button" aria-pressed="false">Still Learning</button>
@@ -72,6 +73,7 @@
 </div>
 <div class="vocab-review-row">
 <button id="review-button" class="vocab-review-button" type="button" aria-pressed="false">☆ Mark for Review</button>
+</div>
 </div>
 </article>
 
@@ -84,7 +86,7 @@
 <script src="supabase-config.js"></script>
 <script src="auth-guard.js"></script>
 <script src="auth.js?v=dark-3"></script>
-<script src="vocab.js?v=9"></script>
+<script src="vocab.js?v=10"></script>
 <script>
 const menuButton=document.querySelector(".mobile-menu-button"),navigation=document.querySelector(".navigation");
 if(menuButton&&navigation){menuButton.addEventListener("click",()=>{const isOpen=navigation.classList.toggle("mobile-open");menuButton.setAttribute("aria-expanded",isOpen?"true":"false");});}
