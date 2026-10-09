@@ -193,11 +193,15 @@
   }
   function completedDomains() { return read(completionKey(),{}); }
   function mixForAccuracy(row) {
+    // Smoothly adjust difficulty from fundamentals to challenge rather
+    // than putting all scores under 40% into the same 6/3/1 bucket.
+    // A 10-question set has whole-number limits; nearby percentages may
+    // still round to the same distribution.
     if (!row.total) return [3,4,3];
-    if (row.accuracy<.4) return [6,3,1];
-    if (row.accuracy<.7) return [4,4,2];
-    if (row.accuracy<.85) return [2,5,3];
-    return [1,4,5];
+    const accuracy=Math.max(0,Math.min(1,Number(row.accuracy)||0));
+    const easy=Math.max(1,Math.min(8,Math.round(8-7*accuracy)));
+    const hard=Math.max(0,Math.min(6,Math.round(6*accuracy*accuracy)));
+    return [easy,10-easy-hard,hard];
   }
   function domainSeverity(row) {
     if (!row.total) return "unassessed";
@@ -345,11 +349,20 @@
       const selected=chooseTen(candidates,mixForAccuracy(row));
       if (selected.length!==10) throw new Error("Unable to assemble 10 new questions.");
       const questionIds=selected.map(q=>String(q.id));
+      const actualCounts=selected.reduce((counts,q)=>{
+        const level=String(q.difficulty||"Medium").toLowerCase();
+        if (level==="easy") counts[0]++;
+        else if (level==="hard") counts[2]++;
+        else counts[1]++;
+        return counts;
+      },[0,0,0]);
       const session={
         version:1,userId,section:row.section,domain:row.domain,
         mockId:"mock-test-"+latest.n,
         mockCompletedAt:latest.state.completedAt||"legacy",
         completionKey:completionKey(),
+        difficultyTarget:mixForAccuracy(row),
+        difficultyActual:actualCounts,
         questionIds,answeredIds:[],createdAt:new Date().toISOString()
       };
       if (!write(GUIDED_PREFIX+userId,session)) {
@@ -367,13 +380,15 @@
   }
 
   async function init() {
+    if (!$("study-guide-loading")) return;
     try {
       if (typeof absolutePrepSupabase==="undefined") throw new Error("Authentication unavailable");
       const {data,error}=await absolutePrepSupabase.auth.getSession();
-      if (error||!data?.session) {
-        location.replace("/login?redirect="+encodeURIComponent("/study-guide"));
-        return;
-      }
+      // The guide lives inside the signed-in dashboard on the public
+      // homepage. A guest must not be redirected away from the homepage.
+      if (error||!data?.session||
+          (typeof isAbsolutePrepGoogleSession==="function"&&
+           !isAbsolutePrepGoogleSession(data.session))) return;
       userId=data.session.user.id;
       latest=getLatestMock();
       $("study-guide-loading").hidden=true;
@@ -420,6 +435,11 @@
       window.addEventListener("pageshow",event=>{
         if (event.persisted) window.location.reload();
       });
+      if (window.location.hash==="#study-guide") {
+        requestAnimationFrame(()=>requestAnimationFrame(()=>
+          $("study-guide")?.scrollIntoView({block:"start"})
+        ));
+      }
     } catch (error) {
       console.error("Study guide error:",error);
       $("study-guide-loading").hidden=false;
