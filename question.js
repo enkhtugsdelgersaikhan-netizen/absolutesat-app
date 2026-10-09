@@ -9229,10 +9229,15 @@ function renderCurrentQuestion() {
 
     }
 
-    questionNumber.textContent =
-        `Question ${
-            currentQuestionIndex + 1
-        }`;
+    const guidedQuestionSession = getGuidedPracticeSession();
+    if (guidedQuestionSession && !mockTestMode) {
+        const domainTitle = "Domain Practice · " + guidedQuestionSession.domain;
+        if (setTitle) setTitle.textContent = domainTitle;
+        if (resultsSetTitle) resultsSetTitle.textContent = domainTitle;
+    }
+    questionNumber.textContent = guidedQuestionSession
+        ? "Question " + (currentQuestionIndex + 1) + " of 10"
+        : "Question " + (currentQuestionIndex + 1);
 
     const isMathQuestion =
         isMathQuestionRecord(question);
