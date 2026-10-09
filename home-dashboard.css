@@ -162,3 +162,70 @@ html.lexlogica-dark-mode .dashboard-reset-confirmation label{color:#f5d1ca}
     align-items:center;
     justify-content:center;
 }
+
+/* Progressive disclosure: real analytics and detailed reports remain available
+   but no longer compete with the three immediate practice priorities. */
+.home-progress-example[hidden]{display:none!important}
+.home-dashboard .home-disclosure{
+    margin:0 0 14px;
+    background:#fff;
+    border:1px solid #dce8e5;
+    border-radius:16px;
+    overflow:hidden;
+}
+.home-disclosure-summary{
+    padding:17px 20px;
+    display:flex;
+    align-items:center;
+    gap:13px;
+    list-style:none;
+    cursor:pointer;
+    transition:background-color .18s ease;
+}
+.home-disclosure-summary::-webkit-details-marker{display:none}
+.home-disclosure-summary:hover{background:#f5faf8}
+.home-disclosure-icon{
+    width:38px;height:38px;display:grid;place-items:center;flex-shrink:0;
+    border:1px solid #d0e6dd;border-radius:10px;color:#0e7367;background:#eff8f4;
+    font-weight:800;font-size:19px;
+}
+.home-disclosure-title{display:grid;gap:3px;min-width:0;flex:1}
+.home-disclosure-title strong{font-size:15px;color:#173b36;line-height:1.4}
+.home-disclosure-title small{font-size:10px;color:#718781;line-height:1.5}
+.home-disclosure-toggle{
+    color:#0e7367;font-size:11px;font-weight:700;white-space:nowrap;
+}
+.home-disclosure-toggle span{font-size:15px;display:inline-block;transition:transform .2s}
+.home-disclosure[open] .home-disclosure-toggle span{transform:rotate(180deg)}
+.home-disclosure-content{padding:0 16px 18px}
+.home-disclosure[open] .home-disclosure-summary{border-bottom:1px solid #e7efec;margin-bottom:16px}
+.home-progress-example{
+    background:#f2f8f5;border:1px solid #d7e7e0;border-radius:11px;
+    padding:13px 15px;margin:0 0 13px;display:grid;gap:5px;
+}
+.home-progress-example>strong{font-size:10px;letter-spacing:.03em;color:#0b796b}
+.home-progress-example>span{font-size:13px;color:#294943;font-weight:700}
+.home-progress-example p{font-size:11px;color:#6c8079;line-height:1.6;margin:0}
+.home-dashboard .home-disclosure .dashboard-chart-grid{margin-bottom:14px}
+.home-dashboard .home-disclosure .dashboard-subtopic-panel{margin-bottom:0}
+.home-disclosure summary:focus-visible{
+    outline:3px solid #deac54;outline-offset:-3px;border-radius:10px;
+}
+html.lexlogica-dark-mode .home-dashboard .home-disclosure{
+    background:#1a2926;border-color:#36534b;
+}
+html.lexlogica-dark-mode .home-disclosure-summary:hover{background:#253c35}
+html.lexlogica-dark-mode .home-disclosure-title strong{color:#dcebe5}
+html.lexlogica-dark-mode .home-disclosure-title small{color:#a8c0b6}
+html.lexlogica-dark-mode .home-disclosure[open] .home-disclosure-summary{border-color:#36534b}
+html.lexlogica-dark-mode .home-progress-example{background:#233831;border-color:#36534b}
+html.lexlogica-dark-mode .home-progress-example>span{color:#dbede5}
+@media(max-width:640px){
+    .home-disclosure-summary{padding:14px;gap:9px}
+    .home-disclosure-icon{width:32px;height:32px}
+    .home-disclosure-title strong{font-size:13px}
+    .home-disclosure-title small{font-size:9px}
+    .home-disclosure-toggle{font-size:0}
+    .home-disclosure-toggle span{font-size:19px}
+    .home-disclosure-content{padding:0 10px 12px}
+}
