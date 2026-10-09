@@ -444,3 +444,13 @@
     .vocab-category-menu,.vocab-category-chevron,.vocab-category-option,.vocab-category-trigger{transition:none!important}
     .vocab-category-picker.is-open .vocab-category-option,.vocab-status-filter-button.active{animation:none!important}
 }
+
+/* Keep the floating animated picker above the later progress/card layers.
+   The entrance animations use transforms, which create stacking contexts even
+   after finishing because of animation-fill-mode: both. */
+.vocab-content{position:relative;isolation:isolate;overflow:visible}
+.vocab-toolbar{position:relative;z-index:10}
+.vocab-toolbar .vocab-category-wrap{position:relative;z-index:11}
+.vocab-progress,.vocab-card,.vocab-empty{position:relative;z-index:0}
+/* Formula Fluency shares Vocabulary's accessible animated category picker. */
+.vocab-category-wrap.is-enhanced #formula-category{display:none}
