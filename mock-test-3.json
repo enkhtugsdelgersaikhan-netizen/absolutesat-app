@@ -3556,7 +3556,20 @@
               "ellipses": [],
               "circles": [],
               "points": [],
-              "labels": [],
+              "labels": [
+                {
+                  "x": 210,
+                  "y": 70,
+                  "text": "length",
+                  "anchor": "middle"
+                },
+                {
+                  "x": 74,
+                  "y": 166,
+                  "text": "width",
+                  "anchor": "middle"
+                }
+              ],
               "rightAngles": [],
               "ticks": []
             }
@@ -6102,7 +6115,20 @@
               "ellipses": [],
               "circles": [],
               "points": [],
-              "labels": [],
+              "labels": [
+                {
+                  "x": 183,
+                  "y": 271,
+                  "text": "length",
+                  "anchor": "middle"
+                },
+                {
+                  "x": 83,
+                  "y": 176,
+                  "text": "height",
+                  "anchor": "middle"
+                }
+              ],
               "rightAngles": [],
               "ticks": []
             }

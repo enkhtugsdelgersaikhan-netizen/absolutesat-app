@@ -7489,7 +7489,14 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 208,
+            "y": 66,
+            "text": "side",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -10093,7 +10100,20 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 210,
+            "y": 70,
+            "text": "length",
+            "anchor": "middle"
+          },
+          {
+            "x": 74,
+            "y": 166,
+            "text": "width",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -11532,7 +11552,20 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 210,
+            "y": 70,
+            "text": "length",
+            "anchor": "middle"
+          },
+          {
+            "x": 74,
+            "y": 166,
+            "text": "width",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -11908,7 +11941,14 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 208,
+            "y": 66,
+            "text": "side",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -14887,7 +14927,20 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 183,
+            "y": 271,
+            "text": "length",
+            "anchor": "middle"
+          },
+          {
+            "x": 83,
+            "y": 176,
+            "text": "height",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -17311,7 +17364,14 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 208,
+            "y": 66,
+            "text": "side",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -20055,7 +20115,20 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 210,
+            "y": 70,
+            "text": "length",
+            "anchor": "middle"
+          },
+          {
+            "x": 74,
+            "y": 166,
+            "text": "width",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -20183,7 +20256,20 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 183,
+            "y": 271,
+            "text": "length",
+            "anchor": "middle"
+          },
+          {
+            "x": 83,
+            "y": 176,
+            "text": "height",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -20370,7 +20456,14 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 208,
+            "y": 66,
+            "text": "side",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -25623,7 +25716,14 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 208,
+            "y": 66,
+            "text": "side",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -25687,7 +25787,20 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 210,
+            "y": 70,
+            "text": "length",
+            "anchor": "middle"
+          },
+          {
+            "x": 74,
+            "y": 166,
+            "text": "width",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -26024,7 +26137,20 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 183,
+            "y": 271,
+            "text": "length",
+            "anchor": "middle"
+          },
+          {
+            "x": 83,
+            "y": 176,
+            "text": "height",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -26088,7 +26214,14 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 208,
+            "y": 66,
+            "text": "side",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -32630,7 +32763,14 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 208,
+            "y": 66,
+            "text": "side",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -32687,7 +32827,14 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 208,
+            "y": 66,
+            "text": "side",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -35713,7 +35860,14 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 208,
+            "y": 66,
+            "text": "side",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -37850,7 +38004,14 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 208,
+            "y": 66,
+            "text": "side",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -38198,7 +38359,14 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 208,
+            "y": 66,
+            "text": "side",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -38358,7 +38526,14 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 208,
+            "y": 66,
+            "text": "side",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -38486,7 +38661,20 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 183,
+            "y": 271,
+            "text": "length",
+            "anchor": "middle"
+          },
+          {
+            "x": 83,
+            "y": 176,
+            "text": "height",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -38764,7 +38952,20 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 210,
+            "y": 70,
+            "text": "length",
+            "anchor": "middle"
+          },
+          {
+            "x": 74,
+            "y": 166,
+            "text": "width",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -39072,7 +39273,14 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 208,
+            "y": 66,
+            "text": "side",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -39129,7 +39337,20 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 210,
+            "y": 70,
+            "text": "length",
+            "anchor": "middle"
+          },
+          {
+            "x": 74,
+            "y": 166,
+            "text": "width",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -39728,7 +39949,20 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 210,
+            "y": 70,
+            "text": "length",
+            "anchor": "middle"
+          },
+          {
+            "x": 74,
+            "y": 166,
+            "text": "width",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -40175,7 +40409,20 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 210,
+            "y": 70,
+            "text": "length",
+            "anchor": "middle"
+          },
+          {
+            "x": 74,
+            "y": 166,
+            "text": "width",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -40239,7 +40486,20 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 210,
+            "y": 70,
+            "text": "length",
+            "anchor": "middle"
+          },
+          {
+            "x": 74,
+            "y": 166,
+            "text": "width",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -40888,7 +41148,14 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 208,
+            "y": 66,
+            "text": "side",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -41386,7 +41653,14 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 208,
+            "y": 66,
+            "text": "side",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -41539,7 +41813,20 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 210,
+            "y": 70,
+            "text": "length",
+            "anchor": "middle"
+          },
+          {
+            "x": 74,
+            "y": 166,
+            "text": "width",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -41758,7 +42045,14 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 208,
+            "y": 66,
+            "text": "side",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -45381,7 +45675,14 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 208,
+            "y": 66,
+            "text": "side",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -46058,6 +46359,13 @@
             "x2": 309,
             "y2": 226,
             "dashed": false
+          },
+          {
+            "x1": 205,
+            "y1": 90,
+            "x2": 309,
+            "y2": 90,
+            "dashed": false
           }
         ],
         "polygons": [],
@@ -46077,7 +46385,20 @@
         ],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 260,
+            "y": 80,
+            "text": "radius",
+            "anchor": "middle"
+          },
+          {
+            "x": 331,
+            "y": 162,
+            "text": "height",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -47005,7 +47326,20 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 183,
+            "y": 271,
+            "text": "length",
+            "anchor": "middle"
+          },
+          {
+            "x": 83,
+            "y": 176,
+            "text": "height",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -47259,7 +47593,20 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 183,
+            "y": 271,
+            "text": "length",
+            "anchor": "middle"
+          },
+          {
+            "x": 83,
+            "y": 176,
+            "text": "height",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -47323,7 +47670,20 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 210,
+            "y": 70,
+            "text": "length",
+            "anchor": "middle"
+          },
+          {
+            "x": 74,
+            "y": 166,
+            "text": "width",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -47815,7 +48175,20 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 183,
+            "y": 271,
+            "text": "length",
+            "anchor": "middle"
+          },
+          {
+            "x": 83,
+            "y": 176,
+            "text": "height",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -48201,7 +48574,14 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 208,
+            "y": 66,
+            "text": "side",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -48246,6 +48626,20 @@
             "x2": 310,
             "y2": 238,
             "dashed": false
+          },
+          {
+            "x1": 210,
+            "y1": 52,
+            "x2": 210,
+            "y2": 238,
+            "dashed": true
+          },
+          {
+            "x1": 210,
+            "y1": 238,
+            "x2": 310,
+            "y2": 238,
+            "dashed": false
           }
         ],
         "polygons": [],
@@ -48259,7 +48653,20 @@
         ],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 229,
+            "y": 145,
+            "text": "height",
+            "anchor": "middle"
+          },
+          {
+            "x": 264,
+            "y": 253,
+            "text": "radius",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -48703,7 +49110,20 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 183,
+            "y": 271,
+            "text": "length",
+            "anchor": "middle"
+          },
+          {
+            "x": 83,
+            "y": 176,
+            "text": "height",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -48767,7 +49187,20 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 210,
+            "y": 70,
+            "text": "length",
+            "anchor": "middle"
+          },
+          {
+            "x": 74,
+            "y": 166,
+            "text": "width",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -49217,7 +49650,20 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 210,
+            "y": 70,
+            "text": "length",
+            "anchor": "middle"
+          },
+          {
+            "x": 74,
+            "y": 166,
+            "text": "width",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -49650,7 +50096,20 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 183,
+            "y": 271,
+            "text": "length",
+            "anchor": "middle"
+          },
+          {
+            "x": 83,
+            "y": 176,
+            "text": "height",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -49707,7 +50166,20 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 210,
+            "y": 70,
+            "text": "length",
+            "anchor": "middle"
+          },
+          {
+            "x": 74,
+            "y": 166,
+            "text": "width",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -49824,7 +50296,14 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 208,
+            "y": 66,
+            "text": "side",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -50026,7 +50505,14 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 208,
+            "y": 66,
+            "text": "side",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -50503,7 +50989,20 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 183,
+            "y": 271,
+            "text": "length",
+            "anchor": "middle"
+          },
+          {
+            "x": 83,
+            "y": 176,
+            "text": "height",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -62376,7 +62875,14 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 208,
+            "y": 66,
+            "text": "side",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -62689,7 +63195,20 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 183,
+            "y": 271,
+            "text": "length",
+            "anchor": "middle"
+          },
+          {
+            "x": 83,
+            "y": 176,
+            "text": "height",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -62753,7 +63272,14 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 208,
+            "y": 66,
+            "text": "side",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -62817,7 +63343,14 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 208,
+            "y": 66,
+            "text": "side",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -63013,7 +63546,14 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 208,
+            "y": 66,
+            "text": "side",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -63176,7 +63716,14 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 208,
+            "y": 66,
+            "text": "side",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -63228,6 +63775,13 @@
             "x2": 309,
             "y2": 226,
             "dashed": false
+          },
+          {
+            "x1": 205,
+            "y1": 90,
+            "x2": 309,
+            "y2": 90,
+            "dashed": false
           }
         ],
         "polygons": [],
@@ -63247,7 +63801,20 @@
         ],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 260,
+            "y": 80,
+            "text": "radius",
+            "anchor": "middle"
+          },
+          {
+            "x": 331,
+            "y": 162,
+            "text": "height",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -63304,7 +63871,20 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 210,
+            "y": 70,
+            "text": "length",
+            "anchor": "middle"
+          },
+          {
+            "x": 74,
+            "y": 166,
+            "text": "width",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -63368,7 +63948,14 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 208,
+            "y": 66,
+            "text": "side",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -63432,7 +64019,14 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 208,
+            "y": 66,
+            "text": "side",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -63489,7 +64083,14 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 208,
+            "y": 66,
+            "text": "side",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -63714,6 +64315,13 @@
             "x2": 309,
             "y2": 226,
             "dashed": false
+          },
+          {
+            "x1": 205,
+            "y1": 90,
+            "x2": 309,
+            "y2": 90,
+            "dashed": false
           }
         ],
         "polygons": [],
@@ -63733,7 +64341,20 @@
         ],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 260,
+            "y": 80,
+            "text": "radius",
+            "anchor": "middle"
+          },
+          {
+            "x": 331,
+            "y": 162,
+            "text": "height",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
@@ -63924,7 +64545,14 @@
         "ellipses": [],
         "circles": [],
         "points": [],
-        "labels": [],
+        "labels": [
+          {
+            "x": 208,
+            "y": 66,
+            "text": "side",
+            "anchor": "middle"
+          }
+        ],
         "rightAngles": [],
         "ticks": []
       }
