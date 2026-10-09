@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - geo-diagram-repair.mjs
+      - geo-diagram-semantic-check.mjs
       - .github/workflows/geo-diagram-repair.yml
   workflow_dispatch:
 permissions:
@@ -26,6 +27,8 @@ jobs:
         run: |
           node geo-diagram-repair.mjs --strict
           git diff --check
+      - name: Check geometry relationships in every drawing
+        run: node geo-diagram-semantic-check.mjs
       - name: Commit audited diagrams to main
         run: |
           if ! git diff --quiet; then
