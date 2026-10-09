@@ -36,6 +36,8 @@
         href="style.css?v=unified-ui-1"
     >
 
+<link rel="stylesheet" href="/dashboard.css?v=home-analytics-1">
+<link rel="stylesheet" href="/home-dashboard.css?v=1">
 <link rel="stylesheet" href="/responsive.css?v=1">
     <!-- Vercel Web Analytics -->
     <script>
@@ -62,6 +64,105 @@
     ========================================== -->
 
     <main>
+
+        <!-- Personal analytics only appear after a verified sign-in. -->
+        <section id="home-dashboard" class="dashboard-page home-dashboard" aria-labelledby="home-dashboard-title" hidden>
+            <div class="dashboard-header">
+                <div class="dashboard-header-copy">
+                    <div class="page-eyebrow">YOUR PRACTICE</div>
+                    <h2 id="home-dashboard-title">Welcome back.</h2>
+                    <p>Pick up where you left off, follow your study plan, and keep an eye on your progress.</p>
+                </div>
+            </div>
+            <section class="dashboard-content" aria-live="polite">
+        <div class="dashboard-kpis">
+            <article class="dashboard-kpi">
+                <span>Practice streak</span>
+                <strong id="streak">—</strong>
+                <small>Consecutive practice days</small>
+            </article>
+            <article class="dashboard-kpi">
+                <span>Questions answered</span>
+                <strong id="questions-answered">—</strong>
+                <small>Total saved practice answers</small>
+            </article>
+        </div>
+
+        <section class="dashboard-panel dashboard-study-guide-card"><div><span class="panel-eyebrow">PERSONALIZED PREPARATION</span><h2>From your first mock to your target SAT score</h2><p>Build a focused study route using your Mock Test 1 baseline, weaknesses, and a goal you choose.</p></div><a href="/study-guide" class="dashboard-guide-link">Open study guide →</a></section>
+
+        <div class="dashboard-chart-grid">
+            <section class="dashboard-panel dashboard-activity-panel">
+                <div class="dashboard-panel-heading">
+                    <div>
+                        <div class="panel-eyebrow">LAST 7 DAYS</div>
+                        <h2>Questions answered</h2>
+                    </div>
+                    <div class="dashboard-legend" aria-label="Chart legend">
+                        <span><i class="is-correct"></i>Correct</span>
+                        <span><i class="is-incorrect"></i>Incorrect</span>
+                    </div>
+                </div>
+                <div id="seven-day-chart" class="seven-day-chart dashboard-empty-chart">Loading practice history…</div>
+            </section>
+
+            <section class="dashboard-panel dashboard-trend-panel">
+                <div class="dashboard-panel-heading">
+                    <div>
+                        <div class="panel-eyebrow">MOCK TESTS</div>
+                        <h2>Mock test performance</h2>
+                        <p>Composite, Reading &amp; Writing, and Math across Mock Tests 1–8</p>
+                    </div>
+                    <div class="dashboard-legend dashboard-mock-legend" aria-label="Mock score chart legend">
+                        <span><i class="is-composite"></i>Composite</span>
+                        <span><i class="is-rw"></i>R&amp;W</span>
+                        <span><i class="is-math"></i>Math</span>
+                    </div>
+                </div>
+                <div id="mock-performance-chart" class="mock-performance-chart dashboard-empty-chart">Complete mock tests to build your score history.</div>
+            </section>
+        </div>
+
+        <section class="dashboard-panel dashboard-subtopic-panel">
+            <div class="dashboard-panel-heading dashboard-table-heading">
+                <div>
+                    <div class="panel-eyebrow">SKILL PERFORMANCE + NEXT WORK</div>
+                    <h2>Accuracy, pace, and what to practice next</h2>
+                </div>
+                <div class="dashboard-filter-group" role="group" aria-label="Filter skills by section">
+                    <button type="button" class="is-active" data-subtopic-filter="all">All</button>
+                    <button type="button" data-subtopic-filter="rw">R&amp;W</button>
+                    <button type="button" data-subtopic-filter="math">Math</button>
+                </div>
+            </div>
+
+            <div id="subtopic-skill-groups" class="dashboard-skill-groups">
+                <div class="dashboard-empty-state">Loading skill analytics…</div>
+            </div>
+
+            <p class="dashboard-benchmark-note">Color benchmark: 90%+ accuracy, about 71 seconds per R&amp;W question, and 95 seconds per Math question. Redder text means farther from the preferred benchmark. Average time uses first-attempt timing recorded from this analytics update onward.</p>
+        </section>
+
+        <div id="dashboard-data-note" class="dashboard-data-note" hidden></div>
+    </section>
+            <section class="dashboard-account-settings" aria-label="Practice data settings">
+                <details class="dashboard-settings-disclosure">
+                    <summary>Practice data settings</summary>
+                    <div class="dashboard-settings-inner">
+                        <p>Resetting deletes saved question attempts, mock history, study-guide progress, vocabulary and formula progress. This action cannot be undone.</p>
+                        <button type="button" class="dashboard-reset" id="dashboard-reset">Reset practice data</button>
+                        <div id="dashboard-reset-confirmation" class="dashboard-reset-confirmation" hidden>
+                            <label for="dashboard-reset-confirm-input">Type <strong>RESET</strong> to permanently delete your practice data.</label>
+                            <input type="text" id="dashboard-reset-confirm-input" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="Type RESET">
+                            <div class="dashboard-reset-actions">
+                                <button type="button" id="dashboard-reset-confirm" class="dashboard-reset-confirm" disabled>Delete practice data</button>
+                                <button type="button" id="dashboard-reset-cancel" class="dashboard-reset-cancel">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </section>
+        </section>
+
 
         <section class="features-section home-features-compact" aria-labelledby="why-absolute-prep">
             <div class="features-container">
@@ -289,7 +390,8 @@
     </script>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="auth.js?v=dark-3"></script>
+<script src="auth.js?v=home-logout-1"></script>
+<script src="/dashboard.js?v=home-analytics-1"></script>
 <script src="/university-top100.js?v=top100-1"></script>
 <script src="/university-catalog.js?v=assets-hires-1"></script>
 <script>
