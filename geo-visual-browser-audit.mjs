@@ -69,4 +69,8 @@ const summary={scanned:questions.length,diagrams:diagrams.length,graphs:question
  contactSheets:rows,items:all};
 writeFileSync(dest+"/report.json",JSON.stringify(summary,null,2)+"\n");
 console.log("VISUAL_AUDIT_SUMMARY "+JSON.stringify({...summary,items:undefined}));
+if(process.argv.includes("--strict")&&summary.withWarnings){
+ console.error("VISUAL_AUDIT_FAILED: "+summary.withWarnings+" diagrams have a visible text collision or clipping.");
+ process.exitCode=1;
+}
 await browser.close();
