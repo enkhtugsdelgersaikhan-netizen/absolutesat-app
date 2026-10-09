@@ -447,3 +447,18 @@ html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .homepage-study-guide .sg
     .sg-fluency-card{flex-wrap:wrap}
     .sg-fluency-card .sg-priority-link{margin-left:auto}
 }
+
+/* The primary action generates a personalized ten-question domain drill. */
+.homepage-study-guide .sg-priority-item .sg-priority-link{
+    min-width:145px;
+    padding:9px 13px;
+    font-size:10px;
+    line-height:1.35;
+    text-align:center;
+}
+@media(max-width:590px){
+    .homepage-study-guide .sg-priority-item .sg-priority-link{
+        width:100%;
+        min-width:0;
+    }
+}
