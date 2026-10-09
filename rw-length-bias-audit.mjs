@@ -2,6 +2,8 @@
 // Usage: node rw-length-bias-audit.mjs [--details] [--json] [--strict]
 import { readFileSync } from "node:fs";
 const bank = JSON.parse(readFileSync(new URL("./question-bank.json", import.meta.url), "utf8"));
+const reviewedBatch = JSON.parse(readFileSync(new URL("./question-batch-20261010-reviewed.json", import.meta.url), "utf8"));
+bank.questions.push(...reviewedBatch.questions.filter(q => q.section === "Reading & Writing"));
 const letters = ["A", "B", "C", "D"];
 const strip = (input) => String(input ?? "")
   .replace(/<[^>]*>/g, " ")
