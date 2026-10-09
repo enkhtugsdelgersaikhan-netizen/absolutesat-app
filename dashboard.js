@@ -1052,7 +1052,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (els.reset) {
         els.reset.addEventListener("click", async () => {
             const confirmed = window.confirm(
-                "Reset all practice data? This permanently removes saved question attempts, reviews, question-set results, timing analytics, and vocabulary progress."
+                "Reset all practice data? This permanently removes question attempts, saved mock tests, study goals, reviews, analytics, and vocabulary progress."
             );
 
             if (!confirmed) return;
@@ -1067,6 +1067,12 @@ document.addEventListener("DOMContentLoaded", async () => {
                 localStorage.removeItem(HISTORY_KEY);
                 localStorage.removeItem("absoluteprep_vocab_state");
                 localStorage.removeItem("absoluteprep_vocab_learned");
+                localStorage.removeItem("lexlogica-study-baseline:v1:" + user.id);
+                localStorage.removeItem("lexlogica-study-goal:v1:" + user.id);
+                localStorage.removeItem("lexlogica-study-checks:v1:" + user.id);
+                for (let number = 1; number <= 8; number += 1) {
+                    localStorage.removeItem("lexlogica-mock-state:" + user.id + ":mock-test-" + number);
+                }
 
                 const tables = [
                     "question_answers",

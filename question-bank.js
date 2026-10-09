@@ -223,6 +223,16 @@ function syncQuestionBankFilterUI() {
 }
 
 loadQuestionBankFilters();
+// Direct links from the personalized guide preselect the exact skill.
+const guideSkill = new URLSearchParams(window.location.search).get("skill");
+if (guideSkill && Object.values(SAT_FILTER_TAXONOMY[activeSection] || {}).flat().includes(guideSkill)) {
+    activeSkill = [guideSkill];
+    activeSearch = "";
+    activeDifficulty = [];
+    activeStatus = [];
+    reviewOnly = false;
+    saveQuestionBankFilters();
+}
 
 function normalizeDifficulty(value) {
     const text = String(value || "medium").toLowerCase();

@@ -4643,6 +4643,24 @@ async function goToNextQuestion() {
    MOCK TEST MODE
    ============================================================ */
 
+function preserveFirstMockStudyBaseline(state) {
+    if (!currentUser || mockTestId !== "mock-test-1" || !state?.completed) return;
+    const key = "lexlogica-study-baseline:v1:" + currentUser.id;
+    try {
+        if (localStorage.getItem(key)) return;
+        localStorage.setItem(key, JSON.stringify({
+            testId: "mock-test-1",
+            completed: true,
+            completedAt: state.completedAt,
+            satScores: state.satScores,
+            completedModules: state.completedModules,
+            routes: state.routes || {},
+            answers: state.answers || {},
+            choiceOrders: state.choiceOrders || {}
+        }));
+    } catch (error) { console.warn("Could not save original study baseline:",error); }
+}
+
 function getMockStateStorageKey() {
     if (
         !currentUser ||
@@ -6337,6 +6355,7 @@ function showMockFinalResults() {
     };
 
     saveMockState();
+    preserveFirstMockStudyBaseline(mockState);
 
     window.scrollTo({
         top: 0,
@@ -6405,6 +6424,10 @@ async function loadMockTest(
         restart &&
         key
     ) {
+        try {
+            const previous = JSON.parse(localStorage.getItem(key) || "null");
+            preserveFirstMockStudyBaseline(previous);
+        } catch {}
         localStorage.removeItem(
             key
         );

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Personalized Study Guide | LexLogica</title>
+  <link rel="icon" type="image/png" href="/Favicon.png?v=b2788e22">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css?v=unified-ui-1">
+  <link rel="stylesheet" href="/study-guide.css?v=1">
+  <link rel="stylesheet" href="/responsive.css?v=1">
+  <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+<header class="header"><div class="header-container">
+  <a href="/" class="logo-link" aria-label="LexLogica home"><img src="/Logo.png" alt="LexLogica" class="logo"></a>
+  <nav class="navigation" aria-label="Main navigation">
+    <a href="/mathematics" class="nav-button">Mathematics</a>
+    <a href="/mock-tests" class="nav-button">Mock Tests</a>
+    <a href="/reading-writing" class="nav-button">Reading and Writing</a>
+  </nav>
+  <a href="/dashboard" class="dashboard-button site-dashboard" hidden aria-hidden="true">Dashboard</a>
+  <div class="auth-buttons"><a href="/login" class="login-button">Login</a></div>
+  <button class="mobile-menu-button" aria-label="Open navigation" aria-expanded="false" type="button">☰</button>
+</div></header>
+<main class="study-guide-page">
+  <div class="study-guide-wrap">
+    <div class="study-guide-intro">
+      <div class="study-guide-eyebrow">YOUR PERSONAL STUDY ROUTE</div>
+      <h1>From your first score to your goal.</h1>
+      <p>A focused SAT plan built from your first LexLogica mock test. Identify the skills to improve, practice with purpose, and use later mocks to measure progress.</p>
+      <a href="/dashboard" class="study-guide-back">← Back to dashboard</a>
+    </div>
+    <div id="study-guide-loading" class="study-guide-loading" role="status">Loading your mock-test history…</div>
+    <section id="study-guide-empty" class="study-guide-empty" hidden>
+      <span class="study-guide-eyebrow">FIRST STEP</span>
+      <h2>Take Mock Test 1 to get started.</h2>
+      <p>Your first completed Mock Test 1 becomes your starting point. This guide will use the results to highlight which skills deserve your attention and track you toward a goal you choose.</p>
+      <a class="sg-primary" href="/question?mock=mock-test-1">Start Mock Test 1 →</a>
+    </section>
+    <section id="study-guide-results" hidden>
+      <section class="sg-score-panel" aria-label="Starting score and score goal">
+        <div class="sg-score-header">
+          <div><div class="study-guide-eyebrow">YOUR SCORE JOURNEY</div><h2>Starting point and destination</h2></div>
+          <span class="sg-score-source">Starting score: first completion of Mock Test 1</span>
+        </div>
+        <div class="sg-score-grid">
+          <div class="sg-score-tile"><span>Starting score</span><strong id="sg-start-score">—</strong><small id="sg-start-sections">R&amp;W — · Math —</small></div>
+          <div class="sg-score-tile"><span>Most recent mock</span><strong id="sg-current-score">—</strong><small id="sg-current-note">Your progress</small></div>
+          <form class="sg-score-tile sg-goal-tile" id="sg-goal-form">
+            <label for="sg-goal-input">Your goal score</label>
+            <div class="sg-goal-entry"><input id="sg-goal-input" type="number" min="400" max="1600" step="10" inputmode="numeric" placeholder="e.g. 1450" required><button type="submit">Save</button></div>
+            <small>400–1600, in 10-point increments</small>
+          </form>
+        </div>
+        <div id="sg-goal-message" class="sg-goal-message" role="status"></div>
+        <div id="sg-progress-wrap" class="sg-progress-wrap" hidden>
+          <div class="sg-progress-label"><span id="sg-progress-description"></span><strong id="sg-gap"></strong></div>
+          <div class="sg-progress-track" role="progressbar" aria-label="Progress toward goal" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="sg-progress-track"><div id="sg-progress-fill"></div></div>
+        </div>
+        <p class="sg-score-caveat">LexLogica currently estimates SAT section scores from raw mock accuracy. These are not official, equated College Board SAT scores, so use them primarily for tracking your practice progress.</p>
+      </section>
+      <div id="sg-plan-content" hidden>
+        <section class="sg-section">
+          <div class="sg-section-heading"><div><span class="study-guide-eyebrow">YOUR DIAGNOSTIC</span><h2>Start with these skills</h2></div><p>Ranked by missed and unanswered items on your first mock. Each skill has a small sample, so confirm weaknesses with more practice.</p></div>
+          <div class="sg-priority-grid">
+            <article class="sg-priority-col"><div class="sg-priority-head"><span>01</span><h3>Reading &amp; Writing</h3></div><div id="sg-rw-priorities"></div></article>
+            <article class="sg-priority-col"><div class="sg-priority-head"><span>02</span><h3>Mathematics</h3></div><div id="sg-math-priorities"></div></article>
+          </div>
+        </section>
+        <section class="sg-section sg-work-panel">
+          <div class="sg-section-heading"><div><span class="study-guide-eyebrow">THIS WEEK'S WORK</span><h2>Your study checklist</h2></div><button id="sg-reset-checklist" class="sg-reset-checks" type="button">Reset weekly checklist</button></div>
+          <div id="sg-weekly-plan" class="sg-weekly-plan"></div>
+          <p class="sg-weekly-note">Repeat this cycle: review errors → focused practice → check mastery → full-length test. A larger goal gap may require multiple cycles; there is no reliable formula promising points gained per hour.</p>
+        </section>
+        <section class="sg-retest">
+          <div><span class="study-guide-eyebrow">MEASURE YOUR PROGRESS</span><h2>A full mock is a checkpoint, not the whole study plan.</h2><p>After one or two weeks of targeted work, take another full-length mock under test-like conditions and review the questions you missed. Keep Mock Test 1 as your original baseline.</p></div>
+          <a class="sg-primary" id="sg-next-test-link" href="/mock-tests">Choose your next mock →</a>
+        </section>
+      </div>
+    </section>
+    <section class="sg-research">
+      <span class="study-guide-eyebrow">RESEARCH BEHIND THE PLAN</span>
+      <p>College Board research associates full-length digital practice with higher SAT performance (2025). Earlier Official SAT Practice research identifies skill progression, full-length tests, and personalized skill recommendations as useful practice behaviors (2020). Both analyses are observational: they do not predict an individual score gain or prove that practice alone caused the reported differences.</p>
+      <div class="sg-source-links"><a target="_blank" rel="noopener noreferrer" href="https://research.collegeboard.org/media/pdf/DigitalSATPracticeTests_052025.pdf">Digital practice study, 2025 ↗</a><a target="_blank" rel="noopener noreferrer" href="https://research.collegeboard.org/media/pdf/osp-technical-report.pdf">Official SAT Practice study, 2020 ↗</a></div>
+      <small>Your study goal and checklist are saved on this device for your signed-in account. They do not currently sync between devices.</small>
+    </section>
+  </div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/auth.js?v=dark-3"></script>
+<script src="/study-guide.js?v=1"></script>
+<script src="/study.js"></script>
+</body>
+</html>
