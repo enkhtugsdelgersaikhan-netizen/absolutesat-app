@@ -193,27 +193,15 @@
   }
   function completedDomains() { return read(completionKey(),{}); }
   function mixForAccuracy(row) {
-    // Quadratic interpolation: 0% -> 10 easy, 100% -> 10 hard.
-    // Medium peaks at 50%. Use largest remainder rounding to preserve
-    // exactly 10 questions without ever returning negative counts.
+    // Smooth, monotonic endpoints: 0% -> 10/0/0; 100% -> 0/0/10.
+    // Easy decreases, hard increases, and medium fills the remaining
+    // slots. Rounding each endpoint independently prevents a higher
+    // accuracy from accidentally receiving fewer hard questions.
     if (!row.total) return [3,4,3];
     const accuracy=Math.max(0,Math.min(1,Number(row.accuracy)||0));
-    const exact=[
-      10*(1-accuracy)*(1-accuracy),
-      20*accuracy*(1-accuracy),
-      10*accuracy*accuracy
-    ];
-    const counts=exact.map(Math.floor);
-    let remaining=10-counts.reduce((a,b)=>a+b,0);
-    const order=[0,1,2].sort((a,b)=>
-      (exact[b]-Math.floor(exact[b]))-(exact[a]-Math.floor(exact[a]))||a-b
-    );
-    for (const index of order) {
-      if (!remaining) break;
-      counts[index]++;
-      remaining--;
-    }
-    return counts;
+    const easy=Math.round(10*(1-accuracy)*(1-accuracy));
+    const hard=Math.round(10*accuracy*accuracy);
+    return [easy,10-easy-hard,hard];
   }
   function domainSeverity(row) {
     if (!row.total) return "unassessed";
