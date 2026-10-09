@@ -189,7 +189,7 @@
   }
   async function init() {
     try {
-      if(!window.absolutePrepSupabase)throw new Error("Authentication unavailable");
+      if(typeof absolutePrepSupabase==="undefined")throw new Error("Authentication unavailable");
       const {data,error}=await absolutePrepSupabase.auth.getSession();
       if(error||!data?.session){
         location.replace("/login?redirect="+encodeURIComponent("/study-guide"));
