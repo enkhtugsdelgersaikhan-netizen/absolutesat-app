@@ -3814,35 +3814,78 @@
             "diagram": {
               "width": 420,
               "height": 300,
-              "alt": "Circle geometry diagram",
+              "alt": "Circle ABCD with diameters AC and BD",
               "caption": "Schematic; not to scale.",
-              "lines": [],
+              "lines": [
+                {
+                  "x1": 116.2,
+                  "y1": 93,
+                  "x2": 299.8,
+                  "y2": 199,
+                  "dashed": false
+                },
+                {
+                  "x1": 299.8,
+                  "y1": 93,
+                  "x2": 116.2,
+                  "y2": 199,
+                  "dashed": false
+                }
+              ],
               "polygons": [],
               "ellipses": [],
               "circles": [
                 {
-                  "cx": 205,
-                  "cy": 152,
-                  "r": 104
+                  "cx": 208,
+                  "cy": 146,
+                  "r": 106
                 }
               ],
               "points": [
                 {
-                  "x": 119.81,
-                  "y": 92.35,
+                  "x": 116.2,
+                  "y": 93,
                   "label": "A",
-                  "dx": -12,
+                  "dx": -15,
                   "dy": -11
                 },
                 {
-                  "x": 299.26,
-                  "y": 108.05,
+                  "x": 299.8,
+                  "y": 93,
                   "label": "B",
                   "dx": 10,
-                  "dy": 15
+                  "dy": -11
+                },
+                {
+                  "x": 299.8,
+                  "y": 199,
+                  "label": "C",
+                  "dx": 10,
+                  "dy": 19
+                },
+                {
+                  "x": 116.2,
+                  "y": 199,
+                  "label": "D",
+                  "dx": -15,
+                  "dy": 19
+                },
+                {
+                  "x": 208,
+                  "y": 146,
+                  "label": "O",
+                  "dx": -10,
+                  "dy": 16
                 }
               ],
-              "labels": [],
+              "labels": [
+                {
+                  "x": 208,
+                  "y": 30,
+                  "text": "minor arc AB > minor arc BC",
+                  "anchor": "middle"
+                }
+              ],
               "rightAngles": [],
               "ticks": []
             }
