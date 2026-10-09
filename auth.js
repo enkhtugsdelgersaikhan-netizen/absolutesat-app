@@ -331,7 +331,60 @@ function isAbsolutePrepGoogleSession(session) {
    UPDATE HEADER
    ============================================================ */
 
-async function updateAbsolutePrepHeader(session = null) {
+function ensureHeaderLogoutButton() {
+    let button = document.querySelector(".site-dashboard");
+    if (!button) return null;
+    // Legacy pages ship a hidden Dashboard link. Replace it with a real,
+    // keyboard-accessible button before displaying anything.
+    if (button.tagName !== "BUTTON") {
+        const replacement = document.createElement("button");
+        replacement.type = "button";
+        replacement.className = button.className + " site-logout";
+        replacement.hidden = true;
+        replacement.setAttribute("aria-hidden", "true");
+        replacement.textContent = "Log out";
+        button.replaceWith(replacement);
+        button = replacement;
+    }
+    if (!button.dataset.logoutBound) {
+        button.dataset.logoutBound = "true";
+        button.addEventListener("click", async () => {
+            if (button.disabled) return;
+            button.disabled = true;
+            button.textContent = "Logging out…";
+            try {
+                const { error } = await absolutePrepSupabase.auth.signOut();
+                if (error) throw error;
+                window.location.assign("/");
+            } catch (error) {
+                console.error("Sign out failed:", error);
+                button.textContent = "Log out";
+                button.disabled = false;
+                window.alert("Could not log out. Please try again.");
+            }
+        });
+    }
+    return button;
+}
+
+function syncMobileAuthLink(authenticated) {
+    const navigation = document.querySelector(".navigation");
+    if (!navigation) return;
+    let link = navigation.querySelector(".nav-auth-link");
+    if (authenticated) {
+        if (link) link.remove();
+        return;
+    }
+    if (!link) {
+        link = document.createElement("a");
+        link.href = "/login";
+        link.className = "nav-button nav-auth-link";
+        link.textContent = "Get started";
+        navigation.appendChild(link);
+    }
+}
+
+async function updateAbsolutePrepHeader(session) {
 
     const authButtons =
         document.querySelector(
@@ -349,7 +402,7 @@ async function updateAbsolutePrepHeader(session = null) {
      * currently stored session.
      */
 
-    if (!session) {
+    if (session === undefined) {
 
         const {
             data,
@@ -376,7 +429,7 @@ async function updateAbsolutePrepHeader(session = null) {
     }
 
 
-    const dashboardButton = document.querySelector(".site-dashboard");
+    const dashboardButton = ensureHeaderLogoutButton();
 
     if (
         session &&
@@ -396,6 +449,7 @@ async function updateAbsolutePrepHeader(session = null) {
 
     if (session) {
 
+        syncMobileAuthLink(true);
         authButtons.classList.add("logged-in");
         if (dashboardButton) { dashboardButton.hidden = false; dashboardButton.classList.add("is-authenticated"); dashboardButton.removeAttribute("aria-hidden"); }
 
@@ -410,6 +464,7 @@ async function updateAbsolutePrepHeader(session = null) {
        LOGGED OUT
     ======================================================== */
 
+    syncMobileAuthLink(false);
     authButtons.classList.remove("logged-in");
     if (dashboardButton) { dashboardButton.hidden = true; dashboardButton.classList.remove("is-authenticated"); dashboardButton.setAttribute("aria-hidden","true"); }
 

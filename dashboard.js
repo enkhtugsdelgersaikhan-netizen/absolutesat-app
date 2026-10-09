@@ -1,12 +1,13 @@
 document.addEventListener("DOMContentLoaded", async () => {
-    const { data } = await absolutePrepSupabase.auth.getSession();
+    const dashboardRoot = document.getElementById("home-dashboard");
+    if (!dashboardRoot) return;
 
-    if (!data || !data.session) {
-        window.location.href = "/login";
-        return;
-    }
+    const { data, error: sessionError } = await absolutePrepSupabase.auth.getSession();
+    if (sessionError || !data?.session ||
+        !isAbsolutePrepGoogleSession(data.session)) return;
 
     const user = data.session.user;
+    dashboardRoot.hidden = false;
     const HISTORY_KEY = "absoluteprep-practice-history:" + user.id;
     const RESET_KEY = "absoluteprep-practice-reset:" + user.id;
     const PREFERRED_ACCURACY = 90;
@@ -1049,16 +1050,36 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     });
 
-    if (els.reset) {
-        els.reset.addEventListener("click", async () => {
-            const confirmed = window.confirm(
-                "Reset all practice data? This permanently removes question attempts, saved mock tests, study goals, reviews, analytics, and vocabulary progress."
-            );
+    // An intentionally recessed, two-stage destructive action:
+    // open the settings disclosure, then type RESET before deletion is enabled.
+    const resetConfirmation = document.getElementById("dashboard-reset-confirmation");
+    const resetInput = document.getElementById("dashboard-reset-confirm-input");
+    const resetConfirm = document.getElementById("dashboard-reset-confirm");
+    const resetCancel = document.getElementById("dashboard-reset-cancel");
 
-            if (!confirmed) return;
-
-            els.reset.disabled = true;
-            els.reset.textContent = "Resetting…";
+    if (els.reset && resetConfirmation && resetInput && resetConfirm && resetCancel) {
+        els.reset.addEventListener("click", () => {
+            els.reset.hidden = true;
+            resetConfirmation.hidden = false;
+            resetInput.value = "";
+            resetConfirm.disabled = true;
+            resetInput.focus();
+        });
+        resetInput.addEventListener("input", () => {
+            resetConfirm.disabled = resetInput.value.trim() !== "RESET";
+        });
+        resetCancel.addEventListener("click", () => {
+            resetInput.value = "";
+            resetConfirm.disabled = true;
+            resetConfirmation.hidden = true;
+            els.reset.hidden = false;
+            els.reset.focus();
+        });
+        resetConfirm.addEventListener("click", async () => {
+            if (resetInput.value.trim() !== "RESET" || resetConfirm.disabled) return;
+            resetConfirm.disabled = true;
+            resetCancel.disabled = true;
+            resetConfirm.textContent = "Deleting…";
 
             try {
                 localStorage.setItem(RESET_KEY, new Date().toISOString());
@@ -1067,6 +1088,9 @@ document.addEventListener("DOMContentLoaded", async () => {
                 localStorage.removeItem(HISTORY_KEY);
                 localStorage.removeItem("absoluteprep_vocab_state");
                 localStorage.removeItem("absoluteprep_vocab_learned");
+                localStorage.removeItem("lexlogica_formula_fluency_state_v1");
+                localStorage.removeItem("absoluteprep-drill-history:" + user.id);
+                localStorage.removeItem("absoluteprep-drill-session");
                 localStorage.removeItem("lexlogica-study-baseline:v1:" + user.id);
                 localStorage.removeItem("lexlogica-study-goal:v1:" + user.id);
                 localStorage.removeItem("lexlogica-study-checks:v1:" + user.id);
@@ -1087,46 +1111,25 @@ document.addEventListener("DOMContentLoaded", async () => {
                         .from(table)
                         .delete()
                         .eq("user_id", user.id);
-
                     if (error) {
                         console.warn("Could not reset " + table + ":", error);
                         failures.push(table);
                     }
                 }
 
-                if (failures.length) {
-                    window.alert(
-                        "Practice data was cleared on this device, but some older server records could not be deleted."
-                    );
-                } else {
-                    window.alert("All practice data has been reset.");
-                }
-
+                window.alert(
+                    failures.length
+                        ? "Data on this device was cleared, but some server practice records could not be deleted. Please try again later."
+                        : "Your practice data has been reset."
+                );
                 window.location.reload();
             } catch (error) {
                 console.error("Practice data reset error:", error);
-                els.reset.disabled = false;
-                els.reset.textContent = "Reset all practice data";
+                resetConfirm.textContent = "Delete practice data";
+                resetConfirm.disabled = resetInput.value.trim() !== "RESET";
+                resetCancel.disabled = false;
                 window.alert("We couldn't reset all practice data.");
             }
-        });
-    }
-
-    if (els.logout) {
-        els.logout.addEventListener("click", async () => {
-            els.logout.disabled = true;
-            els.logout.textContent = "Logging out…";
-
-            const { error } = await absolutePrepSupabase.auth.signOut();
-
-            if (error) {
-                els.logout.disabled = false;
-                els.logout.textContent = "Log out";
-                console.error("Dashboard logout error:", error);
-                return;
-            }
-
-            window.location.href = "/";
         });
     }
 

@@ -3,6 +3,11 @@
   "cleanUrls": true,
   "redirects": [
     {
+      "source": "/dashboard",
+      "destination": "/",
+      "permanent": false
+    },
+    {
       "source": "/math-drill",
       "destination": "/math-question-bank",
       "permanent": true

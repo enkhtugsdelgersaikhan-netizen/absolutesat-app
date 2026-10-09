@@ -6335,3 +6335,18 @@ body.dark-mode .question-diagram-polygon.question-diagram-shaded{
 .university-card:hover{
     box-shadow:var(--ll-shadow-hover)!important;
 }
+
+/* Guests can open the sign-in link from the mobile menu; signed-in users
+   instead have the persistent header Log out button. */
+.nav-auth-link{display:none!important}
+@media(max-width:950px){
+    .header-container .navigation.mobile-open .nav-auth-link{
+        display:flex!important;
+        align-items:center;
+        background:#eaf6f2;
+        color:#0d6b5f;
+        font-weight:700;
+        border-radius:10px;
+        margin-top:4px;
+    }
+}
