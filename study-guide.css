@@ -67,15 +67,15 @@
 .sg-source-links{display:flex;flex-wrap:wrap;gap:16px;margin:11px 0}
 .sg-source-links a{color:#0f756b;font-weight:700;text-decoration:none;font-size:11px}
 .sg-research small{font-size:10px;color:#84968f}
-html.lexlogica-dark-mode .study-guide-page{background:#111d1b;color:#e2f0eb}
-html.lexlogica-dark-mode .study-guide-loading,html.lexlogica-dark-mode .study-guide-empty,html.lexlogica-dark-mode .sg-score-panel,html.lexlogica-dark-mode .sg-priority-col,html.lexlogica-dark-mode .sg-work-panel,html.lexlogica-dark-mode .sg-retest,html.lexlogica-dark-mode .sg-research{background:#1a2926;border-color:#34514a}
-html.lexlogica-dark-mode .sg-score-tile,html.lexlogica-dark-mode .sg-check-card{background:#21332e;border-color:#36534b}
-html.lexlogica-dark-mode .sg-goal-tile,html.lexlogica-dark-mode .sg-check-card.is-done{background:#1a3b32}
-html.lexlogica-dark-mode .sg-priority-item{border-color:#30463f}
-html.lexlogica-dark-mode .sg-priority-name,html.lexlogica-dark-mode .sg-priority-head h3,html.lexlogica-dark-mode .sg-check-card h3{color:#e5f0eb}
-html.lexlogica-dark-mode .sg-score-tile>strong{color:#76cfb8}
-html.lexlogica-dark-mode .sg-goal-entry input{background:#1a2825;color:#e6f1ec;border-color:#4a7467}
-html.lexlogica-dark-mode .sg-reset-checks{background:#1f302b;color:#b7dfd2;border-color:#38584e}
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .study-guide-page{background:#111d1b;color:#e2f0eb}
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .study-guide-loading,html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .study-guide-empty,html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .sg-score-panel,html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .sg-priority-col,html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .sg-work-panel,html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .sg-retest,html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .sg-research{background:#1a2926;border-color:#34514a}
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .sg-score-tile,html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .sg-check-card{background:#21332e;border-color:#36534b}
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .sg-goal-tile,html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .sg-check-card.is-done{background:#1a3b32}
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .sg-priority-item{border-color:#30463f}
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .sg-priority-name,html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .sg-priority-head h3,html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .sg-check-card h3{color:#e5f0eb}
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .sg-score-tile>strong{color:#76cfb8}
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .sg-goal-entry input{background:#1a2825;color:#e6f1ec;border-color:#4a7467}
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .sg-reset-checks{background:#1f302b;color:#b7dfd2;border-color:#38584e}
 @media(max-width:810px){.study-guide-page{padding:30px 14px 55px}.sg-score-grid{grid-template-columns:1fr 1fr}.sg-goal-tile{grid-column:1/-1}.sg-priority-grid,.sg-weekly-plan{grid-template-columns:1fr}.sg-retest{align-items:flex-start;flex-direction:column}.sg-retest .sg-primary{width:100%}.sg-section-heading{display:block}.sg-section-heading p{margin-top:9px}.sg-reset-checks{margin-top:12px}}
 @media(max-width:490px){.sg-score-grid{grid-template-columns:1fr}.sg-goal-tile{grid-column:auto}.sg-score-header{display:block}.sg-score-source{display:block;text-align:left;margin-bottom:13px}.sg-score-panel,.sg-priority-col,.sg-work-panel,.sg-retest,.sg-research{padding:18px}.sg-score-header h2,.sg-section-heading h2{font-size:21px}.sg-priority-item{align-items:flex-start}.sg-priority-link{white-space:normal}}
 
@@ -168,9 +168,9 @@ html.lexlogica-dark-mode .sg-reset-checks{background:#1f302b;color:#b7dfd2;borde
 }
 .sg-workflow-link:hover{background:#eaf6f1}
 .sg-workflow .sg-primary{white-space:nowrap;font-size:11px}
-html.lexlogica-dark-mode .sg-workflow{background:#21332e;border-color:#36534b}
-html.lexlogica-dark-mode .sg-workflow strong{color:#e5f0eb}
-html.lexlogica-dark-mode .sg-domain-check{background:#36534b;color:#c0e9dc}
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .sg-workflow{background:#21332e;border-color:#36534b}
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .sg-workflow strong{color:#e5f0eb}
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .sg-domain-check{background:#36534b;color:#c0e9dc}
 @media(max-width:1050px){
     .sg-workflow{flex-direction:column;align-items:stretch}
     .sg-workflow-actions{justify-content:flex-start}
@@ -245,7 +245,7 @@ html.lexlogica-dark-mode .sg-domain-check{background:#36534b;color:#c0e9dc}
 .sg-priority-item[class*="sg-severity-"] .sg-priority-link:hover{
     background:#edf6f3;
 }
-html.lexlogica-dark-mode .sg-priority-item[class*="sg-severity-"]{
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .sg-priority-item[class*="sg-severity-"]{
     background:#1d302b;
     border-top-color:#36514b;
     border-right-color:#36514b;
@@ -312,13 +312,13 @@ html.lexlogica-dark-mode .sg-priority-item[class*="sg-severity-"]{
     font-size:10px;
     line-height:1.6;
 }
-html.lexlogica-dark-mode .home-dashboard .homepage-study-guide.study-guide-page{
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .home-dashboard .homepage-study-guide.study-guide-page{
     background:transparent;
 }
-html.lexlogica-dark-mode .home-dashboard .homepage-study-guide .study-guide-intro h2{
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .home-dashboard .homepage-study-guide .study-guide-intro h2{
     color:#daeae5;
 }
-html.lexlogica-dark-mode .home-dashboard .homepage-study-guide .sg-research-compact{
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .home-dashboard .homepage-study-guide .sg-research-compact{
     background:#1a2926;
 }
 @media(max-width:760px){
@@ -382,14 +382,14 @@ html.lexlogica-dark-mode .home-dashboard .homepage-study-guide .sg-research-comp
 .homepage-study-guide .sg-more-domains>summary:focus-visible{
     outline:3px solid #deac54;outline-offset:-3px;
 }
-html.lexlogica-dark-mode .homepage-study-guide .sg-more-domains{
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .homepage-study-guide .sg-more-domains{
     background:#1a2926;border-color:#36534b;
 }
-html.lexlogica-dark-mode .homepage-study-guide .sg-more-domains>summary span{color:#9eb5ab}
-html.lexlogica-dark-mode .homepage-study-guide .sg-more-domains[open]>summary{
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .homepage-study-guide .sg-more-domains>summary span{color:#9eb5ab}
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .homepage-study-guide .sg-more-domains[open]>summary{
     background:#22362f;border-color:#36534b;
 }
-html.lexlogica-dark-mode .homepage-study-guide .sg-example-label{
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .homepage-study-guide .sg-example-label{
     background:#233a32;color:#bce2d3;border-color:#36554b;
 }
 @media(max-width:590px){
