@@ -10,6 +10,7 @@ import { fileURLToPath } from "node:url";
 const directory = dirname(fileURLToPath(import.meta.url));
 const files = ["question-bank.json", "math-question-bank.json",
   "math-question-bank-20261010-reviewed.json",
+  "question-batch-20261010-reviewed.json",
   ...Array.from({ length: 8 }, (_, i) => "mock-test-" + (i + 1) + ".json")];
 const fix = process.argv.includes("--fix");
 const strict = process.argv.includes("--strict");
