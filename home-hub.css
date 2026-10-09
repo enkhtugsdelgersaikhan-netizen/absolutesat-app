@@ -205,3 +205,29 @@ html.lexlogica-home-inverted.lexlogica-dark-mode .university-position-label.medi
 html.lexlogica-home-inverted.lexlogica-dark-mode .university-position-label.at-upper .university-position-dot{
   background:#883d5f!important;
 }
+
+/* Semantic outlines accompany semantic text: don't let a red warning
+   acquire a cyan border in the shared inverted dark theme. */
+html.lexlogica-home-inverted.lexlogica-dark-mode :is(
+  .university-position-label.below-lower,
+  .dashboard-subtopic-card.severity-critical,
+  .sat-impact-result.is-negative,
+  .university-impact-card.negative
+){border-color:#87b3b7!important}
+html.lexlogica-home-inverted.lexlogica-dark-mode :is(
+  .university-position-label.at-lower,
+  .dashboard-subtopic-card.severity-weak
+){border-color:#90a3b5!important}
+html.lexlogica-home-inverted.lexlogica-dark-mode :is(
+  .university-position-label.lower-to-median,
+  .dashboard-subtopic-card.severity-watch
+){border-color:#828cb4!important}
+html.lexlogica-home-inverted.lexlogica-dark-mode .university-position-label.median-to-upper{
+  border-color:#a48d9e!important;
+}
+html.lexlogica-home-inverted.lexlogica-dark-mode :is(
+  .university-position-label.at-upper,
+  .dashboard-subtopic-card.severity-strong,
+  .sat-impact-result.is-positive,
+  .university-impact-card.positive
+){border-color:#c992a7!important}
