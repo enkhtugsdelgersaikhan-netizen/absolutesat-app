@@ -20,6 +20,9 @@ const poly=points=>({points});
 const notes={total:0,existing:0,added:0,replaced:0,repaired:0,unchanged:0,
   graphs:0,withoutVisual:0,mockCopies:0,issues:[],invalid:[],bySkill:{}};
 const note=(id,kind,detail)=>{if(notes.issues.length<250)notes.issues.push({id,kind,detail})};
+// Strip presentation-only MathJax delimiters before matching vertex names.
+// SAT content often writes names as \\(ABC\\), not plain ABC.
+const geometryPlain=t=>String(t||"").replace(/\\\\[()[\\]]/g,"").replace(/\\\\parallel/g,"parallel");
 const base=(alt="Geometry schematic",caption="Schematic; not to scale.")=>({
  width:420,height:300,alt,caption,lines:[],polygons:[],ellipses:[],
  circles:[],points:[],labels:[],rightAngles:[],ticks:[]
@@ -49,11 +52,13 @@ function newCircle(q){
  return d;
 }
 function triangleNames(t){
+ t=geometryPlain(t);
  const match=/\btriangles?\s+(?:\\\()?([A-Z]{3})\b/.exec(t);
  if(match)return match[1].toUpperCase().split("");
  return ["A","B","C"];
 }
 function rightVertex(t,names){
+ t=geometryPlain(t);
  for(const m of t.matchAll(/(?:is\s+right\s+at|right\s+at|right\s+angle\s+at)\s+([A-Z])\b/gi)){
    if(names.includes(m[1]))return m[1];
  }
@@ -194,7 +199,7 @@ function newTransversal(q){
  return d;
 }
 function newTwinTriangles(q){
- const t=(q.passage||"")+" "+(q.question||"");
+ const t=geometryPlain((q.passage||"")+" "+(q.question||""));
  let m=/\btriangles\s+([A-Z]{3})\s+and\s+([A-Z]{3})/.exec(t)||
     /\btriangle\s+([A-Z]{3}).{0,100}\btriangle\s+([A-Z]{3})/.exec(t);
  if(!m||m[1]===m[2]){
@@ -381,7 +386,7 @@ function newThreeLineAngles(q){
  return d;
 }
 function newSimilarQuads(q){
- const t=(q.passage||"")+" "+(q.question||"");
+ const t=geometryPlain((q.passage||"")+" "+(q.question||""));
  const matches=[...t.matchAll(/\bquadrilateral\s+([A-Z]{4})\b/g)].map(m=>m[1]);
  const similar=t.match(/\bsimilar\s+to\s+(?:quadrilateral\s+)?([A-Z]{4})\b/);
  if(similar&&!matches.includes(similar[1]))matches.push(similar[1]);
@@ -474,7 +479,7 @@ function isDrawingValid(d,q){
  return count>0;
 }
 function hasMisnamedTriangle(d,q){
- const t=(q.passage||"")+" "+(q.question||"");
+ const t=geometryPlain((q.passage||"")+" "+(q.question||""));
  const m=/\btriangles?\s+([A-Z]{3})\b/.exec(t);
  if(!m||!d.points?.length)return false;
  const set=new Set(d.points.filter(p=>p.label&&/^[A-Z]$/.test(p.label)).map(p=>p.label));
