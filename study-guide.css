@@ -330,3 +330,76 @@ html.lexlogica-dark-mode .home-dashboard .homepage-study-guide .sg-research-comp
         margin-bottom:13px;
     }
 }
+
+/* Homepage study plan: three actions upfront, full taxonomy by choice. */
+.sg-example-label[hidden]{display:none!important}
+.homepage-study-guide .sg-example-label{
+    width:fit-content;margin:0 0 11px;
+    padding:7px 10px;border:1px solid #d8e6df;background:#f3faf7;
+    border-radius:9px;color:#63786e;
+    font-size:10px;font-weight:750;letter-spacing:.04em;
+}
+.homepage-study-guide .sg-score-panel{padding:17px 19px}
+.homepage-study-guide .sg-score-tile{padding:13px 14px}
+.homepage-study-guide .sg-score-tile>strong{font-size:29px}
+.homepage-study-guide .sg-score-header h2{font-size:19px;margin:4px 0 12px}
+.homepage-study-guide .sg-section{margin-top:18px}
+.homepage-study-guide .sg-section-heading{margin-bottom:10px}
+.homepage-study-guide .sg-section-heading h2{font-size:19px}
+.homepage-study-guide .sg-section-heading p{font-size:10px}
+.homepage-study-guide .sg-top-priorities{display:grid;grid-template-columns:1fr;gap:5px}
+.homepage-study-guide .sg-top-priorities .sg-priority-item{
+    margin:0;min-height:65px;padding:10px 13px;
+}
+.homepage-study-guide .sg-top-priorities .sg-priority-name{font-size:12px}
+.homepage-study-guide .sg-top-priorities .sg-priority-meta{font-size:10px}
+.homepage-study-guide .sg-more-domains{
+    margin:13px 0 0;
+    border:1px solid #dbe9e5;background:#fff;
+    border-radius:13px;overflow:hidden;
+}
+.homepage-study-guide .sg-more-domains>summary{
+    padding:13px 16px;cursor:pointer;list-style:none;
+    display:flex;justify-content:space-between;align-items:center;gap:12px;
+    color:#0d7366;font-size:12px;font-weight:750;
+}
+.homepage-study-guide .sg-more-domains>summary::-webkit-details-marker{display:none}
+.homepage-study-guide .sg-more-domains>summary::after{
+    content:"⌄";font-size:18px;color:#0e7367;line-height:1;
+}
+.homepage-study-guide .sg-more-domains[open]>summary::after{content:"⌃"}
+.homepage-study-guide .sg-more-domains>summary span{
+    margin-left:auto;color:#869a92;font-size:10px;font-weight:450;
+}
+.homepage-study-guide .sg-more-domains[open]>summary{
+    border-bottom:1px solid #e2ece8;background:#f8fbfa;
+}
+.homepage-study-guide .sg-more-domains .sg-priority-grid{margin:12px}
+.homepage-study-guide .sg-more-domains .sg-priority-col{padding:14px}
+.homepage-study-guide .sg-workflow{margin-top:12px;padding:13px 16px}
+.homepage-study-guide .sg-workflow p{font-size:10px;line-height:1.55}
+.homepage-study-guide .sg-research-compact{margin-top:10px}
+.homepage-study-guide .sg-more-domains>summary:focus-visible{
+    outline:3px solid #deac54;outline-offset:-3px;
+}
+html.lexlogica-dark-mode .homepage-study-guide .sg-more-domains{
+    background:#1a2926;border-color:#36534b;
+}
+html.lexlogica-dark-mode .homepage-study-guide .sg-more-domains>summary span{color:#9eb5ab}
+html.lexlogica-dark-mode .homepage-study-guide .sg-more-domains[open]>summary{
+    background:#22362f;border-color:#36534b;
+}
+html.lexlogica-dark-mode .homepage-study-guide .sg-example-label{
+    background:#233a32;color:#bce2d3;border-color:#36554b;
+}
+@media(max-width:590px){
+    .homepage-study-guide .sg-more-domains>summary span{display:none}
+    .homepage-study-guide .sg-top-priorities .sg-priority-item{
+        grid-template-columns:27px minmax(0,1fr) auto;
+        gap:7px;
+    }
+    .homepage-study-guide .sg-top-priorities .sg-priority-link{
+        grid-column:2/4;justify-self:stretch;
+    }
+    .homepage-study-guide .sg-score-panel{padding:14px}
+}
