@@ -1,0 +1,37 @@
+name: Geometry diagram repair and audit
+on:
+  push:
+    branches: [main]
+    paths:
+      - geo-diagram-repair.mjs
+      - .github/workflows/geo-diagram-repair.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  geometry:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate repair script syntax
+        run: node --check geo-diagram-repair.mjs
+      - name: Generate and repair schematics
+        run: node geo-diagram-repair.mjs --fix --details
+      - name: Validate bank and mock files
+        run: |
+          node geo-diagram-repair.mjs --strict
+          git diff --check
+      - name: Commit audited diagrams to main
+        run: |
+          if ! git diff --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add math-question-bank.json mock-test-*.json
+            git commit -m "Repair geometry diagrams and add question-specific schematics [skip ci]"
+            git push origin HEAD:main
+          fi
