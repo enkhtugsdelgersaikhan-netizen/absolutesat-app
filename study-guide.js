@@ -1,257 +1,414 @@
 (function () {
   "use strict";
+
   const BASELINE_PREFIX = "lexlogica-study-baseline:v1:";
   const GOAL_PREFIX = "lexlogica-study-goal:v1:";
-  const CHECK_PREFIX = "lexlogica-study-checks:v1:";
-  const mockPrefix = "lexlogica-mock-state:";
+  const COMPLETIONS_PREFIX = "lexlogica-study-domain-completions:v2:";
+  const GUIDED_PREFIX = "lexlogica-study-guided-session:v1:";
+  const MOCK_PREFIX = "lexlogica-mock-state:";
+  const BANK_NAV_KEY = "absoluteprep-question-bank-navigation";
   const $ = id => document.getElementById(id);
-  let userId = "";
-  let baseline = null;
-  let priorities = {readingWriting:[],math:[]};
-  let scores = [];
-  let goal = null;
 
-  const read = (key, fallback) => {
+  const DOMAINS = {
+    readingWriting: [
+      {name:"Information & Ideas",weight:.26},
+      {name:"Craft & Structure",weight:.28},
+      {name:"Expression of Ideas",weight:.20},
+      {name:"Standard English Conventions",weight:.26}
+    ],
+    math: [
+      {name:"Algebra",weight:.35},
+      {name:"Advanced Math",weight:.35},
+      {name:"Problem-Solving & Data Analysis",weight:.15},
+      {name:"Geometry & Trigonometry",weight:.15}
+    ]
+  };
+  const ALIASES = new Map([
+    ["information and ideas","Information & Ideas"],
+    ["craft and structure","Craft & Structure"],
+    ["expression of ideas","Expression of Ideas"],
+    ["standard english conventions","Standard English Conventions"],
+    ["problem solving and data analysis","Problem-Solving & Data Analysis"],
+    ["geometry and trigonometry","Geometry & Trigonometry"],
+    ["algebra","Algebra"],
+    ["advanced math","Advanced Math"]
+  ]);
+  const domainName = value => ALIASES.get(
+    String(value || "").toLowerCase().replace(/&/g," and ").replace(/[\W_]+/g," ").trim()
+  ) || null;
+  const read = (key,fallback) => {
     try { return JSON.parse(localStorage.getItem(key) || "null") ?? fallback; }
     catch { return fallback; }
   };
-  const write = (key, value) => {
-    try { localStorage.setItem(key, JSON.stringify(value)); return true; }
+  const write = (key,value) => {
+    try { localStorage.setItem(key,JSON.stringify(value)); return true; }
     catch { return false; }
   };
-  const escapeHtml = s => String(s == null ? "" : s)
+  const escapeHtml = value => String(value ?? "")
     .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
     .replace(/"/g,"&quot;").replace(/'/g,"&#039;");
-  const scoreValid = (n, min, max) =>
-    Number.isFinite(Number(n)) && Number(n)>=min && Number(n)<=max && Number(n)%10===0;
+  const scoreValid = (value,min,max) => {
+    if (value === null || value === undefined || String(value).trim() === "") return false;
+    const n=Number(value);
+    return Number.isFinite(n)&&n>=min&&n<=max&&n%10===0;
+  };
+
+  let userId="";
+  let latest=null;
+  let scores=[];
+  let goal=null;
+  let priorities={readingWriting:[],math:[]};
+  let reservationsCache=null;
+  const bankCache={};
+
   function getScores(state) {
-    if (!state || !state.completed) return null;
-    const saved = state.satScores || {};
-    if (scoreValid(saved.composite,400,1600) &&
-      scoreValid(saved.readingWriting,200,800) &&
-      scoreValid(saved.math,200,800)) {
-      return {composite:Number(saved.composite),readingWriting:Number(saved.readingWriting),math:Number(saved.math)};
+    if (!state?.completed) return null;
+    const saved=state.satScores||{};
+    if (scoreValid(saved.composite,400,1600)&&
+        scoreValid(saved.readingWriting,200,800)&&scoreValid(saved.math,200,800)) {
+      return {composite:+saved.composite,readingWriting:+saved.readingWriting,math:+saved.math};
     }
-    const m=state.completedModules||{};
-    if (!(m.rw_m1&&m.rw_m2&&m.math_m1&&m.math_m2)) return null;
-    const rw=Math.max(0,Math.min(54,Number(m.rw_m1.correct||0)+Number(m.rw_m2.correct||0)));
-    const math=Math.max(0,Math.min(44,Number(m.math_m1.correct||0)+Number(m.math_m2.correct||0)));
-    const round=x=>10*Math.round(x/10);
+    const modules=state.completedModules||{};
+    if (!(modules.rw_m1&&modules.rw_m2&&modules.math_m1&&modules.math_m2)) return null;
+    const rw=Math.max(0,Math.min(54,Number(modules.rw_m1.correct||0)+Number(modules.rw_m2.correct||0)));
+    const math=Math.max(0,Math.min(44,Number(modules.math_m1.correct||0)+Number(modules.math_m2.correct||0)));
+    const round=n=>Math.round(n/10)*10;
     return {composite:round(400+600*(rw/54+math/44)),
       readingWriting:round(200+600*rw/54),math:round(200+600*math/44)};
   }
-  function savedMock(n) {
-    return read(mockPrefix+userId+":mock-test-"+n,null);
-  }
-  function displayScores() {
-    const starting=getScores(baseline);
-    const withScores=scores.filter(row=>row.scores).sort((a,b)=>a.time-b.time||a.n-b.n);
-    const newest=withScores.length?withScores[withScores.length-1]:null;
-    const current=newest?newest.scores:starting;
-    $("sg-start-score").textContent=starting.composite;
-    $("sg-start-sections").textContent="R&W "+starting.readingWriting+" · Math "+starting.math;
-    $("sg-current-score").textContent=current.composite;
-    $("sg-current-note").textContent=newest&&newest.n!==1?"Mock Test "+newest.n+" · R&W "+current.readingWriting+" · Math "+current.math:"From Mock Test 1";
-    if (goal===null) {
-      $("sg-progress-wrap").hidden=true;
-      $("sg-goal-message").textContent="Set a goal score to unlock a personalized study routine.";
-      return;
-    }
-    if (starting.composite===1600) {
-      $("sg-goal-message").textContent="Your starting mock is already at the scale maximum. Focus on consistency and careful review.";
-      $("sg-progress-wrap").hidden=true;
-      return;
-    }
-    const gain=goal-starting.composite;
-    const achieved=current.composite>=goal;
-    const pct=Math.max(0,Math.min(100,Math.round(100*(current.composite-starting.composite)/gain)));
-    $("sg-goal-message").textContent=achieved?"You have reached or passed this practice-score goal. Keep refining your weakest skills.":"Your target is "+gain+" points above your starting score. This is a target, not a predicted gain.";
-    $("sg-progress-wrap").hidden=false;
-    $("sg-progress-description").textContent=achieved?"Goal reached on your most recent mock":"Progress from your baseline";
-    $("sg-gap").textContent=achieved?String(current.composite-goal)+" points above goal":String(Math.max(0,goal-current.composite))+" points to go";
-    $("sg-progress-fill").style.width=pct+"%";
-    $("sg-progress-track").setAttribute("aria-valuenow",String(pct));
-  }
-  function numeric(value) {
-    const s=String(value??"").trim().replace(/,/g,"");
-    if(!s)return null;
-    const f=s.match(/^(-?\d+(?:\.\d+)?)\s*\/\s*(-?\d+(?:\.\d+)?)$/);
-    if(f){const d=Number(f[2]);return d?Number(f[1])/d:null;}
-    const n=Number(s);return Number.isFinite(n)?n:null;
-  }
-  function correctAnswer(entry,selected,section) {
-    const q=entry.question||{};
-    if(selected===undefined||selected===null||String(selected).trim()==="")return false;
-    if(q.answerType==="student-response"||q.answer_type==="student-response") {
-      const n=numeric(selected);
-      return n!==null&&(q.acceptedAnswers||q.accepted_answers||[]).some(a=>{
-        const value=numeric(a);return value!==null&&Math.abs(n-value)<=1e-9;
-      });
-    }
-    const original=String(q.correctAnswer||q.correct_answer||"").toUpperCase();
-    const order=baseline.choiceOrders?.[section+":"+q.id];
-    const expected=Array.isArray(order)&&order.indexOf(original)>=0
-      ?"ABCD".charAt(order.indexOf(original)):original;
-    return String(selected).trim().toUpperCase()===expected;
-  }
-  async function getDiagnostic() {
-    const response=await fetch("/mock-test-1.json?v=study-guide-1",{cache:"no-store"});
-    if(!response.ok)throw new Error("Couldn't load first mock's question metadata");
-    const manifest=await response.json();
-    const result={readingWriting:[],math:[]};
-    for (const section of ["readingWriting","math"]) {
-      const blocks=manifest.sections?.[section]||{};
-      const low=baseline.routes?.[section]==="low";
-      const chosen=[...(blocks.module1||[]),...(low?blocks.module2Low||[]:blocks.module2High||[])];
-      const grouped=new Map();
-      for(const entry of chosen) {
-        const q=entry.question||{};
-        const skill=entry.targetSubtopic||q.subtopic||q.skill||"Unclassified";
-        let row=grouped.get(skill);
-        if(!row){row={skill,total:0,missed:0,correct:0};grouped.set(skill,row);}
-        row.total+=1;
-        const ans=baseline.answers?.[q.id];
-        if(correctAnswer(entry,ans,section))row.correct+=1;
-        else row.missed+=1;
-      }
-      result[section]=[...grouped.values()].sort((a,b)=>
-        b.missed-a.missed||
-        (b.missed/b.total)-(a.missed/a.total)||
-        a.skill.localeCompare(b.skill)
-      );
-    }
-    return result;
-  }
-  function skillUrl(section,skill) {
-    return (section==="math"?"/math-question-bank":"/reading-question-bank")+
-      "?skill="+encodeURIComponent(skill);
-  }
-  function renderPriorities(section,id) {
-    const items=priorities[section].filter(x=>x.missed>0).slice(0,4);
-    if(!items.length) {
-      $(id).innerHTML='<p class="sg-priority-empty">No missed items in this section on your first mock. Use new practice sets to confirm the strengths and maintain accuracy.</p>';
-      return;
-    }
-    $(id).innerHTML=items.map(row=>
-      '<div class="sg-priority-item"><div><span class="sg-priority-name">'+escapeHtml(row.skill)+
-      '</span><span class="sg-priority-meta">'+row.missed+' missed of '+row.total+' on Mock 1</span></div>'+
-      '<a class="sg-priority-link" href="'+escapeHtml(skillUrl(section,row.skill))+'">Practice →</a></div>'
-    ).join("");
-  }
-  function nextTest() {
-    const n=[2,3,4,5,6,7,8].find(i=>!scores.some(x=>x.n===i&&x.scores));
-    const link=$("sg-next-test-link");
-    link.href=n?"/question?mock=mock-test-"+n:"/mock-tests";
-    link.textContent=n?"Take Mock Test "+n+" →":"Explore mock tests →";
-  }
-  function renderWeekly() {
-    const starting=getScores(baseline);
-    const gap=goal-starting.composite;
-    const rw=priorities.readingWriting.find(x=>x.missed>0);
-    const ma=priorities.math.find(x=>x.missed>0);
-    const rwLabel=rw?rw.skill:"a Reading & Writing skill";
-    const maLabel=ma?ma.skill:"a Math skill";
-    const work=gap>200?"four":"three";
-    const tasks=[
-      {title:"Review your first mock",text:"Revisit the missed and unanswered questions. Write down whether each error came from understanding, method, or pacing.",link:"/question?mock=mock-test-1",label:"Review Mock 1 →"},
-      {title:"Target Reading & Writing",text:"Complete around 15–20 questions focused on "+rwLabel+". Review the explanations and repeat weak skills before moving on.",link:rw?skillUrl("readingWriting",rw.skill):"/reading-question-bank",label:"Open R&W practice →"},
-      {title:"Target Math",text:"Complete around 15–20 questions focused on "+maLabel+". Start with clarity and accuracy, then work toward harder examples.",link:ma?skillUrl("math",ma.skill):"/math-question-bank",label:"Open Math practice →"},
-      {title:"Verify and retest",text:"Spread focused practice over "+work+" study sessions this week. Once the skill feels reliable across new questions, schedule another full mock.",link:"/mock-tests",label:"View mock tests →"}
-    ];
-    const storage=CHECK_PREFIX+userId;
-    const checks=read(storage,{});
-    $("sg-weekly-plan").innerHTML=tasks.map((task,i)=>
-      '<div class="sg-check-card'+(checks[i]?" is-done":"")+'">'+
-      '<input type="checkbox" data-guide-check="'+i+'" aria-label="Complete: '+escapeHtml(task.title)+'" '+(checks[i]?"checked":"")+'>'+
-      '<div><h3>'+(i+1)+'. '+escapeHtml(task.title)+'</h3><p>'+escapeHtml(task.text)+'</p>'+
-      '<a href="'+escapeHtml(task.link)+'">'+escapeHtml(task.label)+'</a></div></div>'
-    ).join("");
-  }
-  function showPlan() {
-    const show=goal!==null;
-    $("sg-plan-content").hidden=!show;
-    if(!show)return;
-    renderPriorities("readingWriting","sg-rw-priorities");
-    renderPriorities("math","sg-math-priorities");
-    renderWeekly();
-    nextTest();
-  }
-  function captureOriginal(state) {
-    if(!getScores(state))return null;
-    const snapshot={
+  const mockState = n => read(MOCK_PREFIX+userId+":mock-test-"+n,null);
+  function preserveOriginal(state) {
+    if (!getScores(state)) return null;
+    const copy={
       testId:"mock-test-1",completed:true,completedAt:state.completedAt,
       satScores:state.satScores,completedModules:state.completedModules,
-      routes:state.routes||{},answers:state.answers||{},
-      choiceOrders:state.choiceOrders||{}
+      routes:state.routes||{},answers:state.answers||{},choiceOrders:state.choiceOrders||{}
     };
-    write(BASELINE_PREFIX+userId,snapshot);
-    return snapshot;
+    write(BASELINE_PREFIX+userId,copy);
+    return copy;
   }
+  function getLatestMock() {
+    let savedBaseline=read(BASELINE_PREFIX+userId,null);
+    if (!getScores(savedBaseline)) savedBaseline=preserveOriginal(mockState(1));
+    const rows=[];
+    for (let n=1;n<=8;n++) {
+      const state=mockState(n);
+      const sat=getScores(state);
+      if (sat) rows.push({n,state,scores:sat,time:Date.parse(state.completedAt||"")||0});
+    }
+    // If Mock 1 is restarted, retain its original completed diagnostic until a
+    // newer completed mock exists. Never count an in-progress attempt as a result.
+    if (getScores(savedBaseline)&&!rows.some(row=>row.n===1)) {
+      rows.push({n:1,state:savedBaseline,scores:getScores(savedBaseline),
+        time:Date.parse(savedBaseline.completedAt||"")||0});
+    }
+    rows.sort((a,b)=>a.time-b.time||a.n-b.n);
+    scores=rows;
+    return rows[rows.length-1]||null;
+  }
+  function displayScores() {
+    const sat=latest.scores;
+    $("sg-start-score").textContent=sat.composite;
+    $("sg-start-sections").textContent="R&W "+sat.readingWriting+" · Math "+sat.math;
+    $("sg-score-source").textContent="From Mock Test "+latest.n;
+    $("sg-progress-wrap").hidden=true;
+    if (goal===null) {
+      $("sg-current-score").textContent="—";
+      $("sg-current-note").textContent="Set your goal to compare";
+      $("sg-goal-message").textContent="Choose a goal score; your domain priorities already reflect Mock Test "+latest.n+".";
+      return;
+    }
+    const gap=goal-sat.composite;
+    $("sg-current-score").textContent=Math.abs(gap);
+    $("sg-current-note").textContent=gap>0?"points to reach your goal":gap<0?"points above your goal":"goal reached";
+    $("sg-goal-message").textContent=gap<=0
+      ?"Your latest mock meets your practice goal. Keep verifying your strengths with new questions."
+      :"Your latest mock is "+gap+" points below your goal. This is a target, not a predicted gain.";
+  }
+  function numberValue(value) {
+    const source=String(value??"").trim().replace(/,/g,"");
+    if (!source) return null;
+    const fraction=source.match(/^(-?\d+(?:\.\d+)?)\s*\/\s*(-?\d+(?:\.\d+)?)$/);
+    if (fraction) return Number(fraction[2])===0?null:Number(fraction[1])/Number(fraction[2]);
+    const n=Number(source);
+    return Number.isFinite(n)?n:null;
+  }
+  function isCorrect(entry,selected,section,state) {
+    const q=entry.question||{};
+    if (selected===undefined||selected===null||String(selected).trim()==="") return false;
+    if (q.answerType==="student-response"||q.answer_type==="student-response") {
+      const n=numberValue(selected);
+      return n!==null&&(q.acceptedAnswers||q.accepted_answers||[]).some(v=>{
+        const a=numberValue(v);
+        return a!==null&&Math.abs(a-n)<=1e-9;
+      });
+    }
+    const original=String(q.correctAnswer||q.correct_answer||"").trim().toUpperCase();
+    const order=state.choiceOrders?.[section+":"+q.id];
+    const answer=Array.isArray(order)&&order.includes(original)
+      ?"ABCD".charAt(order.indexOf(original)):original;
+    return String(selected).trim().toUpperCase()===answer;
+  }
+  async function getDiagnostic() {
+    const response=await fetch("/mock-test-"+latest.n+".json?v=domain-diagnostic-1",{cache:"no-store"});
+    if (!response.ok) throw new Error("Unable to load the latest mock's domain metadata.");
+    const manifest=await response.json();
+    const rows=[];
+    for (const section of ["readingWriting","math"]) {
+      const blocks=manifest.sections?.[section]||{};
+      const low=latest.state.routes?.[section]==="low";
+      const chosen=[...(blocks.module1||[]),...(low?blocks.module2Low||[]:blocks.module2High||[])];
+      const grouped=new Map(DOMAINS[section].map(x=>[x.name,{
+        section,domain:x.name,weight:x.weight,total:0,correct:0,missed:0
+      }]));
+      for (const entry of chosen) {
+        const domain=domainName(entry.targetDomain||entry.question?.domain);
+        if (!domain||!grouped.has(domain)) continue;
+        const row=grouped.get(domain);
+        row.total++;
+        const answer=latest.state.answers?.[entry.question?.id];
+        if (isCorrect(entry,answer,section,latest.state)) row.correct++;
+        else row.missed++;
+      }
+      rows.push(...grouped.values());
+    }
+    for (const row of rows) {
+      row.accuracy=row.total?row.correct/row.total:0;
+      // Exam weighting breaks ties between domains with the same error rate.
+      // Empty domains are shown as unassessed, not incorrectly as 0% mastery.
+      row.urgency=row.total?row.weight*(.1+row.missed/row.total):-1;
+    }
+    const ranked=[...rows].sort((a,b)=>b.urgency-a.urgency||
+      b.missed-a.missed||a.domain.localeCompare(b.domain));
+    ranked.forEach((row,i)=>{row.rank=i+1;});
+    priorities={
+      readingWriting:ranked.filter(x=>x.section==="readingWriting"),
+      math:ranked.filter(x=>x.section==="math")
+    };
+  }
+
+  function completionKey() {
+    return COMPLETIONS_PREFIX+userId+":mock-test-"+latest.n+":"+
+      (latest.state.completedAt||"legacy");
+  }
+  function completedDomains() { return read(completionKey(),{}); }
+  function mixForAccuracy(row) {
+    if (!row.total) return [3,4,3];
+    if (row.accuracy<.4) return [6,3,1];
+    if (row.accuracy<.7) return [4,4,2];
+    if (row.accuracy<.85) return [2,5,3];
+    return [1,4,5];
+  }
+  function renderPriorities(section,id) {
+    const finished=completedDomains();
+    $(id).innerHTML=priorities[section].map(row=>{
+      const key=section+"::"+row.domain;
+      const done=Boolean(finished[key]?.completedAt);
+      const rate=row.total?Math.round(100*row.accuracy)+"% correct":"Not assessed";
+      const count=row.total
+        ?row.missed+" missed of "+row.total+" · "+rate
+        :"No questions in this mock";
+      const dist=mixForAccuracy(row);
+      return '<div class="sg-priority-item'+(done?' is-complete':'')+'">'+
+        '<span class="sg-domain-check" aria-hidden="true">'+(done?'✓':row.rank)+'</span>'+
+        '<div class="sg-domain-copy"><span class="sg-priority-name">'+escapeHtml(row.domain)+'</span>'+
+        '<span class="sg-priority-meta">'+count+' · '+dist.join('/')+' easy/medium/hard</span></div>'+
+        '<span class="sg-domain-status">'+(done?'Completed':'')+'</span>'+
+        '<button type="button" class="sg-priority-link" data-domain-practice="'+
+        escapeHtml(key)+'">'+(done?'Practice again →':'Practice 10 →')+'</button></div>';
+    }).join("");
+  }
+  function nextMock() {
+    const n=[1,2,3,4,5,6,7,8].find(i=>i>latest.n&&!scores.some(x=>x.n===i))
+      ||[1,2,3,4,5,6,7,8].find(i=>!scores.some(x=>x.n===i));
+    $("sg-review-test-link").href="/question?mock=mock-test-"+latest.n;
+    $("sg-review-test-link").textContent="Review Mock "+latest.n+" →";
+    $("sg-next-test-link").href=n?"/question?mock=mock-test-"+n:"/mock-tests";
+    $("sg-next-test-link").textContent=n?"Mock Test "+n+" →":"Explore mock tests →";
+  }
+  function showPlan() {
+    $("sg-plan-content").hidden=false;
+    renderPriorities("readingWriting","sg-rw-priorities");
+    renderPriorities("math","sg-math-priorities");
+    $("sg-diagnostic-note").textContent="Latest: Mock Test "+latest.n+
+      ". Ranked by error rate and SAT domain weight. Each Practice button opens 10 unanswered, non-mock questions with difficulty adjusted to that domain's performance.";
+    nextMock();
+  }
+
+  async function loadBank(section) {
+    if (bankCache[section]) return bankCache[section];
+    const main=section==="math"?"/math-question-bank.json?v=5":"/question-bank.json?v=19";
+    const response=await fetch(main,{cache:"no-store"});
+    if (!response.ok) throw new Error("Question bank is unavailable right now.");
+    const payload=await response.json();
+    let questions=payload.questions||[];
+    if (section==="math") {
+      const supplement=await fetch("/math-question-bank-20261010-reviewed.json?v=1",{cache:"no-store"});
+      if (supplement.ok) {
+        const extra=await supplement.json();
+        questions=questions.concat(extra.questions||[]);
+      }
+    }
+    bankCache[section]=questions;
+    return questions;
+  }
+  async function mockReservations() {
+    if (reservationsCache) return reservationsCache;
+    const response=await fetch("/mock-test-reservations.json?v=6",{cache:"no-store"});
+    if (!response.ok) throw new Error("Cannot verify mock-test reservations.");
+    const payload=await response.json();
+    if (!Array.isArray(payload.allQuestionIds)) throw new Error("Invalid mock reservation manifest.");
+    reservationsCache=new Set(payload.allQuestionIds.map(String));
+    return reservationsCache;
+  }
+  async function attemptedIds() {
+    const ids=new Set(Object.keys(read("absoluteprep-question-status:"+userId,{})));
+    const resetTime=Date.parse(localStorage.getItem("absoluteprep-practice-reset:"+userId)||"")||0;
+    let from=0;
+    for (let page=0;page<100;page++) {
+      const {data,error}=await absolutePrepSupabase.from("question_attempts")
+        .select("question_id,created_at")
+        .eq("user_id",userId)
+        .order("created_at",{ascending:true})
+        .range(from,from+999);
+      if (error) throw new Error("Could not verify your previously solved questions. Please retry.");
+      for (const attempt of data||[]) {
+        if (!resetTime||(Date.parse(attempt.created_at||"")||0)>resetTime)
+          ids.add(String(attempt.question_id));
+      }
+      if (!data||data.length<1000) return ids;
+      from+=1000;
+    }
+    throw new Error("Your practice history is too large to verify safely right now.");
+  }
+  const shuffled = values => {
+    const out=[...values];
+    for(let i=out.length-1;i>0;i--) {
+      const j=Math.floor(Math.random()*(i+1));
+      [out[i],out[j]]=[out[j],out[i]];
+    }
+    return out;
+  };
+  function chooseTen(candidates,mix) {
+    const sets={
+      Easy:shuffled(candidates.filter(x=>String(x.difficulty).toLowerCase()==="easy")),
+      Medium:shuffled(candidates.filter(x=>String(x.difficulty).toLowerCase()==="medium")),
+      Hard:shuffled(candidates.filter(x=>String(x.difficulty).toLowerCase()==="hard"))
+    };
+    const selected=[];
+    const kinds=["Easy","Medium","Hard"];
+    kinds.forEach((kind,i)=>{
+      selected.push(...sets[kind].splice(0,Math.min(sets[kind].length,mix[i])));
+    });
+    let remaining=10-selected.length;
+    // If a particular difficulty runs out, fill the missing slots from
+    // other difficulty levels, never repeat an ID or expose reserved mocks.
+    for (const kind of ["Medium","Easy","Hard"]) {
+      if (!remaining) break;
+      const added=sets[kind].splice(0,remaining);
+      selected.push(...added);
+      remaining-=added.length;
+    }
+    return shuffled(selected);
+  }
+  async function startDomainPractice(row,button) {
+    const oldLabel=button.textContent;
+    button.disabled=true;
+    button.textContent="Preparing…";
+    try {
+      const [bank,reserved,attempted]=await Promise.all([
+        loadBank(row.section),mockReservations(),attemptedIds()
+      ]);
+      const candidates=bank.filter(q=>
+        q.status==="staged"&&q.id&&!reserved.has(String(q.id))&&
+        !attempted.has(String(q.id))&&
+        domainName(q.domain)===row.domain
+      );
+      if (candidates.length<10) {
+        throw new Error("Only "+candidates.length+" unused questions are available in this domain. We need 10 to start a complete assignment.");
+      }
+      const selected=chooseTen(candidates,mixForAccuracy(row));
+      if (selected.length!==10) throw new Error("Unable to assemble 10 new questions.");
+      const questionIds=selected.map(q=>String(q.id));
+      const session={
+        version:1,userId,section:row.section,domain:row.domain,
+        mockId:"mock-test-"+latest.n,
+        mockCompletedAt:latest.state.completedAt||"legacy",
+        completionKey:completionKey(),
+        questionIds,answeredIds:[],createdAt:new Date().toISOString()
+      };
+      if (!write(GUIDED_PREFIX+userId,session)) {
+        throw new Error("Browser storage is unavailable, so the guided assignment cannot be saved.");
+      }
+      sessionStorage.setItem(BANK_NAV_KEY,JSON.stringify({
+        userId,questionIds,currentQuestionId:questionIds[0]
+      }));
+      window.location.assign("/question?id="+encodeURIComponent(questionIds[0])+"&guide=1");
+    } catch (err) {
+      button.disabled=false;
+      button.textContent=oldLabel;
+      $("sg-practice-message").textContent=err.message||"The assignment could not be prepared.";
+    }
+  }
+
   async function init() {
     try {
-      if(typeof absolutePrepSupabase==="undefined")throw new Error("Authentication unavailable");
+      if (typeof absolutePrepSupabase==="undefined") throw new Error("Authentication unavailable");
       const {data,error}=await absolutePrepSupabase.auth.getSession();
-      if(error||!data?.session){
+      if (error||!data?.session) {
         location.replace("/login?redirect="+encodeURIComponent("/study-guide"));
         return;
       }
       userId=data.session.user.id;
-      baseline=read(BASELINE_PREFIX+userId,null);
-      if(!getScores(baseline))baseline=captureOriginal(savedMock(1));
+      latest=getLatestMock();
       $("study-guide-loading").hidden=true;
-      if(!baseline){
+      if (!latest) {
         $("study-guide-empty").hidden=false;
         return;
       }
-      scores=[];
-      for(let n=1;n<=8;n++){
-        const state=savedMock(n),sc=getScores(state);
-        if(sc)scores.push({n,scores:sc,time:Date.parse(state.completedAt||state.startedAt||"")||n});
-      }
-      if(!scores.some(x=>x.n===1))scores.push({n:1,scores:getScores(baseline),time:Date.parse(baseline.completedAt||"")||0});
       goal=read(GOAL_PREFIX+userId,null);
-      const start=getScores(baseline).composite;
-      if(!scoreValid(goal,400,1600)||Number(goal)<=start)goal=null;
+      if (!scoreValid(goal,400,1600)) goal=null;
       else goal=Number(goal);
       $("sg-goal-input").value=goal===null?"":goal;
-      if(start===1600){$("sg-goal-input").disabled=true;$("sg-goal-form").querySelector("button").disabled=true;}
       $("study-guide-results").hidden=false;
       displayScores();
-      try{priorities=await getDiagnostic();}
-      catch(err){
-        console.warn("Unable to generate skill analysis:",err);
-        $("sg-goal-message").textContent="Score data is available, but skill-level diagnosis couldn't load. Try refreshing the page.";
+      try {
+        await getDiagnostic();
+        showPlan();
+      } catch (error) {
+        console.error("Study guide diagnostic error:",error);
+        $("sg-practice-message").textContent="The latest mock's domain analysis couldn't load. Refresh to try again.";
       }
-      showPlan();
       $("sg-goal-form").addEventListener("submit",event=>{
         event.preventDefault();
-        const input=Number($("sg-goal-input").value);
-        if(!scoreValid(input,400,1600)||input<=start){
+        const value=$("sg-goal-input").value;
+        if (!scoreValid(value,400,1600)) {
           $("sg-goal-message").classList.add("is-error");
-          $("sg-goal-message").textContent="Choose a goal above "+start+" in 10-point increments, up to 1600.";
+          $("sg-goal-message").textContent="Enter a SAT goal from 400 to 1600 in 10-point increments.";
           return;
         }
         $("sg-goal-message").classList.remove("is-error");
-        goal=input;
+        goal=Number(value);
         write(GOAL_PREFIX+userId,goal);
-        displayScores();showPlan();
+        displayScores();
       });
-      $("sg-weekly-plan").addEventListener("change",event=>{
-        const input=event.target.closest("[data-guide-check]");
-        if(!input)return;
-        const index=input.dataset.guideCheck;
-        const data=read(CHECK_PREFIX+userId,{});
-        data[index]=input.checked;
-        write(CHECK_PREFIX+userId,data);
-        input.closest(".sg-check-card").classList.toggle("is-done",input.checked);
+      $("sg-plan-content").addEventListener("click",event=>{
+        const button=event.target.closest("[data-domain-practice]");
+        if (!button||button.disabled) return;
+        const key=button.dataset.domainPractice;
+        const row=[...priorities.readingWriting,...priorities.math]
+          .find(x=>x.section+"::"+x.domain===key);
+        if (!row) return;
+        $("sg-practice-message").textContent="";
+        startDomainPractice(row,button);
       });
-      $("sg-reset-checklist").addEventListener("click",()=>{
-        write(CHECK_PREFIX+userId,{});
-        renderWeekly();
+      window.addEventListener("pageshow",event=>{
+        if (event.persisted) window.location.reload();
       });
-    }catch(error){
+    } catch (error) {
       console.error("Study guide error:",error);
-      $("study-guide-loading").textContent="The study guide couldn't be loaded. Please refresh and try again.";
+      $("study-guide-loading").hidden=false;
+      $("study-guide-loading").textContent="The study guide couldn't be loaded. Refresh and try again.";
     }
   }
   document.addEventListener("DOMContentLoaded",init);
