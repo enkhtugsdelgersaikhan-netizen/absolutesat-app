@@ -1422,7 +1422,7 @@
       "section": "Reading & Writing",
       "domain": "Craft & Structure",
       "skill": "Words in Context",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "Although electrospun polymer membranes are prized partly for their microscopic pore structures, the orientation of their fibers can also _____ the material with substantial tensile strength. When fibers are aligned rather than deposited randomly, stresses are distributed more efficiently along the membrane’s principal axis.",
       "question": "Which choice completes the text with the most logical and precise word or phrase?",
       "choices": {
@@ -1437,7 +1437,7 @@
         "B": "To **endow something with** a quality is to provide or equip it with that quality. The second sentence explains that aligned fibers enable stresses to be distributed more efficiently, thereby giving the membrane substantial tensile strength. “Endow” therefore fits both the meaning and the grammatical construction **“endow the material with.”**"
       },
       "subtopic": "Words in Context",
-      "classificationVersion": "2026-10-08-relative-skill-v3"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261005-s5-q08",
@@ -3196,7 +3196,7 @@
       "section": "Reading & Writing",
       "domain": "Standard English Conventions",
       "skill": "Form, Structure & Sense",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "To determine whether two sets of Bronze Age weights were manufactured according to the same measurement standard, archaeologist Hana Petrovic compared the objects’ masses after correcting for corrosion and missing material. _____ comparison revealed a remarkably consistent proportional relationship between the two sets.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "choices": {
@@ -3214,7 +3214,7 @@
         "D": "The noun **“comparison”** is singular and refers to the single act of comparing the two sets of weights described in the preceding sentence. The singular demonstrative **“This”** correctly modifies “comparison.”"
       },
       "subtopic": "Form, Structure & Sense",
-      "classificationVersion": "2026-10-08-relative-skill-v3"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261005-b3-s1-q08",
@@ -3827,7 +3827,7 @@
       "section": "Reading & Writing",
       "domain": "Information & Ideas",
       "skill": "Textual Command of Evidence",
-      "difficulty": "Easy",
+      "difficulty": "Medium",
       "passage": "A 2025 robotics competition at the University of Zaragoza was the first event there devoted entirely to autonomous field machines since the *AgriMotion Challenge* four years earlier. The 2025 competition included a vineyard rover developed by one team, an indoor inventory robot developed by another, and an aerial inspection drone developed by a third. Whereas the vineyard rover would have fit the theme of the *AgriMotion Challenge*, the inventory robot and aerial drone would not have.",
       "question": "Which finding about the *AgriMotion Challenge*, if true, would most directly support the claim?",
       "choices": {
@@ -3845,7 +3845,7 @@
         "D": "D concerns autonomy broadly and would likely include all three 2025 robots rather than distinguishing one from the others."
       },
       "subtopic": "Textual Command of Evidence",
-      "classificationVersion": "2026-10-08-relative-skill-v3"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261005-b3-s3-q09",
@@ -7050,7 +7050,7 @@
       "section": "Reading & Writing",
       "domain": "Information & Ideas",
       "skill": "Inferences",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "Acoustics researcher Mirela Sato and colleagues compared professional audio engineers with adults who had no professional audio experience, asking participants to select their preferred listening level for recordings of orchestral music, spoken dialogue, rainfall, and electronic music. The engineers, who reported substantially greater lifetime exposure to amplified sound, consistently selected higher volumes. Clinical tests, however, showed comparable hearing thresholds in the two groups, suggesting that although an engineer might prefer a favorite recording at 81.7 decibels while a nonengineer might prefer it at 69.8 decibels, this difference _____",
       "question": "Which choice most logically completes the text?",
       "choices": {
@@ -7068,7 +7068,7 @@
         "D": "D goes too far: comparable hearing thresholds rule out one explanation for the preference difference, but they do not rule out professional auditory training as a possible explanation."
       },
       "subtopic": "Inferences",
-      "classificationVersion": "2026-10-08-relative-skill-v3"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261005-b5-q046",
@@ -7927,7 +7927,7 @@
       "section": "Reading & Writing",
       "domain": "Standard English Conventions",
       "skill": "Form, Structure & Sense",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "Beetroot tissue contains a red-violet pigment called betanin. _____ pigment is water-soluble, which is why cut beetroot can readily stain cooking water and nearby foods.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "choices": {
@@ -7945,7 +7945,7 @@
         "B": "A and D are plural demonstratives and do not agree with singular “pigment.” B would introduce a relative clause, but “Which pigment is water-soluble” cannot function as the independent sentence required here."
       },
       "subtopic": "Form, Structure & Sense",
-      "classificationVersion": "2026-10-08-relative-skill-v3"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261005-b5-q075",
@@ -10208,7 +10208,7 @@
       "section": "Reading & Writing",
       "domain": "Information & Ideas",
       "skill": "Central Ideas & Details",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "Meteorological stations established in the Faroe Islands during the late nineteenth century shared several technological characteristics. Many housed thermometers in locally constructed louvered boxes rather than in standardized Stevenson screens, and observers often estimated wind force visually instead of measuring it with dedicated anemometers. Barometric readings were generally recorded manually only a few times each day. This comparatively basic instrumentation resembles that documented at contemporary stations in Iceland rather than the more sophisticated, telegraph-linked observatories operating along parts of the Norwegian coast.",
       "question": "Which choice best states the main idea of the text?",
       "choices": {
@@ -10226,7 +10226,7 @@
         "D": "D is incorrect because the passage groups the Faroe Islands and Iceland together rather than assigning each of the three regions a distinct level of sophistication."
       },
       "subtopic": "Central Ideas & Details",
-      "classificationVersion": "2026-10-08-relative-skill-v3"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261005-b6-q056",
@@ -10370,7 +10370,7 @@
       "section": "Reading & Writing",
       "domain": "Information & Ideas",
       "skill": "Central Ideas & Details",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "The following text is from Elena Marwick’s 1907 work The Cabinet of Stones. A mineralogist is a scientist who studies minerals.\nAt eleven years old, Adrian Vale had settled one matter absolutely: whatever else happened, he would become a scientist. Which science remained uncertain until he opened an old specimen catalogue and encountered such names as labradorite, chrysoberyl, and hornblende. To Adrian, the terms possessed a precision and ceremony that “plant” and “animal” somehow lacked, and by supper he had determined upon mineralogy. His progress was gratifyingly swift. Before his twelfth birthday, he could identify twenty-six specimens from his uncle’s cabinet without consulting their labels, and he had begun taking long Saturday walks in search of others.",
       "question": "According to the text, what most directly motivates Adrian to pursue mineralogy rather than another scientific field?",
       "choices": {
@@ -10388,7 +10388,7 @@
         "D": "D is incorrect because his specimen-collecting walks also occur after the choice and are presented as a consequence of his growing interest."
       },
       "subtopic": "Central Ideas & Details",
-      "classificationVersion": "2026-10-08-relative-skill-v3"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261005-b6-q062",
@@ -11179,7 +11179,7 @@
       "section": "Reading & Writing",
       "domain": "Expression of Ideas",
       "skill": "Rhetorical Synthesis",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "While researching a sculptor, a student has taken the following notes:\n\n- Michael Naranjo is a Santa Clara Pueblo sculptor who lost his sight as a young adult.\n- Because he cannot visually study a model while working, he learns the contours of many subjects through touch.\n- He then relies on tactile and spatial memory as he shapes figures in clay.\n- Rather than concealing every mark made during modeling, Naranjo sometimes allows fingerprints and hand-worked textures to remain visible in finished pieces.\n- One sculpture depicts a dancer leaning forward with both arms extended.\n- Another represents a compact group of horses in motion.",
       "question": "The student wants to describe Naranjo’s artistic process. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "choices": {
@@ -11197,7 +11197,7 @@
         "D": "Choice D provides biographical information and describes the subjects of his work but does not explain how he creates the sculptures."
       },
       "subtopic": "Rhetorical Synthesis",
-      "classificationVersion": "2026-10-08-relative-skill-v3"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261005-b6-q086",
@@ -12738,7 +12738,7 @@
       "section": "Reading & Writing",
       "domain": "Craft & Structure",
       "skill": "Words in Context",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "The following text is adapted from cultural historian Amara Vélez’s 2012 essay Rooms of Memory.\nA historical exhibition never merely accumulates surviving objects. By selecting one photograph rather than another, enlarging certain events while compressing decades elsewhere, and placing some voices at the entrance while relegating others to a final alcove, curators construct a particular projection of the past. Even when every individual artifact is authentic, the arrangement surrounding those artifacts influences the historical world that visitors imagine.",
       "question": "As used in the text, what does the word “projection” most nearly mean?",
       "choices": {
@@ -12758,7 +12758,7 @@
       "sourceBatch": "2026-10-05-new104",
       "sourceQuestionNumber": 48,
       "subtopic": "Words in Context",
-      "classificationVersion": "2026-10-08-relative-skill-v3"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261005-new104-q049",
@@ -12825,7 +12825,7 @@
       "section": "Reading & Writing",
       "domain": "Standard English Conventions",
       "skill": "Form, Structure & Sense",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "Since 1976, the International Astronomical Union’s Minor Planet Center has issued data-based summaries concerning newly observed asteroids and comets. In September 2019, the center, after incorporating revised orbital measurements from observatories in Chile and South Africa, _____ that asteroid 2019 QX4 posed no significant impact risk during its next close approach to Earth.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "choices": {
@@ -12845,7 +12845,7 @@
       "sourceBatch": "2026-10-05-new104",
       "sourceQuestionNumber": 51,
       "subtopic": "Form, Structure & Sense",
-      "classificationVersion": "2026-10-08-relative-skill-v3"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261005-new104-q052",
@@ -14262,7 +14262,7 @@
       "section": "Reading & Writing",
       "domain": "Expression of Ideas",
       "skill": "Rhetorical Synthesis",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "A student has taken these notes:\nThe Alatau Mounted Archery Corps is a university equestrian-archery team based in Bishkek.\nMembers wear coordinated competition uniforms during formal demonstrations.\nThe uniforms consist of charcoal-gray riding coats with copper trim and ivory sashes.\nThe team performs mounted archery routines at intercollegiate exhibitions.",
       "question": "The student wants to describe what members of the team wear. Which choice most effectively uses information from the notes to accomplish this goal?",
       "choices": {
@@ -14282,7 +14282,7 @@
       "sourceBatch": "2026-10-05-new104",
       "sourceQuestionNumber": 92,
       "subtopic": "Rhetorical Synthesis",
-      "classificationVersion": "2026-10-08-relative-skill-v3"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261005-new104-q093",
@@ -14378,7 +14378,7 @@
       "section": "Reading & Writing",
       "domain": "Standard English Conventions",
       "skill": "Form, Structure & Sense",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "Early deep-sea submersibles relied on thick steel pressure hulls and relatively small viewing ports. Some modern research vehicles instead use titanium alloys, syntactic foam, and specially engineered acrylic windows. These refinements, developed to withstand greater pressures while reducing vehicle mass, _____ the evolution of crewed submersibles that began more than a century ago.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "choices": {
@@ -14398,7 +14398,7 @@
       "sourceBatch": "2026-10-05-new104",
       "sourceQuestionNumber": 96,
       "subtopic": "Form, Structure & Sense",
-      "classificationVersion": "2026-10-08-relative-skill-v3"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261005-new104-q097",
@@ -17723,7 +17723,7 @@
       "section": "Reading & Writing",
       "domain": "Craft & Structure",
       "skill": "Words in Context",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "Early twentieth-century archaeological illustrations often reconstructed ruined palaces as pristine monuments, omitting collapsed walls, later additions, and other evidence of change. Archaeologist Mara Velasco objected to this convention, arguing that accurate drawings should show a site’s accumulated history rather than imitate earlier illustrations that instead ______ the monuments’ grandeur while suppressing signs of deterioration.",
       "question": "Which choice completes the text with the most logical and precise word or phrase?",
       "choices": {
@@ -17744,7 +17744,7 @@
       "sourceQuestionNumber": 7,
       "sourceMarker": "20",
       "subtopic": "Words in Context",
-      "classificationVersion": "2026-10-08-relative-skill-v3"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261005-audit79-q008",
@@ -18203,7 +18203,7 @@
       "section": "Reading & Writing",
       "domain": "Expression of Ideas",
       "skill": "Rhetorical Synthesis",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "While researching a topic, a student has taken the following notes:\nA currency is a monetary system officially used within a country.\nNewly independent countries sometimes replace currencies inherited from earlier political arrangements.\nGhana introduced the Ghanaian pound in 1958.\nThe cedi replaced the Ghanaian pound in 1965.\nGhana continues to use a form of the cedi as its official currency.",
       "question": "The student wants to specify how long Ghana officially used the Ghanaian pound. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "choices": {
@@ -18224,7 +18224,7 @@
       "sourceQuestionNumber": 23,
       "sourceMarker": "36",
       "subtopic": "Rhetorical Synthesis",
-      "classificationVersion": "2026-10-08-relative-skill-v3"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261005-audit79-q024",
@@ -19820,7 +19820,7 @@
       "section": "Reading & Writing",
       "domain": "Expression of Ideas",
       "skill": "Rhetorical Synthesis",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "While researching a topic, a student has taken the following notes:\nTextile artist Anni Albers produced hundreds of weavings, designs, prints, and theoretical studies over a career spanning more than five decades.\nMuch of her early experimental weaving was completed while she was associated with the Bauhaus during the 1920s and early 1930s.\nAncient Writing was completed in 1936.\nAncient Writing incorporates cotton, rayon, and jute.\nThe work measures approximately 135 centimeters by 111 centimeters.\nAlbers later produced major prints, public commissions, and influential writings on textile design.",
       "question": "The student wants to emphasize the scope of Albers’s body of work. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "choices": {
@@ -19841,7 +19841,7 @@
       "sourceQuestionNumber": 4,
       "sourceMarker": "Question 4",
       "subtopic": "Rhetorical Synthesis",
-      "classificationVersion": "2026-10-08-relative-skill-v3"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261006-batch156-q005",
@@ -19850,7 +19850,7 @@
       "section": "Reading & Writing",
       "domain": "Standard English Conventions",
       "skill": "Boundaries",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "Mineral deposits in the geothermal pools of Dallol, Ethiopia, can form intensely colored terraces that attract photographers from around the world. The delicate crusts often fascinate ______ visitors step beyond designated routes to obtain closer photographs, however, the mineral formations can be permanently damaged.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "choices": {
@@ -19871,7 +19871,7 @@
       "sourceQuestionNumber": 5,
       "sourceMarker": "Question 5",
       "subtopic": "Boundaries",
-      "classificationVersion": "2026-10-08-relative-skill-v3"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261006-batch156-q006",
@@ -20000,7 +20000,7 @@
       "section": "Reading & Writing",
       "domain": "Craft & Structure",
       "skill": "Words in Context",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "Whether a failed exploratory voyage ultimately altered the history of polar navigation or proved comparatively ______, its course was nevertheless shaped by decisions about provisioning, ship design, and seasonal timing; understanding the voyage therefore requires attention to those logistical factors.",
       "question": "Which choice completes the text with the most logical and precise word or phrase?",
       "choices": {
@@ -20021,7 +20021,7 @@
       "sourceQuestionNumber": 10,
       "sourceMarker": "Question 10",
       "subtopic": "Words in Context",
-      "classificationVersion": "2026-10-08-relative-skill-v3"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261006-batch156-q011",
@@ -20150,7 +20150,7 @@
       "section": "Reading & Writing",
       "domain": "Craft & Structure",
       "skill": "Words in Context",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "The naturalistic theater that emerged in Europe during the late nineteenth century often sought to portray ordinary behavior, social pressures, and moral ambiguity without embellishment. In this respect, naturalism represented a reaction against melodramatic conventions that frequently _____ their protagonists’ nobility and emotional purity while minimizing contradiction, compromise, and ordinary weakness.",
       "question": "Which choice completes the text with the most logical and precise word or phrase?",
       "choices": {
@@ -20171,7 +20171,7 @@
       "sourceQuestionNumber": 15,
       "sourceMarker": "25",
       "subtopic": "Words in Context",
-      "classificationVersion": "2026-10-08-relative-skill-v3"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261006-batch156-q016",
@@ -21856,7 +21856,7 @@
       "section": "Reading & Writing",
       "domain": "Craft & Structure",
       "skill": "Words in Context",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "Most archaeological studies of ancient food preparation have focused on visible residues inside ceramic vessels. Materials scientist Leona Qamar and archaeologist Felipe Orsini instead pursued the _____ approach of analyzing microscopic wear on stone grinding surfaces, allowing them to infer repeated processing of plants even when no identifiable residue remained.",
       "question": "Which choice completes the text with the most logical and precise word?",
       "choices": {
@@ -21877,7 +21877,7 @@
       "sourceQuestionNumber": 67,
       "sourceMarker": "7",
       "subtopic": "Words in Context",
-      "classificationVersion": "2026-10-08-relative-skill-v3"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261006-batch156-q068",
@@ -22651,7 +22651,7 @@
       "section": "Reading & Writing",
       "domain": "Information & Ideas",
       "skill": "Inferences",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "During the early twentieth century, luxury hotels in one European resort city were placed into official classes according to amenities and service capacity. Hotels in the highest class typically employed between 210 and 240 staff members, whereas lower-class hotels generally employed fewer. Two hotels from this period, the Grand Aurelia and the Hotel Vesper, each contained more than 180 guest rooms and three formal dining rooms. Of the two, however, only the Grand Aurelia belonged to the highest class. It can therefore be concluded that _____",
       "question": "Which choice most logically completes the text?",
       "choices": {
@@ -22672,7 +22672,7 @@
       "sourceQuestionNumber": 92,
       "sourceMarker": "3",
       "subtopic": "Inferences",
-      "classificationVersion": "2026-10-08-relative-skill-v3"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261006-batch156-q093",
@@ -23463,7 +23463,7 @@
       "section": "Reading & Writing",
       "domain": "Standard English Conventions",
       "skill": "Form, Structure & Sense",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "Traditional accounts of language change sometimes assume that speakers gradually adopt new pronunciations because those forms are simpler to articulate, but many sociolinguists reject any explanation that relies on ease alone. Researchers such as Farah Benali, whose work examines sound changes in multilingual port cities, ____ that prestige, community identity, and patterns of social contact can shape which pronunciations spread even when the competing forms are equally easy to produce.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "choices": {
@@ -23484,7 +23484,7 @@
       "sourceQuestionNumber": 116,
       "sourceMarker": "7",
       "subtopic": "Form, Structure & Sense",
-      "classificationVersion": "2026-10-08-relative-skill-v3"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261006-batch156-q117",
@@ -23548,7 +23548,7 @@
       "section": "Reading & Writing",
       "domain": "Expression of Ideas",
       "skill": "Transitions",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "Many chemical element symbols closely resemble the elements’ English names: C represents carbon, for instance, and Ne represents neon. _____, several symbols instead preserve names from other languages; Fe, the symbol for iron, derives from the Latin ferrum, while Na, the symbol for sodium, comes from natrium.",
       "question": "Which choice completes the text with the most logical transition?",
       "choices": {
@@ -23569,7 +23569,7 @@
       "sourceQuestionNumber": 118,
       "sourceMarker": "18",
       "subtopic": "Transitions",
-      "classificationVersion": "2026-10-08-relative-skill-v3"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261006-batch156-q119",
@@ -23758,7 +23758,7 @@
       "section": "Reading & Writing",
       "domain": "Expression of Ideas",
       "skill": "Rhetorical Synthesis",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "While researching a topic, a student has taken the following notes:\nThe Saffir-Simpson Hurricane Wind Scale classifies hurricanes from Category 1 through Category 5 according to sustained wind speed.\nHigher categories correspond to stronger sustained winds.\nCategory 1 hurricanes have sustained winds of 74–95 miles per hour.\nCategory 3 hurricanes have sustained winds of 111–129 miles per hour.\nCategory 5 hurricanes have sustained winds of at least 157 miles per hour.\nA higher-category hurricane therefore has stronger sustained winds than a lower-category hurricane.",
       "question": "The student wants to emphasize how powerful a Category 3 hurricane is in relation to hurricanes in the other categories mentioned. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "choices": {
@@ -23779,7 +23779,7 @@
       "sourceQuestionNumber": 125,
       "sourceMarker": "25",
       "subtopic": "Rhetorical Synthesis",
-      "classificationVersion": "2026-10-08-relative-skill-v3"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261006-batch156-q126",
@@ -26333,8 +26333,8 @@
       "skill": "Central Ideas & Details",
       "subtopic": "Central Ideas & Details",
       "domain": "Information & Ideas",
-      "difficulty": "Medium",
-      "classificationVersion": "2026-10-08-relative-skill-v3",
+      "difficulty": "Easy",
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1",
       "choiceExplanations": {
         "D": "D is correct because the text applies a general capacity model to a particular recall finding.",
         "B": "B is incorrect because it attributes the specific drill conclusion to Orli and strengthens it to “always”; neither is established.",
@@ -26652,8 +26652,8 @@
       "skill": "Cross-Text Connections",
       "subtopic": "Cross-Text Connections",
       "domain": "Craft & Structure",
-      "difficulty": "Easy",
-      "classificationVersion": "2026-10-08-relative-skill-v3",
+      "difficulty": "Medium",
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1",
       "choiceExplanations": {
         "D": "D is correct because both texts explicitly describe public admiration, even though they differ about the episode’s evidentiary basis.",
         "B": "B is incorrect because Text 2 does not accept the feat as established.",
@@ -27406,8 +27406,8 @@
       "skill": "Cross-Text Connections",
       "subtopic": "Cross-Text Connections",
       "domain": "Craft & Structure",
-      "difficulty": "Hard",
-      "classificationVersion": "2026-10-08-relative-skill-v3",
+      "difficulty": "Medium",
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1",
       "choiceExplanations": {
         "B": "B is correct because the revised minimum distance excludes a twelve-centimeter location, and the coating explains the higher heating risk.",
         "C": "C is incorrect because other material types are not located or compared.",
@@ -29764,8 +29764,8 @@
       "skill": "Form, Structure & Sense",
       "subtopic": "Form, Structure & Sense",
       "domain": "Standard English Conventions",
-      "difficulty": "Medium",
-      "classificationVersion": "2026-10-08-relative-skill-v3"
+      "difficulty": "Hard",
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261008-audit178-q175",
@@ -31052,7 +31052,7 @@
       "domain": "Craft & Structure",
       "skill": "Words in Context",
       "subtopic": "Words in Context",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "Serenne’s surviving 1909 newsreels are brittle and easily scratched. Usually stored separately in isolated upland warehouses, they have rarely been examined systematically. Their preservation history is difficult to reconstruct because the repositories are so _____ major research libraries.",
       "question": "Which choice completes the text with the most logical and precise word or phrase?",
       "choices": {
@@ -31065,7 +31065,7 @@
       "explanation": "A expresses the geographic separation that makes systematic examination difficult. C means filled with and conflicts with the described isolated repositories. D indicates attraction rather than remoteness. B means responsible for, supplying an administrative relationship rather than the location-based explanation the passage gives.",
       "sourceBatch": "2026-10-08-live398",
       "sourceQuestionNumber": 49,
-      "classificationVersion": "2026-10-08-skill-relative-v4"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261008-live398-q050",
@@ -31075,7 +31075,7 @@
       "domain": "Standard English Conventions",
       "skill": "Form, Structure & Sense",
       "subtopic": "Form, Structure & Sense",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "*Windward Measure* is a steel-and-limestone observation tower designed by engineer Yara Deren. It commemorates pioneering cartographer Celso Varr. The tower _____ on the Korell ridge, a short distance from the station where Varr prepared his first wind charts.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "choices": {
@@ -31088,7 +31088,7 @@
       "explanation": "C agrees with the singular subject tower and expresses the tower’s present location. B, D, and A use plural auxiliaries: were, have, and are. Neither the nearby station nor the earlier mention of charts changes the number of the sentence’s actual subject.",
       "sourceBatch": "2026-10-08-live398",
       "sourceQuestionNumber": 50,
-      "classificationVersion": "2026-10-08-skill-relative-v4"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261008-live398-q051",
@@ -31282,7 +31282,7 @@
       "domain": "Craft & Structure",
       "skill": "Words in Context",
       "subtopic": "Words in Context",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "Hydrologist Mara Nellen has _____ mapping subterranean waterways across markedly different geological settings. Her widely admired surveys of the Ardel limestone system and the basalt passages beneath Lake Verena exemplify that established expertise.",
       "question": "Which choice completes the text with the most logical and precise word or phrase?",
       "choices": {
@@ -31295,7 +31295,7 @@
       "explanation": "A means become known for an activity, fitting the admired surveys that exemplify Nellen’s expertise. D suggests a complaint about mapping, not accomplishment in it. B suggests an obligation, which does not explain the established reputation. C suggests uncertainty or inquiry about mapping rather than the demonstrated skill emphasized by the examples.",
       "sourceBatch": "2026-10-08-live398",
       "sourceQuestionNumber": 59,
-      "classificationVersion": "2026-10-08-skill-relative-v4"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261008-live398-q060",
@@ -31328,7 +31328,7 @@
       "domain": "Information & Ideas",
       "skill": "Inferences",
       "subtopic": "Inferences",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "Drafting teams and instrument-calibration teams are major tenants in converted industrial studios, including the Sorelan complex in Ravess. To investigate their choices of workspace, researcher Ilara Venn’s team examined site locations and daytime brightness during the busiest production quarter. Drafting teams preferred brighter studios; calibration teams did not show that preference. The team concluded that renovations increasing daytime brightness during that quarter would be less likely to _____.",
       "question": "Which choice most logically completes the text?",
       "choices": {
@@ -31341,7 +31341,7 @@
       "explanation": "B directly applies the differing preferences: added brightness supplies an attraction for drafting teams that the calibration teams did not demonstrate. C introduces equipment longevity, which was not studied. D generalizes to other tenants without data. A treats both groups as sharing a positive response, contrary to the distinction that supports the researchers’ conclusion.",
       "sourceBatch": "2026-10-08-live398",
       "sourceQuestionNumber": 61,
-      "classificationVersion": "2026-10-08-skill-relative-v4"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261008-live398-q062",
@@ -32223,7 +32223,7 @@
       "domain": "Information & Ideas",
       "skill": "Central Ideas & Details",
       "subtopic": "Central Ideas & Details",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "Audio laboratories have long used sequential processing to remove noise from large recordings. Recent research in Valencia improved vectorized restoration of damaged analog recordings. The newer method is generally advantageous: conventional restoration applies corrections to one section after another, whereas vectorized restoration calculates corrections across multiple sections together, reducing total processing time.",
       "question": "Based on the text, what is one disadvantage of conventional sequential restoration?",
       "choices": {
@@ -32236,7 +32236,7 @@
       "explanation": "A restates the direct implication of reducing total processing time through simultaneous calculations. C adds a claim about failures. D adds a size limitation. B adds an energy comparison. None of those disadvantages is stated or entailed by the explanation of sequential versus vectorized processing.",
       "sourceBatch": "2026-10-08-live398",
       "sourceQuestionNumber": 99,
-      "classificationVersion": "2026-10-08-skill-relative-v4"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261008-live398-q100",
@@ -32556,7 +32556,7 @@
       "domain": "Information & Ideas",
       "skill": "Textual Command of Evidence",
       "subtopic": "Textual Command of Evidence",
-      "difficulty": "Hard",
+      "difficulty": "Medium",
       "passage": "Researchers Maela Neris and Celso Varr surveyed adult dictionary users at translation cooperatives in Murcia. Their questions addressed experience, reasons for consulting reference tools, and preferences among search interfaces. <u>They claim that experienced users who chiefly consult dictionaries for paid translation tend to favor methods that save time.</u>",
       "question": "Which survey response would most directly support the underlined claim?",
       "choices": {
@@ -32569,7 +32569,7 @@
       "explanation": "D supplies all relevant elements: frequent professional use, experience suggested by daily practice, and a stated preference for the faster method. C describes a temporary obstacle without a time-based preference. A describes occasional recreational use. B describes a novice’s anticipated social use, not an experienced professional’s selection among methods.",
       "sourceBatch": "2026-10-08-live398",
       "sourceQuestionNumber": 112,
-      "classificationVersion": "2026-10-08-skill-relative-v4"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261008-live398-q113",
@@ -32694,7 +32694,7 @@
       "domain": "Information & Ideas",
       "skill": "Inferences",
       "subtopic": "Inferences",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "A 2016 study by researchers Celia Naren and Olek Voss found that musicians who valued theoretical understanding were more likely to adopt a workbook when they perceived it as effective at explaining musical relationships. A later team surveyed age groups at the Lavren academy in Bratislava about a new workbook and found that retired hobbyists gave it the highest average explanatory-effectiveness rating. Assuming the earlier association applies broadly, this result suggests that _____.",
       "question": "Which choice most logically completes the text?",
       "choices": {
@@ -32707,7 +32707,7 @@
       "explanation": "B cautiously applies the positive association between perceived effectiveness and adoption to the group giving the highest rating. A suggests priorities the survey did not establish. C introduces competing products that were not compared. D dismisses the difference that the stated association makes potentially relevant. The wording may preserves the distinction between a suggested tendency and a guaranteed outcome.",
       "sourceBatch": "2026-10-08-live398",
       "sourceQuestionNumber": 118,
-      "classificationVersion": "2026-10-08-skill-relative-v4"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261008-live398-q119",
@@ -34507,7 +34507,7 @@
       "domain": "Craft & Structure",
       "skill": "Words in Context",
       "subtopic": "Words in Context",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "Production analysts argue that precision-lens factories should maintain substantial reserves of blank glass. An adequate inventory can cushion the effects of _____ raw-material deliveries caused by unpredictable rail congestion and temporary harbor closures.",
       "question": "Which choice completes the text with the most logical and precise word or phrase?",
       "choices": {
@@ -34520,7 +34520,7 @@
       "explanation": "B denotes irregular variation, fitting deliveries disrupted by unpredictable congestion and closures. Stored inventory can compensate when supplies vary. A concerns reasons for making deliveries. C suggests deliberate modifications rather than unpredictable changes in supply. D suggests progress or improvement, which does not match the disruptive conditions the passage describes.",
       "sourceBatch": "2026-10-08-live398",
       "sourceQuestionNumber": 190,
-      "classificationVersion": "2026-10-08-skill-relative-v4"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261008-live398-q191",
@@ -35480,7 +35480,7 @@
       "domain": "Craft & Structure",
       "skill": "Words in Context",
       "subtopic": "Words in Context",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "When choosing exhibits, regional science centers often put visitor familiarity ahead of experimental presentation. A center might readily display a conventional working planetarium but be _____ to commission an installation from an untested designer whose approach visitors could find difficult to follow.",
       "question": "Which choice completes the text with the most logical and precise word or phrase?",
       "choices": {
@@ -35493,7 +35493,7 @@
       "explanation": "A expresses the hesitation expected when an institution prioritizes familiar experiences over risk. B implies determination to commission the unfamiliar work, reversing the contrast. D describes luck rather than willingness. C describes surprise, not the reservation about committing to an uncertain exhibit.",
       "sourceBatch": "2026-10-08-live398",
       "sourceQuestionNumber": 228,
-      "classificationVersion": "2026-10-08-skill-relative-v4"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261008-live398-q230",
@@ -35503,7 +35503,7 @@
       "domain": "Standard English Conventions",
       "skill": "Boundaries",
       "subtopic": "Boundaries",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "On a sloping desk in the Nerien Museum rests a 31-by-48-centimeter _____ which was compiled in 1926 by instrument keeper Elda Orlis.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "choices": {
@@ -35516,7 +35516,7 @@
       "explanation": "C keeps the identifying title attached to ledger and places the comma before the supplementary which-clause. A opens an unnecessary interruption before the title and does not close it. D unnecessarily separates the identifying title from the noun it specifies. B omits the boundary introducing the supplementary information about the named ledger.",
       "sourceBatch": "2026-10-08-live398",
       "sourceQuestionNumber": 230,
-      "classificationVersion": "2026-10-08-skill-relative-v4"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261008-live398-q231",
@@ -36124,7 +36124,7 @@
       "domain": "Standard English Conventions",
       "skill": "Form, Structure & Sense",
       "subtopic": "Form, Structure & Sense",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "It was June of 1969 when instrument maker Elda Varen completed _____ of forty instruments selected for the forthcoming exhibition, remains central to the museum's collection.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "choices": {
@@ -36137,7 +36137,7 @@
       "explanation": "D ends the complete first sentence after the instrument's name. It then begins a second sentence whose subject, The harp, is separated from remains by the supplementary phrase “one of forty instruments…”. C joins independent clauses with a comma. A leaves “The harp” as a sentence fragment. B uses a semicolon after the fragment “The harp”; a semicolon must separate independent clauses.",
       "sourceBatch": "2026-10-08-live398",
       "sourceQuestionNumber": 257,
-      "classificationVersion": "2026-10-08-skill-relative-v4"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261008-live398-q258",
@@ -36544,7 +36544,7 @@
       "domain": "Craft & Structure",
       "skill": "Words in Context",
       "subtopic": "Words in Context",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "Textile historians examined 110 early workshop panels, dated to roughly two centuries ago, and concluded that makers repeatedly repositioned small patches to create nearly circular arrangements. The finding that their efforts to achieve that geometry were _____ suggests that the workshops practiced more sophisticated spatial planning than historians had assumed.",
       "question": "Which choice completes the text with the most logical and precise word or phrase?",
       "choices": {
@@ -36557,7 +36557,7 @@
       "explanation": "C means intentional, connecting purposeful geometric construction with a capacity for planning. A concerns compassion, B concerns similarity to something else, and D concerns worry. None explains why the makers' arrangement would indicate deliberate spatial reasoning.",
       "sourceBatch": "2026-10-08-live398",
       "sourceQuestionNumber": 272,
-      "classificationVersion": "2026-10-08-skill-relative-v4"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261008-live398-q273",
@@ -36808,7 +36808,7 @@
       "domain": "Craft & Structure",
       "skill": "Words in Context",
       "subtopic": "Words in Context",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "Digital collections of historical recipes allow researchers to test claims about how _____ a particular ingredient was in regional cooking. One might guess that caraway appeared frequently, for instance, but only a systematic count can establish that it was the seventh most commonly listed spice.",
       "question": "Which choice completes the text with the most logical and precise word or phrase?",
       "choices": {
@@ -36821,7 +36821,7 @@
       "explanation": "B means widespread or common, matching the measured frequency of an ingredient's appearance. A means intellectually deep, C means believable, and D means forcefully confident. The proposed count establishes prevalence rather than any of those qualities.",
       "sourceBatch": "2026-10-08-live398",
       "sourceQuestionNumber": 282,
-      "classificationVersion": "2026-10-08-skill-relative-v4"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261008-live398-q283",
@@ -36854,7 +36854,7 @@
       "domain": "Expression of Ideas",
       "skill": "Transitions",
       "subtopic": "Transitions",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "Working with the Rovena Museum Network, researcher Anouk Meijer analyzed visitor arrivals at venues of different capacities. Smaller galleries had their highest arrivals around 10 a.m. _____ larger galleries reached their peak around 2 p.m.",
       "question": "Which choice completes the text with the most logical transition?",
       "choices": {
@@ -36867,7 +36867,7 @@
       "explanation": "C contrasts the peak times for two venue groups. D would present the second group as an example of the first finding. A would summarize earlier information. B would restate the first finding rather than report a different result.",
       "sourceBatch": "2026-10-08-live398",
       "sourceQuestionNumber": 284,
-      "classificationVersion": "2026-10-08-skill-relative-v4"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261008-live398-q285",
@@ -37288,7 +37288,7 @@
       "domain": "Expression of Ideas",
       "skill": "Rhetorical Synthesis",
       "subtopic": "Rhetorical Synthesis",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "While researching a topic, a student has taken the following notes:\n• The Aven Cultural Council compiled a list of eighty locally significant scents.\n• Entries were chosen for their importance to regional traditions.\n• The scent of cedar shavings in the Rell boatyards is on the list.\n• The scent of toasted fennel at the Brann autumn market is on the list.",
       "question": "The student wants to indicate that both scents appear on the council’s list. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "choices": {
@@ -37301,7 +37301,7 @@
       "explanation": "A explicitly identifies both scents and states their shared inclusion. C describes the list without naming either scent. B establishes the inclusion of only the market scent. D provides a reason for including only the boatyard scent.",
       "sourceBatch": "2026-10-08-live398",
       "sourceQuestionNumber": 304,
-      "classificationVersion": "2026-10-08-skill-relative-v4"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261008-live398-q305",
@@ -37713,7 +37713,7 @@
       "domain": "Standard English Conventions",
       "skill": "Form, Structure & Sense",
       "subtopic": "Form, Structure & Sense",
-      "difficulty": "Medium",
+      "difficulty": "Hard",
       "passage": "To trained engravers such as workshop director Mara Kent, wedge-cut and round-cut lettering have a clear difference: the former uses sharply angled channels, while the latter uses curved grooves. Because recognizing either technique requires specialized knowledge, however, visitors without engraving experience currently _____ to distinguish the two.",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "choices": {
@@ -37726,7 +37726,7 @@
       "explanation": "A uses the simple present to describe the current, general difficulty of the plural subject “visitors.” B and D place the difficulty in the past despite “currently” and the passage’s present-tense account. C uses the past perfect, which would require a later past reference point that the text does not supply.",
       "sourceBatch": "2026-10-08-live398",
       "sourceQuestionNumber": 322,
-      "classificationVersion": "2026-10-08-skill-relative-v4"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261008-live398-q323",
@@ -38046,7 +38046,7 @@
       "domain": "Standard English Conventions",
       "skill": "Form, Structure & Sense",
       "subtopic": "Form, Structure & Sense",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "passage": "The two workshop grades of amber resin and pine resin have softening temperatures of 84 and 69 _____ temperature helps determine the appropriate heating conditions for each material).",
       "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "choices": {
@@ -38059,7 +38059,7 @@
       "explanation": "B uses “respectively” to pair the materials with the temperatures in the same order and opens the parenthetical explanation that the supplied closing parenthesis completes. D incorrectly pulls “respectively” inside the explanation and creates an ill-formed introductory sequence. C adds an unnecessary comma between “respectively” and the parenthetical note. A splits the sentence at the unit and leaves “Respectively, in casting” without a complete construction.",
       "sourceBatch": "2026-10-08-live398",
       "sourceQuestionNumber": 336,
-      "classificationVersion": "2026-10-08-skill-relative-v4"
+      "classificationVersion": "2026-10-10-visible-30-40-30-v1"
     },
     {
       "id": "rw-20261008-live398-q337",
@@ -39731,7 +39731,7 @@
     "answerExplanationReferenceChecks": "Every standalone original choice label remapped against the exact shuffled answer text; nonchoice category labels protected."
   },
   "classificationVersion": "2026-10-08-skill-relative-v4",
-  "classificationNote": "Difficulty calibrated relatively within each SAT Reading & Writing subtopic, to approximately 30% Easy, 40% Medium, 30% Hard. Not official College Board difficulty classification.",
+  "classificationNote": "Visible SAT Reading & Writing practice questions (excluding mock-test reservations) are balanced within each of 11 subtopics to 30% Easy, 40% Medium, 30% Hard, with whole-question rounding. These are editorial relative difficulty labels, and the fixed ratio is LexLogica's bank-design choice, not a verified College Board requirement. Mock-test-reserved items were not modified.",
   "lengthBiasAudit": {
     "date": "2026-10-08",
     "scope": "Reading & Writing question bank",
@@ -39774,5 +39774,433 @@
     "remainingBiasRequiresEditorialReview": true,
     "textualEvidenceEdits": 29,
     "crossTextRestorations": 10
+  },
+  "visibleDifficultyAudit20261010": {
+    "date": "2026-10-10",
+    "targetPercent": {
+      "Easy": 30,
+      "Medium": 40,
+      "Hard": 30
+    },
+    "scope": "visible staged questions only, excluding reserved mock questions; Math includes supplemental file",
+    "visible": 1097,
+    "subtopics": 11,
+    "overall": {
+      "Easy": 330,
+      "Medium": 437,
+      "Hard": 330
+    },
+    "changes": [
+      {
+        "id": "rw-20261008-live398-q190",
+        "subtopic": "Words in Context",
+        "from": "Medium",
+        "to": "Easy"
+      },
+      {
+        "id": "rw-20261008-live398-q059",
+        "subtopic": "Words in Context",
+        "from": "Medium",
+        "to": "Easy"
+      },
+      {
+        "id": "rw-20261008-live398-q228",
+        "subtopic": "Words in Context",
+        "from": "Medium",
+        "to": "Easy"
+      },
+      {
+        "id": "rw-20261008-live398-q282",
+        "subtopic": "Words in Context",
+        "from": "Medium",
+        "to": "Easy"
+      },
+      {
+        "id": "rw-20261008-live398-q049",
+        "subtopic": "Words in Context",
+        "from": "Medium",
+        "to": "Easy"
+      },
+      {
+        "id": "rw-20261008-live398-q272",
+        "subtopic": "Words in Context",
+        "from": "Medium",
+        "to": "Easy"
+      },
+      {
+        "id": "rw-20261005-new104-q048",
+        "subtopic": "Words in Context",
+        "from": "Medium",
+        "to": "Hard"
+      },
+      {
+        "id": "rw-20261005-s5-q07",
+        "subtopic": "Words in Context",
+        "from": "Medium",
+        "to": "Hard"
+      },
+      {
+        "id": "rw-20261006-batch156-q010",
+        "subtopic": "Words in Context",
+        "from": "Medium",
+        "to": "Hard"
+      },
+      {
+        "id": "rw-20261006-batch156-q067",
+        "subtopic": "Words in Context",
+        "from": "Medium",
+        "to": "Hard"
+      },
+      {
+        "id": "rw-20261005-audit79-q007",
+        "subtopic": "Words in Context",
+        "from": "Medium",
+        "to": "Hard"
+      },
+      {
+        "id": "rw-20261006-batch156-q015",
+        "subtopic": "Words in Context",
+        "from": "Medium",
+        "to": "Hard"
+      },
+      {
+        "id": "rw-20261008-audit178-q053",
+        "subtopic": "Central Ideas & Details",
+        "from": "Medium",
+        "to": "Easy"
+      },
+      {
+        "id": "rw-20261008-live398-q099",
+        "subtopic": "Central Ideas & Details",
+        "from": "Medium",
+        "to": "Easy"
+      },
+      {
+        "id": "rw-20261005-b6-q061",
+        "subtopic": "Central Ideas & Details",
+        "from": "Medium",
+        "to": "Hard"
+      },
+      {
+        "id": "rw-20261005-b6-q055",
+        "subtopic": "Central Ideas & Details",
+        "from": "Medium",
+        "to": "Hard"
+      },
+      {
+        "id": "rw-20261008-live398-q230",
+        "subtopic": "Boundaries",
+        "from": "Medium",
+        "to": "Easy"
+      },
+      {
+        "id": "rw-20261006-batch156-q005",
+        "subtopic": "Boundaries",
+        "from": "Medium",
+        "to": "Hard"
+      },
+      {
+        "id": "rw-20261005-new104-q092",
+        "subtopic": "Rhetorical Synthesis",
+        "from": "Medium",
+        "to": "Easy"
+      },
+      {
+        "id": "rw-20261008-live398-q304",
+        "subtopic": "Rhetorical Synthesis",
+        "from": "Medium",
+        "to": "Easy"
+      },
+      {
+        "id": "rw-20261005-audit79-q023",
+        "subtopic": "Rhetorical Synthesis",
+        "from": "Medium",
+        "to": "Easy"
+      },
+      {
+        "id": "rw-20261006-batch156-q004",
+        "subtopic": "Rhetorical Synthesis",
+        "from": "Medium",
+        "to": "Hard"
+      },
+      {
+        "id": "rw-20261005-b6-q085",
+        "subtopic": "Rhetorical Synthesis",
+        "from": "Medium",
+        "to": "Hard"
+      },
+      {
+        "id": "rw-20261006-batch156-q125",
+        "subtopic": "Rhetorical Synthesis",
+        "from": "Medium",
+        "to": "Hard"
+      },
+      {
+        "id": "rw-20261005-b3-s1-q07",
+        "subtopic": "Form, Structure & Sense",
+        "from": "Medium",
+        "to": "Easy"
+      },
+      {
+        "id": "rw-20261005-b5-q074",
+        "subtopic": "Form, Structure & Sense",
+        "from": "Medium",
+        "to": "Easy"
+      },
+      {
+        "id": "rw-20261008-live398-q050",
+        "subtopic": "Form, Structure & Sense",
+        "from": "Medium",
+        "to": "Easy"
+      },
+      {
+        "id": "rw-20261008-live398-q336",
+        "subtopic": "Form, Structure & Sense",
+        "from": "Medium",
+        "to": "Easy"
+      },
+      {
+        "id": "rw-20261008-live398-q257",
+        "subtopic": "Form, Structure & Sense",
+        "from": "Medium",
+        "to": "Easy"
+      },
+      {
+        "id": "rw-20261005-new104-q096",
+        "subtopic": "Form, Structure & Sense",
+        "from": "Medium",
+        "to": "Hard"
+      },
+      {
+        "id": "rw-20261008-audit178-q174",
+        "subtopic": "Form, Structure & Sense",
+        "from": "Medium",
+        "to": "Hard"
+      },
+      {
+        "id": "rw-20261006-batch156-q116",
+        "subtopic": "Form, Structure & Sense",
+        "from": "Medium",
+        "to": "Hard"
+      },
+      {
+        "id": "rw-20261008-live398-q322",
+        "subtopic": "Form, Structure & Sense",
+        "from": "Medium",
+        "to": "Hard"
+      },
+      {
+        "id": "rw-20261005-new104-q051",
+        "subtopic": "Form, Structure & Sense",
+        "from": "Medium",
+        "to": "Hard"
+      },
+      {
+        "id": "rw-20261005-b3-s3-q08",
+        "subtopic": "Textual Command of Evidence",
+        "from": "Easy",
+        "to": "Medium"
+      },
+      {
+        "id": "rw-20261008-live398-q112",
+        "subtopic": "Textual Command of Evidence",
+        "from": "Hard",
+        "to": "Medium"
+      },
+      {
+        "id": "rw-20261008-live398-q284",
+        "subtopic": "Transitions",
+        "from": "Medium",
+        "to": "Easy"
+      },
+      {
+        "id": "rw-20261006-batch156-q118",
+        "subtopic": "Transitions",
+        "from": "Medium",
+        "to": "Hard"
+      },
+      {
+        "id": "rw-20261008-live398-q118",
+        "subtopic": "Inferences",
+        "from": "Medium",
+        "to": "Easy"
+      },
+      {
+        "id": "rw-20261008-live398-q061",
+        "subtopic": "Inferences",
+        "from": "Medium",
+        "to": "Easy"
+      },
+      {
+        "id": "rw-20261005-b5-q045",
+        "subtopic": "Inferences",
+        "from": "Medium",
+        "to": "Hard"
+      },
+      {
+        "id": "rw-20261006-batch156-q092",
+        "subtopic": "Inferences",
+        "from": "Medium",
+        "to": "Hard"
+      },
+      {
+        "id": "rw-20261008-audit178-q064",
+        "subtopic": "Cross-Text Connections",
+        "from": "Easy",
+        "to": "Medium"
+      },
+      {
+        "id": "rw-20261008-audit178-q090",
+        "subtopic": "Cross-Text Connections",
+        "from": "Hard",
+        "to": "Medium"
+      }
+    ],
+    "bySubtopic": {
+      "Craft & Structure / Words in Context": {
+        "n": 142,
+        "before": {
+          "Easy": 37,
+          "Medium": 68,
+          "Hard": 37
+        },
+        "after": {
+          "Easy": 43,
+          "Medium": 56,
+          "Hard": 43
+        }
+      },
+      "Information & Ideas / Central Ideas & Details": {
+        "n": 92,
+        "before": {
+          "Easy": 26,
+          "Medium": 40,
+          "Hard": 26
+        },
+        "after": {
+          "Easy": 28,
+          "Medium": 36,
+          "Hard": 28
+        }
+      },
+      "Information & Ideas / Qualitative Command of Evidence": {
+        "n": 84,
+        "before": {
+          "Easy": 25,
+          "Medium": 34,
+          "Hard": 25
+        },
+        "after": {
+          "Easy": 25,
+          "Medium": 34,
+          "Hard": 25
+        }
+      },
+      "Standard English Conventions / Boundaries": {
+        "n": 100,
+        "before": {
+          "Easy": 29,
+          "Medium": 42,
+          "Hard": 29
+        },
+        "after": {
+          "Easy": 30,
+          "Medium": 40,
+          "Hard": 30
+        }
+      },
+      "Expression of Ideas / Rhetorical Synthesis": {
+        "n": 115,
+        "before": {
+          "Easy": 32,
+          "Medium": 51,
+          "Hard": 32
+        },
+        "after": {
+          "Easy": 35,
+          "Medium": 45,
+          "Hard": 35
+        }
+      },
+      "Craft & Structure / Text Structure & Purpose": {
+        "n": 75,
+        "before": {
+          "Easy": 23,
+          "Medium": 29,
+          "Hard": 23
+        },
+        "after": {
+          "Easy": 23,
+          "Medium": 29,
+          "Hard": 23
+        }
+      },
+      "Standard English Conventions / Form, Structure & Sense": {
+        "n": 158,
+        "before": {
+          "Easy": 42,
+          "Medium": 74,
+          "Hard": 42
+        },
+        "after": {
+          "Easy": 47,
+          "Medium": 64,
+          "Hard": 47
+        }
+      },
+      "Information & Ideas / Textual Command of Evidence": {
+        "n": 61,
+        "before": {
+          "Easy": 19,
+          "Medium": 23,
+          "Hard": 19
+        },
+        "after": {
+          "Easy": 18,
+          "Medium": 25,
+          "Hard": 18
+        }
+      },
+      "Expression of Ideas / Transitions": {
+        "n": 110,
+        "before": {
+          "Easy": 32,
+          "Medium": 46,
+          "Hard": 32
+        },
+        "after": {
+          "Easy": 33,
+          "Medium": 44,
+          "Hard": 33
+        }
+      },
+      "Information & Ideas / Inferences": {
+        "n": 112,
+        "before": {
+          "Easy": 32,
+          "Medium": 48,
+          "Hard": 32
+        },
+        "after": {
+          "Easy": 34,
+          "Medium": 44,
+          "Hard": 34
+        }
+      },
+      "Craft & Structure / Cross-Text Connections": {
+        "n": 48,
+        "before": {
+          "Easy": 15,
+          "Medium": 18,
+          "Hard": 15
+        },
+        "after": {
+          "Easy": 14,
+          "Medium": 20,
+          "Hard": 14
+        }
+      }
+    },
+    "note": "Relative editorial tiers, not a College Board per-subtopic difficulty prescription."
   }
 }

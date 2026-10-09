@@ -1554,5 +1554,10 @@
       "sourceQuestionNumber": "3.23",
       "classificationVersion": "2026-10-10-editorial-review"
     }
-  ]
+  ],
+  "visibleDifficultyAudit20261010": {
+    "date": "2026-10-10",
+    "includedWithMainBank": true,
+    "changed": 0
+  }
 }

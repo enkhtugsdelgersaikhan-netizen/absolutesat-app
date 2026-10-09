@@ -1,0 +1,30 @@
+name: Verify visible question difficulty mix
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'question-bank.json'
+      - 'math-question-bank.json'
+      - 'math-question-bank-20261010-reviewed.json'
+      - 'mock-test-reservations.json'
+      - 'difficulty-mix-audit.mjs'
+      - '.github/workflows/difficulty-mix.yml'
+  pull_request:
+    paths:
+      - 'question-bank.json'
+      - 'math-question-bank.json'
+      - 'math-question-bank-20261010-reviewed.json'
+      - 'mock-test-reservations.json'
+      - 'difficulty-mix-audit.mjs'
+      - '.github/workflows/difficulty-mix.yml'
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node difficulty-mix-audit.mjs
