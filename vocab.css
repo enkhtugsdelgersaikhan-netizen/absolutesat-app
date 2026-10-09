@@ -295,3 +295,152 @@
     .vocab-card .vocab-study-controls{gap:12px;padding-top:22px}
     .vocab-card .vocab-actions{grid-template-columns:1fr}
 }
+
+
+/* Compact subject icon for vocabulary, matching Formula Fluency's illustrations. */
+.vocab-word-icon{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:64px;
+    height:64px;
+    margin:23px auto 0;
+    border:1px solid #cfe0dc;
+    border-radius:13px;
+    background:#eef7f5;
+    color:#0f766e;
+    box-shadow:0 2px 5px rgba(15,23,42,.035);
+}
+.vocab-word-icon svg{width:36px;height:36px;display:block}
+.vocab-card .vocab-word-icon + h2{
+    margin:16px 0 5px;
+    font-size:clamp(34px,5.5vw,48px);
+}
+
+/* Animated, accessible category picker; the native select remains as fallback. */
+.vocab-category-wrap{position:relative;min-width:0}
+.vocab-category-picker{display:none;position:relative}
+.vocab-category-wrap.is-enhanced #vocab-category{display:none}
+.vocab-category-wrap.is-enhanced .vocab-category-picker{display:block}
+.vocab-category-trigger{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    width:100%;
+    height:46px;
+    gap:8px;
+    padding:0 12px;
+    border:1px solid #d5dfdd;
+    border-radius:10px;
+    background:white;
+    color:#334155;
+    font:600 13px Poppins,sans-serif;
+    text-align:left;
+    cursor:pointer;
+    box-shadow:0 1px 0 rgba(15,23,42,.05),0 2px 7px rgba(15,23,42,.035);
+    transition:border-color .18s ease,box-shadow .2s ease,background-color .2s ease;
+}
+.vocab-category-trigger:hover,
+.vocab-category-picker.is-open .vocab-category-trigger{
+    border-color:#0f766e;
+    box-shadow:0 0 0 3px rgba(15,118,110,.09),0 4px 12px rgba(15,23,42,.04);
+}
+.vocab-category-trigger:focus-visible,
+.vocab-category-option:focus-visible{
+    outline:2px solid #0f766e;
+    outline-offset:2px;
+}
+.vocab-category-selected{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    min-width:0;
+}
+#vocab-category-trigger-text{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.vocab-category-symbol{
+    width:21px;
+    height:21px;
+    flex:0 0 21px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    color:#0f766e;
+}
+.vocab-category-symbol svg{width:19px;height:19px;display:block}
+.vocab-category-chevron{
+    flex:0 0 17px;
+    color:#64748b;
+    transition:transform .22s cubic-bezier(.2,.7,.2,1);
+}
+.vocab-category-picker.is-open .vocab-category-chevron{transform:rotate(180deg)}
+.vocab-category-menu{
+    position:absolute;
+    z-index:40;
+    top:calc(100% + 8px);
+    right:0;
+    left:0;
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+    max-height:min(350px,55vh);
+    overflow-y:auto;
+    padding:7px;
+    border:1px solid #dbe4e2;
+    border-radius:12px;
+    background:white;
+    box-shadow:0 14px 34px rgba(15,23,42,.14);
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+    transform:translateY(-7px) scale(.98);
+    transform-origin:top;
+    transition:opacity .18s ease,visibility .18s ease,transform .22s cubic-bezier(.2,.7,.2,1);
+}
+.vocab-category-picker.is-open .vocab-category-menu{
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+    transform:translateY(0) scale(1);
+}
+.vocab-category-option{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    min-height:40px;
+    width:100%;
+    padding:9px 10px;
+    border:0;
+    border-radius:8px;
+    background:transparent;
+    color:#334155;
+    font:500 12px Poppins,sans-serif;
+    line-height:1.35;
+    text-align:left;
+    cursor:pointer;
+    transition:background-color .18s ease,color .18s ease;
+}
+.vocab-category-option:hover,.vocab-category-option:focus-visible{background:#f0fdfa;color:#0f766e}
+.vocab-category-option.is-selected{background:#eef7f5;color:#0f766e;font-weight:600}
+.vocab-category-option .vocab-category-check{margin-left:auto;color:#0f766e;opacity:0}
+.vocab-category-option.is-selected .vocab-category-check{opacity:1}
+.vocab-category-picker.is-open .vocab-category-option{
+    animation:vocabMenuItemIn .2s both;
+    animation-delay:calc(var(--option-index) * 24ms);
+}
+@keyframes vocabMenuItemIn{
+    from{opacity:0;transform:translateY(-5px)}
+    to{opacity:1;transform:translateY(0)}
+}
+.vocab-status-filter-button.active{animation:vocabStatusSelect .2s ease both}
+@keyframes vocabStatusSelect{
+    from{transform:scale(.96)}
+    to{transform:scale(1)}
+}
+@media(max-width:650px){
+    .vocab-word-icon{width:56px;height:56px;margin-top:17px}
+    .vocab-word-icon svg{width:31px;height:31px}
+}
+@media(prefers-reduced-motion:reduce){
+    .vocab-category-menu,.vocab-category-chevron,.vocab-category-option,.vocab-category-trigger{transition:none!important}
+    .vocab-category-picker.is-open .vocab-category-option,.vocab-status-filter-button.active{animation:none!important}
+}

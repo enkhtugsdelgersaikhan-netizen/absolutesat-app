@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css?v=unified-ui-1">
-<link rel="stylesheet" href="vocab.css?v=controls-2">
+<link rel="stylesheet" href="vocab.css?v=controls-3">
 <link rel="stylesheet" href="/responsive.css?v=1">
     <!-- Vercel Web Analytics -->
     <script>
@@ -30,7 +30,17 @@
 <section class="vocab-content">
 <div class="vocab-toolbar">
 <label class="vocab-search-wrap"><span>Search</span><input id="vocab-search" type="search" placeholder="Search a word..." autocomplete="off"></label>
-<label class="vocab-search-wrap"><span>Category</span><select id="vocab-category"><option value="all">All Categories</option><option value="Academic">Academic</option><option value="Argument">Argument & Ideas</option><option value="Tone">Tone & Style</option><option value="Science">Science</option></select></label>
+<div class="vocab-search-wrap vocab-category-wrap">
+<span id="vocab-category-label-text">Category</span>
+<select id="vocab-category" aria-label="Category"><option value="all">All Categories</option><option value="Academic">Academic</option><option value="Argument">Argument &amp; Ideas</option><option value="Tone">Tone &amp; Style</option><option value="Science">Science</option></select>
+<div class="vocab-category-picker" id="vocab-category-picker">
+<button type="button" id="vocab-category-trigger" class="vocab-category-trigger" aria-haspopup="listbox" aria-controls="vocab-category-menu" aria-expanded="false">
+<span class="vocab-category-selected"><span id="vocab-category-trigger-icon" class="vocab-category-symbol" aria-hidden="true"></span><span id="vocab-category-trigger-text">All Categories</span></span>
+<svg class="vocab-category-chevron" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+<div id="vocab-category-menu" class="vocab-category-menu" role="listbox" aria-label="Category" aria-hidden="true"></div>
+</div>
+</div>
 <div class="vocab-status-filter">
 <span>Status</span>
 <div class="vocab-status-buttons" role="group" aria-label="Vocabulary status filter">
@@ -56,6 +66,7 @@
 <span id="vocab-solved-status" class="vocab-status-chip unsolved">Learning</span>
 <span id="vocab-review-status" class="vocab-status-chip review hidden">Review</span>
 </div>
+<div class="vocab-word-icon" id="vocab-word-icon" aria-hidden="true"></div>
 <h2 id="vocab-word">Abate</h2>
 <p id="vocab-pronunciation">/əˈbeɪt/</p>
 <div id="vocab-definition" class="vocab-definition hidden">
@@ -86,7 +97,7 @@
 <script src="supabase-config.js"></script>
 <script src="auth-guard.js"></script>
 <script src="auth.js?v=dark-3"></script>
-<script src="vocab.js?v=10"></script>
+<script src="vocab.js?v=11"></script>
 <script>
 const menuButton=document.querySelector(".mobile-menu-button"),navigation=document.querySelector(".navigation");
 if(menuButton&&navigation){menuButton.addEventListener("click",()=>{const isOpen=navigation.classList.toggle("mobile-open");menuButton.setAttribute("aria-expanded",isOpen?"true":"false");});}

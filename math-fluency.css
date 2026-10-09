@@ -213,3 +213,10 @@
     background:#eef7f5!important;
     box-shadow:0 2px 5px rgba(15,23,42,.035)!important;
 }
+
+
+/* Match Vocabulary's single reveal -> two equal progress actions layout. */
+.formula-card-flash .vocab-study-controls .vocab-pre-actions,
+.formula-card-flash .vocab-study-controls .vocab-actions,
+.formula-card-flash .vocab-study-controls .vocab-review-row{margin-top:0}
+.formula-card-flash .vocab-study-controls{padding-top:26px}

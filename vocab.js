@@ -530,6 +530,7 @@ statusButtons=[...document.querySelectorAll(".vocab-status-filter-button")],
 wordEl=document.getElementById("vocab-word"),
 pronEl=document.getElementById("vocab-pronunciation"),
 catEl=document.getElementById("vocab-category-label"),
+wordIcon=document.getElementById("vocab-word-icon"),
 solvedStatusEl=document.getElementById("vocab-solved-status"),
 reviewStatusEl=document.getElementById("vocab-review-status"),
 meaningEl=document.getElementById("vocab-meaning"),
@@ -547,6 +548,115 @@ progressText=document.getElementById("vocab-progress-text"),
 progressBar=document.getElementById("vocab-progress-bar"),
 countEl=document.getElementById("vocab-count"),
 statusSummary=document.getElementById("vocab-status-summary");
+
+
+// Small category illustrations shared by the menu and flashcard.
+const vocabIconPaths={
+    all:'<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>',
+    Academic:'<path d="M12 6.5C9 4.7 6 4.2 3 5v13c3-.8 6-.3 9 1.5m0-13C15 4.7 18 4.2 21 5v13c-3-.8-6-.3-9 1.5m0-13v13"/>',
+    Argument:'<path d="M4 5.5h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H10l-5.5 3v-3H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2Z"/><path d="M7 10.5h10M7 14h7"/>',
+    Tone:'<path d="M20 4c-5 0-13 4-14 11l-2 5 5-2c7-1 11-9 11-14Z"/><path d="M7 17c3-4 7-7 11-10"/>',
+    Science:'<path d="M9 3h6m-5 0v7l-5.8 8.4A2 2 0 0 0 5.8 21h12.4a2 2 0 0 0 1.6-2.6L14 10V3M7.6 16h8.8"/>'
+};
+function vocabIcon(kind){
+    const path=vocabIconPaths[kind]||vocabIconPaths.all;
+    return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+path+'</svg>';
+}
+
+function setupVocabCategoryPicker(){
+    const wrapper=document.querySelector(".vocab-category-wrap");
+    const picker=document.getElementById("vocab-category-picker");
+    const trigger=document.getElementById("vocab-category-trigger");
+    const menu=document.getElementById("vocab-category-menu");
+    const triggerText=document.getElementById("vocab-category-trigger-text");
+    const triggerIcon=document.getElementById("vocab-category-trigger-icon");
+    if(!wrapper||!picker||!trigger||!menu)return;
+    const buttons=[];
+    for(const [i,option] of [...category.options].entries()){
+        const button=document.createElement("button");
+        button.type="button";
+        button.className="vocab-category-option";
+        button.setAttribute("role","option");
+        button.setAttribute("aria-selected","false");
+        button.tabIndex=-1;
+        button.dataset.value=option.value;
+        button.style.setProperty("--option-index",String(i));
+        const symbol=document.createElement("span");
+        symbol.className="vocab-category-symbol";
+        symbol.setAttribute("aria-hidden","true");
+        symbol.innerHTML=vocabIcon(option.value);
+        const label=document.createElement("span");
+        label.textContent=option.textContent;
+        const check=document.createElement("span");
+        check.className="vocab-category-check";
+        check.setAttribute("aria-hidden","true");
+        check.textContent="✓";
+        button.append(symbol,label,check);
+        menu.append(button);
+        buttons.push(button);
+    }
+    function sync(){
+        const selected=[...category.options].find(o=>o.value===category.value)||category.options[0];
+        triggerText.textContent=selected.textContent;
+        triggerIcon.innerHTML=vocabIcon(selected.value);
+        trigger.setAttribute("aria-label","Category: "+selected.textContent);
+        buttons.forEach(button=>{
+            const active=button.dataset.value===category.value;
+            button.classList.toggle("is-selected",active);
+            button.setAttribute("aria-selected",String(active));
+        });
+    }
+    function toggle(open,focusOption=false){
+        picker.classList.toggle("is-open",open);
+        trigger.setAttribute("aria-expanded",String(open));
+        menu.setAttribute("aria-hidden",String(!open));
+        if(open&&focusOption)(buttons.find(button=>button.dataset.value===category.value)||buttons[0]).focus();
+    }
+    trigger.addEventListener("click",()=>toggle(!picker.classList.contains("is-open")));
+    trigger.addEventListener("keydown",event=>{
+        if(event.key==="ArrowDown"||event.key==="ArrowUp"){
+            event.preventDefault();
+            toggle(true,true);
+            if(event.key==="ArrowUp")buttons[buttons.length-1].focus();
+        }
+        if(event.key==="Escape")toggle(false);
+    });
+    menu.addEventListener("click",event=>{
+        const button=event.target.closest(".vocab-category-option");
+        if(!button)return;
+        category.value=button.dataset.value;
+        category.dispatchEvent(new Event("change",{bubbles:true}));
+        sync();
+        toggle(false);
+        trigger.focus();
+    });
+    menu.addEventListener("keydown",event=>{
+        const index=buttons.indexOf(document.activeElement);
+        if(event.key==="Escape"){
+            event.preventDefault();
+            toggle(false);
+            trigger.focus();
+        }else if(event.key==="ArrowDown"||event.key==="ArrowUp"||event.key==="Home"||event.key==="End"){
+            event.preventDefault();
+            let next=index;
+            if(event.key==="ArrowDown")next=(index+1)%buttons.length;
+            if(event.key==="ArrowUp")next=(index-1+buttons.length)%buttons.length;
+            if(event.key==="Home")next=0;
+            if(event.key==="End")next=buttons.length-1;
+            buttons[next].focus();
+        }else if(event.key==="Tab")toggle(false);
+    });
+    document.addEventListener("pointerdown",event=>{
+        if(!picker.contains(event.target))toggle(false);
+    });
+    document.addEventListener("focusin",event=>{
+        if(!picker.contains(event.target))toggle(false);
+    });
+    category.addEventListener("change",sync);
+    sync();
+    wrapper.classList.add("is-enhanced");
+    category.tabIndex=-1;
+}
 
 const STATE_KEY="absoluteprep_vocab_state";
 const legacyLearned=JSON.parse(localStorage.getItem("absoluteprep_vocab_learned")||"{}");
@@ -837,6 +947,7 @@ function render(){
     pronEl.textContent="";
     pronEl.classList.add("hidden");
     catEl.textContent=word[2];
+    wordIcon.innerHTML=vocabIcon(word[2]);
     meaningEl.textContent=word[3];
     exampleEl.textContent=exampleFor(word[0],word[1],word[2]);
 
@@ -938,6 +1049,7 @@ statusButtons.forEach(button=>{
 });
 
 function initialize(){
+    setupVocabCategoryPicker();
     statusButtons.forEach(button=>{
         button.classList.toggle(
             "active",

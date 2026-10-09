@@ -245,6 +245,7 @@ noteEl=document.getElementById("formula-note"),
 noteWrap=document.getElementById("formula-note-wrap"),
 definition=document.getElementById("formula-definition"),
 reveal=document.getElementById("reveal-button"),
+preActions=document.querySelector(".vocab-pre-actions"),
 reviewButton=document.getElementById("review-button"),
 learningButton=document.getElementById("learning-button"),
 knownButton=document.getElementById("known-button"),
@@ -548,8 +549,10 @@ function findMatching(excludeId=""){return shuffle(formulas.filter(item=>matches
 
 function resetCardUI(){
     definition.classList.add("hidden");
-    actions.classList.remove("hidden");
+    actions.classList.add("hidden");
+    preActions.classList.remove("hidden");
     reveal.classList.remove("hidden");
+    reveal.setAttribute("aria-expanded","false");
     card.classList.remove("vocab-solved-flash","vocab-learning-flash");
     reviewButton.textContent="☆ Mark for Review";
     reviewButton.classList.remove("active");
@@ -632,8 +635,9 @@ function setStatusFilter(status){
 
 reveal.addEventListener("click",()=>{
     definition.classList.remove("hidden");
+    preActions.classList.add("hidden");
     actions.classList.remove("hidden");
-    reveal.classList.add("hidden");
+    reveal.setAttribute("aria-expanded","true");
     typeset([expressionEl,meaningEl,whyEl,whenEl,symbolsEl,exampleEl,noteEl]);
 });
 reviewButton.addEventListener("click",()=>{

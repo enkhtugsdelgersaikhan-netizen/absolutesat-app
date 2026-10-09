@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css?v=unified-ui-1">
-<link rel="stylesheet" href="/vocab.css?v=unified-ui-1">
-<link rel="stylesheet" href="/math-fluency.css?v=unified-ui-1">
+<link rel="stylesheet" href="/vocab.css?v=controls-3">
+<link rel="stylesheet" href="/math-fluency.css?v=controls-3">
 <script>
 window.MathJax={
   tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},
@@ -103,8 +103,9 @@ window.MathJax={
 <div id="formula-note-wrap" class="formula-note"><strong>Remember</strong><p id="formula-note"></p></div>
 </div>
 
+<div class="vocab-study-controls">
 <div class="vocab-pre-actions">
-<button id="reveal-button" class="vocab-primary">Reveal Answer</button>
+<button id="reveal-button" class="vocab-primary" type="button" aria-controls="formula-definition" aria-expanded="false">Reveal Answer</button>
 </div>
 <div class="vocab-actions hidden" id="formula-actions">
 <button id="learning-button" class="vocab-secondary vocab-answer-button" type="button" aria-pressed="false">Still Learning</button>
@@ -112,6 +113,7 @@ window.MathJax={
 </div>
 <div class="vocab-review-row">
 <button id="review-button" class="vocab-review-button" type="button" aria-pressed="false">☆ Mark for Review</button>
+</div>
 </div>
 </article>
 </section>
@@ -121,7 +123,7 @@ window.MathJax={
 <script src="/supabase-config.js"></script>
 <script src="/auth-guard.js"></script>
 <script src="/auth.js?v=dark-3"></script>
-<script src="/math-fluency.js?v=6"></script>
+<script src="/math-fluency.js?v=7"></script>
 <script>
 const menuButton=document.querySelector(".mobile-menu-button"),navigation=document.querySelector(".navigation");
 if(menuButton&&navigation){menuButton.addEventListener("click",()=>{const isOpen=navigation.classList.toggle("mobile-open");menuButton.setAttribute("aria-expanded",isOpen?"true":"false");});}
