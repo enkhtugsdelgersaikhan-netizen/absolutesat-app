@@ -293,3 +293,37 @@ html.lexlogica-dark-mode.lexlogica-home-native :is(
   .university-browse-details>summary,.home-score-range-details>summary,
   .home-feature-more>summary
 ){background:#1d2e28!important;border-color:#365248!important}
+
+/* Resolve smaller score editor, quartile explainer and search-detail surfaces. */
+html.lexlogica-dark-mode.lexlogica-home-native :is(
+ .sat-guide-score-saver,.sat-context-profile-head,.sat-context-profile-form,
+ .sat-context-total,.sat-quartile-brief>div,.sat-score-guide-list,
+ .sat-score-guide-row,.sat-score-all-ranges,.sat-score-scale-head,
+ .sat-strength-track,.sat-strength-card,.sat-strength-meta span,
+ .sat-impact-heading,.sat-impact-input-grid label,
+ .university-score-band,.university-impact-main,.university-featured-meta,
+ .university-card-scores>div,.university-score-band-values>div,
+ .university-featured-data,.university-impact-components,
+ .university-impact-component,.university-position-info,.sat-guide-explainer
+){background:#20332c!important;border-color:#3c5b4d!important;box-shadow:none!important}
+html.lexlogica-dark-mode.lexlogica-home-native :is(
+ .sat-context-profile-head span,.sat-quartile-brief span,.sat-quartile-brief-note,
+ .sat-score-guide-row p,.sat-score-guide-row strong,.sat-guide-score-panel small,
+ .sat-impact-heading span,.sat-impact-school-line,.sat-impact-input-grid label span,
+ .sat-impact-explainer,.sat-impact-anchors,.university-featured-data p,
+ .university-impact-components span,.university-card-data-status
+){color:#a9c7b9!important}
+html.lexlogica-dark-mode.lexlogica-home-native :is(
+ .sat-context-profile-form label,.sat-score-guide-scale .sat-score-scale-head,
+ .sat-quartile-brief>div strong,.sat-impact-school-line strong,
+ .sat-impact-result-label,.university-impact-main span,
+ .university-search-shell>label
+){color:#dcefe5!important}
+html.lexlogica-dark-mode.lexlogica-home-native .sat-guide-score-panel input{
+  color:#edf7f1!important;background:#172920!important;border-color:#4f715d!important}
+html.lexlogica-dark-mode.lexlogica-home-native .logo{
+  filter:brightness(0) invert(1); /* Branding artwork only, never scores. */
+}
+html.lexlogica-dark-mode.lexlogica-home-native .university-browse-details>summary{
+  color:#e4f1e9!important;
+}
