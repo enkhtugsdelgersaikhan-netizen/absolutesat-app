@@ -3445,6 +3445,72 @@
               "B": "This choice does not satisfy the relationships or conditions in the question.",
               "C": "If each leg has length \\(s\\), the hypotenuse is \\(s\\sqrt2\\), so the perimeter is \\(s(2+\\sqrt2)\\). Since \\(18+18\\sqrt2=9\\sqrt2(2+\\sqrt2)\\), each leg is \\(9\\sqrt2\\). The hypotenuse is therefore \\(9\\sqrt2\\cdot\\sqrt2=\\boxed{18}\\).",
               "D": "This choice does not satisfy the relationships or conditions in the question."
+            },
+            "diagram": {
+              "width": 420,
+              "height": 300,
+              "alt": "Triangle HAS schematic",
+              "caption": "Schematic; not to scale.",
+              "lines": [],
+              "polygons": [
+                {
+                  "points": [
+                    [
+                      205,
+                      60
+                    ],
+                    [
+                      91,
+                      243
+                    ],
+                    [
+                      319,
+                      243
+                    ]
+                  ]
+                }
+              ],
+              "ellipses": [],
+              "circles": [],
+              "points": [
+                {
+                  "x": 205,
+                  "y": 60,
+                  "label": "H",
+                  "dx": 0,
+                  "dy": -12
+                },
+                {
+                  "x": 91,
+                  "y": 243,
+                  "label": "A",
+                  "dx": -12,
+                  "dy": 18
+                },
+                {
+                  "x": 319,
+                  "y": 243,
+                  "label": "S",
+                  "dx": 10,
+                  "dy": 18
+                }
+              ],
+              "labels": [],
+              "rightAngles": [],
+              "ticks": [
+                {
+                  "x": 148,
+                  "y": 151.5,
+                  "angle": 32,
+                  "size": 10
+                },
+                {
+                  "x": 262,
+                  "y": 151.5,
+                  "angle": -32,
+                  "size": 10
+                }
+              ]
             }
           }
         },
@@ -3480,7 +3546,42 @@
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Trigonometry",
-            "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+            "classificationVersion": "2026-10-08-relative-30-40-30-v3",
+            "diagram": {
+              "width": 420,
+              "height": 300,
+              "alt": "Rectangle schematic",
+              "caption": "Schematic; not to scale.",
+              "lines": [],
+              "polygons": [
+                {
+                  "points": [
+                    [
+                      95,
+                      88
+                    ],
+                    [
+                      325,
+                      88
+                    ],
+                    [
+                      325,
+                      235
+                    ],
+                    [
+                      95,
+                      235
+                    ]
+                  ]
+                }
+              ],
+              "ellipses": [],
+              "circles": [],
+              "points": [],
+              "labels": [],
+              "rightAngles": [],
+              "ticks": []
+            }
           }
         },
         {
@@ -4198,6 +4299,59 @@
               "B": "This choice does not satisfy the relationships or conditions in the question.",
               "C": "Let the shortest side be \\(s\\). The side lengths are \\(s\\), \\(s+4\\), and \\(2s\\). Thus \\(s+(s+4)+2s=44\\), so \\(s=10\\). The longest side is \\(2s=\\boxed{20}\\).",
               "D": "This choice does not satisfy the relationships or conditions in the question."
+            },
+            "diagram": {
+              "width": 420,
+              "height": 300,
+              "alt": "Triangle HAS schematic",
+              "caption": "Schematic; not to scale.",
+              "lines": [],
+              "polygons": [
+                {
+                  "points": [
+                    [
+                      105,
+                      248
+                    ],
+                    [
+                      322,
+                      248
+                    ],
+                    [
+                      205,
+                      66
+                    ]
+                  ]
+                }
+              ],
+              "ellipses": [],
+              "circles": [],
+              "points": [
+                {
+                  "x": 105,
+                  "y": 248,
+                  "label": "H",
+                  "dx": -12,
+                  "dy": 18
+                },
+                {
+                  "x": 322,
+                  "y": 248,
+                  "label": "A",
+                  "dx": 10,
+                  "dy": 18
+                },
+                {
+                  "x": 205,
+                  "y": 66,
+                  "label": "S",
+                  "dx": 0,
+                  "dy": -12
+                }
+              ],
+              "labels": [],
+              "rightAngles": [],
+              "ticks": []
             }
           }
         },
@@ -4339,7 +4493,8 @@
                   "emphasis": false,
                   "anchor": "middle"
                 }
-              ]
+              ],
+              "caption": "Schematic; not to scale."
             }
           }
         },
@@ -4819,7 +4974,60 @@
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Trigonometry",
-            "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+            "classificationVersion": "2026-10-08-relative-30-40-30-v3",
+            "diagram": {
+              "width": 420,
+              "height": 300,
+              "alt": "Triangle ABC schematic",
+              "caption": "Schematic; not to scale.",
+              "lines": [],
+              "polygons": [
+                {
+                  "points": [
+                    [
+                      105,
+                      248
+                    ],
+                    [
+                      322,
+                      248
+                    ],
+                    [
+                      205,
+                      66
+                    ]
+                  ]
+                }
+              ],
+              "ellipses": [],
+              "circles": [],
+              "points": [
+                {
+                  "x": 105,
+                  "y": 248,
+                  "label": "A",
+                  "dx": -12,
+                  "dy": 18
+                },
+                {
+                  "x": 322,
+                  "y": 248,
+                  "label": "B",
+                  "dx": 10,
+                  "dy": 18
+                },
+                {
+                  "x": 205,
+                  "y": 66,
+                  "label": "C",
+                  "dx": 0,
+                  "dy": -12
+                }
+              ],
+              "labels": [],
+              "rightAngles": [],
+              "ticks": []
+            }
           }
         }
       ],
@@ -5401,7 +5609,60 @@
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Trigonometry",
-            "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+            "classificationVersion": "2026-10-08-relative-30-40-30-v3",
+            "diagram": {
+              "width": 420,
+              "height": 300,
+              "alt": "Triangle ABC schematic",
+              "caption": "Schematic; not to scale.",
+              "lines": [],
+              "polygons": [
+                {
+                  "points": [
+                    [
+                      105,
+                      248
+                    ],
+                    [
+                      322,
+                      248
+                    ],
+                    [
+                      205,
+                      66
+                    ]
+                  ]
+                }
+              ],
+              "ellipses": [],
+              "circles": [],
+              "points": [
+                {
+                  "x": 105,
+                  "y": 248,
+                  "label": "A",
+                  "dx": -12,
+                  "dy": 18
+                },
+                {
+                  "x": 322,
+                  "y": 248,
+                  "label": "B",
+                  "dx": 10,
+                  "dy": 18
+                },
+                {
+                  "x": 205,
+                  "y": 66,
+                  "label": "C",
+                  "dx": 0,
+                  "dy": -12
+                }
+              ],
+              "labels": [],
+              "rightAngles": [],
+              "ticks": []
+            }
           }
         },
         {
@@ -5754,7 +6015,73 @@
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Lines, Angles, and Triangles",
-            "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+            "classificationVersion": "2026-10-08-relative-30-40-30-v3",
+            "diagram": {
+              "width": 420,
+              "height": 300,
+              "alt": "Triangle ABC schematic",
+              "caption": "Schematic; not to scale.",
+              "lines": [],
+              "polygons": [
+                {
+                  "points": [
+                    [
+                      205,
+                      60
+                    ],
+                    [
+                      91,
+                      243
+                    ],
+                    [
+                      319,
+                      243
+                    ]
+                  ]
+                }
+              ],
+              "ellipses": [],
+              "circles": [],
+              "points": [
+                {
+                  "x": 205,
+                  "y": 60,
+                  "label": "A",
+                  "dx": 0,
+                  "dy": -12
+                },
+                {
+                  "x": 91,
+                  "y": 243,
+                  "label": "B",
+                  "dx": -12,
+                  "dy": 18
+                },
+                {
+                  "x": 319,
+                  "y": 243,
+                  "label": "C",
+                  "dx": 10,
+                  "dy": 18
+                }
+              ],
+              "labels": [],
+              "rightAngles": [],
+              "ticks": [
+                {
+                  "x": 148,
+                  "y": 151.5,
+                  "angle": 32,
+                  "size": 10
+                },
+                {
+                  "x": 262,
+                  "y": 151.5,
+                  "angle": -32,
+                  "size": 10
+                }
+              ]
+            }
           }
         },
         {
@@ -5789,7 +6116,106 @@
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Area and Volume",
-            "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+            "classificationVersion": "2026-10-08-relative-30-40-30-v3",
+            "diagram": {
+              "width": 420,
+              "height": 300,
+              "alt": "Cube schematic",
+              "caption": "Schematic; not to scale.",
+              "lines": [
+                {
+                  "x1": 92,
+                  "y1": 123,
+                  "x2": 269,
+                  "y2": 123,
+                  "dashed": false
+                },
+                {
+                  "x1": 92,
+                  "y1": 123,
+                  "x2": 140,
+                  "y2": 83,
+                  "dashed": false
+                },
+                {
+                  "x1": 269,
+                  "y1": 123,
+                  "x2": 269,
+                  "y2": 247,
+                  "dashed": false
+                },
+                {
+                  "x1": 269,
+                  "y1": 123,
+                  "x2": 317,
+                  "y2": 83,
+                  "dashed": false
+                },
+                {
+                  "x1": 269,
+                  "y1": 247,
+                  "x2": 92,
+                  "y2": 247,
+                  "dashed": false
+                },
+                {
+                  "x1": 269,
+                  "y1": 247,
+                  "x2": 317,
+                  "y2": 207,
+                  "dashed": false
+                },
+                {
+                  "x1": 92,
+                  "y1": 247,
+                  "x2": 92,
+                  "y2": 123,
+                  "dashed": false
+                },
+                {
+                  "x1": 92,
+                  "y1": 247,
+                  "x2": 140,
+                  "y2": 207,
+                  "dashed": false
+                },
+                {
+                  "x1": 140,
+                  "y1": 83,
+                  "x2": 317,
+                  "y2": 83,
+                  "dashed": false
+                },
+                {
+                  "x1": 317,
+                  "y1": 83,
+                  "x2": 317,
+                  "y2": 207,
+                  "dashed": false
+                },
+                {
+                  "x1": 317,
+                  "y1": 207,
+                  "x2": 140,
+                  "y2": 207,
+                  "dashed": false
+                },
+                {
+                  "x1": 140,
+                  "y1": 207,
+                  "x2": 140,
+                  "y2": 83,
+                  "dashed": false
+                }
+              ],
+              "polygons": [],
+              "ellipses": [],
+              "circles": [],
+              "points": [],
+              "labels": [],
+              "rightAngles": [],
+              "ticks": []
+            }
           }
         }
       ]

@@ -3292,7 +3292,60 @@
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Lines, Angles, and Triangles",
-            "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+            "classificationVersion": "2026-10-08-relative-30-40-30-v3",
+            "diagram": {
+              "width": 420,
+              "height": 300,
+              "alt": "Triangle ABC schematic",
+              "caption": "Schematic; not to scale.",
+              "lines": [],
+              "polygons": [
+                {
+                  "points": [
+                    [
+                      105,
+                      248
+                    ],
+                    [
+                      322,
+                      248
+                    ],
+                    [
+                      205,
+                      66
+                    ]
+                  ]
+                }
+              ],
+              "ellipses": [],
+              "circles": [],
+              "points": [
+                {
+                  "x": 105,
+                  "y": 248,
+                  "label": "A",
+                  "dx": -12,
+                  "dy": 18
+                },
+                {
+                  "x": 322,
+                  "y": 248,
+                  "label": "B",
+                  "dx": 10,
+                  "dy": 18
+                },
+                {
+                  "x": 205,
+                  "y": 66,
+                  "label": "C",
+                  "dx": 0,
+                  "dy": -12
+                }
+              ],
+              "labels": [],
+              "rightAngles": [],
+              "ticks": []
+            }
           }
         },
         {
@@ -3400,7 +3453,8 @@
                   "rotation": 0
                 }
               ],
-              "ticks": []
+              "ticks": [],
+              "caption": "Schematic; not to scale."
             }
           }
         },
@@ -3749,7 +3803,8 @@
                   "text": "diagonal",
                   "anchor": "middle"
                 }
-              ]
+              ],
+              "caption": "Schematic; not to scale."
             }
           }
         }
@@ -4360,7 +4415,62 @@
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Lines, Angles, and Triangles",
-            "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+            "classificationVersion": "2026-10-08-relative-30-40-30-v3",
+            "diagram": {
+              "width": 420,
+              "height": 300,
+              "alt": "Parallel lines m and n with a transversal",
+              "caption": "Schematic; not to scale.",
+              "lines": [
+                {
+                  "x1": 52,
+                  "y1": 92,
+                  "x2": 363,
+                  "y2": 92,
+                  "dashed": false
+                },
+                {
+                  "x1": 52,
+                  "y1": 216,
+                  "x2": 363,
+                  "y2": 216,
+                  "dashed": false
+                },
+                {
+                  "x1": 112,
+                  "y1": 35,
+                  "x2": 298,
+                  "y2": 273,
+                  "dashed": false
+                }
+              ],
+              "polygons": [],
+              "ellipses": [],
+              "circles": [],
+              "points": [],
+              "labels": [
+                {
+                  "x": 41,
+                  "y": 86,
+                  "text": "m",
+                  "anchor": "middle"
+                },
+                {
+                  "x": 41,
+                  "y": 211,
+                  "text": "n",
+                  "anchor": "middle"
+                },
+                {
+                  "x": 312,
+                  "y": 273,
+                  "text": "t",
+                  "anchor": "middle"
+                }
+              ],
+              "rightAngles": [],
+              "ticks": []
+            }
           }
         },
         {
@@ -4727,6 +4837,78 @@
               "B": "This choice does not satisfy the relationships or conditions in the question.",
               "C": "This choice does not satisfy the relationships or conditions in the question.",
               "D": "Since 17 is the hypotenuse, angle L is the right angle. The stated correspondences force K to correspond to P. Relative to angle K, the opposite leg is JL=15 and the adjacent leg is KL=8. Therefore, \\(\\tan P=\\tan K=\\boxed{\\frac{15}{8}}\\)."
+            },
+            "diagram": {
+              "width": 420,
+              "height": 300,
+              "alt": "Triangle JKL schematic",
+              "caption": "Schematic; not to scale.",
+              "lines": [],
+              "polygons": [
+                {
+                  "points": [
+                    [
+                      105,
+                      248
+                    ],
+                    [
+                      322,
+                      248
+                    ],
+                    [
+                      205,
+                      66
+                    ]
+                  ]
+                }
+              ],
+              "ellipses": [],
+              "circles": [],
+              "points": [
+                {
+                  "x": 105,
+                  "y": 248,
+                  "label": "J",
+                  "dx": -12,
+                  "dy": 18
+                },
+                {
+                  "x": 322,
+                  "y": 248,
+                  "label": "K",
+                  "dx": 10,
+                  "dy": 18
+                },
+                {
+                  "x": 205,
+                  "y": 66,
+                  "label": "L",
+                  "dx": 0,
+                  "dy": -12
+                }
+              ],
+              "labels": [
+                {
+                  "x": 225.5,
+                  "y": 271,
+                  "text": "JK = 17",
+                  "anchor": "middle"
+                },
+                {
+                  "x": 143,
+                  "y": 150,
+                  "text": "JL = 15",
+                  "anchor": "middle"
+                },
+                {
+                  "x": 275.5,
+                  "y": 150,
+                  "text": "KL = 8",
+                  "anchor": "middle"
+                }
+              ],
+              "rightAngles": [],
+              "ticks": []
             }
           }
         }
@@ -5347,6 +5529,78 @@
               "B": "This choice does not satisfy the relationships or conditions in the question.",
               "C": "This choice does not satisfy the relationships or conditions in the question.",
               "D": "Since 17 is the hypotenuse, angle L is the right angle. The stated correspondences force K to correspond to P. Relative to angle K, the opposite leg is JL=15 and the adjacent leg is KL=8. Therefore, \\(\\tan P=\\tan K=\\boxed{\\frac{15}{8}}\\)."
+            },
+            "diagram": {
+              "width": 420,
+              "height": 300,
+              "alt": "Triangle JKL schematic",
+              "caption": "Schematic; not to scale.",
+              "lines": [],
+              "polygons": [
+                {
+                  "points": [
+                    [
+                      105,
+                      248
+                    ],
+                    [
+                      322,
+                      248
+                    ],
+                    [
+                      205,
+                      66
+                    ]
+                  ]
+                }
+              ],
+              "ellipses": [],
+              "circles": [],
+              "points": [
+                {
+                  "x": 105,
+                  "y": 248,
+                  "label": "J",
+                  "dx": -12,
+                  "dy": 18
+                },
+                {
+                  "x": 322,
+                  "y": 248,
+                  "label": "K",
+                  "dx": 10,
+                  "dy": 18
+                },
+                {
+                  "x": 205,
+                  "y": 66,
+                  "label": "L",
+                  "dx": 0,
+                  "dy": -12
+                }
+              ],
+              "labels": [
+                {
+                  "x": 225.5,
+                  "y": 271,
+                  "text": "JK = 17",
+                  "anchor": "middle"
+                },
+                {
+                  "x": 143,
+                  "y": 150,
+                  "text": "JL = 15",
+                  "anchor": "middle"
+                },
+                {
+                  "x": 275.5,
+                  "y": 150,
+                  "text": "KL = 8",
+                  "anchor": "middle"
+                }
+              ],
+              "rightAngles": [],
+              "ticks": []
             }
           }
         },
@@ -5662,6 +5916,59 @@
               "B": "This choice does not satisfy the relationships or conditions in the question.",
               "C": "Let the larger and smaller perimeters be L and S. Then \\(L+S=176\\) and \\(L-S=64\\), so \\(L=120\\) and \\(S=56\\). The linear scale factor is \\(\\frac{120}{56}=\\frac{15}{7}\\). Therefore the corresponding side is \\(14\\cdot\\frac{15}{7}=\\boxed{30}\\).",
               "D": "This choice does not satisfy the relationships or conditions in the question."
+            },
+            "diagram": {
+              "width": 420,
+              "height": 300,
+              "alt": "Triangle HAS schematic",
+              "caption": "Schematic; not to scale.",
+              "lines": [],
+              "polygons": [
+                {
+                  "points": [
+                    [
+                      105,
+                      248
+                    ],
+                    [
+                      322,
+                      248
+                    ],
+                    [
+                      205,
+                      66
+                    ]
+                  ]
+                }
+              ],
+              "ellipses": [],
+              "circles": [],
+              "points": [
+                {
+                  "x": 105,
+                  "y": 248,
+                  "label": "H",
+                  "dx": -12,
+                  "dy": 18
+                },
+                {
+                  "x": 322,
+                  "y": 248,
+                  "label": "A",
+                  "dx": 10,
+                  "dy": 18
+                },
+                {
+                  "x": 205,
+                  "y": 66,
+                  "label": "S",
+                  "dx": 0,
+                  "dy": -12
+                }
+              ],
+              "labels": [],
+              "rightAngles": [],
+              "ticks": []
             }
           }
         },
@@ -5697,7 +6004,42 @@
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Circles",
-            "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+            "classificationVersion": "2026-10-08-relative-30-40-30-v3",
+            "diagram": {
+              "width": 420,
+              "height": 300,
+              "alt": "Circle geometry diagram",
+              "caption": "Schematic; not to scale.",
+              "lines": [],
+              "polygons": [],
+              "ellipses": [],
+              "circles": [
+                {
+                  "cx": 205,
+                  "cy": 152,
+                  "r": 104
+                }
+              ],
+              "points": [
+                {
+                  "x": 119.81,
+                  "y": 92.35,
+                  "label": "A",
+                  "dx": -12,
+                  "dy": -11
+                },
+                {
+                  "x": 299.26,
+                  "y": 108.05,
+                  "label": "B",
+                  "dx": 10,
+                  "dy": 15
+                }
+              ],
+              "labels": [],
+              "rightAngles": [],
+              "ticks": []
+            }
           }
         }
       ]

@@ -3411,7 +3411,60 @@
               "20"
             ],
             "subtopic": "Lines, Angles, and Triangles",
-            "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+            "classificationVersion": "2026-10-08-relative-30-40-30-v3",
+            "diagram": {
+              "width": 420,
+              "height": 300,
+              "alt": "Triangle HAS schematic",
+              "caption": "Schematic; not to scale.",
+              "lines": [],
+              "polygons": [
+                {
+                  "points": [
+                    [
+                      105,
+                      248
+                    ],
+                    [
+                      322,
+                      248
+                    ],
+                    [
+                      205,
+                      66
+                    ]
+                  ]
+                }
+              ],
+              "ellipses": [],
+              "circles": [],
+              "points": [
+                {
+                  "x": 105,
+                  "y": 248,
+                  "label": "H",
+                  "dx": -12,
+                  "dy": 18
+                },
+                {
+                  "x": 322,
+                  "y": 248,
+                  "label": "A",
+                  "dx": 10,
+                  "dy": 18
+                },
+                {
+                  "x": 205,
+                  "y": 66,
+                  "label": "S",
+                  "dx": 0,
+                  "dy": -12
+                }
+              ],
+              "labels": [],
+              "rightAngles": [],
+              "ticks": []
+            }
           }
         },
         {
@@ -3538,7 +3591,8 @@
                   "emphasis": false,
                   "anchor": "middle"
                 }
-              ]
+              ],
+              "caption": "Schematic; not to scale."
             }
           }
         },
@@ -3836,7 +3890,8 @@
                   "dx": -12,
                   "dy": 18
                 }
-              ]
+              ],
+              "caption": "Schematic; not to scale."
             }
           }
         }
@@ -4243,7 +4298,62 @@
               "18"
             ],
             "subtopic": "Lines, Angles, and Triangles",
-            "classificationVersion": "2026-10-08-relative-30-40-30-v3"
+            "classificationVersion": "2026-10-08-relative-30-40-30-v3",
+            "diagram": {
+              "width": 420,
+              "height": 300,
+              "alt": "Parallel lines m and n with a transversal",
+              "caption": "Schematic; not to scale.",
+              "lines": [
+                {
+                  "x1": 52,
+                  "y1": 92,
+                  "x2": 363,
+                  "y2": 92,
+                  "dashed": false
+                },
+                {
+                  "x1": 52,
+                  "y1": 216,
+                  "x2": 363,
+                  "y2": 216,
+                  "dashed": false
+                },
+                {
+                  "x1": 112,
+                  "y1": 35,
+                  "x2": 298,
+                  "y2": 273,
+                  "dashed": false
+                }
+              ],
+              "polygons": [],
+              "ellipses": [],
+              "circles": [],
+              "points": [],
+              "labels": [
+                {
+                  "x": 41,
+                  "y": 86,
+                  "text": "m",
+                  "anchor": "middle"
+                },
+                {
+                  "x": 41,
+                  "y": 211,
+                  "text": "n",
+                  "anchor": "middle"
+                },
+                {
+                  "x": 312,
+                  "y": 273,
+                  "text": "t",
+                  "anchor": "middle"
+                }
+              ],
+              "rightAngles": [],
+              "ticks": []
+            }
           }
         },
         {
@@ -4729,7 +4839,8 @@
                   "emphasis": false,
                   "anchor": "middle"
                 }
-              ]
+              ],
+              "caption": "Schematic; not to scale."
             }
           }
         }
@@ -5254,7 +5365,8 @@
                   "emphasis": false,
                   "anchor": "middle"
                 }
-              ]
+              ],
+              "caption": "Schematic; not to scale."
             }
           }
         },
@@ -5689,7 +5801,8 @@
                   "text": "3x+20°",
                   "anchor": "middle"
                 }
-              ]
+              ],
+              "caption": "Schematic; not to scale."
             }
           }
         },
@@ -5801,7 +5914,8 @@
                   "emphasis": false,
                   "anchor": "middle"
                 }
-              ]
+              ],
+              "caption": "Schematic; not to scale."
             }
           }
         }
