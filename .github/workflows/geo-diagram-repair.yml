@@ -33,7 +33,7 @@ jobs:
           node geo-diagram-repair.mjs --strict
           git diff --check
       - name: Check geometry relationships in every drawing
-        run: node geo-diagram-semantic-check.mjs
+        run: node geo-diagram-semantic-check.mjs --strict
       - name: Commit audited diagrams to main
         run: |
           if ! git diff --quiet; then
