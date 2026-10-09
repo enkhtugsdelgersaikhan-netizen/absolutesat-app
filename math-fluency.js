@@ -257,6 +257,113 @@ progressBar=document.getElementById("formula-progress-bar"),
 countEl=document.getElementById("formula-count"),
 statusSummary=document.getElementById("formula-status-summary");
 
+
+/* Match the animated Vocabulary picker on the Formula Fluency page. */
+const formulaDomainIconPaths={
+    all:'<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>',
+    Algebra:'<path d="M4 20V4M4 20h16"/><path d="M7 16l4-4 3 2 5-7"/>',
+    "Advanced Math":'<path d="M4 18h16M6 5v14"/><path d="M7 16c4-13 7-13 11 0"/>',
+    "Problem-Solving and Data Analysis":'<path d="M4 20V4M4 20h16"/><rect x="7" y="12" width="3" height="6" rx=".5"/><rect x="12" y="9" width="3" height="9" rx=".5"/><rect x="17" y="5" width="3" height="13" rx=".5"/>',
+    "Geometry and Trigonometry":'<path d="M3 19L11 4l9 15H3Z"/><path d="M9 19v-4h4"/>'
+};
+function formulaDomainIcon(value){
+    const paths=formulaDomainIconPaths[value]||formulaDomainIconPaths.all;
+    return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+paths+'</svg>';
+}
+function setupFormulaDomainPicker(){
+    const wrapper=document.querySelector(".vocab-category-wrap");
+    const picker=document.getElementById("formula-category-picker");
+    const trigger=document.getElementById("formula-category-trigger");
+    const menu=document.getElementById("formula-category-menu");
+    const triggerText=document.getElementById("formula-category-trigger-text");
+    const triggerIcon=document.getElementById("formula-category-trigger-icon");
+    if(!wrapper||!picker||!trigger||!menu||!triggerText||!triggerIcon)return;
+    const buttons=[];
+    [...category.options].forEach((option,i)=>{
+        const button=document.createElement("button");
+        button.type="button";
+        button.className="vocab-category-option";
+        button.setAttribute("role","option");
+        button.setAttribute("aria-selected","false");
+        button.tabIndex=-1;
+        button.dataset.value=option.value;
+        button.style.setProperty("--option-index",String(i));
+        const icon=document.createElement("span");
+        icon.className="vocab-category-symbol";
+        icon.setAttribute("aria-hidden","true");
+        icon.innerHTML=formulaDomainIcon(option.value);
+        const label=document.createElement("span");
+        label.textContent=option.textContent;
+        const check=document.createElement("span");
+        check.className="vocab-category-check";
+        check.setAttribute("aria-hidden","true");
+        check.textContent="✓";
+        button.append(icon,label,check);
+        menu.append(button);
+        buttons.push(button);
+    });
+    function sync(){
+        const selected=[...category.options].find(option=>option.value===category.value)||category.options[0];
+        triggerText.textContent=selected.textContent;
+        triggerIcon.innerHTML=formulaDomainIcon(selected.value);
+        trigger.setAttribute("aria-label","Domain: "+selected.textContent);
+        buttons.forEach(button=>{
+            const selected=button.dataset.value===category.value;
+            button.classList.toggle("is-selected",selected);
+            button.setAttribute("aria-selected",String(selected));
+        });
+    }
+    function toggle(open,focusOption=false){
+        picker.classList.toggle("is-open",open);
+        trigger.setAttribute("aria-expanded",String(open));
+        menu.setAttribute("aria-hidden",String(!open));
+        if(open&&focusOption)(buttons.find(button=>button.dataset.value===category.value)||buttons[0]).focus();
+    }
+    trigger.addEventListener("click",()=>toggle(!picker.classList.contains("is-open")));
+    trigger.addEventListener("keydown",event=>{
+        if(event.key==="ArrowDown"||event.key==="ArrowUp"){
+            event.preventDefault();
+            toggle(true,true);
+            if(event.key==="ArrowUp")buttons[buttons.length-1].focus();
+        }else if(event.key==="Escape")toggle(false);
+    });
+    menu.addEventListener("click",event=>{
+        const button=event.target.closest(".vocab-category-option");
+        if(!button)return;
+        category.value=button.dataset.value;
+        category.dispatchEvent(new Event("change",{bubbles:true}));
+        sync();
+        toggle(false);
+        trigger.focus();
+    });
+    menu.addEventListener("keydown",event=>{
+        const index=buttons.indexOf(document.activeElement);
+        if(event.key==="Escape"){
+            event.preventDefault();
+            toggle(false);
+            trigger.focus();
+        }else if(["ArrowDown","ArrowUp","Home","End"].includes(event.key)){
+            event.preventDefault();
+            let next=index;
+            if(event.key==="ArrowDown")next=(index+1)%buttons.length;
+            if(event.key==="ArrowUp")next=(index-1+buttons.length)%buttons.length;
+            if(event.key==="Home")next=0;
+            if(event.key==="End")next=buttons.length-1;
+            buttons[next].focus();
+        }else if(event.key==="Tab")toggle(false);
+    });
+    document.addEventListener("pointerdown",event=>{
+        if(!picker.contains(event.target))toggle(false);
+    });
+    document.addEventListener("focusin",event=>{
+        if(!picker.contains(event.target))toggle(false);
+    });
+    category.addEventListener("change",sync);
+    sync();
+    wrapper.classList.add("is-enhanced");
+    category.tabIndex=-1;
+}
+
 const STATE_KEY="lexlogica_formula_fluency_state_v1";
 
 const PROMPTS={
@@ -669,6 +776,7 @@ category.addEventListener("change",()=>rebuildList());
 statusButtons.forEach(button=>button.addEventListener("click",()=>setStatusFilter(button.dataset.status||"all")));
 
 function initialize(){
+    setupFormulaDomainPicker();
     statusButtons.forEach(button=>button.classList.toggle("active",button.dataset.status==="all"));
     rebuildList();
 }
