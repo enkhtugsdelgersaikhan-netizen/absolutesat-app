@@ -218,15 +218,14 @@
     const count=row.total
       ?row.missed+" missed of "+row.total+" · "+rate
       :"No questions in this mock";
-    const dist=mixForAccuracy(row);
     const section=showSection?(row.section==="math"?"Math · ":"R&W · "):"";
     return '<div class="sg-priority-item sg-severity-'+domainSeverity(row)+(done?' is-complete':'')+'">'+
       '<span class="sg-domain-check" aria-hidden="true">'+(done?'✓':row.rank)+'</span>'+
       '<div class="sg-domain-copy"><span class="sg-priority-name">'+escapeHtml(row.domain)+'</span>'+
-      '<span class="sg-priority-meta">'+section+count+' · target '+dist.join('/')+' easy/medium/hard</span></div>'+
+      '<span class="sg-priority-meta">'+section+count+'</span></div>'+
       '<span class="sg-domain-status">'+(done?'Completed':'')+'</span>'+
       '<button type="button" class="sg-priority-link" data-domain-practice="'+
-      escapeHtml(key)+'">Practice</button></div>';
+      escapeHtml(key)+'" aria-label="Get 10 automatically selected questions for '+escapeHtml(row.domain)+'">Get tailored drill</button></div>';
   }
   function renderPriorities(section,id) {
     const finished=completedDomains();
@@ -247,7 +246,7 @@
     ).join("");
     if (!remaining.length) {
       $("sg-diagnostic-note").textContent=
-        "All 8 domain practice sets are complete for this mock. You can practice again or retest to refresh your priorities.";
+        "All 8 tailored domain drills are complete for this mock. You can get another drill or retest to refresh your priorities.";
     }
   }
   function nextMock() {
@@ -266,7 +265,7 @@
     renderPriorities("readingWriting","sg-rw-priorities");
     renderPriorities("math","sg-math-priorities");
     $("sg-diagnostic-note").textContent="Latest: Mock Test "+latest.n+
-      ". Ranked by error rate and SAT domain weight. Practice selects 10 unused questions; difficulty targets change with accuracy and may be adjusted if the bank lacks questions at a level.";
+      ". Ranked by urgency. LexLogica automatically selects 10 unanswered questions from your chosen domain and adjusts their difficulty based on your latest mock.";
     renderTopPriorities();
     nextMock();
   }
@@ -446,7 +445,7 @@
       goalButton.textContent="Sign in first";
     }
     $("sg-diagnostic-note").textContent=
-      "Illustrative weak-domain ranking. Your real priorities and question difficulty will come from your latest completed mock.";
+      "Example priorities. After your diagnostic, LexLogica automatically picks 10 unanswered questions per drill and tailors their difficulty to your latest mock.";
     const signIn="/login?redirect="+encodeURIComponent("/#study-guide");
     for (const section of ["readingWriting","math"]) {
       const id=section==="math"?"sg-math-priorities":"sg-rw-priorities";
@@ -454,9 +453,9 @@
         '<div class="sg-priority-item sg-severity-unassessed">'+
         '<span class="sg-domain-check" aria-hidden="true">—</span>'+
         '<div class="sg-domain-copy"><span class="sg-priority-name">'+escapeHtml(row.name)+
-        '</span><span class="sg-priority-meta">Not assessed · take a mock for personalized targets</span></div>'+
+        '</span><span class="sg-priority-meta">Not assessed · complete a mock for tailored drills</span></div>'+
         '<span class="sg-domain-status"></span>'+
-        '<a class="sg-priority-link" href="'+escapeHtml(signIn)+'">Practice</a></div>'
+        '<a class="sg-priority-link" href="'+escapeHtml(signIn)+'" aria-label="Sign in for an automatically selected 10-question drill">Get tailored drill</a></div>'
       ).join("");
     }
     const examples=[
@@ -465,15 +464,13 @@
       {name:"Craft & Structure",section:"readingWriting",missed:5,total:10,accuracy:.5,rank:3,severity:"moderate"}
     ];
     $("sg-top-priorities").innerHTML=examples.map(example=>{
-      const dist=mixForAccuracy(example);
       return '<div class="sg-priority-item sg-severity-'+domainSeverity(example)+'">'+
         '<span class="sg-domain-check" aria-hidden="true">'+example.rank+'</span>'+
         '<div class="sg-domain-copy"><span class="sg-priority-name">'+escapeHtml(example.name)+'</span>'+
         '<span class="sg-priority-meta">Example · '+(example.section==="math"?"Math":"R&W")+
         ' · '+example.missed+' of '+example.total+
-        ' missed · '+Math.round(example.accuracy*100)+'% correct · '+
-        dist.join('/')+' easy/medium/hard</span></div>'+
-        '<a class="sg-priority-link" href="'+escapeHtml(signIn)+'">Practice</a></div>';
+        ' missed · '+Math.round(example.accuracy*100)+'% correct</span></div>'+
+        '<a class="sg-priority-link" href="'+escapeHtml(signIn)+'" aria-label="Sign in for an automatically selected 10-question drill">Get tailored drill</a></div>';
     }).join("");
     $("sg-practice-message").textContent=
       "Sign in to unlock diagnostic-based practice and saved progress.";
