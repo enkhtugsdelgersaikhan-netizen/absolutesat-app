@@ -212,7 +212,7 @@
       return '<div class="sg-priority-item'+(done?' is-complete':'')+'">'+
         '<span class="sg-domain-check" aria-hidden="true">'+(done?'✓':row.rank)+'</span>'+
         '<div class="sg-domain-copy"><span class="sg-priority-name">'+escapeHtml(row.domain)+'</span>'+
-        '<span class="sg-priority-meta">'+count+' · '+dist.join('/')+' easy/medium/hard</span></div>'+
+        '<span class="sg-priority-meta">'+count+' · target '+dist.join('/')+' easy/medium/hard</span></div>'+
         '<span class="sg-domain-status">'+(done?'Completed':'')+'</span>'+
         '<button type="button" class="sg-priority-link" data-domain-practice="'+
         escapeHtml(key)+'">'+(done?'Practice again →':'Practice 10 →')+'</button></div>';
@@ -319,11 +319,14 @@
       const [bank,reserved,attempted]=await Promise.all([
         loadBank(row.section),mockReservations(),attemptedIds()
       ]);
-      const candidates=bank.filter(q=>
-        q.status==="staged"&&q.id&&!reserved.has(String(q.id))&&
-        !attempted.has(String(q.id))&&
-        domainName(q.domain)===row.domain
-      );
+      const seen=new Set();
+      const candidates=bank.filter(q=>{
+        if (q.status!=="staged"||!q.id||reserved.has(String(q.id))||
+            attempted.has(String(q.id))||domainName(q.domain)!==row.domain||
+            seen.has(String(q.id))) return false;
+        seen.add(String(q.id));
+        return true;
+      });
       if (candidates.length<10) {
         throw new Error("Only "+candidates.length+" unused questions are available in this domain. We need 10 to start a complete assignment.");
       }
