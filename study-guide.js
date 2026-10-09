@@ -265,9 +265,9 @@
     $("sg-plan-content").hidden=false;
     renderPriorities("readingWriting","sg-rw-priorities");
     renderPriorities("math","sg-math-priorities");
-    renderTopPriorities();
     $("sg-diagnostic-note").textContent="Latest: Mock Test "+latest.n+
       ". Ranked by error rate and SAT domain weight. Practice selects 10 unused questions; difficulty targets change with accuracy and may be adjusted if the bank lacks questions at a level.";
+    renderTopPriorities();
     nextMock();
   }
 
