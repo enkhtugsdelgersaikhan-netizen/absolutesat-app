@@ -54,6 +54,9 @@ function triangleNames(t){
  return ["A","B","C"];
 }
 function rightVertex(t,names){
+ for(const m of t.matchAll(/(?:is\\s+right\\s+at|right\\s+at|right\\s+angle\\s+at)\\s+([A-Z])\\b/gi)){
+   if(names.includes(m[1]))return m[1];
+ }
  const joined=names.join("");
  const patterns=[
  new RegExp("(?:right (?:at|angle at)|\\b"+joined+"\\b is right at)\\s*\\\\?\\(?"+names[0]+"\\b","i"),
@@ -85,7 +88,8 @@ function newTriangle(q,forcedNames=null){
  else coords=[[105,248],[322,248],[205,66]];
  d.polygons.push(poly(coords));
  const offsets=coords.map(([x,y])=>[x<115?-12:x>310?10:0,y<95?-12:18]);
- for(let i=0;i<3;i++)d.points.push(point(...coords[i],names[i],...offsets[i]));
+ const namedTriangle=/\\btriangles?\\s+[A-Z]{3}\\b/.test(t);
+ if(namedTriangle)for(let i=0;i<3;i++)d.points.push(point(...coords[i],names[i],...offsets[i]));
  if(right){
    const i=names.indexOf(right),v=coords[i],a=coords[(i+1)%3],b=coords[(i+2)%3];
    const ua=[a[0]-v[0],a[1]-v[1]], ub=[b[0]-v[0],b[1]-v[1]];
@@ -151,7 +155,8 @@ function newTransversal(q){
  const pair=(t.match(/lines?\s+\\?\(?([a-zℓ])\\?\)?\s+and\s+\\?\(?([a-zℓ])\b/i)||[]).slice(1,3);
  const names=pair.length===2?pair:["m","n"];
  d.lines.push(line([52,92],[363,92]),line([52,216],[363,216]),line([112,35],[298,273]));
- d.labels.push(label(41,86,names[0]),label(41,211,names[1]),label(312,273,"t"));
+ d.labels.push(label(41,86,names[0]),label(41,211,names[1]));
+ if(/\\btransversal\\s+t\\b/i.test(t))d.labels.push(label(312,273,"t"));
  if(/parallel/i.test(t)&&!/(?:prove|sufficient|which additional information|would establish)/i.test(t))
    d.alt="Parallel lines "+names.join(" and ")+" with a transversal";
  return d;
@@ -168,7 +173,7 @@ function newTwinTriangles(q){
    const names=k?b:a, p=coords[k];
    const right=rightVertex(t,names);
    if(right===names[1])p[2]=[p[1][0],p[2][1]];
-   if(right===names[2])p[2]=[p[0][0],p[2][1]];
+   if(right===names[2]){p[0]=[p[0][0],p[2][1]];p[2]=[p[1][0],p[2][1]];}
    d.polygons.push(poly(p));
    for(let i=0;i<3;i++)d.points.push(point(...p[i],names[i],i===1?9:-11,i===2?-13:17));
    if(right)d.labels.push(label(k?292:119,281,"Right angle at "+right));
@@ -201,8 +206,96 @@ function newCircleTangent(q){
  d.points.push(point(...C,cen,-12,18),point(...H,ext,9,-7),point(...pts,p,0,-12),point(...pts2,s,0,19));
  return d;
 }
+
+function newEqualCircleSquare(q){
+ const d=base("Circle and square with equal areas");
+ d.circles.push({cx:120,cy:154,r:66});
+ d.polygons.push(poly([[262,96],[379,96],[379,213],[262,213]]));
+ d.labels.push(label(120,258,"Circle"),label(320,258,"Square"),label(210,37,"Equal areas"));
+ return d;
+}
+function newInscribedRectangle(q){
+ const d=base("Rectangle inscribed in a circle; diagonal is a diameter");
+ const r=110,cx=209,cy=155,x=r*.8,y=r*.6;
+ d.circles.push({cx,cy,r});
+ const p=[[cx-x,cy-y],[cx+x,cy-y],[cx+x,cy+y],[cx-x,cy+y]];
+ d.polygons.push(poly(p));
+ d.lines.push(line(p[0],p[2]));
+ return d;
+}
+function newShadowComparison(q){
+ const t=(q.passage||"")+" "+(q.question||"");
+ const d=base("Two vertical objects casting shadows at the same sun angle");
+ d.lines.push(line([45,249],[379,249]));
+ const left=[[83,249],[83,104],[192,249]];
+ const right=[[251,249],[251,80],[379,249]];
+ d.lines.push(line(left[0],left[1]),line(left[1],left[2]),line(right[0],right[1]),line(right[1],right[2]));
+ d.labels.push(label(78,179,"Object 1","end"),label(253,178,"Object 2","start"),label(141,267,"Shadow 1"),label(317,267,"Shadow 2"));
+ return d;
+}
+function newCircleArcRays(q){
+ const t=(q.passage||"")+" "+(q.question||"");
+ const d=base("Circle with radii and marked central angles");
+ const C=[210,156],r=108;
+ d.circles.push({cx:C[0],cy:C[1],r});
+ const isSemicircle=/semicircle|endpoints of a diameter/i.test(t);
+ const angs=isSemicircle?[180,150,45,0]:[0,45,135];
+ const names=isSemicircle?["A","C","D","B"]:["A","B","C"];
+ d.points.push(point(...C,"O",-13,17));
+ for(let i=0;i<angs.length;i++){
+  const p=pointOnCircle(...C,r,angs[i]);
+  d.lines.push(line(C,p));
+  d.points.push(point(...p,names[i],p[0]<C[0]?-15:11,p[1]<C[1]?-12:19));
+ }
+ if(isSemicircle){d.labels.push(label(120,118,"π/6"),label(297,123,"45°"))}
+ else{d.labels.push(label(259,120,"45°"),label(170,101,"135°"))}
+ return d;
+}
+function newAltitudeAndParallel(q){
+ const d=base("Triangle ABC with altitude AD and EF parallel to BC");
+ const A=[205,53],B=[84,254],C=[326,254],D=[205,254],E=[164.7,120],F=[245.3,120];
+ d.polygons.push(poly([A,B,C]));
+ d.lines.push(line(A,D),line(E,F));
+ for(const [name,v,dx,dy] of [["A",A,0,-12],["B",B,-12,15],["C",C,12,15],
+   ["D",D,0,18],["E",E,-13,-6],["F",F,13,-6]])d.points.push(point(...v,name,dx,dy));
+ d.rightAngles.push({x:D[0],y:D[1],size:13,rotation:0});
+ d.labels.push(label(205,103,"EF ∥ BC"),label(220,190,"AD ⟂ BC"));
+ return d;
+}
+function newParallelSixPoint(q){
+ const d=base("Triangle ABC with DE parallel BC and DF parallel AC");
+ const A=[205,52],B=[78,253],C=[332,253],t=0.4;
+ const D=A.map((v,i)=>round(v*(1-t)+B[i]*t));
+ const E=A.map((v,i)=>round(v*(1-t)+C[i]*t));
+ const F=B.map((v,i)=>round(v*(1-t)+C[i]*t));
+ d.polygons.push(poly([A,B,C]));d.lines.push(line(D,E),line(D,F));
+ for(const [name,v,dx,dy] of [["A",A,0,-12],["B",B,-12,17],["C",C,12,17],
+    ["D",D,-13,-5],["E",E,13,-5],["F",F,0,18]])d.points.push(point(...v,name,dx,dy));
+ d.labels.push(label(119,112,"AD = 8"),label(92,204,"DB = 12"),
+    label(214,277,"BC = 25"));
+ return d;
+}
+function newExtendedIsosceles(q){
+ const d=base("Isosceles right triangle ABC with BC extended to D");
+ const A=[151,93],B=[151,231],C=[286,93],D=[374,3];
+ d.polygons.push(poly([A,B,C]));
+ d.lines.push(line(C,D));
+ for(const [n,p,dx,dy] of [["A",A,-12,-10],["B",B,-12,16],
+    ["C",C,10,16],["D",D,10,14]])d.points.push(point(...p,n,dx,dy));
+ d.rightAngles.push({x:A[0],y:A[1],size:14,rotation:90});
+ return d;
+}
+
 function geometryDiagram(q){
  const t=(q.passage||"")+" "+(q.question||"");
+ if(q.id==="math-20261006-new409-q019")return newEqualCircleSquare(q);
+ if(q.id==="math-20261008-huge798-q136")return newInscribedRectangle(q);
+ if(q.id==="math-20261006-new409-q102"||q.id==="math-20261006-new409-q039")return newCircleArcRays(q);
+ if(q.id==="math-20261006-new409-q133")return newAltitudeAndParallel(q);
+ if(q.id==="math-20261006-new409-q096")return newParallelSixPoint(q);
+ if(q.id==="math-20261006-new409-q109")return newExtendedIsosceles(q);
+ if(/(?:mast|tower).+shadow/i.test(t)&&/(?:tree|sculpture)/i.test(t))return newShadowComparison(q);
+ if(q.id==="math-20261008-huge798-q156")return newCircleTangent(q);
  const lower=t.toLowerCase();
  const skill=(q.skill||"").toLowerCase();
  if(q.graph||q.table)return null;
@@ -300,8 +393,8 @@ function repair(q){
   }
   else if(hasMisnamedTriangle(d,q)){replacement=geometryDiagram(q);reason="wrong triangle vertex labels"}
   else if(hasWrongCircleGeometry(d,q)){replacement=geometryDiagram(q);reason="diameter endpoints not opposite"}
-  else if(/math-20261006-new409-q(023|105|130|156|152|165|133|096)$/.test(id) ||
-     /math-20261008-huge798-q(156|164)$/.test(id)){
+  else if(/math-20261006-new409-q(019|023|039|096|102|105|109|130|133|152|156|165)$/.test(id) ||
+     /math-20261008-huge798-q(136|156|164)$/.test(id)){
     replacement=geometryDiagram(q);reason="verified wrong labels or misleading geometry"}
   if(replacement&&isDrawingValid(replacement,q)){
    q.diagram=cleanDiagram(replacement);notes.replaced++;note(id,"replaced",reason);return;
