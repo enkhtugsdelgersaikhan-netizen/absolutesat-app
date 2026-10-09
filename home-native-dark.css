@@ -263,3 +263,33 @@ html.lexlogica-dark-mode.lexlogica-home-native .sat-impact-result.is-positive>st
 /* Preserve significance in the colored score-range descriptions too. */
 html.lexlogica-dark-mode.lexlogica-home-native .sat-score-all-ranges .sat-score-scale-row:nth-child(6) span{color:#d7c181!important}
 html.lexlogica-dark-mode.lexlogica-home-native .sat-score-all-ranges .sat-score-scale-row:nth-child(7) span{color:#e6a09a!important}
+
+/* Accuracy and pacing are independent: keep each metric's original status
+   rather than coloring both from the card's combined severity. */
+html.lexlogica-dark-mode.lexlogica-home-native .dashboard-subtopic-metrics b[style*="#8b4d4a"]{color:#e6a09a!important}
+html.lexlogica-dark-mode.lexlogica-home-native .dashboard-subtopic-metrics b[style*="#8a6245"]{color:#d7aa86!important}
+html.lexlogica-dark-mode.lexlogica-home-native .dashboard-subtopic-metrics b[style*="#7b7047"]{color:#d7c181!important}
+html.lexlogica-dark-mode.lexlogica-home-native .dashboard-subtopic-metrics b[style*="#326958"]{color:#80d1ad!important}
+html.lexlogica-dark-mode.lexlogica-home-native .dashboard-subtopic-metrics b[style*="#8a9996"]{color:#adbbb4!important}
+html.lexlogica-dark-mode.lexlogica-home-native :is(
+  .university-position-label,.sat-strength-meta span,.sat-score-summary-card,
+  .university-impact-verdict,.university-score-band-values,
+  .university-position-info,.university-impact-explainer
+){background-color:#23372f;border-color:#3d594c}
+html.lexlogica-dark-mode.lexlogica-home-native .university-position-label{
+  background:#253831!important;
+}
+html.lexlogica-dark-mode.lexlogica-home-native :is(
+  .sat-score-scale-row,.sat-score-guide-scale,
+  .university-featured-meta,.university-impact-verdict
+){box-shadow:none!important}
+html.lexlogica-dark-mode.lexlogica-home-native :is(
+  .university-search-row,#university-search,.sat-context-profile input
+){background-color:#172a23!important;color:#eaf5ef!important}
+html.lexlogica-dark-mode.lexlogica-home-native :is(
+  .university-search-shell label,.university-featured-meta strong,.sat-context-profile label
+){color:#bcd2c7!important}
+html.lexlogica-dark-mode.lexlogica-home-native :is(
+  .university-browse-details>summary,.home-score-range-details>summary,
+  .home-feature-more>summary
+){background:#1d2e28!important;border-color:#365248!important}
