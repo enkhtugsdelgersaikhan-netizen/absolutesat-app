@@ -27,7 +27,7 @@
       if(next&&options.scroll){
         window.requestAnimationFrame(()=>{
           panels.get(next)?.scrollIntoView({
-            behavior:options.instant?"instant":"smooth",
+            behavior:options.instant?"auto":"smooth",
             block:"start"
           });
         });
