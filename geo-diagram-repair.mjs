@@ -607,14 +607,6 @@ function geometryDiagram(q){
  if(/\bhexagon\b/i.test(bare))return visualHexagon(q);
  if(/\btriangular prism\b/i.test(bare))return visualTriangularPrism(q);
  if(/\btrapezoids?\b/i.test(bare))return visualTrapezoids(q);
- if(/\b[Tt]riangles?\b/.test(bare)&&!/^\s*(?:What is|Which expression).*radians?\b/.test(bare)){
-   if(/\b[Tt]riangles?\b/.test(bare)&&/\b(squares?|rectangles?)\b/i.test(bare))return visualTriangleSquare(q);
-   const twins=newTwinTriangles(q);if(twins)return twins;
-   if(/points?\s+D\s+lies\s+on\s+(?:\\\()?AB/i.test(t)&&
-      /points?\s+E\s+lies\s+on\s+(?:\\\()?AC/i.test(t)&&/DE.*parallel|DE\\parallel/i.test(t))return newParallelTriangle(q);
-   return newTriangle(q);
- }
-
  if(["math-20261006-new409-q194","math-20261008-huge798-q128"].includes(q.id))return newSimilarQuads(q);
  if(q.id==="math-20261006-new409-q098")return newLadder(q);
  if(q.id==="math-20261006-new409-q208")return newThreeLineAngles(q);
@@ -634,6 +626,14 @@ function geometryDiagram(q){
  if(q.id==="math-20261006-new409-q109")return newExtendedIsosceles(q);
  if(/(?:mast|tower).+shadow/i.test(t)&&/(?:tree|sculpture)/i.test(t))return newShadowComparison(q);
  if(q.id==="math-20261008-huge798-q156")return newCircleTangent(q);
+ if(/\b[Tt]riangles?\b/.test(bare)&&!/^\s*(?:What is|Which expression).*radians?\b/.test(bare)){
+   if(/\b[Tt]riangles?\b/.test(bare)&&/\b(squares?|rectangles?)\b/i.test(bare))return visualTriangleSquare(q);
+   const twins=newTwinTriangles(q);if(twins)return twins;
+   if(/points?\s+D\s+lies\s+on\s+(?:\\\()?AB/i.test(t)&&
+      /points?\s+E\s+lies\s+on\s+(?:\\\()?AC/i.test(t)&&/DE.*parallel|DE\\parallel/i.test(t))return newParallelTriangle(q);
+   return newTriangle(q);
+ }
+
  const lower=t.toLowerCase();
  const skill=(q.skill||"").toLowerCase();
  if(q.graph||q.table)return null;
