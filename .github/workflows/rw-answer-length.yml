@@ -7,11 +7,13 @@ on:
       - question-bank.json
       - question-batch-20261010-reviewed.json
       - rw-length-bias-audit.mjs
+      - rw-answer-length-repairs-20261010.json
       - .github/workflows/rw-answer-length.yml
   pull_request:
     paths:
       - question-bank.json
       - rw-length-bias-audit.mjs
+      - rw-answer-length-repairs-20261010.json
       - .github/workflows/rw-answer-length.yml
 
 jobs:
@@ -22,4 +24,4 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node rw-length-bias-audit.mjs --strict --severe-details
+      - run: node rw-length-bias-audit.mjs --strict
