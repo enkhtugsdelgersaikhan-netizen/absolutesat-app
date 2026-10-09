@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         dashboardRoot.classList.add("is-guest");
         const title = document.getElementById("home-dashboard-title");
         const intro = document.getElementById("home-dashboard-intro");
+        const eyebrow = dashboardRoot.querySelector(".dashboard-header .page-eyebrow");
+        if (eyebrow) eyebrow.textContent = "YOUR SAT PREPARATION";
         if (title) title.textContent = "Welcome to LexLogica.";
         if (intro) intro.textContent =
             "Explore the full homepage. Sign in to track your SAT preparation, see your statistics, and personalize your study guide.";
