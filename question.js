@@ -6278,6 +6278,13 @@ function showMockFinalResults() {
             mathQuestions
         );
 
+    // A completed mock skips the active-question view. The loading state
+    // must be dismissed explicitly when opening saved results; otherwise
+    // its 500px spinner stays visible above the results card.
+    loadingScreen.classList.add(
+        "hidden"
+    );
+
     questionApp.classList.add(
         "hidden"
     );
