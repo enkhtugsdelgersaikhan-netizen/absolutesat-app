@@ -400,6 +400,67 @@
     }
   }
 
+  // Repair the prior homepage layout when an older HTML document is still
+  // open or served from cache but this newer script loads. Remove obsolete
+  // score ranges and put the score meaning and editor in separate columns.
+  function ensurePersonalScoreLayout() {
+    const panel = document.querySelector(".sat-score-experience");
+    if (!panel) return;
+    const oldExplorer = panel.querySelector(".sat-score-explorer");
+    const oldQuartiles = panel.querySelector(".sat-quartile-inline");
+    oldExplorer?.remove();
+    oldQuartiles?.remove();
+
+    const heading = panel.querySelector(".sat-score-experience-heading");
+    const cards = panel.querySelector("#sat-score-personal-summary");
+    const editor = panel.querySelector(".sat-score-editor");
+    if (!heading || !cards || !editor) return;
+
+    const title = heading.querySelector("#sat-score-guide-title");
+    if (title) title.textContent = "What your score means";
+    const intro = heading.querySelector("p");
+    if (intro) intro.textContent =
+      "Only your scores, with university admissions context and a qualitative explanation of each section.";
+
+    const cardHeadings = {
+      composite:"Composite · University admissions",
+      reading:"Reading & Writing",
+      math:"Math"
+    };
+    Object.entries(cardHeadings).forEach(([name,label]) => {
+      const card = cards.querySelector('[data-score-card="' + name + '"]');
+      const text = card?.querySelector("span:first-child");
+      if (text) text.textContent = label;
+    });
+
+    let columns = panel.querySelector(".sat-score-two-column");
+    if (!columns) {
+      columns = document.createElement("div");
+      columns.className = "sat-score-two-column";
+      panel.insertBefore(columns, heading);
+    }
+    let meaning = columns.querySelector(".sat-score-meaning");
+    if (!meaning) {
+      meaning = document.createElement("div");
+      meaning.className = "sat-score-meaning";
+      columns.prepend(meaning);
+    }
+    meaning.append(heading,cards);
+    columns.append(editor);
+
+    // A previous document can reference a cached stylesheet. The versioned
+    // rule set gives the repaired DOM the correct desktop layout as well.
+    const stylesheet = "/sat-score-experience.css?v=score-meaning-layout-3";
+    if (!Array.from(document.querySelectorAll('link[rel="stylesheet"]'))
+        .some(link => link.getAttribute("href") === stylesheet)) {
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = stylesheet;
+      document.head.append(link);
+    }
+  }
+  ensurePersonalScoreLayout();
+
   const input = document.getElementById("university-search");
   const results = document.getElementById("university-search-results");
   const featured = document.getElementById("university-featured");
@@ -912,26 +973,36 @@
     };
   };
 
-  // This is only a transparent illustration requested by the site owner:
-  // score ≈ 800 - 600*E/questionCount, reversed to E ≈ (800-score)*count/600.
-  // Actual adaptive SAT scoring and unscored pretest items invalidate any
-  // claim that this E is the number of questions actually answered incorrectly.
-  const sectionMeaning = (score, totalQuestions) => {
-    const errors = Math.max(0, (800 - score) * totalQuestions / 600);
-    const estimatedErrors = Math.round(errors);
-    let description;
-    if (errors <= 2.5) {
-      description = "In this simple model, that is roughly 0–2 missed questions. A couple of isolated slips would not necessarily suggest a recurring knowledge gap.";
-    } else if (errors <= 6.5) {
-      description = "A handful of modeled misses. Check whether mistakes were scattered slips or repeated in the same subtopics; the score alone cannot distinguish them.";
-    } else if (errors <= 12.5) {
-      description = "Several modeled misses. Use your practice analytics to see whether any question types repeatedly cause difficulty, rather than assuming every error has the same cause.";
-    } else {
-      description = "More room for improvement in this simplified model. Review accuracy by subtopic to identify recurring gaps before deciding what to practice next.";
-    }
+  // Section explanations are qualitative. A digital SAT section score cannot
+  // reveal the number of missed questions or whether a mistake was systemic.
+  // Keep the visible meaning focused on the student's performance and next work.
+  const sectionMeaning = (score, section) => {
+    const focus = section === "math"
+      ? "Review any recurring weak math concepts before spending time chasing isolated slips."
+      : "Review any recurring reading, grammar, or rhetorical patterns before chasing isolated slips.";
+    if (score >= 790) return {
+      title:"Near-ceiling performance",
+      description:"Performance this close to the ceiling is consistent with very strong command of the section. Any small slips may be isolated rather than a recurring gap; review actual mistakes to tell."
+    };
+    if (score >= 760) return {
+      title:"Excellent section performance",
+      description:"This is a high-scoring result. Check your actual practice to see whether occasional mistakes are isolated or cluster around a particular skill."
+    };
+    if (score >= 720) return {
+      title:"Strong section performance",
+      description:"Your section score suggests a solid command of the material, with potential gains from reviewing patterns in questions you miss. " + focus
+    };
+    if (score >= 680) return {
+      title:"Solid foundation",
+      description:"You have demonstrated useful section skills. Look at subtopic accuracy and pacing to separate repeated difficulties from occasional mistakes."
+    };
+    if (score >= 620) return {
+      title:"Room for targeted improvement",
+      description:"Some skills may need more consistent application. Start with subtopics that repeatedly lower your practice accuracy, rather than assuming each missed question reflects the same issue."
+    };
     return {
-      title:"≈ " + estimatedErrors + " modeled " + (estimatedErrors === 1 ? "error" : "errors"),
-      description
+      title:"Build consistency across the section",
+      description:"Focus on foundational accuracy and recurring question types. Use actual practice history to identify causes; a section score alone cannot diagnose them."
     };
   };
 
@@ -941,8 +1012,8 @@
     const composite = validReading && validMath ? reading + math : NaN;
     const interpretations = {
       composite: Number.isFinite(composite) ? admissionMeaning(composite) : null,
-      reading: validReading ? sectionMeaning(reading, 54) : null,
-      math: validMath ? sectionMeaning(math, 44) : null
+      reading: validReading ? sectionMeaning(reading, "reading") : null,
+      math: validMath ? sectionMeaning(math, "math") : null
     };
     const scores = {composite, reading: validReading ? reading : NaN, math: validMath ? math : NaN};
     for (const guide of ["composite", "reading", "math"]) {
@@ -959,7 +1030,7 @@
         ? meaning.description
         : guide === "composite"
           ? "Enter both section scores to see what your SAT means for college applications."
-          : "Enter your " + (guide === "reading" ? "Reading & Writing" : "Math") + " score for a rough error-count illustration.";
+          : "Enter your " + (guide === "reading" ? "Reading & Writing" : "Math") + " score to see your section performance.";
       card.classList.toggle("has-score", Boolean(meaning));
     }
   };
