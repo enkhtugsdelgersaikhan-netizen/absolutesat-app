@@ -2813,7 +2813,7 @@
             "skill": "Linear Equations",
             "difficulty": "Easy",
             "passage": "",
-            "question": "What value of x satisfies the equation\n\n\\[5(3x-4)+2=7x+30?\\]",
+            "question": "What value of x satisfies the equation\n\n\\[5(3x-4)+2=7x+30\\]",
             "choices": {
               "A": "\\(8\\)",
               "B": "\\(4\\)",
@@ -2848,7 +2848,7 @@
             "skill": "Linear Equations",
             "difficulty": "Easy",
             "passage": "",
-            "question": "What value of p satisfies\n\n\\[3(2p-5)+4(p+1)=5(p+5)-7?\\]",
+            "question": "What value of p satisfies\n\n\\[3(2p-5)+4(p+1)=5(p+5)-7\\]",
             "choices": {},
             "correctAnswer": "",
             "explanation": "Expand:\n\n\\[6p-15+4p+4=5p+25-7.\\]\nSo\n\n\\[10p-11=5p+18.\\]\nThen\n\n\\[5p=29,\\]\ngiving\n\\[ \\boxed{p=\\frac{29}{5}}. \\]",
@@ -3262,11 +3262,11 @@
               "D": "\\(f(x)=20(2)^x\\)"
             },
             "correctAnswer": "A",
-            "explanation": "From x=-1 to x=1, x increases by 2 while the output changes from 40 to 10, a factor of 14. Therefore, the factor for each 1-unit increase is 12.\n\\[Using x=1 and f(1)=10,\\]\n\n\\[10=A12,\\]\n\\[so A=20. Hence,\\]\n\n\\[f(x)=2012x.\\]",
+            "explanation": "From \\(x=-1\\) to \\(x=1\\), the output changes from 40 to 10, a factor of \\(\\frac14\\) over two x-units. The factor for each one-unit increase is therefore \\(\\frac12\\). Write \\(f(x)=A(\\frac12)^x\\). Since \\(f(1)=10\\), \\(\\frac A2=10\\), so \\(A=20\\). Thus \\[\\boxed{f(x)=20\\left(\\frac12\\right)^x}.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 412,
             "choiceExplanations": {
-              "A": "From x=-1 to x=1, x increases by 2 while the output changes from 40 to 10, a factor of 14. Therefore, the factor for each 1-unit increase is 12.\n\\[Using x=1 and f(1)=10,\\]\n\n\\[10=A12,\\]\n\\[so A=20. Hence,\\]\n\n\\[f(x)=2012x.\\]",
+              "A": "From \\(x=-1\\) to \\(x=1\\), the output changes from 40 to 10, a factor of \\(\\frac14\\) over two x-units. The factor for each one-unit increase is therefore \\(\\frac12\\). Write \\(f(x)=A(\\frac12)^x\\). Since \\(f(1)=10\\), \\(\\frac A2=10\\), so \\(A=20\\). Thus \\[\\boxed{f(x)=20\\left(\\frac12\\right)^x}.\\]",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -3310,7 +3310,7 @@
             "skill": "Nonlinear Equations/Functions",
             "difficulty": "Medium",
             "passage": "",
-            "question": "For which table are all listed ordered pairs solutions to\n\n\\[2y-3x\\le8?\\]",
+            "question": "For which table are all listed ordered pairs solutions to\n\n\\[2y-3x\\le8\\]",
             "choices": {
               "A": "\\(x\ny\n-2\n2\n1\n5\n4\n9\\)",
               "B": "\\(x\ny\n-2\n1\n1\n6\n4\n9\\)",
@@ -3617,12 +3617,12 @@
               "D": "\\(15\\)"
             },
             "correctAnswer": "B",
-            "explanation": "For infinitely many solutions, the second equation must be a constant multiple of the first.\nSince\n\n\\[104=4518=52,\\]\nthe y-coefficients must also have this ratio:\n\n\\[52k=-15.\\]\nTherefore,\n\\[ \\boxed{k=-6}. \\]",
+            "explanation": "For infinitely many solutions, the second equation must be \\(\\frac52\\) times the first, because \\(10/4=45/18=5/2\\). Therefore \\[\\frac52k=-15\\implies \\boxed{k=-6}.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 317,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "For infinitely many solutions, the second equation must be a constant multiple of the first.\nSince\n\n\\[104=4518=52,\\]\nthe y-coefficients must also have this ratio:\n\n\\[52k=-15.\\]\nTherefore,\n\\[ \\boxed{k=-6}. \\]",
+              "B": "For infinitely many solutions, the second equation must be \\(\\frac52\\) times the first, because \\(10/4=45/18=5/2\\). Therefore \\[\\frac52k=-15\\implies \\boxed{k=-6}.\\]",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -3971,7 +3971,7 @@
             "skill": "Linear Equations",
             "difficulty": "Easy",
             "passage": "",
-            "question": "Which of the following is a solution to\n\n\\[(x+4)(x-1)=(x-3)(x+2)+18?\\]",
+            "question": "Which of the following is a solution to\n\n\\[(x+4)(x-1)=(x-3)(x+2)+18\\]",
             "choices": {
               "A": "\\(2\\)",
               "B": "\\(4\\)",
@@ -4504,7 +4504,7 @@
             "question": "A scientific instrument converts an actual measurement T to a displayed reading D according to\n\n\\[D=1.2(0.75T+5)-8.\\]\nIf the displayed reading is 34, what is the actual measurement T?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "\\[Substitute D=34:\\]\n\n\\[34=1.2(0.75T+5)-8.\\]\nAdd 8:\n\n\\[42=1.2(0.75T+5).\\]\nDivide by 1.2:\n\n\\[35=0.75T+5.\\]\nThus,\n\n\\[30=0.75T\\]\nand\n\\[ \\boxed{T=40}. \\]",
+            "explanation": "Substitute D=34:\n\n\\[34=1.2(0.75T+5)-8.\\]\nAdd 8:\n\n\\[42=1.2(0.75T+5).\\]\nDivide by 1.2:\n\n\\[35=0.75T+5.\\]\nThus,\n\n\\[30=0.75T\\]\nand\n\\[ \\boxed{T=40}. \\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 302,
             "answerType": "student-response",
@@ -4748,7 +4748,7 @@
             "skill": "Rational/Radical Equations",
             "difficulty": "Medium",
             "passage": "",
-            "question": "What is the solution to \\[\\frac{3(x-1)}{x+4}=2-\\frac5{x+4}?\\]",
+            "question": "What is the solution to \\[\\frac{3(x-1)}{x+4}=2-\\frac5{x+4}\\]",
             "choices": {
               "A": "\\(6\\)",
               "B": "\\(3\\)",
@@ -4756,11 +4756,11 @@
               "D": "\\(-4\\)"
             },
             "correctAnswer": "A",
-            "explanation": "Rewrite the right side using denominator x+4:\n\n\\[2-5x+4=2x+8-5x+4=2x+3x+4.\\]\nThus\n\n\\[3(x-1)=2x+3.\\]\nSo\n\n\\[3x-3=2x+3,\\]\nwhich gives\n\n\\[x=6.\\]",
+            "explanation": "Since \\(x\\neq-4\\), multiply both sides of \\(\\frac{3(x-1)}{x+4}=2-\\frac5{x+4}\\) by \\(x+4\\): \\[3(x-1)=2(x+4)-5=2x+3.\\] Hence \\(3x-3=2x+3\\), so \\(\\boxed{x=6}\\).",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 234,
             "choiceExplanations": {
-              "A": "Rewrite the right side using denominator x+4:\n\n\\[2-5x+4=2x+8-5x+4=2x+3x+4.\\]\nThus\n\n\\[3(x-1)=2x+3.\\]\nSo\n\n\\[3x-3=2x+3,\\]\nwhich gives\n\n\\[x=6.\\]",
+              "A": "Since \\(x\\neq-4\\), multiply both sides of \\(\\frac{3(x-1)}{x+4}=2-\\frac5{x+4}\\) by \\(x+4\\): \\[3(x-1)=2(x+4)-5=2x+3.\\] Hence \\(3x-3=2x+3\\), so \\(\\boxed{x=6}\\).",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -5189,7 +5189,7 @@
             "question": "A scientific instrument converts an actual measurement T to a displayed reading D according to\n\n\\[D=1.2(0.75T+5)-8.\\]\nIf the displayed reading is 34, what is the actual measurement T?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "\\[Substitute D=34:\\]\n\n\\[34=1.2(0.75T+5)-8.\\]\nAdd 8:\n\n\\[42=1.2(0.75T+5).\\]\nDivide by 1.2:\n\n\\[35=0.75T+5.\\]\nThus,\n\n\\[30=0.75T\\]\nand\n\\[ \\boxed{T=40}. \\]",
+            "explanation": "Substitute D=34:\n\n\\[34=1.2(0.75T+5)-8.\\]\nAdd 8:\n\n\\[42=1.2(0.75T+5).\\]\nDivide by 1.2:\n\n\\[35=0.75T+5.\\]\nThus,\n\n\\[30=0.75T\\]\nand\n\\[ \\boxed{T=40}. \\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 302,
             "answerType": "student-response",
@@ -5433,7 +5433,7 @@
             "skill": "Rational/Radical Equations",
             "difficulty": "Medium",
             "passage": "",
-            "question": "What is the solution to \\[\\frac{3(x-1)}{x+4}=2-\\frac5{x+4}?\\]",
+            "question": "What is the solution to \\[\\frac{3(x-1)}{x+4}=2-\\frac5{x+4}\\]",
             "choices": {
               "A": "\\(6\\)",
               "B": "\\(3\\)",
@@ -5441,11 +5441,11 @@
               "D": "\\(-4\\)"
             },
             "correctAnswer": "A",
-            "explanation": "Rewrite the right side using denominator x+4:\n\n\\[2-5x+4=2x+8-5x+4=2x+3x+4.\\]\nThus\n\n\\[3(x-1)=2x+3.\\]\nSo\n\n\\[3x-3=2x+3,\\]\nwhich gives\n\n\\[x=6.\\]",
+            "explanation": "Since \\(x\\neq-4\\), multiply both sides of \\(\\frac{3(x-1)}{x+4}=2-\\frac5{x+4}\\) by \\(x+4\\): \\[3(x-1)=2(x+4)-5=2x+3.\\] Hence \\(3x-3=2x+3\\), so \\(\\boxed{x=6}\\).",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 234,
             "choiceExplanations": {
-              "A": "Rewrite the right side using denominator x+4:\n\n\\[2-5x+4=2x+8-5x+4=2x+3x+4.\\]\nThus\n\n\\[3(x-1)=2x+3.\\]\nSo\n\n\\[3x-3=2x+3,\\]\nwhich gives\n\n\\[x=6.\\]",
+              "A": "Since \\(x\\neq-4\\), multiply both sides of \\(\\frac{3(x-1)}{x+4}=2-\\frac5{x+4}\\) by \\(x+4\\): \\[3(x-1)=2(x+4)-5=2x+3.\\] Hence \\(3x-3=2x+3\\), so \\(\\boxed{x=6}\\).",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -5776,12 +5776,12 @@
               "D": "\\(39\\)"
             },
             "correctAnswer": "B",
-            "explanation": "There are\n\n\\[74-6=68\\]\npassenger vans. If all 68 held 8 people, they would carry\n\n\\[68(8)=544\\]\npeople. The actual total is 99 fewer. Replacing an 8-person van with a 5-person van reduces capacity by 3, so the number of 5-person vans is\n\n\\[993=33.\\]",
+            "explanation": "Six of the 74 vans carry no passengers, leaving 68 passenger vans. If all carried 8 people, they would carry \\(68(8)=544\\) passengers, which is 99 too many. Each 5-passenger van reduces capacity by 3, so the number of such vans is \\[\\frac{99}{3}=\\boxed{33}.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 127,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "There are\n\n\\[74-6=68\\]\npassenger vans. If all 68 held 8 people, they would carry\n\n\\[68(8)=544\\]\npeople. The actual total is 99 fewer. Replacing an 8-person van with a 5-person van reduces capacity by 3, so the number of 5-person vans is\n\n\\[993=33.\\]",
+              "B": "Six of the 74 vans carry no passengers, leaving 68 passenger vans. If all carried 8 people, they would carry \\(68(8)=544\\) passengers, which is 99 too many. Each 5-passenger van reduces capacity by 3, so the number of such vans is \\[\\frac{99}{3}=\\boxed{33}.\\]",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -5811,13 +5811,13 @@
               "D": "\\((9,0)\\)"
             },
             "correctAnswer": "C",
-            "explanation": "The slope of m is\n\n\\[2-173-(-2)=-3,\\]\nso m has equation y=-3x+11. Translating right 4 and down 2 gives\n\n\\[y=-3(x-4)+11-2=-3x+21.\\]\n\\[At the x-intercept, y=0:\\]\n\n\\[0=-3x+21,\\]\n\\[so x=7.\\]",
+            "explanation": "From the table points \\((-2,17)\\) and \\((3,2)\\), the slope of line \\(m\\) is \\[\\frac{2-17}{3-(-2)}=-3.\\] Line \\(m\\) is \\(y=-3x+11\\). Translating right 4 and down 2 gives \\(y=-3(x-4)+11-2=-3x+21\\). Set \\(y=0\\) to find \\(x=7\\), so the x-intercept is \\(\\boxed{(7,0)}\\).",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 98,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "The slope of m is\n\n\\[2-173-(-2)=-3,\\]\nso m has equation y=-3x+11. Translating right 4 and down 2 gives\n\n\\[y=-3(x-4)+11-2=-3x+21.\\]\n\\[At the x-intercept, y=0:\\]\n\n\\[0=-3x+21,\\]\n\\[so x=7.\\]",
+              "C": "From the table points \\((-2,17)\\) and \\((3,2)\\), the slope of line \\(m\\) is \\[\\frac{2-17}{3-(-2)}=-3.\\] Line \\(m\\) is \\(y=-3x+11\\). Translating right 4 and down 2 gives \\(y=-3(x-4)+11-2=-3x+21\\). Set \\(y=0\\) to find \\(x=7\\), so the x-intercept is \\(\\boxed{(7,0)}\\).",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "table": {
@@ -6248,7 +6248,7 @@
               "D": "81"
             },
             "correctAnswer": "B",
-            "explanation": "Three separate cubes have 18 faces total. There are two shared interfaces, and each hides 2 faces, leaving\n\n\\[18-4=14\\]\nexposed faces.\nIf each cube has side length s,\n\n\\[14s^2=126\\]\nThus,\n\n\\[s^2=9\\]\n\\[and s=3\\]\nThe volume is\n\\[ 3^3=\\boxed{27}. \\]",
+            "explanation": "Three separate cubes have 18 faces total. There are two shared interfaces, and each hides 2 faces, leaving\n\n\\[18-4=14\\]\nexposed faces.\nIf each cube has side length s,\n\n\\[14s^2=126\\]\nThus,\n\n\\[s^2=9\\]\nand s=3\nThe volume is\n\\[ 3^3=\\boxed{27}. \\]",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 326,
             "choiceExplanations": {
