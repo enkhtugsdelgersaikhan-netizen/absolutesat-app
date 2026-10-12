@@ -5864,63 +5864,31 @@
             "diagram": {
               "width": 420,
               "height": 300,
-              "alt": "Similar right triangles ABC and ADE: A,C,E collinear; A,B,D collinear; BC and DE perpendicular to AE",
+              "alt": "Triangle ADE schematic",
               "caption": "Schematic; not to scale.",
               "lines": [
                 {
-                  "x1": 166.67,
-                  "y1": 185,
-                  "x2": 166.67,
-                  "y2": 250,
-                  "dashed": false
-                },
-                {
-                  "x1": 166.67,
-                  "y1": 235,
-                  "x2": 181.67,
-                  "y2": 235,
-                  "dashed": false,
-                  "rightMark": true
-                },
-                {
-                  "x1": 181.67,
-                  "y1": 235,
-                  "x2": 181.67,
-                  "y2": 250,
-                  "dashed": false,
-                  "rightMark": true
-                },
-                {
-                  "x1": 325,
-                  "y1": 250,
-                  "x2": 325,
-                  "y2": 235,
-                  "dashed": false,
-                  "rightMark": true
-                },
-                {
-                  "x1": 325,
-                  "y1": 235,
-                  "x2": 340,
-                  "y2": 235,
-                  "dashed": false,
-                  "rightMark": true
+                  "x1": 184,
+                  "y1": 69,
+                  "x2": 184,
+                  "y2": 248,
+                  "dashed": true
                 }
               ],
               "polygons": [
                 {
                   "points": [
                     [
-                      80,
-                      250
+                      105,
+                      248
                     ],
                     [
-                      340,
-                      250
+                      322,
+                      248
                     ],
                     [
-                      340,
-                      55
+                      184,
+                      69
                     ]
                   ]
                 }
@@ -5929,58 +5897,38 @@
               "circles": [],
               "points": [
                 {
-                  "x": 80,
-                  "y": 250,
+                  "x": 105,
+                  "y": 248,
                   "label": "A",
-                  "dx": -13,
+                  "dx": -12,
                   "dy": 18
                 },
                 {
-                  "x": 166.67,
-                  "y": 185,
-                  "label": "B",
-                  "dx": -11,
-                  "dy": -11
-                },
-                {
-                  "x": 166.67,
-                  "y": 250,
-                  "label": "C",
-                  "dx": -5,
-                  "dy": 19
-                },
-                {
-                  "x": 340,
-                  "y": 55,
+                  "x": 322,
+                  "y": 248,
                   "label": "D",
-                  "dx": 12,
-                  "dy": -11
+                  "dx": 10,
+                  "dy": 18
                 },
                 {
-                  "x": 340,
-                  "y": 250,
+                  "x": 184,
+                  "y": 69,
                   "label": "E",
-                  "dx": 12,
-                  "dy": 18
+                  "dx": 0,
+                  "dy": -12
                 }
               ],
               "labels": [
                 {
-                  "x": 111,
-                  "y": 201,
-                  "text": "AB = 13",
+                  "x": 213.5,
+                  "y": 277,
+                  "text": "base",
                   "anchor": "middle"
                 },
                 {
-                  "x": 195,
-                  "y": 211,
-                  "text": "BC = 12",
-                  "anchor": "middle"
-                },
-                {
-                  "x": 248,
-                  "y": 274,
-                  "text": "CE = ?",
+                  "x": 202,
+                  "y": 158.5,
+                  "text": "height",
                   "anchor": "middle"
                 }
               ],

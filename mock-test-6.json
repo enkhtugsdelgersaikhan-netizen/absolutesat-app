@@ -3513,45 +3513,22 @@
             "diagram": {
               "width": 420,
               "height": 300,
-              "alt": "Right triangle ABC with point D on AC and segment DE perpendicular to AC, meeting AB at E",
+              "alt": "Triangle ABC schematic",
               "caption": "Schematic; not to scale.",
               "lines": [
                 {
-                  "x1": 100,
-                  "y1": 166,
-                  "x2": 235,
-                  "y2": 166,
-                  "dashed": false
-                },
-                {
-                  "x1": 100,
-                  "y1": 231,
-                  "x2": 114,
-                  "y2": 231,
+                  "x1": 108,
+                  "y1": 228,
+                  "x2": 122,
+                  "y2": 228,
                   "dashed": false,
                   "rightMark": true
                 },
                 {
-                  "x1": 114,
-                  "y1": 231,
-                  "x2": 114,
-                  "y2": 245,
-                  "dashed": false,
-                  "rightMark": true
-                },
-                {
-                  "x1": 100,
-                  "y1": 166,
-                  "x2": 113,
-                  "y2": 166,
-                  "dashed": false,
-                  "rightMark": true
-                },
-                {
-                  "x1": 113,
-                  "y1": 166,
-                  "x2": 113,
-                  "y2": 153,
+                  "x1": 122,
+                  "y1": 228,
+                  "x2": 122,
+                  "y2": 242,
                   "dashed": false,
                   "rightMark": true
                 }
@@ -3560,16 +3537,16 @@
                 {
                   "points": [
                     [
-                      100,
-                      60
+                      108,
+                      65
                     ],
                     [
-                      335,
-                      245
+                      325,
+                      242
                     ],
                     [
-                      100,
-                      245
+                      108,
+                      242
                     ]
                   ]
                 }
@@ -3578,58 +3555,32 @@
               "circles": [],
               "points": [
                 {
-                  "x": 100,
-                  "y": 60,
+                  "x": 108,
+                  "y": 65,
                   "label": "A",
-                  "dx": -11,
+                  "dx": -12,
                   "dy": -12
                 },
                 {
-                  "x": 335,
-                  "y": 245,
+                  "x": 325,
+                  "y": 242,
                   "label": "B",
-                  "dx": 11,
-                  "dy": 15
+                  "dx": 10,
+                  "dy": 18
                 },
                 {
-                  "x": 100,
-                  "y": 245,
+                  "x": 108,
+                  "y": 242,
                   "label": "C",
                   "dx": -12,
-                  "dy": 17
-                },
-                {
-                  "x": 100,
-                  "y": 166,
-                  "label": "D",
-                  "dx": -15,
-                  "dy": 4
-                },
-                {
-                  "x": 235,
-                  "y": 166,
-                  "label": "E",
-                  "dx": 9,
-                  "dy": 6
+                  "dy": 18
                 }
               ],
               "labels": [
                 {
-                  "x": 72,
-                  "y": 113,
-                  "text": "AD = 8",
-                  "anchor": "middle"
-                },
-                {
-                  "x": 69,
-                  "y": 209,
+                  "x": 96,
+                  "y": 146.5,
                   "text": "AC = 14",
-                  "anchor": "middle"
-                },
-                {
-                  "x": 168,
-                  "y": 150,
-                  "text": "DE = x",
                   "anchor": "middle"
                 }
               ],
@@ -5510,29 +5461,22 @@
             "diagram": {
               "width": 420,
               "height": 300,
-              "alt": "Right triangle ABC with perpendicular altitude AD to hypotenuse BC, divided into BD = 5 and DC = 20",
+              "alt": "Triangle ABC schematic",
               "caption": "Schematic; not to scale.",
               "lines": [
                 {
-                  "x1": 110,
-                  "y1": 250,
-                  "x2": 186,
-                  "y2": 212,
-                  "dashed": false
-                },
-                {
-                  "x1": 110,
-                  "y1": 235,
-                  "x2": 125,
-                  "y2": 235,
+                  "x1": 106,
+                  "y1": 246,
+                  "x2": 106,
+                  "y2": 232,
                   "dashed": false,
                   "rightMark": true
                 },
                 {
-                  "x1": 125,
-                  "y1": 235,
-                  "x2": 125,
-                  "y2": 250,
+                  "x1": 106,
+                  "y1": 232,
+                  "x2": 92,
+                  "y2": 232,
                   "dashed": false,
                   "rightMark": true
                 }
@@ -5541,16 +5485,16 @@
                 {
                   "points": [
                     [
-                      110,
-                      250
+                      92,
+                      246
                     ],
                     [
-                      205,
-                      250
+                      330,
+                      246
                     ],
                     [
-                      110,
-                      60
+                      92,
+                      70
                     ]
                   ]
                 }
@@ -5559,48 +5503,28 @@
               "circles": [],
               "points": [
                 {
-                  "x": 110,
-                  "y": 250,
+                  "x": 92,
+                  "y": 246,
                   "label": "A",
-                  "dx": -13,
-                  "dy": 17
+                  "dx": -12,
+                  "dy": 18
                 },
                 {
-                  "x": 205,
-                  "y": 250,
+                  "x": 330,
+                  "y": 246,
                   "label": "B",
-                  "dx": 12,
-                  "dy": 17
+                  "dx": 10,
+                  "dy": 18
                 },
                 {
-                  "x": 110,
-                  "y": 60,
+                  "x": 92,
+                  "y": 70,
                   "label": "C",
                   "dx": -12,
                   "dy": -12
-                },
-                {
-                  "x": 186,
-                  "y": 212,
-                  "label": "D",
-                  "dx": 8,
-                  "dy": -8
                 }
               ],
-              "labels": [
-                {
-                  "x": 227,
-                  "y": 218,
-                  "text": "BD = 5",
-                  "anchor": "middle"
-                },
-                {
-                  "x": 171,
-                  "y": 133,
-                  "text": "DC = 20",
-                  "anchor": "middle"
-                }
-              ],
+              "labels": [],
               "rightAngles": [],
               "ticks": []
             }
