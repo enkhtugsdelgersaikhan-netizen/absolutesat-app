@@ -2761,7 +2761,7 @@
               "D": "\\(19\\)"
             },
             "correctAnswer": "D",
-            "explanation": "\\[To obtain f(9), set\\]\n\n\\[2x-1=9.\\]\n\\[Then 2x=10, so x=5. Therefore,\\]\n\n\\[f(9)=3(5)+4=19.\\]",
+            "explanation": "To obtain f(9), set\n\n\\[2x-1=9.\\]\nThen 2x=10, so x=5. Therefore,\n\n\\[f(9)=3(5)+4=19.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 365,
             "choiceExplanations": {
@@ -2846,7 +2846,7 @@
             "skill": "Linear Functions",
             "difficulty": "Easy",
             "passage": "",
-            "question": "The function g is defined by\n\n\\[g(x)=2(5x-11).\\]\nWhat is the y-coordinate of the y-intercept of the graph\n\n\\[y=12g(x)+7?\\]",
+            "question": "The function g is defined by\n\n\\[g(x)=2(5x-11).\\]\nWhat is the y-coordinate of the y-intercept of the graph\n\n\\[y=12g(x)+7\\]",
             "choices": {
               "A": "\\(-22\\)",
               "B": "\\(-11\\)",
@@ -2854,7 +2854,7 @@
               "D": "\\(7\\)"
             },
             "correctAnswer": "C",
-            "explanation": "\\[At the y-intercept, x=0.\\]\n\n\\[g(0)=2(-11)=-22.\\]\nTherefore,\n\n\\[y=12(-22)+7=-11+7=-4.\\]",
+            "explanation": "At the y-intercept, x=0.\n\n\\[g(0)=2(-11)=-22.\\]\nTherefore,\n\n\\[y=12(-22)+7=-11+7=-4.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 224,
             "choiceExplanations": {
@@ -2881,7 +2881,7 @@
             "skill": "Quadratics",
             "difficulty": "Easy",
             "passage": "",
-            "question": "The function f is defined by\n\n\\[f(x)=x^{2}+4x-5x+2.\\]\nIf h=5, what is the value of f(2-h)?",
+            "question": "The function \\(f\\) is defined by \\[f(x)=x^2+4x-5x-4.\\] If \\(h=5\\), what is the value of \\(f(2-h)\\)?",
             "choices": {
               "A": "\\(-8\\)",
               "B": "\\(4\\)",
@@ -2889,13 +2889,13 @@
               "D": "\\(12\\)"
             },
             "correctAnswer": "C",
-            "explanation": "\\[Since h=5,\\]\n\n\\[2-h=-3.\\]\nThen\n\n\\[f(-3)=9-12-5-1=-8-1=8.\\]",
+            "explanation": "Since \\(h=5\\), \\(2-h=-3\\). Simplify \\(f(x)=x^2-x-4\\). Then \\[f(-3)=(-3)^2-(-3)-4=9+3-4=\\boxed{8}.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 150,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "\\[Since h=5,\\]\n\n\\[2-h=-3.\\]\nThen\n\n\\[f(-3)=9-12-5-1=-8-1=8.\\]",
+              "C": "Since \\(h=5\\), \\(2-h=-3\\). Simplify \\(f(x)=x^2-x-4\\). Then \\[f(-3)=(-3)^2-(-3)-4=9+3-4=\\boxed{8}.\\]",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Quadratics",
@@ -3107,7 +3107,7 @@
               "D": "\\(3\\)"
             },
             "correctAnswer": "C",
-            "explanation": "Since 3x-2y=14, substitute 14 for 3x-2y in the second equation:\n\n\\[2(14)+5y=53.\\]\n\\[Thus 5y=25, so y=5. Then\\]\n\n\\[3x-2(5)=14,\\]\n\\[so 3x=24 and x=8.\\]",
+            "explanation": "Since 3x-2y=14, substitute 14 for 3x-2y in the second equation:\n\n\\[2(14)+5y=53.\\]\nThus 5y=25, so y=5. Then\n\n\\[3x-2(5)=14,\\]\nso 3x=24 and x=8.",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 323,
             "choiceExplanations": {
@@ -3247,7 +3247,7 @@
               "D": "\\(7\\)"
             },
             "correctAnswer": "C",
-            "explanation": "\\[At x=-3,\\]\n\n\\[y=2(9)-3-5=10.\\]\n\\[At x=4,\\]\n\n\\[y=2(16)+4-5=31.\\]\nThus the line passes through (-3,10) and (4,31). Its slope is\n\\[ \\frac{31-10}{4-(-3)} =\\frac{21}{7} =\\boxed3. \\]",
+            "explanation": "At x=-3,\n\n\\[y=2(9)-3-5=10.\\]\nAt x=4,\n\n\\[y=2(16)+4-5=31.\\]\nThus the line passes through (-3,10) and (4,31). Its slope is\n\\[ \\frac{31-10}{4-(-3)} =\\frac{21}{7} =\\boxed3. \\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 180,
             "choiceExplanations": {
@@ -4026,7 +4026,7 @@
             "skill": "Nonlinear Equations/Functions",
             "difficulty": "Easy",
             "passage": "",
-            "question": "Which table gives three solutions to\n\n\\[5x+2y=18?\\]",
+            "question": "Which table gives three solutions to\n\n\\[5x+2y=18\\]",
             "choices": {
               "A": "\\(x\ny\n-2\n14\n0\n9\n4\n-1\\)",
               "B": "\\(x\ny\n-2\n4\n0\n9\n4\n1\\)",
@@ -4186,7 +4186,7 @@
               "D": "\\((0,7)\\)"
             },
             "correctAnswer": "D",
-            "explanation": "\\[At the y-intercept, x=0. Therefore,\\]\n\n\\[4y=28,\\]\n\\[so y=7. The intercept is\\]\n\n(0,7).",
+            "explanation": "At the y-intercept, x=0. Therefore,\n\n\\[4y=28,\\]\nso y=7. The intercept is\n\n(0,7).",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 355,
             "choiceExplanations": {
@@ -4269,7 +4269,7 @@
             "skill": "Quadratics",
             "difficulty": "Easy",
             "passage": "",
-            "question": "What is the sum of the solutions to\n\n\\[(x-2)^{2}=5x+14?\\]",
+            "question": "What is the sum of the solutions to\n\n\\[(x-2)^{2}=5x+14\\]",
             "choices": {},
             "correctAnswer": "",
             "explanation": "Expand and rearrange:\n\\[\nx^2-4x+4=5x+14\n\\]\nso\n\\[\nx^2-9x-10=0.\n\\]\nFor \\(x^2-9x-10=0\\), the sum of the roots is\n\\[\n-\\frac{-9}{1}=\\boxed9.\n\\]",
@@ -4830,7 +4830,7 @@
               "D": "\\(291\\)"
             },
             "correctAnswer": "B",
-            "explanation": "Use vertex form:\n\n\\[h(t)=a(t-4)^{2}+363.\\]\n\\[Since h(0)=75,\\]\n\n\\[75=16a+363,\\]\n\\[so a=-18.\\]\nThe parabola is symmetric about t=4. Since the launch height occurs at t=0, it occurs again at t=8. One second before that is t=7.\n\n\\[h(7)=-18(7-4)^{2}+363=-18(9)+363=201.\\]",
+            "explanation": "Use vertex form:\n\n\\[h(t)=a(t-4)^{2}+363.\\]\nSince h(0)=75,\n\n\\[75=16a+363,\\]\nso a=-18.\nThe parabola is symmetric about t=4. Since the launch height occurs at t=0, it occurs again at t=8. One second before that is t=7.\n\n\\[h(7)=-18(7-4)^{2}+363=-18(9)+363=201.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 405,
             "choiceExplanations": {
@@ -5186,7 +5186,7 @@
             "skill": "Nonlinear Equations/Functions",
             "difficulty": "Easy",
             "passage": "",
-            "question": "Which table gives three solutions to\n\n\\[5x+2y=18?\\]",
+            "question": "Which table gives three solutions to\n\n\\[5x+2y=18\\]",
             "choices": {
               "A": "\\(x\ny\n-2\n14\n0\n9\n4\n-1\\)",
               "B": "\\(x\ny\n-2\n4\n0\n9\n4\n1\\)",
@@ -5572,7 +5572,7 @@
               "D": "\\(291\\)"
             },
             "correctAnswer": "B",
-            "explanation": "Use vertex form:\n\n\\[h(t)=a(t-4)^{2}+363.\\]\n\\[Since h(0)=75,\\]\n\n\\[75=16a+363,\\]\n\\[so a=-18.\\]\nThe parabola is symmetric about t=4. Since the launch height occurs at t=0, it occurs again at t=8. One second before that is t=7.\n\n\\[h(7)=-18(7-4)^{2}+363=-18(9)+363=201.\\]",
+            "explanation": "Use vertex form:\n\n\\[h(t)=a(t-4)^{2}+363.\\]\nSince h(0)=75,\n\n\\[75=16a+363,\\]\nso a=-18.\nThe parabola is symmetric about t=4. Since the launch height occurs at t=0, it occurs again at t=8. One second before that is t=7.\n\n\\[h(7)=-18(7-4)^{2}+363=-18(9)+363=201.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 405,
             "choiceExplanations": {
@@ -5932,7 +5932,7 @@
             "skill": "Exponential Functions",
             "difficulty": "Hard",
             "passage": "",
-            "question": "A quantity P is modeled by\n\n\\[P=abt/3,\\]\nwhere t is measured in months and a and b are positive constants. The quantity increases by \\(21\\%\\) whenever t increases by 6 months. What is the value of b?",
+            "question": "A quantity \\(P\\) is modeled by \\[P=ab^{t/3},\\] where \\(t\\) is measured in months and \\(a\\) and \\(b\\) are positive constants. The quantity increases by 21% whenever \\(t\\) increases by 6 months. What is the value of \\(b\\)?",
             "choices": {
               "A": "\\(0.21\\)",
               "B": "\\(1.21\\)",
@@ -5940,13 +5940,13 @@
               "D": "\\(1.42\\)"
             },
             "correctAnswer": "C",
-            "explanation": "A 6-month increase raises the exponent t/3 by\n\n\\[63=2.\\]\nSo the output is multiplied by b^{2}. A \\(21\\%\\) increase means a multiplier of 1.21:\n\n\\[b^{2}=1.21.\\]\n\\[Since b>0,\\]\n\n\\[b=1.10.\\]",
+            "explanation": "An increase of 6 months increases the exponent \\(t/3\\) by 2, so the quantity is multiplied by \\(b^2\\). A 21% increase is a factor of 1.21. Therefore \\[b^2=1.21\\implies b=\\sqrt{1.21}=\\boxed{1.10},\\] since \\(b>0\\).",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 391,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "A 6-month increase raises the exponent t/3 by\n\n\\[63=2.\\]\nSo the output is multiplied by b^{2}. A \\(21\\%\\) increase means a multiplier of 1.21:\n\n\\[b^{2}=1.21.\\]\n\\[Since b>0,\\]\n\n\\[b=1.10.\\]",
+              "C": "An increase of 6 months increases the exponent \\(t/3\\) by 2, so the quantity is multiplied by \\(b^2\\). A 21% increase is a factor of 1.21. Therefore \\[b^2=1.21\\implies b=\\sqrt{1.21}=\\boxed{1.10},\\] since \\(b>0\\).",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Exponential Functions",
