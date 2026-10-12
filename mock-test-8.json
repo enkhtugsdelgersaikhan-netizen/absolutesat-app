@@ -3293,8 +3293,8 @@
             "domain": "Problem-Solving & Data Analysis",
             "skill": "Probability",
             "difficulty": "Medium",
-            "passage": "The table summarizes the choices of 168 customers.\n\nMembership\nNo membership\nUsed express shipping\n54\n36\nDid not use express shipping\n42\n36\n\nIf one customer is selected at random,",
-            "question": "what is the probability that the customer did not use express shipping?",
+            "passage": "A survey records the shipping choices of 168 customers. The table shows whether customers have a membership and whether they use express shipping.",
+            "question": "If a customer is selected at random, what is the probability that the customer did not use express shipping?",
             "choices": {
               "A": "\\(\\frac3{14}\\)",
               "B": "\\(\\frac{13}{28}\\)",
@@ -5195,12 +5195,12 @@
               "D": "$52"
             },
             "correctAnswer": "B",
-            "explanation": "The demand changes by\n\n\\[17,600-24,800=-7,200\\]\nwhen price rises by 24, so demand decreases by 300 units per $1. To go from 24,800 units to 20,000 units is a decrease of 4,800 units, requiring a price increase of\n\n\\[4,800300=16.\\]\nThus the price is \\(32+16=\\$48\\).",
+            "explanation": "Demand decreases by \\(24{,}800-17{,}600=7{,}200\\) units when price rises by \\(56-32=24\\) dollars. Thus each $1 price increase decreases demand by 300 units. To decrease demand from 24,800 to 20,000 units requires \\[\\frac{24{,}800-20{,}000}{300}=\\frac{4800}{300}=16\\] dollars more. The selling price is \\(32+16=\\boxed{48}\\) dollars.",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 99,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "The demand changes by\n\n\\[17,600-24,800=-7,200\\]\nwhen price rises by 24, so demand decreases by 300 units per $1. To go from 24,800 units to 20,000 units is a decrease of 4,800 units, requiring a price increase of\n\n\\[4,800300=16.\\]\n\\[Thus the price is \\(32+16=\\$48\\).\\]",
+              "B": "Demand decreases by \\(24{,}800-17{,}600=7{,}200\\) units when price rises by \\(56-32=24\\) dollars. Thus each $1 price increase decreases demand by 300 units. To decrease demand from 24,800 to 20,000 units requires \\[\\frac{24{,}800-20{,}000}{300}=\\frac{4800}{300}=16\\] dollars more. The selling price is \\(32+16=\\boxed{48}\\) dollars.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
