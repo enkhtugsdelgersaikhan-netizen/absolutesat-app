@@ -612,10 +612,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         const ticks = [400,800,1200,1600];
         const grid = ticks.map(score =>
             '<span class="mock-stacked-gridline" style="bottom:' +
-            (score / 1600 * 100) + '%" aria-hidden="true"></span>'
+            (score / 1600 * 90) + '%" aria-hidden="true"></span>'
         ).join("");
         const scale = ticks.map(score =>
-            '<span style="bottom:' + (score / 1600 * 100) + '%">' + score + '</span>'
+            '<span style="bottom:' + (score / 1600 * 90) + '%">' + score + '</span>'
         ).join("");
         const columns = tests.map(test => {
             const scores = test.scores;
@@ -628,7 +628,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             const rw = Math.max(0,Math.min(800,Number(scores.readingWriting)||0));
             const math = Math.max(0,Math.min(800,Number(scores.math)||0));
             const composite = rw + math;
-            const heightPercent = composite / 1600 * 100;
+            const heightPercent = composite / 1600 * 90;
             return '<div class="mock-stacked-column is-complete" role="img" aria-label="Mock ' +
                 test.index + ': composite ' + composite + ', Reading and Writing ' +
                 rw + ', Math ' + math + '">' +
