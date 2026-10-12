@@ -3159,7 +3159,7 @@
             "skill": "Equivalent Expressions",
             "difficulty": "Medium",
             "passage": "",
-            "question": "Which of the following is equivalent to\n\n\\[(2x-3y)(x+4y)+5y(x-2y)?\\]",
+            "question": "Which of the following is equivalent to\n\n\\[(2x-3y)(x+4y)+5y(x-2y)\\]?",
             "choices": {
               "A": "\\(2x^2+10xy+22y^2\\)",
               "B": "\\(2x^2+10xy-22y^2\\)",
@@ -3258,7 +3258,7 @@
             "skill": "Rational/Radical Equations",
             "difficulty": "Medium",
             "passage": "",
-            "question": "Which value of \\(x\\) satisfies \\[\\frac{2x+1}{x-2}-\\frac3{x+2}=\\frac{20}{x^2-4}?\\]",
+            "question": "Which value of \\(x\\) satisfies \\[\\frac{2x+1}{x-2}-\\frac3{x+2}=\\frac{20}{x^2-4}\\]?",
             "choices": {
               "A": "\\(-3\\)",
               "B": "\\(2\\)",
@@ -3750,7 +3750,7 @@
             "skill": "Equivalent Expressions",
             "difficulty": "Easy",
             "passage": "",
-            "question": "Which expression is equivalent to\n\n\\[3(2x-5)(x+4)-2x(x-1)?\\]",
+            "question": "Which expression is equivalent to\n\n\\[3(2x-5)(x+4)-2x(x-1)\\]?",
             "choices": {
               "A": "\\(4x^2+11x-60\\)",
               "B": "\\(8x^2+7x-60\\)",
@@ -4232,11 +4232,11 @@
               "D": "\\(\\frac7{20}\\)"
             },
             "correctAnswer": "A",
-            "explanation": "The missing entry in the first row is\n\n\\[40-28=12\\]\nThus, 12 of the 80 centers satisfy both conditions, so the probability is\n\n\\[1280=320\\]",
+            "explanation": "The missing count is \\(40-28=12\\). Out of 80 centers, 12 offer evening classes without a fabrication workshop. The probability is \\[\\frac{12}{80}=\\boxed{\\frac3{20}}.\\]",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 363,
             "choiceExplanations": {
-              "A": "The missing entry in the first row is\n\n\\[40-28=12\\]\nThus, 12 of the 80 centers satisfy both conditions, so the probability is\n\n\\[1280=320\\]",
+              "A": "The missing count is \\(40-28=12\\). Out of 80 centers, 12 offer evening classes without a fabrication workshop. The probability is \\[\\frac{12}{80}=\\boxed{\\frac3{20}}.\\]",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -4414,7 +4414,7 @@
               "D": "\\(12\\)"
             },
             "correctAnswer": "C",
-            "explanation": "Expand the left side:\n\n\\[5a-2ax-b.\\]\n\\[Match the x-coefficients:\\]\n\\[ -2a=-6 \\implies a=3. \\]\nMatch constants:\n\n\\[5(3)-b=9,\\]\n\\[so b=6. Hence,\\]\n\\[ a+b=3+6=\\boxed9. \\]",
+            "explanation": "Expand the left side:\n\n\\[5a-2ax-b.\\]\n\\[Match the x-coefficients:\\]\n\\[ -2a=-6 \\implies a=3. \\]\nMatch constants:\n\n\\[5(3)-b=9,\\]\n\\[so b=6. Hence,\\]\n\\[ a+b=3+6=\\boxed{9}. \\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 62,
             "choiceExplanations": {
@@ -5046,7 +5046,7 @@
               "D": "\\(12\\)"
             },
             "correctAnswer": "C",
-            "explanation": "Expand the left side:\n\n\\[5a-2ax-b.\\]\n\\[Match the x-coefficients:\\]\n\\[ -2a=-6 \\implies a=3. \\]\nMatch constants:\n\n\\[5(3)-b=9,\\]\n\\[so b=6. Hence,\\]\n\\[ a+b=3+6=\\boxed9. \\]",
+            "explanation": "Expand the left side:\n\n\\[5a-2ax-b.\\]\n\\[Match the x-coefficients:\\]\n\\[ -2a=-6 \\implies a=3. \\]\nMatch constants:\n\n\\[5(3)-b=9,\\]\n\\[so b=6. Hence,\\]\n\\[ a+b=3+6=\\boxed{9}. \\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 62,
             "choiceExplanations": {
@@ -5363,7 +5363,7 @@
             "skill": "Equivalent Expressions",
             "difficulty": "Hard",
             "passage": "",
-            "question": "For \\(x\\ne3\\) and \\(x\\ne-1\\), which expression is equivalent to \\[\\frac{x}{x-3}-\\frac2{x+1}?\\]",
+            "question": "For \\(x\\ne3\\) and \\(x\\ne-1\\), which expression is equivalent to \\[\\frac{x}{x-3}-\\frac2{x+1}\\]?",
             "choices": {
               "A": "\\(\\displaystyle \\frac{x^2-x+6}{(x-3)(x+1)}\\)",
               "B": "\\(\\displaystyle \\frac{x^2+3x-6}{(x-3)(x+1)}\\)",
