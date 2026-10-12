@@ -2846,7 +2846,7 @@
             "skill": "Linear Functions",
             "difficulty": "Easy",
             "passage": "",
-            "question": "The function g is defined by\n\n\\[g(x)=2(5x-11).\\]\nWhat is the y-coordinate of the y-intercept of the graph\n\n\\[y=12g(x)+7\\]",
+            "question": "The function \\(g\\) is defined by \\[g(x)=2(5x-11).\\] What is the y-coordinate of the y-intercept of the graph \\[y=\\frac12g(x)+7?\\]",
             "choices": {
               "A": "\\(-22\\)",
               "B": "\\(-11\\)",
@@ -2854,13 +2854,13 @@
               "D": "\\(7\\)"
             },
             "correctAnswer": "C",
-            "explanation": "At the y-intercept, x=0.\n\n\\[g(0)=2(-11)=-22.\\]\nTherefore,\n\n\\[y=12(-22)+7=-11+7=-4.\\]",
+            "explanation": "At the y-intercept, \\(x=0\\). Then \\(g(0)=2(5(0)-11)=-22\\). Therefore \\[y=\\frac12(-22)+7=-11+7=\\boxed{-4}.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 224,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "\\[At the y-intercept, x=0.\\]\n\n\\[g(0)=2(-11)=-22.\\]\nTherefore,\n\n\\[y=12(-22)+7=-11+7=-4.\\]",
+              "C": "At the y-intercept, \\(x=0\\). Then \\(g(0)=2(5(0)-11)=-22\\). Therefore \\[y=\\frac12(-22)+7=-11+7=\\boxed{-4}.\\]",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Linear Functions",
@@ -5765,11 +5765,11 @@
               "D": "\\(\\displaystyle C(n)=p\\left(n-\\frac52\\right)\\)"
             },
             "correctAnswer": "A",
-            "explanation": "The first rental costs 0. The next two each cost 0.75p, for a total of 1.5p. The remaining n-3 rentals cost\n\n\\[p(n-3).\\]\nTherefore,\n\n\\[C(n)=1.5p+p(n-3)=pn-32.\\]",
+            "explanation": "The first rental costs nothing. The second and third each cost \\(0.75p\\), totaling \\(1.5p\\). The remaining \\(n-3\\) rentals cost \\(p(n-3)\\). Thus \\[C(n)=1.5p+p(n-3)=p\\left(n-\\frac32\\right).\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 207,
             "choiceExplanations": {
-              "A": "The first rental costs 0. The next two each cost 0.75p, for a total of 1.5p. The remaining n-3 rentals cost\n\n\\[p(n-3).\\]\nTherefore,\n\n\\[C(n)=1.5p+p(n-3)=pn-32.\\]",
+              "A": "The first rental costs nothing. The second and third each cost \\(0.75p\\), totaling \\(1.5p\\). The remaining \\(n-3\\) rentals cost \\(p(n-3)\\). Thus \\[C(n)=1.5p+p(n-3)=p\\left(n-\\frac32\\right).\\]",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
