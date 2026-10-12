@@ -10214,12 +10214,30 @@ function studentResponseIsCorrect(
                     value !== null
             );
 
-    return accepted.some(
-        answer =>
-            Math.abs(
-                submitted - answer
-            ) <= 1e-9
-    );
+    if (accepted.some(answer => Math.abs(submitted - answer) <= 1e-9)) {
+        return true;
+    }
+
+    // Digital SAT grid-ins allow repeating fractions to be rounded or
+    // truncated to the available decimal precision. Keep exact grading for
+    // integers, terminating decimals, and entries with fewer than 3 places.
+    const submittedText = String(value ?? "").trim().replace(/,/g, "");
+    const decimal = submittedText.match(/^-?(?:\\d+)?\\.(\\d{3,5})$/);
+    if (!decimal) return false;
+
+    const places = decimal[1].length;
+    const scale = 10 ** places;
+    const acceptedText = Array.isArray(question.accepted_answers)
+        ? question.accepted_answers
+        : [];
+    return acceptedText.some(candidate => {
+        if (!/^-?\\d+\\/-?\\d+$/.test(String(candidate).trim())) return false;
+        const target = parseStudentResponseValue(candidate);
+        return target !== null && (
+            Math.abs(submitted - Math.round(target * scale) / scale) <= 1e-9 ||
+            Math.abs(submitted - Math.trunc(target * scale) / scale) <= 1e-9
+        );
+    });
 }
 
 
