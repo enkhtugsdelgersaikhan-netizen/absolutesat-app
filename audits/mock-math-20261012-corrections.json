@@ -1,0 +1,123 @@
+{
+  "math-20261006-batch465-q150": {
+    "choices": {
+      "A": "\\(-8\\)",
+      "B": "\\(4\\)",
+      "C": "\\(14\\)",
+      "D": "\\(12\\)"
+    },
+    "explanation": "With \\(h=5\\), we have \\(2-h=-3\\). Substitute into the given function: \\[f(-3)=(-3)^2+4(-3)-5(-3)+2=9-12+15+2=\\boxed{14}.\\]"
+  },
+  "math-20261006-batch465-q385": {
+    "question": "A solution \\((x,y)\\) to the system \\[x^2=10x+y-4\\] \\[y=-10x+68\\] has \\(x>0\\). What is the value of \\(xy\\)?",
+    "explanation": "Substituting \\(y=-10x+68\\) gives \\(x^2=64\\), so \\(x=8\\) or \\(x=-8\\). The condition \\(x>0\\) selects \\(x=8\\). Then \\(y=-10(8)+68=-12\\), so \\(xy=8(-12)=\\boxed{-96}\\). Without the positive-\\(x\\) condition, the system would have two different solutions."
+  },
+  "math-20261006-batch465-q224": {
+    "question": "The function \\(g\\) is defined by \\[g(x)=2(5x-11).\\] What is the y-coordinate of the y-intercept of the graph of \\[y=\\frac12g(x)+7?\\]",
+    "explanation": "At the y-intercept, \\(x=0\\). Then \\(g(0)=2(5(0)-11)=-22\\), and \\[y=\\frac12(-22)+7=-11+7=\\boxed{-4}.\\]"
+  },
+  "math-20261006-batch465-q391": {
+    "question": "A quantity \\(P\\) is modeled by \\[P=ab^{t/3},\\] where \\(t\\) is measured in months and \\(a\\) and \\(b\\) are positive constants. The quantity increases by \\(21\\%\\) whenever \\(t\\) increases by 6 months. What is the value of \\(b\\)?",
+    "explanation": "An increase of 6 months raises the exponent \\(t/3\\) by \\(6/3=2\\), so \\(P\\) is multiplied by \\(b^2\\). A 21% increase is a multiplier of \\(1.21\\). Therefore \\(b^2=1.21\\). Since \\(b>0\\), \\(\\boxed{b=1.10}\\)."
+  },
+  "math-20261006-batch465-q427": {
+    "question": "The function \\[P(t)=240(1.08)^{t-2}\\] models a population \\(t\\) years after monitoring began. Which of the following best interprets the number 240?",
+    "explanation": "At \\(t=2\\), the exponent \\(t-2\\) is zero. Thus \\(P(2)=240(1.08)^0=240\\), so 240 is the model's estimated population 2 years after monitoring began."
+  },
+  "math-20261006-new409-q373": {
+    "choices": {
+      "A": "\\(3^x<8x+1\\) for every \\(x>0\\).",
+      "B": "\\(3^x>8x+1\\) for every \\(x>0\\).",
+      "C": "There is a constant \\(c\\), with \\(2<c<3\\), such that \\(3^x<8x+1\\) for \\(0<x<c\\), and \\(3^x>8x+1\\) for \\(x>c\\).",
+      "D": "There is a constant \\(c\\), with \\(2<c<3\\), such that \\(3^x>8x+1\\) for \\(0<x<c\\), and \\(3^x<8x+1\\) for \\(x>c\\)."
+    },
+    "explanation": "At \\(x=2\\), \\(3^2=9<17=8(2)+1\\). At \\(x=3\\), \\(3^3=27>25=8(3)+1\\). The difference \\(3^x-(8x+1)\\) is convex and changes from negative to positive once for \\(x>0\\), so the unique positive crossover \\(c\\) lies between 2 and 3. Choice C describes this correctly."
+  },
+  "math-20261006-batch465-q334": {
+    "explanation": "Combine like terms: \\[\\left(\\frac34-\\frac16\\right)x=\\frac73,\\qquad \\frac7{12}x=\\frac73.\\] Multiply both sides by \\(\\frac{12}{7}\\): \\[x=\\frac73\\cdot\\frac{12}{7}=\\boxed{4}.\\]"
+  },
+  "math-20261006-batch465-q181": {
+    "explanation": "First solve \\(2q+5=-1\\). Subtracting 5 gives \\(2q=-6\\), so \\(q=-3\\). Then \\(f(q)=f(-3)=4-3(-3)=\\boxed{13}\\)."
+  },
+  "math-20261006-new409-q391": {
+    "explanation": "The best-fit line passes through approximately \\((2,72)\\) and \\((10,32)\\), so its slope is \\[\\frac{32-72}{10-2}=-5.\\] Using \\((2,72)\\), the predicted value at \\(x=7.5\\) is \\[y=72-5(7.5-2)=44.5.\\] The closest answer choice is \\(\\boxed{45}\\)."
+  },
+  "math-20261006-new409-q376": {
+    "explanation": "There are \\(5+8=13\\) equal parts in the stated ratio. Since the total is 91, one part is \\(91/13=7\\). The quantity \\(q\\) has eight parts, so \\(q=8(7)=\\boxed{56}\\)."
+  },
+  "math-20261006-new409-q378": {
+    "explanation": "If \\(x\\) is last year's enrollment, a 36% increase gives \\(1.36x=340\\). Thus \\(x=340/1.36=\\boxed{250}\\) participants."
+  },
+  "math-20261006-new409-q065": {
+    "explanation": "There are \\(75+60=135\\) members aged at least 30, out of 180 in all. The probability is \\[\\frac{135}{180}=\\boxed{\\frac34}.\\]"
+  },
+  "math-20261006-new409-q372": {
+    "explanation": "Since \\(r,s,t\\) are consecutive integers, \\(s=r+1\\) and \\(t=r+2\\). The mean of P is \\[\\frac{7r+5(r+1)}{12}=r+\\frac5{12}.\\] The mean of Q is \\[\\frac{r+4(r+1)+7(r+2)}{12}=r+\\frac{18}{12}.\\] Therefore Q's mean is \\(\\frac{18-5}{12}=\\boxed{\\frac{13}{12}}\\) greater."
+  },
+  "math-20261006-batch465-q317": {
+    "explanation": "For infinitely many solutions the equations must be multiples. The ratio of the second to the first equation's \\(x\\)-coefficients is \\(10/4=5/2\\); the constants have the same ratio \\(45/18=5/2\\). Thus \\(\\frac52 k=-15\\), so \\(k=\\boxed{-6}\\)."
+  },
+  "math-20261006-new409-q401": {
+    "explanation": "There are 386 daily planner users out of 700 students. The probability is \\[\\frac{386}{700}=\\boxed{\\frac{193}{350}}.\\]"
+  },
+  "math-20261006-new409-q047": {
+    "explanation": "The probability of group C is \\(1-0.38-0.34=0.28\\). If the symposium has \\(N\\) attendees, then \\(0.28N=168\\). Thus \\(N=168/0.28=\\boxed{600}\\)."
+  },
+  "math-20261006-new409-q297": {
+    "explanation": "There are \\(0.37(18{,}600)=6{,}882\\) premium accounts. Since \\(p\\) is measured in hundreds of accounts, \\(p=6{,}882/100=68.82\\), which rounds to \\(\\boxed{69}\\)."
+  },
+  "math-20261006-new409-q384": {
+    "explanation": "The condition restricts the sample to groups A and C. Those groups contain \\(40+45=85\\) components, of which \\(21+5+24+10=60\\) have diameter at least 20 mm. The required conditional probability is \\[\\frac{60}{85}=\\boxed{\\frac{12}{17}}.\\]"
+  },
+  "math-20261006-new409-q400": {
+    "explanation": "There are 18 equally likely vertex labels and four favorable labels (B, D, I, and R), so \\[P=\\frac4{18}=\\boxed{\\frac29}.\\]"
+  },
+  "math-20261006-new409-q363": {
+    "explanation": "The missing count is \\(40-28=12\\). Out of 80 centers, 12 offer evening classes without a fabrication workshop. The probability is \\[\\frac{12}{80}=\\boxed{\\frac3{20}}.\\]"
+  },
+  "math-20261006-batch465-q412": {
+    "explanation": "From \\(x=-1\\) to \\(x=1\\), the output changes from 40 to 10 while \\(x\\) increases by 2, so the two-unit multiplier is \\(10/40=1/4\\). The per-unit multiplier is \\(1/2\\). Since \\(f(1)=10\\), write \\(10=A(1/2)\\), giving \\(A=20\\). Hence \\[\\boxed{f(x)=20\\left(\\frac12\\right)^x}.\\]"
+  },
+  "math-20261006-batch465-q379": {
+    "explanation": "Rewrite the given formula as \\[S=\\frac35T+8+\\frac2{15}(H-100).\\] Then \\[S-\\frac35T-8=\\frac2{15}(H-100).\\] Multiply by \\(15/2\\): \\[\\frac{15}{2}\\left(S-\\frac35T-8\\right)=H-100.\\] Therefore \\[\\boxed{H=100+\\frac{15}{2}\\left(S-\\frac35T-8\\right)}.\\]"
+  },
+  "math-20261006-batch465-q243": {
+    "explanation": "An 18% decrease every 3 hours gives a factor of \\(0.82\\) for each 3-hour interval. The mass is 240 mg at \\(t=6\\), so the number of such intervals after that time is \\((t-6)/3\\). Thus \\[\\boxed{M(t)=240(0.82)^{(t-6)/3}}.\\]"
+  },
+  "math-20261006-batch465-q211": {
+    "explanation": "From \\(2y=3x+5\\), we have \\(y=(3x+5)/2\\). Substitute into \\(4x+y=19\\): \\[4x+\\frac{3x+5}{2}=19.\\] Multiply by 2 to obtain \\(8x+3x+5=38\\), so \\(x=3\\). Then \\(y=(9+5)/2=7\\), and \\(\\boxed{x+y=10}\\)."
+  },
+  "math-20261006-batch465-q207": {
+    "explanation": "The first rental is free. The next two cost \\(0.75p\\) each, or \\(1.5p\\) together. The other \\(n-3\\) rentals cost \\(p(n-3)\\). Thus \\[C(n)=1.5p+p(n-3)=pn-\\frac32p=\\boxed{p\\left(n-\\frac32\\right)}.\\]"
+  },
+  "math-20261006-new409-q404": {
+    "explanation": "Earnings are proportional to time at a constant hourly rate. The time ratio is \\(12.5/7.5=5/3\\), so the technician earns \\(\\boxed{\\frac53E}\\) dollars."
+  },
+  "math-20261006-new409-q386": {
+    "explanation": "The speeds satisfy \\(a=0.70c\\) and \\(c=1.25b\\). Hence \\[a=(0.70)(1.25)b=0.875b=\\boxed{\\frac78b}.\\]"
+  },
+  "math-20261006-batch465-q034": {
+    "explanation": "Rearrange \\(6x-4y=20\\): \\[-4y=20-6x,\\qquad y=\\frac32x-5.\\] The second equation must be identical for infinitely many solutions, so \\(m=\\frac32\\) and \\(b=-5\\). Thus \\(m-b=\\frac32+5=\\boxed{\\frac{13}{2}}\\)."
+  },
+  "math-20261006-batch465-q098": {
+    "explanation": "Using the two table points, the slope is \\[\\frac{2-17}{3-(-2)}=-3.\\] The original line is \\(y=-3x+11\\). Translating four units right and two units down gives \\(y=-3(x-4)+11-2=-3x+21\\). At the x-intercept \\(y=0\\), so \\(\\boxed{x=7}\\)."
+  },
+  "math-20261006-batch465-q232": {
+    "explanation": "Set each factor equal to zero: \\(2x-5=0\\), \\(x+3=0\\), or \\(x-4=0\\). The solutions are \\(x=5/2,-3,4\\). Their product is \\(\\frac52(-3)(4)=\\boxed{-30}\\)."
+  },
+  "math-20261006-batch465-q394": {
+    "explanation": "Expand: \\((x-2)^2=5x+14\\) becomes \\(x^2-4x+4=5x+14\\), or \\(x^2-9x-10=0\\). By Vieta's formula the sum of the two roots is \\(-(-9)/1=\\boxed{9}\\)."
+  },
+  "math-20261006-batch465-q180": {
+    "explanation": "At \\(x=-3\\), \\(y=2(9)-3-5=10\\). At \\(x=4\\), \\(y=2(16)+4-5=31\\). The line through \\((-3,10)\\) and \\((4,31)\\) has slope \\(\\frac{31-10}{4-(-3)}=\\frac{21}{7}=\\boxed{3}\\)."
+  },
+  "math-20261006-new409-q057": {
+    "explanation": "The line of best fit predicts a response of approximately 524 at input 37. Rounded to the nearest ten, this is \\(\\boxed{520}\\)."
+  },
+  "math-20261006-new409-q080": {
+    "explanation": "The probability of arrival in at least 2 days is \\(0.27+0.31+0.24=0.82\\). The probability of taking more than 5 days is \\(0.24\\). Thus the conditional probability is \\(0.24/0.82\\approx\\boxed{0.29}\\)."
+  },
+  "math-20261006-batch465-q401": {
+    "explanation": "At the y-intercept, \\(x=0\\). Then \\[g(0)=7\\left(\\frac13\\right)^{-2}=7(9)=63.\\] Thus the y-intercept is \\(\\boxed{(0,63)}\\)."
+  }
+}
