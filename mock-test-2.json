@@ -4256,12 +4256,12 @@
               "D": "No commuter travels for fewer than 29.2 minutes."
             },
             "correctAnswer": "B",
-            "explanation": "The plausible interval for the population mean is\n\n31.62.4.\nThus,\n\n29.234.0.",
+            "explanation": "A margin of error of 2.4 minutes around the sample mean 31.6 gives the interval \\[31.6-2.4=29.2\\quad\\text{to}\\quad31.6+2.4=34.0.\\] This is a plausible interval for the city's population **mean**, not a range containing every individual commute.",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 371,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "The plausible interval for the population mean is\n\n31.62.4.\nThus,\n\n29.234.0.",
+              "B": "A margin of error of 2.4 minutes around the sample mean 31.6 gives the interval \\[31.6-2.4=29.2\\quad\\text{to}\\quad31.6+2.4=34.0.\\] This is a plausible interval for the city's population **mean**, not a range containing every individual commute.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
