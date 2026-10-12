@@ -426,8 +426,8 @@
   padding:22px 24px;
 }
 .sat-score-experience .sat-score-two-column {
-  display:grid;
-  grid-template-columns:minmax(0,1.6fr) minmax(300px,.85fr);
+  display:grid!important;
+  grid-template-columns:minmax(0,1.55fr) minmax(280px,.85fr)!important;
   align-items:stretch;
   gap:18px;
 }
@@ -566,9 +566,11 @@ html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .sat-score-experience .sa
 html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .sat-score-experience .sat-score-method-note strong {
   color:#b5d8c9;
 }
-@media(max-width:900px){
+/* Two columns on tablets and desktop; stack only when the two panels
+   would become too narrow to read comfortably. */
+@media(max-width:740px){
   .sat-score-experience .sat-score-two-column {
-    grid-template-columns:minmax(0,1fr);
+    grid-template-columns:minmax(0,1fr)!important;
     gap:16px;
   }
   .sat-score-experience .sat-score-editor {
