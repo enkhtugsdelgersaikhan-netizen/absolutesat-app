@@ -2986,7 +2986,7 @@
             "skill": "Statistics",
             "difficulty": "Easy",
             "passage": "",
-            "question": "which data set is the mean greater than the median?",
+            "question": "For which of the following data sets is the mean greater than the median?",
             "choices": {
               "A": "4,6,8,10,12,14,16",
               "B": "1,9,10,10,11,11,11",
