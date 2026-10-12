@@ -36,11 +36,11 @@
         href="style.css?v=two-panel-home-1"
     >
 
-<link rel="stylesheet" href="/dashboard.css?v=home-analytics-1">
-<link rel="stylesheet" href="/study-guide.css?v=auto-tailored-drills-1">
-<link rel="stylesheet" href="/home-dashboard.css?v=two-panel-home-1">
+<link rel="stylesheet" href="/dashboard.css?v=unified-hub-1">
+<link rel="stylesheet" href="/study-guide.css?v=unified-hub-1">
+<link rel="stylesheet" href="/home-dashboard.css?v=unified-hub-1">
 <link rel="stylesheet" href="/responsive.css?v=1">
-<link rel="stylesheet" href="/home-hub.css?v=1">
+<link rel="stylesheet" href="/home-hub.css?v=unified-hub-1">
 <link rel="stylesheet" href="/sat-score-experience.css?v=1">
     <!-- Vercel Web Analytics -->
     <script>
@@ -165,13 +165,13 @@
         <section id="home-dashboard" class="dashboard-page home-dashboard" aria-labelledby="home-dashboard-title">
             <div class="dashboard-header">
                 <div class="dashboard-header-copy">
-                    <div class="page-eyebrow">YOUR PRACTICE</div>
+                    <div class="page-eyebrow">YOUR LEARNING HUB</div>
                     <h2 id="home-dashboard-title">Welcome to LexLogica.</h2>
                     <p id="home-dashboard-intro">Explore your SAT study tools. Sign in to track your own progress and unlock personalized recommendations.</p>
                 </div>
             </div>
             <section class="dashboard-content" aria-live="polite">
-        <div class="dashboard-kpis">
+        <div class="dashboard-kpis" aria-label="Practice momentum">
             <article class="dashboard-kpi">
                 <span>Practice streak</span>
                 <strong id="streak">—</strong>
@@ -183,27 +183,58 @@
                 <small>Total saved practice answers</small>
             </article>
         </div>
-        <div class="home-hub-choices" role="group" aria-label="Your learning tools">
-          <button type="button" class="home-hub-choice" data-home-panel="study-guide" aria-controls="study-guide" aria-expanded="false">
-            <span class="home-hub-choice-icon" aria-hidden="true">✎</span>
-            <span class="home-hub-choice-text"><strong>Your study guide</strong><small>Latest mock, three priorities, vocabulary and formula practice</small></span>
-            <span class="home-hub-choice-action">Open <span aria-hidden="true">↗</span></span>
-          </button>
-          <button type="button" class="home-hub-choice" data-home-panel="home-progress" aria-controls="home-progress" aria-expanded="false">
-            <span class="home-hub-choice-icon" aria-hidden="true">↗</span>
-            <span class="home-hub-choice-text"><strong>Your progress &amp; analytics</strong><small>Mock score trends, activity, skill accuracy and pacing</small></span>
-            <span class="home-hub-choice-action">Open <span aria-hidden="true">↗</span></span>
-          </button>
-        </div>
-
         <!-- Public study-guide overview; private score and diagnostics load only for the signed-in account. -->
-        <section id="study-guide" class="study-guide-page homepage-study-guide home-hub-detail" aria-labelledby="home-study-guide-title" hidden>
+        <section id="study-guide" class="study-guide-page homepage-study-guide" aria-labelledby="home-study-guide-title">
           <div class="study-guide-wrap">
             <div class="study-guide-intro">
               <span class="study-guide-eyebrow">PERSONALIZED PREPARATION</span>
-              <h2 id="home-study-guide-title">Your next steps</h2>
-              <p>See what matters most, practice your weak domains, and track progress toward your SAT goal.</p>
+              <h2 id="home-study-guide-title">Your personalized SAT study plan</h2>
+              <p>Your activity, mock results, targeted drills, and skill insights in one connected view.</p>
             </div>
+        <section class="dashboard-learning-activity" id="home-progress" aria-label="Practice activity and mock-test scores">
+            <div class="dashboard-learning-charts">
+                <div id="home-progress-example" class="home-progress-example" hidden>
+                    <strong>EXAMPLE PREVIEW — your own results will appear here</strong>
+                    <span>5-day streak · 240 questions answered · Mock 1: 1180 → Mock 2: 1250</span>
+                    <p>After you practice, you'll see real activity, score trends, accuracy, and pacing by skill.</p>
+                </div>
+        <div class="dashboard-chart-grid">
+            <section class="dashboard-panel dashboard-activity-panel">
+                <div class="dashboard-panel-heading">
+                    <div>
+                        <div class="panel-eyebrow">LAST 7 DAYS</div>
+                        <h2>Questions answered</h2>
+                    </div>
+                    <div class="dashboard-legend" aria-label="Chart legend">
+                        <span><i class="is-correct"></i>Correct</span>
+                        <span><i class="is-incorrect"></i>Incorrect</span>
+                    </div>
+                </div>
+                <div id="seven-day-chart" class="seven-day-chart dashboard-empty-chart">Loading practice history…</div>
+            </section>
+
+            <section class="dashboard-panel dashboard-trend-panel">
+                <div class="dashboard-panel-heading">
+                    <div>
+                        <div class="panel-eyebrow">MOCK TESTS</div>
+                        <h2>Mock score progression</h2>
+                        <p>Reading &amp; Writing and Math stack to form each mock’s composite.</p>
+                    </div>
+                    <div class="dashboard-legend dashboard-mock-legend" aria-label="Stacked mock score chart legend">
+                        
+                        <span><i class="is-rw"></i>R&amp;W</span>
+                        <span><i class="is-math"></i>Math</span>
+                    </div>
+                </div>
+                <div id="mock-performance-chart" class="mock-performance-chart dashboard-empty-chart">Complete mock tests to build your score history.</div>
+            </section>
+        </div>
+
+        <div id="subtopic-skill-groups" class="dashboard-skill-groups" hidden aria-live="polite"></div>
+
+        <div id="dashboard-data-note" class="dashboard-data-note" hidden></div>
+            </div>
+        </section>
             <p id="sg-example-label" class="sg-example-label" hidden>EXAMPLE PREVIEW · Illustrative scores and priorities, not personal results</p>
             <div id="study-guide-loading" class="study-guide-loading" role="status">Loading your mock-test history…</div>
     <section id="study-guide-empty" class="study-guide-empty" hidden>
@@ -236,9 +267,15 @@
       </section>
       <div id="sg-plan-content" hidden>
         <section class="sg-section">
-          <div class="sg-section-heading"><div><span class="study-guide-eyebrow">LATEST MOCK DIAGNOSTIC</span><h2>Focus on these three domains</h2></div><p id="sg-diagnostic-note">LexLogica automatically selects 10 unanswered questions for each domain drill, with difficulty tailored to your latest completed mock. No manual question selection needed.</p></div>
-          <div id="sg-top-priorities" class="sg-top-priorities" aria-live="polite"></div>
-          <section class="sg-fluency-practice" aria-label="Vocabulary and formula practice">
+          <div class="sg-section-heading"><div><span class="study-guide-eyebrow">ALL EIGHT SAT DOMAINS</span><h2>Practice by domain</h2></div><p id="sg-diagnostic-note">Your latest mock informs each tailored drill. All eight domains stay visible, with expandable skill analytics in each domain.</p></div>
+          <details class="sg-more-domains" id="sg-all-domains">
+            <summary>View all 8 domains <span>Reading &amp; Writing and Mathematics</span></summary>
+          <div class="sg-priority-grid">
+            <article class="sg-priority-col"><div class="sg-priority-head"><span>01</span><h3>Reading &amp; Writing</h3></div><div id="sg-rw-priorities"></div></article>
+            <article class="sg-priority-col"><div class="sg-priority-head"><span>02</span><h3>Mathematics</h3></div><div id="sg-math-priorities"></div></article>
+          </div>
+          </div>
+           <section class="sg-fluency-practice" aria-label="Vocabulary and formula practice">
             <div class="sg-fluency-heading"><strong>Memory practice</strong><span>Short recall sets, based on what you still need to learn</span></div>
             <div class="sg-fluency-grid">
               <article class="sg-fluency-card" id="sg-vocab-summary">
@@ -253,14 +290,7 @@
               </article>
             </div>
           </section>
-          <details class="sg-more-domains" id="sg-all-domains">
-            <summary>View all 8 domains <span>Reading &amp; Writing and Mathematics</span></summary>
-          <div class="sg-priority-grid">
-            <article class="sg-priority-col"><div class="sg-priority-head"><span>01</span><h3>Reading &amp; Writing</h3></div><div id="sg-rw-priorities"></div></article>
-            <article class="sg-priority-col"><div class="sg-priority-head"><span>02</span><h3>Mathematics</h3></div><div id="sg-math-priorities"></div></article>
-          </div>
-          </details>
-          <p id="sg-practice-message" class="sg-practice-message" role="status" aria-live="polite"></p>
+           <p id="sg-practice-message" class="sg-practice-message" role="status" aria-live="polite"></p>
         </section>
         <div class="sg-workflow" aria-label="Study cycle">
           <div><strong>Review → Practice → Retest</strong><p>Review mistakes from your latest mock, finish each domain’s 10-question assignment, then use the next mock to recalculate priorities.</p></div>
@@ -276,68 +306,7 @@
         </section>
 
 
-        <section class="home-disclosure home-progress-details home-hub-detail" id="home-progress" aria-label="Your progress and analytics" hidden>
-            <div class="home-disclosure-content">
-                <div id="home-progress-example" class="home-progress-example" hidden>
-                    <strong>EXAMPLE PREVIEW — your own results will appear here</strong>
-                    <span>5-day streak · 240 questions answered · Mock 1: 1180 → Mock 2: 1250</span>
-                    <p>After you practice, you'll see real activity, score trends, accuracy, and pacing by skill.</p>
-                </div>
-        <div class="dashboard-chart-grid">
-            <section class="dashboard-panel dashboard-activity-panel">
-                <div class="dashboard-panel-heading">
-                    <div>
-                        <div class="panel-eyebrow">LAST 7 DAYS</div>
-                        <h2>Questions answered</h2>
-                    </div>
-                    <div class="dashboard-legend" aria-label="Chart legend">
-                        <span><i class="is-correct"></i>Correct</span>
-                        <span><i class="is-incorrect"></i>Incorrect</span>
-                    </div>
-                </div>
-                <div id="seven-day-chart" class="seven-day-chart dashboard-empty-chart">Loading practice history…</div>
-            </section>
 
-            <section class="dashboard-panel dashboard-trend-panel">
-                <div class="dashboard-panel-heading">
-                    <div>
-                        <div class="panel-eyebrow">MOCK TESTS</div>
-                        <h2>Mock test performance</h2>
-                        <p>Composite, Reading &amp; Writing, and Math across Mock Tests 1–8</p>
-                    </div>
-                    <div class="dashboard-legend dashboard-mock-legend" aria-label="Mock score chart legend">
-                        <span><i class="is-composite"></i>Composite</span>
-                        <span><i class="is-rw"></i>R&amp;W</span>
-                        <span><i class="is-math"></i>Math</span>
-                    </div>
-                </div>
-                <div id="mock-performance-chart" class="mock-performance-chart dashboard-empty-chart">Complete mock tests to build your score history.</div>
-            </section>
-        </div>
-
-        <section class="dashboard-panel dashboard-subtopic-panel">
-            <div class="dashboard-panel-heading dashboard-table-heading">
-                <div>
-                    <div class="panel-eyebrow">SKILL PERFORMANCE + NEXT WORK</div>
-                    <h2>Accuracy, pace, and what to practice next</h2>
-                </div>
-                <div class="dashboard-filter-group" role="group" aria-label="Filter skills by section">
-                    <button type="button" class="is-active" data-subtopic-filter="all">All</button>
-                    <button type="button" data-subtopic-filter="rw">R&amp;W</button>
-                    <button type="button" data-subtopic-filter="math">Math</button>
-                </div>
-            </div>
-
-            <div id="subtopic-skill-groups" class="dashboard-skill-groups">
-                <div class="dashboard-empty-state">Loading skill analytics…</div>
-            </div>
-
-            <p class="dashboard-benchmark-note">Color benchmark: 90%+ accuracy, about 71 seconds per R&amp;W question, and 95 seconds per Math question. Redder text means farther from the preferred benchmark. Average time uses first-attempt timing recorded from this analytics update onward.</p>
-        </section>
-
-        <div id="dashboard-data-note" class="dashboard-data-note" hidden></div>
-            </div>
-        </section>
     </section>
             <section class="dashboard-account-settings" aria-label="Practice data settings" hidden>
                 <details class="dashboard-settings-disclosure">
@@ -518,10 +487,10 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js?v=home-logout-1"></script>
-<script src="/dashboard.js?v=two-panel-home-1"></script>
-<script src="/study-guide.js?v=auto-tailored-drills-1"></script>
+<script src="/dashboard.js?v=unified-hub-1"></script>
+<script src="/study-guide.js?v=unified-hub-1"></script>
 <script src="/home-fluency.js?v=1"></script>
-<script src="/home-hub.js?v=1"></script>
+
 <script src="/university-top100.js?v=top100-1"></script>
 <script src="/university-catalog.js?v=sat-score-experience-1"></script>
 
