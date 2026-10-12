@@ -6457,7 +6457,7 @@ async function loadMockTest(
         await fetch(
             "/" +
             encodeURIComponent(id) +
-            ".json?v=1",
+            ".json?v=math-audit-20261012",
             {
                 cache: "no-store"
             }
