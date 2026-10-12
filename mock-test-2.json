@@ -3164,7 +3164,7 @@
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "First,\n\n\\[(3x-4)(2x+5)=6x2+7x-20.\\]\nAlso,\n\n\\[2h(x)=2x-14.\\]\nTherefore,\n\n\\[f(x)g(x)+2h(x)=6x2+9x-34.\\]\nHence,\n\\[ \\boxed{b=9}. \\]",
+              "C": "First,\n\\[(3x-4)(2x+5)=6x^2+7x-20.\\]\nAlso,\n\\[2h(x)=2x-14.\\]\nTherefore,\n\\[f(x)g(x)+2h(x)=6x^2+9x-34.\\]\nHence,\n\\[\\boxed{b=9}.\\]",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Quadratics",
@@ -3666,11 +3666,11 @@
               "D": "\\(V=40F+22,800\\)"
             },
             "correctAnswer": "A",
-            "explanation": "Subtract 120:\n\n\\[F-120=0.025(V-18,000).\\]\n\\[Since 1/0.025=40,\\]\n\n\\[40(F-120)=V-18,000.\\]\nTherefore,\n\n\\[V=40F-4,800+18,000=40F+13,200.\\]",
+            "explanation": "Subtract 120:\n\n\\[F-120=0.025(V-18,000).\\]\nSince 1/0.025=40,\n\n\\[40(F-120)=V-18,000.\\]\nTherefore,\n\n\\[V=40F-4,800+18,000=40F+13,200.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 399,
             "choiceExplanations": {
-              "A": "Subtract 120:\n\n\\[F-120=0.025(V-18,000).\\]\n\\[Since 1/0.025=40,\\]\n\n\\[40(F-120)=V-18,000.\\]\nTherefore,\n\n\\[V=40F-4,800+18,000=40F+13,200.\\]",
+              "A": "Subtract 120:\n\n\\[F-120=0.025(V-18,000).\\]\nSince 1/0.025=40,\n\n\\[40(F-120)=V-18,000.\\]\nTherefore,\n\n\\[V=40F-4,800+18,000=40F+13,200.\\]",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -3705,7 +3705,7 @@
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 416,
             "choiceExplanations": {
-              "A": "Distribute the monomial and add exponents of like bases.\nFirst term:\n\n\\[a-2a5b3b-1c4=a3b2c4.\\]\nSecond term:\n\n\\[a-2b3b2c4c-6=a-2b5c-2.\\]\nSo the product is\n\n\\[a3b2c4+a-2b5c-2.\\]",
+              "A": "Distribute the monomial and add exponents of like bases. First term:\n\\[a^{-2}a^5b^3b^{-1}c^4=a^3b^2c^4.\\]\nSecond term:\n\\[a^{-2}b^3b^2c^4c^{-6}=a^{-2}b^5c^{-2}.\\]\nSo the product is\n\\[\\boxed{a^3b^2c^4+a^{-2}b^5c^{-2}}.\\]",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -3766,7 +3766,7 @@
             "question": "If (x,y) satisfies\n\n\\[x+y=19\\]\nand\n\n\\[xy=4x+4y+12,\\]\nwhat is one possible value of x?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "\\[Because x+y=19,\\]\n\n\\[xy=4(19)+12=88.\\]\nThus x and y have sum 19 and product 88. They are therefore the roots of\n\n\\[u^{2}-19u+88=0=(u-8)(u-11).\\]\nHence x can be 8 or 11.",
+            "explanation": "Because x+y=19,\n\n\\[xy=4(19)+12=88.\\]\nThus x and y have sum 19 and product 88. They are therefore the roots of\n\n\\[u^{2}-19u+88=0=(u-8)(u-11).\\]\nHence x can be 8 or 11.",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 376,
             "answerType": "student-response",
@@ -3915,11 +3915,11 @@
               "D": "\\((5,9)\\)"
             },
             "correctAnswer": "A",
-            "explanation": "From the second equation,\n\n\\[2x=14,\\]\nso x=7. Substitute into the first:\n\n\\[5(7)-2y=7\\]\n\n\\[35-2y=7,\\]\n\\[so y=14.\\]",
+            "explanation": "From the second equation,\n\n\\[2x=14,\\]\nso x=7. Substitute into the first:\n\n\\[5(7)-2y=7\\]\n\n\\[35-2y=7,\\]\nso y=14.",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 329,
             "choiceExplanations": {
-              "A": "From the second equation,\n\n\\[2x=14,\\]\nso x=7. Substitute into the first:\n\n\\[5(7)-2y=7\\]\n\n\\[35-2y=7,\\]\n\\[so y=14.\\]",
+              "A": "From the second equation,\n\n\\[2x=14,\\]\nso x=7. Substitute into the first:\n\n\\[5(7)-2y=7\\]\n\n\\[35-2y=7,\\]\nso y=14.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -3979,13 +3979,13 @@
               "D": "\\(5\\)"
             },
             "correctAnswer": "C",
-            "explanation": "Set the function equal to 59:\n\n\\[2(t-1)^{3}+5=59.\\]\nThen\n\n\\[2(t-1)^{3}=54\\]\nand\n\n\\[(t-1)^{3}=27.\\]\nTherefore,\n\n\\[t-1=3,\\]\n\\[so t=4.\\]",
+            "explanation": "Set the function equal to 59:\n\n\\[2(t-1)^{3}+5=59.\\]\nThen\n\n\\[2(t-1)^{3}=54\\]\nand\n\n\\[(t-1)^{3}=27.\\]\nTherefore,\n\n\\[t-1=3,\\]\nso t=4.",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 425,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "Set the function equal to 59:\n\n\\[2(t-1)^{3}+5=59.\\]\nThen\n\n\\[2(t-1)^{3}=54\\]\nand\n\n\\[(t-1)^{3}=27.\\]\nTherefore,\n\n\\[t-1=3,\\]\n\\[so t=4.\\]",
+              "C": "Set the function equal to 59:\n\n\\[2(t-1)^{3}+5=59.\\]\nThen\n\n\\[2(t-1)^{3}=54\\]\nand\n\n\\[(t-1)^{3}=27.\\]\nTherefore,\n\n\\[t-1=3,\\]\nso t=4.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Linear Equations",
@@ -4009,7 +4009,7 @@
             "question": "What is the y-coordinate of the y-intercept of the graph of\n\n\\[4(x-2y)+6=30\\]\nin the xy-plane?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "\\[At the y-intercept, x=0:\\]\n\n\\[4(0-2y)+6=30.\\]\nThus,\n\n\\[-8y=24\\]\nand\n\\[ \\boxed{y=-3}. \\]",
+            "explanation": "At the y-intercept, x=0:\n\n\\[4(0-2y)+6=30.\\]\nThus,\n\n\\[-8y=24\\]\nand\n\\[ \\boxed{y=-3}. \\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 312,
             "answerType": "student-response",
@@ -4870,11 +4870,11 @@
               "D": "\\((5,9)\\)"
             },
             "correctAnswer": "A",
-            "explanation": "From the second equation,\n\n\\[2x=14,\\]\nso x=7. Substitute into the first:\n\n\\[5(7)-2y=7\\]\n\n\\[35-2y=7,\\]\n\\[so y=14.\\]",
+            "explanation": "From the second equation,\n\n\\[2x=14,\\]\nso x=7. Substitute into the first:\n\n\\[5(7)-2y=7\\]\n\n\\[35-2y=7,\\]\nso y=14.",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 329,
             "choiceExplanations": {
-              "A": "From the second equation,\n\n\\[2x=14,\\]\nso x=7. Substitute into the first:\n\n\\[5(7)-2y=7\\]\n\n\\[35-2y=7,\\]\n\\[so y=14.\\]",
+              "A": "From the second equation,\n\n\\[2x=14,\\]\nso x=7. Substitute into the first:\n\n\\[5(7)-2y=7\\]\n\n\\[35-2y=7,\\]\nso y=14.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
