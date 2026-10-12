@@ -3342,7 +3342,7 @@
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 245,
             "choiceExplanations": {
-              "A": "\\[Since x,y>0,\\]\n\n\\[81x6y10=9x3y5.\\]\nThen\n\n\\[9x3y53x5y2=3x-2y3=3y3x2.\\]",
+              "A": "Since \\(x,y>0\\),\n\\[\\sqrt{81x^6y^{10}}=9x^3y^5.\\]\nThen\n\\[\\frac{9x^3y^5}{3x^5y^2}=3x^{-2}y^3=\\boxed{\\frac{3y^3}{x^2}}.\\]",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
