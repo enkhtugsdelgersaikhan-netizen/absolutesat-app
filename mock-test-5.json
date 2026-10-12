@@ -3040,13 +3040,13 @@
               "D": "7,200"
             },
             "correctAnswer": "C",
-            "explanation": "Each component has mass\n\n\\[7.23=2.4kg\\]\nSince\n\n\\[1kg=1000g,\\]\n\n\\[2.4kg=2400g\\]",
+            "explanation": "Three identical components together have mass 7.2 kg, so one weighs \\[7.2/3=2.4\\text{ kg}.\\] Multiplying by 1,000 grams per kilogram gives \\(\\boxed{2{,}400}\\) grams.",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 408,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "Each component has mass\n\n\\[7.23=2.4kg\\]\nSince\n\n\\[1kg=1000g,\\]\n\n\\[2.4kg=2400g\\]",
+              "C": "Three identical components together have mass 7.2 kg, so one weighs \\[7.2/3=2.4\\text{ kg}.\\] Multiplying by 1,000 grams per kilogram gives \\(\\boxed{2{,}400}\\) grams.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Linear Equations",
