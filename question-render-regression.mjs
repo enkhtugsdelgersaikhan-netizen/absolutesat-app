@@ -68,7 +68,7 @@ const responseEnd = source.indexOf("function renderStudentResponse(", responseSt
 assert(responseStart >= 0 && responseEnd > responseStart, "Free-response grader not found");
 const responseContext = vm.createContext({});
 vm.runInContext(source.slice(responseStart, responseEnd) +
-  "\\nthis.__studentGrade = studentResponseIsCorrect;", responseContext);
+  "\nthis.__studentGrade = studentResponseIsCorrect;", responseContext);
 const grade = responseContext.__studentGrade;
 assert(grade({ accepted_answers: ["8/3"] }, "8/3"), "Exact fraction should be accepted");
 assert(grade({ accepted_answers: ["8/3"] }, "2.667"), "Rounded repeating fraction should be accepted");
