@@ -2830,12 +2830,12 @@
               "D": "\\(\\frac{28}{3}\\)"
             },
             "correctAnswer": "B",
-            "explanation": "Combine the coefficients:\n\n\\[34-16=912-212=712.\\]\nThus\n\n\\[712x=73.\\]\nMultiply by 127:\n\n\\[x=4.\\]",
+            "explanation": "Combine like terms: \\[\\left(\\frac34-\\frac16\\right)x=\\frac73,\\qquad \\frac7{12}x=\\frac73.\\] Multiply both sides by \\(\\frac{12}{7}\\): \\[x=\\frac73\\cdot\\frac{12}{7}=\\boxed{4}.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 334,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "Combine the coefficients:\n\n\\[34-16=912-212=712.\\]\nThus\n\n\\[712x=73.\\]\nMultiply by 127:\n\n\\[x=4.\\]",
+              "B": "Combine like terms: \\[\\left(\\frac34-\\frac16\\right)x=\\frac73,\\qquad \\frac7{12}x=\\frac73.\\] Multiply both sides by \\(\\frac{12}{7}\\): \\[x=\\frac73\\cdot\\frac{12}{7}=\\boxed{4}.\\]",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -2865,13 +2865,13 @@
               "D": "\\(17\\)"
             },
             "correctAnswer": "C",
-            "explanation": "\\[First solve 2q+5=-1:\\]\n\n\\[2q=-6q=-3.\\]\nThen\n\n\\[f(-3)=4-3(-3)=13.\\]",
+            "explanation": "First solve \\(2q+5=-1\\). Subtracting 5 gives \\(2q=-6\\), so \\(q=-3\\). Then \\(f(q)=f(-3)=4-3(-3)=\\boxed{13}\\).",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 181,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "\\[First solve 2q+5=-1:\\]\n\n\\[2q=-6q=-3.\\]\nThen\n\n\\[f(-3)=4-3(-3)=13.\\]",
+              "C": "First solve \\(2q+5=-1\\). Subtracting 5 gives \\(2q=-6\\), so \\(q=-3\\). Then \\(f(q)=f(-3)=4-3(-3)=\\boxed{13}\\).",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Linear Equations",
@@ -2900,12 +2900,12 @@
               "D": "55"
             },
             "correctAnswer": "B",
-            "explanation": "The slope is\n\n\\[32-7210-2=-5\\]\nUsing (2,72), the line is\n\n\\[y-72=-5(x-2)\\]\n\\[At x=7.5,\\]\n\n\\[y=72-5(5.5)=44.5\\]\nThe closest choice is 45.",
+            "explanation": "The best-fit line passes through approximately \\((2,72)\\) and \\((10,32)\\), so its slope is \\[\\frac{32-72}{10-2}=-5.\\] Using \\((2,72)\\), the predicted value at \\(x=7.5\\) is \\[y=72-5(7.5-2)=44.5.\\] The closest answer choice is \\(\\boxed{45}\\).",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 391,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "The slope is\n\n\\[32-7210-2=-5\\]\nUsing (2,72), the line is\n\n\\[y-72=-5(x-2)\\]\n\\[At x=7.5,\\]\n\n\\[y=72-5(5.5)=44.5\\]\nThe closest choice is 45.",
+              "B": "The best-fit line passes through approximately \\((2,72)\\) and \\((10,32)\\), so its slope is \\[\\frac{32-72}{10-2}=-5.\\] Using \\((2,72)\\), the predicted value at \\(x=7.5\\) is \\[y=72-5(7.5-2)=44.5.\\] The closest answer choice is \\(\\boxed{45}\\).",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -3020,13 +3020,13 @@
               "D": "64"
             },
             "correctAnswer": "C",
-            "explanation": "There are\n\n\\[5+8=13\\]\nequal ratio parts. Each part equals\n\n\\[9113=7\\]\nThus,\n\n\\[q=8(7)=56\\]",
+            "explanation": "There are \\(5+8=13\\) equal parts in the stated ratio. Since the total is 91, one part is \\(91/13=7\\). The quantity \\(q\\) has eight parts, so \\(q=8(7)=\\boxed{56}\\).",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 376,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "There are\n\n\\[5+8=13\\]\nequal ratio parts. Each part equals\n\n\\[9113=7\\]\nThus,\n\n\\[q=8(7)=56\\]",
+              "C": "There are \\(5+8=13\\) equal parts in the stated ratio. Since the total is 91, one part is \\(91/13=7\\). The quantity \\(q\\) has eight parts, so \\(q=8(7)=\\boxed{56}\\).",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Ratio, Rates, Percentages",
@@ -4008,7 +4008,7 @@
             "skill": "Nonlinear Equations/Functions",
             "difficulty": "Easy",
             "passage": "",
-            "question": "What is one possible solution to\n\n\\[3|2x+1|-5=16?\\]",
+            "question": "What is one possible solution to\n\n\\[3|2x+1|-5=16\\]?",
             "choices": {},
             "correctAnswer": "",
             "explanation": "Add 5 and divide by 3:\n\n\\[|2x+1|=7.\\]\nTherefore,\n\n\\[2x+1=7\\]\nor\n\n\\[2x+1=-7.\\]\nThese give\n\n\\[x=3\\]\nor\n\n\\[x=-4.\\]",
@@ -4037,7 +4037,7 @@
             "skill": "Linear Equations",
             "difficulty": "Easy",
             "passage": "",
-            "question": "What value of \\(x\\) satisfies \\[\\frac{3(x-4)}5=18?\\]",
+            "question": "What value of \\(x\\) satisfies \\[\\frac{3(x-4)}5=18\\]?",
             "choices": {
               "A": "\\(26\\)",
               "B": "\\(30\\)",
@@ -4860,12 +4860,12 @@
               "D": "0.82"
             },
             "correctAnswer": "B",
-            "explanation": "The condition \"at least 2 days\" has probability\n\n\\[0.27+0.31+0.24=0.82\\]\nThe required conditional probability is\n\n0.240.820.293.\nThus 0.29 is closest.",
+            "explanation": "The probability of arrival in at least 2 days is \\(0.27+0.31+0.24=0.82\\). The probability of taking more than 5 days is \\(0.24\\). Thus the conditional probability is \\(0.24/0.82\\approx\\boxed{0.29}\\).",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 80,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "The condition \"at least 2 days\" has probability\n\n\\[0.27+0.31+0.24=0.82\\]\nThe required conditional probability is\n\n0.240.820.293.\nThus 0.29 is closest.",
+              "B": "The probability of arrival in at least 2 days is \\(0.27+0.31+0.24=0.82\\). The probability of taking more than 5 days is \\(0.24\\). Thus the conditional probability is \\(0.24/0.82\\approx\\boxed{0.29}\\).",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -5080,7 +5080,7 @@
             "skill": "Nonlinear Equations/Functions",
             "difficulty": "Easy",
             "passage": "",
-            "question": "What is one possible solution to\n\n\\[3|2x+1|-5=16?\\]",
+            "question": "What is one possible solution to\n\n\\[3|2x+1|-5=16\\]?",
             "choices": {},
             "correctAnswer": "",
             "explanation": "Add 5 and divide by 3:\n\n\\[|2x+1|=7.\\]\nTherefore,\n\n\\[2x+1=7\\]\nor\n\n\\[2x+1=-7.\\]\nThese give\n\n\\[x=3\\]\nor\n\n\\[x=-4.\\]",
@@ -5357,12 +5357,12 @@
               "D": "0.82"
             },
             "correctAnswer": "B",
-            "explanation": "The condition \"at least 2 days\" has probability\n\n\\[0.27+0.31+0.24=0.82\\]\nThe required conditional probability is\n\n0.240.820.293.\nThus 0.29 is closest.",
+            "explanation": "The probability of arrival in at least 2 days is \\(0.27+0.31+0.24=0.82\\). The probability of taking more than 5 days is \\(0.24\\). Thus the conditional probability is \\(0.24/0.82\\approx\\boxed{0.29}\\).",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 80,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "The condition \"at least 2 days\" has probability\n\n\\[0.27+0.31+0.24=0.82\\]\nThe required conditional probability is\n\n0.240.820.293.\nThus 0.29 is closest.",
+              "B": "The probability of arrival in at least 2 days is \\(0.27+0.31+0.24=0.82\\). The probability of taking more than 5 days is \\(0.24\\). Thus the conditional probability is \\(0.24/0.82\\approx\\boxed{0.29}\\).",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -5726,19 +5726,19 @@
             "passage": "For \\(x>0\\), consider the two quantities \\(3^x\\) and \\(8x+1\\).",
             "question": "Which statement is true?",
             "choices": {
-              "A": "\\(3x<8x+1 for every x>0.\\)",
-              "B": "\\(3x>8x+1 for every x>0.\\)",
-              "C": "\\(There is a constant c, where 2<c<3, such that 3x<8x+1 for 0<x<c and 3x>8x+1 for x>c.\\)",
-              "D": "\\(There is a constant c, where 2<c<3, such that 3x>8x+1 for 0<x<c and 3x<8x+1 for x>c.\\)"
+              "A": "\\(3^x<8x+1\\) for every \\(x>0\\).",
+              "B": "\\(3^x>8x+1\\) for every \\(x>0\\).",
+              "C": "There is a constant \\(c\\), with \\(2<c<3\\), such that \\(3^x<8x+1\\) for \\(0<x<c\\), and \\(3^x>8x+1\\) for \\(x>c\\).",
+              "D": "There is a constant \\(c\\), with \\(2<c<3\\), such that \\(3^x>8x+1\\) for \\(0<x<c\\), and \\(3^x<8x+1\\) for \\(x>c\\)."
             },
             "correctAnswer": "C",
-            "explanation": "Check values around the crossover:\n\n\\[32=9<17=8(2)+1\\]\nbut\n\n\\[33=27>25=8(3)+1\\]\nThus, there is an intersection between 2 and 3. Before the positive intersection the linear expression is greater; after it the exponential expression eventually grows faster and remains greater.",
+            "explanation": "At \\(x=2\\), \\(3^2=9<17=8(2)+1\\). At \\(x=3\\), \\(3^3=27>25=8(3)+1\\). The difference \\(3^x-(8x+1)\\) is convex and changes from negative to positive once for \\(x>0\\), so the unique positive crossover \\(c\\) lies between 2 and 3. Choice C describes this correctly.",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 373,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "Check values around the crossover:\n\n\\[32=9<17=8(2)+1\\]\nbut\n\n\\[33=27>25=8(3)+1\\]\nThus, there is an intersection between 2 and 3. Before the positive intersection the linear expression is greater; after it the exponential expression eventually grows faster and remains greater.",
+              "C": "At \\(x=2\\), \\(3^2=9<17=8(2)+1\\). At \\(x=3\\), \\(3^3=27>25=8(3)+1\\). The difference \\(3^x-(8x+1)\\) is convex and changes from negative to positive once for \\(x>0\\), so the unique positive crossover \\(c\\) lies between 2 and 3. Choice C describes this correctly.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Exponential Functions",
