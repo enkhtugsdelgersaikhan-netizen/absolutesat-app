@@ -2830,7 +2830,7 @@
             "question": "According to the line of best fit, what response value, rounded to the nearest 10, is predicted when the input value is 37?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "At x=37, the line of best fit is slightly above 520, approximately 524. Rounded to the nearest 10,\n\n524520.",
+            "explanation": "The line of best fit predicts a response of approximately 524 at input 37. Rounded to the nearest ten, this is \\(\\boxed{520}\\).",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 81,
             "answerType": "student-response",
@@ -2959,12 +2959,12 @@
               "D": "462"
             },
             "correctAnswer": "B",
-            "explanation": "If x is last year's enrollment,\n\n\\[1.36x=340\\]\nTherefore,\n\n\\[x=3401.36=250\\]",
+            "explanation": "If \\(x\\) is last year's enrollment, a 36% increase gives \\(1.36x=340\\). Thus \\(x=340/1.36=\\boxed{250}\\) participants.",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 378,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "If x is last year's enrollment,\n\n\\[1.36x=340\\]\nTherefore,\n\n\\[x=3401.36=250\\]",
+              "B": "If \\(x\\) is last year's enrollment, a 36% increase gives \\(1.36x=340\\). Thus \\(x=340/1.36=\\boxed{250}\\) participants.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -3029,13 +3029,13 @@
               "D": "\\(\\displaystyle \\frac59\\)"
             },
             "correctAnswer": "C",
-            "explanation": "There are\n\n\\[75+60=135\\]\nmembers who are at least 30.\nThus,\n\n\\[P=135180=34\\]",
+            "explanation": "There are \\(75+60=135\\) members aged at least 30, out of 180 in all. The probability is \\[\\frac{135}{180}=\\boxed{\\frac34}.\\]",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 65,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "There are\n\n\\[75+60=135\\]\nmembers who are at least 30.\nThus,\n\n\\[P=135180=34\\]",
+              "C": "There are \\(75+60=135\\) members aged at least 30, out of 180 in all. The probability is \\[\\frac{135}{180}=\\boxed{\\frac34}.\\]",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "table": {
@@ -3185,7 +3185,7 @@
             "skill": "Equivalent Expressions",
             "difficulty": "Medium",
             "passage": "",
-            "question": "The function\n\n\\[P(t)=240(1.08)t-2\\]\nmodels a population t years after monitoring began. Which of the following best interprets the number 240?",
+            "question": "The function \\[P(t)=240(1.08)^{t-2}\\] models a population \\(t\\) years after monitoring began. Which of the following best interprets the number 240?",
             "choices": {
               "A": "The estimated population when monitoring began",
               "B": "The estimated population 2 years after monitoring began",
@@ -3193,12 +3193,12 @@
               "D": "The percent of the initial population remaining after 2 years"
             },
             "correctAnswer": "B",
-            "explanation": "The factor 240 is the function value when the exponent is 0:\n\n\\[t-2=0.\\]\nThus t=2, so 240 represents the estimated population 2 years after monitoring began.",
+            "explanation": "At \\(t=2\\), the exponent \\(t-2\\) is zero. Thus \\(P(2)=240(1.08)^0=240\\), so 240 is the model's estimated population 2 years after monitoring began.",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 427,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "The factor 240 is the function value when the exponent is 0:\n\n\\[t-2=0.\\]\nThus t=2, so 240 represents the estimated population 2 years after monitoring began.",
+              "B": "At \\(t=2\\), the exponent \\(t-2\\) is zero. Thus \\(P(2)=240(1.08)^0=240\\), so 240 is the model's estimated population 2 years after monitoring began.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -3693,7 +3693,7 @@
             "skill": "Polynomial Functions",
             "difficulty": "Hard",
             "passage": "",
-            "question": "For nonzero \\(a,b,\\) and \\(c\\), which expression is the product of\n\\[a^{-2}b^3c^4\\]\nand\n\\[a^5b^{-1}+b^2c^{-6}?\\]",
+            "question": "For nonzero \\(a,b,\\) and \\(c\\), which expression is the product of\n\\[a^{-2}b^3c^4\\]\nand\n\\[a^5b^{-1}+b^2c^{-6}\\]?",
             "choices": {
               "A": "\\(a^3b^2c^4+a^{-2}b^5c^{-2}\\)",
               "B": "\\(a^{-10}b^{-3}c^4+a^{-2}b^6c^{-24}\\)",
@@ -3942,7 +3942,7 @@
             "skill": "Nonlinear Equations/Functions",
             "difficulty": "Easy",
             "passage": "",
-            "question": "What is a positive solution to\n\n\\[(2x-7)(x+4)(x-5)(3x+2)=0?\\]",
+            "question": "What is a positive solution to\n\n\\[(2x-7)(x+4)(x-5)(3x+2)=0\\]?",
             "choices": {},
             "correctAnswer": "",
             "explanation": "By the zero-product property,\n\\[\n2x-7=0,\\quad x+4=0,\\quad x-5=0,\\quad 3x+2=0.\n\\]\nThe solutions are\n\\[\n\\frac72,-4,5,-\\frac23.\n\\]\nThe positive solutions are\n\\[\n\\boxed{\\frac72\\text{ and }5}.\n\\]",
@@ -4091,7 +4091,7 @@
             "skill": "Equivalent Expressions",
             "difficulty": "Easy",
             "passage": "",
-            "question": "Which of the following is equivalent to\n\n\\[-8x+20?\\]",
+            "question": "Which of the following is equivalent to\n\n\\[-8x+20\\]?",
             "choices": {
               "A": "\\(-4(2x-5)\\)",
               "B": "\\(4(2x-5)\\)",
@@ -4438,13 +4438,13 @@
               "D": "\\(12\\)"
             },
             "correctAnswer": "C",
-            "explanation": "From the first equation,\n\n\\[y=3x+52.\\]\nSubstitute into the second:\n\n\\[4x+3x+52=19.\\]\nMultiplying by 2,\n\n\\[8x+3x+5=38,\\]\nso\n\n\\[x=3.\\]\n\\[Then y=7, and\\]\n\n\\[x+y=10.\\]",
+            "explanation": "From \\(2y=3x+5\\), we have \\(y=(3x+5)/2\\). Substitute into \\(4x+y=19\\): \\[4x+\\frac{3x+5}{2}=19.\\] Multiply by 2 to obtain \\(8x+3x+5=38\\), so \\(x=3\\). Then \\(y=(9+5)/2=7\\), and \\(\\boxed{x+y=10}\\).",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 211,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "From the first equation,\n\n\\[y=3x+52.\\]\nSubstitute into the second:\n\n\\[4x+3x+52=19.\\]\nMultiplying by 2,\n\n\\[8x+3x+5=38,\\]\nso\n\n\\[x=3.\\]\n\\[Then y=7, and\\]\n\n\\[x+y=10.\\]",
+              "C": "From \\(2y=3x+5\\), we have \\(y=(3x+5)/2\\). Substitute into \\(4x+y=19\\): \\[4x+\\frac{3x+5}{2}=19.\\] Multiply by 2 to obtain \\(8x+3x+5=38\\), so \\(x=3\\). Then \\(y=(9+5)/2=7\\), and \\(\\boxed{x+y=10}\\).",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Systems of Linear Equations",
@@ -4897,7 +4897,7 @@
             "skill": "Nonlinear Equations/Functions",
             "difficulty": "Easy",
             "passage": "",
-            "question": "What is a positive solution to\n\n\\[(2x-7)(x+4)(x-5)(3x+2)=0?\\]",
+            "question": "What is a positive solution to\n\n\\[(2x-7)(x+4)(x-5)(3x+2)=0\\]?",
             "choices": {},
             "correctAnswer": "",
             "explanation": "By the zero-product property,\n\\[\n2x-7=0,\\quad x+4=0,\\quad x-5=0,\\quad 3x+2=0.\n\\]\nThe solutions are\n\\[\n\\frac72,-4,5,-\\frac23.\n\\]\nThe positive solutions are\n\\[\n\\boxed{\\frac72\\text{ and }5}.\n\\]",
@@ -4964,13 +4964,13 @@
               "D": "\\(12\\)"
             },
             "correctAnswer": "C",
-            "explanation": "From the first equation,\n\n\\[y=3x+52.\\]\nSubstitute into the second:\n\n\\[4x+3x+52=19.\\]\nMultiplying by 2,\n\n\\[8x+3x+5=38,\\]\nso\n\n\\[x=3.\\]\n\\[Then y=7, and\\]\n\n\\[x+y=10.\\]",
+            "explanation": "From \\(2y=3x+5\\), we have \\(y=(3x+5)/2\\). Substitute into \\(4x+y=19\\): \\[4x+\\frac{3x+5}{2}=19.\\] Multiply by 2 to obtain \\(8x+3x+5=38\\), so \\(x=3\\). Then \\(y=(9+5)/2=7\\), and \\(\\boxed{x+y=10}\\).",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 211,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "From the first equation,\n\n\\[y=3x+52.\\]\nSubstitute into the second:\n\n\\[4x+3x+52=19.\\]\nMultiplying by 2,\n\n\\[8x+3x+5=38,\\]\nso\n\n\\[x=3.\\]\n\\[Then y=7, and\\]\n\n\\[x+y=10.\\]",
+              "C": "From \\(2y=3x+5\\), we have \\(y=(3x+5)/2\\). Substitute into \\(4x+y=19\\): \\[4x+\\frac{3x+5}{2}=19.\\] Multiply by 2 to obtain \\(8x+3x+5=38\\), so \\(x=3\\). Then \\(y=(9+5)/2=7\\), and \\(\\boxed{x+y=10}\\).",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Systems of Linear Equations",
@@ -5609,11 +5609,11 @@
               "D": "\\(\\frac{25}{14}b\\)"
             },
             "correctAnswer": "A",
-            "explanation": "Since A is \\(30\\%\\) less than C,\n\n\\[a=0.70c\\]\nAnd since C is \\(125\\%\\) of B,\n\n\\[c=1.25b\\]\nTherefore,\n\n\\[a=(0.70)(1.25)b=0.875b=78b\\]",
+            "explanation": "The speeds satisfy \\(a=0.70c\\) and \\(c=1.25b\\). Hence \\[a=(0.70)(1.25)b=0.875b=\\boxed{\\frac78b}.\\]",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 386,
             "choiceExplanations": {
-              "A": "Since A is \\(30\\%\\) less than C,\n\n\\[a=0.70c\\]\nAnd since C is \\(125\\%\\) of B,\n\n\\[c=1.25b\\]\nTherefore,\n\n\\[a=(0.70)(1.25)b=0.875b=78b\\]",
+              "A": "The speeds satisfy \\(a=0.70c\\) and \\(c=1.25b\\). Hence \\[a=(0.70)(1.25)b=0.875b=\\boxed{\\frac78b}.\\]",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -5644,11 +5644,11 @@
               "D": "The two means are equal."
             },
             "correctAnswer": "A",
-            "explanation": "Since the values are consecutive,\n\n\\[s=r+1,t=r+2\\]\nFor P,\n\n\\[P=7r+5(r+1)12=r+512\\]\nFor Q,\n\n\\[Q=r+4(r+1)+7(r+2)12=r+1812\\]\nTherefore,\n\n\\[Q-P=18-512=1312\\]",
+            "explanation": "Since \\(r,s,t\\) are consecutive integers, \\(s=r+1\\) and \\(t=r+2\\). The mean of P is \\[\\frac{7r+5(r+1)}{12}=r+\\frac5{12}.\\] The mean of Q is \\[\\frac{r+4(r+1)+7(r+2)}{12}=r+\\frac{18}{12}.\\] Therefore Q's mean is \\(\\frac{18-5}{12}=\\boxed{\\frac{13}{12}}\\) greater.",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 372,
             "choiceExplanations": {
-              "A": "Since the values are consecutive,\n\n\\[s=r+1,t=r+2\\]\nFor P,\n\n\\[P=7r+5(r+1)12=r+512\\]\nFor Q,\n\n\\[Q=r+4(r+1)+7(r+2)12=r+1812\\]\nTherefore,\n\n\\[Q-P=18-512=1312\\]",
+              "A": "Since \\(r,s,t\\) are consecutive integers, \\(s=r+1\\) and \\(t=r+2\\). The mean of P is \\[\\frac{7r+5(r+1)}{12}=r+\\frac5{12}.\\] The mean of Q is \\[\\frac{r+4(r+1)+7(r+2)}{12}=r+\\frac{18}{12}.\\] Therefore Q's mean is \\(\\frac{18-5}{12}=\\boxed{\\frac{13}{12}}\\) greater.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
