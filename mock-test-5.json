@@ -2970,11 +2970,11 @@
               "D": "\\(\\frac{386}{475}\\)"
             },
             "correctAnswer": "A",
-            "explanation": "There are 386 students who use a planner daily out of 700 students total.\n\n\\[P=386700=193350\\]",
+            "explanation": "There are 386 daily planner users out of 700 students. The probability is \\[\\frac{386}{700}=\\boxed{\\frac{193}{350}}.\\]",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 401,
             "choiceExplanations": {
-              "A": "There are 386 students who use a planner daily out of 700 students total.\n\n\\[P=386700=193350\\]",
+              "A": "There are 386 daily planner users out of 700 students. The probability is \\[\\frac{386}{700}=\\boxed{\\frac{193}{350}}.\\]",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -3040,13 +3040,13 @@
               "D": "7,200"
             },
             "correctAnswer": "C",
-            "explanation": "Each component has mass\n\n\\[7.23=2.4kg\\]\nSince\n\n\\[1kg=1000g,\\]\n\n\\[2.4kg=2400g\\]",
+            "explanation": "Three identical components together have mass 7.2 kg, so one weighs \\[7.2/3=2.4\\text{ kg}.\\] Multiplying by 1,000 grams per kilogram gives \\(\\boxed{2{,}400}\\) grams.",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 408,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "Each component has mass\n\n\\[7.23=2.4kg\\]\nSince\n\n\\[1kg=1000g,\\]\n\n\\[2.4kg=2400g\\]",
+              "C": "Three identical components together have mass 7.2 kg, so one weighs \\[7.2/3=2.4\\text{ kg}.\\] Multiplying by 1,000 grams per kilogram gives \\(\\boxed{2{,}400}\\) grams.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Linear Equations",
@@ -3103,13 +3103,13 @@
               "D": "\\((0,21)\\)"
             },
             "correctAnswer": "C",
-            "explanation": "\\[At the y-intercept, x=0:\\]\n\n\\[g(0)=713-2=7(9)=63.\\]\n\\[Therefore, the y-intercept is\\]\n\n(0,63).",
+            "explanation": "At the y-intercept, \\(x=0\\). Then \\[g(0)=7\\left(\\frac13\\right)^{-2}=7(9)=63.\\] Thus the y-intercept is \\(\\boxed{(0,63)}\\).",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 401,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "\\[At the y-intercept, x=0:\\]\n\n\\[g(0)=713-2=7(9)=63.\\]\n\\[Therefore, the y-intercept is\\]\n\n(0,63).",
+              "C": "At the y-intercept, \\(x=0\\). Then \\[g(0)=7\\left(\\frac13\\right)^{-2}=7(9)=63.\\] Thus the y-intercept is \\(\\boxed{(0,63)}\\).",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Exponential Functions",
@@ -3330,7 +3330,7 @@
             "skill": "Equivalent Expressions",
             "difficulty": "Medium",
             "passage": "",
-            "question": "For positive \\(x\\) and \\(y\\), which expression is equivalent to \\[\\frac{\\sqrt{81x^6y^{10}}}{3x^5y^2}?\\]",
+            "question": "For positive \\(x\\) and \\(y\\), which expression is equivalent to \\[\\frac{\\sqrt{81x^6y^{10}}}{3x^5y^2}\\]?",
             "choices": {
               "A": "\\(\\displaystyle \\frac{3y^3}{x^2}\\)",
               "B": "\\(\\displaystyle \\frac{3y^5}{x^2}\\)",
@@ -3342,7 +3342,7 @@
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 245,
             "choiceExplanations": {
-              "A": "\\[Since x,y>0,\\]\n\n\\[81x6y10=9x3y5.\\]\nThen\n\n\\[9x3y53x5y2=3x-2y3=3y3x2.\\]",
+              "A": "Since \\(x,y>0\\),\n\\[\\sqrt{81x^6y^{10}}=9x^3y^5.\\]\nThen\n\\[\\frac{9x^3y^5}{3x^5y^2}=3x^{-2}y^3=\\boxed{\\frac{3y^3}{x^2}}.\\]",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -3690,7 +3690,7 @@
             "skill": "Nonlinear Equations/Functions",
             "difficulty": "Hard",
             "passage": "",
-            "question": "Which ordered pair is the solution to the system\n\n\\[y=(x+1)(x-7)\\]\nand\n\n\\[y=-2x-11?\\]",
+            "question": "Which ordered pair is the solution to the system\n\n\\[y=(x+1)(x-7)\\]\nand\n\n\\[y=-2x-11\\]?",
             "choices": {
               "A": "\\((2,-15)\\)",
               "B": "\\((-2,-7)\\)",
@@ -4433,7 +4433,7 @@
             "skill": "Equivalent Expressions",
             "difficulty": "Easy",
             "passage": "",
-            "question": "Which of the following is equivalent to\n\n\\[3(2ab-5)-2(ab+1)?\\]",
+            "question": "Which of the following is equivalent to\n\n\\[3(2ab-5)-2(ab+1)\\]?",
             "choices": {
               "A": "\\(4ab-17\\)",
               "B": "\\(4ab-13\\)",
@@ -4819,7 +4819,7 @@
             "skill": "Nonlinear Equations/Functions",
             "difficulty": "Medium",
             "passage": "",
-            "question": "A solution (x,y) to the system\n\n\\[x^{2}=10x+y-4\\]\n\n\\[y=-10x+68\\]\nhas a value of xy equal to which of the following?",
+            "question": "A solution \\((x,y)\\) to the system \\[x^2=10x+y-4\\] \\[y=-10x+68\\] has \\(x>0\\). What is the value of \\(xy\\)?",
             "choices": {
               "A": "\\(-96\\)",
               "B": "\\(64\\)",
@@ -4827,11 +4827,11 @@
               "D": "\\(-12\\)"
             },
             "correctAnswer": "A",
-            "explanation": "Substitute y=-10x+68 into the first equation:\n\n\\[x^{2}=10x-10x+68-4=64.\\]\n\\[Thus x=8. For x=8,\\]\n\n\\[y=-80+68=-12,\\]\nso\n\n\\[xy=(8)(-12)=-96.\\]",
+            "explanation": "Substituting \\(y=-10x+68\\) gives \\(x^2=64\\), so \\(x=8\\) or \\(x=-8\\). The condition \\(x>0\\) selects \\(x=8\\). Then \\(y=-10(8)+68=-12\\), so \\(xy=8(-12)=\\boxed{-96}\\). Without the positive-\\(x\\) condition, the system would have two different solutions.",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 385,
             "choiceExplanations": {
-              "A": "Substitute y=-10x+68 into the first equation:\n\n\\[x^{2}=10x-10x+68-4=64.\\]\n\\[Thus x=8. For x=8,\\]\n\n\\[y=-80+68=-12,\\]\nso\n\n\\[xy=(8)(-12)=-96.\\]",
+              "A": "Substituting \\(y=-10x+68\\) gives \\(x^2=64\\), so \\(x=8\\) or \\(x=-8\\). The condition \\(x>0\\) selects \\(x=8\\). Then \\(y=-10(8)+68=-12\\), so \\(xy=8(-12)=\\boxed{-96}\\). Without the positive-\\(x\\) condition, the system would have two different solutions.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -5949,7 +5949,7 @@
             "skill": "Nonlinear Equations/Functions",
             "difficulty": "Medium",
             "passage": "",
-            "question": "A solution (x,y) to the system\n\n\\[x^{2}=10x+y-4\\]\n\n\\[y=-10x+68\\]\nhas a value of xy equal to which of the following?",
+            "question": "A solution \\((x,y)\\) to the system \\[x^2=10x+y-4\\] \\[y=-10x+68\\] has \\(x>0\\). What is the value of \\(xy\\)?",
             "choices": {
               "A": "\\(-96\\)",
               "B": "\\(64\\)",
@@ -5957,11 +5957,11 @@
               "D": "\\(-12\\)"
             },
             "correctAnswer": "A",
-            "explanation": "Substitute y=-10x+68 into the first equation:\n\n\\[x^{2}=10x-10x+68-4=64.\\]\n\\[Thus x=8. For x=8,\\]\n\n\\[y=-80+68=-12,\\]\nso\n\n\\[xy=(8)(-12)=-96.\\]",
+            "explanation": "Substituting \\(y=-10x+68\\) gives \\(x^2=64\\), so \\(x=8\\) or \\(x=-8\\). The condition \\(x>0\\) selects \\(x=8\\). Then \\(y=-10(8)+68=-12\\), so \\(xy=8(-12)=\\boxed{-96}\\). Without the positive-\\(x\\) condition, the system would have two different solutions.",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 385,
             "choiceExplanations": {
-              "A": "Substitute y=-10x+68 into the first equation:\n\n\\[x^{2}=10x-10x+68-4=64.\\]\n\\[Thus x=8. For x=8,\\]\n\n\\[y=-80+68=-12,\\]\nso\n\n\\[xy=(8)(-12)=-96.\\]",
+              "A": "Substituting \\(y=-10x+68\\) gives \\(x^2=64\\), so \\(x=8\\) or \\(x=-8\\). The condition \\(x>0\\) selects \\(x=8\\). Then \\(y=-10(8)+68=-12\\), so \\(xy=8(-12)=\\boxed{-96}\\). Without the positive-\\(x\\) condition, the system would have two different solutions.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -6515,7 +6515,7 @@
             "question": "How many attendees are at the symposium?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "The probability of group C is\n\n\\[1-0.38-0.34=0.28\\]\nIf N is the total number of attendees,\n\n\\[0.28N=168\\]\nThus,\n\n\\[N=1680.28=600\\]",
+            "explanation": "The probability of group C is \\(1-0.38-0.34=0.28\\). If the symposium has \\(N\\) attendees, then \\(0.28N=168\\). Thus \\(N=168/0.28=\\boxed{600}\\).",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 47,
             "answerType": "student-response",

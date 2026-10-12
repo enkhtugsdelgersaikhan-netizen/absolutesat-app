@@ -2936,11 +2936,11 @@
               "D": "\\(y=\\frac53x-\\frac{53}{3}\\)"
             },
             "correctAnswer": "A",
-            "explanation": "\\[Use y=mx+b:\\]\n\n\\[-1=-35(10)+b=-6+b.\\]\n\\[Thus b=5, so\\]\n\\[ \\boxed{y=-\\frac35x+5}. \\]",
+            "explanation": "Use \\(y=mx+b\\) with slope \\(m=-\\frac35\\). Substitute \\((10,-1)\\): \\[-1=-\\frac35(10)+b=-6+b.\\] Hence \\(b=5\\), giving \\[\\boxed{y=-\\frac35x+5}.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 277,
             "choiceExplanations": {
-              "A": "\\[Use y=mx+b:\\]\n\n\\[-1=-35(10)+b=-6+b.\\]\n\\[Thus b=5, so\\]\n\\[ \\boxed{y=-\\frac35x+5}. \\]",
+              "A": "Use \\(y=mx+b\\) with slope \\(m=-\\frac35\\). Substitute \\((10,-1)\\): \\[-1=-\\frac35(10)+b=-6+b.\\] Hence \\(b=5\\), giving \\[\\boxed{y=-\\frac35x+5}.\\]",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -3028,7 +3028,7 @@
             "skill": "Nonlinear Equations/Functions",
             "difficulty": "Easy",
             "passage": "",
-            "question": "What is the product of all solutions to\n\n\\[(2x-5)(x+3)(x-4)=0?\\]",
+            "question": "What is the product of all solutions to\n\n\\[(2x-5)(x+3)(x-4)=0\\]?",
             "choices": {
               "A": "\\(-30\\)",
               "B": "\\(30\\)",
@@ -3036,11 +3036,11 @@
               "D": "\\(20\\)"
             },
             "correctAnswer": "A",
-            "explanation": "By the zero-product property,\n\n\\[x=52,x=-3,x=4.\\]\nTheir product is\n\n\\[52(-3)(4)=-30.\\]",
+            "explanation": "Set each factor equal to zero: \\(2x-5=0\\), \\(x+3=0\\), or \\(x-4=0\\). The solutions are \\(x=5/2,-3,4\\). Their product is \\(\\frac52(-3)(4)=\\boxed{-30}\\).",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 232,
             "choiceExplanations": {
-              "A": "By the zero-product property,\n\n\\[x=52,x=-3,x=4.\\]\nTheir product is\n\n\\[52(-3)(4)=-30.\\]",
+              "A": "Set each factor equal to zero: \\(2x-5=0\\), \\(x+3=0\\), or \\(x-4=0\\). The solutions are \\(x=5/2,-3,4\\). Their product is \\(\\frac52(-3)(4)=\\boxed{-30}\\).",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -3253,13 +3253,13 @@
               "D": "The number depends on the values of a and c"
             },
             "correctAnswer": "C",
-            "explanation": "At an intersection,\n\n\\[a(x-2)^{2}-3c=c.\\]\nThus\n\n\\[a(x-2)^{2}=4c\\]\nand\n\n\\[(x-2)^{2}=4ca.\\]\n\\[Since a>0 and c>0,\\]\n\n\\[4ca>0.\\]\nA square equal to a positive number gives two distinct real values of x. Therefore, there are two intersections.",
+            "explanation": "At an intersection,\n\n\\[a(x-2)^{2}-3c=c.\\]\nThus\n\n\\[a(x-2)^{2}=4c\\]\nand\n\n\\[(x-2)^{2}=4ca.\\]\nSince a>0 and c>0,\n\n\\[4ca>0.\\]\nA square equal to a positive number gives two distinct real values of x. Therefore, there are two intersections.",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 463,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "At an intersection,\n\n\\[a(x-2)^{2}-3c=c.\\]\nThus\n\n\\[a(x-2)^{2}=4c\\]\nand\n\n\\[(x-2)^{2}=4ca.\\]\n\\[Since a>0 and c>0,\\]\n\n\\[4ca>0.\\]\nA square equal to a positive number gives two distinct real values of x. Therefore, there are two intersections.",
+              "C": "At an intersection,\n\n\\[a(x-2)^{2}-3c=c.\\]\nThus\n\n\\[a(x-2)^{2}=4c\\]\nand\n\n\\[(x-2)^{2}=4ca.\\]\nSince a>0 and c>0,\n\n\\[4ca>0.\\]\nA square equal to a positive number gives two distinct real values of x. Therefore, there are two intersections.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Systems of Linear Equations",
@@ -3292,7 +3292,7 @@
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 414,
             "choiceExplanations": {
-              "A": "Multiply by m:\n\n\\[mv2=L(T-T0).\\]\nDivide by L:\n\n\\[mv2L=T-T0.\\]\nAdd T0:\n\n\\[T=T0+mv2L.\\]",
+              "A": "Multiply by \\(m\\):\n\\[mv^2=L(T-T_0).\\]\nDivide by \\(L\\):\n\\[\\frac{mv^2}{L}=T-T_0.\\]\nAdd \\(T_0\\):\n\\[\\boxed{T=T_0+\\frac{mv^2}{L}}.\\]",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -3611,12 +3611,12 @@
               "D": "\\(70\\)"
             },
             "correctAnswer": "B",
-            "explanation": "\\[Substitute P=1820:\\]\n\n\\[1820=875+26h-95.\\]\n\\[Since 875-95=780,\\]\n\n\\[1040=26h.\\]\nTherefore,\n\\[ \\boxed{h=40}. \\]",
+            "explanation": "Substitute P=1820:\n\n\\[1820=875+26h-95.\\]\nSince 875-95=780,\n\n\\[1040=26h.\\]\nTherefore,\n\\[ \\boxed{h=40}. \\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 16,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "\\[Substitute P=1820:\\]\n\n\\[1820=875+26h-95.\\]\n\\[Since 875-95=780,\\]\n\n\\[1040=26h.\\]\nTherefore,\n\\[ \\boxed{h=40}. \\]",
+              "B": "Substitute P=1820:\n\n\\[1820=875+26h-95.\\]\nSince 875-95=780,\n\n\\[1040=26h.\\]\nTherefore,\n\\[ \\boxed{h=40}. \\]",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -3706,7 +3706,7 @@
             "question": "What is the value of xy?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "Set the expressions for y equal:\n\n\\[x^2-2x+13=4x+4\\]\nThen\n\n\\[x^2-6x+9=0,\\]\nso\n\n\\[(x-3)^2=0\\]\n\\[and x=3. Therefore,\\]\n\n\\[y=4(3)+4=16\\]\nHence\n\\[ xy=3(16)=\\boxed{48}. \\]",
+            "explanation": "Set the expressions for y equal:\n\n\\[x^2-2x+13=4x+4\\]\nThen\n\n\\[x^2-6x+9=0,\\]\nso\n\n\\[(x-3)^2=0\\]\nand x=3. Therefore,\n\n\\[y=4(3)+4=16\\]\nHence\n\\[ xy=3(16)=\\boxed{48}. \\]",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 9,
             "answerType": "student-response",
@@ -3739,13 +3739,13 @@
               "D": "\\(9\\)"
             },
             "correctAnswer": "C",
-            "explanation": "First find the slope:\n\n\\[m=-2-186-(-4)=-2010=-2.\\]\n\\[Using (-4,18),\\]\n\n\\[18=-2(-4)+b,\\]\n\\[so b=10. The line is\\]\n\n\\[y=-2x+10.\\]\n\\[Now substitute (a+1,-8):\\]\n\n\\[-8=-2(a+1)+10.\\]\nSolving gives\n\\[ \\boxed{a=8}. \\]",
+            "explanation": "From the table, the slope is \\[m=\\frac{-2-18}{6-(-4)}=\\frac{-20}{10}=-2.\\] Using the point \\((-4,18)\\), the intercept is \\(b=10\\), so the line is \\(y=-2x+10\\). Substitute \\((a+1,-8)\\): \\[-8=-2(a+1)+10.\\] Thus \\(-18=-2a-2\\), so \\(\\boxed{a=8}\\).",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 318,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "First find the slope:\n\n\\[m=-2-186-(-4)=-2010=-2.\\]\n\\[Using (-4,18),\\]\n\n\\[18=-2(-4)+b,\\]\n\\[so b=10. The line is\\]\n\n\\[y=-2x+10.\\]\n\\[Now substitute (a+1,-8):\\]\n\n\\[-8=-2(a+1)+10.\\]\nSolving gives\n\\[ \\boxed{a=8}. \\]",
+              "C": "From the table, the slope is \\[m=\\frac{-2-18}{6-(-4)}=\\frac{-20}{10}=-2.\\] Using the point \\((-4,18)\\), the intercept is \\(b=10\\), so the line is \\(y=-2x+10\\). Substitute \\((a+1,-8)\\): \\[-8=-2(a+1)+10.\\] Thus \\(-18=-2a-2\\), so \\(\\boxed{a=8}\\).",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "table": {
@@ -3908,7 +3908,7 @@
             "skill": "Linear Equations",
             "difficulty": "Easy",
             "passage": "",
-            "question": "What value of z satisfies\n\n\\[5(2z+1)-3(z-4)=4(z+6)-2?\\]",
+            "question": "What value of z satisfies\n\n\\[5(2z+1)-3(z-4)=4(z+6)-2\\]?",
             "choices": {},
             "correctAnswer": "",
             "explanation": "Expand:\n\n\\[10z+5-3z+12=4z+24-2.\\]\nThus,\n\n\\[7z+17=4z+22.\\]\nSo\n\n\\[3z=5\\]\nand\n\\[ \\boxed{z=\\frac53}. \\]",
@@ -4487,7 +4487,7 @@
             "skill": "Equivalent Expressions",
             "difficulty": "Medium",
             "passage": "",
-            "question": "Which of the following expressions is equivalent to\n\\[18x^4y-30x^2y^3?\\]",
+            "question": "Which of the following expressions is equivalent to\n\\[18x^4y-30x^2y^3\\]?",
             "choices": {
               "A": "\\(6x^2y(3x^2-5y^2)\\)",
               "B": "\\(6xy(3x^3-5xy^2)\\)",
@@ -4499,7 +4499,7 @@
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 368,
             "choiceExplanations": {
-              "A": "The greatest common factor of 18x4y and 30x2y3 is 6x2y. Factoring it out gives\n\n\\[18x4y-30x2y3=6x2y(3x2-5y2).\\]",
+              "A": "The greatest common factor of \\(18x^4y\\) and \\(30x^2y^3\\) is \\(6x^2y\\). Factoring it out gives\n\\[18x^4y-30x^2y^3=\\boxed{6x^2y(3x^2-5y^2)}.\\]",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -4725,7 +4725,7 @@
             "sourceQuestionNumber": 131,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "The usable rail length is\n\n\\[168-24=144\\]\ninches. With 12-inch bins, the minimum number is\n\n\\[144/12=12.\\]\nWith 8-inch bins, the maximum is\n\n\\[144/8=18.\\]\nThus\n\n12n18.",
+              "B": "The usable rail length is\n\\[168-24=144\\]\ninches. With 12-inch bins, the minimum number is\n\\[\\frac{144}{12}=12.\\]\nWith 8-inch bins, the maximum is\n\\[\\frac{144}{8}=18.\\]\nThus,\n\\[12\\le n\\le18.\\]",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -4750,7 +4750,7 @@
             "question": "what is p, to the nearest integer?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "The number of premium accounts is\n\n\\[0.37(18,600)=6,882\\]\nIn hundreds,\n\n\\[p=6,882100=68.82\\]\nTo the nearest integer,\n\\[ \\boxed{p=69}. \\]",
+            "explanation": "There are \\(0.37(18{,}600)=6{,}882\\) premium accounts. Since \\(p\\) is measured in hundreds of accounts, \\(p=6{,}882/100=68.82\\), which rounds to \\(\\boxed{69}\\).",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 297,
             "answerType": "student-response",
@@ -4819,11 +4819,11 @@
               "D": "\\(T-I=11\\)"
             },
             "correctAnswer": "A",
-            "explanation": "\\[The non-instrument mass is\\]\n\n\\[18+7=25.\\]\nTherefore,\n\n\\[T=I+25,\\]\nor equivalently,\n\\[ \\boxed{T-I=25}. \\]",
+            "explanation": "The non-instrument mass is\n\n\\[18+7=25.\\]\nTherefore,\n\n\\[T=I+25,\\]\nor equivalently,\n\\[ \\boxed{T-I=25}. \\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 59,
             "choiceExplanations": {
-              "A": "\\[The non-instrument mass is\\]\n\n\\[18+7=25.\\]\nTherefore,\n\n\\[T=I+25,\\]\nor equivalently,\n\\[ \\boxed{T-I=25}. \\]",
+              "A": "The non-instrument mass is\n\n\\[18+7=25.\\]\nTherefore,\n\n\\[T=I+25,\\]\nor equivalently,\n\\[ \\boxed{T-I=25}. \\]",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -4947,7 +4947,7 @@
             "skill": "Linear Equations",
             "difficulty": "Easy",
             "passage": "",
-            "question": "What value of z satisfies\n\n\\[5(2z+1)-3(z-4)=4(z+6)-2?\\]",
+            "question": "What value of z satisfies\n\n\\[5(2z+1)-3(z-4)=4(z+6)-2\\]?",
             "choices": {},
             "correctAnswer": "",
             "explanation": "Expand:\n\n\\[10z+5-3z+12=4z+24-2.\\]\nThus,\n\n\\[7z+17=4z+22.\\]\nSo\n\n\\[3z=5\\]\nand\n\\[ \\boxed{z=\\frac53}. \\]",
@@ -5059,11 +5059,11 @@
               "D": "\\(T-I=11\\)"
             },
             "correctAnswer": "A",
-            "explanation": "\\[The non-instrument mass is\\]\n\n\\[18+7=25.\\]\nTherefore,\n\n\\[T=I+25,\\]\nor equivalently,\n\\[ \\boxed{T-I=25}. \\]",
+            "explanation": "The non-instrument mass is\n\n\\[18+7=25.\\]\nTherefore,\n\n\\[T=I+25,\\]\nor equivalently,\n\\[ \\boxed{T-I=25}. \\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 59,
             "choiceExplanations": {
-              "A": "\\[The non-instrument mass is\\]\n\n\\[18+7=25.\\]\nTherefore,\n\n\\[T=I+25,\\]\nor equivalently,\n\\[ \\boxed{T-I=25}. \\]",
+              "A": "The non-instrument mass is\n\n\\[18+7=25.\\]\nTherefore,\n\n\\[T=I+25,\\]\nor equivalently,\n\\[ \\boxed{T-I=25}. \\]",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -5168,7 +5168,7 @@
             "question": "what is p, to the nearest integer?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "The number of premium accounts is\n\n\\[0.37(18,600)=6,882\\]\nIn hundreds,\n\n\\[p=6,882100=68.82\\]\nTo the nearest integer,\n\\[ \\boxed{p=69}. \\]",
+            "explanation": "There are \\(0.37(18{,}600)=6{,}882\\) premium accounts. Since \\(p\\) is measured in hundreds of accounts, \\(p=6{,}882/100=68.82\\), which rounds to \\(\\boxed{69}\\).",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 297,
             "answerType": "student-response",
@@ -5277,7 +5277,7 @@
             "sourceQuestionNumber": 131,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "The usable rail length is\n\n\\[168-24=144\\]\ninches. With 12-inch bins, the minimum number is\n\n\\[144/12=12.\\]\nWith 8-inch bins, the maximum is\n\n\\[144/8=18.\\]\nThus\n\n12n18.",
+              "B": "The usable rail length is\n\\[168-24=144\\]\ninches. With 12-inch bins, the minimum number is\n\\[\\frac{144}{12}=12.\\]\nWith 8-inch bins, the maximum is\n\\[\\frac{144}{8}=18.\\]\nThus,\n\\[12\\le n\\le18.\\]",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -5299,7 +5299,7 @@
             "skill": "Equivalent Expressions",
             "difficulty": "Medium",
             "passage": "",
-            "question": "Which of the following expressions is equivalent to\n\\[18x^4y-30x^2y^3?\\]",
+            "question": "Which of the following expressions is equivalent to\n\\[18x^4y-30x^2y^3\\]?",
             "choices": {
               "A": "\\(6x^2y(3x^2-5y^2)\\)",
               "B": "\\(6xy(3x^3-5xy^2)\\)",
@@ -5311,7 +5311,7 @@
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 368,
             "choiceExplanations": {
-              "A": "The greatest common factor of 18x4y and 30x2y3 is 6x2y. Factoring it out gives\n\n\\[18x4y-30x2y3=6x2y(3x2-5y2).\\]",
+              "A": "The greatest common factor of \\(18x^4y\\) and \\(30x^2y^3\\) is \\(6x^2y\\). Factoring it out gives\n\\[18x^4y-30x^2y^3=\\boxed{6x^2y(3x^2-5y^2)}.\\]",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -5552,12 +5552,12 @@
               "D": "\\(940\\)"
             },
             "correctAnswer": "B",
-            "explanation": "The parabola opens downward and has its unrestricted maximum at\n\n\\[=31.\\]\nThe allowed interval ends at 28, entirely to the left of the vertex. The function increases as  moves toward 31, so the largest allowable angle gives the greatest airflow:\n\\[ \\boxed{28^\\circ}. \\]",
+            "explanation": "The parabola opens downward and reaches its unrestricted maximum at \\(\\theta=31^\\circ\\). However, the fan angle is restricted to \\(18^\\circ\\le\\theta\\le28^\\circ\\). On that entire interval, the airflow increases as \\(\\theta\\) approaches 31°, so the greatest allowable airflow occurs at \\(\\boxed{28^\\circ}\\).",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 172,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "The parabola opens downward and has its unrestricted maximum at\n\n\\[=31.\\]\nThe allowed interval ends at 28, entirely to the left of the vertex. The function increases as  moves toward 31, so the largest allowable angle gives the greatest airflow:\n\\[ \\boxed{28^\\circ}. \\]",
+              "B": "The parabola opens downward and reaches its unrestricted maximum at \\(\\theta=31^\\circ\\). However, the fan angle is restricted to \\(18^\\circ\\le\\theta\\le28^\\circ\\). On that entire interval, the airflow increases as \\(\\theta\\) approaches 31°, so the greatest allowable airflow occurs at \\(\\boxed{28^\\circ}\\).",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -6015,7 +6015,7 @@
             "question": "The function\n\\[\nh(x)=x^3+ax^2+bx+c\n\\]\nhas integer constants \\(a\\), \\(b\\), and \\(c\\). Two of its zeros are 4 and -3, and the sum of all three zeros is 6. What is the value of \\(c\\)?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "If the third zero is r,\n\n\\[4+(-3)+r=6,\\]\n\\[so r=5.\\]\nThus\n\n\\[h(x)=(x-4)(x+3)(x-5).\\]\nThe constant term is the product of the constant terms:\n\n\\[(-4)(3)(-5)=60.\\]\n\\[Therefore, c=60.\\]",
+            "explanation": "If the third zero is r,\n\n\\[4+(-3)+r=6,\\]\nso r=5.\nThus\n\n\\[h(x)=(x-4)(x+3)(x-5).\\]\nThe constant term is the product of the constant terms:\n\n\\[(-4)(3)(-5)=60.\\]\n\\[Therefore, c=60.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 433,
             "answerType": "student-response",

@@ -2830,7 +2830,7 @@
             "question": "According to the line of best fit, what response value, rounded to the nearest 10, is predicted when the input value is 37?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "At x=37, the line of best fit is slightly above 520, approximately 524. Rounded to the nearest 10,\n\n524520.",
+            "explanation": "The line of best fit predicts a response of approximately 524 at input 37. Rounded to the nearest ten, this is \\(\\boxed{520}\\).",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 81,
             "answerType": "student-response",
@@ -2959,12 +2959,12 @@
               "D": "462"
             },
             "correctAnswer": "B",
-            "explanation": "If x is last year's enrollment,\n\n\\[1.36x=340\\]\nTherefore,\n\n\\[x=3401.36=250\\]",
+            "explanation": "If \\(x\\) is last year's enrollment, a 36% increase gives \\(1.36x=340\\). Thus \\(x=340/1.36=\\boxed{250}\\) participants.",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 378,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "If x is last year's enrollment,\n\n\\[1.36x=340\\]\nTherefore,\n\n\\[x=3401.36=250\\]",
+              "B": "If \\(x\\) is last year's enrollment, a 36% increase gives \\(1.36x=340\\). Thus \\(x=340/1.36=\\boxed{250}\\) participants.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -3029,13 +3029,13 @@
               "D": "\\(\\displaystyle \\frac59\\)"
             },
             "correctAnswer": "C",
-            "explanation": "There are\n\n\\[75+60=135\\]\nmembers who are at least 30.\nThus,\n\n\\[P=135180=34\\]",
+            "explanation": "There are \\(75+60=135\\) members aged at least 30, out of 180 in all. The probability is \\[\\frac{135}{180}=\\boxed{\\frac34}.\\]",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 65,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "There are\n\n\\[75+60=135\\]\nmembers who are at least 30.\nThus,\n\n\\[P=135180=34\\]",
+              "C": "There are \\(75+60=135\\) members aged at least 30, out of 180 in all. The probability is \\[\\frac{135}{180}=\\boxed{\\frac34}.\\]",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "table": {
@@ -3164,7 +3164,7 @@
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "First,\n\n\\[(3x-4)(2x+5)=6x2+7x-20.\\]\nAlso,\n\n\\[2h(x)=2x-14.\\]\nTherefore,\n\n\\[f(x)g(x)+2h(x)=6x2+9x-34.\\]\nHence,\n\\[ \\boxed{b=9}. \\]",
+              "C": "First,\n\\[(3x-4)(2x+5)=6x^2+7x-20.\\]\nAlso,\n\\[2h(x)=2x-14.\\]\nTherefore,\n\\[f(x)g(x)+2h(x)=6x^2+9x-34.\\]\nHence,\n\\[\\boxed{b=9}.\\]",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Quadratics",
@@ -3185,7 +3185,7 @@
             "skill": "Equivalent Expressions",
             "difficulty": "Medium",
             "passage": "",
-            "question": "The function\n\n\\[P(t)=240(1.08)t-2\\]\nmodels a population t years after monitoring began. Which of the following best interprets the number 240?",
+            "question": "The function \\[P(t)=240(1.08)^{t-2}\\] models a population \\(t\\) years after monitoring began. Which of the following best interprets the number 240?",
             "choices": {
               "A": "The estimated population when monitoring began",
               "B": "The estimated population 2 years after monitoring began",
@@ -3193,12 +3193,12 @@
               "D": "The percent of the initial population remaining after 2 years"
             },
             "correctAnswer": "B",
-            "explanation": "The factor 240 is the function value when the exponent is 0:\n\n\\[t-2=0.\\]\nThus t=2, so 240 represents the estimated population 2 years after monitoring began.",
+            "explanation": "At \\(t=2\\), the exponent \\(t-2\\) is zero. Thus \\(P(2)=240(1.08)^0=240\\), so 240 is the model's estimated population 2 years after monitoring began.",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 427,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "The factor 240 is the function value when the exponent is 0:\n\n\\[t-2=0.\\]\nThus t=2, so 240 represents the estimated population 2 years after monitoring began.",
+              "B": "At \\(t=2\\), the exponent \\(t-2\\) is zero. Thus \\(P(2)=240(1.08)^0=240\\), so 240 is the model's estimated population 2 years after monitoring began.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -3666,11 +3666,11 @@
               "D": "\\(V=40F+22,800\\)"
             },
             "correctAnswer": "A",
-            "explanation": "Subtract 120:\n\n\\[F-120=0.025(V-18,000).\\]\n\\[Since 1/0.025=40,\\]\n\n\\[40(F-120)=V-18,000.\\]\nTherefore,\n\n\\[V=40F-4,800+18,000=40F+13,200.\\]",
+            "explanation": "Subtract 120:\n\n\\[F-120=0.025(V-18,000).\\]\nSince 1/0.025=40,\n\n\\[40(F-120)=V-18,000.\\]\nTherefore,\n\n\\[V=40F-4,800+18,000=40F+13,200.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 399,
             "choiceExplanations": {
-              "A": "Subtract 120:\n\n\\[F-120=0.025(V-18,000).\\]\n\\[Since 1/0.025=40,\\]\n\n\\[40(F-120)=V-18,000.\\]\nTherefore,\n\n\\[V=40F-4,800+18,000=40F+13,200.\\]",
+              "A": "Subtract 120:\n\n\\[F-120=0.025(V-18,000).\\]\nSince 1/0.025=40,\n\n\\[40(F-120)=V-18,000.\\]\nTherefore,\n\n\\[V=40F-4,800+18,000=40F+13,200.\\]",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -3693,7 +3693,7 @@
             "skill": "Polynomial Functions",
             "difficulty": "Hard",
             "passage": "",
-            "question": "For nonzero \\(a,b,\\) and \\(c\\), which expression is the product of\n\\[a^{-2}b^3c^4\\]\nand\n\\[a^5b^{-1}+b^2c^{-6}?\\]",
+            "question": "For nonzero \\(a,b,\\) and \\(c\\), which expression is the product of\n\\[a^{-2}b^3c^4\\]\nand\n\\[a^5b^{-1}+b^2c^{-6}\\]?",
             "choices": {
               "A": "\\(a^3b^2c^4+a^{-2}b^5c^{-2}\\)",
               "B": "\\(a^{-10}b^{-3}c^4+a^{-2}b^6c^{-24}\\)",
@@ -3705,7 +3705,7 @@
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 416,
             "choiceExplanations": {
-              "A": "Distribute the monomial and add exponents of like bases.\nFirst term:\n\n\\[a-2a5b3b-1c4=a3b2c4.\\]\nSecond term:\n\n\\[a-2b3b2c4c-6=a-2b5c-2.\\]\nSo the product is\n\n\\[a3b2c4+a-2b5c-2.\\]",
+              "A": "Distribute the monomial and add exponents of like bases. First term:\n\\[a^{-2}a^5b^3b^{-1}c^4=a^3b^2c^4.\\]\nSecond term:\n\\[a^{-2}b^3b^2c^4c^{-6}=a^{-2}b^5c^{-2}.\\]\nSo the product is\n\\[\\boxed{a^3b^2c^4+a^{-2}b^5c^{-2}}.\\]",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -3766,7 +3766,7 @@
             "question": "If (x,y) satisfies\n\n\\[x+y=19\\]\nand\n\n\\[xy=4x+4y+12,\\]\nwhat is one possible value of x?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "\\[Because x+y=19,\\]\n\n\\[xy=4(19)+12=88.\\]\nThus x and y have sum 19 and product 88. They are therefore the roots of\n\n\\[u^{2}-19u+88=0=(u-8)(u-11).\\]\nHence x can be 8 or 11.",
+            "explanation": "Because x+y=19,\n\n\\[xy=4(19)+12=88.\\]\nThus x and y have sum 19 and product 88. They are therefore the roots of\n\n\\[u^{2}-19u+88=0=(u-8)(u-11).\\]\nHence x can be 8 or 11.",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 376,
             "answerType": "student-response",
@@ -3915,11 +3915,11 @@
               "D": "\\((5,9)\\)"
             },
             "correctAnswer": "A",
-            "explanation": "From the second equation,\n\n\\[2x=14,\\]\nso x=7. Substitute into the first:\n\n\\[5(7)-2y=7\\]\n\n\\[35-2y=7,\\]\n\\[so y=14.\\]",
+            "explanation": "From the second equation,\n\n\\[2x=14,\\]\nso x=7. Substitute into the first:\n\n\\[5(7)-2y=7\\]\n\n\\[35-2y=7,\\]\nso y=14.",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 329,
             "choiceExplanations": {
-              "A": "From the second equation,\n\n\\[2x=14,\\]\nso x=7. Substitute into the first:\n\n\\[5(7)-2y=7\\]\n\n\\[35-2y=7,\\]\n\\[so y=14.\\]",
+              "A": "From the second equation,\n\n\\[2x=14,\\]\nso x=7. Substitute into the first:\n\n\\[5(7)-2y=7\\]\n\n\\[35-2y=7,\\]\nso y=14.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -3942,7 +3942,7 @@
             "skill": "Nonlinear Equations/Functions",
             "difficulty": "Easy",
             "passage": "",
-            "question": "What is a positive solution to\n\n\\[(2x-7)(x+4)(x-5)(3x+2)=0?\\]",
+            "question": "What is a positive solution to\n\n\\[(2x-7)(x+4)(x-5)(3x+2)=0\\]?",
             "choices": {},
             "correctAnswer": "",
             "explanation": "By the zero-product property,\n\\[\n2x-7=0,\\quad x+4=0,\\quad x-5=0,\\quad 3x+2=0.\n\\]\nThe solutions are\n\\[\n\\frac72,-4,5,-\\frac23.\n\\]\nThe positive solutions are\n\\[\n\\boxed{\\frac72\\text{ and }5}.\n\\]",
@@ -3979,13 +3979,13 @@
               "D": "\\(5\\)"
             },
             "correctAnswer": "C",
-            "explanation": "Set the function equal to 59:\n\n\\[2(t-1)^{3}+5=59.\\]\nThen\n\n\\[2(t-1)^{3}=54\\]\nand\n\n\\[(t-1)^{3}=27.\\]\nTherefore,\n\n\\[t-1=3,\\]\n\\[so t=4.\\]",
+            "explanation": "Set the function equal to 59:\n\n\\[2(t-1)^{3}+5=59.\\]\nThen\n\n\\[2(t-1)^{3}=54\\]\nand\n\n\\[(t-1)^{3}=27.\\]\nTherefore,\n\n\\[t-1=3,\\]\nso t=4.",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 425,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "Set the function equal to 59:\n\n\\[2(t-1)^{3}+5=59.\\]\nThen\n\n\\[2(t-1)^{3}=54\\]\nand\n\n\\[(t-1)^{3}=27.\\]\nTherefore,\n\n\\[t-1=3,\\]\n\\[so t=4.\\]",
+              "C": "Set the function equal to 59:\n\n\\[2(t-1)^{3}+5=59.\\]\nThen\n\n\\[2(t-1)^{3}=54\\]\nand\n\n\\[(t-1)^{3}=27.\\]\nTherefore,\n\n\\[t-1=3,\\]\nso t=4.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Linear Equations",
@@ -4009,7 +4009,7 @@
             "question": "What is the y-coordinate of the y-intercept of the graph of\n\n\\[4(x-2y)+6=30\\]\nin the xy-plane?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "\\[At the y-intercept, x=0:\\]\n\n\\[4(0-2y)+6=30.\\]\nThus,\n\n\\[-8y=24\\]\nand\n\\[ \\boxed{y=-3}. \\]",
+            "explanation": "At the y-intercept, x=0:\n\n\\[4(0-2y)+6=30.\\]\nThus,\n\n\\[-8y=24\\]\nand\n\\[ \\boxed{y=-3}. \\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 312,
             "answerType": "student-response",
@@ -4091,7 +4091,7 @@
             "skill": "Equivalent Expressions",
             "difficulty": "Easy",
             "passage": "",
-            "question": "Which of the following is equivalent to\n\n\\[-8x+20?\\]",
+            "question": "Which of the following is equivalent to\n\n\\[-8x+20\\]?",
             "choices": {
               "A": "\\(-4(2x-5)\\)",
               "B": "\\(4(2x-5)\\)",
@@ -4256,12 +4256,12 @@
               "D": "No commuter travels for fewer than 29.2 minutes."
             },
             "correctAnswer": "B",
-            "explanation": "The plausible interval for the population mean is\n\n31.62.4.\nThus,\n\n29.234.0.",
+            "explanation": "A margin of error of 2.4 minutes around the sample mean 31.6 gives the interval \\[31.6-2.4=29.2\\quad\\text{to}\\quad31.6+2.4=34.0.\\] This is a plausible interval for the city's population **mean**, not a range containing every individual commute.",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 371,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "The plausible interval for the population mean is\n\n31.62.4.\nThus,\n\n29.234.0.",
+              "B": "A margin of error of 2.4 minutes around the sample mean 31.6 gives the interval \\[31.6-2.4=29.2\\quad\\text{to}\\quad31.6+2.4=34.0.\\] This is a plausible interval for the city's population **mean**, not a range containing every individual commute.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -4438,13 +4438,13 @@
               "D": "\\(12\\)"
             },
             "correctAnswer": "C",
-            "explanation": "From the first equation,\n\n\\[y=3x+52.\\]\nSubstitute into the second:\n\n\\[4x+3x+52=19.\\]\nMultiplying by 2,\n\n\\[8x+3x+5=38,\\]\nso\n\n\\[x=3.\\]\n\\[Then y=7, and\\]\n\n\\[x+y=10.\\]",
+            "explanation": "From \\(2y=3x+5\\), we have \\(y=(3x+5)/2\\). Substitute into \\(4x+y=19\\): \\[4x+\\frac{3x+5}{2}=19.\\] Multiply by 2 to obtain \\(8x+3x+5=38\\), so \\(x=3\\). Then \\(y=(9+5)/2=7\\), and \\(\\boxed{x+y=10}\\).",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 211,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "From the first equation,\n\n\\[y=3x+52.\\]\nSubstitute into the second:\n\n\\[4x+3x+52=19.\\]\nMultiplying by 2,\n\n\\[8x+3x+5=38,\\]\nso\n\n\\[x=3.\\]\n\\[Then y=7, and\\]\n\n\\[x+y=10.\\]",
+              "C": "From \\(2y=3x+5\\), we have \\(y=(3x+5)/2\\). Substitute into \\(4x+y=19\\): \\[4x+\\frac{3x+5}{2}=19.\\] Multiply by 2 to obtain \\(8x+3x+5=38\\), so \\(x=3\\). Then \\(y=(9+5)/2=7\\), and \\(\\boxed{x+y=10}\\).",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Systems of Linear Equations",
@@ -4870,11 +4870,11 @@
               "D": "\\((5,9)\\)"
             },
             "correctAnswer": "A",
-            "explanation": "From the second equation,\n\n\\[2x=14,\\]\nso x=7. Substitute into the first:\n\n\\[5(7)-2y=7\\]\n\n\\[35-2y=7,\\]\n\\[so y=14.\\]",
+            "explanation": "From the second equation,\n\n\\[2x=14,\\]\nso x=7. Substitute into the first:\n\n\\[5(7)-2y=7\\]\n\n\\[35-2y=7,\\]\nso y=14.",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 329,
             "choiceExplanations": {
-              "A": "From the second equation,\n\n\\[2x=14,\\]\nso x=7. Substitute into the first:\n\n\\[5(7)-2y=7\\]\n\n\\[35-2y=7,\\]\n\\[so y=14.\\]",
+              "A": "From the second equation,\n\n\\[2x=14,\\]\nso x=7. Substitute into the first:\n\n\\[5(7)-2y=7\\]\n\n\\[35-2y=7,\\]\nso y=14.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -4897,7 +4897,7 @@
             "skill": "Nonlinear Equations/Functions",
             "difficulty": "Easy",
             "passage": "",
-            "question": "What is a positive solution to\n\n\\[(2x-7)(x+4)(x-5)(3x+2)=0?\\]",
+            "question": "What is a positive solution to\n\n\\[(2x-7)(x+4)(x-5)(3x+2)=0\\]?",
             "choices": {},
             "correctAnswer": "",
             "explanation": "By the zero-product property,\n\\[\n2x-7=0,\\quad x+4=0,\\quad x-5=0,\\quad 3x+2=0.\n\\]\nThe solutions are\n\\[\n\\frac72,-4,5,-\\frac23.\n\\]\nThe positive solutions are\n\\[\n\\boxed{\\frac72\\text{ and }5}.\n\\]",
@@ -4964,13 +4964,13 @@
               "D": "\\(12\\)"
             },
             "correctAnswer": "C",
-            "explanation": "From the first equation,\n\n\\[y=3x+52.\\]\nSubstitute into the second:\n\n\\[4x+3x+52=19.\\]\nMultiplying by 2,\n\n\\[8x+3x+5=38,\\]\nso\n\n\\[x=3.\\]\n\\[Then y=7, and\\]\n\n\\[x+y=10.\\]",
+            "explanation": "From \\(2y=3x+5\\), we have \\(y=(3x+5)/2\\). Substitute into \\(4x+y=19\\): \\[4x+\\frac{3x+5}{2}=19.\\] Multiply by 2 to obtain \\(8x+3x+5=38\\), so \\(x=3\\). Then \\(y=(9+5)/2=7\\), and \\(\\boxed{x+y=10}\\).",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 211,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "From the first equation,\n\n\\[y=3x+52.\\]\nSubstitute into the second:\n\n\\[4x+3x+52=19.\\]\nMultiplying by 2,\n\n\\[8x+3x+5=38,\\]\nso\n\n\\[x=3.\\]\n\\[Then y=7, and\\]\n\n\\[x+y=10.\\]",
+              "C": "From \\(2y=3x+5\\), we have \\(y=(3x+5)/2\\). Substitute into \\(4x+y=19\\): \\[4x+\\frac{3x+5}{2}=19.\\] Multiply by 2 to obtain \\(8x+3x+5=38\\), so \\(x=3\\). Then \\(y=(9+5)/2=7\\), and \\(\\boxed{x+y=10}\\).",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Systems of Linear Equations",
@@ -5609,11 +5609,11 @@
               "D": "\\(\\frac{25}{14}b\\)"
             },
             "correctAnswer": "A",
-            "explanation": "Since A is \\(30\\%\\) less than C,\n\n\\[a=0.70c\\]\nAnd since C is \\(125\\%\\) of B,\n\n\\[c=1.25b\\]\nTherefore,\n\n\\[a=(0.70)(1.25)b=0.875b=78b\\]",
+            "explanation": "The speeds satisfy \\(a=0.70c\\) and \\(c=1.25b\\). Hence \\[a=(0.70)(1.25)b=0.875b=\\boxed{\\frac78b}.\\]",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 386,
             "choiceExplanations": {
-              "A": "Since A is \\(30\\%\\) less than C,\n\n\\[a=0.70c\\]\nAnd since C is \\(125\\%\\) of B,\n\n\\[c=1.25b\\]\nTherefore,\n\n\\[a=(0.70)(1.25)b=0.875b=78b\\]",
+              "A": "The speeds satisfy \\(a=0.70c\\) and \\(c=1.25b\\). Hence \\[a=(0.70)(1.25)b=0.875b=\\boxed{\\frac78b}.\\]",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -5644,11 +5644,11 @@
               "D": "The two means are equal."
             },
             "correctAnswer": "A",
-            "explanation": "Since the values are consecutive,\n\n\\[s=r+1,t=r+2\\]\nFor P,\n\n\\[P=7r+5(r+1)12=r+512\\]\nFor Q,\n\n\\[Q=r+4(r+1)+7(r+2)12=r+1812\\]\nTherefore,\n\n\\[Q-P=18-512=1312\\]",
+            "explanation": "Since \\(r,s,t\\) are consecutive integers, \\(s=r+1\\) and \\(t=r+2\\). The mean of P is \\[\\frac{7r+5(r+1)}{12}=r+\\frac5{12}.\\] The mean of Q is \\[\\frac{r+4(r+1)+7(r+2)}{12}=r+\\frac{18}{12}.\\] Therefore Q's mean is \\(\\frac{18-5}{12}=\\boxed{\\frac{13}{12}}\\) greater.",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 372,
             "choiceExplanations": {
-              "A": "Since the values are consecutive,\n\n\\[s=r+1,t=r+2\\]\nFor P,\n\n\\[P=7r+5(r+1)12=r+512\\]\nFor Q,\n\n\\[Q=r+4(r+1)+7(r+2)12=r+1812\\]\nTherefore,\n\n\\[Q-P=18-512=1312\\]",
+              "A": "Since \\(r,s,t\\) are consecutive integers, \\(s=r+1\\) and \\(t=r+2\\). The mean of P is \\[\\frac{7r+5(r+1)}{12}=r+\\frac5{12}.\\] The mean of Q is \\[\\frac{r+4(r+1)+7(r+2)}{12}=r+\\frac{18}{12}.\\] Therefore Q's mean is \\(\\frac{18-5}{12}=\\boxed{\\frac{13}{12}}\\) greater.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."

@@ -2761,14 +2761,14 @@
               "D": "\\(19\\)"
             },
             "correctAnswer": "D",
-            "explanation": "\\[To obtain f(9), set\\]\n\n\\[2x-1=9.\\]\n\\[Then 2x=10, so x=5. Therefore,\\]\n\n\\[f(9)=3(5)+4=19.\\]",
+            "explanation": "To obtain f(9), set\n\n\\[2x-1=9.\\]\nThen 2x=10, so x=5. Therefore,\n\n\\[f(9)=3(5)+4=19.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 365,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
-              "D": "\\[To obtain f(9), set\\]\n\n\\[2x-1=9.\\]\n\\[Then 2x=10, so x=5. Therefore,\\]\n\n\\[f(9)=3(5)+4=19.\\]"
+              "D": "To obtain f(9), set\n\n\\[2x-1=9.\\]\nThen 2x=10, so x=5. Therefore,\n\n\\[f(9)=3(5)+4=19.\\]"
             },
             "subtopic": "Linear Equations",
             "classificationVersion": "2026-10-08-relative-30-40-30-v3"
@@ -2846,7 +2846,7 @@
             "skill": "Linear Functions",
             "difficulty": "Easy",
             "passage": "",
-            "question": "The function g is defined by\n\n\\[g(x)=2(5x-11).\\]\nWhat is the y-coordinate of the y-intercept of the graph\n\n\\[y=12g(x)+7?\\]",
+            "question": "The function \\(g\\) is defined by \\[g(x)=2(5x-11).\\] What is the y-coordinate of the y-intercept of the graph of \\[y=\\frac12g(x)+7\\]?",
             "choices": {
               "A": "\\(-22\\)",
               "B": "\\(-11\\)",
@@ -2854,13 +2854,13 @@
               "D": "\\(7\\)"
             },
             "correctAnswer": "C",
-            "explanation": "\\[At the y-intercept, x=0.\\]\n\n\\[g(0)=2(-11)=-22.\\]\nTherefore,\n\n\\[y=12(-22)+7=-11+7=-4.\\]",
+            "explanation": "At the y-intercept, \\(x=0\\). Then \\(g(0)=2(5(0)-11)=-22\\), and \\[y=\\frac12(-22)+7=-11+7=\\boxed{-4}.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 224,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "\\[At the y-intercept, x=0.\\]\n\n\\[g(0)=2(-11)=-22.\\]\nTherefore,\n\n\\[y=12(-22)+7=-11+7=-4.\\]",
+              "C": "At the y-intercept, \\(x=0\\). Then \\(g(0)=2(5(0)-11)=-22\\), and \\[y=\\frac12(-22)+7=-11+7=\\boxed{-4}.\\]",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Linear Functions",
@@ -2885,17 +2885,17 @@
             "choices": {
               "A": "\\(-8\\)",
               "B": "\\(4\\)",
-              "C": "\\(8\\)",
+              "C": "\\(14\\)",
               "D": "\\(12\\)"
             },
             "correctAnswer": "C",
-            "explanation": "\\[Since h=5,\\]\n\n\\[2-h=-3.\\]\nThen\n\n\\[f(-3)=9-12-5-1=-8-1=8.\\]",
+            "explanation": "With \\(h=5\\), we have \\(2-h=-3\\). Substitute into the given function: \\[f(-3)=(-3)^2+4(-3)-5(-3)+2=9-12+15+2=\\boxed{14}.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 150,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "\\[Since h=5,\\]\n\n\\[2-h=-3.\\]\nThen\n\n\\[f(-3)=9-12-5-1=-8-1=8.\\]",
+              "C": "With \\(h=5\\), we have \\(2-h=-3\\). Substitute into the given function: \\[f(-3)=(-3)^2+4(-3)-5(-3)+2=9-12+15+2=\\boxed{14}.\\]",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Quadratics",
@@ -3107,13 +3107,13 @@
               "D": "\\(3\\)"
             },
             "correctAnswer": "C",
-            "explanation": "Since 3x-2y=14, substitute 14 for 3x-2y in the second equation:\n\n\\[2(14)+5y=53.\\]\n\\[Thus 5y=25, so y=5. Then\\]\n\n\\[3x-2(5)=14,\\]\n\\[so 3x=24 and x=8.\\]",
+            "explanation": "Since 3x-2y=14, substitute 14 for 3x-2y in the second equation:\n\n\\[2(14)+5y=53.\\]\nThus 5y=25, so y=5. Then\n\n\\[3x-2(5)=14,\\]\nso 3x=24 and x=8.",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 323,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "Since 3x-2y=14, substitute 14 for 3x-2y in the second equation:\n\n\\[2(14)+5y=53.\\]\n\\[Thus 5y=25, so y=5. Then\\]\n\n\\[3x-2(5)=14,\\]\n\\[so 3x=24 and x=8.\\]",
+              "C": "Since 3x-2y=14, substitute 14 for 3x-2y in the second equation:\n\n\\[2(14)+5y=53.\\]\nThus 5y=25, so y=5. Then\n\n\\[3x-2(5)=14,\\]\nso 3x=24 and x=8.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Systems of Linear Equations",
@@ -3247,13 +3247,13 @@
               "D": "\\(7\\)"
             },
             "correctAnswer": "C",
-            "explanation": "\\[At x=-3,\\]\n\n\\[y=2(9)-3-5=10.\\]\n\\[At x=4,\\]\n\n\\[y=2(16)+4-5=31.\\]\nThus the line passes through (-3,10) and (4,31). Its slope is\n\\[ \\frac{31-10}{4-(-3)} =\\frac{21}{7} =\\boxed3. \\]",
+            "explanation": "At \\(x=-3\\), \\(y=2(9)-3-5=10\\). At \\(x=4\\), \\(y=2(16)+4-5=31\\). The line through \\((-3,10)\\) and \\((4,31)\\) has slope \\(\\frac{31-10}{4-(-3)}=\\frac{21}{7}=\\boxed{3}\\).",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 180,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "\\[At x=-3,\\]\n\n\\[y=2(9)-3-5=10.\\]\n\\[At x=4,\\]\n\n\\[y=2(16)+4-5=31.\\]\nThus the line passes through (-3,10) and (4,31). Its slope is\n\\[ \\frac{31-10}{4-(-3)} =\\frac{21}{7} =\\boxed3. \\]",
+              "C": "At \\(x=-3\\), \\(y=2(9)-3-5=10\\). At \\(x=4\\), \\(y=2(16)+4-5=31\\). The line through \\((-3,10)\\) and \\((4,31)\\) has slope \\(\\frac{31-10}{4-(-3)}=\\frac{21}{7}=\\boxed{3}\\).",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Nonlinear Equations/Functions",
@@ -3517,12 +3517,12 @@
               "D": "\\(15\\)"
             },
             "correctAnswer": "B",
-            "explanation": "From the graph, line \\(\\ell\\) has y-intercept -1 and slope -32, so an equivalent equation is\n\n\\[9x+6y=-6.\\]\nLine r already has the same slope. The two lines would coincide—not have no solution—if\n\n\\[2p+4=-6.\\]\nThus p=-5 is the one value that is not possible.",
+            "explanation": "The plotted line \\(\\ell\\) has slope \\(-\\frac32\\) and y-intercept \\(-1\\), hence \\(\\ell\\) can be written as \\(9x+6y=-6\\). Line \\(r\\) has the same slope for every \\(p\\). For no solution, the lines must be distinct, so \\(2p+4\\ne-6\\), or \\(p\\ne-5\\). The value \\(\\boxed{-5}\\) is therefore NOT possible.",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 94,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "From the graph, line \\(\\ell\\) has y-intercept -1 and slope -32, so an equivalent equation is\n\n\\[9x+6y=-6.\\]\nLine r already has the same slope. The two lines would coincide—not have no solution—if\n\n\\[2p+4=-6.\\]\nThus p=-5 is the one value that is not possible.",
+              "B": "The plotted line \\(\\ell\\) has slope \\(-\\frac32\\) and y-intercept \\(-1\\), hence \\(\\ell\\) can be written as \\(9x+6y=-6\\). Line \\(r\\) has the same slope for every \\(p\\). For no solution, the lines must be distinct, so \\(2p+4\\ne-6\\), or \\(p\\ne-5\\). The value \\(\\boxed{-5}\\) is therefore NOT possible.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -3586,7 +3586,7 @@
             "sourceQuestionNumber": 60,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "The total gain is more than\n\n\\[20(0.6)=12\\]\nand at most\n\n\\[20(0.9)=18.\\]\nAdd the initial 12.5:\n\n\\[24.5<E30.5.\\]\n\\[So the answer is \\(\\boxed{24.5<E\\le30.5}\\).\\]",
+              "B": "The total gain is more than\n\\[20(0.6)=12\\]\nand at most\n\\[20(0.9)=18.\\]\nAdd the initial 12.5:\n\\[24.5<E\\le30.5.\\]\nSo the answer is \\(\\boxed{24.5<E\\le30.5}\\).",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -4026,7 +4026,7 @@
             "skill": "Nonlinear Equations/Functions",
             "difficulty": "Easy",
             "passage": "",
-            "question": "Which table gives three solutions to\n\n\\[5x+2y=18?\\]",
+            "question": "Which table gives three solutions to\n\n\\[5x+2y=18\\]?",
             "choices": {
               "A": "\\(x\ny\n-2\n14\n0\n9\n4\n-1\\)",
               "B": "\\(x\ny\n-2\n4\n0\n9\n4\n1\\)",
@@ -4038,7 +4038,7 @@
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 87,
             "choiceExplanations": {
-              "A": "Solve for y:\n\n\\[y=18-5x2.\\]\n\\[For x=-2,0,4, this gives\\]\n\n\\[14, 9, -1,\\]\nrespectively. Therefore, choice \\(\\boxed A\\) is correct.",
+              "A": "Solve for \\(y\\):\n\\[y=\\frac{18-5x}{2}.\\]\nFor \\(x=-2,0,4\\), this gives\n\\[14,\\ 9,\\ -1,\\]\nrespectively. Therefore, choice \\(\\boxed{A}\\) is correct.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -4186,14 +4186,14 @@
               "D": "\\((0,7)\\)"
             },
             "correctAnswer": "D",
-            "explanation": "\\[At the y-intercept, x=0. Therefore,\\]\n\n\\[4y=28,\\]\n\\[so y=7. The intercept is\\]\n\n(0,7).",
+            "explanation": "At the y-intercept, x=0. Therefore,\n\n\\[4y=28,\\]\nso y=7. The intercept is\n\n(0,7).",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 355,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
-              "D": "\\[At the y-intercept, x=0. Therefore,\\]\n\n\\[4y=28,\\]\n\\[so y=7. The intercept is\\]\n\n(0,7)."
+              "D": "At the y-intercept, x=0. Therefore,\n\n\\[4y=28,\\]\nso y=7. The intercept is\n\n(0,7)."
             },
             "subtopic": "Linear Functions",
             "classificationVersion": "2026-10-08-relative-30-40-30-v3"
@@ -4269,10 +4269,10 @@
             "skill": "Quadratics",
             "difficulty": "Easy",
             "passage": "",
-            "question": "What is the sum of the solutions to\n\n\\[(x-2)^{2}=5x+14?\\]",
+            "question": "What is the sum of the solutions to\n\n\\[(x-2)^{2}=5x+14\\]?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "Expand and rearrange:\n\\[\nx^2-4x+4=5x+14\n\\]\nso\n\\[\nx^2-9x-10=0.\n\\]\nFor \\(x^2-9x-10=0\\), the sum of the roots is\n\\[\n-\\frac{-9}{1}=\\boxed9.\n\\]",
+            "explanation": "Expand: \\((x-2)^2=5x+14\\) becomes \\(x^2-4x+4=5x+14\\), or \\(x^2-9x-10=0\\). By Vieta's formula the sum of the two roots is \\(-(-9)/1=\\boxed{9}\\).",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 394,
             "answerType": "student-response",
@@ -4534,12 +4534,12 @@
               "D": "\\(25\\)"
             },
             "correctAnswer": "B",
-            "explanation": "Substituting \\((6,0)\\) gives\n\\[(6-3)^2+(0+4)^2=9+16=25.\\]\nThe right side equals the radius squared, so the radius is \\(\\boxed5\\).",
+            "explanation": "Substituting \\((6,0)\\) gives\n\\[(6-3)^2+(0+4)^2=9+16=25.\\]\nThe right side equals the radius squared, so the radius is \\(\\boxed{5}\\).",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 97,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "Substituting \\((6,0)\\) gives\n\\[(6-3)^2+(0+4)^2=9+16=25.\\]\nThe right side equals the radius squared, so the radius is \\(\\boxed5\\).",
+              "B": "Substituting \\((6,0)\\) gives\n\\[(6-3)^2+(0+4)^2=9+16=25.\\]\nThe right side equals the radius squared, so the radius is \\(\\boxed{5}\\).",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -4830,12 +4830,12 @@
               "D": "\\(291\\)"
             },
             "correctAnswer": "B",
-            "explanation": "Use vertex form:\n\n\\[h(t)=a(t-4)^{2}+363.\\]\n\\[Since h(0)=75,\\]\n\n\\[75=16a+363,\\]\n\\[so a=-18.\\]\nThe parabola is symmetric about t=4. Since the launch height occurs at t=0, it occurs again at t=8. One second before that is t=7.\n\n\\[h(7)=-18(7-4)^{2}+363=-18(9)+363=201.\\]",
+            "explanation": "Use vertex form:\n\n\\[h(t)=a(t-4)^{2}+363.\\]\nSince h(0)=75,\n\n\\[75=16a+363,\\]\nso a=-18.\nThe parabola is symmetric about t=4. Since the launch height occurs at t=0, it occurs again at t=8. One second before that is t=7.\n\n\\[h(7)=-18(7-4)^{2}+363=-18(9)+363=201.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 405,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "Use vertex form:\n\n\\[h(t)=a(t-4)^{2}+363.\\]\n\\[Since h(0)=75,\\]\n\n\\[75=16a+363,\\]\n\\[so a=-18.\\]\nThe parabola is symmetric about t=4. Since the launch height occurs at t=0, it occurs again at t=8. One second before that is t=7.\n\n\\[h(7)=-18(7-4)^{2}+363=-18(9)+363=201.\\]",
+              "B": "Use vertex form:\n\n\\[h(t)=a(t-4)^{2}+363.\\]\nSince h(0)=75,\n\n\\[75=16a+363,\\]\nso a=-18.\nThe parabola is symmetric about t=4. Since the launch height occurs at t=0, it occurs again at t=8. One second before that is t=7.\n\n\\[h(7)=-18(7-4)^{2}+363=-18(9)+363=201.\\]",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -5186,7 +5186,7 @@
             "skill": "Nonlinear Equations/Functions",
             "difficulty": "Easy",
             "passage": "",
-            "question": "Which table gives three solutions to\n\n\\[5x+2y=18?\\]",
+            "question": "Which table gives three solutions to\n\n\\[5x+2y=18\\]?",
             "choices": {
               "A": "\\(x\ny\n-2\n14\n0\n9\n4\n-1\\)",
               "B": "\\(x\ny\n-2\n4\n0\n9\n4\n1\\)",
@@ -5198,7 +5198,7 @@
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 87,
             "choiceExplanations": {
-              "A": "Solve for y:\n\n\\[y=18-5x2.\\]\n\\[For x=-2,0,4, this gives\\]\n\n\\[14, 9, -1,\\]\nrespectively. Therefore, choice \\(\\boxed A\\) is correct.",
+              "A": "Solve for \\(y\\):\n\\[y=\\frac{18-5x}{2}.\\]\nFor \\(x=-2,0,4\\), this gives\n\\[14,\\ 9,\\ -1,\\]\nrespectively. Therefore, choice \\(\\boxed{A}\\) is correct.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -5572,12 +5572,12 @@
               "D": "\\(291\\)"
             },
             "correctAnswer": "B",
-            "explanation": "Use vertex form:\n\n\\[h(t)=a(t-4)^{2}+363.\\]\n\\[Since h(0)=75,\\]\n\n\\[75=16a+363,\\]\n\\[so a=-18.\\]\nThe parabola is symmetric about t=4. Since the launch height occurs at t=0, it occurs again at t=8. One second before that is t=7.\n\n\\[h(7)=-18(7-4)^{2}+363=-18(9)+363=201.\\]",
+            "explanation": "Use vertex form:\n\n\\[h(t)=a(t-4)^{2}+363.\\]\nSince h(0)=75,\n\n\\[75=16a+363,\\]\nso a=-18.\nThe parabola is symmetric about t=4. Since the launch height occurs at t=0, it occurs again at t=8. One second before that is t=7.\n\n\\[h(7)=-18(7-4)^{2}+363=-18(9)+363=201.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 405,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "Use vertex form:\n\n\\[h(t)=a(t-4)^{2}+363.\\]\n\\[Since h(0)=75,\\]\n\n\\[75=16a+363,\\]\n\\[so a=-18.\\]\nThe parabola is symmetric about t=4. Since the launch height occurs at t=0, it occurs again at t=8. One second before that is t=7.\n\n\\[h(7)=-18(7-4)^{2}+363=-18(9)+363=201.\\]",
+              "B": "Use vertex form:\n\n\\[h(t)=a(t-4)^{2}+363.\\]\nSince h(0)=75,\n\n\\[75=16a+363,\\]\nso a=-18.\nThe parabola is symmetric about t=4. Since the launch height occurs at t=0, it occurs again at t=8. One second before that is t=7.\n\n\\[h(7)=-18(7-4)^{2}+363=-18(9)+363=201.\\]",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -5765,11 +5765,11 @@
               "D": "\\(\\displaystyle C(n)=p\\left(n-\\frac52\\right)\\)"
             },
             "correctAnswer": "A",
-            "explanation": "The first rental costs 0. The next two each cost 0.75p, for a total of 1.5p. The remaining n-3 rentals cost\n\n\\[p(n-3).\\]\nTherefore,\n\n\\[C(n)=1.5p+p(n-3)=pn-32.\\]",
+            "explanation": "The first rental is free. The next two cost \\(0.75p\\) each, or \\(1.5p\\) together. The other \\(n-3\\) rentals cost \\(p(n-3)\\). Thus \\[C(n)=1.5p+p(n-3)=pn-\\frac32p=\\boxed{p\\left(n-\\frac32\\right)}.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 207,
             "choiceExplanations": {
-              "A": "The first rental costs 0. The next two each cost 0.75p, for a total of 1.5p. The remaining n-3 rentals cost\n\n\\[p(n-3).\\]\nTherefore,\n\n\\[C(n)=1.5p+p(n-3)=pn-32.\\]",
+              "A": "The first rental is free. The next two cost \\(0.75p\\) each, or \\(1.5p\\) together. The other \\(n-3\\) rentals cost \\(p(n-3)\\). Thus \\[C(n)=1.5p+p(n-3)=pn-\\frac32p=\\boxed{p\\left(n-\\frac32\\right)}.\\]",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -5932,7 +5932,7 @@
             "skill": "Exponential Functions",
             "difficulty": "Hard",
             "passage": "",
-            "question": "A quantity P is modeled by\n\n\\[P=abt/3,\\]\nwhere t is measured in months and a and b are positive constants. The quantity increases by \\(21\\%\\) whenever t increases by 6 months. What is the value of b?",
+            "question": "A quantity \\(P\\) is modeled by \\[P=ab^{t/3},\\] where \\(t\\) is measured in months and \\(a\\) and \\(b\\) are positive constants. The quantity increases by \\(21\\%\\) whenever \\(t\\) increases by 6 months. What is the value of \\(b\\)?",
             "choices": {
               "A": "\\(0.21\\)",
               "B": "\\(1.21\\)",
@@ -5940,13 +5940,13 @@
               "D": "\\(1.42\\)"
             },
             "correctAnswer": "C",
-            "explanation": "A 6-month increase raises the exponent t/3 by\n\n\\[63=2.\\]\nSo the output is multiplied by b^{2}. A \\(21\\%\\) increase means a multiplier of 1.21:\n\n\\[b^{2}=1.21.\\]\n\\[Since b>0,\\]\n\n\\[b=1.10.\\]",
+            "explanation": "An increase of 6 months raises the exponent \\(t/3\\) by \\(6/3=2\\), so \\(P\\) is multiplied by \\(b^2\\). A 21% increase is a multiplier of \\(1.21\\). Therefore \\(b^2=1.21\\). Since \\(b>0\\), \\(\\boxed{b=1.10}\\).",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 391,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "A 6-month increase raises the exponent t/3 by\n\n\\[63=2.\\]\nSo the output is multiplied by b^{2}. A \\(21\\%\\) increase means a multiplier of 1.21:\n\n\\[b^{2}=1.21.\\]\n\\[Since b>0,\\]\n\n\\[b=1.10.\\]",
+              "C": "An increase of 6 months raises the exponent \\(t/3\\) by \\(6/3=2\\), so \\(P\\) is multiplied by \\(b^2\\). A 21% increase is a multiplier of \\(1.21\\). Therefore \\(b^2=1.21\\). Since \\(b>0\\), \\(\\boxed{b=1.10}\\).",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Exponential Functions",
