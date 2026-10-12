@@ -4133,7 +4133,7 @@
             "question": "If\n\n\\[4x+9=25,\\]\nwhat is the value of\n\n\\[12x+31\\]?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "Notice that\n\n\\[12x+31=3(4x+9)+4.\\]\n\\[Since 4x+9=25,\\]\n\n\\[12x+31=3(25)+4=79.\\]",
+            "explanation": "Notice that\n\n\\[12x+31=3(4x+9)+4.\\]\nSince 4x+9=25,\n\n\\[12x+31=3(25)+4=79.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 352,
             "answerType": "student-response",
@@ -4987,12 +4987,12 @@
               "D": "\\(30\\)"
             },
             "correctAnswer": "B",
-            "explanation": "Only 64-4=60 tickets were sold. Let a be adult tickets and s student tickets:\n\n\\[a+s=60\\]\n\n\\[14a+8s=636.\\]\n\\[Substitute s=60-a:\\]\n\n\\[14a+8(60-a)=636\\]\n\n\\[6a=156\\]\n\\[ \\boxed{a=26}. \\]",
+            "explanation": "Only 64-4=60 tickets were sold. Let a be adult tickets and s student tickets:\n\n\\[a+s=60\\]\n\n\\[14a+8s=636.\\]\nSubstitute s=60-a:\n\n\\[14a+8(60-a)=636\\]\n\n\\[6a=156\\]\n\\[ \\boxed{a=26}. \\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 288,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "Only 64-4=60 tickets were sold. Let a be adult tickets and s student tickets:\n\n\\[a+s=60\\]\n\n\\[14a+8s=636.\\]\n\\[Substitute s=60-a:\\]\n\n\\[14a+8(60-a)=636\\]\n\n\\[6a=156\\]\n\\[ \\boxed{a=26}. \\]",
+              "B": "Only 64-4=60 tickets were sold. Let a be adult tickets and s student tickets:\n\n\\[a+s=60\\]\n\n\\[14a+8s=636.\\]\nSubstitute s=60-a:\n\n\\[14a+8(60-a)=636\\]\n\n\\[6a=156\\]\n\\[ \\boxed{a=26}. \\]",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -5020,7 +5020,7 @@
             "question": "If\n\n\\[4x+9=25,\\]\nwhat is the value of\n\n\\[12x+31\\]?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "Notice that\n\n\\[12x+31=3(4x+9)+4.\\]\n\\[Since 4x+9=25,\\]\n\n\\[12x+31=3(25)+4=79.\\]",
+            "explanation": "Notice that\n\n\\[12x+31=3(4x+9)+4.\\]\nSince 4x+9=25,\n\n\\[12x+31=3(25)+4=79.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 352,
             "answerType": "student-response",
@@ -5515,12 +5515,12 @@
               "D": "\\(30\\)"
             },
             "correctAnswer": "B",
-            "explanation": "Only 64-4=60 tickets were sold. Let a be adult tickets and s student tickets:\n\n\\[a+s=60\\]\n\n\\[14a+8s=636.\\]\n\\[Substitute s=60-a:\\]\n\n\\[14a+8(60-a)=636\\]\n\n\\[6a=156\\]\n\\[ \\boxed{a=26}. \\]",
+            "explanation": "Only 64-4=60 tickets were sold. Let a be adult tickets and s student tickets:\n\n\\[a+s=60\\]\n\n\\[14a+8s=636.\\]\nSubstitute s=60-a:\n\n\\[14a+8(60-a)=636\\]\n\n\\[6a=156\\]\n\\[ \\boxed{a=26}. \\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 288,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "Only 64-4=60 tickets were sold. Let a be adult tickets and s student tickets:\n\n\\[a+s=60\\]\n\n\\[14a+8s=636.\\]\n\\[Substitute s=60-a:\\]\n\n\\[14a+8(60-a)=636\\]\n\n\\[6a=156\\]\n\\[ \\boxed{a=26}. \\]",
+              "B": "Only 64-4=60 tickets were sold. Let a be adult tickets and s student tickets:\n\n\\[a+s=60\\]\n\n\\[14a+8s=636.\\]\nSubstitute s=60-a:\n\n\\[14a+8(60-a)=636\\]\n\n\\[6a=156\\]\n\\[ \\boxed{a=26}. \\]",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -5696,7 +5696,7 @@
             "sourceQuestionNumber": 90,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "If \\(s\\) sampling cases are carried, using exactly 14 cases minimizes the mass and gives \\(14-s\\) sensor cases. Thus,\n\\[\n25s+18(14-s)\\le301.\n\\]\nThis simplifies to\n\\[\n7s+252\\le301,\n\\]\nso\n\\[\n7s\\le49\n\\]\nand \\(s\\le7\\). Therefore, the maximum is\n\\[\n\\boxed7.\n\\]",
+              "B": "If \\(s\\) sampling cases are carried, using exactly 14 cases minimizes the mass and gives \\(14-s\\) sensor cases. Thus,\n\\[\n25s+18(14-s)\\le301.\n\\]\nThis simplifies to\n\\[\n7s+252\\le301,\n\\]\nso\n\\[\n7s\\le49\n\\]\nand \\(s\\le7\\). Therefore, the maximum is\n\\[\n\\boxed{7}.\n\\]",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -5766,7 +5766,7 @@
             "sourceQuestionNumber": 194,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "Using the points \\((1,26)\\) and \\((5,50)\\), the hourly rate is\n\\[\n\\frac{50-26}{5-1}=\\frac{24}{4}=6\n\\]\npercentage points per hour. Thirty minutes is half an hour, so the increase is\n\\[\n6\\left(\\frac12\\right)=\\boxed3.\n\\]",
+              "B": "Using the points \\((1,26)\\) and \\((5,50)\\), the hourly rate is\n\\[\n\\frac{50-26}{5-1}=\\frac{24}{4}=6\n\\]\npercentage points per hour. Thirty minutes is half an hour, so the increase is\n\\[\n6\\left(\\frac12\\right)=\\boxed{3}.\n\\]",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
