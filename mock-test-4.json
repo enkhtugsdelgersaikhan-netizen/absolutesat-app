@@ -4655,11 +4655,11 @@
               "D": "\\(q=4p-2r\\)"
             },
             "correctAnswer": "A",
-            "explanation": "\\[Combine the q-terms:\\]\n\n\\[4p=2q+2r.\\]\nSubtract 2r:\n\n\\[4p-2r=2q.\\]\nDivide by 2:\n\n\\[q=2p-r.\\]",
+            "explanation": "Combine the \\(q\\)-terms: \\[4p=2q+2r.\\] Subtract \\(2r\\) to obtain \\[4p-2r=2q.\\] Dividing by \\(2\\) gives \\[\\boxed{q=2p-r}.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 465,
             "choiceExplanations": {
-              "A": "\\[Combine the q-terms:\\]\n\n\\[4p=2q+2r.\\]\nSubtract 2r:\n\n\\[4p-2r=2q.\\]\nDivide by 2:\n\n\\[q=2p-r.\\]",
+              "A": "Combine the \\(q\\)-terms: \\[4p=2q+2r.\\] Subtract \\(2r\\) to obtain \\[4p-2r=2q.\\] Dividing by \\(2\\) gives \\[\\boxed{q=2p-r}.\\]",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -5397,11 +5397,11 @@
               "D": "\\(q=4p-2r\\)"
             },
             "correctAnswer": "A",
-            "explanation": "\\[Combine the q-terms:\\]\n\n\\[4p=2q+2r.\\]\nSubtract 2r:\n\n\\[4p-2r=2q.\\]\nDivide by 2:\n\n\\[q=2p-r.\\]",
+            "explanation": "Combine the \\(q\\)-terms: \\[4p=2q+2r.\\] Subtract \\(2r\\) to obtain \\[4p-2r=2q.\\] Dividing by \\(2\\) gives \\[\\boxed{q=2p-r}.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 465,
             "choiceExplanations": {
-              "A": "\\[Combine the q-terms:\\]\n\n\\[4p=2q+2r.\\]\nSubtract 2r:\n\n\\[4p-2r=2q.\\]\nDivide by 2:\n\n\\[q=2p-r.\\]",
+              "A": "Combine the \\(q\\)-terms: \\[4p=2q+2r.\\] Subtract \\(2r\\) to obtain \\[4p-2r=2q.\\] Dividing by \\(2\\) gives \\[\\boxed{q=2p-r}.\\]",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
