@@ -2761,14 +2761,14 @@
               "D": "\\(19\\)"
             },
             "correctAnswer": "D",
-            "explanation": "\\[To obtain f(9), set\\]\n\n\\[2x-1=9.\\]\n\\[Then 2x=10, so x=5. Therefore,\\]\n\n\\[f(9)=3(5)+4=19.\\]",
+            "explanation": "To obtain f(9), set\n\n\\[2x-1=9.\\]\nThen 2x=10, so x=5. Therefore,\n\n\\[f(9)=3(5)+4=19.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 365,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
-              "D": "\\[To obtain f(9), set\\]\n\n\\[2x-1=9.\\]\n\\[Then 2x=10, so x=5. Therefore,\\]\n\n\\[f(9)=3(5)+4=19.\\]"
+              "D": "To obtain f(9), set\n\n\\[2x-1=9.\\]\nThen 2x=10, so x=5. Therefore,\n\n\\[f(9)=3(5)+4=19.\\]"
             },
             "subtopic": "Linear Equations",
             "classificationVersion": "2026-10-08-relative-30-40-30-v3"
@@ -2846,7 +2846,7 @@
             "skill": "Linear Functions",
             "difficulty": "Easy",
             "passage": "",
-            "question": "The function \\(g\\) is defined by \\[g(x)=2(5x-11).\\] What is the y-coordinate of the y-intercept of the graph of \\[y=\\frac12g(x)+7?\\]",
+            "question": "The function \\(g\\) is defined by \\[g(x)=2(5x-11).\\] What is the y-coordinate of the y-intercept of the graph of \\[y=\\frac12g(x)+7\\]?",
             "choices": {
               "A": "\\(-22\\)",
               "B": "\\(-11\\)",
@@ -3107,13 +3107,13 @@
               "D": "\\(3\\)"
             },
             "correctAnswer": "C",
-            "explanation": "Since 3x-2y=14, substitute 14 for 3x-2y in the second equation:\n\n\\[2(14)+5y=53.\\]\n\\[Thus 5y=25, so y=5. Then\\]\n\n\\[3x-2(5)=14,\\]\n\\[so 3x=24 and x=8.\\]",
+            "explanation": "Since 3x-2y=14, substitute 14 for 3x-2y in the second equation:\n\n\\[2(14)+5y=53.\\]\nThus 5y=25, so y=5. Then\n\n\\[3x-2(5)=14,\\]\nso 3x=24 and x=8.",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 323,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "Since 3x-2y=14, substitute 14 for 3x-2y in the second equation:\n\n\\[2(14)+5y=53.\\]\n\\[Thus 5y=25, so y=5. Then\\]\n\n\\[3x-2(5)=14,\\]\n\\[so 3x=24 and x=8.\\]",
+              "C": "Since 3x-2y=14, substitute 14 for 3x-2y in the second equation:\n\n\\[2(14)+5y=53.\\]\nThus 5y=25, so y=5. Then\n\n\\[3x-2(5)=14,\\]\nso 3x=24 and x=8.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Systems of Linear Equations",
@@ -3586,7 +3586,7 @@
             "sourceQuestionNumber": 60,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "The total gain is more than\n\n\\[20(0.6)=12\\]\nand at most\n\n\\[20(0.9)=18.\\]\nAdd the initial 12.5:\n\n\\[24.5<E30.5.\\]\n\\[So the answer is \\(\\boxed{24.5<E\\le30.5}\\).\\]",
+              "B": "The total gain is more than\n\\[20(0.6)=12\\]\nand at most\n\\[20(0.9)=18.\\]\nAdd the initial 12.5:\n\\[24.5<E\\le30.5.\\]\nSo the answer is \\(\\boxed{24.5<E\\le30.5}\\).",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -4038,7 +4038,7 @@
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 87,
             "choiceExplanations": {
-              "A": "Solve for y:\n\n\\[y=18-5x2.\\]\n\\[For x=-2,0,4, this gives\\]\n\n\\[14, 9, -1,\\]\nrespectively. Therefore, choice \\(\\boxed A\\) is correct.",
+              "A": "Solve for \\(y\\):\n\\[y=\\frac{18-5x}{2}.\\]\nFor \\(x=-2,0,4\\), this gives\n\\[14,\\ 9,\\ -1,\\]\nrespectively. Therefore, choice \\(\\boxed{A}\\) is correct.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -4186,14 +4186,14 @@
               "D": "\\((0,7)\\)"
             },
             "correctAnswer": "D",
-            "explanation": "\\[At the y-intercept, x=0. Therefore,\\]\n\n\\[4y=28,\\]\n\\[so y=7. The intercept is\\]\n\n(0,7).",
+            "explanation": "At the y-intercept, x=0. Therefore,\n\n\\[4y=28,\\]\nso y=7. The intercept is\n\n(0,7).",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 355,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
-              "D": "\\[At the y-intercept, x=0. Therefore,\\]\n\n\\[4y=28,\\]\n\\[so y=7. The intercept is\\]\n\n(0,7)."
+              "D": "At the y-intercept, x=0. Therefore,\n\n\\[4y=28,\\]\nso y=7. The intercept is\n\n(0,7)."
             },
             "subtopic": "Linear Functions",
             "classificationVersion": "2026-10-08-relative-30-40-30-v3"
@@ -4539,7 +4539,7 @@
             "sourceQuestionNumber": 97,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "Substituting \\((6,0)\\) gives\n\\[(6-3)^2+(0+4)^2=9+16=25.\\]\nThe right side equals the radius squared, so the radius is \\(\\boxed5\\).",
+              "B": "Substituting \\((6,0)\\) gives\n\\[(6-3)^2+(0+4)^2=9+16=25.\\]\nThe right side equals the radius squared, so the radius is \\(\\boxed{5}\\).",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -4830,12 +4830,12 @@
               "D": "\\(291\\)"
             },
             "correctAnswer": "B",
-            "explanation": "Use vertex form:\n\n\\[h(t)=a(t-4)^{2}+363.\\]\n\\[Since h(0)=75,\\]\n\n\\[75=16a+363,\\]\n\\[so a=-18.\\]\nThe parabola is symmetric about t=4. Since the launch height occurs at t=0, it occurs again at t=8. One second before that is t=7.\n\n\\[h(7)=-18(7-4)^{2}+363=-18(9)+363=201.\\]",
+            "explanation": "Use vertex form:\n\n\\[h(t)=a(t-4)^{2}+363.\\]\nSince h(0)=75,\n\n\\[75=16a+363,\\]\nso a=-18.\nThe parabola is symmetric about t=4. Since the launch height occurs at t=0, it occurs again at t=8. One second before that is t=7.\n\n\\[h(7)=-18(7-4)^{2}+363=-18(9)+363=201.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 405,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "Use vertex form:\n\n\\[h(t)=a(t-4)^{2}+363.\\]\n\\[Since h(0)=75,\\]\n\n\\[75=16a+363,\\]\n\\[so a=-18.\\]\nThe parabola is symmetric about t=4. Since the launch height occurs at t=0, it occurs again at t=8. One second before that is t=7.\n\n\\[h(7)=-18(7-4)^{2}+363=-18(9)+363=201.\\]",
+              "B": "Use vertex form:\n\n\\[h(t)=a(t-4)^{2}+363.\\]\nSince h(0)=75,\n\n\\[75=16a+363,\\]\nso a=-18.\nThe parabola is symmetric about t=4. Since the launch height occurs at t=0, it occurs again at t=8. One second before that is t=7.\n\n\\[h(7)=-18(7-4)^{2}+363=-18(9)+363=201.\\]",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -5198,7 +5198,7 @@
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 87,
             "choiceExplanations": {
-              "A": "Solve for y:\n\n\\[y=18-5x2.\\]\n\\[For x=-2,0,4, this gives\\]\n\n\\[14, 9, -1,\\]\nrespectively. Therefore, choice \\(\\boxed A\\) is correct.",
+              "A": "Solve for \\(y\\):\n\\[y=\\frac{18-5x}{2}.\\]\nFor \\(x=-2,0,4\\), this gives\n\\[14,\\ 9,\\ -1,\\]\nrespectively. Therefore, choice \\(\\boxed{A}\\) is correct.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -5572,12 +5572,12 @@
               "D": "\\(291\\)"
             },
             "correctAnswer": "B",
-            "explanation": "Use vertex form:\n\n\\[h(t)=a(t-4)^{2}+363.\\]\n\\[Since h(0)=75,\\]\n\n\\[75=16a+363,\\]\n\\[so a=-18.\\]\nThe parabola is symmetric about t=4. Since the launch height occurs at t=0, it occurs again at t=8. One second before that is t=7.\n\n\\[h(7)=-18(7-4)^{2}+363=-18(9)+363=201.\\]",
+            "explanation": "Use vertex form:\n\n\\[h(t)=a(t-4)^{2}+363.\\]\nSince h(0)=75,\n\n\\[75=16a+363,\\]\nso a=-18.\nThe parabola is symmetric about t=4. Since the launch height occurs at t=0, it occurs again at t=8. One second before that is t=7.\n\n\\[h(7)=-18(7-4)^{2}+363=-18(9)+363=201.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 405,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "Use vertex form:\n\n\\[h(t)=a(t-4)^{2}+363.\\]\n\\[Since h(0)=75,\\]\n\n\\[75=16a+363,\\]\n\\[so a=-18.\\]\nThe parabola is symmetric about t=4. Since the launch height occurs at t=0, it occurs again at t=8. One second before that is t=7.\n\n\\[h(7)=-18(7-4)^{2}+363=-18(9)+363=201.\\]",
+              "B": "Use vertex form:\n\n\\[h(t)=a(t-4)^{2}+363.\\]\nSince h(0)=75,\n\n\\[75=16a+363,\\]\nso a=-18.\nThe parabola is symmetric about t=4. Since the launch height occurs at t=0, it occurs again at t=8. One second before that is t=7.\n\n\\[h(7)=-18(7-4)^{2}+363=-18(9)+363=201.\\]",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
