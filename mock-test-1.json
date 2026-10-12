@@ -4107,7 +4107,7 @@
             "skill": "Linear Functions",
             "difficulty": "Easy",
             "passage": "",
-            "question": "A graph shows a drone's altitude \\(y\\), measured in hundreds of meters, \\(x\\) minutes after launch. A marked point is \\((1.5,24)\\). Which statement correctly interprets this point?",
+            "question": "A drone's altitude \\(y\\), measured in hundreds of meters, is recorded \\(x\\) minutes after launch. One recorded point is \\((1.5,24)\\). Which statement correctly interprets this point?",
             "choices": {
               "A": "After 1.5 minutes, the drone is 24 meters high.",
               "B": "After 24 minutes, the drone is 150 meters high.",
