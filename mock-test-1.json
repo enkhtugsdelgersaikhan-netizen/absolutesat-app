@@ -3982,7 +3982,7 @@
             "question": "The system\n\\[ \\begin{cases} 3x-2y=7\\\\ 5x+3y=-1 \\end{cases} \\]\nhas solution (x,y). What is the value of y?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "Multiply the first equation by 5 and the second by -3:\n\n\\[15x-10y=35\\]\n\n\\[-15x-9y=3.\\]\nAdding gives\n\n\\[-19y=38,\\]\n\\[so y=-2.\\]",
+            "explanation": "Multiply the first equation by 5 and the second by -3:\n\n\\[15x-10y=35\\]\n\n\\[-15x-9y=3.\\]\nAdding gives\n\n\\[-19y=38,\\]\nso y=-2.",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 92,
             "answerType": "student-response",
@@ -4655,11 +4655,11 @@
               "D": "\\((6,-5)\\)"
             },
             "correctAnswer": "A",
-            "explanation": "The second equation becomes\n\n\\[x-2y=17.\\]\n\\[Substitute y=4-2x:\\]\n\n\\[x-2(4-2x)=17\\]\n\n\\[5x-8=17\\]\n\n\\[x=5.\\]\nThen\n\n\\[y=4-2(5)=-6.\\]\nSo the solution is\n\\[ \\boxed{(5,-6)}. \\]",
+            "explanation": "The second equation becomes\n\n\\[x-2y=17.\\]\nSubstitute y=4-2x:\n\n\\[x-2(4-2x)=17\\]\n\n\\[5x-8=17\\]\n\n\\[x=5.\\]\nThen\n\n\\[y=4-2(5)=-6.\\]\nSo the solution is\n\\[ \\boxed{(5,-6)}. \\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 309,
             "choiceExplanations": {
-              "A": "The second equation becomes\n\n\\[x-2y=17.\\]\n\\[Substitute y=4-2x:\\]\n\n\\[x-2(4-2x)=17\\]\n\n\\[5x-8=17\\]\n\n\\[x=5.\\]\nThen\n\n\\[y=4-2(5)=-6.\\]\nSo the solution is\n\\[ \\boxed{(5,-6)}. \\]",
+              "A": "The second equation becomes\n\n\\[x-2y=17.\\]\nSubstitute y=4-2x:\n\n\\[x-2(4-2x)=17\\]\n\n\\[5x-8=17\\]\n\n\\[x=5.\\]\nThen\n\n\\[y=4-2(5)=-6.\\]\nSo the solution is\n\\[ \\boxed{(5,-6)}. \\]",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -4721,7 +4721,7 @@
             "question": "The equation\n\n\\[0.45x+1.35y=18.9\\]\nmodels the total mass, in kilograms, of x small bags and y large bags of a product.\nHow many grams more product is in each large bag than in each small bag?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "A small bag contains 0.45 kg and a large bag contains 1.35 kg. Their difference is\n\n\\[1.35-0.45=0.90kg.\\]\n\\[Since 1 kg =1000 g,\\]\n\n\\[0.90(1000)=900.\\]",
+            "explanation": "A small bag contains 0.45 kg and a large bag contains 1.35 kg. Their difference is\n\n\\[1.35-0.45=0.90kg.\\]\nSince 1 kg =1000 g,\n\n\\[0.90(1000)=900.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 328,
             "answerType": "student-response",
@@ -4794,7 +4794,7 @@
             "sourceQuestionNumber": 374,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "Subtract B:\n\n\\[R-B=A1-k.\\]\nThen\n\n\\[1-k=AR-B,\\]\nso\n\n\\[k=1-AR-B.\\]",
+              "B": "Subtract \\(B\\):\n\\[R-B=\\frac{A}{1-k}.\\]\nThen\n\\[1-k=\\frac{A}{R-B},\\]\nso\n\\[\\boxed{k=1-\\frac{A}{R-B}}.\\]",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -5054,7 +5054,7 @@
             "question": "The system\n\\[ \\begin{cases} 3x-2y=7\\\\ 5x+3y=-1 \\end{cases} \\]\nhas solution (x,y). What is the value of y?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "Multiply the first equation by 5 and the second by -3:\n\n\\[15x-10y=35\\]\n\n\\[-15x-9y=3.\\]\nAdding gives\n\n\\[-19y=38,\\]\n\\[so y=-2.\\]",
+            "explanation": "Multiply the first equation by 5 and the second by -3:\n\n\\[15x-10y=35\\]\n\n\\[-15x-9y=3.\\]\nAdding gives\n\n\\[-19y=38,\\]\nso y=-2.",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 92,
             "answerType": "student-response",
@@ -5152,11 +5152,11 @@
               "D": "\\((6,-5)\\)"
             },
             "correctAnswer": "A",
-            "explanation": "The second equation becomes\n\n\\[x-2y=17.\\]\n\\[Substitute y=4-2x:\\]\n\n\\[x-2(4-2x)=17\\]\n\n\\[5x-8=17\\]\n\n\\[x=5.\\]\nThen\n\n\\[y=4-2(5)=-6.\\]\nSo the solution is\n\\[ \\boxed{(5,-6)}. \\]",
+            "explanation": "The second equation becomes\n\n\\[x-2y=17.\\]\nSubstitute y=4-2x:\n\n\\[x-2(4-2x)=17\\]\n\n\\[5x-8=17\\]\n\n\\[x=5.\\]\nThen\n\n\\[y=4-2(5)=-6.\\]\nSo the solution is\n\\[ \\boxed{(5,-6)}. \\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 309,
             "choiceExplanations": {
-              "A": "The second equation becomes\n\n\\[x-2y=17.\\]\n\\[Substitute y=4-2x:\\]\n\n\\[x-2(4-2x)=17\\]\n\n\\[5x-8=17\\]\n\n\\[x=5.\\]\nThen\n\n\\[y=4-2(5)=-6.\\]\nSo the solution is\n\\[ \\boxed{(5,-6)}. \\]",
+              "A": "The second equation becomes\n\n\\[x-2y=17.\\]\nSubstitute y=4-2x:\n\n\\[x-2(4-2x)=17\\]\n\n\\[5x-8=17\\]\n\n\\[x=5.\\]\nThen\n\n\\[y=4-2(5)=-6.\\]\nSo the solution is\n\\[ \\boxed{(5,-6)}. \\]",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -5218,7 +5218,7 @@
             "question": "The equation\n\n\\[0.45x+1.35y=18.9\\]\nmodels the total mass, in kilograms, of x small bags and y large bags of a product.\nHow many grams more product is in each large bag than in each small bag?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "A small bag contains 0.45 kg and a large bag contains 1.35 kg. Their difference is\n\n\\[1.35-0.45=0.90kg.\\]\n\\[Since 1 kg =1000 g,\\]\n\n\\[0.90(1000)=900.\\]",
+            "explanation": "A small bag contains 0.45 kg and a large bag contains 1.35 kg. Their difference is\n\n\\[1.35-0.45=0.90kg.\\]\nSince 1 kg =1000 g,\n\n\\[0.90(1000)=900.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 328,
             "answerType": "student-response",
@@ -5291,7 +5291,7 @@
             "sourceQuestionNumber": 374,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "Subtract B:\n\n\\[R-B=A1-k.\\]\nThen\n\n\\[1-k=AR-B,\\]\nso\n\n\\[k=1-AR-B.\\]",
+              "B": "Subtract \\(B\\):\n\\[R-B=\\frac{A}{1-k}.\\]\nThen\n\\[1-k=\\frac{A}{R-B},\\]\nso\n\\[\\boxed{k=1-\\frac{A}{R-B}}.\\]",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -5629,7 +5629,7 @@
             "question": "A manufacturer's total cost, in dollars, for producing n units is\n\n\\[C(n)=mn+620,\\]\nwhere m is constant. The cost to produce 180 units is \\(\\$1{,}340\\).\nWhat is the cost to produce 750 units?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "\\[Use C(180)=1340:\\]\n\n\\[1340=180m+620.\\]\nThus,\n\n\\[720=180m\\]\n\\[and m=4.\\]\nThen\n\\[ C(750)=4(750)+620=3000+620=\\boxed{3620}. \\]",
+            "explanation": "Use C(180)=1340:\n\n\\[1340=180m+620.\\]\nThus,\n\n\\[720=180m\\]\nand m=4.\nThen\n\\[ C(750)=4(750)+620=3000+620=\\boxed{3620}. \\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 83,
             "answerType": "student-response",
