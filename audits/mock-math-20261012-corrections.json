@@ -111,13 +111,13 @@
   "math-20261006-batch465-q180": {
     "explanation": "At \\(x=-3\\), \\(y=2(9)-3-5=10\\). At \\(x=4\\), \\(y=2(16)+4-5=31\\). The line through \\((-3,10)\\) and \\((4,31)\\) has slope \\(\\frac{31-10}{4-(-3)}=\\frac{21}{7}=\\boxed{3}\\)."
   },
-  "math-20261006-new409-q057": {
-    "explanation": "The line of best fit predicts a response of approximately 524 at input 37. Rounded to the nearest ten, this is \\(\\boxed{520}\\)."
-  },
   "math-20261006-new409-q080": {
     "explanation": "The probability of arrival in at least 2 days is \\(0.27+0.31+0.24=0.82\\). The probability of taking more than 5 days is \\(0.24\\). Thus the conditional probability is \\(0.24/0.82\\approx\\boxed{0.29}\\)."
   },
   "math-20261006-batch465-q401": {
     "explanation": "At the y-intercept, \\(x=0\\). Then \\[g(0)=7\\left(\\frac13\\right)^{-2}=7(9)=63.\\] Thus the y-intercept is \\(\\boxed{(0,63)}\\)."
+  },
+  "math-20261006-new409-q081": {
+    "explanation": "The line of best fit predicts a response of approximately 524 at input 37. Rounded to the nearest ten, this is \\(\\boxed{520}\\)."
   }
 }
