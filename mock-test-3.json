@@ -3098,7 +3098,7 @@
             "sourceQuestionNumber": 213,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "Using (2,42) and (5,66),\n\n\\[slope=66-425-2=8.\\]\nSince x is the number of devices and y is monthly cost, the slope means \\(\\$8\\) per additional device.",
+              "B": "Using \\((2,42)\\) and \\((5,66)\\),\n\\[\\text{slope}=\\frac{66-42}{5-2}=8.\\]\nSince \\(x\\) is the number of devices and \\(y\\) is monthly cost, the slope means \\(\\$8\\) per additional device.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -3325,7 +3325,7 @@
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
-              "D": "Rewrite:\n\n\\[y3x+82.\\]\nFor x=-2,1,4, the maximum allowed y-values are 1,5.5,10, respectively. Only choice D has all three corresponding y-values at or below those limits."
+              "D": "Rewrite the inequality as\n\\[y\\le\\frac{3x+8}{2}.\\]\nFor \\(x=-2,1,4\\), the maximum allowed \\(y\\)-values are \\(1,5.5,10\\), respectively. Only choice D has all three corresponding \\(y\\)-values at or below those limits."
             },
             "choiceTables": {
               "A": {
@@ -3657,7 +3657,7 @@
             "sourceQuestionNumber": 347,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "“At least 30 items” gives\n\n\\[x+y30.\\]\nThe total cost, including shipping, is\n\n\\[6x+4y+12.\\]\n“Cannot exceed \\(\\$180\\)” gives\n\n\\[6x+4y+12180.\\]",
+              "B": "“At least 30 items” gives\n\\[x+y\\ge30.\\]\nThe total cost, including shipping, is\n\\[6x+4y+12.\\]\n“Cannot exceed \\(\\$180\\)” gives\n\\[6x+4y+12\\le180.\\]",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -3811,7 +3811,7 @@
             "sourceQuestionNumber": 152,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "Set the equations equal:\n\n\\[x^{2}-4x+1=2x-5\\]\n\n\\[x^{2}-6x+6=0.\\]\nBy Vieta's formulas,\n\n\\[x1+x^{2}=6.\\]\n\\[Because y=2x-5,\\]\n\\[ y_1+y_2 =2(x_1+x_2)-10 =12-10 =\\boxed2. \\]",
+              "B": "Set the equations equal:\n\\[x^2-4x+1=2x-5\\]\n\\[x^2-6x+6=0.\\]\nBy Vieta's formulas,\n\\[x_1+x_2=6.\\]\nBecause \\(y=2x-5\\),\n\\[y_1+y_2=2(x_1+x_2)-10=12-10=\\boxed{2}.\\]",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -3979,12 +3979,12 @@
               "D": "\\(8\\)"
             },
             "correctAnswer": "B",
-            "explanation": "Expand both sides:\n\n\\[x^{2}+3x-4=x^{2}-x-6+18.\\]\nSo\n\n\\[x^{2}+3x-4=x^{2}-x+12.\\]\n\\[Cancel x^{2}:\\]\n\n\\[3x-4=-x+12.\\]\nThus\n\n\\[4x=16,\\]\nso\n\n\\[x=4.\\]",
+            "explanation": "Expand both sides:\n\n\\[x^{2}+3x-4=x^{2}-x-6+18.\\]\nSo\n\n\\[x^{2}+3x-4=x^{2}-x+12.\\]\nCancel x^{2}:\n\n\\[3x-4=-x+12.\\]\nThus\n\n\\[4x=16,\\]\nso\n\n\\[x=4.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 267,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "Expand both sides:\n\n\\[x^{2}+3x-4=x^{2}-x-6+18.\\]\nSo\n\n\\[x^{2}+3x-4=x^{2}-x+12.\\]\n\\[Cancel x^{2}:\\]\n\n\\[3x-4=-x+12.\\]\nThus\n\n\\[4x=16,\\]\nso\n\n\\[x=4.\\]",
+              "B": "Expand both sides:\n\n\\[x^{2}+3x-4=x^{2}-x-6+18.\\]\nSo\n\n\\[x^{2}+3x-4=x^{2}-x+12.\\]\nCancel x^{2}:\n\n\\[3x-4=-x+12.\\]\nThus\n\n\\[4x=16,\\]\nso\n\n\\[x=4.\\]",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -4504,7 +4504,7 @@
             "question": "A scientific instrument converts an actual measurement T to a displayed reading D according to\n\n\\[D=1.2(0.75T+5)-8.\\]\nIf the displayed reading is 34, what is the actual measurement T?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "\\[Substitute D=34:\\]\n\n\\[34=1.2(0.75T+5)-8.\\]\nAdd 8:\n\n\\[42=1.2(0.75T+5).\\]\nDivide by 1.2:\n\n\\[35=0.75T+5.\\]\nThus,\n\n\\[30=0.75T\\]\nand\n\\[ \\boxed{T=40}. \\]",
+            "explanation": "Substitute D=34:\n\n\\[34=1.2(0.75T+5)-8.\\]\nAdd 8:\n\n\\[42=1.2(0.75T+5).\\]\nDivide by 1.2:\n\n\\[35=0.75T+5.\\]\nThus,\n\n\\[30=0.75T\\]\nand\n\\[ \\boxed{T=40}. \\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 302,
             "answerType": "student-response",
@@ -5189,7 +5189,7 @@
             "question": "A scientific instrument converts an actual measurement T to a displayed reading D according to\n\n\\[D=1.2(0.75T+5)-8.\\]\nIf the displayed reading is 34, what is the actual measurement T?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "\\[Substitute D=34:\\]\n\n\\[34=1.2(0.75T+5)-8.\\]\nAdd 8:\n\n\\[42=1.2(0.75T+5).\\]\nDivide by 1.2:\n\n\\[35=0.75T+5.\\]\nThus,\n\n\\[30=0.75T\\]\nand\n\\[ \\boxed{T=40}. \\]",
+            "explanation": "Substitute D=34:\n\n\\[34=1.2(0.75T+5)-8.\\]\nAdd 8:\n\n\\[42=1.2(0.75T+5).\\]\nDivide by 1.2:\n\n\\[35=0.75T+5.\\]\nThus,\n\n\\[30=0.75T\\]\nand\n\\[ \\boxed{T=40}. \\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 302,
             "answerType": "student-response",
@@ -5925,7 +5925,7 @@
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "The axis of symmetry is\n\n\\[x=74,\\]\nso the average of the two roots is 74.\nLet the other root be r:\n\n\\[-52+r^{2}=74.\\]\nThus,\n\n\\[-52+r=72\\]\nand\n\n\\[r=6.\\]\nTherefore, the other intercept is\n\\[ \\boxed{(6,0)}. \\]",
+              "C": "The axis of symmetry is\n\\[x=\\frac74.\\]\nTherefore the average of the two roots is \\(\\frac74\\). Let the other root be \\(r\\):\n\\[\\frac{-\\frac52+r}{2}=\\frac74.\\]\nThen\n\\[-\\frac52+r=\\frac72,\\]\nso\n\\[r=6.\\]\nTherefore, the other x-intercept is\n\\[\\boxed{(6,0)}.\\]",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Quadratics",
@@ -6248,12 +6248,12 @@
               "D": "81"
             },
             "correctAnswer": "B",
-            "explanation": "Three separate cubes have 18 faces total. There are two shared interfaces, and each hides 2 faces, leaving\n\n\\[18-4=14\\]\nexposed faces.\nIf each cube has side length s,\n\n\\[14s^2=126\\]\nThus,\n\n\\[s^2=9\\]\n\\[and s=3\\]\nThe volume is\n\\[ 3^3=\\boxed{27}. \\]",
+            "explanation": "Three separate cubes have 18 faces total. There are two shared interfaces, and each hides 2 faces, leaving\n\n\\[18-4=14\\]\nexposed faces.\nIf each cube has side length s,\n\n\\[14s^2=126\\]\nThus,\n\n\\[s^2=9\\]\nand s=3\nThe volume is\n\\[ 3^3=\\boxed{27}. \\]",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 326,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "Three separate cubes have 18 faces total. There are two shared interfaces, and each hides 2 faces, leaving\n\n\\[18-4=14\\]\nexposed faces.\nIf each cube has side length s,\n\n\\[14s^2=126\\]\nThus,\n\n\\[s^2=9\\]\n\\[and s=3\\]\nThe volume is\n\\[ 3^3=\\boxed{27}. \\]",
+              "B": "Three separate cubes have 18 faces total. There are two shared interfaces, and each hides 2 faces, leaving\n\n\\[18-4=14\\]\nexposed faces.\nIf each cube has side length s,\n\n\\[14s^2=126\\]\nThus,\n\n\\[s^2=9\\]\nand s=3\nThe volume is\n\\[ 3^3=\\boxed{27}. \\]",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
