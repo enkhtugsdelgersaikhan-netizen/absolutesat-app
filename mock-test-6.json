@@ -3253,13 +3253,13 @@
               "D": "The number depends on the values of a and c"
             },
             "correctAnswer": "C",
-            "explanation": "At an intersection,\n\n\\[a(x-2)^{2}-3c=c.\\]\nThus\n\n\\[a(x-2)^{2}=4c\\]\nand\n\n\\[(x-2)^{2}=4ca.\\]\nSince a>0 and c>0,\n\n\\[4ca>0.\\]\nA square equal to a positive number gives two distinct real values of x. Therefore, there are two intersections.",
+            "explanation": "At an intersection, \\[a(x-2)^2-3c=c,\\] so \\[a(x-2)^2=4c\\quad\\text{and}\\quad(x-2)^2=\\frac{4c}{a}.\\] Because \\(a>0\\) and \\(c>0\\), the right-hand side is positive. Therefore, \\(x=2\\pm\\sqrt{4c/a}\\) gives two distinct real intersection points.",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 463,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "At an intersection,\n\n\\[a(x-2)^{2}-3c=c.\\]\nThus\n\n\\[a(x-2)^{2}=4c\\]\nand\n\n\\[(x-2)^{2}=4ca.\\]\nSince a>0 and c>0,\n\n\\[4ca>0.\\]\nA square equal to a positive number gives two distinct real values of x. Therefore, there are two intersections.",
+              "C": "At an intersection, \\[a(x-2)^2-3c=c,\\] so \\[a(x-2)^2=4c\\quad\\text{and}\\quad(x-2)^2=\\frac{4c}{a}.\\] Because \\(a>0\\) and \\(c>0\\), the right-hand side is positive. Therefore, \\(x=2\\pm\\sqrt{4c/a}\\) gives two distinct real intersection points.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Systems of Linear Equations",
@@ -3513,22 +3513,45 @@
             "diagram": {
               "width": 420,
               "height": 300,
-              "alt": "Triangle ABC schematic",
+              "alt": "Right triangle ABC with point D on AC and segment DE perpendicular to AC, meeting AB at E",
               "caption": "Schematic; not to scale.",
               "lines": [
                 {
-                  "x1": 108,
-                  "y1": 228,
-                  "x2": 122,
-                  "y2": 228,
+                  "x1": 100,
+                  "y1": 166,
+                  "x2": 235,
+                  "y2": 166,
+                  "dashed": false
+                },
+                {
+                  "x1": 100,
+                  "y1": 231,
+                  "x2": 114,
+                  "y2": 231,
                   "dashed": false,
                   "rightMark": true
                 },
                 {
-                  "x1": 122,
-                  "y1": 228,
-                  "x2": 122,
-                  "y2": 242,
+                  "x1": 114,
+                  "y1": 231,
+                  "x2": 114,
+                  "y2": 245,
+                  "dashed": false,
+                  "rightMark": true
+                },
+                {
+                  "x1": 100,
+                  "y1": 166,
+                  "x2": 113,
+                  "y2": 166,
+                  "dashed": false,
+                  "rightMark": true
+                },
+                {
+                  "x1": 113,
+                  "y1": 166,
+                  "x2": 113,
+                  "y2": 153,
                   "dashed": false,
                   "rightMark": true
                 }
@@ -3537,16 +3560,16 @@
                 {
                   "points": [
                     [
-                      108,
-                      65
+                      100,
+                      60
                     ],
                     [
-                      325,
-                      242
+                      335,
+                      245
                     ],
                     [
-                      108,
-                      242
+                      100,
+                      245
                     ]
                   ]
                 }
@@ -3555,32 +3578,58 @@
               "circles": [],
               "points": [
                 {
-                  "x": 108,
-                  "y": 65,
+                  "x": 100,
+                  "y": 60,
                   "label": "A",
-                  "dx": -12,
+                  "dx": -11,
                   "dy": -12
                 },
                 {
-                  "x": 325,
-                  "y": 242,
+                  "x": 335,
+                  "y": 245,
                   "label": "B",
-                  "dx": 10,
-                  "dy": 18
+                  "dx": 11,
+                  "dy": 15
                 },
                 {
-                  "x": 108,
-                  "y": 242,
+                  "x": 100,
+                  "y": 245,
                   "label": "C",
                   "dx": -12,
-                  "dy": 18
+                  "dy": 17
+                },
+                {
+                  "x": 100,
+                  "y": 166,
+                  "label": "D",
+                  "dx": -15,
+                  "dy": 4
+                },
+                {
+                  "x": 235,
+                  "y": 166,
+                  "label": "E",
+                  "dx": 9,
+                  "dy": 6
                 }
               ],
               "labels": [
                 {
-                  "x": 96,
-                  "y": 146.5,
+                  "x": 72,
+                  "y": 113,
+                  "text": "AD = 8",
+                  "anchor": "middle"
+                },
+                {
+                  "x": 69,
+                  "y": 209,
                   "text": "AC = 14",
+                  "anchor": "middle"
+                },
+                {
+                  "x": 168,
+                  "y": 150,
+                  "text": "DE = x",
                   "anchor": "middle"
                 }
               ],
@@ -3702,7 +3751,7 @@
             "domain": "Advanced Math",
             "skill": "Nonlinear Equations/Functions",
             "difficulty": "Hard",
-            "passage": "The solution to the system\n\\[ \\begin{cases} y=x^2-2x+13\\\\ y=4x+4 \\end{cases} \\]\n\\[is (x,y)\\]",
+            "passage": "The solution to the system\n\\[ \\begin{cases} y=x^2-2x+13\\\\ y=4x+4 \\end{cases} \\]\nis \\((x,y)\\).",
             "question": "What is the value of xy?",
             "choices": {},
             "correctAnswer": "",
@@ -5461,22 +5510,29 @@
             "diagram": {
               "width": 420,
               "height": 300,
-              "alt": "Triangle ABC schematic",
+              "alt": "Right triangle ABC with perpendicular altitude AD to hypotenuse BC, divided into BD = 5 and DC = 20",
               "caption": "Schematic; not to scale.",
               "lines": [
                 {
-                  "x1": 106,
-                  "y1": 246,
-                  "x2": 106,
-                  "y2": 232,
+                  "x1": 110,
+                  "y1": 250,
+                  "x2": 186,
+                  "y2": 212,
+                  "dashed": false
+                },
+                {
+                  "x1": 110,
+                  "y1": 235,
+                  "x2": 125,
+                  "y2": 235,
                   "dashed": false,
                   "rightMark": true
                 },
                 {
-                  "x1": 106,
-                  "y1": 232,
-                  "x2": 92,
-                  "y2": 232,
+                  "x1": 125,
+                  "y1": 235,
+                  "x2": 125,
+                  "y2": 250,
                   "dashed": false,
                   "rightMark": true
                 }
@@ -5485,16 +5541,16 @@
                 {
                   "points": [
                     [
-                      92,
-                      246
+                      110,
+                      250
                     ],
                     [
-                      330,
-                      246
+                      205,
+                      250
                     ],
                     [
-                      92,
-                      70
+                      110,
+                      60
                     ]
                   ]
                 }
@@ -5503,28 +5559,48 @@
               "circles": [],
               "points": [
                 {
-                  "x": 92,
-                  "y": 246,
+                  "x": 110,
+                  "y": 250,
                   "label": "A",
-                  "dx": -12,
-                  "dy": 18
+                  "dx": -13,
+                  "dy": 17
                 },
                 {
-                  "x": 330,
-                  "y": 246,
+                  "x": 205,
+                  "y": 250,
                   "label": "B",
-                  "dx": 10,
-                  "dy": 18
+                  "dx": 12,
+                  "dy": 17
                 },
                 {
-                  "x": 92,
-                  "y": 70,
+                  "x": 110,
+                  "y": 60,
                   "label": "C",
                   "dx": -12,
                   "dy": -12
+                },
+                {
+                  "x": 186,
+                  "y": 212,
+                  "label": "D",
+                  "dx": 8,
+                  "dy": -8
                 }
               ],
-              "labels": [],
+              "labels": [
+                {
+                  "x": 227,
+                  "y": 218,
+                  "text": "BD = 5",
+                  "anchor": "middle"
+                },
+                {
+                  "x": 171,
+                  "y": 133,
+                  "text": "DC = 20",
+                  "anchor": "middle"
+                }
+              ],
               "rightAngles": [],
               "ticks": []
             }
@@ -5607,10 +5683,6 @@
                 {
                   "points": [
                     [
-                      -4,
-                      -14
-                    ],
-                    [
                       -2,
                       -8
                     ],
@@ -5663,10 +5735,6 @@
                     [
                       2,
                       10
-                    ],
-                    [
-                      3,
-                      24
                     ]
                   ],
                   "showPoints": false,
