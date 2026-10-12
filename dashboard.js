@@ -31,9 +31,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             '<div class="dashboard-empty-state">Your mock-test score history will appear here after you sign in.</div>';
         if (skills) skills.innerHTML =
             '<div class="dashboard-empty-state">Your domain and subtopic analysis will appear here after you complete practice.</div>';
-        window.addEventListener("lexlogica:domains-rendered", renderSubtopicTable);
-
-    document.querySelectorAll("[data-subtopic-filter]").forEach(button => {
+        document.querySelectorAll("[data-subtopic-filter]").forEach(button => {
             button.disabled = true;
             button.setAttribute("aria-label", "Sign in to filter your skill analytics");
         });
@@ -1048,6 +1046,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             renderSubtopicTable();
         });
     });
+
+    window.addEventListener("lexlogica:domains-rendered", renderSubtopicTable);
 
     // An intentionally recessed, two-stage destructive action:
     // open the settings disclosure, then type RESET before deletion is enabled.
