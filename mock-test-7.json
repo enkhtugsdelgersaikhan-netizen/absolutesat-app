@@ -3042,7 +3042,7 @@
             "skill": "Linear equations in 2 variables",
             "difficulty": "Easy",
             "passage": "",
-            "question": "Which table gives three values of x and their corresponding values of y for the equation\n\n\\[3x+2y=18?\\]",
+            "question": "Which table gives three values of x and their corresponding values of y for the equation\n\n\\[3x+2y=18\\]?",
             "choices": {
               "A": "\\(x\ny\n-2\n12\n0\n9\n4\n3\\)",
               "B": "\\(x\ny\n-2\n6\n0\n9\n4\n15\\)",
@@ -3808,7 +3808,7 @@
             "question": "What is the probability that its diameter is at least 20 mm, given that the component is not from group B?\nExpress your answer as a fraction or decimal, not as a percent.",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "The condition “not from group B” restricts the sample space to groups A and C.\nTotal components in A and C:\n\n\\[40+45=85\\]\nComponents in A and C with diameter at least 20 mm:\n\n\\[21+5+24+10=60\\]\nThus,\n\n\\[P=6085=1217\\]",
+            "explanation": "The condition restricts the sample to groups A and C. Those groups contain \\(40+45=85\\) components, of which \\(21+5+24+10=60\\) have diameter at least 20 mm. The required conditional probability is \\[\\frac{60}{85}=\\boxed{\\frac{12}{17}}.\\]",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 384,
             "answerType": "student-response",
@@ -4130,7 +4130,7 @@
             "skill": "Linear Equations",
             "difficulty": "Easy",
             "passage": "",
-            "question": "If\n\n\\[4x+9=25,\\]\nwhat is the value of\n\n\\[12x+31?\\]",
+            "question": "If\n\n\\[4x+9=25,\\]\nwhat is the value of\n\n\\[12x+31\\]?",
             "choices": {},
             "correctAnswer": "",
             "explanation": "Notice that\n\n\\[12x+31=3(4x+9)+4.\\]\n\\[Since 4x+9=25,\\]\n\n\\[12x+31=3(25)+4=79.\\]",
@@ -4815,7 +4815,7 @@
             "question": "What is the probability that its label is one of the letters B, D, I, or R? Express your answer as a fraction or decimal, not as a percent.",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "There are 18 equally likely vertices and 4 favorable labels.\nThus,\n\n\\[P=418=29\\]",
+            "explanation": "There are 18 equally likely vertex labels and four favorable labels (B, D, I, and R), so \\[P=\\frac4{18}=\\boxed{\\frac29}.\\]",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 400,
             "answerType": "student-response",
@@ -5017,7 +5017,7 @@
             "skill": "Linear Equations",
             "difficulty": "Easy",
             "passage": "",
-            "question": "If\n\n\\[4x+9=25,\\]\nwhat is the value of\n\n\\[12x+31?\\]",
+            "question": "If\n\n\\[4x+9=25,\\]\nwhat is the value of\n\n\\[12x+31\\]?",
             "choices": {},
             "correctAnswer": "",
             "explanation": "Notice that\n\n\\[12x+31=3(4x+9)+4.\\]\n\\[Since 4x+9=25,\\]\n\n\\[12x+31=3(25)+4=79.\\]",
@@ -5482,7 +5482,7 @@
             "question": "What is the probability that its label is one of the letters B, D, I, or R? Express your answer as a fraction or decimal, not as a percent.",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "There are 18 equally likely vertices and 4 favorable labels.\nThus,\n\n\\[P=418=29\\]",
+            "explanation": "There are 18 equally likely vertex labels and four favorable labels (B, D, I, and R), so \\[P=\\frac4{18}=\\boxed{\\frac29}.\\]",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 400,
             "answerType": "student-response",
@@ -5656,11 +5656,11 @@
               "D": "\\(-\\frac{13}{2}\\)"
             },
             "correctAnswer": "A",
-            "explanation": "Rewrite the first equation:\n\n\\[-4y=20-6x,\\]\nso\n\n\\[y=32x-5.\\]\nFor infinitely many solutions, the equations must be identical. Thus\n\n\\[m=32,b=-5.\\]\nTherefore,\n\\[ m-b=\\frac32-(-5)=\\boxed{\\frac{13}{2}}. \\]",
+            "explanation": "Rearrange \\(6x-4y=20\\): \\[-4y=20-6x,\\qquad y=\\frac32x-5.\\] The second equation must be identical for infinitely many solutions, so \\(m=\\frac32\\) and \\(b=-5\\). Thus \\(m-b=\\frac32+5=\\boxed{\\frac{13}{2}}\\).",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 34,
             "choiceExplanations": {
-              "A": "Rewrite the first equation:\n\n\\[-4y=20-6x,\\]\nso\n\n\\[y=32x-5.\\]\nFor infinitely many solutions, the equations must be identical. Thus\n\n\\[m=32,b=-5.\\]\nTherefore,\n\\[ m-b=\\frac32-(-5)=\\boxed{\\frac{13}{2}}. \\]",
+              "A": "Rearrange \\(6x-4y=20\\): \\[-4y=20-6x,\\qquad y=\\frac32x-5.\\] The second equation must be identical for infinitely many solutions, so \\(m=\\frac32\\) and \\(b=-5\\). Thus \\(m-b=\\frac32+5=\\boxed{\\frac{13}{2}}\\).",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -5691,7 +5691,7 @@
               "D": "\\(9\\)"
             },
             "correctAnswer": "B",
-            "explanation": "If \\(s\\) sampling cases are carried, using exactly 14 cases minimizes the mass and gives \\(14-s\\) sensor cases. Thus,\n\\[\n25s+18(14-s)\\le301.\n\\]\nThis simplifies to\n\\[\n7s+252\\le301,\n\\]\nso\n\\[\n7s\\le49\n\\]\nand \\(s\\le7\\). Therefore, the maximum is\n\\[\n\\boxed7.\n\\]",
+            "explanation": "If \\(s\\) sampling cases are carried, using exactly 14 cases minimizes the mass and gives \\(14-s\\) sensor cases. Thus,\n\\[\n25s+18(14-s)\\le301.\n\\]\nThis simplifies to\n\\[\n7s+252\\le301,\n\\]\nso\n\\[\n7s\\le49\n\\]\nand \\(s\\le7\\). Therefore, the maximum is\n\\[\n\\boxed{7}.\n\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 90,
             "choiceExplanations": {
@@ -5761,7 +5761,7 @@
               "D": "12 percentage points"
             },
             "correctAnswer": "B",
-            "explanation": "Using the points \\((1,26)\\) and \\((5,50)\\), the hourly rate is\n\\[\n\\frac{50-26}{5-1}=\\frac{24}{4}=6\n\\]\npercentage points per hour. Thirty minutes is half an hour, so the increase is\n\\[\n6\\left(\\frac12\\right)=\\boxed3.\n\\]",
+            "explanation": "Using the points \\((1,26)\\) and \\((5,50)\\), the hourly rate is\n\\[\n\\frac{50-26}{5-1}=\\frac{24}{4}=6\n\\]\npercentage points per hour. Thirty minutes is half an hour, so the increase is\n\\[\n6\\left(\\frac12\\right)=\\boxed{3}.\n\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 194,
             "choiceExplanations": {
