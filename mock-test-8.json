@@ -2795,7 +2795,7 @@
             "skill": "Linear Functions",
             "difficulty": "Easy",
             "passage": "",
-            "question": "Line r has slope -35 and passes through (10,-2). Which equation defines line r?",
+            "question": "Line \\(r\\) has slope \\(-\\frac35\\) and passes through \\((10,-2)\\). Which equation defines line \\(r\\)?",
             "choices": {
               "A": "\\(3x+5y=20\\)",
               "B": "\\(5x+3y=44\\)",
@@ -2803,11 +2803,11 @@
               "D": "\\(3x+5y=40\\)"
             },
             "correctAnswer": "A",
-            "explanation": "Use point-slope form:\n\n\\[y+2=-35(x-10).\\]\nMultiplying by 5,\n\n\\[5y+10=-3x+30.\\]\nTherefore,\n\n\\[3x+5y=20.\\]",
+            "explanation": "Use point-slope form: \\[y+2=-\\frac35(x-10).\\] Multiply by 5: \\[5y+10=-3x+30.\\] Rearranging gives \\[\\boxed{3x+5y=20}.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 183,
             "choiceExplanations": {
-              "A": "Use point-slope form:\n\n\\[y+2=-35(x-10).\\]\nMultiplying by 5,\n\n\\[5y+10=-3x+30.\\]\nTherefore,\n\n\\[3x+5y=20.\\]",
+              "A": "Use point-slope form: \\[y+2=-\\frac35(x-10).\\] Multiply by 5: \\[5y+10=-3x+30.\\] Rearranging gives \\[\\boxed{3x+5y=20}.\\]",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -3097,7 +3097,7 @@
               "D": "\\(42\\)"
             },
             "correctAnswer": "A",
-            "explanation": "\\[Since k=3,\\]\n\n\\[1-k=-2.\\]\nTherefore,\n\n\\[f(-2)=2(-2)^{3}-3(-2)^{2}+5(-2)-4.\\]\n\n\\[=-16-12-10-4=-42.\\]",
+            "explanation": "Since k=3,\n\n\\[1-k=-2.\\]\nTherefore,\n\n\\[f(-2)=2(-2)^{3}-3(-2)^{2}+5(-2)-4.\\]\n\n\\[=-16-12-10-4=-42.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 146,
             "choiceExplanations": {
@@ -3159,7 +3159,7 @@
             "skill": "Equivalent Expressions",
             "difficulty": "Medium",
             "passage": "",
-            "question": "Which of the following is equivalent to\n\n\\[(2x-3y)(x+4y)+5y(x-2y)?\\]",
+            "question": "Which of the following is equivalent to\n\n\\[(2x-3y)(x+4y)+5y(x-2y)\\]",
             "choices": {
               "A": "\\(2x^2+10xy+22y^2\\)",
               "B": "\\(2x^2+10xy-22y^2\\)",
@@ -3258,7 +3258,7 @@
             "skill": "Rational/Radical Equations",
             "difficulty": "Medium",
             "passage": "",
-            "question": "Which value of \\(x\\) satisfies \\[\\frac{2x+1}{x-2}-\\frac3{x+2}=\\frac{20}{x^2-4}?\\]",
+            "question": "Which value of \\(x\\) satisfies \\[\\frac{2x+1}{x-2}-\\frac3{x+2}=\\frac{20}{x^2-4}\\]",
             "choices": {
               "A": "\\(-3\\)",
               "B": "\\(2\\)",
@@ -3750,7 +3750,7 @@
             "skill": "Equivalent Expressions",
             "difficulty": "Easy",
             "passage": "",
-            "question": "Which expression is equivalent to\n\n\\[3(2x-5)(x+4)-2x(x-1)?\\]",
+            "question": "Which expression is equivalent to\n\n\\[3(2x-5)(x+4)-2x(x-1)\\]",
             "choices": {
               "A": "\\(4x^2+11x-60\\)",
               "B": "\\(8x^2+7x-60\\)",
@@ -3848,7 +3848,7 @@
               "D": "\\(29\\)"
             },
             "correctAnswer": "C",
-            "explanation": "\\[Substitute y=3x+4:\\]\n\n\\[2(3x+4)=5x+19.\\]\nThen\n\n\\[6x+8=5x+19,\\]\n\\[so x=11. Therefore,\\]\n\n\\[y=3(11)+4=37.\\]",
+            "explanation": "Substitute y=3x+4:\n\n\\[2(3x+4)=5x+19.\\]\nThen\n\n\\[6x+8=5x+19,\\]\nso x=11. Therefore,\n\n\\[y=3(11)+4=37.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 346,
             "choiceExplanations": {
@@ -3883,7 +3883,7 @@
               "D": "25"
             },
             "correctAnswer": "B",
-            "explanation": "\\[Use \\(V=\\pi r^2h\\):\\]\n\\[500\\pi=\\pi r^2(20).\\]\nSo \\(r^2=25\\), hence \\(r=5\\). The diameter is\n\\[\\boxed{10}.\\]",
+            "explanation": "Use \\(V=\\pi r^2h\\):\n\\[500\\pi=\\pi r^2(20).\\]\nSo \\(r^2=25\\), hence \\(r=5\\). The diameter is\n\\[\\boxed{10}.\\]",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 16,
             "choiceExplanations": {
@@ -4232,11 +4232,11 @@
               "D": "\\(\\frac7{20}\\)"
             },
             "correctAnswer": "A",
-            "explanation": "The missing entry in the first row is\n\n\\[40-28=12\\]\nThus, 12 of the 80 centers satisfy both conditions, so the probability is\n\n\\[1280=320\\]",
+            "explanation": "The first-row missing count is \\(40-28=12\\). Of the 80 centers, 12 offer evening classes but do not have a fabrication workshop, so \\[P=\\frac{12}{80}=\\boxed{\\frac3{20}}.\\]",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 363,
             "choiceExplanations": {
-              "A": "The missing entry in the first row is\n\n\\[40-28=12\\]\nThus, 12 of the 80 centers satisfy both conditions, so the probability is\n\n\\[1280=320\\]",
+              "A": "The first-row missing count is \\(40-28=12\\). Of the 80 centers, 12 offer evening classes but do not have a fabrication workshop, so \\[P=\\frac{12}{80}=\\boxed{\\frac3{20}}.\\]",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -4414,7 +4414,7 @@
               "D": "\\(12\\)"
             },
             "correctAnswer": "C",
-            "explanation": "Expand the left side:\n\n\\[5a-2ax-b.\\]\n\\[Match the x-coefficients:\\]\n\\[ -2a=-6 \\implies a=3. \\]\nMatch constants:\n\n\\[5(3)-b=9,\\]\n\\[so b=6. Hence,\\]\n\\[ a+b=3+6=\\boxed9. \\]",
+            "explanation": "Expand the left side:\n\n\\[5a-2ax-b.\\]\nMatch the x-coefficients:\n\\[ -2a=-6 \\implies a=3. \\]\nMatch constants:\n\n\\[5(3)-b=9,\\]\nso b=6. Hence,\n\\[ a+b=3+6=\\boxed9. \\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 62,
             "choiceExplanations": {
@@ -5046,7 +5046,7 @@
               "D": "\\(12\\)"
             },
             "correctAnswer": "C",
-            "explanation": "Expand the left side:\n\n\\[5a-2ax-b.\\]\n\\[Match the x-coefficients:\\]\n\\[ -2a=-6 \\implies a=3. \\]\nMatch constants:\n\n\\[5(3)-b=9,\\]\n\\[so b=6. Hence,\\]\n\\[ a+b=3+6=\\boxed9. \\]",
+            "explanation": "Expand the left side:\n\n\\[5a-2ax-b.\\]\nMatch the x-coefficients:\n\\[ -2a=-6 \\implies a=3. \\]\nMatch constants:\n\n\\[5(3)-b=9,\\]\nso b=6. Hence,\n\\[ a+b=3+6=\\boxed9. \\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 62,
             "choiceExplanations": {
@@ -5195,7 +5195,7 @@
               "D": "$52"
             },
             "correctAnswer": "B",
-            "explanation": "The demand changes by\n\n\\[17,600-24,800=-7,200\\]\nwhen price rises by 24, so demand decreases by 300 units per $1. To go from 24,800 units to 20,000 units is a decrease of 4,800 units, requiring a price increase of\n\n\\[4,800300=16.\\]\n\\[Thus the price is \\(32+16=\\$48\\).\\]",
+            "explanation": "The demand changes by\n\n\\[17,600-24,800=-7,200\\]\nwhen price rises by 24, so demand decreases by 300 units per $1. To go from 24,800 units to 20,000 units is a decrease of 4,800 units, requiring a price increase of\n\n\\[4,800300=16.\\]\nThus the price is \\(32+16=\\$48\\).",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 99,
             "choiceExplanations": {
@@ -5363,7 +5363,7 @@
             "skill": "Equivalent Expressions",
             "difficulty": "Hard",
             "passage": "",
-            "question": "For \\(x\\ne3\\) and \\(x\\ne-1\\), which expression is equivalent to \\[\\frac{x}{x-3}-\\frac2{x+1}?\\]",
+            "question": "For \\(x\\ne3\\) and \\(x\\ne-1\\), which expression is equivalent to \\[\\frac{x}{x-3}-\\frac2{x+1}\\]",
             "choices": {
               "A": "\\(\\displaystyle \\frac{x^2-x+6}{(x-3)(x+1)}\\)",
               "B": "\\(\\displaystyle \\frac{x^2+3x-6}{(x-3)(x+1)}\\)",
@@ -5371,7 +5371,7 @@
               "D": "\\(\\displaystyle \\frac{x-2}{(x-3)(x+1)}\\)"
             },
             "correctAnswer": "A",
-            "explanation": "\\[Use the common denominator (x-3)(x+1):\\]\n\n\\[x(x+1)-2(x-3)(x-3)(x+1).\\]\nThe numerator simplifies to\n\n\\[x^{2}+x-2x+6=x^{2}-x+6.\\]\nThus the equivalent expression is\n\n\\[x^{2}-x+6(x-3)(x+1).\\]",
+            "explanation": "Use the common denominator (x-3)(x+1):\n\n\\[x(x+1)-2(x-3)(x-3)(x+1).\\]\nThe numerator simplifies to\n\n\\[x^{2}+x-2x+6=x^{2}-x+6.\\]\nThus the equivalent expression is\n\n\\[x^{2}-x+6(x-3)(x+1).\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 229,
             "choiceExplanations": {
