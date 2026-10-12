@@ -4756,11 +4756,11 @@
               "D": "\\(-4\\)"
             },
             "correctAnswer": "A",
-            "explanation": "Rewrite the right side using denominator x+4:\n\n\\[2-5x+4=2x+8-5x+4=2x+3x+4.\\]\nThus\n\n\\[3(x-1)=2x+3.\\]\nSo\n\n\\[3x-3=2x+3,\\]\nwhich gives\n\n\\[x=6.\\]",
+            "explanation": "The original denominators require \\(x\\ne-4\\). Multiply both sides by \\(x+4\\): \\[3(x-1)=2(x+4)-5.\\] Simplify: \\(3x-3=2x+3\\), so \\(\\boxed{x=6}\\). Since \\(6\\ne-4\\), this is a valid solution.",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 234,
             "choiceExplanations": {
-              "A": "Rewrite the right side using denominator x+4:\n\n\\[2-5x+4=2x+8-5x+4=2x+3x+4.\\]\nThus\n\n\\[3(x-1)=2x+3.\\]\nSo\n\n\\[3x-3=2x+3,\\]\nwhich gives\n\n\\[x=6.\\]",
+              "A": "The original denominators require \\(x\\ne-4\\). Multiply both sides by \\(x+4\\): \\[3(x-1)=2(x+4)-5.\\] Simplify: \\(3x-3=2x+3\\), so \\(\\boxed{x=6}\\). Since \\(6\\ne-4\\), this is a valid solution.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -5441,11 +5441,11 @@
               "D": "\\(-4\\)"
             },
             "correctAnswer": "A",
-            "explanation": "Rewrite the right side using denominator x+4:\n\n\\[2-5x+4=2x+8-5x+4=2x+3x+4.\\]\nThus\n\n\\[3(x-1)=2x+3.\\]\nSo\n\n\\[3x-3=2x+3,\\]\nwhich gives\n\n\\[x=6.\\]",
+            "explanation": "The original denominators require \\(x\\ne-4\\). Multiply both sides by \\(x+4\\): \\[3(x-1)=2(x+4)-5.\\] Simplify: \\(3x-3=2x+3\\), so \\(\\boxed{x=6}\\). Since \\(6\\ne-4\\), this is a valid solution.",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 234,
             "choiceExplanations": {
-              "A": "Rewrite the right side using denominator x+4:\n\n\\[2-5x+4=2x+8-5x+4=2x+3x+4.\\]\nThus\n\n\\[3(x-1)=2x+3.\\]\nSo\n\n\\[3x-3=2x+3,\\]\nwhich gives\n\n\\[x=6.\\]",
+              "A": "The original denominators require \\(x\\ne-4\\). Multiply both sides by \\(x+4\\): \\[3(x-1)=2(x+4)-5.\\] Simplify: \\(3x-3=2x+3\\), so \\(\\boxed{x=6}\\). Since \\(6\\ne-4\\), this is a valid solution.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
