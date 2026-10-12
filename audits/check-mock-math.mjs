@@ -105,7 +105,7 @@ const mandatory={
  "math-20261008-huge798-q629":q=>q.acceptedAnswers.includes("19"),
  "math-20261006-new409-q198":q=>q.acceptedAnswers.includes("12") &&
    ["A","B","C","D","E"].every(label=>q.diagram?.points?.some(point=>point.label===label)),
- "math-20261006-batch465-q463":q=>q.explanation.includes("\\\\frac{4c}{a}"),
+ "math-20261006-batch465-q463":q=>q.explanation.includes("\\frac{4c}{a}"),
  "math-20261008-huge798-q539":q=>q.diagram?.points?.some(point=>point.label==="D"),
  "math-20261008-huge798-q526":q=>
    ["A","B","C","D","E"].every(label=>q.diagram?.points?.some(point=>point.label===label)),
