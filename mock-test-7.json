@@ -2849,11 +2849,11 @@
               "D": "\\(65<r<71\\)"
             },
             "correctAnswer": "A",
-            "explanation": "The actual temperature is r+3. Therefore,\n\n\\[68r+374.\\]\nSubtracting 3 throughout gives\n\\[ \\boxed{65\\le r\\le71}. \\]",
+            "explanation": "The actual temperature is \\(r+3\\), since the sensor reads 3°F lower than the true temperature. The required range is \\[68\\le r+3\\le74.\\] Subtract 3 from every term to obtain \\(\\boxed{65\\le r\\le71}\\).",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 276,
             "choiceExplanations": {
-              "A": "The actual temperature is r+3. Therefore,\n\n\\[68r+374.\\]\nSubtracting 3 throughout gives\n\\[ \\boxed{65\\le r\\le71}. \\]",
+              "A": "The actual temperature is \\(r+3\\), since the sensor reads 3°F lower than the true temperature. The required range is \\[68\\le r+3\\le74.\\] Subtract 3 from every term to obtain \\(\\boxed{65\\le r\\le71}\\).",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -3050,11 +3050,11 @@
               "D": "\\(x\ny\n-2\n9\n0\n12\n4\n6\\)"
             },
             "correctAnswer": "A",
-            "explanation": "Solve for y:\n\n\\[2y=18-3x,y=9-32x.\\]\nFor x=-2,0,4, the corresponding y-values are 12,9,3, respectively.",
+            "explanation": "Solve \\(3x+2y=18\\) for \\(y\\): \\[y=\\frac{18-3x}{2}=9-\\frac32x.\\] For \\(x=-2,0,4\\), the corresponding values are \\(y=12,9,3\\), respectively, matching choice A.",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 123,
             "choiceExplanations": {
-              "A": "Solve for y:\n\n\\[2y=18-3x,y=9-32x.\\]\nFor x=-2,0,4, the corresponding y-values are 12,9,3, respectively.",
+              "A": "Solve \\(3x+2y=18\\) for \\(y\\): \\[y=\\frac{18-3x}{2}=9-\\frac32x.\\] For \\(x=-2,0,4\\), the corresponding values are \\(y=12,9,3\\), respectively, matching choice A.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -3691,7 +3691,7 @@
             "question": "What value of \\(x\\) satisfies the equation?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "Because the square root is nonnegative, \\(x-3\\ge0\\), so \\(x\\ge^3\\). Squaring gives\n\\[2x+9=(x-3)^2=x^2-6x+9.\\]\nThus\n\\[x^2-8x=0,\\]\nso \\(x=0\\) or \\(x=8\\). Only \\(8\\) satisfies the original equation. Therefore,\n\\[\\boxed{8}.\\]",
+            "explanation": "The right-hand side must be nonnegative, so \\(x-3\\ge0\\), or \\(x\\ge3\\). Squaring \\(\\sqrt{2x+9}=x-3\\) gives \\[2x+9=(x-3)^2=x^2-6x+9.\\] Thus \\(x^2-8x=x(x-8)=0\\), giving 0 or 8. Only \\(x=8\\) satisfies both the domain restriction and the original equation, so \\(\\boxed{8}\\).",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 1,
             "answerType": "student-response",
@@ -4201,11 +4201,11 @@
               "D": "\\[ \\begin{cases} 2x-5=3y\\\\ 2x=y+4 \\end{cases} \\]"
             },
             "correctAnswer": "A",
-            "explanation": "“Five less than twice x” is 2x-5, giving\n\n\\[2x-5=3y.\\]\nAlso,\n\n\\[y=x^{2}+4.\\]\nMultiplying by 2 gives\n\n\\[2y=x+8.\\]\nThus the correct system is choice A.",
+            "explanation": "Five less than twice \\(x\\) equals three times \\(y\\), so \\(2x-5=3y\\). Also, \\(y\\) is 4 greater than half of \\(x\\), so \\(y=\\frac{x}{2}+4\\), equivalently \\(2y=x+8\\). These are the two equations in choice A.",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 27,
             "choiceExplanations": {
-              "A": "“Five less than twice x” is 2x-5, giving\n\n\\[2x-5=3y.\\]\nAlso,\n\n\\[y=x^{2}+4.\\]\nMultiplying by 2 gives\n\n\\[2y=x+8.\\]\nThus the correct system is choice A.",
+              "A": "Five less than twice \\(x\\) equals three times \\(y\\), so \\(2x-5=3y\\). Also, \\(y\\) is 4 greater than half of \\(x\\), so \\(y=\\frac{x}{2}+4\\), equivalently \\(2y=x+8\\). These are the two equations in choice A.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
