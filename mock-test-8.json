@@ -3293,7 +3293,7 @@
             "domain": "Problem-Solving & Data Analysis",
             "skill": "Probability",
             "difficulty": "Medium",
-            "passage": "A survey records the shipping choices of 168 customers. The table shows whether customers have a membership and whether they use express shipping.",
+            "passage": "A survey records shipping choices of 168 customers. Of these, 54 members and 36 nonmembers used express shipping; 42 members and 36 nonmembers did not use express shipping.",
             "question": "If a customer is selected at random, what is the probability that the customer did not use express shipping?",
             "choices": {
               "A": "\\(\\frac3{14}\\)",
