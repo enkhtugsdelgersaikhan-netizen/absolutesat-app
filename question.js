@@ -10222,7 +10222,7 @@ function studentResponseIsCorrect(
     // truncated to the available decimal precision. Keep exact grading for
     // integers, terminating decimals, and entries with fewer than 3 places.
     const submittedText = String(value ?? "").trim().replace(/,/g, "");
-    const decimal = submittedText.match(/^-?(?:\\d+)?\\.(\\d{3,5})$/);
+    const decimal = submittedText.match(/^-?(?:\d+)?\.(\d{3,5})$/);
     if (!decimal) return false;
 
     const places = decimal[1].length;
@@ -10231,7 +10231,7 @@ function studentResponseIsCorrect(
         ? question.accepted_answers
         : [];
     return acceptedText.some(candidate => {
-        if (!/^-?\\d+\\/-?\\d+$/.test(String(candidate).trim())) return false;
+        if (!/^-?\d+\/-?\d+$/.test(String(candidate).trim())) return false;
         const target = parseStudentResponseValue(candidate);
         return target !== null && (
             Math.abs(submitted - Math.round(target * scale) / scale) <= 1e-9 ||
