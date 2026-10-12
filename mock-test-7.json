@@ -3754,7 +3754,7 @@
             "question": "What is the value of \\(x\\)?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "Among night-shift workers, the number with certification B or C is\n\n\\[x+8\\]\nThe total number of night-shift workers is\n\n\\[6+x+8+10=x+24\\]\nTherefore,\n\n\\[x+8x+24=12\\]\nCross-multiply:\n\n\\[2x+16=x+24\\]\nThus,\n\\[ \\boxed{x=8}. \\]",
+            "explanation": "Among night-shift workers, \\(x+8\\) have certification B or C and \\(x+24\\) work the night shift in total. The stated probability \\(\\frac12\\) gives \\[\\frac{x+8}{x+24}=\\frac12.\\] Hence \\(2x+16=x+24\\), so \\(\\boxed{x=8}\\).",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 362,
             "answerType": "student-response",
