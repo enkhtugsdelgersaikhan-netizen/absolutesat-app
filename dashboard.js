@@ -594,14 +594,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     function renderMockPerformance() {
         const tests = loadMockPerformance();
         const completed = tests.filter(test => test.scores);
-
         if (!completed.length) {
             els.mockChart.className =
                 "mock-performance-chart dashboard-chart-empty-state mock-empty-state";
-
             els.mockChart.innerHTML =
                 '<strong>No completed mock tests yet.</strong>' +
-                '<span>Composite, R&W, and Math scores from Mock Tests 1–8 will appear here.</span>' +
+                '<span>Your R&W and Math scores will stack into a composite bar for each finished mock.</span>' +
                 '<div class="mock-empty-slots">' +
                     tests.map(test =>
                         '<div><b>' + test.index + '</b><small>Mock</small></div>'
@@ -610,94 +608,52 @@ document.addEventListener("DOMContentLoaded", async () => {
             return;
         }
 
-        const width = 760;
-        const height = 220;
-        const left = 48;
-        const right = 48;
-        const top = 18;
-        const bottom = 38;
-        const plotWidth = width - left - right;
-        const plotHeight = height - top - bottom;
-        const x = index =>
-            left + ((index - 1) / 7) * plotWidth;
-        const yComposite = score =>
-            top + ((1600 - score) / 1200) * plotHeight;
-        const ySection = score =>
-            top + ((800 - score) / 600) * plotHeight;
-
-        const compositeTicks = [1600,1300,1000,700,400];
-        const sectionTicks = [800,650,500,350,200];
-
-        const grid = compositeTicks.map((value, i) => {
-            const y = yComposite(value);
-            return (
-                '<line class="mock-grid" x1="' + left + '" x2="' + (width-right) +
-                    '" y1="' + y + '" y2="' + y + '"></line>' +
-                '<text class="mock-axis-label" x="' + (left-7) + '" y="' + (y+3) +
-                    '" text-anchor="end">' + value + '</text>' +
-                '<text class="mock-axis-label" x="' + (width-right+7) + '" y="' + (y+3) +
-                    '" text-anchor="start">' + sectionTicks[i] + '</text>'
-            );
+        // All scores share one 0–1600 scale: the sections add up to the total.
+        const ticks = [400,800,1200,1600];
+        const grid = ticks.map(score =>
+            '<span class="mock-stacked-gridline" style="bottom:' +
+            (score / 1600 * 90) + '%" aria-hidden="true"></span>'
+        ).join("");
+        const scale = ticks.map(score =>
+            '<span style="bottom:' + (score / 1600 * 90) + '%">' + score + '</span>'
+        ).join("");
+        const columns = tests.map(test => {
+            const scores = test.scores;
+            if (!scores) {
+                return '<div class="mock-stacked-column is-empty">' +
+                    '<div class="mock-stacked-barslot"><div class="mock-stacked-placeholder" aria-label="Mock ' +
+                    test.index + ' not completed">—</div></div>' +
+                    '<span class="mock-stacked-test-label">Mock ' + test.index + '</span></div>';
+            }
+            const rw = Math.max(0,Math.min(800,Number(scores.readingWriting)||0));
+            const math = Math.max(0,Math.min(800,Number(scores.math)||0));
+            const composite = rw + math;
+            const heightPercent = composite / 1600 * 90;
+            return '<div class="mock-stacked-column is-complete" role="img" aria-label="Mock ' +
+                test.index + ': composite ' + composite + ', Reading and Writing ' +
+                rw + ', Math ' + math + '">' +
+                '<div class="mock-stacked-barslot">' +
+                    '<strong class="mock-stacked-total" style="bottom:calc(' +
+                        heightPercent + '% + 5px)">' + composite + '</strong>' +
+                    '<div class="mock-stacked-segments" style="height:' + heightPercent + '%">' +
+                        '<div class="mock-stacked-segment is-math" style="flex:' + math +
+                            '" title="Math: ' + math + '"><span>' + math + '</span></div>' +
+                        '<div class="mock-stacked-segment is-rw" style="flex:' + rw +
+                            '" title="Reading &amp; Writing: ' + rw + '"><span>' + rw + '</span></div>' +
+                    '</div></div>' +
+                '<span class="mock-stacked-test-label">Mock ' + test.index + '</span></div>';
         }).join("");
 
-        const xLabels = tests.map(test =>
-            '<text class="mock-x-label' + (test.scores ? ' is-complete' : '') +
-                '" x="' + x(test.index) + '" y="' + (height-8) +
-                '" text-anchor="middle">Mock ' + test.index + '</text>'
-        ).join("");
-
-        const buildSeries = (key, yFn, className, label) => {
-            const points = completed.map(test => ({
-                test,
-                x: x(test.index),
-                y: yFn(test.scores[key]),
-                value: test.scores[key]
-            }));
-
-            const line = points.length > 1
-                ? '<polyline class="mock-series ' + className + '" points="' +
-                    points.map(point => point.x + ',' + point.y).join(' ') +
-                    '"></polyline>'
-                : "";
-
-            const dots = points.map(point =>
-                '<g>' +
-                    '<circle class="mock-dot ' + className + '" cx="' + point.x +
-                        '" cy="' + point.y + '" r="4.5">' +
-                        '<title>Mock ' + point.test.index + ' · ' +
-                            escapeHtml(label) + ': ' + point.value + '</title>' +
-                    '</circle>' +
-                '</g>'
-            ).join("");
-
-            return line + dots;
-        };
-
-        const emptySlots = tests
-            .filter(test => !test.scores)
-            .map(test =>
-                '<circle class="mock-empty-dot" cx="' + x(test.index) +
-                    '" cy="' + (top + plotHeight) + '" r="3"></circle>'
-            )
-            .join("");
-
-        els.mockChart.className = "mock-performance-chart";
+        els.mockChart.className = "mock-performance-chart mock-performance-stacked";
         els.mockChart.innerHTML =
-            '<svg viewBox="0 0 ' + width + ' ' + height +
-                '" role="img" aria-label="Mock test Composite, Reading and Writing, and Math score performance">' +
-                grid +
-                '<text class="mock-axis-title" x="10" y="' + (top + plotHeight/2) +
-                    '" transform="rotate(-90 10 ' + (top + plotHeight/2) +
-                    ')" text-anchor="middle">Composite</text>' +
-                '<text class="mock-axis-title" x="' + (width-10) + '" y="' + (top + plotHeight/2) +
-                    '" transform="rotate(90 ' + (width-10) + ' ' + (top + plotHeight/2) +
-                    ')" text-anchor="middle">Section</text>' +
-                buildSeries("composite", yComposite, "is-composite", "Composite") +
-                buildSeries("readingWriting", ySection, "is-rw", "R&W") +
-                buildSeries("math", ySection, "is-math", "Math") +
-                emptySlots +
-                xLabels +
-            '</svg>';
+            '<div class="mock-stacked-chart" role="group" aria-label="Mock tests 1 to 8, stacked section scores with the composite above each bar">' +
+                '<div class="mock-stacked-scale" aria-hidden="true">' + scale + '</div>' +
+                '<div class="mock-stacked-scroll" tabindex="0" aria-label="Scroll horizontally to inspect all mock-test bars">' +
+                    '<div class="mock-stacked-plot">' + grid +
+                        '<div class="mock-stacked-columns">' + columns + '</div>' +
+                    '</div>' +
+                '</div>' +
+            '</div>';
     }
 
     function buildSubtopicRows(attempts, timedHistory, metadata) {
@@ -831,89 +787,64 @@ document.addEventListener("DOMContentLoaded", async () => {
         return "This skill is on track. Maintain it while directing more practice toward weaker areas.";
     }
 
+    // The study guide owns the eight domain cards. Do not create a separate
+    // analytics hierarchy: populate each card's expandable skill breakdown.
     function renderSubtopicTable() {
-        const rows = currentSubtopicRows.filter(row => {
-            if (activeSubtopicFilter === "rw") return row.section === "R&W";
-            if (activeSubtopicFilter === "math") return row.section === "Math";
-            return true;
+        const disclosures = document.querySelectorAll(
+            "#sg-all-domains .sg-domain-analytics[data-domain-analytics]"
+        );
+        disclosures.forEach(details => {
+            const key = details.dataset.domainAnalytics || "";
+            const cut = key.indexOf("::");
+            if (cut < 0) return;
+            const section = key.slice(0,cut) === "math" ? "Math" : "R&W";
+            const domain = key.slice(cut + 2);
+            const skillOrder = DASHBOARD_SKILL_TAXONOMY[section]?.[domain] || [];
+            const rows = currentSubtopicRows
+                .filter(row => row.section === section && row.domain === domain)
+                .sort((a,b) => {
+                    const ai=skillOrder.indexOf(a.subtopic);
+                    const bi=skillOrder.indexOf(b.subtopic);
+                    return (ai < 0 ? 999 : ai) - (bi < 0 ? 999 : bi) ||
+                        a.subtopic.localeCompare(b.subtopic);
+                });
+            const body = details.querySelector(".sg-domain-analytics-body");
+            const count = details.querySelector(".sg-analytics-count");
+            if (!body) return;
+            const practiced = rows.filter(row => row.answered > 0).length;
+            if (count) count.textContent = rows.length
+                ? practiced + " of " + rows.length + " skills practiced"
+                : "Not assessed yet";
+            if (!rows.length) {
+                body.innerHTML = '<p class="sg-domain-analytics-empty">No subtopic attempts yet. ' +
+                    'Complete a drill to see accuracy and pace here.</p>';
+                return;
+            }
+            body.innerHTML =
+                '<p class="sg-domain-analytics-caption">Practice history by subtopic. ' +
+                    'Accuracy target: 90%; pace targets: 71s for R&W and 95s for Math. ' +
+                    'Timing reflects recorded first attempts.</p>' +
+                '<div class="dashboard-domain-subtopics">' +
+                    rows.map(row => {
+                        const accuracy = Number.isFinite(row.accuracy)
+                            ? Math.round(row.accuracy) + "%" : "—";
+                        const avgTime = Number.isFinite(row.averageTime)
+                            ? Math.round(row.averageTime) + "s" : "—";
+                        return '<article class="dashboard-subtopic-card ' +
+                            getSkillSeverityClass(row) + '">' +
+                            '<div class="dashboard-subtopic-card-head"><strong>' +
+                                escapeHtml(row.subtopic) + '</strong><span>' +
+                                row.answered.toLocaleString() + ' answered</span></div>' +
+                            '<div class="dashboard-subtopic-metrics">' +
+                                '<span>Accuracy <b style="color:' + accuracyColor(row.accuracy) +
+                                    '">' + accuracy + '</b></span>' +
+                                '<span>Pace <b style="color:' + paceColor(row.averageTime,row.section) +
+                                    '">' + avgTime + '</b></span>' +
+                            '</div><p>' + escapeHtml(getSkillPracticeDescription(row)) +
+                            '</p></article>';
+                    }).join("") +
+                '</div>';
         });
-
-        if (!rows.length) {
-            els.subtopicBody.innerHTML = '<div class="dashboard-empty-state">No skills found.</div>';
-            return;
-        }
-
-        const sectionOrder = ["R&W", "Math"];
-        const grouped = new Map();
-
-        rows.forEach(row => {
-            const section = row.section || "R&W";
-            const domain = row.domain || "Other";
-            if (!grouped.has(section)) grouped.set(section, new Map());
-            if (!grouped.get(section).has(domain)) grouped.get(section).set(domain, []);
-            grouped.get(section).get(domain).push(row);
-        });
-
-        els.subtopicBody.innerHTML = sectionOrder
-            .filter(section => grouped.has(section))
-            .map(section => {
-                const taxonomy = DASHBOARD_SKILL_TAXONOMY[section] || {};
-                const domainOrder = Object.keys(taxonomy);
-                const domains = Array.from(grouped.get(section).entries())
-                    .sort(([a], [b]) => {
-                        const ai = domainOrder.indexOf(a);
-                        const bi = domainOrder.indexOf(b);
-                        return (ai < 0 ? 999 : ai) - (bi < 0 ? 999 : bi) || a.localeCompare(b);
-                    });
-
-                const domainMarkup = domains.map(([domain, domainRows]) => {
-                    const skillOrder = taxonomy[domain] || [];
-                    const sortedRows = domainRows.slice().sort((a, b) => {
-                        const ai = skillOrder.indexOf(a.subtopic);
-                        const bi = skillOrder.indexOf(b.subtopic);
-                        return (ai < 0 ? 999 : ai) - (bi < 0 ? 999 : bi) ||
-                            a.subtopic.localeCompare(b.subtopic);
-                    });
-
-                    const skillMarkup = sortedRows.map(row => {
-                        const accuracy = Number.isFinite(row.accuracy) ? Math.round(row.accuracy) + "%" : "—";
-                        const avgTime = Number.isFinite(row.averageTime) ? Math.round(row.averageTime) + "s" : "—";
-                        return (
-                            '<article class="dashboard-subtopic-card ' + getSkillSeverityClass(row) + '">' +
-                                '<div class="dashboard-subtopic-card-head">' +
-                                    '<strong>' + escapeHtml(row.subtopic) + '</strong>' +
-                                    '<span>' + row.answered.toLocaleString() + ' answered</span>' +
-                                '</div>' +
-                                '<div class="dashboard-subtopic-metrics">' +
-                                    '<span>Accuracy <b style="color:' + accuracyColor(row.accuracy) + '">' + accuracy + '</b></span>' +
-                                    '<span>Pace <b style="color:' + paceColor(row.averageTime, row.section) + '">' + avgTime + '</b></span>' +
-                                '</div>' +
-                                '<p>' + escapeHtml(getSkillPracticeDescription(row)) + '</p>' +
-                            '</article>'
-                        );
-                    }).join("");
-
-                    return (
-                        '<section class="dashboard-domain-skill-group">' +
-                            '<div class="dashboard-domain-skill-head">' +
-                                '<div><span>DOMAIN</span><strong>' + escapeHtml(domain) + '</strong></div>' +
-                                '<small>' + sortedRows.length + (sortedRows.length === 1 ? ' skill' : ' skills') + '</small>' +
-                            '</div>' +
-                            '<div class="dashboard-domain-subtopics">' + skillMarkup + '</div>' +
-                        '</section>'
-                    );
-                }).join("");
-
-                return (
-                    '<section class="dashboard-section-skill-group" data-section="' + (section === "Math" ? "math" : "rw") + '">' +
-                        '<div class="dashboard-section-skill-head">' +
-                            '<span class="subtopic-section-chip">' + escapeHtml(section) + '</span>' +
-                            '<small>Domains with nested skill performance</small>' +
-                        '</div>' +
-                        '<div class="dashboard-domain-skill-grid">' + domainMarkup + '</div>' +
-                    '</section>'
-                );
-            }).join("");
     }
 
     function renderPriorities(rows) {
@@ -1115,6 +1046,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             renderSubtopicTable();
         });
     });
+
+    window.addEventListener("lexlogica:domains-rendered", renderSubtopicTable);
 
     // An intentionally recessed, two-stage destructive action:
     // open the settings disclosure, then type RESET before deletion is enabled.
