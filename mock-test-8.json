@@ -2795,7 +2795,7 @@
             "skill": "Linear Functions",
             "difficulty": "Easy",
             "passage": "",
-            "question": "Line r has slope -35 and passes through (10,-2). Which equation defines line r?",
+            "question": "Line \\(r\\) has slope \\(-\\frac35\\) and passes through \\((10,-2)\\). Which equation defines line \\(r\\)?",
             "choices": {
               "A": "\\(3x+5y=20\\)",
               "B": "\\(5x+3y=44\\)",
@@ -2803,11 +2803,11 @@
               "D": "\\(3x+5y=40\\)"
             },
             "correctAnswer": "A",
-            "explanation": "Use point-slope form:\n\n\\[y+2=-35(x-10).\\]\nMultiplying by 5,\n\n\\[5y+10=-3x+30.\\]\nTherefore,\n\n\\[3x+5y=20.\\]",
+            "explanation": "Using point-slope form with slope \\(-\\frac35\\) and point \\((10,-2)\\) gives \\[y+2=-\\frac35(x-10).\\] Multiply by 5: \\[5y+10=-3x+30.\\] Therefore \\[\\boxed{3x+5y=20}.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 183,
             "choiceExplanations": {
-              "A": "Use point-slope form:\n\n\\[y+2=-35(x-10).\\]\nMultiplying by 5,\n\n\\[5y+10=-3x+30.\\]\nTherefore,\n\n\\[3x+5y=20.\\]",
+              "A": "Using point-slope form with slope \\(-\\frac35\\) and point \\((10,-2)\\) gives \\[y+2=-\\frac35(x-10).\\] Multiply by 5: \\[5y+10=-3x+30.\\] Therefore \\[\\boxed{3x+5y=20}.\\]",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -2891,7 +2891,7 @@
             "question": "What is its average speed, in meters per second, rounded to the nearest tenth?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "Convert the distance and time:\n\n\\[7.5km=7,500m\\]\nand\n\n\\[12min=720s\\]\nThen\n\n7,50072010.4167.\nRounded to the nearest tenth, the speed is\n\n10.4.",
+            "explanation": "Convert 7.5 kilometers to 7,500 meters and 12 minutes to 720 seconds. The average speed is \\[\\frac{7{,}500}{720}\\approx10.4167\\text{ m/s}.\\] Rounded to the nearest tenth, the speed is \\(\\boxed{10.4}\\) meters per second.",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 387,
             "answerType": "student-response",
@@ -4379,11 +4379,11 @@
               "D": "\\(f(x)=x^{2}-5x-14\\)"
             },
             "correctAnswer": "A",
-            "explanation": "The two numbers are\n\n\\[x-2andx+7.\\]\nTheir product is\n\n\\[f(x)=(x-2)(x+7)=x^{2}+5x-14.\\]",
+            "explanation": "The two factors are \\(x-2\\) and \\(x+7\\). Their product is \\[f(x)=(x-2)(x+7)=x^2+5x-14.\\] Hence choice A is correct.",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 261,
             "choiceExplanations": {
-              "A": "The two numbers are\n\n\\[x-2andx+7.\\]\nTheir product is\n\n\\[f(x)=(x-2)(x+7)=x^{2}+5x-14.\\]",
+              "A": "The two factors are \\(x-2\\) and \\(x+7\\). Their product is \\[f(x)=(x-2)(x+7)=x^2+5x-14.\\] Hence choice A is correct.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -4602,7 +4602,7 @@
             "question": "What is the area of the rectangle, in square units?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "Let the shorter side be x. Then the longer side is x+14. By the Pythagorean theorem,\n\n\\[x^2+(x+14)^2=262\\]\nThis simplifies to\n\n\\[x^2+14x-240=0\\]\nor\n\n\\[(x-10)(x+24)=0\\]\nThe positive solution is x=10, so the longer side is 24. The area is\n\\[ 10(24)=\\boxed{240}. \\]",
+            "explanation": "Let \\(x\\) be the shorter side, so the longer side is \\(x+14\\). By the Pythagorean theorem, \\[x^2+(x+14)^2=26^2=676.\\] Simplifying gives \\(x^2+14x-240=0=(x-10)(x+24)\\). Since a side length is positive, \\(x=10\\). The other side is 24, so the area is \\(\\boxed{240}\\) square units.",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 10,
             "answerType": "student-response",
@@ -4789,11 +4789,11 @@
               "D": "\\(f(x)=x^{2}-5x-14\\)"
             },
             "correctAnswer": "A",
-            "explanation": "The two numbers are\n\n\\[x-2andx+7.\\]\nTheir product is\n\n\\[f(x)=(x-2)(x+7)=x^{2}+5x-14.\\]",
+            "explanation": "The two factors are \\(x-2\\) and \\(x+7\\). Their product is \\[f(x)=(x-2)(x+7)=x^2+5x-14.\\] Hence choice A is correct.",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 261,
             "choiceExplanations": {
-              "A": "The two numbers are\n\n\\[x-2andx+7.\\]\nTheir product is\n\n\\[f(x)=(x-2)(x+7)=x^{2}+5x-14.\\]",
+              "A": "The two factors are \\(x-2\\) and \\(x+7\\). Their product is \\[f(x)=(x-2)(x+7)=x^2+5x-14.\\] Hence choice A is correct.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -5076,7 +5076,7 @@
             "question": "What is the area of the rectangle, in square units?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "Let the shorter side be x. Then the longer side is x+14. By the Pythagorean theorem,\n\n\\[x^2+(x+14)^2=262\\]\nThis simplifies to\n\n\\[x^2+14x-240=0\\]\nor\n\n\\[(x-10)(x+24)=0\\]\nThe positive solution is x=10, so the longer side is 24. The area is\n\\[ 10(24)=\\boxed{240}. \\]",
+            "explanation": "Let \\(x\\) be the shorter side, so the longer side is \\(x+14\\). By the Pythagorean theorem, \\[x^2+(x+14)^2=26^2=676.\\] Simplifying gives \\(x^2+14x-240=0=(x-10)(x+24)\\). Since a side length is positive, \\(x=10\\). The other side is 24, so the area is \\(\\boxed{240}\\) square units.",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 10,
             "answerType": "student-response",
@@ -5371,11 +5371,11 @@
               "D": "\\(\\displaystyle \\frac{x-2}{(x-3)(x+1)}\\)"
             },
             "correctAnswer": "A",
-            "explanation": "\\[Use the common denominator (x-3)(x+1):\\]\n\n\\[x(x+1)-2(x-3)(x-3)(x+1).\\]\nThe numerator simplifies to\n\n\\[x^{2}+x-2x+6=x^{2}-x+6.\\]\nThus the equivalent expression is\n\n\\[x^{2}-x+6(x-3)(x+1).\\]",
+            "explanation": "Using the common denominator \\((x-3)(x+1)\\), \\[\\frac{x}{x-3}-\\frac2{x+1}=\\frac{x(x+1)-2(x-3)}{(x-3)(x+1)}.\\] The numerator is \\(x^2+x-2x+6=x^2-x+6\\). Therefore the equivalent expression is \\[\\boxed{\\frac{x^2-x+6}{(x-3)(x+1)}}.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 229,
             "choiceExplanations": {
-              "A": "\\[Use the common denominator (x-3)(x+1):\\]\n\n\\[x(x+1)-2(x-3)(x-3)(x+1).\\]\nThe numerator simplifies to\n\n\\[x^{2}+x-2x+6=x^{2}-x+6.\\]\nThus the equivalent expression is\n\n\\[x^{2}-x+6(x-3)(x+1).\\]",
+              "A": "Using the common denominator \\((x-3)(x+1)\\), \\[\\frac{x}{x-3}-\\frac2{x+1}=\\frac{x(x+1)-2(x-3)}{(x-3)(x+1)}.\\] The numerator is \\(x^2+x-2x+6=x^2-x+6\\). Therefore the equivalent expression is \\[\\boxed{\\frac{x^2-x+6}{(x-3)(x+1)}}.\\]",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
