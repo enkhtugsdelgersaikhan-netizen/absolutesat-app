@@ -2846,7 +2846,7 @@
             "skill": "Linear Functions",
             "difficulty": "Easy",
             "passage": "",
-            "question": "The function \\(g\\) is defined by \\[g(x)=2(5x-11).\\] What is the y-coordinate of the y-intercept of the graph of \\[y=\\frac12g(x)+7\\]?",
+            "question": "The function \\(g\\) is defined by \\[g(x)=2(5x-11).\\] What is the y-coordinate of the y-intercept of the graph of \\[y=\\frac12g(x)+7?\\]",
             "choices": {
               "A": "\\(-22\\)",
               "B": "\\(-11\\)",
@@ -3517,12 +3517,12 @@
               "D": "\\(15\\)"
             },
             "correctAnswer": "B",
-            "explanation": "From the graph, line \\(\\ell\\) has y-intercept -1 and slope -32, so an equivalent equation is\n\n\\[9x+6y=-6.\\]\nLine r already has the same slope. The two lines would coincide—not have no solution—if\n\n\\[2p+4=-6.\\]\nThus p=-5 is the one value that is not possible.",
+            "explanation": "The plotted line \\(\\ell\\) has slope \\(-\\frac32\\) and y-intercept \\(-1\\), hence \\(\\ell\\) can be written as \\(9x+6y=-6\\). Line \\(r\\) has the same slope for every \\(p\\). For no solution, the lines must be distinct, so \\(2p+4\\ne-6\\), or \\(p\\ne-5\\). The value \\(\\boxed{-5}\\) is therefore NOT possible.",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 94,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "From the graph, line \\(\\ell\\) has y-intercept -1 and slope -32, so an equivalent equation is\n\n\\[9x+6y=-6.\\]\nLine r already has the same slope. The two lines would coincide—not have no solution—if\n\n\\[2p+4=-6.\\]\nThus p=-5 is the one value that is not possible.",
+              "B": "The plotted line \\(\\ell\\) has slope \\(-\\frac32\\) and y-intercept \\(-1\\), hence \\(\\ell\\) can be written as \\(9x+6y=-6\\). Line \\(r\\) has the same slope for every \\(p\\). For no solution, the lines must be distinct, so \\(2p+4\\ne-6\\), or \\(p\\ne-5\\). The value \\(\\boxed{-5}\\) is therefore NOT possible.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
