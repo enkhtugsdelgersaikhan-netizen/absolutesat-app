@@ -3150,12 +3150,12 @@
               "D": "\\(25\\)"
             },
             "correctAnswer": "B",
-            "explanation": "The slope is\n\n\\[m=10-252-(-3)=-3.\\]\nUse (2,10):\n\n\\[10=-3(2)+b.\\]\nThus\n\n\\[b=16.\\]",
+            "explanation": "From the table points \\((-3,25)\\) and \\((2,10)\\), the slope is \\[m=\\frac{10-25}{2-(-3)}=\\frac{-15}{5}=-3.\\] Since \\(g(2)=10\\), \\[10=-3(2)+b\\implies \\boxed{b=16}.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 336,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "The slope is\n\n\\[m=10-252-(-3)=-3.\\]\nUse (2,10):\n\n\\[10=-3(2)+b.\\]\nThus\n\n\\[b=16.\\]",
+              "B": "From the table points \\((-3,25)\\) and \\((2,10)\\), the slope is \\[m=\\frac{10-25}{2-(-3)}=\\frac{-15}{5}=-3.\\] Since \\(g(2)=10\\), \\[10=-3(2)+b\\implies \\boxed{b=16}.\\]",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
