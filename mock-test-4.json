@@ -2846,7 +2846,7 @@
             "skill": "Linear Functions",
             "difficulty": "Easy",
             "passage": "",
-            "question": "The function \\(g\\) is defined by \\[g(x)=2(5x-11).\\] What is the y-coordinate of the y-intercept of the graph \\[y=\\frac12g(x)+7?\\]",
+            "question": "The function \\(g\\) is defined by \\[g(x)=2(5x-11).\\] What is the y-coordinate of the y-intercept of the graph \\[y=\\frac12g(x)+7\\]?",
             "choices": {
               "A": "\\(-22\\)",
               "B": "\\(-11\\)",
