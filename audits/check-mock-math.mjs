@@ -74,6 +74,15 @@ for(let testNumber=1;testNumber<=8;testNumber++){
            bounds.xMin>=bounds.xMax||!Number.isFinite(bounds.yMin)||
            !Number.isFinite(bounds.yMax)||bounds.yMin>=bounds.yMax)
           issues(`${q.id}: invalid XY graph bounds`);
+        for (const series of bounds.series || []) {
+          for (const point of series.points || []) {
+            if (!Array.isArray(point) || point.length < 2 ||
+                !point.every(Number.isFinite) ||
+                point[0] < bounds.xMin || point[0] > bounds.xMax ||
+                point[1] < bounds.yMin || point[1] > bounds.yMax)
+              issues(`${q.id}: graph point lies outside visible bounds`);
+          }
+        }
       }else if(q.graph?.type==="vertical-bar" || q.graph?.type==="horizontal-bar"){
         const n=q.graph.categories?.length||0;
         if(!n||!q.graph.series?.every(series=>series.values?.length===n))
@@ -94,7 +103,12 @@ const mandatory={
  "math-20261006-batch465-q427":q=>/\^\{t-2\}/.test(q.question),
  "math-20261006-new409-q373":q=>/3\^x/.test(q.choices.C),
  "math-20261008-huge798-q629":q=>q.acceptedAnswers.includes("19"),
- "math-20261006-new409-q198":q=>q.acceptedAnswers.includes("12"),
+ "math-20261006-new409-q198":q=>q.acceptedAnswers.includes("12") &&
+   ["A","B","C","D","E"].every(label=>q.diagram?.points?.some(point=>point.label===label)),
+ "math-20261006-batch465-q463":q=>q.explanation.includes("\\\\frac{4c}{a}"),
+ "math-20261008-huge798-q539":q=>q.diagram?.points?.some(point=>point.label==="D"),
+ "math-20261008-huge798-q526":q=>
+   ["A","B","C","D","E"].every(label=>q.diagram?.points?.some(point=>point.label===label)),
 };
 for(const [id,check] of Object.entries(mandatory)){
   const q=seen.get(id);
