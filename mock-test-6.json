@@ -4062,8 +4062,8 @@
             "domain": "Problem-Solving & Data Analysis",
             "skill": "Ratio, Rates, Percentages",
             "difficulty": "Easy",
-            "passage": "A migrating animal travels 1,680 kilometers during a 96-day period. It rests and travels 0 kilometers on 12 of those days.\nOn average,",
-            "question": "how many kilometers does it travel on each day that it actually travels?",
+            "passage": "A migrating animal travels 1,680 kilometers during a 96-day period. It rests and travels 0 kilometers on 12 of those days.",
+            "question": "On average, how many kilometers does the animal travel on each day that it actually travels?",
             "choices": {
               "A": "17.5",
               "B": "20",
@@ -5368,8 +5368,8 @@
             "domain": "Problem-Solving & Data Analysis",
             "skill": "Statistics",
             "difficulty": "Hard",
-            "passage": "A researcher studies the relationship between hive density and annual honey production. The researcher randomly selects 260 apiaries from all registered apiaries in four particular counties that have been operating continuously for at least three years.\nWhat is the largest population to",
-            "question": "which the study's results can reasonably be generalized?",
+            "passage": "A researcher studies the relationship between hive density and annual honey production. The researcher randomly selects 260 apiaries from all registered apiaries in four particular counties that have been operating continuously for at least three years.",
+            "question": "To which population can the study's results reasonably be generalized?",
             "choices": {
               "A": "All apiaries in the four counties",
               "B": "All registered apiaries in the state",

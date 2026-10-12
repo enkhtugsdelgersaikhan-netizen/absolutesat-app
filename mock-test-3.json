@@ -4944,8 +4944,8 @@
             "domain": "Geometry & Trigonometry",
             "skill": "Trigonometry",
             "difficulty": "Hard",
-            "passage": "Triangles \\(ABC\\) and \\(DEF\\) are similar. Angles \\(C\\) and \\(F\\) are right angles, and \\(A\\leftrightarrow D\\). If\n\\[\\tan B=\\frac{15}{8},\\]",
-            "question": "what is \\(\\sin D\\)?",
+            "passage": "Triangles \\(ABC\\) and \\(DEF\\) are similar. Angles \\(C\\) and \\(F\\) are right angles, and \\(A\\leftrightarrow D\\). Also, \\[\\tan B=\\frac{15}{8}.\\]",
+            "question": "What is \\(\\sin D\\)?",
             "choices": {
               "A": "\\(\\frac{8}{15}\\)",
               "B": "\\(\\frac8{17}\\)",
@@ -5629,8 +5629,8 @@
             "domain": "Geometry & Trigonometry",
             "skill": "Trigonometry",
             "difficulty": "Hard",
-            "passage": "Triangles \\(ABC\\) and \\(DEF\\) are similar. Angles \\(C\\) and \\(F\\) are right angles, and \\(A\\leftrightarrow D\\). If\n\\[\\tan B=\\frac{15}{8},\\]",
-            "question": "what is \\(\\sin D\\)?",
+            "passage": "Triangles \\(ABC\\) and \\(DEF\\) are similar. Angles \\(C\\) and \\(F\\) are right angles, and \\(A\\leftrightarrow D\\). Also, \\[\\tan B=\\frac{15}{8}.\\]",
+            "question": "What is \\(\\sin D\\)?",
             "choices": {
               "A": "\\(\\frac{8}{15}\\)",
               "B": "\\(\\frac8{17}\\)",
@@ -5776,12 +5776,12 @@
               "D": "\\(39\\)"
             },
             "correctAnswer": "B",
-            "explanation": "There are\n\n\\[74-6=68\\]\npassenger vans. If all 68 held 8 people, they would carry\n\n\\[68(8)=544\\]\npeople. The actual total is 99 fewer. Replacing an 8-person van with a 5-person van reduces capacity by 3, so the number of 5-person vans is\n\n\\[993=33.\\]",
+            "explanation": "Six of the 74 vans carry no passengers, leaving 68 passenger vans. If all carried 8 people, they would carry \\(68(8)=544\\) passengers, which is 99 too many. Each 5-passenger van reduces capacity by 3, so the number of such vans is \\[\\frac{99}{3}=\\boxed{33}.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 127,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "There are\n\n\\[74-6=68\\]\npassenger vans. If all 68 held 8 people, they would carry\n\n\\[68(8)=544\\]\npeople. The actual total is 99 fewer. Replacing an 8-person van with a 5-person van reduces capacity by 3, so the number of 5-person vans is\n\n\\[993=33.\\]",
+              "B": "Six of the 74 vans carry no passengers, leaving 68 passenger vans. If all carried 8 people, they would carry \\(68(8)=544\\) passengers, which is 99 too many. Each 5-passenger van reduces capacity by 3, so the number of such vans is \\[\\frac{99}{3}=\\boxed{33}.\\]",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
