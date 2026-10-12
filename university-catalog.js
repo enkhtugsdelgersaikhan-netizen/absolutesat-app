@@ -878,88 +878,96 @@
   const profileStatus = document.getElementById("sat-profile-status");
   let profileUser = null;
 
-  // All three range panels stay in the DOM for university comparisons,
-  // but the explorer reveals just the section selected by the student.
-  const scoreTabs = Array.from(document.querySelectorAll("[data-score-tab]"));
-  const guideNames = ["composite", "reading", "math"];
-  const selectScoreTab = (guide, moveFocus = false) => {
-    if (!guideNames.includes(guide)) return;
-    scoreTabs.forEach((tab) => {
-      const active = tab.dataset.scoreTab === guide;
-      tab.classList.toggle("is-active", active);
-      tab.setAttribute("aria-selected", String(active));
-      tab.tabIndex = active ? 0 : -1;
-      if (active && moveFocus) tab.focus();
-    });
-    guideNames.forEach((name) => {
-      const panel = document.getElementById("sat-range-panel-" + name);
-      if (panel) panel.hidden = name !== guide;
-    });
+  // Display only the student's own score interpretation; the generic score
+  // scale explorer has deliberately been removed from the homepage.
+  // Admission context is qualitative, not a predicted acceptance probability.
+  const admissionMeaning = (score) => {
+    if (score >= 1550) return {
+      title:"Top-end SAT result",
+      description:"This is at the high end of score ranges at many selective universities. Another few points usually add little context; the rest of your application still matters."
+    };
+    if (score >= 1500) return {
+      title:"Highly competitive score",
+      description:"This supports a strong academic profile at many selective universities. Compare it with each school's lower quartile, median, and upper quartile; even a high score is not an admissions guarantee."
+    };
+    if (score >= 1450) return {
+      title:"Strong score for many colleges",
+      description:"Your SAT may support applications to a broad range of universities. Some of the most score-selective institutions report higher medians, so school-specific context matters."
+    };
+    if (score >= 1400) return {
+      title:"Competitive, depending on the college",
+      description:"This is a solid result for many institutions. At the most score-selective colleges it may sit below typical submitted scores; compare with each school's median."
+    };
+    if (score >= 1300) return {
+      title:"Admissions context varies by school",
+      description:"This result is above the typical submitted score at some universities and below it at others. Use the school catalog to identify where it strengthens your application."
+    };
+    if (score >= 1200) return {
+      title:"A school-specific result",
+      description:"This score can be competitive at many institutions, but may leave room to improve for colleges with higher submitted-score ranges. Focus on the universities you're targeting."
+    };
+    return {
+      title:"Room to build your testing profile",
+      description:"If your target colleges typically report higher SAT ranges, targeted preparation and a retake may strengthen your testing profile. Other parts of your application also matter."
+    };
   };
-  scoreTabs.forEach((tab, index) => {
-    tab.addEventListener("click", () => selectScoreTab(tab.dataset.scoreTab));
-    tab.addEventListener("keydown", (event) => {
-      if (!["ArrowRight", "ArrowLeft", "Home", "End"].includes(event.key)) return;
-      event.preventDefault();
-      const next = event.key === "Home" ? 0 : event.key === "End" ? scoreTabs.length - 1
-        : (index + (event.key === "ArrowRight" ? 1 : -1) + scoreTabs.length) % scoreTabs.length;
-      selectScoreTab(scoreTabs[next].dataset.scoreTab, true);
-    });
-  });
 
-  const highlightGuideScore = (guide, score) => {
-    const scale = document.querySelector('.sat-score-guide-scale[data-guide="' + guide + '"]');
-    if (!scale) return null;
-    let selected = null;
-    let selectedIndex = -1;
-    scale.querySelectorAll(".sat-score-scale-row").forEach((row, index) => {
-      const min = row.dataset.min === undefined ? -Infinity : Number(row.dataset.min);
-      const max = row.dataset.max === undefined ? Infinity : Number(row.dataset.max);
-      const active = Number.isFinite(score) && score >= min && score <= max;
-      row.classList.toggle("is-user-range", active);
-      if (active) { selected = row; selectedIndex = index; }
-    });
-    return {row: selected, index: selectedIndex};
+  // This is only a transparent illustration requested by the site owner:
+  // score ≈ 800 - 600*E/questionCount, reversed to E ≈ (800-score)*count/600.
+  // Actual adaptive SAT scoring and unscored pretest items invalidate any
+  // claim that this E is the number of questions actually answered incorrectly.
+  const sectionMeaning = (score, totalQuestions) => {
+    const errors = Math.max(0, (800 - score) * totalQuestions / 600);
+    const estimatedErrors = Math.round(errors);
+    let description;
+    if (errors <= 2.5) {
+      description = "In this simple model, that is roughly 0–2 missed questions. A couple of isolated slips would not necessarily suggest a recurring knowledge gap.";
+    } else if (errors <= 6.5) {
+      description = "A handful of modeled misses. Check whether mistakes were scattered slips or repeated in the same subtopics; the score alone cannot distinguish them.";
+    } else if (errors <= 12.5) {
+      description = "Several modeled misses. Use your practice analytics to see whether any question types repeatedly cause difficulty, rather than assuming every error has the same cause.";
+    } else {
+      description = "More room for improvement in this simplified model. Review accuracy by subtopic to identify recurring gaps before deciding what to practice next.";
+    }
+    return {
+      title:"≈ " + estimatedErrors + " modeled " + (estimatedErrors === 1 ? "error" : "errors"),
+      description
+    };
   };
 
   const updateGuideHighlights = (reading, math) => {
     const validReading = validSectionScore(reading);
     const validMath = validSectionScore(math);
     const composite = validReading && validMath ? reading + math : NaN;
-    const values = {
-      composite,
-      reading: validReading ? reading : NaN,
-      math: validMath ? math : NaN
+    const interpretations = {
+      composite: Number.isFinite(composite) ? admissionMeaning(composite) : null,
+      reading: validReading ? sectionMeaning(reading, 54) : null,
+      math: validMath ? sectionMeaning(math, 44) : null
     };
-    for (const guide of guideNames) {
-      const score = values[guide];
-      const match = highlightGuideScore(guide, score);
+    const scores = {composite, reading: validReading ? reading : NaN, math: validMath ? math : NaN};
+    for (const guide of ["composite", "reading", "math"]) {
       const card = document.querySelector('.sat-score-summary-card[data-score-card="' + guide + '"]');
       if (!card) continue;
       const value = card.querySelector("strong[id]");
       const band = document.getElementById("sat-band-" + guide);
       const description = document.getElementById("sat-context-" + guide);
-      const chosen = match?.row;
-      const heading = chosen?.querySelector("span strong")?.textContent?.trim() || "";
-      const detail = chosen?.querySelector("span")?.textContent?.trim() || "";
-      const missing = guide === "composite" ?
-        "Enter both section scores to see your composite score context." :
-        "Enter your " + (guide === "reading" ? "Reading & Writing" : "Math") + " score to see its context.";
+      const score = scores[guide];
+      const meaning = interpretations[guide];
       if (value) value.textContent = Number.isFinite(score) ? String(score) : "—";
-      if (band) band.textContent = chosen ? heading.replace(/[.]$/, "") : "Set your score";
-      if (description) description.textContent = chosen
-        ? detail.slice(heading.length).trim()
-        : missing;
-      card.dataset.tier = chosen ? String(match.index) : "";
-      card.classList.toggle("has-score", Boolean(chosen));
+      if (band) band.textContent = meaning ? meaning.title : "Set your score";
+      if (description) description.textContent = meaning
+        ? meaning.description
+        : guide === "composite"
+          ? "Enter both section scores to see what your SAT means for college applications."
+          : "Enter your " + (guide === "reading" ? "Reading & Writing" : "Math") + " score for a rough error-count illustration.";
+      card.classList.toggle("has-score", Boolean(meaning));
     }
   };
 
   const updateProfilePreview = () => {
-    const reading = Number(readingInput?.value);
-    const math = Number(mathInput?.value);
-    const composite = validSectionScore(reading) && validSectionScore(math) ? reading + math : null;
-    if (totalPreview) totalPreview.textContent = Number.isFinite(composite) ? String(composite) : "—";
+    // Empty fields must not be treated as zero-scored sections.
+    const reading = readingInput?.value?.trim() ? Number(readingInput.value) : NaN;
+    const math = mathInput?.value?.trim() ? Number(mathInput.value) : NaN;
     updateGuideHighlights(reading, math);
   };
 
