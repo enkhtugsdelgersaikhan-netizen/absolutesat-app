@@ -63,4 +63,19 @@ assert(find(math, "math-20261006-new409-q356").explanation.includes("\\frac{144}
   "Mean fraction has incorrect display notation");
 assert(find(math, "math-20261006-new409-q048").explanation.includes("\\frac{r}{m}"),
   "Rate fraction has incorrect display notation");
-console.log("PASS: TeX row breaks, math multiplication, italics, choice layout, and corrected questions");
+const responseStart = source.indexOf("function parseStudentResponseValue(");
+const responseEnd = source.indexOf("function renderStudentResponse(", responseStart);
+assert(responseStart >= 0 && responseEnd > responseStart, "Free-response grader not found");
+const responseContext = vm.createContext({});
+vm.runInContext(source.slice(responseStart, responseEnd) +
+  "\nthis.__studentGrade = studentResponseIsCorrect;", responseContext);
+const grade = responseContext.__studentGrade;
+assert(grade({ accepted_answers: ["8/3"] }, "8/3"), "Exact fraction should be accepted");
+assert(grade({ accepted_answers: ["8/3"] }, "2.667"), "Rounded repeating fraction should be accepted");
+assert(grade({ accepted_answers: ["8/3"] }, "2.666"), "Truncated repeating fraction should be accepted");
+assert(grade({ accepted_answers: ["12/17"] }, "0.706"), "Rounded small repeating fraction should be accepted");
+assert(!grade({ accepted_answers: ["8/3"] }, "2.67"), "Insufficient-precision decimal should be rejected");
+assert(!grade({ accepted_answers: ["8/3"] }, "2.675"), "Incorrect decimal should be rejected");
+assert(!grade({ accepted_answers: ["50"] }, "50.001"), "Integer answers must remain exact");
+
+console.log("PASS: TeX row breaks, math multiplication, italics, choice layout, and corrected questions, and SAT decimal responses");
