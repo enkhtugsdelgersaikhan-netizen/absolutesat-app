@@ -2830,12 +2830,12 @@
               "D": "\\(\\frac{28}{3}\\)"
             },
             "correctAnswer": "B",
-            "explanation": "Combine the coefficients:\n\n\\[34-16=912-212=712.\\]\nThus\n\n\\[712x=73.\\]\nMultiply by 127:\n\n\\[x=4.\\]",
+            "explanation": "Combine the coefficients: \\[\\frac34-\\frac16=\\frac9{12}-\\frac2{12}=\\frac7{12}.\\] Thus \\[\\frac7{12}x=\\frac73.\\] Multiply both sides by \\(\\frac{12}{7}\\): \\[x=\\frac73\\cdot\\frac{12}{7}=\\boxed4.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 334,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "Combine the coefficients:\n\n\\[34-16=912-212=712.\\]\nThus\n\n\\[712x=73.\\]\nMultiply by 127:\n\n\\[x=4.\\]",
+              "B": "Combine the coefficients: \\[\\frac34-\\frac16=\\frac9{12}-\\frac2{12}=\\frac7{12}.\\] Thus \\[\\frac7{12}x=\\frac73.\\] Multiply both sides by \\(\\frac{12}{7}\\): \\[x=\\frac73\\cdot\\frac{12}{7}=\\boxed4.\\]",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -2865,13 +2865,13 @@
               "D": "\\(17\\)"
             },
             "correctAnswer": "C",
-            "explanation": "\\[First solve 2q+5=-1:\\]\n\n\\[2q=-6q=-3.\\]\nThen\n\n\\[f(-3)=4-3(-3)=13.\\]",
+            "explanation": "First solve \\(2q+5=-1\\). Subtract 5 to get \\(2q=-6\\), hence \\(q=-3\\). Substitute: \\[f(q)=4-3(-3)=4+9=\\boxed{13}.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 181,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "\\[First solve 2q+5=-1:\\]\n\n\\[2q=-6q=-3.\\]\nThen\n\n\\[f(-3)=4-3(-3)=13.\\]",
+              "C": "First solve \\(2q+5=-1\\). Subtract 5 to get \\(2q=-6\\), hence \\(q=-3\\). Substitute: \\[f(q)=4-3(-3)=4+9=\\boxed{13}.\\]",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Linear Equations",
@@ -2900,12 +2900,12 @@
               "D": "55"
             },
             "correctAnswer": "B",
-            "explanation": "The slope is\n\n\\[32-7210-2=-5\\]\nUsing (2,72), the line is\n\n\\[y-72=-5(x-2)\\]\n\\[At x=7.5,\\]\n\n\\[y=72-5(5.5)=44.5\\]\nThe closest choice is 45.",
+            "explanation": "Using the points \\((2,72)\\) and \\((10,32)\\), the slope of the line of best fit is approximately \\[m=\\frac{32-72}{10-2}=\\frac{-40}{8}=-5.\\] Using \\((2,72)\\), \\(y-72=-5(x-2)\\). At \\(x=7.5\\), \\[y=72-5(7.5-2)=44.5,\\] closest to \\(\\boxed{45}\\).",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 391,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
-              "B": "The slope is\n\n\\[32-7210-2=-5\\]\nUsing (2,72), the line is\n\n\\[y-72=-5(x-2)\\]\n\\[At x=7.5,\\]\n\n\\[y=72-5(5.5)=44.5\\]\nThe closest choice is 45.",
+              "B": "Using the points \\((2,72)\\) and \\((10,32)\\), the slope of the line of best fit is approximately \\[m=\\frac{32-72}{10-2}=\\frac{-40}{8}=-5.\\] Using \\((2,72)\\), \\(y-72=-5(x-2)\\). At \\(x=7.5\\), \\[y=72-5(7.5-2)=44.5,\\] closest to \\(\\boxed{45}\\).",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
@@ -3020,13 +3020,13 @@
               "D": "64"
             },
             "correctAnswer": "C",
-            "explanation": "There are\n\n\\[5+8=13\\]\nequal ratio parts. Each part equals\n\n\\[9113=7\\]\nThus,\n\n\\[q=8(7)=56\\]",
+            "explanation": "There are \\(5+8=13\\) equal ratio parts. Each part is \\(91/13=7\\). Therefore \\[q=8(7)=\\boxed{56}.\\]",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 376,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "There are\n\n\\[5+8=13\\]\nequal ratio parts. Each part equals\n\n\\[9113=7\\]\nThus,\n\n\\[q=8(7)=56\\]",
+              "C": "There are \\(5+8=13\\) equal ratio parts. Each part is \\(91/13=7\\). Therefore \\[q=8(7)=\\boxed{56}.\\]",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Ratio, Rates, Percentages",
@@ -3982,7 +3982,7 @@
             "question": "The system\n\\[ \\begin{cases} 3x-2y=7\\\\ 5x+3y=-1 \\end{cases} \\]\nhas solution (x,y). What is the value of y?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "Multiply the first equation by 5 and the second by -3:\n\n\\[15x-10y=35\\]\n\n\\[-15x-9y=3.\\]\nAdding gives\n\n\\[-19y=38,\\]\n\\[so y=-2.\\]",
+            "explanation": "Multiply \\(3x-2y=7\\) by 5 and \\(5x+3y=-1\\) by -3. Adding \\(15x-10y=35\\) and \\(-15x-9y=3\\) gives \\(-19y=38\\). Thus \\(\\boxed{y=-2}\\).",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 92,
             "answerType": "student-response",
@@ -4008,7 +4008,7 @@
             "skill": "Nonlinear Equations/Functions",
             "difficulty": "Easy",
             "passage": "",
-            "question": "What is one possible solution to\n\n\\[3|2x+1|-5=16?\\]",
+            "question": "What is one possible solution to\n\n\\[3|2x+1|-5=16\\]",
             "choices": {},
             "correctAnswer": "",
             "explanation": "Add 5 and divide by 3:\n\n\\[|2x+1|=7.\\]\nTherefore,\n\n\\[2x+1=7\\]\nor\n\n\\[2x+1=-7.\\]\nThese give\n\n\\[x=3\\]\nor\n\n\\[x=-4.\\]",
@@ -4037,7 +4037,7 @@
             "skill": "Linear Equations",
             "difficulty": "Easy",
             "passage": "",
-            "question": "What value of \\(x\\) satisfies \\[\\frac{3(x-4)}5=18?\\]",
+            "question": "What value of \\(x\\) satisfies \\[\\frac{3(x-4)}5=18\\]",
             "choices": {
               "A": "\\(26\\)",
               "B": "\\(30\\)",
@@ -4655,11 +4655,11 @@
               "D": "\\((6,-5)\\)"
             },
             "correctAnswer": "A",
-            "explanation": "The second equation becomes\n\n\\[x-2y=17.\\]\n\\[Substitute y=4-2x:\\]\n\n\\[x-2(4-2x)=17\\]\n\n\\[5x-8=17\\]\n\n\\[x=5.\\]\nThen\n\n\\[y=4-2(5)=-6.\\]\nSo the solution is\n\\[ \\boxed{(5,-6)}. \\]",
+            "explanation": "The second equation gives \\(x-2y=17\\). Substituting \\(y=4-2x\\) yields \\(x-2(4-2x)=17\\), hence \\(5x-8=17\\) and \\(x=5\\). Then \\(y=4-2(5)=-6\\), so the solution is \\(\\boxed{(5,-6)}\\).",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 309,
             "choiceExplanations": {
-              "A": "The second equation becomes\n\n\\[x-2y=17.\\]\n\\[Substitute y=4-2x:\\]\n\n\\[x-2(4-2x)=17\\]\n\n\\[5x-8=17\\]\n\n\\[x=5.\\]\nThen\n\n\\[y=4-2(5)=-6.\\]\nSo the solution is\n\\[ \\boxed{(5,-6)}. \\]",
+              "A": "The second equation gives \\(x-2y=17\\). Substituting \\(y=4-2x\\) yields \\(x-2(4-2x)=17\\), hence \\(5x-8=17\\) and \\(x=5\\). Then \\(y=4-2(5)=-6\\), so the solution is \\(\\boxed{(5,-6)}\\).",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -4721,7 +4721,7 @@
             "question": "The equation\n\n\\[0.45x+1.35y=18.9\\]\nmodels the total mass, in kilograms, of x small bags and y large bags of a product.\nHow many grams more product is in each large bag than in each small bag?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "A small bag contains 0.45 kg and a large bag contains 1.35 kg. Their difference is\n\n\\[1.35-0.45=0.90kg.\\]\n\\[Since 1 kg =1000 g,\\]\n\n\\[0.90(1000)=900.\\]",
+            "explanation": "A small bag contains 0.45 kg and a large bag contains 1.35 kg. Their difference is\n\n\\[1.35-0.45=0.90kg.\\]\nSince 1 kg =1000 g,\n\n\\[0.90(1000)=900.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 328,
             "answerType": "student-response",
@@ -5054,7 +5054,7 @@
             "question": "The system\n\\[ \\begin{cases} 3x-2y=7\\\\ 5x+3y=-1 \\end{cases} \\]\nhas solution (x,y). What is the value of y?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "Multiply the first equation by 5 and the second by -3:\n\n\\[15x-10y=35\\]\n\n\\[-15x-9y=3.\\]\nAdding gives\n\n\\[-19y=38,\\]\n\\[so y=-2.\\]",
+            "explanation": "Multiply \\(3x-2y=7\\) by 5 and \\(5x+3y=-1\\) by -3. Adding \\(15x-10y=35\\) and \\(-15x-9y=3\\) gives \\(-19y=38\\). Thus \\(\\boxed{y=-2}\\).",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 92,
             "answerType": "student-response",
@@ -5080,7 +5080,7 @@
             "skill": "Nonlinear Equations/Functions",
             "difficulty": "Easy",
             "passage": "",
-            "question": "What is one possible solution to\n\n\\[3|2x+1|-5=16?\\]",
+            "question": "What is one possible solution to\n\n\\[3|2x+1|-5=16\\]",
             "choices": {},
             "correctAnswer": "",
             "explanation": "Add 5 and divide by 3:\n\n\\[|2x+1|=7.\\]\nTherefore,\n\n\\[2x+1=7\\]\nor\n\n\\[2x+1=-7.\\]\nThese give\n\n\\[x=3\\]\nor\n\n\\[x=-4.\\]",
@@ -5152,11 +5152,11 @@
               "D": "\\((6,-5)\\)"
             },
             "correctAnswer": "A",
-            "explanation": "The second equation becomes\n\n\\[x-2y=17.\\]\n\\[Substitute y=4-2x:\\]\n\n\\[x-2(4-2x)=17\\]\n\n\\[5x-8=17\\]\n\n\\[x=5.\\]\nThen\n\n\\[y=4-2(5)=-6.\\]\nSo the solution is\n\\[ \\boxed{(5,-6)}. \\]",
+            "explanation": "The second equation gives \\(x-2y=17\\). Substituting \\(y=4-2x\\) yields \\(x-2(4-2x)=17\\), hence \\(5x-8=17\\) and \\(x=5\\). Then \\(y=4-2(5)=-6\\), so the solution is \\(\\boxed{(5,-6)}\\).",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 309,
             "choiceExplanations": {
-              "A": "The second equation becomes\n\n\\[x-2y=17.\\]\n\\[Substitute y=4-2x:\\]\n\n\\[x-2(4-2x)=17\\]\n\n\\[5x-8=17\\]\n\n\\[x=5.\\]\nThen\n\n\\[y=4-2(5)=-6.\\]\nSo the solution is\n\\[ \\boxed{(5,-6)}. \\]",
+              "A": "The second equation gives \\(x-2y=17\\). Substituting \\(y=4-2x\\) yields \\(x-2(4-2x)=17\\), hence \\(5x-8=17\\) and \\(x=5\\). Then \\(y=4-2(5)=-6\\), so the solution is \\(\\boxed{(5,-6)}\\).",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -5218,7 +5218,7 @@
             "question": "The equation\n\n\\[0.45x+1.35y=18.9\\]\nmodels the total mass, in kilograms, of x small bags and y large bags of a product.\nHow many grams more product is in each large bag than in each small bag?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "A small bag contains 0.45 kg and a large bag contains 1.35 kg. Their difference is\n\n\\[1.35-0.45=0.90kg.\\]\n\\[Since 1 kg =1000 g,\\]\n\n\\[0.90(1000)=900.\\]",
+            "explanation": "A small bag contains 0.45 kg and a large bag contains 1.35 kg. Their difference is\n\n\\[1.35-0.45=0.90kg.\\]\nSince 1 kg =1000 g,\n\n\\[0.90(1000)=900.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 328,
             "answerType": "student-response",
@@ -5629,7 +5629,7 @@
             "question": "A manufacturer's total cost, in dollars, for producing n units is\n\n\\[C(n)=mn+620,\\]\nwhere m is constant. The cost to produce 180 units is \\(\\$1{,}340\\).\nWhat is the cost to produce 750 units?",
             "choices": {},
             "correctAnswer": "",
-            "explanation": "\\[Use C(180)=1340:\\]\n\n\\[1340=180m+620.\\]\nThus,\n\n\\[720=180m\\]\n\\[and m=4.\\]\nThen\n\\[ C(750)=4(750)+620=3000+620=\\boxed{3620}. \\]",
+            "explanation": "Use C(180)=1340:\n\n\\[1340=180m+620.\\]\nThus,\n\n\\[720=180m\\]\nand m=4.\nThen\n\\[ C(750)=4(750)+620=3000+620=\\boxed{3620}. \\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 83,
             "answerType": "student-response",
@@ -5726,19 +5726,19 @@
             "passage": "For \\(x>0\\), consider the two quantities \\(3^x\\) and \\(8x+1\\).",
             "question": "Which statement is true?",
             "choices": {
-              "A": "\\(3x<8x+1 for every x>0.\\)",
-              "B": "\\(3x>8x+1 for every x>0.\\)",
-              "C": "\\(There is a constant c, where 2<c<3, such that 3x<8x+1 for 0<x<c and 3x>8x+1 for x>c.\\)",
-              "D": "\\(There is a constant c, where 2<c<3, such that 3x>8x+1 for 0<x<c and 3x<8x+1 for x>c.\\)"
+              "A": "For every \\(x>0\\), \\(3^x<8x+1\\).",
+              "B": "For every \\(x>0\\), \\(3^x>8x+1\\).",
+              "C": "There is a constant \\(c\\) with \\(2<c<3\\) such that \\(3^x<8x+1\\) for \\(0<x<c\\) and \\(3^x>8x+1\\) for \\(x>c\\).",
+              "D": "There is a constant \\(c\\) with \\(2<c<3\\) such that \\(3^x>8x+1\\) for \\(0<x<c\\) and \\(3^x<8x+1\\) for \\(x>c\\)."
             },
             "correctAnswer": "C",
-            "explanation": "Check values around the crossover:\n\n\\[32=9<17=8(2)+1\\]\nbut\n\n\\[33=27>25=8(3)+1\\]\nThus, there is an intersection between 2 and 3. Before the positive intersection the linear expression is greater; after it the exponential expression eventually grows faster and remains greater.",
+            "explanation": "At \\(x=2\\), \\(3^2=9<17=8(2)+1\\). At \\(x=3\\), \\(3^3=27>25=8(3)+1\\). The difference \\(3^x-(8x+1)\\) is strictly convex and starts at zero when \\(x=0\\); it first decreases and then increases. Thus it crosses zero exactly once for \\(x>0\\), at some \\(c\\) between 2 and 3. Choice C describes the correct signs on either side.",
             "sourceBatch": "2026-10-06-new-paste409-audited",
             "sourceQuestionNumber": 373,
             "choiceExplanations": {
               "A": "This choice does not satisfy the relationships or conditions given in the question.",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
-              "C": "Check values around the crossover:\n\n\\[32=9<17=8(2)+1\\]\nbut\n\n\\[33=27>25=8(3)+1\\]\nThus, there is an intersection between 2 and 3. Before the positive intersection the linear expression is greater; after it the exponential expression eventually grows faster and remains greater.",
+              "C": "At \\(x=2\\), \\(3^2=9<17=8(2)+1\\). At \\(x=3\\), \\(3^3=27>25=8(3)+1\\). The difference \\(3^x-(8x+1)\\) is strictly convex and starts at zero when \\(x=0\\); it first decreases and then increases. Thus it crosses zero exactly once for \\(x>0\\), at some \\(c\\) between 2 and 3. Choice C describes the correct signs on either side.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
             },
             "subtopic": "Exponential Functions",
