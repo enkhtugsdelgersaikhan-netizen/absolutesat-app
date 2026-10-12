@@ -419,3 +419,189 @@
 @media(prefers-reduced-motion:reduce){
   .sat-score-experience .sat-score-tab{transition:none}
 }
+
+/* PERSONAL SCORE MEANING — one concise interpretation beside the score editor.
+   Keep generic score ranges out of this panel. */
+.sat-guide-row.sat-score-workspace > .sat-score-experience {
+  padding:22px 24px;
+}
+.sat-score-experience .sat-score-two-column {
+  display:grid;
+  grid-template-columns:minmax(0,1.6fr) minmax(300px,.85fr);
+  align-items:stretch;
+  gap:18px;
+}
+.sat-score-experience .sat-score-meaning {
+  min-width:0;
+  padding:2px 0;
+}
+.sat-score-experience .sat-score-experience-heading {
+  margin-bottom:14px;
+}
+.sat-score-experience .sat-score-experience-heading h2 {
+  font-size:clamp(23px,2.1vw,29px);
+  margin:4px 0 6px;
+}
+.sat-score-experience .sat-score-experience-heading p {
+  max-width:650px;
+  font-size:11px;
+}
+.sat-score-experience .sat-score-personal-cards {
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+}
+.sat-score-experience .sat-score-summary-card {
+  min-height:170px;
+  padding:17px 17px 15px;
+}
+.sat-score-experience .sat-score-summary-card[data-score-card="composite"] {
+  grid-column:1 / -1;
+  min-height:158px;
+  background:linear-gradient(120deg,#f0f8f4,#fafcfb);
+}
+.sat-score-experience .sat-score-summary-card>strong {
+  margin:7px 0 5px;
+  font-size:clamp(28px,3vw,39px);
+}
+.sat-score-experience .sat-score-summary-card[data-score-card="composite"]>strong {
+  font-size:clamp(34px,3.3vw,43px);
+}
+.sat-score-experience .sat-score-summary-card>span:first-child {
+  font-size:11px;
+}
+.sat-score-experience .sat-score-card-band {
+  font-size:10px;
+  max-width:100%;
+  box-sizing:border-box;
+}
+.sat-score-experience .sat-score-summary-card p {
+  font-size:10.5px!important;
+  line-height:1.65!important;
+}
+.sat-score-experience .sat-score-method-note {
+  margin:12px 1px 0;
+  font-size:10px;
+  line-height:1.7;
+  color:#74867f;
+}
+.sat-score-experience .sat-score-method-note strong {color:#486a5e}
+.sat-score-experience .sat-score-method-note a {
+  color:#0a776b;
+  font-weight:700;
+  text-underline-offset:2px;
+}
+.sat-score-experience .sat-score-editor {
+  margin:0;
+  padding:24px 22px;
+  border-radius:15px;
+  background:linear-gradient(160deg,#f3f9f6,#fff);
+  border-color:#cee4db;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  gap:6px;
+}
+.sat-score-experience .sat-score-editor-heading {
+  margin-bottom:10px;
+}
+.sat-score-experience .sat-score-editor-heading strong {
+  font-size:clamp(18px,2vw,22px);
+  color:#173d35;
+}
+.sat-score-experience .sat-score-editor-heading p {
+  font-size:11px;
+  line-height:1.65;
+  margin-top:7px;
+}
+.sat-score-experience #sat-profile-form {
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr)!important;
+  gap:14px!important;
+  align-items:stretch;
+}
+.sat-score-experience #sat-profile-form>label {
+  gap:6px;
+}
+.sat-score-experience #sat-profile-form>label>span {
+  font-size:11px!important;
+}
+.sat-score-experience #sat-profile-form input {
+  height:47px!important;
+  font-size:16px!important;
+}
+.sat-score-experience #sat-profile-form .sat-context-profile-actions {
+  display:grid!important;
+  grid-column:1!important;
+  grid-template-columns:minmax(0,1fr) minmax(0,.65fr);
+  gap:8px!important;
+  margin:2px 0 0!important;
+  padding:0!important;
+  width:100%;
+}
+.sat-score-experience #sat-profile-form .sat-context-profile-actions button {
+  min-width:0;
+  width:100%;
+  height:45px!important;
+  font-size:11px;
+  white-space:normal;
+}
+.sat-score-experience #sat-profile-form .sat-context-profile-status {
+  grid-column:1;
+}
+.sat-score-experience .sat-score-editor-note {
+  margin:auto 0 0;
+  padding-top:16px;
+  color:#81958c;
+  font-size:10px;
+  line-height:1.7;
+}
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .sat-score-experience .sat-score-editor,
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .sat-score-experience .sat-score-summary-card[data-score-card="composite"] {
+  background:#21372f;
+  border-color:#365a4c;
+}
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .sat-score-experience .sat-score-editor-heading strong {
+  color:#ddf0e7;
+}
+html.lexlogica-dark-mode:not(.lexlogica-home-inverted) .sat-score-experience .sat-score-method-note strong {
+  color:#b5d8c9;
+}
+@media(max-width:900px){
+  .sat-score-experience .sat-score-two-column {
+    grid-template-columns:minmax(0,1fr);
+    gap:16px;
+  }
+  .sat-score-experience .sat-score-editor {
+    padding:20px;
+  }
+  .sat-score-experience #sat-profile-form {
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+  .sat-score-experience #sat-profile-form .sat-context-profile-actions {
+    grid-column:1 / -1!important;
+  }
+  .sat-score-experience #sat-profile-form .sat-context-profile-status {
+    grid-column:1/-1;
+  }
+}
+@media(max-width:620px){
+  .sat-guide-row.sat-score-workspace>.sat-score-experience {
+    padding:16px 13px;
+  }
+  .sat-score-experience .sat-score-personal-cards {
+    grid-template-columns:1fr;
+  }
+  .sat-score-experience .sat-score-summary-card[data-score-card="composite"] {
+    grid-column:1;
+  }
+  .sat-score-experience .sat-score-summary-card {
+    min-height:0;
+    padding:16px;
+  }
+  .sat-score-experience #sat-profile-form {
+    grid-template-columns:1fr!important;
+  }
+  .sat-score-experience #sat-profile-form .sat-context-profile-actions {
+    grid-column:1!important;
+  }
+}
