@@ -3687,11 +3687,11 @@
               "D": "\\(\\displaystyle H=100+\\frac{2}{15}\\left(S-\\frac35T-8\\right)\\)"
             },
             "correctAnswer": "A",
-            "explanation": "Move the other terms:\n\n\\[S-35T-8=215(H-100).\\]\nMultiply by 152:\n\n\\[152S-35T-8=H-100.\\]\nTherefore,\n\n\\[H=100+152S-35T-8.\\]",
+            "explanation": "Start with \\[S=\\frac35T+8-\\frac2{15}(100-H).\\] Rearrange: \\[S-\\frac35T-8=\\frac2{15}(H-100).\\] Multiply both sides by \\(\\frac{15}{2}\\): \\[\\frac{15}{2}\\left(S-\\frac35T-8\\right)=H-100.\\] Thus \\[\\boxed{H=100+\\frac{15}{2}\\left(S-\\frac35T-8\\right)}.\\]",
             "sourceBatch": "2026-10-06-math-batch465",
             "sourceQuestionNumber": 379,
             "choiceExplanations": {
-              "A": "Move the other terms:\n\n\\[S-35T-8=215(H-100).\\]\nMultiply by 152:\n\n\\[152S-35T-8=H-100.\\]\nTherefore,\n\n\\[H=100+152S-35T-8.\\]",
+              "A": "Start with \\[S=\\frac35T+8-\\frac2{15}(100-H).\\] Rearrange: \\[S-\\frac35T-8=\\frac2{15}(H-100).\\] Multiply both sides by \\(\\frac{15}{2}\\): \\[\\frac{15}{2}\\left(S-\\frac35T-8\\right)=H-100.\\] Thus \\[\\boxed{H=100+\\frac{15}{2}\\left(S-\\frac35T-8\\right)}.\\]",
               "B": "This choice does not satisfy the relationships or conditions given in the question.",
               "C": "This choice does not satisfy the relationships or conditions given in the question.",
               "D": "This choice does not satisfy the relationships or conditions given in the question."
@@ -4944,8 +4944,8 @@
             "domain": "Geometry & Trigonometry",
             "skill": "Trigonometry",
             "difficulty": "Hard",
-            "passage": "Triangles \\(ABC\\) and \\(DEF\\) are similar. Angles \\(C\\) and \\(F\\) are right angles, and \\(A\\leftrightarrow D\\). If\n\\[\\tan B=\\frac{15}{8},\\]",
-            "question": "what is \\(\\sin D\\)?",
+            "passage": "Triangles \\(ABC\\) and \\(DEF\\) are similar. Angles \\(C\\) and \\(F\\) are right angles, and \\(A\\leftrightarrow D\\). Also, \\[\\tan B=\\frac{15}{8}.\\]",
+            "question": "What is \\(\\sin D\\)?",
             "choices": {
               "A": "\\(\\frac{8}{15}\\)",
               "B": "\\(\\frac8{17}\\)",
@@ -5629,8 +5629,8 @@
             "domain": "Geometry & Trigonometry",
             "skill": "Trigonometry",
             "difficulty": "Hard",
-            "passage": "Triangles \\(ABC\\) and \\(DEF\\) are similar. Angles \\(C\\) and \\(F\\) are right angles, and \\(A\\leftrightarrow D\\). If\n\\[\\tan B=\\frac{15}{8},\\]",
-            "question": "what is \\(\\sin D\\)?",
+            "passage": "Triangles \\(ABC\\) and \\(DEF\\) are similar. Angles \\(C\\) and \\(F\\) are right angles, and \\(A\\leftrightarrow D\\). Also, \\[\\tan B=\\frac{15}{8}.\\]",
+            "question": "What is \\(\\sin D\\)?",
             "choices": {
               "A": "\\(\\frac{8}{15}\\)",
               "B": "\\(\\frac8{17}\\)",
