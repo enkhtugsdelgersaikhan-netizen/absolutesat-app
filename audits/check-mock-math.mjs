@@ -68,12 +68,16 @@ for(let testNumber=1;testNumber<=8;testNumber++){
         if(field==="question" && /\?\\\]/.test(value))
           issues(`${q.id}: question mark inside display math`);
       }
-      if(q.graph){
+      if(q.graph?.type==="xy"){
         const bounds=q.graph;
         if(!Number.isFinite(bounds.xMin)||!Number.isFinite(bounds.xMax)||
            bounds.xMin>=bounds.xMax||!Number.isFinite(bounds.yMin)||
            !Number.isFinite(bounds.yMax)||bounds.yMin>=bounds.yMax)
-          issues(`${q.id}: invalid graph bounds`);
+          issues(`${q.id}: invalid XY graph bounds`);
+      }else if(q.graph?.type==="vertical-bar" || q.graph?.type==="horizontal-bar"){
+        const n=q.graph.categories?.length||0;
+        if(!n||!q.graph.series?.every(series=>series.values?.length===n))
+          issues(`${q.id}: invalid bar-chart data`);
       }
     }
   }
