@@ -1628,15 +1628,6 @@ async function toggleQuestionReview(
     const user =
         await getCurrentUser();
 
-    if (!user) {
-        window.location.href =
-            "/login?redirect=" +
-            encodeURIComponent(
-                "/question-bank"
-            );
-        return;
-    }
-
     const currentlyMarked =
         isQuestionMarkedForReview(
             questionId
