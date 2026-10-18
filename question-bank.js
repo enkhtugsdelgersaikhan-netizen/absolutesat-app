@@ -379,19 +379,7 @@ function assignQuestionNumbers(questions) {
 }
 
 async function getCurrentUser() {
-    const { data, error } =
-        await questionBankSupabase.auth.getSession();
-
-    if (error) {
-        console.error(
-            "Could not get current user:",
-            error
-        );
-
-        return null;
-    }
-
-    return data?.session?.user || null;
+    return window.lexlogicaLocalUser || { id: "local" };
 }
 
 function getLocalStatusStorageKey(userId) {
@@ -612,6 +600,15 @@ async function loadUserData() {
         getLocalReviewOverrides(
             user.id
         );
+    // Accountless visitors use saved attempts and review marks on this device.
+    if (user.id === "local") {
+        userAttempts = localAttempts;
+        userReviews = Object.entries(localReviewOverrides)
+            .filter(([, marked]) => marked)
+            .map(([question_id]) => ({ question_id, user_id: user.id }));
+        return;
+    }
+
 
     const resetAt =
         getPracticeResetAt(
@@ -1692,6 +1689,8 @@ async function toggleQuestionReview(
 
     renderQuestions();
 
+    if (user.id === "local") return;
+
     try {
         if (nextMarked) {
             /*
@@ -1972,35 +1971,7 @@ document.addEventListener(
     }
 );
 
-questionBankSupabase.auth.onAuthStateChange(
-    async () => {
-        await loadUserData();
-        renderQuestions();
-    }
-);
-
 async function initializeQuestionBank() {
-    const {
-        data: { session },
-        error
-    } =
-        await questionBankSupabase.auth.getSession();
-
-    if (error || !session) {
-        const currentPath =
-            window.location.pathname +
-            window.location.search;
-
-        window.location.replace(
-            "/login?redirect=" +
-            encodeURIComponent(
-                currentPath
-            )
-        );
-
-        return;
-    }
-
     syncQuestionBankFilterUI();
     await loadQuestions();
 }
