@@ -58,7 +58,7 @@
          HEADER
     ========================================== -->
 
-    <header class="header"><div class="header-container"><a href="/" class="logo-link" aria-label="LexLogica home"><img src="/Logo.png" alt="LexLogica" class="logo"></a><nav class="navigation" aria-label="Main navigation"><a href="/mathematics" class="nav-button">Mathematics</a><a href="/mock-tests" class="nav-button">Mock Tests</a><a href="/reading-writing" class="nav-button">Reading and Writing</a></nav><button type="button" class="dashboard-button site-dashboard site-logout" hidden aria-hidden="true">Log out</button><div class="auth-buttons"><a href="/login" class="login-button get-started-button">Get started</a></div><button class="mobile-menu-button" aria-label="Open navigation" aria-expanded="false" type="button">☰</button></div></header>
+    <header class="header"><div class="header-container"><a href="/" class="logo-link" aria-label="LexLogica home"><img src="/Logo.png" alt="LexLogica" class="logo"></a><nav class="navigation" aria-label="Main navigation"><a href="/mathematics" class="nav-button">Mathematics</a><a href="/mock-tests" class="nav-button">Mock Tests</a><a href="/reading-writing" class="nav-button">Reading and Writing</a></nav><button class="mobile-menu-button" aria-label="Open navigation" aria-expanded="false" type="button">☰</button></div></header>
 
 
 
@@ -162,13 +162,13 @@
         </details>
 
 
-        <!-- Public homepage overview; signed-in students see their own private analytics. -->
+        <!-- Public homepage overview with progress saved locally in each browser. -->
         <section id="home-dashboard" class="dashboard-page home-dashboard" aria-labelledby="home-dashboard-title">
             <div class="dashboard-header">
                 <div class="dashboard-header-copy">
                     <div class="page-eyebrow">YOUR LEARNING HUB</div>
                     <h2 id="home-dashboard-title">Welcome to LexLogica.</h2>
-                    <p id="home-dashboard-intro">Explore your SAT study tools. Sign in to track your own progress and unlock personalized recommendations.</p>
+                    <p id="home-dashboard-intro">Explore your SAT study tools and track your progress right here. Your practice is saved on this device—no account needed.</p>
                 </div>
             </div>
             <section class="dashboard-content" aria-live="polite">
@@ -184,7 +184,7 @@
                 <small>Total saved practice answers</small>
             </article>
         </div>
-        <!-- Public study-guide overview; private score and diagnostics load only for the signed-in account. -->
+        <!-- Public study-guide overview; scores and diagnostics use device-local practice history. -->
         <section id="study-guide" class="study-guide-page homepage-study-guide" aria-labelledby="home-study-guide-title">
           <div class="study-guide-wrap">
             <div class="study-guide-intro">
@@ -240,7 +240,7 @@
             <div id="study-guide-loading" class="study-guide-loading" role="status">Loading your mock-test history…</div>
     <section id="study-guide-empty" class="study-guide-empty" hidden>
       <span class="study-guide-eyebrow">FIRST STEP</span>
-      <h2>Take Mock Test 1 to get started.</h2>
+      <h2>Begin with Mock Test 1.</h2>
       <p>Your most recently completed mock becomes your diagnostic. Start with Mock Test 1, then update your priorities by taking more mocks.</p>
       <a class="sg-primary" href="/question?mock=mock-test-1">Start Mock Test 1 →</a>
     </section>
@@ -313,7 +313,7 @@
                 <details class="dashboard-settings-disclosure">
                     <summary>Practice data settings</summary>
                     <div class="dashboard-settings-inner">
-                        <p>Resetting deletes saved question attempts, mock history, study-guide progress, vocabulary and formula progress. This action cannot be undone.</p>
+                        <p>Resetting clears practice attempts, mock history, study-guide progress, vocabulary and formula progress saved in this browser. This action cannot be undone.</p>
                         <button type="button" class="dashboard-reset" id="dashboard-reset">Reset practice data</button>
                         <div id="dashboard-reset-confirmation" class="dashboard-reset-confirmation" hidden>
                             <label for="dashboard-reset-confirm-input">Type <strong>RESET</strong> to permanently delete your practice data.</label>
