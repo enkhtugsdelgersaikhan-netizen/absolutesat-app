@@ -5465,3 +5465,49 @@ html.lexlogica-dark-mode .question-xy-region{
 #question-app .answer-feedback-explanation{
     overflow-wrap:break-word;
 }
+
+
+/* ============================================================
+   DARK MODE — EXPLANATION PANEL PALETTE
+   The Question page uses one inversion filter. Correct/incorrect
+   feedback and inline choice rationales intentionally counter-invert
+   to preserve green/red status colors. Without native dark surface
+   colors those counter-inverted explanations remain light.
+   ============================================================ */
+html.lexlogica-dark-mode .question-page .answer-feedback,
+html.lexlogica-dark-mode .question-page .choice-reason{
+    filter:invert(1)!important;
+    border-color:#3b4d47;
+    background:#182521;
+    color:#d6e5df;
+}
+
+html.lexlogica-dark-mode .question-page .answer-feedback-title{
+    color:#e8f1ed;
+}
+html.lexlogica-dark-mode .question-page .answer-feedback-explanation,
+html.lexlogica-dark-mode .question-page .choice-reason-text{
+    color:#d6e5df;
+}
+html.lexlogica-dark-mode .question-page .answer-feedback.correct,
+html.lexlogica-dark-mode .question-page .choice-reason-correct{
+    border-color:#38604f;
+    background:#172c24;
+}
+html.lexlogica-dark-mode .question-page .answer-feedback.correct .answer-feedback-title,
+html.lexlogica-dark-mode .question-page .choice-reason-correct .choice-reason-label{
+    color:#8fdbb2;
+}
+html.lexlogica-dark-mode .question-page .answer-feedback.incorrect,
+html.lexlogica-dark-mode .question-page .choice-reason-wrong{
+    border-color:#694340;
+    background:#301f22;
+}
+html.lexlogica-dark-mode .question-page .answer-feedback.incorrect .answer-feedback-title,
+html.lexlogica-dark-mode .question-page .choice-reason-wrong .choice-reason-label{
+    color:#f1aaa3;
+}
+html.lexlogica-dark-mode .question-page .answer-feedback.neutral{
+    border-color:#3b4d47;
+    background:#182521;
+}
