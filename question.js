@@ -6591,76 +6591,8 @@ async function initialize() {
 
     try {
 
-        /*
-         * IMPORTANT:
-         *
-         * getSession() reads the session that Supabase
-         * has already saved in the browser.
-         *
-         * This allows the user to move between:
-         *
-         * Login
-         * Question Bank
-         * Question
-         *
-         * without being treated as logged out.
-         */
-
-        const {
-            data: {
-                session
-            },
-            error: sessionError
-        } =
-            await supabaseClient.auth.getSession();
-
-
-        if (sessionError) {
-
-            console.error(
-                "Could not restore Supabase session:",
-                sessionError
-            );
-
-            showError(
-                "We could not restore your login session. Please try logging in again."
-            );
-
-            return;
-
-        }
-
-
-        /*
-         * No saved session.
-         */
-
-        if (!session) {
-
-            const currentUrl =
-                window.location.pathname +
-                window.location.search;
-
-
-            window.location.replace(
-                "/login?redirect=" +
-                encodeURIComponent(
-                    currentUrl
-                )
-            );
-
-            return;
-
-        }
-
-
-        /*
-         * Saved session exists.
-         */
-
-        currentUser =
-            session.user;
-
+        // Public practice uses one device-local profile, with no login.
+        currentUser = window.lexlogicaLocalUser || { id: "local" };
 
         const params =
             new URLSearchParams(
@@ -6790,7 +6722,7 @@ async function loadQuestionReviewState(
         questionId
     ] = false;
 
-    if (!currentUser) {
+    if (!currentUser || currentUser.id === "local") {
         return;
     }
 
@@ -6910,6 +6842,7 @@ async function loadReviewStatesForQuestions(
 
     if (
         !currentUser ||
+        currentUser.id === "local" ||
         !questionList.length
     ) {
         return;
@@ -11253,7 +11186,7 @@ async function saveQuestionBankAttempt(
         );
     }
 
-    if (!currentUser) {
+    if (!currentUser || currentUser.id === "local") {
         return;
     }
 
@@ -11359,7 +11292,7 @@ async function toggleReview() {
     updateReviewButton();
     updateQuestionNavigator();
 
-    if (!currentUser) {
+    if (!currentUser || currentUser.id === "local") {
         return;
     }
 
@@ -12009,7 +11942,7 @@ async function saveAttempt(
     results
 ) {
 
-    if (!currentUser) {
+    if (!currentUser || currentUser.id === "local") {
 
         return;
 

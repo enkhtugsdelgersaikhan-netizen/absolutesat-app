@@ -41,35 +41,15 @@
     const detail=byId(prefix+"-detail");
     const action=byId(prefix+"-practice");
     if (!status||!detail||!action) return;
-    if (guest) {
-      status.textContent=type==="vocab"
-        ?"Explore 524 SAT-relevant words"
-        :"Explore 104 formula cards";
-      detail.textContent="Preview a 10-card recall session";
-      action.href="/login?redirect="+encodeURIComponent(
-        type==="vocab"?"/vocab?study=10":"/math-fluency?study=10"
-      );
-      return;
-    }
     const result=getStats(type);
     status.textContent=result.remaining+" to learn · "+result.known+" known";
     detail.textContent=result.review+" marked for review · up to 10 cards per session";
     action.href=type==="vocab"?"/vocab?study=10":"/math-fluency?study=10";
   }
-  async function refresh() {
+  function refresh() {
     if (!byId("sg-fluency-practice")&&!byId("sg-vocab-summary")) return;
-    let authenticated=false;
-    try {
-      if (typeof absolutePrepSupabase!=="undefined") {
-        const {data,error}=await absolutePrepSupabase.auth.getSession();
-        authenticated=!error&&!!data?.session&&(
-          typeof isAbsolutePrepGoogleSession!=="function"||
-          isAbsolutePrepGoogleSession(data.session)
-        );
-      }
-    } catch(error) { console.warn("Could not load fluency status:",error); }
-    paint("vocab",!authenticated);
-    paint("formula",!authenticated);
+    paint("vocab",false);
+    paint("formula",false);
   }
   document.addEventListener("DOMContentLoaded",refresh);
   window.addEventListener("pageshow",refresh);

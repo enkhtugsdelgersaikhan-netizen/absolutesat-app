@@ -198,25 +198,8 @@ function escapeHtml(value) {
 // ============================================================
 
 async function getCurrentUser() {
-
-    const {
-        data,
-        error
-    } = await questionBankSupabase.auth.getSession();
-
-    if (error) {
-
-        console.error(
-            "Could not get current user:",
-            error
-        );
-
-        return null;
-    }
-
-    return data?.session?.user || null;
+    return window.lexlogicaLocalUser || { id: "local" };
 }
-
 
 // ============================================================
 // ATTEMPTS
@@ -668,43 +651,9 @@ async function loadUserData() {
     }
 
 
-    const attemptsResult =
-        await questionBankSupabase
-            .from("question_attempts")
-            .select("*")
-            .eq(
-                "user_id",
-                user.id
-            );
-
-
-    if (attemptsResult.error) {
-
-        console.error(
-            "Could not load question attempts:",
-            attemptsResult.error
-        );
-
-        userAttempts = [];
-
-    } else {
-
-        userAttempts =
-            attemptsResult.data || [];
-
-    }
-
-
-    const reviewsResult =
-        await questionBankSupabase
-            .from("question_reviews")
-            .select("*")
-            .eq(
-                "user_id",
-                user.id
-            );
-
-
+    // Public mode: no student data is read from shared backend tables.
+    userAttempts = [];
+    const reviewsResult = { data: [], error: null };
     if (reviewsResult.error) {
 
         console.error(
@@ -1476,42 +1425,7 @@ sectionTabs.forEach(
 // AUTH STATE
 // ============================================================
 
-questionBankSupabase.auth.onAuthStateChange(
-    async () => {
-
-        await loadUserData();
-
-        renderQuestions();
-
-    }
-);
-
-
-// ============================================================
-// INITIAL LOAD — REQUIRE AUTHENTICATION FIRST
-// ============================================================
-
 async function initializeQuestionBank() {
-
-    const {
-        data: { session },
-        error
-    } = await questionBankSupabase.auth.getSession();
-
-    if (error || !session) {
-
-        const currentPath =
-            window.location.pathname +
-            window.location.search;
-
-        window.location.replace(
-            "/login?redirect=" +
-            encodeURIComponent(currentPath)
-        );
-
-        return;
-    }
-
     await loadQuestions();
 }
 

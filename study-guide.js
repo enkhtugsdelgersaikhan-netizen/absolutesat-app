@@ -215,9 +215,7 @@
   // Domain cards remain visible; only the skill-level analysis is expandable.
   function analyticsDisclosure(section,domain,guest=false) {
     const key=section+"::"+domain;
-    const body=guest
-      ?"Sign in and answer practice questions to unlock your own subtopic analytics."
-      :"Loading your accuracy and pacing by subtopic…";
+    const body="Complete practice questions to see your own subtopic analytics.";
     return '<details class="sg-domain-analytics" data-domain-analytics="'+escapeHtml(key)+'">'+
       '<summary><span>Skill analytics</span><span class="sg-analytics-count">Accuracy · pace · advice</span></summary>'+
       '<div class="sg-domain-analytics-body">'+body+'</div></details>';
@@ -315,6 +313,7 @@
   }
   async function attemptedIds() {
     const ids=new Set(Object.keys(read("absoluteprep-question-status:"+userId,{})));
+    if (userId === "local") return ids;
     const resetTime=Date.parse(localStorage.getItem("absoluteprep-practice-reset:"+userId)||"")||0;
     let from=0;
     for (let page=0;page<100;page++) {
@@ -416,9 +415,8 @@
   }
 
   function renderUnassessedDomains(guest) {
-    const signIn="/login?redirect="+encodeURIComponent("/#study-guide");
-    const action=guest?signIn:"/question?mock=mock-test-1";
-    const label=guest?"Sign in for a drill":"Take diagnostic";
+    const action="/question?mock=mock-test-1";
+    const label="Take diagnostic";
     for (const section of ["readingWriting","math"]) {
       const id=section==="math"?"sg-math-priorities":"sg-rw-priorities";
       $(id).innerHTML=DOMAINS[section].map(row=>
@@ -449,59 +447,10 @@
     $("sg-next-test-link").textContent="Start Mock Test 1 →";
   }
 
-  function showGuestGuide() {
-    // Public preview contains taxonomy only, never a previous user's
-    // stored goals, mock results, rankings, or answer history.
-    $("study-guide-loading").hidden=true;
-    $("study-guide-empty").hidden=true;
-    $("study-guide-results").hidden=false;
-    $("sg-plan-content").hidden=false;
-    // Clearly labeled example values give visitors a useful preview,
-    // never a previous student's actual account or locally stored data.
-    const exampleLabel=$("sg-example-label");
-    if (exampleLabel) exampleLabel.hidden=false;
-    $("sg-start-score").textContent="1200";
-    $("sg-start-sections").textContent="Example: R&W 590 · Math 610";
-    $("sg-current-score").textContent="300";
-    $("sg-current-note").textContent="example points to a 1500 goal";
-    $("sg-score-source").textContent="Illustrative example — not your score";
-    $("sg-progress-wrap").hidden=true;
-    $("sg-goal-message").textContent=
-      "Illustrative 1200 → 1500 plan. Sign in and complete a mock for your own score and priorities.";
-    const input=$("sg-goal-input");
-    input.value="1500";
-    input.disabled=true;
-    const goalButton=$("sg-goal-form").querySelector("button");
-    if (goalButton) {
-      goalButton.disabled=true;
-      goalButton.textContent="Sign in first";
-    }
-    $("sg-diagnostic-note").textContent=
-      "All eight SAT domains are visible. Complete a mock for diagnostic-based drills and practice questions for skill analytics.";
-
-    const signIn="/login?redirect="+encodeURIComponent("/#study-guide");
-    renderUnassessedDomains(true);
-    $("sg-practice-message").textContent=
-      "Sign in to unlock diagnostic-based practice and saved progress.";
-    $("sg-review-test-link").href="/mock-tests";
-    $("sg-review-test-link").textContent="Explore mock tests →";
-    $("sg-next-test-link").href=signIn;
-    $("sg-next-test-link").textContent="Get started →";
-  }
-
   async function init() {
     if (!$("study-guide-loading")) return;
     try {
-      if (typeof absolutePrepSupabase==="undefined") { showGuestGuide(); return; }
-      const {data,error}=await absolutePrepSupabase.auth.getSession();
-      // Guests see every homepage section but never another student's data.
-      if (error||!data?.session||
-          (typeof isAbsolutePrepGoogleSession==="function"&&
-           !isAbsolutePrepGoogleSession(data.session))) {
-        showGuestGuide();
-        return;
-      }
-      userId=data.session.user.id;
+      userId=window.lexlogicaLocalUser?.id || "local";
       latest=getLatestMock();
       $("study-guide-loading").hidden=true;
       if (!latest) {
@@ -554,7 +503,7 @@
       }
     } catch (error) {
       console.warn("Study guide initialization unavailable:",error);
-      showGuestGuide();
+      showAwaitingDiagnosticGuide();
     }
   }
   document.addEventListener("DOMContentLoaded",init);
