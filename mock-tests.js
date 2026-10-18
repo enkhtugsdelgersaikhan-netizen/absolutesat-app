@@ -97,21 +97,13 @@ function renderTest(test,userId){
 
 async function initializeMockTests(){
     try{
-        const {data:{session},error:sessionError}=await mockSupabase.auth.getSession();
-
-        if(sessionError||!session){
-            const current=window.location.pathname+window.location.search;
-            window.location.replace("/login?redirect="+encodeURIComponent(current));
-            return;
-        }
-
         const response=await fetch("/mock-tests-catalog.json?v=2",{cache:"no-store"});
         if(!response.ok)throw new Error("Catalog returned "+response.status);
 
         const catalog=await response.json();
         const tests=Array.isArray(catalog.tests)?catalog.tests:[];
 
-        grid.innerHTML=tests.map(test=>renderTest(test,session.user.id)).join("");
+        grid.innerHTML=tests.map(test=>renderTest(test,window.lexlogicaLocalUser?.id || "local")).join("");
         loading.classList.add("hidden");
         grid.classList.remove("hidden");
     }catch(error){
